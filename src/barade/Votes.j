@@ -131,12 +131,14 @@ endfunction
 
 private function ExecuteCallbacks takes integer vote, integer choice, integer votes returns nothing
     local integer i = 0
+    //call BJDebugMsg("Execute callbacks vote " + I2S(vote) + " with choice " + I2S(choice) + " and votes " + I2S(votes))
     loop
         exitwhen (i >= CallbacksCounter)
         set callbackVote = vote
         set callbackChoice = choice
         set callbackVotes = votes
         if (IsTriggerEnabled(CallbackTriggers[i])) then
+            //call BJDebugMsg("Executing callback trigger " + I2S(i))
             call ConditionalTriggerExecute(CallbackTriggers[i])
         endif
         set i = i + 1
@@ -145,8 +147,9 @@ private function ExecuteCallbacks takes integer vote, integer choice, integer vo
         set callbackVote = vote
         set callbackChoice = choice
         set callbackVotes = votes
-        if (IsTriggerEnabled(VoteYesTrigger[i])) then
-            call BJDebugMsg("Executing vote callback trigger")
+        //call BJDebugMsg("Found yes trigger")
+        if (IsTriggerEnabled(VoteYesTrigger[vote])) then
+            //call BJDebugMsg("Executing vote yes callback trigger")
             call ConditionalTriggerExecute(VoteYesTrigger[vote])
         endif
     endif
@@ -200,6 +203,8 @@ private function VoteRecalculateAllChoices takes integer vote, boolean expired r
         set index = VoteChoiceIndex(votedChoice, vote)
         set votedVotes = GetVoteChoiceVotes(index)
     endif
+
+    //call BJDebugMsg("Voted choice: " + I2S(votedChoice))
     
     if (votedChoice != -1) then
         call PauseTimer(VoteTimer[vote])
@@ -265,7 +270,7 @@ function VoteAddVote takes integer vote, integer choice, player whichPlayer, boo
     local integer index = VoteChoiceIndex(choice, vote)
     
     if (not IsPlayerInForce(whichPlayer, VoteChoicesVotes[index])) then
-        call BJDebugMsg("Add vote to choice " + I2S(choice))
+        //call BJDebugMsg("Add vote to choice " + I2S(choice))
         call ForceAddPlayer(VoteChoicesVotes[index], whichPlayer)
         
         if (showMessage) then

@@ -231,7 +231,7 @@ function CreateStats takes nothing returns nothing
     
     set m = CreateMultiboard()
     call MultiboardSetRowCount(m, CountPlayersInForceBJ(f))
-    call MultiboardSetColumnCount(m, 16)
+    call MultiboardSetColumnCount(m, 15)
     call MultiboardSetTitleText(m, GetLocalizedString("STATS"))
     call MultiboardDisplay(m, true)
     set i = 0

@@ -1,4 +1,4 @@
-library WoWReforgedCinematic initializer Init requires TextTagUtils, SelectionUtils, ItemRespawn, optional QueueUI, WoWReforgedTextTag, WoWReforgedCalendar, optional WoWReforgedUiActionsBar
+library WoWReforgedCinematic initializer Init requires ForceUtils, TextTagUtils, SelectionUtils, ItemRespawn, optional QueueUI, WoWReforgedTextTag, WoWReforgedCalendar, optional WoWReforgedUiActionsBar
 
 globals
     public constant string PREFIX_X = "CINEMATIC_X"
@@ -304,6 +304,7 @@ private function Init takes nothing returns nothing
         set i = i + 1
     endloop
     call TriggerAddAction(syncTrigger, function TriggerActionSync)
+    set udg_Cinematics = GetAllUsersCount() == 1
 endfunction
 
 endlibrary

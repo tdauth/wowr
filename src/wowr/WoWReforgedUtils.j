@@ -6,7 +6,7 @@ endfunction
 UnitTypeUtils
 */
 globals
-    constant boolean MAP_DEBUG_MODE_ENABLED = true //MAP_DEBUG_MODE
+    constant boolean MAP_DEBUG_MODE_ENABLED = false // Disable for releases.
 endglobals
 
 //! textmacro DEBUG_MODE_CHECK

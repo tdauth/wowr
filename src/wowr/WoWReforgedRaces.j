@@ -631,7 +631,6 @@ endfunction
 
 private function SetRaceTier1Item takes integer whichRace, integer id returns nothing
     call SetRaceObjectType(whichRace, RACE_OBJECT_TYPE_TIER_1_ITEM, id)
-    set udg_RaceItemTypeTinyCastle[whichRace] = id
 endfunction
 
 private function SetRaceTier2 takes integer whichRace, integer id returns nothing
@@ -4398,7 +4397,6 @@ private function AddRaceScepterItems takes nothing returns nothing
     loop
         exitwhen (i == max)
         call SetRaceObjectType(i, RACE_OBJECT_TYPE_SCEPTER_ITEM, udg_RaceItemType[i])
-        call SetRaceObjectType(i, RACE_OBJECT_TYPE_TIER_1_ITEM, udg_RaceItemTypeTinyCastle[i])
         set i = i + 1
     endloop
 endfunction

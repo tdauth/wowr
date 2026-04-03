@@ -2738,7 +2738,6 @@ globals
     constant playercolor PLAYER_COLOR_BLACK                          = ConvertPlayerColor(24)
 
     constant string MAP_VERSION                                      = "4.7"
-    constant boolean MAP_DEBUG_MODE                                  = true // Disable for releases.
 
     constant string WARCRAFT_III_DOCUMENTS_FOLDER                    = "%userprofile%\\Documents\\Warcraft III"
     constant string CUSTOM_MAP_DATA_FOLDER                           = WARCRAFT_III_DOCUMENTS_FOLDER + "\\CustomMapData"
@@ -2833,6 +2832,10 @@ globals
     constant integer UPG_HERO_LEVEL_75                               = 'R064'
     constant integer UPG_HERO_LEVEL_75_VIP                           = 'R06B'
     constant integer UPG_VIP                                         = 'R06C'
+
+    constant integer UPG_FREELANCER                                  = 'R01W'
+    constant integer UPG_FREELANCER_AI_HARVEST_BONUS                 = 'R02E'
+    constant integer UPG_AI_HARVEST_BONUS                            = 'R019'
 
     // Teams/Factions
     constant integer TEAM_ALLIANCE                                   = 0

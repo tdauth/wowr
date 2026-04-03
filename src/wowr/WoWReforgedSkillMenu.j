@@ -617,22 +617,22 @@ private function UpdateHeroSkillPoints takes unit hero returns nothing
     endif
 endfunction
 
-function AddWowReforgedSkillPointsInitial takes nothing returns nothing
+function AddSkillPointsInitial takes unit hero returns nothing
     local integer skillPoints = SKILL_POINTS_PER_LEVEL
     if (skillPoints > 0) then
-        call AddUnitAttribute(udg_TmpUnit, udg_AttributeSkillPoints, I2R(skillPoints))
-        call UpdateHeroSkillPoints(udg_TmpUnit)
+        call AddUnitAttribute(hero, udg_AttributeSkillPoints, I2R(skillPoints))
+        call UpdateHeroSkillPoints(hero)
     endif
 endfunction
 
-function AddWowReforgedSkillPointsLevelUp takes nothing returns nothing
-    local integer gainedHeroLevels = GetGainedHeroLevels(udg_TmpUnit)
+function AddSkillPointsLevelUp takes unit hero returns nothing
+    local integer gainedHeroLevels = GetGainedHeroLevels(hero)
     local integer skillPoints = gainedHeroLevels * SKILL_POINTS_PER_LEVEL
     //local integer actualAddedHeroSkillPoints = skillPoints - gainedHeroLevels
-    //call BJDebugMsg("Level up for " + GetUnitName(udg_TmpUnit) + " with gained levels " + I2S(gainedHeroLevels) + " and skill points per level " + I2S(SKILL_POINTS_PER_LEVEL) + ": " + I2S(skillPoints) + " leading to actual added hero skill points: " + I2S(actualAddedHeroSkillPoints))
+    //call BJDebugMsg("Level up for " + GetUnitName(hero) + " with gained levels " + I2S(gainedHeroLevels) + " and skill points per level " + I2S(SKILL_POINTS_PER_LEVEL) + ": " + I2S(skillPoints) + " leading to actual added hero skill points: " + I2S(actualAddedHeroSkillPoints))
     if (skillPoints > 0) then
-        call AddUnitAttribute(udg_TmpUnit, udg_AttributeSkillPoints, I2R(skillPoints))
-        call UpdateHeroSkillPoints(udg_TmpUnit)
+        call AddUnitAttribute(hero, udg_AttributeSkillPoints, I2R(skillPoints))
+        call UpdateHeroSkillPoints(hero)
     endif
 endfunction
 

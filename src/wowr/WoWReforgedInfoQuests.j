@@ -271,8 +271,6 @@ private function Init takes nothing returns nothing
     call AddInfoQuestItem(GetLocalizedStringSafe("CC_ENCHANTER"))
     call AddInfoQuestItem(GetLocalizedStringSafe("CC_INSCRIPTOR"))
     call AddInfoQuestItem(GetLocalizedStringSafe("CC_TROPHIES"))
-    call AddInfoQuestItem(GetLocalizedStringSafe("CC_LETTER"))
-    call AddInfoQuestItem(GetLocalizedStringSafe("CC_MAIL_BOX"))
     call AddInfoQuestItem(GetLocalizedStringSafe("CC_DICE"))
     call AddInfoQuestItem(GetLocalizedStringSafe("CC_HOST"))
     call AddInfoQuestItem(GetLocalizedStringSafe("CC_ACCOUNTS"))

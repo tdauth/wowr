@@ -680,8 +680,8 @@ private function EnumStartLobbySettings takes nothing returns nothing
     call SetPlayerStateBJ(GetEnumPlayer(), PLAYER_STATE_RESOURCE_LUMBER, AiPlayersUIGetStartLumber(GetEnumPlayer()))
     call SetPlayerStateBJ(GetEnumPlayer(), PLAYER_STATE_RESOURCE_FOOD_CAP, AiPlayersUIGetFoodLimit(GetEnumPlayer()))
     // Start Researches
-    call SetPlayerTechResearchedSwap(UPG_EVOLUTION, AiPlayersUIGetStartEvolution(GetEnumPlayer()), GetEnumPlayer())
-    call SetPlayerTechResearchedSwap(UPG_CHEAP_EVOLUTION, AiPlayersUIGetStartEvolution(GetEnumPlayer()), GetEnumPlayer())
+    call SetPlayerTechResearched(GetEnumPlayer(), UPG_EVOLUTION, AiPlayersUIGetStartEvolution(GetEnumPlayer()))
+    call SetPlayerTechResearched(GetEnumPlayer(), UPG_CHEAP_EVOLUTION, AiPlayersUIGetStartEvolution(GetEnumPlayer()))
     // Profession
     set udg_PlayerProfession[convertedPlayerId] = AiPlayersUIGetPlayerProfession(GetEnumPlayer())
     // Do not create profession items for AI. They cannot handle it.
@@ -716,7 +716,7 @@ private function EnumStartLobbySettings takes nothing returns nothing
 
         // Harvest Bonuses
         if (playerRace == udg_RaceUndead or playerRace == udg_RaceNightElf or playerRace == udg_RaceDwarf or playerRace == udg_RaceDalaran) then
-            call SetPlayerTechResearchedSwap('R019', 1, GetEnumPlayer())
+            call SetPlayerTechResearched(GetEnumPlayer(), UPG_AI_HARVEST_BONUS, 1)
         endif
         // Hero
         // After race for matching hero!
@@ -741,9 +741,9 @@ private function EnumStartLobbySettings takes nothing returns nothing
                 call SetPlayerHero3(GetEnumPlayer(), hero)
             endif
             if (not isWarlord) then
-                call ModifyHeroStat(bj_HEROSTAT_STR, hero, bj_MODIFYMETHOD_ADD, udg_FreelancerBonusAttributes)
-                call ModifyHeroStat(bj_HEROSTAT_AGI, hero, bj_MODIFYMETHOD_ADD, udg_FreelancerBonusAttributes)
-                call ModifyHeroStat(bj_HEROSTAT_INT, hero, bj_MODIFYMETHOD_ADD, udg_FreelancerBonusAttributes)
+                call SetHeroStr(hero, GetHeroStr(hero, false) + udg_FreelancerBonusAttributes, true)
+                call SetHeroAgi(hero, GetHeroAgi(hero, false) + udg_FreelancerBonusAttributes, true)
+                call SetHeroInt(hero, GetHeroInt(hero, false) + udg_FreelancerBonusAttributes, true)
             endif
             set i = i + 1
         endloop
@@ -751,14 +751,15 @@ private function EnumStartLobbySettings takes nothing returns nothing
         set bj_wantDestroyGroup = true
         call RemoveUnit(FirstOfGroup(GetUnitsOfPlayerAndTypeId(GetEnumPlayer(), FOUNTAIN_OF_LIFE)))
         if (isWarlord) then
+            call BJDebugMsg("Player " + GetPlayerName(GetEnumPlayer()) + " is warlord.")
             set udg_PlayerIsWarlord[convertedPlayerId] = true
             call SetPlayerHandicapXPBJ(GetEnumPlayer(), udg_WarlordXPRate)
         else
+            call BJDebugMsg("Player " + GetPlayerName(GetEnumPlayer()) + " is freelancer.")
             set udg_PlayerIsWarlord[convertedPlayerId] = false
             call SetPlayerHandicapXPBJ(GetEnumPlayer(), udg_FreelancerXPRate)
-            call SetPlayerTechResearchedSwap('R01W', 1, GetEnumPlayer())
-            // Freelancer AI Gold Harvest Bonus
-            call SetPlayerTechResearchedSwap('R02E', 1, GetEnumPlayer())
+            call SetPlayerTechResearched(GetEnumPlayer(), UPG_FREELANCER, 1)
+            call SetPlayerTechResearched(GetEnumPlayer(), UPG_FREELANCER_AI_HARVEST_BONUS, 1)
         endif
     endif
     // Attack Players

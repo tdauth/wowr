@@ -182,8 +182,7 @@ endfunction
 
 private function TriggerConditionSell takes nothing returns boolean
     if (IsUnitType(GetSoldUnit(), UNIT_TYPE_HERO)) then
-        set udg_TmpUnit = GetSoldUnit()
-        call AddWowReforgedSkillPointsInitial()
+        call AddSkillPointsInitial(GetSoldUnit())
         if (CanUseCustomizableAttributes(GetSoldUnit())) then
             call AddUnitAttribute(GetSoldUnit(), udg_AttributeAttributePoints, START_ATTRIBUTE_POINTS)
         endif
@@ -193,8 +192,7 @@ endfunction
 
 private function TriggerConditionLevelUp takes nothing returns boolean
     if (IsUnitType(GetSoldUnit(), UNIT_TYPE_HERO)) then
-        set udg_TmpUnit = GetLevelingUnit()
-        call AddWowReforgedSkillPointsLevelUp()
+        call AddSkillPointsLevelUp(GetLevelingUnit())
         if (CanUseCustomizableAttributes(GetLevelingUnit())) then
             call AddUnitAttribute(GetLevelingUnit(), udg_AttributeAttributePoints, IMaxBJ(1, GetGainedHeroLevels(GetLevelingUnit())) * ATTRIBUTE_POINTS_PER_LEVEL)
         endif

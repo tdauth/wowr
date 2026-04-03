@@ -1969,7 +1969,7 @@ endfunction
 
 private function GenerateRaceEx takes integer i returns nothing
     local item whichItem = CreateItem(udg_RaceTavernItemType[i], 0.0, 0.0)
-    local item tinyItem = CreateItem(udg_RaceItemTypeTinyCastle[i], 0.0, 0.0)
+    local item tinyItem = CreateItem(GetRaceObjectType(i, RACE_OBJECT_TYPE_TIER_1_ITEM), 0.0, 0.0)
     call FileWriteLine("<tr id=\"" + A2S(udg_RaceTavernItemType[i]) + "\">")
     // icon
     call FileWriteLine("<td data-order=\"" + I2S(i) + "\">")

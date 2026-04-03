@@ -64,6 +64,7 @@ globals
     constant integer NOVEMBER = 11
     constant integer DECEMBER = 12
     
+    private integer passedTime = 0
     private trigger changeDayTrigger = CreateTrigger()
     private timer changeSecondTimer = CreateTimer()
     private weathereffect array weather
@@ -181,6 +182,7 @@ endfunction
 private function CheckCalendarEvents takes nothing returns nothing
     local CalendarEvent e = 0
     local integer i = 0
+    set passedTime = passedTime + 1
     loop
         exitwhen (i >= calendarEventsCounter)
         set e = calendarEvents[i]
@@ -304,7 +306,7 @@ function GetCurrentSeason takes nothing returns integer
 endfunction
 
 function GetPassedTime takes nothing returns integer
-    return udg_GameTime
+    return passedTime
 endfunction
 
 function GetCurrentDay takes nothing returns integer

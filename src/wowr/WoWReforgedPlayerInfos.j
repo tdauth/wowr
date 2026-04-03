@@ -75,30 +75,30 @@ function DisplayStats takes player to, player from returns nothing
     local string team = GetLocalizedString("UNKNOWN")
     local string warlord = GetLocalizedString("WARLORD")
     local string vip = ""
-    local string heroName1 = GetUnitName(udg_Hero[playerId])
-    local string heroName2 = GetUnitName(udg_Hero2[playerId])
-    local string heroName3 = GetUnitName(udg_Hero3[playerId])
-    local string heroLevel1 = I2S(GetHeroLevel1(from))
-    local string heroLevel2 = I2S(GetHeroLevel2(from))
-    local string heroLevel3 = I2S(GetHeroLevel3(from))
+    local string heroName1 = "-"
+    local string heroName2 = "-"
+    local string heroName3 = "-"
+    local string heroLevel1 = "-"
+    local string heroLevel2 = "-"
+    local string heroLevel3 = "-"
     local integer heroKills = GetPlayerScore(from, PLAYER_SCORE_HEROES_KILLED) // PLAYER_SCORE_HEROES_KILLED
     local integer unitKills = GetPlayerScore(from, PLAYER_SCORE_UNITS_KILLED) // PLAYER_SCORE_UNITS_KILLED
     local integer buildingsRazed = GetPlayerScore(from, PLAYER_SCORE_STRUCT_RAZED)
     local integer bossesKilled = udg_BossKills[convertedPlayerId]
     local integer bossesMax = BlzGroupGetSize(udg_Bosses)
-    local string race1 = GetRaceName(udg_PlayerRace[convertedPlayerId]) + " (" + I2S(R2I(GetResearchesPercentageForRace(GetPlayerRace1(from), from))) + " %%)"
-    local string race2 = GetRaceName(udg_PlayerRace2[convertedPlayerId]) + " (" + I2S(R2I(GetResearchesPercentageForRace(GetPlayerRace2(from), from))) + " %%)"
-    local string race3 = GetRaceName(udg_PlayerRace3[convertedPlayerId]) + " (" + I2S(R2I(GetResearchesPercentageForRace(GetPlayerRace3(from), from))) + " %%)"
-    local string profession1 = GetProfessionName(udg_PlayerProfession[convertedPlayerId])
-    local string profession2 = GetProfessionName(udg_PlayerProfession2[convertedPlayerId])
-    local string profession3 = GetProfessionName(udg_PlayerProfession3[convertedPlayerId])
+    local string race1 = "-"
+    local string race2 = "-"
+    local string race3 = "-"
+    local string profession1 = "-"
+    local string profession2 = "-"
+    local string profession3 = "-"
     local integer gold = GetPlayerState(from, PLAYER_STATE_RESOURCE_GOLD)
     local integer lumber = GetPlayerState(from, PLAYER_STATE_RESOURCE_LUMBER)
     local integer foodUsed = GetPlayerState(from, PLAYER_STATE_RESOURCE_FOOD_USED)
     local integer foodMax = IMinBJ(GetPlayerState(from, PLAYER_STATE_FOOD_CAP_CEILING), GetPlayerState(from, PLAYER_STATE_RESOURCE_FOOD_CAP))
     local integer xpRate = R2I(GetPlayerHandicapXP(from) * 100.0)
     local integer evolutionLevel = GetPlayerTechCountSimple(UPG_EVOLUTION, from)
-    
+
     if (GetPlayerTeam(from) == TEAM_ALLIANCE) then
         set team = ", " + GetLocalizedString("ALLIANCE")
     elseif (GetPlayerTeam(from) == TEAM_HORDE) then
@@ -106,49 +106,54 @@ function DisplayStats takes player to, player from returns nothing
     else
         set team = ", -"
     endif
-    
-    if (not udg_PlayerIsWarlord[convertedPlayerId]) then
-        set warlord = ", " + GetLocalizedString("FREELANCER")
+
+    if (not IsPlayerWarlord(from)) then
+        set warlord = GetLocalizedString("FREELANCER")
     endif
+
     if (IsPlayerVIP(from)) then
         set vip = ", VIP"
     endif
-    if (from == udg_BossesPlayer) then
-        set heroName1 = GetHeroProperName(udg_Hero[playerId])
-        set heroName2 = GetHeroProperName(udg_Hero2[playerId])
-        set heroName3 = GetHeroProperName(udg_Hero3[playerId])
+
+    if (GetPlayerHero1(from) != null) then
+        set heroName1 = GetUnitName(GetPlayerHero1(from))
+        set heroLevel1 = I2S(GetHeroLevel1(from))
     endif
-    if (heroName1 == null or heroName1 == "") then
-        set heroName1 = "-"
-        set heroLevel1 = "-"
+
+    if (GetPlayerHero2(from) != null) then
+        set heroName2 = GetUnitName(GetPlayerHero2(from))
+        set heroLevel2 = I2S(GetHeroLevel2(from))
     endif
-    if (heroName2 == null or heroName2 == "") then
-        set heroName2 = "-"
-        set heroLevel2 = "-"
+
+    if (GetPlayerHero3(from) != null) then
+        set heroName3 = GetUnitName(GetPlayerHero3(from))
+        set heroLevel3 = I2S(GetHeroLevel3(from))
     endif
-    if (heroName3 == null or heroName3 == "") then
-        set heroName3 = "-"
-        set heroLevel3 = "-"
+
+    if (GetPlayerRace1(from) != udg_RaceNone) then
+        set race1 = GetRaceName(GetPlayerRace1(from)) + " (" + I2S(R2I(GetResearchesPercentageForRace(GetPlayerRace1(from), from))) + " %%)"
     endif
-    if (udg_PlayerRace[convertedPlayerId] == udg_RaceNone) then
-        set race1 = "-"
+
+    if (GetPlayerRace2(from) != udg_RaceNone) then
+        set race2 = GetRaceName(GetPlayerRace2(from)) + " (" + I2S(R2I(GetResearchesPercentageForRace(GetPlayerRace2(from), from))) + " %%)"
     endif
-    if (udg_PlayerRace2[convertedPlayerId] == udg_RaceNone) then
-        set race2 = "-"
+
+    if (GetPlayerRace3(from) != udg_RaceNone) then
+        set race2 = GetRaceName(GetPlayerRace3(from)) + " (" + I2S(R2I(GetResearchesPercentageForRace(GetPlayerRace3(from), from))) + " %%)"
     endif
-    if (udg_PlayerRace3[convertedPlayerId] == udg_RaceNone) then
-        set race3 = "-"
+
+    if (GetPlayerProfession1(from) != udg_ProfessionNone) then
+        set profession1 = GetProfessionName(GetPlayerProfession1(from))
     endif
-    if (udg_PlayerProfession[convertedPlayerId] == udg_ProfessionNone) then
-        set profession1 = "-"
+
+    if (GetPlayerProfession2(from) != udg_ProfessionNone) then
+        set profession2 = GetProfessionName(GetPlayerProfession2(from))
     endif
-    if (udg_PlayerProfession2[convertedPlayerId] == udg_ProfessionNone) then
-        set profession2 = "-"
+
+    if (GetPlayerProfession3(from) != udg_ProfessionNone) then
+        set profession1 = GetProfessionName(GetPlayerProfession3(from))
     endif
-    if (udg_PlayerProfession3[convertedPlayerId] == udg_ProfessionNone) then
-        set profession3 = "-"
-    endif
-    
+
     call DisplayTimedTextToPlayer(to, 0, 0, 20.0, Format(GetLocalizedString("PLAYER_INFOS")).s(GetPlayerNameColored(from)).s(warlord).s(vip).s(team).i(xpRate).s(heroName1).s(heroLevel1).s(heroName2).s(heroLevel2).s(heroName3).s(heroLevel3).s(race1).s(race2).s(race3).s(profession1).s(profession2).s(profession3).i(gold).i(lumber).i(foodUsed).i(foodMax).i(evolutionLevel).i(heroKills).i(unitKills).i(buildingsRazed).i(bossesKilled).i(bossesMax).result())
 endfunction
 

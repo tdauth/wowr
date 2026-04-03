@@ -7,21 +7,21 @@ endglobals
 
 struct ChatCommand
     string array commands[5]
+    boolean array commandsExactMatch[5]
     integer commandsCounter = 0
-    boolean exactMatch
     // Use different chat event triggers in hope that using TriggerRegisterPlayerChatEvent is faster to filter chat commands than any custom string checks.
     trigger t = CreateTrigger()
 
-    method addAlias takes string c returns nothing
+    method addAlias takes string c, boolean exactMatch returns nothing
         set this.commands[this.commandsCounter] = c
+        set this.commandsExactMatch[this.commandsCounter] = exactMatch
         set this.commandsCounter = this.commandsCounter + 1
     endmethod
 
     static method create takes string command, boolean exactMatch, code f returns thistype
         local thistype this = thistype.allocate()
-        set this.exactMatch = exactMatch
         call TriggerAddAction(t, f)
-        call this.addAlias(command)
+        call this.addAlias(command, exactMatch)
 
         set chatCommands[chatCommandsCounter] = this
         set chatCommandsCounter = chatCommandsCounter + 1
@@ -34,8 +34,8 @@ private function Add takes string command, boolean exactMatch, code f returns no
     call ChatCommand.create(command, exactMatch, f)
 endfunction
 
-private function AddAlias takes string c returns nothing
-    call chatCommands[chatCommandsCounter - 1].addAlias(c)
+private function AddAlias takes string c, boolean exactMatch returns nothing
+    call chatCommands[chatCommandsCounter - 1].addAlias(c, exactMatch)
 endfunction
 
 function ShowUI takes player whichPlayer returns nothing
@@ -195,7 +195,7 @@ private function EnumPlayerRegisterChatEvent takes nothing returns nothing
         set max2 = chatCommands[i].commandsCounter
         loop
             exitwhen (j == max2)
-            call TriggerRegisterPlayerChatEvent(chatCommands[i].t, GetEnumPlayer(), chatCommands[i].commands[j], chatCommands[i].exactMatch)
+            call TriggerRegisterPlayerChatEvent(chatCommands[i].t, GetEnumPlayer(), chatCommands[i].commands[j], chatCommands[i].commandsExactMatch[j])
             set j = j + 1
         endloop
         set i = i + 1
@@ -442,10 +442,12 @@ endfunction
 
 private function Ai takes nothing returns nothing
     call AllianceChange(function EnumAi)
+    call ShowStatsMultiboard(GetTriggerPlayer())
 endfunction
 
 private function NoAi takes nothing returns nothing
     call AllianceChange(function EnumNoAi)
+    call ShowStatsMultiboard(GetTriggerPlayer())
 endfunction
 
 private function Ally takes nothing returns nothing
@@ -719,9 +721,9 @@ endfunction
 
 private function Init takes nothing returns nothing
     call Add("-help", true, function Help)
-    call AddAlias("-h")
-    call AddAlias("help")
-    call AddAlias("h")
+    call AddAlias("-h", true)
+    call AddAlias("help", true)
+    call AddAlias("h", true)
     call Add("-helpping", true, function HelpPing)
     call Add("-helpai", true, function HelpAi)
     call Add("-helpally", true, function HelpAlly)
@@ -735,25 +737,28 @@ private function Init takes nothing returns nothing
     call Add("-helpcheats", true, function HelpCheats)
 
     call Add("-discord", true, function Discord)
-    call AddAlias("-d")
+    call AddAlias("-d", true)
     call Add("-website", true, function Website)
-    call AddAlias("-w")
+    call AddAlias("-w", true)
     call Add("-download", true, function Download)
-    call AddAlias("-o")
+    call AddAlias("-o", true)
     call Add("-version", true, function Version)
-    call AddAlias("-v")
+    call AddAlias("-v", true)
     call Add("-time", true, function Time)
 
     call Add("-info", false, function Info)
-    call AddAlias("-i")
+    call AddAlias("-i", true)
+    call AddAlias("-i ", false)
     call Add("-host", true, function Host)
 
     call Add("-get", true, function Get)
-    call AddAlias("-g")
+    call AddAlias("-g", true)
     call Add("-players", true, function Players)
+    call AddAlias("-p", true)
     call Add("-accounts", true, function Accounts)
+    call AddAlias("-a", true)
     call Add("-bans", true, function Bans)
-    call AddAlias("-b")
+    call AddAlias("-b", true)
     call Add("-vips", true, function Vips)
 
     call Add("-friends", true, function Friends)
@@ -801,7 +806,7 @@ private function Init takes nothing returns nothing
     // TODO Hero repick and ping chat commands
 
     call Add("-unlocked", true, function Unlocked)
-    call AddAlias("-u")
+    call AddAlias("-u", true)
 
     call Add("-pingh", true, function PingHeroes)
     call Add("-pinggoldmines", true, function PingGoldMinesAction)
@@ -811,12 +816,12 @@ private function Init takes nothing returns nothing
     call Add("-pingm", true, function PingMountsAction)
     call Add("-pingportals", true, function PingPortalsAction)
     call Add("-pingbosses", true, function PingBossesAction)
-    call AddAlias("-pingb")
-    call AddAlias("-bosses")
+    call AddAlias("-pingb", true)
+    call AddAlias("-bosses", true)
     call Add("-pingproperties", true, function PingPropertiesAction)
     call Add("-pingaltars", true, function PingAltarsAction)
     call Add("-pingres", true, function PingRes)
-    call AddAlias("-resurrectionstones")
+    call AddAlias("-resurrectionstones", true)
     call Add("-pingraces", true, function PingRaces)
 
     call Add("-suicide", true, function Suicide)
