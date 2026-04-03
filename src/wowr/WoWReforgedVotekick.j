@@ -1,4 +1,4 @@
-library WoWReforgedVotekick initializer Init requires PlayerColorUtils, StringUtils, StringFormat, SafeString, WoWReforgedMapData
+library WoWReforgedVotekick initializer Init requires ForceUtils, PlayerColorUtils, StringUtils, StringFormat, SafeString, WoWReforgedMapData
 
 globals
     private trigger startTrigger = CreateTrigger()
@@ -29,11 +29,11 @@ private function Reset takes nothing returns nothing
     call TimerStart(cooldownTimer, 60.0, false, null)
     call TimerStart(playerCooldownTimer[GetPlayerId(targetPlayer)], 60.0, false, null)
     set yesCounter = 0
-    call ForForce(GetMapLobbyPlayers(), function EnumReset)
+    call ForForce(GetAllPlayingUsers(), function EnumReset)
 endfunction
 
 private function TimerFunctionExpire takes nothing returns nothing
-    call DisplayTextToForce(GetMapLobbyPlayers(), GetLocalizedStringSafe("VOTEKICK_HAS_EXPIRED"))
+    call DisplayTextToForce(GetAllPlayingUsers(), GetLocalizedStringSafe("VOTEKICK_HAS_EXPIRED"))
     call Reset()
 endfunction
 
@@ -49,7 +49,7 @@ private function TriggerConditionStart takes nothing returns boolean
 
                 call TimerDialogSetTitle(expireTimerDialog, Format(GetLocalizedStringSafe("VOTEKICK_AGAINST_X")).s(GetPlayerNameColored(target)).result())
                 call TimerDialogDisplay(expireTimerDialog, true)
-                call DisplayTextToForce(GetMapLobbyPlayers(), Format(GetLocalizedStringSafe("VOTEKICK_STARTED_AGAINST_X")).s(GetPlayerNameColored(GetTriggerPlayer())).s(GetPlayerNameColored(target)).result())
+                call DisplayTextToForce(GetAllPlayingUsers(), Format(GetLocalizedStringSafe("VOTEKICK_STARTED_AGAINST_X")).s(GetPlayerNameColored(GetTriggerPlayer())).s(GetPlayerNameColored(target)).result())
             else
                 call SimError(GetTriggerPlayer(), Format(GetLocalizedStringSafe("VOTEKICK_COOLDOWN")).s(FormatTime(TimerGetRemaining(cooldownTimer))).result())
             endif
@@ -67,7 +67,7 @@ private function TriggerConditionYes takes nothing returns boolean
         if (not playerHasVoted[GetPlayerId(GetTriggerPlayer())]) then
             set yesCounter = yesCounter + 1
             if (yesCounter >= GetAllPlayingUsersCount() / 2) then
-                call DisplayTextToForce(GetMapLobbyPlayers(), Format(GetLocalizedStringSafe("X_HAS_BEEN_KICKED")).s(GetPlayerNameColored(targetPlayer)).result())
+                call DisplayTextToForce(GetAllPlayingUsers(), Format(GetLocalizedStringSafe("X_HAS_BEEN_KICKED")).s(GetPlayerNameColored(targetPlayer)).result())
                 call CustomDefeatBJ(targetPlayer, GetLocalizedStringSafe("YOU_HAVE_BEEN_KICKED"))
                 call Reset()
             endif
@@ -83,7 +83,7 @@ endfunction
 private function Init takes nothing returns nothing
     set expireTimerDialog = CreateTimerDialog(expireTimer)
 
-    call ForForce(GetMapLobbyPlayers(), function EnumRegisterChatEvents)
+    call ForForce(GetAllPlayingUsers(), function EnumRegisterChatEvents)
 
     call TriggerAddCondition(startTrigger, Condition(function TriggerConditionStart))
     call TriggerAddCondition(yesTrigger, Condition(function TriggerConditionYes))

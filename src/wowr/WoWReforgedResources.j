@@ -1,4 +1,4 @@
-library WoWReforgedResources initializer Init requires Resources, PlayerColorUtils, StringUtils, SafeString, SimError, SelectionUtils, WoWReforgedUtils, WoWReforgedRaces, WoWReforgedStats, WoWReforgedComputerStartLocations
+library WoWReforgedResources initializer Init requires Resources, ForceUtils, PlayerColorUtils, StringUtils, SafeString, SimError, SelectionUtils, WoWReforgedUtils, WoWReforgedRaces, WoWReforgedStats, WoWReforgedComputerStartLocations
 
 globals
     private integer maxMines = 0
@@ -514,7 +514,7 @@ private function TriggerConditionChatCommandInfo takes nothing returns boolean
 endfunction
 
 private function Init takes nothing returns nothing
-    call ForForce(GetPlayersByMapControl(MAP_CONTROL_USER), function EnumRegisterChatCommandEvents)
+    call ForForce(GetAllPlayingUsers(), function EnumRegisterChatCommandEvents)
     call TriggerAddCondition(triggerChatCommandGuiOn, Condition(function TriggerConditionChatCommandGuiOn))
     call TriggerAddCondition(triggerChatCommandGuiOff, Condition(function TriggerConditionChatCommandGuiOff))
     call TriggerAddCondition(triggerChatCommandInfo, Condition(function TriggerConditionChatCommandInfo))

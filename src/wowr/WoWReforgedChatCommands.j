@@ -1,4 +1,4 @@
-library WoWReforgedChatCommands initializer Init requires HostUtils, StringUtils, StringFormat, SafeString, PlayerColorUtils, WoWReforgedMapData, optional QueueUI, WoWReforgedPlayerInfos, WoWReforgedStats, optional WoWReforgedUiActionsBar, WoWReforgedStats, WoWReforgedAttributes, WoWReforgedAccount, WoWReforgedCheats, WoWReforgedComputerStartLocations
+library WoWReforgedChatCommands initializer Init requires HostUtils, StringUtils, StringFormat, SafeString, ForceUtils, PlayerColorUtils, WoWReforgedMapData, optional QueueUI, WoWReforgedPlayerInfos, WoWReforgedStats, optional WoWReforgedUiActionsBar, WoWReforgedStats, WoWReforgedAttributes, WoWReforgedAccount, WoWReforgedCheats, WoWReforgedComputerStartLocations
 
 globals
     private ChatCommand array chatCommands
@@ -470,7 +470,7 @@ private function Init takes nothing returns nothing
     call Add("-show", true, function Show)
 
     // after all chat commands
-    call ForForce(GetPlayersAll(), function EnumPlayerRegisterChatEvent)
+    call ForForce(GetAllPlayingUsers(), function EnumPlayerRegisterChatEvent)
 endfunction
 
 endlibrary

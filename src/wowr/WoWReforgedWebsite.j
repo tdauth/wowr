@@ -4253,11 +4253,16 @@ private function TriggerActionWebsite takes nothing returns nothing
 endfunction
 
 private function Init takes nothing returns nothing
+    local player slotPlayer = null
     local integer i = 0
     loop
-        call TriggerRegisterPlayerChatEvent(chatCommandTrigger, Player(i), "-website", true)
-        set i = i + 1
         exitwhen (i == bj_MAX_PLAYERS)
+        set slotPlayer = Player(i)
+        if (GetPlayerController(slotPlayer) == MAP_CONTROL_USER and GetPlayerSlotState(slotPlayer) == PLAYER_SLOT_STATE_PLAYING) then
+            call TriggerRegisterPlayerChatEvent(chatCommandTrigger, slotPlayer, "-website", true)
+        endif
+        set slotPlayer = null
+        set i = i + 1
     endloop
     call TriggerAddCondition(chatCommandTrigger, Condition(function TriggerConditionIsSinglePlayer))
     call TriggerAddAction(chatCommandTrigger, function TriggerActionWebsite)

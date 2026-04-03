@@ -254,10 +254,12 @@ private function Init takes nothing returns nothing
             set heroResurrectionStones[index] = 0
             set j = j + 1
         endloop
-        call TriggerRegisterPlayerChatEvent(chatTrigger, slotPlayer, "-noresurrect", true)
-        call TriggerRegisterPlayerChatEvent(chatTrigger, slotPlayer, "-noresurrect1", true)
-        call TriggerRegisterPlayerChatEvent(chatTrigger, slotPlayer, "-noresurrect2", true)
-        call TriggerRegisterPlayerChatEvent(chatTrigger, slotPlayer, "-noresurrect3", true)
+        if (GetPlayerController(slotPlayer) == MAP_CONTROL_USER and GetPlayerSlotState(slotPlayer) == PLAYER_SLOT_STATE_PLAYING) then
+            call TriggerRegisterPlayerChatEvent(chatTrigger, slotPlayer, "-noresurrect", true)
+            call TriggerRegisterPlayerChatEvent(chatTrigger, slotPlayer, "-noresurrect1", true)
+            call TriggerRegisterPlayerChatEvent(chatTrigger, slotPlayer, "-noresurrect2", true)
+            call TriggerRegisterPlayerChatEvent(chatTrigger, slotPlayer, "-noresurrect3", true)
+        endif
         set slotPlayer = null
         set i = i + 1
     endloop
