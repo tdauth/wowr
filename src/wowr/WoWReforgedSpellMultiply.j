@@ -55,7 +55,7 @@ endfunction
 function MultiplyItem takes unit caster, item target returns item
     local item copy = null
     local integer factor = GetUnitAbilityLevel(caster, ABILITY_ID)
-    if (not IsItemInvulnerable(target) and not IsItemLegendaryItem(target)) then
+    if (not IsItemInvulnerable(target) and not IsLegendaryItem(target)) then
         set copy = CreateItem(GetItemTypeId(target), GetItemX(target), GetItemY(target))
         if (GetItemCharges(target) > 1) then
             call SetItemCharges(copy, factor)

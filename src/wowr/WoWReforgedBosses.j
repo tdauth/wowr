@@ -124,12 +124,12 @@ function GetLegendaryItemByItemTypeId takes integer itemTypeId returns integer
     return -1
 endfunction
 
-function IsLegendaryItem takes integer itemTypeId returns boolean
+function IsLegendaryItemTypeId takes integer itemTypeId returns boolean
     return GetLegendaryItemByItemTypeId(itemTypeId) != -1
 endfunction
 
-function IsItemLegendaryItem takes item whichItem returns boolean
-    return GetLegendaryItemByItemTypeId(GetItemTypeId(whichItem)) != -1
+function IsLegendaryItem takes item whichItem returns boolean
+    return IsLegendaryItemTypeId(GetItemTypeId(whichItem))
 endfunction
 
 function GetUnitLegendaryItemsCount takes unit hero returns integer
@@ -139,7 +139,7 @@ function GetUnitLegendaryItemsCount takes unit hero returns integer
     loop
         exitwhen (i == bj_MAX_INVENTORY)
         set slotItem = UnitItemInSlot(hero, i)
-        if (slotItem != null and GetLegendaryItemByItemTypeId(GetItemTypeId(slotItem)) != -1) then
+        if (slotItem != null and IsLegendaryItem(slotItem)) then
             set result = result + 1
         endif
         set slotItem = null

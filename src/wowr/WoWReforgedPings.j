@@ -1,4 +1,4 @@
-library WoWReforgedPings requires WoWReforgedUtils, WoWReforgedAltars, WoWReforgedResurrectionStone, WoWReforgedRacing, WoWReforgedNpcs
+library WoWReforgedPings requires WoWReforgedUtils, WoWReforgedAltars, WoWReforgedResurrectionStone, WoWReforgedRacing, WoWReforgedNpcs, WoWReforgedBosses
 
 globals
     constant real PING_DURATION = 5.0
@@ -45,6 +45,32 @@ function PingAlliedHeroes takes player whichPlayer returns nothing
     endloop
 endfunction
 
+private function EnumPingUnit takes nothing returns nothing
+    call PingUnitForPlayer(GetEnumUnit(), owner)
+endfunction
+
+private function FilterIsLegendaryItem takes nothing returns boolean
+    return IsLegendaryItem(GetFilterItem())
+endfunction
+
+private function EnumPingItem takes nothing returns nothing
+    call PingItemForPlayer(GetEnumItem(), owner)
+endfunction
+
+function PingLegendaryItems takes player whichPlayer returns nothing
+    set owner = whichPlayer
+    call EnumItemsInRect(GetPlayableMapRect(), Filter(function FilterIsLegendaryItem), function EnumPingItem)
+endfunction
+
+function PingMounts takes player whichPlayer returns nothing
+    local group g = MountGetAll(GetTriggerPlayer())
+    set owner = whichPlayer
+    call ForGroup(g, function EnumPingUnit)
+    call GroupClear(g)
+    call DestroyGroup(g)
+    set g = null
+endfunction
+
 private function IsPingablePortal takes player whichPlayer, unit whichUnit returns boolean
     local integer unitTypeId = GetUnitTypeId(whichUnit)
     return unitTypeId == PORTAL_NEUTRAL or unitTypeId == PORTAL_NEUTRAL_WATER or (IsUnitAlly(whichUnit,whichPlayer) and (unitTypeId == PORTAL or unitTypeId == HIDEOUT or unitTypeId == FORTIFIED_HIDEOUT or unitTypeId == GUARDIANS_CITADEL or unitTypeId == TEMPLE_OF_DARKNESS))
@@ -52,10 +78,6 @@ endfunction
 
 private function FilterIsPingablePortal takes nothing returns boolean
     return IsPingablePortal(owner, GetFilterUnit())
-endfunction
-
-private function EnumPingUnit takes nothing returns nothing
-    call PingUnitForPlayer(GetEnumUnit(), owner)
 endfunction
 
 function PingPortals takes player whichPlayer returns nothing

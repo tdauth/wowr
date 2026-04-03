@@ -405,6 +405,14 @@ private function Show takes nothing returns nothing
     call ShowUI(GetTriggerPlayer())
 endfunction
 
+private function PingLegendaryItemsAction takes nothing returns nothing
+    call PingLegendaryItems(GetTriggerPlayer())
+endfunction
+
+private function PingMountsAction takes nothing returns nothing
+    call PingMounts(GetTriggerPlayer())
+endfunction
+
 private function PingPortalsAction takes nothing returns nothing
     call PingPortals(GetTriggerPlayer())
 endfunction
@@ -520,6 +528,8 @@ private function Init takes nothing returns nothing
 
     // TODO Hero repick and ping chat commands
 
+    call Add("-pingl", true, function PingLegendaryItemsAction)
+    call Add("-pingm", true, function PingMountsAction)
     call Add("-pingportals", true, function PingPortalsAction)
     call Add("-pingbosses", true, function PingBossesAction)
     call AddAlias("-pingb")
