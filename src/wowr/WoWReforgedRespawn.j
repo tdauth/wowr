@@ -3,6 +3,7 @@ library WoWReforgedRespawn initializer Init requires UnitGroupRespawnSystem, Tex
 globals
     private trigger deathTrigger = CreateTrigger()
     private trigger respawnTrigger = CreateTrigger()
+    private trigger itemRespawnTrigger = CreateTrigger()
 endglobals
 
 private function GetRespawnBuildingSize takes nothing returns real
@@ -93,12 +94,20 @@ private function TriggerConditionRespawn takes nothing returns boolean
     return false
 endfunction
 
+private function TriggerConditionRespawnItem takes nothing returns boolean
+    call DestroyEffect(AddSpecialEffect("Abilities\\Spells\\Human\\Resurrect\\ResurrectTarget.mdl", GetItemX(GetTriggerRespawnItem()), GetItemY(GetTriggerRespawnItem())))
+    return false
+endfunction
+
 private function Init takes nothing returns nothing
     call TriggerRegisterAnyUnitEventBJ(deathTrigger, EVENT_PLAYER_UNIT_DEATH)
     call TriggerAddCondition(deathTrigger, Condition(function TriggerConditionDeath))
-    
+
     call TriggerRegisterUnitRespawnEvent(respawnTrigger)
     call TriggerAddCondition(respawnTrigger, Condition(function TriggerConditionRespawn))
+
+    call TriggerRegisterItemRespawnEvent(itemRespawnTrigger)
+    call TriggerAddCondition(respawnTrigger, Condition(function TriggerConditionRespawnItem))
 endfunction
 
 endlibrary

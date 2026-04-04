@@ -4,6 +4,8 @@ globals
     private hashtable h = InitHashtable()
     private group array summonedUnits
     private hashtable summonedUnitTypesForAbilities
+    private integer blackArrowLevel = 0
+    private trigger blackArrowSummonTrigger = CreateTrigger()
     private trigger summonTrigger = CreateTrigger()
     private trigger deathTrigger = CreateTrigger()
     private trigger changeOwnerTrigger = CreateTrigger()
@@ -183,6 +185,15 @@ private function TriggerConditionChangeOwner takes nothing returns boolean
     return false
 endfunction
 
+private function EnumBlackArrowSummon takes nothing returns nothing
+    call AddSummonedUnitBonus(GetEnumUnit(), blackArrowLevel)
+endfunction
+
+private function TriggerConditionBlackArrowSummon takes nothing returns nothing
+    set blackArrowLevel = GetUnitAbilitySkillLevelSafe(GetTriggerBlackArrowCaster(), 'ACbk') - 4
+    call ForGroup(GetTriggerBlackArrowSummonedUnits(), function EnumBlackArrowSummon)
+endfunction
+
 private function Init takes nothing returns nothing
     local integer i = 0
     loop
@@ -190,6 +201,19 @@ private function Init takes nothing returns nothing
         set summonedUnits[i] = CreateGroup()
         set i = i + 1
     endloop
+
+    set i = 4
+    loop
+        exitwhen (i >= MAX_HERO_SPELL_LEVEL)
+        call BlackArrowAddAbility('ANba', i, 'ndr3', 1, 80.0, 0.0, 2.0, 'BNdm')
+        call BlackArrowAddAbility('A1Y3', i, 'ndr3', 1, 80.0, 0.0, 2.0, 'BNdm')
+        // Parasite
+        call BlackArrowAddAbility('A24M', i, 'nsns', 1, 80.0, 0.0, 2.0, 'BNpm')
+        set i = i + 1
+    endloop
+    call BlackArrowAddItemTypeId('I05L', BlackArrowAddAbility('AIdf', 1, 'ndr3', 1, 80.0, 0.0, 2.0, 'BNdm'))
+    call TriggerRegisterBlackArrowEvent(blackArrowSummonTrigger)
+    call TriggerAddCondition(blackArrowSummonTrigger, Condition(function TriggerConditionBlackArrowSummon))
 
     call TriggerRegisterAnyUnitEventBJ(summonTrigger, EVENT_PLAYER_UNIT_SUMMON)
     call TriggerAddCondition(summonTrigger, Condition(function TriggerConditionSummon))

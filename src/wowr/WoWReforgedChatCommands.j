@@ -1,4 +1,4 @@
-library WoWReforgedChatCommands initializer Init requires HostUtils, StringUtils, StringFormat, SafeString, ForceUtils, PlayerColorUtils, WoWReforgedMapData, optional QueueUI, WoWReforgedPlayerInfos, WoWReforgedStats, optional WoWReforgedUiActionsBar, WoWReforgedStats, WoWReforgedAttributes, WoWReforgedAccount, WoWReforgedCheats, WoWReforgedComputerStartLocations, WoWReforgedSaveCodesAll
+library WoWReforgedChatCommands initializer Init requires HostUtils, StringUtils, StringFormat, SafeString, ForceUtils, PlayerColorUtils, WoWReforgedMapData, optional QueueUI, WoWReforgedPlayerInfos, WoWReforgedStats, optional WoWReforgedUiActionsBar, WoWReforgedStats, WoWReforgedAttributes, WoWReforgedAccount, WoWReforgedCheats, WoWReforgedComputerStartLocations, WoWReforgedSaveCodesAll, WoWReforgedZones
 
 globals
     private ChatCommand array chatCommands
@@ -946,6 +946,24 @@ private function ClearGenerated takes nothing returns nothing
     call ClearGeneratedSaveCodesVIP(GetTriggerPlayer())
 endfunction
 
+private function ZonesOn takes nothing returns nothing
+    set udg_PlayerShowZonesHints[GetConvertedPlayerId(GetTriggerPlayer())] = true
+    call DisplayTextToPlayer(GetTriggerPlayer(), 0.0, 0.0, GetLocalizedString("ZONE_ENABLE"))
+endfunction
+
+private function ZonesOff takes nothing returns nothing
+    set udg_PlayerShowZonesHints[GetConvertedPlayerId(GetTriggerPlayer())] = false
+    call DisplayTextToPlayer(GetTriggerPlayer(), 0.0, 0.0, GetLocalizedString("ZONE_DISABLE"))
+endfunction
+
+private function Zone takes nothing returns nothing
+    call ShowCurrentZone(GetTriggerPlayer())
+endfunction
+
+private function ZoneFull takes nothing returns nothing
+    call ShowCurrentZoneFull(GetTriggerPlayer())
+endfunction
+
 private function Init takes nothing returns nothing
     call Add("-help", true, function Help)
     call AddAlias("-h", true)
@@ -1073,6 +1091,13 @@ private function Init takes nothing returns nothing
     call Add("-savecheck", true, function SaveCheck)
     call Add("-generated", true, function Generated)
     call Add("-cleargenerated", true, function ClearGenerated)
+
+    call Add("-zoneson", true, function ZonesOn)
+    call Add("-zonesoff", true, function ZonesOff)
+    call Add("-zone", true, function Zone)
+    call AddAlias("-z", true)
+    call Add("-zonefull", true, function ZoneFull)
+    call AddAlias("-zf", true)
 
     // after all chat commands
     call ForForce(GetAllPlayingUsers(), function EnumPlayerRegisterChatEvent)

@@ -14902,7 +14902,7 @@ C
 }
 
 STRING 2806
-// Items: I04P (Deposit 1000 Lumber), Hotkey (Hotkey)
+// Items: I060 (Second Hero), Hotkey (Hotkey)
 {
 X
 }
@@ -19444,13 +19444,13 @@ Divine Golem
 }
 
 STRING 3869
-// Items: I05M (Deposit 10 000 Lumber), Hotkey (Hotkey)
+// Items: I05Z (First Hero), Hotkey (Hotkey)
 {
 Y
 }
 
 STRING 3870
-// Items: I060 (Second Hero), Hotkey (Hotkey)
+// Items: I06K (Dwarf), Hotkey (Hotkey)
 {
 X
 }
@@ -22111,7 +22111,7 @@ Permanently increases the Mana Regeneration of the Hero by 1% when used.
 }
 
 STRING 4541
-// Items: I05Z (First Hero), Hotkey (Hotkey)
+// Items: I06I (Furbolg), Hotkey (Hotkey)
 {
 Y
 }
@@ -22153,7 +22153,7 @@ D
 }
 
 STRING 4548
-// Items: I06K (Dwarf), Hotkey (Hotkey)
+// Items: I075 (Jewelcrafter), Hotkey (Hotkey)
 {
 X
 }
@@ -23752,7 +23752,7 @@ STRING 4899
 }
 
 STRING 4900
-// Items: I05O (Deposit 5000 Gold), Hotkey (Hotkey)
+// Abilities: ACrj (Rejuvenation), Hotkey (Hotkey - Normal)
 {
 J
 }
@@ -24340,7 +24340,7 @@ STRING 5046
 }
 
 STRING 5047
-// Items: I075 (Jewelcrafter), Hotkey (Hotkey)
+// Items: I08Y (Exchange 100 Lumber for 200 Gold), Hotkey (Hotkey)
 {
 X
 }
@@ -26272,61 +26272,61 @@ H
 }
 
 STRING 5419
-// Items: I04R (Withdraw All Lumber), Hotkey (Hotkey)
-{
-H
-}
-
-STRING 5420
 // Abilities: ACcl (Chain Lightning), Hotkey (Hotkey - Normal)
 {
 H
 }
 
-STRING 5421
+STRING 5420
 // Abilities: A0JI (Replenish Mana and Life), Hotkey (Hotkey - Normal)
 {
 H
 }
 
-STRING 5422
+STRING 5421
 // Abilities: A0JI (Replenish Mana and Life), Unhotkey (Hotkey - Turn Off)
 {
 H
 }
 
-STRING 5423
+STRING 5422
 // Abilities: A0PX (Harvest), Hotkey (Hotkey - Normal)
 {
 H
 }
 
-STRING 5424
+STRING 5423
 // Abilities: A1CK (Enable Hatchery), Hotkey (Hotkey - Normal)
 {
 H
 }
 
-STRING 5425
+STRING 5424
 // Abilities: A1CL (Disable Hatchery), Hotkey (Hotkey - Normal)
 {
 H
 }
 
-STRING 5426
+STRING 5425
 // Abilities: A0JY (Hold Position), Hotkey (Hotkey - Normal)
 {
 H
 }
 
-STRING 5427
+STRING 5426
 // Upgrades: R00K (Freezing Breath), Hotkey (Hotkey)
 {
 H
 }
 
-STRING 5428
+STRING 5427
 // Upgrades: R02L (Liquid Fire), Hotkey (Hotkey)
+{
+H
+}
+
+STRING 5428
+// Upgrades: R05L (Priest Adept Training,Priest Master Training), Hotkey (Hotkey)
 {
 H
 }
@@ -26344,19 +26344,19 @@ Allows crafting items.
 }
 
 STRING 5431
-// Upgrades: R05L (Priest Adept Training,Priest Master Training), Hotkey (Hotkey)
-{
-H
-}
-
-STRING 5432
 // Upgrades: R0BG (Defend), Hotkey (Hotkey)
 {
 H
 }
 
-STRING 5433
+STRING 5432
 // Upgrades: R0C2 (Control Magic), Hotkey (Hotkey)
+{
+H
+}
+
+STRING 5433
+// Upgrades: R0I6 (Steel Armor,Thorium Armor,Arcanite Armor), Hotkey (Hotkey)
 {
 H
 }
@@ -26458,18 +26458,12 @@ H
 }
 
 STRING 5465
-// Upgrades: R0I6 (Steel Armor,Thorium Armor,Arcanite Armor), Hotkey (Hotkey)
-{
-H
-}
-
-STRING 5466
 // Upgrades: R07O (Freezing Breath), Hotkey (Hotkey)
 {
 H
 }
 
-STRING 5467
+STRING 5466
 // Upgrades: R01X (Defend), Hotkey (Hotkey)
 {
 H
@@ -30970,7 +30964,7 @@ STRING 6476
 }
 
 STRING 6477
-// Items: I04Q (Withdraw All Gold), Hotkey (Hotkey)
+// Items: I05R (Warlord), Hotkey (Hotkey)
 {
 W
 }
@@ -30982,7 +30976,7 @@ Hire Nathrezim
 }
 
 STRING 6479
-// Items: I05R (Warlord), Hotkey (Hotkey)
+// Items: I05W (Second Race), Hotkey (Hotkey)
 {
 W
 }
@@ -31165,13 +31159,13 @@ Backpack
 }
 
 STRING 6524
-// Items: I05W (Second Race), Hotkey (Hotkey)
+// Items: I063 (Orgrimmar (Barrens)), Hotkey (Hotkey)
 {
 W
 }
 
 STRING 6525
-// Items: I063 (Orgrimmar (Barrens)), Hotkey (Hotkey)
+// Items: I06A (Random Race), Hotkey (Hotkey)
 {
 W
 }
@@ -31183,7 +31177,7 @@ N
 }
 
 STRING 6527
-// Items: I06A (Random Race), Hotkey (Hotkey)
+// Items: I06B (Orc), Hotkey (Hotkey)
 {
 W
 }
@@ -31201,25 +31195,25 @@ Q
 }
 
 STRING 6531
-// Items: I06B (Orc), Hotkey (Hotkey)
-{
-W
-}
-
-STRING 6532
 // Items: I06O (Alchemist), Hotkey (Hotkey)
 {
 W
 }
 
-STRING 6533
+STRING 6532
 // Items: I06X (Kul Tiras), Hotkey (Hotkey)
 {
 W
 }
 
-STRING 6534
+STRING 6533
 // Items: I07A (Equipment Bag), Hotkey (Hotkey)
+{
+W
+}
+
+STRING 6534
+// Items: I07D (Restoration Stone), Hotkey (Hotkey)
 {
 W
 }
@@ -31687,7 +31681,7 @@ Unique - Remornia
 }
 
 STRING 6693
-// Items: I07D (Restoration Stone), Hotkey (Hotkey)
+// Items: I099 (Craft Restoration Stone), Hotkey (Hotkey)
 {
 W
 }
@@ -31747,7 +31741,7 @@ T
 }
 
 STRING 6711
-// Items: I099 (Craft Restoration Stone), Hotkey (Hotkey)
+// Items: I09J (Witch Doctor), Hotkey (Hotkey)
 {
 W
 }
@@ -31783,7 +31777,7 @@ Purchase Pickpocketing
 }
 
 STRING 6718
-// Items: I09J (Witch Doctor), Hotkey (Hotkey)
+// Items: I09U (Orb of Wind), Hotkey (Hotkey)
 {
 W
 }
@@ -31807,7 +31801,7 @@ Purchase Grand Master Enchanting Formula
 }
 
 STRING 6722
-// Items: I09U (Orb of Wind), Hotkey (Hotkey)
+// Items: I0KB (Tiny Wind Mill), Hotkey (Hotkey)
 {
 W
 }
@@ -31819,7 +31813,7 @@ C
 }
 
 STRING 6724
-// Items: I08Y (Exchange 100 Lumber for 200 Gold), Hotkey (Hotkey)
+// Items: I091 (Craft Potion of Mana), Hotkey (Hotkey)
 {
 X
 }
@@ -31939,13 +31933,13 @@ Mystical Hero, adept at ranged assaults. Can learn Teleportation, Far Sight, Mas
 }
 
 STRING 6749
-// Items: I0KB (Tiny Wind Mill), Hotkey (Hotkey)
+// Items: I0RP (+1 Agility), Hotkey (Hotkey)
 {
 W
 }
 
 STRING 6750
-// Items: I0RP (+1 Agility), Hotkey (Hotkey)
+// Items: I0SC (Satyr), Hotkey (Hotkey)
 {
 W
 }
@@ -32281,13 +32275,13 @@ R
 }
 
 STRING 6888
-// Items: I0SC (Satyr), Hotkey (Hotkey)
+// Items: I0T3 (Combiner), Hotkey (Hotkey)
 {
 W
 }
 
 STRING 6889
-// Items: I0T3 (Combiner), Hotkey (Hotkey)
+// Items: I0XU (Fel Orc), Hotkey (Hotkey)
 {
 W
 }
@@ -32503,7 +32497,7 @@ Dungeon of Pain
 }
 
 STRING 6954
-// Items: I06I (Furbolg), Hotkey (Hotkey)
+// Items: I06R (Sorcerer), Hotkey (Hotkey)
 {
 Y
 }
@@ -32605,7 +32599,7 @@ Q
 }
 
 STRING 6976
-// Items: I06R (Sorcerer), Hotkey (Hotkey)
+// Items: I093 (Craft Potion of Healing), Hotkey (Hotkey)
 {
 Y
 }
@@ -32965,7 +32959,7 @@ STRING 7043
 }
 
 STRING 7044
-// Items: I091 (Craft Potion of Mana), Hotkey (Hotkey)
+// Items: I09N (Ironforge (Khaz Modan)), Hotkey (Hotkey)
 {
 X
 }
@@ -33055,7 +33049,7 @@ R
 }
 
 STRING 7062
-// Items: I0XU (Fel Orc), Hotkey (Hotkey)
+// Items: I0XZ (Faceless One), Hotkey (Hotkey)
 {
 W
 }
@@ -33097,13 +33091,13 @@ Banner Stormwind
 }
 
 STRING 7073
-// Items: I0XZ (Faceless One), Hotkey (Hotkey)
+// Items: I0ZS (Random Start Location), Hotkey (Hotkey)
 {
 W
 }
 
 STRING 7074
-// Items: I0ZS (Random Start Location), Hotkey (Hotkey)
+// Items: I12R (Item Gavel), Hotkey (Hotkey)
 {
 W
 }
@@ -33289,7 +33283,7 @@ Tiny Banner Gilneas
 }
 
 STRING 7161
-// Items: I093 (Craft Potion of Healing), Hotkey (Hotkey)
+// Items: I0HK (Vrykul), Hotkey (Hotkey)
 {
 Y
 }
@@ -33379,13 +33373,13 @@ R
 }
 
 STRING 7179
-// Items: I12R (Item Gavel), Hotkey (Hotkey)
+// Items: I18G (Tiny Animal Pen), Hotkey (Hotkey)
 {
 W
 }
 
 STRING 7180
-// Items: I18G (Tiny Animal Pen), Hotkey (Hotkey)
+// Items: I195 (Tiny Barn), Hotkey (Hotkey)
 {
 W
 }
@@ -33541,7 +33535,7 @@ Q
 }
 
 STRING 7259
-// Items: I195 (Tiny Barn), Hotkey (Hotkey)
+// Items: I0OC (Echo Isles), Hotkey (Hotkey)
 {
 W
 }
@@ -33949,7 +33943,7 @@ Increases the level of all heroes owned by player Bosses by 10.
 }
 
 STRING 7414
-// Items: I0OC (Echo Isles), Hotkey (Hotkey)
+// Items: I0OF (Darkspear Islands), Hotkey (Hotkey)
 {
 W
 }
@@ -33973,7 +33967,7 @@ STRING 7417
 }
 
 STRING 7418
-// Items: I0OF (Darkspear Islands), Hotkey (Hotkey)
+// Items: I07X (Random Class), Hotkey (Hotkey)
 {
 W
 }
@@ -33985,7 +33979,7 @@ C
 }
 
 STRING 7420
-// Items: I09N (Ironforge (Khaz Modan)), Hotkey (Hotkey)
+// Items: I0HQ (Worgen), Hotkey (Hotkey)
 {
 X
 }
@@ -34063,13 +34057,13 @@ Q
 }
 
 STRING 7433
-// Items: I07X (Random Class), Hotkey (Hotkey)
+// Abilities: ACcv (Crushing Wave), Hotkey (Hotkey - Normal)
 {
 W
 }
 
 STRING 7434
-// Items: I0HK (Vrykul), Hotkey (Hotkey)
+// Items: I0RT (Attribute Points), Hotkey (Hotkey)
 {
 Y
 }
@@ -34789,7 +34783,7 @@ Web
 }
 
 STRING 7641
-// Abilities: ACcv (Crushing Wave), Hotkey (Hotkey - Normal)
+// Abilities: A00I (Herbalism - Advanced), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -35239,7 +35233,7 @@ Summon Vindicator
 }
 
 STRING 7717
-// Abilities: ACrj (Rejuvenation), Hotkey (Hotkey - Normal)
+// Abilities: A0M2 (Jetpack), Hotkey (Hotkey - Normal)
 {
 J
 }
@@ -39337,7 +39331,7 @@ L
 }
 
 STRING 8518
-// Abilities: A00I (Herbalism - Advanced), Hotkey (Hotkey - Normal)
+// Abilities: A08P (Immortality), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -39781,7 +39775,7 @@ A certification for Khadgar in Dalaran from the Dalaran Engineers.
 }
 
 STRING 8621
-// Items: I0HQ (Worgen), Hotkey (Hotkey)
+// Items: I0Q1 (Goblin Tool Box), Hotkey (Hotkey)
 {
 X
 }
@@ -40393,19 +40387,19 @@ STRING 8792
 }
 
 STRING 8801
-// Abilities: A08P (Immortality), Hotkey (Hotkey - Normal)
-{
-W
-}
-
-STRING 8802
 // Abilities: A09S (Include Unit for Savecode), Hotkey (Hotkey - Normal)
 {
 W
 }
 
-STRING 8803
+STRING 8802
 // Abilities: A0AV (Convert Into Orc), Hotkey (Hotkey - Normal)
+{
+W
+}
+
+STRING 8803
+// Abilities: A0K5 (Finish Construction), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -40567,19 +40561,19 @@ R
 }
 
 STRING 8955
-// Abilities: A0K5 (Finish Construction), Hotkey (Hotkey - Normal)
-{
-W
-}
-
-STRING 8956
 // Abilities: A0MF (Connect with Destination), Hotkey (Hotkey - Normal)
 {
 W
 }
 
+STRING 8956
+// Abilities: A0MZ (Link Crafting Stash), Hotkey (Hotkey - Normal)
+{
+W
+}
+
 STRING 9007
-// Abilities: A0M2 (Jetpack), Hotkey (Hotkey - Normal)
+// Abilities: A0VH (Summon Djinn), Hotkey (Hotkey - Normal)
 {
 J
 }
@@ -40657,7 +40651,7 @@ Wizard
 }
 
 STRING 9137
-// Abilities: A0MZ (Link Crafting Stash), Hotkey (Hotkey - Normal)
+// Abilities: A0PH (Enable Wandering), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -41017,13 +41011,13 @@ R
 }
 
 STRING 9473
-// Abilities: A0PH (Enable Wandering), Hotkey (Hotkey - Normal)
+// Abilities: A0PI (Disable Wandering), Hotkey (Hotkey - Normal)
 {
 W
 }
 
 STRING 9474
-// Abilities: A0PI (Disable Wandering), Hotkey (Hotkey - Normal)
+// Abilities: A0QF (Mass Slow), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -41071,7 +41065,7 @@ R
 }
 
 STRING 9595
-// Abilities: A0QF (Mass Slow), Hotkey (Hotkey - Normal)
+// Abilities: A0TU (Charge), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -41083,7 +41077,7 @@ Holy Aura
 }
 
 STRING 9615
-// Abilities: A0TU (Charge), Hotkey (Hotkey - Normal)
+// Abilities: A0YZ (Cancel), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -41233,7 +41227,7 @@ Necromancer Meat Wagon
 }
 
 STRING 9678
-// Abilities: A0YZ (Cancel), Hotkey (Hotkey - Normal)
+// Abilities: Leav (Healing Wave), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -41269,7 +41263,7 @@ STRING 9747
 }
 
 STRING 9749
-// Abilities: Leav (Healing Wave), Hotkey (Hotkey - Normal)
+// Abilities: A149 (Mass Death Coil), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -41407,7 +41401,7 @@ E
 }
 
 STRING 9890
-// Items: I05N (Deposit 10 000 Gold), Hotkey (Hotkey)
+// Items: I06G (Demon), Hotkey (Hotkey)
 {
 F
 }
@@ -41425,13 +41419,13 @@ STRING 9895
 }
 
 STRING 9903
-// Abilities: A149 (Mass Death Coil), Hotkey (Hotkey - Normal)
+// Abilities: A16T (Water), Hotkey (Hotkey - Normal)
 {
 W
 }
 
 STRING 9904
-// Abilities: A16T (Water), Hotkey (Hotkey - Normal)
+// Abilities: A173 (Mass Bloodlust), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -42019,7 +42013,7 @@ G
 }
 
 STRING 10174
-// Items: I06G (Demon), Hotkey (Hotkey)
+// Items: I06S (Runeforger), Hotkey (Hotkey)
 {
 F
 }
@@ -42643,7 +42637,7 @@ STRING 10279
 }
 
 STRING 10280
-// Items: I06S (Runeforger), Hotkey (Hotkey)
+// Items: I07Z (Pandaria), Hotkey (Hotkey)
 {
 F
 }
@@ -42685,7 +42679,7 @@ A special vial adept at containing magical healing waters.
 }
 
 STRING 10292
-// Items: I0Q1 (Goblin Tool Box), Hotkey (Hotkey)
+// Items: I111 (Craft Potion of Greater Mana), Hotkey (Hotkey)
 {
 X
 }
@@ -42817,7 +42811,7 @@ Craft wands with temporary effects and multiple charges:|n- Wand of Neutralizati
 }
 
 STRING 10321
-// Abilities: A173 (Mass Bloodlust), Hotkey (Hotkey - Normal)
+// Abilities: A1G4 (Orb of Annihilation), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -43117,19 +43111,19 @@ C
 }
 
 STRING 10433
-// Items: I0RT (Attribute Points), Hotkey (Hotkey)
+// Items: I10Z (Craft Potion of Greater Healing), Hotkey (Hotkey)
 {
 Y
 }
 
 STRING 10434
-// Items: I111 (Craft Potion of Greater Mana), Hotkey (Hotkey)
+// Items: I13F (Manual of Mana), Hotkey (Hotkey)
 {
 X
 }
 
 STRING 10435
-// Items: I07Z (Pandaria), Hotkey (Hotkey)
+// Items: I09M (Locked Item Summoner), Hotkey (Hotkey)
 {
 F
 }
@@ -43429,7 +43423,7 @@ S
 }
 
 STRING 10487
-// Items: I09M (Locked Item Summoner), Hotkey (Hotkey)
+// Items: I0L0 (Moving Boxes), Hotkey (Hotkey)
 {
 F
 }
@@ -43975,7 +43969,7 @@ Magical Filler
 }
 
 STRING 10620
-// Abilities: A1G4 (Orb of Annihilation), Hotkey (Hotkey - Normal)
+// Abilities: A1G4 (Orb of Annihilation), Unhotkey (Hotkey - Turn Off)
 {
 W
 }
@@ -44713,13 +44707,13 @@ The Farmer uses his knowledge to craft a Tiny Barn.
 }
 
 STRING 10850
-// Abilities: A1G4 (Orb of Annihilation), Unhotkey (Hotkey - Turn Off)
+// Abilities: A1GZ (Wolf Form), Hotkey (Hotkey - Normal)
 {
 W
 }
 
 STRING 10851
-// Abilities: A1GZ (Wolf Form), Hotkey (Hotkey - Normal)
+// Abilities: A1HR (Healing Wave), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -44737,7 +44731,7 @@ C
 }
 
 STRING 10858
-// Abilities: A1HR (Healing Wave), Hotkey (Hotkey - Normal)
+// Abilities: A1L6 (+1 Agility), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -45667,7 +45661,7 @@ Changes the skin if there are any other skins for this hero.
 }
 
 STRING 11066
-// Items: I0L0 (Moving Boxes), Hotkey (Hotkey)
+// Items: I0M1 (Nerubian), Hotkey (Hotkey)
 {
 F
 }
@@ -45799,7 +45793,7 @@ K
 }
 
 STRING 11129
-// Items: I13F (Manual of Mana), Hotkey (Hotkey)
+// Abilities: A091 (Siphon Mana), Hotkey (Hotkey - Normal)
 {
 X
 }
@@ -45817,7 +45811,7 @@ Conjures a pillar of flame that burns ground units for <A01W,DataA1> damage a se
 }
 
 STRING 11135
-// Abilities: A1L6 (+1 Agility), Hotkey (Hotkey - Normal)
+// Abilities: A1NF (Spell Shield), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -45931,7 +45925,7 @@ Further increases the armor, hit points, number of targets and damage of Enginee
 }
 
 STRING 11169
-// Abilities: A1NF (Spell Shield), Hotkey (Hotkey - Normal)
+// Abilities: A1OD (Mark 1), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -46243,7 +46237,7 @@ Casts Burn Mana and Siphon Mana.
 }
 
 STRING 11343
-// Abilities: A091 (Siphon Mana), Hotkey (Hotkey - Normal)
+// Abilities: A09T (Exclude Unit from Savecode), Hotkey (Hotkey - Normal)
 {
 X
 }
@@ -46303,7 +46297,7 @@ Gnomeregan
 }
 
 STRING 11360
-// Abilities: A09T (Exclude Unit from Savecode), Hotkey (Hotkey - Normal)
+// Abilities: A0YX (Submerge), Unhotkey (Hotkey - Turn Off)
 {
 X
 }
@@ -46777,19 +46771,19 @@ Anathemus,Boulderheart,Fozruk,Gormungan,Grimungous,Baron Kazum,Kashoch the Reave
 }
 
 STRING 11472
-// Abilities: A1OD (Mark 1), Hotkey (Hotkey - Normal)
-{
-W
-}
-
-STRING 11473
 // Abilities: A1Q8 (Magical Creep Summoner), Hotkey (Hotkey - Normal)
 {
 W
 }
 
-STRING 11474
+STRING 11473
 // Abilities: A1QP (Sleep to Next Noon), Hotkey (Hotkey - Normal)
+{
+W
+}
+
+STRING 11474
+// Abilities: A1YG (Summon Creep), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -47233,7 +47227,7 @@ E
 }
 
 STRING 11708
-// Abilities: A1YG (Summon Creep), Hotkey (Hotkey - Normal)
+// Abilities: A1Z5 (Parry), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -47641,7 +47635,7 @@ Summon Siege Golem
 }
 
 STRING 11858
-// Abilities: A1Z5 (Parry), Hotkey (Hotkey - Normal)
+// Abilities: A24P (Dig Up), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -48022,7 +48016,7 @@ A small cluster of tropical landmasses located off the southeastern coast of Dur
 }
 
 STRING 11994
-// Abilities: A24P (Dig Up), Hotkey (Hotkey - Normal)
+// Abilities: A03K (Carrion Swarm), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -48055,7 +48049,7 @@ The former home of the Darkspear tribe of jungle trolls but nor reigned by the M
 }
 
 STRING 12000
-// Abilities: A03K (Carrion Swarm), Hotkey (Hotkey - Normal)
+// Abilities: A0SL (Carrion Swarm), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -49302,12 +49296,6 @@ STRING 12337
 I
 }
 
-STRING 12338
-// Abilities: A0VH (Summon Djinn), Hotkey (Hotkey - Normal)
-{
-J
-}
-
 STRING 12339
 // Abilities: A0VL (Slot 1), Name (Name)
 {
@@ -49993,7 +49981,7 @@ T
 }
 
 STRING 13856
-// Abilities: A0SL (Carrion Swarm), Hotkey (Hotkey - Normal)
+// Abilities: A26B (Next Tile), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -50239,7 +50227,7 @@ Hire Gnomish Submarine
 }
 
 STRING 13984
-// Items: I04N (Wheel of Fortune), Hotkey (Hotkey)
+// Abilities: A0A0 (All Items), Hotkey (Hotkey - Normal)
 {
 U
 }
@@ -50599,13 +50587,13 @@ Creates a shop with purchasable items.
 }
 
 STRING 14110
-// Abilities: A0YX (Submerge), Unhotkey (Hotkey - Turn Off)
+// Abilities: A0Z1 (Submerge), Unhotkey (Hotkey - Turn Off)
 {
 X
 }
 
 STRING 14111
-// Abilities: A26B (Next Tile), Hotkey (Hotkey - Normal)
+// Abilities: A0VQ (Increase Ability Level), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -51265,7 +51253,7 @@ STRING 14467
 }
 
 STRING 14468
-// Items: I0M1 (Nerubian), Hotkey (Hotkey)
+// Items: I0RV (Equal Attributes), Hotkey (Hotkey)
 {
 F
 }
@@ -51427,13 +51415,13 @@ R
 }
 
 STRING 14579
-// Abilities: A0VQ (Increase Ability Level), Hotkey (Hotkey - Normal)
+// Abilities: A0VV (Slot 2), Hotkey (Hotkey - Normal)
 {
 W
 }
 
 STRING 14580
-// Abilities: A0VV (Slot 2), Hotkey (Hotkey - Normal)
+// Abilities: A08X (Finish Construction), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -51667,7 +51655,7 @@ Unique - Jeweled Scepter of Sargeras
 }
 
 STRING 14705
-// Items: I0RV (Equal Attributes), Hotkey (Hotkey)
+// Items: I0SD (Sculptor), Hotkey (Hotkey)
 {
 F
 }
@@ -51775,13 +51763,13 @@ Black Drake
 }
 
 STRING 14876
-// Abilities: A08X (Finish Construction), Hotkey (Hotkey - Normal)
+// Upgrades: R00I (Cannibalize), Hotkey (Hotkey)
 {
 W
 }
 
 STRING 14877
-// Upgrades: R00I (Cannibalize), Hotkey (Hotkey)
+// Upgrades: R01Q (Cannibalize), Hotkey (Hotkey)
 {
 W
 }
@@ -51823,7 +51811,7 @@ R
 }
 
 STRING 14885
-// Upgrades: R01Q (Cannibalize), Hotkey (Hotkey)
+// Upgrades: R06D (Freezing Breath), Hotkey (Hotkey)
 {
 W
 }
@@ -51835,7 +51823,7 @@ R
 }
 
 STRING 14887
-// Upgrades: R06D (Freezing Breath), Hotkey (Hotkey)
+// Upgrades: R0B8 (Creature Carapace,Improved Creature Carapace,Advanced Creature Carapace), Hotkey (Hotkey)
 {
 W
 }
@@ -51895,7 +51883,7 @@ E
 }
 
 STRING 14899
-// Upgrades: R0B8 (Creature Carapace,Improved Creature Carapace,Advanced Creature Carapace), Hotkey (Hotkey)
+// Upgrades: R0CB (Burning Oil), Hotkey (Hotkey)
 {
 W
 }
@@ -51919,13 +51907,13 @@ R
 }
 
 STRING 14907
-// Upgrades: R0CB (Burning Oil), Hotkey (Hotkey)
+// Upgrades: R0CS (Ensnare), Hotkey (Hotkey)
 {
 W
 }
 
 STRING 14908
-// Upgrades: R0CS (Ensnare), Hotkey (Hotkey)
+// Upgrades: R0EO (Ensnare), Hotkey (Hotkey)
 {
 W
 }
@@ -52044,12 +52032,6 @@ STRING 15029
 Purchase Tiny Thieves Guild
 }
 
-STRING 15058
-// Units: n04H (Goblin Bank), Name (Name)
-{
-Goblin Bank
-}
-
 STRING 15074
 // Upgrades: R0CL (War Drums Damage Increase), Name (Name)
 {
@@ -52057,12 +52039,6 @@ Clans
 }
 
 STRING 15086
-// Upgrades: R0EO (Ensnare), Hotkey (Hotkey)
-{
-W
-}
-
-STRING 15087
 // Upgrades: R07U (Freezing Breath), Hotkey (Hotkey)
 {
 W
@@ -52417,7 +52393,7 @@ T
 }
 
 STRING 15363
-// Items: I10Z (Craft Potion of Greater Healing), Hotkey (Hotkey)
+// Items: I112 (Craft Potion of Invisibility), Hotkey (Hotkey)
 {
 Y
 }
@@ -53671,7 +53647,7 @@ Equipment Laboratory
 }
 
 STRING 16581
-// Items: I0SD (Sculptor), Hotkey (Hotkey)
+// Items: I0G3 (Dungeon), Hotkey (Hotkey)
 {
 F
 }
@@ -53881,7 +53857,7 @@ T
 }
 
 STRING 16882
-// Items: I0G3 (Dungeon), Hotkey (Hotkey)
+// Items: I0G5 (Underground), Hotkey (Hotkey)
 {
 F
 }
@@ -54001,13 +53977,13 @@ STRING 16931
 }
 
 STRING 16932
-// Items: I112 (Craft Potion of Invisibility), Hotkey (Hotkey)
+// Items: I113 (Craft Potion of Greater Invisibility), Hotkey (Hotkey)
 {
 Y
 }
 
 STRING 16934
-// Items: I113 (Craft Potion of Greater Invisibility), Hotkey (Hotkey)
+// Abilities: A0B1 (Convert Into Furbolg), Hotkey (Hotkey - Normal)
 {
 Y
 }
@@ -54163,7 +54139,7 @@ N
 }
 
 STRING 17214
-// Items: I0G5 (Underground), Hotkey (Hotkey)
+// Abilities: ACff (Faerie Fire), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -54223,7 +54199,7 @@ P
 }
 
 STRING 17298
-// Abilities: ACff (Faerie Fire), Hotkey (Hotkey - Normal)
+// Abilities: ACff (Faerie Fire), Unhotkey (Hotkey - Turn Off)
 {
 F
 }
@@ -55909,7 +55885,7 @@ Giant Sea Turtle Mount
 }
 
 STRING 18166
-// Items: I05P (Deposit 5000 Lumber), Hotkey (Hotkey)
+// Abilities: ACbf (Breath of Frost), Hotkey (Hotkey - Normal)
 {
 O
 }
@@ -55927,13 +55903,13 @@ P
 }
 
 STRING 18169
-// Abilities: ACbf (Breath of Frost), Hotkey (Hotkey - Normal)
+// Abilities: Aenr (Entangling Roots), Hotkey (Hotkey - Normal)
 {
 O
 }
 
 STRING 18170
-// Abilities: Aenr (Entangling Roots), Hotkey (Hotkey - Normal)
+// Abilities: ACdc (Death Coil), Hotkey (Hotkey - Normal)
 {
 O
 }
@@ -56077,7 +56053,7 @@ STRING 18304
 }
 
 STRING 18312
-// Abilities: A0B1 (Convert Into Furbolg), Hotkey (Hotkey - Normal)
+// Abilities: A0CA (Paint Yellow), Hotkey (Hotkey - Normal)
 {
 Y
 }
@@ -56212,7 +56188,7 @@ Homeworld of the Pandaren.
 }
 
 STRING 18750
-// Abilities: ACff (Faerie Fire), Unhotkey (Hotkey - Turn Off)
+// Abilities: A00N (Hideout Camouflage), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -56632,7 +56608,7 @@ N
 }
 
 STRING 18897
-// Abilities: A00N (Hideout Camouflage), Hotkey (Hotkey - Normal)
+// Abilities: A08O (Fel), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -57208,7 +57184,7 @@ E
 }
 
 STRING 19380
-// Abilities: A0CA (Paint Yellow), Hotkey (Hotkey - Normal)
+// Abilities: A0YX (Submerge), Hotkey (Hotkey - Normal)
 {
 Y
 }
@@ -57226,7 +57202,7 @@ Train Alliance Siege Tower
 }
 
 STRING 19386
-// Abilities: A0Z1 (Submerge), Unhotkey (Hotkey - Turn Off)
+// Abilities: A0Z2 (Submerge), Unhotkey (Hotkey - Turn Off)
 {
 X
 }
@@ -57466,7 +57442,7 @@ Shroud of Protection
 }
 
 STRING 19569
-// Abilities: A0YX (Submerge), Hotkey (Hotkey - Normal)
+// Abilities: A0Z1 (Submerge), Hotkey (Hotkey - Normal)
 {
 Y
 }
@@ -57478,7 +57454,7 @@ C
 }
 
 STRING 19571
-// Abilities: A0Z2 (Submerge), Unhotkey (Hotkey - Turn Off)
+// Abilities: A0Z4 (Leave Submarine), Unhotkey (Hotkey - Turn Off)
 {
 X
 }
@@ -57718,7 +57694,7 @@ Allows portals to select visible locations as destinations.
 }
 
 STRING 19846
-// Abilities: A0Z4 (Leave Submarine), Unhotkey (Hotkey - Turn Off)
+// Abilities: A0ZA (Leave Submarine), Unhotkey (Hotkey - Turn Off)
 {
 X
 }
@@ -57940,7 +57916,7 @@ Purchase Orb of Blood
 }
 
 STRING 19912
-// Abilities: A0ZA (Leave Submarine), Unhotkey (Hotkey - Turn Off)
+// Abilities: A0ZC (Leave Submarine), Unhotkey (Hotkey - Turn Off)
 {
 X
 }
@@ -58174,7 +58150,7 @@ Upgrade to Fortified Infernal Juggernaut
 }
 
 STRING 20036
-// Abilities: A0Z1 (Submerge), Hotkey (Hotkey - Normal)
+// Abilities: A0Z2 (Submerge), Hotkey (Hotkey - Normal)
 {
 Y
 }
@@ -58306,7 +58282,7 @@ Order Items
 }
 
 STRING 20077
-// Abilities: ACdc (Death Coil), Hotkey (Hotkey - Normal)
+// Abilities: A0D4 (Convert into Organic), Hotkey (Hotkey - Normal)
 {
 O
 }
@@ -58513,7 +58489,7 @@ E
 }
 
 STRING 20136
-// Abilities: A0Z2 (Submerge), Hotkey (Hotkey - Normal)
+// Abilities: A0Z4 (Leave Submarine), Hotkey (Hotkey - Normal)
 {
 Y
 }
@@ -58531,7 +58507,7 @@ C
 }
 
 STRING 20150
-// Abilities: A0ZC (Leave Submarine), Unhotkey (Hotkey - Turn Off)
+// Abilities: A161 (Leave Ship), Unhotkey (Hotkey - Turn Off)
 {
 X
 }
@@ -58567,7 +58543,7 @@ Summon Locked Items
 }
 
 STRING 20157
-// Abilities: A08O (Fel), Hotkey (Hotkey - Normal)
+// Abilities: A0B0 (Convert Into Draenei), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -59068,19 +59044,19 @@ STRING 20352
 }
 
 STRING 20353
-// Abilities: A0D4 (Convert into Organic), Hotkey (Hotkey - Normal)
-{
-O
-}
-
-STRING 20354
 // Abilities: A0MQ (Order Items), Hotkey (Hotkey - Normal)
 {
 O
 }
 
-STRING 20355
+STRING 20354
 // Abilities: A12D (Cloud), Hotkey (Hotkey - Normal)
+{
+O
+}
+
+STRING 20355
+// Abilities: A1PM (Harvest Custom Resources), Hotkey (Hotkey - Normal)
 {
 O
 }
@@ -59098,7 +59074,7 @@ STRING 20357
 }
 
 STRING 20358
-// Abilities: A1PM (Harvest Custom Resources), Hotkey (Hotkey - Normal)
+// Abilities: A1PN (Return Resources), Hotkey (Hotkey - Normal)
 {
 O
 }
@@ -59248,7 +59224,7 @@ Centaur Citizen (male)
 }
 
 STRING 20461
-// Abilities: A0B0 (Convert Into Draenei), Hotkey (Hotkey - Normal)
+// Abilities: A0PA (Free Bag), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -61177,7 +61153,7 @@ STRING 22378
 }
 
 STRING 22379
-// Abilities: A0PA (Free Bag), Hotkey (Hotkey - Normal)
+// Abilities: A0PC (First Bag), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -61279,7 +61255,7 @@ Train Greater Voidwalker
 }
 
 STRING 22399
-// Abilities: A1PN (Return Resources), Hotkey (Hotkey - Normal)
+// Abilities: A226 (Summon Eagle), Hotkey (Hotkey - Normal)
 {
 O
 }
@@ -61393,7 +61369,7 @@ STRING 22419
 }
 
 STRING 22420
-// Abilities: A0PC (First Bag), Hotkey (Hotkey - Normal)
+// Abilities: A1DU (Sacrifice), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -61981,7 +61957,7 @@ Improved Devour
 }
 
 STRING 22596
-// Abilities: A1DU (Sacrifice), Hotkey (Hotkey - Normal)
+// Abilities: A1GV (Aquatic Form), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -62742,7 +62718,7 @@ Temple of Demigods Blueprints
 }
 
 STRING 23286
-// Abilities: A0Z4 (Leave Submarine), Hotkey (Hotkey - Normal)
+// Abilities: A0ZA (Leave Submarine), Hotkey (Hotkey - Normal)
 {
 Y
 }
@@ -63054,7 +63030,7 @@ Heavy ranged amphibious unit. Can initially cast Parasite. Can also learn Death 
 }
 
 STRING 23794
-// Abilities: A226 (Summon Eagle), Hotkey (Hotkey - Normal)
+// Upgrades: R004 (Moon Armor,Improved Moon Armor,Advanced Moon Armor), Hotkey (Hotkey)
 {
 O
 }
@@ -63606,7 +63582,7 @@ Devour
 }
 
 STRING 24470
-// Abilities: A1GV (Aquatic Form), Hotkey (Hotkey - Normal)
+// Abilities: A1HL (Reinforce), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -64284,7 +64260,7 @@ STRING 24999
 }
 
 STRING 25001
-// Upgrades: R004 (Moon Armor,Improved Moon Armor,Advanced Moon Armor), Hotkey (Hotkey)
+// Upgrades: R07E (Sundering Blades), Hotkey (Hotkey)
 {
 O
 }
@@ -64293,12 +64269,6 @@ STRING 25010
 // Abilities: A0XL (Evasion), Name (Name)
 {
 Evasion
-}
-
-STRING 25012
-// Upgrades: R07E (Sundering Blades), Hotkey (Hotkey)
-{
-O
 }
 
 STRING 25016
@@ -64872,7 +64842,7 @@ P
 }
 
 STRING 25620
-// Abilities: A1HL (Reinforce), Hotkey (Hotkey - Normal)
+// Abilities: A1LD (Equal Attributes), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -66420,7 +66390,7 @@ Allows learning spells for reskillable heroes and Equipment Bags. Contains all a
 }
 
 STRING 27706
-// Abilities: A1LD (Equal Attributes), Hotkey (Hotkey - Normal)
+// Abilities: A1VZ (Fel), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -66456,7 +66426,7 @@ V
 }
 
 STRING 27795
-// Abilities: A1VZ (Fel), Hotkey (Hotkey - Normal)
+// Abilities: A11K (Fel), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -66732,7 +66702,7 @@ Plans to build an Alchemist Lab for Monte Glazlowe and the Goblins.
 }
 
 STRING 27951
-// Abilities: A11K (Fel), Hotkey (Hotkey - Normal)
+// Abilities: A17Q (Firebolt), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -66750,7 +66720,7 @@ NewBonus - Mana
 }
 
 STRING 27954
-// Abilities: A17Q (Firebolt), Hotkey (Hotkey - Normal)
+// Abilities: A0XM (Slot 8), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -67878,7 +67848,7 @@ E
 }
 
 STRING 29013
-// Abilities: A0XM (Slot 8), Hotkey (Hotkey - Normal)
+// Abilities: A0A7 (Random Spell), Hotkey (Hotkey - Normal)
 {
 F
 }
@@ -68172,25 +68142,25 @@ STRING 29126
 }
 
 STRING 29128
-// Abilities: A0ZA (Leave Submarine), Hotkey (Hotkey - Normal)
-{
-Y
-}
-
-STRING 29129
 // Abilities: A0ZC (Leave Submarine), Hotkey (Hotkey - Normal)
 {
 Y
 }
 
+STRING 29129
+// Abilities: A161 (Leave Ship), Hotkey (Hotkey - Normal)
+{
+Y
+}
+
 STRING 29130
-// Abilities: A161 (Leave Ship), Unhotkey (Hotkey - Turn Off)
+// Abilities: A1GX (Flight Form), Hotkey (Hotkey - Normal)
 {
 X
 }
 
 STRING 29131
-// Abilities: A1GX (Flight Form), Hotkey (Hotkey - Normal)
+// Abilities: A1IA (Reduce), Hotkey (Hotkey - Normal)
 {
 X
 }
@@ -68340,7 +68310,7 @@ The submarine emerges from the water. Makes it visible but increases the life an
 }
 
 STRING 29198
-// Abilities: A161 (Leave Ship), Hotkey (Hotkey - Normal)
+// Abilities: A1H3 (Crow Form), Hotkey (Hotkey - Normal)
 {
 Y
 }
@@ -68418,7 +68388,7 @@ The submarine emerges from the water. Makes it visible but increases the life an
 }
 
 STRING 29215
-// Abilities: A1H3 (Crow Form), Hotkey (Hotkey - Normal)
+// Abilities: A1LB (Attribute Points), Hotkey (Hotkey - Normal)
 {
 Y
 }
@@ -68460,25 +68430,25 @@ The submarine emerges from the water. Makes it visible but increases the life an
 }
 
 STRING 29222
-// Abilities: A1LB (Attribute Points), Hotkey (Hotkey - Normal)
+// Abilities: A0VZ (Back), Hotkey (Hotkey - Normal)
 {
 Y
 }
 
 STRING 29224
-// Abilities: A1IA (Reduce), Hotkey (Hotkey - Normal)
-{
-X
-}
-
-STRING 29225
 // Abilities: A0WX (Previous Page), Hotkey (Hotkey - Normal)
 {
 X
 }
 
-STRING 29226
+STRING 29225
 // Abilities: A0YA (Slot 10), Hotkey (Hotkey - Normal)
+{
+X
+}
+
+STRING 29226
+// Upgrades: R03V (Flying Machine Bombs), Hotkey (Hotkey)
 {
 X
 }
@@ -68520,13 +68490,13 @@ Build Goblin Sheep Processor
 }
 
 STRING 29358
-// Abilities: A0VZ (Back), Hotkey (Hotkey - Normal)
+// Abilities: A0WU (Next Page), Hotkey (Hotkey - Normal)
 {
 Y
 }
 
 STRING 29359
-// Upgrades: R03V (Flying Machine Bombs), Hotkey (Hotkey)
+// Upgrades: R04R (Hippogryph Taming), Hotkey (Hotkey)
 {
 X
 }
@@ -68946,7 +68916,7 @@ N
 }
 
 STRING 30466
-// Abilities: A0A7 (Random Spell), Hotkey (Hotkey - Normal)
+// Upgrades: R00M (Stone Form), Hotkey (Hotkey)
 {
 F
 }
@@ -69180,7 +69150,7 @@ Creates a Dragon's Reach at a target location.
 }
 
 STRING 30838
-// Abilities: A0WU (Next Page), Hotkey (Hotkey - Normal)
+// Abilities: A0Y9 (Slot 9), Hotkey (Hotkey - Normal)
 {
 Y
 }
@@ -70122,7 +70092,7 @@ STRING 31128
 }
 
 STRING 31147
-// Upgrades: R04R (Hippogryph Taming), Hotkey (Hotkey)
+// Upgrades: R026 (Animal War Training), Hotkey (Hotkey)
 {
 X
 }
@@ -70278,7 +70248,7 @@ Gives the units in the area to another player who can be specified with the chat
 }
 
 STRING 31245
-// Upgrades: R00M (Stone Form), Hotkey (Hotkey)
+// Upgrades: R00P (Disease Cloud), Hotkey (Hotkey)
 {
 F
 }
@@ -70668,7 +70638,7 @@ STRING 31560
 }
 
 STRING 31561
-// Upgrades: R026 (Animal War Training), Hotkey (Hotkey)
+// Upgrades: R07T (Flying Machine Bombs), Hotkey (Hotkey)
 {
 X
 }
@@ -70866,7 +70836,7 @@ Flame Storm (Effect)
 }
 
 STRING 31747
-// Upgrades: R00P (Disease Cloud), Hotkey (Hotkey)
+// Upgrades: R017 (Stone Form), Hotkey (Hotkey)
 {
 F
 }
@@ -70878,7 +70848,7 @@ STRING 31748
 }
 
 STRING 31749
-// Upgrades: R017 (Stone Form), Hotkey (Hotkey)
+// Upgrades: R03L (Stone Form), Hotkey (Hotkey)
 {
 F
 }
@@ -71862,7 +71832,7 @@ P
 }
 
 STRING 32583
-// Upgrades: R03L (Stone Form), Hotkey (Hotkey)
+// Upgrades: R05Z (Flare), Hotkey (Hotkey)
 {
 F
 }
@@ -73572,7 +73542,7 @@ Research Fel
 }
 
 STRING 33706
-// Upgrades: R05Z (Flare), Hotkey (Hotkey)
+// Upgrades: R06X (Stone Form), Hotkey (Hotkey)
 {
 F
 }
@@ -74010,15 +73980,9 @@ Enters the ship which transforms the hero into a ship which can move on water.
 }
 
 STRING 33893
-// Abilities: A0Y9 (Slot 9), Hotkey (Hotkey - Normal)
+// Abilities: A0CQ (Next Spell Variation), Hotkey (Hotkey - Normal)
 {
 Y
-}
-
-STRING 33894
-// Upgrades: R07T (Flying Machine Bombs), Hotkey (Hotkey)
-{
-X
 }
 
 STRING 33896
@@ -79566,7 +79530,7 @@ The Metropolis digs into the ground, becomes invisible, and gains a regeneration
 }
 
 STRING 36035
-// Upgrades: R06X (Stone Form), Hotkey (Hotkey)
+// Upgrades: R0CG (Improved Lumber Harvesting,Advanced Lumber Harvesting), Hotkey (Hotkey)
 {
 F
 }
@@ -81363,12 +81327,6 @@ STRING 36418
 // Units: h0P7 (Lamp), Name (Name)
 {
 Lamp
-}
-
-STRING 36447
-// Abilities: A0CQ (Next Spell Variation), Hotkey (Hotkey - Normal)
-{
-Y
 }
 
 STRING 36451
@@ -83682,7 +83640,7 @@ Places a Web which explodes when enemy ground units get nearby and causes damage
 }
 
 STRING 37576
-// Abilities: A0A0 (All Items), Hotkey (Hotkey - Normal)
+// Abilities: A0D8 (Convert into Non-Undead), Hotkey (Hotkey - Normal)
 {
 U
 }
@@ -84750,7 +84708,7 @@ L
 }
 
 STRING 37851
-// Upgrades: R0CG (Improved Lumber Harvesting,Advanced Lumber Harvesting), Hotkey (Hotkey)
+// Upgrades: R0CM (Stone Form), Hotkey (Hotkey)
 {
 F
 }
@@ -85062,7 +85020,7 @@ STRING 37924
 }
 
 STRING 37925
-// Abilities: A0D8 (Convert into Non-Undead), Hotkey (Hotkey - Normal)
+// Abilities: A0Y2 (Full Regeneration), Hotkey (Hotkey - Normal)
 {
 U
 }
@@ -85560,7 +85518,7 @@ Sacrifices Troll units converting them into random creeps with their base level.
 }
 
 STRING 38123
-// Upgrades: R0CM (Stone Form), Hotkey (Hotkey)
+// Upgrades: R0EJ (Ensnare), Hotkey (Hotkey)
 {
 F
 }
@@ -85602,13 +85560,13 @@ Supporting spellcaster. Can initially cast Dispel Magic, and can also learn Invi
 }
 
 STRING 38130
-// Abilities: A0Y2 (Full Regeneration), Hotkey (Hotkey - Normal)
+// Abilities: A16G (Unstable Concoction), Unhotkey (Hotkey - Turn Off)
 {
 U
 }
 
 STRING 38131
-// Abilities: A16G (Unstable Concoction), Unhotkey (Hotkey - Turn Off)
+// Abilities: A16G (Unstable Concoction), Hotkey (Hotkey - Normal)
 {
 U
 }
@@ -86550,7 +86508,7 @@ K
 }
 
 STRING 38759
-// Abilities: A16G (Unstable Concoction), Hotkey (Hotkey - Normal)
+// Abilities: A1N8 (Ambush), Hotkey (Hotkey - Normal)
 {
 U
 }
@@ -89207,54 +89165,6 @@ STRING 40184
 Build Northern Vendor Shop
 }
 
-STRING 40185
-// Items: I05N (Deposit 10 000 Gold), Name (Name)
-{
-Deposit 10 000 Gold
-}
-
-STRING 40186
-// Items: I05N (Deposit 10 000 Gold), Tip (Tooltip - Basic)
-{
-Deposit 10 000 Gold
-}
-
-STRING 40187
-// Items: I04O (Deposit 1000 Gold), Ubertip (Tooltip - Extended)
-{
-Deposits gold to get it back with interest charges.
-}
-
-STRING 40188
-// Items: I04O (Deposit 1000 Gold), Description (Description)
-{
-Deposits gold to get it back with interest charges.
-}
-
-STRING 40189
-// Items: I05M (Deposit 10 000 Lumber), Name (Name)
-{
-Deposit 10 000 Lumber
-}
-
-STRING 40190
-// Items: I05M (Deposit 10 000 Lumber), Tip (Tooltip - Basic)
-{
-Deposit 10 000 Lumber
-}
-
-STRING 40191
-// Items: I04P (Deposit 1000 Lumber), Ubertip (Tooltip - Extended)
-{
-Deposits lumber to get it back with interest charges.
-}
-
-STRING 40192
-// Items: I04P (Deposit 1000 Lumber), Description (Description)
-{
-Deposits lumber to get it back with interest charges.
-}
-
 STRING 40196
 // Units: o05U (Northern Vendor Shop), EditorSuffix (Name - Editor Suffix)
 {
@@ -89436,7 +89346,7 @@ STRING 40414
 }
 
 STRING 40416
-// Upgrades: R0EJ (Ensnare), Hotkey (Hotkey)
+// Upgrades: R07A (Upgrade Moon Glaive), Hotkey (Hotkey)
 {
 F
 }
@@ -89613,54 +89523,6 @@ STRING 40456
 // Units: n0FL (Polar Bear), Tip (Tooltip - Basic)
 {
 Train Polar Bear
-}
-
-STRING 40457
-// Items: I05O (Deposit 5000 Gold), Name (Name)
-{
-Deposit 5000 Gold
-}
-
-STRING 40458
-// Items: I05O (Deposit 5000 Gold), Tip (Tooltip - Basic)
-{
-Deposit 5000 Gold
-}
-
-STRING 40459
-// Items: I05N (Deposit 10 000 Gold), Ubertip (Tooltip - Extended)
-{
-Deposits gold to get it back with interest charges.
-}
-
-STRING 40460
-// Items: I05N (Deposit 10 000 Gold), Description (Description)
-{
-Deposits gold to get it back with interest charges.
-}
-
-STRING 40461
-// Items: I05P (Deposit 5000 Lumber), Name (Name)
-{
-Deposit 5000 Lumber
-}
-
-STRING 40462
-// Items: I05P (Deposit 5000 Lumber), Tip (Tooltip - Basic)
-{
-Deposit 5000 Lumber
-}
-
-STRING 40463
-// Items: I05M (Deposit 10 000 Lumber), Ubertip (Tooltip - Extended)
-{
-Deposits lumber to get it back with interest charges.
-}
-
-STRING 40464
-// Items: I05M (Deposit 10 000 Lumber), Description (Description)
-{
-Deposits lumber to get it back with interest charges.
 }
 
 STRING 40466
@@ -91008,7 +90870,7 @@ D
 }
 
 STRING 41033
-// Upgrades: R07A (Upgrade Moon Glaive), Hotkey (Hotkey)
+// Upgrades: R03B (Cloud), Hotkey (Hotkey)
 {
 F
 }
@@ -91215,12 +91077,6 @@ STRING 41075
 // Upgrades: R0CC (Backpack), EditorSuffix (Editor Suffix)
 {
 (Tuskarr)
-}
-
-STRING 41077
-// Upgrades: R03B (Cloud), Hotkey (Hotkey)
-{
-F
 }
 
 STRING 41078
@@ -96876,7 +96732,7 @@ Train Timber Wolf
 }
 
 STRING 43257
-// Abilities: A1N8 (Ambush), Hotkey (Hotkey - Normal)
+// Abilities: A1WT (Unload Fel Boars), Hotkey (Hotkey - Normal)
 {
 U
 }
@@ -99564,7 +99420,7 @@ High King of the Alliance
 }
 
 STRING 45308
-// Abilities: A1WT (Unload Fel Boars), Hotkey (Hotkey - Normal)
+// Abilities: A1QF (Unhide from Trees), Hotkey (Hotkey - Normal)
 {
 U
 }
@@ -101910,7 +101766,7 @@ Change Direction
 }
 
 STRING 46626
-// Abilities: A1QF (Unhide from Trees), Hotkey (Hotkey - Normal)
+// Abilities: A1YT (Examine Unit), Hotkey (Hotkey - Normal)
 {
 U
 }
@@ -105540,12 +105396,6 @@ Developer
 }
 
 STRING 49740
-// Abilities: A1YT (Examine Unit), Hotkey (Hotkey - Normal)
-{
-U
-}
-
-STRING 49799
 // Upgrades: R0EY (Animal War Training), Hotkey (Hotkey)
 {
 U
@@ -114004,54 +113854,6 @@ STRING 54916
 (Clan Banner - Dummy)
 }
 
-STRING 54918
-// Items: I04O (Deposit 1000 Gold), Name (Name)
-{
-Deposit 1000 Gold
-}
-
-STRING 54919
-// Items: I04O (Deposit 1000 Gold), Tip (Tooltip - Basic)
-{
-Deposit 1000 Gold
-}
-
-STRING 54920
-// Items: I04P (Deposit 1000 Lumber), Name (Name)
-{
-Deposit 1000 Lumber
-}
-
-STRING 54921
-// Items: I04P (Deposit 1000 Lumber), Tip (Tooltip - Basic)
-{
-Deposit 1000 Lumber
-}
-
-STRING 54922
-// Items: I04Q (Withdraw All Gold), Name (Name)
-{
-Withdraw All Gold
-}
-
-STRING 54923
-// Items: I04Q (Withdraw All Gold), Tip (Tooltip - Basic)
-{
-Withdraw All Gold
-}
-
-STRING 54924
-// Items: I04R (Withdraw All Lumber), Name (Name)
-{
-Withdraw All Lumber
-}
-
-STRING 54925
-// Items: I04R (Withdraw All Lumber), Tip (Tooltip - Basic)
-{
-Withdraw All Lumber
-}
-
 STRING 54926
 // Items: I04W (Unique - Portable Tinker Factory), Ubertip (Tooltip - Extended)
 {
@@ -114737,13 +114539,13 @@ Train Kobold Geomancer
 }
 
 STRING 55351
-// Items: I11B (Outland Black Citadel), Name (Name)
+// Items: I11B (Outland), Name (Name)
 {
 Outland
 }
 
 STRING 55352
-// Items: I11B (Outland Black Citadel), Tip (Tooltip - Basic)
+// Items: I11B (Outland), Tip (Tooltip - Basic)
 {
 Outland
 }
@@ -115019,7 +114821,7 @@ STRING 55417
 }
 
 STRING 55419
-// Items: I11B (Outland Black Citadel), Ubertip (Tooltip - Extended)
+// Items: I11B (Outland), Ubertip (Tooltip - Extended)
 {
 |cff0000ffGeographic Location:|r Another World.
 Homeworld of the Orcs, Draenei, Ogres and Demons.
@@ -115816,30 +115618,6 @@ STRING 55803
 Buy Property Antorus, the Burning Throne
 }
 
-STRING 55805
-// Items: I04N (Wheel of Fortune), Name (Name)
-{
-Wheel of Fortune
-}
-
-STRING 55806
-// Items: I04N (Wheel of Fortune), Tip (Tooltip - Basic)
-{
-Wheel of Fortune
-}
-
-STRING 55807
-// Items: I04N (Wheel of Fortune), Ubertip (Tooltip - Extended)
-{
-Gives the chance to win prices.
-}
-
-STRING 55808
-// Items: I04N (Wheel of Fortune), Description (Description)
-{
-Gives the chance to win prices.
-}
-
 STRING 55809
 // Units: n0LM (Antorus, the Burning Throne), Name (Name)
 {
@@ -115850,18 +115628,6 @@ STRING 55810
 // Units: n0LX (Maraudon), EditorSuffix (Name - Editor Suffix)
 {
 (Property)
-}
-
-STRING 55811
-// Items: I05O (Deposit 5000 Gold), Ubertip (Tooltip - Extended)
-{
-Deposits gold to get it back with interest charges.
-}
-
-STRING 55812
-// Items: I05O (Deposit 5000 Gold), Description (Description)
-{
-Deposits gold to get it back with interest charges.
 }
 
 STRING 55813
@@ -115876,24 +115642,6 @@ STRING 55814
 Hellfire Citadel
 }
 
-STRING 55815
-// Items: I05P (Deposit 5000 Lumber), Ubertip (Tooltip - Extended)
-{
-Deposits lumber to get it back with interest charges.
-}
-
-STRING 55816
-// Items: I05P (Deposit 5000 Lumber), Description (Description)
-{
-Deposits lumber to get it back with interest charges.
-}
-
-STRING 55819
-// Items: I04Q (Withdraw All Gold), Ubertip (Tooltip - Extended)
-{
-Withdraw gold to get it back with interest charges. This resets the timer for interest charges!
-}
-
 STRING 55821
 // Units: n0LN (Fel Orc Child), Tip (Tooltip - Basic)
 {
@@ -115904,12 +115652,6 @@ STRING 55822
 // Units: n01H (Draenei Child), Ubertip (Tooltip - Extended)
 {
 A tiny villager who can cast Disarmament.
-}
-
-STRING 55823
-// Items: I04R (Withdraw All Lumber), Ubertip (Tooltip - Extended)
-{
-Withdraw lumber to get it back with interest charges. This resets the timer for interest charges!
 }
 
 STRING 55825

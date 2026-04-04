@@ -715,6 +715,8 @@ StringList {
     ZONE_NAME                          "|cff00ff00%1%|r",
     ZONE_NAME_2                        "|cff00ff00%1%|r - |cff00ff00%2%|r",
     ZONE_NAME_3                        "|cff00ff00%1%|r - |cff00ff00%2%|r - |cff00ff00%3%|r",
+    ZONE_ENABLE                        "Enabled entering zones messages.",
+    ZONE_DISABLE                       "Disabled entering zones messages.",
     NO_UNIT_SELECTED                   "No unit selected.",
     PLAYER_SELECTION                   "Player Selection",
     AZEROTH                            "Azeroth",

@@ -70,7 +70,7 @@ private function Init takes nothing returns nothing
     call AddChange("Remove chat command \"-bounties\".")
     call AddChange("Remove chat command \"-passive\".")
     call AddChange("Remove chat command \"-maxbosslevels\".")
-    call AddChange("Remove Goblin Deposit.")
+    call AddChange("Remove Goblin Bank.")
     call AddChange("Revise alliances chat commands.")
     call AddChange("Improve English texts including hero tooltips.")
     call AddChange("Improve German translation.")
