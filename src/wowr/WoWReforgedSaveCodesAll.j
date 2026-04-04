@@ -2,7 +2,10 @@ library WoWReforgedSaveCodesAll initializer Init requires FileIO, FileUtils, WoW
 
 globals
     private trigger syncTrigger = CreateTrigger()
-    
+
+    private timer autoSaveTimer = CreateTimer()
+    private boolean array autoSaveEnabled
+
     private boolean array loadedAllOnce
     private player tmpPlayer = null
     private string tmpString = ""
@@ -466,14 +469,42 @@ private function TriggerActionSync takes nothing returns nothing
     set triggerPlayer = null
 endfunction
 
+function EnableAutoSaveForPlayer takes player whichPlayer returns nothing
+    set autoSaveEnabled[GetPlayerId(whichPlayer)] = true
+endfunction
+
+function DisableAutoSaveForPlayer takes player whichPlayer returns nothing
+    set autoSaveEnabled[GetPlayerId(whichPlayer)] = true
+endfunction
+
+private function EnumAutoSave takes nothing returns nothing
+    if (udg_SaveAndLoadEnabled and autoSaveEnabled[GetPlayerId(GetEnumPlayer())] and GetPlayerHero1(GetEnumPlayer()) != null) then
+        set udg_TmpPlayer = GetEnumPlayer()
+        call CreateSaveCodeAllTextFile(GetEnumPlayer())
+        call GetSaveCode(GetEnumPlayer())
+        call GetAllSaveCodeItems(GetEnumPlayer())
+        call GetAllSaveCodeUnits(GetEnumPlayer())
+        call GetAllSaveCodeBuildings(GetEnumPlayer())
+        call GetAllSaveCodeResearches(GetEnumPlayer())
+        call GetSaveCodeResources(GetEnumPlayer())
+        // TODO Some feedback
+    endif
+endfunction
+
+private function TimerFunctionAutoSave takes nothing returns nothing
+    call ForForce(GetAllPlayingUsers(), function EnumAutoSave)
+endfunction
+
 private function Init takes nothing returns nothing
     local integer i = 0
     loop
         exitwhen (i == bj_MAX_PLAYERS)
+        set autoSaveEnabled[i] = true
         call TriggerRegisterPlayerEvent(syncTrigger, Player(i), EVENT_PLAYER_SYNC_DATA)
         set i = i + 1
     endloop
     call TriggerAddAction(syncTrigger, function TriggerActionSync)
+    call TimerStart(autoSaveTimer, 900.0, true, function TimerFunctionAutoSave)
 endfunction
 
 endlibrary

@@ -1,4 +1,4 @@
-library WoWReforgedChatCommands initializer Init requires HostUtils, StringUtils, StringFormat, SafeString, ForceUtils, PlayerColorUtils, WoWReforgedMapData, optional QueueUI, WoWReforgedPlayerInfos, WoWReforgedStats, optional WoWReforgedUiActionsBar, WoWReforgedStats, WoWReforgedAttributes, WoWReforgedAccount, WoWReforgedCheats, WoWReforgedComputerStartLocations
+library WoWReforgedChatCommands initializer Init requires HostUtils, StringUtils, StringFormat, SafeString, ForceUtils, PlayerColorUtils, WoWReforgedMapData, optional QueueUI, WoWReforgedPlayerInfos, WoWReforgedStats, optional WoWReforgedUiActionsBar, WoWReforgedStats, WoWReforgedAttributes, WoWReforgedAccount, WoWReforgedCheats, WoWReforgedComputerStartLocations, WoWReforgedSaveCodesAll
 
 globals
     private ChatCommand array chatCommands
@@ -187,15 +187,22 @@ endfunction
 private function EnumPlayerRegisterChatEvent takes nothing returns nothing
     local integer i = 0
     local integer max = chatCommandsCounter
+    local ChatCommand c = 0
     local integer j = 0
     local integer max2 = 0
     loop
         exitwhen (i == max)
+        set c = chatCommands[i]
         set j = 0
-        set max2 = chatCommands[i].commandsCounter
+        set max2 = c.commandsCounter
         loop
             exitwhen (j == max2)
-            call TriggerRegisterPlayerChatEvent(chatCommands[i].t, GetEnumPlayer(), chatCommands[i].commands[j], chatCommands[i].commandsExactMatch[j])
+            if (c.commandsExactMatch[j]) then
+                call TriggerRegisterPlayerChatEvent(c.t, GetEnumPlayer(), c.commands[j], c.commandsExactMatch[j])
+            else
+                call TriggerRegisterPlayerChatEvent(c.t, GetEnumPlayer(), c.commands[j], true)
+                call TriggerRegisterPlayerChatEvent(c.t, GetEnumPlayer(), c.commands[j] + " ", false)
+            endif
             set j = j + 1
         endloop
         set i = i + 1
@@ -719,6 +726,226 @@ private function Clear takes nothing returns nothing
     endif
 endfunction
 
+private function Save takes nothing returns nothing
+    if (udg_SaveAndLoadEnabled) then
+        if (GetPlayerHero1(GetTriggerPlayer()) != null) then
+            call DisplayTimedTextToPlayer(GetTriggerPlayer(), 0.0, 0.0, 45.00, ColoredSaveCode(GetSaveCode(GetTriggerPlayer())))
+            call GetAllSaveCodeItems(GetTriggerPlayer())
+            call GetAllSaveCodeUnits(GetTriggerPlayer())
+            call GetAllSaveCodeBuildings(GetTriggerPlayer())
+            call GetAllSaveCodeResearches(GetTriggerPlayer())
+            call GetSaveCodeResources(GetTriggerPlayer())
+            call CreateSaveCodeAllTextFile(GetTriggerPlayer())
+            call ShowSaveCodeUI(GetTriggerPlayer())
+        else
+            call SimError(GetTriggerPlayer(), GetLocalizedStringSafe("PICK_YOUR_HERO_FIRST"))
+        endif
+    else
+        call SimError(GetTriggerPlayer(), GetLocalizedStringSafe("LOADING_SAVECODES_DISABLED"))
+    endif
+endfunction
+
+private function SaveClear takes nothing returns nothing
+    if (udg_SaveAndLoadEnabled) then
+        if (GetPlayerHero1(GetTriggerPlayer()) != null) then
+            call GetSaveCode(GetTriggerPlayer())
+            call GetSaveCodeItems(GetTriggerPlayer())
+            call GetSaveCodeUnits(GetTriggerPlayer())
+            call GetSaveCodeBuildings(GetTriggerPlayer())
+            call GetSaveCodeResearches(GetTriggerPlayer())
+            call CreateSaveCodeAllTextFile(GetTriggerPlayer())
+            // TODO Some feedback
+        else
+            call SimError(GetTriggerPlayer(), GetLocalizedStringSafe("PICK_YOUR_HERO_FIRST"))
+        endif
+    else
+        call SimError(GetTriggerPlayer(), GetLocalizedStringSafe("LOADING_SAVECODES_DISABLED"))
+    endif
+endfunction
+
+private function SaveAutoOn takes nothing returns nothing
+    call EnableAutoSaveForPlayer(GetTriggerPlayer())
+endfunction
+
+private function SaveAutoOff takes nothing returns nothing
+    call DisableAutoSaveForPlayer(GetTriggerPlayer())
+endfunction
+
+private function SaveGui takes nothing returns nothing
+    if (udg_SaveAndLoadEnabled) then
+        call ShowSaveCodeUI(GetTriggerPlayer())
+    else
+        call SimError(GetTriggerPlayer(), GetLocalizedString("LOADING_SAVECODES_DISABLED"))
+    endif
+endfunction
+
+private function ASave takes nothing returns nothing
+    if (udg_SaveAndLoadEnabled) then
+        call CreateSaveCodeAllTextFile(GetTriggerPlayer())
+        // TODO Feedback.
+    else
+         call SimError(GetTriggerPlayer(), GetLocalizedString("LOADING_SAVECODES_DISABLED"))
+    endif
+endfunction
+
+private function ALoad takes nothing returns nothing
+    if (udg_SaveAndLoadEnabled) then
+        call GetSaveCodeAllTextFile(GetTriggerPlayer())
+        // TODO Feedback.
+    else
+        call SimError(GetTriggerPlayer(), GetLocalizedString("LOADING_SAVECODES_DISABLED"))
+    endif
+endfunction
+
+private function AReset takes nothing returns nothing
+    if (udg_SaveAndLoadEnabled) then
+        call ResetSaveCodeAllTextFile(GetTriggerPlayer())
+        // TODO Feedback.
+    else
+        call SimError(GetTriggerPlayer(), GetLocalizedString("LOADING_SAVECODES_DISABLED"))
+    endif
+endfunction
+
+private function Load takes nothing returns nothing
+    local string saveCode = StringToken(GetEventPlayerChatString(), 1)
+    if (udg_SaveAndLoadEnabled) then
+        if (GetPlayerHero1(GetTriggerPlayer()) != null) then
+            call DisplayTextToPlayer(GetTriggerPlayer(), 0.0, 0.0, GetLocalizedString("COLON_LOADING_SAVE_CODE"))
+            call DisplayTextToPlayer(GetTriggerPlayer(), 0.0, 0.0, ColoredSaveCode(saveCode))
+            if (ApplySaveCode(GetTriggerPlayer(), saveCode)) then
+                call DisplayTextToPlayer(GetTriggerPlayer(), 0.0, 0.0, GetLocalizedString("SUCCESSFULLY_LOADED_YOUR_SAVE_CODE"))
+                set udg_PlayerSaveCodeLoads[GetConvertedPlayerId(GetTriggerPlayer())] = udg_PlayerSaveCodeLoads[GetConvertedPlayerId(GetTriggerPlayer())] + 1
+                call DisplayTextToForce(GetPlayersAll(), Format(GetLocalizedString("X_HAS_SUCCESSFULLY_LOADED")).s(GetPlayerNameColored(GetTriggerPlayer())).result())
+            else
+                call SimError(GetTriggerPlayer(), Format(GetLocalizedString("INVALID_SAVE_CODE_X")).s(GetSaveCodeErrors(GetTriggerPlayer(), saveCode)).result())
+            endif
+        else
+            call SimError(GetTriggerPlayer(), GetLocalizedString("PICK_YOUR_HERO_FIRST"))
+        endif
+    else
+        call SimError(GetTriggerPlayer(), GetLocalizedString("LOADING_SAVECODES_DISABLED"))
+    endif
+endfunction
+
+private function LoadI takes nothing returns nothing
+    local string saveCode = StringToken(GetEventPlayerChatString(), 1)
+    if (udg_SaveAndLoadEnabled) then
+        if (GetPlayerHero1(GetTriggerPlayer()) != null) then
+            call DisplayTextToPlayer(GetTriggerPlayer(), 0.0, 0.0, GetLocalizedString("COLON_LOADING_SAVE_CODE"))
+            call DisplayTextToPlayer(GetTriggerPlayer(), 0.0, 0.0, ColoredSaveCode(saveCode))
+            if (ApplySaveCodeItems(GetTriggerPlayer(), saveCode)) then
+                call DisplayTextToPlayer(GetTriggerPlayer(), 0.0, 0.0, GetLocalizedString("SUCCESSFULLY_LOADED_YOUR_SAVE_CODE"))
+                set udg_PlayerSaveCodeLoads[GetConvertedPlayerId(GetTriggerPlayer())] = udg_PlayerSaveCodeLoads[GetConvertedPlayerId(GetTriggerPlayer())] + 1
+                call DisplayTextToForce(GetPlayersAll(), Format(GetLocalizedString("X_HAS_SUCCESSFULLY_LOADED")).s(GetPlayerNameColored(GetTriggerPlayer())).result())
+            else
+                call SimError(GetTriggerPlayer(), Format(GetLocalizedString("INVALID_SAVE_CODE_X")).s(GetSaveCodeErrors(GetTriggerPlayer(), saveCode)).result())
+            endif
+        else
+            call SimError(GetTriggerPlayer(), GetLocalizedString("PICK_YOUR_HERO_FIRST"))
+        endif
+    else
+        call SimError(GetTriggerPlayer(), GetLocalizedString("LOADING_SAVECODES_DISABLED"))
+    endif
+endfunction
+
+private function LoadU takes nothing returns nothing
+    local string saveCode = StringToken(GetEventPlayerChatString(), 1)
+    if (udg_SaveAndLoadEnabled) then
+        if (GetPlayerHero1(GetTriggerPlayer()) != null) then
+            call DisplayTextToPlayer(GetTriggerPlayer(), 0.0, 0.0, GetLocalizedString("COLON_LOADING_SAVE_CODE"))
+            call DisplayTextToPlayer(GetTriggerPlayer(), 0.0, 0.0, ColoredSaveCode(saveCode))
+            if (ApplySaveCodeUnits(GetTriggerPlayer(), saveCode)) then
+                call DisplayTextToPlayer(GetTriggerPlayer(), 0.0, 0.0, GetLocalizedString("SUCCESSFULLY_LOADED_YOUR_SAVE_CODE"))
+                set udg_PlayerSaveCodeLoads[GetConvertedPlayerId(GetTriggerPlayer())] = udg_PlayerSaveCodeLoads[GetConvertedPlayerId(GetTriggerPlayer())] + 1
+                call DisplayTextToForce(GetPlayersAll(), Format(GetLocalizedString("X_HAS_SUCCESSFULLY_LOADED")).s(GetPlayerNameColored(GetTriggerPlayer())).result())
+            else
+                call SimError(GetTriggerPlayer(), Format(GetLocalizedString("INVALID_SAVE_CODE_X")).s(GetSaveCodeErrors(GetTriggerPlayer(), saveCode)).result())
+            endif
+        else
+            call SimError(GetTriggerPlayer(), GetLocalizedString("PICK_YOUR_HERO_FIRST"))
+        endif
+    else
+        call SimError(GetTriggerPlayer(), GetLocalizedString("LOADING_SAVECODES_DISABLED"))
+    endif
+endfunction
+
+private function LoadB takes nothing returns nothing
+    local string saveCode = StringToken(GetEventPlayerChatString(), 1)
+    if (udg_SaveAndLoadEnabled) then
+        if (GetPlayerHero1(GetTriggerPlayer()) != null) then
+            call DisplayTextToPlayer(GetTriggerPlayer(), 0.0, 0.0, GetLocalizedString("COLON_LOADING_SAVE_CODE"))
+            call DisplayTextToPlayer(GetTriggerPlayer(), 0.0, 0.0, ColoredSaveCode(saveCode))
+            if (ApplySaveCodeBuildings(GetTriggerPlayer(), saveCode)) then
+                call DisplayTextToPlayer(GetTriggerPlayer(), 0.0, 0.0, GetLocalizedString("SUCCESSFULLY_LOADED_YOUR_SAVE_CODE"))
+                set udg_PlayerSaveCodeLoads[GetConvertedPlayerId(GetTriggerPlayer())] = udg_PlayerSaveCodeLoads[GetConvertedPlayerId(GetTriggerPlayer())] + 1
+                call DisplayTextToForce(GetPlayersAll(), Format(GetLocalizedString("X_HAS_SUCCESSFULLY_LOADED")).s(GetPlayerNameColored(GetTriggerPlayer())).result())
+            else
+                call SimError(GetTriggerPlayer(), Format(GetLocalizedString("INVALID_SAVE_CODE_X")).s(GetSaveCodeErrors(GetTriggerPlayer(), saveCode)).result())
+            endif
+        else
+            call SimError(GetTriggerPlayer(), GetLocalizedString("PICK_YOUR_HERO_FIRST"))
+        endif
+    else
+        call SimError(GetTriggerPlayer(), GetLocalizedString("LOADING_SAVECODES_DISABLED"))
+    endif
+endfunction
+
+private function LoadR takes nothing returns nothing
+    local string saveCode = StringToken(GetEventPlayerChatString(), 1)
+    if (udg_SaveAndLoadEnabled) then
+        if (GetPlayerHero1(GetTriggerPlayer()) != null) then
+            call DisplayTextToPlayer(GetTriggerPlayer(), 0.0, 0.0, GetLocalizedString("COLON_LOADING_SAVE_CODE"))
+            call DisplayTextToPlayer(GetTriggerPlayer(), 0.0, 0.0, ColoredSaveCode(saveCode))
+            if (ApplySaveCodeResearches(GetTriggerPlayer(), saveCode)) then
+                call DisplayTextToPlayer(GetTriggerPlayer(), 0.0, 0.0, GetLocalizedString("SUCCESSFULLY_LOADED_YOUR_SAVE_CODE"))
+                set udg_PlayerSaveCodeLoads[GetConvertedPlayerId(GetTriggerPlayer())] = udg_PlayerSaveCodeLoads[GetConvertedPlayerId(GetTriggerPlayer())] + 1
+                call DisplayTextToForce(GetPlayersAll(), Format(GetLocalizedString("X_HAS_SUCCESSFULLY_LOADED")).s(GetPlayerNameColored(GetTriggerPlayer())).result())
+            else
+                call SimError(GetTriggerPlayer(), Format(GetLocalizedString("INVALID_SAVE_CODE_X")).s(GetSaveCodeErrors(GetTriggerPlayer(), saveCode)).result())
+            endif
+        else
+            call SimError(GetTriggerPlayer(), GetLocalizedString("PICK_YOUR_HERO_FIRST"))
+        endif
+    else
+        call SimError(GetTriggerPlayer(), GetLocalizedString("LOADING_SAVECODES_DISABLED"))
+    endif
+endfunction
+
+private function LoadRes takes nothing returns nothing
+    local string saveCode = StringToken(GetEventPlayerChatString(), 1)
+    if (udg_SaveAndLoadEnabled) then
+        if (GetPlayerHero1(GetTriggerPlayer()) != null) then
+            call DisplayTextToPlayer(GetTriggerPlayer(), 0.0, 0.0, GetLocalizedString("COLON_LOADING_SAVE_CODE"))
+            call DisplayTextToPlayer(GetTriggerPlayer(), 0.0, 0.0, ColoredSaveCode(saveCode))
+            if (ApplySaveCodeResources(GetTriggerPlayer(), saveCode)) then
+                call DisplayTextToPlayer(GetTriggerPlayer(), 0.0, 0.0, GetLocalizedString("SUCCESSFULLY_LOADED_YOUR_SAVE_CODE"))
+                set udg_PlayerSaveCodeLoads[GetConvertedPlayerId(GetTriggerPlayer())] = udg_PlayerSaveCodeLoads[GetConvertedPlayerId(GetTriggerPlayer())] + 1
+                call DisplayTextToForce(GetPlayersAll(), Format(GetLocalizedString("X_HAS_SUCCESSFULLY_LOADED")).s(GetPlayerNameColored(GetTriggerPlayer())).result())
+            else
+                call SimError(GetTriggerPlayer(), Format(GetLocalizedString("INVALID_SAVE_CODE_X")).s(GetSaveCodeErrors(GetTriggerPlayer(), saveCode)).result())
+            endif
+        else
+            call SimError(GetTriggerPlayer(), GetLocalizedString("PICK_YOUR_HERO_FIRST"))
+        endif
+    else
+        call SimError(GetTriggerPlayer(), GetLocalizedString("LOADING_SAVECODES_DISABLED"))
+    endif
+endfunction
+
+private function SaveCheck takes nothing returns nothing
+    local string saveCode = StringToken(GetEventPlayerChatString(), 1)
+    call DisplayTextToPlayer(GetTriggerPlayer(), 0.0, 0.0, "Checking savecode: " + ColoredSaveCode(saveCode))
+    call DisplayTextToPlayer(GetTriggerPlayer(), 0.0, 0.0, "Check: " + GetSaveCodeInfos(GetTriggerPlayer(), saveCode))
+endfunction
+
+private function Generated takes nothing returns nothing
+    call DisplayGeneratedSaveCodes(GetTriggerPlayer())
+endfunction
+
+private function ClearGenerated takes nothing returns nothing
+    call ClearGeneratedSaveCodesVIP(GetTriggerPlayer())
+endfunction
+
 private function Init takes nothing returns nothing
     call Add("-help", true, function Help)
     call AddAlias("-h", true)
@@ -747,8 +974,7 @@ private function Init takes nothing returns nothing
     call Add("-time", true, function Time)
 
     call Add("-info", false, function Info)
-    call AddAlias("-i", true)
-    call AddAlias("-i ", false)
+    call AddAlias("-i", false)
     call Add("-host", true, function Host)
 
     call Add("-get", true, function Get)
@@ -827,6 +1053,26 @@ private function Init takes nothing returns nothing
     call Add("-suicide", true, function Suicide)
 
     call Add("-clear", true, function Clear)
+
+    call Add("-save", true, function Save)
+    call Add("-savec", true, function SaveClear)
+    call AddAlias("-s", true)
+    call Add("-saveautoon", true, function SaveAutoOn)
+    call Add("-saveautoff", true, function SaveAutoOff)
+    call Add("-savegui", true, function SaveGui)
+    call Add("-asave", true, function ASave)
+    call Add("-aload", true, function ALoad)
+    call Add("-areset", true, function AReset)
+    call Add("-load", false, function Load)
+    call AddAlias("-l", false)
+    call Add("-loadi", false, function LoadI)
+    call Add("-loadu", false, function LoadU)
+    call Add("-loadb", false, function LoadB)
+    call Add("-loadr", false, function LoadR)
+    call Add("-loadres", false, function LoadRes)
+    call Add("-savecheck", true, function SaveCheck)
+    call Add("-generated", true, function Generated)
+    call Add("-cleargenerated", true, function ClearGenerated)
 
     // after all chat commands
     call ForForce(GetAllPlayingUsers(), function EnumPlayerRegisterChatEvent)

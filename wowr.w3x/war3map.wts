@@ -47112,27 +47112,6 @@ STRING 11641
 Queen of Suffering
 }
 
-STRING 11642
-// Items: I0N4 (Outland Netherstorm), Name (Name)
-{
-Outland Netherstorm
-}
-
-STRING 11643
-// Items: I0N4 (Outland Netherstorm), Tip (Tooltip - Basic)
-{
-Outland Netherstorm
-}
-
-STRING 11644
-// Items: I0N4 (Outland Netherstorm), Ubertip (Tooltip - Extended)
-{
-|cff0000ffGeographic Location:|r Another World.
-Homeworld of the Orcs, Draenei and Demons. Harsh world with very strong creeps!
-
-|cff00ff00Recommended Race:|r Ogre.
-}
-
 STRING 11645
 // Abilities: A0AB (Dig Up Artifacts), Name (Name)
 {
@@ -114757,46 +114736,22 @@ STRING 55344
 Train Kobold Geomancer
 }
 
-STRING 55346
-// Items: I067 (Outland Draenei Camp), Name (Name)
-{
-Outland Draenei Camp
-}
-
-STRING 55347
-// Items: I067 (Outland Draenei Camp), Tip (Tooltip - Basic)
-{
-Outland Draenei Camp
-}
-
 STRING 55351
 // Items: I11B (Outland Black Citadel), Name (Name)
 {
-Outland Black Citadel
+Outland
 }
 
 STRING 55352
 // Items: I11B (Outland Black Citadel), Tip (Tooltip - Basic)
 {
-Outland Black Citadel
+Outland
 }
 
 STRING 55353
 // Units: n0AI (Naga Child), Name (Name)
 {
 Naga Child
-}
-
-STRING 55354
-// Items: I11C (Outland Illidan's Camp), Name (Name)
-{
-Outland Illidan's Camp
-}
-
-STRING 55355
-// Items: I11C (Outland Illidan's Camp), Tip (Tooltip - Basic)
-{
-Outland Illidan's Camp
 }
 
 STRING 55356
@@ -115063,31 +115018,13 @@ STRING 55417
 - Sentry Ward,- Sentry Ward|n- Stasis Trap,- Sentry Ward|n- Stasis Trap|n- Healing Ward
 }
 
-STRING 55418
-// Items: I067 (Outland Draenei Camp), Ubertip (Tooltip - Extended)
-{
-|cff0000ffGeographic Location:|r Another World.
-Homeworld of the Orcs, Draenei and Demons. Harsh world with very strong creeps!
-
-|cff00ff00Recommended Race:|r Draenei.
-}
-
 STRING 55419
 // Items: I11B (Outland Black Citadel), Ubertip (Tooltip - Extended)
 {
 |cff0000ffGeographic Location:|r Another World.
-Homeworld of the Orcs, Draenei and Demons. Harsh world with very strong creeps!
+Homeworld of the Orcs, Draenei, Ogres and Demons.
 
-|cff00ff00Recommended Race:|r Demon, Fel Orc.
-}
-
-STRING 55420
-// Items: I11C (Outland Illidan's Camp), Ubertip (Tooltip - Extended)
-{
-|cff0000ffGeographic Location:|r Another World.
-Homeworld of the Orcs, Draenei and Demons. Harsh world with very strong creeps!
-
-|cff00ff00Recommended Race:|r Blood Elf, Naga.
+|cff00ff00Recommended Races:|r Demon, Fel Orc, Draenei, Lost Ones and Ogres.
 }
 
 STRING 55422

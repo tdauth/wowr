@@ -1,4 +1,10 @@
-library WoWReforgedItemCheck requires ItemUtils, WoWReforgedProfessions, WoWReforgedRaces, WoWReforgedProperties, WoWReforgedTomes
+library WoWReforgedItemCheck initializer Init requires ItemUtils, WoWReforgedProfessions, WoWReforgedRaces, WoWReforgedProperties, WoWReforgedTomes
+
+globals
+    private trigger pickupItemTrigger = CreateTrigger()
+    private trigger sellItemTrigger = CreateTrigger()
+    private trigger sellUnitTrigger = CreateTrigger()
+endglobals
 
 function PlayerIsAllowedItemRace takes player whichPlayer, integer itemTypeId returns boolean
     local integer itemRace = GetItemRace(itemTypeId)
@@ -93,20 +99,91 @@ function GetItemPickupErrorReason takes item whichItem, unit hero returns string
     return result
 endfunction
 
-function ShowItemPickupError takes unit hero, item whichItem returns nothing
+private function ShowItemPickupError takes unit hero, item whichItem returns nothing
     call SimError(GetOwningPlayer(hero), Format(GetLocalizedString("PICKUP_ERROR")).s(GetItemName(whichItem)).s(GetItemPickupErrorReason(whichItem, hero)).result())
 endfunction
 
-function SimErrorRefundProfessionItem takes unit hero, item whichItem returns nothing
+private function SimErrorRefundProfessionItem takes unit hero, item whichItem returns nothing
     call SimError(GetOwningPlayer(hero), Format(GetLocalizedString("BELONGS_TO_PROFESSION")).s(GetItemName(whichItem)).s(GetProfessionName(GetBookItemProfession(GetItemTypeId(whichItem)))).result())
 endfunction
 
-function SimErrorRefundRaceItem takes unit hero, item whichItem returns nothing
+private function SimErrorRefundRaceItem takes unit hero, item whichItem returns nothing
     call SimError(GetOwningPlayer(hero), Format(GetLocalizedString("BELONGS_TO_RACE")).s(GetItemName(whichItem)).s(GetRaceName(GetObjectRace(GetItemTypeId(whichItem)))).result())
 endfunction
 
-function SimErrorRefundRaceUnit takes unit hero, unit whichUnit returns nothing
+private function SimErrorRefundRaceUnit takes unit hero, unit whichUnit returns nothing
     call SimError(GetOwningPlayer(hero), Format(GetLocalizedString("BELONGS_TO_RACE")).s(GetUnitName(whichUnit)).s(GetRaceName(GetObjectRace(GetUnitTypeId(whichUnit)))).result())
+endfunction
+
+private function TriggerConditionPickupItem takes nothing returns boolean
+    local item whichItem = GetManipulatedItem()
+    // The item could have already been removed by some other trigger
+    if (GetItemTypeId(whichItem) != 0 and  GetWidgetLife(whichItem) > 0.0 and not CanItemBePickedUp(whichItem, GetTriggerUnit())) then
+        call DisableTrigger(GetTriggeringTrigger())
+        call ShowItemPickupError(GetTriggerUnit(), whichItem)
+        call UnitRemoveItem(GetTriggerUnit(), whichItem)
+        call EnableTrigger(GetTriggeringTrigger())
+    endif
+    set whichItem = null
+    return false
+endfunction
+
+private function TriggerConditionSellItem takes nothing returns boolean
+    local unit buyer = GetBuyingUnit()
+    local integer buyerUnitTypeId = GetUnitTypeId(buyer)
+    local player buyerOwner = GetOwningPlayer(buyer)
+    local unit shop = GetTriggerUnit()
+    local integer shopUnitTypeId = GetUnitTypeId(shop)
+    local item soldItem = GetSoldItem()
+    local integer soldItemTypeId = GetItemTypeId(soldItem)
+    // Properties are allowed to sell race items.
+    if (not udg_UnlockedAll and buyerUnitTypeId != ITEM_VALUES_DUMMY_HERO) then
+        if (PlayerIsAllowedItemProfession(buyerOwner, soldItemTypeId)) then
+            call SimErrorRefundProfessionItem(buyer, soldItem)
+            call RefundItem(soldItem, buyerOwner)
+        elseif (not IsProperty(shopUnitTypeId) and PlayerHasUnlockedRace(buyerOwner, GetObjectRace(soldItemTypeId))) then
+            call SimErrorRefundRaceItem(buyer, soldItem)
+            call RefundItem(soldItem, buyerOwner)
+        endif
+    endif
+    set buyer = null
+    set buyerOwner = null
+    set shop = null
+    set soldItem = null
+    return false
+endfunction
+
+private function TriggerConditionSellUnit takes nothing returns boolean
+    local unit soldUnit = GetSoldUnit()
+    local integer soldUnitTypeId = GetUnitTypeId(soldUnit)
+    local integer shopUnitTypeId = GetUnitTypeId(GetTriggerUnit())
+    // The unit could have already been removed by some other trigger
+    // Never refund/remove sold heroes.
+    if (soldUnitTypeId != 0 and GetWidgetLife(soldUnit) > 0.0 and not IsUnitType(soldUnit, UNIT_TYPE_HERO)) then
+        if (udg_UnlockedAll or PlayerHasUnlockedRace(GetOwningPlayer(soldUnit), GetObjectRace(soldUnitTypeId))) then
+            // Water units (ships) can always be purchased from shipyards.
+            if (not IsWaterRaceUnit(GetRaceObjectType(GetObjectRace(soldUnitTypeId), soldUnitTypeId))) then
+                // Properties are allowed to sell race units.
+                if (not IsProperty(shopUnitTypeId)) then
+                    call SimErrorRefundRaceUnit(GetBuyingUnit(), soldUnit)
+                    call RefundUnit(soldUnit)
+                endif
+            endif
+        endif
+    endif
+    set soldUnit = null
+    return false
+endfunction
+
+private function Init takes nothing returns nothing
+    call TriggerRegisterAnyUnitEventBJ(pickupItemTrigger, EVENT_PLAYER_UNIT_PICKUP_ITEM)
+    call TriggerAddCondition(pickupItemTrigger, Condition(function TriggerConditionPickupItem))
+
+    call TriggerRegisterAnyUnitEventBJ(sellItemTrigger, EVENT_PLAYER_UNIT_SELL_ITEM)
+    call TriggerAddCondition(sellItemTrigger, Condition( function TriggerConditionSellItem))
+
+    call TriggerRegisterAnyUnitEventBJ(sellUnitTrigger, EVENT_PLAYER_UNIT_SELL)
+    call TriggerAddCondition(sellUnitTrigger, Condition( function TriggerConditionSellUnit))
 endfunction
 
 endlibrary

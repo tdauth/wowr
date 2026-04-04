@@ -18,7 +18,7 @@ private function Init takes nothing returns nothing
     call AddStartLocation('I062', gg_rct_Start_Location_Draktharon_Keep, 270.0)
     call AddStartLocation('I11H', gg_rct_Start_Location_Kezan, 270.0)
     call AddStartLocation('I065', gg_rct_Start_Location_Sunken_Ruins, 90.0)
-    call AddStartLocation('I067', gg_rct_Start_Location_Outland, 90.0)
+    call AddStartLocation('I11B', gg_rct_Start_Location_Outland, 90.0)
     call AddStartLocation('I0A4', gg_rct_Start_Location_Theramore, 270.0)
 endfunction
 

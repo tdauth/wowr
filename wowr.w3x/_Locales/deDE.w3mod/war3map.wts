@@ -114797,13 +114797,13 @@ Fremdland Draenei-Lager
 STRING 55351
 // Items: I11B (Outland Black Citadel), Name (Name)
 {
-Fremdland Schwarze Zitadelle
+Fremdland
 }
 
 STRING 55352
 // Items: I11B (Outland Black Citadel), Tip (Tooltip - Basic)
 {
-Fremdland Schwarze Zitadelle
+Fremdland
 }
 
 STRING 55353
@@ -115101,9 +115101,9 @@ STRING 55419
 // Items: I11B (Outland Black Citadel), Ubertip (Tooltip - Extended)
 {
 |cff0000ffGeografischer Standort:|r Andere Welt.
-Homeworld of the Orcs, Draenei and Demons. Harsh world with very strong creeps!
+Heimatwelt der Orcs, Draenei, Oger und Dämonen.
 
-|cff00ff00Empfohlenes Volk:|r Dämonen, Höllenorcs.
+|cff00ff00Empfohlene Völker:|r Dämonen, Höllen-Orcs, Draenei, Verlorene und Oger.
 }
 
 STRING 55420

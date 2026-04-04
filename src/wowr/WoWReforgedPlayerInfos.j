@@ -200,53 +200,53 @@ function GetPlayerSelectionSettings takes player whichPlayer returns string
     local string profession2 = "-"
     local string profession3 = "-"
     local string startLocation = "-"
-    
+
     if (udg_PlayerSelectionGameMode[convertedPlayerId] == 0) then
         set mode = GetLocalizedString("WARLORD")
     endif
-    
+
     if (udg_PlayerSelectionGameMode[convertedPlayerId] == 1) then
         set mode = GetLocalizedString("FREELANCER")
     endif
-    
+
     if (GetPlayerHero1(whichPlayer) != null) then
         set hero1 = GetUnitName(GetPlayerHero1(whichPlayer))
     endif
-    
+
     if (GetPlayerHero2(whichPlayer) != null) then
         set hero2 = GetUnitName(GetPlayerHero2(whichPlayer))
     endif
-    
+
     if (GetPlayerHero3(whichPlayer) != null) then
         set hero3 = GetUnitName(GetPlayerHero3(whichPlayer))
     endif
-    
+
     if (udg_PlayerSelectionRace1[convertedPlayerId] != udg_RaceNone) then
         set race1 = GetRaceName(udg_PlayerSelectionRace1[convertedPlayerId])
     endif
-    
+
     if (udg_PlayerSelectionRace2[convertedPlayerId] != udg_RaceNone) then
         set race2 = GetRaceName(udg_PlayerSelectionRace2[convertedPlayerId])
     endif
-    
+
     if (udg_PlayerSelectionRace3[convertedPlayerId] != udg_RaceNone) then
         set race3 = GetRaceName(udg_PlayerSelectionRace3[convertedPlayerId])
     endif
-    
+
     if (udg_PlayerSelectionProfession1[convertedPlayerId] != udg_ProfessionNone) then
         set profession1 = GetProfessionName(udg_PlayerSelectionProfession1[convertedPlayerId])
     endif
-    
+
     if (udg_PlayerSelectionProfession2[convertedPlayerId] != udg_ProfessionNone) then
         set profession2 = GetProfessionName(udg_PlayerSelectionProfession2[convertedPlayerId])
     endif
-    
+
     if (udg_PlayerSelectionProfession3[convertedPlayerId] != udg_ProfessionNone) then
         set profession3 = GetProfessionName(udg_PlayerSelectionProfession3[convertedPlayerId])
     endif
-    
+
     set startLocation = GetStartLocationName(udg_PlayerSelectionStartLocation[convertedPlayerId])
-    
+
     return Format(GetLocalizedString("PLAYER_SELECTION_SETTINGS")).s(playerSelectionMode).s(mode).s(hero1).s(hero2).s(hero3).s(race1).s(race2).s(race3).s(profession1).s(profession2).s(profession3).s(startLocation).result()
 endfunction
 
