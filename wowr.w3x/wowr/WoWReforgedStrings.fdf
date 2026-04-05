@@ -1164,7 +1164,6 @@ StringList {
     AI_CHANGE_ERROR                    "Unable to change AI to %1% for %2%.",
     ENABLED                            "enabled",
     DISABLED                           "disabled",
-    GOLD_
     // Votes
     IQ_ENABLED                         "Enabled",
     IQ_DISABLED                        "Disabled",
