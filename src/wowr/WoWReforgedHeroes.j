@@ -474,13 +474,13 @@ private function Init takes nothing returns nothing
     
     // Navy
     call AddHero(HUMAN_BATTLESHIP_HERO, CLASS_TINKER, udg_RaceNone, GRYPHON_MOUNT, false, GetLocalizedString("TAVERN_NAVY"), "")
-    call AddHero(CAPTAIN_HERO, CLASS_WARRIOR, udg_RaceNone, GRYPHON_MOUNT, false, GetLocalizedString("NAVY"), "")
-    call AddHero(GNOMISH_SUBMARINE_HERO, CLASS_TINKER, udg_RaceNone, FLYING_MACHINE_MOUNT, false, GetLocalizedString("NAVY"), "")
-    call AddHero(GNOMISH_SUBMARINE_HERO_PILOT, CLASS_TINKER, udg_RaceNone, FLYING_MACHINE_MOUNT, false, GetLocalizedString("NAVY"), "")
-    call AddHero(GOBLIN_SUBMARINE_HERO, CLASS_TINKER, udg_RaceNone, ZEPPELIN_MOUNT, false, GetLocalizedString("NAVY"), "")
-    call AddHero(GOBLIN_SUBMARINE_PILOT_HERO, CLASS_TINKER, udg_RaceNone, ZEPPELIN_MOUNT, false, GetLocalizedString("NAVY"), "")
-    call AddHero(DWARF_SUBMARINE_HERO, CLASS_TINKER, udg_RaceNone, GRYPHON_MOUNT, false, GetLocalizedString("NAVY"), "")
-    call AddHero(DWARF_SUBMARINE_PILOT_HERO, CLASS_TINKER, udg_RaceNone, GRYPHON_MOUNT, false, GetLocalizedString("NAVY"), "")
+    call AddHero(CAPTAIN_HERO, CLASS_WARRIOR, udg_RaceNone, GRYPHON_MOUNT, false, GetLocalizedString("TAVERN_NAVY"), "")
+    call AddHero(GNOMISH_SUBMARINE_HERO, CLASS_TINKER, udg_RaceNone, FLYING_MACHINE_MOUNT, false, GetLocalizedString("TAVERN_NAVY"), "")
+    call AddHero(GNOMISH_SUBMARINE_HERO_PILOT, CLASS_TINKER, udg_RaceNone, FLYING_MACHINE_MOUNT, false, GetLocalizedString("TAVERN_NAVY"), "")
+    call AddHero(GOBLIN_SUBMARINE_HERO, CLASS_TINKER, udg_RaceNone, ZEPPELIN_MOUNT, false, GetLocalizedString("TAVERN_NAVY"), "")
+    call AddHero(GOBLIN_SUBMARINE_PILOT_HERO, CLASS_TINKER, udg_RaceNone, ZEPPELIN_MOUNT, false, GetLocalizedString("TAVERN_NAVY"), "")
+    call AddHero(DWARF_SUBMARINE_HERO, CLASS_TINKER, udg_RaceNone, GRYPHON_MOUNT, false, GetLocalizedString("TAVERN_NAVY"), "")
+    call AddHero(DWARF_SUBMARINE_PILOT_HERO, CLASS_TINKER, udg_RaceNone, GRYPHON_MOUNT, false, GetLocalizedString("TAVERN_NAVY"), "")
     
     // Demigods
     call AddHero(DEMIGOD_LIGHT, CLASS_PALADIN, udg_RaceNone, GREEN_DRAGON_MOUNT, false, GetLocalizedString("DEMIGODS"), "")
