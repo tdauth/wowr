@@ -58,6 +58,7 @@
 //! import "wowr/WoWReforgedHideout.j"
 //! import "wowr/WoWReforgedI18n.j"
 //! import "wowr/WoWReforgedIcons.j"
+//! import "wowr/WoWReforgedIllusions.j"
 //! import "wowr/WoWReforgedInfoQuests.j"
 //! import "wowr/WoWReforgedItemCheck.j"
 //! import "wowr/WoWReforgedItemSets.j"
