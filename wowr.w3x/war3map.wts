@@ -21102,7 +21102,7 @@ STRING 4357
 STRING 4358
 // Units: u006 (Gan'arg Engineer), Ubertip (Tooltip - Extended)
 {
-Basic worker. Can construct structures, harvest gold, lumber and repair structures. |n|n|cffffcc00Attacks land units.|r
+Basic worker. Can construct structures, harvest gold, lumber and repair structures. |n|n|cffffcc00Attacks land units and trees.|r
 }
 
 STRING 4359

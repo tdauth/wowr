@@ -8625,7 +8625,7 @@ Kael'thas Sunstrider's pet phoenix boss hero who can cast Flammenschlag, Feueran
 STRING 1463
 // Units: o0A4 (Arcane Academy), Ubertip (Tooltip - Extended)
 {
-Spellcaster production building. Trains Kobold Erdmagiers and Kobold-Pilzzauberins. |nAlso contains spell upgrades for Kobold Erdmagiers and Kobold-Pilzzauberins.
+Zauberer-Produktionsgebäude. Bildet Kobold-Erdmagier und Kobold-Pilzzauberinnen aus. |nBietet auch die Ausbaustufen für Kobold-Erdmagier und Kobold-Pilzzauberinnen.
 }
 
 STRING 1464
@@ -8637,7 +8637,7 @@ STRING 1464
 STRING 1465
 // Units: u00C (Dungeon of Pain), Ubertip (Tooltip - Extended)
 {
-Spellcaster production building. Trains Eredar-Zauberers and Sukkubus. |nAlso contains upgrades for Eredar-Zauberers and Sukkubus.
+Zauberer-Produktionsgebäude. Bildet Eredar-Zauberer und Sukkuben aus. |nBietet auch die Ausbaustufen für Eredar-Zauberer und Sukkuben.
 }
 
 STRING 1466
@@ -10333,7 +10333,7 @@ Powerful Undead hero. Can learn Schlaf, Vampir-Aura, Kritischer Schlag, Chaosreg
 }
 
 STRING 1754
-// Units: u008 (Altar of Twisting Nether), EditorSuffix (Name - Editor Suffix)
+// Units: u008 (Altar des Wirbelnden Jenseits), EditorSuffix (Name - Editor Suffix)
 {
 (Dämonen)
 }
@@ -12030,13 +12030,13 @@ Dient als Abladepunkt für das geschlagene Holz. |nAlso contains upgrades for im
 STRING 2210
 // Units: o0BD (Elemental Grove), Ubertip (Tooltip - Extended)
 {
-Spellcaster production building. Trains Gnoll-Schatzjägers and Gnoll Mystweavers. |nAlso contains spell upgrades for Gnoll-Schatzjägers and Gnoll Mystweavers.
+Zauberer-Produktionsgebäude. Trains Gnoll-Schatzjägers and Gnoll Mystweavers. |nAlso contains spell upgrades for Gnoll-Schatzjägers and Gnoll Mystweavers.
 }
 
 STRING 2211
 // Units: o0BH (Gnoll Merchant), Ubertip (Tooltip - Extended)
 {
-Creates a shop with purchasable items. The items available depend upon what level of upgrade your Gnoll-Lager has (Gnoll-Lager, Außenposten, or Fort) and which buildings you have.
+Errichtet einen Laden mit käuflichen Gegenständen. Welche Gegenstände verfügbar sind, hängt davon ab, welche Ausbaustufe Ihr Rathaus hat (Gnoll-Lager, Außenposten oder Fort) und welche Gebäude Sie haben.
 }
 
 STRING 2212
@@ -19722,7 +19722,7 @@ Bibliothek errichten
 STRING 3926
 // Units: o03T (Library), Ubertip (Tooltip - Extended)
 {
-Creates a shop with purchasable items. The items available depend upon what level of upgrade your Haupthaus has (Verlies, Dark Verlies, or Great Verlies) and which buildings you have.
+Errichtet einen Laden mit käuflichen Gegenständen. Welche Gegenstände verfügbar sind, hängt davon ab, welche Ausbaustufe Ihr Rathaus hat (Verlies, Dunkles Verlies oder Großes Verlies) und welche Gebäude Sie haben.
 }
 
 STRING 3927
@@ -21102,7 +21102,7 @@ STRING 4357
 STRING 4358
 // Units: u006 (Gan'arg Engineer), Ubertip (Tooltip - Extended)
 {
-Basic worker. Can construct structures, harvest gold, lumber and repair structures. |n|n|cffffcc00Greift Land-Einheiten an.|r
+Einfache Arbeiter-Einheit. Kann Gold und Holz abbauen, Gebäude errichten und 'Reparieren'. |n|n|cffffcc00Greif Land-Einheiten und Bäume an.|r
 }
 
 STRING 4359
@@ -21366,7 +21366,7 @@ Furbolg-Marktplatz errichten
 STRING 4404
 // Units: n01N (Draenei Shop), Ubertip (Tooltip - Extended)
 {
-Creates a shop with purchasable items.
+Errichtet einen Laden mit käuflichen Gegenständen.
 }
 
 STRING 4405
@@ -24606,7 +24606,7 @@ Kohlenpfanne errichten
 STRING 5095
 // Units: o03P (Brazier), Ubertip (Tooltip - Extended)
 {
-Spellcaster production building. Trains Ghosts, Feuergeists, and Heretics. |nAlso contains spell upgrades for Ghosts, Feuergeists, and Heretics.
+Zauberer-Produktionsgebäude. Trains Ghosts, Feuergeists, and Heretics. |nAlso contains spell upgrades for Ghosts, Feuergeists, and Heretics.
 }
 
 STRING 5098
@@ -32588,9 +32588,9 @@ S
 }
 
 STRING 6974
-// Items: I0D9 (Tiny Altar of Twisting Nether), Name (Name)
+// Items: I0D9 (Tiny Altar des Wirbelnden Jenseits), Name (Name)
 {
-Tiny Altar of Twisting Nether
+Tiny Altar des Wirbelnden Jenseits
 }
 
 STRING 6975
@@ -32680,7 +32680,7 @@ Skin von Arthas beritten.|n|n|cffffcc00Beschränkt auf den Benutzer Barade#2569.
 STRING 6992
 // Abilities: A1IY (Hero Attributes), Tip (Tooltip - Normal)
 {
-B
+Helden-Attribute
 }
 
 STRING 6993
@@ -32908,7 +32908,7 @@ STRING 7033
 STRING 7034
 // Units: u00A (Dimensional Gate), Ubertip (Tooltip - Extended)
 {
-Primäres Truppen-Produktionsgebäude. Trains Anführers, Teufels-Pirschers, and Nether Drakes. Also contains upgrades for the unit types.
+Primäres Truppen-Produktionsgebäude. Bildet Anführer, Teufels-Pirscher und Niederdrachen aus. Bietet auch Ausbaustufen für die Einheitentypen.
 }
 
 STRING 7035
@@ -32968,7 +32968,7 @@ X
 STRING 7045
 // Units: u00G (Obelisk), Ubertip (Tooltip - Extended)
 {
-Creates a shop with purchasable items. The items available depend upon what level of upgrade your Dämonentor has (Dämonentor, Großes Dämonentor or Gigantisches Dämonentor) and which buildings you have.
+Errichtet einen Laden mit käuflichen Gegenständen. Welche Gegenstände verfügbar sind, hängt davon ab, welche Ausbaustufe Ihr Dämonentor hat (Dämonentor, Großes Dämonentor or Gigantisches Dämonentor) und welche Gebäude Sie haben.
 }
 
 STRING 7046
@@ -34738,7 +34738,7 @@ Niederdrachen-Reittier
 STRING 7633
 // Units: u00D (Shrine), Ubertip (Tooltip - Extended)
 {
-Trains Höllenbesties. Bietet auch die Ausbaustufen Dauerhafter Feuerbrand, Harthaut and Festhaut upgrades.
+Bildet Höllenbestien aus. Bietet auch die Ausbaustufen Dauerhafter Feuerbrand, Harthaut and Festhaut upgrades.
 }
 
 STRING 7634
@@ -34976,9 +34976,9 @@ Mana wiederherstellen
 }
 
 STRING 7673
-// Items: I0D9 (Tiny Altar of Twisting Nether), Tip (Tooltip - Basic)
+// Items: I0D9 (Tiny Altar des Wirbelnden Jenseits), Tip (Tooltip - Basic)
 {
-Purchase Tiny Altar of Twisting Nether
+Purchase Tiny Altar des Wirbelnden Jenseits
 }
 
 STRING 7674
@@ -46168,13 +46168,13 @@ Primäres Truppen-Produktionsgebäude. Trains Goblin-Flammenwerfers, Goblin-Rand
 STRING 11306
 // Units: o014 (Goblin Arcane Laboratory), Ubertip (Tooltip - Extended)
 {
-Spellcaster production building. Trains Goblin-Magier, Goblin-Zauberin and Goblin-Alchimist. |nAlso contains spell upgrades for the three unit types.
+Zauberer-Produktionsgebäude. Trains Goblin-Magier, Goblin-Zauberin and Goblin-Alchimist. |nAlso contains spell upgrades for the three unit types.
 }
 
 STRING 11307
 // Units: h01S (Freelancer Shop), Ubertip (Tooltip - Extended)
 {
-Creates a shop with purchasable items.
+Errichtet einen Laden mit käuflichen Gegenständen.
 }
 
 STRING 11332
@@ -47494,7 +47494,7 @@ Bildet Greifenreiter, Adler-Ritter und Greifenritter aus.
 STRING 11825
 // Units: o076 (Magi Lodge), Ubertip (Tooltip - Extended)
 {
-Spellcaster production building. Trains Oger-Magier, Ogre Hexenmeisters, and Ogre Necromancers. |nAlso contains spell upgrades for Oger-Magier, Ogre Hexenmeisters, and Ogre Necromancers.
+Zauberer-Produktionsgebäude. Trains Oger-Magier, Ogre Hexenmeisters, and Ogre Necromancers. |nAlso contains spell upgrades for Oger-Magier, Ogre Hexenmeisters, and Ogre Necromancers.
 }
 
 STRING 11826
@@ -48638,9 +48638,9 @@ Purchase Tiny Fortified Infernal Machine
 }
 
 STRING 12201
-// Items: I0D9 (Tiny Altar of Twisting Nether), Description (Description)
+// Items: I0D9 (Tiny Altar des Wirbelnden Jenseits), Description (Description)
 {
-Creates an Altar of Twisting Nether.
+Creates an Altar des Wirbelnden Jenseits.
 }
 
 STRING 12202
@@ -48650,9 +48650,9 @@ STRING 12202
 }
 
 STRING 12204
-// Items: I0D9 (Tiny Altar of Twisting Nether), Ubertip (Tooltip - Extended)
+// Items: I0D9 (Tiny Altar des Wirbelnden Jenseits), Ubertip (Tooltip - Extended)
 {
-Creates an Altar of Twisting Nether at a target location.
+Creates an Altar des Wirbelnden Jenseits at a target location.
 }
 
 STRING 12205
@@ -48764,9 +48764,9 @@ Errichtet am Zielort einen Obelisk.
 }
 
 STRING 12227
-// Abilities: A03Z (Build Tiny Altar of Twisting Nether), Name (Name)
+// Abilities: A03Z (Build Tiny Altar des Wirbelnden Jenseits), Name (Name)
 {
-Build Tiny Altar of Twisting Nether
+Build Tiny Altar des Wirbelnden Jenseits
 }
 
 STRING 12228
@@ -50584,7 +50584,7 @@ STRING 14108
 STRING 14109
 // Units: o01A (Goblin Shop), Ubertip (Tooltip - Extended)
 {
-Creates a shop with purchasable items.
+Errichtet einen Laden mit käuflichen Gegenständen.
 }
 
 STRING 14110
@@ -52630,7 +52630,7 @@ Wächter der alten Götter anheuern
 STRING 15801
 // Units: o08Z (Ancient Library of Forbidden Knowledge), Ubertip (Tooltip - Extended)
 {
-Spellcaster production building. Trains Witches and Kultists. |nAlso contains spell upgrades for Witches and Kultists.
+Zauberer-Produktionsgebäude. Trains Witches and Kultists. |nAlso contains spell upgrades for Witches and Kultists.
 }
 
 STRING 15802
@@ -57257,7 +57257,7 @@ Höllenplünderer beschwören
 }
 
 STRING 19395
-// Abilities: A03Z (Build Tiny Altar of Twisting Nether), EditorSuffix (Editor Suffix)
+// Abilities: A03Z (Build Tiny Altar des Wirbelnden Jenseits), EditorSuffix (Editor Suffix)
 {
 (Dämonen)
 }
@@ -58141,7 +58141,7 @@ Ausbau zum Tempel der Dunkelheit
 STRING 20034
 // Units: u007 (Fortified Infernal Machine), Tip (Tooltip - Basic)
 {
-Summon Befestigte Höllenmaschine
+Befestigte Höllenmaschine beschwören
 }
 
 STRING 20035
@@ -61078,7 +61078,7 @@ Legionstransporter beschwören
 STRING 22354
 // Units: u019 (Legion Transporter), Ubertip (Tooltip - Extended)
 {
-Can cast Dunkle Beschwörung.
+Kann die Fähigkeit 'Dunkle Beschwörung' wirken.
 }
 
 STRING 22355
@@ -76353,7 +76353,7 @@ Gives Stacheleber range units maximum mana, mana regeneration and the Quil Spray
 STRING 35117
 // Units: o0AW (Treasure Hideout), Ubertip (Tooltip - Extended)
 {
-Creates a shop with purchasable items. The items available depend upon what level of upgrade your Manger has (Manger, Shelter, or Anhnen-Bastion) and which buildings you have.
+Errichtet einen Laden mit käuflichen Gegenständen. Welche Gegenstände verfügbar sind, hängt davon ab, welche Ausbaustufe Ihr Zwinger hat (Zwinger, Unterschlupf oder Anhnen-Bastion) und welche Gebäude Sie haben.
 }
 
 STRING 35118
@@ -85735,15 +85735,15 @@ Selbst wählen
 }
 
 STRING 38173
-// Units: u008 (Altar of Twisting Nether), Name (Name)
+// Units: u008 (Altar des Wirbelnden Jenseits), Name (Name)
 {
-Altar of Twisting Nether
+Altar des Wirbelnden Jenseits
 }
 
 STRING 38174
-// Units: u008 (Altar of Twisting Nether), Tip (Tooltip - Basic)
+// Units: u008 (Altar des Wirbelnden Jenseits), Tip (Tooltip - Basic)
 {
-Summon Altar of Twisting Nether
+Altar des Wirbelnden Jenseits beschwören
 }
 
 STRING 38175
@@ -86199,7 +86199,7 @@ STRING 38627
 STRING 38628
 // Units: h0PB (Inn), Ubertip (Tooltip - Extended)
 {
-Creates a shop with purchasable items. The items available depend upon what level of upgrade your Rathaus has (Dragon's Reach, Advanced Dragon's Reach, or Fortified Dragon's Reach) and which buildings you have.
+Errichtet einen Laden mit käuflichen Gegenständen. The items available depend upon what level of upgrade your Rathaus has (Dragon's Reach, Advanced Dragon's Reach, or Fortified Dragon's Reach) and which buildings you have.
 }
 
 STRING 38629
@@ -89601,7 +89601,7 @@ STRING 40491
 STRING 40492
 // Units: h00X (Treasury Of Tides), Ubertip (Tooltip - Extended)
 {
-Creates a shop with purchasable items. The items available depend upon what level of upgrade your Temple of Water has (Temple of Water, Tempel der Gezeiten, or Tempel der Meere) and which buildings you have.
+Errichtet einen Laden mit käuflichen Gegenständen. Welche Gegenstände verfügbar sind, hängt davon ab, welche Ausbaustufe Ihr Tempel des Wassers hat (Tempel des Wassers, Tempel der Gezeiten oder Tempel der Meere) und welche Gebäude Sie haben.
 }
 
 STRING 40493
@@ -90729,7 +90729,7 @@ Liefert Essen, wodurch die maximale Anzahl von Einheiten erhöht wird, die ausge
 STRING 40887
 // Units: o05Q (Hunters Rest), Ubertip (Tooltip - Extended)
 {
-Spellcaster production building. Bildet Schamanen und Heiler aus. |nAlso contains spell upgrades for Schamanen und Heiler.
+Zauberer-Produktionsgebäude. Bildet Schamanen und Heiler aus. |nAlso contains spell upgrades for Schamanen und Heiler.
 }
 
 STRING 40888
@@ -91335,7 +91335,7 @@ Highly mobile rider. Effective against buildings. Can learn the Kriegsdonner abi
 STRING 41186
 // Units: o05U (Northern Vendor Shop), Ubertip (Tooltip - Extended)
 {
-Creates a shop with purchasable items. The items available depend upon what level of upgrade your Haupthaus has (Gefrorene Halle, Gefrorene Hochburg, or Gefrorene Festung) and which buildings you have.
+Errichtet einen Laden mit käuflichen Gegenständen. Welche Gegenstände verfügbar sind, hängt davon ab, welche Ausbaustufe Ihre Gefrorene Halle hat (Gefrorene Halle, Gefrorene Hochburg oder Gefrorene Festung) und welche Gebäude Sie haben.
 }
 
 STRING 41187
@@ -92619,7 +92619,7 @@ Dient als Abladepunkt für das geschlagene Holz. |nAlso contains upgrades for im
 STRING 41503
 // Units: o0AV (House of Ancestry), Ubertip (Tooltip - Extended)
 {
-Spellcaster production building. Trains Keiler-Mystikers, Razormanes Medicine Men, and Necromancers. |nAlso contains spell upgrades for Keiler-Mystikers, Razormanes Medicine Men, and Necromancers.
+Zauberer-Produktionsgebäude. Trains Keiler-Mystikers, Razormanes Medicine Men, and Necromancers. |nAlso contains spell upgrades for Keiler-Mystikers, Razormanes Medicine Men, and Necromancers.
 }
 
 STRING 41504
@@ -93255,7 +93255,7 @@ Kodobestie ausbilden
 STRING 41861
 // Units: h04D (Bazaar), Ubertip (Tooltip - Extended)
 {
-Creates a shop with purchasable items. The items available depend upon what level of upgrade your Rathaus has (High Elf Rathaus, Hochelfenburg, or Hochelfenschloss) and which buildings you have.
+Errichtet einen Laden mit käuflichen Gegenständen. Welche Gegenstände verfügbar sind, hängt davon ab, welche Ausbaustufe Ihre Hochelfen-Rathaus hat (Hochelfen-Rathaus, Hochelfenburg oder Hochelfenschloss) und welche Gebäude Sie haben.
 }
 
 STRING 41862
@@ -93519,7 +93519,7 @@ Verleiht bestimmten Tauren-Land-Einheiten die Fähigkeit, Gegenstände zu tragen
 STRING 41909
 // Units: o03H (Spirit Lodge), Ubertip (Tooltip - Extended)
 {
-Spellcaster production building. Trains Geistläufers and Tauren Druids. |nAlso contains spell upgrades for Geistläufers and Tauren Druids.
+Zauberer-Produktionsgebäude. Trains Geistläufers and Tauren Druids. |nAlso contains spell upgrades for Geistläufers and Tauren Druids.
 }
 
 STRING 41910
@@ -94467,7 +94467,7 @@ Druiden ausbilden
 STRING 42329
 // Units: h0QH (Brewery), Ubertip (Tooltip - Extended)
 {
-Creates a shop with purchasable items. The items available depend upon what level of upgrade your Rathaus has (Pandaren Temple, Hoch entwickelter Pandaren-Tempel, or Großer Pandaren-Tempel) and which buildings you have.
+Errichtet einen Laden mit käuflichen Gegenständen. Welche Gegenstände verfügbar sind, hängt davon ab, welche Ausbaustufe Ihr Pandaren-Tempel hat (Pandaren-Tempel, Hoch entwickelter Pandaren-Tempel oder Großer Pandaren-Tempel) und welche Gebäude Sie haben.
 }
 
 STRING 42330
@@ -98625,7 +98625,7 @@ Trains Ogre Hunters, Grollhufs, Bronze Drakes, and Zeppelins. |nBietet auch die 
 STRING 44008
 // Units: o07A (Draenor Merchant), Ubertip (Tooltip - Extended)
 {
-Creates a shop with purchasable items. The items available depend upon what level of upgrade your Oger-Hügel has (Oger-Hügel, Hoch entwickelter Oger-Hügel, or Befestigter Oger-Hügel) and which buildings you have.
+Errichtet einen Laden mit käuflichen Gegenständen. Welche Gegenstände verfügbar sind, hängt davon ab, welche Ausbaustufe Ihr Oger-Hügel hat (Oger-Hügel, Hoch entwickelter Oger-Hügel oder Befestigter Oger-Hügel) und welche Gebäude Sie haben.
 }
 
 STRING 44009
@@ -109578,7 +109578,7 @@ Build Hexenmeister Temple
 STRING 51084
 // Units: o096 (Warlock Temple), Ubertip (Tooltip - Extended)
 {
-Spellcaster production building. Trains Kultists, Hexenmeisters, and Elders. |nAlso contains spell upgrades for Kultists, Hexenmeisters, and Elders.
+Zauberer-Produktionsgebäude. Trains Kultists, Hexenmeisters, and Elders. |nAlso contains spell upgrades for Kultists, Hexenmeisters, and Elders.
 }
 
 STRING 51085
@@ -111066,7 +111066,7 @@ Primäres Truppen-Produktionsgebäude. Trains Footmen, Archers, and Knights. |nB
 STRING 51643
 // Units: h0ML (Trade House), Ubertip (Tooltip - Extended)
 {
-Creates a shop with purchasable items. The items available depend upon what level of upgrade your Rathaus has (Rathaus, Citadel, or Palast) and which buildings you have.
+Errichtet einen Laden mit käuflichen Gegenständen. Welche Gegenstände verfügbar sind, hängt davon ab, welche Ausbaustufe Ihr Rathaus hat (Rathaus, Zitadelle oder Palast) und welche Gebäude Sie haben.
 }
 
 STRING 51645
@@ -112706,7 +112706,7 @@ Zufällige Zauber
 STRING 53416
 // Abilities: A1IY (Hero Attributes), Ubertip (Tooltip - Normal - Extended)
 {
-Allows skilling hero attributes and randomizing hero spells and skins.
+Ermöglicht das Erlernen von Heldenattributen und die Heldenzauber und -skins zufällig auszuwählen.
 }
 
 STRING 53417
@@ -117566,7 +117566,7 @@ STRING 56621
 STRING 56622
 // Units: o0A9 (Spirit Tent), Ubertip (Tooltip - Extended)
 {
-Spellcaster production building. Trains Zentauren-Wahrsagerins and Centaur Sorcerers. |nAlso contains spell upgrades for Zentauren-Wahrsagerins and Centaur Sorcerers.
+Zauberer-Produktionsgebäude. Trains Zentauren-Wahrsagerins and Centaur Sorcerers. |nAlso contains spell upgrades for Zentauren-Wahrsagerins and Centaur Sorcerers.
 }
 
 STRING 56623
@@ -118036,7 +118036,7 @@ The former World Tree of the Night Elves which was attacked by Archimonde.|n
 STRING 56861
 // Units: u01A (Sacrificial Pit), Ubertip (Tooltip - Extended)
 {
-Trains Kerkermeisters and Inquisitors.|nAlso contain Seelendiebstahl, Antimagie-Hülle, and Improved Verschlingen upgrades.
+Bildet Kerkermeister und Inquisitoren aus.|nBietet auch die Ausbaustufen 'Seelendiebstahl', 'Antimagie-Hülle' und 'Verbessertes Verschlingen'.
 }
 
 STRING 56862
