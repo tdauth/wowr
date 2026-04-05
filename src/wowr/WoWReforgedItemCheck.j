@@ -6,12 +6,12 @@ globals
     private trigger sellUnitTrigger = CreateTrigger()
 endglobals
 
-function PlayerIsAllowedItemRace takes player whichPlayer, integer itemTypeId returns boolean
+private function PlayerIsAllowedItemRace takes player whichPlayer, integer itemTypeId returns boolean
     local integer itemRace = GetItemRace(itemTypeId)
     return itemRace == udg_RaceNone or PlayerHasRace(whichPlayer, itemRace) or PropertyAllowsItemTypeId(whichPlayer, itemRace, itemTypeId)
 endfunction
 
-function PlayerIsAllowedItemProfession takes player whichPlayer, integer itemTypeId returns boolean
+private function PlayerIsAllowedItemProfession takes player whichPlayer, integer itemTypeId returns boolean
     local integer itemProfession = GetBookItemProfession(itemTypeId)
     return itemProfession == udg_ProfessionNone or PlayerHasProfession(whichPlayer, itemProfession)
 endfunction
@@ -38,7 +38,7 @@ function CanItemTypeIdBePickedUp takes integer itemTypeId, unit hero returns boo
     return result
 endfunction
 
-function GetItemTypeIdPickupErrorReason takes integer itemTypeId, unit hero returns string
+private function GetItemTypeIdPickupErrorReason takes integer itemTypeId, unit hero returns string
     local player heroOwner = GetOwningPlayer(hero)
     if (GetUnitTypeId(hero) != ITEM_VALUES_DUMMY_HERO) then
         if (not udg_PlayerUnlockedAllRaces[GetConvertedPlayerId(heroOwner)]) then
@@ -61,7 +61,7 @@ endfunction
  * Abilities will be used multiple times if your hero has the same item multiple times in the inventory.
  * This would craft multiple items and summon multiple units at once which is pretty unbalanced.
  */
-function IsUniqueScepterOrProfessionBook takes item whichItem, unit hero returns boolean
+private function IsUniqueScepterOrProfessionBook takes item whichItem, unit hero returns boolean
     local integer itemTypeId = GetItemTypeId(whichItem)
     if (GetUnitTypeId(hero) == BACKPACK or GetUnitTypeId(hero) == ITEM_VALUES_DUMMY_HERO) then
         return true
@@ -138,10 +138,10 @@ private function TriggerConditionSellItem takes nothing returns boolean
     local integer soldItemTypeId = GetItemTypeId(soldItem)
     // Properties are allowed to sell race items.
     if (not udg_UnlockedAll and buyerUnitTypeId != ITEM_VALUES_DUMMY_HERO) then
-        if (PlayerIsAllowedItemProfession(buyerOwner, soldItemTypeId)) then
+        if (not PlayerIsAllowedItemProfession(buyerOwner, soldItemTypeId)) then
             call SimErrorRefundProfessionItem(buyer, soldItem)
             call RefundItem(soldItem, buyerOwner)
-        elseif (not IsProperty(shopUnitTypeId) and PlayerHasUnlockedRace(buyerOwner, GetObjectRace(soldItemTypeId))) then
+        elseif (not IsProperty(shopUnitTypeId) and not PlayerHasUnlockedRace(buyerOwner, GetObjectRace(soldItemTypeId))) then
             call SimErrorRefundRaceItem(buyer, soldItem)
             call RefundItem(soldItem, buyerOwner)
         endif
@@ -160,7 +160,7 @@ private function TriggerConditionSellUnit takes nothing returns boolean
     // The unit could have already been removed by some other trigger
     // Never refund/remove sold heroes.
     if (soldUnitTypeId != 0 and GetWidgetLife(soldUnit) > 0.0 and not IsUnitType(soldUnit, UNIT_TYPE_HERO)) then
-        if (udg_UnlockedAll or PlayerHasUnlockedRace(GetOwningPlayer(soldUnit), GetObjectRace(soldUnitTypeId))) then
+        if (not udg_UnlockedAll and not PlayerHasUnlockedRace(GetOwningPlayer(soldUnit), GetObjectRace(soldUnitTypeId))) then
             // Water units (ships) can always be purchased from shipyards.
             if (not IsWaterRaceUnit(GetRaceObjectType(GetObjectRace(soldUnitTypeId), soldUnitTypeId))) then
                 // Properties are allowed to sell race units.

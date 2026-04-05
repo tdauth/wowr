@@ -576,6 +576,7 @@ function AiPlayersUIChooseComputerStartLocationTeam takes integer team returns i
         endif
         set i = i + 1
     endloop
+    call BJDebugMsg("Choose computer start location with team " + I2S(team) + " and matches " + I2S(choicesCounter))
     if (choicesCounter > 0) then
         return AiPlayersUIChooseComputerStartLocation(choices[GetRandomInt(0, choicesCounter - 1)])
     endif
@@ -605,38 +606,6 @@ function AiPlayersUIGetPlayerWarlord takes player whichPlayer returns boolean
     return true
 endfunction
 
-function GetRandomRaceWithAISupport takes nothing returns integer
-    return GetRandomInt(1, GetRacesMax() - 1) // with freelancer
-endfunction
-
-function GetRandomWarlordRaceWithAISupport takes nothing returns integer
-    return GetRandomInt(1, GetRacesMax() - 1) // no freelancer
-endfunction
-
-function GetRandomTeamRaceWithAISupport takes integer team returns integer
-    local integer array r
-    local integer c = 0
-    local integer i = 0
-    local integer max = GetRacesMax()
-    loop
-        exitwhen (i == max)
-        if (GetRaceTeam(i) == team or GetRaceTeam(i) == TEAM_NONE) then
-            set r[c] = i
-            set c = c + 1
-        endif
-        set i = i + 1
-    endloop
-    return r[GetRandomInt(0, c - 1)]
-endfunction
-
-function GetRandomAllianceRaceWithAISupport takes nothing returns integer
-    return GetRandomTeamRaceWithAISupport(TEAM_ALLIANCE)
-endfunction
-
-function GetRandomHordeRaceWithAISupport takes nothing returns integer
-    return GetRandomTeamRaceWithAISupport(TEAM_HORDE)
-endfunction
-
 function AiPlayersUIGetPlayerRace takes player whichPlayer, integer startLocation, integer team returns integer
     local integer index = GetPlayerIndex(whichPlayer)
     local integer frameValue = 0
@@ -650,9 +619,9 @@ function AiPlayersUIGetPlayerRace takes player whichPlayer, integer startLocatio
         elseif (frameValue == RACES_MENU_ITEM_RANDOM_WARLORD) then
             return GetRandomWarlordRaceWithAISupport()
         elseif (frameValue == RACES_MENU_ITEM_RANDOM_ALLIANCE) then
-            return GetRandomAllianceRaceWithAISupport()
+            return GetRandomWarlordAllianceRaceWithAISupport()
         elseif (frameValue == RACES_MENU_ITEM_RANDOM_HORDE) then
-            return GetRandomHordeRaceWithAISupport()
+            return GetRandomWarlordHordeRaceWithAISupport()
         elseif (frameValue == RACES_MENU_ITEM_RANDOM) then
             return GetRandomRaceWithAISupport()
         elseif (frameValue == RACES_MENU_ITEM_RANDOM_FREELANCER) then

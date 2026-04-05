@@ -664,7 +664,7 @@ private function EnumAutoLoadMines takes nothing returns nothing
     endif
 endfunction
 
-private function TimerFunctionAutoLoadMines takes nothing returns nothing
+function AutoloadComputerWorkersIntoMines takes nothing returns nothing
     call ForForce(computerPlayers, function EnumAutoLoadMines)
 endfunction
 
@@ -912,7 +912,7 @@ private function Init takes nothing returns nothing
     call TimerStart(autoRevivalTimer, 60.0, true, function ComputerAIAutoReviveHeroesAll)
     call TimerStart(autoCraftTimer, 120.0, true, function ComputerAIAutoCraft)
     call TimerStart(autoAttackNavyTimer, 360.0, true, function TimerFunctionAutoAttackNavy)
-    call TimerStart(autoLoadMinesTimer, 120.0, true, function TimerFunctionAutoLoadMines)
+    call TimerStart(autoLoadMinesTimer, 120.0, true, function AutoloadComputerWorkersIntoMines)
 
     call OnStartGame(function StartGame)
 endfunction

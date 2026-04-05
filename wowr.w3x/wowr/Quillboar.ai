@@ -77,9 +77,9 @@ function BuildingStrategy takes nothing returns nothing
         call StartExpansionSimple(QUILLBOAR_THORNY_SPIRE)
 
         if (buildShips) then
-            call StartUnitSimple(shipyards, TUSKARR_TUSKARR_SHIPYARD)
-            call StartUnitSimple(ships_transport, TUSKARR_FISHING_BOAT)
-            call StartUnitSimple(ships_frigate, ORC_TRANSPORT_SHIP)
+            call StartUnitSimple(shipyards, ORC_SHIPYARD)
+            call StartUnitSimple(ships_transport, ORC_TRANSPORT_SHIP)
+            call StartUnitSimple(ships_frigate, ORC_FRIGATE)
             call StartUnitSimple(ships_battleship, ORC_JUGGERNAUGHT)
         endif
 

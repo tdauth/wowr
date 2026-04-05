@@ -4116,6 +4116,7 @@ private function AddQuillboar takes nothing returns nothing
     //call SetRaceShipyard(r, QUILLBOAR_THORNY_SPIRE)
     //call SetRaceSpecialBuilding(r, QUILLBOAR_THORNY_SPIRE)
     //call SetRaceSpecialBuilding2(r, QUILLBOAR_THORNY_SPIRE)
+    call SetRaceShipyard(r, ORC_SHIPYARD)
 
     // researches
     call AddResearch(r, UPG_QUILLBOAR_BACKPACK)

@@ -122,7 +122,9 @@ private function MovementTypesMatch takes unit u0, unit u1 returns boolean
 endfunction
 
 struct Resource
+    string id // For chat commands to give it to other players,
     string name
+    boolean transferable // For chat commands to give it to other players,
     string icon
     string iconAtt
     string description
@@ -136,10 +138,12 @@ struct Resource
     static Resource array resources
     static integer resourcesCount = 0
     
-    public static method create takes string name returns thistype
+    public static method create takes string id, string name, boolean transferable returns thistype
         local thistype this = thistype.allocate()
         local integer i = 0
+        set this.id = id
         set this.name = name
+        set this.transferable = transferable
         set this.goldExchangeRate = goldExchangeRate
         set thistype.resources[thistype.resourcesCount] = this
         set thistype.resourcesCount = thistype.resourcesCount + 1
@@ -175,8 +179,12 @@ function GetAllResourcesInfo takes player whichPlayer returns string
     return msg
 endfunction
 
-function AddResource takes string name returns Resource
-    return Resource.create(name)
+function AddResource takes string id, string name, boolean transferable returns Resource
+    return Resource.create(id, name, transferable)
+endfunction
+
+function GetResourceId takes Resource resource returns string
+    return resource.id
 endfunction
 
 function SetResourceName takes Resource resource, string name returns nothing
@@ -185,6 +193,10 @@ endfunction
 
 function GetResourceName takes Resource resource returns string
     return resource.name
+endfunction
+
+function IsResourceTransferable takes Resource resource returns boolean
+    return resource.transferable
 endfunction
 
 function SetResourceIcon takes Resource resource, string icon returns nothing
@@ -1548,25 +1560,25 @@ private function Init takes nothing returns nothing
     call TriggerRegisterAnyUnitEventBJ(deathTrigger, EVENT_PLAYER_UNIT_DEATH)
     call TriggerAddAction(deathTrigger, function TriggerActionDeath)
     
-    set GOLD = AddResource(GetLocalizedString("GOLD"))
+    set GOLD = AddResource("gold", GetLocalizedString("GOLD"), true)
     call SetResourceIcon(GOLD, GOLD_ICON)
     call SetResourceIconAtt(GOLD, GOLD_ICON_ATT)
     call SetResourceDescription(GOLD, GetLocalizedString("RESOURCE_UBERTIP_GOLD"))
     call SetResourceGoldExchangeRate(GOLD, GOLD_GOLD_EXCHANGE_RATE)
     call SetResourceColorRed(GOLD, 255)
     call SetResourceColorGreen(GOLD, 255)
-    set LUMBER = AddResource(GetLocalizedString("LUMBER"))
+    set LUMBER = AddResource("lumber", GetLocalizedString("LUMBER"), true)
     call SetResourceIcon(LUMBER, LUMBER_ICON)
     call SetResourceIconAtt(LUMBER, LUMBER_ICON_ATT)
     call SetResourceDescription(LUMBER, GetLocalizedString("RESOURCE_UBERTIP_LUMBER"))
     call SetResourceGoldExchangeRate(LUMBER, LUMBER_GOLD_EXCHANGE_RATE)
     call SetResourceColorGreen(LUMBER, 255)
-    set FOOD = AddResource(GetLocalizedString("FOOD"))
+    set FOOD = AddResource("food", GetLocalizedString("FOOD"), false)
     call SetResourceIcon(FOOD, FOOD_ICON)
     call SetResourceIconAtt(FOOD, FOOD_ICON_ATT)
     call SetResourceDescription(FOOD, GetLocalizedString("RESOURCE_UBERTIP_SUPPLY"))
     call SetResourceGoldExchangeRate(FOOD, FOOD_GOLD_EXCHANGE_RATE)
-    set FOOD_MAX = AddResource(GetLocalizedString("FOOD_MAXIMUM"))
+    set FOOD_MAX = AddResource("foodmax", GetLocalizedString("FOOD_MAXIMUM"), false)
     call SetResourceIcon(FOOD_MAX, FOOD_MAX_ICON)
     call SetResourceIconAtt(FOOD_MAX, FOOD_MAX_ICON_ATT)
     call SetResourceDescription(FOOD_MAX, GetLocalizedString("RESOURCE_UBERTIP_SUPPLY"))

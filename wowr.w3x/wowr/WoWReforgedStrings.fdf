@@ -185,10 +185,12 @@ StringList {
     RECEIVED_RESOURCES_FROM            "Received %1% of %2% from %3%.",
     RECEIVED_X_RESOURCES               "Received %1% of %2%.",
     NOT_ENOUGH_X                       "Not enough %1%.",
+    AMOUNT_MUST_BE_POSITIVE            "Amount must be positive.",
     TARGET_PLAYER_HAS_NOT_ENOUGH       "Target player has not enough %1%.",
     TARGET_PLAYER_HAS_TO_BE_ALLIED_C   "Target player has has to be an allied Computer player.",
     INVALID_PLAYER                     "Invalid player.",
     INVALID_RESOURCE                   "Invalid resource.",
+    RESOURCE_CANNOT_BE_TRANSFERRED     "Resource cannot be transferred.",
     SOLD_ALL_FOR_GOLD                  "Sold all resources for %1% gold.",
     SOLD_ALL_LUMBER_FOR_GOLD           "Sold all lumber for %1% gold.",
     // Resources Multiboard Gui
@@ -1162,6 +1164,7 @@ StringList {
     AI_CHANGE_ERROR                    "Unable to change AI to %1% for %2%.",
     ENABLED                            "enabled",
     DISABLED                           "disabled",
+    GOLD_
     // Votes
     IQ_ENABLED                         "Enabled",
     IQ_DISABLED                        "Disabled",

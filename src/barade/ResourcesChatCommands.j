@@ -94,7 +94,7 @@ function GetResourceFromString takes string s returns Resource
     loop
         exitwhen (i == max)
         set resource = GetResource(i)
-        if (StringCase(GetResourceName(resource), false) == lower) then
+        if (GetResourceId(resource) == lower) then
             return resource
         endif
         set i = i + 1
@@ -115,17 +115,25 @@ private function GiveChatCommand takes player whichPlayer, string msg returns no
     local Resource r = GetResourceFromString(resource)
     local player t = GetPlayerFromString(to)
     if (r != 0) then
-        if (t != null) then
-            if (a <= GetPlayerResource(whichPlayer, r)) then
-                call AddPlayerResource(t, r, a)
-                call RemovePlayerResource(whichPlayer, r, a)
-                call DisplayTimedTextToPlayer(whichPlayer, 0.0, 0.0, INFO_DURATION, Format(GetLocalizedString("GAVE_RESOURCES_TO")).i(a).s(GetResourceName(r)).s(GetPlayerNameColored(t)).result())
-                call DisplayTimedTextToPlayer(t, 0.0, 0.0, INFO_DURATION, Format(GetLocalizedString("RECEIVED_RESOURCES_FROM")).i(a).s(GetResourceName(r)).s(GetPlayerNameColored(whichPlayer)).result())
+        if (IsResourceTransferable(r)) then
+            if (t != null) then
+                if (a > 0) then
+                    if (a <= GetPlayerResource(whichPlayer, r)) then
+                        call AddPlayerResource(t, r, a)
+                        call RemovePlayerResource(whichPlayer, r, a)
+                        call DisplayTimedTextToPlayer(whichPlayer, 0.0, 0.0, INFO_DURATION, Format(GetLocalizedString("GAVE_RESOURCES_TO")).i(a).s(GetResourceName(r)).s(GetPlayerNameColored(t)).result())
+                        call DisplayTimedTextToPlayer(t, 0.0, 0.0, INFO_DURATION, Format(GetLocalizedString("RECEIVED_RESOURCES_FROM")).i(a).s(GetResourceName(r)).s(GetPlayerNameColored(whichPlayer)).result())
+                    else
+                        call SimError(whichPlayer, Format(GetLocalizedString("NOT_ENOUGH_X")).s(GetResourceName(r)).result())
+                    endif
+                else
+                    call SimError(whichPlayer, Format(GetLocalizedString("AMOUNT_MUST_BE_POSITIVE")).result())
+                endif
             else
-                call SimError(whichPlayer, Format(GetLocalizedString("NOT_ENOUGH_X")).s(GetResourceName(r)).result())
+                call SimError(whichPlayer, GetLocalizedString("INVALID_PLAYER"))
             endif
         else
-            call SimError(whichPlayer, GetLocalizedString("INVALID_PLAYER"))
+            call SimError(whichPlayer, GetLocalizedString("RESOURCE_CANNOT_BE_TRANSFERRED"))
         endif
     else
         call SimError(whichPlayer, GetLocalizedString("INVALID_RESOURCE"))
@@ -140,20 +148,28 @@ private function AskChatCommand takes player whichPlayer, string msg returns not
     local Resource r = GetResourceFromString(resource)
     local player f = GetPlayerFromString(from)
     if (r != 0) then
-        if (f != null) then
-            if (IsPlayerAlly(f, whichPlayer) and GetPlayerController(f) != MAP_CONTROL_USER) then
-                if (a <= GetPlayerResource(f, r)) then
-                    call AddPlayerResource(whichPlayer, r, a)
-                    call RemovePlayerResource(f, r, a)
-                    call DisplayTimedTextToPlayer(whichPlayer, 0.0, 0.0, INFO_DURATION, Format(GetLocalizedString("RECEIVED_RESOURCES_FROM")).i(a).s(GetResourceName(r)).s(GetPlayerNameColored(whichPlayer)).result())
+        if (IsResourceTransferable(r)) then
+            if (f != null) then
+                if (IsPlayerAlly(f, whichPlayer) and GetPlayerController(f) != MAP_CONTROL_USER) then
+                    if (a > 0) then
+                        if (a <= GetPlayerResource(f, r)) then
+                            call AddPlayerResource(whichPlayer, r, a)
+                            call RemovePlayerResource(f, r, a)
+                            call DisplayTimedTextToPlayer(whichPlayer, 0.0, 0.0, INFO_DURATION, Format(GetLocalizedString("RECEIVED_RESOURCES_FROM")).i(a).s(GetResourceName(r)).s(GetPlayerNameColored(whichPlayer)).result())
+                        else
+                            call SimError(whichPlayer, Format(GetLocalizedString("TARGET_PLAYER_HAS_NOT_ENOUGH")).s(GetResourceName(r)).result())
+                        endif
+                    else
+                        call SimError(whichPlayer, Format(GetLocalizedString("AMOUNT_MUST_BE_POSITIVE")).result())
+                    endif
                 else
-                    call SimError(whichPlayer, Format(GetLocalizedString("TARGET_PLAYER_HAS_NOT_ENOUGH")).s(GetResourceName(r)).result())
+                    call SimError(whichPlayer, GetLocalizedString("TARGET_PLAYER_HAS_TO_BE_ALLIED_C"))
                 endif
             else
-                call SimError(whichPlayer, GetLocalizedString("TARGET_PLAYER_HAS_TO_BE_ALLIED_C"))
+                    call SimError(whichPlayer, GetLocalizedString("INVALID_PLAYER"))
             endif
         else
-                call SimError(whichPlayer, GetLocalizedString("INVALID_PLAYER"))
+            call SimError(whichPlayer, GetLocalizedString("RESOURCE_CANNOT_BE_TRANSFERRED"))
         endif
     else
         call SimError(whichPlayer, GetLocalizedString("INVALID_RESOURCE"))
@@ -174,15 +190,23 @@ private function SellChatCommand takes player whichPlayer, string msg returns no
     endif
     
     if (r != 0) then
-        if (t != 0) then
-            if (a <= GetPlayerResource(whichPlayer, r)) then
-                set received = ExchangePlayerResource(whichPlayer, r, t, a)
-                call DisplayTimedTextToPlayer(whichPlayer, 0.0, 0.0, INFO_DURATION, Format(GetLocalizedString("RECEIVED_X_RESOURCES")).i(received).s(GetResourceName(t)).result())
+        if (IsResourceTransferable(r)) then
+            if (t != 0) then
+                if (a > 0) then
+                    if (a <= GetPlayerResource(whichPlayer, r)) then
+                        set received = ExchangePlayerResource(whichPlayer, r, t, a)
+                        call DisplayTimedTextToPlayer(whichPlayer, 0.0, 0.0, INFO_DURATION, Format(GetLocalizedString("RECEIVED_X_RESOURCES")).i(received).s(GetResourceName(t)).result())
+                    else
+                        call SimError(whichPlayer, Format(GetLocalizedString("NOT_ENOUGH_X")).s(GetResourceName(r)).result())
+                    endif
+                else
+                    call SimError(whichPlayer, Format(GetLocalizedString("AMOUNT_MUST_BE_POSITIVE")).result())
+                endif
             else
-                call SimError(whichPlayer, Format(GetLocalizedString("NOT_ENOUGH_X")).s(GetResourceName(r)).result())
+                call SimError(whichPlayer, GetLocalizedString("INVALID_PLAYER"))
             endif
         else
-                call SimError(whichPlayer, GetLocalizedString("INVALID_PLAYER"))
+            call SimError(whichPlayer, GetLocalizedString("RESOURCE_CANNOT_BE_TRANSFERRED"))
         endif
     else
         call SimError(whichPlayer, GetLocalizedString("INVALID_RESOURCE"))
@@ -197,8 +221,16 @@ private function BuyChatCommand takes player whichPlayer, string msg returns not
     local integer received = 0
     
     if (r != 0) then
-        set received = ExchangePlayerResource(whichPlayer, Resources_GOLD, r, a)
-        call DisplayTimedTextToPlayer(whichPlayer, 0.0, 0.0, INFO_DURATION, Format(GetLocalizedString("RECEIVED_X_RESOURCES")).i(received).s(GetResourceName(r)).result())
+        if (IsResourceTransferable(r)) then
+            if (a > 0) then
+                set received = ExchangePlayerResource(whichPlayer, Resources_GOLD, r, a)
+                call DisplayTimedTextToPlayer(whichPlayer, 0.0, 0.0, INFO_DURATION, Format(GetLocalizedString("RECEIVED_X_RESOURCES")).i(received).s(GetResourceName(r)).result())
+            else
+                call SimError(whichPlayer, Format(GetLocalizedString("AMOUNT_MUST_BE_POSITIVE")).result())
+            endif
+        else
+            call SimError(whichPlayer, GetLocalizedString("RESOURCE_CANNOT_BE_TRANSFERRED"))
+        endif
     else
         call SimError(whichPlayer, GetLocalizedString("INVALID_RESOURCE"))
     endif
@@ -206,6 +238,7 @@ endfunction
 
 private function TriggerConditionChat takes nothing returns boolean
     local string msg = GetEventPlayerChatString()
+    local integer i = 0
     
     if (ALLOW_HELP and (msg == "-helpresources" or msg == "-helpr" or msg == "-hr")) then
         call DisplayTimedTextToPlayer(GetTriggerPlayer(), 0.0, 0.0, HELP_DURATION, GetResourceChatCommands())
@@ -223,6 +256,15 @@ private function TriggerConditionChat takes nothing returns boolean
         call SellChatCommand(GetTriggerPlayer(), msg)
     elseif (ALLOW_BUY and StringStartsWith(msg, "-buy")) then
         call BuyChatCommand(GetTriggerPlayer(), msg)
+    elseif (ALLOW_GIVE) then
+        set i = 0
+        loop
+            exitwhen (i == GetMaxResources())
+            if (StringStartsWith(msg, "-" + GetResourceId(i))) then
+                call GiveChatCommand(GetTriggerPlayer(), msg)
+            endif
+            set i = i + 1
+        endloop
     endif
     return false
 endfunction

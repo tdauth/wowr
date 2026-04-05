@@ -72,6 +72,9 @@ private function Init takes nothing returns nothing
     call AddChange("Remove chat command \"-maxbosslevels\".")
     call AddChange("Remove Goblin Bank.")
     call AddChange("Revise alliances chat commands.")
+    call AddChange("Check for positive amounts in resources system chat commands.")
+    call AddChange("Check if resource is transferable for resource system chat commands.")
+    call AddChange("Add chat commands like \"-gold\", \"-lumber\", \"-iron\", \"-favor\" etc. into resources system.")
     call AddChange("Improve English texts including hero tooltips.")
     call AddChange("Improve German translation.")
 

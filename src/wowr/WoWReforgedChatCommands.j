@@ -1,6 +1,11 @@
-library WoWReforgedChatCommands initializer Init requires HostUtils, StringUtils, StringFormat, SafeString, ForceUtils, PlayerColorUtils, WoWReforgedMapData, optional QueueUI, WoWReforgedPlayerInfos, WoWReforgedStats, optional WoWReforgedUiActionsBar, WoWReforgedStats, WoWReforgedAttributes, WoWReforgedAccount, WoWReforgedCheats, WoWReforgedComputerStartLocations, WoWReforgedSaveCodesAll, WoWReforgedZones
+library WoWReforgedChatCommands initializer Init requires Ascii, HostUtils, StringUtils, StringFormat, SafeString, ForceUtils, PlayerColorUtils, WoWReforgedUtils, WoWReforgedMapData, optional QueueUI, WoWReforgedPlayerInfos, WoWReforgedStats, WoWReforgedSaveCodeObjects, WoWReforgedHeroes, WoWReforgedBosses, WoWReforgedQuests, WoWReforgedProfessions, optional WoWReforgedUiActionsBar, WoWReforgedStats, WoWReforgedAttributes, WoWReforgedAccount, WoWReforgedComputerStartLocations, WoWReforgedSaveCodesAll, WoWReforgedZones, WoWReforgedCinematic, optional OrdersWatcher, OnStartGame
+
+/*
+ * Chat commands and cheats.
+ */
 
 globals
+    // TODO Do we really need sto store the instances? We could register trigger events instantly.
     private ChatCommand array chatCommands
     private integer chatCommandsCounter = 0
 endglobals
@@ -9,6 +14,7 @@ struct ChatCommand
     string array commands[5]
     boolean array commandsExactMatch[5]
     integer commandsCounter = 0
+    boolean isCheat = false
     // Use different chat event triggers in hope that using TriggerRegisterPlayerChatEvent is faster to filter chat commands than any custom string checks.
     trigger t = CreateTrigger()
 
@@ -36,6 +42,16 @@ endfunction
 
 private function AddAlias takes string c, boolean exactMatch returns nothing
     call chatCommands[chatCommandsCounter - 1].addAlias(c, exactMatch)
+endfunction
+
+private function TriggerConditionCheat takes nothing returns boolean
+    return udg_Cheats
+endfunction
+
+private function AddCheat takes string command, boolean exactMatch, code f returns nothing
+    local ChatCommand c = ChatCommand.create(command, exactMatch, f)
+    call TriggerAddCondition(c.t, Condition(function TriggerConditionCheat))
+    set c.isCheat = true
 endfunction
 
 function ShowUI takes player whichPlayer returns nothing
@@ -251,6 +267,10 @@ endfunction
 
 private function HelpReset takes nothing returns nothing
     call DisplayTextToPlayer(GetTriggerPlayer(), 0, 0, GetHelpTextReset())
+endfunction
+
+private function GetHelpTextCheats takes nothing returns string
+    return "-cheats, -nocheats, -creeps, -cinoutro, -cinlichking, -cinoldgods, -cininvasion, -boots, -terrain, -heroskills, -bonus, -quests, -fields, -read, -write, -maxresources, -respawngroupcounter, -respawnall, -maxlevel, -levelX, -col, -medivh, -revive, -resetrepick, -demigodlight, -demigoddark, -trydemigod, -orderon, -orderoff, -kill, -fill, -share, -unitinfo, -checksave, -generatesave, -savecounters, -savecodeduplicates, -savecodemissing, -autoskill, -orbs, -herolevels, -deathwing, -claws, -clawsbonus, -regennight, -craft, -legendary, -professions, -aigui, -aicraft, -aiharveston/off, -day, -night, -jaina, -arena, -evolution, -evolutioncreeps, -nagaquest4, -website"
 endfunction
 
 private function HelpCheats takes nothing returns nothing
@@ -964,6 +984,275 @@ private function ZoneFull takes nothing returns nothing
     call ShowCurrentZoneFull(GetTriggerPlayer())
 endfunction
 
+private function MountName1 takes nothing returns nothing
+    call SetMountName1(GetTriggerPlayer(), StringTokenEnteredChatMessageEx(1, true))
+endfunction
+
+private function MountName2 takes nothing returns nothing
+    call SetMountName2(GetTriggerPlayer(), StringTokenEnteredChatMessageEx(1, true))
+endfunction
+
+private function MountName3 takes nothing returns nothing
+    call SetMountName3(GetTriggerPlayer(), StringTokenEnteredChatMessageEx(1, true))
+endfunction
+
+private function CommandSay takes nothing returns nothing
+    call Say(GetTriggerPlayer(), StringTokenEnteredChatMessageEx(1, true))
+endfunction
+
+private function CommandShout takes nothing returns nothing
+    call Shout(GetTriggerPlayer(), StringTokenEnteredChatMessageEx(1, true))
+endfunction
+
+// Cheats
+
+private function EnumKill takes nothing returns nothing
+    call KillUnit(GetEnumUnit())
+    call DisplayTimedTextToForce(GetPlayersAll(), 30.0, GetPlayerName(GetTriggerPlayer()) + " is killing " + GetUnitName(GetEnumUnit()) + ".")
+endfunction
+
+private function CheatKill takes nothing returns nothing
+    set bj_wantDestroyGroup = true
+    call ForGroupBJ(GetUnitsSelectedAll(GetTriggerPlayer()), function EnumKill)
+endfunction
+
+private function EnumFill takes nothing returns nothing
+    call SetUnitLifePercentBJ(GetEnumUnit(), 100)
+    call SetUnitManaPercentBJ(GetEnumUnit(), 100)
+    call UnitResetCooldown(GetEnumUnit())
+    call DisplayTimedTextToForce(GetPlayersAll(), 30.0, GetPlayerName(GetTriggerPlayer()) + " is filling " + GetUnitName(GetEnumUnit()) + ".")
+endfunction
+
+private function CheatFill takes nothing returns nothing
+    set bj_wantDestroyGroup = true
+    call ForGroupBJ(GetUnitsSelectedAll(GetTriggerPlayer()), function EnumFill)
+endfunction
+
+function CheatUnfreeze takes nothing returns nothing
+    call PauseAllUnitsBJ(false)
+endfunction
+
+private function EnumRemoveUnit takes nothing returns nothing
+    call RemoveUnit(GetEnumUnit())
+endfunction
+
+function CheatNoCreeps takes nothing returns nothing
+    set bj_wantDestroyGroup = true
+    call ForGroupBJ(GetUnitsOfPlayerAll(Player(PLAYER_NEUTRAL_AGGRESSIVE)), function EnumRemoveUnit)
+    call BJDebugMsg("Removed all creeps.")
+endfunction
+
+function CheatNoBosses takes nothing returns nothing
+    set bj_wantDestroyGroup = true
+    call ForGroupBJ(GetUnitsOfPlayerAll(udg_BossesPlayer), function EnumRemoveUnit)
+    call BJDebugMsg("Removed all bosses.")
+endfunction
+
+function CheatNoPassive takes nothing returns nothing
+    set bj_wantDestroyGroup = true
+    call ForGroupBJ(GetUnitsOfPlayerAll(Player(PLAYER_NEUTRAL_PASSIVE)), function EnumRemoveUnit)
+    call BJDebugMsg("Removed all passive.")
+endfunction
+
+function CheatLegendaryItems takes player whichPlayer returns nothing
+    local unit hero = GetPlayerHero1(whichPlayer)
+    local item whichItem = null
+    local integer i = 0
+    local integer max = GetLegendaryItemsMax()
+    loop
+        exitwhen (i == max)
+        if (udg_LegendaryItemType[i] != 0) then
+            set whichItem = UnitAddItemById(hero, udg_LegendaryItemType[i])
+        else
+            call BJDebugMsg("Warning: Legendary item with index " + I2S(i) + " is 0.")
+        endif
+        set i = i + 1
+    endloop
+endfunction
+
+function CheatItems takes player whichPlayer returns nothing
+    local unit hero = GetPlayerHero1(whichPlayer)
+    local item whichItem = null
+    local integer i = 0
+    local integer max = GetSaveObjectItemMax()
+
+    // contain race and profession items
+    set i = 1
+    loop
+        exitwhen (i == max)
+        if (GetSaveObjectItemId(i) != 0) then
+            set whichItem = UnitAddItemById(hero, GetSaveObjectItemId(i))
+            if (GetItemCharges(whichItem) > 0) then
+                call SetItemCharges(whichItem, 100)
+            endif
+        else
+            call BJDebugMsg("Warning: Item save object with index " + I2S(i) + " is 0.")
+        endif
+        set i = i + 1
+    endloop
+
+    call CheatLegendaryItems(whichPlayer)
+
+    set i = 0
+    set max = GetQuestsMax()
+    loop
+        exitwhen (i == max)
+        if (GetQuestReward(i) != 0) then
+            set whichItem = UnitAddItemById(hero, GetQuestReward(i))
+        else
+            call BJDebugMsg("Warning: Quest reward item with index " + I2S(i) + " is 0.")
+        endif
+        set i = i + 1
+    endloop
+endfunction
+
+function CheatMaxResources takes player whichPlayer returns nothing
+    local integer i = 0
+    local integer max = GetMaxResources()
+    loop
+        exitwhen (i == max)
+        call SetPlayerResource(whichPlayer, GetResource(i), 9999999)
+        set i = i + 1
+    endloop
+endfunction
+
+private function CheatHeroSkills takes nothing returns nothing
+    local unit hero = null
+    local integer i = 0
+    local integer max = GetHeroesMax()
+    loop
+        exitwhen (i == max)
+        set hero = CreateUnit(GetTriggerPlayer(), GetHeroUnitType(i), 0.0, 0.0, 0.0)
+        call SetHeroLevel(hero, MAX_HERO_LEVEL, false)
+        call AutoSkillHero(hero)
+        call RemoveUnit(hero)
+        set hero = null
+        set i = i + 1
+    endloop
+    set i = 0
+    set max = BlzGroupGetSize(udg_Bosses)
+    loop
+        exitwhen (i == max)
+        set hero = CreateUnit(GetTriggerPlayer(), GetUnitTypeId(BlzGroupUnitAt(udg_Bosses, i)), 0.0, 0.0, 0.0)
+        call SetHeroLevel(hero, MAX_HERO_LEVEL, false)
+        call AutoSkillHero(hero)
+        call RemoveUnit(hero)
+        set hero = null
+        set i = i + 1
+    endloop
+endfunction
+
+private function ForGroupCheckSaveCodeMissing takes nothing returns nothing
+    local integer unitTypeId = GetUnitTypeId(GetEnumUnit())
+    local integer index = GetSaveObjectUnitType(unitTypeId)
+
+    if (index == -1) then
+        set index = GetSaveObjectBuildingType(unitTypeId)
+    endif
+
+    if (index == -1) then
+        call BJDebugMsg("Missing save code for unit type " + GetObjectName(unitTypeId))
+    endif
+endfunction
+
+private function ForItemGroupCheckSaveCodeMissing takes nothing returns nothing
+    local integer unitTypeId = GetItemTypeId(GetEnumItem())
+    local integer index = GetSaveObjectItemType(unitTypeId)
+
+    if (index == -1) then
+        call BJDebugMsg("Missing save code for item type " + GetObjectName(unitTypeId))
+    endif
+endfunction
+
+function CheatSaveCodeMissing takes nothing returns nothing
+    local group g = CreateGroup()
+    call GroupEnumUnitsOfPlayer(g, Player(PLAYER_NEUTRAL_AGGRESSIVE), null)
+    call ForGroup(g, function ForGroupCheckSaveCodeMissing)
+    call GroupClear(g)
+    call DestroyGroup(g)
+    set g = null
+
+    call EnumItemsInRect(GetPlayableMapRect(), null, function ForItemGroupCheckSaveCodeMissing)
+endfunction
+
+private function PrintProfession takes integer p returns nothing
+    local integer i = 0
+    local integer max = PROFESSION_RANK_MAX
+    local integer j = 0
+    local integer max2 = 0
+    call BJDebugMsg("- " + GetProfessionName(p))
+    loop
+        exitwhen (i >= max)
+        set j = 0
+        set max2 = GetProfessionCraftedItemsCount(p, i)
+        call BJDebugMsg(GetProfessionName(p) + " Rank " + GetRankName(i) + " with count " + I2S(max2))
+        loop
+            exitwhen (j >= max2)
+            if (GetProfessionCraftedUnit(p, i, j) != 0) then
+                call BJDebugMsg(GetProfessionName(p) + " " + GetObjectName(GetProfessionCraftedUnit(p, i, j)) + " with count " + I2S(GetProfessionCraftedCount(p, i, j)))
+            elseif (GetProfessionCraftedItem(p, i, j) != 0) then
+                call BJDebugMsg(GetProfessionName(p) + " " + GetObjectName(GetProfessionCraftedItem(p, i, j)) + " with count " + I2S(GetProfessionCraftedCount(p, i, j)))
+            endif
+            set j = j + 1
+        endloop
+        set i = i + 1
+    endloop
+endfunction
+
+function CheatProfessions takes nothing returns nothing
+    local integer i = 0
+    local integer max = GetProfessionsMax()
+    loop
+        exitwhen (i == max)
+        call PrintProfession(i)
+        set i = i + 1
+    endloop
+endfunction
+
+private function CreateItemForFirstHero takes player whichPlayer, integer itemTypeId returns nothing
+    call DisplayTimedTextToPlayer(whichPlayer, 0.0, 0.0, 6.0, Format(GetLocalizedStringSafe("CREATED_X_FOR_FIRST_HERO")).s(GetObjectName(itemTypeId)).result())
+    if (GetPlayerHero1(whichPlayer) != null) then
+        call UnitAddItemById(GetPlayerHero1(whichPlayer), itemTypeId)
+    endif
+endfunction
+
+private function CheatBoots takes nothing returns nothing
+    call CreateItemForFirstHero(GetTriggerPlayer(), ITEM_BOOTS_OF_TELEPORTATION)
+endfunction
+
+private function CheatTool takes nothing returns nothing
+    call CreateItemForFirstHero(GetTriggerPlayer(), ITEM_GOBLIN_TOOL_BOX)
+endfunction
+
+private function CheatSpade takes nothing returns nothing
+    call CreateItemForFirstHero(GetTriggerPlayer(), ITEM_SPADE)
+endfunction
+
+private function CheatTerrain takes nothing returns nothing
+    call DisplayTimedTextToPlayer(GetTriggerPlayer(), 0.0, 0.0, 6.0, "Tile: " + A2S(GetTerrainType(GetCameraTargetPositionX(), GetCameraTargetPositionY())))
+endfunction
+
+private function CheatLoadMines takes nothing returns nothing
+    call AutoloadComputerWorkersIntoMines()
+    call DisplayTextToPlayer(GetTriggerPlayer(), 0.0, 0.0, "Auto loaded Computer workers into mines.")
+endfunction
+
+private function CheatOrderOn takes nothing returns nothing
+static if (LIBRARY_OrdersWatcher) then
+    call EnableOrderDebugger()
+endif
+endfunction
+
+private function CheatOrderOff takes nothing returns nothing
+static if (LIBRARY_OrdersWatcher) then
+    call DisableOrderDebugger()
+endif
+endfunction
+
+private function StartGame takes nothing returns nothing
+    set udg_Cheats = GetAllPlayingUsersCount() == 1 and (GetPlayerName(Player(0)) == "WorldEdit" or GetPlayerName(Player(0)) == "Barade" or  GetPlayerName(Player(0)) == "Barade#2569")
+endfunction
+
 private function Init takes nothing returns nothing
     call Add("-help", true, function Help)
     call AddAlias("-h", true)
@@ -1099,8 +1388,35 @@ private function Init takes nothing returns nothing
     call Add("-zonefull", true, function ZoneFull)
     call AddAlias("-zf", true)
 
+    call Add("-mountname1", false, function MountName1)
+    call Add("-mountname2", false, function MountName2)
+    call Add("-mountname3", false, function MountName3)
+
+    call Add("-say", false, function CommandSay)
+    call Add("-shout", false, function CommandShout)
+
+    // Cheats
+    call AddCheat("-kill", true, function CheatKill)
+    call AddCheat("-fill", true, function CheatFill)
+    call AddCheat("-unfreeze", true, function CheatUnfreeze)
+    call AddCheat("-nocreeps", true, function CheatNoCreeps)
+    call AddCheat("-nobosses", true, function CheatNoBosses)
+    call AddCheat("-nopassive", true, function CheatNoPassive)
+    call AddCheat("-creeps", true, function CompareCreeps)
+    call AddCheat("-boots", true, function CheatBoots)
+    call AddCheat("-tool", true, function CheatTool)
+    call AddCheat("-spade", true, function CheatSpade)
+    call AddCheat("-terrain", true, function CheatTerrain)
+    call AddCheat("-heroskills", true, function CheatHeroSkills)
+    call AddCheat("-bonus", true, function DisplayNewBonusConfig)
+    call AddCheat("-loadmines", true, function CheatLoadMines)
+    call AddCheat("-orderon", true, function CheatOrderOn)
+    call AddCheat("-orderoff", true, function CheatOrderOff)
+
     // after all chat commands
     call ForForce(GetAllPlayingUsers(), function EnumPlayerRegisterChatEvent)
+
+    call OnStartGame(function StartGame)
 endfunction
 
 endlibrary

@@ -1,5 +1,37 @@
 library WoWReforgedComputerStartLocations requires MathUtils, WoWReforgedTmpVariables, WoWReforgedRaces
 
+function GetRandomRaceWithAISupport takes nothing returns integer
+    return GetRandomInt(0, GetRacesMax() - 1) // with freelancer
+endfunction
+
+function GetRandomWarlordRaceWithAISupport takes nothing returns integer
+    return GetRandomInt(1, GetRacesMax() - 1) // no freelancer
+endfunction
+
+function GetRandomWarlordTeamRaceWithAISupport takes integer team returns integer
+    local integer array r
+    local integer c = 0
+    local integer i = 0
+    local integer max = GetRacesMax()
+    loop
+        exitwhen (i == max)
+        if (GetRaceTeam(i) == team or GetRaceTeam(i) == TEAM_NONE) then
+            set r[c] = i
+            set c = c + 1
+        endif
+        set i = i + 1
+    endloop
+    return r[GetRandomInt(0, c - 1)]
+endfunction
+
+function GetRandomWarlordAllianceRaceWithAISupport takes nothing returns integer
+    return GetRandomWarlordTeamRaceWithAISupport(TEAM_ALLIANCE)
+endfunction
+
+function GetRandomWarlordHordeRaceWithAISupport takes nothing returns integer
+    return GetRandomWarlordTeamRaceWithAISupport(TEAM_HORDE)
+endfunction
+
 struct ComputerStartLocation
     real x
     real y
@@ -28,7 +60,13 @@ struct ComputerStartLocation
             return r[GetRandomInt(0, c)]
         endif
 
-        return udg_RaceFreelancer
+        if (team == TEAM_ALLIANCE) then
+            return GetRandomWarlordAllianceRaceWithAISupport()
+        elseif (team == TEAM_HORDE) then
+            return GetRandomWarlordHordeRaceWithAISupport()
+        endif
+
+        return GetRandomWarlordRaceWithAISupport()
     endmethod
 
     method hasRace takes integer whichRace returns boolean
@@ -52,7 +90,7 @@ struct ComputerStartLocation
         loop
             exitwhen (i == possibleRacesCounter)
             set raceTeam = GetRaceTeam(possibleRaces[i])
-            if (raceTeam == team or raceTeam == TEAM_NONE) then
+            if (raceTeam == team) then
                 return true
             endif
             set i = i + 1

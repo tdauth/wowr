@@ -24,7 +24,6 @@
 //! import "wowr/WoWReforgedCarHorn.j"
 //! import "wowr/WoWReforgedChangeLog.j"
 //! import "wowr/WoWReforgedChatCommands.j"
-//! import "wowr/WoWReforgedCheats.j"
 //! import "wowr/WoWReforgedChests.j"
 //! import "wowr/WoWReforgedCinematic.j"
 //! import "wowr/WoWReforgedCitizens.j"

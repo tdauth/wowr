@@ -78,7 +78,7 @@ function BuildingStrategy takes nothing returns nothing
         call StartExpansionSimple(CENTAUR_LODGE)
 
         if (buildShips) then
-            call StartUnitSimple(shipyards, OGRE_SHIPYARD)
+            call StartUnitSimple(shipyards, ORC_SHIPYARD)
             call StartUnitSimple(ships_transport, ORC_TRANSPORT_SHIP)
             call StartUnitSimple(ships_frigate, ORC_FRIGATE)
             call StartUnitSimple(ships_battleship, ORC_JUGGERNAUGHT)
