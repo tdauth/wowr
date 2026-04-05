@@ -51,11 +51,15 @@ struct ComputerStartLocation
             exitwhen (i == possibleRacesCounter)
             set raceTeam = GetRaceTeam(possibleRaces[i])
             if (raceTeam == team or raceTeam == TEAM_NONE) then
+                call BJDebugMsg("Possible race " + GetRaceName(possibleRaces[i]) + " for start location " + I2S(this))
                 set r[c] = possibleRaces[i]
                 set c = c + 1
             endif
             set i = i + 1
         endloop
+
+        call BJDebugMsg("Possible races count" + I2S(c))
+
         if (c > 0) then
             return r[GetRandomInt(0, c)]
         endif

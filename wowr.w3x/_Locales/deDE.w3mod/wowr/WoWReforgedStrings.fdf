@@ -1854,7 +1854,7 @@ StringList {
     IQ_RACES_1                         "Additional races require a higher hero level of your first hero.",
     IQ_START_LOCATIONS_TITLE           "Startorte",
     IQ_START_LOCATIONS_DESCRIPTION     "The start locations allow you to start the game at some specified area on the map. Some start locations may be occupied by other players including Warlord AI.",
-    IQ_VICTORY_TITLE                   "Sieg",
+    IQ_VICTORY_TITLE                   "Sieg (%1%)",
     IQ_VICTORY_DESCRIPTION             "Every player can win the game by killing the boss Archimonde if the victory conditions are enabled. The game ends after this. All players who are not allied with the killing player will lose the game.",
     IQ_AI_TITLE                        "Computer-KI (Respawn %1%)",
     IQ_AI_DESCRIPTION                  "Computer players are warlords by default. They start with a main building, five workers and their hero. The AI will collect gold and lumber and build additional gold mines. It should attack creeps and hostile players from time to time. If you are allied to a computer player it is recommended to defend him and to give him resources if you are a warlord yourself. Allied computer players might turn out to be rather useful when attacking another player. When the base of a computer player is destroyed, the hero will get a tiny main building to rebuild a base. Their race is defined in the beginning by the host player.",

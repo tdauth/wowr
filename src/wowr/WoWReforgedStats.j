@@ -343,7 +343,7 @@ function CreateStats takes nothing returns nothing
             call MultiboardSetItemStyle(mitem, true, true)
             call MultiboardSetItemIcon(mitem, "ReplaceableTextures\\CommandButtons\\BTNHealthStone.blp")
             call MultiboardSetItemValueColor(mitem, red, green, blue, 255)
-            call MultiboardSetItemWidth(mitem, 0.04)
+            call MultiboardSetItemWidth(mitem, 0.03)
             call MultiboardReleaseItem(mitem)
             set column = column + 1
             // Increase row

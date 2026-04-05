@@ -15,7 +15,7 @@ globals
 
     private constant real LINE_HEIGHT = 0.03
     
-    private constant real LINE_HEIGHT_SPACING = 0.12
+    private constant real LINE_HEIGHT_SPACING = 0.1
     
     private constant real START_X = UI_FULLSCREEN_X + 0.03
 
@@ -610,11 +610,11 @@ function AiPlayersUIGetPlayerRace takes player whichPlayer, integer startLocatio
     local integer index = GetPlayerIndex(whichPlayer)
     local integer frameValue = 0
     local integer random = 0
-    local race whichRace = GetPlayerRace(whichPlayer)
 
     if (index != -1) then
         set frameValue = Races[index]
         if (frameValue == RACES_MENU_ITEM_MATCHING_START_LOCATION) then
+            call BJDebugMsg("RACES_MENU_ITEM_MATCHING_START_LOCATION")
             return GetComputerStartLocation(startLocation).getRandomPossibleRace(team)
         elseif (frameValue == RACES_MENU_ITEM_RANDOM_WARLORD) then
             return GetRandomWarlordRaceWithAISupport()
@@ -631,13 +631,14 @@ function AiPlayersUIGetPlayerRace takes player whichPlayer, integer startLocatio
         endif
     endif
 
+    call BJDebugMsg("AiPlayersUIGetPlayerRace udg_RaceNone")
+
     return udg_RaceNone
 endfunction
 
 function AiPlayersUIGetPlayerProfession takes player whichPlayer returns integer
     local integer index = GetPlayerIndex(whichPlayer)
     local integer frameValue = 0
-    local race whichRace = GetPlayerRace(whichPlayer)
 
     if (index != -1) then
         set frameValue = Professions[index]
