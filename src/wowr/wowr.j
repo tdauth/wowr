@@ -75,6 +75,7 @@
 //! import "wowr/WoWReforgedObjectMappings.j"
 //! import "wowr/WoWReforgedPagedButtonsConfig.j"
 //! import "wowr/WoWReforgedPlayerInfos.j"
+//! import "wowr/WoWReforgedPlayers.j"
 //! import "wowr/WoWReforgedPickpocketing.j"
 //! import "wowr/WoWReforgedPings.j"
 //! import "wowr/WoWReforgedPortals.j"

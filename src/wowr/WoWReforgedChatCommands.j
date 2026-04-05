@@ -423,20 +423,10 @@ private function EnumNoAi takes nothing returns nothing
     endif
 endfunction
 
-private function PrepareAllianceChanges takes nothing returns nothing
-    call DisableAllianceChangesTrigger()
-    call DisableTrigger(gg_trg_Player_Leaves_Alliance_Change)
-endfunction
-
-private function EndAllianceChanges takes nothing returns nothing
-    call EnableAllianceChangesTrigger()
-    call EnableTrigger(gg_trg_Player_Leaves_Alliance_Change)
-endfunction
-
 private function AllianceChange takes code f returns nothing
-    call PrepareAllianceChanges()
+    call DisableAllianceChangesTrigger()
     call ForForce(GetMapLobbyPlayers(), f)
-    call EndAllianceChanges()
+    call EnableAllianceChangesTrigger()
 endfunction
 
 private function Friends takes nothing returns nothing
@@ -480,13 +470,13 @@ endfunction
 private function Ally takes nothing returns nothing
     local player p = GetPlayerFromString(StringToken(GetEventPlayerChatString(), 1))
     if (p != null and p != GetTriggerPlayer() and GetMapAllowConfigureAIPlayer(p)) then
-        call PrepareAllianceChanges()
+        call DisableAllianceChangesTrigger()
         call SetPlayerAllianceBJ(GetTriggerPlayer(), ALLIANCE_SHARED_XP, true, p)
         call SetPlayerAllianceBJ(GetTriggerPlayer(), ALLIANCE_SHARED_SPELLS, true, p)
         call SetPlayerAllianceBJ(GetTriggerPlayer(), ALLIANCE_HELP_REQUEST, true, p)
         call SetPlayerAllianceBJ(GetTriggerPlayer(), ALLIANCE_HELP_RESPONSE, true, p)
         call SetPlayerAllianceBJ(GetTriggerPlayer(), ALLIANCE_PASSIVE, true, p)
-        call EndAllianceChanges()
+        call EnableAllianceChangesTrigger()
         call DisplayTextToPlayer(p, 0.0, 0.0, Format(GetLocalizedStringSafe("ALLIANCE_ALLIED")).s(GetPlayerNameColored(GetTriggerPlayer())).result())
     else
         call SimError(GetTriggerPlayer(), GetLocalizedStringSafe("INVALID_PLAYER"))
@@ -496,13 +486,13 @@ endfunction
 private function Unally takes nothing returns nothing
     local player p = GetPlayerFromString(StringToken(GetEventPlayerChatString(), 1))
     if (p != null and p != GetTriggerPlayer() and GetMapAllowConfigureAIPlayer(p)) then
-        call PrepareAllianceChanges()
+        call DisableAllianceChangesTrigger()
         call SetPlayerAllianceBJ(GetTriggerPlayer(), ALLIANCE_SHARED_XP, false, p)
         call SetPlayerAllianceBJ(GetTriggerPlayer(), ALLIANCE_SHARED_SPELLS, false, p)
         call SetPlayerAllianceBJ(GetTriggerPlayer(), ALLIANCE_HELP_REQUEST, false, p)
         call SetPlayerAllianceBJ(GetTriggerPlayer(), ALLIANCE_HELP_RESPONSE, false, p)
         call SetPlayerAllianceBJ(GetTriggerPlayer(), ALLIANCE_PASSIVE, false, p)
-        call EndAllianceChanges()
+        call EnableAllianceChangesTrigger()
         call DisplayTextToPlayer(p, 0.0, 0.0, Format(GetLocalizedStringSafe("ALLIANCE_HOSTILE")).s(GetPlayerNameColored(GetTriggerPlayer())).result())
     else
         call SimError(GetTriggerPlayer(), GetLocalizedStringSafe("INVALID_PLAYER"))
@@ -512,13 +502,13 @@ endfunction
 private function Neutral takes nothing returns nothing
     local player p = GetPlayerFromString(StringToken(GetEventPlayerChatString(), 1))
     if (p != null and p != GetTriggerPlayer() and GetMapAllowConfigureAIPlayer(p)) then
-        call PrepareAllianceChanges()
+        call DisableAllianceChangesTrigger()
         call SetPlayerAllianceBJ(GetTriggerPlayer(), ALLIANCE_SHARED_XP, false, p)
         call SetPlayerAllianceBJ(GetTriggerPlayer(), ALLIANCE_SHARED_SPELLS, false, p)
         call SetPlayerAllianceBJ(GetTriggerPlayer(), ALLIANCE_HELP_REQUEST, false, p)
         call SetPlayerAllianceBJ(GetTriggerPlayer(), ALLIANCE_HELP_RESPONSE, false, p)
         call SetPlayerAllianceBJ(GetTriggerPlayer(), ALLIANCE_PASSIVE, true, p)
-        call EndAllianceChanges()
+        call EnableAllianceChangesTrigger()
         call DisplayTextToPlayer(p, 0.0, 0.0, Format(GetLocalizedStringSafe("ALLIANCE_NEUTRAL")).s(GetPlayerNameColored(GetTriggerPlayer())).result())
     else
         call SimError(GetTriggerPlayer(), GetLocalizedStringSafe("INVALID_PLAYER"))
@@ -528,9 +518,9 @@ endfunction
 private function Vision takes nothing returns nothing
     local player p = GetPlayerFromString(StringToken(GetEventPlayerChatString(), 1))
     if (p != null and p != GetTriggerPlayer() and GetMapAllowConfigureAIPlayer(p)) then
-        call PrepareAllianceChanges()
+        call DisableAllianceChangesTrigger()
         call SetPlayerAllianceBJ(GetTriggerPlayer(), ALLIANCE_SHARED_VISION, true, p)
-        call EndAllianceChanges()
+        call EnableAllianceChangesTrigger()
         call DisplayTextToPlayer(p, 0.0, 0.0, Format(GetLocalizedStringSafe("ALLIANCE_SHARED_VISION")).s(GetPlayerNameColored(GetTriggerPlayer())).result())
     else
         call SimError(GetTriggerPlayer(), GetLocalizedStringSafe("INVALID_PLAYER"))
@@ -540,9 +530,9 @@ endfunction
 private function Unvision takes nothing returns nothing
     local player p = GetPlayerFromString(StringToken(GetEventPlayerChatString(), 1))
     if (p != null and p != GetTriggerPlayer() and GetMapAllowConfigureAIPlayer(p)) then
-        call PrepareAllianceChanges()
+        call DisableAllianceChangesTrigger()
         call SetPlayerAllianceBJ(GetTriggerPlayer(), ALLIANCE_SHARED_VISION, false, p)
-        call EndAllianceChanges()
+        call EnableAllianceChangesTrigger()
         call DisplayTextToPlayer(p, 0.0, 0.0, Format(GetLocalizedStringSafe("ALLIANCE_NO_SHARED_VISION")).s(GetPlayerNameColored(GetTriggerPlayer())).result())
     else
         call SimError(GetTriggerPlayer(), GetLocalizedStringSafe("INVALID_PLAYER"))
@@ -552,10 +542,10 @@ endfunction
 private function Control takes nothing returns nothing
     local player p = GetPlayerFromString(StringToken(GetEventPlayerChatString(), 1))
     if (p != null and p != GetTriggerPlayer() and GetMapAllowConfigureAIPlayer(p)) then
-        call PrepareAllianceChanges()
+        call DisableAllianceChangesTrigger()
         call SetPlayerAllianceBJ(GetTriggerPlayer(), ALLIANCE_SHARED_CONTROL, true, p)
         call SetPlayerAllianceBJ(GetTriggerPlayer(), ALLIANCE_SHARED_ADVANCED_CONTROL, true, p)
-        call EndAllianceChanges()
+        call EnableAllianceChangesTrigger()
         call DisplayTextToPlayer(p, 0.0, 0.0, Format(GetLocalizedStringSafe("ALLIANCE_SHARED_ADVANCED_CONTROL")).s(GetPlayerNameColored(GetTriggerPlayer())).result())
     else
         call SimError(GetTriggerPlayer(), GetLocalizedStringSafe("INVALID_PLAYER"))
@@ -565,10 +555,10 @@ endfunction
 private function Uncontrol takes nothing returns nothing
     local player p = GetPlayerFromString(StringToken(GetEventPlayerChatString(), 1))
     if (p != null and p != GetTriggerPlayer() and GetMapAllowConfigureAIPlayer(p)) then
-        call PrepareAllianceChanges()
+        call DisableAllianceChangesTrigger()
         call SetPlayerAllianceBJ(GetTriggerPlayer(), ALLIANCE_SHARED_CONTROL, true, p)
         call SetPlayerAllianceBJ(GetTriggerPlayer(), ALLIANCE_SHARED_ADVANCED_CONTROL, true, p)
-        call EndAllianceChanges()
+        call EnableAllianceChangesTrigger()
         call DisplayTextToPlayer(p, 0.0, 0.0, Format(GetLocalizedStringSafe("ALLIANCE_NO_SHARED_ADVANCED_CONTROL")).s(GetPlayerNameColored(GetTriggerPlayer())).result())
     else
         call SimError(GetTriggerPlayer(), GetLocalizedStringSafe("INVALID_PLAYER"))
