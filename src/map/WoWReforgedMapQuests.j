@@ -1,7 +1,7 @@
 library WoWReforgedMapQuests initializer Init requires WoWReforgedQuests
 
 private function Init takes nothing returns nothing
-    set udg_MainQuest[1] = AddQuest("MainQuest1", GetLocalizedStringSafe("ARCHIMONDE"), GetLocalizedStringSafe("QUEST_ARCHIMONDE_DESCRIPTION"), "ReplaceableTextures\\CommandButtons\\BTNArchimonde.blp", gg_unit_Hjai_0012, 'I027')
+    set udg_MainQuest[1] = AddQuest("MainQuest1", GetLocalizedStringSafe("ARCHIMONDE"), GetLocalizedStringSafe("Q_ARCHIMONDE_DESCRIPTION"), "ReplaceableTextures\\CommandButtons\\BTNArchimonde.blp", gg_unit_Hjai_0012, 'I027')
     call AddQuestItem(GetLocalizedStringSafe("Q_ARCHIMONDE_0"))
 
     // Human Quests
