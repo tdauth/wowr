@@ -10,6 +10,7 @@ globals
     private constant integer KEY_HANDLER = 0
 
     private trigger enterTrigger = CreateTrigger()
+    private trigger deathTrigger = CreateTrigger()
     private hashtable h = InitHashtable()
     private boolean init = false
 endglobals
@@ -20,9 +21,15 @@ struct CustomUnitType
         return true
     endmethod
     
-    public stub method handler takes unit whichUnit returns nothing
+    public stub method onEnter takes unit whichUnit returns nothing
     endmethod
-    
+
+    public stub method onDeath takes unit whichUnit returns nothing
+    endmethod
+
+    public stub method onRemove takes unit whichUnit returns nothing
+    endmethod
+
 endstruct
 
 function AddCustomUnitType takes integer unitTypeId, CustomUnitType c returns nothing
@@ -33,11 +40,27 @@ function IsCustomUnitType takes integer unitTypeId returns boolean
     return HaveSavedInteger(h, unitTypeId, KEY_HANDLER)
 endfunction
 
-function CallCustomUnitTypeHandler takes unit whichUnit returns nothing
+function CallCustomUnitTypeOnEnter takes unit whichUnit returns nothing
     local integer unitTypeId = GetUnitTypeId(whichUnit)
     local CustomUnitType c = LoadInteger(h, unitTypeId, KEY_HANDLER)
     if (c != 0 and c.filter.evaluate(whichUnit)) then
-        call c.handler.execute(whichUnit)
+        call c.onEnter.execute(whichUnit)
+    endif
+endfunction
+
+function CallCustomUnitTypeOnDeath takes unit whichUnit returns nothing
+    local integer unitTypeId = GetUnitTypeId(whichUnit)
+    local CustomUnitType c = LoadInteger(h, unitTypeId, KEY_HANDLER)
+    if (c != 0 and c.filter.evaluate(whichUnit)) then
+        call c.onDeath.execute(whichUnit)
+    endif
+endfunction
+
+function CallCustomUnitTypeOnRemove takes unit whichUnit returns nothing
+    local integer unitTypeId = GetUnitTypeId(whichUnit)
+    local CustomUnitType c = LoadInteger(h, unitTypeId, KEY_HANDLER)
+    if (c != 0 and c.filter.evaluate(whichUnit)) then
+        call c.onRemove.execute(whichUnit)
     endif
 endfunction
 
@@ -46,12 +69,19 @@ private function FilterHasCustomUnitType takes nothing returns boolean
 endfunction
 
 private function EnumCustomUnitType takes nothing returns nothing
-    call CallCustomUnitTypeHandler(GetEnumUnit())
+    call CallCustomUnitTypeOnEnter(GetEnumUnit())
 endfunction
 
 private function TriggerConditionEnter takes nothing returns boolean
     if (IsCustomUnitType(GetUnitTypeId(GetTriggerUnit()))) then
-        call CallCustomUnitTypeHandler(GetTriggerUnit())
+        call CallCustomUnitTypeOnEnter(GetTriggerUnit())
+    endif
+    return false
+endfunction
+
+private function TriggerConditionDeath takes nothing returns boolean
+    if (IsCustomUnitType(GetUnitTypeId(GetTriggerUnit()))) then
+        call CallCustomUnitTypeOnDeath(GetTriggerUnit())
     endif
     return false
 endfunction
@@ -67,7 +97,18 @@ function InitCustomUnitTypes takes nothing returns nothing
         
         call TriggerRegisterEnterRectSimple(enterTrigger, GetPlayableMapRect())
         call TriggerAddCondition(enterTrigger, Condition(function TriggerConditionEnter))
+
+        call TriggerRegisterAnyUnitEventBJ(deathTrigger, EVENT_PLAYER_UNIT_DEATH)
+        call TriggerAddCondition(deathTrigger, Condition(function TriggerConditionDeath))
     endif
 endfunction
+
+private function RemoveUnitHook takes unit whichUnit returns nothing
+    if (IsCustomUnitType(GetUnitTypeId(GetTriggerUnit()))) then
+        call CallCustomUnitTypeOnRemove(GetTriggerUnit())
+    endif
+endfunction
+
+hook RemoveUnit RemoveUnitHook
 
 endlibrary

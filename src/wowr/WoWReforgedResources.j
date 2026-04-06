@@ -17,6 +17,9 @@ globals
     private trigger triggerChatCommandGuiOn = CreateTrigger()
     private trigger triggerChatCommandGuiOff = CreateTrigger()
     private trigger triggerChatCommandInfo = CreateTrigger()
+    private trigger deathTrigger = CreateTrigger()
+    private trigger constructFinishTrigger = CreateTrigger()
+    private trigger useItemTrigger = CreateTrigger()
 endglobals
 
 function GetMaxMines takes nothing returns integer
@@ -513,6 +516,58 @@ private function TriggerConditionChatCommandInfo takes nothing returns boolean
     return false
 endfunction
 
+private function TriggerConditionDeath takes nothing returns boolean
+    if (GetUnitTypeId(GetTriggerUnit()) == 'n0DJ') then
+        call RewardFlotsam(GetTriggerUnit(), GetKillingUnit())
+    endif
+    return false
+endfunction
+
+private function TriggerConditionConstructFinish takes nothing returns boolean
+    if (GetUnitAbilityLevel(GetConstructedStructure(), 'Argl') > 0 or GetUnitAbilityLevel(GetConstructedStructure(), 'Argd') > 0 or GetUnitAbilityLevel(GetConstructedStructure(), 'Arlm') > 0) then
+        //call AddWoWReforgedReturnBuilding(GetConstructedStructure())
+    endif
+    return false
+endfunction
+
+private function TriggerConditionUseItem takes nothing returns boolean
+    local integer itemTypeId = GetItemTypeId(GetManipulatedItem())
+    if (itemTypeId == ITEM_RANDOM_RESOURCE) then
+        call CreateRandomResources(GetTriggerUnit())
+    elseif (itemTypeId == ITEM_MEAT) then
+        call UseMeatItem(GetTriggerUnit())
+    elseif (itemTypeId == ITEM_FISH) then
+        call UseFishItem(GetTriggerUnit())
+    elseif (itemTypeId == ITEM_BUNDLE_OF_WHEAT) then
+        call UseBundleOfWheatItem(GetTriggerUnit())
+    elseif (itemTypeId == ITEM_BLACK_POWDER) then
+        call UseBlackPowderItem(GetTriggerUnit())
+    elseif (itemTypeId == ITEM_ROCKS) then
+        call UseRockItem(GetTriggerUnit())
+    elseif (itemTypeId == ITEM_BANANA) then
+        call UseBananaItem(GetTriggerUnit())
+    elseif (itemTypeId == ITEM_LEMON) then
+        call UseLemonItem(GetTriggerUnit())
+    elseif (itemTypeId == ITEM_ORANGE) then
+        call UseOrangeItem(GetTriggerUnit())
+    elseif (itemTypeId == ITEM_GARLIC) then
+        call UseGarlicItem(GetTriggerUnit())
+    elseif (itemTypeId == ITEM_PUMPKIN) then
+        call UsePumpkinItem(GetTriggerUnit())
+    elseif (itemTypeId == ITEM_APPLE) then
+        call UseAppleItem(GetTriggerUnit())
+    elseif (itemTypeId == ITEM_STRAWBERRY) then
+        call UseAppleItem(GetTriggerUnit())
+    elseif (itemTypeId == ITEM_CHERRY) then
+        call UseAppleItem(GetTriggerUnit())
+    elseif (itemTypeId == ITEM_MILK) then
+        call UseMilkItem(GetTriggerUnit())
+    elseif (itemTypeId == ITEM_WOOL) then
+        call UseWoolItem(GetTriggerUnit())
+    endif
+    return false
+endfunction
+
 private function Init takes nothing returns nothing
     call ForForce(GetAllPlayingUsers(), function EnumRegisterChatCommandEvents)
     call TriggerAddCondition(triggerChatCommandGuiOn, Condition(function TriggerConditionChatCommandGuiOn))
@@ -538,6 +593,15 @@ private function Init takes nothing returns nothing
     set udg_ResourceFruits = Add("fruits", GetLocalizedStringSafe("FRUITS"), GetLocalizedStringSafe("FRUITS_DESCRIPTION"), 0.4, 255, 165, 0, "ReplaceableTextures\\CommandButtons\\BTNOrange.blp", "ReplaceableTextures\\CommandButtons\\BTNOrange.blp")
     set udg_ResourceFel = Add("fel", GetLocalizedStringSafe("FEL"), GetLocalizedStringSafe("FEL_DESCRIPTION"), 2.0, 50, 255, 50, "ReplaceableTextures\\CommandButtons\\BTNFelBurn.blp", "ReplaceableTextures\\CommandButtons\\BTNFelBurn.blp")
     set udg_ResourceArgunite = Add("argunite", GetLocalizedStringSafe("ARGUNITE"), GetLocalizedStringSafe("ARGUNITE_DESCRIPTION"), 2.0, 191, 85, 236, "ReplaceableTextures\\CommandButtons\\BTNBTNDraeneiPylon.dds", "ReplaceableTextures\\CommandButtons\\BTNBTNDraeneiPylon.dds")
+
+    call TriggerRegisterAnyUnitEventBJ(deathTrigger, EVENT_PLAYER_UNIT_DEATH)
+    call TriggerAddCondition(deathTrigger, Condition(function TriggerConditionDeath))
+
+    call TriggerRegisterAnyUnitEventBJ(constructFinishTrigger, EVENT_PLAYER_UNIT_CONSTRUCT_FINISH)
+    call TriggerAddCondition(constructFinishTrigger, Condition(function TriggerConditionConstructFinish))
+
+    call TriggerRegisterAnyUnitEventBJ(useItemTrigger, EVENT_PLAYER_UNIT_USE_ITEM)
+    call TriggerAddCondition(useItemTrigger, Condition(function TriggerConditionUseItem))
 
     call InitRandomMines()
 endfunction

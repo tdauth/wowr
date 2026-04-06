@@ -3750,6 +3750,7 @@ globals
     constant integer ITEM_SEARING_BLADE                              = 'srbd'
 
     // Food
+    constant integer ITEM_RANDOM_RESOURCE                            = 'I0KI'
     constant integer ITEM_BUNDLE_OF_WHEAT                            = 'I0KT'
     constant integer ITEM_APPLE                                      = 'I141'
     constant integer ITEM_BANANA                                     = 'I0S8'

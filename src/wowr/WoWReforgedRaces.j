@@ -629,6 +629,10 @@ private function SetRaceTier1 takes integer whichRace, integer id returns nothin
     call SetRaceObjectType(whichRace, RACE_OBJECT_TYPE_TIER_1, id)
 endfunction
 
+function GetRaceTier1 takes integer whichRace returns integer
+    return GetRaceObjectType(whichRace, RACE_OBJECT_TYPE_TIER_1)
+endfunction
+
 private function SetRaceTier1Item takes integer whichRace, integer id returns nothing
     call SetRaceObjectType(whichRace, RACE_OBJECT_TYPE_TIER_1_ITEM, id)
 endfunction
@@ -637,12 +641,20 @@ private function SetRaceTier2 takes integer whichRace, integer id returns nothin
     call SetRaceObjectType(whichRace, RACE_OBJECT_TYPE_TIER_2, id)
 endfunction
 
+function GetRaceTier2 takes integer whichRace returns integer
+    return GetRaceObjectType(whichRace, RACE_OBJECT_TYPE_TIER_2)
+endfunction
+
 private function SetRaceTier2Item takes integer whichRace, integer id returns nothing
     call SetRaceObjectType(whichRace, RACE_OBJECT_TYPE_TIER_2_ITEM, id)
 endfunction
 
 private function SetRaceTier3 takes integer whichRace, integer id returns nothing
     call SetRaceObjectType(whichRace, RACE_OBJECT_TYPE_TIER_3, id)
+endfunction
+
+function GetRaceTier3 takes integer whichRace returns integer
+    return GetRaceObjectType(whichRace, RACE_OBJECT_TYPE_TIER_3)
 endfunction
 
 private function SetRaceTier3Item takes integer whichRace, integer id returns nothing
@@ -675,6 +687,10 @@ endfunction
 
 private function SetRaceMill takes integer whichRace, integer id returns nothing
     call SetRaceObjectType(whichRace, RACE_OBJECT_TYPE_MILL, id)
+endfunction
+
+function GetRaceMill takes integer whichRace returns integer
+    return GetRaceObjectType(whichRace, RACE_OBJECT_TYPE_MILL)
 endfunction
 
 private function SetRaceMillItem takes integer whichRace, integer id returns nothing

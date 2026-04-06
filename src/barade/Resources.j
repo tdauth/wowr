@@ -1546,20 +1546,20 @@ private function Init takes nothing returns nothing
     // use trigger actions to avoid issues with unfinished Channel abilities
     call TriggerRegisterAnyUnitEventBJ(castTrigger, EVENT_PLAYER_UNIT_SPELL_EFFECT)
     call TriggerAddAction(castTrigger, function TriggerActionCast)
-    
+
     call TriggerRegisterAnyUnitEventBJ(orderTrigger, EVENT_PLAYER_UNIT_ISSUED_TARGET_ORDER)
     call TriggerAddAction(orderTrigger, function TriggerActionOrder)
-    
+
     call TriggerRegisterAnyUnitEventBJ(orderResetTrigger, EVENT_PLAYER_UNIT_ISSUED_ORDER)
     call TriggerRegisterAnyUnitEventBJ(orderResetTrigger, EVENT_PLAYER_UNIT_ISSUED_POINT_ORDER)
     call TriggerAddAction(orderResetTrigger, function TriggerActionOrderReset)
-    
+
     call TriggerRegisterAnyUnitEventBJ(returnTrigger, EVENT_PLAYER_UNIT_SPELL_CHANNEL)
     call TriggerAddAction(returnTrigger, function TriggerActionReturn)
 
     call TriggerRegisterAnyUnitEventBJ(deathTrigger, EVENT_PLAYER_UNIT_DEATH)
     call TriggerAddAction(deathTrigger, function TriggerActionDeath)
-    
+
     set GOLD = AddResource("gold", GetLocalizedString("GOLD"), true)
     call SetResourceIcon(GOLD, GOLD_ICON)
     call SetResourceIconAtt(GOLD, GOLD_ICON_ATT)

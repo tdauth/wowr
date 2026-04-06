@@ -20,7 +20,7 @@ endfunction
 
 private struct CustomUnitTypePlayerHideout extends CustomUnitType
     
-    public stub method handler takes unit whichUnit returns nothing
+    public stub method onEnter takes unit whichUnit returns nothing
         call SetPlayerHideout(whichUnit)
     endmethod
 
@@ -28,7 +28,7 @@ endstruct
 
 private struct CustomUnitTypeFishSchool extends CustomUnitType
     
-    public stub method handler takes unit whichUnit returns nothing
+    public stub method onEnter takes unit whichUnit returns nothing
         call AddFishSchool(whichUnit)
     endmethod
 
@@ -36,7 +36,7 @@ endstruct
 
 private struct CustomUnitTypeBerryBush extends CustomUnitType
     
-    public stub method handler takes unit whichUnit returns nothing
+    public stub method onEnter takes unit whichUnit returns nothing
         call AddBerryBush(whichUnit)
     endmethod
 
@@ -44,7 +44,7 @@ endstruct
 
 private struct CustomUnitTypePortal extends CustomUnitType
     
-    public stub method handler takes unit whichUnit returns nothing
+    public stub method onEnter takes unit whichUnit returns nothing
         call UpdatePortalNameByItself(whichUnit)
     endmethod
 
@@ -52,7 +52,7 @@ endstruct
 
 private struct CustomUnitTypeAddCustomMine extends CustomUnitType
     
-    public stub method handler takes unit whichUnit returns nothing
+    public stub method onEnter takes unit whichUnit returns nothing
         call AddCustomMine(whichUnit)
     endmethod
 
@@ -60,7 +60,7 @@ endstruct
 
 private struct CustomUnitTypeAddProperty extends CustomUnitType
     
-    public stub method handler takes unit whichUnit returns nothing
+    public stub method onEnter takes unit whichUnit returns nothing
         call AddCustomProperty(whichUnit)
     endmethod
 
@@ -68,7 +68,7 @@ endstruct
 
 private struct CustomUnitTypeHideLibrary extends CustomUnitType
     
-    public stub method handler takes unit whichUnit returns nothing
+    public stub method onEnter takes unit whichUnit returns nothing
         call HideLibrary(whichUnit)
     endmethod
 
@@ -76,7 +76,7 @@ endstruct
 
 private struct CustomUnitTypeAddResourcesShop extends CustomUnitType
     
-    public stub method handler takes unit whichUnit returns nothing
+    public stub method onEnter takes unit whichUnit returns nothing
         call AddResourcesShop(whichUnit)
     endmethod
 
@@ -84,7 +84,7 @@ endstruct
 
 private struct CustomUnitTypeAddAntimagicWard extends CustomUnitType
     
-    public stub method handler takes unit whichUnit returns nothing
+    public stub method onEnter takes unit whichUnit returns nothing
         call AddAntimagicWard(whichUnit)
     endmethod
 
@@ -92,7 +92,7 @@ endstruct
 
 private struct CustomUnitTypeAddBannersShop extends CustomUnitType
     
-    public stub method handler takes unit whichUnit returns nothing
+    public stub method onEnter takes unit whichUnit returns nothing
         call AddBannersShop(whichUnit)
     endmethod
 
@@ -100,7 +100,7 @@ endstruct
 
 private struct CustomUnitTypeAddMountsShop extends CustomUnitType
     
-    public stub method handler takes unit whichUnit returns nothing
+    public stub method onEnter takes unit whichUnit returns nothing
         call AddMountsShop(whichUnit)
     endmethod
 
@@ -108,7 +108,7 @@ endstruct
 
 private struct CustomUnitTypeAddSceptersShop extends CustomUnitType
     
-    public stub method handler takes unit whichUnit returns nothing
+    public stub method onEnter takes unit whichUnit returns nothing
         call AddSceptersShop(whichUnit)
     endmethod
 
@@ -116,7 +116,7 @@ endstruct
 
 private struct CustomUnitTypeAddProfessionBooksShop extends CustomUnitType
     
-    public stub method handler takes unit whichUnit returns nothing
+    public stub method onEnter takes unit whichUnit returns nothing
         call AddProfessionBooksShop(whichUnit)
     endmethod
 
@@ -124,7 +124,7 @@ endstruct
 
 private struct CustomUnitTypeAddTrainer extends CustomUnitType
     
-    public stub method handler takes unit whichUnit returns nothing
+    public stub method onEnter takes unit whichUnit returns nothing
         call AddTrainer(whichUnit)
     endmethod
 
@@ -132,7 +132,7 @@ endstruct
 
 private struct CustomUnitTypeAddSkinsShop extends CustomUnitType
     
-    public stub method handler takes unit whichUnit returns nothing
+    public stub method onEnter takes unit whichUnit returns nothing
         call AddSkinsShop(whichUnit)
     endmethod
 
@@ -140,7 +140,7 @@ endstruct
 
 private struct CustomUnitTypeAddArmory extends CustomUnitType
     
-    public stub method handler takes unit whichUnit returns nothing
+    public stub method onEnter takes unit whichUnit returns nothing
         call AddArmory(whichUnit)
     endmethod
 
@@ -148,7 +148,7 @@ endstruct
 
 private struct CustomUnitTypeAddChest extends CustomUnitType
     
-    public stub method handler takes unit whichUnit returns nothing
+    public stub method onEnter takes unit whichUnit returns nothing
         call AddChest(whichUnit)
     endmethod
 
@@ -156,7 +156,7 @@ endstruct
 
 private struct CustomUnitTypeEnableItemCraftingUnit extends CustomUnitType
     
-    public stub method handler takes unit whichUnit returns nothing
+    public stub method onEnter takes unit whichUnit returns nothing
         local integer i = udg_RecipeCooking
         local integer max = GetRecipesMax()
         call EnableItemCraftingUnit(whichUnit)
@@ -171,7 +171,7 @@ endstruct
 
 private struct CustomUnitTypeAddAlchemistLab extends CustomUnitType
     
-    public stub method handler takes unit whichUnit returns nothing
+    public stub method onEnter takes unit whichUnit returns nothing
         call AddAlchemistLab(whichUnit)
     endmethod
 
@@ -179,7 +179,7 @@ endstruct
 
 private struct CustomUnitTypeAddGameModesTavern extends CustomUnitType
     
-    public stub method handler takes unit whichUnit returns nothing
+    public stub method onEnter takes unit whichUnit returns nothing
         call AddGameModesTavern(whichUnit)
     endmethod
 
@@ -187,7 +187,7 @@ endstruct
 
 private struct CustomUnitTypeAddHeroesTavern extends CustomUnitType
     
-    public stub method handler takes unit whichUnit returns nothing
+    public stub method onEnter takes unit whichUnit returns nothing
         call AddHeroesTavern(whichUnit)
     endmethod
 
@@ -195,7 +195,7 @@ endstruct
 
 private struct CustomUnitTypeAddRacesTavern extends CustomUnitType
     
-    public stub method handler takes unit whichUnit returns nothing
+    public stub method onEnter takes unit whichUnit returns nothing
         call AddRacesTavern(whichUnit)
     endmethod
 
@@ -203,7 +203,7 @@ endstruct
 
 private struct CustomUnitTypeAddProfessionsTavern extends CustomUnitType
     
-    public stub method handler takes unit whichUnit returns nothing
+    public stub method onEnter takes unit whichUnit returns nothing
         call AddProfessionsTavern(whichUnit)
     endmethod
 
@@ -211,7 +211,7 @@ endstruct
 
 private struct CustomUnitTypeAddStartLocationsTavern extends CustomUnitType
     
-    public stub method handler takes unit whichUnit returns nothing
+    public stub method onEnter takes unit whichUnit returns nothing
         call AddStartLocationsTavern(whichUnit)
     endmethod
 
@@ -219,7 +219,7 @@ endstruct
 
 private struct CustomUnitTypeCreateRandomMine extends CustomUnitType
     
-    public stub method handler takes unit whichUnit returns nothing
+    public stub method onEnter takes unit whichUnit returns nothing
         call CreateRandomMine(whichUnit)
     endmethod
 
@@ -227,7 +227,7 @@ endstruct
 
 private struct CustomUnitTypeCreateRandomWaterMine extends CustomUnitType
     
-    public stub method handler takes unit whichUnit returns nothing
+    public stub method onEnter takes unit whichUnit returns nothing
         call CreateRandomWaterMine(whichUnit)
     endmethod
 
@@ -235,7 +235,7 @@ endstruct
 
 private struct CustomUnitTypeReplaceRandomCorpse extends CustomUnitType
     
-    public stub method handler takes unit whichUnit returns nothing
+    public stub method onEnter takes unit whichUnit returns nothing
         call ReplaceRandomCorpse(whichUnit)
     endmethod
 
@@ -243,7 +243,7 @@ endstruct
 
 private struct CustomUnitTypeAddGoldMine extends CustomUnitType
     
-    public stub method handler takes unit whichUnit returns nothing
+    public stub method onEnter takes unit whichUnit returns nothing
         call AddGoldMine(whichUnit)
     endmethod
 
@@ -251,7 +251,7 @@ endstruct
 
 private struct CustomUnitTypeAddRecordPlayer extends CustomUnitType
     
-    public stub method handler takes unit whichUnit returns nothing
+    public stub method onEnter takes unit whichUnit returns nothing
         call AddRecordPlayer(whichUnit)
     endmethod
 
@@ -259,7 +259,7 @@ endstruct
 
 private struct CustomUnitTypeAddRespawnUnit extends CustomUnitType
     
-    public stub method handler takes unit whichUnit returns nothing
+    public stub method onEnter takes unit whichUnit returns nothing
         call AddRespawnUnit(whichUnit)
     endmethod
 
@@ -267,7 +267,7 @@ endstruct
 
 private struct CustomUnitTypeEnableAllLevers extends CustomUnitType
     
-    public stub method handler takes unit whichUnit returns nothing
+    public stub method onEnter takes unit whichUnit returns nothing
         call EnableAllLevers(whichUnit)
     endmethod
 
@@ -275,7 +275,7 @@ endstruct
 
 private struct CustomUnitTypeAddVIPMercenaryCamp extends CustomUnitType
     
-    public stub method handler takes unit whichUnit returns nothing
+    public stub method onEnter takes unit whichUnit returns nothing
         call AddVIPMercenaryCamp(whichUnit)
     endmethod
 
@@ -283,8 +283,30 @@ endstruct
 
 private struct CustomUnitTypeAddTentacle extends CustomUnitType
     
-    public stub method handler takes unit whichUnit returns nothing
+    public stub method onEnter takes unit whichUnit returns nothing
         call AddTentacle(whichUnit)
+    endmethod
+
+endstruct
+
+private struct CustomUnitTypeReturnBuilding extends CustomUnitType
+
+    public stub method onEnter takes unit whichUnit returns nothing
+        if (GetUnitAbilityLevel(whichUnit, 'Argl') > 0 or GetUnitAbilityLevel(whichUnit, 'Argd') > 0 or GetUnitAbilityLevel(whichUnit, 'Arlm') > 0) then
+            call AddWoWReforgedReturnBuilding(whichUnit)
+        endif
+    endmethod
+
+    public stub method onDeath takes unit whichUnit returns nothing
+        if (IsReturnBuilding(whichUnit)) then
+            call RemoveReturnBuilding(whichUnit)
+        endif
+    endmethod
+
+    public stub method onRemove takes unit whichUnit returns nothing
+        if (IsReturnBuilding(whichUnit)) then
+            call RemoveReturnBuilding(whichUnit)
+        endif
     endmethod
 
 endstruct
@@ -334,7 +356,7 @@ private function EnumUnitInit takes nothing returns nothing
     set whichUnit = null
 endfunction
 
-// Call once during map initialization after all other initializations.
+// Call once during map initialization after all other initializations for the best performance since it will enumerate units only once.
 function InitAllPreplacedUnits takes nothing returns nothing
     local timer t = CreateTimer()
     local group g = CreateGroup()
@@ -377,6 +399,8 @@ endfunction
 
 private function Init takes nothing returns nothing
     local CustomUnitType c = 0
+    local integer i = 0
+    local integer max = 0
 
     call AddCustomUnitType(HIDEOUT, CustomUnitTypePlayerHideout.create())
     
@@ -466,6 +490,28 @@ private function Init takes nothing returns nothing
     call AddCustomUnitType(EYE_TENTACLE_CTHUN, c)
     call AddCustomUnitType(EYE_TENTACLE_NZOTH, c)
     call AddCustomUnitType(MACE_TENTACLE_YOGG_SARON, c)
+
+    set c = CustomUnitTypeReturnBuilding.create()
+    call AddCustomUnitType(TEMPLE_OF_DARKNESS, c)
+    call AddCustomUnitType(TEMPLE_OF_LIGHT, c)
+    set i = 0
+    set max = GetMaxRaces()
+    loop
+        exitwhen (i == max)
+        if (GetRaceTier1(i) != 0) then
+            call AddCustomUnitType(GetRaceTier1(i), c)
+        endif
+        if (GetRaceTier2(i) != 0) then
+            call AddCustomUnitType(GetRaceTier2(i), c)
+        endif
+        if (GetRaceTier3(i) != 0) then
+            call AddCustomUnitType(GetRaceTier3(i), c)
+        endif
+        if (GetRaceMill(i) != 0) then
+            call AddCustomUnitType(GetRaceMill(i), c)
+        endif
+        set i = i + 1
+    endloop
 endfunction
 
 endlibrary
