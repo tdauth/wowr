@@ -18058,7 +18058,7 @@ B
 }
 
 STRING 3518
-// Units: h0XL (Buy Property Fallow Sanctuary), Hotkey (Hotkey)
+// Units: h0XL (Buy Property Brachshain), Hotkey (Hotkey)
 {
 B
 }
@@ -39736,7 +39736,7 @@ STRING 8613
 STRING 8614
 // Units: u03P (Repair Dalaran Power Generator), Name (Name)
 {
-Repair Dalaran Stromgenerator
+Dalaran-Stromgenerator reparieren
 }
 
 STRING 8615
@@ -39748,13 +39748,13 @@ STRING 8615
 STRING 8616
 // Units: u03P (Repair Dalaran Power Generator), Tip (Tooltip - Basic)
 {
-Repair Dalaran Stromgenerator
+Dalaran-Stromgenerator reparieren
 }
 
 STRING 8617
 // Units: u03P (Repair Dalaran Power Generator), Ubertip (Tooltip - Extended)
 {
-Repairs 500 hit points.
+Repariert 500 Trefferpunkte.
 }
 
 STRING 8618
@@ -53728,7 +53728,7 @@ Einheiten-Auktionshammer erwerben
 STRING 16743
 // Items: I044 (Mana Burn), Description (Description)
 {
-Allows causing damage to a unit from its mana.
+Ermöglicht es, bei einer Einheit Schaden durch ihr eigenes Mana zu verursachen.
 }
 
 STRING 16745
@@ -53746,7 +53746,7 @@ Gegenstands-Auktionshammer erwerben
 STRING 16747
 // Items: I044 (Mana Burn), Ubertip (Tooltip - Extended)
 {
-Allows causing damage to a unit from its mana.
+Ermöglicht es, bei einer Einheit Schaden durch ihr eigenes Mana zu verursachen.
 }
 
 STRING 16749
@@ -57835,13 +57835,13 @@ Bestien-Pfeife erwerben
 STRING 19894
 // Items: I09F (Beast Whistle), Description (Description)
 {
-Sets the summon duration of all friendly summoned units in an area to 60 seconds.
+Setzt die Beschwörungsdauer von allen befreundeten beschworenen Einheiten im Zielgebiet auf 60 Sekunden.
 }
 
 STRING 19895
 // Items: I09F (Beast Whistle), Ubertip (Tooltip - Extended)
 {
-Sets the summon duration of all friendly summoned units in an area to 60 seconds.
+Setzt die Beschwörungsdauer von allen befreundeten beschworenen Einheiten im Zielgebiet auf 60 Sekunden.
 }
 
 STRING 19896
@@ -58324,7 +58324,7 @@ STRING 20088
 |cff0000ffGeografischer Standort:|r Südosten.
 Left unharmed by the Legion´s invasion and Scourge´s corruption, the humans of Azeroth prosper in this region under the protection of the Paladins of the Silver Hand and the Young King Anduin Wrynn.
 
-|cff00ff00Empfohlenes Volk:|r Zwerge.
+|cff00ff00Empfohlene Völker:|r Menschen, Sturmwind, Lordaeron, Kul Tiras und Dalaran.
 }
 
 STRING 20090
@@ -102285,7 +102285,7 @@ Reflexion
 STRING 48172
 // Destructibles: B00H (Dummy), Name (Name)
 {
-Dummy
+Übungspuppe
 }
 
 STRING 48179
@@ -115365,7 +115365,7 @@ STRING 55721
 }
 
 STRING 55722
-// Units: n0LU (Fallow Sanctuary), EditorSuffix (Name - Editor Suffix)
+// Units: n0LU (Brachshain), EditorSuffix (Name - Editor Suffix)
 {
 (Immobilie)
 }
@@ -116028,27 +116028,27 @@ STRING 55943
 }
 
 STRING 55947
-// Units: h0XL (Buy Property Fallow Sanctuary), Name (Name)
+// Units: h0XL (Buy Property Brachshain), Name (Name)
 {
-Buy Property Fallow Sanctuary
+Immobilie Brachshain kaufen
 }
 
 STRING 55948
-// Units: h0XL (Buy Property Fallow Sanctuary), Tip (Tooltip - Basic)
+// Units: h0XL (Buy Property Brachshain), Tip (Tooltip - Basic)
 {
-Buy Property Fallow Sanctuary
+Immobilie Brachshain kaufen
 }
 
 STRING 55949
-// Units: h0XL (Buy Property Fallow Sanctuary), Ubertip (Tooltip - Extended)
+// Units: h0XL (Buy Property Brachshain), Ubertip (Tooltip - Extended)
 {
 Die Immobilie erwerben. |n|n|cffffcc00Volk: Verlorene.|r|n|cffffcc00Rohstoff: Argunit.|r|n|cffffcc00Nahrung: 80.|r|n|cffffcc00Gibt Ihnen automatisch alle Forschungen des Volks.|r
 }
 
 STRING 55950
-// Units: n0LU (Fallow Sanctuary), Name (Name)
+// Units: n0LU (Brachshain), Name (Name)
 {
-Fallow Sanctuary
+Brachshain
 }
 
 STRING 55951
