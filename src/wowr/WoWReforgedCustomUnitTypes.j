@@ -318,7 +318,7 @@ private function EnumUnitInit takes nothing returns nothing
     local integer index = -1
     call AddCommandButtons(whichUnit)
     if (IsCustomUnitType(unitTypeId)) then
-        call CallCustomUnitTypeHandler(whichUnit)
+        call CallCustomUnitTypeOnEnter(whichUnit)
     endif
     
     //if (RectContainsUnit(GetMapPlayerSelectionRect(), whichUnit) and unitTypeId != 'n061') then
@@ -495,7 +495,7 @@ private function Init takes nothing returns nothing
     call AddCustomUnitType(TEMPLE_OF_DARKNESS, c)
     call AddCustomUnitType(TEMPLE_OF_LIGHT, c)
     set i = 0
-    set max = GetMaxRaces()
+    set max = GetRacesMax()
     loop
         exitwhen (i == max)
         if (GetRaceTier1(i) != 0) then
