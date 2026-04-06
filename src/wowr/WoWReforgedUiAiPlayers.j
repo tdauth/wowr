@@ -42,17 +42,18 @@ globals
     private constant real COLUMN_HERO_START_LEVEL_X = COLUMN_HERO_X + COLUMN_HERO_WIDTH + COLUMN_SPACING_X
     private constant real COLUMN_HERO_START_LEVEL_WIDTH = 0.04
 
-    private constant real COLUMN_START_LOCATION_X = COLUMN_HERO_START_LEVEL_X + COLUMN_HERO_START_LEVEL_WIDTH + COLUMN_SPACING_X
+    // new line
+    private constant real COLUMN_START_LOCATION_X = START_X
     private constant real COLUMN_START_LOCATION_WIDTH = 0.13
 
     private constant real COLUMN_RACE_X = COLUMN_START_LOCATION_X + COLUMN_START_LOCATION_WIDTH + COLUMN_SPACING_X
     private constant real COLUMN_RACE_WIDTH = 0.15
 
-    // new line
-    private constant real COLUMN_PROFESSION_X = START_X
+    private constant real COLUMN_PROFESSION_X = COLUMN_RACE_X + COLUMN_RACE_WIDTH + COLUMN_SPACING_X
     private constant real COLUMN_PROFESSION_WIDTH = 0.13
     
-    private constant real COLUMN_START_GOLD_X = COLUMN_PROFESSION_X + COLUMN_PROFESSION_WIDTH + COLUMN_SPACING_X
+    // new line
+    private constant real COLUMN_START_GOLD_X = START_X
     private constant real COLUMN_START_GOLD_WIDTH = 0.06
 
     private constant real COLUMN_START_LUMBER_X = COLUMN_START_GOLD_X + COLUMN_START_GOLD_WIDTH + COLUMN_SPACING_X
@@ -236,8 +237,8 @@ globals
     private framehandle array LabelFrameColumnExpansionsEdit
     private framehandle array LabelFrameColumnSharedControlCheckbox
     private framehandle array LabelFrameColumnDifficultyEdit
-    // bottom buttons
 
+    // bottom buttons
     private framehandle PreviousPageButton
     private trigger PreviousPageTrigger = null
 
@@ -359,6 +360,9 @@ private function SetVisible takes boolean visible returns nothing
 endfunction
 
 function SetAiPlayersUiVisibleForPlayer takes player whichPlayer, boolean visible returns nothing
+    if (visible) then
+        call UpdateComputerPlayersTitle()
+    endif
     if (whichPlayer == GetLocalPlayer()) then
         call SetVisible(visible)
     endif
@@ -968,7 +972,6 @@ function CreateAiPlayersUiEx takes force aiPlayers returns nothing
     set TitleFrame = BlzCreateFrameByType("TEXT", "AiPlayersGuiTitle", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), "", 0)
     call BlzFrameSetAbsPoint(TitleFrame, FRAMEPOINT_TOPLEFT, UI_FULLSCREEN_X, UI_FULLSCREEN_TITLE_Y)
     call BlzFrameSetAbsPoint(TitleFrame, FRAMEPOINT_BOTTOMRIGHT, UI_FULLSCREEN_X + UI_FULLSCREEN_WIDTH, UI_FULLSCREEN_TITLE_Y - UI_FULLSCREEN_TITLE_HEIGHT)
-    call UpdateComputerPlayersTitle()
     call BlzFrameSetTextAlignment(TitleFrame, TEXT_JUSTIFY_TOP, TEXT_JUSTIFY_CENTER)
 
     // header line
@@ -1002,6 +1005,9 @@ function CreateAiPlayersUiEx takes force aiPlayers returns nothing
     call BlzFrameSetText(LabelFrameColumnHeroStartLevel, GetLocalizedString("LEVEL")) // Level
     call BlzFrameSetTextAlignment(LabelFrameColumnHeroStartLevel, TEXT_JUSTIFY_TOP, TEXT_JUSTIFY_CENTER)
 
+    // new line
+    set y = LINE_HEADERS_Y - LINE_HEIGHT - LINE_HEIGHT_SPACING
+
     set LabelFrameColumnStartLocation = BlzCreateFrameByType("TEXT", "AiPlayersGuiHeaderLineStartLocation", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), "", 0)
     call BlzFrameSetAbsPoint(LabelFrameColumnStartLocation, FRAMEPOINT_TOPLEFT, COLUMN_START_LOCATION_X, LINE_HEADERS_Y)
     call BlzFrameSetAbsPoint(LabelFrameColumnStartLocation, FRAMEPOINT_BOTTOMRIGHT, COLUMN_START_LOCATION_X + COLUMN_START_LOCATION_WIDTH, LINE_HEADERS_Y - LINE_HEADERS_HEIGHT)
@@ -1013,15 +1019,15 @@ function CreateAiPlayersUiEx takes force aiPlayers returns nothing
     call BlzFrameSetAbsPoint(LabelFrameColumnRace, FRAMEPOINT_BOTTOMRIGHT, COLUMN_RACE_X + COLUMN_RACE_WIDTH, LINE_HEADERS_Y - LINE_HEADERS_HEIGHT)
     call BlzFrameSetText(LabelFrameColumnRace, GetLocalizedString("RACE")) // Race
     call BlzFrameSetTextAlignment(LabelFrameColumnRace, TEXT_JUSTIFY_TOP, TEXT_JUSTIFY_CENTER)
-
-    // new line
-    set y = LINE_HEADERS_Y - LINE_HEIGHT - LINE_HEIGHT_SPACING
     
     set LabelFrameColumnProfession = BlzCreateFrameByType("TEXT", "AiPlayersGuiHeaderLineProfession", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), "", 0)
     call BlzFrameSetAbsPoint(LabelFrameColumnProfession, FRAMEPOINT_TOPLEFT, COLUMN_PROFESSION_X, y)
     call BlzFrameSetAbsPoint(LabelFrameColumnProfession, FRAMEPOINT_BOTTOMRIGHT, COLUMN_PROFESSION_X + COLUMN_PROFESSION_WIDTH, y - LINE_HEADERS_HEIGHT)
     call BlzFrameSetText(LabelFrameColumnProfession, GetLocalizedString("PROFESSION")) // Profession
     call BlzFrameSetTextAlignment(LabelFrameColumnProfession, TEXT_JUSTIFY_TOP, TEXT_JUSTIFY_CENTER)
+
+    // new line
+    set y = LINE_HEADERS_Y - LINE_HEIGHT - LINE_HEIGHT_SPACING
 
     set LabelFrameColumnStartGold = BlzCreateFrameByType("TEXT", "AiPlayersGuiHeaderLineStartGold", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), "", 0)
     call BlzFrameSetAbsPoint(LabelFrameColumnStartGold, FRAMEPOINT_TOPLEFT, COLUMN_START_GOLD_X, y)
