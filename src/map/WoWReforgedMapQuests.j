@@ -44,7 +44,7 @@ private function Init takes nothing returns nothing
     call AddQuestItem(GetLocalizedStringSafe("Q_RECONSTRUCTION_0"))
     call AddQuestItem(GetLocalizedStringSafe("Q_RECONSTRUCTION_1"))
 
-    set udg_Dalaran_Quest[1] = AddQuestNext("DalaranQuest2", GetLocalizedStringSafe("Q_FIRE_ELEMENTAL_TITLE"), GetLocalizedStringSafe("Q_FIRE_ELEMENTAL_DESCRIPTION"), "ReplaceableTextures\\CommandButtons\\BTNFireSpawn.blp", gg_unit_H08B_1934, 'mnsf')
+    set udg_Dalaran_Quest[2] = AddQuestNext("DalaranQuest2", GetLocalizedStringSafe("Q_FIRE_ELEMENTAL_TITLE"), GetLocalizedStringSafe("Q_FIRE_ELEMENTAL_DESCRIPTION"), "ReplaceableTextures\\CommandButtons\\BTNFireSpawn.blp", gg_unit_H08B_1934, 'mnsf')
     call AddQuestItem(GetLocalizedStringSafe("Q_FIRE_ELEMENTAL_0"))
     call AddQuestItem(GetLocalizedStringSafe("Q_FIRE_ELEMENTAL_1"))
 
