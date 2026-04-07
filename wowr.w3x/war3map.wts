@@ -85244,19 +85244,19 @@ Provides +4 to hero stats, summoned units and defense, +9 to damage and +200 to 
 STRING 38072
 // Abilities: A1CQ (Inscription - Adept), Ubertip (Tooltip - Normal - Extended)
 {
-The Inscriptor uses mystical power to create a Adept Glyph.
+Crafts Adept Glyphs.
 }
 
 STRING 38073
 // Abilities: A1CR (Inscription - Master), Ubertip (Tooltip - Normal - Extended)
 {
-The Inscriptor uses mystical power to create a Master Glyph.
+Crafts Master Glyphs.
 }
 
 STRING 38074
 // Abilities: A1CS (Inscription - Advanced), Ubertip (Tooltip - Normal - Extended)
 {
-The Inscriptor uses mystical power to create a Advanced Glyph.
+Crafts Advanced Glyphs.
 }
 
 STRING 38075
@@ -90146,7 +90146,7 @@ Place Fish Trap
 STRING 40620
 // Items: I0Q2 (Fish Trap), Ubertip (Tooltip - Extended)
 {
-Places a Fish Trap which generates for <A1GS,Dur1> seconds.
+Places a Fish Trap which generates fishes for <A1GS,Dur1> seconds.
 }
 
 STRING 40621
@@ -90986,7 +90986,7 @@ Places a Fish Trap.
 STRING 41057
 // Abilities: A1GS (Place Fish Trap), Ubertip (Tooltip - Normal - Extended)
 {
-Places a Fish Trap which generates for <A1GS,Dur1> seconds.
+Places a Fish Trap which generates fishes for <A1GS,Dur1> seconds.
 }
 
 STRING 41058
@@ -91220,7 +91220,7 @@ Place Fish Trap
 STRING 41102
 // Abilities: A1HU (Place Fish Trap), Ubertip (Tooltip - Normal - Extended)
 {
-Places a Fish Trap which generates for <A1GS,Dur1> seconds.
+Places a Fish Trap which generates fishes for <A1GS,Dur1> seconds.
 }
 
 STRING 41120

@@ -10809,7 +10809,7 @@ B
 STRING 1851
 // Units: h04C (Arch Cleric), Ubertip (Tooltip - Extended)
 {
-Supporting spellcaster. Can initially cast Magical Laterne, which summons a Magical Laterne to watch a certain area for some time. Can also learn Entwaffnung, Manaschutzzauber and Sonnenbrunnen-Auferstehung. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
+Unterstützender Zauberer. Can initially cast Magical Laterne, which summons a Magical Laterne to watch a certain area for some time. Can also learn Entwaffnung, Manaschutzzauber and Sonnenbrunnen-Auferstehung. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
 }
 
 STRING 1852
@@ -13428,7 +13428,7 @@ Foliant der Bewegung erwerben
 STRING 2476
 // Units: h077 (Wizard), Ubertip (Tooltip - Extended)
 {
-Supporting spellcaster. Can initially cast Purge, which removes all buffs from a target unit and slows its movement speed. Can also learn Frost-Rüstung and Verwandlung. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
+Unterstützender Zauberer. Can initially cast Purge, which removes all buffs from a target unit and slows its movement speed. Can also learn Frost-Rüstung and Verwandlung. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
 }
 
 STRING 2477
@@ -13566,7 +13566,7 @@ STRING 2499
 STRING 2500
 // Units: hmpr (Priest), Ubertip (Tooltip - Extended)
 {
-Supporting spellcaster. Can initially cast Heilen, which increases the life of wounded units. Can also learn Magie bannen and Inneres Feuer. Can gather the resource Favor from Arkanes Sanktums. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
+Unterstützender Zauberer. Can initially cast Heilen, which increases the life of wounded units. Can also learn Magie bannen and Inneres Feuer. Can gather the resource Favor from Arkanes Sanktums. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
 }
 
 STRING 2501
@@ -14784,7 +14784,7 @@ STRING 2775
 STRING 2776
 // Units: n03U (Goblin Alchemist), Ubertip (Tooltip - Extended)
 {
-Supporting spellcaster. Can initially cast Illusion, which confuses the enemy by creating one illusion of an allied unit. Can also learn Chemischer Zorn and Säurebombe. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
+Unterstützender Zauberer. Can initially cast Illusion, which confuses the enemy by creating one illusion of an allied unit. Can also learn Chemischer Zorn and Säurebombe. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
 }
 
 STRING 2777
@@ -18798,7 +18798,7 @@ Heavy ranged flying unit. Tamed from the Outland area to serve the Draenei. |n|n
 STRING 3721
 // Units: o02C (Troll Gatherer), Ubertip (Tooltip - Extended)
 {
-Basic worker unit. Can harvest gold and lumber, build structures, and Repair. |n|n|cffffcc00Greif Land-Einheiten und Bäume an.|r
+Einfache Arbeiter-Einheit. Kann Gold und Holz abbauen, Gebäude errichten und 'Reparieren'. |n|n|cffffcc00Greif Land-Einheiten und Bäume an.|r
 }
 
 STRING 3722
@@ -20088,7 +20088,7 @@ B
 STRING 4050
 // Units: h03A (Battle Priest), Ubertip (Tooltip - Extended)
 {
-Supporting spellcaster. Can initially cast Heiliges Licht, which heals wounded allied units and damages enemy Undead units. Can also learn Breath of Frost and Gebrüll. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
+Unterstützender Zauberer. Can initially cast Heiliges Licht, which heals wounded allied units and damages enemy Undead units. Can also learn Breath of Frost and Gebrüll. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
 }
 
 STRING 4051
@@ -20158,7 +20158,7 @@ Runenschmieden - Novize
 }
 
 STRING 4092
-// Units: n0G0 (Murloc Sorcerer Den), Hotkey (Hotkey)
+// Units: n0G0 (Murloczauberer-Bau), Hotkey (Hotkey)
 {
 D
 }
@@ -21910,7 +21910,7 @@ R
 }
 
 STRING 4508
-// Units: o05E (Ancient Ward), Hotkey (Hotkey)
+// Units: o05E (Uralter Schutzzauber), Hotkey (Hotkey)
 {
 W
 }
@@ -33190,7 +33190,7 @@ E
 STRING 7096
 // Units: o05M (Worker), Ubertip (Tooltip - Extended)
 {
-Basic worker unit. Can harvest gold and lumber, build structures, and Repair. |n|n|cffffcc00Greif Land-Einheiten und Bäume an.|r
+Einfache Arbeiter-Einheit. Kann Gold und Holz abbauen, Gebäude errichten und 'Reparieren'. |n|n|cffffcc00Greif Land-Einheiten und Bäume an.|r
 }
 
 STRING 7098
@@ -39278,7 +39278,7 @@ STRING 8506
 }
 
 STRING 8507
-// Units: n0G1 (Hatchling Ground), Hotkey (Hotkey)
+// Units: n0G1 (Jungtierstätte), Hotkey (Hotkey)
 {
 G
 }
@@ -48490,7 +48490,7 @@ STRING 12170
 STRING 12171
 // Units: o0AZ (Razormane Medicine Man), Ubertip (Tooltip - Extended)
 {
-Supporting spellcaster. Can initially cast Verjüngung, which regenerates mana for friendly units. Can also learn Wildgeist and Heil-Schutzzauber. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
+Unterstützender Zauberer. Can initially cast Verjüngung, which regenerates mana for friendly units. Can also learn Wildgeist and Heil-Schutzzauber. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
 }
 
 STRING 12172
@@ -55468,7 +55468,7 @@ STRING 17694
 STRING 17752
 // Units: o06Y (Gnoll Runt), Ubertip (Tooltip - Extended)
 {
-Basic worker unit. Can harvest gold and lumber, build structures, and Repair. |n|n|cffffcc00Greif Land-Einheiten und Bäume an.|r
+Einfache Arbeiter-Einheit. Kann Gold und Holz abbauen, Gebäude errichten und 'Reparieren'. |n|n|cffffcc00Greif Land-Einheiten und Bäume an.|r
 }
 
 STRING 17773
@@ -66681,7 +66681,7 @@ Primary structure, used to train Gnoll Runts and receive gathered resources. Can
 STRING 27938
 // Units: o06Z (Kobold Engineer), Ubertip (Tooltip - Extended)
 {
-Basic worker unit. Can harvest gold and lumber, build structures, and Repair. |n|n|cffffcc00Greif Land-Einheiten und Bäume an.|r
+Einfache Arbeiter-Einheit. Kann Gold und Holz abbauen, Gebäude errichten und 'Reparieren'. |n|n|cffffcc00Greif Land-Einheiten und Bäume an.|r
 }
 
 STRING 27941
@@ -73683,7 +73683,7 @@ STRING 33781
 STRING 33782
 // Units: o02L (Troll Bloodmage), Ubertip (Tooltip - Extended)
 {
-Supporting spellcaster. Can initially cast Kannibalismus, which heals hit points by eating enemy living ground units. Can also learn Unstable Concoction and Lebensauger. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
+Unterstützender Zauberer. Can initially cast Kannibalismus, which heals hit points by eating enemy living ground units. Can also learn Unstable Concoction and Lebensauger. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
 }
 
 STRING 33783
@@ -77049,7 +77049,7 @@ Silberbarren
 STRING 35331
 // Units: h0IP (Runecarver), Ubertip (Tooltip - Extended)
 {
-Supporting spellcaster. Can initially cast Heilen, which increases the life of wounded units. Can also learn Magie bannen and Inneres Feuer. Can gather the resource Favor from Arkanes Sanktums. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
+Unterstützender Zauberer. Can initially cast Heilen, which increases the life of wounded units. Can also learn Magie bannen and Inneres Feuer. Can gather the resource Favor from Arkanes Sanktums. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
 }
 
 STRING 35332
@@ -77331,7 +77331,7 @@ Scharlachrotes Kloster erforschen
 STRING 35444
 // Units: h0QD (Arcanist), Ubertip (Tooltip - Extended)
 {
-Supporting spellcaster. Can initially cast Heilen, which increases the life of wounded units. Can also learn Magie bannen and Inneres Feuer. Can gather the resource Favor from Arkanes Sanktums. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
+Unterstützender Zauberer. Can initially cast Heilen, which increases the life of wounded units. Can also learn Magie bannen and Inneres Feuer. Can gather the resource Favor from Arkanes Sanktums. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
 }
 
 STRING 35445
@@ -82855,7 +82855,7 @@ Ausbau zu Neruber-Waffen
 }
 
 STRING 37404
-// Units: o05E (Ancient Ward), EditorSuffix (Name - Editor Suffix)
+// Units: o05E (Uralter Schutzzauber), EditorSuffix (Name - Editor Suffix)
 {
 (Neruber)
 }
@@ -84375,13 +84375,13 @@ STRING 37777
 STRING 37778
 // Abilities: A1DF (Burrow), Ubertip (Tooltip - Normal - Extended)
 {
-The Nest vergräbt sich im Boden, wird unsichtbar und erhält eine Regenerationsrate von <ucrm,regenHP> Trefferpunkten pro Sekunde.
+Das Nest vergräbt sich im Boden, wird unsichtbar und erhält eine Regenerationsrate von <ucrm,regenHP> Trefferpunkten pro Sekunde.
 }
 
 STRING 37779
 // Abilities: A1DF (Burrow), Unubertip (Tooltip - Turn Off - Extended)
 {
-The Nest bricht aus der Erde hervor und wird wieder sichtbar.
+Das Nest bricht aus der Erde hervor und wird wieder sichtbar.
 }
 
 STRING 37780
@@ -84393,13 +84393,13 @@ STRING 37780
 STRING 37781
 // Abilities: A1DG (Burrow), Ubertip (Tooltip - Normal - Extended)
 {
-The Nest vergräbt sich im Boden, wird unsichtbar und erhält eine Regenerationsrate von <ucrm,regenHP> Trefferpunkten pro Sekunde.
+Das Nest vergräbt sich im Boden, wird unsichtbar und erhält eine Regenerationsrate von <ucrm,regenHP> Trefferpunkten pro Sekunde.
 }
 
 STRING 37782
 // Abilities: A1DG (Burrow), Unubertip (Tooltip - Turn Off - Extended)
 {
-The Nest bricht aus der Erde hervor und wird wieder sichtbar.
+Das Nest bricht aus der Erde hervor und wird wieder sichtbar.
 }
 
 STRING 37783
@@ -84411,13 +84411,13 @@ STRING 37783
 STRING 37784
 // Abilities: A1DH (Burrow), Ubertip (Tooltip - Normal - Extended)
 {
-The Nest vergräbt sich im Boden, wird unsichtbar und erhält eine Regenerationsrate von <ucrm,regenHP> Trefferpunkten pro Sekunde.
+Das Nest vergräbt sich im Boden, wird unsichtbar und erhält eine Regenerationsrate von <ucrm,regenHP> Trefferpunkten pro Sekunde.
 }
 
 STRING 37785
 // Abilities: A1DH (Burrow), Unubertip (Tooltip - Turn Off - Extended)
 {
-The Nest bricht aus der Erde hervor und wird wieder sichtbar.
+Das Nest bricht aus der Erde hervor und wird wieder sichtbar.
 }
 
 STRING 37786
@@ -84435,7 +84435,7 @@ The Nest vergräbt sich im Boden, wird unsichtbar und erhält eine Regenerations
 STRING 37788
 // Abilities: A1DI (Burrow), Unubertip (Tooltip - Turn Off - Extended)
 {
-The Nest bricht aus der Erde hervor und wird wieder sichtbar.
+Das Nest bricht aus der Erde hervor und wird wieder sichtbar.
 }
 
 STRING 37789
@@ -84597,7 +84597,7 @@ Causes one of the two skeletons created by Tote erwecken to be a Skeletal Mage a
 STRING 37816
 // Units: u028 (Nerubian Tunnel), Ubertip (Tooltip - Extended)
 {
-Invisible building which is connected to all other Neruber-Tunnel buildings to transport friendly ground units.|n|nIncreases the hit points regeneration of all transported units.
+Usichtbares Gebäude, das mit allen anderen Neruber-Tunnel-Gbäuden verbunden ist, um befreundete Boden-Einheiten zu transportieren.|n|nErhöht die Trefferpunkt-Regeneration von allen transportierten Einheiten.
 }
 
 STRING 37817
@@ -84615,7 +84615,7 @@ Azjol Nerubian Obelisk
 STRING 37819
 // Units: n00D (Azjol Nerubian Obelisk), Description (Description)
 {
-Allows hiring Faceless units.
+Ermöglicht die Anheuerung gesichtsloser Einheiten.
 }
 
 STRING 37820
@@ -84627,7 +84627,7 @@ Powerful strong building with Chaos damage and Frostangriff. |n|n|cffffcc00Begre
 STRING 37821
 // Units: n0EJ (Nerubian Webspinner), Ubertip (Tooltip - Extended)
 {
-Light ranged unit that can cast Replenish Mana and Life, Netz spinnen and Summon Ancient Ward. |n|n|cffffcc00Greift Land-Einheiten an.|r
+Light ranged unit that can cast Replenish Mana and Life, Netz spinnen and Summon Uralter Schutzzauber. |n|n|cffffcc00Greift Land-Einheiten an.|r
 }
 
 STRING 37822
@@ -84643,19 +84643,19 @@ Neruber-Unterkunft errichten
 }
 
 STRING 37825
-// Units: o05E (Ancient Ward), Name (Name)
+// Units: o05E (Uralter Schutzzauber), Name (Name)
 {
-Ancient Ward
+Uralter Schutzzauber
 }
 
 STRING 37826
-// Units: o05E (Ancient Ward), Tip (Tooltip - Basic)
+// Units: o05E (Uralter Schutzzauber), Tip (Tooltip - Basic)
 {
-Build Ancient Ward
+Uralten Schutzzauber errichten
 }
 
 STRING 37827
-// Units: o05E (Ancient Ward), Ubertip (Tooltip - Extended)
+// Units: o05E (Uralter Schutzzauber), Ubertip (Tooltip - Extended)
 {
 Prevents enemy Reveals, Far Sight, Portal, Scroll of Town Portal, Blinzeln, Massenteleportationation and Stab der Teleportation spells of enemy units in the nearby area and adds a black mask for enemy players. Can cast Stille, detects invisible units and is permanently invisible itself.|n|nOnly works if built before enemy Antimagischer Schutzzaubers in the area.
 }
@@ -84669,7 +84669,7 @@ STRING 37828
 STRING 37829
 // Abilities: A1DL (Burrow), Ubertip (Tooltip - Normal - Extended)
 {
-The Altar of the Spider vergräbt sich im Boden, wird unsichtbar und erhält eine Regenerationsrate von <ucrm,regenHP> Trefferpunkten pro Sekunde.
+Der Altar der Spinne vergräbt sich im Boden, wird unsichtbar und erhält eine Regenerationsrate von <ucrm,regenHP> Trefferpunkten pro Sekunde.
 }
 
 STRING 37830
@@ -84681,25 +84681,25 @@ STRING 37830
 STRING 37846
 // Abilities: A1DL (Burrow), Unubertip (Tooltip - Turn Off - Extended)
 {
-The Altar of the Spider bricht aus der Erde hervor und wird wieder sichtbar.
+Der Altar der Spinne bricht aus der Erde hervor und wird wieder sichtbar.
 }
 
 STRING 37847
-// Abilities: A1DM (Ancient Ward), EditorSuffix (Editor Suffix)
+// Abilities: A1DM (Uralter Schutzzauber), EditorSuffix (Editor Suffix)
 {
 (Neruber) (Netzspinner)
 }
 
 STRING 37848
-// Abilities: A1DM (Ancient Ward), Name (Name)
+// Abilities: A1DM (Uralter Schutzzauber), Name (Name)
 {
-Ancient Ward
+Uralter Schutzzauber
 }
 
 STRING 37849
-// Abilities: A1DM (Ancient Ward), Tip (Tooltip - Normal)
+// Abilities: A1DM (Uralter Schutzzauber), Tip (Tooltip - Normal)
 {
-Ancient Ward
+Uralter Schutzzauber
 }
 
 STRING 37850
@@ -84759,7 +84759,7 @@ P
 STRING 37861
 // Units: o008 (Royal Vault), Tip (Tooltip - Basic)
 {
-Build Königliches Gewölbe
+Königliches Gewölbe errichten
 }
 
 STRING 37862
@@ -84897,7 +84897,7 @@ Provides +1 to hero stats, summoned units and defense, +3 to damage and +50 to h
 STRING 37900
 // Units: n0EX (Val'kyr), Tip (Tooltip - Basic)
 {
-Hire Val'kyr
+Val'kyr anheuern
 }
 
 STRING 37901
@@ -84999,7 +84999,7 @@ Monument
 STRING 37921
 // Units: n0ET (Monument), Tip (Tooltip - Basic)
 {
-Build Monument
+Monument errichten
 }
 
 STRING 37922
@@ -85245,19 +85245,19 @@ Provides +4 to hero stats, summoned units and defense, +9 to damage and +200 to 
 STRING 38072
 // Abilities: A1CQ (Inscription - Adept), Ubertip (Tooltip - Normal - Extended)
 {
-The Inscriptor uses mystical power to create a Adept Glyph.
+Stellt Adepten-Glyphen her.
 }
 
 STRING 38073
 // Abilities: A1CR (Inscription - Master), Ubertip (Tooltip - Normal - Extended)
 {
-The Inscriptor uses mystical power to create a Meister Glyph.
+Stellt Meister-Glyphen her.
 }
 
 STRING 38074
 // Abilities: A1CS (Inscription - Advanced), Ubertip (Tooltip - Normal - Extended)
 {
-The Inscriptor uses mystical power to create a Advanced Glyph.
+Stellt Fortgeschrittene Glyphen her.
 }
 
 STRING 38075
@@ -85299,7 +85299,7 @@ Fliegende Fernkampfeinheit. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
 STRING 38081
 // Units: n0EX (Val'kyr), EditorSuffix (Name - Editor Suffix)
 {
-(Dark) (Fliegend) (Vrykul)
+(Dunkel) (Fliegend) (Vrykul)
 }
 
 STRING 38082
@@ -85407,7 +85407,7 @@ Dunkle Val'kyr
 STRING 38099
 // Units: n0EV (Dark Val'kyr), Tip (Tooltip - Basic)
 {
-Dark Val'kyr ausbilden
+Dunkle Val'kyr ausbilden
 }
 
 STRING 38100
@@ -85473,7 +85473,7 @@ STRING 38109
 STRING 38110
 // Units: h0P7 (Lamp), Ubertip (Tooltip - Extended)
 {
-Basic observation tower. Has no attack.
+Einfacher Beobachtungsturm. Hat keinen Angriff.
 }
 
 STRING 38111
@@ -85503,7 +85503,7 @@ Untoten Vrykul ausbilden
 STRING 38117
 // Units: o050 (Temple of Sacrifice), Ubertip (Tooltip - Extended)
 {
-Sacrifices Troll units converting them into random creeps with their base level.|n|n|cffffcc00Begrenzt auf 1.|r
+Opfert Troll-Einheiten, die dabei in zufällige Unholde mit ihrer Basisstufe umgewandelt werden.|n|n|cffffcc00Begrenzt auf 1.|r
 }
 
 STRING 38119
@@ -85515,7 +85515,7 @@ STRING 38119
 STRING 38122
 // Abilities: A1DU (Sacrifice), Ubertip (Tooltip - Normal - Extended)
 {
-Sacrifices Troll units converting them into random creeps with their base level.
+Opfert Troll-Einheiten, die dabei in zufällige Unholde mit ihrer Basisstufe umgewandelt werden.
 }
 
 STRING 38123
@@ -85545,19 +85545,19 @@ STRING 38126
 STRING 38127
 // Units: o08O (Dragonspawn Slave), Ubertip (Tooltip - Extended)
 {
-Basic worker unit. Can harvest gold and lumber, build structures, and Repair. |n|n|cffffcc00Greif Land-Einheiten und Bäume an.|r
+Einfache Arbeiter-Einheit. Kann Gold und Holz abbauen, Gebäude errichten und 'Reparieren'. |n|n|cffffcc00Greif Land-Einheiten und Bäume an.|r
 }
 
 STRING 38128
 // Units: o02D (Troll Barracks), Ubertip (Tooltip - Extended)
 {
-Primäres Truppen-Produktionsgebäude. Trains Headhunters, Manhunters, Darkspear Troll Riders, and Voodoo Cannoneers. |nBietet auch die Ausbaustufen Berserker, and Troll Regeneration upgrades.
+Primäres Truppen-Produktionsgebäude. Bildet Kopfjäger, Menschenjäger, Dunkelspeer-Troll-Reiter und Voodoo-Kanoniere aus. |nBietet auch die Ausbaustufen 'Berserker' und 'Troll-Regeneration'.
 }
 
 STRING 38129
 // Units: o02K (Troll Hexer), Ubertip (Tooltip - Extended)
 {
-Supporting spellcaster. Can initially cast Magie bannen, and can also learn Unsichtbarkeit and Hex. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
+Unterstützender Zauberer. Kann zu Beginn den Zauber 'Magie bannen' wirken und kann auch 'Unsichtbarkeit' und 'Hexerei' erlernen. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
 }
 
 STRING 38130
@@ -86205,13 +86205,13 @@ Errichtet einen Laden mit käuflichen Gegenständen. The items available depend 
 STRING 38629
 // Units: n0F4 (Vrykul Citizen (male)), Name (Name)
 {
-Vrykul Citizen (male)
+Vrykul-Bürger
 }
 
 STRING 38630
 // Units: n0F4 (Vrykul Citizen (male)), Tip (Tooltip - Basic)
 {
-Hire Vrykul Citizen (male)
+Vrykul-Bürger anheuern
 }
 
 STRING 38631
@@ -86229,7 +86229,7 @@ STRING 38632
 STRING 38633
 // Units: n0F5 (Vrykul Citizen (female)), Name (Name)
 {
-Vrykul Citizen (female)
+Vrykul-Bürgerin
 }
 
 STRING 38634
@@ -86361,7 +86361,7 @@ Rieseneisbär ausbilden
 STRING 38731
 // Units: h0QE (Arcanist), Ubertip (Tooltip - Extended)
 {
-Supporting spellcaster. Can initially cast Heilen, which increases the life of wounded units. Can also learn Magie bannen and Inneres Feuer. Can gather the resource Favor from Arkanes Sanktums. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
+Unterstützender Zauberer. Can initially cast Heilen, which increases the life of wounded units. Can also learn Magie bannen and Inneres Feuer. Can gather the resource Favor from Arkanes Sanktums. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
 }
 
 STRING 38732
@@ -86373,7 +86373,7 @@ Runenmetz
 STRING 38733
 // Units: h0IP (Runecarver), Tip (Tooltip - Basic)
 {
-Train Runenmetz
+Runenmetz ausbilden
 }
 
 STRING 38734
@@ -86493,13 +86493,13 @@ Lady Hederine,Mistress of Torment,Sinstralis of the Pain,Simone the Seductress,R
 STRING 38756
 // Units: n0BZ (Proto Drake), Ubertip (Tooltip - Extended)
 {
-Heavy ranged flying unit. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
+Schwere fliegende Fernkampfeinheit. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
 }
 
 STRING 38757
 // Units: n0C0 (Proto Drake), Ubertip (Tooltip - Extended)
 {
-Heavy ranged flying unit. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
+Schwere fliegende Fernkampfeinheit. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
 }
 
 STRING 38758
@@ -86631,25 +86631,25 @@ STRING 38791
 STRING 38792
 // Upgrades: R0BK (Priest Adept Training,Priest Master Training), Name (Name)
 {
-Goldene Val'kyr Adeptenausbildung
+Goldene-Val'kyr-Adeptenausbildung
 }
 
 STRING 38793
 // Upgrades: R0BK (Priest Adept Training,Priest Master Training), Name (Name)
 {
-Goldene Val'kyr Meisterausbildung
+Goldene-Val'kyr-Meisterausbildung
 }
 
 STRING 38794
 // Upgrades: R0BK (Priest Adept Training,Priest Master Training), Tip (Tooltip)
 {
-Goldene Val'kyr Meisterausbildung
+Goldene-Val'kyr-Meisterausbildung
 }
 
 STRING 38795
 // Upgrades: R0BK (Priest Adept Training,Priest Master Training), Tip (Tooltip)
 {
-Goldene Val'kyr Adeptenausbildung
+Goldene Val'kyr-Adeptenausbildung
 }
 
 STRING 38796
@@ -86661,25 +86661,25 @@ STRING 38796
 STRING 38797
 // Upgrades: R0BL (Priest Adept Training,Priest Master Training), Name (Name)
 {
-Dunkle Val'kyr Adeptenausbildung
+Dunkle-Val'kyr-Adeptenausbildung
 }
 
 STRING 38798
 // Upgrades: R0BL (Priest Adept Training,Priest Master Training), Name (Name)
 {
-Dunkle Val'kyr Meisterausbildung
+Dunkle-Val'kyr-Meisterausbildung
 }
 
 STRING 38799
 // Upgrades: R0BL (Priest Adept Training,Priest Master Training), Tip (Tooltip)
 {
-Dunkle Val'kyr Meisterausbildung
+Dunkle-Val'kyr-Meisterausbildung
 }
 
 STRING 38800
 // Upgrades: R0BL (Priest Adept Training,Priest Master Training), Tip (Tooltip)
 {
-Dunkle Val'kyr Adeptenausbildung
+Dunkle-Val'kyr-Adeptenausbildung
 }
 
 STRING 38805
@@ -86829,19 +86829,19 @@ Versatile foot soldier. Can learn the Stachelpanzerschale ability. |n|n|cffffcc0
 STRING 38845
 // Abilities: A1EP (Giants), Name (Name)
 {
-Giants
+Riesen
 }
 
 STRING 38846
 // Abilities: A1EP (Giants), Tip (Tooltip - Normal)
 {
-Giants
+Riesen
 }
 
 STRING 38847
 // Abilities: A1EP (Giants), Ubertip (Tooltip - Normal - Extended)
 {
-Increases the hit point regeneration rate and maximum hit points of Vrykul units.
+Erhöht die Trefferpunkt-Regenerationsrate und die maximalen Trefferpunkte von Vrykul-Einheiten.
 }
 
 STRING 38848
@@ -87429,7 +87429,7 @@ STRING 39658
 STRING 39659
 // Units: h0IX (Druid), Ubertip (Tooltip - Extended)
 {
-Supporting spellcaster. Can initially cast Wirbelsturm, which stuns enemy ground units. Can also learn Verjüngung and Sturmkrähengestalt. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
+Unterstützender Zauberer. Can initially cast Wirbelsturm, which stuns enemy ground units. Can also learn Verjüngung and Sturmkrähengestalt. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
 }
 
 STRING 39660
@@ -88539,49 +88539,49 @@ STRING 39942
 STRING 39943
 // Items: I1AX (Tiny Arcane Tower), Description (Description)
 {
-Creates an Arcane Tower.
+Errichtet einen Arkanen Turm.
 }
 
 STRING 39944
 // Items: I1AX (Tiny Arcane Tower), Name (Name)
 {
-Tiny Arcane Tower
+Winziger Arkaner Turm
 }
 
 STRING 39945
 // Items: I1AX (Tiny Arcane Tower), Tip (Tooltip - Basic)
 {
-Purchase Tiny Arcane Tower
+Winzigen Arkanen Turm erwerben
 }
 
 STRING 39946
 // Items: I17P (Tiny Arcane Tower), Ubertip (Tooltip - Extended)
 {
-Creates an Arcane Tower at a target location.
+Errichtet am Zielort einen Arkanen Turm.
 }
 
 STRING 39947
 // Items: I0PC (Tiny Barracks), Description (Description)
 {
-Creates Kaserne.
+Errichtet eine Kaserne.
 }
 
 STRING 39948
 // Items: I0PC (Tiny Barracks), Name (Name)
 {
-Tiny Kaserne
+Winzige Kaserne
 }
 
 STRING 39949
 // Items: I0PC (Tiny Barracks), Tip (Tooltip - Basic)
 {
-Purchase Tiny Kaserne
+Winzige Kaserne erwerben
 }
 
 STRING 39950
 // Items: I0PC (Tiny Barracks), Ubertip (Tooltip - Extended)
 {
-Creates Kaserne at a target location.
+Errichtet am Zielort eine Kaserne.
 }
 
 STRING 39951
@@ -88941,7 +88941,7 @@ STRING 40009
 STRING 40017
 // Units: N0FC (Tuskarr Chieftain), Tip (Tooltip - Basic)
 {
-Summon Tuskarr-Häuptling
+Tuskarr-Häuptling beschwören
 }
 
 STRING 40022
@@ -88965,13 +88965,13 @@ Nachtaktiv
 STRING 40027
 // Units: U02W (Giant Skeleton), Awakentip (Tooltip - Awaken)
 {
-Revive Riesenskelett
+Riesenskelett wiederbeleben
 }
 
 STRING 40045
 // Units: U02W (Giant Skeleton), Revivetip (Tooltip - Revive)
 {
-Revive Riesenskelett
+Riesenskelett wiederbeleben
 }
 
 STRING 40067
@@ -90147,7 +90147,7 @@ Reuse platzieren
 STRING 40620
 // Items: I0Q2 (Fish Trap), Ubertip (Tooltip - Extended)
 {
-Places a Reuse which generates for <A1GS,Dur1> Sekunden lang an.
+Platziert eine Reuse, die <A1GS,Dur1> Sekunden lang an Fische erzeugt.
 }
 
 STRING 40621
@@ -90307,7 +90307,7 @@ Ein mystischer Held, adept at using nature spells. Can learn Massenverjüngung, 
 }
 
 STRING 40658
-// Units: n0G0 (Murloc Sorcerer Den), Ubertip (Tooltip - Extended)
+// Units: n0G0 (Murloczauberer-Bau), Ubertip (Tooltip - Extended)
 {
 Trains Murloc-Blasen-Magiers. Also contains spell upgrades for Murloc-Blasen-Magiers.
 }
@@ -90649,7 +90649,7 @@ Kaserne
 }
 
 STRING 40778
-// Units: n0G0 (Murloc Sorcerer Den), EditorSuffix (Name - Editor Suffix)
+// Units: n0G0 (Murloczauberer-Bau), EditorSuffix (Name - Editor Suffix)
 {
 (Murlocs)
 }
@@ -90819,49 +90819,49 @@ STRING 40903
 STRING 41010
 // Units: E01R (Druid Wolf Form), Name (Name)
 {
-Druid Wolfsgestalt
+Druide in Wolfsgestalt
 }
 
 STRING 41011
 // Units: E01R (Druid Wolf Form), Awakentip (Tooltip - Awaken)
 {
-Revive Druid Wolfsgestalt
+Druide in Wolfsgestalt wiederbeleben
 }
 
 STRING 41018
 // Units: E01R (Druid Wolf Form), Revivetip (Tooltip - Revive)
 {
-Revive Druid Wolfsgestalt
+Druide in Wolfsgestalt wiederbeleben
 }
 
 STRING 41019
 // Units: E01R (Druid Wolf Form), Tip (Tooltip - Basic)
 {
-Summon Druid Wolfsgestalt
+Druide in Wolfsgestalt beschwören
 }
 
 STRING 41020
 // Units: E01S (Druid Cat Form), Name (Name)
 {
-Druid Katzengestalt
+Druide in Katzengestalt
 }
 
 STRING 41021
 // Units: E01S (Druid Cat Form), Awakentip (Tooltip - Awaken)
 {
-Revive Druid Katzengestalt
+Druide in Katzengestalt wiederbeleben
 }
 
 STRING 41022
 // Units: E01S (Druid Cat Form), Revivetip (Tooltip - Revive)
 {
-Revive Druid Katzengestalt
+Druide in Katzengestalt wiederbeleben
 }
 
 STRING 41023
 // Units: E01S (Druid Cat Form), Tip (Tooltip - Basic)
 {
-Summon Druid Katzengestalt
+Druide in Katzengestalt beschwören
 }
 
 STRING 41027
@@ -90879,55 +90879,55 @@ F
 STRING 41034
 // Units: E01T (Druid Bear Form), Name (Name)
 {
-Druid Bärengestalt
+Druide in Bärengestalt
 }
 
 STRING 41035
 // Units: E01T (Druid Bear Form), Awakentip (Tooltip - Awaken)
 {
-Revive Druid Bärengestalt
+Druide in Bärengestalt wiederbeleben
 }
 
 STRING 41036
 // Units: E01T (Druid Bear Form), Revivetip (Tooltip - Revive)
 {
-Revive Druid Bärengestalt
+Druide in Bärengestalt wiederbeleben
 }
 
 STRING 41037
 // Units: E01T (Druid Bear Form), Tip (Tooltip - Basic)
 {
-Summon Druid Bärengestalt
+Druide in Bärengestalt beschwören
 }
 
 STRING 41038
 // Units: E01U (Druid Crow Form), Name (Name)
 {
-Druid Krähengestalt
+Druide in Krähengestalt
 }
 
 STRING 41039
 // Units: E01U (Druid Crow Form), Awakentip (Tooltip - Awaken)
 {
-Revive Druid Krähengestalt
+Druide in Krähengestalt wiederbeleben
 }
 
 STRING 41040
 // Units: E01U (Druid Crow Form), Revivetip (Tooltip - Revive)
 {
-Revive Druid Krähengestalt
+Druide in Krähengestalt wiederbeleben
 }
 
 STRING 41041
 // Units: E01U (Druid Crow Form), Tip (Tooltip - Basic)
 {
-Summon Druid Krähengestalt
+Druide in Krähengestalt beschwören
 }
 
 STRING 41044
 // Abilities: A1H4 (Normal Form), Ubertip (Tooltip - Normal - Extended)
 {
-Transforms back into the normal form.
+Verwandelt sich zurück in die normale Gestalt.
 }
 
 STRING 41046
@@ -90939,23 +90939,23 @@ Erzdruide
 STRING 41047
 // Units: E01K (Archdruid), Awakentip (Tooltip - Awaken)
 {
-Revive Erzdruide
+Erzdruide wiederbeleben
 }
 
 STRING 41048
 // Units: E01K (Archdruid), Revivetip (Tooltip - Revive)
 {
-Revive Erzdruide
+Erzdruide wiederbeleben
 }
 
 STRING 41049
 // Units: E01K (Archdruid), Tip (Tooltip - Basic)
 {
-Summon Erzdruide
+Erzdruide beschwören
 }
 
 STRING 41050
-// Units: n0G1 (Hatchling Ground), EditorSuffix (Name - Editor Suffix)
+// Units: n0G1 (Jungtierstätte), EditorSuffix (Name - Editor Suffix)
 {
 (Murlocs)
 }
@@ -90975,19 +90975,19 @@ STRING 41052
 STRING 41055
 // Items: I0Q2 (Fish Trap), Tip (Tooltip - Basic)
 {
-Purchase Reuse
+Reuse erwerben
 }
 
 STRING 41056
 // Items: I0Q2 (Fish Trap), Description (Description)
 {
-Places a Reuse.
+Reuse platzieren
 }
 
 STRING 41057
 // Abilities: A1GS (Place Fish Trap), Ubertip (Tooltip - Normal - Extended)
 {
-Places a Reuse which generates for <A1GS,Dur1> Sekunden lang an.
+Platziert eine Reuse, die <A1GS,Dur1> Sekunden lang Fische erzeugt.
 }
 
 STRING 41058
@@ -90999,7 +90999,7 @@ STRING 41058
 STRING 41059
 // Abilities: A1HL (Reinforce), Name (Name)
 {
-Reinforce
+Verstärken
 }
 
 STRING 41060
@@ -91011,13 +91011,13 @@ STRING 41060
 STRING 41061
 // Abilities: A1HL (Reinforce), Tip (Tooltip - Normal)
 {
-Reinforce
+Verstärken
 }
 
 STRING 41062
 // Abilities: A1HL (Reinforce), Ubertip (Tooltip - Normal - Extended)
 {
-Increases maximum hit points of destructables for gold and lumber.
+Erhöht die maximalen Trefferpunkte von Zerstörbaren für Gold und Holz.
 }
 
 STRING 41063
@@ -91035,7 +91035,7 @@ STRING 41065
 STRING 41067
 // Abilities: A1HN (Examine Destructible), Ubertip (Tooltip - Normal - Extended)
 {
-Shows hit points and maximum hit points of the target gate, tree, barrel, bridge etc.
+Zeigt Trefferpunkte und maximale Trefferpunkte des Ziel-Tors, -Baums, -Fasses, der Ziel-Brücke etc.
 }
 
 STRING 41068
@@ -91053,7 +91053,7 @@ Multi-Tier
 STRING 41070
 // Abilities: A1HO (Multi-Tier), Ubertip (Tooltip - Normal - Extended)
 {
-The Hydra gets another head when it has killed 1 unit. Can have 3 heads at most. Each head adds another attack.
+Die Hydra erhält einen weiteren Kopf sobald sie 1 Einheit getötet hat. Kann maximal 3 Köpfe haben. Jeder Kopf fügt einen neuen Angriff hinzu.
 }
 
 STRING 41071
@@ -91087,9 +91087,9 @@ Verschlingen erforschen
 }
 
 STRING 41079
-// Units: n0G0 (Murloc Sorcerer Den), Name (Name)
+// Units: n0G0 (Murloczauberer-Bau), Name (Name)
 {
-Murloczauberer Den
+Murloczauberer-Bau
 }
 
 STRING 41080
@@ -91111,27 +91111,27 @@ STRING 41082
 }
 
 STRING 41083
-// Units: n0G3 (Murloc Huntsman), EditorSuffix (Name - Editor Suffix)
+// Units: n0G3 (Murloc-Jäger), EditorSuffix (Name - Editor Suffix)
 {
 (Murlocs)
 }
 
 STRING 41084
-// Units: n0G0 (Murloc Sorcerer Den), Tip (Tooltip - Basic)
+// Units: n0G0 (Murloczauberer-Bau), Tip (Tooltip - Basic)
 {
-Build Murloczauberer Den
+Murloczauberer-Bau errichten
 }
 
 STRING 41085
-// Units: n0G1 (Hatchling Ground), Name (Name)
+// Units: n0G1 (Jungtierstätte), Name (Name)
 {
-Hatchling Ground
+Jungtierstätte
 }
 
 STRING 41086
-// Units: n0G1 (Hatchling Ground), Tip (Tooltip - Basic)
+// Units: n0G1 (Jungtierstätte), Tip (Tooltip - Basic)
 {
-Build Hatchling Ground
+Jungtierstätte errichten
 }
 
 STRING 41087
@@ -91221,7 +91221,7 @@ Reuse platzieren
 STRING 41102
 // Abilities: A1HU (Place Fish Trap), Ubertip (Tooltip - Normal - Extended)
 {
-Places a Reuse which generates for <A1GS,Dur1> Sekunden lang an.
+Platziert eine Reuse, die <A1GS,Dur1> Sekunden lang Fische erzeugt.
 }
 
 STRING 41120
@@ -91269,7 +91269,7 @@ Schmetter-Angriff erforschen
 STRING 41132
 // Upgrades: R0CQ (Stone Form), Ubertip (Tooltip - Extended)
 {
-Gives Eiszahn-Mammuts the ability Schmetter-Angriff.
+Gibt Eiszahn-Mammuts die Fähigkeit 'Schmetter-Angriff'.
 }
 
 STRING 41133
@@ -91347,7 +91347,7 @@ STRING 41187
 STRING 41189
 // Units: n0FI (Giant Frost Wolf), Ubertip (Tooltip - Extended)
 {
-Medium melee unit. Can learn the Kritischer Schlag ability. |n|n|cffffcc00Greift Land-Einheiten an.|r
+Mittlere Nahkampf-Einheit. Kann die Fähigkeit 'Kritischer Schlag' erlernen. |n|n|cffffcc00Greift Land-Einheiten an.|r
 }
 
 STRING 41190
@@ -91459,9 +91459,9 @@ Kritischer Schlag
 }
 
 STRING 41213
-// Units: n0G3 (Murloc Huntsman), Tip (Tooltip - Basic)
+// Units: n0G3 (Murloc-Jäger), Tip (Tooltip - Basic)
 {
-Train Murloc Huntsman
+Murloc-Jäger ausbilden
 }
 
 STRING 41214
@@ -91473,7 +91473,7 @@ Kritischen Schlag erforschen
 STRING 41215
 // Upgrades: R0CT (Stone Form), Ubertip (Tooltip - Extended)
 {
-Gives Riesenfrostwölfe the Critikal Strike ability.
+Gibt Riesenfrostwölfe die Fähigkeit 'Kritischer Schlag'.
 }
 
 STRING 41216
@@ -91593,7 +91593,7 @@ STRING 41236
 STRING 41237
 // Abilities: A1I4 (Build Tiny Gathering Hall), Name (Name)
 {
-Build Tiny Versammlungshalle
+Winzige Versammlungshalle errichten
 }
 
 STRING 41239
@@ -92637,7 +92637,7 @@ K
 STRING 41507
 // Units: o0AY (Razormane Mystic), Ubertip (Tooltip - Extended)
 {
-Supporting spellcaster. Can initially cast Verbannen, which removes negative buffs and damages summoned units. Can also learn Wirbelsturm and Stampede. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
+Unterstützender Zauberer. Can initially cast Verbannen, which removes negative buffs and damages summoned units. Can also learn Wirbelsturm and Stampede. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
 }
 
 STRING 41508
@@ -93843,7 +93843,7 @@ Bildet Greifenreiter und Schwebekopter aus.
 STRING 42038
 // Units: h0QF (Arcanist), Ubertip (Tooltip - Extended)
 {
-Supporting spellcaster. Can initially cast Heilen, which increases the life of wounded units. Can also learn Magie bannen and Inneres Feuer. Can gather the resource Favor from Arkanes Sanktums. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
+Unterstützender Zauberer. Can initially cast Heilen, which increases the life of wounded units. Can also learn Magie bannen and Inneres Feuer. Can gather the resource Favor from Arkanes Sanktums. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
 }
 
 STRING 42039
@@ -93867,7 +93867,7 @@ STRING 42041
 STRING 42042
 // Units: h0RX (Priest), Ubertip (Tooltip - Extended)
 {
-Supporting spellcaster. Can initially cast Heilen, which increases the life of wounded units. Can also learn Magie bannen and Inneres Feuer. Can gather the resource Favor from Arkanes Sanktums. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
+Unterstützender Zauberer. Can initially cast Heilen, which increases the life of wounded units. Can also learn Magie bannen and Inneres Feuer. Can gather the resource Favor from Arkanes Sanktums. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
 }
 
 STRING 42043
@@ -95475,7 +95475,7 @@ Stachelpanzerschale erforschen
 STRING 42526
 // Units: h0AA (Sage), Ubertip (Tooltip - Extended)
 {
-Supporting spellcaster. Can initially cast Heilen, which increases the life of wounded units. Can also learn Wirbelsturm and Entwaffnung. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
+Unterstützender Zauberer. Can initially cast Heilen, which increases the life of wounded units. Can also learn Wirbelsturm and Entwaffnung. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
 }
 
 STRING 42527
@@ -99351,7 +99351,7 @@ Stellt Werkzeuge zur Übertragung von Gegenstandsfähigkeiten auf andere Gegenst
 STRING 45262
 // Units: o08U (Worker), Ubertip (Tooltip - Extended)
 {
-Basic worker unit. Can harvest gold and lumber, build structures, and Repair. |n|n|cffffcc00Greif Land-Einheiten und Bäume an.|r
+Einfache Arbeiter-Einheit. Kann Gold und Holz abbauen, Gebäude errichten und 'Reparieren'. |n|n|cffffcc00Greif Land-Einheiten und Bäume an.|r
 }
 
 STRING 45268
@@ -100203,7 +100203,7 @@ STRING 45961
 STRING 45963
 // Units: h0RL (Bishop), Ubertip (Tooltip - Extended)
 {
-Supporting spellcaster. Can initially cast Heilen, which increases the life of wounded units. Can also learn Magie bannen and Inneres Feuer. Can gather the resource Favor from Arkanes Sanktums. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r|n|n|cffffcc00Limit to 8.|r
+Unterstützender Zauberer. Can initially cast Heilen, which increases the life of wounded units. Can also learn Magie bannen and Inneres Feuer. Can gather the resource Favor from Arkanes Sanktums. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r|n|n|cffffcc00Limit to 8.|r
 }
 
 STRING 45965
@@ -100731,7 +100731,7 @@ STRING 46067
 STRING 46068
 // Units: h0RM (Mage), Ubertip (Tooltip - Extended)
 {
-Supporting spellcaster. Can initially cast Feuerblitz, which damages and stuns enemy units. Can also learn Teleport and Blizzard. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
+Unterstützender Zauberer. Can initially cast Feuerblitz, which damages and stuns enemy units. Can also learn Teleport and Blizzard. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
 }
 
 STRING 46069
@@ -100947,7 +100947,7 @@ STRING 46146
 STRING 46215
 // Units: o03L (Skeletal Servant), Ubertip (Tooltip - Extended)
 {
-Basic worker unit. Can harvest gold and lumber, build structures, and Repair. |n|n|cffffcc00Greif Land-Einheiten und Bäume an.|r
+Einfache Arbeiter-Einheit. Kann Gold und Holz abbauen, Gebäude errichten und 'Reparieren'. |n|n|cffffcc00Greif Land-Einheiten und Bäume an.|r
 }
 
 STRING 46246
@@ -114993,7 +114993,7 @@ Upgrades the totem carried by Meeresrieses, increasing the damage of their Pulve
 }
 
 STRING 55538
-// Units: n0G1 (Hatchling Ground), Ubertip (Tooltip - Extended)
+// Units: n0G1 (Jungtierstätte), Ubertip (Tooltip - Extended)
 {
 Trains Snap Dragons, Drachenschildkrötes, and Meeresrieses. Bietet auch die Ausbaustufen Murloc-Eier upgrade.
 }
