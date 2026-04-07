@@ -30,8 +30,11 @@ endfunction
 private function ChangeGround takes player whichPlayer, real x, real y returns nothing
     local integer index = playerTile[GetPlayerId(whichPlayer)]
     local location l = Location(x, y)
-    call ReplaceWithTerrain(GetRectFromCircleBJ(l, 64.0), GetMapTile(index))
+    local rect r = GetRectFromCircleBJ(l, 64.0)
+    call ReplaceWithTerrain(r, GetMapTile(index))
     call ShowCurrentTile(whichPlayer)
+    call RemoveRect(r)
+    set r = null
     call RemoveLocation(l)
     set l = null
 endfunction
