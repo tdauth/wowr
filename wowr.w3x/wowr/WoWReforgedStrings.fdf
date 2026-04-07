@@ -941,6 +941,9 @@ StringList {
     SETTINGS_SEASONS                   "- Seasons: %1%",
     SETTINGS_CHEATS                    "- Cheats: %1%",
     SETTINGS_BUILDER                   "- Builder: %1%",
+    SETTINGS_AUTO_SAVE                 "- Auto Save: %1%",
+    SETTINGS_ZONES                     "- Enter Zone Notifications: %1%",
+    SETTINGS_MOUNT_NAME                "- Mount name %1%: %2%",
     // News UI
     NEWS                               "News",
     COLON_SUBSCRIBE_VIP                "Subscribe (VIP):",

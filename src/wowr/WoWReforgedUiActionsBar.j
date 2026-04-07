@@ -8,7 +8,7 @@ globals
     private constant real UI_Y = 0.163
     private constant real UI_BUTTON_SIZE = 0.020
     private constant real UI_SPACE = 0.003
-    
+
     private constant real UI_CHECKBOX_X = UI_X
     private constant real UI_CLEAR_X = UI_CHECKBOX_X + UI_BUTTON_SIZE + UI_SPACE
     private constant real UI_PICKUP_ITEMS_X = UI_CLEAR_X + UI_BUTTON_SIZE + UI_SPACE
@@ -26,14 +26,14 @@ globals
     private constant real UI_SETTINGS_X = UI_DIPLOMACY_X + UI_BUTTON_SIZE + UI_SPACE
     private constant real UI_NEWS_X = UI_SETTINGS_X + UI_BUTTON_SIZE + UI_SPACE
     private constant real UI_MULTIBOARD_X = UI_NEWS_X + UI_BUTTON_SIZE + UI_SPACE
-    
+
     private trigger SyncTrigger = CreateTrigger()
-    
+
     private framehandle CheckboxButton
     private framehandle CheckboxTooltip
     private trigger CheckboxCheckTrigger
     private trigger CheckboxUncheckTrigger
-    
+
     private framehandle ClearButton
     private framehandle ClearFrame
     private framehandle ClearTooltip
@@ -43,78 +43,78 @@ globals
     private framehandle PickupItemsFrame
     private framehandle PickupItemsTooltip
     private trigger PickupItemsTrigger
-    
+
     private framehandle DropItemsButton
     private framehandle DropItemsFrame
     private framehandle DropItemsTooltip
     private trigger DropItemsTrigger
-    
+
     private framehandle BackpackButton
     private framehandle BackpackFrame
     private framehandle BackpackTooltip
     private trigger BackpackTrigger
-    
+
     private framehandle MountsButton
     private framehandle MountsFrame
     private framehandle MountsTooltip
     private trigger MountsTrigger
-    
+
     private framehandle SummonedUnitsButton
     private framehandle SummonedUnitsFrame
     private framehandle SummonedUnitsTooltip
     private trigger SummonedUnitsTrigger
-    
+
     private framehandle TownHallsButton
     private framehandle TownHallsFrame
     private framehandle TownHallsTooltip
     private trigger TownHallsTrigger
-    
+
     private framehandle AltarsButton
     private framehandle AltarsFrame
     private framehandle AltarsTooltip
     private trigger AltarsTrigger
-    
+
     private framehandle SaveCodesButton
     private framehandle SaveCodesFrame
     private framehandle SaveCodesTooltip
     private trigger SaveCodesTrigger
-    
+
     private framehandle AutoSkillButton
     private framehandle AutoSkillFrame
     private framehandle AutoSkillTooltip
     private trigger AutoSkillTrigger
-    
+
     private framehandle LogButton
     private framehandle LogFrame
     private framehandle LogTooltip
     private trigger LogTrigger
-    
+
     // Damage Calculation Table
     private framehandle DctButton
     private framehandle DctFrame
     private framehandle DctTooltip
     private trigger DctTrigger
-        
+
     private framehandle DiplomacyButton
     private framehandle DiplomacyFrame
     private framehandle DiplomacyTooltip
     private trigger DiplomacyTrigger
-    
+
     private framehandle SettingsButton
     private framehandle SettingsFrame
     private framehandle SettingsTooltip
     private trigger SettingsTrigger
-    
+
     private framehandle NewsButton
     private framehandle NewsFrame
     private framehandle NewsTooltip
     private trigger NewsTrigger
-    
+
     private framehandle MultiboardButton
     private framehandle MultiboardFrame
     private framehandle MultiboardTooltip
     private trigger MultiboardTrigger
-    
+
     private integer array currentMultiboard
     private boolean array checked
 endglobals
@@ -144,7 +144,7 @@ endfunction
 
 private function GetMax takes nothing returns integer
     local integer max = 3
-    
+
 static if (LIBRARY_HandleCountersMultiboard) then
     set max = max + 1
 endif
@@ -162,7 +162,7 @@ endfunction
 
 private function GetIndex3 takes nothing returns integer
     local integer result = 3
-    
+
 static if (LIBRARY_HandleCountersMultiboard and LIBRARY_PeriodicWatcherMultiboard) then
     set result = result + 1
 endif
@@ -242,13 +242,13 @@ private function CheckedFunction takes nothing returns nothing
 
     call RemoveActionsBarUIFocus(GetTriggerPlayer())
 endfunction
-    
+
 private function UncheckedFunction takes nothing returns nothing
     //! runtextmacro optional Trace("ActionsBarUiUnchecked")
     if (GetTriggerPlayer() == GetLocalPlayer()) then
         call BlzSendSyncData(PREFIX, "Unchecked")
     endif
-    
+
     call RemoveActionsBarUIFocus(GetTriggerPlayer())
 endfunction
 
@@ -399,9 +399,9 @@ endfunction
 
 private function UpdateMultiboard takes player whichPlayer returns nothing
     local integer playerId = GetPlayerId(whichPlayer)
-    
+
     //call BJDebugMsg("Current multiboard index " + I2S(currentMultiboard[playerId]) + " with index 2 " + I2S(GetIndex2()) + " and index 3 " + I2S(GetIndex3()))
-    
+
     if (currentMultiboard[playerId] == 0) then
         // stats
         call HideCalendarMultiboardForPlayer(whichPlayer)
@@ -482,7 +482,7 @@ private function Multiboard takes player whichPlayer returns nothing
     local integer playerId = GetPlayerId(whichPlayer)
 
     set currentMultiboard[playerId] = ModuloInteger(currentMultiboard[playerId] + 1, GetMax())
-    
+
     call UpdateMultiboard(whichPlayer)
 endfunction
 
@@ -491,7 +491,7 @@ private function MultiboardClickFunction takes nothing returns nothing
     if (GetTriggerPlayer() == GetLocalPlayer()) then
         call BlzSendSyncData(PREFIX, "Multiboard")
     endif
-    
+
     call RemoveActionsBarUIFocus(GetTriggerPlayer())
     call RemoveActionsBarUIFocusEx(MultiboardFrame, GetTriggerPlayer())
 endfunction
@@ -503,7 +503,7 @@ private function CreateActionsBarUI takes nothing returns nothing
     call BlzFrameSetAbsPoint(CheckboxButton, FRAMEPOINT_BOTTOMRIGHT, UI_CHECKBOX_X + UI_BUTTON_SIZE, UI_Y - UI_BUTTON_SIZE)
     call BlzFrameSetEnable(CheckboxButton, true)
     call BlzFrameSetValue(CheckboxButton, 1.0)
-    
+
     set CheckboxTooltip = BlzCreateFrameByType("TEXT", "CheckboxTooltip", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), "", 0)
     call BlzFrameSetTooltip(CheckboxButton, CheckboxTooltip)
     call BlzFrameSetPoint(CheckboxTooltip, FRAMEPOINT_BOTTOM, CheckboxButton, FRAMEPOINT_TOP, 0, 0.01)
@@ -513,7 +513,7 @@ private function CreateActionsBarUI takes nothing returns nothing
     set CheckboxCheckTrigger = CreateTrigger()
     call BlzTriggerRegisterFrameEvent(CheckboxCheckTrigger, CheckboxButton, FRAMEEVENT_CHECKBOX_CHECKED)
     call TriggerAddAction(CheckboxCheckTrigger, function CheckedFunction)
-    
+
     set CheckboxUncheckTrigger = CreateTrigger()
     call BlzTriggerRegisterFrameEvent(CheckboxUncheckTrigger, CheckboxButton, FRAMEEVENT_CHECKBOX_UNCHECKED)
     call TriggerAddAction(CheckboxUncheckTrigger, function UncheckedFunction)
@@ -523,12 +523,12 @@ private function CreateActionsBarUI takes nothing returns nothing
     call BlzFrameSetAbsPoint(ClearButton, FRAMEPOINT_TOPLEFT, UI_CLEAR_X, UI_Y)
     call BlzFrameSetAbsPoint(ClearButton, FRAMEPOINT_BOTTOMRIGHT, UI_CLEAR_X + UI_BUTTON_SIZE, UI_Y - UI_BUTTON_SIZE)
     call BlzFrameSetEnable(ClearButton, true)
-    
+
     set ClearFrame = BlzCreateFrameByType("BACKDROP", "ClearFrame", ClearButton, "", 0)
     call BlzFrameSetAllPoints(ClearFrame, ClearButton)
     call BlzFrameSetTexture(ClearFrame, "ReplaceableTextures\\CommandButtons\\BTNCancel.blp", 0, true)
     call BlzFrameSetEnable(ClearFrame, true)
-    
+
     set ClearTooltip = BlzCreateFrameByType("TEXT", "ClearTooltip", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), "", 0)
     call BlzFrameSetTooltip(ClearButton, ClearTooltip)
     call BlzFrameSetPoint(ClearTooltip, FRAMEPOINT_BOTTOM, ClearButton, FRAMEPOINT_TOP, 0, 0.01)
@@ -544,12 +544,12 @@ private function CreateActionsBarUI takes nothing returns nothing
     call BlzFrameSetAbsPoint(PickupItemsButton, FRAMEPOINT_TOPLEFT, UI_PICKUP_ITEMS_X, UI_Y)
     call BlzFrameSetAbsPoint(PickupItemsButton, FRAMEPOINT_BOTTOMRIGHT, UI_PICKUP_ITEMS_X + UI_BUTTON_SIZE, UI_Y - UI_BUTTON_SIZE)
     call BlzFrameSetEnable(PickupItemsButton, true)
-    
+
     set PickupItemsFrame = BlzCreateFrameByType("BACKDROP", "PickupItemsFrame", PickupItemsButton, "", 0)
     call BlzFrameSetAllPoints(PickupItemsFrame, PickupItemsButton)
     call BlzFrameSetTexture(PickupItemsFrame, "ReplaceableTextures\\CommandButtons\\BTNPickUpItem.blp", 0, true)
     call BlzFrameSetEnable(PickupItemsFrame, true)
-    
+
     set PickupItemsTooltip = BlzCreateFrameByType("TEXT", "PickupItemsTooltip", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), "", 0)
     call BlzFrameSetTooltip(PickupItemsButton, PickupItemsTooltip)
     call BlzFrameSetPoint(PickupItemsTooltip, FRAMEPOINT_BOTTOM, PickupItemsButton, FRAMEPOINT_TOP, 0, 0.01)
@@ -559,18 +559,18 @@ private function CreateActionsBarUI takes nothing returns nothing
     set PickupItemsTrigger = CreateTrigger()
     call BlzTriggerRegisterFrameEvent(PickupItemsTrigger, PickupItemsButton, FRAMEEVENT_CONTROL_CLICK)
     call TriggerAddAction(PickupItemsTrigger, function PickupItemsClickFunction)
-    
+
     // drop items
     set DropItemsButton = BlzCreateFrameByType("BUTTON", "PickupItemsButton", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), "ScoreScreenTabButtonTemplate", 0)
     call BlzFrameSetAbsPoint(DropItemsButton, FRAMEPOINT_TOPLEFT, UI_DROP_ITEMS_X, UI_Y)
     call BlzFrameSetAbsPoint(DropItemsButton, FRAMEPOINT_BOTTOMRIGHT, UI_DROP_ITEMS_X + UI_BUTTON_SIZE, UI_Y - UI_BUTTON_SIZE)
     call BlzFrameSetEnable(DropItemsButton, true)
-    
+
     set DropItemsFrame = BlzCreateFrameByType("BACKDROP", "DropItemsFrame", DropItemsButton, "", 0)
     call BlzFrameSetAllPoints(DropItemsFrame, DropItemsButton)
     call BlzFrameSetTexture(DropItemsFrame, "ReplaceableTextures\\CommandButtons\\BTNUndeadUnLoad.blp", 0, true)
     call BlzFrameSetEnable(DropItemsFrame, true)
-    
+
     set DropItemsTooltip = BlzCreateFrameByType("TEXT", "DropItemsTooltip", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), "", 0)
     call BlzFrameSetTooltip(DropItemsButton, DropItemsTooltip)
     call BlzFrameSetPoint(DropItemsTooltip, FRAMEPOINT_BOTTOM, DropItemsButton, FRAMEPOINT_TOP, 0, 0.01)
@@ -580,18 +580,18 @@ private function CreateActionsBarUI takes nothing returns nothing
     set DropItemsTrigger = CreateTrigger()
     call BlzTriggerRegisterFrameEvent(DropItemsTrigger, DropItemsButton, FRAMEEVENT_CONTROL_CLICK)
     call TriggerAddAction(DropItemsTrigger, function DropItemsClickFunction)
-    
+
     // backpack
     set BackpackButton = BlzCreateFrameByType("BUTTON", "BackpackButton", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), "ScoreScreenTabButtonTemplate", 0)
     call BlzFrameSetAbsPoint(BackpackButton, FRAMEPOINT_TOPLEFT, UI_BACKPACK_X, UI_Y)
     call BlzFrameSetAbsPoint(BackpackButton, FRAMEPOINT_BOTTOMRIGHT, UI_BACKPACK_X + UI_BUTTON_SIZE, UI_Y - UI_BUTTON_SIZE)
     call BlzFrameSetEnable(BackpackButton, true)
-    
+
     set BackpackFrame = BlzCreateFrameByType("BACKDROP", "BackpackFrame", BackpackButton, "", 0)
     call BlzFrameSetAllPoints(BackpackFrame, BackpackButton)
     call BlzFrameSetTexture(BackpackFrame, "ReplaceableTextures\\CommandButtons\\BTNINV_Misc_Bag_09.blp", 0, true)
     call BlzFrameSetEnable(BackpackFrame, true)
-    
+
     set BackpackTooltip = BlzCreateFrameByType("TEXT", "BackpackTooltip", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), "", 0)
     call BlzFrameSetTooltip(BackpackButton, BackpackTooltip)
     call BlzFrameSetPoint(BackpackTooltip, FRAMEPOINT_BOTTOM, BackpackButton, FRAMEPOINT_TOP, 0, 0.01)
@@ -601,18 +601,18 @@ private function CreateActionsBarUI takes nothing returns nothing
     set BackpackTrigger = CreateTrigger()
     call BlzTriggerRegisterFrameEvent(BackpackTrigger, BackpackButton, FRAMEEVENT_CONTROL_CLICK)
     call TriggerAddAction(BackpackTrigger, function BackpackClickFunction)
-    
+
     // mounts
     set MountsButton = BlzCreateFrameByType("BUTTON", "MountsButton", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), "ScoreScreenTabButtonTemplate", 0)
     call BlzFrameSetAbsPoint(MountsButton, FRAMEPOINT_TOPLEFT, UI_MOUNTS_X, UI_Y)
     call BlzFrameSetAbsPoint(MountsButton, FRAMEPOINT_BOTTOMRIGHT, UI_MOUNTS_X + UI_BUTTON_SIZE, UI_Y - UI_BUTTON_SIZE)
     call BlzFrameSetEnable(MountsButton, true)
-    
+
     set MountsFrame = BlzCreateFrameByType("BACKDROP", "MountsFrame", MountsButton, "", 0)
     call BlzFrameSetAllPoints(MountsFrame, MountsButton)
     call BlzFrameSetTexture(MountsFrame, "ReplaceableTextures\\CommandButtons\\BTNGryphonRider.blp", 0, true)
     call BlzFrameSetEnable(MountsFrame, true)
-    
+
     set MountsTooltip = BlzCreateFrameByType("TEXT", "MountsTooltip", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), "", 0)
     call BlzFrameSetTooltip(MountsButton, MountsTooltip)
     call BlzFrameSetPoint(MountsTooltip, FRAMEPOINT_BOTTOM, MountsButton, FRAMEPOINT_TOP, 0, 0.01)
@@ -622,18 +622,18 @@ private function CreateActionsBarUI takes nothing returns nothing
     set MountsTrigger = CreateTrigger()
     call BlzTriggerRegisterFrameEvent(MountsTrigger, MountsButton, FRAMEEVENT_CONTROL_CLICK)
     call TriggerAddAction(MountsTrigger, function MountsClickFunction)
-    
+
     // summoned units
     set SummonedUnitsButton = BlzCreateFrameByType("BUTTON", "SummonedUnitsButton", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), "ScoreScreenTabButtonTemplate", 0)
     call BlzFrameSetAbsPoint(SummonedUnitsButton, FRAMEPOINT_TOPLEFT, UI_SUMMONED_UNITS_X, UI_Y)
     call BlzFrameSetAbsPoint(SummonedUnitsButton, FRAMEPOINT_BOTTOMRIGHT, UI_SUMMONED_UNITS_X + UI_BUTTON_SIZE, UI_Y - UI_BUTTON_SIZE)
     call BlzFrameSetEnable(SummonedUnitsButton, true)
-    
+
     set SummonedUnitsFrame = BlzCreateFrameByType("BACKDROP", "SummonedUnitsFrame", SummonedUnitsButton, "", 0)
     call BlzFrameSetAllPoints(SummonedUnitsFrame, SummonedUnitsButton)
     call BlzFrameSetTexture(SummonedUnitsFrame, "ReplaceableTextures\\CommandButtons\\BTNSummonWaterElemental.blp", 0, true)
     call BlzFrameSetEnable(SummonedUnitsFrame, true)
-    
+
     set SummonedUnitsTooltip = BlzCreateFrameByType("TEXT", "SummonedUnitsTooltip", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), "", 0)
     call BlzFrameSetTooltip(SummonedUnitsButton, SummonedUnitsTooltip)
     call BlzFrameSetPoint(SummonedUnitsTooltip, FRAMEPOINT_BOTTOM, SummonedUnitsButton, FRAMEPOINT_TOP, 0, 0.01)
@@ -643,18 +643,18 @@ private function CreateActionsBarUI takes nothing returns nothing
     set SummonedUnitsTrigger = CreateTrigger()
     call BlzTriggerRegisterFrameEvent(SummonedUnitsTrigger, SummonedUnitsButton, FRAMEEVENT_CONTROL_CLICK)
     call TriggerAddAction(SummonedUnitsTrigger, function SummonedUnitsClickFunction)
-    
+
     // town halls
     set TownHallsButton = BlzCreateFrameByType("BUTTON", "TownHallsButton", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), "ScoreScreenTabButtonTemplate", 0)
     call BlzFrameSetAbsPoint(TownHallsButton, FRAMEPOINT_TOPLEFT, UI_TOWN_HALLS_X, UI_Y)
     call BlzFrameSetAbsPoint(TownHallsButton, FRAMEPOINT_BOTTOMRIGHT, UI_TOWN_HALLS_X + UI_BUTTON_SIZE, UI_Y - UI_BUTTON_SIZE)
     call BlzFrameSetEnable(TownHallsButton, true)
-    
+
     set TownHallsFrame = BlzCreateFrameByType("BACKDROP", "TownHallsFrame", TownHallsButton, "", 0)
     call BlzFrameSetAllPoints(TownHallsFrame, TownHallsButton)
     call BlzFrameSetTexture(TownHallsFrame, "ReplaceableTextures\\CommandButtons\\BTNCastle.blp", 0, true)
     call BlzFrameSetEnable(TownHallsFrame, true)
-    
+
     set TownHallsTooltip = BlzCreateFrameByType("TEXT", "TownHallsTooltip", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), "", 0)
     call BlzFrameSetTooltip(TownHallsButton, TownHallsTooltip)
     call BlzFrameSetPoint(TownHallsTooltip, FRAMEPOINT_BOTTOM, TownHallsButton, FRAMEPOINT_TOP, 0, 0.01)
@@ -664,18 +664,18 @@ private function CreateActionsBarUI takes nothing returns nothing
     set TownHallsTrigger = CreateTrigger()
     call BlzTriggerRegisterFrameEvent(TownHallsTrigger, TownHallsButton, FRAMEEVENT_CONTROL_CLICK)
     call TriggerAddAction(TownHallsTrigger, function TownHallsClickFunction)
-    
+
     // altars
     set AltarsButton = BlzCreateFrameByType("BUTTON", "AltarsButton", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), "ScoreScreenTabButtonTemplate", 0)
     call BlzFrameSetAbsPoint(AltarsButton, FRAMEPOINT_TOPLEFT, UI_ALTARS_X, UI_Y)
     call BlzFrameSetAbsPoint(AltarsButton, FRAMEPOINT_BOTTOMRIGHT, UI_ALTARS_X + UI_BUTTON_SIZE, UI_Y - UI_BUTTON_SIZE)
     call BlzFrameSetEnable(AltarsButton, true)
-    
+
     set AltarsFrame = BlzCreateFrameByType("BACKDROP", "AltarsFrame", AltarsButton, "", 0)
     call BlzFrameSetAllPoints(AltarsFrame, AltarsButton)
     call BlzFrameSetTexture(AltarsFrame, "ReplaceableTextures\\CommandButtons\\BTNAltarOfKings.blp", 0, true)
     call BlzFrameSetEnable(AltarsFrame, true)
-    
+
     set AltarsTooltip = BlzCreateFrameByType("TEXT", "TownHallsTooltip", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), "", 0)
     call BlzFrameSetTooltip(AltarsButton, AltarsTooltip)
     call BlzFrameSetPoint(AltarsTooltip, FRAMEPOINT_BOTTOM, AltarsButton, FRAMEPOINT_TOP, 0, 0.01)
@@ -685,18 +685,18 @@ private function CreateActionsBarUI takes nothing returns nothing
     set AltarsTrigger = CreateTrigger()
     call BlzTriggerRegisterFrameEvent(AltarsTrigger, AltarsButton, FRAMEEVENT_CONTROL_CLICK)
     call TriggerAddAction(AltarsTrigger, function AltarsClickFunction)
-    
+
     // save codes
     set SaveCodesButton = BlzCreateFrameByType("BUTTON", "SaveCodesButton", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), "ScoreScreenTabButtonTemplate", 0)
     call BlzFrameSetAbsPoint(SaveCodesButton, FRAMEPOINT_TOPLEFT, UI_SAVECODES_X, UI_Y)
     call BlzFrameSetAbsPoint(SaveCodesButton, FRAMEPOINT_BOTTOMRIGHT, UI_SAVECODES_X + UI_BUTTON_SIZE, UI_Y - UI_BUTTON_SIZE)
     call BlzFrameSetEnable(SaveCodesButton, true)
-    
+
     set SaveCodesFrame = BlzCreateFrameByType("BACKDROP", "SaveCodesFrame", SaveCodesButton, "", 0)
     call BlzFrameSetAllPoints(SaveCodesFrame, SaveCodesButton)
     call BlzFrameSetTexture(SaveCodesFrame, "ReplaceableTextures\\CommandButtons\\BTNIconSave.blp", 0, true)
     call BlzFrameSetEnable(SaveCodesFrame, true)
-    
+
     set SaveCodesTooltip = BlzCreateFrameByType("TEXT", "SaveCodesTooltip", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), "", 0)
     call BlzFrameSetTooltip(SaveCodesButton, SaveCodesTooltip)
     call BlzFrameSetPoint(SaveCodesTooltip, FRAMEPOINT_BOTTOM, SaveCodesButton, FRAMEPOINT_TOP, 0, 0.01)
@@ -706,18 +706,18 @@ private function CreateActionsBarUI takes nothing returns nothing
     set SaveCodesTrigger = CreateTrigger()
     call BlzTriggerRegisterFrameEvent(SaveCodesTrigger, SaveCodesButton, FRAMEEVENT_CONTROL_CLICK)
     call TriggerAddAction(SaveCodesTrigger, function SaveCodesClickFunction)
-    
+
     // auto skill
     set AutoSkillButton = BlzCreateFrameByType("BUTTON", "AutoSkillButton", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), "ScoreScreenTabButtonTemplate", 0)
     call BlzFrameSetAbsPoint(AutoSkillButton, FRAMEPOINT_TOPLEFT, UI_AUTO_SKILL_X, UI_Y)
     call BlzFrameSetAbsPoint(AutoSkillButton, FRAMEPOINT_BOTTOMRIGHT, UI_AUTO_SKILL_X + UI_BUTTON_SIZE, UI_Y - UI_BUTTON_SIZE)
     call BlzFrameSetEnable(AutoSkillButton, true)
-    
+
     set AutoSkillFrame = BlzCreateFrameByType("BACKDROP", "AutoSkillFrame", AutoSkillButton, "", 0)
     call BlzFrameSetAllPoints(AutoSkillFrame, AutoSkillButton)
     call BlzFrameSetTexture(AutoSkillFrame, "ReplaceableTextures\\CommandButtons\\BTNSkillz.blp", 0, true)
     call BlzFrameSetEnable(AutoSkillFrame, true)
-    
+
     set AutoSkillTooltip = BlzCreateFrameByType("TEXT", "AutoSkillTooltip", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), "", 0)
     call BlzFrameSetTooltip(AutoSkillButton, AutoSkillTooltip)
     call BlzFrameSetPoint(AutoSkillTooltip, FRAMEPOINT_BOTTOM, AutoSkillButton, FRAMEPOINT_TOP, 0, 0.01)
@@ -727,18 +727,18 @@ private function CreateActionsBarUI takes nothing returns nothing
     set AutoSkillTrigger = CreateTrigger()
     call BlzTriggerRegisterFrameEvent(AutoSkillTrigger, AutoSkillButton, FRAMEEVENT_CONTROL_CLICK)
     call TriggerAddAction(AutoSkillTrigger, function AutoSkillClickFunction)
-    
+
     // log
     set LogButton = BlzCreateFrameByType("BUTTON", "LogButton", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), "ScoreScreenTabButtonTemplate", 0)
     call BlzFrameSetAbsPoint(LogButton, FRAMEPOINT_TOPLEFT, UI_LOG_X, UI_Y)
     call BlzFrameSetAbsPoint(LogButton, FRAMEPOINT_BOTTOMRIGHT, UI_LOG_X + UI_BUTTON_SIZE, UI_Y - UI_BUTTON_SIZE)
     call BlzFrameSetEnable(LogButton, true)
-    
+
     set LogFrame = BlzCreateFrameByType("BACKDROP", "LogFrame", LogButton, "", 0)
     call BlzFrameSetAllPoints(LogFrame, LogButton)
     call BlzFrameSetTexture(LogFrame, "ReplaceableTextures\\CommandButtons\\BTNSpy.blp", 0, true)
     call BlzFrameSetEnable(LogFrame, true)
-    
+
     set LogTooltip = BlzCreateFrameByType("TEXT", "LogTooltip", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), "", 0)
     call BlzFrameSetTooltip(LogButton, LogTooltip)
     call BlzFrameSetPoint(LogTooltip, FRAMEPOINT_BOTTOM, LogButton, FRAMEPOINT_TOP, 0, 0.01)
@@ -748,18 +748,18 @@ private function CreateActionsBarUI takes nothing returns nothing
     set LogTrigger = CreateTrigger()
     call BlzTriggerRegisterFrameEvent(LogTrigger, LogButton, FRAMEEVENT_CONTROL_CLICK)
     call TriggerAddAction(LogTrigger, function LogClickFunction)
-    
+
     // damage calculation table
     set DctButton = BlzCreateFrameByType("BUTTON", "DctButton", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), "ScoreScreenTabButtonTemplate", 0)
     call BlzFrameSetAbsPoint(DctButton, FRAMEPOINT_TOPLEFT, UI_DCT_X, UI_Y)
     call BlzFrameSetAbsPoint(DctButton, FRAMEPOINT_BOTTOMRIGHT, UI_DCT_X + UI_BUTTON_SIZE, UI_Y - UI_BUTTON_SIZE)
     call BlzFrameSetEnable(DctButton, true)
-    
+
     set DctFrame = BlzCreateFrameByType("BACKDROP", "DctFrame", DctButton, "", 0)
     call BlzFrameSetAllPoints(DctFrame, DctButton)
     call BlzFrameSetTexture(DctFrame, "ReplaceableTextures\\CommandButtons\\BTNSteelMelee.blp", 0, true)
     call BlzFrameSetEnable(DctFrame, true)
-    
+
     set DctTooltip = BlzCreateFrameByType("TEXT", "DctTooltip", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), "", 0)
     call BlzFrameSetTooltip(DctButton, DctTooltip)
     call BlzFrameSetPoint(DctTooltip, FRAMEPOINT_BOTTOM, DctButton, FRAMEPOINT_TOP, 0, 0.01)
@@ -769,18 +769,18 @@ private function CreateActionsBarUI takes nothing returns nothing
     set LogTrigger = CreateTrigger()
     call BlzTriggerRegisterFrameEvent(LogTrigger, DctButton, FRAMEEVENT_CONTROL_CLICK)
     call TriggerAddAction(LogTrigger, function DctClickFunction)
-    
+
     // diplomacy
     set DiplomacyButton = BlzCreateFrameByType("BUTTON", "DiplomacyButton", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), "ScoreScreenTabButtonTemplate", 0)
     call BlzFrameSetAbsPoint(DiplomacyButton, FRAMEPOINT_TOPLEFT, UI_DIPLOMACY_X, UI_Y)
     call BlzFrameSetAbsPoint(DiplomacyButton, FRAMEPOINT_BOTTOMRIGHT, UI_DIPLOMACY_X + UI_BUTTON_SIZE, UI_Y - UI_BUTTON_SIZE)
     call BlzFrameSetEnable(DiplomacyButton, true)
-    
+
     set DiplomacyFrame = BlzCreateFrameByType("BACKDROP", "DiplomacyFrame", DiplomacyButton, "", 0)
     call BlzFrameSetAllPoints(DiplomacyFrame, DiplomacyButton)
     call BlzFrameSetTexture(DiplomacyFrame, "ReplaceableTextures\\CommandButtons\\BTNStaffOfPreservation.blp", 0, true)
     call BlzFrameSetEnable(DiplomacyFrame, true)
-    
+
     set DiplomacyTooltip = BlzCreateFrameByType("TEXT", "DiplomacyTooltip", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), "", 0)
     call BlzFrameSetTooltip(DiplomacyButton, DiplomacyTooltip)
     call BlzFrameSetPoint(DiplomacyTooltip, FRAMEPOINT_BOTTOM, DiplomacyButton, FRAMEPOINT_TOP, 0, 0.01)
@@ -790,18 +790,18 @@ private function CreateActionsBarUI takes nothing returns nothing
     set DiplomacyTrigger = CreateTrigger()
     call BlzTriggerRegisterFrameEvent(DiplomacyTrigger, DiplomacyButton, FRAMEEVENT_CONTROL_CLICK)
     call TriggerAddAction(DiplomacyTrigger, function DiplomacyClickFunction)
-    
+
     // settings
     set SettingsButton = BlzCreateFrameByType("BUTTON", "SettingsButton", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), "ScoreScreenTabButtonTemplate", 0)
     call BlzFrameSetAbsPoint(SettingsButton, FRAMEPOINT_TOPLEFT, UI_SETTINGS_X, UI_Y)
     call BlzFrameSetAbsPoint(SettingsButton, FRAMEPOINT_BOTTOMRIGHT, UI_SETTINGS_X + UI_BUTTON_SIZE, UI_Y - UI_BUTTON_SIZE)
     call BlzFrameSetEnable(SettingsButton, true)
-    
+
     set SettingsFrame = BlzCreateFrameByType("BACKDROP", "SettingsFrame", SettingsButton, "", 0)
     call BlzFrameSetAllPoints(SettingsFrame, SettingsButton)
     call BlzFrameSetTexture(SettingsFrame, "ReplaceableTextures\\CommandButtons\\BTNReplay-loop.blp", 0, true)
     call BlzFrameSetEnable(SettingsFrame, true)
-    
+
     set SettingsTooltip = BlzCreateFrameByType("TEXT", "SettingsTooltip", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), "", 0)
     call BlzFrameSetTooltip(SettingsButton, SettingsTooltip)
     call BlzFrameSetPoint(SettingsTooltip, FRAMEPOINT_BOTTOM, SettingsButton, FRAMEPOINT_TOP, 0, 0.01)
@@ -811,18 +811,18 @@ private function CreateActionsBarUI takes nothing returns nothing
     set SettingsTrigger = CreateTrigger()
     call BlzTriggerRegisterFrameEvent(SettingsTrigger, SettingsButton, FRAMEEVENT_CONTROL_CLICK)
     call TriggerAddAction(SettingsTrigger, function SettingsClickFunction)
-    
+
     // news
     set NewsButton = BlzCreateFrameByType("BUTTON", "NewsButton", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), "ScoreScreenTabButtonTemplate", 0)
     call BlzFrameSetAbsPoint(NewsButton, FRAMEPOINT_TOPLEFT, UI_NEWS_X, UI_Y)
     call BlzFrameSetAbsPoint(NewsButton, FRAMEPOINT_BOTTOMRIGHT, UI_NEWS_X + UI_BUTTON_SIZE, UI_Y - UI_BUTTON_SIZE)
     call BlzFrameSetEnable(NewsButton, true)
-    
+
     set NewsFrame = BlzCreateFrameByType("BACKDROP", "NewsFrame", LogButton, "", 0)
     call BlzFrameSetAllPoints(NewsFrame, NewsButton)
     call BlzFrameSetTexture(NewsFrame, "ReplaceableTextures\\CommandButtons\\BTNINV_Letter_03.blp", 0, true)
     call BlzFrameSetEnable(NewsFrame, true)
-    
+
     set NewsTooltip = BlzCreateFrameByType("TEXT", "NewsTooltip", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), "", 0)
     call BlzFrameSetTooltip(NewsButton, NewsTooltip)
     call BlzFrameSetPoint(NewsTooltip, FRAMEPOINT_BOTTOM, NewsButton, FRAMEPOINT_TOP, 0, 0.01)
@@ -832,18 +832,18 @@ private function CreateActionsBarUI takes nothing returns nothing
     set NewsTrigger = CreateTrigger()
     call BlzTriggerRegisterFrameEvent(NewsTrigger, NewsButton, FRAMEEVENT_CONTROL_CLICK)
     call TriggerAddAction(NewsTrigger, function NewsClickFunction)
-    
+
     // multiboards
     set MultiboardButton = BlzCreateFrameByType("BUTTON", "MultiboardButton", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), "ScoreScreenTabButtonTemplate", 0)
     call BlzFrameSetAbsPoint(MultiboardButton, FRAMEPOINT_TOPLEFT, UI_MULTIBOARD_X, UI_Y)
     call BlzFrameSetAbsPoint(MultiboardButton, FRAMEPOINT_BOTTOMRIGHT, UI_MULTIBOARD_X + UI_BUTTON_SIZE, UI_Y - UI_BUTTON_SIZE)
     call BlzFrameSetEnable(MultiboardButton, true)
-    
+
     set MultiboardFrame = BlzCreateFrameByType("BACKDROP", "MultiboardFrame", MultiboardButton, "", 0)
     call BlzFrameSetAllPoints(MultiboardFrame, MultiboardButton)
     call BlzFrameSetTexture(MultiboardFrame, "ReplaceableTextures\\CommandButtons\\BTNReplay-Play.blp", 0, true)
     call BlzFrameSetEnable(MultiboardFrame, true)
-    
+
     set MultiboardTooltip = BlzCreateFrameByType("TEXT", "BlzFrameSetTooltip", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), "", 0)
     call BlzFrameSetTooltip(MultiboardButton, MultiboardTooltip)
     call BlzFrameSetPoint(MultiboardTooltip, FRAMEPOINT_BOTTOM, MultiboardButton, FRAMEPOINT_TOP, 0, 0.01)
@@ -853,7 +853,7 @@ private function CreateActionsBarUI takes nothing returns nothing
     set MultiboardTrigger = CreateTrigger()
     call BlzTriggerRegisterFrameEvent(MultiboardTrigger, MultiboardButton, FRAMEEVENT_CONTROL_CLICK)
     call TriggerAddAction(MultiboardTrigger, function MultiboardClickFunction)
-   
+
     call SetActionsBarUIVisible(true, true)
     //call BlzFrameSetVisible(CheckboxButton, true)
 endfunction
@@ -876,7 +876,7 @@ private function TriggerActionSync takes nothing returns nothing
         call PickupAllItemsAroundByPlayer(GetTriggerPlayer())
     elseif (data == "DropBackpack") then
         call DropAllItemsFromBackpack(GetTriggerPlayer())
-    elseif (data == "Backpack") then            
+    elseif (data == "Backpack") then
         if (GetPlayerBackpack(GetTriggerPlayer()) != null) then
             call SelectUnitForPlayerSingle(GetPlayerBackpack(GetTriggerPlayer()), GetTriggerPlayer())
             call ShowBackpackUI(GetTriggerPlayer())
@@ -912,9 +912,7 @@ private function TriggerActionSync takes nothing returns nothing
             call SimError(GetTriggerPlayer(), GetLocalizedString("HOST_DIPLOMACY")) // You must be host to configure diplomacy.
         endif
     elseif (data == "Settings") then
-        if (GetLocalPlayer() == GetTriggerPlayer()) then
-            call ShowSettingsUI()
-        endif
+        call ShowSettingsUIForPlayer(GetTriggerPlayer())
     elseif (data == "News") then
         if (GetLocalPlayer() == GetTriggerPlayer()) then
             call ShowNewsUI()
@@ -927,9 +925,9 @@ endfunction
 private function Init takes nothing returns nothing
     call TriggerRegisterAnyPlayerSyncEvent(SyncTrigger, PREFIX, false)
     call TriggerAddAction(SyncTrigger, function TriggerActionSync)
-    
+
     call OnStartGame(function CreateActionsBarUI)
-    
+
 static if LIBRARY_FrameLoader then
     call FrameLoaderAdd(function CreateActionsBarUI)
     call FrameLoaderAdd(function UpdateAllMultiboards)

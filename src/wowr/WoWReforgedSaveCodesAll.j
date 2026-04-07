@@ -26,7 +26,7 @@ function GetGameModeSuffix takes boolean isWarlord returns string
     if (isWarlord) then
         return "Warlord"
     endif
-    
+
     return "Freelancer"
 endfunction
 
@@ -82,10 +82,10 @@ function CreateSaveCodeAllHeroesTextFileEx takes player whichPlayer returns noth
     local string playerName = GetPlayerName(whichPlayer)
     local string saveCode = GetSaveCode(whichPlayer)
     local string content = ""
-    
+
     set content = content + " -load " + saveCode
     set content = content + " "
-    
+
     call FileIO_Write(GetSaveCodeAllFileNameForPlayer(whichPlayer), content)
 endfunction
 
@@ -142,7 +142,7 @@ function CreateSaveCodeAllUnitsTextFileEx takes player whichPlayer returns nothi
         endif
         set i = i + 1
     endloop
-    
+
     call FileIO_Write(GetSaveCodeAllFileNameUnitsForPlayer(whichPlayer), content)
 endfunction
 
@@ -296,7 +296,7 @@ function LoadSaveCodeAllItems takes player whichPlayer, string allSaveCodes retu
         call ApplySaveCodeItems(whichPlayer, saveCode)
         set i = i + 1
     endloop
-        
+
     call DisplayTimedTextToPlayer(whichPlayer, 0.0, 0.0, 6.0, GetLocalizedString("LOADED_ITEM_SAVE_CODES"))
 endfunction
 
@@ -310,7 +310,7 @@ function LoadSaveCodeAllUnits takes player whichPlayer, string allSaveCodes retu
         call ApplySaveCodeUnits(whichPlayer, saveCode)
         set i = i + 1
     endloop
-        
+
     call DisplayTimedTextToPlayer(whichPlayer, 0.0, 0.0, 6.0, GetLocalizedString("LOADED_UNIT_SAVE_CODES"))
 endfunction
 
@@ -324,7 +324,7 @@ function LoadSaveCodeAllBuildings takes player whichPlayer, string allSaveCodes 
         call ApplySaveCodeBuildings(whichPlayer, saveCode)
         set i = i + 1
     endloop
-        
+
     call DisplayTimedTextToPlayer(whichPlayer, 0.0, 0.0, 6.0, GetLocalizedString("LOADED_BUILDING_SAVE_CODES"))
 endfunction
 
@@ -338,7 +338,7 @@ function LoadSaveCodeAllResearches takes player whichPlayer, string allSaveCodes
         call ApplySaveCodeResearches(whichPlayer, saveCode)
         set i = i + 1
     endloop
-        
+
     call DisplayTimedTextToPlayer(whichPlayer, 0.0, 0.0, 6.0, GetLocalizedString("LOADED_RESEARCH_SAVE_CODES"))
 endfunction
 
@@ -374,7 +374,7 @@ function GetSaveCodeAllTextFile takes player whichPlayer returns nothing
         else
             call BlzSendSyncData("SaveCodeAllHeroes", "missing")
         endif
-        
+
         set fileContent = FileIO_Read(fileNameItems)
         //call BJDebugMsg("File content: " + fileContent)
         if (fileContent != null) then
@@ -382,7 +382,7 @@ function GetSaveCodeAllTextFile takes player whichPlayer returns nothing
         else
             call BlzSendSyncData("SaveCodeAllItems", "missing")
         endif
-        
+
         set fileContent = FileIO_Read(fileNameUnits)
         //call BJDebugMsg("File content: " + fileContent)
         if (fileContent != null) then
@@ -390,7 +390,7 @@ function GetSaveCodeAllTextFile takes player whichPlayer returns nothing
         else
             call BlzSendSyncData("SaveCodeAllUnits", "missing")
         endif
-        
+
         set fileContent = FileIO_Read(fileNameBuildings)
         //call BJDebugMsg("File content: " + fileContent)
         if (fileContent != null) then
@@ -398,7 +398,7 @@ function GetSaveCodeAllTextFile takes player whichPlayer returns nothing
         else
             call BlzSendSyncData("SaveCodeAllBuildings", "missing")
         endif
-        
+
         set fileContent = FileIO_Read(fileNameResearches)
         //call BJDebugMsg("File content: " + fileContent)
         if (fileContent != null) then
@@ -406,7 +406,7 @@ function GetSaveCodeAllTextFile takes player whichPlayer returns nothing
         else
             call BlzSendSyncData("SaveCodeAllResearches", "missing")
         endif
-        
+
         set fileContent = FileIO_Read(fileNameResources)
         //call BJDebugMsg("File content: " + fileContent)
         if (fileContent != null) then
@@ -467,6 +467,10 @@ private function TriggerActionSync takes nothing returns nothing
         endif
     endif
     set triggerPlayer = null
+endfunction
+
+function IsAutoSaveEnabledForPlayer takes player whichPlayer returns boolean
+    return autoSaveEnabled[GetPlayerId(whichPlayer)]
 endfunction
 
 function EnableAutoSaveForPlayer takes player whichPlayer returns nothing
