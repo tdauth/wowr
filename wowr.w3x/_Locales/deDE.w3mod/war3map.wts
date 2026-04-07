@@ -118054,7 +118054,7 @@ STRING 56863
 STRING 56864
 // Abilities: A22L (Spell Damage Reduction), EditorSuffix (Editor Suffix)
 {
-(Ysera's Heart)
+(Yseras Herz)
 }
 
 STRING 56870
@@ -118138,7 +118138,7 @@ Provides an increase to the Hero's line of sight radius and makes it at night th
 STRING 56972
 // Items: I0H0 (Advanced Goblin Night Scope), Description (Description)
 {
-Increases sight range and makes it at night the same as at day.
+Erhöht die Sichtweite und macht sie in der Nacht genauso weit wie am Tage.
 }
 
 STRING 56987
@@ -118156,13 +118156,13 @@ Ancient of War Mount
 STRING 56998
 // Units: n04P (Shadow Shivarra), Name (Name)
 {
-Shadow Shivarra
+Schatten-Shivarra
 }
 
 STRING 56999
 // Units: n04P (Shadow Shivarra), Tip (Tooltip - Basic)
 {
-Hire Shadow Shivarra
+Schatten-Shivarra anheuern
 }
 
 STRING 57000
@@ -119014,7 +119014,7 @@ Waffenmeister
 STRING 57386
 // Items: I13L (Tiny High Elf Farm), Tip (Tooltip - Basic)
 {
-Purchase Winziger Hochelfen-Hof
+Winzigen Hochelfen-Hof erwerben
 }
 
 STRING 57387
