@@ -5189,7 +5189,7 @@ Lich-König
 STRING 875
 // Upgrades: R01C (Burning Oil), Ubertip (Tooltip - Extended)
 {
-Player is no AI.
+Spieler ist keine KI.
 }
 
 STRING 876
@@ -5656,7 +5656,7 @@ STRING 953
 STRING 954
 // Units: H0Y0 (Rogue), Awakentip (Tooltip - Awaken)
 {
-Revive Rogue
+Schurken wiederbeleben
 }
 
 STRING 956
@@ -8383,7 +8383,7 @@ Zauberschild
 }
 
 STRING 1421
-// Upgrades: R02L (Liquid Fire), Name (Name)
+// Upgrades: R02L (Flüssiges Feuer), Name (Name)
 {
 Chemie
 }
@@ -11583,13 +11583,13 @@ Foliant des Chaos erwerben
 STRING 2057
 // Items: I1A5 (Tome of Chaos), Description (Description)
 {
-Permanently changes the damage type to Chaos.
+Ändert den Schadenstyp dauerhaft zu 'Chaos'.
 }
 
 STRING 2058
 // Items: I1A5 (Tome of Chaos), Ubertip (Tooltip - Extended)
 {
-Permanently changes the damage type of the Hero to Chaos when used.
+Ändert bei Benutzung den Schadenstyp dauerhaft zu 'Chaos'.
 }
 
 STRING 2059
@@ -11649,13 +11649,13 @@ STRING 2067
 STRING 2068
 // Units: h0YG (Buy Property Boralus), Name (Name)
 {
-Buy Property Boralus
+Immobilie Boralus kaufen
 }
 
 STRING 2069
 // Units: h0YG (Buy Property Boralus), Tip (Tooltip - Basic)
 {
-Buy Property Boralus
+Immobilie Boralus kaufen
 }
 
 STRING 2070
@@ -13074,13 +13074,13 @@ Meeresriese wiederbeleben
 STRING 2386
 // Items: I1A6 (Tome of Divinity), Description (Description)
 {
-Permanently changes the armor type to Divine.
+Ändert den Rüstungstyp dauerhaft zu 'Göttlich'.
 }
 
 STRING 2387
 // Items: I1A6 (Tome of Divinity), Ubertip (Tooltip - Extended)
 {
-Permanently changes the armor type of the Hero to Divine when used.
+Ändert bei Benutzung den Rüstungstyp dauerhaft zu 'Göttlich'.
 }
 
 STRING 2390
@@ -14998,7 +14998,7 @@ Milch
 }
 
 STRING 2842
-// Upgrades: R02L (Liquid Fire), Tip (Tooltip)
+// Upgrades: R02L (Flüssiges Feuer), Tip (Tooltip)
 {
 Chemie erforschen
 }
@@ -15010,7 +15010,7 @@ STRING 2843
 }
 
 STRING 2844
-// Upgrades: R02L (Liquid Fire), Ubertip (Tooltip - Extended)
+// Upgrades: R02L (Flüssiges Feuer), Ubertip (Tooltip - Extended)
 {
 Gibt Einheiten mit Feuerangriffen Zusatz- und Flächenschaden.
 }
@@ -17902,7 +17902,7 @@ Increases the movement speed and the agility by 6 of the Hero when worn.
 }
 
 STRING 3492
-// Upgrades: R02S (Liquid Fire), effect1 (Effect 1)
+// Upgrades: R02S (Flüssiges Feuer), effect1 (Effect 1)
 {
 rmov
 }
@@ -26320,7 +26320,7 @@ H
 }
 
 STRING 5427
-// Upgrades: R02L (Liquid Fire), Hotkey (Hotkey)
+// Upgrades: R02L (Flüssiges Feuer), Hotkey (Hotkey)
 {
 H
 }
@@ -30395,7 +30395,7 @@ Strong moving flying machin which can transport ground units. Excellent at scout
 }
 
 STRING 6276
-// Upgrades: R02R (Liquid Fire), Name (Name)
+// Upgrades: R02R (Flüssiges Feuer), Name (Name)
 {
 Demolieren
 }
@@ -38072,7 +38072,7 @@ Baupläne des Tempels der Halbgötter
 }
 
 STRING 8256
-// Upgrades: R098 (Liquid Fire), Name (Name)
+// Upgrades: R098 (Flüssiges Feuer), Name (Name)
 {
 Volltreffer-Aura
 }
@@ -39332,7 +39332,7 @@ L
 }
 
 STRING 8518
-// Abilities: A08P (Immortality), Hotkey (Hotkey - Normal)
+// Abilities: A08P (Unsterblichkeit), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -40952,7 +40952,7 @@ Q
 }
 
 STRING 9401
-// Upgrades: R0IN (Liquid Fire), Hotkey (Hotkey)
+// Upgrades: R0IN (Flüssiges Feuer), Hotkey (Hotkey)
 {
 Q
 }
@@ -43438,7 +43438,7 @@ G
 STRING 10489
 // Items: I03I (VIP Human Flag), Ubertip (Tooltip - Extended)
 {
-This flag indicates to other players that you are a VIP. It can summon some animals.
+Diese Flagge signalisiert anderen Spielern, dass du ein VIP bist. Sie kann bestimmte Tiere herbeirufen.
 }
 
 STRING 10490
@@ -44488,13 +44488,13 @@ Winziges Jagdlager errichten
 STRING 10772
 // Abilities: A208 (Hunting - Doctor), Name (Name)
 {
-Jagd - Doctor
+Jagd - Doktor
 }
 
 STRING 10773
 // Abilities: A208 (Hunting - Doctor), Tip (Tooltip - Normal)
 {
-Doctor Jagd
+Doktor-Jagd
 }
 
 STRING 10774
@@ -44512,7 +44512,7 @@ Jagd - Großmeister
 STRING 10776
 // Abilities: A209 (Hunting - Grand Master), Tip (Tooltip - Normal)
 {
-Großmeister Jagd
+Großmeister-Jagd
 }
 
 STRING 10777
@@ -44536,13 +44536,13 @@ S
 STRING 10780
 // Abilities: A20R (Summon Critter), Name (Name)
 {
-Summon Tier
+Tier beschwören
 }
 
 STRING 10781
 // Abilities: A20R (Summon Critter), Tip (Tooltip - Normal)
 {
-Summon Tier
+Tier beschwören
 }
 
 STRING 10782
@@ -45604,7 +45604,7 @@ VIP-Orc-Flagge erwerben
 STRING 11056
 // Items: I03M (VIP Orc Flag), Ubertip (Tooltip - Extended)
 {
-This flag indicates to other players that you are a VIP. It can summon some animals.
+Diese Flagge signalisiert anderen Spielern, dass du ein VIP bist. Sie kann bestimmte Tiere herbeirufen.
 }
 
 STRING 11057
@@ -45622,7 +45622,7 @@ VIP-Nachtelfen-Flagge erwerben
 STRING 11059
 // Items: I03N (VIP Night Elf Flag), Ubertip (Tooltip - Extended)
 {
-This flag indicates to other players that you are a VIP. It can summon some animals.
+Diese Flagge signalisiert anderen Spielern, dass du ein VIP bist. Sie kann bestimmte Tiere herbeirufen.
 }
 
 STRING 11060
@@ -45640,7 +45640,7 @@ VIP-Untoten-Flagge erwerben
 STRING 11062
 // Items: I03O (VIP Undead Flag), Ubertip (Tooltip - Extended)
 {
-This flag indicates to other players that you are a VIP. It can summon some animals.
+Diese Flagge signalisiert anderen Spielern, dass du ein VIP bist. Sie kann bestimmte Tiere herbeirufen.
 }
 
 STRING 11063
@@ -45754,7 +45754,7 @@ STRING 11094
 STRING 11121
 // Units: o02I (Warbeast Kraal), Ubertip (Tooltip - Extended)
 {
-Trains Batriders, Bats, Troll-Golems, and Zalandari Throne of Wars. |nBietet auch die Ausbaustufen Liquid Fire and Sperrfeuer upgrades.
+Bildet Fledermausreiter, Fledermäuse, Troll-Golems und Zalandari Throne of Wars aus. |nBietet auch die Ausbaustufen 'Flüssiges Feuer' und 'Sperrfeuer'.
 }
 
 STRING 11122
@@ -45778,13 +45778,13 @@ STRING 11124
 STRING 11125
 // Abilities: A264 (Flatten All), Tip (Tooltip - Normal)
 {
-Flatten All
+Alles glätten
 }
 
 STRING 11126
 // Abilities: A264 (Flatten All), Ubertip (Tooltip - Normal - Extended)
 {
-Removes all diggings created by you.
+Entfernt alle von Ihnen erstellten Grabungen.
 }
 
 STRING 11127
@@ -45872,9 +45872,9 @@ Ping Included Units for Savecode
 }
 
 STRING 11160
-// Abilities: A08P (Immortality), Tip (Tooltip - Normal)
+// Abilities: A08P (Unsterblichkeit), Tip (Tooltip - Normal)
 {
-Immortality
+Unsterblichkeit
 }
 
 STRING 11161
@@ -45884,15 +45884,15 @@ Lich-König
 }
 
 STRING 11162
-// Abilities: A08P (Immortality), EditorSuffix (Editor Suffix)
+// Abilities: A08P (Unsterblichkeit), EditorSuffix (Editor Suffix)
 {
 (Weltenbaum)
 }
 
 STRING 11163
-// Abilities: A08P (Immortality), Name (Name)
+// Abilities: A08P (Unsterblichkeit), Name (Name)
 {
-Immortality
+Unsterblichkeit
 }
 
 STRING 11164
@@ -46064,7 +46064,7 @@ Dummy Caster Auferstehung World Tree
 }
 
 STRING 11254
-// Abilities: A08P (Immortality), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A08P (Unsterblichkeit), Ubertip (Tooltip - Normal - Extended)
 {
 Heilens all Night Elf units and ressurects dead units all over the map if the World Tree is full with Wisps.
 }
@@ -47108,21 +47108,21 @@ Königin des Leidens
 }
 
 STRING 11645
-// Abilities: A0AB (Dig Up Artifacts), Name (Name)
+// Abilities: A0AB (Artefakte ausgraben), Name (Name)
 {
-Dig Up Artifacts
+Artefakte ausgraben
 }
 
 STRING 11646
-// Abilities: A0AB (Dig Up Artifacts), Tip (Tooltip - Normal)
+// Abilities: A0AB (Artefakte ausgraben), Tip (Tooltip - Normal)
 {
-Dig Up Artifacts
+Artefakte ausgraben
 }
 
 STRING 11647
-// Abilities: A0AB (Dig Up Artifacts), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0AB (Artefakte ausgraben), Ubertip (Tooltip - Normal - Extended)
 {
-Digs up random artifacts to buy.
+Gräbt zufällige Artefakte zum Kaufen aus.
 }
 
 STRING 11648
@@ -47912,7 +47912,7 @@ Erhöht die Mana-Kapazität, die Mana-Regenerationsrate und die Trefferpunkte vo
 }
 
 STRING 11940
-// Abilities: A0AB (Dig Up Artifacts), EditorSuffix (Editor Suffix)
+// Abilities: A0AB (Artefakte ausgraben), EditorSuffix (Editor Suffix)
 {
 (Ausgrabungsstätte) (Archaeologist)
 }
@@ -51458,7 +51458,7 @@ Kodo-Bestien-Reiter
 }
 
 STRING 14589
-// Upgrades: R0DD (Liquid Fire), Name (Name)
+// Upgrades: R0DD (Flüssiges Feuer), Name (Name)
 {
 Unsichtbarkeit
 }
@@ -51794,7 +51794,7 @@ R
 }
 
 STRING 14881
-// Upgrades: R02T (Liquid Fire), Hotkey (Hotkey)
+// Upgrades: R02T (Flüssiges Feuer), Hotkey (Hotkey)
 {
 R
 }
@@ -55106,7 +55106,7 @@ Wiederherstellungsstein herstellen
 }
 
 STRING 17547
-// Upgrades: R0IO (Liquid Fire), Hotkey (Hotkey)
+// Upgrades: R0IO (Flüssiges Feuer), Hotkey (Hotkey)
 {
 T
 }
@@ -59155,19 +59155,19 @@ Kriegszelt errichten
 STRING 20412
 // Units: o0A8 (War Tent), Ubertip (Tooltip - Extended)
 {
-Primäres Truppen-Produktionsgebäude. Trains Centaur Drudges, Centaur Archers and Centaur Outrunners.  |nBietet auch die Ausbaustufen Searing Pfeile, and Niederreiten upgrades.
+Primäres Truppen-Produktionsgebäude. Trains Zentauren-Schufters, Centaur Archers and Zentauren-Läufers.  |nBietet auch die Ausbaustufen Searing Pfeile, and Niederreiten upgrades.
 }
 
 STRING 20413
 // Units: h0Y2 (Centaur Housing), Name (Name)
 {
-Zentaurenunterkunft
+Zentauren-Unterkunft
 }
 
 STRING 20414
 // Units: h0Y2 (Centaur Housing), Tip (Tooltip - Basic)
 {
-Zentaurenunterkunft errichten
+Zentauren-Unterkunft errichten
 }
 
 STRING 20418
@@ -59189,9 +59189,9 @@ STRING 20420
 }
 
 STRING 20421
-// Units: n0MA (Centaur Drudge), Tip (Tooltip - Basic)
+// Units: n0MA (Zentauren-Schufter), Tip (Tooltip - Basic)
 {
-Train Centaur Drudge
+Zentauren-Schufter ausbilden
 }
 
 STRING 20422
@@ -59207,15 +59207,15 @@ Zentauren-Bogenschützen ausbilden
 }
 
 STRING 20424
-// Units: n0MA (Centaur Drudge), EditorSuffix (Name - Editor Suffix)
+// Units: n0MA (Zentauren-Schufter), EditorSuffix (Name - Editor Suffix)
 {
 (Zentauren)
 }
 
 STRING 20425
-// Units: n0MC (Centaur Outrunner), Tip (Tooltip - Basic)
+// Units: n0MC (Zentauren-Läufer), Tip (Tooltip - Basic)
 {
-Train Centaur Outrunner
+Zentauren-Läufer ausbilden
 }
 
 STRING 20426
@@ -64249,7 +64249,7 @@ Dornen-Aura
 }
 
 STRING 24995
-// Upgrades: R0IO (Liquid Fire), Name (Name)
+// Upgrades: R0IO (Flüssiges Feuer), Name (Name)
 {
 Dornen-Aura
 }
@@ -71503,13 +71503,13 @@ Build Freiberufler-Hafen
 }
 
 STRING 32500
-// Upgrades: R02J (Liquid Fire), Name (Name)
+// Upgrades: R02J (Flüssiges Feuer), Name (Name)
 {
 Sprengstoff
 }
 
 STRING 32501
-// Upgrades: R02J (Liquid Fire), Tip (Tooltip)
+// Upgrades: R02J (Flüssiges Feuer), Tip (Tooltip)
 {
 Sprengstoff erforschen
 }
@@ -71521,7 +71521,7 @@ Pandaren-Kind
 }
 
 STRING 32503
-// Upgrades: R02J (Liquid Fire), Ubertip (Tooltip - Extended)
+// Upgrades: R02J (Flüssiges Feuer), Ubertip (Tooltip - Extended)
 {
 Allows using explosives to blow up the whole tunnel system.
 }
@@ -71755,13 +71755,13 @@ STRING 32546
 }
 
 STRING 32547
-// Upgrades: R02K (Liquid Fire), Name (Name)
+// Upgrades: R02K (Flüssiges Feuer), Name (Name)
 {
 Reparieren
 }
 
 STRING 32548
-// Upgrades: R02K (Liquid Fire), Tip (Tooltip)
+// Upgrades: R02K (Flüssiges Feuer), Tip (Tooltip)
 {
 Reparieren erforschen
 }
@@ -71773,7 +71773,7 @@ Pandaren-Kind ausbilden
 }
 
 STRING 32550
-// Upgrades: R02K (Liquid Fire), Ubertip (Tooltip - Extended)
+// Upgrades: R02K (Flüssiges Feuer), Ubertip (Tooltip - Extended)
 {
 Allows Goblin warriors to repair mechanical units and structures.
 }
@@ -73369,13 +73369,13 @@ STRING 33575
 }
 
 STRING 33577
-// Upgrades: R098 (Liquid Fire), Tip (Tooltip)
+// Upgrades: R098 (Flüssiges Feuer), Tip (Tooltip)
 {
 Volltreffer-Aura erfroschen
 }
 
 STRING 33578
-// Upgrades: R098 (Liquid Fire), Ubertip (Tooltip - Extended)
+// Upgrades: R098 (Flüssiges Feuer), Ubertip (Tooltip - Extended)
 {
 Gives Eis-Troll-Kriegsherr the Trueshot ability, which increases the damage of nearby friendly range attacking units.
 }
@@ -73417,7 +73417,7 @@ Erhöht die Mana-Kapazität, die Mana-Regenerationsrate und die Trefferpunkte vo
 }
 
 STRING 33594
-// Abilities: A15G (Liquid Fire), EditorSuffix (Editor Suffix)
+// Abilities: A15G (Flüssiges Feuer), EditorSuffix (Editor Suffix)
 {
 (Trolle)
 }
@@ -73801,7 +73801,7 @@ STRING 33834
 }
 
 STRING 33835
-// Upgrades: R095 (Liquid Fire), EditorSuffix (Editor Suffix)
+// Upgrades: R095 (Flüssiges Feuer), EditorSuffix (Editor Suffix)
 {
 (Trolle)
 }
@@ -73819,7 +73819,7 @@ STRING 33837
 }
 
 STRING 33838
-// Upgrades: R098 (Liquid Fire), EditorSuffix (Editor Suffix)
+// Upgrades: R098 (Flüssiges Feuer), EditorSuffix (Editor Suffix)
 {
 (Trolle)
 }
@@ -75247,7 +75247,7 @@ C
 }
 
 STRING 34382
-// Upgrades: R02K (Liquid Fire), Hotkey (Hotkey)
+// Upgrades: R02K (Flüssiges Feuer), Hotkey (Hotkey)
 {
 P
 }
@@ -76285,13 +76285,13 @@ STRING 35101
 }
 
 STRING 35102
-// Upgrades: R0IM (Liquid Fire), Name (Name)
+// Upgrades: R0IM (Flüssiges Feuer), Name (Name)
 {
 Stachelschauer
 }
 
 STRING 35103
-// Upgrades: R0IM (Liquid Fire), Tip (Tooltip)
+// Upgrades: R0IM (Flüssiges Feuer), Tip (Tooltip)
 {
 Stachelschauer erforschen
 }
@@ -76303,19 +76303,19 @@ STRING 35104
 }
 
 STRING 35105
-// Upgrades: R0IM (Liquid Fire), Ubertip (Tooltip - Extended)
+// Upgrades: R0IM (Flüssiges Feuer), Ubertip (Tooltip - Extended)
 {
 Gives Stacheleber range units maximum mana, mana regeneration and the Quil Spray ability whicht deals extra damage and damages multiple units at once.
 }
 
 STRING 35106
-// Upgrades: R0IM (Liquid Fire), effect1 (Effect 1)
+// Upgrades: R0IM (Flüssiges Feuer), effect1 (Effect 1)
 {
 rmnx
 }
 
 STRING 35107
-// Upgrades: R0IM (Liquid Fire), effect2 (Effect 2)
+// Upgrades: R0IM (Flüssiges Feuer), effect2 (Effect 2)
 {
 rmnr
 }
@@ -76327,13 +76327,13 @@ STRING 35111
 }
 
 STRING 35112
-// Upgrades: R0IN (Liquid Fire), Name (Name)
+// Upgrades: R0IN (Flüssiges Feuer), Name (Name)
 {
 Stacheln
 }
 
 STRING 35113
-// Upgrades: R0IN (Liquid Fire), Tip (Tooltip)
+// Upgrades: R0IN (Flüssiges Feuer), Tip (Tooltip)
 {
 Stacheln erforschen
 }
@@ -76345,7 +76345,7 @@ STRING 35114
 }
 
 STRING 35115
-// Upgrades: R0IN (Liquid Fire), Ubertip (Tooltip - Extended)
+// Upgrades: R0IN (Flüssiges Feuer), Ubertip (Tooltip - Extended)
 {
 Gives Stacheleber range units maximum mana, mana regeneration and the Quil Spray ability whicht deals extra damage and damages multiple units at once.
 }
@@ -76357,25 +76357,25 @@ Errichtet einen Laden mit käuflichen Gegenständen. Welche Gegenstände verfüg
 }
 
 STRING 35118
-// Upgrades: R0IM (Liquid Fire), EditorSuffix (Editor Suffix)
+// Upgrades: R0IM (Flüssiges Feuer), EditorSuffix (Editor Suffix)
 {
 (Stacheleber)
 }
 
 STRING 35120
-// Upgrades: R0IO (Liquid Fire), Tip (Tooltip)
+// Upgrades: R0IO (Flüssiges Feuer), Tip (Tooltip)
 {
 Dornen-Aura erforschen
 }
 
 STRING 35121
-// Upgrades: R0IN (Liquid Fire), EditorSuffix (Editor Suffix)
+// Upgrades: R0IN (Flüssiges Feuer), EditorSuffix (Editor Suffix)
 {
 (Stacheleber)
 }
 
 STRING 35124
-// Upgrades: R0IO (Liquid Fire), EditorSuffix (Editor Suffix)
+// Upgrades: R0IO (Flüssiges Feuer), EditorSuffix (Editor Suffix)
 {
 (Stacheleber)
 }
@@ -83773,31 +83773,31 @@ STRING 37601
 }
 
 STRING 37602
-// Upgrades: R02Q (Liquid Fire), Ubertip (Tooltip - Extended)
+// Upgrades: R02Q (Flüssiges Feuer), Ubertip (Tooltip - Extended)
 {
 Gives Treibstoffpumpes the ability Treibstoff.
 }
 
 STRING 37605
-// Upgrades: R02R (Liquid Fire), Tip (Tooltip)
+// Upgrades: R02R (Flüssiges Feuer), Tip (Tooltip)
 {
 Demolieren erforschen
 }
 
 STRING 37607
-// Upgrades: R02R (Liquid Fire), Ubertip (Tooltip - Extended)
+// Upgrades: R02R (Flüssiges Feuer), Ubertip (Tooltip - Extended)
 {
 Verleiht Goblin-Kaisern die Fähigkeit 'Demolieren'.
 }
 
 STRING 37609
-// Upgrades: R02S (Liquid Fire), Name (Name)
+// Upgrades: R02S (Flüssiges Feuer), Name (Name)
 {
 Ingenieurwissenschaften
 }
 
 STRING 37610
-// Upgrades: R02S (Liquid Fire), Tip (Tooltip)
+// Upgrades: R02S (Flüssiges Feuer), Tip (Tooltip)
 {
 Ingenieurwissenschaften erforschen
 }
@@ -83809,7 +83809,7 @@ STRING 37611
 }
 
 STRING 37612
-// Upgrades: R02S (Liquid Fire), Ubertip (Tooltip - Extended)
+// Upgrades: R02S (Flüssiges Feuer), Ubertip (Tooltip - Extended)
 {
 Makes Goblin tank units faster.
 }
@@ -83947,13 +83947,13 @@ Höllenorc-Hafen errichten
 }
 
 STRING 37641
-// Upgrades: R02T (Liquid Fire), Name (Name)
+// Upgrades: R02T (Flüssiges Feuer), Name (Name)
 {
 Flammengranate
 }
 
 STRING 37642
-// Upgrades: R02T (Liquid Fire), Tip (Tooltip)
+// Upgrades: R02T (Flüssiges Feuer), Tip (Tooltip)
 {
 Flammengranate erforschen
 }
@@ -83965,19 +83965,19 @@ Neruber-Kind
 }
 
 STRING 37644
-// Upgrades: R02T (Liquid Fire), Ubertip (Tooltip - Extended)
+// Upgrades: R02T (Flüssiges Feuer), Ubertip (Tooltip - Extended)
 {
 Allows Goblin-Flammenwerfers to use the ability Flammengranate.
 }
 
 STRING 37646
-// Upgrades: R02U (Liquid Fire), Name (Name)
+// Upgrades: R02U (Flüssiges Feuer), Name (Name)
 {
 Mobiles Geschütz
 }
 
 STRING 37647
-// Upgrades: R02U (Liquid Fire), Tip (Tooltip)
+// Upgrades: R02U (Flüssiges Feuer), Tip (Tooltip)
 {
 Mobiles Geschütz erforschen
 }
@@ -83989,7 +83989,7 @@ Neruber-Kind ausbilden
 }
 
 STRING 37649
-// Upgrades: R02U (Liquid Fire), Ubertip (Tooltip - Extended)
+// Upgrades: R02U (Flüssiges Feuer), Ubertip (Tooltip - Extended)
 {
 Allows Goblin ground units to take turrets and carry them around.
 }
@@ -87139,7 +87139,7 @@ Gives all tanks the Berserker-Panzer ability.
 }
 
 STRING 38915
-// Upgrades: R02Q (Liquid Fire), Name (Name)
+// Upgrades: R02Q (Flüssiges Feuer), Name (Name)
 {
 Treibstoff
 }
@@ -87163,7 +87163,7 @@ Dieb
 }
 
 STRING 38919
-// Upgrades: R02Q (Liquid Fire), Tip (Tooltip)
+// Upgrades: R02Q (Flüssiges Feuer), Tip (Tooltip)
 {
 Treibstoff erforschen
 }
@@ -92643,7 +92643,7 @@ Unterstützender Zauberer. Can initially cast Verbannen, which removes negative 
 STRING 41508
 // Units: o0B2 (Animal Battle Grounds), Ubertip (Tooltip - Extended)
 {
-Trains Quillbeasts, Harpy Rogues, and Harpy Windwitches. |nBietet auch die Ausbaustufen Einschnüren, Envenomed Spears, Liquid Fire and War Drums upgrades.
+Trains Quillbeasts, Harpy Rogues, and Harpy Windwitches. |nBietet auch die Ausbaustufen Einschnüren, Envenomed Spears, Flüssiges Feuer and War Drums upgrades.
 }
 
 STRING 41509
@@ -93217,13 +93217,13 @@ STRING 41852
 }
 
 STRING 41853
-// Upgrades: R0D6 (Liquid Fire), Name (Name)
+// Upgrades: R0D6 (Flüssiges Feuer), Name (Name)
 {
 Erdenmutter
 }
 
 STRING 41854
-// Upgrades: R0D6 (Liquid Fire), Tip (Tooltip)
+// Upgrades: R0D6 (Flüssiges Feuer), Tip (Tooltip)
 {
 Erdenmutter erforschen
 }
@@ -93235,7 +93235,7 @@ STRING 41855
 }
 
 STRING 41856
-// Upgrades: R0D6 (Liquid Fire), Ubertip (Tooltip - Extended)
+// Upgrades: R0D6 (Flüssiges Feuer), Ubertip (Tooltip - Extended)
 {
 Gives Tauren warriors the chance to be reincarnated after dying and to reincarnate enemy creeps as allied creeps after their death.
 }
@@ -93757,7 +93757,7 @@ STRING 42021
 }
 
 STRING 42022
-// Upgrades: R0D6 (Liquid Fire), EditorSuffix (Editor Suffix)
+// Upgrades: R0D6 (Flüssiges Feuer), EditorSuffix (Editor Suffix)
 {
 (Tauren)
 }
@@ -93805,19 +93805,19 @@ STRING 42029
 }
 
 STRING 42031
-// Upgrades: R0DD (Liquid Fire), Tip (Tooltip)
+// Upgrades: R0DD (Flüssiges Feuer), Tip (Tooltip)
 {
 Unsichtbarkeit erforschen
 }
 
 STRING 42032
-// Upgrades: R0DD (Liquid Fire), Ubertip (Tooltip - Extended)
+// Upgrades: R0DD (Flüssiges Feuer), Ubertip (Tooltip - Extended)
 {
 Gibt Geisterflügeldrachen die Fähigkeit Unsichtbarkeit.
 }
 
 STRING 42033
-// Upgrades: R0DD (Liquid Fire), EditorSuffix (Editor Suffix)
+// Upgrades: R0DD (Flüssiges Feuer), EditorSuffix (Editor Suffix)
 {
 (Tauren)
 }
@@ -97681,7 +97681,7 @@ Primäres Gebäude, wird zum Ausbilden von Zentauren-Arbeitern und zum Einlagern
 }
 
 STRING 43513
-// Units: n0MC (Centaur Outrunner), EditorSuffix (Name - Editor Suffix)
+// Units: n0MC (Zentauren-Läufer), EditorSuffix (Name - Editor Suffix)
 {
 (Zentauren)
 }
@@ -100975,7 +100975,7 @@ Passive Verwandlung
 }
 
 STRING 46283
-// Upgrades: R02S (Liquid Fire), Hotkey (Hotkey)
+// Upgrades: R02S (Flüssiges Feuer), Hotkey (Hotkey)
 {
 N
 }
@@ -101893,7 +101893,7 @@ STRING 46650
 }
 
 STRING 47446
-// Upgrades: R0IO (Liquid Fire), Ubertip (Tooltip - Extended)
+// Upgrades: R0IO (Flüssiges Feuer), Ubertip (Tooltip - Extended)
 {
 Gives Klingenmähnen-Häuptlings the ability Dornen-Aura which deals damage back to attacking enemy melee units.
 }
@@ -113250,19 +113250,19 @@ STRING 54089
 }
 
 STRING 54090
-// Upgrades: R02J (Liquid Fire), EditorSuffix (Editor Suffix)
+// Upgrades: R02J (Flüssiges Feuer), EditorSuffix (Editor Suffix)
 {
 (Goblins)
 }
 
 STRING 54091
-// Upgrades: R02K (Liquid Fire), EditorSuffix (Editor Suffix)
+// Upgrades: R02K (Flüssiges Feuer), EditorSuffix (Editor Suffix)
 {
 (Goblins)
 }
 
 STRING 54092
-// Upgrades: R02L (Liquid Fire), EditorSuffix (Editor Suffix)
+// Upgrades: R02L (Flüssiges Feuer), EditorSuffix (Editor Suffix)
 {
 (Goblins)
 }
@@ -113292,31 +113292,31 @@ STRING 54096
 }
 
 STRING 54097
-// Upgrades: R02Q (Liquid Fire), EditorSuffix (Editor Suffix)
+// Upgrades: R02Q (Flüssiges Feuer), EditorSuffix (Editor Suffix)
 {
 (Goblins)
 }
 
 STRING 54098
-// Upgrades: R02R (Liquid Fire), EditorSuffix (Editor Suffix)
+// Upgrades: R02R (Flüssiges Feuer), EditorSuffix (Editor Suffix)
 {
 (Goblins)
 }
 
 STRING 54099
-// Upgrades: R02S (Liquid Fire), EditorSuffix (Editor Suffix)
+// Upgrades: R02S (Flüssiges Feuer), EditorSuffix (Editor Suffix)
 {
 (Goblins)
 }
 
 STRING 54100
-// Upgrades: R02T (Liquid Fire), EditorSuffix (Editor Suffix)
+// Upgrades: R02T (Flüssiges Feuer), EditorSuffix (Editor Suffix)
 {
 (Goblins)
 }
 
 STRING 54101
-// Upgrades: R02U (Liquid Fire), EditorSuffix (Editor Suffix)
+// Upgrades: R02U (Flüssiges Feuer), EditorSuffix (Editor Suffix)
 {
 (Goblins)
 }
@@ -122786,19 +122786,19 @@ C
 }
 
 STRING 59117
-// Upgrades: R02Q (Liquid Fire), Hotkey (Hotkey)
+// Upgrades: R02Q (Flüssiges Feuer), Hotkey (Hotkey)
 {
 C
 }
 
 STRING 59118
-// Upgrades: R02R (Liquid Fire), Hotkey (Hotkey)
+// Upgrades: R02R (Flüssiges Feuer), Hotkey (Hotkey)
 {
 C
 }
 
 STRING 59119
-// Upgrades: R02U (Liquid Fire), Hotkey (Hotkey)
+// Upgrades: R02U (Flüssiges Feuer), Hotkey (Hotkey)
 {
 C
 }
