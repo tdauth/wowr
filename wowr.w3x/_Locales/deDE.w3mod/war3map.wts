@@ -624,7 +624,7 @@ STRING 104
 }
 
 STRING 105
-// Abilities: A0OP (Animal War Training), EditorSuffix (Editor Suffix)
+// Abilities: A0OP (Kampftierausbildung), EditorSuffix (Editor Suffix)
 {
  (Icon) (Dalaran)
 }
@@ -1764,7 +1764,7 @@ STRING 294
 }
 
 STRING 295
-// Upgrades: R01V (Animal War Training), Tip (Tooltip)
+// Upgrades: R01V (Kampftierausbildung), Tip (Tooltip)
 {
 Günstige Evolution erforschen - [|cffffcc00Stufe 1|r]
 }
@@ -2665,7 +2665,7 @@ Illidan Stormrage´s Blade. Needed for a special Quest.
 }
 
 STRING 447
-// Upgrades: R01V (Animal War Training), Tip (Tooltip)
+// Upgrades: R01V (Kampftierausbildung), Tip (Tooltip)
 {
 Günstige Evolution erforschen - [|cffffcc00Stufe 2|r]
 }
@@ -2682,7 +2682,7 @@ Ersteller: Baradé
 }
 
 STRING 450
-// Upgrades: R04Y (Animal War Training), Name (Name)
+// Upgrades: R04Y (Kampftierausbildung), Name (Name)
 {
 Bonus-Helden
 }
@@ -3124,7 +3124,7 @@ STRING 521
 }
 
 STRING 522
-// Upgrades: R00U (Animal War Training), Name (Name)
+// Upgrades: R00U (Kampftierausbildung), Name (Name)
 {
 Evolution
 }
@@ -4502,7 +4502,7 @@ Flying boss hero from Outland who can cast Kritischer Schlag, Evasion, Life Stea
 }
 
 STRING 753
-// Upgrades: R01V (Animal War Training), Ubertip (Tooltip - Extended)
+// Upgrades: R01V (Kampftierausbildung), Ubertip (Tooltip - Extended)
 {
 Erforscht Evolution, ist aber günstiger.
 }
@@ -5330,235 +5330,235 @@ STRING 899
 }
 
 STRING 900
-// Upgrades: R00U (Animal War Training), Tip (Tooltip)
+// Upgrades: R00U (Kampftierausbildung), Tip (Tooltip)
 {
 Evolution erforschen - [|cffffcc00Stufe 2|r]
 }
 
 STRING 901
-// Upgrades: R00U (Animal War Training), Tip (Tooltip)
+// Upgrades: R00U (Kampftierausbildung), Tip (Tooltip)
 {
 Evolution erforschen - [|cffffcc00Stufe 3|r]
 }
 
 STRING 902
-// Upgrades: R00U (Animal War Training), Tip (Tooltip)
+// Upgrades: R00U (Kampftierausbildung), Tip (Tooltip)
 {
 Evolution erforschen - [|cffffcc00Stufe 4|r]
 }
 
 STRING 903
-// Upgrades: R00U (Animal War Training), Tip (Tooltip)
+// Upgrades: R00U (Kampftierausbildung), Tip (Tooltip)
 {
 Evolution erforschen - [|cffffcc00Stufe 5|r]
 }
 
 STRING 904
-// Upgrades: R00U (Animal War Training), Tip (Tooltip)
+// Upgrades: R00U (Kampftierausbildung), Tip (Tooltip)
 {
 Evolution erforschen - [|cffffcc00Stufe 6|r]
 }
 
 STRING 905
-// Upgrades: R00U (Animal War Training), Tip (Tooltip)
+// Upgrades: R00U (Kampftierausbildung), Tip (Tooltip)
 {
 Evolution erforschen - [|cffffcc00Stufe 7|r]
 }
 
 STRING 906
-// Upgrades: R00U (Animal War Training), Tip (Tooltip)
+// Upgrades: R00U (Kampftierausbildung), Tip (Tooltip)
 {
 Evolution erforschen - [|cffffcc00Stufe 8|r]
 }
 
 STRING 907
-// Upgrades: R00U (Animal War Training), Tip (Tooltip)
+// Upgrades: R00U (Kampftierausbildung), Tip (Tooltip)
 {
 Evolution erforschen - [|cffffcc00Stufe 9|r]
 }
 
 STRING 908
-// Upgrades: R00U (Animal War Training), Tip (Tooltip)
+// Upgrades: R00U (Kampftierausbildung), Tip (Tooltip)
 {
 Evolution erforschen - [|cffffcc00Stufe 10|r]
 }
 
 STRING 909
-// Upgrades: R00U (Animal War Training), Tip (Tooltip)
+// Upgrades: R00U (Kampftierausbildung), Tip (Tooltip)
 {
 Evolution erforschen - [|cffffcc00Stufe 11|r]
 }
 
 STRING 910
-// Upgrades: R00U (Animal War Training), Tip (Tooltip)
+// Upgrades: R00U (Kampftierausbildung), Tip (Tooltip)
 {
 Evolution erforschen - [|cffffcc00Stufe 12|r]
 }
 
 STRING 911
-// Upgrades: R00U (Animal War Training), Tip (Tooltip)
+// Upgrades: R00U (Kampftierausbildung), Tip (Tooltip)
 {
 Evolution erforschen - [|cffffcc00Stufe 13|r]
 }
 
 STRING 912
-// Upgrades: R00U (Animal War Training), Tip (Tooltip)
+// Upgrades: R00U (Kampftierausbildung), Tip (Tooltip)
 {
 Evolution erforschen - [|cffffcc00Stufe 14|r]
 }
 
 STRING 913
-// Upgrades: R00U (Animal War Training), Tip (Tooltip)
+// Upgrades: R00U (Kampftierausbildung), Tip (Tooltip)
 {
 Evolution erforschen - [|cffffcc00Stufe 15|r]
 }
 
 STRING 914
-// Upgrades: R00U (Animal War Training), Tip (Tooltip)
+// Upgrades: R00U (Kampftierausbildung), Tip (Tooltip)
 {
 Evolution erforschen - [|cffffcc00Stufe 16|r]
 }
 
 STRING 915
-// Upgrades: R00U (Animal War Training), Tip (Tooltip)
+// Upgrades: R00U (Kampftierausbildung), Tip (Tooltip)
 {
 Evolution erforschen - [|cffffcc00Stufe 17|r]
 }
 
 STRING 916
-// Upgrades: R00U (Animal War Training), Tip (Tooltip)
+// Upgrades: R00U (Kampftierausbildung), Tip (Tooltip)
 {
 Evolution erforschen - [|cffffcc00Stufe 18|r]
 }
 
 STRING 917
-// Upgrades: R00U (Animal War Training), Tip (Tooltip)
+// Upgrades: R00U (Kampftierausbildung), Tip (Tooltip)
 {
 Evolution erforschen - [|cffffcc00Stufe 19|r]
 }
 
 STRING 918
-// Upgrades: R00U (Animal War Training), Tip (Tooltip)
+// Upgrades: R00U (Kampftierausbildung), Tip (Tooltip)
 {
 Evolution erforschen - [|cffffcc00Stufe 20|r]
 }
 
 STRING 919
-// Upgrades: R00U (Animal War Training), Tip (Tooltip)
+// Upgrades: R00U (Kampftierausbildung), Tip (Tooltip)
 {
 Evolution erforschen - [|cffffcc00Stufe 21|r]
 }
 
 STRING 920
-// Upgrades: R00U (Animal War Training), Tip (Tooltip)
+// Upgrades: R00U (Kampftierausbildung), Tip (Tooltip)
 {
 Evolution erforschen - [|cffffcc00Stufe 22|r]
 }
 
 STRING 921
-// Upgrades: R00U (Animal War Training), Tip (Tooltip)
+// Upgrades: R00U (Kampftierausbildung), Tip (Tooltip)
 {
 Evolution erforschen - [|cffffcc00Stufe 23|r]
 }
 
 STRING 922
-// Upgrades: R00U (Animal War Training), Tip (Tooltip)
+// Upgrades: R00U (Kampftierausbildung), Tip (Tooltip)
 {
 Evolution erforschen - [|cffffcc00Stufe 24|r]
 }
 
 STRING 923
-// Upgrades: R00U (Animal War Training), Tip (Tooltip)
+// Upgrades: R00U (Kampftierausbildung), Tip (Tooltip)
 {
 Evolution erforschen - [|cffffcc00Stufe 25|r]
 }
 
 STRING 924
-// Upgrades: R00U (Animal War Training), Tip (Tooltip)
+// Upgrades: R00U (Kampftierausbildung), Tip (Tooltip)
 {
 Evolution erforschen - [|cffffcc00Stufe 26|r]
 }
 
 STRING 925
-// Upgrades: R00U (Animal War Training), Tip (Tooltip)
+// Upgrades: R00U (Kampftierausbildung), Tip (Tooltip)
 {
 Evolution erforschen - [|cffffcc00Stufe 27|r]
 }
 
 STRING 926
-// Upgrades: R00U (Animal War Training), Tip (Tooltip)
+// Upgrades: R00U (Kampftierausbildung), Tip (Tooltip)
 {
 Evolution erforschen - [|cffffcc00Stufe 28|r]
 }
 
 STRING 927
-// Upgrades: R00U (Animal War Training), Tip (Tooltip)
+// Upgrades: R00U (Kampftierausbildung), Tip (Tooltip)
 {
 Evolution erforschen - [|cffffcc00Stufe 29|r]
 }
 
 STRING 928
-// Upgrades: R00U (Animal War Training), Tip (Tooltip)
+// Upgrades: R00U (Kampftierausbildung), Tip (Tooltip)
 {
 Evolution erforschen - [|cffffcc00Stufe 30|r]
 }
 
 STRING 929
-// Upgrades: R00U (Animal War Training), Tip (Tooltip)
+// Upgrades: R00U (Kampftierausbildung), Tip (Tooltip)
 {
 Evolution erforschen - [|cffffcc00Stufe 31|r]
 }
 
 STRING 930
-// Upgrades: R00U (Animal War Training), Tip (Tooltip)
+// Upgrades: R00U (Kampftierausbildung), Tip (Tooltip)
 {
 Evolution erforschen - [|cffffcc00Stufe 32|r]
 }
 
 STRING 931
-// Upgrades: R00U (Animal War Training), Tip (Tooltip)
+// Upgrades: R00U (Kampftierausbildung), Tip (Tooltip)
 {
 Evolution erforschen - [|cffffcc00Stufe 33|r]
 }
 
 STRING 932
-// Upgrades: R00U (Animal War Training), Tip (Tooltip)
+// Upgrades: R00U (Kampftierausbildung), Tip (Tooltip)
 {
 Evolution erforschen - [|cffffcc00Stufe 34|r]
 }
 
 STRING 933
-// Upgrades: R00U (Animal War Training), Tip (Tooltip)
+// Upgrades: R00U (Kampftierausbildung), Tip (Tooltip)
 {
 Evolution erforschen - [|cffffcc00Stufe 35|r]
 }
 
 STRING 934
-// Upgrades: R00U (Animal War Training), Tip (Tooltip)
+// Upgrades: R00U (Kampftierausbildung), Tip (Tooltip)
 {
 Evolution erforschen - [|cffffcc00Stufe 36|r]
 }
 
 STRING 935
-// Upgrades: R00U (Animal War Training), Tip (Tooltip)
+// Upgrades: R00U (Kampftierausbildung), Tip (Tooltip)
 {
 Evolution erforschen - [|cffffcc00Stufe 37|r]
 }
 
 STRING 936
-// Upgrades: R00U (Animal War Training), Tip (Tooltip)
+// Upgrades: R00U (Kampftierausbildung), Tip (Tooltip)
 {
 Evolution erforschen - [|cffffcc00Stufe 38|r]
 }
 
 STRING 937
-// Upgrades: R00U (Animal War Training), Tip (Tooltip)
+// Upgrades: R00U (Kampftierausbildung), Tip (Tooltip)
 {
 Evolution erforschen - [|cffffcc00Stufe 39|r]
 }
 
 STRING 938
-// Upgrades: R00U (Animal War Training), Tip (Tooltip)
+// Upgrades: R00U (Kampftierausbildung), Tip (Tooltip)
 {
 Evolution erforschen - [|cffffcc00Stufe 40|r]
 }
@@ -5570,13 +5570,13 @@ FrozenThrone Peak
 }
 
 STRING 940
-// Upgrades: R00U (Animal War Training), Tip (Tooltip)
+// Upgrades: R00U (Kampftierausbildung), Tip (Tooltip)
 {
 Evolution erforschen - [|cffffcc00Stufe 41|r]
 }
 
 STRING 941
-// Upgrades: R00U (Animal War Training), Tip (Tooltip)
+// Upgrades: R00U (Kampftierausbildung), Tip (Tooltip)
 {
 Evolution erforschen - [|cffffcc00Stufe 42|r]
 }
@@ -5588,43 +5588,43 @@ Demigod´s Protection
 }
 
 STRING 943
-// Upgrades: R00U (Animal War Training), Tip (Tooltip)
+// Upgrades: R00U (Kampftierausbildung), Tip (Tooltip)
 {
 Evolution erforschen - [|cffffcc00Stufe 43|r]
 }
 
 STRING 944
-// Upgrades: R00U (Animal War Training), Tip (Tooltip)
+// Upgrades: R00U (Kampftierausbildung), Tip (Tooltip)
 {
 Evolution erforschen - [|cffffcc00Stufe 44|r]
 }
 
 STRING 945
-// Upgrades: R00U (Animal War Training), Tip (Tooltip)
+// Upgrades: R00U (Kampftierausbildung), Tip (Tooltip)
 {
 Evolution erforschen - [|cffffcc00Stufe 45|r]
 }
 
 STRING 946
-// Upgrades: R00U (Animal War Training), Tip (Tooltip)
+// Upgrades: R00U (Kampftierausbildung), Tip (Tooltip)
 {
 Evolution erforschen - [|cffffcc00Stufe 46|r]
 }
 
 STRING 947
-// Upgrades: R00U (Animal War Training), Tip (Tooltip)
+// Upgrades: R00U (Kampftierausbildung), Tip (Tooltip)
 {
 Evolution erforschen - [|cffffcc00Stufe 47|r]
 }
 
 STRING 948
-// Upgrades: R00U (Animal War Training), Tip (Tooltip)
+// Upgrades: R00U (Kampftierausbildung), Tip (Tooltip)
 {
 Evolution erforschen - [|cffffcc00Stufe 48|r]
 }
 
 STRING 949
-// Upgrades: R00U (Animal War Training), Tip (Tooltip)
+// Upgrades: R00U (Kampftierausbildung), Tip (Tooltip)
 {
 Evolution erforschen - [|cffffcc00Stufe 49|r]
 }
@@ -5636,7 +5636,7 @@ Magischer Samen (3)
 }
 
 STRING 951
-// Upgrades: R00U (Animal War Training), Tip (Tooltip)
+// Upgrades: R00U (Kampftierausbildung), Tip (Tooltip)
 {
 Evolution erforschen - [|cffffcc00Stufe 50|r]
 }
@@ -5666,37 +5666,37 @@ Schurken wiederbeleben
 }
 
 STRING 957
-// Upgrades: R00U (Animal War Training), Tip (Tooltip)
+// Upgrades: R00U (Kampftierausbildung), Tip (Tooltip)
 {
 Evolution erforschen - [|cffffcc00Stufe 51|r]
 }
 
 STRING 958
-// Upgrades: R00U (Animal War Training), Tip (Tooltip)
+// Upgrades: R00U (Kampftierausbildung), Tip (Tooltip)
 {
 Evolution erforschen - [|cffffcc00Stufe 52|r]
 }
 
 STRING 959
-// Upgrades: R00U (Animal War Training), Tip (Tooltip)
+// Upgrades: R00U (Kampftierausbildung), Tip (Tooltip)
 {
 Evolution erforschen - [|cffffcc00Stufe 53|r]
 }
 
 STRING 960
-// Upgrades: R00U (Animal War Training), Tip (Tooltip)
+// Upgrades: R00U (Kampftierausbildung), Tip (Tooltip)
 {
 Evolution erforschen - [|cffffcc00Stufe 54|r]
 }
 
 STRING 961
-// Upgrades: R00U (Animal War Training), Tip (Tooltip)
+// Upgrades: R00U (Kampftierausbildung), Tip (Tooltip)
 {
 Evolution erforschen - [|cffffcc00Stufe 55|r]
 }
 
 STRING 962
-// Upgrades: R00U (Animal War Training), Tip (Tooltip)
+// Upgrades: R00U (Kampftierausbildung), Tip (Tooltip)
 {
 Evolution erforschen - [|cffffcc00Stufe 56|r]
 }
@@ -5708,7 +5708,7 @@ A book that contains knowledge of compisong different arcane scrolls.
 }
 
 STRING 964
-// Upgrades: R00U (Animal War Training), Tip (Tooltip)
+// Upgrades: R00U (Kampftierausbildung), Tip (Tooltip)
 {
 Evolution erforschen - [|cffffcc00Stufe 57|r]
 }
@@ -6919,7 +6919,7 @@ Frost-Wyrm-Reittier
 }
 
 STRING 1170
-// Upgrades: R04S (Animal War Training), Name (Name)
+// Upgrades: R04S (Kampftierausbildung), Name (Name)
 {
 Halbgott
 }
@@ -7171,19 +7171,19 @@ Special Hero, who can change his spells during combat, has amphibious movement a
 }
 
 STRING 1213
-// Upgrades: R01V (Animal War Training), Tip (Tooltip)
+// Upgrades: R01V (Kampftierausbildung), Tip (Tooltip)
 {
 Günstige Evolution erforschen - [|cffffcc00Stufe 3|r]
 }
 
 STRING 1214
-// Upgrades: R01V (Animal War Training), Tip (Tooltip)
+// Upgrades: R01V (Kampftierausbildung), Tip (Tooltip)
 {
 Günstige Evolution erforschen - [|cffffcc00Stufe 4|r]
 }
 
 STRING 1215
-// Upgrades: R01V (Animal War Training), Tip (Tooltip)
+// Upgrades: R01V (Kampftierausbildung), Tip (Tooltip)
 {
 Günstige Evolution erforschen - [|cffffcc00Stufe 5|r]
 }
@@ -7195,13 +7195,13 @@ Panzerung - Novize
 }
 
 STRING 1217
-// Upgrades: R01V (Animal War Training), Tip (Tooltip)
+// Upgrades: R01V (Kampftierausbildung), Tip (Tooltip)
 {
 Günstige Evolution erforschen - [|cffffcc00Stufe 6|r]
 }
 
 STRING 1218
-// Upgrades: R01V (Animal War Training), Tip (Tooltip)
+// Upgrades: R01V (Kampftierausbildung), Tip (Tooltip)
 {
 Günstige Evolution erforschen - [|cffffcc00Stufe 7|r]
 }
@@ -7213,7 +7213,7 @@ STRING 1219
 }
 
 STRING 1220
-// Upgrades: R01V (Animal War Training), Tip (Tooltip)
+// Upgrades: R01V (Kampftierausbildung), Tip (Tooltip)
 {
 Günstige Evolution erforschen - [|cffffcc00Stufe 8|r]
 }
@@ -7225,49 +7225,49 @@ Refuge
 }
 
 STRING 1222
-// Upgrades: R01V (Animal War Training), Tip (Tooltip)
+// Upgrades: R01V (Kampftierausbildung), Tip (Tooltip)
 {
 Günstige Evolution erforschen - [|cffffcc00Stufe 9|r]
 }
 
 STRING 1223
-// Upgrades: R01V (Animal War Training), Tip (Tooltip)
+// Upgrades: R01V (Kampftierausbildung), Tip (Tooltip)
 {
 Günstige Evolution erforschen - [|cffffcc00Stufe 10|r]
 }
 
 STRING 1224
-// Upgrades: R01V (Animal War Training), Tip (Tooltip)
+// Upgrades: R01V (Kampftierausbildung), Tip (Tooltip)
 {
 Günstige Evolution erforschen - [|cffffcc00Stufe 11|r]
 }
 
 STRING 1225
-// Upgrades: R01V (Animal War Training), Tip (Tooltip)
+// Upgrades: R01V (Kampftierausbildung), Tip (Tooltip)
 {
 Günstige Evolution erforschen - [|cffffcc00Stufe 12|r]
 }
 
 STRING 1226
-// Upgrades: R01V (Animal War Training), Tip (Tooltip)
+// Upgrades: R01V (Kampftierausbildung), Tip (Tooltip)
 {
 Günstige Evolution erforschen - [|cffffcc00Stufe 13|r]
 }
 
 STRING 1227
-// Upgrades: R01V (Animal War Training), Tip (Tooltip)
+// Upgrades: R01V (Kampftierausbildung), Tip (Tooltip)
 {
 Günstige Evolution erforschen - [|cffffcc00Stufe 14|r]
 }
 
 STRING 1228
-// Upgrades: R01V (Animal War Training), Tip (Tooltip)
+// Upgrades: R01V (Kampftierausbildung), Tip (Tooltip)
 {
 Günstige Evolution erforschen - [|cffffcc00Stufe 15|r]
 }
 
 STRING 1229
-// Upgrades: R01V (Animal War Training), Tip (Tooltip)
+// Upgrades: R01V (Kampftierausbildung), Tip (Tooltip)
 {
 Günstige Evolution erforschen - [|cffffcc00Stufe 16|r]
 }
@@ -7303,7 +7303,7 @@ Increases Armor by +8. Also grants Ausdauer-Aura and Unheilige Aura. Created for
 }
 
 STRING 1235
-// Upgrades: R01V (Animal War Training), Tip (Tooltip)
+// Upgrades: R01V (Kampftierausbildung), Tip (Tooltip)
 {
 Günstige Evolution erforschen - [|cffffcc00Stufe 17|r]
 }
@@ -7327,31 +7327,31 @@ Increases Goblin-Zauberin' mana capacity, mana regeneration rate, hit points, an
 }
 
 STRING 1239
-// Upgrades: R01V (Animal War Training), Tip (Tooltip)
+// Upgrades: R01V (Kampftierausbildung), Tip (Tooltip)
 {
 Günstige Evolution erforschen - [|cffffcc00Stufe 18|r]
 }
 
 STRING 1240
-// Upgrades: R01V (Animal War Training), Tip (Tooltip)
+// Upgrades: R01V (Kampftierausbildung), Tip (Tooltip)
 {
 Günstige Evolution erforschen - [|cffffcc00Stufe 19|r]
 }
 
 STRING 1241
-// Upgrades: R01V (Animal War Training), Tip (Tooltip)
+// Upgrades: R01V (Kampftierausbildung), Tip (Tooltip)
 {
 Günstige Evolution erforschen - [|cffffcc00Stufe 20|r]
 }
 
 STRING 1242
-// Upgrades: R01V (Animal War Training), Tip (Tooltip)
+// Upgrades: R01V (Kampftierausbildung), Tip (Tooltip)
 {
 Günstige Evolution erforschen - [|cffffcc00Stufe 21|r]
 }
 
 STRING 1243
-// Upgrades: R01V (Animal War Training), Tip (Tooltip)
+// Upgrades: R01V (Kampftierausbildung), Tip (Tooltip)
 {
 Günstige Evolution erforschen - [|cffffcc00Stufe 22|r]
 }
@@ -7387,31 +7387,31 @@ A magical Scroll that contains a spell that will dispel Sapphirons invulnerabili
 }
 
 STRING 1249
-// Upgrades: R01V (Animal War Training), Tip (Tooltip)
+// Upgrades: R01V (Kampftierausbildung), Tip (Tooltip)
 {
 Günstige Evolution erforschen - [|cffffcc00Stufe 23|r]
 }
 
 STRING 1250
-// Upgrades: R01V (Animal War Training), Tip (Tooltip)
+// Upgrades: R01V (Kampftierausbildung), Tip (Tooltip)
 {
 Günstige Evolution erforschen - [|cffffcc00Stufe 24|r]
 }
 
 STRING 1251
-// Upgrades: R01V (Animal War Training), Tip (Tooltip)
+// Upgrades: R01V (Kampftierausbildung), Tip (Tooltip)
 {
 Günstige Evolution erforschen - [|cffffcc00Stufe 25|r]
 }
 
 STRING 1252
-// Upgrades: R01V (Animal War Training), Tip (Tooltip)
+// Upgrades: R01V (Kampftierausbildung), Tip (Tooltip)
 {
 Günstige Evolution erforschen - [|cffffcc00Stufe 26|r]
 }
 
 STRING 1253
-// Upgrades: R01V (Animal War Training), Tip (Tooltip)
+// Upgrades: R01V (Kampftierausbildung), Tip (Tooltip)
 {
 Günstige Evolution erforschen - [|cffffcc00Stufe 27|r]
 }
@@ -7591,7 +7591,7 @@ STRING 1282
 }
 
 STRING 1283
-// Upgrades: R02W (Animal War Training), Tip (Tooltip)
+// Upgrades: R02W (Kampftierausbildung), Tip (Tooltip)
 {
 Sprengstoff-Fass erforschen
 }
@@ -8209,7 +8209,7 @@ E
 }
 
 STRING 1392
-// Upgrades: R01V (Animal War Training), Tip (Tooltip)
+// Upgrades: R01V (Kampftierausbildung), Tip (Tooltip)
 {
 Günstige Evolution erforschen - [|cffffcc00Stufe 28|r]
 }
@@ -8239,7 +8239,7 @@ STRING 1396
 }
 
 STRING 1397
-// Abilities: A0EX (Animal War Training), EditorSuffix (Editor Suffix)
+// Abilities: A0EX (Kampftierausbildung), EditorSuffix (Editor Suffix)
 {
  (Icon) (Zwerge)
 }
@@ -8329,13 +8329,13 @@ STRING 1411
 }
 
 STRING 1412
-// Abilities: A0NC (Animal War Training), EditorSuffix (Editor Suffix)
+// Abilities: A0NC (Kampftierausbildung), EditorSuffix (Editor Suffix)
 {
  (Icon) (Kul Tiras)
 }
 
 STRING 1413
-// Abilities: A0G3 (Animal War Training), EditorSuffix (Editor Suffix)
+// Abilities: A0G3 (Kampftierausbildung), EditorSuffix (Editor Suffix)
 {
  (Icon) (Hochelfen)
 }
@@ -8679,7 +8679,7 @@ Herz der Harpyien-Königin
 STRING 1472
 // Units: h046 (Dragonhawk Rider), Ubertip (Tooltip - Extended)
 {
-Swift flying unit, mounted by an Elven warrior. Has the Aerial Shackles ability, which allows it to immobilize and disarm enemy air units temporarily. Can learn Blood Elf Animal War Training, and the Cloud ability. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
+Swift flying unit, mounted by an Elven warrior. Has the Aerial Shackles ability, which allows it to immobilize and disarm enemy air units temporarily. Can learn Blood Elf Kampftierausbildung, and the Cloud ability. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
 }
 
 STRING 1473
@@ -9097,7 +9097,7 @@ STRING 1541
 }
 
 STRING 1542
-// Upgrades: R01V (Animal War Training), Tip (Tooltip)
+// Upgrades: R01V (Kampftierausbildung), Tip (Tooltip)
 {
 Günstige Evolution erforschen - [|cffffcc00Stufe 29|r]
 }
@@ -9223,7 +9223,7 @@ Draenei-Laden errichten
 }
 
 STRING 1563
-// Upgrades: R04S (Animal War Training), Tip (Tooltip)
+// Upgrades: R04S (Kampftierausbildung), Tip (Tooltip)
 {
 Halbgott
 }
@@ -9307,7 +9307,7 @@ Stellt Gegenstände her, die Ihren Helden heilen und das Leben des Helden erhöh
 }
 
 STRING 1577
-// Abilities: A052 (Animal War Training), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A052 (Kampftierausbildung), Ubertip (Tooltip - Normal - Extended)
 {
 Increases the maximum hit points of this unit by <R000,base1>.
 }
@@ -10015,7 +10015,7 @@ Tempel der Meere
 }
 
 STRING 1695
-// Upgrades: R04S (Animal War Training), Ubertip (Tooltip - Extended)
+// Upgrades: R04S (Kampftierausbildung), Ubertip (Tooltip - Extended)
 {
 Player has become demigod at some point in time.
 }
@@ -10741,7 +10741,7 @@ Errichtet eine Werkstatt.
 }
 
 STRING 1840
-// Upgrades: R00U (Animal War Training), Tip (Tooltip)
+// Upgrades: R00U (Kampftierausbildung), Tip (Tooltip)
 {
 Evolution erforschen - [|cffffcc00Stufe 1|r]
 }
@@ -11281,109 +11281,109 @@ STRING 1985
 }
 
 STRING 1997
-// Upgrades: R00U (Animal War Training), Tip (Tooltip)
+// Upgrades: R00U (Kampftierausbildung), Tip (Tooltip)
 {
 Evolution erforschen - [|cffffcc00Stufe 58|r]
 }
 
 STRING 1998
-// Upgrades: R00U (Animal War Training), Tip (Tooltip)
+// Upgrades: R00U (Kampftierausbildung), Tip (Tooltip)
 {
 Evolution erforschen - [|cffffcc00Stufe 59|r]
 }
 
 STRING 1999
-// Upgrades: R00U (Animal War Training), Tip (Tooltip)
+// Upgrades: R00U (Kampftierausbildung), Tip (Tooltip)
 {
 Evolution erforschen - [|cffffcc00Stufe 60|r]
 }
 
 STRING 2000
-// Upgrades: R00U (Animal War Training), Tip (Tooltip)
+// Upgrades: R00U (Kampftierausbildung), Tip (Tooltip)
 {
 Evolution erforschen - [|cffffcc00Stufe 61|r]
 }
 
 STRING 2001
-// Upgrades: R00U (Animal War Training), Tip (Tooltip)
+// Upgrades: R00U (Kampftierausbildung), Tip (Tooltip)
 {
 Evolution erforschen - [|cffffcc00Stufe 62|r]
 }
 
 STRING 2002
-// Upgrades: R00U (Animal War Training), Tip (Tooltip)
+// Upgrades: R00U (Kampftierausbildung), Tip (Tooltip)
 {
 Evolution erforschen - [|cffffcc00Stufe 63|r]
 }
 
 STRING 2003
-// Upgrades: R00U (Animal War Training), Tip (Tooltip)
+// Upgrades: R00U (Kampftierausbildung), Tip (Tooltip)
 {
 Evolution erforschen - [|cffffcc00Stufe 64|r]
 }
 
 STRING 2004
-// Upgrades: R00U (Animal War Training), Tip (Tooltip)
+// Upgrades: R00U (Kampftierausbildung), Tip (Tooltip)
 {
 Evolution erforschen - [|cffffcc00Stufe 65|r]
 }
 
 STRING 2005
-// Upgrades: R00U (Animal War Training), Tip (Tooltip)
+// Upgrades: R00U (Kampftierausbildung), Tip (Tooltip)
 {
 Evolution erforschen - [|cffffcc00Stufe 66|r]
 }
 
 STRING 2006
-// Upgrades: R00U (Animal War Training), Tip (Tooltip)
+// Upgrades: R00U (Kampftierausbildung), Tip (Tooltip)
 {
 Evolution erforschen - [|cffffcc00Stufe 67|r]
 }
 
 STRING 2007
-// Upgrades: R00U (Animal War Training), Tip (Tooltip)
+// Upgrades: R00U (Kampftierausbildung), Tip (Tooltip)
 {
 Evolution erforschen - [|cffffcc00Stufe 68|r]
 }
 
 STRING 2008
-// Upgrades: R00U (Animal War Training), Tip (Tooltip)
+// Upgrades: R00U (Kampftierausbildung), Tip (Tooltip)
 {
 Evolution erforschen - [|cffffcc00Stufe 69|r]
 }
 
 STRING 2009
-// Upgrades: R00U (Animal War Training), Tip (Tooltip)
+// Upgrades: R00U (Kampftierausbildung), Tip (Tooltip)
 {
 Evolution erforschen - [|cffffcc00Stufe 70|r]
 }
 
 STRING 2010
-// Upgrades: R00U (Animal War Training), Tip (Tooltip)
+// Upgrades: R00U (Kampftierausbildung), Tip (Tooltip)
 {
 Evolution erforschen - [|cffffcc00Stufe 71|r]
 }
 
 STRING 2011
-// Upgrades: R00U (Animal War Training), Tip (Tooltip)
+// Upgrades: R00U (Kampftierausbildung), Tip (Tooltip)
 {
 Evolution erforschen - [|cffffcc00Stufe 72|r]
 }
 
 STRING 2012
-// Upgrades: R00U (Animal War Training), Tip (Tooltip)
+// Upgrades: R00U (Kampftierausbildung), Tip (Tooltip)
 {
 Evolution erforschen - [|cffffcc00Stufe 73|r]
 }
 
 STRING 2013
-// Upgrades: R00U (Animal War Training), Tip (Tooltip)
+// Upgrades: R00U (Kampftierausbildung), Tip (Tooltip)
 {
 Evolution erforschen - [|cffffcc00Stufe 74|r]
 }
 
 STRING 2014
-// Upgrades: R00U (Animal War Training), Tip (Tooltip)
+// Upgrades: R00U (Kampftierausbildung), Tip (Tooltip)
 {
 Evolution erforschen - [|cffffcc00Stufe 75|r]
 }
@@ -11497,7 +11497,7 @@ Dämonen-Feuer
 }
 
 STRING 2043
-// Buffs/Effects: B00B (Hero), Buffubertip (Tooltip - Extended)
+// Buffs/Effects: B00B (Held), Buffubertip (Tooltip - Extended)
 {
 Bei dieser Einheit handelt es sich um einen Helden. Dies hat keinen besonderen Effekt. Es fügt lediglich den Heldenglanz hinzu.
 }
@@ -11872,19 +11872,19 @@ König Klafterbart wiederbeleben
 }
 
 STRING 2177
-// Upgrades: R01V (Animal War Training), Tip (Tooltip)
+// Upgrades: R01V (Kampftierausbildung), Tip (Tooltip)
 {
 Günstige Evolution erforschen - [|cffffcc00Stufe 30|r]
 }
 
 STRING 2178
-// Upgrades: R01V (Animal War Training), Tip (Tooltip)
+// Upgrades: R01V (Kampftierausbildung), Tip (Tooltip)
 {
 Günstige Evolution erforschen - [|cffffcc00Stufe 31|r]
 }
 
 STRING 2179
-// Upgrades: R01V (Animal War Training), Tip (Tooltip)
+// Upgrades: R01V (Kampftierausbildung), Tip (Tooltip)
 {
 Günstige Evolution erforschen - [|cffffcc00Stufe 32|r]
 }
@@ -12352,19 +12352,19 @@ Gives Gnoll melee units the ability Enslavement which allows them to enslave wea
 }
 
 STRING 2264
-// Upgrades: R05B (Animal War Training), Name (Name)
+// Upgrades: R05B (Kampftierausbildung), Name (Name)
 {
 Fass-Gestalt
 }
 
 STRING 2265
-// Upgrades: R05B (Animal War Training), Tip (Tooltip)
+// Upgrades: R05B (Kampftierausbildung), Tip (Tooltip)
 {
 Fass-Gestalt erforschen
 }
 
 STRING 2266
-// Upgrades: R05B (Animal War Training), Ubertip (Tooltip - Extended)
+// Upgrades: R05B (Kampftierausbildung), Ubertip (Tooltip - Extended)
 {
 Allows Gnoll Rocketbreakers to change into a Barrel Form which allows them to explode in enemy buildings.
 }
@@ -13246,13 +13246,13 @@ Zauberbuch der alten Götter
 }
 
 STRING 2446
-// Upgrades: R03F (Animal War Training), Name (Name)
+// Upgrades: R03F (Kampftierausbildung), Name (Name)
 {
 Heldenstufe 65
 }
 
 STRING 2447
-// Upgrades: R03F (Animal War Training), Tip (Tooltip)
+// Upgrades: R03F (Kampftierausbildung), Tip (Tooltip)
 {
 Heldenstufe 65
 }
@@ -15796,13 +15796,13 @@ Errichtet einen Altar des Manas.
 }
 
 STRING 3035
-// Upgrades: R010 (Animal War Training), Name (Name)
+// Upgrades: R010 (Kampftierausbildung), Name (Name)
 {
 Heldenstufe 35
 }
 
 STRING 3036
-// Upgrades: R010 (Animal War Training), Tip (Tooltip)
+// Upgrades: R010 (Kampftierausbildung), Tip (Tooltip)
 {
 Heldenstufe 35
 }
@@ -17818,13 +17818,13 @@ STRING 3464
 }
 
 STRING 3465
-// Upgrades: R00V (Animal War Training), Name (Name)
+// Upgrades: R00V (Kampftierausbildung), Name (Name)
 {
 Heldenstufe 45
 }
 
 STRING 3466
-// Upgrades: R00V (Animal War Training), Tip (Tooltip)
+// Upgrades: R00V (Kampftierausbildung), Tip (Tooltip)
 {
 Heldenstufe 45
 }
@@ -18226,61 +18226,61 @@ Winziger Kirschbaum
 }
 
 STRING 3614
-// Upgrades: R01V (Animal War Training), Tip (Tooltip)
+// Upgrades: R01V (Kampftierausbildung), Tip (Tooltip)
 {
 Günstige Evolution erforschen - [|cffffcc00Stufe 33|r]
 }
 
 STRING 3615
-// Upgrades: R01V (Animal War Training), Tip (Tooltip)
+// Upgrades: R01V (Kampftierausbildung), Tip (Tooltip)
 {
 Günstige Evolution erforschen - [|cffffcc00Stufe 34|r]
 }
 
 STRING 3616
-// Upgrades: R01V (Animal War Training), Tip (Tooltip)
+// Upgrades: R01V (Kampftierausbildung), Tip (Tooltip)
 {
 Günstige Evolution erforschen - [|cffffcc00Stufe 35|r]
 }
 
 STRING 3617
-// Upgrades: R01V (Animal War Training), Tip (Tooltip)
+// Upgrades: R01V (Kampftierausbildung), Tip (Tooltip)
 {
 Günstige Evolution erforschen - [|cffffcc00Stufe 36|r]
 }
 
 STRING 3618
-// Upgrades: R01V (Animal War Training), Tip (Tooltip)
+// Upgrades: R01V (Kampftierausbildung), Tip (Tooltip)
 {
 Günstige Evolution erforschen - [|cffffcc00Stufe 37|r]
 }
 
 STRING 3619
-// Upgrades: R01V (Animal War Training), Tip (Tooltip)
+// Upgrades: R01V (Kampftierausbildung), Tip (Tooltip)
 {
 Günstige Evolution erforschen - [|cffffcc00Stufe 38|r]
 }
 
 STRING 3620
-// Upgrades: R01V (Animal War Training), Tip (Tooltip)
+// Upgrades: R01V (Kampftierausbildung), Tip (Tooltip)
 {
 Günstige Evolution erforschen - [|cffffcc00Stufe 39|r]
 }
 
 STRING 3621
-// Upgrades: R01V (Animal War Training), Tip (Tooltip)
+// Upgrades: R01V (Kampftierausbildung), Tip (Tooltip)
 {
 Günstige Evolution erforschen - [|cffffcc00Stufe 40|r]
 }
 
 STRING 3622
-// Upgrades: R01V (Animal War Training), Tip (Tooltip)
+// Upgrades: R01V (Kampftierausbildung), Tip (Tooltip)
 {
 Günstige Evolution erforschen - [|cffffcc00Stufe 41|r]
 }
 
 STRING 3623
-// Upgrades: R01V (Animal War Training), Tip (Tooltip)
+// Upgrades: R01V (Kampftierausbildung), Tip (Tooltip)
 {
 Günstige Evolution erforschen - [|cffffcc00Stufe 42|r]
 }
@@ -18292,19 +18292,19 @@ Lich-König
 }
 
 STRING 3626
-// Upgrades: R01V (Animal War Training), Tip (Tooltip)
+// Upgrades: R01V (Kampftierausbildung), Tip (Tooltip)
 {
 Günstige Evolution erforschen - [|cffffcc00Stufe 43|r]
 }
 
 STRING 3627
-// Upgrades: R01V (Animal War Training), Tip (Tooltip)
+// Upgrades: R01V (Kampftierausbildung), Tip (Tooltip)
 {
 Günstige Evolution erforschen - [|cffffcc00Stufe 44|r]
 }
 
 STRING 3628
-// Upgrades: R01V (Animal War Training), Tip (Tooltip)
+// Upgrades: R01V (Kampftierausbildung), Tip (Tooltip)
 {
 Günstige Evolution erforschen - [|cffffcc00Stufe 45|r]
 }
@@ -19158,7 +19158,7 @@ Constructs a Minenschacht, so Arbeiters can collect resources from the Gold Mine
 STRING 3788
 // Units: h02Y (Dwarf Rider), Ubertip (Tooltip - Extended)
 {
-Powerful mounted warrior. Can cast Storm Bolt. Can learn Animal War Training. |n|n|cffffcc00Greift Land-Einheiten an.|r
+Powerful mounted warrior. Can cast Storm Bolt. Can learn Kampftierausbildung. |n|n|cffffcc00Greift Land-Einheiten an.|r
 }
 
 STRING 3789
@@ -19456,7 +19456,7 @@ X
 }
 
 STRING 3871
-// Units: n0FR (Murloc Tiderunner), Hotkey (Hotkey)
+// Units: n0FR (Murloc-Gezeitenläufer), Hotkey (Hotkey)
 {
 T
 }
@@ -19762,7 +19762,7 @@ STRING 3935
 }
 
 STRING 3937
-// Upgrades: R00U (Animal War Training), effect3 (Effect 3)
+// Upgrades: R00U (Kampftierausbildung), effect3 (Effect 3)
 {
 rman
 }
@@ -19786,7 +19786,7 @@ KI-Goldbonus Game Type Fast
 }
 
 STRING 3945
-// Upgrades: R01V (Animal War Training), Tip (Tooltip)
+// Upgrades: R01V (Kampftierausbildung), Tip (Tooltip)
 {
 Günstige Evolution erforschen - [|cffffcc00Stufe 46|r]
 }
@@ -20404,7 +20404,7 @@ The Drachenzüchter uses his knowledge to breed a Drachenei of Tharifas.
 }
 
 STRING 4138
-// Upgrades: R00U (Animal War Training), effect2 (Effect 2)
+// Upgrades: R00U (Kampftierausbildung), effect2 (Effect 2)
 {
 ratx
 }
@@ -20586,11 +20586,11 @@ Falkenschreiter-Reiter ausbilden
 STRING 4171
 // Units: h00C (Barracks), Ubertip (Tooltip - Extended)
 {
-Primäres Truppen-Produktionsgebäude. Trains Schwertkämpfer, Archers, and Falkenschreiter-Reiters. |nBietet auch die Ausbaustufen Verteidigen, Marksmanship, Improved Bows and Animal War Training upgrades.
+Primäres Truppen-Produktionsgebäude. Trains Schwertkämpfer, Archers, and Falkenschreiter-Reiters. |nBietet auch die Ausbaustufen Verteidigen, Marksmanship, Improved Bows and Kampftierausbildung upgrades.
 }
 
 STRING 4172
-// Upgrades: R000 (Animal War Training), Ubertip (Tooltip - Extended)
+// Upgrades: R000 (Kampftierausbildung), Ubertip (Tooltip - Extended)
 {
 Increases the maximum hit points of Dragonhawk Riders and Falkenschreiter-Reiters by <Rhan,base1>.
 }
@@ -20776,7 +20776,7 @@ STRING 4255
 }
 
 STRING 4256
-// Upgrades: R01V (Animal War Training), Tip (Tooltip)
+// Upgrades: R01V (Kampftierausbildung), Tip (Tooltip)
 {
 Günstige Evolution erforschen - [|cffffcc00Stufe 47|r]
 }
@@ -21004,13 +21004,13 @@ Mannoroth wiederbeleben
 }
 
 STRING 4324
-// Upgrades: R00X (Animal War Training), Name (Name)
+// Upgrades: R00X (Kampftierausbildung), Name (Name)
 {
 Heldenstufe 10
 }
 
 STRING 4325
-// Upgrades: R00X (Animal War Training), Tip (Tooltip)
+// Upgrades: R00X (Kampftierausbildung), Tip (Tooltip)
 {
 Heldenstufe 10
 }
@@ -23158,7 +23158,7 @@ Purchase Dwarven Celestial Orb of Souls
 }
 
 STRING 4791
-// Items: I0C4 (Unlimited Bag of Gold), Tip (Tooltip - Basic)
+// Items: I0C4 (Unbegrenzter Sack voll Gold), Tip (Tooltip - Basic)
 {
 Unbegrenzten Beutel voll Gold erwerben
 }
@@ -26092,7 +26092,7 @@ Menschen-Bürgerin anheuern
 }
 
 STRING 5372
-// Upgrades: R01V (Animal War Training), Tip (Tooltip)
+// Upgrades: R01V (Kampftierausbildung), Tip (Tooltip)
 {
 Günstige Evolution erforschen - [|cffffcc00Stufe 48|r]
 }
@@ -27124,7 +27124,7 @@ Winzigen Elfen-Hof erwerben
 }
 
 STRING 5611
-// Buffs/Effects: B00B (Hero), EditorName (Name (Editor Only))
+// Buffs/Effects: B00B (Held), EditorName (Name (Editor Only))
 {
 Held
 }
@@ -28403,13 +28403,13 @@ Detect Leave
 }
 
 STRING 5854
-// Upgrades: R07C (Animal War Training), Name (Name)
+// Upgrades: R07C (Kampftierausbildung), Name (Name)
 {
 Heldenstufe 55
 }
 
 STRING 5855
-// Upgrades: R07C (Animal War Training), Tip (Tooltip)
+// Upgrades: R07C (Kampftierausbildung), Tip (Tooltip)
 {
 Heldenstufe 55
 }
@@ -30557,7 +30557,7 @@ Zepter der Blutelfen erwerben
 }
 
 STRING 6357
-// Upgrades: R01V (Animal War Training), Name (Name)
+// Upgrades: R01V (Kampftierausbildung), Name (Name)
 {
 Günstige Evolution
 }
@@ -31232,37 +31232,37 @@ STRING 6536
 }
 
 STRING 6537
-// Upgrades: R01V (Animal War Training), Tip (Tooltip)
+// Upgrades: R01V (Kampftierausbildung), Tip (Tooltip)
 {
 Günstige Evolution erforschen - [|cffffcc00Stufe 49|r]
 }
 
 STRING 6538
-// Upgrades: R01V (Animal War Training), Tip (Tooltip)
+// Upgrades: R01V (Kampftierausbildung), Tip (Tooltip)
 {
 Günstige Evolution erforschen - [|cffffcc00Stufe 50|r]
 }
 
 STRING 6539
-// Upgrades: R01V (Animal War Training), Tip (Tooltip)
+// Upgrades: R01V (Kampftierausbildung), Tip (Tooltip)
 {
 Günstige Evolution erforschen - [|cffffcc00Stufe 51|r]
 }
 
 STRING 6540
-// Upgrades: R01V (Animal War Training), Tip (Tooltip)
+// Upgrades: R01V (Kampftierausbildung), Tip (Tooltip)
 {
 Günstige Evolution erforschen - [|cffffcc00Stufe 52|r]
 }
 
 STRING 6541
-// Upgrades: R01V (Animal War Training), Tip (Tooltip)
+// Upgrades: R01V (Kampftierausbildung), Tip (Tooltip)
 {
 Günstige Evolution erforschen - [|cffffcc00Stufe 53|r]
 }
 
 STRING 6542
-// Upgrades: R01V (Animal War Training), Tip (Tooltip)
+// Upgrades: R01V (Kampftierausbildung), Tip (Tooltip)
 {
 Günstige Evolution erforschen - [|cffffcc00Stufe 54|r]
 }
@@ -31574,7 +31574,7 @@ T
 }
 
 STRING 6640
-// Upgrades: R032 (Animal War Training), Name (Name)
+// Upgrades: R032 (Kampftierausbildung), Name (Name)
 {
 Heldenstufe 5
 }
@@ -31640,7 +31640,7 @@ Command Buttons
 }
 
 STRING 6685
-// Upgrades: R032 (Animal War Training), Tip (Tooltip)
+// Upgrades: R032 (Kampftierausbildung), Tip (Tooltip)
 {
 Heldenstufe 5
 }
@@ -31652,25 +31652,25 @@ O
 }
 
 STRING 6687
-// Upgrades: R03G (Animal War Training), Name (Name)
+// Upgrades: R03G (Kampftierausbildung), Name (Name)
 {
 Heldenstufe 70
 }
 
 STRING 6688
-// Upgrades: R03G (Animal War Training), Tip (Tooltip)
+// Upgrades: R03G (Kampftierausbildung), Tip (Tooltip)
 {
 Heldenstufe 70
 }
 
 STRING 6689
-// Upgrades: R050 (Animal War Training), Name (Name)
+// Upgrades: R050 (Kampftierausbildung), Name (Name)
 {
 Heldenstufe 15
 }
 
 STRING 6690
-// Upgrades: R050 (Animal War Training), Tip (Tooltip)
+// Upgrades: R050 (Kampftierausbildung), Tip (Tooltip)
 {
 Heldenstufe 15
 }
@@ -32266,7 +32266,7 @@ Allows casting the abilities of the boss.
 STRING 6886
 // Units: E01I (Wisp), EditorSuffix (Name - Editor Suffix)
 {
-(Hero)
+(Held)
 }
 
 STRING 6887
@@ -33032,7 +33032,7 @@ A book that contains knowledge of crafting magical weapons.
 }
 
 STRING 7056
-// Upgrades: R01V (Animal War Training), Tip (Tooltip)
+// Upgrades: R01V (Kampftierausbildung), Tip (Tooltip)
 {
 Günstige Evolution erforschen - [|cffffcc00Stufe 55|r]
 }
@@ -34106,7 +34106,7 @@ STRING 7441
 }
 
 STRING 7442
-// Upgrades: R01V (Animal War Training), Tip (Tooltip)
+// Upgrades: R01V (Kampftierausbildung), Tip (Tooltip)
 {
 Günstige Evolution erforschen - [|cffffcc00Stufe 56|r]
 }
@@ -34244,7 +34244,7 @@ STRING 7502
 }
 
 STRING 7504
-// Upgrades: R06M (Animal War Training), Ubertip (Tooltip - Extended)
+// Upgrades: R06M (Kampftierausbildung), Ubertip (Tooltip - Extended)
 {
 Allows Female Bürger to construct a Drachenhorst.
 }
@@ -36470,13 +36470,13 @@ rats
 }
 
 STRING 7950
-// Upgrades: R04T (Animal War Training), Name (Name)
+// Upgrades: R04T (Kampftierausbildung), Name (Name)
 {
 Heldenstufe 60
 }
 
 STRING 7951
-// Upgrades: R04T (Animal War Training), Tip (Tooltip)
+// Upgrades: R04T (Kampftierausbildung), Tip (Tooltip)
 {
 Heldenstufe 60
 }
@@ -37621,7 +37621,7 @@ Purchase Stonemaul Arena Meister Belt
 STRING 8179
 // Units: h044 (High Elf Barracks), Ubertip (Tooltip - Extended)
 {
-Primäres Truppen-Produktionsgebäude. Trains Blood Elf Lieutenants, Schwertkämpfer, Dragonhawk Riders, and Archers. |nBietet auch die Ausbaustufen Verteidigen, Blood Elf Animal War Training, and Cloud upgrades.
+Primäres Truppen-Produktionsgebäude. Trains Blood Elf Lieutenants, Schwertkämpfer, Dragonhawk Riders, and Archers. |nBietet auch die Ausbaustufen Verteidigen, Blood Elf Kampftierausbildung, and Cloud upgrades.
 }
 
 STRING 8180
@@ -37952,9 +37952,9 @@ Archäologie - Meister
 }
 
 STRING 8236
-// Upgrades: R000 (Animal War Training), Name (Name)
+// Upgrades: R000 (Kampftierausbildung), Name (Name)
 {
-Blood Elf Animal War Training
+Blood Elf Kampftierausbildung
 }
 
 STRING 8237
@@ -39616,7 +39616,7 @@ STRING 8577
 STRING 8586
 // Units: h0MS (Gryphon Rider), Ubertip (Tooltip - Extended)
 {
-Powerful flying creature, mounted by an archer. Can learn Animal War Training and Scharlachroter Kreuzzug. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
+Powerful flying creature, beritten von einem Bogenschützen. Kann 'Kampftierausbildung' und 'Scharlachroter Kreuzzug' erlernen. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
 }
 
 STRING 8589
@@ -39706,13 +39706,13 @@ Kopf des Schreckenslords
 STRING 8609
 // Items: I16F (Head of the Dreadlord), Ubertip (Tooltip - Extended)
 {
-The head of the leading Dreadlord of the Undead forces which attacked Dalaran. Return it to Khadgar to get your reward.
+Der Kopf des führenden Schreckenslords der untoten Streitkräfte, die Dalaran angegriffen haben. Bringt ihn zurück zu Khadgar um Eure Belohnung zu erhalten.
 }
 
 STRING 8610
 // Items: I16F (Head of the Dreadlord), Description (Description)
 {
-The head of the leading Dreadlord of the Undead forces which attacked Dalaran.
+Der Kopf des führenden Schreckenslords der untoten Streitkräfte, die Dalaran angegriffen haben.
 }
 
 STRING 8611
@@ -39970,7 +39970,7 @@ Heiligen Schild erwerben
 STRING 8653
 // Items: I16K (Holy Shield), Description (Description)
 {
-Provides a +6 bonus to armor.
+Erhöht die Rüstung um 6.
 }
 
 STRING 8654
@@ -40154,9 +40154,9 @@ STRING 8697
 }
 
 STRING 8698
-// Doodads: D013 (Gypsy Wagon), Name (Name)
+// Doodads: D013 (Zigeunerwagen), Name (Name)
 {
-Gypsy Wagon
+Zigeunerwagen
 }
 
 STRING 8699
@@ -40166,7 +40166,7 @@ STRING 8699
 }
 
 STRING 8703
-// Upgrades: R089 (Animal War Training), Name (Name)
+// Upgrades: R089 (Kampftierausbildung), Name (Name)
 {
 |cffffcc00Quest-Aktualisierung:|r Return the book to Gerard.
 }
@@ -41354,13 +41354,13 @@ E
 }
 
 STRING 9787
-// Upgrades: R05A (Animal War Training), Name (Name)
+// Upgrades: R05A (Kampftierausbildung), Name (Name)
 {
 Tomes
 }
 
 STRING 9788
-// Upgrades: R05A (Animal War Training), Tip (Tooltip)
+// Upgrades: R05A (Kampftierausbildung), Tip (Tooltip)
 {
 Tomes
 }
@@ -41660,7 +41660,7 @@ S
 }
 
 STRING 10088
-// Upgrades: R089 (Animal War Training), Tip (Tooltip)
+// Upgrades: R089 (Kampftierausbildung), Tip (Tooltip)
 {
 |cffffcc00Quest-Aktualisierung:|r Return the equipment to Gerard.
 }
@@ -41890,7 +41890,7 @@ B
 STRING 10143
 // Units: h0RO (Gryphon Knight), Ubertip (Tooltip - Extended)
 {
-Powerful mounted warrior. Can cast Fly changing its form to a flying form and attacking only air units. Can learn Animal War Training and Sundering Blades. |n|n|cffffcc00Greift Land-Einheiten an.|r
+Powerful mounted warrior. Can cast Fly changing its form to a flying form and attacking only air units. Can learn Kampftierausbildung and Sundering Blades. |n|n|cffffcc00Greift Land-Einheiten an.|r
 }
 
 STRING 10144
@@ -41938,25 +41938,25 @@ Vile Duke of the Jadefire
 STRING 10160
 // Units: h0RP (Gryphon Knight), Ubertip (Tooltip - Extended)
 {
-Powerful mounted warrior. Can cast Fly changing its form to a flying form and attacking only air units. Can learn Animal War Training and Sundering Blades. |n|n|cffffcc00Attacks air units.|r
+Powerful mounted warrior. Can cast Fly changing its form to a flying form and attacking only air units. Can learn Kampftierausbildung and Sundering Blades. |n|n|cffffcc00Attacks air units.|r
 }
 
 STRING 10161
 // Units: h0RU (Knight), Ubertip (Tooltip - Extended)
 {
-Powerful mounted warrior. Can learn Animal War Training, Sundering Blades and Unmount. |n|n|cffffcc00Greift Land-Einheiten an.|r
+Powerful mounted warrior. Can learn Kampftierausbildung, Sundering Blades and Unmount. |n|n|cffffcc00Greift Land-Einheiten an.|r
 }
 
 STRING 10162
 // Units: h0RZ (Gryphon Rider), Ubertip (Tooltip - Extended)
 {
-Powerful flying creature, mounted by an archer. Can learn Animal War Training, Marksmanship and Improved Bows. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
+Powerful flying creature, mounted by an archer. Can learn Kampftierausbildung, Marksmanship and Improved Bows. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
 }
 
 STRING 10163
 // Units: h0S0 (Eagle Knight), Ubertip (Tooltip - Extended)
 {
-Powerful flying creature, mounted by a Spear Thrower. Can cast Vergiftete Waffen. Can learn Animal War Training. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
+Powerful flying creature, mounted by a Spear Thrower. Can cast Vergiftete Waffen. Can learn Kampftierausbildung. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
 }
 
 STRING 10164
@@ -43826,25 +43826,25 @@ Return this trophy to Admiral Proudmoore's Spirit.
 }
 
 STRING 10588
-// Items: I18E (Captain's Hat), Name (Name)
+// Items: I18E (Kapitänshut), Name (Name)
 {
-Captain's Hat
+Kapitänshut
 }
 
 STRING 10589
-// Items: I18E (Captain's Hat), Tip (Tooltip - Basic)
+// Items: I18E (Kapitänshut), Tip (Tooltip - Basic)
 {
-Purchase Captain's Hat
+Kapitänshut erwerben
 }
 
 STRING 10590
-// Items: I18E (Captain's Hat), Ubertip (Tooltip - Extended)
+// Items: I18E (Kapitänshut), Ubertip (Tooltip - Extended)
 {
 |cff8b00ffEinzigartig|r|nGrants the ability Wirbelsturm. Also increases strength, agility and intelligence by 6 when worn.
 }
 
 STRING 10591
-// Items: I18E (Captain's Hat), Description (Description)
+// Items: I18E (Kapitänshut), Description (Description)
 {
 |cff8b00ffEinzigartig|r|nThis hat allows calling the winds of the sea.
 }
@@ -45248,37 +45248,37 @@ Grommash Hellscream beschwören
 }
 
 STRING 10966
-// Upgrades: R01V (Animal War Training), Tip (Tooltip)
+// Upgrades: R01V (Kampftierausbildung), Tip (Tooltip)
 {
 Günstige Evolution erforschen - [|cffffcc00Stufe 57|r]
 }
 
 STRING 10967
-// Upgrades: R01V (Animal War Training), Tip (Tooltip)
+// Upgrades: R01V (Kampftierausbildung), Tip (Tooltip)
 {
 Günstige Evolution erforschen - [|cffffcc00Stufe 58|r]
 }
 
 STRING 10968
-// Upgrades: R01V (Animal War Training), Tip (Tooltip)
+// Upgrades: R01V (Kampftierausbildung), Tip (Tooltip)
 {
 Günstige Evolution erforschen - [|cffffcc00Stufe 59|r]
 }
 
 STRING 10969
-// Upgrades: R01V (Animal War Training), Tip (Tooltip)
+// Upgrades: R01V (Kampftierausbildung), Tip (Tooltip)
 {
 Günstige Evolution erforschen - [|cffffcc00Stufe 60|r]
 }
 
 STRING 10970
-// Upgrades: R01V (Animal War Training), Tip (Tooltip)
+// Upgrades: R01V (Kampftierausbildung), Tip (Tooltip)
 {
 Günstige Evolution erforschen - [|cffffcc00Stufe 61|r]
 }
 
 STRING 10971
-// Upgrades: R01V (Animal War Training), Tip (Tooltip)
+// Upgrades: R01V (Kampftierausbildung), Tip (Tooltip)
 {
 Günstige Evolution erforschen - [|cffffcc00Stufe 62|r]
 }
@@ -46310,7 +46310,7 @@ STRING 11361
 }
 
 STRING 11364
-// Upgrades: R01V (Animal War Training), Tip (Tooltip)
+// Upgrades: R01V (Kampftierausbildung), Tip (Tooltip)
 {
 Günstige Evolution erforschen - [|cffffcc00Stufe 63|r]
 }
@@ -46334,7 +46334,7 @@ STRING 11367
 }
 
 STRING 11370
-// Upgrades: R01V (Animal War Training), Tip (Tooltip)
+// Upgrades: R01V (Kampftierausbildung), Tip (Tooltip)
 {
 Günstige Evolution erforschen - [|cffffcc00Stufe 64|r]
 }
@@ -46736,7 +46736,7 @@ Rewards a freelancer with 800 gold and lumber and 200 experience. Can be used on
 }
 
 STRING 11464
-// Upgrades: R01V (Animal War Training), Tip (Tooltip)
+// Upgrades: R01V (Kampftierausbildung), Tip (Tooltip)
 {
 Günstige Evolution erforschen - [|cffffcc00Stufe 65|r]
 }
@@ -48380,7 +48380,7 @@ O
 }
 
 STRING 12110
-// Upgrades: R00U (Animal War Training), Ubertip (Tooltip - Extended)
+// Upgrades: R00U (Kampftierausbildung), Ubertip (Tooltip - Extended)
 {
 - Increases the maximum hit points, mana and damage of all player units.|n- Increases the armor and level by 1 every 10 levels of this research of all player units.|n- Increases armour, movement speed and attack and sight range of ships and submarines.|n- Allows unit abilities to target units with a level above their initial level: Verwandlung (Human, Goblin), Transmutieren (Goblins), Besessenheit (Untote), Bezauberung Creeps) etc. This does not improve hero abilities!|n- Increases cargo hold, movement speed and mana of mounts.|n|nIs increased automatically for creeps and bosses to the lowest hero level of playing users.
 }
@@ -49160,13 +49160,13 @@ Anpassbarer Held
 }
 
 STRING 12315
-// Upgrades: R027 (Animal War Training), Name (Name)
+// Upgrades: R027 (Kampftierausbildung), Name (Name)
 {
 Heldenstufe 50
 }
 
 STRING 12316
-// Upgrades: R027 (Animal War Training), Tip (Tooltip)
+// Upgrades: R027 (Kampftierausbildung), Tip (Tooltip)
 {
 Heldenstufe 50
 }
@@ -49730,19 +49730,19 @@ Plattform
 }
 
 STRING 12420
-// Upgrades: R025 (Animal War Training), Name (Name)
+// Upgrades: R025 (Kampftierausbildung), Name (Name)
 {
 Heldenstufe 20
 }
 
 STRING 12421
-// Upgrades: R025 (Animal War Training), Tip (Tooltip)
+// Upgrades: R025 (Kampftierausbildung), Tip (Tooltip)
 {
 Heldenstufe 20
 }
 
 STRING 12422
-// Upgrades: R025 (Animal War Training), Ubertip (Tooltip - Extended)
+// Upgrades: R025 (Kampftierausbildung), Ubertip (Tooltip - Extended)
 {
 Allows summoning a Mount.
 }
@@ -51038,13 +51038,13 @@ STRING 14341
 }
 
 STRING 14342
-// Upgrades: R01V (Animal War Training), Tip (Tooltip)
+// Upgrades: R01V (Kampftierausbildung), Tip (Tooltip)
 {
 Günstige Evolution erforschen - [|cffffcc00Stufe 66|r]
 }
 
 STRING 14343
-// Upgrades: R01V (Animal War Training), Tip (Tooltip)
+// Upgrades: R01V (Kampftierausbildung), Tip (Tooltip)
 {
 Günstige Evolution erforschen - [|cffffcc00Stufe 67|r]
 }
@@ -51964,7 +51964,7 @@ R
 STRING 14943
 // Units: h02V (Dwarf Barracks), Ubertip (Tooltip - Extended)
 {
-Primäres Truppen-Produktionsgebäude. Trains Troll-Schlächters, Dwarf Riflemen and Dwarf Riders. |nBietet auch die Ausbaustufen Berserker Upgrade, Long Rifles, and Animal War Training upgrades.
+Primäres Truppen-Produktionsgebäude. Trains Troll-Schlächters, Dwarf Riflemen and Dwarf Riders. |nBietet auch die Ausbaustufen Berserker Upgrade, Long Rifles, and Kampftierausbildung upgrades.
 }
 
 STRING 14944
@@ -55664,7 +55664,7 @@ Heiltrank herstellen
 }
 
 STRING 17823
-// Upgrades: R05P (Animal War Training), Name (Name)
+// Upgrades: R05P (Kampftierausbildung), Name (Name)
 {
 Cenarius fehlt
 }
@@ -56102,7 +56102,7 @@ A sturdy transport ship capable of carrying huge amounts of Oil over the sea.
 }
 
 STRING 18537
-// Upgrades: R05Q (Animal War Training), Name (Name)
+// Upgrades: R05Q (Kampftierausbildung), Name (Name)
 {
 Todesschwinge is missing
 }
@@ -57677,19 +57677,19 @@ STRING 19840
 }
 
 STRING 19842
-// Upgrades: R026 (Animal War Training), Name (Name)
+// Upgrades: R026 (Kampftierausbildung), Name (Name)
 {
 Arkane Portale
 }
 
 STRING 19843
-// Upgrades: R026 (Animal War Training), Tip (Tooltip)
+// Upgrades: R026 (Kampftierausbildung), Tip (Tooltip)
 {
 Arkane Portale erforschen
 }
 
 STRING 19844
-// Upgrades: R026 (Animal War Training), Ubertip (Tooltip - Extended)
+// Upgrades: R026 (Kampftierausbildung), Ubertip (Tooltip - Extended)
 {
 Allows portals to select visible locations as destinations.
 }
@@ -57893,7 +57893,7 @@ Verteidigungsgebäude against ground units.|n|n|cffffcc00Greift Land-Einheiten a
 }
 
 STRING 19905
-// Upgrades: R00U (Animal War Training), Hotkey (Hotkey)
+// Upgrades: R00U (Kampftierausbildung), Hotkey (Hotkey)
 {
 E
 }
@@ -57965,7 +57965,7 @@ Meeresriese
 }
 
 STRING 19936
-// Upgrades: R00U (Animal War Training), Hotkey (Hotkey)
+// Upgrades: R00U (Kampftierausbildung), Hotkey (Hotkey)
 {
 E
 }
@@ -58235,7 +58235,7 @@ STRING 20062
 }
 
 STRING 20063
-// Upgrades: R00U (Animal War Training), Hotkey (Hotkey)
+// Upgrades: R00U (Kampftierausbildung), Hotkey (Hotkey)
 {
 E
 }
@@ -58265,7 +58265,7 @@ D
 }
 
 STRING 20074
-// Upgrades: R00U (Animal War Training), Hotkey (Hotkey)
+// Upgrades: R00U (Kampftierausbildung), Hotkey (Hotkey)
 {
 E
 }
@@ -58424,7 +58424,7 @@ Medizinmann - Adept
 }
 
 STRING 20107
-// Upgrades: R00U (Animal War Training), Hotkey (Hotkey)
+// Upgrades: R00U (Kampftierausbildung), Hotkey (Hotkey)
 {
 E
 }
@@ -58484,7 +58484,7 @@ Herstellungslager verbinden
 }
 
 STRING 20133
-// Upgrades: R00U (Animal War Training), Hotkey (Hotkey)
+// Upgrades: R00U (Kampftierausbildung), Hotkey (Hotkey)
 {
 E
 }
@@ -58895,19 +58895,19 @@ D
 }
 
 STRING 20253
-// Upgrades: R00U (Animal War Training), Hotkey (Hotkey)
+// Upgrades: R00U (Kampftierausbildung), Hotkey (Hotkey)
 {
 E
 }
 
 STRING 20254
-// Upgrades: R00U (Animal War Training), Hotkey (Hotkey)
+// Upgrades: R00U (Kampftierausbildung), Hotkey (Hotkey)
 {
 E
 }
 
 STRING 20255
-// Upgrades: R00U (Animal War Training), Hotkey (Hotkey)
+// Upgrades: R00U (Kampftierausbildung), Hotkey (Hotkey)
 {
 E
 }
@@ -58925,7 +58925,7 @@ Ring des Schutzes +4 herstellen
 }
 
 STRING 20258
-// Upgrades: R00U (Animal War Training), Hotkey (Hotkey)
+// Upgrades: R00U (Kampftierausbildung), Hotkey (Hotkey)
 {
 E
 }
@@ -58985,7 +58985,7 @@ Oger-Magier ausbilden
 }
 
 STRING 20287
-// Upgrades: R00U (Animal War Training), Hotkey (Hotkey)
+// Upgrades: R00U (Kampftierausbildung), Hotkey (Hotkey)
 {
 E
 }
@@ -59105,7 +59105,7 @@ Horst errichten
 }
 
 STRING 20367
-// Upgrades: R00U (Animal War Training), Hotkey (Hotkey)
+// Upgrades: R00U (Kampftierausbildung), Hotkey (Hotkey)
 {
 E
 }
@@ -59351,7 +59351,7 @@ Rückkopplung erforschen
 }
 
 STRING 20488
-// Upgrades: R00U (Animal War Training), Hotkey (Hotkey)
+// Upgrades: R00U (Kampftierausbildung), Hotkey (Hotkey)
 {
 E
 }
@@ -59963,7 +59963,7 @@ STRING 20616
 }
 
 STRING 20617
-// Upgrades: R00U (Animal War Training), Hotkey (Hotkey)
+// Upgrades: R00U (Kampftierausbildung), Hotkey (Hotkey)
 {
 E
 }
@@ -60077,7 +60077,7 @@ Bildet Drachenfalkenreiter aus. |nBietet auch die Ausbaustufen Cloud upgrade.
 }
 
 STRING 20639
-// Upgrades: R00U (Animal War Training), Hotkey (Hotkey)
+// Upgrades: R00U (Kampftierausbildung), Hotkey (Hotkey)
 {
 E
 }
@@ -60260,7 +60260,7 @@ C
 }
 
 STRING 20809
-// Abilities: A0OP (Animal War Training), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0OP (Kampftierausbildung), Ubertip (Tooltip - Normal - Extended)
 {
 Increases the maximum hit points of this unit by <R000,base1>.
 }
@@ -60308,7 +60308,7 @@ Enchant Gold Mine
 }
 
 STRING 20860
-// Upgrades: R00U (Animal War Training), Hotkey (Hotkey)
+// Upgrades: R00U (Kampftierausbildung), Hotkey (Hotkey)
 {
 E
 }
@@ -60320,13 +60320,13 @@ This ward provides mana regeneration for nearby friendly units.
 }
 
 STRING 20871
-// Upgrades: R064 (Animal War Training), Name (Name)
+// Upgrades: R064 (Kampftierausbildung), Name (Name)
 {
 Heldenstufe 75
 }
 
 STRING 20872
-// Upgrades: R064 (Animal War Training), Tip (Tooltip)
+// Upgrades: R064 (Kampftierausbildung), Tip (Tooltip)
 {
 Heldenstufe 75
 }
@@ -60458,7 +60458,7 @@ STRING 21319
 }
 
 STRING 21320
-// Upgrades: R066 (Animal War Training), Ubertip (Tooltip - Extended)
+// Upgrades: R066 (Kampftierausbildung), Ubertip (Tooltip - Extended)
 {
 Increases the maximum hit points of Dragonhawk Riders and Versorgungswagens by <Rhan,base1>.
 }
@@ -60554,7 +60554,7 @@ P
 }
 
 STRING 21354
-// Upgrades: R00U (Animal War Training), Hotkey (Hotkey)
+// Upgrades: R00U (Kampftierausbildung), Hotkey (Hotkey)
 {
 E
 }
@@ -60668,25 +60668,25 @@ STRING 21808
 }
 
 STRING 21817
-// Upgrades: R06C (Animal War Training), Name (Name)
+// Upgrades: R06C (Kampftierausbildung), Name (Name)
 {
 VIP
 }
 
 STRING 21818
-// Upgrades: R06C (Animal War Training), Tip (Tooltip)
+// Upgrades: R06C (Kampftierausbildung), Tip (Tooltip)
 {
 VIP
 }
 
 STRING 22246
-// Upgrades: R06B (Animal War Training), Name (Name)
+// Upgrades: R06B (Kampftierausbildung), Name (Name)
 {
 VIP oder Heldenstufe 75
 }
 
 STRING 22247
-// Upgrades: R06B (Animal War Training), EditorSuffix (Editor Suffix)
+// Upgrades: R06B (Kampftierausbildung), EditorSuffix (Editor Suffix)
 {
 (Herr der Leere Hero)
 }
@@ -60782,7 +60782,7 @@ Heiliges Licht
 }
 
 STRING 22298
-// Upgrades: R00U (Animal War Training), Hotkey (Hotkey)
+// Upgrades: R00U (Kampftierausbildung), Hotkey (Hotkey)
 {
 E
 }
@@ -61088,13 +61088,13 @@ I
 }
 
 STRING 22356
-// Upgrades: R00U (Animal War Training), Hotkey (Hotkey)
+// Upgrades: R00U (Kampftierausbildung), Hotkey (Hotkey)
 {
 E
 }
 
 STRING 22357
-// Upgrades: R00U (Animal War Training), Hotkey (Hotkey)
+// Upgrades: R00U (Kampftierausbildung), Hotkey (Hotkey)
 {
 E
 }
@@ -61844,13 +61844,13 @@ STRING 22564
 }
 
 STRING 22565
-// Upgrades: R00U (Animal War Training), Hotkey (Hotkey)
+// Upgrades: R00U (Kampftierausbildung), Hotkey (Hotkey)
 {
 E
 }
 
 STRING 22566
-// Upgrades: R00U (Animal War Training), Hotkey (Hotkey)
+// Upgrades: R00U (Kampftierausbildung), Hotkey (Hotkey)
 {
 E
 }
@@ -62485,19 +62485,19 @@ Gnom-Bürger
 }
 
 STRING 23057
-// Upgrades: R00U (Animal War Training), Hotkey (Hotkey)
+// Upgrades: R00U (Kampftierausbildung), Hotkey (Hotkey)
 {
 E
 }
 
 STRING 23058
-// Upgrades: R00U (Animal War Training), Hotkey (Hotkey)
+// Upgrades: R00U (Kampftierausbildung), Hotkey (Hotkey)
 {
 E
 }
 
 STRING 23062
-// Upgrades: R00U (Animal War Training), Hotkey (Hotkey)
+// Upgrades: R00U (Kampftierausbildung), Hotkey (Hotkey)
 {
 E
 }
@@ -62689,7 +62689,7 @@ Mojo Dark-Ale,Sinjo Honeybrew,Kesha Wildbarley,Tatsa Sweetbarrow,Mushi Ale-Heart
 }
 
 STRING 23215
-// Upgrades: R00U (Animal War Training), Hotkey (Hotkey)
+// Upgrades: R00U (Kampftierausbildung), Hotkey (Hotkey)
 {
 E
 }
@@ -62731,13 +62731,13 @@ STRING 23298
 }
 
 STRING 23302
-// Upgrades: R00U (Animal War Training), Hotkey (Hotkey)
+// Upgrades: R00U (Kampftierausbildung), Hotkey (Hotkey)
 {
 E
 }
 
 STRING 23303
-// Upgrades: R00U (Animal War Training), Hotkey (Hotkey)
+// Upgrades: R00U (Kampftierausbildung), Hotkey (Hotkey)
 {
 E
 }
@@ -62809,25 +62809,25 @@ STRING 23425
 }
 
 STRING 23426
-// Upgrades: R00U (Animal War Training), Hotkey (Hotkey)
+// Upgrades: R00U (Kampftierausbildung), Hotkey (Hotkey)
 {
 E
 }
 
 STRING 23427
-// Upgrades: R00U (Animal War Training), Hotkey (Hotkey)
+// Upgrades: R00U (Kampftierausbildung), Hotkey (Hotkey)
 {
 E
 }
 
 STRING 23428
-// Upgrades: R00U (Animal War Training), Hotkey (Hotkey)
+// Upgrades: R00U (Kampftierausbildung), Hotkey (Hotkey)
 {
 E
 }
 
 STRING 23429
-// Upgrades: R00U (Animal War Training), Hotkey (Hotkey)
+// Upgrades: R00U (Kampftierausbildung), Hotkey (Hotkey)
 {
 E
 }
@@ -62863,7 +62863,7 @@ Mal'Ganis beschwören
 }
 
 STRING 23478
-// Upgrades: R00U (Animal War Training), Hotkey (Hotkey)
+// Upgrades: R00U (Kampftierausbildung), Hotkey (Hotkey)
 {
 E
 }
@@ -62953,7 +62953,7 @@ STRING 23636
 }
 
 STRING 23702
-// Upgrades: R00U (Animal War Training), Hotkey (Hotkey)
+// Upgrades: R00U (Kampftierausbildung), Hotkey (Hotkey)
 {
 E
 }
@@ -62979,7 +62979,7 @@ STRING 23710
 STRING 23731
 // Units: h0PH (Stormcrow Knight), Ubertip (Tooltip - Extended)
 {
-Powerful flying creature, mounted by a Gilneas spear-thrower. Can learn Animal War Training, and the Schleichendes Gift ability. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
+Powerful flying creature, mounted by a Gilneas spear-thrower. Can learn Kampftierausbildung, and the Schleichendes Gift ability. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
 }
 
 STRING 23735
@@ -63151,7 +63151,7 @@ Allows to train all Dragons.
 }
 
 STRING 23897
-// Upgrades: R066 (Animal War Training), EditorSuffix (Editor Suffix)
+// Upgrades: R066 (Kampftierausbildung), EditorSuffix (Editor Suffix)
 {
 (Dalaran)
 }
@@ -63169,7 +63169,7 @@ STRING 23899
 }
 
 STRING 23900
-// Upgrades: R00U (Animal War Training), Hotkey (Hotkey)
+// Upgrades: R00U (Kampftierausbildung), Hotkey (Hotkey)
 {
 E
 }
@@ -63189,7 +63189,7 @@ rmin
 STRING 24334
 // Units: n09L (Dragon Roost), Ubertip (Tooltip - Extended)
 {
-Allows to train all Dragons.|n|n|cffffcc00Begrenzt auf 1.|r
+Ermöglicht die Ausbildung aller Drachen.|n|n|cffffcc00Begrenzt auf 1.|r
 }
 
 STRING 24336
@@ -63303,7 +63303,7 @@ Skyfire-Kanonenschiff
 STRING 24399
 // Units: h0BR (Skyfire Gunship), Tip (Tooltip - Basic)
 {
-Train Skyfire-Kanonenschiff
+Skyfire-Kanonenschiff ausbilden
 }
 
 STRING 24400
@@ -63399,7 +63399,7 @@ Verteidigen erforschen
 STRING 24416
 // Upgrades: R06P (Exhume Corpses), Ubertip (Tooltip - Extended)
 {
-Gives Captains the ability Verteidigen.
+Verleiht Captains die Fähigkeit 'Verteidigen'.
 }
 
 STRING 24417
@@ -63495,7 +63495,7 @@ STRING 24441
 STRING 24442
 // Upgrades: R06Q (Ensnare), Ubertip (Tooltip - Extended)
 {
-Enables Guardsmen to use the Einschnüren ability. Einschnüren causes a target enemy unit to be bound to the ground so that it cannot move. Air units that are ensnared can be attacked as though they were land units.
+Enables Wachen to use the Einschnüren ability. Einschnüren causes a target enemy unit to be bound to the ground so that it cannot move. Air units that are ensnared can be attacked as though they were land units.
 }
 
 STRING 24443
@@ -63507,7 +63507,7 @@ STRING 24443
 STRING 24444
 // Upgrades: R06R (Ensnare), Ubertip (Tooltip - Extended)
 {
-Enables Guardsmen to use the Einschnüren ability. Einschnüren causes a target enemy unit to be bound to the ground so that it cannot move. Air units that are ensnared can be attacked as though they were land units.
+Enables Wachen to use the Einschnüren ability. Einschnüren causes a target enemy unit to be bound to the ground so that it cannot move. Air units that are ensnared can be attacked as though they were land units.
 }
 
 STRING 24446
@@ -63649,7 +63649,7 @@ STRING 24480
 }
 
 STRING 24481
-// Upgrades: R05O (Animal War Training), EditorSuffix (Editor Suffix)
+// Upgrades: R05O (Kampftierausbildung), EditorSuffix (Editor Suffix)
 {
 (Kul Tiras)
 }
@@ -63853,7 +63853,7 @@ Ein intelligenter Ingenieur, der Ihre Stadt verbessern kann.
 }
 
 STRING 24535
-// Upgrades: R00U (Animal War Training), Hotkey (Hotkey)
+// Upgrades: R00U (Kampftierausbildung), Hotkey (Hotkey)
 {
 E
 }
@@ -63861,7 +63861,7 @@ E
 STRING 24536
 // Abilities: A0S4 (Engineer Form), Name (Name)
 {
-Ingenieur Form
+Ingenieurs-Gestalt
 }
 
 STRING 24538
@@ -63939,13 +63939,13 @@ Horst errichten
 STRING 24551
 // Units: h0BQ (Advanced Barracks), Tip (Tooltip - Basic)
 {
-Ausbau zum Advanced Kaserne
+Ausbau zur Hoch entwickelten Kaserne
 }
 
 STRING 24552
 // Units: h0BQ (Advanced Barracks), Ubertip (Tooltip - Extended)
 {
-Primäres Truppen-Produktionsgebäude. Trains Guardsmen, Freibeuters and Royal Guards. Provides upgrades Einschnüren and Schmetter-Angriff.
+Primäres Truppen-Produktionsgebäude. Bildet Wachen, Freibeuter und Königliche Wachen aus. Bietet die Ausbaustufen 'Einschnüren' und 'Schmetter-Angriff'.
 }
 
 STRING 24553
@@ -63979,27 +63979,27 @@ STRING 24558
 }
 
 STRING 24575
-// Items: I0C4 (Unlimited Bag of Gold), Name (Name)
+// Items: I0C4 (Unbegrenzter Sack voll Gold), Name (Name)
 {
-Unlimited Bag of Gold
+Unbegrenzter Sack voll Gold
 }
 
 STRING 24576
-// Items: I0C4 (Unlimited Bag of Gold), Description (Description)
+// Items: I0C4 (Unbegrenzter Sack voll Gold), Description (Description)
 {
-Gives gold for attacking units.
+Gibt Gold für den Angriff von Einheiten.
 }
 
 STRING 24577
-// Items: I0C4 (Unlimited Bag of Gold), Ubertip (Tooltip - Extended)
+// Items: I0C4 (Unbegrenzter Sack voll Gold), Ubertip (Tooltip - Extended)
 {
-Gives gold for attacking units.
+Gibt Gold für den Angriff von Einheiten.
 }
 
 STRING 24578
 // Abilities: A0SA (Pillage), EditorSuffix (Editor Suffix)
 {
-(Unlimited Bag of Gold)
+(Unbegrenzter Sack voll Gold)
 }
 
 STRING 24587
@@ -64105,7 +64105,7 @@ O
 }
 
 STRING 24821
-// Upgrades: R00U (Animal War Training), Hotkey (Hotkey)
+// Upgrades: R00U (Kampftierausbildung), Hotkey (Hotkey)
 {
 E
 }
@@ -64429,7 +64429,7 @@ rauv
 }
 
 STRING 25102
-// Upgrades: R00U (Animal War Training), Hotkey (Hotkey)
+// Upgrades: R00U (Kampftierausbildung), Hotkey (Hotkey)
 {
 E
 }
@@ -64555,7 +64555,7 @@ Kapitän beschwören
 }
 
 STRING 25348
-// Upgrades: R00U (Animal War Training), Hotkey (Hotkey)
+// Upgrades: R00U (Kampftierausbildung), Hotkey (Hotkey)
 {
 E
 }
@@ -64603,7 +64603,7 @@ Ein mystischer Held, adept at controlling magic and ranged assaults. Can learn F
 }
 
 STRING 25404
-// Upgrades: R00U (Animal War Training), Hotkey (Hotkey)
+// Upgrades: R00U (Kampftierausbildung), Hotkey (Hotkey)
 {
 E
 }
@@ -64669,7 +64669,7 @@ Erhöht die Aufladungen des Zielgegenstands um 1.
 }
 
 STRING 25496
-// Upgrades: R00U (Animal War Training), Hotkey (Hotkey)
+// Upgrades: R00U (Kampftierausbildung), Hotkey (Hotkey)
 {
 E
 }
@@ -65077,7 +65077,7 @@ Track
 }
 
 STRING 26085
-// Upgrades: R00U (Animal War Training), Hotkey (Hotkey)
+// Upgrades: R00U (Kampftierausbildung), Hotkey (Hotkey)
 {
 E
 }
@@ -65437,7 +65437,7 @@ Schwarmraketen
 }
 
 STRING 26485
-// Upgrades: R02Y (Animal War Training), Name (Name)
+// Upgrades: R02Y (Kampftierausbildung), Name (Name)
 {
 Schwarmraketen
 }
@@ -66007,7 +66007,7 @@ STRING 26901
 }
 
 STRING 26920
-// Upgrades: R00U (Animal War Training), Hotkey (Hotkey)
+// Upgrades: R00U (Kampftierausbildung), Hotkey (Hotkey)
 {
 E
 }
@@ -66061,13 +66061,13 @@ Gilneas Banner
 }
 
 STRING 27026
-// Upgrades: R00U (Animal War Training), Hotkey (Hotkey)
+// Upgrades: R00U (Kampftierausbildung), Hotkey (Hotkey)
 {
 E
 }
 
 STRING 27027
-// Upgrades: R00U (Animal War Training), Hotkey (Hotkey)
+// Upgrades: R00U (Kampftierausbildung), Hotkey (Hotkey)
 {
 E
 }
@@ -66267,13 +66267,13 @@ Gleiten
 STRING 27320
 // Units: E02B (Ancient of Lore), EditorSuffix (Name - Editor Suffix)
 {
-(Hero)
+(Held)
 }
 
 STRING 27359
 // Abilities: A0K8 (Strong Boss Abilities), EditorSuffix (Editor Suffix)
 {
-(Hero)
+(Held)
 }
 
 STRING 27395
@@ -66409,7 +66409,7 @@ Eine intelligente Menschen-Bürgerin. Hat eine Manaregenerations-Aura.
 }
 
 STRING 27748
-// Upgrades: R02Y (Animal War Training), Tip (Tooltip)
+// Upgrades: R02Y (Kampftierausbildung), Tip (Tooltip)
 {
 Schwarmraketen erforschen
 }
@@ -66433,7 +66433,7 @@ F
 }
 
 STRING 27817
-// Upgrades: R00U (Animal War Training), Hotkey (Hotkey)
+// Upgrades: R00U (Kampftierausbildung), Hotkey (Hotkey)
 {
 E
 }
@@ -67099,7 +67099,7 @@ Gnoll-Kind ausbilden
 }
 
 STRING 28033
-// Upgrades: R05B (Animal War Training), EditorSuffix (Editor Suffix)
+// Upgrades: R05B (Kampftierausbildung), EditorSuffix (Editor Suffix)
 {
 (Gnolle)
 }
@@ -67357,7 +67357,7 @@ G
 }
 
 STRING 28206
-// Upgrades: R00U (Animal War Training), Hotkey (Hotkey)
+// Upgrades: R00U (Kampftierausbildung), Hotkey (Hotkey)
 {
 E
 }
@@ -67597,7 +67597,7 @@ Fel-Peon wiederbeleben
 }
 
 STRING 28599
-// Upgrades: R00U (Animal War Training), Hotkey (Hotkey)
+// Upgrades: R00U (Kampftierausbildung), Hotkey (Hotkey)
 {
 E
 }
@@ -67771,19 +67771,19 @@ Goblin-U-Boot beschwören
 }
 
 STRING 28825
-// Upgrades: R00U (Animal War Training), Hotkey (Hotkey)
+// Upgrades: R00U (Kampftierausbildung), Hotkey (Hotkey)
 {
 E
 }
 
 STRING 28871
-// Upgrades: R00U (Animal War Training), Hotkey (Hotkey)
+// Upgrades: R00U (Kampftierausbildung), Hotkey (Hotkey)
 {
 E
 }
 
 STRING 28874
-// Upgrades: R00U (Animal War Training), Hotkey (Hotkey)
+// Upgrades: R00U (Kampftierausbildung), Hotkey (Hotkey)
 {
 E
 }
@@ -67843,7 +67843,7 @@ STRING 29004
 }
 
 STRING 29010
-// Upgrades: R00U (Animal War Training), Hotkey (Hotkey)
+// Upgrades: R00U (Kampftierausbildung), Hotkey (Hotkey)
 {
 E
 }
@@ -67921,7 +67921,7 @@ Enters the submarine which transforms the hero into a U-Boot which can move on w
 }
 
 STRING 29043
-// Upgrades: R00U (Animal War Training), Hotkey (Hotkey)
+// Upgrades: R00U (Kampftierausbildung), Hotkey (Hotkey)
 {
 E
 }
@@ -67959,23 +67959,23 @@ Flammenschredder wiederbeleben
 STRING 29079
 // Abilities: A0YX (Submerge), EditorSuffix (Editor Suffix)
 {
-(Gnomisches U-Boot) (Hero)
+(Gnomisches U-Boot) (Held)
 }
 
 STRING 29087
 // Abilities: A0Z1 (Submerge), EditorSuffix (Editor Suffix)
 {
-(Goblin-U-Boot) (Hero)
+(Goblin-U-Boot) (Held)
 }
 
 STRING 29088
 // Abilities: A0Z2 (Submerge), EditorSuffix (Editor Suffix)
 {
-(Gepanzertes U-Boot) (Hero)
+(Gepanzertes U-Boot) (Held)
 }
 
 STRING 29090
-// Upgrades: R00U (Animal War Training), Hotkey (Hotkey)
+// Upgrades: R00U (Kampftierausbildung), Hotkey (Hotkey)
 {
 E
 }
@@ -68119,7 +68119,7 @@ Enters the submarine which transforms the hero into a U-Boot which can move on w
 }
 
 STRING 29123
-// Buffs/Effects: B00B (Hero), Bufftip (Tooltip)
+// Buffs/Effects: B00B (Held), Bufftip (Tooltip)
 {
 |cff00ff00Held|r
 }
@@ -68569,13 +68569,13 @@ Ein mystischer Held, adept at ranged combat. Can learn Frostschlag, Meeres-Eleme
 }
 
 STRING 29623
-// Upgrades: R00U (Animal War Training), Hotkey (Hotkey)
+// Upgrades: R00U (Kampftierausbildung), Hotkey (Hotkey)
 {
 E
 }
 
 STRING 29624
-// Upgrades: R00U (Animal War Training), Hotkey (Hotkey)
+// Upgrades: R00U (Kampftierausbildung), Hotkey (Hotkey)
 {
 E
 }
@@ -68623,7 +68623,7 @@ Raketen abschießen Schadensbonus
 }
 
 STRING 29711
-// Upgrades: R00U (Animal War Training), Hotkey (Hotkey)
+// Upgrades: R00U (Kampftierausbildung), Hotkey (Hotkey)
 {
 E
 }
@@ -68635,13 +68635,13 @@ Primäres Gebäude, wird zum Ausbilden von Ingenieueren und zum Einlagern gesamm
 }
 
 STRING 29751
-// Upgrades: R00U (Animal War Training), Hotkey (Hotkey)
+// Upgrades: R00U (Kampftierausbildung), Hotkey (Hotkey)
 {
 E
 }
 
 STRING 29799
-// Upgrades: R00U (Animal War Training), Hotkey (Hotkey)
+// Upgrades: R00U (Kampftierausbildung), Hotkey (Hotkey)
 {
 E
 }
@@ -68659,7 +68659,7 @@ Defensive Ancient. When rooted in the ground, can hurl enormous rocks at nearby 
 }
 
 STRING 29860
-// Upgrades: R00U (Animal War Training), Hotkey (Hotkey)
+// Upgrades: R00U (Kampftierausbildung), Hotkey (Hotkey)
 {
 E
 }
@@ -68677,7 +68677,7 @@ STRING 29876
 }
 
 STRING 29900
-// Upgrades: R00U (Animal War Training), Hotkey (Hotkey)
+// Upgrades: R00U (Kampftierausbildung), Hotkey (Hotkey)
 {
 E
 }
@@ -68965,7 +68965,7 @@ Weltenbaum erforschen
 }
 
 STRING 30614
-// Upgrades: R00U (Animal War Training), Hotkey (Hotkey)
+// Upgrades: R00U (Kampftierausbildung), Hotkey (Hotkey)
 {
 E
 }
@@ -68977,7 +68977,7 @@ Vrykul-Arbeiter
 }
 
 STRING 30655
-// Upgrades: R00U (Animal War Training), Hotkey (Hotkey)
+// Upgrades: R00U (Kampftierausbildung), Hotkey (Hotkey)
 {
 E
 }
@@ -70027,7 +70027,7 @@ Worgen-Fluch erforschen
 }
 
 STRING 31087
-// Units: h0PF (Gilneas Gunship), EditorSuffix (Name - Editor Suffix)
+// Units: h0PF (Kanonenschiff von Gilneas), EditorSuffix (Name - Editor Suffix)
 {
 (Worgen)
 }
@@ -70093,7 +70093,7 @@ STRING 31128
 }
 
 STRING 31147
-// Upgrades: R026 (Animal War Training), Hotkey (Hotkey)
+// Upgrades: R026 (Kampftierausbildung), Hotkey (Hotkey)
 {
 X
 }
@@ -70327,7 +70327,7 @@ Transforms a killed enemy unit into a Worgen who lasts 60 seconds.
 }
 
 STRING 31392
-// Upgrades: R00U (Animal War Training), Hotkey (Hotkey)
+// Upgrades: R00U (Kampftierausbildung), Hotkey (Hotkey)
 {
 E
 }
@@ -70711,7 +70711,7 @@ Nachtelfen
 }
 
 STRING 31591
-// Upgrades: R01V (Animal War Training), Tip (Tooltip)
+// Upgrades: R01V (Kampftierausbildung), Tip (Tooltip)
 {
 Günstige Evolution erforschen - [|cffffcc00Stufe 68|r]
 }
@@ -71149,13 +71149,13 @@ Converts units into Night Elf units.
 }
 
 STRING 32038
-// Upgrades: R00U (Animal War Training), Hotkey (Hotkey)
+// Upgrades: R00U (Kampftierausbildung), Hotkey (Hotkey)
 {
 E
 }
 
 STRING 32040
-// Upgrades: R00U (Animal War Training), Hotkey (Hotkey)
+// Upgrades: R00U (Kampftierausbildung), Hotkey (Hotkey)
 {
 E
 }
@@ -71263,13 +71263,13 @@ Basic worker. Can summon structures, harvest gold and lumber, and Repair.|n|n|cf
 }
 
 STRING 32310
-// Upgrades: R00U (Animal War Training), Hotkey (Hotkey)
+// Upgrades: R00U (Kampftierausbildung), Hotkey (Hotkey)
 {
 E
 }
 
 STRING 32346
-// Upgrades: R00U (Animal War Training), Hotkey (Hotkey)
+// Upgrades: R00U (Kampftierausbildung), Hotkey (Hotkey)
 {
 E
 }
@@ -71281,7 +71281,7 @@ Druide in Wassergestalt wiederbeleben
 }
 
 STRING 32360
-// Upgrades: R00U (Animal War Training), Hotkey (Hotkey)
+// Upgrades: R00U (Kampftierausbildung), Hotkey (Hotkey)
 {
 E
 }
@@ -72091,7 +72091,7 @@ Händler von Draenor
 }
 
 STRING 32692
-// Upgrades: R00U (Animal War Training), Hotkey (Hotkey)
+// Upgrades: R00U (Kampftierausbildung), Hotkey (Hotkey)
 {
 E
 }
@@ -72181,7 +72181,7 @@ STRING 32726
 }
 
 STRING 32732
-// Upgrades: R00U (Animal War Training), Hotkey (Hotkey)
+// Upgrades: R00U (Kampftierausbildung), Hotkey (Hotkey)
 {
 E
 }
@@ -72433,7 +72433,7 @@ This unit is affected by Plünderaura. Each attack that does damage to an enemy 
 }
 
 STRING 32838
-// Upgrades: R00U (Animal War Training), Hotkey (Hotkey)
+// Upgrades: R00U (Kampftierausbildung), Hotkey (Hotkey)
 {
 E
 }
@@ -73063,7 +73063,7 @@ STRING 33475
 }
 
 STRING 33482
-// Upgrades: R00U (Animal War Training), Hotkey (Hotkey)
+// Upgrades: R00U (Kampftierausbildung), Hotkey (Hotkey)
 {
 E
 }
@@ -73465,13 +73465,13 @@ Troll-Medizinmann
 }
 
 STRING 33677
-// Upgrades: R00U (Animal War Training), Hotkey (Hotkey)
+// Upgrades: R00U (Kampftierausbildung), Hotkey (Hotkey)
 {
 E
 }
 
 STRING 33686
-// Upgrades: R00U (Animal War Training), Hotkey (Hotkey)
+// Upgrades: R00U (Kampftierausbildung), Hotkey (Hotkey)
 {
 E
 }
@@ -73993,15 +73993,15 @@ Ausbau zum Arcanite Troll Spears
 }
 
 STRING 33915
-// Units: h0PF (Gilneas Gunship), Name (Name)
+// Units: h0PF (Kanonenschiff von Gilneas), Name (Name)
 {
-Gilneas Gunship
+Kanonenschiff von Gilneas
 }
 
 STRING 33916
-// Units: h0PF (Gilneas Gunship), Tip (Tooltip - Basic)
+// Units: h0PF (Kanonenschiff von Gilneas), Tip (Tooltip - Basic)
 {
-Train Gilneas Gunship
+Kanonenschiff von Gilneas ausbilden
 }
 
 STRING 33917
@@ -74013,7 +74013,7 @@ Bannerträger
 STRING 33918
 // Units: h0NA (Banner Carrier), Tip (Tooltip - Basic)
 {
-Train Bannerträger
+Bannerträger ausbilden
 }
 
 STRING 33919
@@ -74263,7 +74263,7 @@ STRING 33980
 }
 
 STRING 33981
-// Abilities: A052 (Animal War Training), EditorSuffix (Editor Suffix)
+// Abilities: A052 (Kampftierausbildung), EditorSuffix (Editor Suffix)
 {
 (Icon) (Blutelfen)
 }
@@ -74365,9 +74365,9 @@ Blutelfen-Bogenschützin ausbilden
 }
 
 STRING 34008
-// Upgrades: R000 (Animal War Training), Tip (Tooltip)
+// Upgrades: R000 (Kampftierausbildung), Tip (Tooltip)
 {
-Research Blood Elf Animal War Training
+Research Blood Elf Kampftierausbildung
 }
 
 STRING 34015
@@ -74419,7 +74419,7 @@ STRING 34027
 }
 
 STRING 34031
-// Upgrades: R000 (Animal War Training), EditorSuffix (Editor Suffix)
+// Upgrades: R000 (Kampftierausbildung), EditorSuffix (Editor Suffix)
 {
 (Blutelfen)
 }
@@ -75607,7 +75607,7 @@ Speerkämpfer erforschen
 }
 
 STRING 34775
-// Upgrades: R01V (Animal War Training), Hotkey (Hotkey)
+// Upgrades: R01V (Kampftierausbildung), Hotkey (Hotkey)
 {
 C
 }
@@ -76111,7 +76111,7 @@ STRING 35069
 }
 
 STRING 35073
-// Upgrades: R01V (Animal War Training), Hotkey (Hotkey)
+// Upgrades: R01V (Kampftierausbildung), Hotkey (Hotkey)
 {
 C
 }
@@ -76705,7 +76705,7 @@ Upgrades Archers to Armbrustmen, giving them more damage but slower cooldown.
 }
 
 STRING 35181
-// Upgrades: R01V (Animal War Training), Hotkey (Hotkey)
+// Upgrades: R01V (Kampftierausbildung), Hotkey (Hotkey)
 {
 C
 }
@@ -81061,7 +81061,7 @@ STRING 36312
 }
 
 STRING 36313
-// Upgrades: R0AT (Animal War Training), EditorSuffix (Editor Suffix)
+// Upgrades: R0AT (Kampftierausbildung), EditorSuffix (Editor Suffix)
 {
 (Lordaeron)
 }
@@ -81289,7 +81289,7 @@ Entwaffnung
 }
 
 STRING 36360
-// Abilities: A1B7 (Animal War Training), EditorSuffix (Editor Suffix)
+// Abilities: A1B7 (Kampftierausbildung), EditorSuffix (Editor Suffix)
 {
  (Icon) (Lordaeron)
 }
@@ -81307,7 +81307,7 @@ STRING 36362
 }
 
 STRING 36363
-// Upgrades: R0AT (Animal War Training), Ubertip (Tooltip - Extended)
+// Upgrades: R0AT (Kampftierausbildung), Ubertip (Tooltip - Extended)
 {
 Increases the maximum hit points of Knights, Pegasus-Ritters, and Greifenreiters by <Rhan,base1>.
 }
@@ -82771,7 +82771,7 @@ N
 }
 
 STRING 37386
-// Upgrades: R01V (Animal War Training), Hotkey (Hotkey)
+// Upgrades: R01V (Kampftierausbildung), Hotkey (Hotkey)
 {
 C
 }
@@ -82831,7 +82831,7 @@ Ausbau zu Neruber-Waffen
 }
 
 STRING 37397
-// Upgrades: R01V (Animal War Training), Hotkey (Hotkey)
+// Upgrades: R01V (Kampftierausbildung), Hotkey (Hotkey)
 {
 C
 }
@@ -83085,13 +83085,13 @@ Oger-Stärke
 STRING 37449
 // Items: I0NQ (Advanced Glyph), Name (Name)
 {
-Advanced Glyph
+Fortgeschrittene Glyphe
 }
 
 STRING 37450
 // Items: I0NQ (Advanced Glyph), Tip (Tooltip - Basic)
 {
-Purchase Advanced Glyph
+Fortgeschrittene Glyphe erwerben
 }
 
 STRING 37451
@@ -83787,7 +83787,7 @@ Demolieren erforschen
 STRING 37607
 // Upgrades: R02R (Liquid Fire), Ubertip (Tooltip - Extended)
 {
-Gives Goblin-Kaisers the ability Demolieren.
+Verleiht Goblin-Kaisern die Fähigkeit 'Demolieren'.
 }
 
 STRING 37609
@@ -84043,19 +84043,19 @@ STRING 37659
 }
 
 STRING 37660
-// Upgrades: R02V (Animal War Training), Name (Name)
+// Upgrades: R02V (Kampftierausbildung), Name (Name)
 {
 Ölbohrungen
 }
 
 STRING 37661
-// Upgrades: R02V (Animal War Training), Tip (Tooltip)
+// Upgrades: R02V (Kampftierausbildung), Tip (Tooltip)
 {
 Ölbohrungen erforschen
 }
 
 STRING 37662
-// Upgrades: R02V (Animal War Training), Ubertip (Tooltip - Extended)
+// Upgrades: R02V (Kampftierausbildung), Ubertip (Tooltip - Extended)
 {
 Allows constructing Oil Derricks.
 }
@@ -84067,7 +84067,7 @@ STRING 37663
 }
 
 STRING 37667
-// Upgrades: R01V (Animal War Training), Hotkey (Hotkey)
+// Upgrades: R01V (Kampftierausbildung), Hotkey (Hotkey)
 {
 C
 }
@@ -84559,7 +84559,7 @@ Advanced Ancient Power
 }
 
 STRING 37810
-// Upgrades: R01V (Animal War Training), Hotkey (Hotkey)
+// Upgrades: R01V (Kampftierausbildung), Hotkey (Hotkey)
 {
 C
 }
@@ -85033,19 +85033,19 @@ I
 }
 
 STRING 37927
-// Upgrades: R01V (Animal War Training), Hotkey (Hotkey)
+// Upgrades: R01V (Kampftierausbildung), Hotkey (Hotkey)
 {
 C
 }
 
 STRING 37930
-// Upgrades: R01V (Animal War Training), Hotkey (Hotkey)
+// Upgrades: R01V (Kampftierausbildung), Hotkey (Hotkey)
 {
 C
 }
 
 STRING 37931
-// Upgrades: R01V (Animal War Training), Hotkey (Hotkey)
+// Upgrades: R01V (Kampftierausbildung), Hotkey (Hotkey)
 {
 C
 }
@@ -85753,13 +85753,13 @@ Mauer beschwören
 }
 
 STRING 38224
-// Upgrades: R02W (Animal War Training), Ubertip (Tooltip - Extended)
+// Upgrades: R02W (Kampftierausbildung), Ubertip (Tooltip - Extended)
 {
 Allows Randaliers to place Sprengstoff-Fasss which cause more damage than Goblin Land Mines.
 }
 
 STRING 38228
-// Upgrades: R02Y (Animal War Training), Ubertip (Tooltip - Extended)
+// Upgrades: R02Y (Kampftierausbildung), Ubertip (Tooltip - Extended)
 {
 Ermöglicht Sturmpanzern, die 'Schwarmraketen'-Fähigkeit zu benutzen.
 }
@@ -87295,13 +87295,13 @@ Allows Goblin-Dampfwalzes to cut down trees.
 }
 
 STRING 39637
-// Upgrades: R01V (Animal War Training), Tip (Tooltip)
+// Upgrades: R01V (Kampftierausbildung), Tip (Tooltip)
 {
 Günstige Evolution erforschen - [|cffffcc00Stufe 69|r]
 }
 
 STRING 39638
-// Upgrades: R01V (Animal War Training), Tip (Tooltip)
+// Upgrades: R01V (Kampftierausbildung), Tip (Tooltip)
 {
 Günstige Evolution erforschen - [|cffffcc00Stufe 70|r]
 }
@@ -87313,31 +87313,31 @@ Nachtelfen
 }
 
 STRING 39640
-// Upgrades: R01V (Animal War Training), Tip (Tooltip)
+// Upgrades: R01V (Kampftierausbildung), Tip (Tooltip)
 {
 Günstige Evolution erforschen - [|cffffcc00Stufe 71|r]
 }
 
 STRING 39641
-// Upgrades: R01V (Animal War Training), Tip (Tooltip)
+// Upgrades: R01V (Kampftierausbildung), Tip (Tooltip)
 {
 Günstige Evolution erforschen - [|cffffcc00Stufe 72|r]
 }
 
 STRING 39642
-// Upgrades: R01V (Animal War Training), Tip (Tooltip)
+// Upgrades: R01V (Kampftierausbildung), Tip (Tooltip)
 {
 Günstige Evolution erforschen - [|cffffcc00Stufe 73|r]
 }
 
 STRING 39643
-// Upgrades: R01V (Animal War Training), Tip (Tooltip)
+// Upgrades: R01V (Kampftierausbildung), Tip (Tooltip)
 {
 Günstige Evolution erforschen - [|cffffcc00Stufe 74|r]
 }
 
 STRING 39644
-// Upgrades: R01V (Animal War Training), Tip (Tooltip)
+// Upgrades: R01V (Kampftierausbildung), Tip (Tooltip)
 {
 Günstige Evolution erforschen - [|cffffcc00Stufe 75|r]
 }
@@ -87433,7 +87433,7 @@ Unterstützender Zauberer. Can initially cast Wirbelsturm, which stuns enemy gro
 }
 
 STRING 39660
-// Abilities: A1EX (Animal War Training), EditorSuffix (Editor Suffix)
+// Abilities: A1EX (Kampftierausbildung), EditorSuffix (Editor Suffix)
 {
  (Icon) (Worgen)
 }
@@ -87453,7 +87453,7 @@ Raketen
 STRING 39663
 // Abilities: A1EZ (Rockets), Ubertip (Tooltip - Normal - Extended)
 {
-Allows Gilneas Gunships to attack air units.
+Ermöglicht Kanonenschiffen von Gilneas, Luft-Einheiten anzugreifen.
 }
 
 STRING 39665
@@ -87507,7 +87507,7 @@ STRING 39673
 STRING 39676
 // Upgrades: R0BY (Flying Machine Bombs), Ubertip (Tooltip - Extended)
 {
-Allows Gilneas Gunships to attack air units.
+Ermöglicht Kanonenschiffen von Gilneas, Luft-Einheiten anzugreifen.
 }
 
 STRING 39677
@@ -87567,13 +87567,13 @@ Ausbau zur Magischen Mauer
 STRING 39686
 // Upgrades: R0C1 (Improved Lumber Harvesting,Advanced Lumber Harvesting), Name (Name)
 {
-Improved Night Harvest
+Verbesserte Nacht-Ernte
 }
 
 STRING 39687
 // Upgrades: R0C1 (Improved Lumber Harvesting,Advanced Lumber Harvesting), Name (Name)
 {
-Advanced Night Harvest
+Hoch entwickelte Nacht-Ernte
 }
 
 STRING 39688
@@ -87591,7 +87591,7 @@ rmin
 STRING 39690
 // Units: h0J9 (Cathedral), Ubertip (Tooltip - Extended)
 {
-Special building which can force the moon to appear. |n|n|cffffcc00Begrenzt auf 1.|r
+Spezialgebäude, das den Mond zum Erscheinen zwingen kann. |n|n|cffffcc00Begrenzt auf 1.|r
 }
 
 STRING 39691
@@ -87681,11 +87681,11 @@ Dient als Abladepunkt für das geschlagene Holz. |nBietet auch die Ausbaustufen 
 STRING 39708
 // Units: h0J8 (Manor), Ubertip (Tooltip - Extended)
 {
-Trains Hirnloser Worgen, and Sturmkrähen-Ritters. |nBietet auch die Ausbaustufen Improved Kritischer Schlag and Schleichendes Gift upgrades.
+Bildet Hirnlose Worgen und Sturmkrähen-Ritters aus. |nBietet auch die Ausbaustufen 'Verbesserter Kritischer Schlag' und 'Schleichendes Gift'.
 }
 
 STRING 39709
-// Units: h0PF (Gilneas Gunship), Ubertip (Tooltip - Extended)
+// Units: h0PF (Kanonenschiff von Gilneas), Ubertip (Tooltip - Extended)
 {
 Strong moving flying machine. Excellent at scouting, and effective against ground units. Can learn the Raketen upgrade. |nCan see invisible units. |n|n|cffffcc00Attacks ground units.|r
 }
@@ -87849,7 +87849,7 @@ Einkerkern
 STRING 39764
 // Abilities: A1F9 (Imprison), Ubertip (Tooltip - Normal - Extended)
 {
-Einkerkerns the target enemy unit the cage is destroyed.
+Kerkert die feindliche Ziel-Einheit ein bis der Käfig zerstört wird.
 }
 
 STRING 39765
@@ -87879,7 +87879,7 @@ Adds <A15Q,DataA1> bonus damage to the attack of a Hero when carried. The Hero's
 STRING 39770
 // Upgrades: R0C1 (Improved Lumber Harvesting,Advanced Lumber Harvesting), Tip (Tooltip)
 {
-Improved Night Harvest
+Verbesserte Nacht-Ernte
 }
 
 STRING 39771
@@ -87921,19 +87921,19 @@ STRING 39777
 STRING 39778
 // Upgrades: R0C5 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Name (Name)
 {
-Worgen Claws
+Worgen-Klauen
 }
 
 STRING 39779
 // Upgrades: R0C5 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Name (Name)
 {
-Improved Worgen Claws
+Verbesserte Worgen-Klauen
 }
 
 STRING 39780
 // Upgrades: R0C5 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Name (Name)
 {
-Advanced Worgen Claws
+Hoch entwickelte Worgen-Klauen
 }
 
 STRING 39781
@@ -88047,7 +88047,7 @@ Contains upgrades for improved armor, weaponry and Worgen traits.
 STRING 39800
 // Units: h0JE (Workshop), Ubertip (Tooltip - Extended)
 {
-Produces Gilneas Gunships, Mantikors, and Bannerträgers. |nBietet auch die Ausbaustufen Raketen, Cargo, Sperrfeuer, and Menschlicher Mut upgrades.
+Produces Kanonenschiff von Gilneass, Mantikors, and Bannerträgers. |nBietet auch die Ausbaustufen Raketen, Cargo, Sperrfeuer, and Menschlicher Mut upgrades.
 }
 
 STRING 39801
@@ -88149,7 +88149,7 @@ Ladung erforschen
 STRING 39817
 // Upgrades: R0CA (Cloud), Ubertip (Tooltip - Extended)
 {
-Provides Gilneas Gunships with the Cargo ability, which allows transporting units.
+Provides Kanonenschiff von Gilneass with the Cargo ability, which allows transporting units.
 }
 
 STRING 39818
@@ -88519,7 +88519,7 @@ STRING 39939
 }
 
 STRING 39940
-// Upgrades: R0BX (Animal War Training), EditorSuffix (Editor Suffix)
+// Upgrades: R0BX (Kampftierausbildung), EditorSuffix (Editor Suffix)
 {
 (Worgen)
 }
@@ -89119,7 +89119,7 @@ STRING 40167
 }
 
 STRING 40168
-// Units: n0FR (Murloc Tiderunner), EditorSuffix (Name - Editor Suffix)
+// Units: n0FR (Murloc-Gezeitenläufer), EditorSuffix (Name - Editor Suffix)
 {
 (Murlocs)
 }
@@ -90631,9 +90631,9 @@ Meteor
 }
 
 STRING 40749
-// Units: E01P (Druid Spider Form), Name (Name)
+// Units: E01P (Druide in Spinnengestalt), Name (Name)
 {
-Druid Spider Form
+Druide in Spinnengestalt
 }
 
 STRING 40772
@@ -90655,9 +90655,9 @@ STRING 40778
 }
 
 STRING 40779
-// Units: E01P (Druid Spider Form), Awakentip (Tooltip - Awaken)
+// Units: E01P (Druide in Spinnengestalt), Awakentip (Tooltip - Awaken)
 {
-Revive Druid Spider Form
+Revive Druide in Spinnengestalt
 }
 
 STRING 40780
@@ -90685,39 +90685,39 @@ STRING 40853
 }
 
 STRING 40865
-// Units: E01P (Druid Spider Form), Revivetip (Tooltip - Revive)
+// Units: E01P (Druide in Spinnengestalt), Revivetip (Tooltip - Revive)
 {
-Revive Druid Spider Form
+Druide in Spinnengestalt wiederbeleben
 }
 
 STRING 40866
-// Units: E01P (Druid Spider Form), Tip (Tooltip - Basic)
+// Units: E01P (Druide in Spinnengestalt), Tip (Tooltip - Basic)
 {
-Summon Druid Spider Form
+Druide in Spinnengestalt beschwören
 }
 
 STRING 40867
 // Units: E01Q (Druid Stag Form), Name (Name)
 {
-Druid Hirschgestalt
+Druide in Hirschgestalt
 }
 
 STRING 40868
 // Units: E01Q (Druid Stag Form), Awakentip (Tooltip - Awaken)
 {
-Revive Druid Hirschgestalt
+Druide in Hirschgestalt wiederbeleben
 }
 
 STRING 40869
 // Units: E01Q (Druid Stag Form), Revivetip (Tooltip - Revive)
 {
-Revive Druid Hirschgestalt
+Druide in Hirschgestalt wiederbeleben
 }
 
 STRING 40870
 // Units: E01Q (Druid Stag Form), Tip (Tooltip - Basic)
 {
-Summon Druid Hirschgestalt
+Druide in Hirschgestalt beschwören
 }
 
 STRING 40886
@@ -90735,59 +90735,59 @@ Zauberer-Produktionsgebäude. Bildet Schamanen und Heiler aus. |nAlso contains s
 STRING 40888
 // Units: n0FF (Chieftain), Tip (Tooltip - Basic)
 {
-Train Chieftain
+Häuptling ausbilden
 }
 
 STRING 40889
-// Units: n0FU (Multi-Tier Hydra), Name (Name)
+// Units: n0FU (Mehrstufige Hydra), Name (Name)
 {
-Multi-Tier Hydra
+Mehrstufige Hydra
 }
 
 STRING 40890
-// Units: n0FU (Multi-Tier Hydra), Tip (Tooltip - Basic)
+// Units: n0FU (Mehrstufige Hydra), Tip (Tooltip - Basic)
 {
-Hire Multi-Tier Hydra
+Mehrstufige Hydra anheuern
 }
 
 STRING 40891
-// Units: n0FU (Multi-Tier Hydra), EditorSuffix (Name - Editor Suffix)
+// Units: n0FU (Mehrstufige Hydra), EditorSuffix (Name - Editor Suffix)
 {
 (Stufe 1)
 }
 
 STRING 40892
-// Units: n0FV (Multi-Tier Hydra), Name (Name)
+// Units: n0FV (Mehrstufige Hydra), Name (Name)
 {
-Multi-Tier Hydra
+Mehrstufige Hydra
 }
 
 STRING 40893
-// Units: n0FV (Multi-Tier Hydra), Tip (Tooltip - Basic)
+// Units: n0FV (Mehrstufige Hydra), Tip (Tooltip - Basic)
 {
-Hire Multi-Tier Hydra
+Mehrstufige Hydra anheuern
 }
 
 STRING 40894
-// Units: n0FV (Multi-Tier Hydra), EditorSuffix (Name - Editor Suffix)
+// Units: n0FV (Mehrstufige Hydra), EditorSuffix (Name - Editor Suffix)
 {
 (Stufe 2)
 }
 
 STRING 40895
-// Units: n0FW (Multi-Tier Hydra), Name (Name)
+// Units: n0FW (Mehrstufige Hydra), Name (Name)
 {
-Multi-Tier Hydra
+Mehrstufige Hydra
 }
 
 STRING 40896
-// Units: n0FW (Multi-Tier Hydra), Tip (Tooltip - Basic)
+// Units: n0FW (Mehrstufige Hydra), Tip (Tooltip - Basic)
 {
-Hire Multi-Tier Hydra
+Mehrstufige Hydra anheuern
 }
 
 STRING 40897
-// Units: n0FW (Multi-Tier Hydra), EditorSuffix (Name - Editor Suffix)
+// Units: n0FW (Mehrstufige Hydra), EditorSuffix (Name - Editor Suffix)
 {
 (Stufe 3)
 }
@@ -90961,9 +90961,9 @@ STRING 41050
 }
 
 STRING 41051
-// Units: n0FR (Murloc Tiderunner), Tip (Tooltip - Basic)
+// Units: n0FR (Murloc-Gezeitenläufer), Tip (Tooltip - Basic)
 {
-Train Murloc Tiderunner
+Train Murloc-Gezeitenläufer
 }
 
 STRING 41052
@@ -91225,7 +91225,7 @@ Platziert eine Reuse, die <A1GS,Dur1> Sekunden lang Fische erzeugt.
 }
 
 STRING 41120
-// Upgrades: R01V (Animal War Training), Hotkey (Hotkey)
+// Upgrades: R01V (Kampftierausbildung), Hotkey (Hotkey)
 {
 C
 }
@@ -92107,7 +92107,7 @@ Enables Speerkämpfer to use the Einschnüren ability. Einschnüren causes a tar
 }
 
 STRING 41358
-// Upgrades: R01V (Animal War Training), Hotkey (Hotkey)
+// Upgrades: R01V (Kampftierausbildung), Hotkey (Hotkey)
 {
 C
 }
@@ -92437,7 +92437,7 @@ L
 }
 
 STRING 41428
-// Upgrades: R01V (Animal War Training), Hotkey (Hotkey)
+// Upgrades: R01V (Kampftierausbildung), Hotkey (Hotkey)
 {
 C
 }
@@ -93541,13 +93541,13 @@ Fremdland
 }
 
 STRING 41948
-// Upgrades: R06M (Animal War Training), Name (Name)
+// Upgrades: R06M (Kampftierausbildung), Name (Name)
 {
 Drachenkunde
 }
 
 STRING 41949
-// Upgrades: R06M (Animal War Training), Tip (Tooltip)
+// Upgrades: R06M (Kampftierausbildung), Tip (Tooltip)
 {
 Drachenkunde erforschen
 }
@@ -96865,7 +96865,7 @@ Arbeiter
 }
 
 STRING 43284
-// Upgrades: R01V (Animal War Training), Hotkey (Hotkey)
+// Upgrades: R01V (Kampftierausbildung), Hotkey (Hotkey)
 {
 C
 }
@@ -96919,7 +96919,7 @@ STRING 43298
 }
 
 STRING 43299
-// Upgrades: R01V (Animal War Training), Hotkey (Hotkey)
+// Upgrades: R01V (Kampftierausbildung), Hotkey (Hotkey)
 {
 C
 }
@@ -97639,7 +97639,7 @@ Ausrüstungstasche
 }
 
 STRING 43504
-// Upgrades: R01V (Animal War Training), Hotkey (Hotkey)
+// Upgrades: R01V (Kampftierausbildung), Hotkey (Hotkey)
 {
 C
 }
@@ -98371,13 +98371,13 @@ Archimonde beschwören
 }
 
 STRING 43765
-// Upgrades: R04W (Animal War Training), Name (Name)
+// Upgrades: R04W (Kampftierausbildung), Name (Name)
 {
 Heldenstufe 30
 }
 
 STRING 43766
-// Upgrades: R04W (Animal War Training), Tip (Tooltip)
+// Upgrades: R04W (Kampftierausbildung), Tip (Tooltip)
 {
 Heldenstufe 30
 }
@@ -98857,7 +98857,7 @@ Spellcasting warrior of the Ogre Legion. Can cast Tote erwecken. |n|n|cffffcc00G
 }
 
 STRING 44055
-// Upgrades: R01V (Animal War Training), Hotkey (Hotkey)
+// Upgrades: R01V (Kampftierausbildung), Hotkey (Hotkey)
 {
 C
 }
@@ -98911,13 +98911,13 @@ Auswahlmodus
 }
 
 STRING 44595
-// Upgrades: R04U (Animal War Training), Name (Name)
+// Upgrades: R04U (Kampftierausbildung), Name (Name)
 {
 Heldenstufe 25
 }
 
 STRING 44596
-// Upgrades: R04U (Animal War Training), Tip (Tooltip)
+// Upgrades: R04U (Kampftierausbildung), Tip (Tooltip)
 {
 Heldenstufe 25
 }
@@ -100417,13 +100417,13 @@ Absitzen
 }
 
 STRING 46005
-// Upgrades: R0EY (Animal War Training), Ubertip (Tooltip - Extended)
+// Upgrades: R0EY (Kampftierausbildung), Ubertip (Tooltip - Extended)
 {
 Unmounts when the horse is being killed and continues fighting on foot.
 }
 
 STRING 46006
-// Abilities: A1P2 (Animal War Training), EditorSuffix (Editor Suffix)
+// Abilities: A1P2 (Kampftierausbildung), EditorSuffix (Editor Suffix)
 {
 (Icon) (Sturmwind)
 }
@@ -100507,13 +100507,13 @@ STRING 46020
 }
 
 STRING 46021
-// Upgrades: R0EY (Animal War Training), Name (Name)
+// Upgrades: R0EY (Kampftierausbildung), Name (Name)
 {
 Absteigen
 }
 
 STRING 46022
-// Upgrades: R0EY (Animal War Training), Tip (Tooltip)
+// Upgrades: R0EY (Kampftierausbildung), Tip (Tooltip)
 {
 Absteigen erforschen
 }
@@ -100693,7 +100693,7 @@ Gronn-Keulen erforschen
 }
 
 STRING 46056
-// Upgrades: R01V (Animal War Training), Hotkey (Hotkey)
+// Upgrades: R01V (Kampftierausbildung), Hotkey (Hotkey)
 {
 C
 }
@@ -100831,7 +100831,7 @@ STRING 46123
 }
 
 STRING 46124
-// Upgrades: R0EY (Animal War Training), EditorSuffix (Editor Suffix)
+// Upgrades: R0EY (Kampftierausbildung), EditorSuffix (Editor Suffix)
 {
 (Sturmwind)
 }
@@ -100861,7 +100861,7 @@ Magier-Meister-Ausbildung
 }
 
 STRING 46129
-// Upgrades: R0EZ (Animal War Training), EditorSuffix (Editor Suffix)
+// Upgrades: R0EZ (Kampftierausbildung), EditorSuffix (Editor Suffix)
 {
 (Sturmwind)
 }
@@ -100921,7 +100921,7 @@ The Kombinierer crafts a Meister Kombinationswerkzeug.
 }
 
 STRING 46143
-// Upgrades: R01V (Animal War Training), Hotkey (Hotkey)
+// Upgrades: R01V (Kampftierausbildung), Hotkey (Hotkey)
 {
 C
 }
@@ -100981,13 +100981,13 @@ N
 }
 
 STRING 46302
-// Upgrades: R01V (Animal War Training), Hotkey (Hotkey)
+// Upgrades: R01V (Kampftierausbildung), Hotkey (Hotkey)
 {
 C
 }
 
 STRING 46303
-// Upgrades: R01V (Animal War Training), Hotkey (Hotkey)
+// Upgrades: R01V (Kampftierausbildung), Hotkey (Hotkey)
 {
 C
 }
@@ -101077,13 +101077,13 @@ Kurdran,Bor Stonebreaker,Munin Ironcliff,Thorgas Broadaxe,Kelv Sternhammer,Grim 
 }
 
 STRING 46341
-// Upgrades: R01V (Animal War Training), Hotkey (Hotkey)
+// Upgrades: R01V (Kampftierausbildung), Hotkey (Hotkey)
 {
 C
 }
 
 STRING 46342
-// Upgrades: R01V (Animal War Training), Hotkey (Hotkey)
+// Upgrades: R01V (Kampftierausbildung), Hotkey (Hotkey)
 {
 C
 }
@@ -102151,7 +102151,7 @@ D
 }
 
 STRING 47706
-// Upgrades: R01V (Animal War Training), Hotkey (Hotkey)
+// Upgrades: R01V (Kampftierausbildung), Hotkey (Hotkey)
 {
 C
 }
@@ -102205,7 +102205,7 @@ STRING 48148
 }
 
 STRING 48149
-// Upgrades: R01V (Animal War Training), Hotkey (Hotkey)
+// Upgrades: R01V (Kampftierausbildung), Hotkey (Hotkey)
 {
 C
 }
@@ -102265,7 +102265,7 @@ STRING 48165
 }
 
 STRING 48167
-// Upgrades: R01V (Animal War Training), Hotkey (Hotkey)
+// Upgrades: R01V (Kampftierausbildung), Hotkey (Hotkey)
 {
 C
 }
@@ -102331,13 +102331,13 @@ Zauberer wiederbeleben
 }
 
 STRING 48202
-// Upgrades: R04X (Animal War Training), Name (Name)
+// Upgrades: R04X (Kampftierausbildung), Name (Name)
 {
 Heldenstufe 40
 }
 
 STRING 48203
-// Upgrades: R04X (Animal War Training), Tip (Tooltip)
+// Upgrades: R04X (Kampftierausbildung), Tip (Tooltip)
 {
 Heldenstufe 40
 }
@@ -102643,7 +102643,7 @@ Winzige Waffenkammer errichten
 }
 
 STRING 48581
-// Upgrades: R01V (Animal War Training), Hotkey (Hotkey)
+// Upgrades: R01V (Kampftierausbildung), Hotkey (Hotkey)
 {
 C
 }
@@ -103909,7 +103909,7 @@ STRING 49102
 }
 
 STRING 49103
-// Upgrades: R01V (Animal War Training), Hotkey (Hotkey)
+// Upgrades: R01V (Kampftierausbildung), Hotkey (Hotkey)
 {
 C
 }
@@ -104491,7 +104491,7 @@ STRING 49289
 }
 
 STRING 49290
-// Upgrades: R01V (Animal War Training), Hotkey (Hotkey)
+// Upgrades: R01V (Kampftierausbildung), Hotkey (Hotkey)
 {
 C
 }
@@ -105265,7 +105265,7 @@ Allows harvesting minerals and increases attack damage against structures. Miner
 }
 
 STRING 49641
-// Upgrades: R01V (Animal War Training), Hotkey (Hotkey)
+// Upgrades: R01V (Kampftierausbildung), Hotkey (Hotkey)
 {
 C
 }
@@ -105397,7 +105397,7 @@ Entwickler
 }
 
 STRING 49740
-// Upgrades: R0EY (Animal War Training), Hotkey (Hotkey)
+// Upgrades: R0EY (Kampftierausbildung), Hotkey (Hotkey)
 {
 U
 }
@@ -107836,7 +107836,7 @@ Erlaubt Bürgern den Bau a Murloc-Fischer to protect your base.
 }
 
 STRING 50611
-// Upgrades: R01V (Animal War Training), Hotkey (Hotkey)
+// Upgrades: R01V (Kampftierausbildung), Hotkey (Hotkey)
 {
 C
 }
@@ -108826,7 +108826,7 @@ Eine intelligente Gesichtslosen-Bürgerin. Hat eine Manaregenerations-Aura.
 }
 
 STRING 50891
-// Upgrades: R01V (Animal War Training), Hotkey (Hotkey)
+// Upgrades: R01V (Kampftierausbildung), Hotkey (Hotkey)
 {
 C
 }
@@ -110248,7 +110248,7 @@ Turns the Kriegsmaschine back into an undeployed position, giving it a shorter a
 }
 
 STRING 51364
-// Upgrades: R01V (Animal War Training), Hotkey (Hotkey)
+// Upgrades: R01V (Kampftierausbildung), Hotkey (Hotkey)
 {
 C
 }
@@ -110332,7 +110332,7 @@ STRING 51384
 }
 
 STRING 51388
-// Upgrades: R01V (Animal War Training), Hotkey (Hotkey)
+// Upgrades: R01V (Kampftierausbildung), Hotkey (Hotkey)
 {
 C
 }
@@ -111060,7 +111060,7 @@ Primäres Gebäude, wird zum Ausbilden von Arbeitern und zum Einlagern gesammelt
 STRING 51642
 // Units: h0MH (Barracks), Ubertip (Tooltip - Extended)
 {
-Primäres Truppen-Produktionsgebäude. Trains Footmen, Archers, and Knights. |nBietet auch die Ausbaustufen Verteidigen, Verbessertes Bogenschießen, Armbrustmen, Speerkämpfer, and Animal War Training upgrades.
+Primäres Truppen-Produktionsgebäude. Trains Footmen, Archers, and Knights. |nBietet auch die Ausbaustufen Verteidigen, Verbessertes Bogenschießen, Armbrustmen, Speerkämpfer, and Kampftierausbildung upgrades.
 }
 
 STRING 51643
@@ -111084,7 +111084,7 @@ Trains Priests, Zauberinnen, and Mages. |nAlso contains spell upgrades for Pries
 STRING 51647
 // Units: h0RB (Barracks), Ubertip (Tooltip - Extended)
 {
-Primäres Truppen-Produktionsgebäude. Trains Footmen, Rangers and Knights. |nBietet auch die Ausbaustufen Verteidigen, Improved Bows, Marksmanship, Unmount, Animal War Training, and Sundering Blades upgrades.
+Primäres Truppen-Produktionsgebäude. Trains Footmen, Rangers and Knights. |nBietet auch die Ausbaustufen Verteidigen, Improved Bows, Marksmanship, Unmount, Kampftierausbildung, and Sundering Blades upgrades.
 }
 
 STRING 51652
@@ -112062,7 +112062,7 @@ Die Fähigkeit, in der Nacht genauso weit zu sehen wie am Tage.
 }
 
 STRING 52375
-// Upgrades: R01V (Animal War Training), Hotkey (Hotkey)
+// Upgrades: R01V (Kampftierausbildung), Hotkey (Hotkey)
 {
 C
 }
@@ -112230,7 +112230,7 @@ This unit has parried. Attacks are parried.
 }
 
 STRING 52937
-// Upgrades: R02W (Animal War Training), Name (Name)
+// Upgrades: R02W (Kampftierausbildung), Name (Name)
 {
 Sprengstoff-Fass
 }
@@ -112842,7 +112842,7 @@ STRING 53740
 }
 
 STRING 53742
-// Upgrades: R01V (Animal War Training), Hotkey (Hotkey)
+// Upgrades: R01V (Kampftierausbildung), Hotkey (Hotkey)
 {
 C
 }
@@ -113124,19 +113124,19 @@ STRING 54067
 }
 
 STRING 54068
-// Upgrades: R01V (Animal War Training), Hotkey (Hotkey)
+// Upgrades: R01V (Kampftierausbildung), Hotkey (Hotkey)
 {
 C
 }
 
 STRING 54069
-// Upgrades: R01V (Animal War Training), Hotkey (Hotkey)
+// Upgrades: R01V (Kampftierausbildung), Hotkey (Hotkey)
 {
 C
 }
 
 STRING 54070
-// Upgrades: R01V (Animal War Training), Hotkey (Hotkey)
+// Upgrades: R01V (Kampftierausbildung), Hotkey (Hotkey)
 {
 C
 }
@@ -113322,13 +113322,13 @@ STRING 54101
 }
 
 STRING 54102
-// Upgrades: R02V (Animal War Training), EditorSuffix (Editor Suffix)
+// Upgrades: R02V (Kampftierausbildung), EditorSuffix (Editor Suffix)
 {
 (Goblins)
 }
 
 STRING 54103
-// Upgrades: R02W (Animal War Training), EditorSuffix (Editor Suffix)
+// Upgrades: R02W (Kampftierausbildung), EditorSuffix (Editor Suffix)
 {
 (Goblins)
 }
@@ -113340,7 +113340,7 @@ STRING 54104
 }
 
 STRING 54105
-// Upgrades: R02Y (Animal War Training), EditorSuffix (Editor Suffix)
+// Upgrades: R02Y (Kampftierausbildung), EditorSuffix (Editor Suffix)
 {
 (Goblins)
 }
@@ -113490,7 +113490,7 @@ STRING 54460
 }
 
 STRING 54461
-// Upgrades: R01V (Animal War Training), Hotkey (Hotkey)
+// Upgrades: R01V (Kampftierausbildung), Hotkey (Hotkey)
 {
 C
 }
@@ -113544,7 +113544,7 @@ STRING 54470
 }
 
 STRING 54472
-// Upgrades: R01V (Animal War Training), Hotkey (Hotkey)
+// Upgrades: R01V (Kampftierausbildung), Hotkey (Hotkey)
 {
 C
 }
@@ -113904,7 +113904,7 @@ STRING 54957
 }
 
 STRING 54958
-// Upgrades: R01V (Animal War Training), Hotkey (Hotkey)
+// Upgrades: R01V (Kampftierausbildung), Hotkey (Hotkey)
 {
 C
 }
@@ -114861,7 +114861,7 @@ Belagerungsdrachenschildkröte
 }
 
 STRING 55427
-// Upgrades: R01V (Animal War Training), Hotkey (Hotkey)
+// Upgrades: R01V (Kampftierausbildung), Hotkey (Hotkey)
 {
 C
 }
@@ -114935,7 +114935,7 @@ STRING 55445
 STRING 55446
 // Units: n0FQ (Barracks), Ubertip (Tooltip - Extended)
 {
-Trains Murloc Tiderunners, Murloc Huntsmen and Murloc-Fleischfressers.
+Bildet Murloc-Gezeitenläufer, Murloc-Jäger und Murloc-Fleischfresser aus.
 }
 
 STRING 55448
@@ -114969,7 +114969,7 @@ Verleiht eine Chance von <A211,DataA1>% chance that an attack will deal <A211,Da
 }
 
 STRING 55456
-// Upgrades: R01V (Animal War Training), Hotkey (Hotkey)
+// Upgrades: R01V (Kampftierausbildung), Hotkey (Hotkey)
 {
 C
 }
@@ -115680,7 +115680,7 @@ STRING 55829
 }
 
 STRING 55830
-// Upgrades: R01V (Animal War Training), Hotkey (Hotkey)
+// Upgrades: R01V (Kampftierausbildung), Hotkey (Hotkey)
 {
 C
 }
@@ -115776,7 +115776,7 @@ Converts non-Undead player units into Undead  player units.
 }
 
 STRING 55865
-// Upgrades: R01V (Animal War Training), Hotkey (Hotkey)
+// Upgrades: R01V (Kampftierausbildung), Hotkey (Hotkey)
 {
 C
 }
@@ -116280,7 +116280,7 @@ Ruft den Geist einer Kuh herbei, um den Spieler zu retten.
 }
 
 STRING 56172
-// Upgrades: R01V (Animal War Training), Hotkey (Hotkey)
+// Upgrades: R01V (Kampftierausbildung), Hotkey (Hotkey)
 {
 C
 }
@@ -117336,7 +117336,7 @@ Initiand, Adept, Meister
 }
 
 STRING 56563
-// Upgrades: R01V (Animal War Training), Hotkey (Hotkey)
+// Upgrades: R01V (Kampftierausbildung), Hotkey (Hotkey)
 {
 C
 }
@@ -118790,7 +118790,7 @@ Goblin-Rennen-Auto beschwören
 }
 
 STRING 57297
-// Units: n0MW (Goblin Race Checkpoint), EditorSuffix (Name - Editor Suffix)
+// Units: n0MW (Goblin-Rennen-Checkpoint), EditorSuffix (Name - Editor Suffix)
 {
 (Goblin Quest 2)
 }
@@ -118798,7 +118798,7 @@ STRING 57297
 STRING 57298
 // Abilities: A23I (Item Flame Strike), Name (Name)
 {
-Item Flammenschlag
+Gegenstand Flammenschlag
 }
 
 STRING 57299
@@ -118814,9 +118814,9 @@ Pokal Dritter Platz Fremdland
 }
 
 STRING 57307
-// Units: n0MW (Goblin Race Checkpoint), Name (Name)
+// Units: n0MW (Goblin-Rennen-Checkpoint), Name (Name)
 {
-Goblin Race Checkpoint
+Goblin-Rennen-Checkpoint
 }
 
 STRING 57318
@@ -118976,7 +118976,7 @@ Freiberufler erhalten mehr Erfahrung durch die Tötung von Einheiten und beginne
 }
 
 STRING 57378
-// Upgrades: R04V (Animal War Training), Name (Name)
+// Upgrades: R04V (Kampftierausbildung), Name (Name)
 {
 Kriegsherr
 }
@@ -119042,13 +119042,13 @@ Errichtet einen Altar der Sonne.
 }
 
 STRING 57391
-// Upgrades: R01W (Animal War Training), Name (Name)
+// Upgrades: R01W (Kampftierausbildung), Name (Name)
 {
 Freiberufler
 }
 
 STRING 57392
-// Upgrades: R01W (Animal War Training), Tip (Tooltip)
+// Upgrades: R01W (Kampftierausbildung), Tip (Tooltip)
 {
 Freiberufler
 }
@@ -120002,7 +120002,7 @@ STRING 57659
 }
 
 STRING 57660
-// Upgrades: R01V (Animal War Training), Hotkey (Hotkey)
+// Upgrades: R01V (Kampftierausbildung), Hotkey (Hotkey)
 {
 C
 }
@@ -122300,7 +122300,7 @@ STRING 58551
 }
 
 STRING 58552
-// Upgrades: R044 (Animal War Training), EditorSuffix (Editor Suffix)
+// Upgrades: R044 (Kampftierausbildung), EditorSuffix (Editor Suffix)
 {
 (Zwerge)
 }
@@ -122630,157 +122630,157 @@ A big gold treasure from the mines of Ironforge.
 }
 
 STRING 59091
-// Upgrades: R01V (Animal War Training), Hotkey (Hotkey)
+// Upgrades: R01V (Kampftierausbildung), Hotkey (Hotkey)
 {
 C
 }
 
 STRING 59092
-// Upgrades: R01V (Animal War Training), Hotkey (Hotkey)
+// Upgrades: R01V (Kampftierausbildung), Hotkey (Hotkey)
 {
 C
 }
 
 STRING 59093
-// Upgrades: R01V (Animal War Training), Hotkey (Hotkey)
+// Upgrades: R01V (Kampftierausbildung), Hotkey (Hotkey)
 {
 C
 }
 
 STRING 59094
-// Upgrades: R01V (Animal War Training), Hotkey (Hotkey)
+// Upgrades: R01V (Kampftierausbildung), Hotkey (Hotkey)
 {
 C
 }
 
 STRING 59095
-// Upgrades: R01V (Animal War Training), Hotkey (Hotkey)
+// Upgrades: R01V (Kampftierausbildung), Hotkey (Hotkey)
 {
 C
 }
 
 STRING 59096
-// Upgrades: R01V (Animal War Training), Hotkey (Hotkey)
+// Upgrades: R01V (Kampftierausbildung), Hotkey (Hotkey)
 {
 C
 }
 
 STRING 59097
-// Upgrades: R01V (Animal War Training), Hotkey (Hotkey)
+// Upgrades: R01V (Kampftierausbildung), Hotkey (Hotkey)
 {
 C
 }
 
 STRING 59098
-// Upgrades: R01V (Animal War Training), Hotkey (Hotkey)
+// Upgrades: R01V (Kampftierausbildung), Hotkey (Hotkey)
 {
 C
 }
 
 STRING 59099
-// Upgrades: R01V (Animal War Training), Hotkey (Hotkey)
+// Upgrades: R01V (Kampftierausbildung), Hotkey (Hotkey)
 {
 C
 }
 
 STRING 59100
-// Upgrades: R01V (Animal War Training), Hotkey (Hotkey)
+// Upgrades: R01V (Kampftierausbildung), Hotkey (Hotkey)
 {
 C
 }
 
 STRING 59101
-// Upgrades: R01V (Animal War Training), Hotkey (Hotkey)
+// Upgrades: R01V (Kampftierausbildung), Hotkey (Hotkey)
 {
 C
 }
 
 STRING 59102
-// Upgrades: R01V (Animal War Training), Hotkey (Hotkey)
+// Upgrades: R01V (Kampftierausbildung), Hotkey (Hotkey)
 {
 C
 }
 
 STRING 59103
-// Upgrades: R01V (Animal War Training), Hotkey (Hotkey)
+// Upgrades: R01V (Kampftierausbildung), Hotkey (Hotkey)
 {
 C
 }
 
 STRING 59104
-// Upgrades: R01V (Animal War Training), Hotkey (Hotkey)
+// Upgrades: R01V (Kampftierausbildung), Hotkey (Hotkey)
 {
 C
 }
 
 STRING 59105
-// Upgrades: R01V (Animal War Training), Hotkey (Hotkey)
+// Upgrades: R01V (Kampftierausbildung), Hotkey (Hotkey)
 {
 C
 }
 
 STRING 59106
-// Upgrades: R01V (Animal War Training), Hotkey (Hotkey)
+// Upgrades: R01V (Kampftierausbildung), Hotkey (Hotkey)
 {
 C
 }
 
 STRING 59107
-// Upgrades: R01V (Animal War Training), Hotkey (Hotkey)
+// Upgrades: R01V (Kampftierausbildung), Hotkey (Hotkey)
 {
 C
 }
 
 STRING 59108
-// Upgrades: R01V (Animal War Training), Hotkey (Hotkey)
+// Upgrades: R01V (Kampftierausbildung), Hotkey (Hotkey)
 {
 C
 }
 
 STRING 59109
-// Upgrades: R01V (Animal War Training), Hotkey (Hotkey)
+// Upgrades: R01V (Kampftierausbildung), Hotkey (Hotkey)
 {
 C
 }
 
 STRING 59110
-// Upgrades: R01V (Animal War Training), Hotkey (Hotkey)
+// Upgrades: R01V (Kampftierausbildung), Hotkey (Hotkey)
 {
 C
 }
 
 STRING 59111
-// Upgrades: R01V (Animal War Training), Hotkey (Hotkey)
+// Upgrades: R01V (Kampftierausbildung), Hotkey (Hotkey)
 {
 C
 }
 
 STRING 59112
-// Upgrades: R01V (Animal War Training), Hotkey (Hotkey)
+// Upgrades: R01V (Kampftierausbildung), Hotkey (Hotkey)
 {
 C
 }
 
 STRING 59113
-// Upgrades: R01V (Animal War Training), Hotkey (Hotkey)
+// Upgrades: R01V (Kampftierausbildung), Hotkey (Hotkey)
 {
 C
 }
 
 STRING 59114
-// Upgrades: R01V (Animal War Training), Hotkey (Hotkey)
+// Upgrades: R01V (Kampftierausbildung), Hotkey (Hotkey)
 {
 C
 }
 
 STRING 59115
-// Upgrades: R01V (Animal War Training), Hotkey (Hotkey)
+// Upgrades: R01V (Kampftierausbildung), Hotkey (Hotkey)
 {
 C
 }
 
 STRING 59116
-// Upgrades: R01V (Animal War Training), Hotkey (Hotkey)
+// Upgrades: R01V (Kampftierausbildung), Hotkey (Hotkey)
 {
 C
 }
@@ -123238,7 +123238,7 @@ STRING 60178
 STRING 60179
 // Units: h04M (Dragonhawk Rider), Ubertip (Tooltip - Extended)
 {
-Swift flying unit, mounted by an Elven warrior. Has the Aerial Shackles ability, which allows it to immobilize and disarm enemy air units temporarily. Can learn Blood Elf Animal War Training, and the Cloud ability. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
+Swift flying unit, mounted by an Elven warrior. Has the Aerial Shackles ability, which allows it to immobilize and disarm enemy air units temporarily. Can learn Blood Elf Kampftierausbildung, and the Cloud ability. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
 }
 
 STRING 60180
@@ -123848,7 +123848,7 @@ STRING 61103
 }
 
 STRING 61104
-// Upgrades: R04F (Animal War Training), EditorSuffix (Editor Suffix)
+// Upgrades: R04F (Kampftierausbildung), EditorSuffix (Editor Suffix)
 {
 (Hochelfen)
 }
