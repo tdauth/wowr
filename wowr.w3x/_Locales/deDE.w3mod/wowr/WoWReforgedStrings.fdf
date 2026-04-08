@@ -940,7 +940,10 @@ StringList {
     SETTINGS_VICTORY                   "- Sieg: %1%",
     SETTINGS_SEASONS                   "- Jahreszeiten: %1%",
     SETTINGS_CHEATS                    "- Cheats: %1%",
-    SETTINGS_BUILDER                   "- Builder: %1%",
+    SETTINGS_BUILDER                   "- Erschaffer: %1%",
+    SETTINGS_AUTO_SAVE                 "- Auto-Speichern: %1%",
+    SETTINGS_ZONES                     "- Benachrichtigungen für das Betreten von Zonen: %1%",
+    SETTINGS_MOUNT_NAME                "- Reittier-Name %1%: %2%",
     // News UI
     NEWS                               "Neuigkeiten",
     COLON_SUBSCRIBE_VIP                "Abonnieren (VIP):",
