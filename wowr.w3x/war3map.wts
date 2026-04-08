@@ -87848,7 +87848,7 @@ Imprison
 STRING 39764
 // Abilities: A1F9 (Imprison), Ubertip (Tooltip - Normal - Extended)
 {
-Imprisons the target enemy unit the cage is destroyed.
+Imprisons the target enemy unit until the cage is destroyed.
 }
 
 STRING 39765
