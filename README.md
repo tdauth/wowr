@@ -6,34 +6,23 @@ Open world role-playing game and strategy map for Warcraft III: Reforged based o
 This map is not a recreation of the game World of Warcraft but is inspired by and uses some lore from the game.
 
 
-[Official website](https://tdauth.github.io/wowr-website)
-
-GitHub Repository [wowr-website](https://github.com/tdauth/wowr-website) of the official website.
-
-The map is in the folder [wowr.w3x](./wowr.w3x) and can be modified with the Warcraft III: Reforged World Editor.
+[Official website](https://tdauth.github.io/wowr-website) with its own [repository](https://github.com/tdauth/wowr-website).
 
 ## Contribute
 
-[Subscribe](https://www.paypal.com/webapps/billing/plans/subscribe?plan_id=P-2H6673288J5283354M6TTVVY) to become a VIP:
+| [Subscribe](https://www.paypal.com/webapps/billing/plans/subscribe?plan_id=P-2H6673288J5283354M6TTVVY) to become a VIP | [Donate](https://www.paypal.com/donate?hosted_button_id=ZAAKMQLSNGDK8) |
+| :--- | :--- |
+| ![Subscribe](images/QR_Code_Subscribe.png "Subscribe") | ![Donate](images/QR_Code_Donate.png "Donate") |
+| Send me your Battle.net ID on Discord after subscribing to get it unlocked with the next map release. |
 
-![Subscribe](images/QR_Code_Subscribe.png "Subscribe")
-
-Send me your Battle.net ID on Discord after subscribing to get it unlocked with the next map release.
-
-[Donate](https://www.paypal.com/donate?hosted_button_id=ZAAKMQLSNGDK8):
-
-![Donate](images/QR_Code_Donate.png "Donate")
-
-* Report any issues on Discord.
+* Discuss the map on its [Discord Server](https://discord.gg/eM34z36).
 * Support the [YouTube Channel](https://www.youtube.com/channel/UCzGcsuPfRVqdaE87JYCK5zw).
 
 ## Play the Map
 
 * [Discord Server](https://discord.gg/eM34z36): Join to find players and discuss the map.
 * [Official Releases](https://github.com/tdauth/wowr/releases)
-* [Google Drive](https://drive.google.com/drive/u/1/folders/1ZQL_8YVCbYfe8r6juGQnfMPIfzaHLfcd) contains development versions.
-* [Current development version](./wowr.w3x): Use [this page](https://download-directory.github.io/) with the URL <https://github.com/tdauth/wowr/tree/master/wowr.w3x> to download the directory, open it with the World Editor and save it as a Frozen Throne scenario to play it. It is stored as folder to avoid a big history.
-
+* [Google Drive](https://drive.google.com/drive/u/1/folders/1ZQL_8YVCbYfe8r6juGQnfMPIfzaHLfcd) contains unfinished development versions of the map which are still in progress.
 
 Download and place the map file `wowr[version].w3x` into the folder `C:\Users\%USERNAME%\Documents\Warcraft III\Maps\Download`.
 Start Warcraft III: Reforged and play a custom game by choosing the map.
@@ -43,23 +32,23 @@ Start Warcraft III: Reforged and play a custom game by choosing the map.
 - Start the World Editor of Warcraft III.
 - Open the map folder [wowr.w3x](./wowr.w3x).
 - Save the map with these preconditions:
+  - Make sure that the JassHelper and vJass are enabled:
+    ![JassHelper](images/JassHelper.jpg "JassHelper")
+  - `C:\Program Files (x86)\Warcraft III\_retail_\x86_64\JassHelper\jasshelper.conf` must contain the correct lookup folder:
+    ```
+    [lookupfolders]
+    "D:\wowr\src\"
+    ```
 
-Make sure that the JassHelper and vJass are enabled:
+    It has to be the [src](./src) folder from this repository.
 
-![JassHelper](images/JassHelper.jpg "JassHelper")
+    **Note that the file `jasshelper.conf` is reset by the Battle.net app automatically and you might have to adapt it multiple times.**
 
-`C:\Program Files (x86)\Warcraft III\_retail_\x86_64\JassHelper\jasshelper.conf` must contain the correct lookup folder:
+    Use a script like [updatejasshelperconfig.sh](./scripts/updatejasshelperconfig.sh) to automatically update the jasshelper.conf file.
 
-```
-[lookupfolders]
-"D:\wowr\src\"
-```
 
-It has to be the [src](./src) folder from this repository.
-
-**Note that the file `jasshelper.conf` is reset by the Battle.net app automatically and you might have to adapt it multiple times.**
-
-Use a script like [updatejasshelperconfig.sh](./scripts/updatejasshelperconfig.sh) to automatically update the jasshelper.conf file.
+**Hint:** Saving the map takes some time due to the big number of objects.
+Hence, you can use the "Validate Map Triggers (F10)" action in the trigger editor before actually saving the map to make sure there won't be any syntax error.
 
 
 *Enable HD graphics in older versions of the map:* Older versions of the map are restricted to SD graphics to avoid performance issues.
@@ -67,38 +56,6 @@ However, you can easily remove this restriction by opening and modifying the map
 Load the map in the World Editor and go to "Scenario" -> "Map Options ..." -> "Supported modes:" -> Choose "SD and HD" -> press OK -> save the map.
 
 ![SD and HD](images/HD.jpg "SD and HD")
-
-## Frozen Throne Support
-
-This map has been developed for Warcraft III: Reforged.
-However, it can be adapted for the old Frozen Throne version.
-Use the tool [Map Adapter](https://www.hiveworkshop.com/threads/map-adapter.326456/) or adapt the map manually.
-JASS natives which only exist in Reforged must be replaced with custom functions.
-You have to adapt the [common.j](./wowr.w3x/scripts/common.j) file and remove natives which do not exist in Frozen Throne.
-You have to add all of these natives to the map script war3map.j as user-defined JASS functions.
-Modify any map file manually with an MPQ editor like [Ladik's MPQ Editor](https://www.hiveworkshop.com/threads/ladiks-mpq-editor-version-2-0-1-278.91512/).
-
-## On the Limitations of Warcraft III
-
-This project exists for several years now.
-These years helped me to get some experience with the limitations of the Warcraft III engine as well as the changes and bugs introduced by Reforged.
-Hence, one should be really careful to add new features and new content.
-For example, a high number of ability levels will slow down the loading time massively.
-A high number of preplaced units and other objects will heavily decrease the FPS.
-Custom AI scripts can lead to crashes depending on the space the AI is given at start and map size in total.
-A smaller map area leads to less preplaced objects and much better FPS as well as less crashes with AI.
-Therefore it seems to be a good idea to keep everything a bit smaller than it theoretically could be.
-The map should have a playable size less then 255x255 to avoid crashes by AI scripts sending attack waves.
-Low ability and research levels improve the loading time and decrease the number number of translatable strings.
-Besides, the number of preskilled ability levels for boss heroes stays low and there is less need for researches like Evolution/progression of world creeps.
-Computer players need enough space for build their base or otherwise the game will crash.
-Keep the number of custom scripts low and make sure that periodic scripts won't affect the performance.
-Custom models with high polygon count will affect the FPS as well.
-Make sure that custom assets have a low file size and a certain quality standard before using them.
-A huge map area will also make the minimap much smaller and pretty much almost useless.
-Cliff types are restricted to only two being rendered which limits areas such as Outland using its own cliff type.
-Use the 64 different tile types wisely.
-The [Warcraft III Wishlist](https://github.com/tdauth/warcraft-iii-wishlist) lists all the required features and bug fixes for the game.
 
 ## Computer AI
 
@@ -171,11 +128,6 @@ Use this check list when releasing a new version of the map:
 * Upload the release on as many modding websites as possible.
 * Announce the new release on Discord.
 
-## Modifications with World Editor
-
-Saving the map takes some time due to the big number of objects.
-Hence, you can use the "Validate Map Triggers (F10)" action in the trigger editor before actually saving the map to make sure there won't be any syntax error.
-
 ## Multiplayer Tests
 
 Multiplayer tests are possible at one PC by hosting a LAN game.
@@ -230,6 +182,38 @@ The original map script has been added to this repository as well as the origina
 
 * [war3map.j](./original_map/war3map.j)
 * [war3map.wts](./original_map/war3map.wts)
+
+## On the Limitations of Warcraft III
+
+This project exists for several years now.
+These years helped me to get some experience with the limitations of the Warcraft III engine as well as the changes and bugs introduced by Reforged.
+Hence, one should be really careful to add new features and new content.
+For example, a high number of ability levels will slow down the loading time massively.
+A high number of preplaced units and other objects will heavily decrease the FPS.
+Custom AI scripts can lead to crashes depending on the space the AI is given at start and map size in total.
+A smaller map area leads to less preplaced objects and much better FPS as well as less crashes with AI.
+Therefore it seems to be a good idea to keep everything a bit smaller than it theoretically could be.
+The map should have a playable size less then 225x225 to avoid crashes by AI scripts sending attack waves.
+Low ability and research levels improve the loading time and decrease the number number of translatable strings.
+Besides, the number of preskilled ability levels for boss heroes stays low and there is less need for researches like Evolution/progression of world creeps.
+Computer players need enough space for build their base or otherwise the game will crash.
+Keep the number of custom scripts low and make sure that periodic scripts won't affect the performance.
+Custom models with high polygon count will affect the FPS as well.
+Make sure that custom assets have a low file size and a certain quality standard before using them.
+A huge map area will also make the minimap much smaller and pretty much almost useless.
+Cliff types are restricted to only two being rendered which limits areas such as Outland using its own cliff type.
+Use the 64 different tile types wisely.
+The [Warcraft III Wishlist](https://github.com/tdauth/warcraft-iii-wishlist) lists all the required features and bug fixes for the game.
+
+## Frozen Throne Support
+
+This map has been developed for Warcraft III: Reforged.
+However, it can be adapted for the old Frozen Throne version.
+Use the tool [Map Adapter](https://www.hiveworkshop.com/threads/map-adapter.326456/) or adapt the map manually.
+JASS natives which only exist in Reforged must be replaced with custom functions.
+You have to adapt the [common.j](./wowr.w3x/scripts/common.j) file and remove natives which do not exist in Frozen Throne.
+You have to add all of these natives to the map script war3map.j as user-defined JASS functions.
+Modify any map file manually with an MPQ editor like [Ladik's MPQ Editor](https://www.hiveworkshop.com/threads/ladiks-mpq-editor-version-2-0-1-278.91512/).
 
 ## WarsmashModEngine
 
