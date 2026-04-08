@@ -75,6 +75,7 @@ private function Init takes nothing returns nothing
     call AddChange("Check for positive amounts in resources system chat commands.")
     call AddChange("Check if resource is transferable for resource system chat commands.")
     call AddChange("Add chat commands like \"-gold\", \"-lumber\", \"-iron\", \"-favor\" etc. into resources system.")
+    call AddChange("Use system ItemCarrierGroups.")
     call AddChange("Improve English texts including hero tooltips.")
     call AddChange("Improve German translation.")
 
@@ -360,7 +361,7 @@ static if (MAP_DEBUG_MODE_ENABLED) then
     call AddChange("Add custom models for Elemental Lords.")
     call AddChange("Register submarine updates for submarine pilot heroes.")
     call AddChange("Automatic pick stuff in the beginning of the game to allow an instant start.")
-    
+
     call AddVersion("4.3")
     call AddChange("Add zone Gilneas.")
     call AddChange("Add zone Gnomeregan.")
@@ -474,7 +475,7 @@ static if (MAP_DEBUG_MODE_ENABLED) then
     call AddChange("Add arrow buttons to start location in AI Players UI.")
     call AddChange("Simplify the code for choosing the race in AI Players UI.")
     call AddChange("Add zone Jadefire Glen.")
-    
+
     call AddVersion("4.2")
     call AddChange("Refactor hero journey code.")
     call AddChange("Improve German translation.")
@@ -550,7 +551,7 @@ static if (MAP_DEBUG_MODE_ENABLED) then
     call AddChange("Add prestored clan \"B.O.O.M.\".")
     call AddChange("Remove unit shadow from Flamestorm Dummy.")
     call AddChange("Votes \"-portals/-noportals\" includes all neutral portals now.")
-    
+
     call AddVersion("4.1")
     call AddChange("Rename race Eredar into Draenei.")
     call AddChange("Improve race Draenei.")
@@ -1261,7 +1262,7 @@ static if (MAP_DEBUG_MODE_ENABLED) then
     call AddChange("Disable library GetMainSelectedUnit due to crashes in Warcraft Reforged 2.0.")
     call AddChange("Disable library UnitSoundSets due to issues in Warcraft Reforged 2.0.")
     call AddChange("Disable library UnitSoundSetsFakeBars due to issues in Warcraft Reforged 2.0.")
-    
+
     call AddVersion("3.30")
     call AddChange("Add world zones.")
     call AddChange("Add continent zones.")
@@ -1409,7 +1410,7 @@ static if (MAP_DEBUG_MODE_ENABLED) then
     call AddChange("Fix global variable udg_ProfessionBard.")
     call AddChange("Fix auto crafted item for profession Sorcerer rank Master.")
     call AddChange("Add snow to Ironforge.")
-    
+
     call AddVersion("3.28")
     call AddChange("Improve race Bandit.")
     call AddChange("Custom icon and buff for Enslavement.")
@@ -1936,7 +1937,7 @@ static if (MAP_DEBUG_MODE_ENABLED) then
     call AddChange("Fix learn icon of hero spell Phoenix Egg.")
     call AddChange("Add hero Phoenix.")
     call AddChange("Add learnable hero spell Phoenix Egg for slot 4.")
-    
+
     call AddVersion("3.22")
     call AddChange("Do not remove talk to me effect after completing Tuskarr quest 1.")
     call AddChange("Add Goblin quest 1.")
@@ -2052,7 +2053,7 @@ static if (MAP_DEBUG_MODE_ENABLED) then
     call AddChange("Include Portal buildings for all races when changing the names to the destination.")
     call AddChange("Fix owner of Fountain of Power in Emerald Dream.")
     call AddChange("Fix tooltip of spell Scream.")
-    
+
     call AddVersion("3.21")
     call AddChange("Add creep Explosive Barrel.")
     call AddChange("Add learnable hero spell Summon Djinn.")
@@ -2358,7 +2359,7 @@ static if (MAP_DEBUG_MODE_ENABLED) then
     call AddChange("Add skin Darth Vader.")
     call AddChange("Add skin Darth Maul.")
     call AddChange("Add back hero Gunner.")
-    
+
     call AddVersion("3.20")
     call AddChange("Generate Sacrificial Pit buildings on the website.")
     call AddChange("Fix generating unit bounty on the website.")
@@ -2555,7 +2556,7 @@ static if (MAP_DEBUG_MODE_ENABLED) then
     call AddChange("Add creeps Phoenixes to Outland.")
     call AddChange("Add hero Satyr Trickster.")
     call AddChange("Add mount Phoenix.")
-    
+
     call AddVersion("3.18")
     call AddChange("Fix Jaina quest 4.")
     call AddChange("Fix chat commands for enabling/disabling leaderboards in all 4 Jaina quests.")
@@ -2845,7 +2846,7 @@ static if (MAP_DEBUG_MODE_ENABLED) then
     call AddChange("Fix learn ability for hero spell Cyclone in slot 1.")
     call AddChange("Add ability Enable/Disable Gold Exchange to building Trading Post.")
     call AddChange("Add unit Spanish Conquistador to race Medieval.")
-    
+
     call AddVersion("3.16")
     call AddChange("Change chat command \"-pingoldgods\" into \"-pingjaina\".")
     call AddChange("Fix Jaina quest 2.")
@@ -2863,7 +2864,7 @@ static if (MAP_DEBUG_MODE_ENABLED) then
     call AddChange("Add vote \"-enablevips\".")
     call AddChange("Add vote \"-disablevips\".")
     call AddChange("Fix disallowing races for non-VIPs due to Corrupted Ancients.")
-    
+
     call AddVersion("3.15")
     call AddChange("Increase hero spell Cleaving Attack bonus per level.")
     call AddChange("Fix healing and mana regeneration aura of NPC Lord Nicholas Buzan.")
@@ -3108,7 +3109,7 @@ static if (MAP_DEBUG_MODE_ENABLED) then
     call AddChange("Improve race Roman Empire.")
     call AddChange("Reduce interval for Pack Horses.")
     call AddChange("Add skin Priest.")
-    
+
     call AddVersion("3.14")
     call AddChange("Add Skins shop.")
     call AddChange("Add reskillable heroes from start.")
@@ -3305,7 +3306,7 @@ static if (MAP_DEBUG_MODE_ENABLED) then
     call AddChange("Add cheat \"-bonus\".")
     call AddChange("Add learnable hero spell Sight Aura.")
     call AddChange("Add learnable hero spell Magic Resistance Aura.")
-    
+
     call AddVersion("3.13")
     call AddChange("Add hero Tuskarr Chieftain.")
     call AddChange("Add race Tuskarr.")
@@ -3371,7 +3372,7 @@ static if (MAP_DEBUG_MODE_ENABLED) then
     call AddChange("Item Book of Mercenaries summons amphibious creeps on deep water now.")
     call AddChange("Reduce memory leaks for the effect of item Book of Mercenaries.")
     call AddChange("Change icon of item Book of Mercenaries.")
-    
+
     call AddVersion("3.12")
     call AddChange("Function HeroCountItemsOfItemType counts item charges now.")
     call AddChange("Add chat command \"-pingo\".")
@@ -3493,7 +3494,7 @@ static if (MAP_DEBUG_MODE_ENABLED) then
     call AddChange("Add learnable hero spell Mass Firebolt.")
     call AddChange("Add learnable hero spell Replenish.")
     call AddChange("Add more Fountains of Power to the player selection and move them.")
-    
+
     call AddVersion("3.11")
     call AddChange("Improve website data.")
     call AddChange("Add arrow buttons for race in AI players GUI.")
@@ -3536,7 +3537,7 @@ static if (MAP_DEBUG_MODE_ENABLED) then
     call AddChange("Fix Troll Berserkers.")
     call AddChange("Fix soundset of Troll Voodoo Cannoneers.")
     call AddChange("Fix Troll tooltips, icon positions and hotkeys.")
-    
+
     call AddVersion("3.10")
     call AddChange("Add missing credits.")
     call AddChange("Add link to quest for reward items.")
@@ -3578,7 +3579,7 @@ static if (MAP_DEBUG_MODE_ENABLED) then
     call AddChange("Fix allowing crafting items with only one of the requirements.")
     call AddChange("Add info about Orb of Web to item Orb of Orbs.")
     call AddChange("Hide dummy of item Orb of Royality.")
-    
+
     call AddVersion("3.9")
     call AddChange("Improve website data.")
     call AddChange("Fix name Muradin in the third Human quest.")
@@ -3654,7 +3655,7 @@ static if (MAP_DEBUG_MODE_ENABLED) then
     call AddChange("Add profession Inscriptor.")
     call AddChange("Replace Random Mines during the start of the map.")
     call AddChange("Add learnable hero spell Place Goblin Land Mine.")
-    
+
     call AddVersion("3.8")
     call AddChange("Add more website data.")
     call AddChange("Change icon of Torpedoes research from race Galactic Republic.")
@@ -3783,7 +3784,7 @@ static if (MAP_DEBUG_MODE_ENABLED) then
     call AddChange("Add small new creep area to Outland next to the Orc camp.")
     call AddChange("Rename research Unholy Armor from Demon race into Fel Armor.")
     call AddChange("Change icon of research Fel Armor for race Demon.")
-    
+
     call AddVersion("3.7")
     call AddChange("Custom icon for research Astrology.")
     call AddChange("Add Ancient Greece research Bronze Swords.")
@@ -3826,7 +3827,7 @@ static if (MAP_DEBUG_MODE_ENABLED) then
     call AddChange("Add German citizens, housings and Berghof special building.")
     call AddChange("Add Leibstandarte unit to race Germans WWII.")
     call AddChange("Improve AI script of race Germans WWII.")
-    
+
     call AddVersion("3.6")
     call AddChange("Reorder races.")
     call AddChange("Improve race tooltips.")
@@ -3994,7 +3995,7 @@ static if (MAP_DEBUG_MODE_ENABLED) then
     call AddChange("Add neutral building Fish School.")
     call AddChange("Add item Fish.")
     call AddChange("Add unit Night Elf Fishing Boat.")
-    
+
     call AddVersion("3.5")
     call AddChange("Add Demon research Space Travel.")
     call AddChange("Fix hotkeys of Void Lord Commander heroes.")
@@ -4056,7 +4057,7 @@ static if (MAP_DEBUG_MODE_ENABLED) then
     call AddChange("Fix moving floating revived heroes into the sea.")
     call AddChange("Remove gold costs from hero standard abilities.")
     call AddChange("Races Troll, Tauren and Pandaren are no bonus races anymore.")
-        
+
     call AddVersion("3.4")
     call AddChange("Add Modern Warfare AI support.")
     call AddChange("AI builds housings and lumber mills before other stuff to get more resources in the beginning.")
@@ -4483,7 +4484,7 @@ static if (MAP_DEBUG_MODE_ENABLED) then
     call AddChange("Add many new IDs to the Pandaren AI script.")
     call AddChange("Add ability and research Drunk Panda to Pandaren race.")
     call AddChange("Add unit Shaman to Pandaren race.")
-    
+
     call AddVersion("3.3")
     call AddChange("Staff of Silence is not included into random choice for dropped items anymore.")
     call AddChange("Fix icon position of Open Gate.")
@@ -4533,7 +4534,7 @@ static if (MAP_DEBUG_MODE_ENABLED) then
     call AddChange("Improve info text for enchanter.")
     call AddChange("Give Spell Book, Research Tent and Event House ground textures.")
     call AddChange("Disabled unit sound sets for turrets.")
-    
+
     call AddVersion("3.2")
     call AddChange("Add race Free People of Middle Earth.")
     call AddChange("Add hero Boromir.")
@@ -4570,7 +4571,7 @@ static if (MAP_DEBUG_MODE_ENABLED) then
     call AddChange("Revised hero abilities of General Grievous.")
     call AddChange("Add hero U. S. General.")
     call AddChange("Fix air attack for heroes Mountain Giant and Iron Fist.")
-    
+
     call AddVersion("3.1")
     call AddChange("Fix food maximum in player info.")
     call AddChange("Add XP rate to player info.")
@@ -4671,7 +4672,7 @@ static if (MAP_DEBUG_MODE_ENABLED) then
     call AddChange("Reduce duration of ability Tranquility to 8 seconds.")
     call AddChange("Place a Thieves Guild on Theramore.")
     call AddChange("Revise quest log info.")
-    
+
     call AddVersion("3.0")
     call AddChange("Fix tooltips of ability Stampede (Fel Beast).")
     call AddChange("Fix leaving units from Khadgar's Time Portal.")
@@ -5322,7 +5323,7 @@ static if (MAP_DEBUG_MODE_ENABLED) then
     call AddChange("Enable cheats for player red with name Barade#2569.")
     call AddChange("Do mention links in quest log entries \"Reforged Version\" and \"Credits\" instead of listing everything.")
     call AddChange("Add Repair to some citizen units since AI uses them to construct structures.")
-    
+
     call AddVersion("2.0")
     call AddChange("Fix number of Adventurers in the map description.")
     call AddChange("Add cheat \"-savegui\".")
@@ -5560,7 +5561,7 @@ static if (MAP_DEBUG_MODE_ENABLED) then
     call AddChange("Made AntiDenseMan#1202 a VIP.")
     call AddChange("Add all alliance chat commands to the separate quest log entry Alliances.")
     call AddChange("Fix AI alliance responses.")
-    
+
     call AddVersion("1.9.9")
     call AddChange("Save XP of hero 2 in savecodes.")
     call AddChange("Replace bugged Frost Armor ability of Crown of the Lich King by Item Attack Frost Bonus.")
@@ -5587,7 +5588,7 @@ static if (MAP_DEBUG_MODE_ENABLED) then
     call AddChange("Crystal Ball is sold by Power Generator.")
     call AddChange("Add new fixed computer player The Alliance.")
     call AddChange("Add shorter path from Outland start base to boss Kil'jaeden.")
-    
+
     call AddVersion("1.9.8")
     call AddChange("Disable hidden island prevention for AI.")
     call AddChange("Lich King special building is a building now and requires ground-pathable placement.")
@@ -5595,7 +5596,7 @@ static if (MAP_DEBUG_MODE_ENABLED) then
     call AddChange("Add pathing texture back to Power Generator which led to crashing the game.")
     call AddChange("Enable Freelancer AI by default.")
     call AddChange("Only allow custom UI for backpacks in singleplayer since it causes desyncs.")
-    
+
     call AddVersion("1.9.7")
     call AddChange("Allow Undead and Night Elf citizens to directly build their goldmines instead of housings.")
     call AddChange("Add missing hero icon for Cenarius.")
@@ -5680,7 +5681,7 @@ static if (MAP_DEBUG_MODE_ENABLED) then
     call AddChange("Do not hide minimap boss icons when bosses die.")
     call AddChange("Translate tooltips of Serpent Ward back into English.")
     call AddChange("Summon 2 Serpent Wards at level 4 instead of 1 Cobra Ward.")
-    
+
     call AddVersion("1.9.6")
     call AddChange("Increase food upkeep levels by 50.")
     call AddChange("Ignore buildings from The Burning Legion on respawning creeps to respawn Archimonde.")
@@ -5707,7 +5708,7 @@ static if (MAP_DEBUG_MODE_ENABLED) then
     call AddChange("Add level skip requirements to tech upgrades of ability Robo-Goblin.")
     call AddChange("Store savecodes in text files in C:\\Users\\<your user>\\Documents\\Warcraft III\\CustomMapData.")
     call AddChange("Add save/load system vote dialog after other settings votings.")
-    
+
     call AddVersion("1.9.5")
     call AddChange("Add Socrethar to Outland.")
     call AddChange("Add Demon Quest 1 and 2.")
@@ -5718,7 +5719,7 @@ static if (MAP_DEBUG_MODE_ENABLED) then
     call AddChange("Obfuscate savecodes with the hash of the player's name.")
     call AddChange("Remove space from savecode when using \"-savecheck\".")
     call AddChange("Print different output on using \"-savecheck\".")
-    
+
     call AddVersion("1.9.4")
     call AddChange("Add and fixed caused damage in tooltip of Finger of Death.")
     call AddChange("Reduce effect of Holy Light.")
@@ -5776,7 +5777,7 @@ static if (MAP_DEBUG_MODE_ENABLED) then
     call AddChange("Only one single multiboard with stats for all players to improve the performance.")
     call AddChange("Enable AI freelancers by default.")
     call AddChange("Allow Neutral Shop to train some mercenaries.")
-    
+
     call AddVersion("1.9.3")
     call AddChange("Increase number of respawn groups to fix missing respawns of creep bosses.")
     call AddChange("Add The Burning Legion and Bosses to the player stats multiboard.")
@@ -5851,7 +5852,7 @@ static if (MAP_DEBUG_MODE_ENABLED) then
     call AddChange("Fix tooltip values of item Unique - Mask of Death.")
     call AddChange("Change order IDs of Freelancer Summon Mercanaries to avoid conflicts with abilities.")
     call AddChange("Fix Freelancer AI hero start locations.")
-    
+
     call AddVersion("1.9.2")
     call AddChange("Revise some voting calculations and triggering in the beginning.")
     call AddChange("Use vote dialogs per player.")
@@ -5867,7 +5868,7 @@ static if (MAP_DEBUG_MODE_ENABLED) then
     call AddChange("Move Freelancer AI Hideouts to 4 different islands which can be reached via portals.")
     call AddChange("Fix crafting Rune of Rebirth for Runeforger which actually summons creeps now.")
     call AddChange("Add hero Mountain Giant.")
-    
+
     call AddVersion("1.9.1")
     call AddChange("Drop Frostmourne upon death.")
     call AddChange("Fix GetUnitXXXByType functions.")
@@ -5888,7 +5889,7 @@ static if (MAP_DEBUG_MODE_ENABLED) then
     call AddChange("Add special building Arcane Observatory to Humans.")
     call AddChange("Add auto summoned mercenaries for AI Freelancers.")
     call AddChange("Add special building Book of Summoning Pedestal to Demons.")
-    
+
     call AddVersion("1.9.0")
     call AddChange("Add chat command \"-aiattackson/off X\".")
     call AddChange("Do not ally leaving players with all players.")
@@ -5924,7 +5925,7 @@ static if (MAP_DEBUG_MODE_ENABLED) then
     call AddChange("Add new boss to Azeroth with legendary artifact Frostmourne.")
     call AddChange("Safely set back the movement type to the correct type even with some unit transformation for the Scepter of the Sea Giant.")
     call AddChange("Completely disable waygate abilities for all AI players.")
-    
+
     call AddVersion("1.8.9")
     call AddChange("Improve stopping harvesting and building on hidden places.")
     call AddChange("Fix minimum numbers for Demon Master (thanks Runeblade14) which led to a crash.")
@@ -5942,7 +5943,7 @@ static if (MAP_DEBUG_MODE_ENABLED) then
     call AddChange("Try clearing dialogs to avoid repick bug.")
     call AddChange("Mention cooldown for Random Events in tooltip.")
     call AddChange("Fix showing race selection dialog on repick.")
-    
+
     call AddVersion("1.8.8")
     call AddChange("Reveal the initial town hall location to all players in the beginning.")
     call AddChange("Unpause Harpy Queen when starting Orc Quest 2.")
@@ -5963,7 +5964,7 @@ static if (MAP_DEBUG_MODE_ENABLED) then
     call AddChange("Do not allow dropping regular items in the VIP room.")
     call AddChange("Massively reduce the damage multiplier of Critical Strike and reduce the chance with every level.")
     call AddChange("Make Dark Portal summoning for bonus hero Archimonde time limited.")
-    
+
     call AddVersion("1.8.7")
     call AddChange("Fix some Battle.net ID for a VIP member.")
     call AddChange("Fix setting race to None in the beginning which allowed to purchase the Human race items for Freelancers.")
@@ -6002,7 +6003,7 @@ static if (MAP_DEBUG_MODE_ENABLED) then
     call AddChange("Move icons of Gryphon Rider and Storm Hammer to the left.")
     call AddChange("Remove Spellbreaker info from the tooltip of Arcane Sanctum.")
     call AddChange("Add floating texts to portals in bonus hero chamber and VIP room.")
-    
+
     call AddVersion("1.8.6")
     call AddChange("Disable researching creep Evolution when The Burning Legion increase their hero levels.")
     call AddChange("Make sure Evolution becomes available for The Burning Legion.")
@@ -6034,7 +6035,7 @@ static if (MAP_DEBUG_MODE_ENABLED) then
     call AddChange("Add Furbolg AI support for Night Elf.")
     call AddChange("Rename quest entry Secret Chamber to Bonus Heroes.")
     call AddChange("Add Engineer profession to AI.")
-    
+
     call AddVersion("1.8.5")
     call AddChange("Power Generator auras affect ancients and regular structures.")
     call AddChange("Fix allowing to write \"-yes\" when no votekick is running.")
@@ -6088,7 +6089,7 @@ static if (MAP_DEBUG_MODE_ENABLED) then
     call AddChange("Increase Frost Armor bonus from 5 to 8 for Crown of the Lich King.")
     call AddChange("Fix backpack becoming vulnerable after completing Naga quest 4.")
     call AddChange("Heroes of The Burning Legion start with level 6.")
-    
+
     call AddVersion("1.8.4")
     call AddChange("Fix skilling Rain of Fire for Pit Lord for The Burning Legion.")
     call AddChange("Do not instantly kill summoned units when Evolution has been researched.")
@@ -6098,7 +6099,7 @@ static if (MAP_DEBUG_MODE_ENABLED) then
     call AddChange("Add \"-race2\" chat command at hero level 30 to choose a second race for Warlords.")
     call AddChange("Fix conditions for \"-profession2\".")
     call AddChange("Add chat command \"-fullrepick\" which removes 3/4 of your XP but allows you to change the game mode.")
-    
+
     call AddVersion("1.8.3")
     call AddChange("Power Generator can only be built next to a town hall.")
     call AddChange("Remove all buffs from the dummy which is used to get the base defense and level for Evolution.")
@@ -6113,7 +6114,7 @@ static if (MAP_DEBUG_MODE_ENABLED) then
     call AddChange("Fix DropAllItemsFromHero which did not drop the last item")
     call AddChange("Add Starfall and mana to Power Generator.")
     call AddChange("Enable \"-far\" from start.")
-    
+
     call AddVersion("1.8.2")
     call AddChange("Only increase the unit levels from Evolution every 10 levels.")
     call AddChange("Increase unit defense by 1 from Evolution every 10 levels.")
@@ -6139,7 +6140,7 @@ static if (MAP_DEBUG_MODE_ENABLED) then
     call AddChange("Add item Alliance with the Burning Legion to the Power Generator.")
     call AddChange("Add votekick chat commands.")
     call AddChange("Add item Pickpocketing.")
-    
+
     call AddVersion("1.8")
     call AddChange("Replace creep Akama with hero who is not invulnerable.")
     call AddChange("Respawn level 22 Dreadlord in Azeroth.")
@@ -6268,7 +6269,7 @@ static if (MAP_DEBUG_MODE_ENABLED) then
     call AddChange("Make Evolution available and use it for creeps at hero level 10.")
     call AddChange("Upgrade creeps every 10 hero levels at once.")
     call AddChange("Evolution adds more HP, attack dices and mana to units per level.")
-    
+
     call AddVersion("1.7")
     call AddChange("Fix AI recreation of town halls for: Naga, Blood Elf, Demon and Draenei.")
     call AddChange("Add condition to avoid building multiple town halls for Blood Elf and Demon AI.")
@@ -6447,7 +6448,7 @@ static if (MAP_DEBUG_MODE_ENABLED) then
     call AddChange("Add delay to game type fast to finish the construction of a building.")
     call AddChange("Increase the hero revival speed in game type fast.")
     call AddChange("Fix portals.")
-    
+
     call AddVersion("1.6")
     call AddChange("Draenei Haven can be upgraded to Demigod temples and has Reward Freelancer and Give Units to Another Allied Player now.")
     call AddChange("Prevent creating buildings on Theramore.")
@@ -6504,7 +6505,7 @@ static if (MAP_DEBUG_MODE_ENABLED) then
     call AddChange("Add Guards to Kil'Jaeden and move old creeps to Orc base.")
     call AddChange("Add weather effect to Kil'Jaeden.")
     call AddChange("Rename Kil'Jaeden from Warlock to The Deceiver.")
-    
+
     call AddVersion("1.5")
     call AddChange("Change the game data set to the latest patch.")
     call AddChange("Add Attribute Bonus to all bonus heroes.")
@@ -6628,7 +6629,7 @@ static if (MAP_DEBUG_MODE_ENABLED) then
     call AddChange("Add unit Wagon to Blood Elves.")
     call AddChange("Fix hero selection info for Akama.")
     call AddChange("Add Draenei AI with Akama as hero and with a 50 %% chance to by used by Orc players.")
-    
+
     call AddVersion("1.4")
     call AddChange("Hand of God at level 35.")
     call AddChange("24 Players support.")
@@ -6772,7 +6773,7 @@ static if (MAP_DEBUG_MODE_ENABLED) then
     call AddChange("Do not use StringHash to avoid collisions.")
     call AddChange("Remove unused JASS code.")
     call AddChange("Add several unit groups by GUI triggers.")
-    
+
     call AddVersion("1.3")
     call AddChange("Heldenwahlansicht gefixt.")
     call AddChange("Keine Beschreibungen und kein Multiboard mehr in der Heldenwahl.")
@@ -6799,10 +6800,10 @@ static if (MAP_DEBUG_MODE_ENABLED) then
     call AddChange("Mehr Informationen ins Quest-Log geschrieben.")
     call AddChange("Massen-Teleportation hat keine zunehmende Zauberverzögerung mit erhöhter Stufe.")
     call AddChange("Kameragrenzen verkleinert.")
-    
+
     call AddVersion("1.2")
     call AddChange("Dialog für Spielmodiwahl erst wenn Held zur Startortwahl kommt.")
-    call AddChange("Auswahlkamera") 
+    call AddChange("Auswahlkamera")
 endif
 endfunction
 

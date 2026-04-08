@@ -24,6 +24,7 @@
 //! import "barade/HideAbility.j"
 //! import "barade/HideInTrees.j"
 //! import "barade/HostUtils.j"
+//! import "barade/ItemCarrierGroups.j"
 //! import "barade/ItemRespawn.j"
 //! import "barade/ItemTypeUtils.j"
 //! import "barade/ItemUnstackSystem.j"

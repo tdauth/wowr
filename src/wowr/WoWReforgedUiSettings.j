@@ -1,4 +1,4 @@
-library WoWReforgedUiSettings initializer Init requires OnStartGame, optional FrameLoader, StringUtils, WoWReforgedUi, WoWReforgedMapData, WoWReforgedUtils, WoWReforgedCalendar, WoWReforgedBuilder, WoWReforgedMounts, WoWReforgedZones
+library WoWReforgedUiSettings initializer Init requires OnStartGame, optional FrameLoader, StringUtils, WoWReforgedUi, WoWReforgedMapData, WoWReforgedUtils, WoWReforgedCalendar, WoWReforgedBuilder, WoWReforgedMounts, WoWReforgedSaveCodesAll, WoWReforgedZones
 
 globals
     public constant string CHAT_COMMAND_SHORT = "-st"
@@ -29,9 +29,9 @@ globals
     public constant real CLOSE_BUTTON_X = FULLSCREEN_WIDTH / 2.0 - (CLOSE_BUTTON_WIDTH / 2.0)
     public constant real CLOSE_BUTTON_Y = TEXT_AREA_Y - TEXT_AREA_HEIGHT - VERTICAL_SPACE
 
-    private framehandle BackgroundFrame
+    private framehandle backgroundFrame
 
-    private framehandle TextAreaFrame
+    private framehandle textAreaFrame
 
     private trigger closeTrigger = null
     private trigger chatCommandTrigger = CreateTrigger()
@@ -41,31 +41,31 @@ private function SetSettingsUIVisible takes player whichPlayer, boolean visible 
     if (whichPlayer == GetLocalPlayer()) then
         if (visible) then
             // update
-            call BlzFrameSetText(TextAreaFrame, "")
-            call BlzFrameAddText(TextAreaFrame, Format(GetLocalizedString("SETTINGS_MAP_NAME")).s(GetExternalString(1)).result())
-            call BlzFrameAddText(TextAreaFrame, Format(GetLocalizedString("SETTINGS_MAP_VERSION")).s(MAP_VERSION).result())
-            call BlzFrameAddText(TextAreaFrame, Format(GetLocalizedString("SETTINGS_MAP_DESCRIPTION")).s(GetExternalString(3)).result())
-            call BlzFrameAddText(TextAreaFrame, Format(GetLocalizedString("SETTINGS_MAP_DIMENSIONS")).i(R2I(GetRectWidthBJ(GetPlayableMapRect()) / bj_CELLWIDTH)).i(R2I(GetRectHeightBJ(GetPlayableMapRect()) / bj_CELLWIDTH)).result())
-            call BlzFrameAddText(TextAreaFrame, Format(GetLocalizedString("SETTINGS_PLAYERS")).i(GetPlayers()).result())
-            call BlzFrameAddText(TextAreaFrame, Format(GetLocalizedString("SETTINGS_TEAMS")).i(2).result())
-            call BlzFrameAddText(TextAreaFrame, Format(GetLocalizedString("SETTINGS_SINGLEPLAYER")).s(B2Option(IsInSinglePlayer())).result())
-            call BlzFrameAddText(TextAreaFrame, Format(GetLocalizedString("SETTINGS_SAVE_CODES")).s(B2Option(udg_SaveAndLoadEnabled)).result())
-            call BlzFrameAddText(TextAreaFrame, Format(GetLocalizedString("SETTINGS_TOMES")).s(B2Option(udg_Tomes)).result())
-            call BlzFrameAddText(TextAreaFrame, Format(GetLocalizedString("SETTINGS_CINEMATICS")).s(B2Option(udg_Cinematics)).result())
-            call BlzFrameAddText(TextAreaFrame, Format(GetLocalizedString("SETTINGS_AI_RESPAWN")).s(B2Option(udg_AIRespawn)).result())
-            call BlzFrameAddText(TextAreaFrame, Format(GetLocalizedString("SETTINGS_SEASONS")).s(B2Option(IsSeasonsEnabled())).result())
-            call AddMapSettings(TextAreaFrame)
-            call BlzFrameAddText(TextAreaFrame, Format(GetLocalizedString("SETTINGS_CHEATS")).s(B2Option(udg_Cheats)).result())
-            call BlzFrameAddText(TextAreaFrame, Format(GetLocalizedString("SETTINGS_BUILDER")).s(B2Option(IsBuildersEnabled())).result())
+            call BlzFrameSetText(textAreaFrame, "")
+            call BlzFrameAddText(textAreaFrame, Format(GetLocalizedString("SETTINGS_MAP_NAME")).s(GetExternalString(1)).result())
+            call BlzFrameAddText(textAreaFrame, Format(GetLocalizedString("SETTINGS_MAP_VERSION")).s(MAP_VERSION).result())
+            call BlzFrameAddText(textAreaFrame, Format(GetLocalizedString("SETTINGS_MAP_DESCRIPTION")).s(GetExternalString(3)).result())
+            call BlzFrameAddText(textAreaFrame, Format(GetLocalizedString("SETTINGS_MAP_DIMENSIONS")).i(R2I(GetRectWidthBJ(GetPlayableMapRect()) / bj_CELLWIDTH)).i(R2I(GetRectHeightBJ(GetPlayableMapRect()) / bj_CELLWIDTH)).result())
+            call BlzFrameAddText(textAreaFrame, Format(GetLocalizedString("SETTINGS_PLAYERS")).i(GetPlayers()).result())
+            call BlzFrameAddText(textAreaFrame, Format(GetLocalizedString("SETTINGS_TEAMS")).i(2).result())
+            call BlzFrameAddText(textAreaFrame, Format(GetLocalizedString("SETTINGS_SINGLEPLAYER")).s(B2Option(IsInSinglePlayer())).result())
+            call BlzFrameAddText(textAreaFrame, Format(GetLocalizedString("SETTINGS_SAVE_CODES")).s(B2Option(udg_SaveAndLoadEnabled)).result())
+            call BlzFrameAddText(textAreaFrame, Format(GetLocalizedString("SETTINGS_TOMES")).s(B2Option(udg_Tomes)).result())
+            call BlzFrameAddText(textAreaFrame, Format(GetLocalizedString("SETTINGS_CINEMATICS")).s(B2Option(udg_Cinematics)).result())
+            call BlzFrameAddText(textAreaFrame, Format(GetLocalizedString("SETTINGS_AI_RESPAWN")).s(B2Option(udg_AIRespawn)).result())
+            call BlzFrameAddText(textAreaFrame, Format(GetLocalizedString("SETTINGS_SEASONS")).s(B2Option(IsSeasonsEnabled())).result())
+            call AddMapSettings(textAreaFrame)
+            call BlzFrameAddText(textAreaFrame, Format(GetLocalizedString("SETTINGS_CHEATS")).s(B2Option(udg_Cheats)).result())
+            call BlzFrameAddText(textAreaFrame, Format(GetLocalizedString("SETTINGS_BUILDER")).s(B2Option(IsBuildersEnabled())).result())
 
             // TODO Add all player settings:
-            call BlzFrameAddText(TextAreaFrame, Format(GetLocalizedString("SETTINGS_AUTO_SAVE")).s(B2Option(IsAutoSaveEnabledForPlayer(GetTriggerPlayer()))).result())
-            call BlzFrameAddText(TextAreaFrame, Format(GetLocalizedString("SETTINGS_ZONES")).s(B2Option(udg_PlayerShowZonesHints[GetConvertedPlayerId(GetTriggerPlayer())])).result())
-            call BlzFrameAddText(TextAreaFrame, Format(GetLocalizedString("SETTINGS_MOUNT_NAME")).i(1).s(GetMountName1(GetTriggerPlayer()).result())
-            call BlzFrameAddText(TextAreaFrame, Format(GetLocalizedString("SETTINGS_MOUNT_NAME")).i(2).s(GetMountName2(GetTriggerPlayer()).result())
-            call BlzFrameAddText(TextAreaFrame, Format(GetLocalizedString("SETTINGS_MOUNT_NAME")).i(3).s(GetMountName3(GetTriggerPlayer()).result())
+            call BlzFrameAddText(textAreaFrame, Format(GetLocalizedString("SETTINGS_AUTO_SAVE")).s(B2Option(IsAutoSaveEnabledForPlayer(GetTriggerPlayer()))).result())
+            call BlzFrameAddText(textAreaFrame, Format(GetLocalizedString("SETTINGS_ZONES")).s(B2Option(udg_PlayerShowZonesHints[GetConvertedPlayerId(GetTriggerPlayer())])).result())
+            call BlzFrameAddText(textAreaFrame, Format(GetLocalizedString("SETTINGS_MOUNT_NAME")).i(1).s(GetMountName1(GetTriggerPlayer())).result())
+            call BlzFrameAddText(textAreaFrame, Format(GetLocalizedString("SETTINGS_MOUNT_NAME")).i(2).s(GetMountName2(GetTriggerPlayer())).result())
+            call BlzFrameAddText(textAreaFrame, Format(GetLocalizedString("SETTINGS_MOUNT_NAME")).i(3).s(GetMountName3(GetTriggerPlayer())).result())
         endif
-        call BlzFrameSetVisible(BackgroundFrame, visible)
+        call BlzFrameSetVisible(backgroundFrame, visible)
     endif
 endfunction
 
@@ -84,23 +84,23 @@ endfunction
 private function CreateUI takes nothing returns nothing
     local framehandle f = null
 
-    set BackgroundFrame = BlzCreateFrame("EscMenuBackdrop", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), 0, 0)
-    call BlzFrameSetAbsPoint(BackgroundFrame, FRAMEPOINT_TOPLEFT, X, Y)
-    call BlzFrameSetAbsPoint(BackgroundFrame, FRAMEPOINT_BOTTOMRIGHT, X + WIDTH, Y - HEIGHT)
-    call BlzFrameSetLevel(BackgroundFrame, 1)
+    set backgroundFrame = BlzCreateFrame("EscMenuBackdrop", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), 0, 0)
+    call BlzFrameSetAbsPoint(backgroundFrame, FRAMEPOINT_TOPLEFT, X, Y)
+    call BlzFrameSetAbsPoint(backgroundFrame, FRAMEPOINT_BOTTOMRIGHT, X + WIDTH, Y - HEIGHT)
+    call BlzFrameSetLevel(backgroundFrame, 1)
 
-    set f = BlzCreateFrame("EscMenuTitleTextTemplate", BackgroundFrame, 0, 0)
+    set f = BlzCreateFrame("EscMenuTitleTextTemplate", backgroundFrame, 0, 0)
     call BlzFrameSetAbsPoint(f, FRAMEPOINT_TOPLEFT, TITLE_X, TITLE_Y)
     call BlzFrameSetAbsPoint(f, FRAMEPOINT_BOTTOMRIGHT, TITLE_X + WIDTH, TITLE_Y - TITLE_HEIGHT)
     call BlzFrameSetTextAlignment(f, TEXT_JUSTIFY_TOP, TEXT_JUSTIFY_CENTER)
     call BlzFrameSetText(f, GetLocalizedString("SETTINGS"))
 
-    set TextAreaFrame = BlzCreateFrame("EscMenuTextAreaTemplate", BackgroundFrame, 0, 0)
-    call BlzFrameSetAbsPoint(TextAreaFrame, FRAMEPOINT_TOPLEFT, TEXT_AREA_X, TEXT_AREA_Y)
-    call BlzFrameSetAbsPoint(TextAreaFrame, FRAMEPOINT_BOTTOMRIGHT, TEXT_AREA_X + TEXT_AREA_WIDTH, TEXT_AREA_Y - TEXT_AREA_HEIGHT)
-    call BlzFrameSetFont(TextAreaFrame, "MasterFont", 0.011, 0)
+    set textAreaFrame = BlzCreateFrame("EscMenuTextAreaTemplate", backgroundFrame, 0, 0)
+    call BlzFrameSetAbsPoint(textAreaFrame, FRAMEPOINT_TOPLEFT, TEXT_AREA_X, TEXT_AREA_Y)
+    call BlzFrameSetAbsPoint(textAreaFrame, FRAMEPOINT_BOTTOMRIGHT, TEXT_AREA_X + TEXT_AREA_WIDTH, TEXT_AREA_Y - TEXT_AREA_HEIGHT)
+    call BlzFrameSetFont(textAreaFrame, "MasterFont", 0.011, 0)
 
-    set f = BlzCreateFrame("ScriptDialogButton", BackgroundFrame, 0, 0)
+    set f = BlzCreateFrame("ScriptDialogButton", backgroundFrame, 0, 0)
     call BlzFrameSetAbsPoint(f, FRAMEPOINT_TOPLEFT, CLOSE_BUTTON_X, CLOSE_BUTTON_Y)
     call BlzFrameSetAbsPoint(f, FRAMEPOINT_BOTTOMRIGHT, CLOSE_BUTTON_X + CLOSE_BUTTON_WIDTH, CLOSE_BUTTON_Y - CLOSE_BUTTON_HEIGHT)
     call BlzFrameSetText(f, GetLocalizedString("OK_YELLOW"))
@@ -112,7 +112,7 @@ private function CreateUI takes nothing returns nothing
     call BlzTriggerRegisterFrameEvent(closeTrigger, f, FRAMEEVENT_CONTROL_CLICK)
     call TriggerAddAction(closeTrigger, function CloseFunction)
 
-    call HideSettingsUI()
+    call BlzFrameSetVisible(backgroundFrame, false)
 endfunction
 
 private function TriggerActionShowSettingsUI takes nothing returns nothing

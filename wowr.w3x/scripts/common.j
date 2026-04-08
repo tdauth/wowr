@@ -3657,6 +3657,9 @@ globals
     constant integer ITEM_HOLY_SHIELD                                = 'I16K'
     constant integer ITEM_HOLY_SWORD                                 = 'I16L'
 
+    // Legendary Items
+    constant integer ITEM_SCEPTER_OF_SARGERAS                        = 'I046'
+
     // Recipes
     constant integer ITEM_BOOTS_OF_TELEPORTATION                     = 'I0YI'
     constant integer ITEM_ORB_OF_ORBS                                = 'I05L'

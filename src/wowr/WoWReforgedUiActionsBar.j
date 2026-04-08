@@ -1,4 +1,4 @@
-library WoWReforgedUiActionsBar initializer Init requires optional Tracer, OnStartGame, FrameSaver, FrameLoader, LogUI, DamageCalculationTableUI, DiplomacyUI, WoWReforgedUiNews, WoWReforgedAutoSkill, optional HandleCountersMultiboard, optional PeriodicWatcherMultiboard, WoWReforgedUi, WoWReforgedUtils, WoWReforgedItemUtils, WoWReforgedBackpacks, WoWReforgedUiBackpack, WoWReforgedMounts, WoWReforgedUiSaveCode, WoWReforgedSummonedUnits, WoWReforgedAltars, WoWReforgedCalendarMultiboard, WoWReforgedResources, WoWReforgedStats
+library WoWReforgedUiActionsBar initializer Init requires optional Tracer, OnStartGame, FrameSaver, FrameLoader, LogUI, DamageCalculationTableUI, DiplomacyUI, WoWReforgedUiNews, WoWReforgedAutoSkill, optional HandleCountersMultiboard, optional PeriodicWatcherMultiboard, WoWReforgedUi, WoWReforgedUtils, WoWReforgedItems, WoWReforgedBackpacks, WoWReforgedUiBackpack, WoWReforgedMounts, WoWReforgedUiSaveCode, WoWReforgedSummonedUnits, WoWReforgedAltars, WoWReforgedCalendarMultiboard, WoWReforgedResources, WoWReforgedStats
 
 globals
     private constant string PREFIX = "WoWReforgedUiActionsBar"

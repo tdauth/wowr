@@ -1,4 +1,4 @@
-library WoWReforgedSaveCodes requires OpLimit, StringUtils, ForceUtils, MaxHpResearch, SaveCodeSystem, WoWReforgedSaveCodeObjects, WoWReforgedUtils, WoWReforgedMapData, WoWReforgedResources, WoWReforgedEquipmentBags, WoWReforgedHeroJourney, WoWReforgedEvolution, WoWReforgedDemigod, WoWReforgedDependencyEquivalents, WoWReforgedRaces, WoWReforgedProfessions, WoWReforgedItemCheck, WoWReforgedTradingPosts, WoWReforgedPortals, WoWReforgedAntimagicWards, WoWReforgedBanners, WoWReforgedSkins, WoWReforgedRecordPlayer
+library WoWReforgedSaveCodes requires OpLimit, StringUtils, ForceUtils, MaxHpResearch, SaveCodeSystem, WoWReforgedSaveCodeObjects, WoWReforgedUtils, WoWReforgedMapData, WoWReforgedResources, WoWReforgedEquipmentBags, WoWReforgedHeroJourney, WoWReforgedEvolution, WoWReforgedDemigod, WoWReforgedDependencyEquivalents, WoWReforgedRaces, WoWReforgedProfessions, WoWReforgedItems, WoWReforgedTradingPosts, WoWReforgedPortals, WoWReforgedAntimagicWards, WoWReforgedBanners, WoWReforgedSkins, WoWReforgedRecordPlayer
 
 globals
     constant integer SAVE_CODE_INDEX_TYPE = 0
@@ -165,12 +165,12 @@ function CreateSaveCodeTextFileHeroes takes string playerName, boolean isSingleP
     set content = content + AppendFileContent("XP 2: " + I2S(xp2))
     set content = content + AppendFileContent("Hero Level 3: " + I2S(heroLevel3))
     set content = content + AppendFileContent("XP 3: " + I2S(xp3))
-    
+
      // The line below creates the log
     call FileWriteLine(content)
 
     set content = ""
-    
+
     set content = content + AppendFileContent("Demigod: " + ConvertSaveCodeDemigodValueToInfo(demigodValue))
     set content = content + AppendFileContent("Gold: " + I2S(gold))
     set content = content + AppendFileContent("Lumber: " + I2S(lumber))
@@ -237,7 +237,7 @@ endfunction
 function GetSaveCodeEx takes player whichPlayer, string playerName, boolean isSinglePlayer, boolean isWarlord, integer xpRate, integer heroLevel, integer xp, integer heroLevel2, integer xp2, integer heroLevel3, integer xp3, integer gold, integer lumber, integer evolutionLevel, integer demigodValue, integer equipmentBags returns string
     local integer playerNameHash = CompressedAbsStringHash(playerName)
     local string result = ""
-    
+
     set result = result + ConvertDecimalNumberToSaveCodeSegment(SAVE_CODE_TYPE_HEROES)
     set result = result + ConvertDecimalNumberToSaveCodeSegment(playerNameHash)
 
@@ -456,7 +456,7 @@ function ApplySaveCode takes player whichPlayer, string s returns boolean
             endif
 
             call RecreateEquipmentBags(whichPlayer, equipmentBags)
-            
+
             call AddGeneratedSaveCode(s)
 
             return true
@@ -491,7 +491,7 @@ function GetSaveCodeErrors takes player whichPlayer, string s returns string
         if (StringLength(result) > 0) then
             set result = result + ", "
         endif
-        
+
         set result = result + "Expected different checksum!"
     endif
 
@@ -654,33 +654,33 @@ endfunction
 function GetSaveCodeXp1 takes string name, string s returns integer
     local string saveCode = ReadSaveCode(s, CompressedAbsStringHash(name))
     local integer xp = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, SAVE_CODE_INDEX_XP)
-    
+
     return xp
 endfunction
 
 function GetSaveCodeXp2 takes string name, string s returns integer
     local string saveCode = ReadSaveCode(s, CompressedAbsStringHash(name))
     local integer xp2 = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, SAVE_CODE_INDEX_XP_2)
-    
+
     return xp2
 endfunction
 
 function GetSaveCodeXp3 takes string name, string s returns integer
     local string saveCode = ReadSaveCode(s, CompressedAbsStringHash(name))
     local integer xp3 = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, SAVE_CODE_INDEX_XP_3)
-    
+
     return xp3
 endfunction
 
 function GetSaveCodeGold takes string name, string s returns integer
     local string saveCode = ReadSaveCode(s, CompressedAbsStringHash(name))
-    
+
     return ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, SAVE_CODE_INDEX_GOLD)
 endfunction
 
 function GetSaveCodeLumber takes string name, string s returns integer
     local string saveCode = ReadSaveCode(s, CompressedAbsStringHash(name))
-    
+
     return ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, SAVE_CODE_INDEX_LUMBER)
 endfunction
 
@@ -786,7 +786,7 @@ function DistinctGroup takes group whichGroup returns group
         set first = null
         set i = i + 1
     endloop
-    
+
     if (bj_wantDestroyGroup) then
         call GroupClear(whichGroup)
         call DestroyGroup(whichGroup)
@@ -1076,7 +1076,7 @@ function ApplySaveCodeBuildings takes player whichPlayer, string s returns boole
                     if (not IsObjectFromPlayerRace(id, whichPlayer)) then
                         set id = MapBuildingID(id, GetPlayerRace1(whichPlayer))
                     endif
-                    
+
                     if (id != 0 and IsObjectFromPlayerRace(id, whichPlayer) and IsObjectFromPlayerProfession(id, whichPlayer)) then
                         if (GetPlayerTechMaxAllowed(whichPlayer, id) == 0 or CountLivingPlayerUnitsOfTypeIdFast(id , whichPlayer) < GetPlayerTechMaxAllowed(whichPlayer, id)) then
                             set x = ConvertAbsCoordinateX(I2R(ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, pos + 1)))
@@ -1098,7 +1098,7 @@ function ApplySaveCodeBuildings takes player whichPlayer, string s returns boole
             endloop
 
             call DisplaySaveCodeErrorAtLeastOne(whichPlayer, atLeastOne)
-            
+
             if (atLeastOne) then
                 call AddGeneratedSaveCode(s)
             endif
@@ -1204,7 +1204,7 @@ function GetSaveCodeShortInfosBuildings takes player whichPlayer, string s retur
     local real y = 0.0
     local string checksumStatus = GetChecksumStatus(checksum, checkedSaveCode)
     local string result = ""
-    
+
     if (isSinglePlayer) then
         set singlePlayerStatus = "S"
     endif
@@ -1278,7 +1278,7 @@ function GetSaveCodeItemsEx3 takes string playerName, boolean isSinglePlayer, bo
 
     //call BJDebugMsg("Save code playerNameHash " + I2S(playerNameHash))
     //call BJDebugMsg("Save code XP " + I2S(xp))
-    
+
     if (itemTypeSlot0 != 0 or itemTypeSlot1 != 0 or itemTypeSlot2 != 0 or itemTypeSlot3 != 0 or itemTypeSlot4 != 0 or itemTypeSlot5 != 0) then
         set result = result + ConvertDecimalNumberToSaveCodeSegment(SAVE_CODE_TYPE_ITEMS)
         set result = result + ConvertDecimalNumberToSaveCodeSegment(playerNameHash)
@@ -1376,7 +1376,7 @@ function GetSaveCodeItemsEx3 takes string playerName, boolean isSinglePlayer, bo
             endif
         endif
 
-        //call BJDebugMsg("Compressed result: " + result) 
+        //call BJDebugMsg("Compressed result: " + result)
         //call BJDebugMsg("Checksum: " + I2S(CompressedAbsStringHash(result)))
         //call BJDebugMsg("Checked save code part length: " + I2S(StringLength(result)))
         //call BJDebugMsg("Checked save code part: " + result)
@@ -1391,15 +1391,15 @@ function GetSaveCodeItemsEx3 takes string playerName, boolean isSinglePlayer, bo
 
         if (itemCounter > 0) then
             call AddGeneratedSaveCode(result)
-            
+
             if (writeFile) then
                 call CreateSaveCodeItemsTextFile(playerName, isSinglePlayer, isWarlord, index, itemCounter, itemNames, result)
             endif
-            
+
             return result
         endif
     endif
-    
+
     return ""
 endfunction
 
@@ -1452,7 +1452,7 @@ function GetAllSaveCodeItems takes player whichPlayer returns string
     local string result = GetSaveCodeItemsEx(GetPlayerName(whichPlayer), isSinglePlayer, isWarlord, xpRate, GetPlayerHero1(whichPlayer), true, 0)
     call GetSaveCodeItemsEx(GetPlayerName(whichPlayer), isSinglePlayer, isWarlord, xpRate, GetPlayerHero2(whichPlayer), true, 1)
     call GetSaveCodeItemsEx(GetPlayerName(whichPlayer), isSinglePlayer, isWarlord, xpRate, GetPlayerHero3(whichPlayer), true, 2)
-    
+
     set index = 3
     set i = 0
     set max = BACKPACK_MAX_PAGES
@@ -1462,7 +1462,7 @@ function GetAllSaveCodeItems takes player whichPlayer returns string
         set index = index + 1
         set i = i + 1
     endloop
-    
+
     set i = 0
     set max = GetEquipmentBagsCount(whichPlayer)
     loop
@@ -1471,7 +1471,7 @@ function GetAllSaveCodeItems takes player whichPlayer returns string
         set index = index + 1
         set i = i + 1
     endloop
-    
+
     return result
 endfunction
 
@@ -1530,7 +1530,7 @@ function ApplySaveCodeItemsEx takes player whichPlayer, string s, unit hero retu
                     if (not IsObjectFromPlayerRace(id, whichPlayer)) then
                         set id = MapItemID(id, GetPlayerRace1(whichPlayer))
                     endif
-                    
+
                     if (id != 0 and IsObjectFromPlayerRace(id, whichPlayer) and IsObjectFromPlayerProfession(id, whichPlayer)) then
                         if (not IsTome(id) or udg_Tomes) then
                             call UnitAddItemByIdSwapped(id, hero)
@@ -1553,7 +1553,7 @@ function ApplySaveCodeItemsEx takes player whichPlayer, string s, unit hero retu
             endloop
 
             call DisplaySaveCodeErrorAtLeastOne(whichPlayer, atLeastOne)
-            
+
             if (atLeastOne) then
                 call AddGeneratedSaveCode(s)
             endif
@@ -1740,7 +1740,7 @@ function GetPlayerUnitsOrderedByPriority takes player whichPlayer, integer index
     call GroupClear(livingUnitsToBeSaved)
     call DestroyGroup(livingUnitsToBeSaved)
     set livingUnitsToBeSaved = null
-    
+
     //call BJDebugMsg("Size of units: " + I2S(BlzGroupGetSize(whichGroup)))
 
     return whichGroup
@@ -1869,7 +1869,7 @@ function GetSaveCodeUnitsEx3 takes string playerName, boolean isSinglePlayer, bo
         set result = result + ConvertDecimalNumberToSaveCodeSegment(0)
         set i = i + 1
     endloop
-    
+
     //call BJDebugMsg("Compressed result: " + result)
     //call BJDebugMsg("Checksum: " + I2S(CompressedAbsStringHash(result)))
     //call BJDebugMsg("Checked save code part length: " + I2S(StringLength(result)))
@@ -1919,7 +1919,7 @@ function GetSaveCodeUnitsEx2 takes string playerName, boolean isSinglePlayer, bo
         set first = null
         set i = i + 1
     endloop
-    
+
     return GetSaveCodeUnitsEx3(playerName, isSinglePlayer, isWarlord, xpRate, writeFile, index, unitTypeIds[0], unitTypeIdCounts[0], unitTypeIds[1], unitTypeIdCounts[1], unitTypeIds[2], unitTypeIdCounts[2], unitTypeIds[3], unitTypeIdCounts[3], unitTypeIds[4], unitTypeIdCounts[4], unitTypeIds[5], unitTypeIdCounts[5], unitTypeIds[6], unitTypeIdCounts[6], unitTypeIds[7], unitTypeIdCounts[7])
 endfunction
 
@@ -2007,7 +2007,7 @@ function ApplySaveCodeUnits takes player whichPlayer, string s returns boolean
                     if (not IsObjectFromPlayerRace(id, whichPlayer)) then
                         set id = MapUnitID(id, GetPlayerRace1(whichPlayer), true)
                     endif
-                    
+
                     if (id != 0) then
                         set count = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, pos + 1)
                         //call BJDebugMsg("Loading save object " + GetObjectName(saveObjectId) + " with number: " + I2S(count))
@@ -2020,18 +2020,18 @@ function ApplySaveCodeUnits takes player whichPlayer, string s returns boolean
                                     if (GetPlayerTechMaxAllowed(whichPlayer, id) == 0 or CountLivingPlayerUnitsOfTypeIdFast(id , whichPlayer) < GetPlayerTechMaxAllowed(whichPlayer, id)) then
                                         call MoveLocation(tmpLocation, GetMapWaterNeutralZoneX(whichPlayer), GetMapWaterNeutralZoneY(whichPlayer))
                                         call CreateUnitAtLocSaveLast(whichPlayer, id, tmpLocation, GetMapWaterNeutralZoneFacing(whichPlayer))
-                                        
+
                                         call ApplyAllMaxHpResearches(bj_lastCreatedUnit, null)
-                                        
+
                                         if (not IsWaterUnit(bj_lastCreatedUnit)) then
                                             call MoveLocationToUnit(tmpLocation, GetPlayerHero1(whichPlayer))
                                             call SetUnitPositionLocFacingBJ(bj_lastCreatedUnit, tmpLocation, GetUnitFacing(GetPlayerHero1(whichPlayer)))
                                         endif
-                                        
+
                                         if (IsUnitType(bj_lastCreatedUnit, UNIT_TYPE_PEON)) then
                                             call AddWoWReforgedWorker(null, bj_lastCreatedUnit)
                                         endif
-                                        
+
                                         call GroupAddUnit(createdUnits, bj_lastCreatedUnit)
                                         set atLeastOne = true
                                     else
@@ -2062,7 +2062,7 @@ function ApplySaveCodeUnits takes player whichPlayer, string s returns boolean
             set tmpLocation = null
 
             call DisplaySaveCodeErrorAtLeastOne(whichPlayer, atLeastOne)
-            
+
             if (atLeastOne) then
                 call AddGeneratedSaveCode(s)
             endif
@@ -2174,7 +2174,7 @@ function GetSaveCodeShortInfosUnits takes player whichPlayer, string s returns s
     local integer count = 0
     local string checksumStatus = GetChecksumStatus(checksum, checkedSaveCode)
     local string result = ""
-    
+
     if (isSinglePlayer) then
         set singlePlayerStatus = "S"
     endif
@@ -2396,7 +2396,7 @@ function ApplySaveCodeResearches takes player whichPlayer, string s returns bool
             endloop
 
             call DisplaySaveCodeErrorAtLeastOne(whichPlayer, atLeastOne)
-            
+
             if (atLeastOne) then
                 call AddGeneratedSaveCode(s)
                 set udg_TmpPlayer = whichPlayer
@@ -2504,7 +2504,7 @@ function GetSaveCodeShortInfosResearches takes player whichPlayer, string s retu
     local string saveCodeTypeName = GetSaveCodeTypeName(saveCodeType)
     local string checksumStatus = GetChecksumStatus(checksum, checkedSaveCode)
     local string result = ""
-    
+
     if (isSinglePlayer) then
         set singlePlayerStatus = "S"
     endif
