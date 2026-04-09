@@ -9309,7 +9309,7 @@ Stellt Gegenstände her, die Ihren Helden heilen und das Leben des Helden erhöh
 STRING 1577
 // Abilities: A052 (Animal War Training), Ubertip (Tooltip - Normal - Extended)
 {
-Increases the maximum hit points of this unit by <R000,base1>.
+Erhöht die maximalen Trefferpunkte dieser Einheit um <R000,base1>.
 }
 
 STRING 1578
@@ -9319,21 +9319,21 @@ Jagdfalke
 }
 
 STRING 1579
-// Abilities: A03V (Gate of the Underworld), Name (Name)
+// Abilities: A03V (Demon Gate), Name (Name)
 {
-Tor of the Underworld
+Dämonentor
 }
 
 STRING 1580
-// Abilities: A03V (Gate of the Underworld), Tip (Tooltip - Normal)
+// Abilities: A03V (Demon Gate), Tip (Tooltip - Normal)
 {
-Tor of the Underworld
+Dämonentor
 }
 
 STRING 1581
-// Abilities: A03V (Gate of the Underworld), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A03V (Demon Gate), Ubertip (Tooltip - Normal - Extended)
 {
-Opens a gate through which Demons can enter this world.
+Öffnet ein Tor, durch das Dämonen in diese Welt gelangen können.
 }
 
 STRING 1582
@@ -9351,13 +9351,13 @@ STRING 1583
 STRING 1584
 // Units: o08B (Pylon), Tip (Tooltip - Basic)
 {
-Build Pylon
+Pylon errichten
 }
 
 STRING 1585
 // Units: o08C (Workshop), Ubertip (Tooltip - Extended)
 {
-Trains Vigilants, Belagerungsbrechers, and Dimensionsschiffs.
+Bildet Wachen, Belagerungsbrecher und Dimensionsschiffe aus.
 }
 
 STRING 1586
@@ -10179,7 +10179,7 @@ Build Tiny Arkanes Sanktum
 STRING 1726
 // Abilities: A03N (Matching Class), Ubertip (Tooltip - Normal - Extended)
 {
-Picks the matching class for your hero which replaces all abilities.
+Wählt die passende Klasse für Ihren Helden aus und ersetzt alle Fähigkeiten.
 }
 
 STRING 1727
@@ -10201,9 +10201,9 @@ STRING 1729
 }
 
 STRING 1732
-// Abilities: A03O (Hero Abilities Matching Class), Name (Name)
+// Abilities: A03O (Heldenfähigkeiten passend zur Klasse), Name (Name)
 {
-Heldenfähigkeiten Matching Class
+Heldenfähigkeiten passend zur Klasse
 }
 
 STRING 1733
@@ -18664,7 +18664,7 @@ STRING 3694
 }
 
 STRING 3695
-// Units: n0JG (Vigilant), EditorSuffix (Name - Editor Suffix)
+// Units: n0JG (Wache), EditorSuffix (Name - Editor Suffix)
 {
 (Draenei)
 }
@@ -38354,7 +38354,7 @@ Purchase Tiny Banner Pandaren
 }
 
 STRING 8313
-// Abilities: A03V (Gate of the Underworld), EditorSuffix (Editor Suffix)
+// Abilities: A03V (Demon Gate), EditorSuffix (Editor Suffix)
 {
 (Medivhs Zauberbuch)
 }
@@ -38942,7 +38942,7 @@ Sperrfeuer
 }
 
 STRING 8426
-// Abilities: A03O (Hero Abilities Matching Class), EditorSuffix (Editor Suffix)
+// Abilities: A03O (Heldenfähigkeiten passend zur Klasse), EditorSuffix (Editor Suffix)
 {
 B
 }
@@ -60262,7 +60262,7 @@ C
 STRING 20809
 // Abilities: A0OP (Animal War Training), Ubertip (Tooltip - Normal - Extended)
 {
-Increases the maximum hit points of this unit by <R000,base1>.
+Erhöht die maximalen Trefferpunkte dieser Einheit um <R000,base1>.
 }
 
 STRING 20813
@@ -105511,21 +105511,21 @@ STRING 49957
 }
 
 STRING 49960
-// Units: n0J6 (Vigilant), Name (Name)
+// Units: n0J6 (Wache), Name (Name)
 {
-Vigilant
+Wache
 }
 
 STRING 49961
-// Units: n0J6 (Vigilant), EditorSuffix (Name - Editor Suffix)
+// Units: n0J6 (Wache), EditorSuffix (Name - Editor Suffix)
 {
 (Argus) (Unhold)
 }
 
 STRING 49962
-// Units: n0J6 (Vigilant), Tip (Tooltip - Basic)
+// Units: n0J6 (Wache), Tip (Tooltip - Basic)
 {
-Hire Vigilant
+Hire Wache
 }
 
 STRING 49963
@@ -106402,13 +106402,13 @@ Belagerungsbrecher ausbilden
 }
 
 STRING 50212
-// Units: n0JG (Vigilant), Name (Name)
+// Units: n0JG (Wache), Name (Name)
 {
 Wachsamer
 }
 
 STRING 50214
-// Units: n0JG (Vigilant), Tip (Tooltip - Basic)
+// Units: n0JG (Wache), Tip (Tooltip - Basic)
 {
 Wachsamen anheuern
 }

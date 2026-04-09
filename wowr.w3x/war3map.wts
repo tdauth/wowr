@@ -9319,19 +9319,19 @@ Hunting Hawk
 }
 
 STRING 1579
-// Abilities: A03V (Gate of the Underworld), Name (Name)
+// Abilities: A03V (Demon Gate), Name (Name)
 {
-Gate of the Underworld
+Demon Gate
 }
 
 STRING 1580
-// Abilities: A03V (Gate of the Underworld), Tip (Tooltip - Normal)
+// Abilities: A03V (Demon Gate), Tip (Tooltip - Normal)
 {
-Gate of the Underworld
+Demon Gate
 }
 
 STRING 1581
-// Abilities: A03V (Gate of the Underworld), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A03V (Demon Gate), Ubertip (Tooltip - Normal - Extended)
 {
 Opens a gate through which Demons can enter this world.
 }
@@ -38353,7 +38353,7 @@ Purchase Tiny Banner Pandaren
 }
 
 STRING 8313
-// Abilities: A03V (Gate of the Underworld), EditorSuffix (Editor Suffix)
+// Abilities: A03V (Demon Gate), EditorSuffix (Editor Suffix)
 {
 (Medivh's Spell Book)
 }
