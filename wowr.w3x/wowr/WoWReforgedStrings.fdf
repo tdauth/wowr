@@ -1974,4 +1974,69 @@ StringList {
     Q_SIEGE_OF_DALARAN_DESCRIPTION     "The city of Dalaran is attacked by enemy forces. Defend it against them. Get your reward from Khadgar for a successful defence.",
     Q_SIEGE_OF_DALARAN_0               "Defeat the Undeads attacking Daralan.",
     Q_SIEGE_OF_DALARAN_1               "Bring the Head of the Dreadlord to Khadgar in Dalaran.",
+    // KulTirasQuest1
+    Q_SEA_TRADE_TITLE                  "Sea Trade",
+    Q_SEA_TRADE_DESCRIPTION            "The kingdom of Kul Tiras is specialized in sea travel due to its location on an island. It has a big navy but needs to import certain resources which are not present on the island. Extend the sea trade routes by bringing a Trading Ship to different ports in a certain order: New Stormwind, Theramore, Teldrassil and Sunstrider Isle and returning it to Kul Tiras. Get your reward from Admiral Proudmoore's spirit.",
+    Q_SEA_TRADE_0                      "Move a ship to the port of Stormwind.",
+    Q_SEA_TRADE_1                      "Move a ship to the port of Theramore.",
+    Q_SEA_TRADE_2                      "Move a ship to the port of Teldrassil.",
+    Q_SEA_TRADE_3                      "Move a ship to the port of Sunstrider Isle.",
+    Q_SEA_TRADE_4                      "Move a ship back to the port of Kul Tiras.",
+    // KulTirasQuest2
+    Q_TREASURE_HUNTING_TITLE           "Treasure Hunting",
+    Q_TREASURE_HUNTING_DESCRIPTION     "Admiral Proudmoore's spirit has received a treasure map from captured pirates. He wants you to dig up all the treasures marked on the map and return them to him to get your reward. Destroy the treasures to dig them up.",
+    Q_TREASURE_HUNTING_0               "Dig up all treasures.",
+    Q_TREASURE_HUNTING_1               "Bring the treasures to Admiral Proudmoore.",
+    // KulTirasQuest3
+    Q_CULTISTS_TITLE                   "Cultists",
+    Q_CULTISTS_DESCRIPTION             "There is a cult spreading in the kingdom of Kul Tiras which worships a powerful Kraken next to the coast. Admiral Proudmoore's spirit wants you to sacrifice those cult members to the Kraken which is what they want, too. Kill the Kraken after the sacrifices. Get your reward from Admiral Proudmoore's spirit.",
+    Q_CULTISTS_0                       "Sacrifice all Cultists to the Kraken.",
+    Q_CULTISTS_1                       "Kill the Kraken.",
+    Q_CULTISTS_2                       "Bring the Kraken's Head to Admiral Proudmoore.",
+    // KulTirasQuest4
+    Q_SEA_BATTLE_TITLE                 "Sea Battle",
+    Q_SEA_BATTLE_DESCRIPTION           "The kingdom of Kul Tiras is attacked by Pirates. The coast must be defended. Help the Kul Tiras navy to defend their coast, destroy all Pirate ships and attack the pirate bay and kill their captain. Return the captain's skull to Admiral Proudmoore's Spirit to receive your reward.",
+    Q_SEA_BATTLE_0                     "Destroy all Pirate Ships.",
+    Q_SEA_BATTLE_1                     "Kill the Captain.",
+    Q_SEA_BATTLE_2                     "Bring the Captain's Head to Admiral Proudmoore.",
+    // NightElfQuest1
+    Q_DRUID_SPELL_TITLE                "Druid Spell",
+    Q_DRUID_SPELL_DESCRIPTION          "The city of Darnassus is flourishing as hoped. However, there seems to be a problem with the Night Elf housings around the new World Tree. They are somehow falling apart. Apparently this seems to be a side-effect of the World Tree´s growing. Tyrande needs a special Spell from the Druids of the Talon to enhance the structures and shield them from the World Tree´s damaging magic. She requires a Hero to travel to the Barrow Dens in Ashenvale, find the druids and recover the Spell for her. Although this is only a small running job, there will be a reward for the Hero´s efforts to help the Night Elves.",
+    Q_DRUID_SPELL_0                    "Bring the Druid Letter to Barrow Dens in Ashenvale.",
+    Q_DRUID_SPELL_1                    "Bring the Druid Spell to Tyrande in Darnassus.",
+    // NightElfQuest2
+    Q_THE_WORLD_TREE_TITLE             "The World Tree",
+    Q_THE_WORLD_TREE_DESCRIPTION       "Ever since the destruction of the Demon Archimonde near the World Tree, its regeneration has somehow been strange. The Arch-Druid Furion suspects some kind of corruption of the magical waters the World Tree is feeding from... Since the dispelling of demonic magicks is the speciality of the Paladins of the Silver Hand, Furion needs their help. Someone must seek the head of their Order who is currently in Nethergarde Citadel in Azeroth and get a sample of blessed water from him. Pouring the blessed water into the Well of Eternity should dispel any remnants of demonic corruption in it.",
+    Q_THE_WORLD_TREE_0                 "Get the blessed water from the head of the Silver Hand in Nethergarde Citadel.",
+    Q_THE_WORLD_TREE_1                 "Bring the blessed water to Malfurion at Mount Hyjal.",
+    // NightElfQuest3
+    Q_MOON_STONES_TITLE                "Moon Stones",
+    Q_MOON_STONES_DESCRIPTION          "During an experiment with the newly discovered Moon Stones, there has been an accident. The effect of the Moon Stone somehow prolongued the Eclipse to an incredible length. Tyrande has tried many spells to cancel the eclipse but with no success. She believes that with the help of the Arch-Sorceress Jaina Proudmoore, she could dispel the eclipse and also enhance the moon stones so that such an accident does not occur again. The mission is simple: travel to Theramore, and let Jaina enhance the moon stone Tyrande gave you. Afterwards return to it to Tyrande and receive a small reward for helping the Night Elves !",
+    Q_MOON_STONES_0                    "Bring the Moonstone to Jaina Proudmoore on Theramore.",
+    Q_MOON_STONES_1                    "Return the Enhanced Moonstone to Tyrande in Darnassus.",
+    // NightElfQuest4
+    Q_DEMON_BLOOD_TITLE                "Demon Blood",
+    Q_DEMON_BLOOD_DESCRIPTION          "After the Legion´s defeat on Kalimdor, the Night Elves seem to have overlooked something. There is still a defiled Fountain somewhere in Fellwood, probably the source of the Warsong Clan´s former corruption. To prevent other creatures to drink from it, Furion asks you to travel to the nearby Felwood Forest, find the Defiled Fountain and destroy it. But be on your guard, since there seem to be remnants of the Dark Legion´s strike force that the Night Elves have not yet eliminated!",
+    Q_DEMON_BLOOD_0                    "Destroy the Defiled Fountain in Felwood Forest.",
+    Q_DEMON_BLOOD_1                    "Return to Malfurion at Mount Hyjal.",
+    // OrcQuest1
+    Q_DUROTAR_LAW_CODE_TITLE           "Durotar Law Code",
+    Q_DUROTAR_LAW_CODE_DESCRIPTION     "The Orcish nation of Durotar is prospering well. Under the guidance of Warchief Thrall, they have established a council of elders that is responsible for establishing order and laws among the hot-headed Orcs. Although the Night Elves and Humans already have written codes of law, this is something totally new for the young nation of Orcs. Thrall promised to keep the Night Elves informed about the progress of Durotar´s legislative acts. Since his former running pet, Rexxar, has moved to the wilds again, Thrall needs a new errand boy. Your Hero has to take the Code of Laws tome and take it to Tyrande on Teldrassil Isle. Afterwards you can return to Thrall and claim you payment for the job.",
+    Q_DUROTAR_LAW_CODE_0               "Bring the Code of Laws tome to Tyrande on Teldrassil Isle.",
+    Q_DUROTAR_LAW_CODE_1               "Return to Thrall for your payment.",
+    // OrcQuest2
+    Q_HARPY_MENACE_TITLE               "Harpy Menace",
+    Q_HARPY_MENACE_DESCRIPTION         "The Tauren have constantly been harassed by Harpies and Centaurs since they moved to Mulgore. Now a scout has discovered one of the Harpies´ Queens. Cairne believes that if she was destroyed, the Harpies would at last be silenced. He needs a strong hero to travel to the nearby Stonetalon Mountains, find the Harpy Queen and dispose of her as she deserves. Return afterwards her heart to Cairne as a proof of the mission success and claim your reward! (*ugh*)",
+    Q_HARPY_MENACE_0                   "Kill the Harpy Queen.",
+    Q_HARPY_MENACE_1                   "Return her heart to Cairne.",
+    // OrcQuest3
+    Q_ARENA_CONTEST_TITLE              "Arena Contest",
+    Q_ARENA_CONTEST_DESCRIPTION        "Rexxar and the Stonemaul Ogres declare their Arena officially as open ! For the first warrior to beat Level 9 of the Gauntlet Arena, Rexxar has announced a special prize, apart from the items that may be dropped in the Arena fights. Beat Level 9 of the Gauntlet and show Rexxar the Stonemaul Arena Master Belt. He will then reward your Hero with something special.",
+    Q_ARENA_CONTEST_0                  "Beat Level 9 of the Gauntlet.",
+    Q_ARENA_CONTEST_1                  "Show Rexxar the Stonemaul Arena Master Belt.",
+    // OrcQuest4
+    Q_CENTAUR_KHANS_TITLE              "Centaur Khans",
+    Q_CENTAUR_KHANS_DESCRIPTION        "The Pandaren Brewmaster, Chem Stormstout, has recently arrived in Mulgore with interesting news from his travel in the south. There seems to be an increased movement of the centaurs. They apparently seem to have their seasonal fights for who is to be the new Supreme Centaur leader. The Tauren see their opportunity to strike a blow at the centaurs in order to lower their battle morale and cause confusion among them. Cairne and Chem will reward any Hero who kills all 7 Centaur Khans in the southern part of the Barrens.",
+    Q_CENTAUR_KHANS_0                  "Kill all 7 Centaur Khans.",
+    Q_CENTAUR_KHANS_1                  "Return to Cairne to receive your reward.",
 }
