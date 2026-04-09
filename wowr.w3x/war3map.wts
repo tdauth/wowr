@@ -8445,7 +8445,7 @@ Talisman of Everlasting
 STRING 1431
 // Items: I025 (Talisman of Everlasting), Description (Description)
 {
-Increases Life by 600 and grants 2 extra Hitpoints regeneration per second.
+Increases life by 600 and grants 2 extra hitpoints regeneration per second.
 }
 
 STRING 1432
@@ -9153,7 +9153,7 @@ Blocks an enemy spell every 15 seconds and adds 250 Mana.
 STRING 1551
 // Items: I025 (Talisman of Everlasting), Ubertip (Tooltip - Extended)
 {
-Increases Life by 600 and grants 2 extra Hitpoints regeneration per second.
+Increases life by 600 and grants 2 extra hitpoints regeneration per second.
 }
 
 STRING 1552
@@ -9303,7 +9303,7 @@ STRING 1575
 STRING 1576
 // Items: I06N (Herbalist), Ubertip (Tooltip - Extended)
 {
-Craft items which heal your hero and increase the hero's life:|n- Potion of Greater Healing|n- Scroll of Healing|n- Health Stone|n- Potion of Invulnerability|n- Talisman of Everlasting|n- Tiny Fountain of Health
+Craft items which heal your hero and increase the hero's life:|n- Potions of Greater Healing|n- Scrolls of Healing|n- Health Stones|n- Potions of Invulnerability|n- Talismans of Everlasting|n- Tiny Fountains of Health
 }
 
 STRING 1577
@@ -69578,7 +69578,7 @@ Master Herbalism
 STRING 30972
 // Abilities: A01D (Herbalism - Master), Ubertip (Tooltip - Normal - Extended)
 {
-The Herbalist uses his gathered herbs and minerals to create an Amulet of Everlasting.
+Crafts Talismans of Everlasting.
 }
 
 STRING 30973

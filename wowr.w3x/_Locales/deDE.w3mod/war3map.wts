@@ -2522,9 +2522,9 @@ STRING 422
 }
 
 STRING 423
-// Items: I025 (Talisman of Everlasting), Tip (Tooltip - Basic)
+// Items: I025 (Talisman der Ewigkeit), Tip (Tooltip - Basic)
 {
-Purchase Talisman der Ewigkeit
+Talisman der Ewigkeit erwerben
 }
 
 STRING 424
@@ -8437,15 +8437,15 @@ S
 }
 
 STRING 1430
-// Items: I025 (Talisman of Everlasting), Name (Name)
+// Items: I025 (Talisman der Ewigkeit), Name (Name)
 {
 Talisman der Ewigkeit
 }
 
 STRING 1431
-// Items: I025 (Talisman of Everlasting), Description (Description)
+// Items: I025 (Talisman der Ewigkeit), Description (Description)
 {
-Increases Life by 600 and grants 2 extra Hitpoints regeneration per second.
+Erhöht das Leben um 600 und gewährt eine zusätzliche Trefferpunkt-Regeneration von 2 pro Sekunde.
 }
 
 STRING 1432
@@ -9151,9 +9151,9 @@ Blocks an enemy spell every 15 seconds and adds 250 Mana.
 }
 
 STRING 1551
-// Items: I025 (Talisman of Everlasting), Ubertip (Tooltip - Extended)
+// Items: I025 (Talisman der Ewigkeit), Ubertip (Tooltip - Extended)
 {
-Increases Life by 600 and grants 2 extra Hitpoints regeneration per second.
+Erhöht das Leben um 600 und gewährt eine zusätzliche Trefferpunkt-Regeneration von 2 pro Sekunde.
 }
 
 STRING 1552
@@ -9303,7 +9303,7 @@ STRING 1575
 STRING 1576
 // Items: I06N (Herbalist), Ubertip (Tooltip - Extended)
 {
-Stellt Gegenstände her, die Ihren Helden heilen und das Leben des Helden erhöhen:|n- Großer Heiltrank|n- Rolle der Heilung|n- Gesundheitsstein|n- Trank der Unverwundbarkeit|n- Talisman of Everlasting|n- Winziger Brunnen der Gesundheit
+Stellt Gegenstände her, die Ihren Helden heilen und das Leben des Helden erhöhen:|n- Große Heiltränke|n- Rollen der Heilung|n- Gesundheitssteine|n- Tränke der Unverwundbarkeit|n- Talismane der Ewigkeit|n- Winzige Brunnen der Gesundheit
 }
 
 STRING 1577
@@ -69573,13 +69573,13 @@ The Kräuterkundler uses his gathered herbs and minerals to create a Potion of I
 STRING 30971
 // Abilities: A01D (Herbalism - Master), Tip (Tooltip - Normal)
 {
-Meister Kräuterkunde
+Meister-Kräuterkunde
 }
 
 STRING 30972
 // Abilities: A01D (Herbalism - Master), Ubertip (Tooltip - Normal - Extended)
 {
-The Kräuterkundler uses his gathered herbs and minerals to create an Amulet of Everlasting.
+Stellt Talismane der Ewigkeit her.
 }
 
 STRING 30973
