@@ -2200,7 +2200,7 @@ E
 }
 
 STRING 369
-// Units: h0IA (Dragon's Reach), EditorSuffix (Name - Editor Suffix)
+// Units: h0IA (Drachenfeste), EditorSuffix (Name - Editor Suffix)
 {
 (Vrykul)
 }
@@ -2564,7 +2564,7 @@ The Kräuterkundler uses his gathered herbs and minerals to create a Heath Stone
 }
 
 STRING 430
-// Units: h0IB (Advanced Dragon's Reach), EditorSuffix (Name - Editor Suffix)
+// Units: h0IB (Hoch entwickelte Drachenfeste), EditorSuffix (Name - Editor Suffix)
 {
 (Vrykul)
 }
@@ -21850,7 +21850,7 @@ Verlies-Stacheln
 }
 
 STRING 4497
-// Units: h0IC (Fortified Dragon's Reach), EditorSuffix (Name - Editor Suffix)
+// Units: h0IC (Befestigte Drachenfeste), EditorSuffix (Name - Editor Suffix)
 {
 (Vrykul)
 }
@@ -65371,15 +65371,15 @@ Haus errichten
 }
 
 STRING 26422
-// Units: h0IA (Dragon's Reach), Name (Name)
+// Units: h0IA (Drachenfeste), Name (Name)
 {
-Dragon's Reach
+Drachenfeste
 }
 
 STRING 26423
-// Units: h0IA (Dragon's Reach), Tip (Tooltip - Basic)
+// Units: h0IA (Drachenfeste), Tip (Tooltip - Basic)
 {
-Build Dragon's Reach
+Drachenfeste errichten
 }
 
 STRING 26424
@@ -65389,15 +65389,15 @@ STRING 26424
 }
 
 STRING 26425
-// Units: h0IB (Advanced Dragon's Reach), Name (Name)
+// Units: h0IB (Hoch entwickelte Drachenfeste), Name (Name)
 {
-Advanced Dragon's Reach
+Hoch entwickelte Drachenfeste
 }
 
 STRING 26426
-// Units: h0IB (Advanced Dragon's Reach), Tip (Tooltip - Basic)
+// Units: h0IB (Hoch entwickelte Drachenfeste), Tip (Tooltip - Basic)
 {
-Ausbau zum Advanced Dragon's Reach
+Ausbau zur Hoch entwickelten Drachenfeste
 }
 
 STRING 26431
@@ -65977,9 +65977,9 @@ S
 }
 
 STRING 26865
-// Units: h0IC (Fortified Dragon's Reach), Name (Name)
+// Units: h0IC (Befestigte Drachenfeste), Name (Name)
 {
-Fortified Dragon's Reach
+Befestigte Drachenfeste
 }
 
 STRING 26869
@@ -68295,7 +68295,7 @@ Gepanzertes U-Boot beschwören
 STRING 29195
 // Abilities: A0YX (Submerge), Ubertip (Tooltip - Normal - Extended)
 {
-The submarine submerges into the water. Makes it invisible but lowers the life and mana regeneration massively.
+Das U-Boot taucht unter Wasser ab. Macht es unsichtbar, aber verringert dabei die Lebens- und Manaregeneration massiv.
 }
 
 STRING 29196
@@ -68307,7 +68307,7 @@ Auftauchen
 STRING 29197
 // Abilities: A0YX (Submerge), Unubertip (Tooltip - Turn Off - Extended)
 {
-The submarine emerges from the water. Makes it visible but increases the life and mana regeneration massively.
+Das U-Boot taucht aus dem Wasser auf. Macht es sichtbar, aber erhöht dabei die Lebens- und Manaregeneration massiv.
 }
 
 STRING 29198
@@ -68373,7 +68373,7 @@ Abtauchen
 STRING 29212
 // Abilities: A0Z1 (Submerge), Ubertip (Tooltip - Normal - Extended)
 {
-The submarine submerges into the water. Makes it invisible but lowers the life and mana regeneration massively.
+Das U-Boot taucht unter Wasser ab. Macht es unsichtbar, aber verringert dabei die Lebens- und Manaregeneration massiv.
 }
 
 STRING 29213
@@ -68385,7 +68385,7 @@ Auftauchen
 STRING 29214
 // Abilities: A0Z1 (Submerge), Unubertip (Tooltip - Turn Off - Extended)
 {
-The submarine emerges from the water. Makes it visible but increases the life and mana regeneration massively.
+Das U-Boot taucht aus dem Wasser auf. Macht es sichtbar, aber erhöht dabei die Lebens- und Manaregeneration massiv.
 }
 
 STRING 29215
@@ -68415,7 +68415,7 @@ Abtauchen
 STRING 29219
 // Abilities: A0Z2 (Submerge), Ubertip (Tooltip - Normal - Extended)
 {
-The submarine submerges into the water. Makes it invisible but lowers the life and mana regeneration massively.
+Das U-Boot taucht unter Wasser ab. Macht es unsichtbar, aber verringert dabei die Lebens- und Manaregeneration massiv.
 }
 
 STRING 29220
@@ -68427,7 +68427,7 @@ Auftauchen
 STRING 29221
 // Abilities: A0Z2 (Submerge), Unubertip (Tooltip - Turn Off - Extended)
 {
-The submarine emerges from the water. Makes it visible but increases the life and mana regeneration massively.
+Das U-Boot taucht aus dem Wasser auf. Macht es sichtbar, aber erhöht dabei die Lebens- und Manaregeneration massiv.
 }
 
 STRING 29222
@@ -68865,37 +68865,37 @@ N
 STRING 30449
 // Abilities: A0BF (Artillary Position), Untip (Tooltip - Turn Off)
 {
-Walking Form
+Bewegliche Form
 }
 
 STRING 30453
-// Abilities: A16J (Artillery Position), Name (Name)
+// Abilities: A16J (Artillerie-Stellung), Name (Name)
 {
-Artillery Position
+Artillerie-Stellung
 }
 
 STRING 30454
-// Abilities: A16J (Artillery Position), Tip (Tooltip - Normal)
+// Abilities: A16J (Artillerie-Stellung), Tip (Tooltip - Normal)
 {
-Artillery Position
+Artillerie-Stellung
 }
 
 STRING 30455
-// Abilities: A16J (Artillery Position), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A16J (Artillerie-Stellung), Ubertip (Tooltip - Normal - Extended)
 {
-Takes an artillery position which allows the Artillery to fire. However, disables their movement.
+Nimmt eine Artilleriestellung ein, die es der Artillerie ermöglicht, zu feuern. Allerdings kann sie sich nicht mehr bewegen.
 }
 
 STRING 30456
-// Abilities: A16J (Artillery Position), Untip (Tooltip - Turn Off)
+// Abilities: A16J (Artillerie-Stellung), Untip (Tooltip - Turn Off)
 {
-Walking Form
+Bewegliche Form
 }
 
 STRING 30457
-// Abilities: A16J (Artillery Position), Unubertip (Tooltip - Turn Off - Extended)
+// Abilities: A16J (Artillerie-Stellung), Unubertip (Tooltip - Turn Off - Extended)
 {
-Picks up the artillery to move again which disables any attacks.
+Packt die Artillerie zusammen, um sich erneut zu bewegen, wodurch jegliche Angriffe unterbunden werden.
 }
 
 STRING 30461
@@ -68935,9 +68935,9 @@ Digs up the target area. This is not kept in savegames.
 }
 
 STRING 30479
-// Units: h0IC (Fortified Dragon's Reach), Tip (Tooltip - Basic)
+// Units: h0IC (Befestigte Drachenfeste), Tip (Tooltip - Basic)
 {
-Ausbau zum Fortified Dragon's Reach
+Ausbau zur Befestigten Drachenfeste
 }
 
 STRING 30496
@@ -69127,27 +69127,27 @@ Zepter der Vrykul erwerben
 }
 
 STRING 30834
-// Items: I0HM (Tiny Dragon's Reach), Description (Description)
+// Items: I0HM (Tiny Drachenfeste), Description (Description)
 {
-Creates a Dragon's Reach.
+Errichtet eine Drachenfeste.
 }
 
 STRING 30835
-// Items: I0HM (Tiny Dragon's Reach), Name (Name)
+// Items: I0HM (Tiny Drachenfeste), Name (Name)
 {
-Tiny Dragon's Reach
+Winzige Drachenfeste
 }
 
 STRING 30836
-// Items: I0HM (Tiny Dragon's Reach), Tip (Tooltip - Basic)
+// Items: I0HM (Tiny Drachenfeste), Tip (Tooltip - Basic)
 {
-Purchase Tiny Dragon's Reach
+Winzige Drachenfeste erwerben
 }
 
 STRING 30837
-// Items: I0HM (Tiny Dragon's Reach), Ubertip (Tooltip - Extended)
+// Items: I0HM (Tiny Drachenfeste), Ubertip (Tooltip - Extended)
 {
-Creates a Dragon's Reach at a target location.
+Errichtet am Zielort eine Drachenfeste.
 }
 
 STRING 30838
@@ -69169,9 +69169,9 @@ STRING 30840
 }
 
 STRING 30841
-// Abilities: A11I (Build Tiny Dragon's Reach), Name (Name)
+// Abilities: A11I (Build Tiny Drachenfeste), Name (Name)
 {
-Build Tiny Dragon's Reach
+Winzige Drachenfeste errichten
 }
 
 STRING 30842
@@ -74247,7 +74247,7 @@ Heavily armored vehicle, effective at destroying buildings. Loses ability to mov
 STRING 33978
 // Units: h0KJ (Decimator), EditorSuffix (Name - Editor Suffix)
 {
-(Blutelfen) (Artillery Position)
+(Blutelfen) (Artillerie-Stellung)
 }
 
 STRING 33979
@@ -74311,7 +74311,7 @@ STRING 33988
 }
 
 STRING 33994
-// Abilities: A16J (Artillery Position), EditorSuffix (Editor Suffix)
+// Abilities: A16J (Artillerie-Stellung), EditorSuffix (Editor Suffix)
 {
 (Blutelfen) (Dezimator)
 }
@@ -86149,21 +86149,21 @@ Ein listiger Held, adept at manipulating opponents. Can learn Stille, Todesmante
 }
 
 STRING 38606
-// Units: h0IA (Dragon's Reach), Ubertip (Tooltip - Extended)
+// Units: h0IA (Drachenfeste), Ubertip (Tooltip - Extended)
 {
-Primary structure, used to train Vrykul-Arbeiters and receive gathered resources. Can be upgraded to Advanced Dragon's Reach and then Fortified Dragon's Reach ermöglicht die Produktion weiterer Gebäude- und Einheitenarten.
+Primäres Gebäude, wird zum Ausbilden von Vrykul-Arbeitern und zum Einlagern gesammelter Rohstoffe verwendet. Kann erst zur Hoch entwickelten Drachenfeste und dann zur Befestigten Drachenfeste ausgebaut werden, um die Produktion weiterer Gebäude- und Einheitenarten zu ermöglichen.
 }
 
 STRING 38607
-// Units: h0IB (Advanced Dragon's Reach), Ubertip (Tooltip - Extended)
+// Units: h0IB (Hoch entwickelte Drachenfeste), Ubertip (Tooltip - Extended)
 {
-Ausbau zum Advanced Dragon's Reach ermöglicht die Produktion weiterer Gebäude- und Einheitenarten.
+Ausbau zur Hoch entwickelten Drachenfeste ermöglicht die Produktion weiterer Gebäude- und Einheitenarten.
 }
 
 STRING 38608
-// Units: h0IC (Fortified Dragon's Reach), Ubertip (Tooltip - Extended)
+// Units: h0IC (Befestigte Drachenfeste), Ubertip (Tooltip - Extended)
 {
-Ausbau zum Fortified Dragon's Reach ermöglicht die Produktion weiterer Gebäude- und Einheitenarten.
+Ausbau zur Befestigten Drachenfeste ermöglicht die Produktion weiterer Gebäude- und Einheitenarten.
 }
 
 STRING 38609
@@ -86199,7 +86199,7 @@ STRING 38627
 STRING 38628
 // Units: h0PB (Inn), Ubertip (Tooltip - Extended)
 {
-Errichtet einen Laden mit käuflichen Gegenständen. The items available depend upon what level of upgrade your Rathaus has (Dragon's Reach, Advanced Dragon's Reach, or Fortified Dragon's Reach) and which buildings you have.
+Errichtet einen Laden mit käuflichen Gegenständen. Welche Gegenstände verfügbar sind, hängt davon ab, welche Ausbaustufe Ihre Drachenfeste hat (Drachenfeste, Hoch entwickelte Drachenfeste oder Befestigte Drachenfeste) und welche Gebäude Sie haben.
 }
 
 STRING 38629
