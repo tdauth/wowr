@@ -1,4 +1,4 @@
-library WoWReforgedUnlimitedBagOfFood initializer Init
+library WoWReforgedItemUnlimitedBagOfFood initializer Init
 
 //call UnlimitedBagOfFood(GetTriggerUnit())
 
