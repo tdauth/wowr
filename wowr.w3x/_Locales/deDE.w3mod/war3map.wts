@@ -15514,15 +15514,15 @@ Heavily armored vehicle, effective at destroying buildings and has the abilities
 }
 
 STRING 2977
-// Abilities: A05R (Increased Morale), Name (Name)
+// Abilities: A05R (Erhöhte Moral), Name (Name)
 {
-Increased Morale
+Erhöhte Moral
 }
 
 STRING 2978
-// Abilities: A05R (Increased Morale), Tip (Tooltip - Normal)
+// Abilities: A05R (Erhöhte Moral), Tip (Tooltip - Normal)
 {
-Increased Morale
+Erhöhte Moral
 }
 
 STRING 2979
@@ -28613,7 +28613,7 @@ Increases the damage by <A1P4,DataA1> and causes area of effect damage.
 }
 
 STRING 5899
-// Abilities: A05R (Increased Morale), EditorSuffix (Editor Suffix)
+// Abilities: A05R (Erhöhte Moral), EditorSuffix (Editor Suffix)
 {
 (Blutelfen)
 }
