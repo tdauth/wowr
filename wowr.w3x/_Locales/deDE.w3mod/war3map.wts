@@ -59371,7 +59371,7 @@ Provides Dalaran towers with the ability to detect invisible units.
 STRING 20492
 // Units: n086 (Wizard), Ubertip (Tooltip - Extended)
 {
-Heavy ranged unit with Tote erwecken. Can also cast Meeres-Elementargeist beschwören and Stille. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
+Schwere Fernkampf-Einheit mit 'Tote erwecken'. Kann außerdem 'Meeres-Elementargeist beschwören' und 'Stille' wirken. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
 }
 
 STRING 20493
@@ -66303,13 +66303,13 @@ Zauberbuch erwerben
 STRING 27456
 // Items: I0FJ (Spell Book), Description (Description)
 {
-Places a mobile Zauberbuch.
+Platziert ein mobiles Zauberbuch.
 }
 
 STRING 27457
 // Items: I0FJ (Spell Book), Ubertip (Tooltip - Extended)
 {
-Places a mobile Zauberbuch.
+Platziert ein mobiles Zauberbuch.
 }
 
 STRING 27458
@@ -66477,13 +66477,13 @@ Drops random Goldmünzen on death.
 STRING 27884
 // Abilities: A0X5 (Improved Mining), Name (Name)
 {
-Improved Bergbau
+Verbesserter Bergbau
 }
 
 STRING 27885
 // Abilities: A0X5 (Improved Mining), Tip (Tooltip - Normal)
 {
-Improved Bergbau
+Verbesserter Bergbau
 }
 
 STRING 27886
@@ -67119,7 +67119,7 @@ C
 STRING 28050
 // Units: h0UV (Phoenix), Tip (Tooltip - Basic)
 {
-Hire Phönix
+Phönix anheuern
 }
 
 STRING 28059
