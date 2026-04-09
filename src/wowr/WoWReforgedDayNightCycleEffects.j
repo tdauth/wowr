@@ -10,7 +10,7 @@ globals
     private boolean array destructableHide
     private real array destructableHideDelay
     private integer destructableIdsCounter = 0
-    
+
     private integer array doodadIds
     private string array doodadDayAnimNames
     private string array doodadNightAnimNames
@@ -103,7 +103,7 @@ private function NightEffects takes nothing returns nothing
 
     if (IsNight() and effectsIsDaytime) then
         set effectsIsDaytime = false
-        
+
         call PlayDoodadAnimations(false)
         call EnumDestructablesInRect(GetPlayableMapRect(), filter, function EnumDestructableNightEffect)
     endif
@@ -113,7 +113,7 @@ private function Init takes nothing returns nothing
     set filter = Filter(function FilterIsDayNightDestructable)
     //call TriggerAddAction(bj_dncSoundsDay, function DayEffects)
     //call TriggerAddAction(bj_dncSoundsNight, function NightEffects)
-    
+
     // Set up triggers to respond to changes from day to night or vice-versa.
     set dayEffectsTrigger = CreateTrigger()
     call TriggerRegisterGameStateEvent(dayEffectsTrigger,   GAME_STATE_TIME_OF_DAY, GREATER_THAN_OR_EQUAL, bj_TOD_DAWN)
@@ -124,9 +124,9 @@ private function Init takes nothing returns nothing
     call TriggerRegisterGameStateEvent(nightEffectsTrigger, GAME_STATE_TIME_OF_DAY, LESS_THAN,             bj_TOD_DAWN)
     call TriggerRegisterGameStateEvent(nightEffectsTrigger, GAME_STATE_TIME_OF_DAY, GREATER_THAN_OR_EQUAL, bj_TOD_DUSK)
     call TriggerAddAction(nightEffectsTrigger, function NightEffects)
-    
+
     //call AddDestructable()
-    
+
     call AddDoodad('YOlp') // Post Lantern Cityscape
     call AddDoodad('LOlp') // Post Lantern Lordaeron Summer
     call AddDoodad('LObz') // Brazier Glowing Loraderon Summer
