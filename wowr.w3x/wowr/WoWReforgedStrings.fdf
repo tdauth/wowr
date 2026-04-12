@@ -2039,4 +2039,49 @@ StringList {
     Q_CENTAUR_KHANS_DESCRIPTION        "The Pandaren Brewmaster, Chem Stormstout, has recently arrived in Mulgore with interesting news from his travel in the south. There seems to be an increased movement of the centaurs. They apparently seem to have their seasonal fights for who is to be the new Supreme Centaur leader. The Tauren see their opportunity to strike a blow at the centaurs in order to lower their battle morale and cause confusion among them. Cairne and Chem will reward any Hero who kills all 7 Centaur Khans in the southern part of the Barrens.",
     Q_CENTAUR_KHANS_0                  "Kill all 7 Centaur Khans.",
     Q_CENTAUR_KHANS_1                  "Return to Cairne to receive your reward.",
+    // BloodElfQuest1
+    Q_FARSTRIDERS_TITLE                "Farstriders",
+    Q_FARSTRIDERS_DESCRIPTION          "The Blood Elves have to retake their former kingdom Quel'Thalas and restore the Sunwell. Due to their magic addiction they are heavily weakened and need the help of the unaffected rangers of the Farstriders to defeat the Scourge from Quel'Thalas. Hire a ranger from the Mercenary Camp and return her to Sunstrider Isle to get your reward.",
+    Q_FARSTRIDERS_0                    "Hire a Ranger at the Mercenary Camp in Sunwell Grove.",
+    Q_FARSTRIDERS_1                    "Return the Ranger to Lor'Themar Theron.",
+    // BloodElfQuest2
+    Q_TRAITOR_TITLE                    "Traitor",
+    Q_TRAITOR_DESCRIPTION              "Prince Kael has betrayed the Blood Elf people. He followed his addiction to magic and became corrupted by Demon powers. Together with his new master Illidan and the Naga he his now residing in Outland but has plans to reclaim the Blood Elf kingdom. Lor'themar wants you to capture him and bring him before trial before he can endanger his people.",
+    Q_TRAITOR_0                        "Capture Kael in Outland.",
+    Q_TRAITOR_1                        "Return Kael to Lor'Themar Theron.",
+    // BloodElfQuest3
+    Q_FORSAKEN_TITLE                   "Forsaken",
+    Q_FORSAKEN_DESCRIPTION             "We need more allies the make the Blood Elf army strong enough for defeating the Scourge in our former kingdom. Sylvanas Windrunner is ready to help the Blood Elves with her Forsaken troops to defeat the common enemy if we meet her and kill enemy undead creeps for her.",
+    Q_FORSAKEN_0                       "Bring Lor'themar's message to Sylvanas in Undercity.",
+    Q_FORSAKEN_1                       "Kill 20 Undead creeps.",
+    Q_FORSAKEN_2                       "Return to Sylvanas Windrunner in Undercity.",
+    // BloodElfQuest4
+    Q_QUEL_THALAS_TITLE                "Quel'Thalas",
+    Q_QUEL_THALAS_DESCRIPTION          "It is time to reclaim the kingdom of Quel'Thalas and to heal the corrupted Sunwell to claim the former immortality of the Blood Elves. The prophet Velen prepared an essence of the Naaru to heal the Sunwell. Get it and return it to Lor'themar. The Blood Elves army is ready to attack the Scourge. Take it to reconquer Quel'Thalas and heal the Sunwell.",
+    Q_QUEL_THALAS_0                    "Get the essence of the Naaru from Velen the Prophet.",
+    Q_QUEL_THALAS_1                    "Bring the essence to Lor'themar.",
+    Q_QUEL_THALAS_2                    "Reconquer Quel'Thalas with the Blood Elf and Forsaken army.",
+    // NagaQuest1
+    Q_TOMB_OF_SARGERAS_TITLE           "Tomb of Sargeras",
+    Q_TOMB_OF_SARGERAS_DESCRIPTION     "After having returned from Outland, Illidan, Kael and Vashj have devised a new plan to strike at the Lich King. However, Lord Illidan needs a special Artifact which he can only get from his Master, Kil´Jaeden himself. He is currently somewhere in the Tomb of Sargeras, for reasons unknown. Your hero must travel to the Tomb of Sargeras near the Maelstrom, find Kil´Jaeden, get the Artifact from him and return it to Illidan. Kil´Jaeden may be somewhat be aroused by the lost battle at Icecrown Glacier, so watch your steps carefully.",
+    Q_TOMB_OF_SARGERAS_0               "Get the artifact from Kil´Jaeden in the Tomb of Sargeras near the Maelstrom.",
+    Q_TOMB_OF_SARGERAS_1               "Bring the artifact to Lord Illidan in Nazjatar.",
+    // NagaQuest2
+    Q_FIGHT_FIRE_WITH_FIRE_TITLE       "Fight Fire with Fire",
+    Q_FIGHT_FIRE_WITH_FIRE_DESCRIPTION "Lord Illidan is getting tired of being chased by the Night Elf Warden Maiev Shadowsong. Before the next step to strike at the Lich King, Illidan wants the Warden matter solved first. According to spy reports, Maiev and her group of Huntresses have currently set up a base camp near the Naga Temple Ruins, giving you the chance to conduct a surprise attack! However, Illidan wants Maiev alive. You will have to use a special magical scroll Kael has made to prevent Maiev from using her teleporting skills and capture her. The quest is to find Maiev and use the Arcane Scroll near her in order to activate the spell. Afterwards, return Maiev to Illidan and claim your reward!",
+    Q_FIGHT_FIRE_WITH_FIRE_0           "Capture Maiev in Sunken Ruins with Kael's scroll.",
+    Q_FIGHT_FIRE_WITH_FIRE_1           "Return the captured Maiev to Lord Illidan in Nazjatar.",
+    // NagaQuest3
+    Q_SAPPHIRON_TITLE                  "Sapphiron",
+    Q_SAPPHIRON_DESCRIPTION            "The time to strike at the Lich King is coming near. But before, a final step is needed. There is a mighty Frost Wyrm called Sapphiron who watches every movement in and out of Icecrown. Lord Illidan requires you to destroy it in order to get to the Icecrown Glacier undetected! The Dragon is however protected by a spell that prevents him from being harmed in any way. Lady Vashj has created a special spell that will dispel the protection of the Frost Wyrm and make it vulnerable. The quest is to travel to Icecrown, find Sapphiron´s Lair, use the magic scroll near the Dragon and after the invulnerability is dispelled, kill it. Afterwards return the creature´s head to Lord Illidan. This time Sapphiron stays dead!",
+    Q_SAPPHIRON_0                      "Use the magic scroll in Sapphiron´s Lair in Icecrown.",
+    Q_SAPPHIRON_1                      "Kill Sapphiron.",
+    Q_SAPPHIRON_2                      "Return Sapphiron's head to Lord Illidan in Nazjatar.",
+    // NagaQuest4
+    Q_STORMRAGE_TITLE                  "Stormrage",
+    Q_STORMRAGE_DESCRIPTION            "It is time to strike at the Lich King himself! Illidan has a score to settle with Arthas. However, the subject of this campaign is not to destroy the Lich King himself since his powers are still far too great at the moment but his temporary death will be enough to accomplish the actual quest: the Lich King created a powerful device that would allow him to increase his evil sorceries to a tremendous extent. Fortunately he has not yet used it. This must be prevented at all costs! Recently Kil´Jaeden has given Illidan a special ring that will prevent Frostmourne´s powers from permanently destroying Illidan. However, in order to destroy the Lich King´s artifact, Illidan needs to enhance his double-bladed weapon first with sacred waters from a certain magical well. Take his Blade to the Sunwell in Silvermoon, and after they are enhanced by the magic waters of the Sunwell, return the blade to Illidan. Afterwards guide Illidan himself to the Frozen Throne and conduct a surprise attack on the Dark Knight!",
+    Q_STORMRAGE_0                      "Take Lord Illidan's Blade to the Sunwell in Silvermoon.",
+    Q_STORMRAGE_1                      "Return the enhanced blade to Lord Illidan in Nazjatar.",
+    Q_STORMRAGE_2                      "Guide Lord Illidan himself to the Frozen Throne and kill the Lich King.",
+    Q_STORMRAGE_3                      "Shatter the crystal on the Frozen Throne.",
 }

@@ -43,18 +43,65 @@ private function Init takes nothing returns nothing
     set udg_Dalaran_Quest[1] = AddQuest("DalaranQuest1", GetLocalizedStringSafe("Q_RECONSTRUCTION_TITLE"), GetLocalizedStringSafe("Q_RECONSTRUCTION_DESCRIPTION"), "ReplaceableTextures\\CommandButtons\\BTNGeneradorazul.blp", gg_unit_H08B_1934, 'pmna')
     call AddQuestItem(GetLocalizedStringSafe("Q_RECONSTRUCTION_0"))
     call AddQuestItem(GetLocalizedStringSafe("Q_RECONSTRUCTION_1"))
-
     set udg_Dalaran_Quest[2] = AddQuestNext("DalaranQuest2", GetLocalizedStringSafe("Q_FIRE_ELEMENTAL_TITLE"), GetLocalizedStringSafe("Q_FIRE_ELEMENTAL_DESCRIPTION"), "ReplaceableTextures\\CommandButtons\\BTNFireSpawn.blp", gg_unit_H08B_1934, 'mnsf')
     call AddQuestItem(GetLocalizedStringSafe("Q_FIRE_ELEMENTAL_0"))
     call AddQuestItem(GetLocalizedStringSafe("Q_FIRE_ELEMENTAL_1"))
-
     set udg_Dalaran_Quest[3] = AddQuestNext("DalaranQuest3", GetLocalizedStringSafe("Q_ARCANE_MAGIC_TITLE"), GetLocalizedStringSafe("Q_ARCANE_MAGIC_DESCRIPTION"), "ReplaceableTextures\\CommandButtons\\BTNFeedBack.blp", gg_unit_H08B_1934, 'amrc')
     call AddQuestItem(GetLocalizedStringSafe("Q_ARCANE_MAGIC_0"))
     call AddQuestItem(GetLocalizedStringSafe("Q_ARCANE_MAGIC_1"))
-
     set udg_Dalaran_Quest[3] = AddQuestNext("DalaranQuest4", GetLocalizedStringSafe("Q_SIEGE_OF_DALARAN_TITLE"), GetLocalizedStringSafe("Q_SIEGE_OF_DALARAN_DESCRIPTION"), "ReplaceableTextures\\CommandButtons\\BTNArcaneCastle.blp", gg_unit_H08B_1934, 'rwiz')
     call AddQuestItem(GetLocalizedStringSafe("Q_SIEGE_OF_DALARAN_0"))
     call AddQuestItem(GetLocalizedStringSafe("Q_SIEGE_OF_DALARAN_1"))
+
+    // Kul Tiras Quests
+    set udg_KulTirasQuestPingTarget = GetRectCenter(gg_rct_Kul_Tiras_Quest_1_discover_and_complete)
+    set udg_KulTiras_Quest[1] = AddQuest("KulTirasQuest1", GetLocalizedStringSafe("Q_SEA_TRADE_TITLE"), GetLocalizedStringSafe("Q_SEA_TRADE_DESCRIPTION"), "ReplaceableTextures\\CommandButtons\\BTNShip.blp", gg_unit_H0Q1_0860, 'I17V')
+    call AddQuestItem(GetLocalizedStringSafe("Q_SEA_TRADE_0"))
+    call AddQuestItem(GetLocalizedStringSafe("Q_SEA_TRADE_1"))
+    call AddQuestItem(GetLocalizedStringSafe("Q_SEA_TRADE_2"))
+    call AddQuestItem(GetLocalizedStringSafe("Q_SEA_TRADE_3"))
+    call AddQuestItem(GetLocalizedStringSafe("Q_SEA_TRADE_4"))
+    set udg_KulTiras_Quest[2] = AddQuestNext("KulTirasQuest2", GetLocalizedStringSafe("Q_TREASURE_HUNTING_TITLE"), GetLocalizedStringSafe("Q_TREASURE_HUNTING_DESCRIPTION"), "ReplaceableTextures\\CommandButtons\\BTNTreasure Chest.blp", gg_unit_H0Q1_0860, 'I188')
+    call AddQuestItem(GetLocalizedStringSafe("Q_TREASURE_HUNTING_0"))
+    call AddQuestItem(GetLocalizedStringSafe("Q_TREASURE_HUNTING_1"))
+    set udg_KulTiras_Quest[3] = AddQuest("KulTirasQuest3", GetLocalizedStringSafe("Q_CULTISTS_TITLE"), GetLocalizedStringSafe("Q_CULTISTS_DESCRIPTION"), "ReplaceableTextures\\CommandButtons\\Btn_TidesageGreen.blp", gg_unit_H0Q1_0860, 'I18B')
+    call AddQuestItem(GetLocalizedStringSafe("Q_CULTISTS_0"))
+    call AddQuestItem(GetLocalizedStringSafe("Q_CULTISTS_1"))
+    call AddQuestItem(GetLocalizedStringSafe("Q_CULTISTS_2"))
+    set udg_KulTiras_Quest[4] = AddQuest("KulTirasQuest4", GetLocalizedStringSafe("Q_SEA_BATTLE_TITLE"), GetLocalizedStringSafe("Q_SEA_BATTLE_DESCRIPTION"), "ReplaceableTextures\\CommandButtons\\BTNKulTirasDreadnought.blp", gg_unit_H0Q1_0860, 'I18E')
+    call AddQuestItem(GetLocalizedStringSafe("Q_SEA_BATTLE_0"))
+    call AddQuestItem(GetLocalizedStringSafe("Q_SEA_BATTLE_1"))
+    call AddQuestItem(GetLocalizedStringSafe("Q_SEA_BATTLE_2"))
+
+    // Night Elf Quests
+    set udg_NightElfQuestPingTarget = GetRectCenter(gg_rct_Night_Elf_Quest_1_discover_and_complete)
+    set udg_NightElfQuest[1] = AddQuest("NightElfQuest1", GetLocalizedStringSafe("Q_DRUID_SPELL_TITLE"), GetLocalizedStringSafe("Q_DRUID_SPELL_DESCRIPTION"), "ReplaceableTextures\\CommandButtons\\BTNBearDen.blp", gg_unit_Etyr_0014, 'sneg')
+    call AddQuestItem(GetLocalizedStringSafe("Q_DRUID_SPELL_0"))
+    call AddQuestItem(GetLocalizedStringSafe("Q_DRUID_SPELL_1"))
+    set udg_NightElfQuest[2] = AddQuest("NightElfQuest2", GetLocalizedStringSafe("Q_THE_WORLD_TREE_TITLE"), GetLocalizedStringSafe("Q_THE_WORLD_TREE_DESCRIPTION"), "ReplaceableTextures\\CommandButtons\\BTNFurion.blp", gg_unit_Emfr_0013, 'schl')
+    call AddQuestItem(GetLocalizedStringSafe("Q_THE_WORLD_TREE_0"))
+    call AddQuestItem(GetLocalizedStringSafe("Q_THE_WORLD_TREE_1"))
+    set udg_NightElfQuest[3] = AddQuest("NightElfQuest3", GetLocalizedStringSafe("Q_MOON_STONES_TITLE"), GetLocalizedStringSafe("Q_MOON_STONES_DESCRIPTION"), "ReplaceableTextures\\CommandButtons\\BTNElunesBlessing.blp", gg_unit_Etyr_0014, 'I01I')
+    call AddQuestItem(GetLocalizedStringSafe("Q_MOON_STONES_0"))
+    call AddQuestItem(GetLocalizedStringSafe("Q_MOON_STONES_1"))
+    set udg_NightElfQuest[4] = AddQuest("NightElfQuest4", GetLocalizedStringSafe("Q_DEMON_BLOOD_TITLE"), GetLocalizedStringSafe("Q_DEMON_BLOOD_DESCRIPTION"), "ReplaceableTextures\\CommandButtons\\BTNFountainOfLifeBlood.blp", gg_unit_Emfr_0013, 'azhr')
+    call AddQuestItem(GetLocalizedStringSafe("Q_DEMON_BLOOD_0"))
+    call AddQuestItem(GetLocalizedStringSafe("Q_DEMON_BLOOD_1"))
+
+    // Orc Quests
+    set udg_OrcQuestPingTarget = GetRectCenter(gg_rct_Orc_Quest_1_discover_and_complete)
+    set udg_OrcQuest[1] = AddQuest("OrcQuest1", GetLocalizedStringSafe("Q_DUROTAR_LAW_CODE_TITLE"), GetLocalizedStringSafe("Q_DUROTAR_LAW_CODE_DESCRIPTION"), "ReplaceableTextures\\CommandButtons\\BTNThrall.blp", gg_unit_Othr_0010, 'stel')
+    call AddQuestItem(GetLocalizedStringSafe("Q_DUROTAR_LAW_CODE_0"))
+    call AddQuestItem(GetLocalizedStringSafe("Q_DUROTAR_LAW_CODE_1"))
+    set udg_OrcQuest[2] = AddQuest("OrcQuest2", GetLocalizedStringSafe("Q_HARPY_MENACE_TITLE"), GetLocalizedStringSafe("Q_HARPY_MENACE_DESCRIPTION"), "ReplaceableTextures\\CommandButtons\\BTNHeroTaurenChieftain.blp", gg_unit_Ocbh_0011, 'I01L')
+    call AddQuestItem(GetLocalizedStringSafe("Q_HARPY_MENACE_0"))
+    call AddQuestItem(GetLocalizedStringSafe("Q_HARPY_MENACE_1"))
+    set udg_OrcQuest[3] = AddQuest("OrcQuest3", GetLocalizedStringSafe("Q_ARENA_CONTEST_TITLE"), GetLocalizedStringSafe("Q_ARENA_CONTEST_DESCRIPTION"), "ReplaceableTextures\\CommandButtons\\BTNBeastMaster.blp", gg_unit_Orex_0234, 'I01M')
+    call AddQuestItem(GetLocalizedStringSafe("Q_ARENA_CONTEST_0"))
+    call AddQuestItem(GetLocalizedStringSafe("Q_ARENA_CONTEST_1"))
+    set udg_OrcQuest[4] = AddQuest("OrcQuest4", GetLocalizedStringSafe("Q_CENTAUR_KHANS_TITLE"), GetLocalizedStringSafe("Q_CENTAUR_KHANS_DESCRIPTION"), "ReplaceableTextures\\CommandButtons\\BTNPandarenBrewmaster.blp", gg_unit_Nsjs_0218, 'I01N')
+    call AddQuestItem(GetLocalizedStringSafe("Q_CENTAUR_KHANS_0"))
+    call AddQuestItem(GetLocalizedStringSafe("Q_CENTAUR_KHANS_1"))
 endfunction
 
 endlibrary
