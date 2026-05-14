@@ -7,6 +7,6 @@ WARSMASH_DIR="$HOME/Dokumente/Projekte/WarsmashModEngine"
 cd "$WARSMASH_DIR"
 git pull
 git checkout tdauth
+echo "See Warsmash logs in $(pwd)/core/assets/Logs"
 #./gradlew clean
 ./gradlew :desktop:runGame -Pargs="-loadfile $MAP_DIR -ini $INI_FILE -window"
-echo "See Warsmash logs in $(pwd)/core/assets/Logs"
