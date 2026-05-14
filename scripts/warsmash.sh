@@ -9,6 +9,19 @@ git pull
 git checkout tdauth
 echo "See Warsmash logs in $(pwd)/core/assets/Logs"
 #./gradlew clean
+# Increase Gradle heap memory:
 # ~/.gradle/gradle.properties
 # org.gradle.jvmargs=-Xmx4g
+#
+#task runGame(dependsOn: classes, type: JavaExec) {
+#    mainClass = project.mainClassName
+#    classpath = sourceSets.main.runtimeClasspath
+#    standardInput = System.in
+#    workingDir = project.assetsDir
+#    ignoreExitValue = true
+#    args cmdargs.split()
+
+#    jvmArgs = ["-Xmx8g"]
+#}
+# For IDEA you need to set the maximum heap memory for IDEA in the UI: Help -> Change Memory Settings
 JAVA_TOOL_OPTIONS="-Xmx8g -Xms1g" ./gradlew :desktop:runGame -Pargs="-loadfile $MAP_DIR -ini $INI_FILE -window"
