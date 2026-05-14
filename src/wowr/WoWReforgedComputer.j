@@ -46,7 +46,7 @@ function ComputerAIAutoReviveHeroesEx takes player whichPlayer, group heroes ret
             exitwhen (hero == null)
             set altar = FirstOfGroup(altars)
             exitwhen (altar == null)
-            call IssueTargetOrder(altar, "revive", hero) 
+            call IssueTargetOrder(altar, "revive", hero)
             call GroupRemoveUnit(heroes, hero)
             call GroupRemoveUnit(altars, altar)
         endloop
@@ -131,7 +131,7 @@ function ComputerAITrainNavy takes unit shipyard returns boolean
     if (unitTypeId != 0) then
         return IssueImmediateOrderById(shipyard, unitTypeId)
     endif
-    
+
     return false
 endfunction
 
@@ -278,12 +278,12 @@ private function StartingUnitsReplaceMine takes player whichPlayer, unit mine, i
     call SetUnitOwner(GetLastReplacedUnitBJ(), whichPlayer, true)
     call SetResourceAmount(GetLastReplacedUnitBJ(), 1000000)
     call StartingUnitsPeons(whichPlayer, l, whichRace)
-    
+
     if (GetRaceHasBlight(whichRace)) then
         // Create a patch of blight around the gold mine.
         call SetBlightLoc(whichPlayer, l, 768, true)
     endif
-    
+
     call RemoveLocation(l)
     set l = null
 endfunction
@@ -594,7 +594,7 @@ private function TriggerConditionConstructFinish takes nothing returns boolean
         if (IsUnitType(GetConstructedStructure(), UNIT_TYPE_TOWNHALL)) then
             call GroupAddUnit(computerTownHalls[playerId], GetConstructedStructure())
 
-            if (BlzGroupGetSize(computerTownHalls[playerId]) == 01) then
+            if (BlzGroupGetSize(computerTownHalls[playerId]) == 1) then
                 // The player needs enough gold to build workers
                 if (GetPlayerState(owner, PLAYER_STATE_RESOURCE_GOLD) < 100) then
                     call AdjustPlayerStateBJ(100, owner, PLAYER_STATE_RESOURCE_GOLD)
