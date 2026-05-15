@@ -7,7 +7,8 @@ WARSMASH_DIR="$HOME/Dokumente/Projekte/WarsmashModEngine"
 cd "$WARSMASH_DIR"
 git pull
 git checkout tdauth
-echo "See Warsmash logs in $(pwd)/core/assets/Logs"
+echo "See Warsmash logs in file://$(pwd)/core/assets/Logs"
+xdg-open "$(pwd)/core/assets/Logs"
 #./gradlew clean
 # Increase Gradle heap memory:
 # ~/.gradle/gradle.properties

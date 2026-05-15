@@ -215,17 +215,18 @@ You have to adapt the [common.j](./wowr.w3x/scripts/common.j) file and remove na
 You have to add all of these natives to the map script war3map.j as user-defined JASS functions.
 Modify any map file manually with an MPQ editor like [Ladik's MPQ Editor](https://www.hiveworkshop.com/threads/ladiks-mpq-editor-version-2-0-1-278.91512/).
 
-## WarsmashModEngine
+## WarsmashModEngine Support
 
 [WarsmashModEngine](https://github.com/Retera/WarsmashModEngine) is a Warcraft III Open Source emulator.
+Debugging the map with it would help to find issues which are really hard to find with the official Warcraft III game which is closed source and does not allow to set any break points and inspect stack traces.
+Besides, it has much better Linux support than the original Warcraft III since it is written in Java.
 To run this map with WarsmashModEngine use [warsmash.sh](./scripts/warsmash.sh) on Linux systems.
-However, make sure that [warsmash.ini](./scripts/warsmash.ini) and the paths in warsmash.sh are set up correctly for your Warcraft III installation and map.
 You need to have Gradle and some JDK installed and `JAVA_HOME` to be set.
 Log files are created in `WarsmashModEngine/core/assets/Logs/`.
-
-
-WarsmashModEngine is currently not fully supporting Reforged and hence does not fully support this map but might support it in the future.
-Debugging the map with it would help to find issues which are really hard to find with the official Warcraft III game which is closed source and does not allow to set any break points and inspect stack traces.
+Make sure that [warsmash.ini](./scripts/warsmash.ini) and the paths in warsmash.sh are set up correctly for your Warcraft III installation and map.
+WarsmashModEngine is currently not fully supporting Reforged and hence Reforged CASC directories cannot simply be specified as data source.
+Hence, the directory [wc3wowre](./wc3/wc3wowre) (Warcraft III World of Warcraft Reforged Edition) is used in the as data source and contains necessary files from Reforged.
+The goal is to create a custom MPQ containing all data from Reforged which is required to play the map together with the MPQ archives from the original Frozen Throne game to allow anyone to play this map with WarsmashModEngine.
 
 ## Credits
 
