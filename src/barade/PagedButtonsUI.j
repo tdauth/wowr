@@ -11,10 +11,10 @@ globals
     public constant integer MAX_SLOTS_PER_LINE = 13
     public constant integer HERO_GOLD_COST = 0
     public constant integer HERO_LUMBER_COST = 0
-    
+
     public constant boolean LOAD_TOC_FILE = false
     public constant string TOC_FILE = "war3mapImported\\PagedButtonsUITOC.toc"
-    
+
     public constant string PREFIX = "PagedButtonsUI"
     public constant real X = 0.0
     public constant real Y = 0.57
@@ -29,67 +29,67 @@ globals
     public constant real CHARGES_POS = 0.003
     public constant real CHARGES_SIZE = 0.02
     public constant real BUTTON_SPACE = 0.005
-    
+
     public constant real TOOLTIP_FRAME_X = 0.46
     public constant real TOOLTIP_FRAME_Y = 0.55
     public constant real TOOLTIP_FRAME_WIDTH = 0.32
     public constant real TOOLTIP_FRAME_HEIGHT = 0.386
-    
+
     public constant real TOOLTIP_HORIZONTAL_SPACING = 0.03
     public constant real TOOLTIP_X = TOOLTIP_FRAME_X + TOOLTIP_HORIZONTAL_SPACING
 
     public constant real TOOLTIP_ICON_X = TOOLTIP_X
     public constant real TOOLTIP_ICON_Y = 0.52
     public constant real TOOLTIP_ICON_SIZE = 0.034
-    
+
     public constant real TOOLTIP_PAGE_NAME_X = TOOLTIP_ICON_X + TOOLTIP_ICON_SIZE + 0.003
     public constant real TOOLTIP_PAGE_NAME_Y = 0.52
     public constant real TOOLTIP_PAGE_NAME_WIDTH = 0.1
     public constant real TOOLTIP_PAGE_NAME_HEIGHT = 0.011
-    
+
     public constant real VERTICAL_SPACE = 0.0004
-    
+
     public constant real SUMMON_X = TOOLTIP_PAGE_NAME_X
     public constant real SUMMON_Y = TOOLTIP_PAGE_NAME_Y - TOOLTIP_PAGE_NAME_HEIGHT - VERTICAL_SPACE
     public constant real SUMMON_HEIGHT = 0.011
-    
+
     public constant real COST_SPACE = 0.009
     public constant real COST_ICON_SPACE = 0.003
-    
+
     public constant real COST_X = SUMMON_X
     public constant real COST_Y = SUMMON_Y - SUMMON_HEIGHT - VERTICAL_SPACE
     public constant real COST_HEIGHT = 0.011
     public constant real COST_ICON_SIZE = 0.01
     public constant real COST_GOLD_X = COST_X + COST_ICON_SIZE + COST_ICON_SPACE
     public constant real COST_WIDTH = 0.03
-    
+
     public constant real COST_ICON_LUMBER_X = COST_GOLD_X + COST_WIDTH + COST_SPACE
     public constant real COST_LUMBER_X = COST_ICON_LUMBER_X + COST_ICON_SIZE + COST_ICON_SPACE
     public constant real COST_ICON_FOOD_X = COST_LUMBER_X + COST_WIDTH + COST_SPACE
     public constant real COST_FOOD_X = COST_ICON_FOOD_X + COST_ICON_SIZE + COST_ICON_SPACE
-    
+
     public constant real TOOLTIP_WIDTH = TOOLTIP_FRAME_WIDTH - 2.0 * TOOLTIP_HORIZONTAL_SPACING
     public constant real TOOLTIP_Y = COST_Y - COST_HEIGHT - BUTTON_SPACE
     public constant real TOOLTIP_HEIGHT = 0.29
     public constant real TOOLTIP_FONT_HEIGHT = 0.008
-    
+
     public constant real PREVIEW_X = TOOLTIP_X + 0.05
     public constant real PREVIEW_Y = TOOLTIP_FRAME_Y - TOOLTIP_HEIGHT + 0.03
     public constant real PREVIEW_WIDTH = TOOLTIP_WIDTH
     public constant real PREVIEW_HEIGHT = 0.02
-    
+
     public constant real NEXT_PAGE_BUTTON_X = 0.18
     public constant real PREVIOUS_PAGE_BUTTON_X = 0.06
     public constant real PAGE_BUTTON_WIDTH = 0.12
-    
+
     public constant real CHECKBOX_X = 0.032
     public constant real CHECKBOX_SIZE = 0.026
-    
+
     public constant real CLOSE_BUTTON_X = 0.34
     public constant real BOTTOM_BUTTONS_Y = 0.203
     public constant real CLOSE_BUTTON_WIDTH = 0.12
     public constant real CLOSE_BUTTON_HEIGHT = 0.03
-    
+
     // player data
     private boolean array enabledForPlayer
     private boolean array UIVisible
@@ -102,7 +102,7 @@ globals
     private real array previewModelScale
     private string array previewModelFile
     //endif
-    
+
     private framehandle BackgroundFrame
     private framehandle TitleFrame
     private framehandle array SlotFrame
@@ -136,7 +136,7 @@ globals
     private trigger UncheckedTrigger = null
     private framehandle CloseButton
     private trigger CloseTrigger = null
-    
+
     private hashtable h = InitHashtable()
     private trigger syncTrigger = CreateTrigger()
     private trigger selectionTrigger = CreateTrigger()
@@ -209,7 +209,7 @@ private function SetVisible takes boolean visible returns nothing
     call BlzFrameSetVisible(BackgroundFrame, visible)
     call BlzFrameSetVisible(TitleFrame, visible)
     call BlzFrameSetVisible(Checkbox, visible)
-    
+
     call SetTooltipVisible(visible)
 endfunction
 
@@ -291,21 +291,21 @@ endif
                         call BlzFrameSetVisible(SlotBackdropFrame[i], true)
                     endif
                 endif
-                
+
                 set handleId = GetHandleId(SlotClickTrigger[i])
                 call SaveInteger(h, handleId, 0, slot)
                 set handleId = GetHandleId(SlotTooltipOnTrigger[i])
                 call SaveInteger(h, handleId, 0, slot)
                 set handleId = GetHandleId(SlotTooltipOffTrigger[i])
                 call SaveInteger(h, handleId, 0, slot)
-                
+
                 set i = i + 1
             endif
         endif
-        
+
         set slot = slot + 1
     endloop
-    
+
     loop
         exitwhen (i >= MAX_SLOTS)
         if (whichPlayer == GetLocalPlayer()) then
@@ -330,7 +330,7 @@ private function GetPagesIndexFromPagedButtonsShopEx takes unit shop returns int
         if (GetPagedButtonsPageByIndex(shop, i) >= currentPage) then
             return countNonSpacerButtons / MAX_SLOTS
         endif
-        
+
         if (not IsPagedButtonSpacer(shop, i)) then
             set countNonSpacerButtons = countNonSpacerButtons + 1
         endif
@@ -506,21 +506,21 @@ endif
             set goldCost = GetItemCostGold(id)
             set lumberCost = GetItemCostLumber(id)
         endif
-        
+
 static if (LIBRARY_PagedButtonsConfig and SHOW_PREVIEW_MODELS) then
         set modelX = c.modelX
         set modelY = c.modelY
         set modelScale = c.modelScale
         set modelPath = c.modelPath
 endif
-        
+
         if (summonText != null and StringLength(summonText) > 0) then
             if (GetLocalPlayer() == GetTriggerPlayer()) then
                 call BlzFrameSetText(SummonFrame, summonText)
                 call BlzFrameSetVisible(SummonFrame, true)
             endif
         endif
-        
+
         if (goldCost > 0) then
              if (GetLocalPlayer() == GetTriggerPlayer()) then
                 call BlzFrameSetText(ItemGoldFrame, "|cffffcc00" + I2S(goldCost) + "|r")
@@ -533,7 +533,7 @@ endif
                 call BlzFrameSetVisible(ItemGoldFrame, false)
             endif
         endif
-        
+
         if (lumberCost > 0) then
              if (GetLocalPlayer() == GetTriggerPlayer()) then
                 call BlzFrameSetText(ItemLumberFrame, "|cffffcc00" + I2S(lumberCost) + "|r")
@@ -546,7 +546,7 @@ endif
                 call BlzFrameSetVisible(ItemLumberFrame, false)
             endif
         endif
-        
+
         if (foodCost > 0) then
              if (GetLocalPlayer() == GetTriggerPlayer()) then
                 call BlzFrameSetText(ItemFoodFrame, "|cffffcc00" + I2S(foodCost) + "|r")
@@ -560,7 +560,7 @@ endif
             endif
         endif
         //call BJDebugMsg("Entering item " + I2S(index))
-        
+
         if (pageName != null) then
             if (GetLocalPlayer() == GetTriggerPlayer()) then
                 call BlzFrameSetText(PageNameText, pageName)
@@ -578,7 +578,7 @@ endif
             set tooltip = tooltip + Format(GetLocalizedString("EMPTY_SLOT_TOOLTIP")).i(slot + 1).i(page + 1).result()
             //call BlzFrameSetVisible(ItemGoldIconFrame[playerId], false)
         endif
-        
+
         if (id != 0) then
             if (GetLocalPlayer() == GetTriggerPlayer()) then
                 call BlzFrameSetTexture(TooltipIcon, GetButtonSlotIcon(shop, slot), 0, false)
@@ -597,7 +597,7 @@ endif
             //call BlzFrameSetText(TooltipText, tooltip)
             call BlzFrameSetVisible(TooltipText, true)
         endif
-        
+
 static if (SHOW_PREVIEW_MODELS) then
         if (StringLength(modelPath) > 0) then
             // https://us.forums.blizzard.com/en/warcraft3/t/jasslua-frameeventmouseenter-infinite-loop/28659
@@ -610,7 +610,7 @@ static if (SHOW_PREVIEW_MODELS) then
                 set previewModelFile[playerId] = modelPath
                 // It won't work if we do not recreate the framehandle.
                 call RefreshPreviewFrame()
-                
+
                 if (GetLocalPlayer() == GetTriggerPlayer()) then
                     call RefreshPreviewFrameForPlayerOnly(modelX, modelY, modelScale, modelPath)
                 endif
@@ -626,7 +626,7 @@ static if (SHOW_PREVIEW_MODELS) then
         endif
 endif
     endif
-    
+
     set shop = null
 endfunction
 
@@ -674,7 +674,7 @@ public function CreateUI takes nothing returns nothing
     local integer handleId = 0
     local real x = 0.0
     local real y = 0.0
-    
+
     set BackgroundFrame = BlzCreateFrame("EscMenuBackdrop", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0),0,0)
     call BlzFrameSetAbsPoint(BackgroundFrame, FRAMEPOINT_TOPLEFT, X, Y)
     call BlzFrameSetAbsPoint(BackgroundFrame, FRAMEPOINT_BOTTOMRIGHT, SIZE_X, Y - SIZE_Y)
@@ -721,7 +721,7 @@ public function CreateUI takes nothing returns nothing
         call TriggerAddAction(SlotTooltipOnTrigger[i], function EnterItemFunction)
         set handleId = GetHandleId(SlotTooltipOnTrigger[i])
         call SaveInteger(h, handleId, 0, i)
-        
+
         if (SlotTooltipOffTrigger[i] != null) then
             set handleId = GetHandleId(SlotTooltipOffTrigger[i])
             call FlushChildHashtable(h, handleId)
@@ -733,7 +733,7 @@ public function CreateUI takes nothing returns nothing
         call SaveInteger(h, handleId, 0, i)
 
         // TODO Mouse down and mouse up to drag & drop to another bag or switch or do it like Warcraft's inventory with right click and left click. Add the icon of the item to the mouse cursor. If you click on the map it is dropped, if you click on the inventory it is dropped there.
-        
+
         set SlotPageBackgroundFrame[i] = BlzCreateFrameByType("BACKDROP", "ItemBagBackrgroundFrame" + I2S(i), BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), "", 0)
         call BlzFrameSetAbsPoint(SlotPageBackgroundFrame[i], FRAMEPOINT_TOPLEFT, x, y)
         call BlzFrameSetAbsPoint(SlotPageBackgroundFrame[i], FRAMEPOINT_BOTTOMRIGHT, x + CHARGES_BACKGROUND_SIZE, y - CHARGES_BACKGROUND_SIZE)
@@ -747,7 +747,7 @@ public function CreateUI takes nothing returns nothing
         call BlzFrameSetScale(SlotPageFrame[i], 0.7)
         call BlzFrameSetEnable(SlotPageFrame[i], false)
         call BlzFrameSetLevel(SlotPageFrame[i], 2)
-        
+
         set SlotChargesBackgroundFrame[i] = BlzCreateFrameByType("BACKDROP", "PagedButtonsUIItemChargesBackrgroundFrame" + I2S(i), BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), "", 0)
         call BlzFrameSetAbsPoint(SlotChargesBackgroundFrame[i], FRAMEPOINT_TOPLEFT, x + BUTTON_SIZE - CHARGES_BACKGROUND_SIZE, y - BUTTON_SIZE + CHARGES_BACKGROUND_SIZE)
         call BlzFrameSetAbsPoint(SlotChargesBackgroundFrame[i], FRAMEPOINT_BOTTOMRIGHT, x + BUTTON_SIZE, y - BUTTON_SIZE)
@@ -775,16 +775,16 @@ public function CreateUI takes nothing returns nothing
     set TooltipFrame = BlzCreateFrame("EscMenuBackdrop", BackgroundFrame, 0, 0)
     call BlzFrameSetAbsPoint(TooltipFrame, FRAMEPOINT_TOPLEFT, TOOLTIP_FRAME_X, TOOLTIP_FRAME_Y)
     call BlzFrameSetAbsPoint(TooltipFrame, FRAMEPOINT_BOTTOMRIGHT, TOOLTIP_FRAME_X + TOOLTIP_FRAME_WIDTH, TOOLTIP_FRAME_Y - TOOLTIP_FRAME_HEIGHT)
-    
+
     set TooltipIcon = BlzCreateFrameByType("BACKDROP", "PagedButtonsUITooltipIconFrame", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), "", 0)
     call BlzFrameSetAbsPoint(TooltipIcon, FRAMEPOINT_TOPLEFT, TOOLTIP_ICON_X, TOOLTIP_ICON_Y)
     call BlzFrameSetAbsPoint(TooltipIcon, FRAMEPOINT_BOTTOMRIGHT, TOOLTIP_ICON_X + TOOLTIP_ICON_SIZE, TOOLTIP_ICON_Y - TOOLTIP_ICON_SIZE)
     call BlzFrameSetTexture(TooltipIcon, "ReplaceableTextures\\WorldEditUI\\Editor-Random-Item.blp", 0, true)
-    
+
     set PageNameText = BlzCreateFrameByType("TEXT", "PagedButtonsUITooltipPageName", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), "", 0)
     call BlzFrameSetAbsPoint(PageNameText, FRAMEPOINT_TOPLEFT, TOOLTIP_PAGE_NAME_X, TOOLTIP_PAGE_NAME_Y)
     call BlzFrameSetAbsPoint(PageNameText, FRAMEPOINT_BOTTOMRIGHT, TOOLTIP_PAGE_NAME_X + TOOLTIP_PAGE_NAME_WIDTH, TOOLTIP_PAGE_NAME_Y - TOOLTIP_PAGE_NAME_HEIGHT)
-    
+
     set SummonFrame = BlzCreateFrameByType("TEXT", "PagedButtonsUITooltipSummon", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), "", 0)
     call BlzFrameSetAbsPoint(SummonFrame, FRAMEPOINT_TOPLEFT,  SUMMON_X, SUMMON_Y)
     call BlzFrameSetAbsPoint(SummonFrame, FRAMEPOINT_BOTTOMRIGHT, SUMMON_X + TOOLTIP_WIDTH, SUMMON_Y - SUMMON_HEIGHT)
@@ -793,29 +793,29 @@ public function CreateUI takes nothing returns nothing
     call BlzFrameSetAbsPoint(ItemGoldIconFrame, FRAMEPOINT_TOPLEFT, COST_X, COST_Y)
     call BlzFrameSetAbsPoint(ItemGoldIconFrame, FRAMEPOINT_BOTTOMRIGHT, COST_X + COST_ICON_SIZE, COST_Y - COST_ICON_SIZE)
     call BlzFrameSetTexture(ItemGoldIconFrame, "UI\\Feedback\\Resources\\ResourceGold.blp", 0, true)
-    
+
     set ItemGoldFrame = BlzCreateFrameByType("TEXT", "PagedButtonsUITooltipGold", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), "", 0)
     call BlzFrameSetAbsPoint(ItemGoldFrame, FRAMEPOINT_TOPLEFT, COST_GOLD_X, COST_Y)
     call BlzFrameSetAbsPoint(ItemGoldFrame, FRAMEPOINT_BOTTOMRIGHT, COST_GOLD_X + COST_WIDTH, COST_Y - COST_HEIGHT)
-    
+
     set ItemLumberIconFrame = BlzCreateFrameByType("BACKDROP", "PagedButtonsUITooltipLumberFrame", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), "", 0)
     call BlzFrameSetAbsPoint(ItemLumberIconFrame, FRAMEPOINT_TOPLEFT, COST_ICON_LUMBER_X, COST_Y)
     call BlzFrameSetAbsPoint(ItemLumberIconFrame, FRAMEPOINT_BOTTOMRIGHT, COST_ICON_LUMBER_X + COST_ICON_SIZE, COST_Y - COST_ICON_SIZE)
     call BlzFrameSetTexture(ItemLumberIconFrame, "UI\\Feedback\\Resources\\ResourceLumber.blp", 0, true)
-    
+
     set ItemLumberFrame = BlzCreateFrameByType("TEXT", "PagedButtonsUITooltipLumber", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), "", 0)
     call BlzFrameSetAbsPoint(ItemLumberFrame, FRAMEPOINT_TOPLEFT, COST_LUMBER_X, COST_Y)
     call BlzFrameSetAbsPoint(ItemLumberFrame, FRAMEPOINT_BOTTOMRIGHT,  COST_LUMBER_X + COST_WIDTH, COST_Y - COST_ICON_SIZE)
-    
+
     set ItemFoodIconFrame = BlzCreateFrameByType("BACKDROP", "PagedButtonsUITooltipFoodFrame", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), "", 0)
     call BlzFrameSetAbsPoint(ItemFoodIconFrame, FRAMEPOINT_TOPLEFT, COST_ICON_FOOD_X, COST_Y)
     call BlzFrameSetAbsPoint(ItemFoodIconFrame, FRAMEPOINT_BOTTOMRIGHT, COST_ICON_FOOD_X + COST_ICON_SIZE, COST_Y - COST_ICON_SIZE)
     call BlzFrameSetTexture(ItemFoodIconFrame, "UI\\Feedback\\Resources\\ResourceSupply.blp", 0, true)
-    
+
     set ItemFoodFrame = BlzCreateFrameByType("TEXT", "PagedButtonsUITooltipFood", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), "", 0)
     call BlzFrameSetAbsPoint(ItemFoodFrame, FRAMEPOINT_TOPLEFT, COST_FOOD_X, COST_Y)
     call BlzFrameSetAbsPoint(ItemFoodFrame, FRAMEPOINT_BOTTOMRIGHT, COST_FOOD_X + COST_WIDTH, COST_Y - COST_ICON_SIZE)
-    
+
     set TooltipText = BlzCreateFrame("EscMenuTextAreaTemplate", BackgroundFrame, 0, 0)
     call BlzFrameSetAbsPoint(TooltipText, FRAMEPOINT_TOPLEFT, TOOLTIP_X, TOOLTIP_Y)
     call BlzFrameSetAbsPoint(TooltipText, FRAMEPOINT_BOTTOMRIGHT, TOOLTIP_X + TOOLTIP_WIDTH, TOOLTIP_Y - TOOLTIP_HEIGHT)
@@ -823,7 +823,7 @@ public function CreateUI takes nothing returns nothing
     call BlzFrameSetEnable(TooltipText, false)
     call BlzFrameSetTextAlignment(TooltipText, TEXT_JUSTIFY_TOP, TEXT_JUSTIFY_LEFT)
     call BlzFrameSetLevel(TooltipText, 1)
-    
+
     //call BJDebugMsg("Icon " + GetIconByItemType(itemTypeId) + " for item type " + GetObjectName(itemTypeId))
 
 static if (SHOW_PREVIEW_MODELS) then
@@ -841,7 +841,7 @@ endif
     set NextPagesTrigger = CreateTrigger()
     call BlzTriggerRegisterFrameEvent(NextPagesTrigger, NextPagesButton, FRAMEEVENT_CONTROL_CLICK)
     call TriggerAddAction(NextPagesTrigger, function NextPagesFunction)
-    
+
     set PreviousPagesButton = BlzCreateFrame("ScriptDialogButton", BackgroundFrame, 0, 0)
     call BlzFrameSetAbsPoint(PreviousPagesButton, FRAMEPOINT_TOPLEFT, PREVIOUS_PAGE_BUTTON_X, BOTTOM_BUTTONS_Y)
     call BlzFrameSetAbsPoint(PreviousPagesButton, FRAMEPOINT_BOTTOMRIGHT, PREVIOUS_PAGE_BUTTON_X + PAGE_BUTTON_WIDTH, BOTTOM_BUTTONS_Y - CLOSE_BUTTON_HEIGHT)
@@ -859,14 +859,14 @@ endif
     call BlzFrameSetAbsPoint(Checkbox, FRAMEPOINT_BOTTOMRIGHT, CHECKBOX_X + CHECKBOX_SIZE, BOTTOM_BUTTONS_Y - CHECKBOX_SIZE)
     call BlzFrameSetEnable(Checkbox, true)
     call BlzFrameSetValue(Checkbox, 1.0)
-   
+
     if (CheckedTrigger != null) then
         call DestroyTrigger(CheckedTrigger)
     endif
     set CheckedTrigger = CreateTrigger()
     call BlzTriggerRegisterFrameEvent(CheckedTrigger, Checkbox, FRAMEEVENT_CHECKBOX_CHECKED)
     call TriggerAddAction(CheckedTrigger, function CheckedFunction)
-    
+
     if (UncheckedTrigger != null) then
         call DestroyTrigger(UncheckedTrigger)
     endif
@@ -980,11 +980,15 @@ private function Init takes nothing returns nothing
     local player slotPlayer = null
     local integer i = 0
     loop
-        exitwhen (i >= MAX_SLOTS)
+        exitwhen (i == MAX_SLOTS)
         set SlotClickTrigger[i] = null
         set SlotTooltipOnTrigger[i] = null
         set SlotTooltipOffTrigger[i] = null
-        
+        set i = i + 1
+    endloop
+    set i = 0
+    loop
+        exitwhen (i == bj_MAX_PLAYERS)
         set slotPlayer = Player(i)
         if (GetPlayerSlotState(slotPlayer) == PLAYER_SLOT_STATE_PLAYING and GetPlayerController(slotPlayer) == MAP_CONTROL_USER) then
             set enabledForPlayer[i] = ENABLED_BY_DEFAULT
@@ -997,22 +1001,21 @@ static if (SHOW_PREVIEW_MODELS) then
 endif
         endif
         set slotPlayer = null
-        
         set i = i + 1
     endloop
     call TriggerAddAction(syncTrigger, function TriggerActionSyncData)
-    
+
 static if (LOAD_TOC_FILE) then
     call BlzLoadTOCFile(TOC_FILE)
 endif
-    
+
     call TriggerRegisterAnyUnitEventBJ(selectionTrigger, EVENT_PLAYER_UNIT_SELECTED)
     // Barade: Using trigger conditions with selection events led to weird behavior, so use a trigger action here.
     call TriggerAddAction(selectionTrigger, function TriggerActionSelected)
-    
+
     call TriggerRegisterChangePagedButtons(changePageButtonsTrigger)
     call TriggerAddCondition(changePageButtonsTrigger, Condition(function TriggerConditionChangePage))
-    
+
     call TriggerRegisterAnyUnitEventBJ(deathTrigger, EVENT_PLAYER_UNIT_DEATH)
     call TriggerAddCondition(deathTrigger, Condition(function TriggerConditionDeath))
 
