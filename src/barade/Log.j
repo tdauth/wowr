@@ -6,17 +6,18 @@ globals
     // This will remove all empty lines at the beginning of a message which helps with SimError.
     constant boolean REMOVE_STARTING_EMPTY_LINES = true
 
-    constant integer LOG_MAXIMUM = 5000
+    constant integer LOG_MAXIMUM = 200
+    private constant integer ARRAY_MAX = bj_MAX_PLAYERS * LOG_MAXIMUM // Should be smaller than JASS_MAX_ARRAY_SIZE.
     private string array log
     private integer array logCounter
     private boolean array logEnabled
     private integer array logMaximum
-    
+
     private trigger array callbackTriggers
     private integer callbackTriggersCounter = 0
     private player triggerLogPlayer = null
     private string triggerLogMessage = null
-    
+
     private string tmpMessage = ""
 endglobals
 
@@ -88,10 +89,10 @@ function RemoveStartingEmptyLines takes string s returns string
             exitwhen (i >= max or SubString(s, i, i + 1) != "\n")
             set i = i + 1
         endloop
- 
+
         return SubString(s, i, max)
     endif
-    
+
     return s
 endfunction
 endif
@@ -100,13 +101,18 @@ function AddLog takes player whichPlayer, string msg returns nothing
     local integer index = GetLogCounter(whichPlayer)
     local integer i = 0
     local integer max = 0
+
+    if (ARRAY_MAX >= JASS_MAX_ARRAY_SIZE) then
+        call BJDebugMsg("AddLog: ARRAY_MAX is too large with value " + I2S() + ", so decrease LOG_MAXIMUM.")
+    endif
+
     if (IsLogEnabled(whichPlayer)) then
         // Do this before removing empty lines since StringLength seems to already localize the passed string.
         set msg = GetLocalizedString(msg)
 static if (REMOVE_STARTING_EMPTY_LINES) then
         set msg = RemoveStartingEmptyLines(msg)
 endif
-        
+
         set max = GetLogMaximum(whichPlayer)
         if (index >= max) then
             set i = 1
@@ -120,7 +126,7 @@ endif
             set logCounter[GetPlayerId(whichPlayer)] = index + 1
             set log[GetLogEntryIndex(whichPlayer, index)] = msg
         endif
-        
+
         call ExecuteCallbackTriggers(whichPlayer, msg)
     endif
 endfunction
@@ -171,7 +177,7 @@ private function GetChatMessageRecipient takes integer recipient returns string
     elseif (recipient == 2) then
         return GetLocalizedString("CHAT_RECIPIENT_OBSERVERS")
     endif
-    
+
     return GetLocalizedString("CHAT_RECIPIENT_PRIVATE")
 endfunction
 
