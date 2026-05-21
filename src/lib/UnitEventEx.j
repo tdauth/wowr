@@ -584,7 +584,7 @@ private module UnitEventExCore
 
 
     /*/* onIndex */*/
-    private static method onIndex takes nothing returns nothing
+    private static method onIndex takes nothing returns boolean
         local unit u = GetIndexedUnit()
         local integer id = GetUnitId(u)
 
@@ -612,11 +612,13 @@ private module UnitEventExCore
         call thistype.timerCheck(u)
 
         set u = null
+
+        return false // Barade: Fix for Warsmash.
     endmethod
 
 
     /*/* onDeindex */*/
-    private static method onDeindex takes nothing returns nothing
+    private static method onDeindex takes nothing returns boolean
         local unit u = GetIndexedUnit()
         local integer id = GetUnitId(u)
 
@@ -625,6 +627,8 @@ private module UnitEventExCore
         endif
 
         set u = null
+
+        return false // Barade: Fix for Warsmash.
     endmethod
 
 
