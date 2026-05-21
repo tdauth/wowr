@@ -7,7 +7,7 @@ library Indexer
     // Simple unit indexer for version 1.31+
     // Simply copy and paste to import
     /* ----------------------------------- END ---------------------------------- */
-    
+
     /* -------------------------------------------------------------------------- */
     /*                                   System                                   */
     /* -------------------------------------------------------------------------- */
@@ -19,11 +19,11 @@ library Indexer
         readonly static unit unit
         readonly static trigger onIndex = CreateTrigger()
         readonly static trigger onDeindex = CreateTrigger()
-        
+
         private static method index takes unit source returns nothing
             if GetUnitUserData(source) == 0 then
                 set unit = source
-                
+
                 if key > - 1 then
                     set id = array[key]
                     set array[key] = 0
@@ -31,7 +31,7 @@ library Indexer
                 else
                     set id = id + 1
                 endif
-                
+
                 if GetUnitAbilityLevel(unit, ability) == 0 then
                     call UnitAddAbility(unit, ability)
                     call UnitMakeAbilityPermanent(unit, true, ability)
@@ -39,11 +39,11 @@ library Indexer
                 endif
                 call SetUnitUserData(unit, id)
                 call TriggerEvaluate(onIndex)
-                
+
                 set unit = null
             endif
         endmethod
-    
+
         private static method onOrder takes nothing returns nothing
             if GetIssuedOrderId() == 852056 then
                 if GetUnitAbilityLevel(GetTriggerUnit(), ability) == 0 then
@@ -55,17 +55,18 @@ library Indexer
                 endif
             endif
         endmethod
-    
-        private static method onEnter takes nothing returns nothing
+
+        private static method onEnter takes nothing returns boolean
             call index(GetFilterUnit())
+            return false // Barade: Fix for Warsmash.
         endmethod
-    
+
         private static method onInit takes nothing returns nothing
             local trigger t = CreateTrigger()
             local region r = CreateRegion()
             local rect map = GetWorldBounds()
             local integer i = 0
-            
+
             call RegionAddRect(r, map)
             call RemoveRect(map)
             call TriggerRegisterEnterRegion(CreateTrigger(), r, Filter(function thistype.onEnter))
@@ -82,12 +83,12 @@ library Indexer
                 set i = i + 1
             endloop
             call TriggerAddCondition(t, Filter(function thistype.onOrder))
-            
+
             set r = null
             set map = null
         endmethod
     endstruct
-    
+
     /* -------------------------------------------------------------------------- */
     /*                                  JASS API                                  */
     /* -------------------------------------------------------------------------- */
@@ -96,11 +97,11 @@ library Indexer
         call TriggerAddCondition(Indexer.onIndex, Filter(c))
     endfunction
     */
-    
+
     function RegisterUnitDeindexEvent takes code c returns nothing
         call TriggerAddCondition(Indexer.onDeindex, Filter(c))
     endfunction
-    
+
     function GetIndexUnit takes nothing returns unit
         return Indexer.unit
     endfunction
