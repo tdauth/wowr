@@ -76,6 +76,9 @@ private function Init takes nothing returns nothing
     call AddChange("Remove chat command \"-passive\".")
     call AddChange("Remove chat command \"-maxbosslevels\".")
     call AddChange("Remove Goblin Bank.")
+    call AddChange("Reduce history size of Log to avoid exceeding JASS array limit.")
+    call AddChange("Fix PagedButtonsUI init loop for players.")
+    call AddChange("Fix integer literal in WoWReforgedComputer.")
 
 static if (MAP_DEBUG_MODE_ENABLED) then
     call AddVersion("4.6")
