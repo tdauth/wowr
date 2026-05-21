@@ -30,4 +30,5 @@ xdg-open "$(pwd)/core/assets/Logs"
 #    jvmArgs = ["-Xmx4g"]
 #}
 # For IDEA you need to set the maximum heap memory for IDEA in the UI: Help -> Change Memory Settings
-JAVA_TOOL_OPTIONS="-Xmx4g -Xms1g" ionice -c 3 nice -n 19 ./gradlew :desktop:runGame --max-workers=2 -Pargs="-loadfile $MAP_DIR -ini $INI_FILE -window" --console=plain --stacktrace --info
+JAVA_TOOL_OPTIONS="-Xmx4g -Xms1g" systemd-run --user --scope -p MemoryMax=2G -p CPUQuota=30% ./gradlew :desktop:runGame --max-workers=2 -Pargs="-loadfile $MAP_DIR -ini $INI_FILE -window" --console=plain --stacktrace --info
+# ionice -c 3 nice -n 19
