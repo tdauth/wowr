@@ -347,19 +347,19 @@ globals
     public constant boolean HOOK_REMOVE_UNIT = true
     // This delay hreshold is required to avoid wrong item or unit types being removed due to still refilling stocks.
     public constant integer STOCK_DELAY_THRESHOLD = 1
-    
+
     public constant integer BUTTON_TYPE_UNIT = 0
     public constant integer BUTTON_TYPE_ITEM = 1
     public constant integer BUTTON_TYPE_ABILITY = 2
     public constant integer BUTTON_TYPE_SPACER = 3
-    
+
     private hashtable h = InitHashtable()
     private group shops = CreateGroup()
     private trigger deathTrigger = null
     private trigger sellUnitTrigger = CreateTrigger()
     private trigger sellItemTrigger = CreateTrigger()
     private timer autoUpdateStockTimer = CreateTimer()
-    
+
     // callbacks
     private trigger array callbackTriggersChangePageButtons
     private integer callbackTriggersChangePageButtonsCounter = 0
@@ -428,11 +428,11 @@ public struct Type[100000]
     boolean shown = false
     boolean enabled = true
     integer whichType
-    
+
     public method isSpacer takes nothing returns boolean
         return whichType == BUTTON_TYPE_SPACER
     endmethod
-    
+
 endstruct
 
 // Use a separate type for spacers to save memory.
@@ -443,7 +443,7 @@ public struct SpacerType extends Type
         set this.whichType = BUTTON_TYPE_SPACER
         return this
     endmethod
-    
+
     public stub method onDestroy takes nothing returns nothing
     endmethod
 endstruct
@@ -460,7 +460,7 @@ public struct SlotType extends Type
     integer elapsedTimeStartDelay
     integer elapsedTimeReplenishInterval
     boolean startDelayDone = false
-    
+
     private static thistype array list
     private static integer listCounter = 0
 
@@ -476,13 +476,13 @@ public struct SlotType extends Type
         set this.replenishInterval = replenishInterval
         set this.elapsedTimeStartDelay = 0
         set this.elapsedTimeReplenishInterval = 0
-        
+
         set list[listCounter] = this
         set listCounter = listCounter + 1
-        
+
         return this
     endmethod
-    
+
     public method onDestroy takes nothing returns nothing
         local boolean found = false
         local integer i = 0
@@ -501,7 +501,7 @@ public struct SlotType extends Type
             set thistype.listCounter = thistype.listCounter - 1
         endif
     endmethod
-    
+
     public static method timerFunctionUpdateTime takes nothing returns nothing
         local boolean updated = false
         local integer elapsedSeconds = 1
@@ -512,7 +512,7 @@ public struct SlotType extends Type
             set this = thistype.list[i]
             if (this.replenish) then
                 set updated = false
-                
+
                 if (not startDelayDone) then
                     set this.elapsedTimeStartDelay = this.elapsedTimeStartDelay + elapsedSeconds
                     if (this.elapsedTimeStartDelay >= this.startDelay) then
@@ -524,7 +524,7 @@ public struct SlotType extends Type
                         set this.startDelayDone = true
                     endif
                 endif
-                
+
                 if (this.currentStock < this.maxStock) then
                     set this.elapsedTimeReplenishInterval = this.elapsedTimeReplenishInterval + elapsedSeconds
                     //if (this.id == BOOTS_OF_SPEED) then
@@ -551,7 +551,7 @@ public struct SlotType extends Type
                             // Do nothing for abilities.
                         endif
                     endif
-                    
+
                     call ExecuteObjectAvailableCallbacks(this.shop, this.id)
                 endif
             endif
@@ -574,7 +574,7 @@ public struct Shop[100000]
     integer buttonsCount = 0
     Page array pages[500]
     integer maxPages = 0
-    
+
     public method removeButton takes integer index returns nothing
         loop
             exitwhen (index >= this.buttonsCount)
@@ -584,13 +584,13 @@ public struct Shop[100000]
         endloop
         set this.buttonsCount = this.buttonsCount - 1
     endmethod
-    
+
     public static method create takes string name returns thistype
         local thistype this = thistype.allocate()
         set this.name = name
         return this
     endmethod
-    
+
 endstruct
 
 function GetPagedButtonsShop takes unit shop returns Shop
@@ -627,7 +627,7 @@ endfunction
 
 function GetPagedButton takes unit shop, integer index returns Type
     local Shop x = GetPagedButtonsShop(shop)
-    
+
     return x.buttons[index]
 endfunction
 
@@ -914,7 +914,7 @@ static if (SHOW_PAGE_NUMBER_IN_PAGE_BUTTONS and SHOW_NEXT_AND_PREVIOUS_PAGE_NUMB
         else
             set nextPage = currentPage + 2
         endif
-        
+
         if (currentPage == 0) then
             set previousPage = maxPages
         else
@@ -924,7 +924,7 @@ else
         set nextPage = currentPage + 1
         set previousPage = currentPage + 1
 endif
-        
+
         call AddUnitToStock(shop, NEXT_PAGE_ID, nextPage, nextPage)
         call AddUnitToStock(shop, PREVIOUS_PAGE_ID, previousPage, previousPage)
 endif
@@ -1053,17 +1053,17 @@ function RemovePagedButtonsIndex takes unit shop, integer index returns boolean
                 call UnitRemoveAbility(shop, SlotType(t).id)
             endif
         endif
-    
+
         call s.removeButton(index)
         call t.destroy()
-        
+
         // update buttons
         call RefreshMaxPages(shop)
         call SetPagedButtonsPage(shop, IMaxBJ(0, IMinBJ(GetPagedButtonsPage(shop), s.maxPages - 1)))
-        
+
         return true
     endif
-    
+
     return false
 endfunction
 
@@ -1072,7 +1072,7 @@ function RemovePagedButtonsId takes unit shop, integer id returns boolean
     if (index != -1) then
         return RemovePagedButtonsIndex(shop, index)
     endif
-    
+
     return false
 endfunction
 
@@ -1101,7 +1101,7 @@ static if (LIBRARY_PagedButtonsConfig) then
     if (replenishInterval > 0) then
         set replenishInterval = replenishInterval + STOCK_DELAY_THRESHOLD
     endif
-    
+
     if (startDelay > 0) then
         set currentStock = 0
     endif
@@ -1113,7 +1113,7 @@ function AddPagedButtonsId takes unit shop, integer id, integer whichType return
     local Shop s = GetPagedButtonsShop(shop)
     local Type t = 0
     local integer index = 0
-    
+
     if (s == 0) then
         return -1
     endif
@@ -1127,9 +1127,9 @@ function AddPagedButtonsId takes unit shop, integer id, integer whichType return
     set s.buttonsCount = index + 1
     call RefreshMaxPages(shop)
     call SetPagedButtonsPage(shop, GetPagedButtonsPage(shop))
-    
+
     //call BJDebugMsg("Added ID " + GetObjectName(id) + " to shop " + GetUnitName(shop) + " resulting in " + I2S(s.buttons.getSize()) + " buttons and " + I2S(s.maxPages) + " max pages.")
-    
+
     return index
 endfunction
 
@@ -1183,7 +1183,7 @@ function NextPagedButtonsPage takes unit shop, string name returns integer
     if (s != 0) then
         // find the next page
         loop
-            exitwhen (nextPage > s.maxPages or StringLength(s.pages[nextPage].name) == 0)
+            exitwhen (nextPage > s.maxPages or s.pages[nextPage] == 0 or StringLength(s.pages[nextPage].name) == 0)
             set nextPage = nextPage + 1
         endloop
         if (nextPage > 0) then
@@ -1193,15 +1193,15 @@ function NextPagedButtonsPage takes unit shop, string name returns integer
         call RefreshMaxPagesEx(shop, nextPage + 1)
         //call BJDebugMsg("Setting name for next page " + I2S(nextPage) + ": " + name)
         call SetPagedButtonsPageName(shop, nextPage, name)
-    
+
 static if (CHANGE_PAGE_UNIT_NAME) then
         call ChangeShopUnitName(shop)
 endif
-    
+
         //call BJDebugMsg("Set name for next page " + I2S(nextPage) + " to name " + name)
         return nextPage
     endif
-    
+
     return -1
 endfunction
 
@@ -1216,10 +1216,10 @@ function EnablePagedButtons takes unit shop returns boolean
         call GroupAddUnit(shops, shop)
         call SetPagedButtonsShop(shop, Shop.create(GetUnitName(shop)))
         call SetPagedButtonsSlotsPerPage(shop, SLOTS_PER_PAGE)
-        
+
         return true
     endif
-    
+
     return false
 endfunction
 
@@ -1239,10 +1239,10 @@ endif
         call HidePagedButtonsCurrentPage(shop)
         call DestroyPagedButtonsShopTypes(shop)
         call FlushChildHashtable(h, GetHandleId(shop))
-        
+
         return true
     endif
-    
+
     return false
 endfunction
 
@@ -1464,7 +1464,7 @@ player changes the page.
 - Remove function RefreshPagedButtonsPage.
 - Make option constants public.
 - Add separators in API documentation comment.
-- Add callback functions GetTriggerChangingShop, GetTriggerPreviousPage, GetTriggerAvailableObject, 
+- Add callback functions GetTriggerChangingShop, GetTriggerPreviousPage, GetTriggerAvailableObject,
 TriggerRegisterChangePagedButtons and TriggerRegisterObjectAvailable and use them in the example map.
 - Use different structs for spacers than for actual object IDs to save memory.
 - Configure unit and item types in the example map config to show how it can be used.
