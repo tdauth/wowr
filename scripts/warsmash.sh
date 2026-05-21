@@ -31,4 +31,4 @@ xdg-open "$(pwd)/core/assets/Logs"
 #}
 # For IDEA you need to set the maximum heap memory for IDEA in the UI: Help -> Change Memory Settings
 # clean and --rerun-tasks only for clean builds which take much longer
-systemd-run --user --scope -p MemoryMax=5G -p CPUQuota=30% ./gradlew clean :desktop:runGame -Dorg.gradle.jvmargs="-Xmx4g -Xms512m" --rerun-tasks --max-workers=2 -Pargs="-loadfile $MAP_DIR -ini $INI_FILE -window" --console=plain --stacktrace --info
+systemd-run --user --scope -p MemoryMax=8G -p CPUQuota=30% ./gradlew clean :desktop:runGame -Dorg.gradle.jvmargs="-Xmx7g -Xms1g" --rerun-tasks --max-workers=6 -Pargs="-loadfile $MAP_DIR -ini $INI_FILE -window" --console=plain --stacktrace --info
