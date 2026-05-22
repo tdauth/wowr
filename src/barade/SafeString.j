@@ -6,15 +6,20 @@ library SafeString
  */
 
 globals
-    constant integer MAX_STRING_LENGTH = 1023
+    public constant boolean ENABLE_CHECK = false // Disable the check for better performance and less code after making sure no invalid strings exist anymore.
+    public constant integer MAX_STRING_LENGTH = 1023
 endglobals
 
 function GetLocalizedStringSafe takes string source returns string
+static if (ENABLE_CHECK) then
     local string r = GetLocalizedString(source)
     if (StringLength(r) <= MAX_STRING_LENGTH) then
         return r
     endif
     return source + " is longer than " + I2S(MAX_STRING_LENGTH)
+else
+    return GetLocalizedString(source)
+endif
 endfunction
 
 endlibrary
