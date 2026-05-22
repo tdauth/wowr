@@ -127,9 +127,17 @@ private function ForFunctionUpdateStats takes nothing returns nothing
     set column = column + 1
     set mitem = MultiboardGetItem(m, currentRow, column)
     call MultiboardSetItemStyle(mitem, true, true)
-    set text = I2S(GetHeroLevel(udg_Held[convertedPlayerId]))
+    if (udg_Held[convertedPlayerId] != null) then
+        set text = I2S(GetHeroLevel(udg_Held[convertedPlayerId]))
+    else
+        set text = "0"
+    endif
     call MultiboardSetItemValue(mitem, text)
-    set value = GetUnitTypeId(udg_Held[convertedPlayerId])
+    if (udg_Held[convertedPlayerId] != null) then
+        set value = GetUnitTypeId(udg_Held[convertedPlayerId])
+    else
+        set value = 0
+    endif
     set text = GetIconByUnitType(value)
     call MultiboardSetItemIcon(mitem, text)
     call MultiboardReleaseItem(mitem)
@@ -137,9 +145,17 @@ private function ForFunctionUpdateStats takes nothing returns nothing
     set column = column + 1
     set mitem = MultiboardGetItem(m, currentRow, column)
     call MultiboardSetItemStyle(mitem, true, true)
-    set text = I2S(GetHeroLevel(udg_Held2[convertedPlayerId]))
+    if (udg_Held2[convertedPlayerId] != null) then
+        set text = I2S(GetHeroLevel(udg_Held2[convertedPlayerId]))
+    else
+        set text = "0"
+    endif
     call MultiboardSetItemValue(mitem, text)
-    set value = GetUnitTypeId(udg_Held2[convertedPlayerId])
+    if (udg_Held2[convertedPlayerId] != null) then
+        set value = GetUnitTypeId(udg_Held2[convertedPlayerId])
+    else
+        set value = 0
+    endif
     set text = GetIconByUnitType(value)
     call MultiboardSetItemIcon(mitem, text)
     call MultiboardReleaseItem(mitem)
@@ -147,9 +163,17 @@ private function ForFunctionUpdateStats takes nothing returns nothing
     set column = column + 1
     set mitem = MultiboardGetItem(m, currentRow, column)
     call MultiboardSetItemStyle(mitem, true, true)
-    set text = I2S(GetHeroLevel(udg_Held3[convertedPlayerId]))
+    if (udg_Held3[convertedPlayerId] != null) then
+        set text = I2S(GetHeroLevel(udg_Held3[convertedPlayerId]))
+    else
+        set text = "0"
+    endif
     call MultiboardSetItemValue(mitem, text)
-    set value = GetUnitTypeId(udg_Held3[convertedPlayerId])
+    if (udg_Held3[convertedPlayerId] != null) then
+        set value = GetUnitTypeId(udg_Held3[convertedPlayerId])
+    else
+        set value = 0
+    endif
     set text = GetIconByUnitType(value)
     call MultiboardSetItemIcon(mitem, text)
     call MultiboardReleaseItem(mitem)
@@ -228,7 +252,7 @@ function CreateStats takes nothing returns nothing
     call ForceClear(f)
     call ForceAddForce(f, GetPlayersAll())
     call ForceRemovePlayer(f, udg_BossesPlayer)
-    
+
     set m = CreateMultiboard()
     call MultiboardSetRowCount(m, CountPlayersInForceBJ(f))
     call MultiboardSetColumnCount(m, 15)
