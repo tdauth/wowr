@@ -2,9 +2,10 @@ library DamageCalculationTableUI initializer Init requires OnStartGame, optional
 
 globals
     public constant string CHAT_COMMAND = "-dct"
-    
+
+    public constant boolean LOAD_TOC_FILE = false
     public constant string TOC_FILE = "war3mapImported\\xxx.toc"
-    
+
     public constant real FULLSCREEN_HEIGHT = 0.6
     public constant real FULLSCREEN_WIDTH = 0.8
 
@@ -15,13 +16,13 @@ globals
     public constant real TITLE_X = X
     public constant real TITLE_Y = Y - 0.028
     public constant real TITLE_HEIGHT = 0.015
-    
+
     public constant real TABLE_BORDER_SPACE = 0.03
     public constant real VERTICAL_SPACE = 0.01
-    
+
     public constant real TABLE_CELL_WIDTH = 0.032
     public constant real TABLE_LINE_HEIGHT = 0.032
-  
+
     public constant real TABLE_X = X + TABLE_BORDER_SPACE
     public constant real TABLE_Y = TITLE_Y - TITLE_HEIGHT - VERTICAL_SPACE
     public constant real TABLE_WIDTH = WIDTH - 2.0 * TABLE_BORDER_SPACE
@@ -31,16 +32,16 @@ globals
     public constant real CLOSE_BUTTON_HEIGHT = 0.035
     public constant real CLOSE_BUTTON_X = FULLSCREEN_WIDTH / 2.0 - (CLOSE_BUTTON_WIDTH / 2.0)
     public constant real CLOSE_BUTTON_Y = TABLE_Y - TABLE_HEIGHT - VERTICAL_SPACE
-    
+
     private framehandle BackgroundFrame
-    
+
     private framehandle array attackTypes
     private framehandle array attackTypesTooltips
     private framehandle array defenseTypes
     private framehandle array defenseTypesTooltips
     private framehandle array cells
     private framehandle array cellsTooltips
-    
+
     private trigger closeTrigger = null
     private trigger chatCommandTrigger = CreateTrigger()
 endglobals
@@ -83,7 +84,7 @@ function HideDamageCalculationTableUIForPlayer takes player whichPlayer returns 
     if (whichPlayer == GetLocalPlayer()) then
         call SetDamageCalculationTableUIVisible(false)
     endif
-endfunction 
+endfunction
 
 private function CloseFunction takes nothing returns nothing
     call HideDamageCalculationTableUIForPlayer(GetTriggerPlayer())
@@ -107,7 +108,7 @@ function GetDefenseTypeName takes integer v returns string
     elseif (v == DEFENSE_TYPE_ETHEREAL) then
         return GetLocalizedString("ETHEREAL")
     endif
-    
+
     return GetLocalizedString("NONE")
 endfunction
 
@@ -131,7 +132,7 @@ function GetDefenseTypeIcon takes integer v returns string
     elseif (v == DEFENSE_TYPE_ETHEREAL) then
         return "ReplaceableTextures\\CommandButtons\\ATTBanish.blp"
     endif
-    
+
     return "UI\\Widgets\\Console\\Human\\Infocard-neutral-armor-unarmored.blp"
 endfunction
 
@@ -151,7 +152,7 @@ function GetAttackTypeName takes integer v returns string
     elseif (v == GetHandleId(ATTACK_TYPE_MAGIC)) then
         return GetLocalizedString("MAGIC")
     endif
-    
+
     return GetLocalizedString("NONE")
 endfunction
 
@@ -171,7 +172,7 @@ function GetAttackTypeIcon takes integer v returns string
     elseif (v == GetHandleId(ATTACK_TYPE_MAGIC)) then
         return "UI\\Widgets\\Console\\Human\\Infocard-neutral-attack-magic.blp"
     endif
-    
+
     return "UI\\Widgets\\Console\\Human\\Infocard-neutral-attack-melee.blp"
 endfunction
 
@@ -180,7 +181,7 @@ public function CreateUI takes nothing returns nothing
     local integer i = 0
     local integer j = 0
     local integer index = 0
-    
+
     set BackgroundFrame = BlzCreateFrame("EscMenuBackdrop", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), 0, 0)
     call BlzFrameSetAbsPoint(BackgroundFrame, FRAMEPOINT_TOPLEFT, X, Y)
     call BlzFrameSetAbsPoint(BackgroundFrame, FRAMEPOINT_BOTTOMRIGHT, X + WIDTH, Y - HEIGHT)
@@ -191,7 +192,7 @@ public function CreateUI takes nothing returns nothing
     call BlzFrameSetAbsPoint(f, FRAMEPOINT_BOTTOMRIGHT, TITLE_X + WIDTH, TITLE_Y - TITLE_HEIGHT)
     call BlzFrameSetTextAlignment(f, TEXT_JUSTIFY_TOP, TEXT_JUSTIFY_CENTER)
     call BlzFrameSetText(f, GetLocalizedString("DAMAGE_CALCULATION_TABLE"))
-    
+
     // y
     set i = 0
     loop
@@ -201,17 +202,17 @@ public function CreateUI takes nothing returns nothing
         call BlzFrameSetAbsPoint(f, FRAMEPOINT_TOPLEFT, TABLE_X, TABLE_Y - (i + 1) * TABLE_LINE_HEIGHT)
         call BlzFrameSetAbsPoint(f, FRAMEPOINT_BOTTOMRIGHT, TABLE_X + TABLE_CELL_WIDTH, TABLE_Y - (i + 1) * TABLE_LINE_HEIGHT - TABLE_LINE_HEIGHT)
         call BlzFrameSetTexture(f, GetAttackTypeIcon(i), 0, false)
-        
+
         set f = BlzCreateFrameByType("TEXT", "AttackTypeTooltip" + I2S(i), BackgroundFrame, "", 0)
         set attackTypesTooltips[i] = f
         call BlzFrameSetTooltip(attackTypes[i], f)
         call BlzFrameSetPoint(f, FRAMEPOINT_BOTTOM, attackTypes[i], FRAMEPOINT_TOP, 0, 0.01)
         call BlzFrameSetEnable(f, false)
         call BlzFrameSetText(f, GetAttackTypeName(i))
-        
+
         set i = i + 1
     endloop
-    
+
     // x
     set i = 0
     loop
@@ -221,17 +222,17 @@ public function CreateUI takes nothing returns nothing
         call BlzFrameSetAbsPoint(f, FRAMEPOINT_TOPLEFT, TABLE_X + (i + 1) * TABLE_CELL_WIDTH, TABLE_Y)
         call BlzFrameSetAbsPoint(f, FRAMEPOINT_BOTTOMRIGHT, TABLE_X + (i + 1) * TABLE_CELL_WIDTH + TABLE_CELL_WIDTH, TABLE_Y - TABLE_LINE_HEIGHT)
         call BlzFrameSetTexture(f, GetDefenseTypeIcon(i), 0, false)
-        
+
         set f = BlzCreateFrameByType("TEXT", "DefenseTypeTooltip" + I2S(i), BackgroundFrame, "", 0)
         set defenseTypesTooltips[i] = f
         call BlzFrameSetTooltip(defenseTypes[i], f)
         call BlzFrameSetPoint(f, FRAMEPOINT_BOTTOM, defenseTypes[i], FRAMEPOINT_TOP, 0, 0.01)
         call BlzFrameSetEnable(f, false)
         call BlzFrameSetText(f, GetDefenseTypeName(i))
-        
+
         set i = i + 1
     endloop
-    
+
     set i = 0 // y
     loop
         exitwhen (i == MAX_ATTACK_TYPES)
@@ -245,14 +246,14 @@ public function CreateUI takes nothing returns nothing
             call BlzFrameSetAbsPoint(f, FRAMEPOINT_BOTTOMRIGHT, TABLE_X + (j + 1) * TABLE_CELL_WIDTH + TABLE_CELL_WIDTH, TABLE_Y - (i + 1) * TABLE_LINE_HEIGHT - TABLE_LINE_HEIGHT)
             call BlzFrameSetText(f, I2S(R2I(100 * GetDamageCalculationTableValue(i, j))) + " %%")
             call BlzFrameSetTextAlignment(f, TEXT_JUSTIFY_CENTER, TEXT_JUSTIFY_CENTER)
-            
+
             set f = BlzCreateFrameByType("TEXT", "CellTooltip" + I2S(index), BackgroundFrame, "", 0)
             set cellsTooltips[index] = f
             call BlzFrameSetTooltip(cells[index], f)
             call BlzFrameSetPoint(f, FRAMEPOINT_BOTTOM, cells[index], FRAMEPOINT_TOP, 0, 0.0005)
             call BlzFrameSetEnable(f, false)
             call BlzFrameSetText(f, GetAttackTypeName(i) + " - " + GetDefenseTypeName(j))
-            
+
             set j = j + 1
         endloop
         set i = i + 1
@@ -293,8 +294,10 @@ private function Start takes nothing returns nothing
     endloop
     call TriggerAddAction(chatCommandTrigger, function TriggerActionShowUI)
 
+static if (LOAD_TOC_FILE) then
     call BlzLoadTOCFile(TOC_FILE)
-    
+endif
+
     call CreateUI()
 endfunction
 
