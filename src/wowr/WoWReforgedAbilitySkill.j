@@ -112,6 +112,10 @@ private function SetAbilitySkillExtendedTooltip takes integer abilityId, integer
     call SaveStr(h, abilityId, level, tooltip)
 endfunction
 
+/*
+ * Set the tool string key without calling GetLocalizedString befor to avoid desyncs because of different strings saved in the hashtable.
+ * It will be localized automatically after calling GetAbilitySkillExtendedTooltip.
+ */
 function SetAbilityTooltip takes integer abilityId, string tooltip returns nothing
     call SetAbilitySkillExtendedTooltip(abilityId, 0, tooltip)
 endfunction
@@ -284,7 +288,7 @@ function UpdateAbilityTooltip takes unit hero, integer abilityId, ability a, int
     //call BJDebugMsg("Update ability tooltip for " + GetObjectName(abilityId) + " with level " + I2S(level))
     call BlzSetAbilityStringLevelField(a, ABILITY_SLF_TOOLTIP_NORMAL, 0, Format(GetLocalizedString("ABILITY_LEVEL_X")).s(GetObjectName(abilityId)).i(level).result())
     if (HasAbilitySkillExtendedTooltip(abilityId, 0)) then
-        call BlzSetAbilityStringLevelField(a, ABILITY_SLF_TOOLTIP_NORMAL_EXTENDED, 0, FormatAbilityTooltip(hero, abilityId, level, GetLocalizedString(GetAbilitySkillExtendedTooltip(abilityId, 0))))
+        call BlzSetAbilityStringLevelField(a, ABILITY_SLF_TOOLTIP_NORMAL_EXTENDED, 0, FormatAbilityTooltip(hero, abilityId, level, GetLocalizedStringSafe(GetAbilitySkillExtendedTooltip(abilityId, 0))))
     endif
 endfunction
 
