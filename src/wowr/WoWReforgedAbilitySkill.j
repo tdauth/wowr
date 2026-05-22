@@ -11,12 +11,12 @@ globals
     constant integer LIFE_REGENERATION_BONUS_PER_LEVEL = 1
     constant real CHANCE_BONUS_PER_LEVEL = 0.01
     constant real DAMAGE_MULTIPLIER_PER_LEVEL = 0.1
-    
+
     private hashtable h = InitHashtable()
     private hashtable skillHashtable = InitHashtable()
-    
+
     private unit DUMMY = null
-    
+
     private trigger array callbackTriggers
     private integer callbackTriggersCounter = 0
     private integer triggerSkilledAbilityId = 0
@@ -29,7 +29,7 @@ private function AddAbilityToDummy takes integer abilityId returns ability
     if (GetUnitAbilityLevel(DUMMY, abilityId) == 0) then
         call UnitAddAbility(DUMMY, abilityId)
     endif
-    
+
     return BlzGetUnitAbility(DUMMY, abilityId)
 endfunction
 
@@ -153,9 +153,9 @@ function FormatAbilityTooltip takes unit caster, integer abilityId, integer leve
                     set rawcodePercentage = ""
                     set hasPercentage = false
                     set percentageFactor = 1.0
-                
+
                     set rawcodeField = StringTokenEx(fieldString, 1, ",", false)
-                    if (rawcodeField != null) then
+                    if (rawcodeField != null and StringLength(rawcodeField) == 4) then
                         set rawcodeAbility = StringTokenEx(fieldString, 0, ",", false)
                         set rawcodeLevel = StringTokenEx(fieldString, 2, ",", false)
                         set rawcodePercentage = StringTokenEx(fieldString, 3, ",", false)
@@ -163,7 +163,7 @@ function FormatAbilityTooltip takes unit caster, integer abilityId, integer leve
                         if (hasPercentage) then
                             set percentageFactor = 100.0
                         endif
-                        
+
                         if (rawcodeAbility != null and rawcodeAbility != "this" and StringLength(rawcodeAbility) > 0) then
                             set tooltipAbilityId = S2A(rawcodeAbility)
                         else
@@ -176,13 +176,13 @@ function FormatAbilityTooltip takes unit caster, integer abilityId, integer leve
                             // x means that we always take level 0 which might have been modified by the skilling.
                             set level = 0
                         endif
-                        
+
                         //call BJDebugMsg("Tooltip of " + GetObjectName(abilityId) + " with rawcode ability " + rawcodeAbility + " and rawcode level " + rawcodeLevel + " leading to level " + I2S(level) + " and rawcode field " + rawcodeField + " and rawcode percentage " + rawcodePercentage)
-                        
+
                         set result = result + SubString(tooltip, lastAfterEnd, index)
-                        
+
                         set fieldValue = "X"
-                        
+
                         if (fieldType != ABILITY_FIELD_TYPE_UNKNOWN) then
                             if (IsAbilityFieldTypeCustom(fieldType)) then
                                 // Custom fields do not actually store any value per unit, so we have to use the level of the ability here.
@@ -228,12 +228,12 @@ function FormatAbilityTooltip takes unit caster, integer abilityId, integer leve
                                 else
                                     set a = null
                                 endif
-                                
+
                                 // The unit has no ability, so get its value from a dummy.
                                 if (a == null) then
                                     set a = AddAbilityToDummy(tooltipAbilityId)
                                 endif
-                                
+
                                 if (a != null) then
                                     if (IsAbilityFieldTypeReal(fieldType)) then
                                         set fieldValue = I2S(R2I(BlzGetAbilityRealLevelField(a, ConvertAbilityRealLevelField(S2A(rawcodeField)), level) * percentageFactor))
@@ -241,21 +241,23 @@ function FormatAbilityTooltip takes unit caster, integer abilityId, integer leve
                                     elseif (IsAbilityFieldTypeInteger(fieldType)) then
                                         set fieldValue = I2S(BlzGetAbilityIntegerLevelField(a, ConvertAbilityIntegerLevelField(S2A(rawcodeField)), level))
                                     endif
-                                    
+
                                 endif
                             endif
                         else
                             call BJDebugMsg("Register field type for field " + rawcodeField + "!")
                         endif
-                        
+
                         //call BJDebugMsg("Field value of " + GetObjectName(tooltipAbilityId) + " with rawcode ability " + rawcodeAbility + " and rawcode level " + rawcodeLevel + " leading to level " + I2S(level) + " and rawcode field " + rawcodeField + " and rawcode percentage " + rawcodePercentage + ": " + fieldValue)
                         set result = result + fieldValue
-                        
+
                         set continue = true
                         set lastAfterEnd = index2 + 1
                         set index = lastAfterEnd
-                        
+
                         //call BJDebugMsg("Continue at index " + I2S(index))
+                    else
+                        call BJDebugMsg("Invalid field " + rawcodeField + " for ability " + GetObjectName(abilityId))
                     endif
                 endif
             endif
@@ -300,7 +302,7 @@ function SkillAbilityEx takes unit hero, integer handleId, integer abilityId, ab
         call UpdateAbilityTooltip(hero, abilityId, a, level)
     endif
     if (abilityId == ABILITY_BARRAGE) then
-        call BlzSetAbilityStringLevelField(a, ABILITY_SLF_MISSILE_ART, 0, BlzGetUnitWeaponStringField(hero, UNIT_WEAPON_SF_ATTACK_PROJECTILE_ART, 0))       
+        call BlzSetAbilityStringLevelField(a, ABILITY_SLF_MISSILE_ART, 0, BlzGetUnitWeaponStringField(hero, UNIT_WEAPON_SF_ATTACK_PROJECTILE_ART, 0))
     endif
 endfunction
 
