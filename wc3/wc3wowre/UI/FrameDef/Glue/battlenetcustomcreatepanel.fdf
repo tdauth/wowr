@@ -1,0 +1,205 @@
+// -- INCLUDE FILES ---------------------------------------------
+
+IncludeFile "UI\FrameDef\Glue\BattleNetTemplates.fdf",
+
+// -- LOCAL TEMPLATES -------------------------------------------
+
+// -- FRAMES ----------------------------------------------------
+
+Frame "FRAME" "BattleNetCustomCreatePanel" {
+    SetAllPoints,
+    TabFocusPush,
+
+    // --- title
+    Frame "TEXT" "CustomCreateTitleLabel" INHERITS "BattleNetTitleTextTemplate" {
+        SetPoint TOPLEFT, "BattleNetCustomCreatePanel", TOPLEFT, 0.02625, -0.039,
+        Text "BNET_CUSTOM_CREATE_TITLE",
+    }
+
+    // --- create game controls
+    Frame "TEXT" "CreateGameNameLabel" INHERITS "BattleNetLabelTextTemplate" {
+        SetPoint TOPLEFT, "CustomCreateTitleLabel", BOTTOMLEFT, 0.0, -0.01625,
+        Text "COLON_GAME_NAME",
+		Width 0.24,
+    }
+
+    Frame "EDITBOX" "CreateGameNameEditBox" INHERITS WITHCHILDREN "BattleNetEditBoxTemplate" {
+        Width 0.2375,
+        SetPoint TOPLEFT, "CreateGameNameLabel", BOTTOMLEFT, 0.0, -0.001,
+		TabFocusDefault,
+		TabFocusNext "AdvancedOptionsButton",
+
+        EditTextFrame "CreateGameNameEditBoxText",
+        Frame "TEXT" "CreateGameNameEditBoxText" INHERITS "BattleNetEditBoxTextTemplate" {
+        Width 0.24,
+		}
+    }
+
+    Frame "GLUECHECKBOX" "PublicGameRadio" INHERITS WITHCHILDREN "BattleNetRadioButtonTemplate" {
+        Width 0.020,
+        Height 0.020,
+        SetPoint TOPLEFT, "CreateGameNameEditBox", TOPRIGHT, 0.002, 0.0,
+    }
+
+    Frame "TEXT" "PublicGameLabel" INHERITS "BattleNetLabelTextTemplate" {
+        SetPoint LEFT, "PublicGameRadio", RIGHT, 0.003, 0.0,
+        Text "PUBLIC_GAME",
+    }
+
+    Frame "GLUECHECKBOX" "PrivateGameRadio" INHERITS WITHCHILDREN "BattleNetRadioButtonTemplate" {
+        Width 0.020,
+        Height 0.020,
+        SetPoint BOTTOMLEFT, "CreateGameNameEditBox", BOTTOMRIGHT, 0.002, 0.0,
+    }
+
+    Frame "TEXT" "PrivateGameLabel" INHERITS "BattleNetLabelTextTemplate" {
+        SetPoint LEFT, "PrivateGameRadio", RIGHT, 0.003, 0.0,
+            Text "PRIVATE_GAME",
+    }
+
+    Frame "TEXT" "CreateGameSpeedLabel" INHERITS "BattleNetLabelTextTemplate" {
+        SetPoint TOPLEFT, "CreateGameNameEditBox", BOTTOMLEFT, 0.0, -0.011875,
+        Text "COLON_GAME_SPEED",
+		Width 0.24,
+    }
+
+    Frame "BACKDROP" "CreateGameSpeedSliderBackdrop" {
+        Height 0.032,
+        Width 0.256,
+        SetPoint TOPLEFT, "CreateGameSpeedLabel", BOTTOMLEFT, 0.0, -0.001,
+        BackdropBlendAll,
+        BackdropBackground  "UI\Widgets\BattleNet\bnet-slider-bar3.blp",
+
+        Frame "SLIDER" "CreateGameSpeedSlider" {
+            Height 0.032,
+            Width 0.23725,
+            SetPoint CENTER, "CreateGameSpeedSliderBackdrop", CENTER, -0.00125, -0.0003,
+
+            SliderMinValue 0,
+            SliderMaxValue 2,
+            SliderInitialValue 2,
+            SliderStepSize 1,
+            SliderLayoutHorizontal,
+
+            SliderThumbButtonFrame "CreateGameSpeedThumbButton",
+            Frame "BUTTON" "CreateGameSpeedThumbButton" {
+                Width 0.016,
+                Height 0.016,
+
+                ControlBackdrop "CreateGameSpeedThumbButtonBackdrop",
+                Frame "BACKDROP" "CreateGameSpeedThumbButtonBackdrop" {
+                    BackdropBlendAll,
+                    BackdropBackground  "UI\Widgets\Glues\SinglePlayerSkirmish-ScrollBarKnob.blp",
+                }
+
+                ControlDisabledBackdrop "CreateGameSpeedThumbButtonDisabledBackdrop",
+                Frame "BACKDROP" "CreateGameSpeedThumbButtonDisabledBackdrop" {
+                    BackdropBlendAll,
+                    BackdropBackground  "UI\Widgets\Glues\SinglePlayerSkirmish-ScrollBarKnobDisabled.blp",
+                }
+            }
+        }
+    }
+
+    Frame "TEXT" "CreateGameSpeedValue" INHERITS "BattleNetTitleTextTemplate" {
+        SetPoint LEFT, "CreateGameSpeedSliderBackdrop", RIGHT, 0.005, 0.0,
+		Width 0.24,
+	}
+
+    Frame "TEXT" "MapListLabel" INHERITS "BattleNetLabelTextTemplate" {
+        SetPoint TOPLEFT, "CreateGameSpeedLabel", BOTTOMLEFT, 0.0, -0.04625,
+        Text "COLON_SELECT_MAP",
+		Width 0.24,
+	}
+
+    Frame "FRAME" "MapListContainer" {
+        SetPoint TOPLEFT, "MapListLabel", BOTTOMLEFT, 0.0, -0.001,
+        Width 0.375,
+        Height 0.230625,
+	}
+
+    // --- map info display controls
+    Frame "FRAME" "MapInfoPanel" {
+        Frame "FRAME" "MapInfoPaneContainer" {
+            Width 0.271875,
+            Height 0.323125,
+            SetPoint TOP, "BattleNetCustomCreatePanel", TOPRIGHT, -0.180625, -0.0375,
+        }
+
+        Frame "BACKDROP" "MapInfoBackdrop" INHERITS "BattleNetMenuSingleLargeButtonBaseBackdrop" {
+                SetPoint TOPRIGHT,"BattleNetCustomCreatePanel",TOPRIGHT, -0.055, -0.38,
+
+	        Frame "GLUETEXTBUTTON" "MapInfoButton" INHERITS WITHCHILDREN "BattleNetButtonTemplate" {
+		    Width 0.187,
+                    SetPoint TOPRIGHT,"MapInfoBackdrop",TOPRIGHT, -0.032, -0.015625,
+		    ControlShortcutKey "KEY_ADVANCED_OPTIONS_SHORTCUT",
+                    TabFocusNext "CreateGameButton",
+
+                    ButtonText "MapInfoButtonText",
+		        Frame "TEXT" "MapInfoButtonText" INHERITS "BattleNetButtonTextTemplate" {
+			        Text "KEY_ADVANCED_OPTIONS",
+		        }
+	        }
+        }
+    }
+
+    Frame "FRAME" "AdvancedOptionsPanel" {
+        Frame "FRAME" "AdvancedOptionsPaneContainer" {
+            Width 0.271875,
+            Height 0.323125,
+            SetPoint TOP, "BattleNetCustomCreatePanel", TOPRIGHT, -0.180625, -0.0375,
+        }
+
+        Frame "BACKDROP" "AdvancedOptionsBackdrop" INHERITS "BattleNetMenuSingleLargeButtonBaseBackdrop" {
+                SetPoint TOPRIGHT,"BattleNetCustomCreatePanel",TOPRIGHT, -0.055, -0.38,
+
+	        Frame "GLUETEXTBUTTON" "AdvancedOptionsButton" INHERITS WITHCHILDREN "BattleNetButtonTemplate" {
+		    Width 0.187,
+                    SetPoint TOPRIGHT,"AdvancedOptionsBackdrop",TOPRIGHT, -0.032, -0.015625,
+		    ControlShortcutKey "KEY_MAP_INFO_SHORTCUT",
+                    TabFocusNext "CreateGameButton",
+
+                    ButtonText "AdvancedOptionsButtonText",
+		        Frame "TEXT" "AdvancedOptionsButtonText" INHERITS "BattleNetButtonTextTemplate" {
+			        Text "KEY_MAP_INFO",
+		        }
+	        }
+        }
+    }
+
+    // --- bottom button controls
+    Frame "BACKDROP" "CreateGameBackdrop" INHERITS "BattleNetMenuButtonBaseBackdrop" {
+        Width 0.24,
+        SetPoint TOPRIGHT,"BattleNetCustomCreatePanel",BOTTOMRIGHT, -0.014375, 0.124375,
+
+	    Frame "GLUETEXTBUTTON" "CreateGameButton" INHERITS WITHCHILDREN "BattleNetButtonTemplate" {
+            Width 0.168,
+		    SetPoint TOPRIGHT,"CreateGameBackdrop",TOPRIGHT, -0.012, -0.0165,
+		    ControlShortcutKey "KEY_CREATE_GAME_SHORTCUT",
+            TabFocusNext "CancelButton",
+
+            ButtonText "CreateGameButtonText",
+		    Frame "TEXT" "CreateGameButtonText" INHERITS "BattleNetButtonTextTemplate" {
+			    Text "KEY_CREATE_GAME",
+		    }
+	    }
+    }
+
+    Frame "BACKDROP" "CancelBackdrop" INHERITS "BattleNetMenuButtonBaseBackdrop" {
+        Width 0.24,
+        SetPoint TOPRIGHT,"CreateGameBackdrop",BOTTOMRIGHT, 0.0, 0.015,            
+
+	    Frame "GLUETEXTBUTTON" "CancelButton" INHERITS WITHCHILDREN "BattleNetButtonTemplate" {
+            Width 0.168,
+            SetPoint TOPRIGHT,"CancelBackdrop",TOPRIGHT, -0.012, -0.0165,
+		    ControlShortcutKey "KEY_CANCEL_SHORTCUT",
+            TabFocusNext "CreateGameNameEditBox",
+
+            ButtonText "CancelButtonText",
+		    Frame "TEXT" "CancelButtonText" INHERITS "BattleNetButtonTextTemplate" {
+			    Text "KEY_CANCEL",
+		    }
+	    }
+    }
+}
+

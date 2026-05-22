@@ -1,0 +1,152 @@
+// -- INCLUDE FILES ---------------------------------------------
+
+IncludeFile "UI\FrameDef\Glue\BattleNetTemplates.fdf",
+
+// -- LOCAL TEMPLATES -------------------------------------------
+
+Frame "BACKDROP" "BNetPopupMenuBackdropTemplate" INHERITS "BattleNetMenuButtonBaseBackdrop" {
+    BackdropMirrored,
+}
+
+Frame "POPUPMENU" "BNetPopupMenuTemplate" INHERITS "BattleNetPopupMenuTemplate" {
+    Width 0.179,
+
+    ControlBackdrop "PopupMenuBackdrop",
+    Frame "BACKDROP" "PopupMenuBackdrop" INHERITS "BattleNetButtonBackdropTemplate" {
+    }
+
+    ControlDisabledBackdrop "PopupMenuDisabledBackdrop",
+    Frame "BACKDROP" "PopupMenuDisabledBackdrop" INHERITS "BattleNetButtonDisabledBackdropTemplate" {
+    }
+
+    PopupTitleFrame "PopupMenuTitle",
+    Frame "GLUETEXTBUTTON" "PopupMenuTitle" INHERITS WITHCHILDREN "BattleNetPopupMenuTitleTemplate" {
+    }
+
+    PopupArrowFrame "PopupMenuArrow",
+    Frame "BUTTON" "PopupMenuArrow" INHERITS WITHCHILDREN "BattleNetPopupMenuArrowTemplate" { 
+    }
+}
+
+// -- FRAMES ----------------------------------------------------
+
+Frame "FRAME" "BattleNetStandardPanel" {
+    SetAllPoints,
+
+    // --- Standard Game Options ----------------------------------------------------
+    Frame "TEXT" "StandardTitleLabel" INHERITS "BattleNetTitleTextTemplate" {
+        SetPoint TOPLEFT, "BattleNetStandardPanel", TOPLEFT, 0.02625, -0.039,
+        Text "BNET_STD_TITLE",
+    }
+
+    Frame "TEXT" "RaceLabel" INHERITS "BattleNetInfoTextTemplate" {
+        SetPoint TOPLEFT,"StandardTitleLabel",BOTTOMLEFT, 0.0, -0.01,
+        Text "BNET_STD_RACE",
+    }
+
+    Frame "BACKDROP" "RaceMenuBackdrop" INHERITS "BNetPopupMenuBackdropTemplate" {
+        SetPoint TOPLEFT, "RaceLabel", BOTTOMLEFT, 0.0, 0.00375,
+
+	    Frame "POPUPMENU" "RaceMenu" INHERITS WITHCHILDREN "BNetPopupMenuTemplate" {
+		    SetPoint TOPLEFT,"RaceMenuBackdrop",TOPLEFT, 0.012, -0.0165,
+
+            PopupMenuFrame "RacePopupMenuMenu",
+            Frame "MENU" "RacePopupMenuMenu" INHERITS WITHCHILDREN "BattleNetPopupMenuMenuTemplate" {
+            }
+	    }
+    }
+
+    Frame "TEXT" "StyleLabel" INHERITS "BattleNetInfoTextTemplate" {
+        SetPoint TOPLEFT, "RaceLabel", BOTTOMLEFT, 0.0, -0.06375,
+        Text "BNET_STD_GAME_TYPE",
+    }
+
+
+    Frame "BACKDROP" "StyleBackdrop" INHERITS "BNetPopupMenuBackdropTemplate" {
+        SetPoint TOPLEFT, "StyleLabel", BOTTOMLEFT, 0.0, 0.00375,
+
+	    Frame "POPUPMENU" "StyleMenu" INHERITS WITHCHILDREN "BNetPopupMenuTemplate" {
+		    SetPoint TOPLEFT,"StyleBackdrop",TOPLEFT, 0.012, -0.0165,
+
+            PopupMenuFrame "StylePopupMenuMenu",
+            Frame "MENU" "StylePopupMenuMenu" INHERITS WITHCHILDREN "BattleNetPopupMenuMenuTemplate" {
+            }
+	    }
+    }
+
+    Frame "TEXT" "StyleDescriptionValue" INHERITS "BattleNetLabelTextTemplate" {
+        Width 0.15625,
+        SetPoint LEFT, "StyleBackdrop", RIGHT, -0.03125, 0.0,
+        FontColor 1.0 1.0 1.0 1.0,
+        FontJustificationH JUSTIFYLEFT,
+    }
+
+    Frame "FRAME" "MapPreferenceContainer" {
+        Width 0.37875,
+        Height 0.268125,
+        SetPoint BOTTOMLEFT, "BattleNetStandardPanel", BOTTOMLEFT, 0.021875, 0.02475,
+    }
+
+    Frame "TEXT" "MapPreferenceVetoDesc" INHERITS "BattleNetLabelTextTemplate" {
+        Width 0.38,
+        SetPoint BOTTOMLEFT, "MapPreferenceContainer", TOPLEFT, 0.0, 0.00325,
+        FontColor 1.0 1.0 1.0 1.0,
+        Text "BNET_STD_MAP_LIST_DESC_VETO",
+    }
+
+    Frame "TEXT" "MapPreferenceDesc" INHERITS "BattleNetLabelTextTemplate" {
+        Width 0.38,
+        SetPoint BOTTOMLEFT, "MapPreferenceVetoDesc", TOPLEFT, 0.0, 0.0055,
+        FontColor 1.0 1.0 1.0 1.0,
+        Text "BNET_STD_MAP_LIST_DESC",
+    }
+
+    Frame "TEXT" "MapPreferenceLabel" INHERITS "BattleNetInfoTextTemplate" {
+        SetPoint BOTTOMLEFT, "MapPreferenceDesc", TOPLEFT, 0.0, 0.00250,
+        Text "BNET_STD_MAP_LIST",
+    }
+
+    // --- Selection Info -----------------------------------------------------
+
+    Frame "FRAME" "MapInfoPaneContainer" {
+        Width 0.259375,
+        Height 0.375,
+        SetPoint TOP, "BattleNetStandardPanel", TOPRIGHT, -0.1825, -0.035625,
+    }
+
+    // --- Bottom Buttons -------------------------------------------------------
+    Frame "BACKDROP" "PlayGameBackdrop" INHERITS "BattleNetMenuButtonBaseBackdrop" {
+        Width 0.24,
+        SetPoint TOPRIGHT,"BattleNetStandardPanel",BOTTOMRIGHT, -0.014375, 0.124375,
+
+	    Frame "GLUETEXTBUTTON" "PlayGameButton" INHERITS WITHCHILDREN "BattleNetButtonTemplate" {
+            Width 0.168,
+		    SetPoint TOPRIGHT,"PlayGameBackdrop",TOPRIGHT, -0.012, -0.0165,
+		    ControlShortcutKey "KEY_PLAY_GAME_SHORTCUT",
+            TabFocusDefault,
+            TabFocusNext "CancelButton",
+
+            ButtonText "PlayGameButtonText",
+		    Frame "TEXT" "PlayGameButtonText" INHERITS "BattleNetButtonTextTemplate" {
+			    Text "KEY_PLAY_GAME",
+		    }
+	    }
+    }
+
+    Frame "BACKDROP" "CancelBackdrop" INHERITS "BattleNetMenuButtonBaseBackdrop" {
+        Width 0.24,
+        SetPoint TOPRIGHT,"PlayGameBackdrop",BOTTOMRIGHT, 0.0, 0.015,            
+
+	    Frame "GLUETEXTBUTTON" "CancelButton" INHERITS WITHCHILDREN "BattleNetButtonTemplate" {
+            Width 0.168,
+            SetPoint TOPRIGHT,"CancelBackdrop",TOPRIGHT, -0.012, -0.0165,
+		    ControlShortcutKey "KEY_CANCEL_SHORTCUT",
+            TabFocusNext "PlayGameButton",
+
+            ButtonText "CancelButtonText",
+		    Frame "TEXT" "CancelButtonText" INHERITS "BattleNetButtonTextTemplate" {
+			    Text "KEY_CANCEL",
+		    }
+	    }
+    }
+}

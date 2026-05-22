@@ -1,0 +1,784 @@
+// -- INCLUDE FILES ---------------------------------------------------------
+
+IncludeFile "UI\FrameDef\Glue\StandardTemplates.fdf",
+
+// -- LOCAL TEMPLATES -------------------------------------------------------
+
+Frame "BACKDROP" "OptionsPopupMenuBackdropTemplate" INHERITS "StandardMenuButtonBaseBackdrop" {
+    Height 0.0515,
+    Width 0.251,
+    BackdropMirrored,
+}
+
+Frame "POPUPMENU" "OptionsPopupMenuTemplate" INHERITS "StandardPopupMenuTemplate" {
+    Height 0.025,
+    Width 0.1775,
+
+    ControlBackdrop "PopupMenuBackdrop",
+    Frame "BACKDROP" "PopupMenuBackdrop" INHERITS "StandardButtonBackdropTemplate" {
+    }
+
+    ControlDisabledBackdrop "PopupMenuDisabledBackdrop",
+    Frame "BACKDROP" "PopupMenuDisabledBackdrop" INHERITS "StandardButtonDisabledBackdropTemplate" {
+    }
+
+    PopupTitleFrame "PopupMenuTitle",
+    Frame "GLUETEXTBUTTON" "PopupMenuTitle" INHERITS WITHCHILDREN "StandardPopupMenuTitleTemplate" {
+	}
+
+    PopupArrowFrame "PopupMenuArrow",
+    Frame "BUTTON" "PopupMenuArrow" INHERITS WITHCHILDREN "StandardPopupMenuArrowTemplate" { 
+    }
+}
+
+// -- FRAMES ----------------------------------------------------------------
+
+Frame "FRAME" "OptionsMenu" INHERITS "StandardFrameTemplate" {
+	SetAllPoints,
+
+    Frame "FRAME" "OptionsControlLayer" {
+    SetAllPoints,
+
+		// ***********************************************
+		// **
+		// **   Right Options Button Panel
+		// **
+		// **********
+
+		Frame "BACKDROP" "GameplayBackdrop" INHERITS "StandardMenuButtonBaseBackdrop" {
+			SetPoint TOPRIGHT,"OptionsMenu",TOPRIGHT, -0.015, -0.110625,
+
+			Frame "GLUETEXTBUTTON" "GameplayButton" INHERITS WITHCHILDREN "StandardButtonTemplate" {
+				SetPoint TOPRIGHT,"GameplayBackdrop",TOPRIGHT, -0.012, -0.0165,
+				ControlShortcutKey "KEY_GAMEPLAY_SHORTCUT",
+				TabFocusDefault,
+				TabFocusNext "VideoButton",
+
+				ButtonText "GameplayButtonText",
+				Frame "TEXT" "GameplayButtonText" INHERITS "StandardButtonTextTemplate" {
+					Text "KEY_GAMEPLAY",
+				}
+			}
+		}
+
+		Frame "BACKDROP" "VideoBackdrop" INHERITS "StandardMenuButtonBaseBackdrop" {
+			SetPoint TOPRIGHT,"GameplayBackdrop",BOTTOMRIGHT,0, 0.005,
+
+			Frame "GLUETEXTBUTTON" "VideoButton" INHERITS WITHCHILDREN "StandardButtonTemplate" {		    
+				SetPoint TOPRIGHT,"VideoBackdrop",TOPRIGHT, -0.012, -0.0165,
+				ControlShortcutKey "KEY_VIDEO_SHORTCUT",
+				TabFocusNext "SoundButton",
+
+				ButtonText "VideoButtonText",
+				Frame "TEXT" "VideoButtonText" INHERITS "StandardButtonTextTemplate" {
+					Text "KEY_VIDEO",
+				}
+			}
+		}
+
+		Frame "BACKDROP" "SoundBackdrop" INHERITS "StandardMenuButtonBaseBackdrop" {
+			SetPoint TOPRIGHT,"VideoBackdrop",BOTTOMRIGHT,0, 0.005,
+
+			Frame "GLUETEXTBUTTON" "SoundButton" INHERITS WITHCHILDREN "StandardButtonTemplate" {		    
+				SetPoint TOPRIGHT,"SoundBackdrop",TOPRIGHT, -0.012, -0.0165,
+				ControlShortcutKey "KEY_SOUND_SHORTCUT",
+				TabFocusNext "OKButton",
+
+				ButtonText "SoundButtonText",
+				Frame "TEXT" "SoundButtonText" INHERITS "StandardButtonTextTemplate" {
+					Text "KEY_SOUND",
+				}
+			}
+		}
+
+		// ***********************************************
+		// **
+		// **   Gameplay Panel
+		// **
+		// **********
+
+		Frame "FRAME" "GameplayPanel" {
+
+			Frame "TEXT" "GameplayOptionsTitle" INHERITS "StandardTitleTextTemplate" {
+				SetPoint TOPLEFT, "OptionsMenu", TOPLEFT, 0.025, -0.085,
+				FontColor 1.0 1.0 1.0 1.0,
+				Text "GAMEPLAY_OPTIONS",
+			}
+
+			Frame "TEXT" "MouseScrollLabel" INHERITS "StandardInfoTextTemplate" {
+				SetPoint TOPLEFT, "GameplayOptionsTitle", BOTTOMLEFT, 0.0, -0.01,
+				Text "COLON_MOUSE_SCROLL",
+			}
+
+			Frame "TEXT" "MouseScrollSlowLabel" INHERITS "StandardLabelTextTemplate" {
+				SetPoint TOPLEFT, "MouseScrollLabel", BOTTOMLEFT, 0.01, -0.005,
+				FontColor 1.0 1.0 1.0 1.0,
+				Text "SLOW_SCROLL",
+			}
+
+			Frame "SLIDER" "MouseScrollSlider" INHERITS WITHCHILDREN "StandardSliderTemplate" {
+				Width 0.235,
+				SetPoint LEFT, "MouseScrollSlowLabel", RIGHT, 0.01, 0.0,
+
+				SliderMinValue 0,
+				SliderMaxValue 100,
+				SliderInitialValue 0,
+				SliderStepSize 1,
+			}            
+
+			Frame "TEXT" "MouseScrollFastLabel" INHERITS "StandardLabelTextTemplate" {
+				SetPoint LEFT, "MouseScrollSlider", RIGHT, 0.01, 0.0,
+				FontColor 1.0 1.0 1.0 1.0,
+				Text "FAST_SCROLL",
+			}
+
+            Frame "GLUECHECKBOX" "MouseScrollDisableCheckBox" INHERITS WITHCHILDREN "StandardCheckBoxTemplate" {
+				SetPoint TOPLEFT, "MouseScrollSlowLabel", BOTTOMLEFT, -0.01, -0.01,
+			}
+
+			Frame "TEXT" "MouseScrollDisableLabel" INHERITS "StandardInfoTextTemplate" {
+				SetPoint LEFT, "MouseScrollDisableCheckBox", RIGHT, 0.01, 0.0,
+				Text "GAMEPLAY_MOUSE_SCROLL_DISABLE",
+			}
+
+			Frame "TEXT" "KeyScrollLabel" INHERITS "StandardInfoTextTemplate" {
+				SetPoint TOPLEFT, "MouseScrollLabel", BOTTOMLEFT, 0.0, -0.06,
+				Text "COLON_KEYBOARD_SCROLL",
+			}
+
+			Frame "TEXT" "KeyScrollSlowLabel" INHERITS "StandardLabelTextTemplate" {
+				SetPoint TOPLEFT, "KeyScrollLabel", BOTTOMLEFT, 0.01, -0.005,
+				FontColor 1.0 1.0 1.0 1.0,
+				Text "SLOW_SCROLL",
+			}
+
+			Frame "SLIDER" "KeyScrollSlider" INHERITS WITHCHILDREN "StandardSliderTemplate" {
+				Width 0.235,
+				SetPoint LEFT, "KeyScrollSlowLabel", RIGHT, 0.01, 0.0,
+
+				SliderMinValue 0,
+				SliderMaxValue 100,
+				SliderInitialValue 0,
+				SliderStepSize 1,
+			}
+
+			Frame "TEXT" "KeyScrollFastLabel" INHERITS "StandardLabelTextTemplate" {
+				SetPoint LEFT, "KeyScrollSlider", RIGHT, 0.01, 0.0,
+				FontColor 1.0 1.0 1.0 1.0,
+				Text "FAST_SCROLL",
+			}
+
+			Frame "GLUECHECKBOX" "TooltipsCheckBox" INHERITS WITHCHILDREN "StandardCheckBoxTemplate" {
+				SetPoint TOPLEFT, "KeyScrollLabel", BOTTOMLEFT, 0.0, -0.03,
+			}
+
+			Frame "TEXT" "TooltipsLabel" INHERITS "StandardInfoTextTemplate" {
+				SetPoint LEFT, "TooltipsCheckBox", RIGHT, 0.01, 0.0,
+				Text "ENHANCED_TOOLTIPS",
+			}
+
+            Frame "GLUECHECKBOX" "SubgroupCheckBox"  INHERITS WITHCHILDREN "StandardCheckBoxTemplate" {
+				SetPoint TOPLEFT, "TooltipsCheckBox", BOTTOMLEFT, 0.0, -0.005,
+            }
+
+            Frame "TEXT" "SubgroupLabel"  INHERITS "StandardInfoTextTemplate" {
+				SetPoint LEFT, "SubgroupCheckBox", RIGHT, 0.01, 0.0,
+                Text "SUBGROUP_MODIFIER",
+            }
+
+            Frame "GLUECHECKBOX" "FormationToggleCheckBox"  INHERITS WITHCHILDREN "StandardCheckBoxTemplate" {
+				SetPoint TOPLEFT, "SubgroupCheckBox", BOTTOMLEFT, 0.0, -0.005,
+            }
+
+            Frame "TEXT" "FormationToggleLabel"  INHERITS "StandardInfoTextTemplate" {
+				SetPoint LEFT, "FormationToggleCheckBox", RIGHT, 0.01, 0.0,
+                Text "FORMATION_TOGGLE",
+            }
+
+            Frame "GLUECHECKBOX" "CustomKeysCheckBox" INHERITS WITHCHILDREN "StandardCheckBoxTemplate" {
+                SetPoint TOPLEFT, "FormationToggleCheckBox", BOTTOMLEFT, 0.0, -0.005,
+            }
+
+            Frame "TEXT" "CustomKeysLabel"  INHERITS "StandardInfoTextTemplate" {
+                SetPoint LEFT, "CustomKeysCheckBox", RIGHT, 0.01, 0.0,
+                Text "CUSTOM_KEYS",
+            }
+
+            Frame "GLUECHECKBOX" "HealthBarsCheckBox" INHERITS WITHCHILDREN "StandardCheckBoxTemplate" {
+				SetPoint TOPLEFT, "CustomKeysCheckBox", BOTTOMLEFT, 0.0, -0.005,
+			}
+
+			Frame "TEXT" "HealthBarsLabel" INHERITS "StandardInfoTextTemplate" {
+				SetPoint LEFT, "HealthBarsCheckBox", RIGHT, 0.01, 0.0,
+				Text "HEALTH_BARS",
+			}
+            
+            Frame "GLUECHECKBOX" "AutosaveReplayCheckBox" INHERITS WITHCHILDREN "StandardCheckBoxTemplate" {
+				SetPoint TOPLEFT, "HealthBarsCheckBox", BOTTOMLEFT, 0.0, -0.005,
+			}
+			
+			Frame "TEXT" "AutosaveReplayLabel" INHERITS "StandardInfoTextTemplate" {
+				SetPoint LEFT, "AutosaveReplayCheckBox", RIGHT, 0.01, 0.0,
+				Text "AUTOSAVE_REPLAY",
+			}
+            
+            // ** Not used anymore, dropped support for OS9 and needed room
+			//Frame "GLUECHECKBOX" "InputSprocketCheckBox" INHERITS WITHCHILDREN "StandardCheckBoxTemplate" {
+			//	SetPoint TOPLEFT, "AutosaveReplayCheckBox", BOTTOMLEFT, 0.0, -0.005,
+			//}
+			
+			//Frame "TEXT" "InputSprocketLabel" INHERITS "StandardInfoTextTemplate" {
+			//	SetPoint LEFT, "InputSprocketCheckBox", RIGHT, 0.01, 0.0,
+			//	Text "ENABLE_MULTIBUTTON_MOUSE",
+			//}
+
+			Frame "TEXT" "GamePortLabel" INHERITS "StandardInfoTextTemplate" {
+                SetPoint TOPLEFT, "AutosaveReplayCheckBox", BOTTOMLEFT, 0.0, -0.02,
+				Text "COLON_GAMEPORT",
+			}
+
+            Frame "GLUEEDITBOX" "GamePortEditBox" INHERITS WITHCHILDREN "StandardEditBoxTemplate" {
+                Width 0.08,
+                SetPoint LEFT, "GamePortLabel", RIGHT, 0.026875, 0.0,
+            }
+
+			Frame "TEXT" "ChatSupportLabel" INHERITS "StandardInfoTextTemplate" {
+                SetPoint TOPLEFT, "GamePortLabel", BOTTOMLEFT, 0.0, -0.0375,
+				Text "COLON_CHAT_SUPPORT",
+			}
+
+			Frame "BACKDROP" "ChatSupportBackdrop" INHERITS "OptionsPopupMenuBackdropTemplate" {
+				SetPoint LEFT,"ChatSupportLabel",RIGHT, 0.01, 0.0,
+
+				Frame "GLUEPOPUPMENU" "ChatSupportMenu" INHERITS WITHCHILDREN "OptionsPopupMenuTemplate" {
+					SetPoint TOPLEFT,"ChatSupportBackdrop",TOPLEFT, 0.012, -0.013,
+
+					PopupMenuFrame "ChatSupportPopupMenuMenu",
+					Frame "MENU" "ChatSupportPopupMenuMenu" INHERITS WITHCHILDREN "StandardPopupMenuMenuTemplate" {
+					}
+				}
+			}
+                
+    }
+
+		// ***********************************************
+		// **
+		// **   Video Panel
+		// **
+		// **********
+
+		Frame "FRAME" "VideoPanel" {
+
+			Frame "TEXT" "VideoOptionsTitle" INHERITS "StandardTitleTextTemplate" {
+				SetPoint TOPLEFT, "OptionsMenu", TOPLEFT, 0.025, -0.085,
+				FontColor 1.0 1.0 1.0 1.0,
+				Text "VIDEO_OPTIONS",
+			}
+
+			Frame "TEXT" "GammaLabel" INHERITS "StandardInfoTextTemplate" {
+				SetPoint TOPLEFT, "VideoOptionsTitle", BOTTOMLEFT, 0.0, -0.005,
+				Text "COLON_GAMMA",
+			}
+
+			Frame "TEXT" "GammaDarkLabel" INHERITS "StandardLabelTextTemplate" {
+				SetPoint LEFT, "GammaLabel", RIGHT, 0.007, 0.0,
+				FontColor 1.0 1.0 1.0 1.0,
+				Text "DARK",
+			}
+
+			Frame "SLIDER" "GammaSlider" INHERITS WITHCHILDREN "StandardSliderTemplate" {
+				Width 0.250,
+				SetPoint LEFT, "GammaDarkLabel", RIGHT, 0.007, 0.0,
+
+				SliderMinValue 0,
+				SliderMaxValue 100,
+				SliderInitialValue 0,
+				SliderStepSize 1,
+			}
+
+			Frame "TEXT" "GammaBrightLabel" INHERITS "StandardLabelTextTemplate" {
+				SetPoint LEFT, "GammaSlider", RIGHT, 0.007, 0.0,
+				FontColor 1.0 1.0 1.0 1.0,
+				Text "BRIGHT",
+			}
+
+			// --- labels
+			Frame "TEXT" "WindowModeLabel" INHERITS "StandardInfoTextTemplate" {
+				SetPoint TOPLEFT, "GammaLabel", BOTTOMLEFT, 0.0, -0.02,
+				Text "COLON_WINDOW_MODE",
+				FrameFont "MasterFont", 0.0115, "",
+			}
+
+			Frame "TEXT" "ResolutionLabel" INHERITS "StandardInfoTextTemplate" {
+				SetPoint TOPLEFT, "WindowModeLabel", BOTTOMLEFT, 0.0, -0.02625,
+				Text "COLON_RESOLUTION",
+				FrameFont "MasterFont", 0.0115, "",
+			}
+
+			Frame "TEXT" "VSyncCheckboxLabel" INHERITS "StandardInfoTextTemplate" {
+				SetPoint TOPLEFT, "ResolutionLabel", BOTTOMLEFT, 0.0, -0.02625,
+				Text "COLON_VSYNC",
+				FrameFont "MasterFont", 0.0115, "",
+			}
+
+			Frame "TEXT" "ModelDetailLabel" INHERITS "StandardInfoTextTemplate" {
+				SetPoint TOPLEFT, "VSyncCheckboxLabel", BOTTOMLEFT, 0.0, -0.02625,
+				Text "COLON_MODEL_DETAIL",
+				FrameFont "MasterFont", 0.0115, "",
+			}
+
+			Frame "TEXT" "AnimQualityLabel" INHERITS "StandardInfoTextTemplate" {
+				SetPoint TOPLEFT, "ModelDetailLabel", BOTTOMLEFT, 0.0, -0.02625,
+				Text "COLON_ANIM_QUALITY",
+				FrameFont "MasterFont", 0.0115, "",
+			}
+
+			Frame "TEXT" "TextureQualityLabel" INHERITS "StandardInfoTextTemplate" {
+				SetPoint TOPLEFT, "AnimQualityLabel", BOTTOMLEFT, 0.0, -0.02625,
+				Text "COLON_TEXTURE_QUALITY",
+				FrameFont "MasterFont", 0.0115, "",
+			}
+
+			Frame "TEXT" "ParticlesLabel" INHERITS "StandardInfoTextTemplate" {
+				SetPoint TOPLEFT, "TextureQualityLabel", BOTTOMLEFT, 0.0, -0.02625,
+				Text "COLON_PARTICLES",
+			}
+
+			Frame "TEXT" "LightsLabel" INHERITS "StandardInfoTextTemplate" {
+				SetPoint TOPLEFT, "ParticlesLabel", BOTTOMLEFT, 0.0, -0.02625,
+				Text "COLON_LIGHTS",
+			}
+
+			Frame "TEXT" "ShadowsLabel" INHERITS "StandardInfoTextTemplate" {
+				SetPoint TOPLEFT, "LightsLabel", BOTTOMLEFT, 0.0, -0.02625,
+				Text "COLON_SHADOWS",
+			}
+
+			Frame "TEXT" "OcclusionLabel" INHERITS "StandardInfoTextTemplate" {
+				SetPoint TOPLEFT, "ShadowsLabel", BOTTOMLEFT, 0.0, -0.02625,
+				Text "COLON_OCCLUSION",
+			}
+
+//            Frame "TEXT" "SpellFilterLabel" INHERITS "StandardInfoTextTemplate" {
+//                SetPoint TOPLEFT, "OcclusionLabel", BOTTOMLEFT, 0.0, -0.02625,
+//                Text "COLON_SPELL_FILTER",
+//            }
+
+			// --- pulldowns
+			Frame "BACKDROP" "WindowModeBackdrop" INHERITS "OptionsPopupMenuBackdropTemplate" {
+				//SetPoint LEFT,"WindowModeLabel",RIGHT, 0.0, 0.0,
+				//SetPoint LEFT,"WindowModeLabel",RIGHT, 0.5, 0.0,
+				SetPoint RIGHT,"WindowModeLabel",LEFT, 0.425, 0.0,
+
+				Frame "POPUPMENU" "WindowModeMenu" INHERITS WITHCHILDREN "OptionsPopupMenuTemplate" {
+					SetPoint TOPLEFT,"WindowModeBackdrop",TOPLEFT, 0.012, -0.013,
+
+					PopupMenuFrame "WindowModePopupMenuMenu",
+					Frame "MENU" "WindowModePopupMenuMenu" INHERITS WITHCHILDREN "StandardPopupMenuMenuTemplate" {
+						MenuItem "WINDOW_MODE_WINDOWED",     		 -2,
+						MenuItem "WINDOW_MODE_WINDOWED_FULLSCREEN",  -2,
+						MenuItem "WINDOW_MODE_FULLSCREEN",    		 -2,
+					}
+				}
+			}
+
+			Frame "BACKDROP" "ResolutionBackdrop" INHERITS "OptionsPopupMenuBackdropTemplate" {
+				SetPoint TOPLEFT,"WindowModeBackdrop",BOTTOMLEFT, 0.0, 0.01375,
+
+				Frame "POPUPMENU" "ResolutionMenu" INHERITS WITHCHILDREN "OptionsPopupMenuTemplate" {
+					SetPoint TOPLEFT,"ResolutionBackdrop",TOPLEFT, 0.012, -0.013,
+
+					PopupMenuFrame "ResolutionPopupMenuMenu",
+					Frame "MENU" "ResolutionPopupMenuMenu" INHERITS WITHCHILDREN "StandardPopupMenuMenuTemplate" {
+					}
+				}
+			}
+
+			Frame "GLUECHECKBOX" "VSyncCheckBox" INHERITS WITHCHILDREN "StandardCheckBoxTemplate" {
+				SetPoint TOPLEFT, "ResolutionBackdrop", BOTTOMLEFT, 0.0, 0.0,
+			}
+
+			Frame "BACKDROP" "ModelDetailBackdrop" INHERITS "OptionsPopupMenuBackdropTemplate" {
+				SetPoint TOPLEFT,"VSyncCheckBox",BOTTOMLEFT, 0.0, -0.002,
+
+				Frame "POPUPMENU" "ModelDetailMenu" INHERITS WITHCHILDREN "OptionsPopupMenuTemplate" {
+					SetPoint TOPLEFT,"ModelDetailBackdrop",TOPLEFT, 0.012, -0.013,
+
+					PopupMenuFrame "ModelDetailPopupMenuMenu",
+					Frame "MENU" "ModelDetailPopupMenuMenu" INHERITS WITHCHILDREN "StandardPopupMenuMenuTemplate" {
+						MenuItem "LOW_MODELS",     -2,
+						MenuItem "MEDIUM_MODELS",  -2,
+						MenuItem "HIGH_MODELS",    -2,
+					}
+				}
+			}
+
+			Frame "BACKDROP" "AnimQualityBackdrop" INHERITS "OptionsPopupMenuBackdropTemplate" {
+				SetPoint TOPLEFT,"ModelDetailBackdrop",BOTTOMLEFT, 0.0, 0.01375,
+
+				Frame "POPUPMENU" "AnimQualityMenu" INHERITS WITHCHILDREN "OptionsPopupMenuTemplate" {
+					SetPoint TOPLEFT,"AnimQualityBackdrop",TOPLEFT, 0.012, -0.013,
+
+					PopupMenuFrame "AnimQualityPopupMenuMenu",
+					Frame "MENU" "AnimQualityPopupMenuMenu" INHERITS WITHCHILDREN "StandardPopupMenuMenuTemplate" {
+						MenuItem "LOW_ANIM",     -2,
+						MenuItem "MEDIUM_ANIM",  -2,
+						MenuItem "HIGH_ANIM",    -2,
+					}
+				}
+			}
+
+			Frame "BACKDROP" "TextureQualityBackdrop" INHERITS "OptionsPopupMenuBackdropTemplate" {
+				SetPoint TOPLEFT,"AnimQualityBackdrop",BOTTOMLEFT, 0.0, 0.01375,
+
+				Frame "POPUPMENU" "TextureQualityMenu" INHERITS WITHCHILDREN "OptionsPopupMenuTemplate" {
+					SetPoint TOPLEFT,"TextureQualityBackdrop",TOPLEFT, 0.012, -0.013,
+
+					PopupMenuFrame "TextureQualityPopupMenuMenu",
+					Frame "MENU" "TextureQualityPopupMenuMenu" INHERITS WITHCHILDREN "StandardPopupMenuMenuTemplate" {
+						MenuItem "LOW_TEXTURES",     -2,
+						MenuItem "MEDIUM_TEXTURES",  -2,
+						MenuItem "HIGH_TEXTURES",    -2,
+					}
+				}
+			}
+
+			Frame "BACKDROP" "ParticlesBackdrop" INHERITS "OptionsPopupMenuBackdropTemplate" {
+				SetPoint TOPLEFT,"TextureQualityBackdrop",BOTTOMLEFT, 0.0, 0.01375,
+
+				Frame "POPUPMENU" "ParticlesMenu" INHERITS WITHCHILDREN "OptionsPopupMenuTemplate" {
+					SetPoint TOPLEFT,"ParticlesBackdrop",TOPLEFT, 0.012, -0.013,
+
+					PopupMenuFrame "ParticlesPopupMenuMenu",
+					Frame "MENU" "ParticlesPopupMenuMenu" INHERITS WITHCHILDREN "StandardPopupMenuMenuTemplate" {
+						MenuItem "LOW_PARTICLES",     -2,
+						MenuItem "MEDIUM_PARTICLES",  -2,
+						MenuItem "HIGH_PARTICLES",    -2,
+					}
+				}
+			}
+
+			Frame "BACKDROP" "LightsBackdrop" INHERITS "OptionsPopupMenuBackdropTemplate" {
+				SetPoint TOPLEFT,"ParticlesBackdrop",BOTTOMLEFT, 0.0, 0.01375,
+
+				Frame "POPUPMENU" "LightsMenu" INHERITS WITHCHILDREN "OptionsPopupMenuTemplate" {
+					SetPoint TOPLEFT,"LightsBackdrop",TOPLEFT, 0.012, -0.013,
+
+					PopupMenuFrame "LightsPopupMenuMenu",
+					Frame "MENU" "LightsPopupMenuMenu" INHERITS WITHCHILDREN "StandardPopupMenuMenuTemplate" {                    
+						MenuItem "LOW_LIGHTS",     -2,
+						MenuItem "MEDIUM_LIGHTS",  -2,
+						MenuItem "HIGH_LIGHTS",    -2,
+					}
+				}
+			}
+
+			Frame "BACKDROP" "ShadowsBackdrop" INHERITS "OptionsPopupMenuBackdropTemplate" {
+				SetPoint TOPLEFT,"LightsBackdrop",BOTTOMLEFT, 0.0, 0.01375,
+
+				Frame "POPUPMENU" "ShadowsMenu" INHERITS WITHCHILDREN "OptionsPopupMenuTemplate" {
+					SetPoint TOPLEFT,"ShadowsBackdrop",TOPLEFT, 0.012, -0.013,
+
+					PopupMenuFrame "ShadowsPopupMenuMenu",
+					Frame "MENU" "ShadowsPopupMenuMenu" INHERITS WITHCHILDREN "StandardPopupMenuMenuTemplate" {
+						MenuItem "OFF",                -2,
+						MenuItem "ON",                 -2,
+					}
+				}
+			}
+
+			Frame "BACKDROP" "OcclusionBackdrop" INHERITS "OptionsPopupMenuBackdropTemplate" {
+				SetPoint TOPLEFT,"ShadowsBackdrop",BOTTOMLEFT, 0.0, 0.01375,
+
+				Frame "POPUPMENU" "OcclusionMenu" INHERITS WITHCHILDREN "OptionsPopupMenuTemplate" {
+					SetPoint TOPLEFT,"OcclusionBackdrop",TOPLEFT, 0.012, -0.013,
+
+					PopupMenuFrame "OcclusionPopupMenuMenu",
+					Frame "MENU" "OcclusionPopupMenuMenu" INHERITS WITHCHILDREN "StandardPopupMenuMenuTemplate" {
+						MenuItem "OFF",                -2,
+						MenuItem "ON",                 -2,
+					}
+				}
+			}
+
+
+//            Frame "BACKDROP" "SpellFilterBackdrop" INHERITS "OptionsPopupMenuBackdropTemplate" {
+//                SetPoint TOPLEFT,"OcclusionBackdrop",BOTTOMLEFT, 0.0, 0.01375,
+//
+//                Frame "GLUEPOPUPMENU" "SpellFilterMenu" INHERITS WITHCHILDREN "OptionsPopupMenuTemplate" {                
+//                    SetPoint TOPLEFT,"SpellFilterBackdrop",TOPLEFT, 0.012, -0.013,
+//
+//                    PopupMenuFrame "SpellFilterPopupMenuMenu",
+//                    Frame "MENU" "SpellFilterPopupMenuMenu" INHERITS WITHCHILDREN "StandardPopupMenuMenuTemplate" {
+//                        MenuItem "LOW_SPELLS",     -2,
+//                        MenuItem "MEDIUM_SPELLS",  -2,
+//                        MenuItem "HIGH_SPELLS",    -2,
+//                    }
+//                }
+//            }
+
+		}
+
+		// ***********************************************
+		// **
+		// **   Sound Panel
+		// **
+		// **********
+
+		Frame "FRAME" "SoundPanel" {
+
+			Frame "TEXT" "SoundOptionsTitle" INHERITS "StandardTitleTextTemplate" {
+				SetPoint TOPLEFT, "OptionsMenu", TOPLEFT, 0.025, -0.085,
+
+				FontColor 1.0 1.0 1.0 1.0,
+				Text "SOUND_OPTIONS",
+			}
+
+			Frame "GLUECHECKBOX" "SoundCheckBox" INHERITS WITHCHILDREN "StandardCheckBoxTemplate" {
+				SetPoint TOPLEFT, "SoundOptionsTitle", BOTTOMLEFT, 0.0, -0.01,
+			}
+
+			Frame "TEXT" "SoundVolumeLabel" INHERITS "StandardInfoTextTemplate" {
+				SetPoint LEFT, "SoundCheckBox", RIGHT, 0.01, 0.0,
+				Text "COLON_SOUND_EFFECTS_VOLUME",
+			}
+
+			Frame "TEXT" "SoundVolumeLowLabel" INHERITS "StandardLabelTextTemplate" {
+				SetPoint TOPLEFT, "SoundCheckBox", BOTTOMLEFT, 0.005, -0.006,
+				FontColor 1.0 1.0 1.0 1.0,
+				Text "LOW_VOL",
+			}
+
+			Frame "SLIDER" "SoundVolumeSlider" INHERITS WITHCHILDREN "StandardSliderTemplate" {
+				Width 0.25,
+				SetPoint LEFT, "SoundVolumeLowLabel", RIGHT, 0.01, 0.0,
+
+				SliderMinValue 0,
+				SliderMaxValue 100,
+				SliderInitialValue 0,
+				SliderStepSize 1,
+			}
+
+			Frame "TEXT" "SoundVolumeHighLabel" INHERITS "StandardLabelTextTemplate" {
+				SetPoint LEFT, "SoundVolumeSlider", RIGHT, 0.01, 0.0,
+				FontColor 1.0 1.0 1.0 1.0,
+				Text "HIGH_VOL",
+			}
+
+			Frame "GLUECHECKBOX" "MusicCheckBox" INHERITS WITHCHILDREN "StandardCheckBoxTemplate" {
+				SetPoint TOPLEFT, "SoundCheckBox", BOTTOMLEFT, 0.0, -0.04,
+			}
+
+			Frame "TEXT" "MusicVolumeLabel" INHERITS "StandardInfoTextTemplate" {
+				SetPoint LEFT, "MusicCheckBox", RIGHT, 0.01, 0.0,
+				Text "COLON_MUSIC_VOLUME",
+			}
+
+			Frame "TEXT" "MusicVolumeLowLabel" INHERITS "StandardLabelTextTemplate" {
+				SetPoint TOPLEFT, "MusicCheckBox", BOTTOMLEFT, 0.005, -0.006,
+				FontColor 1.0 1.0 1.0 1.0,
+				Text "LOW_VOL",
+			}
+
+			Frame "SLIDER" "MusicVolumeSlider" INHERITS WITHCHILDREN "StandardSliderTemplate" {
+				Width 0.25,
+				SetPoint LEFT, "MusicVolumeLowLabel", RIGHT, 0.01, 0.0,
+
+				SliderMinValue 0,
+				SliderMaxValue 100,
+				SliderInitialValue 0,
+				SliderStepSize 1,
+			}
+
+			Frame "TEXT" "MusicVolumeHighLabel" INHERITS "StandardLabelTextTemplate" {
+				SetPoint LEFT, "MusicVolumeSlider", RIGHT, 0.01, 0.0,
+				FontColor 1.0 1.0 1.0 1.0,
+				Text "HIGH_VOL",
+			}
+
+			Frame "GLUECHECKBOX" "AmbientCheckBox" INHERITS WITHCHILDREN "StandardCheckBoxTemplate" {
+				SetPoint TOPLEFT, "MusicCheckBox", BOTTOMLEFT, 0.0, -0.05,
+			}
+
+			Frame "TEXT" "AmbientLabel" INHERITS "StandardInfoTextTemplate" {
+				SetPoint LEFT, "AmbientCheckBox", RIGHT, 0.01, 0.0,
+				Text "AMBIENT_SOUNDS",
+			}
+
+			Frame "GLUECHECKBOX" "MovementCheckBox" INHERITS WITHCHILDREN "StandardCheckBoxTemplate" {
+				SetPoint TOPLEFT, "AmbientCheckBox", BOTTOMLEFT, 0.0, -0.005,
+			}
+
+			Frame "TEXT" "MovementLabel" INHERITS "StandardInfoTextTemplate" {
+				SetPoint LEFT, "MovementCheckBox", RIGHT, 0.01, 0.0,
+				Text "MOVEMENT_SOUNDS",
+			}
+
+			Frame "GLUECHECKBOX" "SubtitlesCheckBox" INHERITS WITHCHILDREN "StandardCheckBoxTemplate" {
+				SetPoint TOPLEFT, "MovementCheckBox", BOTTOMLEFT, 0.0, -0.005,
+			}
+
+			Frame "TEXT" "SubtitlesLabel" INHERITS "StandardInfoTextTemplate" {
+				SetPoint LEFT, "SubtitlesCheckBox", RIGHT, 0.01, 0.0,
+				Text "SUBTITLES",
+			}
+
+			Frame "GLUECHECKBOX" "UnitCheckBox" INHERITS WITHCHILDREN "StandardCheckBoxTemplate" {
+				SetPoint LEFT, "AmbientCheckBox", RIGHT, 0.17125, 0.0,
+			}
+
+			Frame "TEXT" "UnitLabel" INHERITS "StandardInfoTextTemplate" {
+				SetPoint LEFT, "UnitCheckBox", RIGHT, 0.01, 0.0,
+				Text "UNIT_SOUNDS",
+			}
+
+			// --- provider options
+			Frame "TEXT" "ProviderLabel" INHERITS "StandardInfoTextTemplate" {
+				SetPoint TOPLEFT, "SubtitlesCheckBox", BOTTOMLEFT, 0.0, -0.03,
+				Text "COLON_SOUND_PROVIDER",
+			}
+
+			Frame "BACKDROP" "ProviderBackdrop" INHERITS "OptionsPopupMenuBackdropTemplate" {
+				SetPoint LEFT,"ProviderLabel",RIGHT, 0.035, 0.0,
+
+				Frame "POPUPMENU" "ProviderMenu" INHERITS WITHCHILDREN "OptionsPopupMenuTemplate" {
+			        SetPoint TOPLEFT,"ProviderBackdrop",TOPLEFT, 0.012, -0.013,
+
+					PopupMenuFrame "ProviderPopupMenuMenu",
+					Frame "MENU" "ProviderPopupMenuMenu" INHERITS WITHCHILDREN "StandardPopupMenuMenuTemplate" {
+					}
+				}
+			}
+
+			Frame "GLUECHECKBOX" "EnviroCheckBox" INHERITS WITHCHILDREN "StandardCheckBoxTemplate" {
+				SetPoint TOPLEFT, "ProviderLabel", BOTTOMLEFT, 0.0, -0.03,
+			}
+
+			Frame "TEXT" "EnviroLabel" INHERITS "StandardInfoTextTemplate" {
+				SetPoint LEFT, "EnviroCheckBox", RIGHT, 0.01, 0.0,
+				Text "ENVIRONMENTAL_EFFECTS",
+			}
+
+			Frame "GLUECHECKBOX" "PositionalCheckBox" INHERITS WITHCHILDREN "StandardCheckBoxTemplate" {
+				SetPoint TOPLEFT, "EnviroCheckBox", BOTTOMLEFT, 0.0, -0.005,
+			}
+
+			Frame "TEXT" "PositionalLabel" INHERITS "StandardInfoTextTemplate" {
+				SetPoint LEFT, "PositionalCheckBox", RIGHT, 0.01, 0.0,
+				Text "POSITIONAL_AUDIO",
+			}
+		}
+
+		// ***********************************************
+		// **
+		// **   Bottom Button Panel
+		// **
+		// **********
+
+
+		Frame "BACKDROP" "OKBackdrop" INHERITS "StandardMenuButtonBaseBackdrop" {
+			Width 0.24,
+			SetPoint BOTTOMRIGHT,"OptionsMenu",BOTTOMRIGHT, -0.015, 0.074,
+
+			Frame "GLUETEXTBUTTON" "OKButton" INHERITS WITHCHILDREN "StandardButtonTemplate" {
+				Width 0.168,
+				SetPoint TOPRIGHT,"OKBackdrop",TOPRIGHT, -0.012, -0.0165,
+				ControlShortcutKey "KEY_OK_SHORTCUT",
+				TabFocusNext "CancelButton",
+
+				ButtonText "OKButtonText",
+				Frame "TEXT" "OKButtonText" INHERITS "StandardButtonTextTemplate" {
+					Text "KEY_OK",
+				}
+			}
+		}
+
+		Frame "BACKDROP" "CancelBackdrop" INHERITS "StandardMenuButtonBaseBackdrop" {
+			Width 0.24,
+			SetPoint BOTTOMRIGHT,"OptionsMenu",BOTTOMRIGHT, -0.015, 0.0225,
+
+			Frame "GLUETEXTBUTTON" "CancelButton" INHERITS WITHCHILDREN "StandardButtonTemplate" {
+				Width 0.168,
+				SetPoint TOPRIGHT,"CancelBackdrop",TOPRIGHT, -0.012, -0.0165,
+				ControlShortcutKey "KEY_CANCEL_SHORTCUT",
+
+				ButtonText "CancelButtonText",
+				Frame "TEXT" "CancelButtonText" INHERITS "StandardButtonTextTemplate" {
+					Text "KEY_CANCEL",
+				}
+			}
+		}
+	}
+}
+
+// -- OptionsConfirmDialog --------------------------------------------------------
+Frame "DIALOG" "OptionsConfirmDialog" {
+    Height 0.19,
+    Width 0.5265625,
+
+    DialogBackdrop "OptionsConfirmDialogBackdrop",
+    Frame "BACKDROP" "OptionsConfirmDialogBackdrop" {
+        BackdropTileBackground,
+        BackdropBackground  "UI\Widgets\BattleNet\bnet-dialoguebox-background.blp",
+        BackdropCornerFlags "UL|UR|BL|BR|T|L|B|R",
+        BackdropCornerSize  0.064,
+        BackdropBackgroundSize  0.128,
+        BackdropBackgroundInsets 0.01 0.01 0.01 0.01,
+        BackdropEdgeFile  "UI\Widgets\BattleNet\bnet-dialoguebox-border.blp",
+	    BackdropBlendAll,
+    }
+
+    Frame "TEXT" "OptionsConfirmTitleText" INHERITS "StandardTitleTextTemplate" {
+        SetPoint TOP, "OptionsConfirmDialog", TOP, 0.0, -0.025,
+        Text "OPTIONS_CONFIRM_TITLE",
+    }
+
+    Frame "TEXT" "OptionsConfirmInfoText" INHERITS "StandardInfoTextTemplate" {
+        Width 0.48,
+        SetPoint TOPLEFT, "OptionsConfirmDialog", TOPLEFT, 0.0234375, -0.05053125,
+        FontJustificationH JUSTIFYLEFT,
+        Text "OPTIONS_CONFIRM_INFO",
+    }
+
+    Frame "TEXT" "OptionsTimeoutLabel" INHERITS "StandardLabelTextTemplate" {
+        SetPoint TOPLEFT, "OptionsConfirmInfoText", BOTTOMLEFT, 0.0, -0.01,
+        FontJustificationH JUSTIFYLEFT,
+        Text "OPTIONS_CONFIRM_TIMEOUT",
+    }
+
+    Frame "TEXT" "OptionsTimeoutValue" INHERITS "StandardValueTextTemplate" {
+        SetPoint LEFT, "OptionsTimeoutLabel", RIGHT, 0.01, 0.0,
+    }
+
+    Frame "BACKDROP" "ConfirmOKButtonBackdrop" INHERITS "StandardMenuSingleButtonBaseBackdrop" {
+        SetPoint BOTTOMRIGHT, "OptionsConfirmDialog", BOTTOM, 0.0, 0.015,
+
+	    Frame "GLUETEXTBUTTON" "ConfirmOKButton" INHERITS WITHCHILDREN "StandardButtonTemplate" {
+            Width 0.159,
+		    SetPoint TOPRIGHT,"ConfirmOKButtonBackdrop",TOPRIGHT, -0.032, -0.015625,
+            ControlShortcutKey "KEY_OK_SHORTCUT",
+            TabFocusDefault,
+            TabFocusNext "ConfirmCancelButton",
+            ButtonText "ConfirmOKButtonText",
+		    Frame "TEXT" "ConfirmOKButtonText" INHERITS "StandardButtonTextTemplate" {
+			    Text "KEY_OK",
+		    }
+	    }
+    }
+
+    Frame "BACKDROP" "ConfirmCancelButtonBackdrop" INHERITS "StandardMenuSingleButtonBaseBackdrop" {
+        SetPoint BOTTOMLEFT, "OptionsConfirmDialog", BOTTOM, -0.03203125, 0.015,
+
+	    Frame "GLUETEXTBUTTON" "ConfirmCancelButton" INHERITS WITHCHILDREN "StandardButtonTemplate" {
+            Width 0.159,
+		    SetPoint TOPRIGHT,"ConfirmCancelButtonBackdrop",TOPRIGHT, -0.032, -0.015625,
+            ControlShortcutKey "KEY_CANCEL_SHORTCUT",
+            TabFocusNext "ConfirmOKButton",
+            ButtonText "ConfirmCancelButtonText",
+		    Frame "TEXT" "ConfirmCancelButtonText" INHERITS "StandardButtonTextTemplate" {
+			    Text "KEY_CANCEL",
+		    }
+	    }
+    }
+
+}

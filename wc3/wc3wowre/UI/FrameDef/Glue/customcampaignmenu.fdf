@@ -1,0 +1,214 @@
+// -- INCLUDE FILES ---------------------------------------------------------
+
+IncludeFile "UI\FrameDef\Glue\StandardTemplates.fdf",
+
+// -- LOCAL TEMPLATES -------------------------------------------------------
+
+// -- FRAMES ----------------------------------------------------------------
+
+Frame "FRAME" "CustomCampaignMenu" INHERITS "StandardFrameTemplate" {
+	SetAllPoints,
+    TabFocusPush,
+
+    //*************************
+    //*
+    //* Game Settings Panel
+    //*
+    //*******
+
+    Frame "FRAME" "GameSettingsPanel" {
+
+        Frame "TEXT" "CustomCampaignTitle" INHERITS "StandardTitleTextTemplate" {
+            SetPoint TOPLEFT, "CustomCampaignMenu", TOPLEFT, 0.02625, -0.039,
+            Text "CUSTOM_CAMPAIGN",
+        }
+	
+		Frame "FRAME" "FileListFrame" {
+			SetPoint TOPLEFT, "CustomCampaignTitle", BOTTOMLEFT, 0.0, -0.005,
+			Width 0.37,
+			Height 0.3,
+		}
+
+        Frame "FRAME" "DifficultyPanel" {
+            Frame "TEXT" "DifficultyTitle" INHERITS "StandardTitleTextTemplate" {
+                SetPoint TOPLEFT, "FileListFrame", BOTTOMLEFT, 0.0, -0.001,
+                Text "COLON_DIFFICULTY",
+            }
+
+            Frame "TEXT" "DifficultyInfo" INHERITS "StandardInfoTextTemplate" {
+                SetPoint TOPLEFT, "DifficultyTitle", BOTTOMLEFT, 0.0, -0.001,
+                Width 0.37,
+                FontJustificationH JUSTIFYLEFT,
+                Text "DIFFICULTY_TEXT",
+            }
+
+	        Frame "POPUPMENU" "DifficultySelect" INHERITS "CampaignPopupMenuTemplate" {
+				SetPoint TOPRIGHT, "DifficultyInfo", BOTTOMRIGHT, 0.0, -0.002,
+	            Height 0.036,
+	            Width 0.145,
+
+                ControlBackdrop "CampaignPopupMenuBackdropTemplate",
+                Frame "BACKDROP" "CampaignPopupMenuBackdropTemplate" INHERITS "StandardCampaignButtonBackdropTemplate" {
+                }
+
+                ControlDisabledBackdrop "CampaignPopupMenuDisabledBackdropTemplate",
+                Frame "BACKDROP" "CampaignPopupMenuDisabledBackdropTemplate" INHERITS "StandardCampaignButtonDisabledBackdropTemplate" {
+                }
+
+                PopupTitleFrame "CampaignPopupMenuTitle",
+                Frame "TEXTBUTTON" "CampaignPopupMenuTitle" INHERITS WITHCHILDREN "CampaignPopupMenuTitleTemplate" {
+                }
+
+                PopupArrowFrame "CampaignPopupMenuArrow",
+                Frame "BUTTON" "CampaignPopupMenuArrow" INHERITS WITHCHILDREN "CampaignPopupMenuArrowTemplate" { 
+                }
+
+                PopupMenuFrame "CampaignPopupMenuMenu",
+                Frame "MENU" "CampaignPopupMenuMenu" INHERITS WITHCHILDREN "StandardPopupMenuMenuTemplate" {
+                    MenuItem "EASY",    -2,
+                    MenuItem "NORMAL",  -2,
+                    MenuItem "HARD",    -2,
+                }
+	        }
+        }
+    }
+
+    //*************************
+    //*
+    //* Map Info Pane
+    //*
+    //*******
+
+    Frame "FRAME" "CampaignInfoPane" {
+
+        Width 0.271875,
+        Height 0.223125,
+        SetPoint TOP, "CustomCampaignMenu", TOPRIGHT, -0.180625, -0.0375,
+
+        Frame "TEXT" "CampaignNameValue" INHERITS "StandardInfoTextTemplate" {
+            FontColor 1.0 1.0 1.0 1.0,
+        }
+
+        Frame "BACKDROP" "AuthIcon" {
+            SetPoint LEFT, "CampaignNameValue", RIGHT, 0.0025, 0.0,
+            Width 0.01875,
+            Height 0.01875,
+            BackdropBlendAll,
+            BackdropBackground  "ui\widgets\battlenet\chaticons\bnet-blizzard.blp",
+        }
+
+        Frame "SPRITE" "MinimapImage" {
+            SetPoint TOP, "CampaignInfoPane", TOP, 0.0, -0.0325,
+            Width 0.13125,
+            Height 0.13125,            
+        }
+
+        Frame "BACKDROP" "MinimapImageBackdrop" {
+            SetPoint CENTER, "MinimapImage", CENTER, 0.0, 0.002275,
+            Width 0.183125,
+            Height 0.183125,
+            BackdropBlendAll,
+            BackdropBackground  "UI\Widgets\Glues\SinglePlayerSkirmish-MinimapCover3.blp",
+        }
+
+        Frame "TEXT" "AuthorLabel" INHERITS "StandardLabelTextTemplate" {
+            SetPoint TOP, "MinimapImageBackdrop", BOTTOM, 0.0, 0.0,
+            Width 0.25,
+            Text "COLON_AUTHOR",
+            FontJustificationV JUSTIFYBOTTOM,
+        }
+
+        Frame "TEXT" "AuthorValue" INHERITS "StandardLabelTextTemplate" {
+            SetPoint TOPLEFT, "AuthorLabel", TOPLEFT, 0.0, 0.0,
+            Width 0.25,
+            FontColor 1.0 1.0 1.0 1.0,
+            FontJustificationH JUSTIFYRIGHT,
+            FontJustificationV JUSTIFYBOTTOM,
+        }
+
+        Frame "TEXT" "DifficultyLabel" INHERITS "StandardLabelTextTemplate" {
+            SetPoint TOP, "AuthorLabel", BOTTOM, 0.0, -0.004,
+            Width 0.25,
+            Text "COLON_DIFFICULTY",
+            FontJustificationV JUSTIFYBOTTOM,
+        }
+
+        Frame "TEXT" "DifficultyValue" INHERITS "StandardLabelTextTemplate" {
+            SetPoint TOPLEFT, "DifficultyLabel", TOPLEFT, 0.0, 0.0,
+            Width 0.25,
+            FontColor 1.0 1.0 1.0 1.0,
+            FontJustificationH JUSTIFYRIGHT,
+            FontJustificationV JUSTIFYBOTTOM,
+        }
+
+        Frame "TEXT" "NumMissionsLabel" INHERITS "StandardLabelTextTemplate" {
+            SetPoint TOP, "DifficultyLabel", BOTTOM, 0.0, -0.004,
+            Width 0.25,
+            Text "COLON_NUMBER_OF_MISSIONS",
+            FontJustificationV JUSTIFYBOTTOM,
+        }
+
+        Frame "TEXT" "NumMissionsValue" INHERITS "StandardLabelTextTemplate" {
+            SetPoint TOPLEFT, "NumMissionsLabel", TOPLEFT, 0.0, 0.0,
+            Width 0.25,
+            FontColor 1.0 1.0 1.0 1.0,
+            FontJustificationH JUSTIFYRIGHT,
+            FontJustificationV JUSTIFYBOTTOM,
+        }
+
+        Frame "TEXT" "MapDescLabel" INHERITS "StandardLabelTextTemplate" {
+            SetPoint TOP, "NumMissionsLabel", BOTTOM, 0.0, -0.02,
+            Width 0.25,
+            Text "COLON_DESCRIPTION",
+        }
+
+        Frame "TEXT" "MapDescValue" INHERITS "StandardSmallTextTemplate" {
+            SetPoint TOP, "MapDescLabel", BOTTOM, 0.0, -0.002,
+            Width 0.25,
+            FontColor 1.0 1.0 1.0 1.0,
+            FontJustificationV JUSTIFYTOP,
+            FontJustificationH JUSTIFYLEFT,
+        }
+    }
+
+    //*************************
+    //*
+    //* Bottom Buttons
+    //*
+    //*******
+
+    Frame "BACKDROP" "OKBackdrop" INHERITS "StandardMenuButtonBaseBackdrop" {
+        Width 0.24,
+        SetPoint TOPRIGHT,"CustomCampaignMenu",BOTTOMRIGHT, -0.014375, 0.124375,
+
+	    Frame "GLUETEXTBUTTON" "OKButton" INHERITS WITHCHILDREN "StandardButtonTemplate" {
+            Width 0.168,
+		    SetPoint TOPRIGHT,"OKBackdrop",TOPRIGHT, -0.012, -0.0165,
+		    ControlShortcutKey "KEY_PLAY_CAMPAIGN_SHORTCUT",
+            TabFocusDefault,
+            TabFocusNext "CancelButton",
+
+            ButtonText "OKButtonText",
+		    Frame "TEXT" "OKButtonText" INHERITS "StandardButtonTextTemplate" {
+			    Text "KEY_PLAY_CAMPAIGN",
+		    }
+	    }
+    }
+
+    Frame "BACKDROP" "CancelBackdrop" INHERITS "StandardMenuButtonBaseBackdrop" {
+        Width 0.24,
+        SetPoint TOPRIGHT,"OKBackdrop",BOTTOMRIGHT, 0.0, 0.015,
+
+	    Frame "GLUETEXTBUTTON" "CancelButton" INHERITS WITHCHILDREN "StandardButtonTemplate" {
+            Width 0.168,
+		    SetPoint TOPRIGHT,"CancelBackdrop",TOPRIGHT, -0.012, -0.0165,
+		    ControlShortcutKey "KEY_BACK_SHORTCUT",
+            TabFocusNext "OKButton",
+
+            ButtonText "CancelButtonText",
+		    Frame "TEXT" "CancelButtonText" INHERITS "StandardButtonTextTemplate" {
+			    Text "KEY_BACK",
+		    }
+	    }
+    }
+}

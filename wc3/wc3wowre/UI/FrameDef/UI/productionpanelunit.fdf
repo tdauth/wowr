@@ -1,0 +1,51 @@
+
+String "ProductionNumberTextTemplate" {
+    Font "MasterFont",0.008,
+    FontColor 1.0 1.0 1.0,
+}
+
+Frame "SIMPLEFRAME" "ProductionPanelUnitFrame" {
+    Width 0.026,
+    Height 0.026,
+    DecorateFileNames,
+    UseActiveContext,
+
+    Layer "ARTWORK" {
+        Texture "ProductionPanelUnitTexture" {    
+            Width 0.026,
+            Height 0.026,
+            SetPoint TOPLEFT, "ProductionPanelUnitFrame", TOPLEFT, 0.0, 0.0,
+        }
+    }
+ 
+    Frame "SIMPLEBUTTON" "ProductionPanelNumberButton" {
+        UseActiveContext,
+        Width 0.0105,
+        Height 0.009,
+        DecorateFileNames,
+        SetPoint BOTTOMRIGHT, "ProductionPanelUnitFrame", BOTTOMRIGHT, -0.0012, 0.001,
+        NormalTexture "EscMenuEditBoxBackground",  
+        DisabledTexture "EscMenuEditBoxBackground", 
+        NormalText "ProductionNumberTextTemplate" "1",
+        DisabledText "ProductionNumberTextTemplate" "1",
+    }
+
+    Frame "SIMPLESTATUSBAR" "ProductionPanelUnitProgressBar" {
+        UseActiveContext,
+        SetPoint TOPLEFT, "ProductionPanelUnitFrame", TOPLEFT, 0.0, -0.026,
+        Width 0.0258,
+        Height 0.002,
+        DecorateFileNames,
+        BarTexture "ObserverProductionTimerFill",
+        LayerStyle "IGNORETRACKEVENTS",
+
+        Layer "BACKGROUND" {
+			Texture {
+                Width 0.026,
+                Height 0.003,
+				File "ObserverProductionTimerBacking",
+                TexCoord 0.0, 0.75, 0.0, 0.28125,
+			}
+        }
+    }
+}

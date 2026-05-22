@@ -1,0 +1,37 @@
+// -- INCLUDE FILES ---------------------------------------------------------
+
+IncludeFile "UI\FrameDef\UI\EscMenuTemplates.fdf",
+
+// -- FRAMES ----------------------------------------------------------------
+Frame "SIMPLEFRAME" "SimpleTimeElapsedPanel" {
+    Width  0.06f,
+    Height 0.03f,
+    UseActiveContext,
+    DecorateFileNames,
+	SetPoint BOTTOMRIGHT, "ConsoleBottomBar", TOPLEFT, 0.2, 0.0385,
+
+    Frame "BACKDROP" "TimeElapsedPanelBackdrop" { 
+        UseActiveContext,
+		Width  0.06f,
+		Height 0.03f,
+		SetPoint BOTTOMRIGHT, "SimpleTimeElapsedPanel", BOTTOMRIGHT, 0, 0,			
+	    DecorateFileNames,
+        BackdropTileBackground,
+        BackdropBackground          "EscMenuEditBoxBackground",
+        BackdropCornerFlags         "UL|UR|BL|BR|T|L|B|R",
+        BackdropCornerSize          0.0125,
+        BackdropBackgroundInsets    0.005f 0.005f 0.005f 0.005f,
+        BackdropEdgeFile            "EscMenuEditBoxBorder",
+	    BackdropBlendAll,
+    }
+
+    Frame "TEXT" "TimeElapsedValue" INHERITS "EscMenuInfoTextTemplate" {
+        UseActiveContext,
+        SetPoint CENTER, "SimpleTimeElapsedPanel", CENTER, 0, 0,
+        Width 0.05,
+        FontJustificationH JUSTIFYCENTER,
+        FrameFont "MasterFont", 0.009,"",
+        Text "0:00:00",
+    }
+	
+}

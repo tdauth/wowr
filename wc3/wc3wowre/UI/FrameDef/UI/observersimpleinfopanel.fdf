@@ -1,0 +1,158 @@
+// -- INCLUDE FILES ---------------------------------------------------------
+
+IncludeFile "UI\FrameDef\UI\SimpleInfoPanel.fdf",
+
+
+// -- LOCAL TEMPLATES -------------------------------------------------------
+String "ObserverInfoPanelFillBarTextTemplate" {
+    Font "EscMenuTextFont", 0.0098,
+    FontColor 1.0 1.0 1.0 1.0,
+    FontHighlightColor 1.0 1.0 1.0 1.0,
+    FontDisabledColor 0.2 0.2 0.2 1.0,
+    FontShadowColor 0.0 0.0 0.0 0.9,	
+    FontShadowOffset 0.001 -0.001,
+}
+
+String "ObserverInfoPanelHeroLevelBarTextTemplate" {
+    Font "EscMenuTextFont", 0.0086,
+    FontColor 1.0 1.0 1.0 1.0,
+    FontHighlightColor 1.0 1.0 1.0 1.0,
+    FontDisabledColor 0.2 0.2 0.2 1.0,
+    FontShadowColor 0.0 0.0 0.0 0.9,	
+    FontShadowOffset 0.001 -0.001,
+}
+
+// -- FRAMES ----------------------------------------------------------------
+Frame "SIMPLEFRAME" "SimpleObserverInfoPanelUnitDetail" {
+    UseActiveContext,
+    DecorateFileNames,
+    Width 0.1,
+    Height 0.1,
+    
+    // --- unit name frame --------------------------------------------------
+    String "SimpleNameValue" INHERITS "SimpleInfoPanelTitleTextTemplate" {
+        Anchor TOP, 0.005, 0.021,
+        Font "InfoPanelTextFont", 0.01,
+    }
+
+    // --- timed life bar ----------------------------------------------------
+    Frame "SIMPLESTATUSBAR" "SimpleProgressIndicator" {
+        UseActiveContext,
+        SetPoint TOP, "SimpleObserverInfoPanelUnitDetail", TOP, 0.0, 0.0,
+        Height 0.015625,
+        Width 0.2,
+    }
+
+    // --- building build queue panel -------------------------------------------------
+    Frame "SIMPLESTATUSBAR" "SimpleBuildTimeIndicator" {
+        UseActiveContext,
+        SetPoint TOPLEFT, "SimpleInfoPanelUnitDetail", TOPLEFT, 0.061250, -0.038125,
+    }
+
+    String "SimpleBuildingActionLabel" INHERITS "SimpleInfoPanelDescriptionTextTemplate" {
+        SetPoint CENTER, "SimpleInfoPanelUnitDetail", TOPLEFT, 0.11375, -0.029875,
+    }
+
+    
+    // --- Life fill bar ----------------------------------------------------
+    Frame "SIMPLESTATUSBAR" "ObserverInfoPanelLifeFillBar" {
+        UseActiveContext,
+        SetPoint TOP, "SimpleObserverInfoPanelUnitDetail", TOP, -0.0415, 0.005, // Position set in CObserverPanelDetail
+        Width 0.085,
+        Height 0.0125,
+        DecorateFileNames,
+        BarTexture "SimpleHpBarConsole",
+
+        Layer "BACKGROUND" {
+			Texture {
+                Width 0.089,
+                Height 0.016,
+				File "ObserverHeroResourceBar",
+                TexCoord 0.1796875, 0.814453125, 0.015625, 0.984375,
+			}
+        }
+
+        Layer "ARTWORK" {
+            String "ObserverInfoPanelLifeText" INHERITS "ObserverInfoPanelFillBarTextTemplate" {
+                SetPoint TOP, "ObserverInfoPanelLifeFillBar", TOP, 0.0, 0.0 // Position set in CObserverPanelDetail
+            }
+        }
+
+        Layer "ARTWORK_OVERLAY" {
+			Texture {
+                Width 0.088,
+                Height 0.016,
+				File "ObserverHeroResourceBarFrame",
+                TexCoord 0.1796875, 0.814453125, 0.015625, 0.984375,
+			}
+        }
+    }
+
+    // --- Mana fill bar ----------------------------------------------------
+    Frame "SIMPLESTATUSBAR" "ObserverInfoPanelManaFillBar" {
+        UseActiveContext,
+        SetPoint TOP, "SimpleObserverInfoPanelUnitDetail", TOP, 0.0515, 0.005,
+        Width 0.085,
+        Height 0.0125,
+        DecorateFileNames,
+        BarTexture "SimpleManaBarConsole",
+
+        Layer "BACKGROUND" {
+            Texture {
+                Width 0.089,
+                Height 0.016,
+                File "ObserverHeroResourceBar",
+                TexCoord 0.1796875, 0.814453125, 0.015625, 0.984375,
+            }
+        }
+
+        Layer "ARTWORK" {
+            String "ObserverInfoPanelManaText" INHERITS "ObserverInfoPanelFillBarTextTemplate" {
+                SetPoint TOP, "ObserverInfoPanelManaFillBar", TOP, 0.0, -0.0025,
+            }
+        }
+
+        Layer "ARTWORK_OVERLAY" {
+            Texture {
+                Width 0.089,
+                Height 0.016,
+                File "ObserverHeroResourceBarFrame",
+                TexCoord 0.1796875, 0.814453125, 0.015625, 0.984375,
+            }
+        }
+    }
+    
+    // --- Hero level fill bar ----------------------------------------------------
+    Frame "SIMPLESTATUSBAR" "ObserverHeroLevelBar" {
+        UseActiveContext,
+        SetPoint TOP, "SimpleObserverInfoPanelUnitDetail", BOTTOM, 0.005, 0.099,
+        Width 0.179,
+        Height 0.013625,
+        DecorateFileNames,
+        BarTexture "SimpleManaBarConsole",
+
+        Layer "BACKGROUND" {
+            Texture {
+                Width 0.183,
+                Height 0.017,
+                File "ObserverHeroResourceBar",
+                TexCoord 0.1796875, 0.814453125, 0.015625, 0.984375,
+            }
+        }
+
+        Layer "ARTWORK" {
+            String "ObserverHeroLevelBarText" INHERITS "ObserverInfoPanelHeroLevelBarTextTemplate" {
+                SetPoint TOP, "ObserverHeroLevelBar", TOP, 0.0, -0.0028,
+            }
+        }
+
+        Layer "ARTWORK_OVERLAY" {
+            Texture {
+                Width 0.183,
+                Height 0.017,
+                File "ObserverHeroResourceBarFrame",
+                TexCoord 0.1796875, 0.814453125, 0.015625, 0.984375,
+            }
+        }
+    }
+}

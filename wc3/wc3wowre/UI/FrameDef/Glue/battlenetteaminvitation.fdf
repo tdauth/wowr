@@ -1,0 +1,119 @@
+// -- INCLUDE FILES ---------------------------------------------
+
+IncludeFile "UI\FrameDef\Glue\BattleNetTemplates.fdf",
+
+// -- LOCAL TEMPLATES -------------------------------------------
+
+// -- FRAMES ----------------------------------------------------
+
+Frame "FRAME" "BattleNetTeamInvitation" {
+
+/*
+    // NOTE: use this highlight to position this guy on any new screens
+    Frame "HIGHLIGHT" "DebugTestFrame" {
+        SetAllPoints,
+        HighlightColor 1.0 0.0 0.0 0.2,
+        HighlightType "SHADE",
+    }
+*/
+
+    Frame "TEXT" "InvitationTitle" INHERITS "BattleNetTitleTextTemplate" {
+        SetPoint TOPLEFT, "BattleNetTeamInvitation", TOPLEFT, 0.0, -0.004,
+        Text "BNET_INVITEE_TITLE",
+        FontColor 1.0 1.0 1.0 1.0,
+    }
+
+    Frame "TEXT" "InvitationValue" INHERITS "BattleNetLabelTextTemplate" {
+        Width 0.26475,
+        SetPoint TOPLEFT, "InvitationTitle", BOTTOMLEFT, 0.0, -0.0105,
+    }
+
+    Frame "TEXT" "InvitationTeamMemberLabel" INHERITS "BattleNetLabelTextTemplate" {
+        SetPoint TOPLEFT, "InvitationValue", BOTTOMLEFT, 0.0, -0.01,
+        Text "COLON_TEAM_MEMBERS",
+    }
+
+    Frame "BACKDROP" "InvitationTeamMemberBackdrop1" {
+        Width 0.2575,
+        Height 0.032,        
+        SetPoint TOPLEFT, "InvitationTeamMemberLabel", BOTTOMLEFT, 0.0, -0.005,
+        BackdropBackground  "UI\Widgets\BattleNet\bnet-userlist-back.blp",
+        BackdropBlendAll,
+
+        Frame "TEXT" "InvitationTeamMemberValue1" INHERITS "BattleNetValueTextTemplate" {
+            SetPoint LEFT, "InvitationTeamMemberBackdrop1", LEFT, 0.012, 0.0,
+        }
+    }
+    Frame "BACKDROP" "InvitationTeamMemberBackdrop2" {
+        Width 0.2575,
+        Height 0.032,        
+        SetPoint TOPLEFT, "InvitationTeamMemberBackdrop1", BOTTOMLEFT, 0.0, 0.001875,
+        BackdropBackground  "UI\Widgets\BattleNet\bnet-userlist-back.blp",
+        BackdropBlendAll,
+
+        Frame "TEXT" "InvitationTeamMemberValue2" INHERITS "BattleNetValueTextTemplate" {
+            SetPoint LEFT, "InvitationTeamMemberBackdrop2", LEFT, 0.012, 0.0,
+        }
+    }
+    Frame "BACKDROP" "InvitationTeamMemberBackdrop3" {
+        Width 0.2575,
+        Height 0.032,        
+        SetPoint TOPLEFT, "InvitationTeamMemberBackdrop2", BOTTOMLEFT, 0.0, 0.001875,
+        BackdropBackground  "UI\Widgets\BattleNet\bnet-userlist-back.blp",
+        BackdropBlendAll,
+
+        Frame "TEXT" "InvitationTeamMemberValue3" INHERITS "BattleNetValueTextTemplate" {
+            SetPoint LEFT, "InvitationTeamMemberBackdrop3", LEFT, 0.012, 0.0,
+        }
+    }
+    Frame "BACKDROP" "InvitationTeamMemberBackdrop4" {
+        Width 0.2575,
+        Height 0.032,        
+        SetPoint TOPLEFT, "InvitationTeamMemberBackdrop3", BOTTOMLEFT, 0.0, 0.001875,
+        BackdropBackground  "UI\Widgets\BattleNet\bnet-userlist-back.blp",
+        BackdropBlendAll,
+
+        Frame "TEXT" "InvitationTeamMemberValue4" INHERITS "BattleNetValueTextTemplate" {
+            SetPoint LEFT, "InvitationTeamMemberBackdrop4", LEFT, 0.012, 0.0,
+        }
+    }
+
+    Frame "TEXT" "InvitationInfoText" INHERITS "BattleNetLabelTextTemplate" {
+        Width 0.26475,
+        SetPoint TOPLEFT, "InvitationTeamMemberBackdrop4", BOTTOMLEFT, 0.0, -0.0075,
+        Text "BNET_INVITEE_INFO",
+    }
+
+    Frame "TEXT" "InvitationTimeoutLabel" INHERITS "BattleNetLabelTextTemplate" {
+        SetPoint TOPLEFT, "InvitationInfoText", BOTTOMLEFT, 0.0, -0.011,
+        Text "BNET_INVITEE_TIMOUT",
+        FontColor 1.0 0.0 0.0,
+    }
+
+    Frame "TEXT" "InvitationTimeoutValue" INHERITS "BattleNetValueTextTemplate" {
+        SetPoint LEFT, "InvitationTimeoutLabel", RIGHT, 0.006, 0.0,
+    }
+
+	Frame "GLUETEXTBUTTON" "InviteAcceptButton" INHERITS WITHCHILDREN "BattleNetBorderedButtonTemplate" {
+        Width 0.12,
+		SetPoint BOTTOMLEFT, "BattleNetTeamInvitation", BOTTOMLEFT, 0.006, 0.004,
+        ControlShortcutKey "KEY_ACCEPT_SHORTCUT",
+
+        ButtonText "InviteAcceptButtonText",
+		Frame "TEXT" "InviteAcceptButtonText" INHERITS "BattleNetButtonTextTemplate" {
+			Text "KEY_ACCEPT",
+		}
+	}
+
+	Frame "GLUETEXTBUTTON" "InviteDeclineButton" INHERITS WITHCHILDREN "BattleNetBorderedButtonTemplate" {
+        Width 0.12,
+		SetPoint BOTTOMRIGHT,"BattleNetTeamInvitation",BOTTOMRIGHT, -0.006, 0.004,
+        ControlShortcutKey "KEY_DECLINE_SHORTCUT",
+
+        ButtonText "InviteDeclineButtonText",
+		Frame "TEXT" "InviteDeclineButtonText" INHERITS "BattleNetButtonTextTemplate" {
+			Text "KEY_DECLINE",
+		}
+	}
+}
+

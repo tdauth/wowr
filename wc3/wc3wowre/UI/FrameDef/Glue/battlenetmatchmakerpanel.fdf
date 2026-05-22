@@ -1,0 +1,449 @@
+// -- INCLUDE FILES ---------------------------------------------
+
+IncludeFile "UI\FrameDef\Glue\BattleNetTemplates.fdf",
+IncludeFile "UI\FrameDef\Glue\StandardTemplates.fdf",
+
+// -- LOCAL TEMPLATES -------------------------------------------
+
+Frame "BACKDROP" "BNetMMPopupMenuBackdropTemplate" INHERITS "BattleNetMenuButtonBaseBackdrop" {
+    Width 0.1714,
+}
+
+Frame "POPUPMENU" "BNetMMPopupMenuTemplate" INHERITS "BattleNetPopupMenuTemplate" {
+    Width 0.12,
+
+    ControlBackdrop "PopupMenuBackdrop",
+    Frame "BACKDROP" "PopupMenuBackdrop" INHERITS "BattleNetButtonBackdropTemplate" {
+    }
+
+    ControlDisabledBackdrop "PopupMenuDisabledBackdrop",
+    Frame "BACKDROP" "PopupMenuDisabledBackdrop" INHERITS "BattleNetButtonDisabledBackdropTemplate" {
+    }
+
+    PopupTitleFrame "PopupMenuTitle",
+    Frame "GLUETEXTBUTTON" "PopupMenuTitle" INHERITS WITHCHILDREN "BattleNetPopupMenuTitleTemplate" {
+    }
+
+    PopupArrowFrame "PopupMenuArrow",
+    Frame "BUTTON" "PopupMenuArrow" INHERITS WITHCHILDREN "BattleNetPopupMenuArrowTemplate" { 
+    }
+}
+
+// COPIED FROM PLAYERSLOT.FDF -- recursive includes were not working so copying was necessary
+Frame "POPUPMENU" "MMPlayerSlotPopupMenu" {
+    Width 0.109,
+    Height 0.025,
+    PopupButtonInset 0.01,
+
+    ControlBackdrop "PlayerSlotPopupMenuBackdrop",
+    Frame "BACKDROP" "PlayerSlotPopupMenuBackdrop" {
+        BackdropTileBackground,
+        BackdropBackground  "UI\Widgets\Glues\GlueScreen-Button1-BackdropBackground.blp",
+        BackdropCornerFlags "UL|UR|BL|BR|T|L|B|R",
+        BackdropCornerSize  0.016,
+        BackdropBackgroundSize  0.032,
+        BackdropBackgroundInsets 0.004 0.004 0.004 0.004,
+        BackdropEdgeFile  "UI\Widgets\Glues\GlueScreen-Button1-BorderedBackdropBorder.blp",
+    }
+
+    ControlDisabledBackdrop "PlayerSlotPopupMenuDisabledBackdrop",
+    Frame "BACKDROP" "PlayerSlotPopupMenuDisabledBackdrop" {
+        BackdropTileBackground,
+        BackdropBackground  "UI\Widgets\Glues\GlueScreen-Button1-BackdropBackground-Disabled.blp",
+        BackdropCornerFlags "UL|UR|BL|BR|T|L|B|R",
+        BackdropCornerSize  0.016,
+        BackdropBackgroundSize  0.032,
+        BackdropBackgroundInsets 0.004 0.004 0.004 0.004,
+        BackdropEdgeFile  "UI\Widgets\Glues\GlueScreen-Button1-BorderedBackdropBorder-Disabled.blp",
+    }
+
+    ControlPushedBackdrop "PlayerSlotPopupMenuPushedBackdrop",
+    Frame "BACKDROP" "PlayerSlotPopupMenuPushedBackdrop" {
+        BackdropTileBackground,
+        BackdropBackground  "UI\Widgets\Glues\GlueScreen-Button1-BackdropBackground.blp",
+        BackdropCornerFlags "UL|UR|BL|BR|T|L|B|R",
+        BackdropCornerSize  0.016,
+        BackdropBackgroundSize  0.032,
+        BackdropBackgroundInsets 0.004 0.004 0.004 0.004,
+        BackdropEdgeFile  "UI\Widgets\Glues\GlueScreen-Button1-BorderedBackdropBorder-Down.blp",
+    }
+
+    PopupTitleFrame "PlayerSlotPopupMenuTitle",
+    Frame "GLUETEXTBUTTON" "PlayerSlotPopupMenuTitle" INHERITS WITHCHILDREN "StandardPopupMenuTitleTemplate" {
+    }
+
+    PopupArrowFrame "PlayerSlotPopupMenuArrow",
+    Frame "BUTTON" "PlayerSlotPopupMenuArrow" INHERITS WITHCHILDREN "StandardPopupMenuArrowTemplate" { 
+    }
+}
+
+// -- FRAMES ----------------------------------------------------
+
+Frame "FRAME" "BattleNetMatchmakerPanel" {
+    SetAllPoints,
+
+    // --- team setup
+    Frame "TEXT" "PlayerLabel" INHERITS "BattleNetLabelTextTemplate" {
+        SetPoint TOPLEFT, "BattleNetMatchmakerPanel", TOPLEFT, 0.02, -0.036875,
+        Width 0.153,
+        Text "COLON_TEAM_MEMBER",
+    }
+    
+    Frame "TEXT" "RaceLabel" INHERITS "BattleNetLabelTextTemplate" {
+        SetPoint LEFT, "PlayerLabel", RIGHT, 0.0, 0.0,
+        Text "COLON_RACE",
+    }
+    
+    Frame "FRAME" "PlayerSlotContainer" {
+        Width 0.45,
+        Height 0.39,
+        SetPoint TOPLEFT, "BattleNetMatchmakerPanel", TOPLEFT, 0.0175, -0.05,
+    }
+
+    Frame "TEXT" "StyleLabel" INHERITS "BattleNetInfoTextTemplate" {
+        SetPoint TOPLEFT, "BattleNetMatchmakerPanel", TOPRIGHT, -0.27, -0.05,
+        //SetPoint TOPLEFT, "RaceLabel", BOTTOMLEFT, 0.0, -0.06375,
+        Text "COLON_GAME_TYPE",
+    }
+
+    Frame "BACKDROP" "StyleBackdrop" INHERITS "BNetMMPopupMenuBackdropTemplate" {
+        SetPoint TOPRIGHT, "BattleNetMatchmakerPanel", TOPRIGHT, -0.02, -0.025,
+        
+	    Frame "POPUPMENU" "StyleMenu" INHERITS WITHCHILDREN "BNetMMPopupMenuTemplate" {
+            SetPoint TOPRIGHT,"StyleBackdrop",TOPRIGHT, -0.0075, -0.0155,
+            
+            PopupMenuFrame "StylePopupMenuMenu",
+            Frame "MENU" "StylePopupMenuMenu" INHERITS WITHCHILDREN "BattleNetPopupMenuMenuTemplate" {
+            }
+	    }
+    }
+
+    Frame "TEXT" "StyleDescriptionValue" INHERITS "BattleNetLabelTextTemplate" {
+        Width 0.15625,
+        SetPoint LEFT, "StyleBackdrop", RIGHT, -0.03125, 0.0,
+        FontColor 1.0 1.0 1.0 1.0,
+        FontJustificationH JUSTIFYLEFT,
+    }
+
+    Frame "TEXT" "MapPreferenceLabel" INHERITS "BattleNetInfoTextTemplate" {
+        SetPoint TOPLEFT, "StyleLabel", BOTTOMLEFT, 0.0, -0.025,
+        Text "COLON_MAP_PREFERENCES",
+    }
+    
+    Frame "FRAME" "MapPreferenceContainer" {
+        Width 0.259375,
+        Height 0.25,
+        SetPoint TOPLEFT, "MapPreferenceLabel", BOTTOMLEFT, -0.01, -0.005,
+    }
+
+    Frame "TEXT" "MapPreferenceVetoDesc" INHERITS "BattleNetLabelTextTemplate" {
+        Width 0.255,
+        SetPoint TOPLEFT, "MapPreferenceContainer", BOTTOMLEFT, 0.01, 0.00325,
+        FontColor 1.0 1.0 1.0 1.0,
+        Text "BNET_STD_MAP_LIST_DESC_VETO",
+    }
+
+//    Frame "TEXT" "MapPreferenceDesc" INHERITS "BattleNetLabelTextTemplate" {
+//        Width 0.38,
+//        //SetPoint BOTTOMLEFT, "MapPreferenceVetoDesc", TOPLEFT, 0.0, 0.0055,
+//        SetPoint BOTTOMLEFT, "MapPreferenceVetoDesc", BOTTOMLEFT, 0.0, 0.0055,
+//        FontColor 1.0 1.0 1.0 1.0,
+//        Text "BNET_STD_MAP_LIST_DESC",
+//    }
+
+    // --- Chat Display -------------------------------------------------------
+    Frame "TEXTAREA" "MMChatTextArea" {
+        DecorateFileNames,
+        FrameFont "MasterFont", 0.011, "",
+        TextAreaLineHeight 0.01,
+        TextAreaLineGap 0.0015,
+        TextAreaInset 0.0,
+        TextAreaMaxLines 128,
+
+        SetPoint TOPLEFT, "BattleNetMatchmakerPanel", TOPLEFT, 0.014375, -0.453125,
+        Width 0.461875,
+        Height 0.094375,
+
+        TextAreaScrollBar "ChatScrollBar",
+        Frame "SCROLLBAR" "ChatScrollBar" INHERITS WITHCHILDREN "StandardScrollBarTemplate" {
+        }
+    }
+
+    Frame "SLASHCHATBOX" "MMChatEditBox" INHERITS WITHCHILDREN "StandardEditBoxTemplate" {
+        Width 0.469375,
+        SetPoint TOPLEFT, "MMChatTextArea", BOTTOMLEFT, -0.003125, 0.000625,
+		TabFocusDefault,
+		TabFocusNext "PlayGameButton",
+    }
+    
+    // --- Bottom Buttons -------------------------------------------------------
+    Frame "BACKDROP" "PlayGameBackdrop" INHERITS "BattleNetMenuButtonBaseBackdrop" {
+        Width 0.24,
+        SetPoint TOPRIGHT,"BattleNetMatchmakerPanel",BOTTOMRIGHT, -0.014375, 0.136,
+
+	    Frame "GLUETEXTBUTTON" "PlayGameButton" INHERITS WITHCHILDREN "BattleNetButtonTemplate" {
+            Width 0.168,
+		    SetPoint TOPRIGHT,"PlayGameBackdrop",TOPRIGHT, -0.012, -0.0165,
+		    ControlShortcutKey "KEY_PLAY_GAME_SHORTCUT",
+            TabFocusDefault,
+            TabFocusNext "CancelButton",
+
+            ButtonText "PlayGameButtonText",
+		    Frame "TEXT" "PlayGameButtonText" INHERITS "BattleNetButtonTextTemplate" {
+			    Text "KEY_PLAY_GAME",
+		    }
+	    }
+    }
+
+    Frame "BACKDROP" "CancelBackdrop" INHERITS "BattleNetMenuButtonBaseBackdrop" {
+        Width 0.24,
+        SetPoint TOPRIGHT,"PlayGameBackdrop",BOTTOMRIGHT, 0.0, 0.015,            
+
+	    Frame "GLUETEXTBUTTON" "CancelButton" INHERITS WITHCHILDREN "BattleNetButtonTemplate" {
+            Width 0.168,
+            SetPoint TOPRIGHT,"CancelBackdrop",TOPRIGHT, -0.012, -0.0165,
+		    ControlShortcutKey "KEY_CANCEL_SHORTCUT",
+            TabFocusNext "PlayGameButton",
+
+            ButtonText "CancelButtonText",
+		    Frame "TEXT" "CancelButtonText" INHERITS "BattleNetButtonTextTemplate" {
+			    Text "KEY_CANCEL",
+		    }
+	    }
+    }
+    
+    Frame "BACKDROP" "QueueStatusBoxContainer" INHERITS "StandardEditBoxBackdropTemplate"  {
+        Width 0.3,
+        Height 0.16,
+        SetPoint BOTTOMRIGHT,"BattleNetMatchmakerPanel",BOTTOMRIGHT, 0.0, 0.0,
+        BackdropBackground  "UI\Widgets\BattleNet\bnet-Queued-background.blp",
+    }
+}
+
+Frame "CONTROL" "MMPlayerSlot" {
+    Height 0.025,
+
+    Frame "POPUPMENU" "NameMenu" INHERITS WITHCHILDREN "MMPlayerSlotPopupMenu" {
+        Width 0.153,
+        UseActiveContext,
+        SetPoint LEFT, "MMPlayerSlot", LEFT, 0.0, 0.0,
+
+        PopupMenuFrame "NamePopupMenuMenu",
+        Frame "MENU" "NamePopupMenuMenu" INHERITS WITHCHILDREN "StandardPopupMenuMenuTemplate" {
+            UseActiveContext,
+        }
+    }
+
+    Frame "POPUPMENU" "RaceMenu" INHERITS WITHCHILDREN "MMPlayerSlotPopupMenu" {
+        Width 0.114,
+        UseActiveContext,
+        SetPoint LEFT, "NameMenu", RIGHT, 0.0, 0.0,
+
+        PopupMenuFrame "RacePopupMenuMenu",
+        Frame "MENU" "RacePopupMenuMenu" INHERITS WITHCHILDREN "StandardPopupMenuMenuTemplate" {
+            UseActiveContext,
+
+            MenuItem "RANDOM",     -2,
+            MenuItem "HUMAN",      -2,
+            MenuItem "ORC",        -2,
+            MenuItem "UNDEAD",     -2,
+            MenuItem "NIGHT_ELF",  -2,
+        }
+    }
+
+    Frame "TEXT" "StateValue" INHERITS "StandardLabelTextTemplate" {
+        Height 0.0125,
+        
+        FrameFont "MasterFont",0.011,"",
+        FontFlags "FIXEDSIZE",
+            
+        UseActiveContext,
+        SetPoint LEFT, "RaceMenu", RIGHT, 0.0, 0.0,
+    }
+}
+
+// -- BattleNetMatchmakerTeamInviteDialog --------------------------------------------------------
+Frame "DIALOG" "BattleNetMatchmakerTeamInviteDialog" {
+    Height 0.32,
+    Width 0.5,
+
+    DialogBackdrop "InviteDialogBackdrop",
+    Frame "BACKDROP" "InviteDialogBackdrop" {
+        BackdropTileBackground,
+        BackdropBackground  "UI\Widgets\BattleNet\bnet-dialoguebox-background.blp",
+        BackdropCornerFlags "UL|UR|BL|BR|T|L|B|R",
+        BackdropCornerSize  0.064,
+        BackdropBackgroundSize  0.128,
+        BackdropBackgroundInsets 0.01 0.01 0.01 0.01,
+        BackdropEdgeFile  "UI\Widgets\BattleNet\bnet-dialoguebox-border.blp",
+	    BackdropBlendAll,
+    }
+
+    Frame "TEXT" "InviteTitleText" INHERITS "BattleNetTitleTextTemplate" {
+        SetPoint TOPLEFT, "BattleNetMatchmakerTeamInviteDialog", TOPLEFT, 0.02625, -0.024375,
+        Text "BNET_TEAM_INVITATION_TITLE",
+    }
+
+    Frame "FRAME" "InviteListContainer" {
+        Width 0.45,
+        Height 0.135,
+        SetPoint TOP, "BattleNetMatchmakerTeamInviteDialog", TOP, 0.0, -0.08,
+    }
+
+    Frame "TEXT" "PotentialTeammatesLabel" INHERITS "BattleNetLabelTextTemplate" {
+        SetPoint BOTTOMLEFT, "InviteListContainer", TOPLEFT, 0.0, 0.0,
+        Text "COLON_POTENTIAL_TEAMMATES",
+    }
+
+    Frame "GLUEBUTTON" "InviteRefreshButton" {
+        Height 0.03,
+        Width 0.03,
+        ControlStyle "AUTOTRACK|HIGHLIGHTONMOUSEOVER",
+        SetPoint BOTTOMRIGHT, "InviteListContainer", TOPRIGHT, 0.0, 0.0,
+    
+		ControlBackdrop "InviteRefreshButtonBackdropTemplate",
+		Frame "BACKDROP" "InviteRefreshButtonBackdropTemplate" {
+			BackdropBackground  "UI\Widgets\BattleNet\bnet-refresh-up.blp",
+		    BackdropCornerFlags "UL|UR|BL|BR|T|L|B|R",
+		    BackdropCornerSize  0.014,
+		    BackdropBackgroundSize  0.026,
+		    BackdropBackgroundInsets 0.004 0.004 0.004 0.004,
+		    BackdropEdgeFile  "UI\Widgets\Glues\GlueScreen-Button2-BackdropBorder.blp",
+            BackdropBlendAll,
+		}
+    
+		ControlPushedBackdrop "InviteRefreshButtonPushedBackdropTemplate",
+		Frame "BACKDROP" "InviteRefreshButtonPushedBackdropTemplate" {
+			BackdropBackground  "UI\Widgets\BattleNet\bnet-refresh-down.blp",
+		    BackdropCornerFlags "UL|UR|BL|BR|T|L|B|R",
+		    BackdropCornerSize  0.014,
+		    BackdropBackgroundSize  0.026,
+		    BackdropBackgroundInsets 0.004 0.004 0.004 0.004,
+		    BackdropEdgeFile  "UI\Widgets\Glues\GlueScreen-Button2-BackdropBorder-Down.blp",
+            BackdropBlendAll,
+		}
+    
+		ControlDisabledBackdrop "InviteRefreshButtonDisabledBackdropTemplate",
+		Frame "BACKDROP" "InviteRefreshButtonDisabledBackdropTemplate" {
+		    BackdropBackground  "UI\Widgets\BattleNet\bnet-refresh-disabled.blp",
+		    BackdropCornerFlags "UL|UR|BL|BR|T|L|B|R",
+		    BackdropCornerSize  0.014,
+		    BackdropBackgroundSize  0.026,
+		    BackdropBackgroundInsets 0.004 0.004 0.004 0.004,
+		    BackdropEdgeFile  "UI\Widgets\Glues\GlueScreen-Button2-BackdropBorder-Disabled.blp",
+            BackdropBlendAll,
+		}
+    
+        ControlMouseOverHighlight "InviteRefreshButtonMouseOverHighlight",
+        Frame "HIGHLIGHT" "InviteRefreshButtonMouseOverHighlight" INHERITS "BattleNetButtonMouseOverHighlightTemplate" {
+        }
+    }
+
+    Frame "EDITBOX" "InviteManualEntry" INHERITS WITHCHILDREN "BattleNetEditBoxTemplate" {
+        Width 0.45,
+        //Height 0.02,
+        SetPoint TOPLEFT, "InviteListContainer", BOTTOMLEFT, 0.0, -0.000625,
+		TabFocusDefault,
+		TabFocusNext "InviteButton",
+        
+        EditTextFrame "InviteManualEntryEditBoxText",
+            Frame "TEXT" "InviteManualEntryEditBoxText" INHERITS "BattleNetEditBoxTextTemplate" {
+        }
+    }
+    
+    Frame "BACKDROP" "InviteCancelButtonBackdrop" INHERITS "BattleNetMenuSingleButtonBaseBackdrop" {
+        SetPoint BOTTOMRIGHT, "BattleNetMatchmakerTeamInviteDialog", BOTTOMRIGHT, -0.022, 0.0075,
+
+	    Frame "GLUETEXTBUTTON" "InviteCancelButton" INHERITS WITHCHILDREN "BattleNetButtonTemplate" {
+            Width 0.159,
+		    SetPoint TOPRIGHT,"InviteCancelButtonBackdrop",TOPRIGHT, -0.032, -0.015625,
+		    ControlShortcutKey "KEY_CANCEL_SHORTCUT",
+
+            ButtonText "InviteCancelButtonText",
+		    Frame "TEXT" "InviteCancelButtonText" INHERITS "BattleNetButtonTextTemplate" {
+			    Text "KEY_CANCEL",
+		    }
+	    }
+    }
+
+    Frame "BACKDROP" "InviteButtonBackdrop" INHERITS "BattleNetMenuSingleButtonBaseBackdrop" {
+        SetPoint RIGHT, "InviteCancelButtonBackdrop", LEFT, 0.025, 0.0,
+
+	    Frame "GLUETEXTBUTTON" "InviteButton" INHERITS WITHCHILDREN "BattleNetButtonTemplate" {
+            Width 0.159,
+		    SetPoint TOPRIGHT,"InviteButtonBackdrop",TOPRIGHT, -0.032, -0.015625,
+		    ControlShortcutKey "KEY_INVITE_SHORTCUT",
+
+            ButtonText "InviteButtonText",
+		    Frame "TEXT" "InviteButtonText" INHERITS "BattleNetButtonTextTemplate" {
+			    Text "KEY_INVITE",
+		    }
+	    }
+    }
+}
+
+// -- BattleNetMatchmakerPendingInviteDialog --------------------------------------------------------
+Frame "DIALOG" "BattleNetMatchmakerPendingInviteDialog" {
+    Height 0.32,
+    Width 0.5,
+    
+    DialogBackdrop "PendingInviteDialogBackdrop",
+    Frame "BACKDROP" "PendingInviteDialogBackdrop" {
+        BackdropTileBackground,
+        BackdropBackground  "UI\Widgets\BattleNet\bnet-dialoguebox-background.blp",
+        BackdropCornerFlags "UL|UR|BL|BR|T|L|B|R",
+        BackdropCornerSize  0.064,
+        BackdropBackgroundSize  0.128,
+        BackdropBackgroundInsets 0.01 0.01 0.01 0.01,
+        BackdropEdgeFile  "UI\Widgets\BattleNet\bnet-dialoguebox-border.blp",
+	    BackdropBlendAll,
+    }
+    
+    Frame "TEXT" "BattleNetMatchmakerPendingInviteTitle" INHERITS "BattleNetTitleTextTemplate" {
+        SetPoint TOP, "BattleNetMatchmakerPendingInviteDialog", TOP, 0.0, -0.04,
+        Text "BNET_INVITEE_TITLE",
+        FontColor 1.0 1.0 1.0 1.0,
+    }
+
+    Frame "TEXT" "BattleNetMatchmakerPendingInviteValue" INHERITS "BattleNetLabelTextTemplate" {
+        SetPoint TOP, "BattleNetMatchmakerPendingInviteTitle", BOTTOM, 0.0, -0.0105,
+    }
+
+    Frame "TEXT" "BattleNetMatchmakerPendingInviteTimeoutLabel" INHERITS "BattleNetLabelTextTemplate" {
+        SetPoint TOP, "BattleNetMatchmakerPendingInviteValue", BOTTOM, 0.0, -0.011,
+        Text "BNET_CLAN_INVITE_TIMOUT",
+        FontColor 1.0 0.0 0.0,
+    }
+
+    Frame "TEXT" "BattleNetMatchmakerPendingInviteTimeoutValue" INHERITS "BattleNetValueTextTemplate" {
+        SetPoint TOP, "BattleNetMatchmakerPendingInviteTimeoutLabel", BOTTOM, 0.0, -0.01,
+    }
+
+    Frame "BACKDROP" "BattleNetMatchmakerPendingInviteDeclineButtonBackdrop" INHERITS "BattleNetMenuSingleButtonBaseBackdrop" {
+        SetPoint BOTTOMRIGHT, "BattleNetMatchmakerPendingInviteDialog", BOTTOMRIGHT, -0.022, 0.0075,
+
+        Frame "GLUETEXTBUTTON" "BattleNetMatchmakerPendingInviteDeclineButton" INHERITS WITHCHILDREN "BattleNetButtonTemplate" {
+            Width 0.159,
+		    SetPoint TOPRIGHT,"BattleNetMatchmakerPendingInviteDeclineButtonBackdrop",TOPRIGHT, -0.032, -0.015625,
+
+            ButtonText "BattleNetMatchmakerPendingInviteDeclineButtonText",
+            Frame "TEXT" "BattleNetMatchmakerPendingInviteDeclineButtonText" INHERITS "BattleNetButtonTextTemplate" {
+                Text "DECLINE",
+            }
+        }
+    }
+    
+    Frame "BACKDROP" "BattleNetMatchmakerPendingInviteAcceptButtonBackdrop" INHERITS "BattleNetMenuSingleButtonBaseBackdrop" {
+        SetPoint RIGHT, "BattleNetMatchmakerPendingInviteDeclineButtonBackdrop", LEFT, 0.025, 0.0,
+
+        Frame "GLUETEXTBUTTON" "BattleNetMatchmakerPendingInviteAcceptButton" INHERITS WITHCHILDREN "BattleNetButtonTemplate" {
+            Width 0.159,
+		    SetPoint TOPRIGHT,"BattleNetMatchmakerPendingInviteAcceptButtonBackdrop",TOPRIGHT, -0.032, -0.015625,
+
+            ButtonText "BattleNetMatchmakerPendingInviteAcceptButtonText",
+            Frame "TEXT" "BattleNetMatchmakerPendingInviteAcceptButtonText" INHERITS "BattleNetButtonTextTemplate" {
+                Text "ACCEPT",
+            }
+        }
+    }
+}

@@ -1,0 +1,18 @@
+// -- INCLUDE FILES ---------------------------------------------
+
+IncludeFile "UI\FrameDef\Glue\StandardTemplates.fdf",
+
+// -- LOCAL TEMPLATES -------------------------------------------
+
+// -- FRAMES ----------------------------------------------------
+
+Frame "CONTROL" "CheckListBox" {
+
+    ControlBackdrop "CheckListBoxBackdrop",
+    Frame "BACKDROP" "CheckListBoxBackdrop" INHERITS "StandardEditBoxBackdropTemplate" {
+    }
+
+    Frame "SCROLLBAR" "CheckListBoxScrollBar" INHERITS WITHCHILDREN "StandardScrollBarTemplate" {
+        SetPoint TOPRIGHT, "CheckListBox", TOPRIGHT, 0.0, 0.0,
+    }
+}

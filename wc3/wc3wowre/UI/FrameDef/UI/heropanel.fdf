@@ -1,0 +1,35 @@
+Frame "SIMPLEFRAME" "HeroPanelFrame" {
+    Width 0.36,
+    Height 0.1465,
+    DecorateFileNames,
+    SetAllPoints,
+
+    Layer "BACKGROUND" {
+        Texture {
+            File "ObserverHeroPanelTile",
+            TexCoord 0.140625, 0.859375, 0.451171875, 1.0,
+        }
+    }
+
+    Layer "ARTWORK" {
+        Texture {
+            File "ObserverHeroPanelEndCapLeft",
+            Width 0.006,
+            Height 0.146,
+            TexCoord 0.40625, 1.0, 0.451171875, 1.0, 
+            Anchor TOPLEFT,0.0,0.0,
+        }
+
+        Texture {
+            File "ObserverHeroPanelEndCapRight",
+            Width 0.006,
+            Height 0.146,
+            TexCoord 0.0, 0.5625, 0.451171875, 1.0, 
+            Anchor TOPRIGHT,0.0,0.0,
+        }
+    }
+}
+
+
+
+

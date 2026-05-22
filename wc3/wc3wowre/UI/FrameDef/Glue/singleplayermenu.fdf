@@ -1,0 +1,274 @@
+// -- INCLUDE FILES ---------------------------------------------
+
+IncludeFile "UI\FrameDef\Glue\StandardTemplates.fdf",
+
+// -- LOCAL TEMPLATES -------------------------------------------
+
+// -- FRAMES ----------------------------------------------------
+
+Frame "FRAME" "SinglePlayerMenu" INHERITS "StandardFrameTemplate" {
+	SetAllPoints,
+
+	Frame "FRAME" "ProfilePanel" {
+	
+	    Frame "TEXT" "SinglePlayerProfileText" INHERITS "StandardTitleTextTemplate" {
+	        SetPoint TOPLEFT, "SinglePlayerMenu", TOPLEFT, 0.02625, -0.109,
+		    FontColor 1.0 1.0 1.0 1.0,
+	        Text "SINGLE_PLAYER_PROFILES",
+	    }
+
+	    Frame "TEXT" "ProfileMessage" INHERITS "StandardSmallTextTemplate" {
+	        SetPoint TOPLEFT, "SinglePlayerProfileText", BOTTOMLEFT, 0.0, -0.005,
+	        Width 0.275,
+	        Height 0.05,
+	        Text "PROFILE_MESSAGE",
+	        FontJustificationH JUSTIFYLEFT,
+	        FontJustificationV JUSTIFYTOP,
+	    }
+
+        Frame "TEXT" "ProfileAddText" INHERITS "StandardInfoTextTemplate" {
+	        SetPoint TOPLEFT, "ProfileMessage", BOTTOMLEFT, 0.0, -0.005,
+	        Width 0.275,
+	        Text "PROFILE_NEW",
+	        FontJustificationH JUSTIFYLEFT,
+	        FontJustificationV JUSTIFYBOTTOM,
+        }
+
+	    
+        Frame "EDITBOX" "NewProfileEditBox" INHERITS WITHCHILDREN "StandardEditBoxTemplate" {
+            Height 0.04,
+            Width 0.18,
+            SetPoint TOPLEFT, "ProfileAddText", BOTTOMLEFT, 0.0, -0.001,
+			TabFocusNext "AddProfileButton",
+
+            EditTextFrame "NewProfileEditBoxText",
+            Frame "TEXT" "NewProfileEditBoxText" INHERITS "StandardEditBoxTextTemplate" {
+            }
+        }
+
+        Frame "BACKDROP" "AddProfileBackdrop" INHERITS "StandardMenuSmallButtonBaseBackdrop" {
+            Width 0.16,
+            Height 0.05,
+            SetPoint LEFT, "NewProfileEditBox", RIGHT, 0.001, 0.0,
+            BackdropMirrored,
+
+		    Frame "GLUETEXTBUTTON" "AddProfileButton" INHERITS WITHCHILDREN "StandardSmallButtonTemplate" {		    
+				Width 0.079,
+				Height 0.023,
+				SetPoint TOPLEFT,"AddProfileBackdrop",TOPLEFT, 0.008, -0.013,
+				TabFocusNext "DeleteProfileButton",
+
+				ButtonText "AddProfileButtonText",
+				Frame "TEXT" "AddProfileButtonText" INHERITS "StandardButtonTextTemplate" {
+					Text "CREATE",
+				}
+		    }
+        }
+		
+		Frame "TEXT" "ProfileListText" INHERITS "StandardInfoTextTemplate" {
+	        SetPoint TOPLEFT, "NewProfileEditBox", BOTTOMLEFT, 0.0, -0.01,
+	        Width 0.275,
+	        Text "PROFILE_LIST",
+	        FontJustificationH JUSTIFYLEFT,
+	        FontJustificationV JUSTIFYBOTTOM,
+		}
+		
+		Frame "FRAME" "ProfileListContainer" {
+	    	SetPoint TOPLEFT, "ProfileListText", BOTTOMLEFT, 0.0, -0.001,
+	    	Width 0.275,
+	    	Height 0.110,
+	    }
+
+        Frame "BACKDROP" "DeleteProfileBackdrop" INHERITS "StandardMenuSmallButtonBaseBackdrop" {
+            Width 0.16,
+            Height 0.05,
+            SetPoint TOPLEFT, "ProfileListContainer", BOTTOMLEFT, 0.0, 0.002,
+            BackdropMirrored,
+
+		    Frame "GLUETEXTBUTTON" "DeleteProfileButton" INHERITS WITHCHILDREN "StandardSmallButtonTemplate" {		    
+                Width 0.079,
+                Height 0.023,
+                SetPoint TOPLEFT, "DeleteProfileBackdrop", TOPLEFT, 0.008, -0.013,
+				ControlShortcutKey "KEY_DELETE_SHORTCUT",		    
+				TabFocusNext "SelectProfileButton",
+
+				ButtonText "DeleteProfileButtonText",
+				Frame "TEXT" "DeleteProfileButtonText" INHERITS "StandardButtonTextTemplate" {
+					Text "KEY_DELETE",
+				}
+		    }
+        }
+		
+
+        Frame "BACKDROP" "SelectProfileBackdrop" INHERITS "StandardMenuSmallButtonBaseBackdrop" {
+            Width 0.16,
+            Height 0.05,
+            SetPoint TOPLEFT, "SinglePlayerMenu", TOPLEFT, 0.207, -0.370,
+            BackdropMirrored,
+
+		    Frame "GLUETEXTBUTTON" "SelectProfileButton" INHERITS WITHCHILDREN "StandardSmallButtonTemplate" {		    
+                Width 0.079,
+                Height 0.023,
+                SetPoint TOPLEFT,"SelectProfileBackdrop",TOPLEFT, 0.008, -0.013,
+
+				ControlShortcutKey "KEY_SELECT_SHORTCUT",		    
+				TabFocusNext "CampaignButton",
+
+				ButtonText "SelectProfileButtonText",
+				Frame "TEXT" "SelectProfileButtonText" INHERITS "StandardButtonTextTemplate" {
+					Text "KEY_SELECT",
+				}
+		    }
+        }
+	}
+
+	Frame "FRAME" "CancelPanel" {
+		Frame "BACKDROP" "CancelBackdrop" INHERITS "StandardMenuButtonBaseBackdrop" {
+			Width 0.24,
+			SetPoint BOTTOMRIGHT,"SinglePlayerMenu",BOTTOMRIGHT,-0.015,0.05,
+	
+			Frame "GLUETEXTBUTTON" "CancelButton" INHERITS WITHCHILDREN "StandardButtonTemplate" {
+				Width 0.168,
+				SetPoint TOPRIGHT,"CancelBackdrop",TOPRIGHT, -0.012, -0.0165,
+				ControlShortcutKey "KEY_CANCEL_SHORTCUT",
+                TabFocusNext "ProfileButton",
+				
+				ButtonText "CancelButtonText",
+				Frame "TEXT" "CancelButtonText" INHERITS "StandardButtonTextTemplate" {
+					Text "KEY_CANCEL",
+				}
+			}
+		}
+	}
+
+	
+	Frame "FRAME" "MainPanel" {
+		
+		Frame "BACKDROP" "CampaignBackdrop" INHERITS "StandardMenuButtonBaseBackdrop" {
+			SetPoint TOPRIGHT,"SinglePlayerMenu",TOPRIGHT, -0.015, -0.15,
+	
+			Frame "GLUETEXTBUTTON" "CampaignButton" INHERITS WITHCHILDREN "StandardButtonTemplate" {		    
+				SetPoint TOPRIGHT,"CampaignBackdrop",TOPRIGHT, -0.012, -0.0165,
+				ControlShortcutKey "KEY_CAMPAIGN_SHORTCUT",		    
+				TabFocusDefault,
+				TabFocusNext "LoadSavedButton",
+	
+				ButtonText "CampaignButtonText",
+				Frame "TEXT" "CampaignButtonText" INHERITS "StandardButtonTextTemplate" {
+					Text "KEY_CAMPAIGN",
+				}
+			}
+		}
+	
+		Frame "BACKDROP" "LoadSavedBackdrop" INHERITS "StandardMenuButtonBaseBackdrop" {
+			SetPoint TOPRIGHT,"CampaignBackdrop",BOTTOMRIGHT,0, 0.014,
+	
+			Frame "GLUETEXTBUTTON" "LoadSavedButton" INHERITS WITHCHILDREN "StandardButtonTemplate" {
+				SetPoint TOPRIGHT,"LoadSavedBackdrop",TOPRIGHT, -0.012, -0.0165,
+				ControlShortcutKey "KEY_LOAD_SAVED_GAME_SHORTCUT",
+				TabFocusNext "ViewReplayButton",
+	
+				ButtonText "LoadSavedButtonText",
+				Frame "TEXT" "LoadSavedButtonText" INHERITS "StandardButtonTextTemplate" {
+					Text "KEY_LOAD_SAVED_GAME",
+				}
+			}
+		}
+	
+		Frame "BACKDROP" "ViewReplayBackdrop" INHERITS "StandardMenuButtonBaseBackdrop" {
+			SetPoint TOPRIGHT,"LoadSavedBackdrop",BOTTOMRIGHT,0, 0.014,
+	
+			Frame "GLUETEXTBUTTON" "ViewReplayButton" INHERITS WITHCHILDREN "StandardButtonTemplate" {
+				SetPoint TOPRIGHT,"ViewReplayBackdrop",TOPRIGHT, -0.012, -0.0165,
+				ControlShortcutKey "KEY_VIEW_REPLAY_SHORTCUT",
+				TabFocusNext "CustomCampaignButton",
+	
+				ButtonText "ViewReplayButtonText",
+				Frame "TEXT" "ViewReplayButtonText" INHERITS "StandardButtonTextTemplate" {
+					Text "KEY_VIEW_REPLAY",
+				}
+			}
+		}
+
+		Frame "BACKDROP" "CustomCampaignBackdrop" INHERITS "StandardMenuButtonBaseBackdrop" {
+			SetPoint TOPRIGHT,"ViewReplayBackdrop",BOTTOMRIGHT,0, 0.014,
+	
+			Frame "GLUETEXTBUTTON" "CustomCampaignButton" INHERITS WITHCHILDREN "StandardButtonTemplate" {
+				SetPoint TOPRIGHT,"CustomCampaignBackdrop",TOPRIGHT, -0.012, -0.0165,
+				ControlShortcutKey "KEY_CUSTOM_CAMPAIGN_SHORTCUT",
+				TabFocusNext "SkirmishButton",
+	
+				ButtonText "CustomCampaignButtonText",
+				Frame "TEXT" "CustomCampaignButtonText" INHERITS "StandardButtonTextTemplate" {
+					Text "KEY_CUSTOM_CAMPAIGN",
+				}
+			}
+		}
+        
+		Frame "BACKDROP" "SkirmishBackdrop" INHERITS "StandardMenuButtonBaseBackdrop" {
+			SetPoint TOPRIGHT,"CustomCampaignBackdrop",BOTTOMRIGHT,0, 0.014,
+	
+			Frame "GLUETEXTBUTTON" "SkirmishButton" INHERITS WITHCHILDREN "StandardButtonTemplate" {
+				SetPoint TOPRIGHT,"SkirmishBackdrop",TOPRIGHT, -0.012, -0.0165,
+				ControlShortcutKey "KEY_CUSTOM_GAME_SHORTCUT",
+				TabFocusNext "CancelButton",
+	
+				ButtonText "SkirmishButtonText",
+				Frame "TEXT" "SkirmishButtonText" INHERITS "StandardButtonTextTemplate" {
+					Text "KEY_CUSTOM_GAME",
+				}
+			}
+		}
+		
+		Frame "TEXT" "ProfileNameText" INHERITS "StandardTitleTextTemplate" {
+			Width 0.16,
+			Height 0.04,
+			SetPoint BOTTOMLEFT, "CampaignBackdrop", TOPLEFT, 0.04, 0.024,
+		    FontColor 1.0 1.0 1.0 1.0,
+			Text "EMPTY_STRING",
+	        FontJustificationH JUSTIFYLEFT,
+	        FontJustificationV JUSTIFYBOTTOM,
+		}
+
+        Frame "BACKDROP" "ProfileButtonBackdrop" INHERITS "StandardMenuTinyButtonBaseBackdrop" {
+			SetPoint TOPRIGHT,"SinglePlayerMenu",TOPRIGHT, -0.012, -0.09,
+		
+		    Frame "GLUEBUTTON" "ProfileButton" INHERITS WITHCHILDREN "StandardIconicButtonTemplate" {	
+	            Width 0.03,
+			    Height 0.026,
+	            SetPoint TOPRIGHT,"ProfileButtonBackdrop",TOPRIGHT, -0.009, -0.014,
+                TabFocusNext "NewProfileEditBox",                
+
+				ControlBackdrop "RealmButtonBackdropTemplate",
+				Frame "BACKDROP" "RealmButtonBackdropTemplate" {
+				    BackdropBackground  "UI\Widgets\BattleNet\bnet-mainmenu-options-up.blp",
+				    BackdropCornerFlags "UL|UR|BL|BR|T|L|B|R",
+				    BackdropCornerSize  0.013,
+				    BackdropBackgroundSize  0.026,
+				    BackdropBackgroundInsets 0.004 0.004 0.004 0.004,
+				    BackdropEdgeFile  "UI\Widgets\Glues\GlueScreen-Button2-BackdropBorder.blp",
+				}
+			
+				ControlPushedBackdrop "RealmButtonPushedBackdropTemplate",
+				Frame "BACKDROP" "RealmButtonPushedBackdropTemplate" {
+				    BackdropBackground  "UI\Widgets\BattleNet\bnet-mainmenu-options-down.blp",
+				    BackdropCornerFlags "UL|UR|BL|BR|T|L|B|R",
+				    BackdropCornerSize  0.013,
+				    BackdropBackgroundSize  0.026,
+				    BackdropBackgroundInsets 0.004 0.004 0.004 0.004,
+				    BackdropEdgeFile  "UI\Widgets\Glues\GlueScreen-Button2-BackdropBorder-Down.blp",
+				}
+			
+				ControlDisabledBackdrop "RealmButtonDisabledBackdropTemplate",
+				Frame "BACKDROP" "RealmButtonDisabledBackdropTemplate" {
+				    BackdropBackground  "UI\Widgets\BattleNet\bnet-mainmenu-options-disabled.blp",
+				    BackdropCornerFlags "UL|UR|BL|BR|T|L|B|R",
+				    BackdropCornerSize  0.013,
+				    BackdropBackgroundSize  0.026,
+				    BackdropBackgroundInsets 0.004 0.004 0.004 0.004,
+				    BackdropEdgeFile  "UI\Widgets\Glues\GlueScreen-Button2-BackdropBorder-Disabled.blp",
+				}
+            }
+        }
+	}
+}

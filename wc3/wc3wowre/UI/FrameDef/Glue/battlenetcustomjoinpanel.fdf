@@ -1,0 +1,429 @@
+// -- INCLUDE FILES ---------------------------------------------
+
+IncludeFile "UI\FrameDef\Glue\BattleNetTemplates.fdf",
+
+// -- LOCAL TEMPLATES -------------------------------------------
+
+Frame "POPUPMENU" "FilterPopupMenuTemplate" INHERITS "StandardPopupMenuTemplate" {
+    Height 0.032,
+    Width 0.14,
+
+    ControlBackdrop "FilterPopupMenuBackdrop",
+    Frame "BACKDROP" "FilterPopupMenuBackdrop" {
+        BackdropTileBackground,
+        BackdropBackground  "UI\Widgets\Glues\GlueScreen-Button1-BackdropBackground.blp",
+        BackdropCornerFlags "UL|UR|BL|BR|T|L|B|R",
+        BackdropCornerSize  0.016,
+        BackdropBackgroundSize  0.032,
+        BackdropBackgroundInsets 0.004 0.004 0.004 0.004,
+        BackdropEdgeFile  "UI\Widgets\Glues\GlueScreen-Button1-BorderedBackdropBorder.blp",
+    }
+
+    ControlDisabledBackdrop "FilterPopupMenuDisabledBackdrop",
+    Frame "BACKDROP" "FilterPopupMenuDisabledBackdrop" {
+        BackdropTileBackground,
+        BackdropBackground  "UI\Widgets\Glues\GlueScreen-Button1-BackdropBackground-Disabled.blp",
+        BackdropCornerFlags "UL|UR|BL|BR|T|L|B|R",
+        BackdropCornerSize  0.016,
+        BackdropBackgroundSize  0.032,
+        BackdropBackgroundInsets 0.004 0.004 0.004 0.004,
+        BackdropEdgeFile  "UI\Widgets\Glues\GlueScreen-Button1-BorderedBackdropBorder-Disabled.blp",
+    }
+
+    PopupTitleFrame "FilterPopupMenuTitle",
+    Frame "GLUETEXTBUTTON" "FilterPopupMenuTitle" INHERITS WITHCHILDREN "StandardPopupMenuTitleTemplate" {
+    }
+
+    PopupArrowFrame "FilterPopupMenuArrow",
+    Frame "BUTTON" "FilterPopupMenuArrow" INHERITS WITHCHILDREN "StandardPopupMenuArrowTemplate" { 
+    }
+}
+
+// -- FRAMES ----------------------------------------------------
+
+Frame "FRAME" "BattleNetCustomJoinPanel" {
+    SetAllPoints,
+    TabFocusPush,
+
+    // --- title
+    Frame "TEXT" "CustomJoinTitleLabel" INHERITS "BattleNetTitleTextTemplate" {
+        SetPoint TOPLEFT, "BattleNetCustomJoinPanel", TOPLEFT, 0.02625, -0.039,
+        Text "BNET_CUSTOM_JOIN_TITLE",
+		Width 0.24,
+    }
+
+    // --- join game controls
+    Frame "TEXT" "JoinGameListLabel" INHERITS "BattleNetLabelTextTemplate" {
+        SetPoint TOPLEFT, "CustomJoinTitleLabel", BOTTOMLEFT, 0.0, -0.01875,
+        Text "COLON_AVAILABLE_GAMES",
+		Width 0.24,
+    }
+
+    Frame "FRAME" "JoinGameListContainer" {
+        SetPoint TOPLEFT, "JoinGameListLabel", BOTTOMLEFT, 0.0, -0.001,
+        Height 0.28725,
+        Width 0.375,
+    }
+
+    Frame "TEXT" "JoinGameNameLabel" INHERITS "BattleNetLabelTextTemplate" {
+        SetPoint TOPLEFT, "JoinGameListContainer", BOTTOMLEFT, 0.0, -0.006875,
+        Text "COLON_GAME_NAME",
+		Width 0.24,
+    }
+
+    Frame "EDITBOX" "JoinGameNameEditBox" INHERITS WITHCHILDREN "BattleNetEditBoxTemplate" {
+        Width 0.213625,
+        SetPoint TOPLEFT, "JoinGameNameLabel", BOTTOMLEFT, 0.0, -0.001,
+		TabFocusDefault,
+        TabFocusNext "JoinGameButton",
+
+        EditTextFrame "JoinGameNameEditBoxText",
+        Frame "TEXT" "JoinGameNameEditBoxText" INHERITS "BattleNetEditBoxTextTemplate" {
+        Width 0.24,
+		}
+    }
+
+    Frame "BACKDROP" "JoinGameBackdrop" INHERITS "BattleNetMenuSmallButtonBaseBackdrop" {
+        BackdropMirrored,
+        SetPoint LEFT,"JoinGameNameEditBox",RIGHT, 0.0, 0.0,
+
+	    Frame "GLUETEXTBUTTON" "JoinGameButton" INHERITS WITHCHILDREN "BattleNetButtonTemplate" {
+            Width 0.128,
+            SetPoint TOPLEFT,"JoinGameBackdrop",TOPLEFT, 0.012, -0.0165,
+		    ControlShortcutKey "KEY_JOIN_GAME_SHORTCUT",
+            TabFocusNext "LoadGameButton",
+
+            ButtonText "JoinGameButtonText",
+		    Frame "TEXT" "JoinGameButtonText" INHERITS "BattleNetButtonTextTemplate" {
+			    Text "KEY_JOIN_GAME",
+		    }
+	    }
+    }
+
+    Frame "BACKDROP" "GameFilterBackdrop" INHERITS "BattleNetMenuSmallButtonBaseBackdrop" {
+        SetPoint BOTTOMRIGHT,"JoinGameListContainer",TOPRIGHT, 0.0, -0.0075,
+
+	    Frame "GLUETEXTBUTTON" "GameFilterButton" INHERITS WITHCHILDREN "BattleNetButtonTemplate" {
+            Height 0.03,
+            Width 0.094875,
+            SetPoint TOPRIGHT,"GameFilterBackdrop",TOPRIGHT, -0.012, -0.0165,
+		    ControlShortcutKey "KEY_FILTER_SHORTCUT",
+            TabFocusNext "JoinGameNameEditBox",
+
+            ButtonText "GameFilterButtonText",
+		    Frame "TEXT" "GameFilterButtonText" INHERITS "BattleNetButtonTextTemplate" {
+			    Text "KEY_FILTER",
+		    }
+	    }
+
+        Frame "GLUEBUTTON" "GameRefreshButton" {
+            Height 0.03,
+            Width 0.03,
+            ControlStyle "AUTOTRACK|HIGHLIGHTONMOUSEOVER",
+            SetPoint RIGHT, "GameFilterButton", LEFT, 0.0, 0.0,
+
+		    ControlBackdrop "GameRefreshButtonBackdropTemplate",
+		    Frame "BACKDROP" "GameRefreshButtonBackdropTemplate" {
+		        BackdropBackground  "UI\Widgets\BattleNet\bnet-refresh-up.blp",
+		        BackdropCornerFlags "UL|UR|BL|BR|T|L|B|R",
+		        BackdropCornerSize  0.014,
+		        BackdropBackgroundSize  0.026,
+		        BackdropBackgroundInsets 0.004 0.004 0.004 0.004,
+		        BackdropEdgeFile  "UI\Widgets\Glues\GlueScreen-Button2-BackdropBorder.blp",
+                BackdropBlendAll,
+		    }
+
+		    ControlPushedBackdrop "GameRefreshButtonPushedBackdropTemplate",
+		    Frame "BACKDROP" "GameRefreshButtonPushedBackdropTemplate" {
+		        BackdropBackground  "UI\Widgets\BattleNet\bnet-refresh-down.blp",
+		        BackdropCornerFlags "UL|UR|BL|BR|T|L|B|R",
+		        BackdropCornerSize  0.014,
+		        BackdropBackgroundSize  0.026,
+		        BackdropBackgroundInsets 0.004 0.004 0.004 0.004,
+		        BackdropEdgeFile  "UI\Widgets\Glues\GlueScreen-Button2-BackdropBorder-Down.blp",
+                BackdropBlendAll,
+		    }
+
+		    ControlDisabledBackdrop "GameRefreshButtonDisabledBackdropTemplate",
+		    Frame "BACKDROP" "GameRefreshButtonDisabledBackdropTemplate" {
+		        BackdropBackground  "UI\Widgets\BattleNet\bnet-refresh-disabled.blp",
+		        BackdropCornerFlags "UL|UR|BL|BR|T|L|B|R",
+		        BackdropCornerSize  0.014,
+		        BackdropBackgroundSize  0.026,
+		        BackdropBackgroundInsets 0.004 0.004 0.004 0.004,
+		        BackdropEdgeFile  "UI\Widgets\Glues\GlueScreen-Button2-BackdropBorder-Disabled.blp",
+                BackdropBlendAll,
+		    }
+
+            ControlMouseOverHighlight "GameRefreshButtonMouseOverHighlight",
+            Frame "HIGHLIGHT" "GameRefreshButtonMouseOverHighlight" INHERITS "BattleNetButtonMouseOverHighlightTemplate" {
+            }
+        }
+    }
+
+    // --- create panel
+    Frame "TEXT" "CustomCreateTitle" INHERITS "BattleNetTitleTextTemplate" {
+        SetPoint TOPLEFT, "BattleNetCustomJoinPanel", TOPLEFT, 0.02625, -0.4875,
+        Text "BNET_CUSTOM_JOIN_CREATE_TITLE",
+    }
+
+    Frame "TEXT" "CustomCreateInfo" INHERITS "BattleNetInfoTextTemplate" {
+        SetPoint TOPLEFT, "CustomCreateTitle", BOTTOMLEFT, 0.0, -0.001875,
+        Text "BNET_CUSTOM_JOIN_CREATE_INFO",
+    }
+
+    Frame "BACKDROP" "CreateGameBackdrop" INHERITS "BattleNetMenuSmallButtonBaseBackdrop" {
+        BackdropMirrored,
+        SetPoint BOTTOMLEFT,"BattleNetCustomJoinPanel",BOTTOMLEFT, 0.24, 0.013,
+
+	    Frame "GLUETEXTBUTTON" "CreateGameButton" INHERITS WITHCHILDREN "BattleNetButtonTemplate" {
+            Width 0.128,
+            SetPoint TOPLEFT,"CreateGameBackdrop",TOPLEFT, 0.012, -0.0165,
+		    ControlShortcutKey "KEY_CREATE_GAME_SHORTCUT",
+            TabFocusNext "CancelButton",
+
+            ButtonText "CreateGameButtonText",
+		    Frame "TEXT" "CreateGameButtonText" INHERITS "BattleNetButtonTextTemplate" {
+			    Text "KEY_CREATE_GAME",
+		    }
+	    }
+    }
+
+    Frame "BACKDROP" "LoadGameBackdrop" INHERITS "BattleNetMenuSmallButtonBaseBackdrop" {
+        BackdropMirrored,
+        SetPoint RIGHT,"CreateGameButton",LEFT, 0.085625, 0.0,
+
+	    Frame "GLUETEXTBUTTON" "LoadGameButton" INHERITS WITHCHILDREN "BattleNetButtonTemplate" {
+            Width 0.128,
+            SetPoint TOPLEFT,"LoadGameBackdrop",TOPLEFT, 0.012, -0.0165,
+		    ControlShortcutKey "KEY_LOAD_GAME_SHORTCUT",
+            TabFocusNext "CreateGameButton",
+
+            ButtonText "LoadGameButtonText",
+		    Frame "TEXT" "LoadGameButtonText" INHERITS "BattleNetButtonTextTemplate" {
+			    Text "KEY_LOAD_GAME",
+		    }
+	    }
+    }
+
+    // --- map info controls
+    Frame "FRAME" "MapInfoPaneContainer" {
+        Width 0.271875,
+        Height 0.223125,
+        SetPoint TOP, "BattleNetCustomJoinPanel", TOPRIGHT, -0.180625, -0.0375,
+    }
+
+    Frame "TEXT" "GameCreatorLabel" INHERITS "BattleNetLabelTextTemplate" {
+        Width 0.271875,
+        SetPoint TOP, "MapInfoPaneContainer", BOTTOM, 0.0, -0.005,
+
+        Text "COLON_GAME_CREATOR",
+    }
+
+    Frame "TEXT" "GameCreatorValue" INHERITS "BattleNetLabelTextTemplate" {
+        Width 0.271875,
+        SetPoint TOPLEFT, "GameCreatorLabel", TOPLEFT, 0.0, 0.0,
+
+        FontColor 1.0 1.0 1.0 1.0,
+        FontJustificationH JUSTIFYRIGHT,
+    }
+
+    Frame "TEXT" "GameSpeedLabel" INHERITS "BattleNetLabelTextTemplate" {
+        Width 0.271875,
+        SetPoint TOP, "GameCreatorLabel", BOTTOM, 0.0, -0.002,
+
+        Text "COLON_GAME_SPEED",
+    }
+
+    Frame "TEXT" "GameSpeedValue" INHERITS "BattleNetLabelTextTemplate" {
+        Width 0.271875,
+        SetPoint TOPLEFT, "GameSpeedLabel", TOPLEFT, 0.0, 0.0,
+
+        FontColor 1.0 1.0 1.0 1.0,
+        FontJustificationH JUSTIFYRIGHT,
+    }
+
+    Frame "TEXT" "GameCreationTimeLabel" INHERITS "BattleNetLabelTextTemplate" {
+        Width 0.271875,
+        SetPoint TOP, "GameSpeedLabel", BOTTOM, 0.0, -0.002,
+
+        Text "COLON_GAME_CREATION_TIME",
+    }
+
+    Frame "TEXT" "GameCreationTimeValue" INHERITS "BattleNetLabelTextTemplate" {
+        Width 0.271875,
+        SetPoint TOPLEFT, "GameCreationTimeLabel", TOPLEFT, 0.0, 0.0,
+
+        FontColor 1.0 1.0 1.0 1.0,
+        FontJustificationH JUSTIFYRIGHT,
+    }
+
+    Frame "FRAME" "AdvancedOptionsContainer" {
+        Height 0.125,
+        Width 0.271875,
+        SetPoint TOP, "GameCreationTimeLabel", BOTTOM, 0.0, -0.008,
+    }
+
+    // -- bottom button controls
+    Frame "BACKDROP" "CancelBackdrop" INHERITS "BattleNetMenuButtonBaseBackdrop" {
+        Width 0.24,
+        SetPoint TOPRIGHT,"BattleNetCustomJoinPanel",BOTTOMRIGHT, -0.014375, 0.099375,
+
+	    Frame "GLUETEXTBUTTON" "CancelButton" INHERITS WITHCHILDREN "BattleNetButtonTemplate" {
+            Width 0.168,
+            SetPoint TOPRIGHT,"CancelBackdrop",TOPRIGHT, -0.012, -0.0165,
+		    ControlShortcutKey "KEY_BACK_SHORTCUT",
+            TabFocusNext "GameFilterButton",
+
+            ButtonText "CancelButtonText",
+		    Frame "TEXT" "CancelButtonText" INHERITS "BattleNetButtonTextTemplate" {
+			    Text "KEY_BACK",
+		    }
+	    }
+    }
+}
+
+// -- BattleNetCustomFilterDialog --------------------------------------------------------
+Frame "DIALOG" "BattleNetCustomFilterDialog" {
+    Height 0.325,
+    Width 0.5,
+
+    DialogBackdrop "CustomFilterDialogBackdrop",
+    Frame "BACKDROP" "CustomFilterDialogBackdrop" {
+        BackdropTileBackground,
+        BackdropBackground  "UI\Widgets\BattleNet\bnet-dialoguebox-background.blp",
+        BackdropCornerFlags "UL|UR|BL|BR|T|L|B|R",
+        BackdropCornerSize  0.064,
+        BackdropBackgroundSize  0.128,
+        BackdropBackgroundInsets 0.01 0.01 0.01 0.01,
+        BackdropEdgeFile  "UI\Widgets\BattleNet\bnet-dialoguebox-border.blp",
+	    BackdropBlendAll,
+    }
+
+    Frame "TEXT" "CustomFilterTitleText" INHERITS "BattleNetTitleTextTemplate" {
+        SetPoint TOPLEFT, "BattleNetCustomFilterDialog", TOPLEFT, 0.02625, -0.024375,
+        Text "CUSTOM_FILTER_TITLE",
+    }
+
+    Frame "TEXT" "CustomFilterInfoText" INHERITS "BattleNetInfoTextTemplate" {
+        Width 0.448125,
+        SetPoint TOPLEFT, "CustomFilterTitleText", BOTTOMLEFT, 0.0, -0.001875,
+        FontJustificationH JUSTIFYLEFT,
+        Text "CUSTOM_FILTER_INFO",
+    }
+
+    Frame "TEXT" "CustomFilterMapCreatorLabel" INHERITS "BattleNetLabelTextTemplate" {
+        SetPoint TOPLEFT, "CustomFilterInfoText", BOTTOMLEFT, 0.075, -0.03,
+        Text "COLON_MAP_CREATOR",
+		Width 0.08,
+    }
+
+    Frame "TEXT" "CustomFilterMapTypeLabel" INHERITS "BattleNetLabelTextTemplate" {
+        SetPoint TOPLEFT, "CustomFilterMapCreatorLabel", BOTTOMLEFT, 0.0, -0.040789,
+        Text "COLON_MAP_TYPE",
+		Width 0.08,
+    }
+
+    Frame "TEXT" "CustomFilterMapSizeLabel" INHERITS "BattleNetLabelTextTemplate" {
+        SetPoint LEFT, "CustomFilterMapCreatorLabel", RIGHT, 0.075, 0.0,
+        Text "COLON_MAP_SIZE",
+		Width 0.08,
+    }
+
+    Frame "TEXT" "CustomFilterObserverLabel" INHERITS "BattleNetLabelTextTemplate" {
+        SetPoint TOPLEFT, "CustomFilterMapSizeLabel", BOTTOMLEFT, 0.0, -0.040789,
+        Text "COLON_OBSERVERS",
+		Width 0.08,
+    }
+    
+    Frame "TEXT" "CustomFilterRegionLabel" INHERITS "BattleNetLabelTextTemplate" {
+        SetPoint TOPLEFT, "CustomFilterMapTypeLabel", BOTTOMLEFT, 0.12085, -0.040789,
+        Text "COLON_REGION",
+		Width 0.05,
+    }
+
+    Frame "POPUPMENU" "MapCreatorMenu" INHERITS WITHCHILDREN "FilterPopupMenuTemplate" {
+        SetPoint TOPLEFT, "CustomFilterMapCreatorLabel", BOTTOMLEFT, 0.0, 0.0,
+
+        PopupMenuFrame "MapCreatorPopupMenuMenu",
+        Frame "MENU" "MapCreatorPopupMenuMenu" INHERITS WITHCHILDREN "StandardPopupMenuMenuTemplate" {
+            MenuItem "ANY_CREATOR", -2,
+            MenuItem "BLIZZARD",    -2,
+            MenuItem "USER",        -2,
+        }
+    }
+
+    Frame "POPUPMENU" "MapTypeMenu" INHERITS WITHCHILDREN "FilterPopupMenuTemplate" {
+        SetPoint TOPLEFT, "CustomFilterMapTypeLabel", BOTTOMLEFT, 0.0, 0.0,
+
+        PopupMenuFrame "MapTypePopupMenuMenu",
+        Frame "MENU" "MapTypePopupMenuMenu" INHERITS WITHCHILDREN "StandardPopupMenuMenuTemplate" {
+            MenuItem "ANY_TYPE",    -2,
+            MenuItem "MELEE",       -2,
+            MenuItem "NON_MELEE",   -2,
+        }
+    }
+
+    Frame "POPUPMENU" "MapSizeMenu" INHERITS WITHCHILDREN "FilterPopupMenuTemplate" {
+        SetPoint TOPLEFT, "CustomFilterMapSizeLabel", BOTTOMLEFT, 0.0, 0.0,
+
+        PopupMenuFrame "MapSizePopupMenuMenu",
+        Frame "MENU" "MapSizePopupMenuMenu" INHERITS WITHCHILDREN "StandardPopupMenuMenuTemplate" {
+            MenuItem "ANY_SIZE",    -2,
+            MenuItem "LARGE",       -2,
+            MenuItem "MEDIUM",      -2,
+            MenuItem "SMALL",       -2,
+        }
+    }
+
+    Frame "POPUPMENU" "ObserverMenu" INHERITS WITHCHILDREN "FilterPopupMenuTemplate" {
+        SetPoint TOPLEFT, "CustomFilterObserverLabel", BOTTOMLEFT, 0.0, 0.0,
+
+        PopupMenuFrame "ObserverPopupMenuMenu",
+        Frame "MENU" "ObserverPopupMenuMenu" INHERITS WITHCHILDREN "StandardPopupMenuMenuTemplate" {
+            MenuItem "ANY_MODE",         -2,
+            MenuItem "ALLOWED",          -2,
+            MenuItem "ALLOWED_ON_DEATH", -2,
+            MenuItem "DISALLOWED",       -2,
+        }
+    }
+
+    Frame "POPUPMENU" "RegionMenu" INHERITS WITHCHILDREN "FilterPopupMenuTemplate" {
+        SetPoint TOPLEFT, "CustomFilterRegionLabel", BOTTOMLEFT, -0.033, 0.0,
+
+        PopupMenuFrame "RegionPopupMenuMenu",
+        Frame "MENU" "RegionPopupMenuMenu" INHERITS WITHCHILDREN "StandardPopupMenuMenuTemplate" {
+            MenuItem "ALL",    -2,
+        }
+    }
+
+    Frame "BACKDROP" "CustomFilterCancelButtonBackdrop" INHERITS "BattleNetMenuSingleButtonBaseBackdrop" {
+        SetPoint BOTTOMRIGHT, "BattleNetCustomFilterDialog", BOTTOMRIGHT, -0.022, 0.015,
+
+        Frame "GLUETEXTBUTTON" "CustomFilterCancelButton" INHERITS WITHCHILDREN "BattleNetButtonTemplate" {
+            Width 0.159,
+            SetPoint TOPRIGHT,"CustomFilterCancelButtonBackdrop",TOPRIGHT, -0.032, -0.015625,
+            ControlShortcutKey "KEY_CANCEL_SHORTCUT",
+
+            ButtonText "CustomFilterCancelButtonText",
+            Frame "TEXT" "CustomFilterCancelButtonText" INHERITS "BattleNetButtonTextTemplate" {
+                Text "KEY_CANCEL",
+            }
+        }
+    }
+
+    Frame "BACKDROP" "CustomFilterOkButtonBackdrop" INHERITS "BattleNetMenuSingleButtonBaseBackdrop" {
+        SetPoint RIGHT, "CustomFilterCancelButtonBackdrop", LEFT, 0.025, 0.0,
+
+	    Frame "GLUETEXTBUTTON" "CustomFilterOkButton" INHERITS WITHCHILDREN "BattleNetButtonTemplate" {
+            Width 0.159,
+		    SetPoint TOPRIGHT,"CustomFilterOkButtonBackdrop",TOPRIGHT, -0.032, -0.015625,
+		    ControlShortcutKey "KEY_OK_SHORTCUT",
+
+            ButtonText "CustomFilterOkButtonText",
+		    Frame "TEXT" "CustomFilterOkButtonText" INHERITS "BattleNetButtonTextTemplate" {
+			    Text "KEY_OK",
+		    }
+	    }
+    }
+}

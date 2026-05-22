@@ -1,0 +1,107 @@
+// -- INCLUDE FILES ---------------------------------------------
+
+IncludeFile "UI\FrameDef\Glue\BattleNetTemplates.fdf",
+
+// -- LOCAL TEMPLATES -------------------------------------------
+
+// -- FRAMES ----------------------------------------------------
+
+Frame "FRAME" "BattleNetCustomLoadPanel" {
+    SetAllPoints,
+    TabFocusPush,
+
+    //*************************
+    //*
+    //* Game Settings Panel
+    //*
+    //*******
+
+    Frame "FRAME" "GameSettingsPanel" {
+
+        Frame "TEXT" "BattleNetCustomLoadTitle" INHERITS "BattleNetTitleTextTemplate" {
+            SetPoint TOPLEFT, "BattleNetCustomLoadPanel", TOPLEFT, 0.02625, -0.039,
+            Text "LOAD_MULTIPLAYER_SAVED_GAME",
+        }
+	
+        Frame "TEXT" "CreateGameNameLabel" INHERITS "BattleNetLabelTextTemplate" {
+            SetPoint TOPLEFT, "BattleNetCustomLoadTitle", BOTTOMLEFT, 0.0, -0.01625,
+            Text "COLON_GAME_NAME",
+        }
+
+        Frame "EDITBOX" "CreateGameNameEditBox" INHERITS WITHCHILDREN "BattleNetEditBoxTemplate" {
+            Width 0.2375,
+            SetPoint TOPLEFT, "CreateGameNameLabel", BOTTOMLEFT, 0.0, -0.001,
+		    TabFocusDefault,
+		    TabFocusNext "OKButton",
+
+            EditTextFrame "CreateGameNameEditBoxText",
+            Frame "TEXT" "CreateGameNameEditBoxText" INHERITS "BattleNetEditBoxTextTemplate" {
+            }
+        }
+
+		Frame "FRAME" "FileListFrame" {
+			SetPoint TOPLEFT, "CreateGameNameLabel", BOTTOMLEFT, 0.0, -0.04,
+			Width 0.37,
+			Height 0.23,
+		}
+
+        Frame "TEXT" "LoadInfoText" INHERITS "BattleNetValueTextTemplate" {
+            SetPoint TOPLEFT, "FileListFrame", BOTTOMLEFT, 0.0, -0.004,
+            Width 0.37,
+            Text "LOAD_BATTLENET_INFO",
+        }
+    }
+
+    //*************************
+    //*
+    //* Map Info Pane
+    //*
+    //*******
+
+    Frame "FRAME" "MapInfoPaneContainer" {
+        Width 0.271875,
+        Height 0.223125,
+        SetPoint TOP, "BattleNetCustomLoadPanel", TOPRIGHT, -0.180625, -0.0375,
+    }
+
+    //*************************
+    //*
+    //* Bottom Buttons
+    //*
+    //*******
+
+    Frame "BACKDROP" "OKBackdrop" INHERITS "BattleNetMenuButtonBaseBackdrop" {
+        Width 0.24,
+        SetPoint TOPRIGHT,"BattleNetCustomLoadPanel",BOTTOMRIGHT, -0.014375, 0.124375,
+
+	    Frame "GLUETEXTBUTTON" "OKButton" INHERITS WITHCHILDREN "BattleNetButtonTemplate" {
+            Width 0.168,
+		    SetPoint TOPRIGHT,"OKBackdrop",TOPRIGHT, -0.012, -0.0165,
+		    ControlShortcutKey "KEY_LOAD_GAME_SHORTCUT",
+            TabFocusNext "CancelButton",
+
+            ButtonText "OKButtonText",
+		    Frame "TEXT" "OKButtonText" INHERITS "BattleNetButtonTextTemplate" {
+			    Text "KEY_LOAD_GAME",
+		    }
+	    }
+    }
+
+    Frame "BACKDROP" "CancelBackdrop" INHERITS "BattleNetMenuButtonBaseBackdrop" {
+        Width 0.24,
+        SetPoint TOPRIGHT,"OKBackdrop",BOTTOMRIGHT, 0.0, 0.015,
+
+	    Frame "GLUETEXTBUTTON" "CancelButton" INHERITS WITHCHILDREN "BattleNetButtonTemplate" {
+            Width 0.168,
+		    SetPoint TOPRIGHT,"CancelBackdrop",TOPRIGHT, -0.012, -0.0165,
+		    ControlShortcutKey "KEY_BACK_SHORTCUT",
+            TabFocusNext "CreateGameNameEditBox",
+
+            ButtonText "CancelButtonText",
+		    Frame "TEXT" "CancelButtonText" INHERITS "BattleNetButtonTextTemplate" {
+			    Text "KEY_BACK",
+		    }
+	    }
+    }
+}
+

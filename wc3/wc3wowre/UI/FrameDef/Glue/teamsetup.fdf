@@ -1,0 +1,23 @@
+// -- INCLUDE FILES ---------------------------------------------
+
+IncludeFile "UI\FrameDef\Glue\StandardTemplates.fdf",
+
+// -- LOCAL TEMPLATES -------------------------------------------
+
+// -- FRAMES ----------------------------------------------------
+
+Frame "CONTROL" "TeamSetup" {
+
+/*
+    Frame "HIGHLIGHT" "Test" {
+        SetAllPoints,
+        HighlightType "SHADE",
+        HighlightColor 1.0 0.0 0.0 0.2,
+    }
+*/
+
+    Frame "SCROLLBAR" "TeamSetupScrollBar" INHERITS WITHCHILDREN "StandardScrollBarTemplate" {
+    	Height 0.38,
+        SetPoint TOPRIGHT, "TeamSetup", TOPRIGHT, 0.0, 0.0,
+    }
+}

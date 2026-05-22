@@ -1,0 +1,163 @@
+
+IncludeFile "UI\FrameDef\UI\EscMenuTemplates.fdf",
+
+Frame "SIMPLEFRAME" "SimpleReplayPanelV2" {
+    SetAllPoints,
+    DecorateFileNames,
+
+	Layer "BACKGROUND" {
+		Texture "SimpleReplayPanelBackdrop" {
+			File "ReplayPanelBackdropV2",
+			Width 0.17,
+			Height 0.13,
+			TexCoord 0.3798828125, 1.0, 0.0, 0.953125,
+			Anchor TOPLEFT, -0.01, 0.017,
+		}
+	}
+
+	String "ReplayVisionLabel" INHERITS "ReplayPanelStringTemplate" {
+		Anchor TOPLEFT, 0.005, 0.0055,
+		FontJustificationH JUSTIFYLEFT,
+		Text "REPLAY_VISION",
+	}
+
+    Frame "POPUPMENU" "ReplayVisionMenu" {
+        Width 0.15,
+        Height 0.024,
+        PopupButtonInset 0.01,
+        SetPoint TOPLEFT, "ReplayVisionLabel", BOTTOMLEFT, -0.005, 0,
+
+        ControlBackdrop "ReplayVisionMenuBackdrop",
+        Frame "BACKDROP" "ReplayVisionMenuBackdrop" INHERITS "EscMenuButtonBackdropTemplate" {
+			BackdropCornerSize  0.0125,
+			BackdropBackgroundSize  0.128,
+			BackdropBackgroundInsets 0.004 0.004 0.004 0.004,
+        }
+
+        ControlDisabledBackdrop "ReplayVisionMenuDisabledBackdrop",
+        Frame "BACKDROP" "ReplayVisionMenuDisabledBackdrop" INHERITS "EscMenuButtonDisabledBackdropTemplate" {
+			BackdropCornerSize  0.0125,
+			BackdropBackgroundSize  0.128,
+			BackdropBackgroundInsets 0.004 0.004 0.004 0.004,
+        }
+
+        PopupTitleFrame "ReplayVisionMenuTitle",
+        Frame "GLUETEXTBUTTON" "ReplayVisionMenuTitle" INHERITS WITHCHILDREN "EscMenuPopupMenuTitleTemplate" {
+        }
+
+        PopupArrowFrame "ReplayVisionMenuArrow",
+        Frame "BUTTON" "ReplayVisionMenuArrow" INHERITS WITHCHILDREN "EscMenuPopupMenuArrowTemplate" { 
+        }
+
+        PopupMenuFrame "ReplayVisionPopupMenu",
+        Frame "MENU" "ReplayVisionPopupMenu" INHERITS "EscMenuPopupMenuMenuTemplate" {
+			DecorateFileNames,
+			FrameFont "EscMenuTextFont",0.011,"",
+			MenuItemHeight 0.012,
+			MenuBorder 0.01,
+
+			ControlBackdrop "ReplayVisionPopupMenuMenuBackdropTemplate",
+			Frame "BACKDROP" "ReplayVisionPopupMenuMenuBackdropTemplate" INHERITS "EscMenuButtonBackdropTemplate" {
+				DecorateFileNames,
+				BackdropCornerSize  0.0125,
+				BackdropBackgroundSize  0.128,
+				BackdropBackgroundInsets 0.004 0.004 0.004 0.004,
+				BackdropBackground "EscMenuEditBoxBackground",
+			}
+        }
+    }
+
+	Frame "SIMPLESTATUSBAR" "ReplayStatusBar" {
+		DecorateFileNames,
+		SetPoint TOPLEFT,"ReplayVisionMenu",BOTTOMLEFT, 0.003, -0.0125,
+		Width 0.14,
+		Height 0.012,
+		BarTexture "ReplayTimelineFill",
+
+		Frame "SIMPLEFRAME" "ReplayStatusBarBorder" {
+			SetAllPoints,
+			DecorateFileNames,
+
+			Layer "ARTWORK" {
+				Texture {
+					File "ReplayTimelineBorder",
+					TexCoord 0.24, 0.76, 0.18, 0.9,
+				}
+
+				String "ReplayElapsedTimeLabel" INHERITS "ReplayPanelStringTemplate" {
+					SetPoint TOPLEFT, "ReplayVisionLabel", BOTTOMLEFT, -0.001, -0.024,
+					FontJustificationH JUSTIFYLEFT,
+					Text "ELAPSED_TIME",
+					Font "MasterFont",0.007,
+				}
+
+				String "ReplayElapsedTime" INHERITS "ReplayPanelStringTemplate" {
+					SetPoint LEFT, "ReplayElapsedTimeLabel", RIGHT, 0.002, 0,
+					FontColor 1.0 1.0 1.0 1.0,
+					FontJustificationH JUSTIFYLEFT,
+					Font "MasterFont",0.007,
+				}
+
+				String "ReplaySpeedAtLabel" INHERITS "ReplayPanelStringTemplate" {
+					SetPoint LEFT, "ReplayElapsedTime", RIGHT, 0.002, 0,
+					FontJustificationH JUSTIFYLEFT,
+					Text "REPLAY_SPEED_AT",
+					Font "MasterFont",0.007,
+				}
+
+				String "ReplaySpeedMultiplier" INHERITS "ReplayPanelStringTemplate" {
+					SetPoint LEFT, "ReplaySpeedAtLabel", RIGHT, 0.0, 0,
+					FontColor 1.0 1.0 1.0 1.0,
+					FontJustificationH JUSTIFYLEFT,
+					Font "MasterFont",0.007,
+				}
+
+				String "ReplaySpeedLabel" INHERITS "ReplayPanelStringTemplate" {
+					SetPoint LEFT, "ReplaySpeedMultiplier", RIGHT, 0.002, 0,
+					FontColor 1.0 1.0 1.0 1.0,
+					FontJustificationH JUSTIFYLEFT,
+					Text "SPEED",
+					Font "MasterFont",0.007,
+				}
+			}
+		}
+	}
+
+	Frame "SIMPLECHECKBOX" "ReplayFogCheckBox" {
+		DecorateFileNames,
+		SetPoint BOTTOMLEFT,"SimpleReplayPanelV2",BOTTOMLEFT,0,0.055,
+		Width 0.02,
+		Height 0.02,
+		
+		NormalTexture "ReplayCheckBoxNormal",
+		PushedTexture "ReplayCheckBoxPressed",
+		CheckedTexture "ReplayCheckBoxCheck",
+	}
+
+	Layer "ARTWORK" {
+		String "ReplayFogString" INHERITS "ReplayPanelStringTemplate" {
+			Anchor BOTTOMLEFT,0.018,0.06,
+			FontJustificationH JUSTIFYLEFT,
+			Text "FOG_OF_WAR",
+		}
+	}
+
+	Frame "SIMPLECHECKBOX" "ReplayCameraCheckBox" {
+		DecorateFileNames,
+		SetPoint BOTTOMLEFT,"SimpleReplayPanelV2",BOTTOMLEFT,0.076,0.055,
+		Width 0.02,
+		Height 0.02,
+		
+		NormalTexture "ReplayCheckBoxNormal",
+		PushedTexture "ReplayCheckBoxPressed",
+		CheckedTexture "ReplayCheckBoxCheck",
+	}
+
+	Layer "ARTWORK" {
+		String "ReplayCameraString" INHERITS "ReplayPanelStringTemplate" {
+			Anchor BOTTOMLEFT,0.095,0.06,
+			FontJustificationH JUSTIFYLEFT,
+			Text "REPLAY_CAMERA",
+		}
+	}
+}

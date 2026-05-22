@@ -1,0 +1,60 @@
+Frame "TEXT" "TextTemplate" {
+    DecorateFileNames,
+    FrameFont "EscMenuTextFont", 0.01, "",
+    FontJustificationH JUSTIFYLEFT,
+    FontJustificationV JUSTIFYMIDDLE,    
+    FontFlags "FIXEDSIZE",
+    FontColor 1.0 1.0 1.0 1.0,
+    FontHighlightColor 1.0 1.0 1.0 1.0,
+    FontDisabledColor 0.2 0.2 0.2 1.0,
+	FontShadowColor 0.0 0.0 0.0 0.9,	
+    FontShadowOffset 0.002 -0.002,	
+}
+
+Frame "SIMPLEFRAME" "PlayerStatisticsPanelFrame" {
+    Width 0.35,
+    Height 0.204,
+    DecorateFileNames,
+
+    Frame "BACKDROP" "StatisticsPanelBackground" {
+
+        Width 0.37,
+        Height 0.204,
+
+        SetPoint TOPLEFT, "PlayerStatisticsPanelFrame", TOPLEFT, 0.015, 0.0,
+
+        DecorateFileNames,
+        BackdropBackground  "ObserverStatisticsBackground",
+        BackdropBackgroundSize 0.1,
+        BackdropBlendAll,
+		
+		LayerStyle "SCROLLCHILD",
+    }
+
+    Frame "SIMPLEFRAME" "PlayerStatisticsPanelFrameBorder" {
+        DecorateFileNames,
+        UseActiveContext,
+
+        Layer "ARTWORK_OVERLAY" {
+            Texture "StatisticsUpperFrame" {
+                SetPoint TOPLEFT, "PlayerStatisticsPanelFrame", TOPLEFT, -0.01, 0.0045,
+                Width 0.365,
+                Height 0.02,
+                File "ObserverStatisticsFrameTop",
+                TexCoord 0.3876953125, 1, 0, 0.6484375,
+            }
+
+            Texture "StatisticsLowerFrame" {
+                SetPoint TOPLEFT, "PlayerStatisticsPanelFrame", TOPLEFT, -0.013, -0.4,
+                Width 0.365,
+                Height 0.02,
+                File "ObserverStatisticsFrameBottom",
+                TexCoord 0.3876953125, 1, 0.09375, 0.640625,
+            }
+        }
+    }
+}
+
+
+
+

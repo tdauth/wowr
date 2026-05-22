@@ -1,0 +1,33 @@
+String "ProductionPanelPlayerNameTextTemplate" {
+    FontJustificationH JUSTIFYLEFT,
+    FontJustificationV JUSTIFYMIDDLE,
+    FontColor 1.0 0.96 0.8 1.0,
+    FontShadowColor 0.0 0.0 0.0 0.0,
+    FontShadowOffset 0.002 -0.002,
+    Font "EscMenuTextFont", 0.0066,
+}
+
+Frame "SIMPLEFRAME" "ProductionPanelRowFrame" {
+    Width 0.5,
+    Height 0.029,
+    DecorateFileNames,
+
+    Layer "ARTWORK_OVERLAY" {
+        Texture "ProductionRowPlayerColourIcon" {
+            Width 0.005,
+            Height 0.03,
+            SetPoint TOPLEFT, "ProductionPanelRowFrame", TOPLEFT, 0.0, -0.02,
+            File "ObserverProductionPlayerColor",
+            TexCoord 0.0, 1.0, 0.0, 0.546875,
+        }
+    }
+
+    String "ProductionPanelRowPlayerNameText" INHERITS "ProductionPanelPlayerNameTextTemplate" {
+        SetPoint TOPLEFT, "ProductionPanelRowFrame", TOPLEFT, 0.0, 0.0,
+        Text "PLAYER_NAME",
+    } 
+}
+
+
+
+

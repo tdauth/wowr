@@ -1,0 +1,1080 @@
+// -- INCLUDE FILES ---------------------------------------------
+
+IncludeFile "UI\FrameDef\Glue\BattleNetTemplates.fdf",
+
+// -- LOCAL TEMPLATES -------------------------------------------
+
+Frame "TEXT" "TeamLabelTextTemplate" {
+    DecorateFileNames,
+    FrameFont "MasterFont", 0.011, "",
+    FontJustificationH JUSTIFYLEFT,
+    FontJustificationV JUSTIFYMIDDLE,    
+    FontFlags "FIXEDSIZE",
+    FontColor 0.99 0.827 0.0705 1.0,
+    FontHighlightColor 1.0 1.0 1.0 1.0,
+    FontDisabledColor 0.2 0.2 0.2 1.0,
+	FontShadowColor 0.0 0.0 0.0 0.9,	
+    FontShadowOffset 0.001 -0.001,	
+}
+
+Frame "TEXT" "LadderNameTextTemplate" {
+    DecorateFileNames,
+    FrameFont "MasterFont", 0.011, "",
+    FontJustificationH JUSTIFYLEFT,
+    FontJustificationV JUSTIFYMIDDLE,    
+    FontFlags "FIXEDSIZE",
+    FontColor 1.0 1.0 1.0 1.0,
+    FontHighlightColor 1.0 1.0 1.0 1.0,
+    FontDisabledColor 0.2 0.2 0.2 1.0,
+	FontShadowColor 0.0 0.0 0.0 0.9,	
+    FontShadowOffset 0.001 -0.001,	
+}
+
+Frame "TEXT" "TeamValueTextTemplate" {
+    DecorateFileNames,
+    FrameFont "MasterFont", 0.011, "",
+    FontJustificationH JUSTIFYLEFT,
+    FontJustificationV JUSTIFYMIDDLE,    
+    FontFlags "FIXEDSIZE",
+    FontColor 1.0 1.0 1.0 1.0,
+    FontHighlightColor 1.0 1.0 1.0 1.0,
+    FontDisabledColor 0.2 0.2 0.2 1.0,
+	FontShadowColor 0.0 0.0 0.0 0.9,	
+    FontShadowOffset 0.001 -0.001,	
+}
+
+Frame "TEXT" "TeamLadderRankValueTextTemplate" {
+    DecorateFileNames,
+    FrameFont "MasterFont", 0.015, "",
+    FontJustificationH JUSTIFYLEFT,
+    FontJustificationV JUSTIFYMIDDLE,    
+    FontFlags "FIXEDSIZE",
+    FontColor 1.0 1.0 1.0 1.0,
+    FontHighlightColor 1.0 1.0 1.0 1.0,
+    FontDisabledColor 0.2 0.2 0.2 1.0,
+	FontShadowColor 0.0 0.0 0.0 0.9,	
+    FontShadowOffset 0.001 -0.001,	
+}
+
+// --- LADDER BUTTON -------------
+
+Frame "BACKDROP" "LadderButtonBackdropTemplate" {
+    BackdropTileBackground,
+    BackdropBackground  "UI\Widgets\BattleNet\bnet-mainmenu-ladder-up.blp",
+    BackdropCornerFlags "UL|UR|BL|BR",
+    BackdropCornerSize  0.016,
+    BackdropBackgroundSize  0.032,
+    BackdropBackgroundInsets 0.007 0.007 0.007 0.007,
+    BackdropEdgeFile  "UI\Widgets\Glues\GlueScreen-CampaignButton-BackdropBorder.blp",
+    BackdropBlendAll,
+}
+
+Frame "BACKDROP" "LadderButtonPushedBackdropTemplate" {
+    BackdropTileBackground,
+    BackdropBackground  "UI\Widgets\BattleNet\bnet-mainmenu-ladder-down.blp",
+    BackdropCornerFlags "UL|UR|BL|BR",
+    BackdropCornerSize  0.016,
+    BackdropBackgroundSize  0.032,
+    BackdropBackgroundInsets 0.007 0.007 0.007 0.007,
+    BackdropEdgeFile  "UI\Widgets\Glues\GlueScreen-CampaignButton-BackdropBorder-Down.blp",
+    BackdropBlendAll,
+}
+
+Frame "BACKDROP" "LadderButtonDisabledBackdropTemplate" {
+    BackdropTileBackground,
+    BackdropBackground  "UI\Widgets\BattleNet\bnet-mainmenu-ladder-disabled.blp",
+    BackdropCornerFlags "UL|UR|BL|BR",
+    BackdropCornerSize  0.016,
+    BackdropBackgroundSize  0.032,
+    BackdropBackgroundInsets 0.004 0.004 0.004 0.004,
+    BackdropEdgeFile  "UI\Widgets\Glues\GlueScreen-CampaignButton-BackdropBorder-Disabled.blp",
+    BackdropBlendAll,
+}
+
+Frame "BACKDROP" "LadderButtonDisabledPushedBackdropTemplate" {
+    BackdropTileBackground,
+    BackdropBackground  "UI\Widgets\BattleNet\bnet-mainmenu-ladder-disabled.blp",
+    BackdropCornerFlags "UL|UR|BL|BR",
+    BackdropCornerSize  0.016,
+    BackdropBackgroundSize  0.032,
+    BackdropBackgroundInsets 0.004 0.004 0.004 0.004,
+    BackdropEdgeFile  "UI\Widgets\Glues\GlueScreen-CampaignButton-BackdropBorder-DisabledDown.blp",
+    BackdropBlendAll,
+}
+
+Frame "HIGHLIGHT" "LadderButtonFocusHighlightBackdropTemplate" {
+    HighlightType "FILETEXTURE",
+    HighlightAlphaFile "UI\Widgets\Glues\GlueScreen-CampaignButton-KeyboardHighlight.blp",    
+    HighlightAlphaMode "ADD",
+}
+
+Frame "HIGHLIGHT" "LadderButtonMouseOverHighlightBackdropTemplate" {
+    HighlightType "FILETEXTURE",
+    HighlightAlphaFile "UI\Widgets\BattleNet\bnet-button01-highlight-mouse.blp",    
+    HighlightAlphaMode "ADD",
+}
+
+Frame "TEXTBUTTON" "LadderButtonTemplate" {
+    Height 0.032,
+    Width 0.032,
+    ControlStyle "AUTOTRACK|HIGHLIGHTONFOCUS|HIGHLIGHTONMOUSEOVER",
+    ButtonPushedTextOffset -0.0015f -0.0015f,    
+
+    ControlBackdrop "LadderButtonBackdropTemplate",
+    Frame "BACKDROP" "LadderButtonBackdropTemplate" INHERITS "LadderButtonBackdropTemplate" {
+    }
+
+    ControlPushedBackdrop "LadderButtonPushedBackdropTemplate",
+    Frame "BACKDROP" "LadderButtonPushedBackdropTemplate" INHERITS "LadderButtonPushedBackdropTemplate" {
+    }
+
+    ControlDisabledBackdrop "LadderButtonDisabledBackdropTemplate",
+    Frame "BACKDROP" "LadderButtonDisabledBackdropTemplate" INHERITS "LadderButtonDisabledBackdropTemplate" {
+    }
+
+    ControlFocusHighlight "LadderButtonFocusHighlightTemplate",
+    Frame "HIGHLIGHT" "LadderButtonFocusHighlightTemplate" INHERITS "LadderButtonFocusHighlightBackdropTemplate" {
+    }
+
+    ControlMouseOverHighlight "LadderButtonMouseOverHighlightTemplate",
+    Frame "HIGHLIGHT" "LadderButtonMouseOverHighlightTemplate" INHERITS "LadderButtonMouseOverHighlightBackdropTemplate" {
+    }
+}
+
+// --- CLAN BUTTON -------------
+
+Frame "BACKDROP" "ClanButtonBackdropTemplate" {
+    BackdropTileBackground,
+    BackdropBackground  "UI\Widgets\BattleNet\bnet-mainmenu-clans-up.blp",
+    BackdropCornerFlags "UL|UR|BL|BR",
+    BackdropCornerSize  0.016,
+    BackdropBackgroundSize  0.032,
+    BackdropBackgroundInsets 0.007 0.007 0.007 0.007,
+    BackdropEdgeFile  "UI\Widgets\Glues\GlueScreen-CampaignButton-BackdropBorder.blp",
+    BackdropBlendAll,
+}
+
+Frame "BACKDROP" "ClanButtonPushedBackdropTemplate" {
+    BackdropTileBackground,
+    BackdropBackground  "UI\Widgets\BattleNet\bnet-mainmenu-clans-down.blp",
+    BackdropCornerFlags "UL|UR|BL|BR",
+    BackdropCornerSize  0.016,
+    BackdropBackgroundSize  0.032,
+    BackdropBackgroundInsets 0.007 0.007 0.007 0.007,
+    BackdropEdgeFile  "UI\Widgets\Glues\GlueScreen-CampaignButton-BackdropBorder-Down.blp",
+    BackdropBlendAll,
+}
+
+Frame "BACKDROP" "ClanButtonDisabledBackdropTemplate" {
+    BackdropTileBackground,
+    BackdropBackground  "UI\Widgets\BattleNet\bnet-mainmenu-clans-disabled.blp",
+    BackdropCornerFlags "UL|UR|BL|BR",
+    BackdropCornerSize  0.016,
+    BackdropBackgroundSize  0.032,
+    BackdropBackgroundInsets 0.004 0.004 0.004 0.004,
+    BackdropEdgeFile  "UI\Widgets\Glues\GlueScreen-CampaignButton-BackdropBorder-Disabled.blp",
+    BackdropBlendAll,
+}
+
+Frame "BACKDROP" "ClanButtonDisabledPushedBackdropTemplate" {
+    BackdropTileBackground,
+    BackdropBackground  "UI\Widgets\BattleNet\bnet-mainmenu-clans-disabled.blp",
+    BackdropCornerFlags "UL|UR|BL|BR",
+    BackdropCornerSize  0.016,
+    BackdropBackgroundSize  0.032,
+    BackdropBackgroundInsets 0.004 0.004 0.004 0.004,
+    BackdropEdgeFile  "UI\Widgets\Glues\GlueScreen-CampaignButton-BackdropBorder-DisabledDown.blp",
+    BackdropBlendAll,
+}
+
+Frame "HIGHLIGHT" "ClanButtonFocusHighlightBackdropTemplate" {
+    HighlightType "FILETEXTURE",
+    HighlightAlphaFile "UI\Widgets\Glues\GlueScreen-CampaignButton-KeyboardHighlight.blp",    
+    HighlightAlphaMode "ADD",
+}
+
+Frame "HIGHLIGHT" "ClanButtonMouseOverHighlightBackdropTemplate" {
+    HighlightType "FILETEXTURE",
+    HighlightAlphaFile "UI\Widgets\BattleNet\bnet-button01-highlight-mouse.blp",    
+    HighlightAlphaMode "ADD",
+}
+
+Frame "GLUEBUTTON" "ClanButtonTemplate" {
+    Height 0.032,
+    Width 0.032,
+    ControlStyle "AUTOTRACK|HIGHLIGHTONFOCUS|HIGHLIGHTONMOUSEOVER",
+
+    ControlBackdrop "ClanButtonBackdropTemplate",
+    Frame "BACKDROP" "ClanButtonBackdropTemplate" INHERITS "ClanButtonBackdropTemplate" {
+    }
+
+    ControlPushedBackdrop "ClanButtonPushedBackdropTemplate",
+    Frame "BACKDROP" "ClanButtonPushedBackdropTemplate" INHERITS "ClanButtonPushedBackdropTemplate" {
+    }
+
+    ControlDisabledBackdrop "ClanButtonDisabledBackdropTemplate",
+    Frame "BACKDROP" "ClanButtonDisabledBackdropTemplate" INHERITS "ClanButtonDisabledBackdropTemplate" {
+    }
+
+    ControlFocusHighlight "ClanButtonFocusHighlightTemplate",
+    Frame "HIGHLIGHT" "ClanButtonFocusHighlightTemplate" INHERITS "ClanButtonFocusHighlightBackdropTemplate" {
+    }
+
+    ControlMouseOverHighlight "ClanButtonMouseOverHighlightTemplate",
+    Frame "HIGHLIGHT" "ClanButtonMouseOverHighlightTemplate" INHERITS "ClanButtonMouseOverHighlightBackdropTemplate" {
+    }
+}
+
+// -- FRAMES ----------------------------------------------------
+
+Frame "FRAME" "BattleNetProfilePanel" {
+    SetAllPoints,
+
+    // --- Personal Info -------------------------------------------------------
+    Frame "SPRITE" "ProfilePortraitFrame" {
+        Width 0.0900,
+        Height 0.09185,
+        SetPoint TOPLEFT, "BattleNetProfilePanel", TOPLEFT, 0.02, -0.034375,
+
+        Frame "BACKDROP" "ProfilePortraitHighlight" {
+            SetAllPoints,
+            BackdropBlendAll,
+            BackdropBackground  "UI\Widgets\BattleNet\bnet-profileportrait-cover.blp",
+        }
+    }
+
+	Frame "GLUETEXTBUTTON" "IconSelectButton" INHERITS WITHCHILDREN "BattleNetButtonTemplate" {
+        Height 0.025625,
+        Width 0.09375,
+        SetPoint TOP,"ProfilePortraitFrame",BOTTOM, 0.0, -0.010625,
+		ControlShortcutKey "KEY_SELECT_ICON_SHORTCUT",
+        TabFocusNext "ProfileHomepageField",
+
+			FrameFont "MasterFont", 0.009, "",
+		ButtonText "IconSelectButtonText",
+		Frame "TEXT" "IconSelectButtonText" INHERITS "BattleNetButtonTextTemplate" {
+			Text "KEY_SELECT_ICON",
+		FrameFont "MasterFont", 0.011, "",
+		}
+	}
+
+    Frame "TEXT" "ProfileNameLabel" INHERITS "BattleNetLabelTextTemplate" {
+        DecorateFileNames,
+        FrameFont "MasterFont", 0.011, "",
+        SetPoint TOPLEFT, "BattleNetProfilePanel", TOPLEFT, 0.130625, -0.0325,
+        Text "COLON_NAME",
+		Width 0.24,
+    }
+
+    Frame "TEXT" "ProfileNameValue" INHERITS "BattleNetValueTextTemplate" {
+        DecorateFileNames,
+        FrameFont "MasterFont", 0.011, "",
+        SetPoint TOPLEFT, "ProfileNameLabel", BOTTOMLEFT, 0.005, -0.0035,
+		Width 0.24,
+	}
+
+
+    Frame "FRAME" "ProfileClanPanel" {
+        
+        Frame "TEXT" "ProfileClanLabel" INHERITS "BattleNetLabelTextTemplate" {
+            DecorateFileNames,
+            FrameFont "MasterFont", 0.011, "",
+            SetPoint TOPLEFT, "ProfileNameLabel", BOTTOMLEFT, 0.0, -0.0165,
+            Text "COLON_CLAN",
+			Width 0.24,
+        }
+
+	    Frame "GLUEBUTTON" "ProfileClanButton" INHERITS WITHCHILDREN "ClanButtonTemplate" {
+		    UseActiveContext,
+		    SetPoint TOPLEFT, "ProfileClanLabel", BOTTOMLEFT, 0.0015, 0.002,
+	    }
+
+        Frame "TEXT" "ProfileClanValue" INHERITS "BattleNetValueTextTemplate" {
+            DecorateFileNames,
+            FrameFont "MasterFont", 0.011, "",
+            SetPoint LEFT, "ProfileClanButton", RIGHT, 0.0, 0.0,
+            Text "Monkey Blast [MBST]",
+			Width 0.24,
+        }
+
+        Frame "TEXT" "ProfileClanRankLabel" INHERITS "BattleNetLabelTextTemplate" {
+            DecorateFileNames,
+            FrameFont "MasterFont", 0.011, "",
+            SetPoint TOPLEFT, "ProfileClanLabel", BOTTOMLEFT, 0.0, -0.028,
+            Text "COLON_CLAN_RANK",
+			Width 0.24,
+        }
+
+        Frame "BACKDROP" "ProfileClanRankImage" {
+            BackdropBlendAll,
+            BackdropBackgroundSize  0.032,
+            BackdropBackground  "UI\Widgets\BattleNet\ChatIcons\clan-orc-officer.blp",
+            SetPoint TOPLEFT, "ProfileClanRankLabel", BOTTOMLEFT, 0.005, 0.0065,
+            Height 0.032,
+            Width 0.032,
+        }
+
+        Frame "TEXT" "ProfileClanRankValue" INHERITS "BattleNetValueTextTemplate" {
+            DecorateFileNames,
+            FrameFont "MasterFont", 0.011, "",
+            SetPoint LEFT, "ProfileClanRankImage", RIGHT, 0.005, 0.0,
+            Text "Shaman",
+			Width 0.24,
+        }
+
+        Frame "TEXT" "ProfileClanJoinedLabel" INHERITS "BattleNetLabelTextTemplate" {
+            DecorateFileNames,
+            FrameFont "MasterFont", 0.011, "",
+            SetPoint TOPLEFT, "ProfileClanRankLabel", BOTTOMLEFT, 0.0, -0.023,
+            Text "COLON_CLAN_JOINED",
+			Width 0.24,
+        }
+
+        Frame "TEXT" "ProfileClanJoinedValue" INHERITS "BattleNetValueTextTemplate" {
+            DecorateFileNames,
+            FrameFont "MasterFont", 0.011, "",
+            SetPoint TOPLEFT, "ProfileClanJoinedLabel", BOTTOMLEFT, 0.005, -0.0035,
+            Text "January 12th, 2003 4:45pm",
+			Width 0.24,
+        }
+    }
+
+    Frame "TEXT" "ProfileHomepageLabel" INHERITS "BattleNetLabelTextTemplate" {
+        SetPoint TOPLEFT, "BattleNetProfilePanel", TOPLEFT, 0.0175, -0.1825,
+        Text "COLON_HOMEPAGE",
+		Width 0.24,
+    }
+
+    Frame "EDITBOX" "ProfileHomepageField" INHERITS WITHCHILDREN "BattleNetEditBoxTemplate" {
+        Width 0.39,
+        SetPoint TOPLEFT, "ProfileHomepageLabel", BOTTOMLEFT, 0.0, -0.001,        
+        TabFocusNext "ProfileAdditionalField",
+    
+		EditTextFrame "ProfileHomepageFieldEditBoxText",
+		Frame "TEXT" "ProfileHomepageFieldEditBoxText" INHERITS	"BattleNetEditBoxTextTemplate" {
+			Width 0.24,
+		}	
+	}
+
+    Frame "TEXT" "ProfileAdditionalLabel" INHERITS "BattleNetLabelTextTemplate" {
+        SetPoint TOPLEFT, "ProfileHomepageField", BOTTOMLEFT, 0.0, -0.008,
+        Text "COLON_ADDITIONAL_INFORMATION",
+		Width 0.24,
+    }
+
+    Frame "EDITBOX" "ProfileAdditionalField" INHERITS WITHCHILDREN "BattleNetEditBoxTemplate" {
+        //Height 0.14,
+        Width 0.39,
+        SetPoint TOPLEFT, "ProfileAdditionalLabel", BOTTOMLEFT, 0.0, -0.001,
+        TabFocusNext "ProfileWebButton",
+		
+		EditTextFrame "ProfileAdditionalFieldEditBoxText",
+		Frame "TEXT" "ProfileAdditionalFieldEditBoxText" INHERITS "BattleNetEditBoxTextTemplate" {
+			Width 0.24,
+		}	
+    }
+
+    Frame "BACKDROP" "ProfileAdditionalBackdrop" INHERITS "BattleNetEditBoxBackdropTemplate" {
+        Width 0.39,
+        Height 0.115,
+        SetPoint TOPLEFT, "ProfileAdditionalLabel", BOTTOMLEFT, 0.0, -0.001,
+
+        Frame "TEXT" "ProfileAdditionalText" INHERITS "BattleNetValueTextTemplate" {
+            DecorateFileNames,
+            FrameFont "MasterFont", 0.011, "",
+            FontJustificationH JUSTIFYLEFT,
+            FontJustificationV JUSTIFYTOP,
+            SetPoint TOPLEFT, "ProfileAdditionalBackdrop", TOPLEFT, 0.01125, -0.01125,
+            SetPoint BOTTOMRIGHT, "ProfileAdditionalBackdrop", BOTTOMRIGHT, -0.020625, 0.01125,
+        }
+    }
+
+	// --- Ladder Info -------------------------------------------------------
+
+    Frame "TEXT" "ProfileLadderInfoLabel" INHERITS "BattleNetInfoTextTemplate" {
+        SetPoint TOPLEFT, "BattleNetProfilePanel", TOPRIGHT, -0.35, -0.034375,
+        FontColor 1.0 1.0 1.0 1.0,
+        Text "COLON_LADDER_INFO",
+		Width 0.08,
+    }
+
+    Frame "BACKDROP" "PersonalLadderTabBackdrop" {
+        Height 0.02,
+        Width 0.09083,
+        BackdropBackground "UI\Widgets\BattleNet\bnet-tab-up.blp",
+        BackdropBlendAll,
+        SetPoint TOPLEFT, "BattleNetProfilePanel", TOPRIGHT, -0.35375, -0.049375,
+        
+        Frame "TEXT" "PersonalLadderTabLabel" INHERITS "BattleNetLabelTextTemplate" {
+            Height 0.01625,
+            Width 0.09083,
+            SetPoint BOTTOM, "PersonalLadderTabBackdrop", BOTTOM, 0.0, 0.0025,
+            FontJustificationH JUSTIFYCENTER,
+            FontJustificationV JUSTIFYBOTTOM,    
+
+            Text "PERSONAL",
+        }
+    }
+
+    Frame "BACKDROP" "TeamLadderTabBackdrop" {
+        Height 0.02,
+        Width 0.09083,
+        BackdropBackground "UI\Widgets\BattleNet\bnet-tab-down.blp",
+        BackdropBlendAll,
+        SetPoint LEFT, "PersonalLadderTabBackdrop", RIGHT, 0.0, 0.0,
+
+        Frame "TEXT" "TeamLadderTabLabel" INHERITS "BattleNetLabelTextTemplate" {
+            Height 0.01625,
+            Width 0.09083,
+            SetPoint BOTTOM, "TeamLadderTabBackdrop", BOTTOM, 0.0, 0.0025,
+            FontJustificationH JUSTIFYCENTER,
+            FontJustificationV JUSTIFYBOTTOM,
+
+            Text "TEAM",
+        }
+    }
+
+    Frame "BACKDROP" "ClanLadderTabBackdrop" {
+        Height 0.02,
+        Width 0.09083,
+        BackdropBackground "UI\Widgets\BattleNet\bnet-tab-down.blp",
+        BackdropBlendAll,
+        SetPoint LEFT, "TeamLadderTabBackdrop", RIGHT, 0.0, 0.0,
+
+        Frame "TEXT" "ClanLadderTabLabel" INHERITS "BattleNetLabelTextTemplate" {
+            Height 0.01625,
+            Width 0.09083,
+            SetPoint BOTTOM, "ClanLadderTabBackdrop", BOTTOM, 0.0, 0.0025,
+            FontJustificationH JUSTIFYCENTER,
+            FontJustificationV JUSTIFYBOTTOM,
+
+            Text "CLAN",
+        }
+    }
+
+    Frame "BACKDROP" "EmptyLadderTabBackdrop" {
+        Height 0.02,
+        Width 0.063125,
+        BackdropBackground "UI\Widgets\BattleNet\bnet-tab-empty.blp",
+        BackdropBlendAll,
+        SetPoint BOTTOMLEFT, "ClanLadderTabBackdrop", BOTTOMRIGHT, 0.0, 0.0,
+    }
+    
+    Frame "FRAME" "ProfileListBoxContainer" {
+        SetPoint TOPLEFT, "PersonalLadderTabBackdrop", BOTTOMLEFT, 0.0, -0.005,
+        Width 0.334375,
+        Height 0.360625,
+    }
+
+    // --- Play History ---------------------------------------------------------
+
+    Frame "TEXT" "ProfilePlayHistoryLabel" INHERITS "BattleNetInfoTextTemplate" {
+        SetPoint TOPLEFT, "BattleNetProfilePanel", BOTTOMLEFT, 0.0175, 0.19,
+        FontColor 1.0 1.0 1.0 1.0,
+        Text "COLON_PLAY_HISTORY",
+		Width 0.24,
+    }
+
+    Frame "BACKDROP" "PersonalHistoryTabBackdrop" {
+        Height 0.02,
+        Width 0.09083,
+        BackdropBackground "UI\Widgets\BattleNet\bnet-tab-up.blp",
+        BackdropBlendAll,
+        SetPoint TOPLEFT, "BattleNetProfilePanel", BOTTOMLEFT, 0.0125, 0.175,
+        
+        Frame "TEXT" "PersonalHistoryTabLabel" INHERITS "BattleNetLabelTextTemplate" {
+            Height 0.01625,
+            Width 0.09083,
+            SetPoint BOTTOM, "PersonalHistoryTabBackdrop", BOTTOM, 0.0, 0.0025,
+            FontJustificationH JUSTIFYCENTER,
+            FontJustificationV JUSTIFYBOTTOM,    
+
+            Text "PERSONAL",
+        }
+    }
+
+    Frame "BACKDROP" "ClanHistoryTabBackdrop" {
+        Height 0.02,
+        Width 0.09083,
+        BackdropBackground "UI\Widgets\BattleNet\bnet-tab-down.blp",
+        BackdropBlendAll,
+        SetPoint LEFT, "PersonalHistoryTabBackdrop", RIGHT, 0.0, 0.0,
+
+        Frame "TEXT" "ClanHistoryTabLabel" INHERITS "BattleNetLabelTextTemplate" {
+            Height 0.01625,
+            Width 0.09083,
+            SetPoint BOTTOM, "ClanHistoryTabBackdrop", BOTTOM, 0.0, 0.0025,
+            FontJustificationH JUSTIFYCENTER,
+            FontJustificationV JUSTIFYBOTTOM,
+
+            Text "CLAN",
+        }
+    }
+
+    Frame "BACKDROP" "EmptyTabBackdrop" {
+        Height 0.02,
+        Width 0.212705,
+        BackdropBackground "UI\Widgets\BattleNet\bnet-tab-empty.blp",
+        BackdropBlendAll,
+        SetPoint BOTTOMLEFT, "ClanHistoryTabBackdrop", BOTTOMRIGHT, 0.0, 0.0,
+    }
+
+    Frame "TEXT" "ProfileHumanLabel" INHERITS "BattleNetLabelTextTemplate" {
+        SetPoint TOPLEFT, "PersonalHistoryTabBackdrop", BOTTOMLEFT, 0.051, -0.01625,
+        Text "COLON_HUMAN",
+		Width 0.24,
+    }
+    Frame "TEXT" "ProfileOrcLabel" INHERITS "BattleNetLabelTextTemplate" {
+        SetPoint TOPLEFT, "ProfileHumanLabel", BOTTOMLEFT, 0.0, -0.002,
+        Text "COLON_ORC",
+		Width 0.24,
+    }
+    Frame "TEXT" "ProfileUndeadLabel" INHERITS "BattleNetLabelTextTemplate" {
+        SetPoint TOPLEFT, "ProfileOrcLabel", BOTTOMLEFT, 0.0, -0.002,
+        Text "COLON_UNDEAD",
+		Width 0.24,
+    }
+    Frame "TEXT" "ProfileNightElfLabel" INHERITS "BattleNetLabelTextTemplate" {
+        SetPoint TOPLEFT, "ProfileUndeadLabel", BOTTOMLEFT, 0.0, -0.002,
+        Text "COLON_NIGHT_ELF",
+		Width 0.24,
+    }
+    Frame "TEXT" "ProfileRandomLabel" INHERITS "BattleNetLabelTextTemplate" {
+        SetPoint TOPLEFT, "ProfileNightElfLabel", BOTTOMLEFT, 0.0, -0.002,
+        Text "COLON_RANDOM",
+		Width 0.24,
+    }
+    Frame "TEXT" "ProfileTotalLabel" INHERITS "BattleNetLabelTextTemplate" {
+        SetPoint TOPLEFT, "ProfileRandomLabel", BOTTOMLEFT, 0.0, -0.008,
+        Text "COLON_TOTAL",
+		Width 0.24,
+    }
+    Frame "TEXT" "ProfileTournLabel" INHERITS "BattleNetLabelTextTemplate" {
+        SetPoint TOPLEFT, "ProfileTotalLabel", BOTTOMLEFT, 0.0, -0.008,
+        Text "COLON_TOURNAMENT",
+		Width 0.24,
+    }
+
+    // wins
+    Frame "TEXT" "ProfileWinsLabel" INHERITS "BattleNetLabelTextTemplate" {
+        SetPoint TOPRIGHT, "ProfileHumanLabel", TOPLEFT, 0.140625, 0.01375,
+        FontJustificationH JUSTIFYRIGHT,
+        Text "COLON_WINS",
+		Width 0.08,
+    }
+
+    Frame "TEXT" "ProfileHumanWinsValue" INHERITS "BattleNetValueTextTemplate" {
+        SetPoint TOPRIGHT, "ProfileWinsLabel", BOTTOMRIGHT, 0.0, -0.00075,
+        FontJustificationH JUSTIFYRIGHT,
+    }
+    Frame "TEXT" "ProfileOrcWinsValue" INHERITS "BattleNetValueTextTemplate" {
+        SetPoint TOPRIGHT, "ProfileHumanWinsValue", BOTTOMRIGHT, 0.0, -0.002,
+        FontJustificationH JUSTIFYRIGHT,
+    }
+    Frame "TEXT" "ProfileUndeadWinsValue" INHERITS "BattleNetValueTextTemplate" {
+        SetPoint TOPRIGHT, "ProfileOrcWinsValue", BOTTOMRIGHT, 0.0, -0.002,
+        FontJustificationH JUSTIFYRIGHT,
+    }
+    Frame "TEXT" "ProfileNightElfWinsValue" INHERITS "BattleNetValueTextTemplate" {
+        SetPoint TOPRIGHT, "ProfileUndeadWinsValue", BOTTOMRIGHT, 0.0, -0.002,
+        FontJustificationH JUSTIFYRIGHT,
+    }
+    Frame "TEXT" "ProfileRandomWinsValue" INHERITS "BattleNetValueTextTemplate" {
+        SetPoint TOPRIGHT, "ProfileNightElfWinsValue", BOTTOMRIGHT, 0.0, -0.002,
+        FontJustificationH JUSTIFYRIGHT,
+    }
+    Frame "TEXT" "ProfileTotalWinsValue" INHERITS "BattleNetValueTextTemplate" {
+        SetPoint TOPRIGHT, "ProfileRandomWinsValue", BOTTOMRIGHT, 0.0, -0.008,
+        FontJustificationH JUSTIFYRIGHT,
+    }
+    Frame "TEXT" "ProfileTournWinsValue" INHERITS "BattleNetValueTextTemplate" {
+        SetPoint TOPRIGHT, "ProfileTotalWinsValue", BOTTOMRIGHT, 0.0, -0.008,
+        FontJustificationH JUSTIFYRIGHT,
+    }
+
+    // losses
+    Frame "TEXT" "ProfileLossesLabel" INHERITS "BattleNetLabelTextTemplate" {
+        SetPoint LEFT, "ProfileWinsLabel", RIGHT, 0.027, 0.0,
+        FontJustificationH JUSTIFYRIGHT,
+        Text "COLON_LOSSES",
+		Width 0.06,
+    }
+
+    Frame "TEXT" "ProfileHumanLossesValue" INHERITS "BattleNetValueTextTemplate" {
+        SetPoint TOPRIGHT, "ProfileLossesLabel", BOTTOMRIGHT, 0.0, -0.00075,
+        FontJustificationH JUSTIFYRIGHT,
+    }
+    Frame "TEXT" "ProfileOrcLossesValue" INHERITS "BattleNetValueTextTemplate" {
+        SetPoint TOPRIGHT, "ProfileHumanLossesValue", BOTTOMRIGHT, 0.0, -0.002,
+        FontJustificationH JUSTIFYRIGHT,
+    }
+    Frame "TEXT" "ProfileUndeadLossesValue" INHERITS "BattleNetValueTextTemplate" {
+        SetPoint TOPRIGHT, "ProfileOrcLossesValue", BOTTOMRIGHT, 0.0, -0.002,
+        FontJustificationH JUSTIFYRIGHT,
+    }
+    Frame "TEXT" "ProfileNightElfLossesValue" INHERITS "BattleNetValueTextTemplate" {
+        SetPoint TOPRIGHT, "ProfileUndeadLossesValue", BOTTOMRIGHT, 0.0, -0.002,
+        FontJustificationH JUSTIFYRIGHT,
+    }
+    Frame "TEXT" "ProfileRandomLossesValue" INHERITS "BattleNetValueTextTemplate" {
+        SetPoint TOPRIGHT, "ProfileNightElfLossesValue", BOTTOMRIGHT, 0.0, -0.002,
+        FontJustificationH JUSTIFYRIGHT,
+    }
+    Frame "TEXT" "ProfileTotalLossesValue" INHERITS "BattleNetValueTextTemplate" {
+        SetPoint TOPRIGHT, "ProfileRandomLossesValue", BOTTOMRIGHT, 0.0, -0.008,
+        FontJustificationH JUSTIFYRIGHT,
+    }
+    Frame "TEXT" "ProfileTournLossesValue" INHERITS "BattleNetValueTextTemplate" {
+        SetPoint TOPRIGHT, "ProfileTotalLossesValue", BOTTOMRIGHT, 0.0, -0.008,
+        FontJustificationH JUSTIFYRIGHT,
+    }
+
+    // win percentage
+    Frame "TEXT" "ProfileWinPercentageLabel" INHERITS "BattleNetLabelTextTemplate" {
+        SetPoint LEFT, "ProfileLossesLabel", RIGHT, 0.027, 0.0,
+        FontJustificationH JUSTIFYRIGHT,
+        Text "COLON_WIN_PERCENTAGE",
+		Width 0.06,
+    }
+
+    Frame "TEXT" "ProfileHumanWinPercentageValue" INHERITS "BattleNetValueTextTemplate" {
+        SetPoint TOPRIGHT, "ProfileWinPercentageLabel", BOTTOMRIGHT, 0.0, -0.00075,
+        FontJustificationH JUSTIFYRIGHT,
+		Width 0.05,
+    }
+    Frame "TEXT" "ProfileOrcWinPercentageValue" INHERITS "BattleNetValueTextTemplate" {
+        SetPoint TOPRIGHT, "ProfileHumanWinPercentageValue", BOTTOMRIGHT, 0.0, -0.002,
+        FontJustificationH JUSTIFYRIGHT,
+		Width 0.05,
+    }
+    Frame "TEXT" "ProfileUndeadWinPercentageValue" INHERITS "BattleNetValueTextTemplate" {
+        SetPoint TOPRIGHT, "ProfileOrcWinPercentageValue", BOTTOMRIGHT, 0.0, -0.002,
+        FontJustificationH JUSTIFYRIGHT,
+		Width 0.05,
+	}
+    Frame "TEXT" "ProfileNightElfWinPercentageValue" INHERITS "BattleNetValueTextTemplate" {
+        SetPoint TOPRIGHT, "ProfileUndeadWinPercentageValue", BOTTOMRIGHT, 0.0, -0.002,
+        FontJustificationH JUSTIFYRIGHT,
+		Width 0.05,
+    }
+    Frame "TEXT" "ProfileRandomWinPercentageValue" INHERITS "BattleNetValueTextTemplate" {
+        SetPoint TOPRIGHT, "ProfileNightElfWinPercentageValue", BOTTOMRIGHT, 0.0, -0.002,
+        FontJustificationH JUSTIFYRIGHT,
+		Width 0.05,
+    }
+    Frame "TEXT" "ProfileTotalWinPercentageValue" INHERITS "BattleNetValueTextTemplate" {
+        SetPoint TOPRIGHT, "ProfileRandomWinPercentageValue", BOTTOMRIGHT, 0.0, -0.008,
+        FontJustificationH JUSTIFYRIGHT,
+		Width 0.05,
+    }
+    Frame "TEXT" "ProfileTournWinPercentageValue" INHERITS "BattleNetValueTextTemplate" {
+        SetPoint TOPRIGHT, "ProfileTotalWinPercentageValue", BOTTOMRIGHT, 0.0, -0.008,
+        FontJustificationH JUSTIFYRIGHT,
+		Width 0.05,
+    }
+
+    Frame "HIGHLIGHT" "ProfileTotalHighlight" {
+		SetPoint TOP, "ProfileTotalLabel", TOP, 0.0, 0.002,
+		SetPoint BOTTOM, "ProfileTotalLabel", BOTTOM, 0.0, -0.002,
+		SetPoint LEFT, "ProfileTotalLabel", LEFT, -0.02, 0.0,
+		SetPoint RIGHT, "ProfileTotalWinPercentageValue", RIGHT, 0.02, 0.0,
+        HighlightColor 0.0 0.0 1.0 0.1,
+        HighlightType "SHADE",
+    }
+
+    // --- Bottom Buttons -------------------------------------------------------
+
+    Frame "BACKDROP" "ProfileWebBackdrop" INHERITS "BattleNetMenuButtonBaseBackdrop" {
+        Width 0.24,
+        SetPoint TOPRIGHT,"BattleNetProfilePanel",BOTTOMRIGHT, -0.014375, 0.124375,
+
+	    Frame "GLUETEXTBUTTON" "ProfileWebButton" INHERITS WITHCHILDREN "BattleNetButtonTemplate" {
+            Width 0.168,
+            SetPoint TOPRIGHT,"ProfileWebBackdrop",TOPRIGHT, -0.012, -0.0165,
+		    ControlShortcutKey "KEY_WEB_PROFILE_SHORTCUT",
+            TabFocusNext "ProfileBackButton",
+
+            ButtonText "ProfileWebButtonText",
+		    Frame "TEXT" "ProfileWebButtonText" INHERITS "BattleNetButtonTextTemplate" {
+			    Text "KEY_WEB_PROFILE",
+		    }
+	    }
+    }
+
+    Frame "BACKDROP" "ProfileBackBackdrop" INHERITS "BattleNetMenuButtonBaseBackdrop" {
+        Width 0.24,
+        SetPoint TOPRIGHT,"ProfileWebBackdrop",BOTTOMRIGHT, 0.0, 0.015,
+
+	    Frame "GLUETEXTBUTTON" "ProfileBackButton" INHERITS WITHCHILDREN "BattleNetButtonTemplate" {
+            Width 0.168,
+            SetPoint TOPRIGHT,"ProfileBackBackdrop",TOPRIGHT, -0.012, -0.0165,
+		    ControlShortcutKey "KEY_BACK_SHORTCUT",
+            TabFocusDefault,
+            TabFocusNext "IconSelectButton",
+
+            ButtonText "ProfileBackButtonText",
+		    Frame "TEXT" "ProfileBackButtonText" INHERITS "BattleNetButtonTextTemplate" {
+			    Text "KEY_BACK",
+		    }
+	    }
+    }
+}
+
+// -------------------------------------
+Frame "FRAME" "BattleNetProfileListBox" {
+    Frame "SCROLLBAR" "ProfileListBoxScrollBar" INHERITS WITHCHILDREN "BattleNetScrollBarTemplate" {
+    }
+}
+
+// -------------------------------------
+Frame "FRAME" "BattleNetProfileListItem" {
+    UseActiveContext,
+
+    Frame "HIGHLIGHT" "ItemHighlight" {
+        UseActiveContext,
+        SetAllPoints,
+        LayerStyle "IGNORETRACKEVENTS",
+        HighlightColor 0.0 0.0 1.0 0.1,
+        HighlightType "SHADE",
+    }
+
+    Frame "FRAME" "LadderPanel" {
+        UseActiveContext,
+
+        Frame "TEXT" "LadderLabel" INHERITS "LadderNameTextTemplate" {
+		    UseActiveContext,
+            LayerStyle "IGNORETRACKEVENTS",
+		    SetPoint TOPLEFT, "BattleNetProfileListItem", TOPLEFT, 0.002, -0.002,
+	    }
+
+		Frame "GLUEBUTTON" "ProfileLadderButton" INHERITS WITHCHILDREN "LadderButtonTemplate" {
+			UseActiveContext,
+			SetPoint LEFT, "BattleNetProfileListItem", LEFT, 0.005, -0.003,
+		}
+        
+		Frame "TEXT" "LadderRankLabel" INHERITS "TeamLabelTextTemplate" {
+			UseActiveContext,
+            LayerStyle "IGNORETRACKEVENTS",
+            FontJustificationH JUSTIFYCENTER,
+			SetPoint TOPLEFT, "ProfileLadderButton", TOPRIGHT, -0.004, -0.003125,
+            Width 0.08,
+			Text "COLON_RANK",
+		}
+
+		Frame "TEXT" "LadderRankValue" INHERITS "TeamLadderRankValueTextTemplate" {
+			UseActiveContext,
+            LayerStyle "IGNORETRACKEVENTS",
+            FontJustificationH JUSTIFYCENTER,
+			SetPoint TOP, "LadderRankLabel", BOTTOM, 0.0, 0.0,
+            Width 0.08,
+		}
+		
+	    Frame "SPRITE" "LadderLevelBar" {
+	        UseActiveContext,
+            LayerStyle "IGNORETRACKEVENTS",
+	        SetPoint LEFT, "ProfileLadderButton", RIGHT, 0.06, 0.0,
+	        BackgroundArt "UI\Glues\BattleNet\BattleNetTeamLevelBar\BattleNetTeamLevelBar.mdl",
+
+	        Frame "TEXT" "LadderLevelLabel" INHERITS "TeamValueTextTemplate" {
+	            UseActiveContext,
+                LayerStyle "IGNORETRACKEVENTS",
+                FontJustificationH JUSTIFYCENTER,
+	            SetPoint CENTER, "LadderLevelBar", CENTER, -0.024625, 0.0,
+	        }
+	    }
+        
+		Frame "TEXT" "LadderWinsLabel" INHERITS "TeamLabelTextTemplate" {
+			UseActiveContext,
+            LayerStyle "IGNORETRACKEVENTS",
+			SetPoint TOPLEFT, "LadderLevelBar", TOPRIGHT, -0.0475, -0.007,
+	        Text "COLON_WINS",
+			Width 0.05,
+		}
+
+		Frame "TEXT" "LadderWinsValue" INHERITS "TeamValueTextTemplate" {
+			UseActiveContext,
+            LayerStyle "IGNORETRACKEVENTS",
+			SetPoint LEFT, "LadderWinsLabel", RIGHT, 0.005, 0.0,
+		}
+
+		Frame "TEXT" "LadderLossesLabel" INHERITS "TeamLabelTextTemplate" {
+			UseActiveContext,
+            LayerStyle "IGNORETRACKEVENTS",
+			SetPoint TOPLEFT, "LadderWinsLabel", BOTTOMLEFT, 0.0, -0.004,
+	        Text "COLON_LOSSES",
+			Width 0.05,
+		}
+
+		Frame "TEXT" "LadderLossesValue" INHERITS "TeamValueTextTemplate" {
+			UseActiveContext,
+            LayerStyle "IGNORETRACKEVENTS",
+			SetPoint LEFT, "LadderLossesLabel", RIGHT, 0.005, 0.0,
+		}
+ 		
+		Frame "TEXT" "LadderLevelMarker" INHERITS "TeamValueTextTemplate" {
+			UseActiveContext,
+            LayerStyle "IGNORETRACKEVENTS",
+            FontJustificationH JUSTIFYCENTER,
+			SetPoint TOP, "LadderLevelBar", BOTTOM, -0.024625, 0.005275,
+		}
+
+		Frame "TEXT" "LadderLevelMinusOneMarker" INHERITS "TeamValueTextTemplate" {
+			UseActiveContext,
+            LayerStyle "IGNORETRACKEVENTS",
+            FontJustificationH JUSTIFYLEFT,
+			SetPoint LEFT, "LadderLevelMarker", LEFT, -0.041875, 0.0,
+		}
+
+		Frame "TEXT" "LadderLevelPlusOneMarker" INHERITS "TeamValueTextTemplate" {
+			UseActiveContext,
+            LayerStyle "IGNORETRACKEVENTS",
+            FontJustificationH JUSTIFYRIGHT,
+			SetPoint RIGHT, "LadderLevelMarker", RIGHT, 0.041875, 0.0,
+		}
+	}
+
+	Frame "FRAME" "TeamPanel" {
+        UseActiveContext,
+
+        Frame "TEXT" "LastGameLabel" INHERITS "LadderNameTextTemplate" {
+		    UseActiveContext,
+            FontColor 0.4 0.4 0.4 1.0,
+            FrameFont "MasterFont", 0.009, "",
+            LayerStyle "IGNORETRACKEVENTS",
+		    SetPoint TOPLEFT, "BattleNetProfileListItem", TOPLEFT, 0.002, -0.002,
+            Text "LAST_GAME_PLAYED",
+			Width 0.1,
+	    }
+
+        Frame "TEXT" "LastGameValue" INHERITS "LadderNameTextTemplate" {
+		    UseActiveContext,
+            FontColor 0.6 0.6 0.6 1.0,
+            FrameFont "MasterFont", 0.009, "",
+            LayerStyle "IGNORETRACKEVENTS",
+		    SetPoint LEFT, "LastGameLabel", RIGHT, 0.005, 0.0,
+			Width 0.188,
+	    }
+
+		Frame "GLUEBUTTON" "ProfileTeamLadderButton" INHERITS WITHCHILDREN "LadderButtonTemplate" {
+			UseActiveContext,
+			SetPoint LEFT, "BattleNetProfileListItem", LEFT, 0.005, 0.0,
+		}
+        
+	    Frame "SPRITE" "TeamLadderLevelBar" {
+	        UseActiveContext,
+	        SetPoint LEFT, "ProfileTeamLadderButton", RIGHT, -0.012, 0.0,
+            LayerStyle "IGNORETRACKEVENTS",
+	        BackgroundArt "UI\Glues\BattleNet\BattleNetTeamLevelBar\BattleNetTeamLevelBar.mdl",
+
+	        Frame "TEXT" "TeamLadderLevelLabel" INHERITS "TeamValueTextTemplate" {
+	            UseActiveContext,
+                LayerStyle "IGNORETRACKEVENTS",
+                FontJustificationH JUSTIFYCENTER,
+	            SetPoint CENTER, "TeamLadderLevelBar", CENTER, -0.024625, 0.0,
+	        }
+	    }
+        
+		Frame "TEXT" "TeamLadderWinsLabel" INHERITS "TeamLabelTextTemplate" {
+			UseActiveContext,
+            LayerStyle "IGNORETRACKEVENTS",
+			SetPoint TOPLEFT, "TeamLadderLevelBar", TOPRIGHT, -0.056013, -0.007,
+	        Text "COLON_WINS",
+			Width 0.05,
+		}
+
+		Frame "TEXT" "TeamLadderWinsValue" INHERITS "TeamValueTextTemplate" {
+			UseActiveContext,
+            LayerStyle "IGNORETRACKEVENTS",
+			SetPoint LEFT, "TeamLadderWinsLabel", RIGHT, 0.005, 0.0,
+		}
+
+		Frame "TEXT" "TeamLadderLossesLabel" INHERITS "TeamLabelTextTemplate" {
+			UseActiveContext,
+            LayerStyle "IGNORETRACKEVENTS",
+			SetPoint TOPLEFT, "TeamLadderWinsLabel", BOTTOMLEFT, 0.0, -0.004,
+	        Text "COLON_LOSSES",
+			Width 0.05,
+		}
+
+		Frame "TEXT" "TeamLadderLossesValue" INHERITS "TeamValueTextTemplate" {
+			UseActiveContext,
+            LayerStyle "IGNORETRACKEVENTS",
+			SetPoint LEFT, "TeamLadderLossesLabel", RIGHT, 0.005, 0.0,
+		}
+ 		
+		Frame "TEXT" "TeamLadderLevelMarker" INHERITS "TeamValueTextTemplate" {
+			UseActiveContext,
+            LayerStyle "IGNORETRACKEVENTS",
+            FontJustificationH JUSTIFYCENTER,
+			SetPoint TOP, "TeamLadderLevelBar", BOTTOM, -0.024625, 0.005275,
+		}
+
+		Frame "TEXT" "TeamLadderLevelMinusOneMarker" INHERITS "TeamValueTextTemplate" {
+			UseActiveContext,
+            LayerStyle "IGNORETRACKEVENTS",
+            FontJustificationH JUSTIFYLEFT,
+			SetPoint LEFT, "TeamLadderLevelMarker", LEFT, -0.041875, 0.0,
+		}
+
+		Frame "TEXT" "TeamLadderLevelPlusOneMarker" INHERITS "TeamValueTextTemplate" {
+			UseActiveContext,
+            LayerStyle "IGNORETRACKEVENTS",
+            FontJustificationH JUSTIFYRIGHT,
+			SetPoint RIGHT, "TeamLadderLevelMarker", RIGHT, 0.041875, 0.0,
+		}
+      
+		Frame "TEXT" "TeamPartnersLabel" INHERITS "TeamLabelTextTemplate" {
+			UseActiveContext,
+            LayerStyle "IGNORETRACKEVENTS",
+			SetPoint TOPLEFT, "TeamLadderWinsLabel", TOPLEFT, 0.074, 0.0,		
+	        Text "COLON_PARTNERS",
+		}
+
+		Frame "TEXT" "TeamPartnersValue" INHERITS "TeamValueTextTemplate" {
+			UseActiveContext,
+            LayerStyle "IGNORETRACKEVENTS",
+			SetPoint TOPLEFT, "TeamPartnersLabel", TOPRIGHT, 0.005, 0.0,		
+		}        
+	}
+}
+
+// -- BattleNetIconSelectDialog --------------------------------------------------------
+Frame "DIALOG" "BattleNetIconSelectDialog" {
+    Height 0.47,
+    Width 0.5,
+
+    DialogBackdrop "IconSelectDialogBackdrop",
+    Frame "BACKDROP" "IconSelectDialogBackdrop" {
+        BackdropTileBackground,
+        BackdropBackground  "UI\Widgets\BattleNet\bnet-dialoguebox-background.blp",
+        BackdropCornerFlags "UL|UR|BL|BR|T|L|B|R",
+        BackdropCornerSize  0.064,
+        BackdropBackgroundSize  0.128,
+        BackdropBackgroundInsets 0.01 0.01 0.01 0.01,
+        BackdropEdgeFile  "UI\Widgets\BattleNet\bnet-dialoguebox-border.blp",
+	    BackdropBlendAll,
+    }
+
+    Frame "TEXT" "IconSelectTitleText" INHERITS "BattleNetTitleTextTemplate" {
+        SetPoint TOPLEFT, "BattleNetIconSelectDialog", TOPLEFT, 0.02625, -0.024375,
+        Text "SELECT_ICON_TITLE",
+		FrameFont "MasterFont", 0.0199, "",
+    }
+
+    Frame "TEXT" "IconSelectInfoText" INHERITS "BattleNetInfoTextTemplate" {
+        Width 0.448125,
+        SetPoint TOPLEFT, "IconSelectTitleText", BOTTOMLEFT, 0.0, -0.001875,
+        FontJustificationH JUSTIFYLEFT,
+        Text "SELECT_ICON_INFO",
+		FrameFont "MasterFont", 0.01171, "",
+    }
+
+    Frame "TEXT" "IconSelectCurrentIconLabel" INHERITS "BattleNetLabelTextTemplate" {
+        SetPoint TOPLEFT, "IconSelectInfoText", BOTTOMLEFT, 0.0125, -0.015,
+        Text "COLON_CURRENT_ICON",
+		Width 0.18,
+    }
+
+    Frame "TEXT" "IconSelectCurrentIconValue" INHERITS "BattleNetValueTextTemplate" {
+        SetPoint LEFT, "IconSelectCurrentIconLabel", RIGHT, 0.02, 0.0,
+        Text "DEFAULT",
+    }
+
+    Frame "BACKDROP" "IconSelectCurrentIconBorder" {
+        Height 0.04,
+        Width 0.04,
+        SetPoint LEFT, "IconSelectCurrentIconLabel", RIGHT, 0.006, 0.0,
+        BackdropBackground  "UI\Widgets\BattleNet\chaticons\iconselection-border-active.blp",
+	    BackdropBlendAll,
+
+        Frame "BACKDROP" "IconSelectCurrentIcon" {
+            Height 0.04,
+            Width 0.04,
+            SetPoint CENTER, "IconSelectCurrentIconBorder", CENTER, 0.00250, 0.0,
+        }
+    }
+
+    Frame "TEXT" "IconSelectPortraitLabel" INHERITS "BattleNetLabelTextTemplate" {
+        SetPoint TOPLEFT, "IconSelectInfoText", BOTTOMLEFT, 0.0125, -0.045,
+        Text "COLON_PORTRAIT",
+		Width 0.18,
+    }
+
+    Frame "BACKDROP" "IconSelectPortraitBorder" INHERITS "BattleNetEditBoxBackdropTemplate" {
+        Width 0.11025,
+        Height 0.11125,
+        SetPoint TOPLEFT, "IconSelectPortraitLabel", BOTTOMLEFT, 0.0, -0.003,
+    }
+
+    Frame "SPRITE" "IconSelectPortrait" {
+        Width 0.0900,
+        Height 0.09185,
+        SetPoint CENTER, "IconSelectPortraitBorder", CENTER, 0.0, 0.0,
+
+        Frame "BACKDROP" "IconSelectPortraitHighlight" {
+            SetAllPoints,
+            BackdropBlendAll,
+            BackdropBackground  "UI\Widgets\BattleNet\bnet-profileportrait-cover.blp",
+        }
+    }
+
+	Frame "GLUETEXTBUTTON" "IconSelectDefaultButton" INHERITS WITHCHILDREN "BattleNetBorderedButtonTemplate" {
+        Width 0.1,
+		SetPoint TOP,"IconSelectPortrait",BOTTOM, 0.0, -0.015,
+		ControlShortcutKey "KEY_DEFAULT_ICON_SHORTCUT",
+
+        ButtonText "IconSelectDefaultButtonText",
+		Frame "TEXT" "IconSelectDefaultButtonText" INHERITS "BattleNetButtonTextTemplate" {
+			Text "KEY_DEFAULT_ICON",
+			FrameFont "MasterFont", 0.01, "",
+		}
+	}
+
+    Frame "TEXT" "IconSelectDefaultValue" INHERITS "BattleNetValueTextTemplate" {
+        SetPoint TOP,"IconSelectDefaultButton",BOTTOM, -0.004, -0.01,
+		FrameFont "MasterFont", 0.009, "",
+		Text "DEFAULT_ICON_SELECTED",
+    }
+
+    Frame "FRAME" "IconSelectBoxContainer" {
+        SetPoint TOPLEFT, "IconSelectPortrait", TOPRIGHT, 0.02, 0.01,
+        Width 0.2,
+        Height 0.2,
+    }
+    
+    Frame "TEXT" "IconSelectBoxLabel" INHERITS "BattleNetLabelTextTemplate" {
+        SetPoint BOTTOMLEFT, "IconSelectBoxContainer", TOPLEFT, 0.0, 0.002625,
+        Text "COLON_CHOOSE_ICON",
+		Width 0.18,
+    }
+
+    Frame "BACKDROP" "IconSelectCancelButtonBackdrop" INHERITS "BattleNetMenuSingleButtonBaseBackdrop" {
+        SetPoint BOTTOMRIGHT, "BattleNetIconSelectDialog", BOTTOMRIGHT, -0.022, 0.015,
+
+	    Frame "GLUETEXTBUTTON" "IconSelectCancelButton" INHERITS WITHCHILDREN "BattleNetButtonTemplate" {
+            Width 0.159,
+		    SetPoint TOPRIGHT,"IconSelectCancelButtonBackdrop",TOPRIGHT, -0.032, -0.015625,
+		    ControlShortcutKey "KEY_CANCEL_SHORTCUT",
+
+            ButtonText "IconSelectCancelButtonText",
+		    Frame "TEXT" "IconSelectCancelButtonText" INHERITS "BattleNetButtonTextTemplate" {
+			    Text "KEY_CANCEL",
+		    }
+	    }
+    }
+
+    Frame "BACKDROP" "IconSelectOkButtonBackdrop" INHERITS "BattleNetMenuSingleButtonBaseBackdrop" {
+        SetPoint RIGHT, "IconSelectCancelButtonBackdrop", LEFT, 0.025, 0.0,
+
+	    Frame "GLUETEXTBUTTON" "IconSelectOkButton" INHERITS WITHCHILDREN "BattleNetButtonTemplate" {
+            Width 0.159,
+		    SetPoint TOPRIGHT,"IconSelectOkButtonBackdrop",TOPRIGHT, -0.032, -0.015625,
+		    ControlShortcutKey "KEY_OK_SHORTCUT",
+
+            ButtonText "IconSelectOkButtonText",
+		    Frame "TEXT" "IconSelectOkButtonText" INHERITS "BattleNetButtonTextTemplate" {
+			    Text "KEY_OK",
+		    }
+	    }
+    }
+}

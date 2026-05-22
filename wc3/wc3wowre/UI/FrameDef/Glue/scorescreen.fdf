@@ -1,0 +1,455 @@
+// -- INCLUDE FILES ---------------------------------------------
+
+IncludeFile "UI\FrameDef\Glue\StandardTemplates.fdf",
+IncludeFile "UI\FrameDef\UI\EscMenuTemplates.fdf",
+
+// -- LOCAL TEMPLATES -------------------------------------------
+
+Frame "BUTTON" "ScoreScreenTabButtonTemplate" {
+	Width 0.1,
+	Height 0.03,
+	ControlStyle "AUTOTRACK|HIGHLIGHTONMOUSEOVER",
+
+	ControlMouseOverHighlight "ScoreScreenTabButtonBackdrop",
+	Frame "HIGHLIGHT" "ScoreScreenTabButtonBackdrop" {
+		HighlightType "FILETEXTURE",
+		HighlightAlphaFile "UI\Glues\ScoreScreen\scorescreen-tab-hilight.blp",
+		HighlightAlphaMode "ADD",
+	}
+}
+
+Frame "GLUECHECKBOX" "ScoreScreen5ColumnButtonTemplate" {
+	Width 0.0935,
+	Height 0.0125,
+	ControlStyle "AUTOTRACK|HIGHLIGHTONMOUSEOVER",
+	
+	CheckBoxCheckHighlight "ScoreScreen5ColumnButtonTemplateCheckHighlight",
+	Frame "HIGHLIGHT" "ScoreScreen5ColumnButtonTemplateCheckHighlight" {
+		HighlightType "FILETEXTURE",
+		HighlightAlphaFile "UI\Glues\ScoreScreen\scorescreen-tab-hilight.blp",
+		HighlightAlphaMode "ADD",
+	}
+	
+	ControlMouseOverHighlight "ScoreScreen5ColumnButtonTemplateMouseHighlight",
+	Frame "HIGHLIGHT" "ScoreScreen5ColumnButtonTemplateMouseHighlight" {
+		HighlightType "FILETEXTURE",
+		HighlightAlphaFile "UI\Glues\ScoreScreen\scorescreen-tab-hilight.blp",
+		HighlightAlphaMode "ADD",
+	}
+}
+
+Frame "GLUECHECKBOX" "ScoreScreen4ColumnButtonTemplate" {
+	Width 0.1225,
+	Height 0.0125,
+	ControlStyle "AUTOTRACK|HIGHLIGHTONMOUSEOVER",
+	
+	CheckBoxCheckHighlight "ScoreScreen4ColumnButtonTemplateCheckHighlight",
+	Frame "HIGHLIGHT" "ScoreScreen4ColumnButtonTemplateCheckHighlight" {
+		HighlightType "FILETEXTURE",
+		HighlightAlphaFile "UI\Glues\ScoreScreen\scorescreen-tab-hilight.blp",
+		HighlightAlphaMode "ADD",
+	}
+	
+	ControlMouseOverHighlight "ScoreScreen4ColumnButtonTemplateHighlight",
+	Frame "HIGHLIGHT" "ScoreScreen4ColumnButtonTemplateHighlight" {
+		HighlightType "FILETEXTURE",
+		HighlightAlphaFile "UI\Glues\ScoreScreen\scorescreen-tab-hilight.blp",
+		HighlightAlphaMode "ADD",
+	}
+}
+
+Frame "BACKDROP" "ScoreScreenButtonBackdropTemplate" {
+    BackdropTileBackground,
+    BackdropBackground  "UI\Widgets\EscMenu\Human\blank-background.blp",
+    BackdropCornerFlags "UL|UR|BL|BR|T|L|B|R",
+    BackdropCornerSize  0.016,
+    BackdropBackgroundSize  0.032,
+    BackdropBackgroundInsets 0.004 0.004 0.004 0.004,
+    BackdropEdgeFile  "UI\Glues\ScoreScreen\scorescreen-buttonbackground.blp",
+}
+
+Frame "GLUETEXTBUTTON" "ScoreScreenBottomButtonTemplate" {
+	Width 0.1745,
+	Height 0.02925,
+	ControlStyle "AUTOTRACK|HIGHLIGHTONMOUSEOVER",
+
+    ControlBackdrop "ScoreScreenButtonBackdrop",
+    Frame "BACKDROP" "ScoreScreenButtonBackdrop" INHERITS "ScoreScreenButtonBackdropTemplate" {
+    }
+
+    
+	ControlMouseOverHighlight "ScoreScreenBottomButtonTemplateHighlight",
+	Frame "HIGHLIGHT" "ScoreScreenBottomButtonTemplateHighlight" {
+		HighlightType "FILETEXTURE",
+		HighlightAlphaFile "UI\Glues\ScoreScreen\scorescreen-tab-hilight.blp",
+		HighlightAlphaMode "ADD",
+	}
+}
+
+Frame "GLUECHECKBOX" "ScoreScreenBottomCheckButtonTemplate" {
+	Width 0.187,
+	Height 0.019,
+	ControlStyle "AUTOTRACK|HIGHLIGHTONMOUSEOVER",
+	
+	CheckBoxCheckHighlight "ScoreScreenBottomButtonTemplateCheckHighlight",
+	Frame "HIGHLIGHT" "ScoreScreenBottomButtonTemplateCheckHighlight" {
+		HighlightType "FILETEXTURE",
+		HighlightAlphaFile "UI\Glues\ScoreScreen\scorescreen-tab-hilight.blp",
+		HighlightAlphaMode "ADD",
+	}
+	
+	ControlMouseOverHighlight "ScoreScreenBottomButtonTemplateMouseHighlight",
+	Frame "HIGHLIGHT" "ScoreScreenBottomButtonTemplateMouseHighlight" {
+		HighlightType "FILETEXTURE",
+		HighlightAlphaFile "UI\Glues\ScoreScreen\scorescreen-tab-hilight.blp",
+		HighlightAlphaMode "ADD",
+	}
+}
+
+Frame "TEXT" "ScoreScreenTabTextTemplate" {
+	DecorateFileNames,
+	FrameFont "MasterFont", 0.013, "",
+    FontJustificationH JUSTIFYCENTER,
+    FontJustificationV JUSTIFYMIDDLE,    
+    FontFlags "FIXEDSIZE",
+    FontColor 0.8 0.64 0.0 1.0,
+    FontHighlightColor 1.0 1.0 1.0 1.0,
+	FontShadowColor 0.0 0.0 0.0 1.0,
+    FontShadowOffset 0.002 -0.002,
+}
+
+Frame "TEXT" "ScoreScreenTabTextSelectedTemplate" {
+	DecorateFileNames,
+	FrameFont "MasterFont", 0.015, "",
+    FontJustificationH JUSTIFYCENTER,
+    FontJustificationV JUSTIFYMIDDLE,    
+    FontFlags "FIXEDSIZE",
+    FontColor 1.0 0.86 0.28 1.0,
+    FontHighlightColor 1.0 1.0 1.0 1.0,
+	FontShadowColor 0.0 0.0 0.0 1.0,	
+    FontShadowOffset 0.002 -0.002,
+}
+
+Frame "TEXT" "ScoreScreenColumnHeaderTemplate" {
+	DecorateFileNames,
+	FrameFont "MasterFont", 0.009, "",
+    FontJustificationH JUSTIFYCENTER,
+    FontJustificationV JUSTIFYMIDDLE,    
+    FontFlags "FIXEDSIZE",
+    FontColor 1.0 1.0 1.0 1.0,
+    FontHighlightColor 1.0 1.0 1.0 1.0,
+	FontShadowColor 0.0 0.0 0.0 1.0,
+    FontShadowOffset 0.002 -0.002,
+}
+
+// -- FRAMES ----------------------------------------------------
+
+Frame "FRAME" "ScoreScreenFrame" {
+	SetAllPoints,
+		
+	Frame "FRAME" "ScoreScreenMainPanel" {
+		SetAllPoints,
+		
+		Frame "MODEL" "ScoreScreenBackground" {
+			BackgroundArt "UI\Glues\ScoreScreen\ScoreScreen-Background\ScoreScreen-Background.mdl",
+			SetAllPoints,
+			LayerStyle "NOSHADING",
+		}
+
+		Frame "MODEL" "ScoreScreenPageTab" {
+			BackgroundArt "UI\Glues\ScoreScreen\ScoreScreen-Tabs\ScoreScreen-Tabs.mdl",
+			SetAllPoints,
+			LayerStyle "NOSHADING",
+		}
+
+		Frame "FRAME" "ScoreScreen5ColumnFrame" {
+			SetAllPoints,
+			LayerStyle "IGNORETRACKEVENTS",
+
+			Frame "GLUECHECKBOX" "ScoreScreen5ColumnButton0" INHERITS WITHCHILDREN "ScoreScreen5ColumnButtonTemplate" {
+				SetPoint TOP,"ScoreScreenBackground",TOP,-0.1865,-0.085,
+				Frame "TEXT" "ScoreScreen5ColumnHeader0" INHERITS "ScoreScreenColumnHeaderTemplate" {
+					LayerStyle "IGNORETRACKEVENTS",
+					SetPoint CENTER,"ScoreScreen5ColumnButton0",CENTER,0,0,
+				}
+			}
+			
+			Frame "GLUECHECKBOX" "ScoreScreen5ColumnButton1" INHERITS WITHCHILDREN "ScoreScreen5ColumnButtonTemplate" {
+				SetPoint TOP,"ScoreScreenBackground",TOP,-0.0703,-0.085,
+				Frame "TEXT" "ScoreScreen5ColumnHeader1" INHERITS "ScoreScreenColumnHeaderTemplate" {
+					LayerStyle "IGNORETRACKEVENTS",
+					SetPoint CENTER,"ScoreScreen5ColumnButton1",CENTER,0,0,
+				}
+			}
+			
+			Frame "GLUECHECKBOX" "ScoreScreen5ColumnButton2" INHERITS WITHCHILDREN "ScoreScreen5ColumnButtonTemplate" {
+				SetPoint TOP,"ScoreScreenBackground",TOP,0.0462,-0.085,
+				Frame "TEXT" "ScoreScreen5ColumnHeader2" INHERITS "ScoreScreenColumnHeaderTemplate" {
+					LayerStyle "IGNORETRACKEVENTS",
+					SetPoint CENTER,"ScoreScreen5ColumnButton2",CENTER,0,0,
+				}
+			}
+
+			Frame "GLUECHECKBOX" "ScoreScreen5ColumnButton3" INHERITS WITHCHILDREN "ScoreScreen5ColumnButtonTemplate" {
+				SetPoint TOP,"ScoreScreenBackground",TOP,0.1627,-0.085,
+				Frame "TEXT" "ScoreScreen5ColumnHeader3" INHERITS "ScoreScreenColumnHeaderTemplate" {
+					LayerStyle "IGNORETRACKEVENTS",
+					SetPoint CENTER,"ScoreScreen5ColumnButton3",CENTER,0,0,
+				}
+			}
+
+			Frame "GLUECHECKBOX" "ScoreScreen5ColumnButton4" INHERITS WITHCHILDREN "ScoreScreen5ColumnButtonTemplate" {
+				SetPoint TOP,"ScoreScreenBackground",TOP,0.28,-0.085,
+				Frame "TEXT" "ScoreScreen5ColumnHeader4" INHERITS "ScoreScreenColumnHeaderTemplate" {
+					LayerStyle "IGNORETRACKEVENTS",
+					SetPoint CENTER,"ScoreScreen5ColumnButton4",CENTER,0,0,
+				}
+			}
+		}
+
+		Frame "FRAME" "ScoreScreen4ColumnFrame" {
+			SetAllPoints,
+			LayerStyle "IGNORETRACKEVENTS",
+
+			Frame "GLUECHECKBOX" "ScoreScreen4ColumnButton0" INHERITS WITHCHILDREN "ScoreScreen4ColumnButtonTemplate" {
+				SetPoint TOP,"ScoreScreenBackground",TOP,-0.172,-0.085,
+				Frame "TEXT" "ScoreScreen4ColumnHeader0" INHERITS "ScoreScreenColumnHeaderTemplate" {
+					LayerStyle "IGNORETRACKEVENTS",
+					SetPoint CENTER,"ScoreScreen4ColumnButton0",CENTER,0,0,
+				}
+			}
+			
+			Frame "GLUECHECKBOX" "ScoreScreen4ColumnButton1" INHERITS WITHCHILDREN "ScoreScreen4ColumnButtonTemplate" {
+				SetPoint TOP,"ScoreScreenBackground",TOP,-0.0273,-0.085,
+				Frame "TEXT" "ScoreScreen4ColumnHeader1" INHERITS "ScoreScreenColumnHeaderTemplate" {
+					LayerStyle "IGNORETRACKEVENTS",
+					SetPoint CENTER,"ScoreScreen4ColumnButton1",CENTER,0,0,
+				}
+			}
+			
+			Frame "GLUECHECKBOX" "ScoreScreen4ColumnButton2" INHERITS WITHCHILDREN "ScoreScreen4ColumnButtonTemplate" {
+				SetPoint TOP,"ScoreScreenBackground",TOP,0.1182,-0.085,
+				Frame "TEXT" "ScoreScreen4ColumnHeader2" INHERITS "ScoreScreenColumnHeaderTemplate" {
+					LayerStyle "IGNORETRACKEVENTS",
+					SetPoint CENTER,"ScoreScreen4ColumnButton2",CENTER,0,0,
+				}
+			}
+
+			Frame "GLUECHECKBOX" "ScoreScreen4ColumnButton3" INHERITS WITHCHILDREN "ScoreScreen4ColumnButtonTemplate" {
+				SetPoint TOP,"ScoreScreenBackground",TOP,0.2647,-0.085,
+				Frame "TEXT" "ScoreScreen4ColumnHeader3" INHERITS "ScoreScreenColumnHeaderTemplate" {
+					LayerStyle "IGNORETRACKEVENTS",
+					SetPoint CENTER,"ScoreScreen4ColumnButton3",CENTER,0,0,
+				}
+			}
+		}
+		
+		Frame "MODEL" "ScoreScreenRaceArt" {
+			SetAllPoints,
+			LayerStyle "NOSHADING|IGNORETRACKEVENTS",
+		}
+
+		Frame "MODEL" "ScoreScreenBarTop" {
+			BackgroundArt "UI\Glues\ScoreScreen\ScoreScreen-TopBar\ScoreScreen-TopBar.mdl",
+			SetPoint TOPLEFT,"ScoreScreenFrame",TOPLEFT,0,-0.11,
+			LayerStyle "NOSHADING",
+		}
+
+		Frame"TEXT" "ScoreScreenTabTextSelected" INHERITS "ScoreScreenTabTextSelectedTemplate" {
+		}
+
+		Frame "TEXT" "ScoreScreenTabText0" INHERITS "ScoreScreenTabTextTemplate" {
+			SetPoint TOP,"ScoreScreenBackground",TOP,-0.20,-0.036,
+			Text "SCORESCREEN_TAB0",
+		}
+		Frame "BUTTON" "ScoreScreenTabButton0" INHERITS WITHCHILDREN "ScoreScreenTabButtonTemplate" {
+			SetPoint TOP,"ScoreScreenBackground",TOP,-0.20,-0.025,
+		}
+
+		Frame "TEXT" "ScoreScreenTabText1" INHERITS "ScoreScreenTabTextTemplate" {
+			SetPoint TOP,"ScoreScreenBackground",TOP,-0.074,-0.036,
+			Text "SCORESCREEN_TAB1",
+		}
+		Frame "BUTTON" "ScoreScreenTabButton1" INHERITS WITHCHILDREN "ScoreScreenTabButtonTemplate" {
+			SetPoint TOP,"ScoreScreenBackground",TOP,-0.074,-0.025,
+		}
+
+		Frame "TEXT" "ScoreScreenTabText2" INHERITS "ScoreScreenTabTextTemplate" {
+			SetPoint TOP,"ScoreScreenBackground",TOP,0.055,-0.036,
+			Text "SCORESCREEN_TAB2",
+		}
+		Frame "BUTTON" "ScoreScreenTabButton2" INHERITS WITHCHILDREN "ScoreScreenTabButtonTemplate" {
+			SetPoint TOP,"ScoreScreenBackground",TOP,0.055,-0.025,
+		}
+
+		Frame "TEXT" "ScoreScreenTabText3" INHERITS "ScoreScreenTabTextTemplate" {
+			SetPoint TOP,"ScoreScreenBackground",TOP,0.18,-0.036,
+			Text "SCORESCREEN_TAB3",
+		}
+		Frame "BUTTON" "ScoreScreenTabButton3" INHERITS WITHCHILDREN "ScoreScreenTabButtonTemplate" {
+			SetPoint TOP,"ScoreScreenBackground",TOP,0.18,-0.025,
+		}
+
+        Frame "TEXT" "ScoreScreenElapsedTimeLabel" INHERITS "StandardLabelTextTemplate" {
+            SetPoint BOTTOMLEFT, "ScoreScreenFrame", BOTTOMLEFT, 0.0094, 0.05,
+            Text "COLON_ELAPSED_TIME",
+        }
+
+        Frame "TEXT" "ScoreScreenElapsedTimeValue" INHERITS "StandardValueTextTemplate" {
+            SetPoint LEFT, "ScoreScreenElapsedTimeLabel", RIGHT, 0.01, 0.0,
+        }
+        
+		Frame "GLUECHECKBOX" "ScoreScreenTeamsButton" INHERITS WITHCHILDREN "ScoreScreenBottomCheckButtonTemplate" {
+			Width 0.0365,
+			Height 0.0125,
+			SetPoint TOP,"ScoreScreenBackground",TOP,-0.374,-0.085,
+			Frame "TEXT" "ScoreScreenTeamsText" INHERITS "ScoreScreenColumnHeaderTemplate" {
+				LayerStyle "IGNORETRACKEVENTS",
+				SetPoint CENTER,"ScoreScreenTeamsButton",CENTER,0,0,
+				Text "TEAMS",
+			}
+		}
+
+        Frame "BACKDROP" "ScoreScreenTeamColorBackdrop" INHERITS "ScoreScreenButtonBackdropTemplate" {
+            SetPoint LEFT, "ScoreScreenTeamsButton", RIGHT, 0.01, 0.0,
+            Height 0.020625,
+            Width 0.023125,
+
+		    Frame "GLUEBUTTON" "ScoreScreenTeamColorButton" {
+                Height 0.020625,
+                Width 0.023125,
+			    SetPoint CENTER, "ScoreScreenTeamColorBackdrop", CENTER, 0.0, 0.000625,
+			    ControlShortcutKey "SCORESCREEN_TEAM_COLOR_SHORTCUT",
+    
+                ControlBackdrop "ScoreScreenButtonBackdrop",
+                Frame "BACKDROP" "ScoreScreenButtonBackdrop" INHERITS "ScoreScreenButtonBackdropTemplate" {
+                }
+
+                ControlPushedBackdrop "ScoreScreenButtonPushedBackdrop",
+                Frame "BACKDROP" "ScoreScreenButtonPushedBackdrop" INHERITS "ScoreScreenButtonBackdropTemplate" {
+                }
+
+                ControlDisabledBackdrop "ScoreScreenButtonDisabledBackdrop",
+                Frame "BACKDROP" "ScoreScreenButtonDisabledBackdrop" INHERITS "ScoreScreenButtonBackdropTemplate" {
+                }
+		    }
+        }
+
+		Frame "GLUETEXTBUTTON" "ScoreScreenSaveReplayButton" INHERITS WITHCHILDREN "ScoreScreenBottomButtonTemplate" {
+			SetPoint TOP,"ScoreScreenBackground",TOP,0.03875,-0.541,
+			ControlShortcutKey "KEY_SAVE_REPLAY_SHORTCUT",
+            TabFocusNext "ScoreScreenOkButton",
+			ButtonText "ScoreScreenSaveReplayText",
+			Frame "TEXT" "ScoreScreenSaveReplayText" INHERITS "ScoreScreenTabTextTemplate" {
+				SetPoint CENTER,"ScoreScreenSaveReplayButton",CENTER,0,0,
+				Text "KEY_SAVE_REPLAY",
+			}
+		}
+
+		Frame "GLUETEXTBUTTON" "ScoreScreenReplaySavedButton" INHERITS WITHCHILDREN "ScoreScreenBottomButtonTemplate" {
+			SetPoint TOP,"ScoreScreenBackground",TOP,0.03875,-0.541,
+			ButtonText "ScoreScreenReplaySavedText",
+			Frame "TEXT" "ScoreScreenReplaySavedText" INHERITS "ScoreScreenTabTextTemplate" {
+				SetPoint CENTER,"ScoreScreenReplaySavedButton",CENTER,0,0,
+				Text "REPLAY_SAVED",
+			}
+		}
+		
+		Frame "GLUETEXTBUTTON" "ScoreScreenOkButton" INHERITS WITHCHILDREN "ScoreScreenBottomButtonTemplate" {
+			SetPoint TOP,"ScoreScreenBackground",TOP,0.232125,-0.541,
+			ControlShortcutKey "OK_WHITE_SHORTCUT",
+            TabFocusDefault,
+            TabFocusNext "ScoreScreenSaveReplayButton",
+			ButtonText "ScoreScreenOkText",
+			Frame "TEXT" "ScoreScreenOkText" INHERITS "ScoreScreenTabTextTemplate" {
+				SetPoint CENTER,"ScoreScreenOkButton",CENTER,0,0,
+				Text "OK_WHITE",
+			}
+		}	
+	    Frame "SCROLLBAR" "ScoreScreenScrollBar" INHERITS WITHCHILDREN "StandardScrollBarTemplate" {
+    		Height 0.38,
+	        SetPoint TOPLEFT, "ScoreScreenBarTop", TOPRIGHT, -0.0025, -0.00375,
+	    }
+	}
+}	
+
+Frame "FRAME" "SaveReplayPanel" {
+	SetPoint CENTER, "ScoreScreenFrame", CENTER, 0.0, 0.0,
+	Width 0.432,
+	Height 0.288,
+
+	Frame "BACKDROP" "SaveReplayBackdrop" {
+		SetAllPoints,
+		
+	    DecorateFileNames,
+	    BackdropTileBackground,
+	    BackdropBackground  "EscMenuBackground",
+	    BackdropCornerFlags "UL|UR|BL|BR|T|L|B|R",
+	    BackdropCornerSize  0.048,
+	    BackdropBackgroundSize  0.256,
+	    BackdropBackgroundInsets 0.01 0.01 0.01 0.01,
+	    BackdropEdgeFile  "EscMenuBorder",
+	    BackdropBlendAll,
+	}
+	
+	Frame "FRAME" "ReplayListFrame" {
+		SetPoint TOP, "SaveReplayPanel", TOP, 0.0, -0.048,
+		Width 0.362,
+		Height 0.135,
+	}
+
+    Frame "TEXT" "SaveReplayTitleText" INHERITS "StandardTitleTextTemplate" {
+        SetPoint TOP, "SaveReplayPanel", TOP, 0.0, -0.03,
+
+        FontColor 1.0 1.0 1.0 1.0,
+        Text "SAVE_REPLAY",
+    }
+
+    Frame "GLUETEXTBUTTON" "SaveReplaySaveButton" INHERITS WITHCHILDREN "EscMenuButtonTemplate" {
+        SetPoint BOTTOMLEFT, "SaveReplayPanel", BOTTOMLEFT, 0.035, 0.03,
+		Width 0.118,
+        TabFocusDefault,
+        TabFocusNext "SaveReplayDeleteButton",
+        ControlShortcutKey "KEY_SAVE_E_SHORTCUT",
+		
+        ButtonText "SaveReplaySaveButtonText",
+        Frame "TEXT" "SaveReplaySaveButtonText" INHERITS "StandardButtonTextTemplate" {
+	        Text "KEY_SAVE_E",
+        }
+    }
+
+    Frame "GLUETEXTBUTTON" "SaveReplayDeleteButton" INHERITS WITHCHILDREN "EscMenuButtonTemplate" {
+        SetPoint LEFT, "SaveReplaySaveButton", RIGHT, 0.005, 0.0,
+		Width 0.118,
+        TabFocusNext "SaveReplayCancelButton",
+        ControlShortcutKey "KEY_DELETE_SHORTCUT",
+		
+        ButtonText "SaveReplayDeleteButtonText",
+        Frame "TEXT" "SaveReplayDeleteButtonText" INHERITS "StandardButtonTextTemplate" {
+	        Text "KEY_DELETE",
+        }
+    }
+
+    Frame "GLUETEXTBUTTON" "SaveReplayCancelButton" INHERITS WITHCHILDREN "EscMenuButtonTemplate" {
+        SetPoint LEFT, "SaveReplayDeleteButton", RIGHT, 0.005, 0.0,
+		Width 0.118,
+        TabFocusNext "SaveReplayFileEditBox",
+        ControlShortcutKey "KEY_CANCEL_SHORTCUT",
+		
+        ButtonText "SaveReplayCancelButtonText",
+        Frame "TEXT" "SaveReplayCancelButtonText" INHERITS "StandardButtonTextTemplate" {
+	        Text "KEY_CANCEL",
+        }
+    }
+
+    Frame "EDITBOX" "SaveReplayFileEditBox" INHERITS WITHCHILDREN "StandardDecoratedEditBoxTemplate" {
+        Width 0.362,
+        Height 0.037,
+        SetPoint BOTTOM, "SaveReplayDeleteButton", TOP, 0.0, 0.005,
+        TabFocusNext "SaveReplaySaveButton",
+
+        EditTextFrame "SaveReplayFileEditBoxText",
+        Frame "TEXT" "SaveReplayFileEditBoxText" INHERITS "StandardDecoratedEditBoxTextTemplate" {
+        }
+    }
+}

@@ -1,0 +1,145 @@
+// -- INCLUDE FILES ---------------------------------------------
+
+IncludeFile "UI\FrameDef\Glue\StandardTemplates.fdf",
+
+// -- LOCAL TEMPLATES -------------------------------------------
+
+Frame "BACKDROP" "SkirmishPopupMenuBackdropTemplate" {
+    Width 0.14675,
+    Height 0.026125,
+    BackdropBlendAll,
+    BackdropMirrored,
+    BackdropBackground  "UI\Widgets\Glues\GlueScreen-Button-BorderShort.blp",    
+}
+
+Frame "POPUPMENU" "SkirmishPopupMenuTemplate" INHERITS "StandardPopupMenuTemplate" {
+    Width 0.15,
+    Height 0.025,
+
+    ControlBackdrop "PopupMenuBackdrop",
+    Frame "BACKDROP" "PopupMenuBackdrop" INHERITS "StandardButtonBackdropTemplate" {
+    }
+
+    ControlDisabledBackdrop "PopupMenuDisabledBackdrop",
+    Frame "BACKDROP" "PopupMenuDisabledBackdrop" INHERITS "StandardButtonDisabledBackdropTemplate" {
+    }
+
+    PopupTitleFrame "PopupMenuTitle",
+    Frame "GLUETEXTBUTTON" "PopupMenuTitle" INHERITS WITHCHILDREN "StandardPopupMenuTitleTemplate" {
+    }
+
+    PopupArrowFrame "PopupMenuArrow",
+    Frame "BUTTON" "PopupMenuArrow" INHERITS WITHCHILDREN "StandardPopupMenuArrowTemplate" { 
+    }
+}
+
+// -- FRAMES ----------------------------------------------------
+
+Frame "FRAME" "Skirmish" INHERITS "StandardFrameTemplate" {
+    SetAllPoints,
+    TabFocusPush,
+
+    // game settings
+    Frame "TEXT" "GameSettingsLabel" INHERITS "StandardTitleTextTemplate" {
+        SetPoint TOPLEFT, "Skirmish", TOPLEFT, 0.020625, -0.03125,
+        Text "GAME_SETTINGS",
+    }
+
+    Frame "FRAME" "MapListContainer" {
+        Width 0.31675,
+        Height 0.13375,
+        SetPoint TOPLEFT, "Skirmish", TOPLEFT, 0.163125, -0.019375,
+    }
+
+    // team setup
+    Frame "FRAME" "TeamSetupContainer" {
+        Width 0.46375,
+        Height 0.39,
+        SetPoint BOTTOMLEFT, "Skirmish", BOTTOMLEFT, 0.015, 0.0225,
+    }
+
+    // map info display controls
+    Frame "FRAME" "MapInfoPanel" {
+        Frame "FRAME" "MapInfoPaneContainer" {
+            Width 0.234375,
+            Height 0.2875,
+            SetPoint TOPRIGHT, "Skirmish", TOPRIGHT, -0.025625, -0.05625,        
+        }
+
+        Frame "BACKDROP" "MapInfoBackdrop" INHERITS "StandardMenuSingleLargeButtonBaseBackdrop" {
+            SetPoint TOPRIGHT,"Skirmish",TOPRIGHT, -0.015, -0.358,
+
+	        Frame "GLUETEXTBUTTON" "MapInfoButton" INHERITS WITHCHILDREN "StandardButtonTemplate" {
+                Width 0.187,
+                SetPoint TOPRIGHT,"MapInfoBackdrop",TOPRIGHT, -0.032, -0.015625,
+                ControlShortcutKey "KEY_ADVANCED_OPTIONS_SHORTCUT",
+                TabFocusNext "CreateGameButton",
+
+                ButtonText "MapInfoButtonText",
+                Frame "TEXT" "MapInfoButtonText" INHERITS "StandardButtonTextTemplate" {
+	                Text "KEY_ADVANCED_OPTIONS",
+                }
+	        }
+        }
+    }
+
+    Frame "FRAME" "AdvancedOptionsPanel" {
+        Frame "FRAME" "AdvancedOptionsPaneContainer" {
+            Width 0.234375,
+            Height 0.2875,
+            SetPoint TOPRIGHT, "Skirmish", TOPRIGHT, -0.025625, -0.05625,        
+        }
+
+        Frame "BACKDROP" "AdvancedOptionsBackdrop" INHERITS "StandardMenuSingleLargeButtonBaseBackdrop" {
+            SetPoint TOPRIGHT,"Skirmish",TOPRIGHT, -0.015, -0.358,
+
+	        Frame "GLUETEXTBUTTON" "AdvancedOptionsButton" INHERITS WITHCHILDREN "StandardButtonTemplate" {
+		        Width 0.187,
+                SetPoint TOPRIGHT,"AdvancedOptionsBackdrop",TOPRIGHT, -0.032, -0.015625,
+		        ControlShortcutKey "KEY_MAP_INFO_SHORTCUT",
+                TabFocusNext "CreateGameButton",
+
+                ButtonText "AdvancedOptionsButtonText",
+		        Frame "TEXT" "AdvancedOptionsButtonText" INHERITS "StandardButtonTextTemplate" {
+			        Text "KEY_MAP_INFO",
+		        }
+	        }
+        }
+    }
+
+    // bottom buttons
+    Frame "BACKDROP" "PlayGameBackdrop" INHERITS "StandardMenuButtonBaseBackdrop" {
+        Width 0.24,
+        SetPoint BOTTOMRIGHT,"Skirmish",BOTTOMRIGHT, -0.015, 0.074,
+
+	    Frame "GLUETEXTBUTTON" "PlayGameButton" INHERITS WITHCHILDREN "StandardButtonTemplate" {
+            Width 0.168,
+		    SetPoint TOPRIGHT,"PlayGameBackdrop",TOPRIGHT, -0.012, -0.0165,
+		    ControlShortcutKey "KEY_START_GAME_SHORTCUT",
+            TabFocusDefault,
+		    TabFocusNext "CancelButton",
+
+            ButtonText "PlayGameButtonText",
+		    Frame "TEXT" "PlayGameButtonText" INHERITS "StandardButtonTextTemplate" {
+			    Text "KEY_START_GAME",
+		    }
+	    }
+    }
+
+    Frame "BACKDROP" "CancelBackdrop" INHERITS "StandardMenuButtonBaseBackdrop" {
+        Width 0.24,
+        SetPoint BOTTOMRIGHT,"Skirmish",BOTTOMRIGHT, -0.015, 0.0225,
+
+	    Frame "GLUETEXTBUTTON" "CancelButton" INHERITS WITHCHILDREN "StandardButtonTemplate" {
+            Width 0.168,
+		    SetPoint TOPRIGHT,"CancelBackdrop",TOPRIGHT, -0.012, -0.0165,
+		    ControlShortcutKey "KEY_CANCEL_SHORTCUT",
+
+            ButtonText "CancelButtonText",
+		    Frame "TEXT" "CancelButtonText" INHERITS "StandardButtonTextTemplate" {
+			    Text "KEY_CANCEL",
+		    }
+	    }
+    }
+}
+

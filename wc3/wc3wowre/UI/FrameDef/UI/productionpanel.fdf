@@ -1,0 +1,66 @@
+IncludeFile "UI\FrameDef\UI\EscMenuTemplates.fdf",
+
+Frame "SIMPLEFRAME" "ProductionPanelFrame" {
+    Width 0.7,
+    Height 0.5,
+    DecorateFileNames,
+
+    //Layer "BACKGROUND" {
+        //Texture {
+                //File "ObserverHeroPanelTile",
+                //TexCoord 0.17578125, 0.82421875, 0.44921875, 1.0, 
+                //SetAllPoints,
+        //}  
+    //}
+
+    Frame "POPUPMENU" "ProductionPanelModePopupMenuFrame" {
+        Width 0.09,
+        Height 0.025,
+        PopupButtonInset 0.01,
+        SetPoint TOPLEFT, "ProductionPanelFrame", TOPLEFT, 0, 0, // Position is set in CProductionPanel::OnFrameResize()
+
+        ControlBackdrop "ProductionPanelModeBackdrop",
+        Frame "BACKDROP" "ProductionPanelModeBackdrop" INHERITS "EscMenuButtonBackdropTemplate" {
+			BackdropCornerSize  0.0125,
+			BackdropBackgroundSize  0.128,
+			BackdropBackgroundInsets 0.004 0.004 0.004 0.004,
+        }
+
+        ControlDisabledBackdrop "ProductionPanelModeDisabledBackdrop",
+        Frame "BACKDROP" "ProductionPanelModeDisabledBackdrop" INHERITS "EscMenuButtonDisabledBackdropTemplate" {
+			BackdropCornerSize  0.0125,
+			BackdropBackgroundSize  0.128,
+			BackdropBackgroundInsets 0.004 0.004 0.004 0.004,
+        }
+
+        PopupTitleFrame "ProductionPanelModeMenuTitle",
+        Frame "GLUETEXTBUTTON" "ReplayVisionMenuTitle" INHERITS WITHCHILDREN "EscMenuPopupMenuTitleTemplate" {
+        }
+
+        PopupArrowFrame "ProductionPanelModeMenuArrow",
+        Frame "BUTTON" "ProductionPanelModeMenuArrow" INHERITS WITHCHILDREN "EscMenuPopupMenuArrowTemplate" { 
+        }
+
+        PopupMenuFrame "ProductionPanelModeMenu",
+        Frame "MENU" "ProductionPanelModeMenu" INHERITS "EscMenuPopupMenuMenuTemplate" {
+			DecorateFileNames,
+			FrameFont "EscMenuTextFont",0.0066,"",
+			MenuItemHeight 0.012,
+			MenuBorder 0.01,
+            Width 0.5,
+
+			ControlBackdrop "ProductionPanelModeMenuBackdropTemplate",
+			Frame "BACKDROP" "ProductionPanelModeMenuBackdropTemplate" INHERITS "EscMenuButtonBackdropTemplate" {
+				DecorateFileNames,
+				BackdropCornerSize  0.0125,
+				BackdropBackgroundSize  0.128,
+				BackdropBackgroundInsets 0.004 0.004 0.004 0.004,
+				BackdropBackground "EscMenuEditBoxBackground",
+			}
+        }
+    }
+}
+
+
+
+

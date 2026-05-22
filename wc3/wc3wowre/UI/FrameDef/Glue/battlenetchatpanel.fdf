@@ -1,0 +1,693 @@
+// -- INCLUDE FILES ---------------------------------------------
+
+IncludeFile "UI\FrameDef\Glue\BattleNetTemplates.fdf",
+
+// -- LOCAL TEMPLATES -------------------------------------------
+
+Frame "GLUEBUTTON" "IconicButtonTemplate" {
+    Height 0.038,
+    Width 0.038,
+    ControlStyle "AUTOTRACK|HIGHLIGHTONFOCUS|HIGHLIGHTONMOUSEOVER",
+
+    ControlFocusHighlight "IconicButtonFocusHighlightTemplate",
+    Frame "HIGHLIGHT" "IconicButtonFocusHighlightTemplate" INHERITS "BattleNetButtonFocusHighlightTemplate" {
+    }
+
+    ControlMouseOverHighlight "IconicButtonMouseOverHighlightTemplate",
+    Frame "HIGHLIGHT" "IconicButtonMouseOverHighlightTemplate" INHERITS "BattleNetButtonMouseOverHighlightTemplate" {
+    }
+}
+
+// -- AD BANNER -------------------------------------------------
+
+Frame "FRAME" "AdBanner" {
+	SetPoint TOPLEFT, "BattleNetChatPanel", TOPLEFT, 0.026625, -0.0145,
+	Width 0.5265,
+	Height 0.0675,
+}
+
+// -- FRAMES ----------------------------------------------------
+
+Frame "FRAME" "BattleNetChatPanel" {
+    SetAllPoints,
+
+    Frame "SPRITE" "ButtonBarBackground" {
+        SetAllPoints,
+    }
+
+    Frame "FRAME" "ControlLayer" {
+
+        // --- AD FRAME
+		Frame "BACKDROP" "AdFrame" INHERITS "BattleNetControlBackdropTemplate" {
+			SetPoint TOPLEFT, "BattleNetChatPanel", TOPLEFT, 0.016625, -0.0045,
+			Width 0.546,
+			Height 0.087,
+		}
+
+		Frame "BACKDROP" "LogoFrame" INHERITS "BattleNetControlBackdropTemplate" {
+			SetPoint LEFT, "AdFrame", RIGHT, 0.001, 0.0,
+			Width 0.215625,
+			Height 0.087,
+		}
+
+        // --- BUTTON BAR BUTTONS
+        Frame "GLUETEXTBUTTON" "StandardGameButton" INHERITS WITHCHILDREN "BattleNetButtonTemplate" {
+            Width 0.115,
+	        Height 0.038,
+            SetPoint TOPLEFT, "BattleNetChatPanel", TOPLEFT, 0.163625, -0.103,
+            ControlShortcutKey "KEY_PLAY_GAME_SHORTCUT",
+            TabFocusDefault,
+            TabFocusNext "QuickStandardGameButton",
+
+            ButtonText "StandardGameButtonText",
+            Frame "TEXT" "StandardGameButtonText" INHERITS "BattleNetButtonTextTemplate" {
+                Text "KEY_PLAY_GAME",
+            }
+        }
+        Frame "GLUEBUTTON" "QuickStandardGameButton" INHERITS WITHCHILDREN "IconicButtonTemplate" {
+            SetPoint LEFT, "StandardGameButton", RIGHT, 0.0, 0.0,
+            ControlShortcutKey "BNET_QUICKSTANDARD_GAME_SHORTCUT",            
+            TabFocusNext "StandardTeamGameButton",
+
+		    ControlBackdrop "QuickStandardGameButtonBackdropTemplate",
+		    Frame "BACKDROP" "QuickStandardGameButtonBackdropTemplate" {
+		        BackdropBackground  "UI\Widgets\BattleNet\bnet-mainmenu-quickgame-up.blp",
+		        BackdropCornerFlags "UL|UR|BL|BR|T|L|B|R",
+		        BackdropCornerSize  0.016,
+		        BackdropBackgroundSize  0.032,
+		        BackdropBackgroundInsets 0.004 0.004 0.004 0.004,
+		        BackdropEdgeFile  "UI\Widgets\Glues\GlueScreen-Button2-BackdropBorder.blp",
+		    }
+	
+		    ControlPushedBackdrop "QuickStandardGameButtonPushedBackdropTemplate",
+		    Frame "BACKDROP" "QuickStandardGameButtonPushedBackdropTemplate" {
+		        BackdropBackground  "UI\Widgets\BattleNet\bnet-mainmenu-quickgame-down.blp",
+		        BackdropCornerFlags "UL|UR|BL|BR|T|L|B|R",
+		        BackdropCornerSize  0.016,
+		        BackdropBackgroundSize  0.032,
+		        BackdropBackgroundInsets 0.004 0.004 0.004 0.004,
+		        BackdropEdgeFile  "UI\Widgets\Glues\GlueScreen-Button2-BackdropBorder-Down.blp",
+		    }
+	
+		    ControlDisabledBackdrop "QuickStandardGameButtonDisabledBackdropTemplate",
+		    Frame "BACKDROP" "QuickStandardGameButtonDisabledBackdropTemplate" {
+		        BackdropBackground  "UI\Widgets\BattleNet\bnet-mainmenu-quickgame-disabled.blp",
+		        BackdropCornerFlags "UL|UR|BL|BR|T|L|B|R",
+		        BackdropCornerSize  0.016,
+		        BackdropBackgroundSize  0.032,
+		        BackdropBackgroundInsets 0.004 0.004 0.004 0.004,
+		        BackdropEdgeFile  "UI\Widgets\Glues\GlueScreen-Button2-BackdropBorder-Disabled.blp",
+		    }
+        }
+
+
+
+        Frame "GLUEBUTTON" "StandardTeamGameButton" INHERITS WITHCHILDREN "IconicButtonTemplate" {
+            SetPoint LEFT, "QuickStandardGameButton", RIGHT, 0.020125, 0.0,
+            ControlShortcutKey "BNET_TEAM_GAME_SHORTCUT",            
+            TabFocusNext "CustomGameButton",
+
+		    ControlBackdrop "CustomTeamButtonBackdropTemplate",
+		    Frame "BACKDROP" "CustomTeamButtonBackdropTemplate" {
+		        BackdropBackground  "UI\Widgets\BattleNet\bnet-mainmenu-customteam-up.blp",
+		        BackdropCornerFlags "UL|UR|BL|BR|T|L|B|R",
+		        BackdropCornerSize  0.016,
+		        BackdropBackgroundSize  0.032,
+		        BackdropBackgroundInsets 0.004 0.004 0.004 0.004,
+		        BackdropEdgeFile  "UI\Widgets\Glues\GlueScreen-Button2-BackdropBorder.blp",
+		    }
+	
+		    ControlPushedBackdrop "CustomTeamButtonPushedBackdropTemplate",
+		    Frame "BACKDROP" "CustomTeamButtonPushedBackdropTemplate" {
+		        BackdropBackground  "UI\Widgets\BattleNet\bnet-mainmenu-customteam-down.blp",
+		        BackdropCornerFlags "UL|UR|BL|BR|T|L|B|R",
+		        BackdropCornerSize  0.016,
+		        BackdropBackgroundSize  0.032,
+		        BackdropBackgroundInsets 0.004 0.004 0.004 0.004,
+		        BackdropEdgeFile  "UI\Widgets\Glues\GlueScreen-Button2-BackdropBorder-Down.blp",
+		    }
+	
+		    ControlDisabledBackdrop "CustomTeamButtonDisabledBackdropTemplate",
+		    Frame "BACKDROP" "CustomTeamButtonDisabledBackdropTemplate" {
+		        BackdropBackground  "UI\Widgets\BattleNet\bnet-mainmenu-customteam-disabled.blp",
+		        BackdropCornerFlags "UL|UR|BL|BR|T|L|B|R",
+		        BackdropCornerSize  0.016,
+		        BackdropBackgroundSize  0.032,
+		        BackdropBackgroundInsets 0.004 0.004 0.004 0.004,
+		        BackdropEdgeFile  "UI\Widgets\Glues\GlueScreen-Button2-BackdropBorder-Disabled.blp",
+		    }
+        }
+        Frame "GLUEBUTTON" "CustomGameButton" INHERITS WITHCHILDREN "IconicButtonTemplate" {
+            SetPoint LEFT, "StandardTeamGameButton", RIGHT, 0.02, 0.0,
+            ControlShortcutKey "BNET_CUSTOM_GAME_SHORTCUT",            
+            TabFocusNext "LadderButton",
+
+		    ControlBackdrop "UserGameButtonBackdropTemplate",
+		    Frame "BACKDROP" "UserGameButtonBackdropTemplate" {
+		        BackdropBackground  "UI\Widgets\BattleNet\bnet-mainmenu-usermadegame-up.blp",
+		        BackdropCornerFlags "UL|UR|BL|BR|T|L|B|R",
+		        BackdropCornerSize  0.016,
+		        BackdropBackgroundSize  0.032,
+		        BackdropBackgroundInsets 0.004 0.004 0.004 0.004,
+		        BackdropEdgeFile  "UI\Widgets\Glues\GlueScreen-Button2-BackdropBorder.blp",
+		    }
+	
+		    ControlPushedBackdrop "UserGameButtonPushedBackdropTemplate",
+		    Frame "BACKDROP" "UserGameButtonPushedBackdropTemplate" {
+		        BackdropBackground  "UI\Widgets\BattleNet\bnet-mainmenu-usermadegame-down.blp",
+		        BackdropCornerFlags "UL|UR|BL|BR|T|L|B|R",
+		        BackdropCornerSize  0.016,
+		        BackdropBackgroundSize  0.032,
+		        BackdropBackgroundInsets 0.004 0.004 0.004 0.004,
+		        BackdropEdgeFile  "UI\Widgets\Glues\GlueScreen-Button2-BackdropBorder-Down.blp",
+		    }
+	
+		    ControlDisabledBackdrop "UserGameButtonDisabledBackdropTemplate",
+		    Frame "BACKDROP" "UserGameButtonDisabledBackdropTemplate" {
+		        BackdropBackground  "UI\Widgets\BattleNet\bnet-mainmenu-usermadegame-disabled.blp",
+		        BackdropCornerFlags "UL|UR|BL|BR|T|L|B|R",
+		        BackdropCornerSize  0.016,
+		        BackdropBackgroundSize  0.032,
+		        BackdropBackgroundInsets 0.004 0.004 0.004 0.004,
+		        BackdropEdgeFile  "UI\Widgets\Glues\GlueScreen-Button2-BackdropBorder-Disabled.blp",
+		    }
+        }
+
+        Frame "GLUEBUTTON" "TournamentButton" INHERITS WITHCHILDREN "IconicButtonTemplate" {
+            SetPoint LEFT, "CustomGameButton", RIGHT, 0.0515, 0.0,
+            ControlShortcutKey "BNET_TOURNAMENT_SHORTCUT",
+            TabFocusNext "LadderButton",            
+
+		    ControlBackdrop "TournamentButtonBackdropTemplate",
+		    Frame "BACKDROP" "TournamentButtonBackdropTemplate" {
+		        BackdropBackground  "UI\Widgets\BattleNet\bnet-mainmenu-tournament-up.blp",
+		        BackdropCornerFlags "UL|UR|BL|BR|T|L|B|R",
+		        BackdropCornerSize  0.016,
+		        BackdropBackgroundSize  0.032,
+		        BackdropBackgroundInsets 0.004 0.004 0.004 0.004,
+		        BackdropEdgeFile  "UI\Widgets\Glues\GlueScreen-Button2-BackdropBorder.blp",
+		    }
+	
+		    ControlPushedBackdrop "TournamentButtonPushedBackdropTemplate",
+		    Frame "BACKDROP" "TournamentButtonPushedBackdropTemplate" {
+		        BackdropBackground  "UI\Widgets\BattleNet\bnet-mainmenu-tournament-down.blp",
+		        BackdropCornerFlags "UL|UR|BL|BR|T|L|B|R",
+		        BackdropCornerSize  0.016,
+		        BackdropBackgroundSize  0.032,
+		        BackdropBackgroundInsets 0.004 0.004 0.004 0.004,
+		        BackdropEdgeFile  "UI\Widgets\Glues\GlueScreen-Button2-BackdropBorder-Down.blp",
+		    }
+	
+		    ControlDisabledBackdrop "TournamentButtonDisabledBackdropTemplate",
+		    Frame "BACKDROP" "TournamentButtonDisabledBackdropTemplate" {
+		        BackdropBackground  "UI\Widgets\BattleNet\bnet-mainmenu-tournament-disabled.blp",
+		        BackdropCornerFlags "UL|UR|BL|BR|T|L|B|R",
+		        BackdropCornerSize  0.016,
+		        BackdropBackgroundSize  0.032,
+		        BackdropBackgroundInsets 0.004 0.004 0.004 0.004,
+		        BackdropEdgeFile  "UI\Widgets\Glues\GlueScreen-Button2-BackdropBorder-Disabled.blp",
+		    }
+        }
+
+        Frame "GLUEBUTTON" "LadderButton" INHERITS WITHCHILDREN "IconicButtonTemplate" {
+            SetPoint LEFT, "TournamentButton", RIGHT, 0.0185, 0.0,
+            ControlShortcutKey "BNET_LADDER_SHORTCUT",
+            TabFocusNext "ProfileButton",
+
+		    ControlBackdrop "LadderButtonBackdropTemplate",
+		    Frame "BACKDROP" "LadderButtonBackdropTemplate" {
+		        BackdropBackground  "UI\Widgets\BattleNet\bnet-mainmenu-ladder-up.blp",
+		        BackdropCornerFlags "UL|UR|BL|BR|T|L|B|R",
+		        BackdropCornerSize  0.016,
+		        BackdropBackgroundSize  0.032,
+		        BackdropBackgroundInsets 0.004 0.004 0.004 0.004,
+		        BackdropEdgeFile  "UI\Widgets\Glues\GlueScreen-Button2-BackdropBorder.blp",
+		    }
+	
+		    ControlPushedBackdrop "LadderButtonPushedBackdropTemplate",
+		    Frame "BACKDROP" "LadderButtonPushedBackdropTemplate" {
+		        BackdropBackground  "UI\Widgets\BattleNet\bnet-mainmenu-ladder-down.blp",
+		        BackdropCornerFlags "UL|UR|BL|BR|T|L|B|R",
+		        BackdropCornerSize  0.016,
+		        BackdropBackgroundSize  0.032,
+		        BackdropBackgroundInsets 0.004 0.004 0.004 0.004,
+		        BackdropEdgeFile  "UI\Widgets\Glues\GlueScreen-Button2-BackdropBorder-Down.blp",
+		    }
+	
+		    ControlDisabledBackdrop "LadderButtonDisabledBackdropTemplate",
+		    Frame "BACKDROP" "LadderButtonDisabledBackdropTemplate" {
+		        BackdropBackground  "UI\Widgets\BattleNet\bnet-mainmenu-ladder-disabled.blp",
+		        BackdropCornerFlags "UL|UR|BL|BR|T|L|B|R",
+		        BackdropCornerSize  0.016,
+		        BackdropBackgroundSize  0.032,
+		        BackdropBackgroundInsets 0.004 0.004 0.004 0.004,
+		        BackdropEdgeFile  "UI\Widgets\Glues\GlueScreen-Button2-BackdropBorder-Disabled.blp",
+		    }
+        }
+
+        Frame "GLUEBUTTON" "ProfileButton" INHERITS WITHCHILDREN "IconicButtonTemplate" {
+            SetPoint LEFT, "LadderButton", RIGHT, 0.0185, 0.0,
+            ControlShortcutKey "BNET_PROFILE_SHORTCUT",
+            TabFocusNext "ChannelNameField",
+
+		    ControlBackdrop "ProfileButtonBackdropTemplate",
+		    Frame "BACKDROP" "ProfileButtonBackdropTemplate" {
+		        BackdropBackground  "UI\Widgets\BattleNet\bnet-mainmenu-profile-up.blp",
+		        BackdropCornerFlags "UL|UR|BL|BR|T|L|B|R",
+		        BackdropCornerSize  0.016,
+		        BackdropBackgroundSize  0.032,
+		        BackdropBackgroundInsets 0.004 0.004 0.004 0.004,
+		        BackdropEdgeFile  "UI\Widgets\Glues\GlueScreen-Button2-BackdropBorder.blp",
+		    }
+	
+		    ControlPushedBackdrop "ProfileButtonPushedBackdropTemplate",
+		    Frame "BACKDROP" "ProfileButtonPushedBackdropTemplate" {
+		        BackdropBackground  "UI\Widgets\BattleNet\bnet-mainmenu-profile-down.blp",
+		        BackdropCornerFlags "UL|UR|BL|BR|T|L|B|R",
+		        BackdropCornerSize  0.016,
+		        BackdropBackgroundSize  0.032,
+		        BackdropBackgroundInsets 0.004 0.004 0.004 0.004,
+		        BackdropEdgeFile  "UI\Widgets\Glues\GlueScreen-Button2-BackdropBorder-Down.blp",
+		    }
+	
+		    ControlDisabledBackdrop "ProfileButtonDisabledBackdropTemplate",
+		    Frame "BACKDROP" "ProfileButtonDisabledBackdropTemplate" {
+		        BackdropBackground  "UI\Widgets\BattleNet\bnet-mainmenu-profile-disabled.blp",
+		        BackdropCornerFlags "UL|UR|BL|BR|T|L|B|R",
+		        BackdropCornerSize  0.016,
+		        BackdropBackgroundSize  0.032,
+		        BackdropBackgroundInsets 0.004 0.004 0.004 0.004,
+		        BackdropEdgeFile  "UI\Widgets\Glues\GlueScreen-Button2-BackdropBorder-Disabled.blp",
+		    }
+        }
+
+        // --- CHAT PANEL ---
+        Frame "FRAME" "ChatPanel" {
+
+            Frame "BACKDROP" "ChatChannelBackdrop" INHERITS "BattleNetMenuSmallButtonBaseBackdrop" {
+                Width 0.2325,
+                Height 0.0525,
+                BackdropMirrored,
+                SetPoint TOPLEFT, "BattleNetChatPanel", TOPLEFT, 0.011, -0.1475,
+
+	            Frame "GLUETEXTBUTTON" "ChatChannelButton" INHERITS WITHCHILDREN "BattleNetButtonTemplate" {
+                    Width 0.1165,
+                    Height 0.025,
+		            SetPoint TOPLEFT,"ChatChannelBackdrop",TOPLEFT, 0.01, -0.013,
+                    TabFocusNext "BattleNetChatEditBox",
+		            ControlShortcutKey "KEY_CHANNEL_SHORTCUT",
+
+                    ButtonText "ChatChannelButtonText",
+		            Frame "TEXT" "ChatChannelButtonText" INHERITS "BattleNetButtonTextTemplate" {
+			            Text "KEY_CHANNEL",
+		            }
+	            }
+            }
+
+            Frame "TEXT" "ChatChannelNameLabel" INHERITS "BattleNetTitleTextTemplate" {            
+                Width 0.31125,
+                Height 0.025625,
+                SetPoint TOPLEFT, "BattleNetChatPanel", TOPLEFT, 0.16625, -0.161875,
+                FontJustificationH JUSTIFYLEFT,
+            }
+
+            Frame "TEXTAREA" "ChatTextArea" {
+                DecorateFileNames,
+                FrameFont "MasterFont", 0.011, "",
+                TextAreaLineHeight 0.01,
+                TextAreaLineGap 0.0015,
+                TextAreaInset 0.005,
+                TextAreaMaxLines 128,
+                Height 0.335,
+                Width 0.465625,
+                SetPoint TOPLEFT, "BattleNetChatPanel", TOPLEFT, 0.01125, -0.201875,
+
+                TextAreaScrollBar "BattleNetTextAreaScrollBarTemplate",
+                Frame "SCROLLBAR" "BattleNetTextAreaScrollBarTemplate" INHERITS WITHCHILDREN "BattleNetScrollBarTemplate" {
+                }
+            }
+
+            Frame "EDITBOX" "BattleNetChatEditBox" INHERITS WITHCHILDREN "BattleNetEditBoxTemplate" {
+                Height 0.044375,
+                Width 0.465625,
+                SetPoint BOTTOMLEFT, "BattleNetChatPanel", BOTTOMLEFT, 0.01125, 0.02125,
+                TabFocusNext "EnterChatButton",
+
+                EditTextFrame "ChatEditBoxText",
+                Frame "TEXT" "ChatEditBoxText" INHERITS "BattleNetEditBoxTextTemplate" {
+                }
+            }
+
+            Frame "FRAME" "TabbedPanel" {
+                Height 0.346875,
+                Width 0.2725,
+                SetPoint TOPRIGHT, "BattleNetChatPanel", TOPRIGHT, -0.011875, -0.16,                
+                
+                Frame "BACKDROP" "UserlistTabBackdrop" {
+                    Height 0.02,
+                    Width 0.09083,
+                    BackdropBackground "UI\Widgets\BattleNet\bnet-tab-up.blp",
+                    BackdropBlendAll,
+                    SetPoint TOPLEFT, "TabbedPanel", TOPLEFT, 0.0, 0.0,
+                    
+                    Frame "TEXT" "UserListTabLabel" INHERITS "BattleNetLabelTextTemplate" {
+                        Height 0.01625,
+                        Width 0.09083,
+                        SetPoint BOTTOM, "UserlistTabBackdrop", BOTTOM, 0.0, 0.0025,
+                        FontJustificationH JUSTIFYCENTER,
+                        FontJustificationV JUSTIFYBOTTOM,    
+                        ControlShortcutKey "KEY_CHANNEL_TAB_SHORTCUT",
+
+                        Text "KEY_CHANNEL_TAB",
+                    }
+                }
+
+                Frame "BACKDROP" "FriendsTabBackdrop" {
+                    Height 0.02,
+                    Width 0.09083,
+                    BackdropBackground "UI\Widgets\BattleNet\bnet-tab-down.blp",
+                    BackdropBlendAll,
+                    SetPoint LEFT, "UserlistTabBackdrop", RIGHT, 0.0, 0.0,
+
+                    Frame "TEXT" "FriendsTabLabel" INHERITS "BattleNetLabelTextTemplate" {
+                        Height 0.01625,
+                        Width 0.09083,
+                        SetPoint BOTTOM, "FriendsTabBackdrop", BOTTOM, 0.0, 0.0025,
+                        FontJustificationH JUSTIFYCENTER,
+                        FontJustificationV JUSTIFYBOTTOM,    
+                        ControlShortcutKey "KEY_FRIENDS_TAB_SHORTCUT",
+
+                        Text "KEY_FRIENDS_TAB",
+                    }
+                }
+
+                Frame "BACKDROP" "ClanTabBackdrop" {
+                    Height 0.02,
+                    Width 0.09083,
+                    BackdropBackground "UI\Widgets\BattleNet\bnet-tab-down.blp",
+                    BackdropBlendAll,
+                    SetPoint LEFT, "FriendsTabBackdrop", RIGHT, 0.0, 0.0,
+
+                    Frame "TEXT" "ClanTabLabel" INHERITS "BattleNetLabelTextTemplate" {
+                        Height 0.01625,
+                        Width 0.09083,
+                        SetPoint BOTTOM, "ClanTabBackdrop", BOTTOM, 0.0, 0.0025,
+                        FontJustificationH JUSTIFYCENTER,
+                        FontJustificationV JUSTIFYBOTTOM,    
+                        ControlShortcutKey "KEY_CLAN_TAB_SHORTCUT",
+
+                        Text "KEY_CLAN_TAB",
+                    }
+                }
+                
+                Frame "FRAME" "TabbedContentContainer" {
+                    Height 0.32453125,
+                    Width 0.2725,
+                    SetPoint BOTTOM, "TabbedPanel", BOTTOM, 0.0, 0.0,
+                }
+            }
+
+            Frame "BACKDROP" "ChatQuitBattleNetBackdrop" INHERITS "BattleNetMenuLargeButtonBaseBackdrop" {
+                Width 0.275,
+                Height 0.053,
+                SetPoint BOTTOMRIGHT,"BattleNetChatPanel",BOTTOMRIGHT, -0.013, 0.014,
+
+                Frame "FRAME" "ChatQuitBattleNetButtonContainer" {
+                    Width 0.1945,
+                    Height 0.026,
+		            SetPoint TOPRIGHT,"ChatQuitBattleNetBackdrop",TOPRIGHT, -0.0425, -0.012,
+                }
+
+                Frame "GLUETEXTBUTTON" "HelpButton" INHERITS WITHCHILDREN "BattleNetButtonTemplate" {
+                    Width 0.03,
+                    Height 0.02375,
+                    SetPoint LEFT, "ChatQuitBattleNetButtonContainer", RIGHT, 0.0, 0.0,
+
+                    ButtonText "HelpButtonText",
+		            Frame "TEXT" "HelpButtonText" INHERITS "BattleNetButtonTextTemplate" {
+			            Text "HELP_BUTTON",
+		            }
+                }
+            }
+        } // chat panel
+
+        // --- CHANNEL PANEL ---
+        Frame "FRAME" "ChannelPanel" {
+            Frame "TEXT" "ChannelTitle" INHERITS "BattleNetTitleTextTemplate" {
+                SetPoint TOPLEFT, "BattleNetChatPanel", TOPLEFT, 0.0235, -0.16625,
+
+                Text "BNET_CHANNEL_TITLE",
+				Width 0.24,
+            }
+
+            Frame "TEXT" "AvailableChannelLabel" INHERITS "BattleNetLabelTextTemplate" {
+                SetPoint TOPLEFT, "ChannelTitle", BOTTOMLEFT, 0.0, -0.01,
+
+                Text "COLON_AVAILABLE_CHANNELS",
+				Width 0.24,
+            }
+
+            Frame "FRAME" "AvailableChannelContainer" {
+                SetPoint TOPLEFT, "AvailableChannelLabel", BOTTOMLEFT, 0.0, -0.002,
+                Height 0.2125,
+                Width 0.440625,
+            }
+
+            Frame "TEXT" "ChannelInfoText" INHERITS "BattleNetInfoTextTemplate" {
+                SetPoint TOPLEFT, "AvailableChannelContainer", BOTTOMLEFT, 0.0, -0.0075,
+                Width 0.4375,
+                FontJustificationH JUSTIFYLEFT,
+                FontJustificationV JUSTIFYTOP,
+                Text "BNET_CHANNEL_INFO",                
+            }
+
+            Frame "TEXT" "ChannelNameLabel" INHERITS "BattleNetLabelTextTemplate" {
+                SetPoint TOPLEFT, "ChannelInfoText", BOTTOMLEFT, 0.0, -0.02,
+
+                Text "COLON_CHANNEL_NAME",
+				Width 0.24,
+            }
+
+            Frame "EDITBOX" "ChannelNameField" INHERITS WITHCHILDREN "BattleNetEditBoxTemplate" {
+                Width 0.24375,
+                SetPoint TOPLEFT, "ChannelNameLabel", BOTTOMLEFT, 0.0, -0.002,
+                TabFocusNext "JoinChannelButton",
+
+                EditTextFrame "ChannelNameEditBoxText",
+                Frame "TEXT" "ChannelNameEditBoxText" INHERITS "BattleNetEditBoxTextTemplate" {
+                Width 0.24,
+				}
+            }
+
+            Frame "BACKDROP" "JoinChannelBackdrop" INHERITS "BattleNetMenuButtonBaseBackdrop" {
+                Width 0.22,
+                BackdropMirrored,
+                SetPoint LEFT,"ChannelNameField", RIGHT, 0.002, 0.0,
+
+	            Frame "GLUETEXTBUTTON" "JoinChannelButton" INHERITS WITHCHILDREN "BattleNetButtonTemplate" {
+                    Width 0.15425,
+                    SetPoint TOPRIGHT,"JoinChannelBackdrop",TOPRIGHT, -0.055125, -0.0165,
+		            ControlShortcutKey "KEY_JOIN_CHANNEL_SHORTCUT",
+                    TabFocusNext "BackButton",
+
+                    ButtonText "JoinChannelButtonText",
+		            Frame "TEXT" "JoinChannelButtonText" INHERITS "BattleNetButtonTextTemplate" {
+			            Text "KEY_JOIN_CHANNEL",
+		            }
+	            }
+            }
+
+            Frame "BACKDROP" "BackBackdrop" INHERITS "BattleNetMenuButtonBaseBackdrop" {
+                Width 0.24,
+                SetPoint TOPRIGHT,"BattleNetChatPanel",BOTTOMRIGHT, -0.014375, 0.099375,
+
+	            Frame "GLUETEXTBUTTON" "BackButton" INHERITS WITHCHILDREN "BattleNetButtonTemplate" {
+                    Width 0.168,
+		            SetPoint TOPRIGHT,"BackBackdrop",TOPRIGHT, -0.012, -0.0165,                    
+		            ControlShortcutKey "KEY_BACK_SHORTCUT",
+                    TabFocusNext "ChatChannelButton",
+
+                    ButtonText "BackButtonText",
+		            Frame "TEXT" "BackButtonText" INHERITS "BattleNetButtonTextTemplate" {
+			            Text "KEY_BACK",
+		            }
+	            }
+            }
+        } // channel panel
+
+        // --- WELCOME PANEL ---
+        Frame "FRAME" "WelcomePanel" {
+
+            Frame "TEXT" "WelcomeChannelNameLabel" INHERITS "BattleNetTitleTextTemplate" {            
+                Width 0.31125,
+                Height 0.025625,
+                SetPoint TOPLEFT, "BattleNetChatPanel", TOPLEFT, 0.16625, -0.161875,
+                FontJustificationH JUSTIFYLEFT,
+                Text "BNET_WELCOME",
+            }
+
+            Frame "TEXT" "WelcomeNewsLabel" INHERITS "BattleNetInfoTextTemplate" {            
+                SetPoint TOPLEFT, "BattleNetChatPanel", TOPLEFT, 0.026, -0.2075,
+                FontJustificationH JUSTIFYLEFT,
+                Text "BNET_NEWS",
+            }
+
+            Frame "TEXT" "WelcomeNewItemCount" INHERITS "BattleNetInfoTextTemplate" {
+                SetPoint LEFT, "WelcomeNewsLabel", RIGHT, 0.005, 0.0,
+                FontJustificationH JUSTIFYLEFT,
+                FontColor 1.0 0.0 0.0 1.0,
+            }
+
+            Frame "FRAME" "NewsBoxContainer" {
+                Height 0.34625,
+                Width 0.4475,
+                SetPoint BOTTOMLEFT, "BattleNetChatPanel", BOTTOMLEFT, 0.021875, 0.031,
+            }
+
+            Frame "TEXT" "WelcomeMOTDLabel" INHERITS "BattleNetInfoTextTemplate" {            
+                SetPoint TOPLEFT, "BattleNetChatPanel", TOPRIGHT, -0.275, -0.16375,
+                Text "BNET_MOTD",
+            }
+
+            Frame "TEXT" "WelcomeMOTDText" INHERITS "BattleNetLabelTextTemplate" {
+                Width 0.254375,
+                Height 0.131,
+                SetPoint TOPLEFT, "WelcomeMOTDLabel", BOTTOMLEFT, 0.0, -0.00375,
+                FontColor 1.0 1.0 1.0 1.0,
+                FontJustificationH JUSTIFYLEFT,
+                FontJustificationV JUSTIFYTOP,
+            }
+
+            Frame "FRAME" "UpcomingTournamentPanel" {
+                Frame "TEXT" "UpcomingTournamentTitle" INHERITS "BattleNetInfoTextTemplate" {            
+                    SetPoint TOPLEFT, "WelcomeMOTDText", BOTTOMLEFT, 0.0, -0.002,
+                    Text "BNET_TOURNAMENT_TITLE_UPCOMING",
+                }
+
+                Frame "TEXT" "UpcomingTournamentFormatLabel" INHERITS "BattleNetLabelTextTemplate" {            
+                    SetPoint TOPLEFT, "UpcomingTournamentTitle", BOTTOMLEFT, 0.0, -0.00375,
+                    DecorateFileNames,
+                    FrameFont "MasterFont", 0.011, "",
+                    Text "BNET_TOURNAMENT_SINFO1_UPCOMING",
+                }
+
+                Frame "TEXT" "UpcomingTournamentTimeLabel" INHERITS "BattleNetLabelTextTemplate" {            
+                    SetPoint TOPLEFT, "UpcomingTournamentFormatLabel", BOTTOMLEFT, 0.0, -0.00375,
+                    DecorateFileNames,
+                    FrameFont "MasterFont", 0.011, "",
+                    Text "BNET_TOURNAMENT_SINFO2_UPCOMING",
+                }
+
+                Frame "TEXT" "UpcomingTournamentSponsorLabel" INHERITS "BattleNetLabelTextTemplate" {            
+                    SetPoint TOPLEFT, "UpcomingTournamentTimeLabel", BOTTOMLEFT, 0.0, -0.00375,
+                    DecorateFileNames,
+                    FrameFont "MasterFont", 0.011, "",
+                    Text "BNET_TOURNAMENT_SPONSOR",
+                }
+
+                Frame "BACKDROP" "UpcomingTournamentSponsorIcon" {
+                    Height 0.064,
+                    Width 0.256,
+                    SetPoint TOPLEFT, "UpcomingTournamentSponsorLabel", BOTTOMLEFT, 0.0, 0.0,
+                    BackdropBackground  "UI\Widgets\BattleNet\chaticons\bnet-war3.blp",
+                    BackdropBlendAll,
+                }
+
+                Frame "TEXT" "UpcomingTournamentSponsorValue" INHERITS "BattleNetValueTextTemplate" {            
+					SetPoint LEFT, "UpcomingTournamentSponsorLabel", RIGHT, 0.0025, 0.0,
+                    DecorateFileNames,
+                    FrameFont "MasterFont", 0.011, "",
+                    Text "BNET_TOURNAMENT_SPONSOR",
+                }
+            }
+
+            Frame "BACKDROP" "EnterChatBackdrop" INHERITS "BattleNetMenuButtonBaseBackdrop" {
+                Width 0.24,
+                SetPoint TOPRIGHT,"BattleNetChatPanel",BOTTOMRIGHT, -0.014375, 0.124375,
+
+	            Frame "GLUETEXTBUTTON" "EnterChatButton" INHERITS WITHCHILDREN "BattleNetButtonTemplate" {
+                    Width 0.168,
+		            SetPoint TOPRIGHT,"EnterChatBackdrop",TOPRIGHT, -0.012, -0.0165,
+                    TabFocusNext "QuitBattleNetButton",
+		            ControlShortcutKey "KEY_ENTER_CHAT_SHORTCUT",
+
+                    ButtonText "EnterChatButtonText",
+		            Frame "TEXT" "EnterChatButtonText" INHERITS "BattleNetButtonTextTemplate" {
+			            Text "KEY_ENTER_CHAT",
+		            }
+	            }
+            }
+
+            Frame "BACKDROP" "WelcomeQuitBattleNetBackdrop" INHERITS "BattleNetMenuButtonBaseBackdrop" {
+                Width 0.24,
+                SetPoint TOPRIGHT,"EnterChatBackdrop",BOTTOMRIGHT, 0.0, 0.015,            
+
+                Frame "FRAME" "WelcomeQuitBattleNetButtonContainer" {
+                    Width 0.168,
+                    Height 0.031,
+                    SetPoint TOPRIGHT,"WelcomeQuitBattleNetBackdrop",TOPRIGHT, -0.012, -0.0165,
+                }
+            }
+        } // welcome panel
+
+        // common controls
+	    Frame "GLUETEXTBUTTON" "QuitBattleNetButton" INHERITS WITHCHILDREN "BattleNetButtonTemplate" {
+            Width 0.168,
+            SetPoint TOPRIGHT,"WelcomeQuitBattleNetBackdrop",TOPRIGHT, -0.012, -0.0165,
+		    ControlShortcutKey "KEY_EXIT_BNET_SHORTCUT",
+
+            ButtonText "QuitBattleNetButtonText",
+		    Frame "TEXT" "QuitBattleNetButtonText" INHERITS "BattleNetButtonTextTemplate" {
+			    Text "KEY_EXIT_BNET",
+		    }
+	    }
+
+        Frame "FRAME" "TeamInviteContainer" {
+            Height 0.340625,
+            Width 0.26475,
+            SetPoint TOPRIGHT, "BattleNetChatPanel", TOPRIGHT, -0.01565, -0.16,                
+        }
+    }
+}
+
+// -- BattleNetHelpDialog --------------------------------------------------------
+Frame "DIALOG" "BattleNetHelpDialog" {
+    Height 0.37375,
+    Width 0.5,
+
+    DialogBackdrop "HelpDialogBackdrop",
+    Frame "BACKDROP" "HelpDialogBackdrop" {
+        BackdropTileBackground,
+        BackdropBackground  "UI\Widgets\BattleNet\bnet-dialoguebox-background.blp",
+        BackdropCornerFlags "UL|UR|BL|BR|T|L|B|R",
+        BackdropCornerSize  0.064,
+        BackdropBackgroundSize  0.128,
+        BackdropBackgroundInsets 0.01 0.01 0.01 0.01,
+        BackdropEdgeFile  "UI\Widgets\BattleNet\bnet-dialoguebox-border.blp",
+	    BackdropBlendAll,
+    }
+
+    Frame "TEXT" "HelpTitleText" INHERITS "BattleNetTitleTextTemplate" {
+        SetPoint TOP, "BattleNetHelpDialog", TOP, 0.0, -0.025,
+        Text "BNET_HELP_TITLE",
+    }
+
+    Frame "TEXTAREA" "HelpTextArea" INHERITS WITHCHILDREN "BattleNetTextAreaTemplate" {
+        Height 0.225,
+        Width 0.45,
+        SetPoint TOP, "HelpTitleText", TOP, 0.0, -0.025,
+    }
+
+    Frame "BACKDROP" "HelpOKButtonBackdrop" INHERITS "BattleNetMenuSingleButtonBaseBackdrop" {
+        SetPoint BOTTOM, "BattleNetHelpDialog", BOTTOM, -0.015, 0.015,
+
+	    Frame "GLUETEXTBUTTON" "HelpOKButton" INHERITS WITHCHILDREN "BattleNetButtonTemplate" {
+            Width 0.159,
+		    SetPoint TOPRIGHT,"HelpOKButtonBackdrop",TOPRIGHT, -0.032, -0.015625,
+            ButtonText "HelpOKButtonText",
+		    Frame "TEXT" "HelpOKButtonText" INHERITS "BattleNetButtonTextTemplate" {
+			    Text "OK",
+		    }
+	    }
+    }
+}

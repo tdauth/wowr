@@ -1,0 +1,362 @@
+// -- INCLUDE FILES ---------------------------------------------
+
+IncludeFile "UI\FrameDef\Glue\BattleNetTemplates.fdf",
+
+// -- LOCAL TEMPLATES -------------------------------------------
+
+Frame "POPUPMENU" "ClanPopupMenuTemplate" INHERITS "BattleNetPopupMenuTemplate" {
+    Width 0.179,
+
+    ControlBackdrop "PopupMenuBackdrop",
+    Frame "BACKDROP" "PopupMenuBackdrop" INHERITS "BattleNetBorderedButtonBackdropTemplate" {
+    }
+
+    ControlDisabledBackdrop "PopupMenuDisabledBackdrop",
+    Frame "BACKDROP" "PopupMenuDisabledBackdrop" INHERITS "BattleNetBorderedButtonDisabledBackdropTemplate" {
+    }
+
+    PopupTitleFrame "PopupMenuTitle",
+    Frame "GLUETEXTBUTTON" "PopupMenuTitle" INHERITS WITHCHILDREN "BattleNetPopupMenuTitleTemplate" {
+    }
+
+    PopupArrowFrame "PopupMenuArrow",
+    Frame "BUTTON" "PopupMenuArrow" INHERITS WITHCHILDREN "BattleNetPopupMenuArrowTemplate" { 
+    }
+}
+
+// -- FRAMES ----------------------------------------------------
+
+Frame "FRAME" "BattleNetClanPane" {
+
+    Frame "FRAME" "ClanListPanel" {
+        Frame "FRAME" "ClanListContainer" {
+            Height 0.28875,
+            SetPoint TOPLEFT, "BattleNetClanPane", TOPLEFT, 0.0, 0.0,
+            SetPoint TOPRIGHT, "BattleNetClanPane", TOPRIGHT, 0.0, 0.0,
+        }
+
+        Frame "GLUETEXTBUTTON" "ClanManagementButton" INHERITS WITHCHILDREN "BattleNetBorderedButtonTemplate" {
+            Width 0.26475,
+            SetPoint TOP, "ClanListContainer", BOTTOM, 0.0, -0.001,
+
+            ButtonText "ClanManagementButtonText",
+		    Frame "TEXT" "ClanManagementButtonText" INHERITS "BattleNetButtonTextTemplate" {
+			    Text "CLAN_MANAGEMENT",
+		    }
+        }
+    }
+
+    Frame "FRAME" "ClanInfoPanel" {
+        Frame "TEXT" "ClanInfoText1" INHERITS "BattleNetLabelTextTemplate" {
+            Width 0.26475,
+            SetPoint TOPLEFT, "BattleNetClanPane", TOPLEFT, 0.00625, -0.01,
+            Text "CLAN_INFO_TEXT1",
+        }
+
+        Frame "TEXT" "ClanInfoText2" INHERITS "BattleNetLabelTextTemplate" {
+            Width 0.26475,
+            SetPoint TOPLEFT, "ClanInfoText1", BOTTOMLEFT, 0.0, -0.015,
+            Text "CLAN_INFO_TEXT2",
+        }
+
+        Frame "TEXT" "ClanInfoText3" INHERITS "BattleNetLabelTextTemplate" {
+            Width 0.26475,
+            SetPoint TOPLEFT, "ClanInfoText2", BOTTOMLEFT, 0.0, -0.015,
+            Text "CLAN_INFO_TEXT3",
+        }
+
+        Frame "GLUETEXTBUTTON" "ClanRulesButton" INHERITS WITHCHILDREN "BattleNetBorderedButtonTemplate" {
+            Width 0.19,
+            SetPoint TOP, "ClanInfoText3", BOTTOM, 0.0, -0.005,
+
+            ButtonText "ClanRulesButtonText",
+		    Frame "TEXT" "ClanRulesButtonText" INHERITS "BattleNetButtonTextTemplate" {
+			    Text "VIEW_CLAN_RULES",
+		    }
+        }
+
+        Frame "TEXT" "ClanInfoText4" INHERITS "BattleNetLabelTextTemplate" {
+            Width 0.26475,
+            SetPoint TOP, "ClanRulesButton", BOTTOM, 0.0, -0.01,
+            Text "CLAN_INFO_TEXT4",
+        }
+
+        Frame "GLUETEXTBUTTON" "StartCreationButton" INHERITS WITHCHILDREN "BattleNetBorderedButtonTemplate" {
+            Width 0.12,
+            SetPoint TOP, "ClanInfoText4", BOTTOM, 0.0, -0.005,
+
+            ButtonText "StartCreationButtonText",
+		    Frame "TEXT" "StartCreationButtonText" INHERITS "BattleNetButtonTextTemplate" {
+			    Text "CREATE_CLAN",
+		    }
+        }
+    }
+
+    Frame "FRAME" "ClanCreatePanel" {
+        Frame "TEXT" "ClanCreateText1" INHERITS "BattleNetLabelTextTemplate" {
+            Width 0.26475,
+            SetPoint TOPLEFT, "BattleNetClanPane", TOPLEFT, 0.00325, -0.01,
+            Text "CLAN_CREATE_TEXT1",
+        }
+
+        Frame "TEXT" "ClanNameLabel" INHERITS "BattleNetLabelTextTemplate" {
+            Width 0.26475,
+            FontJustificationH JUSTIFYCENTER,
+            SetPoint TOP, "ClanCreateText1", BOTTOM, 0.0, -0.030625,
+            Text "COLON_CLAN_NAME",
+        }
+
+        Frame "EDITBOX" "ClanNameField" INHERITS WITHCHILDREN "BattleNetEditBoxTemplate" {
+            Width 0.26475,
+            SetPoint TOP, "ClanNameLabel", BOTTOM, 0.0, -0.005,
+            TabFocusNext "ClanTagField",
+        }
+
+        Frame "TEXT" "ClanTagLabel" INHERITS "BattleNetLabelTextTemplate" {
+            Width 0.26475,
+            FontJustificationH JUSTIFYCENTER,
+            SetPoint TOP, "ClanNameField", BOTTOM, 0.0, -0.030625,
+            Text "COLON_CLAN_TAG",
+        }
+
+        Frame "EDITBOX" "ClanTagField" INHERITS WITHCHILDREN "BattleNetEditBoxTemplate" {
+            Width 0.1,
+            SetPoint TOP, "ClanTagLabel", BOTTOM, 0.0, -0.005,
+        }
+
+        Frame "GLUETEXTBUTTON" "CreateClanButton" INHERITS WITHCHILDREN "BattleNetBorderedButtonTemplate" {
+            Width 0.124375,
+            SetPoint TOPRIGHT, "ClanTagField", BOTTOM, 0.0, -0.055625,
+
+            ButtonText "CreateClanButtonText",
+		    Frame "TEXT" "CreateClanButtonText" INHERITS "BattleNetButtonTextTemplate" {
+			    Text "CREATE_CLAN",
+		    }
+        }
+
+        Frame "GLUETEXTBUTTON" "ClanCancelButton" INHERITS WITHCHILDREN "BattleNetBorderedButtonTemplate" {
+            Width 0.124375,
+            SetPoint TOPLEFT, "ClanTagField", BOTTOM, 0.0, -0.055625,
+
+            ButtonText "ClanCancelButtonText",
+		    Frame "TEXT" "ClanCancelButtonText" INHERITS "BattleNetButtonTextTemplate" {
+			    Text "CANCEL",
+		    }
+        }
+    }
+
+    Frame "FRAME" "ClanManagementPanel" {
+        Frame "TEXT" "ClanManagementTitle" INHERITS "BattleNetTitleTextTemplate" {
+            SetPoint TOPLEFT, "BattleNetClanPane", TOPLEFT, 0.00625, -0.003125,
+            Text "COLON_CLAN_MANAGEMENT",
+        }
+
+        Frame "TEXT" "ClanManagementRulesLabel" INHERITS "BattleNetLabelTextTemplate" {
+            Width 0.26475,
+            SetPoint TOPLEFT, "ClanManagementTitle", BOTTOMLEFT, 0.0, -0.003,
+            Text "CLAN_RULES_LABEL",
+        }
+
+        Frame "GLUETEXTBUTTON" "ClanManagementRulesButton" INHERITS WITHCHILDREN "BattleNetBorderedButtonTemplate" {
+            Width 0.19,
+            SetPoint TOP, "ClanManagementRulesLabel", BOTTOM, 0.0, -0.003,
+
+            ButtonText "ClanManagementRulesButtonText",
+		    Frame "TEXT" "ClanManagementRulesButtonText" INHERITS "BattleNetButtonTextTemplate" {
+			    Text "VIEW_CLAN_RULES",
+		    }
+        }
+
+        Frame "TEXT" "ClanManagementDisbandLabel" INHERITS "BattleNetLabelTextTemplate" {
+            Width 0.26475,
+            SetPoint TOP, "ClanManagementRulesButton", BOTTOM, 0.0, -0.005,
+            Text "CLAN_DISBAND_LABEL",
+        }
+
+        Frame "GLUETEXTBUTTON" "ClanManagementDisbandButton" INHERITS WITHCHILDREN "BattleNetBorderedButtonTemplate" {
+            Width 0.15,
+            SetPoint TOP, "ClanManagementDisbandLabel", BOTTOM, 0.0, -0.003,
+
+            ButtonText "ClanManagementDisbandButtonText",
+		    Frame "TEXT" "ClanManagementDisbandButtonText" INHERITS "BattleNetButtonTextTemplate" {
+			    Text "CLAN_DISBAND",
+		    }
+        }
+
+        Frame "TEXT" "ClanManagementMOTDLabel" INHERITS "BattleNetLabelTextTemplate" {
+            Width 0.26475,
+            SetPoint TOPLEFT, "ClanManagementDisbandLabel", BOTTOMLEFT, 0.0, -0.03875,
+            Text "COLON_CLAN_MOTD",
+        }
+
+        Frame "EDITBOX" "ClanManagementMOTDEditBox" INHERITS WITHCHILDREN "BattleNetEditBoxTemplate" {
+            Width 0.26475,
+            SetPoint TOPLEFT, "ClanManagementMOTDLabel", BOTTOMLEFT, 0.0, -0.005,
+        }
+
+        Frame "BACKDROP" "ClanManagementMOTDBackdrop" INHERITS "BattleNetEditBoxBackdropTemplate" {
+            Width 0.26475,
+            Height 0.11325,
+            SetPoint TOPLEFT, "ClanManagementMOTDLabel", BOTTOMLEFT, 0.0, -0.005,
+
+            Frame "TEXT" "ClanManagementMOTDText" INHERITS "BattleNetValueTextTemplate" {
+                DecorateFileNames,
+                FrameFont "MasterFont", 0.011, "",
+                FontJustificationH JUSTIFYLEFT,
+                FontJustificationV JUSTIFYTOP,
+                SetPoint TOPLEFT, "ClanManagementMOTDBackdrop", TOPLEFT, 0.01125, -0.01125,
+                SetPoint BOTTOMRIGHT, "ClanManagementMOTDBackdrop", BOTTOMRIGHT, -0.020625, 0.01125,
+            }
+        }
+
+        Frame "GLUETEXTBUTTON" "ClanManagementOKButton" INHERITS WITHCHILDREN "BattleNetBorderedButtonTemplate" {
+            Width 0.124375,
+            SetPoint BOTTOMLEFT, "BattleNetClanPane", BOTTOMLEFT, 0.003, 0.003,
+
+            ButtonText "ClanManagementOKButtonText",
+		    Frame "TEXT" "ClanManagementOKButtonText" INHERITS "BattleNetButtonTextTemplate" {
+			    Text "OK",
+		    }
+        }
+
+        Frame "GLUETEXTBUTTON" "ClanManagementCancelButton" INHERITS WITHCHILDREN "BattleNetBorderedButtonTemplate" {
+            Width 0.124375,
+            SetPoint BOTTOMRIGHT, "BattleNetClanPane", BOTTOMRIGHT, -0.003, 0.003,
+
+            ButtonText "ClanManagementCancelButtonText",
+		    Frame "TEXT" "ClanManagementCancelButtonText" INHERITS "BattleNetButtonTextTemplate" {
+			    Text "CANCEL",
+		    }
+        }
+    }
+}
+
+
+// -- BattleNetClanInviteDialog --------------------------------------------------------
+Frame "DIALOG" "BattleNetClanInviteDialog" {
+    Height 0.45,
+    Width 0.5,
+
+    DialogBackdrop "InviteDialogBackdrop",
+    Frame "BACKDROP" "InviteDialogBackdrop" {
+        BackdropTileBackground,
+        BackdropBackground  "UI\Widgets\BattleNet\bnet-dialoguebox-background.blp",
+        BackdropCornerFlags "UL|UR|BL|BR|T|L|B|R",
+        BackdropCornerSize  0.064,
+        BackdropBackgroundSize  0.128,
+        BackdropBackgroundInsets 0.01 0.01 0.01 0.01,
+        BackdropEdgeFile  "UI\Widgets\BattleNet\bnet-dialoguebox-border.blp",
+	    BackdropBlendAll,
+    }
+
+    Frame "TEXT" "InviteTitleText" INHERITS "BattleNetTitleTextTemplate" {
+        SetPoint TOPLEFT, "BattleNetClanInviteDialog", TOPLEFT, 0.02625, -0.024375,
+        Text "BNET_CLAN_INVITATION_TITLE",
+    }
+
+    Frame "TEXT" "InviteInfoText" INHERITS "BattleNetInfoTextTemplate" {
+        Width 0.448125,
+        SetPoint TOPLEFT, "InviteTitleText", BOTTOMLEFT, 0.0, -0.001875,
+        FontJustificationH JUSTIFYLEFT,
+        Text "BNET_CLAN_INVITATION_INFO",
+    }
+
+    Frame "TEXT" "InviteInfoText2" INHERITS "BattleNetInfoTextTemplate" {
+        Width 0.448125,
+        SetPoint TOPLEFT, "InviteInfoText", BOTTOMLEFT, 0.0, -0.01,
+        FontJustificationH JUSTIFYLEFT,
+        Text "BNET_CLAN_INVITATION_INFO2",
+    }
+
+    Frame "FRAME" "InviteListContainer" {
+        Width 0.45,
+        Height 0.175,
+        SetPoint BOTTOM, "BattleNetClanInviteDialog", BOTTOM, 0.0, 0.084375,
+    }
+
+    Frame "TEXT" "NotEnoughPotentialsLabel" INHERITS "BattleNetTitleTextTemplate" {
+        Width 0.4,
+        SetPoint CENTER, "InviteListContainer", CENTER, 0.0, 0.0,
+
+        Text "NOT_ENOUGH_POTENTIALS",
+    }
+
+    Frame "TEXT" "PotentialTeammatesLabel" INHERITS "BattleNetLabelTextTemplate" {
+        SetPoint BOTTOMLEFT, "InviteListContainer", TOPLEFT, 0.0, 0.0,
+        Text "COLON_POTENTIAL_CLANMATES",
+    }
+
+    Frame "GLUEBUTTON" "InviteRefreshButton" {
+        Height 0.03,
+        Width 0.03,
+        ControlStyle "AUTOTRACK|HIGHLIGHTONMOUSEOVER",
+        SetPoint BOTTOMRIGHT, "InviteListContainer", TOPRIGHT, 0.0, 0.0,
+
+		ControlBackdrop "InviteRefreshButtonBackdropTemplate",
+		Frame "BACKDROP" "InviteRefreshButtonBackdropTemplate" {
+		    BackdropBackground  "UI\Widgets\BattleNet\bnet-refresh-up.blp",
+		    BackdropCornerFlags "UL|UR|BL|BR|T|L|B|R",
+		    BackdropCornerSize  0.014,
+		    BackdropBackgroundSize  0.026,
+		    BackdropBackgroundInsets 0.004 0.004 0.004 0.004,
+		    BackdropEdgeFile  "UI\Widgets\Glues\GlueScreen-Button2-BackdropBorder.blp",
+            BackdropBlendAll,
+		}
+
+		ControlPushedBackdrop "InviteRefreshButtonPushedBackdropTemplate",
+		Frame "BACKDROP" "InviteRefreshButtonPushedBackdropTemplate" {
+		    BackdropBackground  "UI\Widgets\BattleNet\bnet-refresh-down.blp",
+		    BackdropCornerFlags "UL|UR|BL|BR|T|L|B|R",
+		    BackdropCornerSize  0.014,
+		    BackdropBackgroundSize  0.026,
+		    BackdropBackgroundInsets 0.004 0.004 0.004 0.004,
+		    BackdropEdgeFile  "UI\Widgets\Glues\GlueScreen-Button2-BackdropBorder-Down.blp",
+            BackdropBlendAll,
+		}
+
+		ControlDisabledBackdrop "InviteRefreshButtonDisabledBackdropTemplate",
+		Frame "BACKDROP" "InviteRefreshButtonDisabledBackdropTemplate" {
+		    BackdropBackground  "UI\Widgets\BattleNet\bnet-refresh-disabled.blp",
+		    BackdropCornerFlags "UL|UR|BL|BR|T|L|B|R",
+		    BackdropCornerSize  0.014,
+		    BackdropBackgroundSize  0.026,
+		    BackdropBackgroundInsets 0.004 0.004 0.004 0.004,
+		    BackdropEdgeFile  "UI\Widgets\Glues\GlueScreen-Button2-BackdropBorder-Disabled.blp",
+            BackdropBlendAll,
+		}
+
+        ControlMouseOverHighlight "InviteRefreshButtonMouseOverHighlight",
+        Frame "HIGHLIGHT" "InviteRefreshButtonMouseOverHighlight" INHERITS "BattleNetButtonMouseOverHighlightTemplate" {
+        }
+    }
+
+    Frame "BACKDROP" "InviteCancelButtonBackdrop" INHERITS "BattleNetMenuSingleButtonBaseBackdrop" {
+        SetPoint BOTTOMRIGHT, "BattleNetClanInviteDialog", BOTTOMRIGHT, -0.022, 0.015,
+
+	    Frame "GLUETEXTBUTTON" "InviteCancelButton" INHERITS WITHCHILDREN "BattleNetButtonTemplate" {
+            Width 0.159,
+		    SetPoint TOPRIGHT,"InviteCancelButtonBackdrop",TOPRIGHT, -0.032, -0.015625,
+		    ControlShortcutKey "KEY_CANCEL_SHORTCUT",
+
+            ButtonText "InviteCancelButtonText",
+		    Frame "TEXT" "InviteCancelButtonText" INHERITS "BattleNetButtonTextTemplate" {
+			    Text "KEY_CANCEL",
+		    }
+	    }
+    }
+
+    Frame "BACKDROP" "InviteButtonBackdrop" INHERITS "BattleNetMenuSingleButtonBaseBackdrop" {
+        SetPoint RIGHT, "InviteCancelButtonBackdrop", LEFT, 0.025, 0.0,
+
+	    Frame "GLUETEXTBUTTON" "InviteButton" INHERITS WITHCHILDREN "BattleNetButtonTemplate" {
+            Width 0.159,
+		    SetPoint TOPRIGHT,"InviteButtonBackdrop",TOPRIGHT, -0.032, -0.015625,
+		    ControlShortcutKey "KEY_INVITE_SHORTCUT",
+
+            ButtonText "InviteButtonText",
+		    Frame "TEXT" "InviteButtonText" INHERITS "BattleNetButtonTextTemplate" {
+			    Text "KEY_INVITE",
+		    }
+	    }
+    }
+}

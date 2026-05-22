@@ -1,0 +1,637 @@
+/*
+ *  BattleNetTemplates.fdf
+ *  ----------------------
+ *  These are BattleNet templates to be inherited by components in the
+ *  Battle.Net glue screens.
+ */
+
+Frame "BACKDROP" "BattleNetHeavyBackdropTemplate" {
+    BackdropTileBackground,
+    BackdropBackground  "UI\Widgets\HeavyBorderBackGround.blp",
+    BackdropCornerFlags "UL|UR|BL|BR|T|L|B|R",
+    BackdropEdgeFile    "UI\Widgets\HeavyBorderCorners.blp",
+}
+
+Frame "BACKDROP" "BattleNetMediumBackdropTemplate" {
+    BackdropTileBackground,
+    BackdropBackground  "UI\Widgets\LightBorderBackGround.blp",
+    BackdropCornerFlags "UL|UR|BL|BR|T|L|B|R",
+    BackdropEdgeFile    "UI\Widgets\LightBorderCorners.blp",
+}
+
+Frame "BACKDROP" "BattleNetLightBackdropTemplate" {
+    BackdropTileBackground,
+    BackdropBackground  "UI\Widgets\LightBorderBackGround.blp",
+    BackdropCornerFlags "UL|UR|BL|BR|T|L|B|R",
+    BackdropEdgeFile    "UI\Widgets\LightBorderCorners.blp",
+}
+
+Frame "BACKDROP" "BattleNetControlBackdropTemplate" {
+    BackdropTileBackground,
+    BackdropBackground  "UI\Widgets\BattleNet\bnet-inputbox-back.blp",
+    BackdropCornerFlags "UL|UR|BL|BR|T|L|B|R",
+    BackdropCornerSize  0.032,
+    BackdropBackgroundInsets 0.004 0.004 0.004 0.004,
+    BackdropEdgeFile  "UI\Widgets\BattleNet\bnet-inputbox-border.blp",
+    BackdropBlendAll,
+}
+
+Frame "BACKDROP" "BattleNetEditBoxBackdropTemplate" {
+    BackdropTileBackground,
+    BackdropBackground  "UI\Widgets\BattleNet\bnet-inputbox-back.blp",
+    BackdropCornerFlags "UL|UR|BL|BR|T|L|B|R",
+    BackdropCornerSize  0.032,
+    BackdropBackgroundInsets 0.004 0.004 0.004 0.004,
+    BackdropEdgeFile  "UI\Widgets\BattleNet\bnet-inputbox-border.blp",
+    BackdropBlendAll,
+}
+
+// --- SMALL BUTTON --------------------------------------------------------------------
+
+Frame "BACKDROP" "BattleNetMenuSmallButtonBaseBackdrop" {
+    Width 0.256,
+    Height 0.064,
+    BackdropBlendAll,
+    BackdropBackground  "UI\Widgets\Glues\GlueScreen-Button1-SmallBorder.blp",
+}
+
+// --- LARGE BUTTON --------------------------------------------------------------------
+
+Frame "BACKDROP" "BattleNetMenuLargeButtonBaseBackdrop" {
+    Width 0.256,
+    Height 0.064,
+    BackdropBlendAll,
+    BackdropBackground  "UI\Widgets\Glues\GlueScreen-Button1-LargeBorder.blp",
+}
+
+// --- SINGLE BUTTON --------------------------------------------------------------------
+
+Frame "BACKDROP" "BattleNetMenuSingleButtonBaseBackdrop" {
+    Width 0.256,
+    Height 0.064,
+    BackdropBlendAll,
+    BackdropBackground  "UI\Widgets\Glues\GlueScreen-Button1-BorderSingle.blp",
+}
+
+
+// --- SINGLE SMALL BUTTON --------------------------------------------------------------------
+
+Frame "BACKDROP" "BattleNetMenuSingleSmallButtonBaseBackdrop" {
+    Width 0.256,
+    Height 0.064,
+    BackdropBlendAll,
+    BackdropBackground  "UI\Widgets\Glues\GlueScreen-Button1-SmallBorderSingle.blp",
+}
+
+
+// --- SINGLE LARGE BUTTON --------------------------------------------------------------------
+
+Frame "BACKDROP" "BattleNetMenuSingleLargeButtonBaseBackdrop" {
+    Width 0.256,
+    Height 0.064,
+    BackdropBlendAll,
+    BackdropBackground  "UI\Widgets\Glues\GlueScreen-Button1-LargeBorderSingle.blp",
+}
+
+// --- BUTTON --------------------------------------------------------------------
+
+Frame "BACKDROP" "BattleNetMenuButtonBaseBackdrop" {
+    Width 0.256,
+    Height 0.064,
+    BackdropBlendAll,
+    BackdropBackground  "UI\Widgets\Glues\GlueScreen-Button1-Border.blp",
+}
+
+Frame "BACKDROP" "BattleNetButtonBackdropTemplate" {
+    BackdropTileBackground,
+    BackdropBackground  "UI\Widgets\Glues\GlueScreen-Button1-BackdropBackground.blp",
+    BackdropCornerFlags "UL|UR|BL|BR|T|L|B|R",
+    BackdropCornerSize  0.016,
+    BackdropBackgroundSize  0.032,
+    BackdropBackgroundInsets 0.004 0.004 0.004 0.004,
+    BackdropEdgeFile  "UI\Widgets\Glues\GlueScreen-Button1-BackdropBorder.blp",
+}
+
+Frame "BACKDROP" "BattleNetButtonPushedBackdropTemplate" {
+    BackdropTileBackground,
+    BackdropBackground  "UI\Widgets\Glues\GlueScreen-Button1-BackdropBackground.blp",
+    BackdropCornerFlags "UL|UR|BL|BR|T|L|B|R",
+    BackdropCornerSize  0.016,
+    BackdropBackgroundSize  0.032,
+    BackdropBackgroundInsets 0.004 0.004 0.004 0.004,
+    BackdropEdgeFile  "UI\Widgets\Glues\GlueScreen-Button1-BackdropBorder-Down.blp",
+}
+
+Frame "BACKDROP" "BattleNetButtonDisabledBackdropTemplate" {
+    BackdropTileBackground,
+    BackdropBackground  "UI\Widgets\Glues\GlueScreen-Button1-BackdropBackground-Disabled.blp",
+    BackdropCornerFlags "UL|UR|BL|BR|T|L|B|R",
+    BackdropCornerSize  0.016,
+    BackdropBackgroundSize  0.032,
+    BackdropBackgroundInsets 0.004 0.004 0.004 0.004,
+    BackdropEdgeFile  "UI\Widgets\Glues\GlueScreen-Button1-BackdropBorder-Disabled.blp",
+}
+
+Frame "BACKDROP" "BattleNetButtonDisabledPushedBackdropTemplate" {
+    BackdropTileBackground,
+    BackdropBackground  "UI\Widgets\Glues\GlueScreen-Button1-BackdropBackground-Disabled.blp",
+    BackdropCornerFlags "UL|UR|BL|BR|T|L|B|R",
+    BackdropCornerSize  0.016,
+    BackdropBackgroundSize  0.032,
+    BackdropBackgroundInsets 0.004 0.004 0.004 0.004,
+    BackdropEdgeFile  "UI\Widgets\Glues\GlueScreen-Button1-BackdropBorder-DisabledDown.blp",
+}
+
+Frame "HIGHLIGHT" "BattleNetButtonFocusHighlightTemplate" {
+    HighlightType "FILETEXTURE",
+    HighlightAlphaFile "UI\Widgets\Glues\GlueScreen-Button-KeyboardHighlight.blp",    
+    HighlightAlphaMode "ADD",
+}
+
+Frame "HIGHLIGHT" "BattleNetButtonMouseOverHighlightTemplate" {
+    HighlightType "FILETEXTURE",
+    HighlightAlphaFile "UI\Widgets\BattleNet\bnet-button01-highlight-mouse.blp",    
+    HighlightAlphaMode "ADD",
+}
+
+Frame "TEXTBUTTON" "BattleNetButtonTemplate" {
+    Height 0.031,
+    Width 0.179,
+    ControlStyle "AUTOTRACK|HIGHLIGHTONMOUSEOVER",
+    ButtonPushedTextOffset -0.002f -0.003f,    
+
+    ControlBackdrop "ButtonBackdropTemplate",
+    Frame "BACKDROP" "ButtonBackdropTemplate" INHERITS "BattleNetButtonBackdropTemplate" {
+    }
+
+    ControlPushedBackdrop "ButtonPushedBackdropTemplate",
+    Frame "BACKDROP" "ButtonPushedBackdropTemplate" INHERITS "BattleNetButtonPushedBackdropTemplate" {
+    }
+
+    ControlDisabledBackdrop "ButtonDisabledBackdropTemplate",
+    Frame "BACKDROP" "ButtonDisabledBackdropTemplate" INHERITS "BattleNetButtonDisabledBackdropTemplate" {
+    }
+
+//    ControlFocusHighlight "ButtonFocusHighlightTemplate",
+//    Frame "HIGHLIGHT" "ButtonFocusHighlightTemplate" INHERITS "BattleNetButtonFocusHighlightTemplate" {
+//    }
+
+    ControlMouseOverHighlight "ButtonMouseOverHighlightTemplate",
+    Frame "HIGHLIGHT" "ButtonMouseOverHighlightTemplate" INHERITS "BattleNetButtonMouseOverHighlightTemplate" {
+    }
+}
+
+Frame "TEXT" "BattleNetButtonTextTemplate" {
+    DecorateFileNames,
+    FrameFont "MasterFont", 0.012, "",
+    FontJustificationH JUSTIFYCENTER,
+    FontJustificationV JUSTIFYMIDDLE,    
+	FontJustificationOffset 0.0 -0.001,
+    FontFlags "FIXEDSIZE",
+    FontColor 0.99 0.827 0.0705 1.0,
+    FontHighlightColor 1.0 1.0 1.0 1.0,
+    FontDisabledColor 0.5 0.5 0.5 1.0,
+	FontShadowColor 0.0 0.0 0.0 0.9,	
+    FontShadowOffset 0.002 -0.002,	
+}
+
+Frame "TEXT" "BattleNetButtonBarTextTemplate" {
+    DecorateFileNames,
+    FrameFont "MasterFont", 0.012, "",
+    FontJustificationH JUSTIFYCENTER,
+    FontJustificationV JUSTIFYMIDDLE,    
+	FontJustificationOffset 0.0 -0.001,
+    FontFlags "FIXEDSIZE",
+    FontColor 0.99 0.827 0.0705 1.0,
+    FontHighlightColor 1.0 1.0 1.0 1.0,
+    FontDisabledColor 0.5 0.5 0.5 1.0,
+	FontShadowColor 0.0 0.0 0.0 0.9,	
+    FontShadowOffset 0.002 -0.002,	
+}
+
+Frame "TEXT" "BattleNetTitleTextTemplate" {
+    DecorateFileNames,
+    FrameFont "MasterFont", 0.015, "",
+    FontJustificationH JUSTIFYLEFT,
+    FontJustificationV JUSTIFYMIDDLE,    
+    FontFlags "FIXEDSIZE",
+    FontColor 1.0 1.0 1.0 1.0,
+    FontHighlightColor 1.0 1.0 1.0 1.0,
+    FontDisabledColor 0.2 0.2 0.2 1.0,
+	FontShadowColor 0.0 0.0 0.0 0.9,	
+    FontShadowOffset 0.002 -0.002,	
+}
+
+Frame "TEXT" "BattleNetLabelTextTemplate" {
+    DecorateFileNames,
+    FrameFont "MasterFont", 0.012, "",
+    FontJustificationH JUSTIFYLEFT,
+    FontJustificationV JUSTIFYMIDDLE,    
+    FontFlags "FIXEDSIZE",
+    FontColor 0.99 0.827 0.0705 1.0,
+    FontHighlightColor 1.0 1.0 1.0 1.0,
+    FontDisabledColor 0.2 0.2 0.2 1.0,
+	FontShadowColor 0.0 0.0 0.0 0.9,	
+    FontShadowOffset 0.002 -0.002,	
+}
+
+Frame "TEXT" "BattleNetValueTextTemplate" {
+    DecorateFileNames,
+    FrameFont "MasterFont", 0.012, "",
+    FontJustificationH JUSTIFYLEFT,
+    FontJustificationV JUSTIFYMIDDLE,    
+    FontFlags "FIXEDSIZE",
+    FontColor 1.0 1.0 1.0 1.0,
+    FontHighlightColor 1.0 1.0 1.0 1.0,
+    FontDisabledColor 0.2 0.2 0.2 1.0,
+	FontShadowColor 0.0 0.0 0.0 0.9,	
+    FontShadowOffset 0.002 -0.002,	
+}
+
+Frame "TEXT" "BattleNetListBoxTextTemplate" {
+    DecorateFileNames,
+    FrameFont "MasterFont", 0.012, "",
+    FontJustificationH JUSTIFYLEFT,
+    FontJustificationV JUSTIFYMIDDLE,    
+    FontFlags "FIXEDSIZE",
+    FontColor 0.99 0.827 0.0705 1.0,
+    FontHighlightColor 1.0 1.0 1.0 1.0,
+    FontDisabledColor 0.2 0.2 0.2 1.0,
+	FontShadowColor 0.0 0.0 0.0 0.9,	
+    FontShadowOffset 0.002 -0.002,	
+}
+
+Frame "TEXT" "BattleNetInfoTextTemplate" {
+    DecorateFileNames,
+    FrameFont "MasterFont", 0.012, "",
+    FontJustificationH JUSTIFYCENTER,
+    FontJustificationV JUSTIFYMIDDLE,    
+    FontFlags "FIXEDSIZE",
+    FontColor 0.99 0.827 0.0705 1.0,
+    FontHighlightColor 1.0 1.0 1.0 1.0,
+    FontDisabledColor 0.2 0.2 0.2 1.0,
+	FontShadowColor 0.0 0.0 0.0 0.9,	
+    FontShadowOffset 0.002 -0.002,	
+}
+
+
+// --- BORDERED BUTTON --------------------------------------------------------------------
+
+Frame "BACKDROP" "BattleNetBorderedButtonBackdropTemplate" {
+    BackdropTileBackground,
+    BackdropBackground  "UI\Widgets\Glues\GlueScreen-Button1-BackdropBackground.blp",
+    BackdropCornerFlags "UL|UR|BL|BR|T|L|B|R",
+    BackdropCornerSize  0.016,
+    BackdropBackgroundSize  0.032,
+    BackdropBackgroundInsets 0.004 0.004 0.004 0.004,
+    BackdropEdgeFile  "UI\Widgets\Glues\GlueScreen-Button1-BorderedBackdropBorder.blp",
+}
+
+Frame "BACKDROP" "BattleNetBorderedButtonPushedBackdropTemplate" {
+    BackdropTileBackground,
+    BackdropBackground  "UI\Widgets\Glues\GlueScreen-Button1-BackdropBackground.blp",
+    BackdropCornerFlags "UL|UR|BL|BR|T|L|B|R",
+    BackdropCornerSize  0.016,
+    BackdropBackgroundSize  0.032,
+    BackdropBackgroundInsets 0.004 0.004 0.004 0.004,
+    BackdropEdgeFile  "UI\Widgets\Glues\GlueScreen-Button1-BorderedBackdropBorder-Down.blp",
+}
+
+Frame "BACKDROP" "BattleNetBorderedButtonDisabledBackdropTemplate" {
+    BackdropTileBackground,
+    BackdropBackground  "UI\Widgets\Glues\GlueScreen-Button1-BackdropBackground-Disabled.blp",
+    BackdropCornerFlags "UL|UR|BL|BR|T|L|B|R",
+    BackdropCornerSize  0.016,
+    BackdropBackgroundSize  0.032,
+    BackdropBackgroundInsets 0.004 0.004 0.004 0.004,
+    BackdropEdgeFile  "UI\Widgets\Glues\GlueScreen-Button1-BorderedBackdropBorder-Disabled.blp",
+}
+
+Frame "BACKDROP" "BattleNetBorderedButtonDisabledPushedBackdropTemplate" {
+    BackdropTileBackground,
+    BackdropBackground  "UI\Widgets\Glues\GlueScreen-Button1-BackdropBackground-Disabled.blp",
+    BackdropCornerFlags "UL|UR|BL|BR|T|L|B|R",
+    BackdropCornerSize  0.016,
+    BackdropBackgroundSize  0.032,
+    BackdropBackgroundInsets 0.004 0.004 0.004 0.004,
+    BackdropEdgeFile  "UI\Widgets\Glues\GlueScreen-Button1-BorderedBackdropBorder-DisabledDown.blp",
+}
+
+Frame "HIGHLIGHT" "BattleNetBorderedButtonFocusHighlightTemplate" {
+    HighlightType "FILETEXTURE",
+    HighlightAlphaFile "UI\Widgets\Glues\GlueScreen-Button-KeyboardHighlight.blp",    
+    HighlightAlphaMode "ADD",
+}
+
+Frame "HIGHLIGHT" "BattleNetBorderedButtonMouseOverHighlightTemplate" {
+    HighlightType "FILETEXTURE",
+    HighlightAlphaFile "UI\Widgets\BattleNet\bnet-button01-highlight-mouse.blp",    
+    HighlightAlphaMode "ADD",
+}
+
+Frame "TEXTBUTTON" "BattleNetBorderedButtonTemplate" {
+    Height 0.031,
+    Width 0.179,
+    ControlStyle "AUTOTRACK|HIGHLIGHTONMOUSEOVER",
+    ButtonPushedTextOffset -0.002f -0.003f,    
+
+    ControlBackdrop "BorderedButtonBackdropTemplate",
+    Frame "BACKDROP" "BorderedButtonBackdropTemplate" INHERITS "BattleNetBorderedButtonBackdropTemplate" {
+    }
+
+    ControlPushedBackdrop "BorderedButtonPushedBackdropTemplate",
+    Frame "BACKDROP" "BorderedButtonPushedBackdropTemplate" INHERITS "BattleNetBorderedButtonPushedBackdropTemplate" {
+    }
+
+    ControlDisabledBackdrop "BorderedButtonDisabledBackdropTemplate",
+    Frame "BACKDROP" "BorderedButtonDisabledBackdropTemplate" INHERITS "BattleNetBorderedButtonDisabledBackdropTemplate" {
+    }
+
+//    ControlFocusHighlight "BorderedButtonFocusHighlightTemplate",
+//    Frame "HIGHLIGHT" "BorderedButtonFocusHighlightTemplate" INHERITS "BattleNetBorderedButtonFocusHighlightTemplate" {
+//    }
+
+    ControlMouseOverHighlight "BorderedButtonMouseOverHighlightTemplate",
+    Frame "HIGHLIGHT" "BorderedButtonMouseOverHighlightTemplate" INHERITS "BattleNetBorderedButtonMouseOverHighlightTemplate" {
+    }
+}
+
+// --- SCROLLBAR ---------------------------------------------------------------------
+
+Frame "SCROLLBAR" "BattleNetScrollBarTemplate" {
+    Width 0.0165,
+    SliderLayoutVertical,
+
+    ControlBackdrop "StandardScrollBarBackdrop",
+    Frame "BACKDROP" "StandardScrollBarBackdrop" {
+        BackdropTileBackground,
+        BackdropBackground  "UI\Widgets\Glues\GlueScreen-Scrollbar-BackdropBackground.blp",
+        BackdropCornerFlags "UL|UR|BL|BR|T|L|B|R",
+        BackdropCornerSize  0.008,
+        BackdropBackgroundInsets 0.004 0.004 0.004 0.004,
+        BackdropEdgeFile  "UI\Widgets\Glues\GlueScreen-Scrollbar-BackdropBorder.blp",
+        BackdropBlendAll,
+    }
+
+    ScrollBarIncButtonFrame "BattleNetScrollBarIncButton",
+    Frame "BUTTON" "BattleNetScrollBarIncButton" {
+        Width 0.015,
+        Height 0.015,
+        ControlBackdrop "BattleNetScrollBarIncButtonBackdrop",
+        Frame "BACKDROP" "BattleNetScrollBarIncButtonBackdrop" {                    
+            BackdropBackground  "UI\Widgets\Glues\GlueScreen-Scrollbar-UpArrow.blp",
+            BackdropBlendAll,
+        }
+    }
+
+    ScrollBarDecButtonFrame "BattleNetScrollBarDecButton",
+    Frame "BUTTON" "BattleNetScrollBarDecButton" {
+        Width 0.015,
+        Height 0.015,
+        ControlBackdrop "BattleNetScrollBarDecButtonBackdrop",
+        Frame "BACKDROP" "BattleNetScrollBarDecButtonBackdrop" {
+            BackdropBackground  "UI\Widgets\Glues\GlueScreen-Scrollbar-DownArrow.blp",
+            BackdropBlendAll,
+        }
+    }
+
+    SliderThumbButtonFrame "BattleNetThumbButton",
+    Frame "BUTTON" "BattleNetThumbButton" {
+        Width 0.01,
+        Height 0.01,
+        ControlBackdrop "BattleNetThumbButtonBackdrop",
+        Frame "BACKDROP" "BattleNetThumbButtonBackdrop" {
+            BackdropBackground  "UI\Widgets\Glues\SinglePlayerSkirmish-ScrollBarKnob.blp",
+            BackdropBlendAll,
+        }
+    }
+}
+
+// --- SLIDER -----------------------------------------------------------------------
+
+Frame "SLIDER" "BattleNetSliderTemplate" {
+    Height 0.022,
+    SliderLayoutHorizontal,
+
+/*
+    ControlBackdrop "BattleNetScrollBarBackdropTemplate",
+    Frame "BACKDROP" "BattleNetScrollBarBackdropTemplate" INHERITS "BattleNetControlBackdropTemplate" {
+    }
+*/
+
+    SliderThumbButtonFrame "BattleNetThumbButtonTemplate",
+    Frame "BUTTON" "BattleNetThumbButtonTemplate" {
+        Width 0.016,
+        Height 0.016,
+        ControlBackdrop "BattleNetThumbButtonBackdropTemplate",
+        Frame "BACKDROP" "BattleNetThumbButtonBackdropTemplate" {
+            BackdropBlendAll,
+            BackdropBackground  "UI\Widgets\Glues\SinglePlayerSkirmish-ScrollBarKnob.blp",
+        }
+    }
+}
+
+// --- LISTBOX ----------------------------------------------------------------------
+
+Frame "LISTBOX" "BattleNetListBoxTemplate" {
+    ListBoxBorder 0.01,
+
+    ControlBackdrop "BattleNetListBoxBackdropTemplate",
+    Frame "BACKDROP" "BattleNetListBoxBackdropTemplate" INHERITS "BattleNetControlBackdropTemplate" {
+    }
+
+    ListBoxScrollBar "BattleNetListBoxScrollBarTemplate",
+    Frame "SCROLLBAR" "BattleNetListBoxScrollBarTemplate" INHERITS WITHCHILDREN "BattleNetScrollBarTemplate" {
+    }
+}
+
+// --- POPUPMENU --------------------------------------------------------------------
+
+Frame "BACKDROP" "BattleNetPopupMenuBaseBackdrop" {
+    Width 0.14675,
+    Height 0.026125,
+    BackdropBlendAll,
+    BackdropBackground  "UI\Widgets\Glues\GlueScreen-PlayerButton-BorderRight.blp",
+}
+
+Frame "MENU" "BattleNetPopupMenuMenuTemplate" {
+    Height 0.03,
+    DecorateFileNames,
+    FrameFont "MasterFont",0.013,"",
+    MenuTextHighlightColor 0.99 0.827 0.0705 1.0,
+    MenuItemHeight 0.014,
+    MenuBorder 0.009,
+
+    ControlBackdrop "BattleNetPopupMenuMenuBackdropTemplate",
+    Frame "BACKDROP" "BattleNetPopupMenuMenuBackdropTemplate" INHERITS "BattleNetBorderedButtonBackdropTemplate" {
+    }
+}
+
+Frame "TEXTBUTTON" "BattleNetPopupMenuTitleTemplate" {  
+    DecorateFileNames,
+    FrameFont "MasterFont",0.013,"",
+    ButtonText "BattleNetPopupMenuTitleTextTemplate",
+    Frame "TEXT" "BattleNetPopupMenuTitleTextTemplate" {
+        FontJustificationOffset 0.01 0.0,
+        FontFlags "FIXEDSIZE",
+    }
+}
+
+Frame "BUTTON" "BattleNetPopupMenuArrowTemplate" {
+    Height 0.011,
+    Width 0.011,
+    ControlBackdrop "BattleNetPopupMenuArrowBackdropTemplate",
+    Frame "BACKDROP" "BattleNetPopupMenuArrowBackdropTemplate" {
+        BackdropBlendAll,
+        BackdropBackground "UI\Widgets\Glues\GlueScreen-Pulldown-Arrow.blp",
+    }
+}
+
+
+Frame "POPUPMENU" "BattleNetPopupMenuTemplate" {
+    Width 0.111875,
+    Height 0.03125,
+    PopupButtonInset 0.01,
+
+
+    ControlBackdrop "BattleNetPopupMenuBackdropTemplate",
+    Frame "BACKDROP" "BattleNetPopupMenuBackdropTemplate" INHERITS "BattleNetButtonBackdropTemplate" {
+    }
+
+    ControlDisabledBackdrop "BattleNetPopupMenuDisabledBackdropTemplate",
+    Frame "BACKDROP" "BattleNetPopupMenuDisabledBackdropTemplate" INHERITS "BattleNetButtonDisabledBackdropTemplate" {
+    }
+
+    PopupTitleFrame "PopupMenuTitle",
+    Frame "TEXTBUTTON" "PopupMenuTitle" INHERITS WITHCHILDREN "BattleNetPopupMenuTitleTemplate" {
+    }
+
+    PopupArrowFrame "PopupMenuArrow",
+    Frame "BUTTON" "PopupMenuArrow" INHERITS WITHCHILDREN "BattleNetPopupMenuArrowTemplate" { 
+    }
+
+    PopupMenuFrame "PopupMenuMenu",
+    Frame "MENU" "PopupMenuMenu" INHERITS WITHCHILDREN "BattleNetPopupMenuMenuTemplate" {
+    }
+}
+
+// --- RADIOBUTTON --------------------------------------------------------------------
+
+Frame "CHECKBOX" "BattleNetRadioButtonTemplate" {
+    Width 0.024,
+    Height 0.024,
+
+    ControlBackdrop "BattleNetRadioButtonBackdrop",
+    Frame "BACKDROP" "BattleNetRadioButtonBackdrop" {
+        BackdropBlendAll,
+        BackdropBackground  "UI\Widgets\Glues\GlueScreen-RadioButton-Background.blp",
+    }
+
+    ControlPushedBackdrop "BattleNetRadioButtonPushedBackdrop",
+    Frame "BACKDROP" "BattleNetRadioButtonPushedBackdrop" {
+        BackdropBlendAll,
+        BackdropBackground  "UI\Widgets\Glues\GlueScreen-RadioButton-BackgroundPressed.blp",
+    }
+
+    ControlDisabledBackdrop "BattleNetCheckBoxDisabledBackdrop",
+    Frame "BACKDROP" "BattleNetCheckBoxDisabledBackdrop" {
+        BackdropBlendAll,
+        BackdropBackground  "UI\Widgets\Glues\GlueScreen-Checkbox-BackgroundDisabled.blp",
+    }
+
+    CheckBoxCheckHighlight "BattleNetRadioButtonHighlightTemplate",
+    Frame "HIGHLIGHT" "BattleNetRadioButtonHighlightTemplate" {
+        HighlightType "FILETEXTURE",
+        HighlightAlphaFile "UI\Widgets\Glues\GlueScreen-RadioButton-Button.blp",    
+        HighlightAlphaMode "BLEND",
+    }
+
+    CheckBoxDisabledCheckHighlight "BattleNetDisabledRadioButtonHighlightTemplate",
+    Frame "HIGHLIGHT" "BattleNetDisabledRadioButtonHighlightTemplate" {
+        HighlightType "FILETEXTURE",
+        HighlightAlphaFile "UI\Widgets\Glues\GlueScreen-RadioButton-ButtonDisabled.blp",    
+        HighlightAlphaMode "BLEND",
+    }
+}
+
+// --- EDITBOX --------------------------------------------------------------------
+
+Frame "TEXT" "BattleNetEditBoxTextTemplate" {
+    DecorateFileNames,
+    FrameFont "MasterFont", 0.015, "",
+    FontColor 1.0 1.0 1.0,
+    FontFlags "FIXEDSIZE",
+}
+
+Frame "EDITBOX" "BattleNetEditBoxTemplate" {
+    Height 0.04,
+    EditBorderSize 0.009,
+    EditCursorColor 1.0 1.0 1.0,
+
+    ControlBackdrop "BattleNetEditBoxBackdrop",
+    Frame "BACKDROP" "BattleNetEditBoxBackdrop" INHERITS "BattleNetEditBoxBackdropTemplate" {
+    }
+}
+
+// --- TEXTAREA -----------------------------------------------------------------
+Frame "TEXTAREA" "BattleNetTextAreaTemplate" {
+    //DecorateFileNames,
+    //FrameFont "MasterFont", 0.011, "",
+    TextAreaLineHeight 0.015,
+    TextAreaLineGap 0.0,
+    TextAreaInset 0.01,
+
+    TextAreaScrollBar "BattleNetTextAreaScrollBarTemplate",
+    Frame "SCROLLBAR" "BattleNetTextAreaScrollBarTemplate" INHERITS WITHCHILDREN "BattleNetScrollBarTemplate" {
+    }
+
+    ControlBackdrop "BattleNetTextAreaBackdropTemplate",
+    Frame "BACKDROP" "BattleNetTextAreaBackdropTemplate" INHERITS "BattleNetControlBackdropTemplate" {
+    }
+}
+
+// --- CHATDISPLAY -----------------------------------------------------------------
+
+Frame "CHATDISPLAY" "BattleNetChatDisplayTemplate" {
+    DecorateFileNames,
+    FrameFont "MasterFont", 0.011, "",
+    ChatDisplayLineHeight 0.01,
+    ChatDisplayBorderSize 0.01,
+
+    /*
+    ControlBackdrop "BattleNetChatDisplayBackdropTemplate",
+    Frame "BACKDROP" "BattleNetChatDisplayBackdropTemplate" INHERITS "BattleNetControlBackdropTemplate" {
+    }
+    */
+
+    /*
+    ChatDisplayScrollBar "BattleNetChatDisplayScrollBarTemplate",
+    Frame "SCROLLBAR" "BattleNetChatDisplayScrollBarTemplate" INHERITS WITHCHILDREN "BattleNetScrollBarTemplate" {
+    }
+    */
+
+    /*
+    ChatDisplayEditBox "BattleNetChatDisplayEditBoxTemplate",
+    Frame "EDITBOX" "BattleNetChatDisplayEditBoxTemplate" INHERITS WITHCHILDREN "BattleNetEditBoxTemplate" {
+    }
+    */
+}
+
+// --- DIALOG/FRAME ----------------------------------------------------------------
+
+Frame "DIALOG" "BattleNetDialogTemplate" {
+    Width 0.60,
+    Height 0.40,
+    DecorateFileNames,
+    FrameFont "MasterFont",0.015,"",
+
+    DialogBackdrop "BattleNetDialogBackdropTemplate",
+    Frame "BACKDROP" "BattleNetDialogBackdropTemplate" INHERITS "BattleNetHeavyBackdropTemplate" {
+    }
+}
+
+Frame "FRAME" "BattleNetFrameTemplate" {
+    DecorateFileNames,
+    FrameFont "MasterFont", 0.015, "",
+}
+

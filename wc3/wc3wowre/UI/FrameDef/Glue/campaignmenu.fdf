@@ -1,0 +1,92 @@
+// -- INCLUDE FILES ---------------------------------------------
+
+IncludeFile "UI\FrameDef\Glue\StandardTemplates.fdf",
+
+// -- LOCAL TEMPLATES -------------------------------------------
+
+// -- FRAMES ----------------------------------------------------
+
+Frame "FRAME" "CampaignMenu" INHERITS "StandardFrameTemplate" {
+	SetAllPoints,
+
+    Frame "SPRITE" "CampaignBackdrop" {
+        SetAllPoints,
+    }
+
+    Frame "SPRITE" "SlidingDoors" {
+    	BackgroundArt "UI\Glues\SinglePlayer\Campaign-Fade\Campaign-Fade.mdl",
+        SetAllPoints,
+    }
+
+    Frame "GLUETEXTBUTTON" "BackButton" INHERITS WITHCHILDREN "CampaignButtonTemplate" {
+        Width 0.168,
+	    SetPoint TOPRIGHT, "CampaignMenu", BOTTOMRIGHT, -0.04, 0.05,
+	    ControlShortcutKey "KEY_BACK_SHORTCUT",
+
+        ButtonText "BackButtonText",
+	    Frame "TEXT" "BackButtonText" INHERITS "StandardButtonTextTemplate" {
+		    Text "KEY_BACK",
+	    }
+    }
+   
+	Frame "FRAME" "MissionSelectFrame" {
+		
+		Frame "TEXT" "MissionName" INHERITS "StandardTitleTextTemplate" {
+			SetPoint BOTTOM, "CampaignMenu", BOTTOM, -0.15, 0.04,
+		    FrameFont "MasterFont", 0.024, "",
+		    FontJustificationH JUSTIFYCENTER,
+		    FontJustificationV JUSTIFYMIDDLE,    
+			Text "EMPTY_STRING",
+		}
+		
+		Frame "TEXT" "MissionNameHeader" INHERITS "StandardSmallTextTemplate" {
+			SetPoint BOTTOM, "MissionName", TOP, 0.0, 0.002,
+		    FrameFont "MasterFont", 0.015, "",
+		    FontJustificationH JUSTIFYCENTER,
+		    FontJustificationV JUSTIFYMIDDLE,    
+			Text "EMPTY_STRING",
+		}
+		
+	}	
+	
+	Frame "FRAME" "CampaignSelectFrame" {
+
+	    Frame "SPRITE" "WarCraftIIILogo" {
+	        SetPoint TOPRIGHT, "CampaignMenu", TOPRIGHT, 0.08, 0.04,
+	    }
+
+		Frame "BACKDROP" "CampaignDifficultyBackdrop" {
+	        Height  0.090f,
+	        Width   0.265f,
+	        SetPoint BOTTOMLEFT, "CampaignMenu", BOTTOMLEFT,  0.022, 0.076,
+	
+	        DecorateFileNames,
+	        BackdropTileBackground,
+	        BackdropBackground          "EscMenuEditBoxBackground",
+	        BackdropCornerFlags         "UL|UR|BL|BR|T|L|B|R",
+	        BackdropCornerSize          0.0125,
+	        BackdropBackgroundSize      0.256,
+	        BackdropBackgroundInsets    0.005 0.005 0.005 0.005,
+	        BackdropEdgeFile            "EscMenuEditBoxBorder",
+			BackdropBlendAll,
+			
+	        Frame "POPUPMENU" "DifficultySelect" INHERITS WITHCHILDREN "CampaignPopupMenuTemplate" {
+				SetPoint BOTTOMRIGHT, "CampaignDifficultyBackdrop", BOTTOMRIGHT, -0.007, 0.007,
+	            Height 0.036,
+	            Width 0.145,
+	        }
+			
+	        Frame "TEXT" "DifficultySelectLabel" INHERITS "StandardLabelTextTemplate" {
+				SetPoint TOPLEFT, "CampaignDifficultyBackdrop", TOPLEFT, 0.01, -0.01,
+				Text "SELECT_DIFFICULTY_LEVEL",
+			}
+			
+	        Frame "TEXT" "DifficultyDescriptionText" INHERITS "StandardSmallTitleTextTemplate" {
+				Width 0.245,
+				SetPoint TOPLEFT, "DifficultySelectLabel", BOTTOMLEFT, 0, 0.001,
+				Text "DIFFICULTY_TEXT",
+			}
+		}					
+	}
+}
+

@@ -1,0 +1,117 @@
+// -- INCLUDE FILES ---------------------------------------------
+
+IncludeFile "UI\FrameDef\Glue\StandardTemplates.fdf",
+
+// -- LOCAL TEMPLATES -------------------------------------------
+
+// -- FRAMES ----------------------------------------------------
+
+Frame "FRAME" "AdvancedOptionsDisplay" {
+
+/*
+    // NOTE: use this highlight to position this guy on any new screens
+    Frame "HIGHLIGHT" "DebugTestFrame" {
+        SetAllPoints,
+        HighlightColor 1.0 0.0 0.0 0.2,
+        HighlightType "SHADE",
+    }
+*/
+
+    // ------------
+    Frame "TEXT" "AdvancedOptionsTitleLabel" INHERITS "StandardTitleTextTemplate" {
+        SetPoint TOPLEFT, "AdvancedOptionsDisplay", TOPLEFT, 0.0, 0.0,
+        SetPoint TOPRIGHT, "AdvancedOptionsDisplay", TOPRIGHT, 0.0, 0.0,
+        Text "ADVANCED_OPTIONS",
+        FontColor 1.0 1.0 1.0 1.0,
+
+        Frame "TEXT" "AdvancedOptionsTitleValue" INHERITS "StandardTitleTextTemplate" {
+            SetAllPoints,
+            FontJustificationH JUSTIFYRIGHT,
+        }
+    }
+
+    // ------------
+    Frame "TEXT" "LockTeamsLabel" INHERITS "StandardLabelTextTemplate" {
+        SetPoint TOPLEFT, "AdvancedOptionsTitleLabel", BOTTOMLEFT, 0.0, -0.002,
+        SetPoint TOPRIGHT, "AdvancedOptionsTitleLabel", BOTTOMRIGHT, 0.0, -0.002,
+        Text "COLON_LOCK_TEAMS",
+
+        Frame "TEXT" "LockTeamsValue" INHERITS "StandardValueTextTemplate" {
+            SetAllPoints,
+            FontJustificationH JUSTIFYRIGHT,
+        }
+    }
+
+    // ------------
+    Frame "TEXT" "TeamsTogetherLabel" INHERITS "StandardLabelTextTemplate" {
+        SetPoint TOPLEFT, "LockTeamsLabel", BOTTOMLEFT, 0.0, -0.002,
+        SetPoint TOPRIGHT, "LockTeamsLabel", BOTTOMRIGHT, 0.0, -0.002,
+        Text "COLON_TEAMS_TOGETHER",
+
+        Frame "TEXT" "TeamsTogetherValue" INHERITS "StandardValueTextTemplate" {
+            SetAllPoints,
+            FontJustificationH JUSTIFYRIGHT,
+        }
+    }
+
+    // ------------
+    Frame "TEXT" "AdvSharedControlLabel" INHERITS "StandardLabelTextTemplate" {
+        SetPoint TOPLEFT, "TeamsTogetherLabel", BOTTOMLEFT, 0.0, -0.002,
+        SetPoint TOPRIGHT, "TeamsTogetherLabel", BOTTOMRIGHT, 0.0, -0.002,
+        Text "COLON_ADV_SHARED_CONTROL",
+
+        Frame "TEXT" "AdvSharedControlValue" INHERITS "StandardValueTextTemplate" {
+            SetAllPoints,
+            FontJustificationH JUSTIFYRIGHT,
+        }
+    }
+
+    // ------------
+    Frame "TEXT" "RandomRacesLabel" INHERITS "StandardLabelTextTemplate" {
+        SetPoint TOPLEFT, "AdvSharedControlLabel", BOTTOMLEFT, 0.0, -0.002,
+        SetPoint TOPRIGHT, "AdvSharedControlLabel", BOTTOMRIGHT, 0.0, -0.002,
+        Text "COLON_RANDOM_RACES",
+
+        Frame "TEXT" "RandomRacesValue" INHERITS "StandardValueTextTemplate" {
+            SetAllPoints,
+            FontJustificationH JUSTIFYRIGHT,
+        }
+    }
+
+    // ------------
+    Frame "TEXT" "RandomHeroLabel" INHERITS "StandardLabelTextTemplate" {
+        SetPoint TOPLEFT, "RandomRacesLabel", BOTTOMLEFT, 0.0, -0.002,
+        SetPoint TOPRIGHT, "RandomRacesLabel", BOTTOMRIGHT, 0.0, -0.002,
+        Text "COLON_RANDOM_HERO",
+
+        Frame "TEXT" "RandomHeroValue" INHERITS "StandardValueTextTemplate" {
+            SetAllPoints,
+            FontJustificationH JUSTIFYRIGHT,
+        }
+    }
+
+    // ------------
+    Frame "TEXT" "ObserversLabel" INHERITS "StandardLabelTextTemplate" {
+        SetPoint TOPLEFT, "RandomHeroLabel", BOTTOMLEFT, 0.0, -0.002,
+        SetPoint TOPRIGHT, "RandomHeroLabel", BOTTOMRIGHT, 0.0, -0.002,
+        Text "COLON_OBSERVERS",
+
+        Frame "TEXT" "ObserversValue" INHERITS "StandardValueTextTemplate" {
+            SetAllPoints,
+            FontJustificationH JUSTIFYRIGHT,
+        }
+    }
+
+    // ------------
+    Frame "TEXT" "MapVisibilityLabel" INHERITS "StandardLabelTextTemplate" {
+        SetPoint TOPLEFT, "ObserversLabel", BOTTOMLEFT, 0.0, -0.002,
+        SetPoint TOPRIGHT, "ObserversLabel", BOTTOMRIGHT, 0.0, -0.002,
+        Text "COLON_VISIBILITY",
+
+        Frame "TEXT" "MapVisibilityValue" INHERITS "StandardValueTextTemplate" {
+            SetAllPoints,
+            FontJustificationH JUSTIFYRIGHT,
+        }
+    }
+}
+

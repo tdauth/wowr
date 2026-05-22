@@ -1,0 +1,109 @@
+// -- INCLUDE FILES ---------------------------------------------------------
+
+IncludeFile "UI\FrameDef\Glue\StandardTemplates.fdf",
+
+// -- LOCAL TEMPLATES -------------------------------------------------------
+
+// -- FRAMES ----------------------------------------------------------------
+
+Frame "FRAME" "ViewReplayScreen" INHERITS "StandardFrameTemplate" {
+	SetAllPoints,
+    TabFocusPush,
+
+    //*************************
+    //*
+    //* Game Settings Panel
+    //*
+    //*******
+
+    Frame "FRAME" "GameSettingsPanel" {
+
+        Frame "TEXT" "ViewReplayTitle" INHERITS "StandardTitleTextTemplate" {
+            SetPoint TOPLEFT, "ViewReplayScreen", TOPLEFT, 0.02625, -0.039,
+            Text "VIEW_REPLAY",
+        }
+	
+		Frame "FRAME" "FileListFrame" {
+			SetPoint TOPLEFT, "ViewReplayTitle", BOTTOMLEFT, 0.0, -0.01,
+			Width 0.37,
+			Height 0.325,
+		}
+    }
+
+    //*************************
+    //*
+    //* Map Info Pane
+    //*
+    //*******
+
+    Frame "FRAME" "MapInfoPaneContainer" {
+        Width 0.271875,
+        Height 0.223125,
+        SetPoint TOP, "ViewReplayScreen", TOPRIGHT, -0.180625, -0.0375,
+    }
+
+    //*************************
+    //*
+    //* Number of Players
+    //*
+    //*******
+
+    Frame "TEXT" "NumPlayersLabel" INHERITS "StandardLabelTextTemplate" {
+        SetPoint TOPLEFT, "MapInfoPaneContainer", BOTTOMLEFT, 0.0, -0.006,
+        Width 0.271875,
+        Text "COLON_NUMBER_OF_PLAYERS",
+        FontJustificationV JUSTIFYBOTTOM,
+    }
+
+    Frame "TEXT" "NumPlayersValue" INHERITS "StandardLabelTextTemplate" {
+        SetPoint TOPLEFT, "NumPlayersLabel", TOPLEFT, 0.0, 0.0,
+        Width 0.271875,
+        Text "EMPTY_STRING",
+
+        FontColor 1.0 1.0 1.0 1.0,
+        FontJustificationH JUSTIFYRIGHT,
+        FontJustificationV JUSTIFYBOTTOM,
+    }
+
+
+    //*************************
+    //*
+    //* Bottom Buttons
+    //*
+    //*******
+
+    Frame "BACKDROP" "OKBackdrop" INHERITS "StandardMenuButtonBaseBackdrop" {
+        Width 0.24,
+        SetPoint TOPRIGHT,"ViewReplayScreen",BOTTOMRIGHT, -0.014375, 0.124375,
+
+	    Frame "GLUETEXTBUTTON" "OKButton" INHERITS WITHCHILDREN "StandardButtonTemplate" {
+            Width 0.168,
+		    SetPoint TOPRIGHT,"OKBackdrop",TOPRIGHT, -0.012, -0.0165,
+		    ControlShortcutKey "KEY_VIEW_REPLAY_SHORTCUT",
+            TabFocusDefault,
+            TabFocusNext "CancelButton",
+
+            ButtonText "OKButtonText",
+		    Frame "TEXT" "OKButtonText" INHERITS "StandardButtonTextTemplate" {
+			    Text "KEY_VIEW_REPLAY",
+		    }
+	    }
+    }
+
+    Frame "BACKDROP" "CancelBackdrop" INHERITS "StandardMenuButtonBaseBackdrop" {
+        Width 0.24,
+        SetPoint TOPRIGHT,"OKBackdrop",BOTTOMRIGHT, 0.0, 0.015,
+
+	    Frame "GLUETEXTBUTTON" "CancelButton" INHERITS WITHCHILDREN "StandardButtonTemplate" {
+            Width 0.168,
+		    SetPoint TOPRIGHT,"CancelBackdrop",TOPRIGHT, -0.012, -0.0165,
+		    ControlShortcutKey "KEY_BACK_SHORTCUT",
+            TabFocusNext "OKButton",
+
+            ButtonText "CancelButtonText",
+		    Frame "TEXT" "CancelButtonText" INHERITS "StandardButtonTextTemplate" {
+			    Text "KEY_BACK",
+		    }
+	    }
+    }
+}

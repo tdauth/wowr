@@ -1,0 +1,17 @@
+// -- INCLUDE FILES ---------------------------------------------
+
+IncludeFile "UI\FrameDef\Glue\StandardTemplates.fdf",
+
+// -- LOCAL TEMPLATES -------------------------------------------
+
+// -- FRAMES ----------------------------------------------------
+
+Frame "FRAME" "MovieScreen" INHERITS "StandardFrameTemplate" {
+    SetAllPoints,
+
+    Frame "TEXT" "Caption" INHERITS "StandardTitleTextTemplate" {
+        SetPoint BOTTOM, "MovieScreen", BOTTOM, 0.0, 0.1,
+        FontJustificationH JUSTIFYCENTER,
+        FrameFont "MasterFont", 0.02, "",
+	}
+}

@@ -1,0 +1,17 @@
+// -- INCLUDE FILES ---------------------------------------------
+
+IncludeFile "UI\FrameDef\Glue\BattleNetTemplates.fdf",
+
+// -- LOCAL TEMPLATES -------------------------------------------
+
+// -- FRAMES ----------------------------------------------------
+
+Frame "CONTROL" "BattleNetIconSelectBox" {
+    ControlBackdrop "MapListBoxBackdrop",
+    Frame "BACKDROP" "MapListBoxBackdrop" INHERITS "StandardEditBoxBackdropTemplate" {
+    }
+
+    Frame "SCROLLBAR" "IconSelectScrollBar" INHERITS WITHCHILDREN "BattleNetScrollBarTemplate" {
+        SetPoint BOTTOMRIGHT, "BattleNetIconSelectBox", BOTTOMRIGHT, -0.009375, 0.009375,
+    }
+}

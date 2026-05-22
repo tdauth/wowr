@@ -1,0 +1,147 @@
+// -- INCLUDE FILES ---------------------------------------------
+
+IncludeFile "UI\FrameDef\Glue\BattleNetTemplates.fdf",
+
+// -- LOCAL TEMPLATES -------------------------------------------
+
+// -- FRAMES ----------------------------------------------------
+
+Frame "FRAME" "BattleNetStatusBox" {
+
+    Frame "FRAME" "LogoPane" {
+        Frame "BACKDROP" "LogoBackdrop" {
+            SetPoint TOPLEFT, "BattleNetStatusBox", TOPLEFT, 0.01, -0.01,
+            SetPoint BOTTOMRIGHT, "BattleNetStatusBox", BOTTOMRIGHT, -0.01, 0.01,
+            UseActiveContext,
+            BackdropBackground "UI\Glues\BattleNet\PlaceholderAd\bnet-logo-placeholder.blp",
+            BackdropBlendAll,
+        }
+    }
+
+    Frame "FRAME" "TournamentPane" {
+        Frame "TEXT" "TournamentTitleValue" INHERITS "BattleNetLabelTextTemplate" {
+            SetPoint TOP, "BattleNetStatusBox", TOP, 0.0, -0.012,
+            UseActiveContext,
+            Width 0.19,
+            FontJustificationH JUSTIFYCENTER,
+            Text "Tournament Title Value",
+        }
+
+        Frame "TEXT" "TournamentTitleInfoValue" INHERITS "BattleNetLabelTextTemplate" {
+            SetPoint TOP, "TournamentTitleValue", BOTTOM, 0.0, -0.001,
+            UseActiveContext,
+            Width 0.19,
+            DecorateFileNames,
+            FrameFont "MasterFont", 0.011, "",
+            FontJustificationH JUSTIFYCENTER,
+            Text "Tournament Title Info Value",
+        }
+
+        Frame "TEXT" "TournamentSmallInfoValue1" INHERITS "BattleNetLabelTextTemplate" {
+            SetPoint TOP, "TournamentTitleInfoValue", BOTTOM, 0.0, -0.005,
+            UseActiveContext,
+            Width 0.19,
+            DecorateFileNames,
+            FrameFont "MasterFont", 0.011, "",
+            FontJustificationH JUSTIFYCENTER,
+            Text "Tournament Small Info Value 1",
+        }
+
+        Frame "TEXT" "TournamentSmallInfoValue2" INHERITS "BattleNetLabelTextTemplate" {
+            SetPoint TOP, "TournamentSmallInfoValue1", BOTTOM, 0.0, -0.001,
+            UseActiveContext,
+            Width 0.19,
+            DecorateFileNames,
+            FrameFont "MasterFont", 0.011, "",
+            FontJustificationH JUSTIFYCENTER,
+            Text "Tournament Small Info Value 2",
+        }
+
+        Frame "TEXT" "TournamentLargeInfoValue" INHERITS "BattleNetLabelTextTemplate" {
+            SetPoint TOP, "TournamentTitleValue", BOTTOM, 0.0, -0.005,
+            UseActiveContext,
+            Width 0.19,
+            FontJustificationH JUSTIFYCENTER,
+            Text "Tournament Large Info Value",
+        }
+
+        Frame "GLUETEXTBUTTON" "TournamentPlayGameButton" INHERITS WITHCHILDREN "BattleNetBorderedButtonTemplate" {
+            SetPoint BOTTOM, "BattleNetStatusBox", BOTTOM, 0.0, 0.01,            
+            UseActiveContext,
+            Width 0.095,
+            Height 0.025,
+
+            ButtonText "TournamentPlayGameButtonText",
+		    Frame "TEXT" "TournamentPlayGameButtonText" INHERITS "BattleNetButtonTextTemplate" {
+                UseActiveContext,
+                DecorateFileNames,
+                FrameFont "MasterFont", 0.011, "",
+                FontJustificationOffset 0.0 0.0,
+			    Text "BNET_TOURNAMENT_PLAY_GAME",
+		    }            
+        }
+
+        Frame "BACKDROP" "TournamentClockIcon" {
+            Height 0.02,
+            Width 0.02,
+            SetPoint BOTTOMLEFT, "BattleNetStatusBox", BOTTOMLEFT, 0.015, 0.012,
+            UseActiveContext,
+            BackdropBackground "UI\Widgets\BattleNet\bnet-tournament-clock.blp",
+            BackdropBlendAll,
+        }
+    }
+
+    Frame "FRAME" "AnonSearchPane" {
+        Frame "TEXT" "AnonSearchTitle" INHERITS "BattleNetValueTextTemplate" {
+            SetPoint TOP, "BattleNetStatusBox", TOP, 0.0, -0.010,
+            UseActiveContext,
+            FontJustificationH JUSTIFYCENTER,
+            Text "BNET_STATUS_ANONSEARCH_TITLE",
+        }
+
+        Frame "SPRITE" "AnonSearchWorkingAnim" {
+            SetPoint TOPRIGHT, "AnonSearchTitle", BOTTOM, -0.0225, 0.056875,
+            UseActiveContext,
+        }
+
+        Frame "TEXT" "AnonSearchStatusText" INHERITS "BattleNetLabelTextTemplate" {
+            DecorateFileNames,
+            FrameFont "MasterFont", 0.011, "",
+            SetPoint TOP, "AnonSearchTitle", BOTTOM, 0.0, -0.005,
+            UseActiveContext,
+            Text "BNET_STATUS_ANONSEARCH_SEARCH",
+        }
+
+        Frame "GLUETEXTBUTTON" "AnonSearchCancelButton" INHERITS WITHCHILDREN "BattleNetBorderedButtonTemplate" {
+            SetPoint BOTTOMRIGHT, "BattleNetStatusBox", BOTTOMRIGHT, -0.01, 0.01,            
+            UseActiveContext,
+            Width 0.07,
+            Height 0.025,
+
+            ButtonText "AnonSearchCancelButtonText",
+		    Frame "TEXT" "AnonSearchCancelButtonText" INHERITS "BattleNetButtonTextTemplate" {
+                UseActiveContext,
+                DecorateFileNames,
+                FrameFont "MasterFont", 0.011, "",
+                FontJustificationOffset 0.0 0.0,
+			    Text "CANCEL",
+		    }            
+        }
+
+        Frame "TEXT" "AnonSearchAverageLabel" INHERITS "BattleNetLabelTextTemplate" {
+            UseActiveContext,
+            DecorateFileNames,
+            FrameFont "MasterFont", 0.011, "",
+            SetPoint BOTTOMLEFT, "BattleNetStatusBox", BOTTOMLEFT, 0.01, 0.012,
+            Text "BNET_STATUS_ANONSEARCH_AVERAGE",
+        }
+
+        Frame "TIMERTEXT" "AnonSearchAverageValue" INHERITS "BattleNetValueTextTemplate" {
+            UseActiveContext,
+            DecorateFileNames,
+            FrameFont "MasterFont", 0.011, "",
+            SetPoint BOTTOMLEFT, "BattleNetStatusBox", BOTTOMLEFT, 0.0875, 0.011,
+        }
+    }
+
+}

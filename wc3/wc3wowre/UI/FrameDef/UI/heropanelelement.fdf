@@ -1,0 +1,500 @@
+IncludeFile "UI\FrameDef\UI\EscMenuTemplates.fdf",
+
+String "HeroLevelTextTemplate" {
+    Font "MasterFont", 0.008,
+    FontColor 1.0 1.0 1.0,
+}
+
+Frame "SIMPLEFRAME" "HeroPanelElementFrame" {
+    Width 0.112,
+    Height 0.146,
+    DecorateFileNames,
+
+    Frame "POPUPMENU" "HeroPanelPlayerNameMenuFrame" {
+        Width 0.106,
+        Height 0.025,
+        PopupButtonInset 0.01,
+        SetPoint TOPLEFT, "HeroPanelElementFrame", TOPLEFT, 0.0, 0.0, // Position is set in CHeroPanelElement::OnFrameResize()
+
+        ControlBackdrop "HeroPanelPlayerNameBackdrop",
+        Frame "BACKDROP" "HeroPanelPlayerNameBackdrop" INHERITS "EscMenuButtonBackdropTemplate" {
+			BackdropCornerSize  0.0125,
+			BackdropBackgroundSize  0.128,
+			BackdropBackgroundInsets 0.004 0.004 0.004 0.004,
+            BackdropBackground  "ObserverStatisticsBackground",
+            BackdropBlendAll,
+        }
+
+        ControlDisabledBackdrop "HeroPanelPlayerNameDisabledBackdrop",
+        Frame "BACKDROP" "HeroPanelPlayerNameDisabledBackdrop" INHERITS "EscMenuButtonDisabledBackdropTemplate" {
+			BackdropCornerSize  0.0125,
+			BackdropBackgroundSize  0.128,
+			BackdropBackgroundInsets 0.004 0.004 0.004 0.004,
+            BackdropBackground  "ObserverStatisticsBackground",
+            BackdropBlendAll,
+        }
+
+        PopupTitleFrame "HeroPanelPlayerNameMenuTitle",
+        Frame "GLUETEXTBUTTON" "ReplayVisionMenuTitle" INHERITS WITHCHILDREN "EscMenuPopupMenuTitleTemplate" {
+        }
+
+        PopupArrowFrame "HeroPanelPlayerNameMenuArrow",
+        Frame "BUTTON" "HeroPanelPlayerNameMenuArrow" INHERITS WITHCHILDREN "EscMenuPopupMenuArrowTemplate" { 
+        }
+
+        PopupMenuFrame "HeroPanelPlayerNameMenu",
+        Frame "MENU" "HeroPanelPlayerNameMenu" INHERITS "EscMenuPopupMenuMenuTemplate" {
+			DecorateFileNames,
+			FrameFont "EscMenuTextFont",0.0066,"",
+			MenuItemHeight 0.012,
+			MenuBorder 0.01,
+            Width 0.5,
+
+			ControlBackdrop "HeroPanelPlayerNameMenuBackdropTemplate",
+			Frame "BACKDROP" "HeroPanelPlayerNameMenuBackdropTemplate" INHERITS "EscMenuButtonBackdropTemplate" {
+				DecorateFileNames,
+				BackdropCornerSize  0.0125,
+				BackdropBackgroundSize  0.128,
+				BackdropBackgroundInsets 0.004 0.004 0.004 0.004,
+				BackdropBackground "EscMenuEditBoxBackground",
+			}
+        }
+    }
+
+    Frame "SIMPLEFRAME" "HeroColourHolder" {
+        DecorateFileNames,
+        UseActiveContext,
+
+        Layer "BACKGROUND" {
+            Texture "HeroPlayerColourBackground" {
+                Width 0.094,
+                Height 0.014,
+                SetPoint TOPLEFT, "HeroPanelPlayerNameMenuTitle", TOPLEFT, 0.009, 0.215, // Position is set in CHeroPanelElement::OnFrameResize()
+                File "ObserverHeroPanelPlayerBacking",
+            }
+        }
+
+        Layer "ARTWORK" {
+            Texture "HeroPlayerColourIcon" {
+                Width 0.007,
+                Height 0.007,
+                SetPoint TOPLEFT, "HeroPanelPlayerNameMenuTitle", TOPLEFT, 0.009, 0.215, // Position is set in CHeroPanelElement::OnFrameResize()
+                File "ObserverPlayerColor",
+            }
+        }
+    }
+
+    /////////////////////////////////////////////////////////////////
+    ///////////////////// Hero Buttons - 3 Heros ////////////////////
+    /////////////////////////////////////////////////////////////////
+    	
+    Frame "SIMPLEBUTTON" "HeroButton_0" {
+        UseActiveContext,
+        DecorateFileNames,
+        Width 0.026,
+        Height 0.026,
+
+        SetPoint TOPLEFT, "HeroPanelElementFrame", TOPLEFT, 0.012, -0.028,
+
+        Texture "HeroColor_0" {
+            Width 0.004,
+            Height 0.036,
+            SetPoint TOPRIGHT, "HeroButton_0", TOPRIGHT, -0.0275, 0.0,
+            File "ObserverHeroPanelPlayerColor",
+            TexCoord 0.0, 1.0, 0.0, 0.546875,
+        }
+    }
+
+    Frame "SIMPLEBUTTON" "HeroButton_1" {
+        UseActiveContext,
+        DecorateFileNames,
+        Width 0.026,
+        Height 0.026,
+
+        SetPoint TOPLEFT, "HeroPanelElementFrame", TOPLEFT, 0.012, -0.067,
+
+        Texture "HeroColor_1" {
+            Width 0.004,
+            Height 0.036,
+            SetPoint TOPRIGHT, "HeroButton_1", TOPRIGHT, -0.0275, 0.0,
+            File "ObserverHeroPanelPlayerColor",
+            TexCoord 0.0, 1.0, 0.0, 0.546875,
+        }
+    }
+
+    Frame "SIMPLEBUTTON" "HeroButton_2" {
+        UseActiveContext,
+        DecorateFileNames,
+        Width 0.026,
+        Height 0.026,
+
+        SetPoint TOPLEFT, "HeroPanelElementFrame", TOPLEFT, 0.012, -0.106,
+
+        Texture "HeroColor_2" {
+            Width 0.004,
+            Height 0.036,
+            SetPoint TOPRIGHT, "HeroButton_2", TOPRIGHT, -0.0275, 0.0,
+            File "ObserverHeroPanelPlayerColor",
+            TexCoord 0.0, 1.0, 0.0, 0.546875,
+        }
+    }
+
+    /////////////////////////////////////////////////////////////////
+    ///////////////// Hero Level Buttons - 1 Per Hero ///////////////
+    /////////////////////////////////////////////////////////////////
+
+    Frame "SIMPLEBUTTON" "HeroLevelButton_0" {
+        UseActiveContext,
+        Width 0.006,
+        Height 0.01,
+        DecorateFileNames,
+        SetPoint BOTTOMRIGHT, "HeroButton_0", BOTTOMRIGHT, -0.002, 0.002,
+        NormalTexture "ToolTipBackground",    
+        NormalText "HeroLevelTextTemplate" "",
+    }
+
+    Frame "SIMPLEBUTTON" "HeroLevelButton_1" {
+        UseActiveContext,
+        Width 0.006,
+        Height 0.01,
+        DecorateFileNames,
+        SetPoint BOTTOMRIGHT, "HeroButton_1", BOTTOMRIGHT, -0.002, 0.002,
+        NormalTexture "ToolTipBackground",   
+        NormalText "HeroLevelTextTemplate" "", 
+    }
+
+    Frame "SIMPLEBUTTON" "HeroLevelButton_2" {
+        UseActiveContext,
+        Width 0.006,
+        Height 0.01,
+        DecorateFileNames,
+        SetPoint BOTTOMRIGHT, "HeroButton_2", BOTTOMRIGHT, -0.002, 0.002,
+        NormalTexture "ToolTipBackground",   
+        NormalText "HeroLevelTextTemplate" "", 
+    }
+
+    /////////////////////////////////////////////////////////////////
+    ///////// Status Bars - 2 Per Hero (Health and Mana) ////////////
+    /////////////////////////////////////////////////////////////////
+
+    // Hero 0 Status Bars
+    Frame "SIMPLESTATUSBAR" "HeroHealthBar_0" {
+        UseActiveContext,
+        SetPoint TOPLEFT, "HeroPanelElementFrame", TOPLEFT, 0.012, -0.054,
+        Width 0.026,
+        Height 0.004,
+        DecorateFileNames,
+        BarTexture "SimpleHpBarConsole",
+    }
+
+    Frame "SIMPLESTATUSBAR" "HeroManaBar_0" {
+        UseActiveContext,
+        SetPoint TOPLEFT, "HeroPanelElementFrame", TOPLEFT, 0.012, -0.059,
+        Width 0.026,
+        Height 0.004,
+        DecorateFileNames,
+        BarTexture "SimpleManaBarConsole",
+    }
+
+    // Hero 1 Status Bars
+    Frame "SIMPLESTATUSBAR" "HeroHealthBar_1" {
+        UseActiveContext,
+        SetPoint TOPLEFT, "HeroPanelElementFrame", TOPLEFT, 0.012, -0.093,
+        Width 0.026,
+        Height 0.004,
+        DecorateFileNames,
+        BarTexture "SimpleHpBarConsole",
+    }
+
+    Frame "SIMPLESTATUSBAR" "HeroManaBar_1" {
+        UseActiveContext,
+        SetPoint TOPLEFT, "HeroPanelElementFrame", TOPLEFT, 0.012, -0.098,
+        Width 0.026,
+        Height 0.004,
+        DecorateFileNames,
+        BarTexture "SimpleManaBarConsole",
+    }
+
+    // Hero 2 Status Bars
+    Frame "SIMPLESTATUSBAR" "HeroHealthBar_2" {
+        UseActiveContext,
+        SetPoint TOPLEFT, "HeroPanelElementFrame", TOPLEFT, 0.012, -0.132,
+        Width 0.026,
+        Height 0.004,
+        DecorateFileNames,
+        BarTexture "SimpleHpBarConsole",
+    }
+
+    Frame "SIMPLESTATUSBAR" "HeroManaBar_2" {
+        UseActiveContext,
+        SetPoint TOPLEFT, "HeroPanelElementFrame", TOPLEFT, 0.012, -0.137,
+        Width 0.026,
+        Height 0.004,
+        DecorateFileNames,
+        BarTexture "SimpleManaBarConsole",
+    }
+
+    /////////////////////////////////////////////////////////////////
+    //////////// Ability Buttons - Maximum of 4 per hero ////////////
+    /////////////////////////////////////////////////////////////////
+
+    // Hero 0 Ability Buttons
+    
+    Frame "SIMPLEBUTTON" "AbilityButton_00" {
+        UseActiveContext,
+        Width 0.017,
+        Height 0.017,
+
+        SetPoint TOPLEFT, "HeroPanelElementFrame", TOPLEFT, 0.04, -0.028,  // Top Left Ability
+    }
+
+    Frame "SIMPLEBUTTON" "AbilityButton_01" {
+        UseActiveContext,
+        Width 0.017,
+        Height 0.017,
+
+        SetPoint TOPLEFT, "HeroPanelElementFrame", TOPLEFT, 0.04, -0.046,  // Bottom Left Ability
+    }
+
+    Frame "SIMPLEBUTTON" "AbilityButton_02" {
+        UseActiveContext,
+        Width 0.017,
+        Height 0.017,
+
+        SetPoint TOPLEFT, "HeroPanelElementFrame", TOPLEFT, 0.058, -0.028,  // Top Right Ability
+    }
+
+    Frame "SIMPLEBUTTON" "AbilityButton_03" {
+        UseActiveContext,
+        Width 0.017,
+        Height 0.017,
+
+        SetPoint TOPLEFT, "HeroPanelElementFrame", TOPLEFT, 0.058, -0.046,  // Bottom Right Ability
+    }
+
+    // Hero 1 Ability Buttons
+    
+    Frame "SIMPLEBUTTON" "AbilityButton_10" {
+        UseActiveContext,
+        Width 0.017,
+        Height 0.017,
+
+        SetPoint TOPLEFT, "HeroPanelElementFrame", TOPLEFT, 0.04, -0.067,  // Top Left Ability
+    }
+
+    Frame "SIMPLEBUTTON" "AbilityButton_11" {
+        UseActiveContext,
+        Width 0.017,
+        Height 0.017,
+
+        SetPoint TOPLEFT, "HeroPanelElementFrame", TOPLEFT, 0.04, -0.085,  // Bottom Left Ability
+    }
+
+    Frame "SIMPLEBUTTON" "AbilityButton_12" {
+        UseActiveContext,
+        Width 0.017,
+        Height 0.017,
+
+        SetPoint TOPLEFT, "HeroPanelElementFrame", TOPLEFT, 0.058, -0.067,  // Top Right Ability
+    }
+
+    Frame "SIMPLEBUTTON" "AbilityButton_13" {
+        UseActiveContext,
+        Width 0.017,
+        Height 0.017,
+
+        SetPoint TOPLEFT, "HeroPanelElementFrame", TOPLEFT, 0.058, -0.085,  // Bottom Right Ability
+    }
+
+    // Hero 2 Ability Buttons
+    
+    Frame "SIMPLEBUTTON" "AbilityButton_20" {
+        UseActiveContext,
+        Width 0.017,
+        Height 0.017,
+
+        SetPoint TOPLEFT, "HeroPanelElementFrame", TOPLEFT, 0.04, -0.106,  // Top Left Ability
+    }
+
+    Frame "SIMPLEBUTTON" "AbilityButton_21" {
+        UseActiveContext,
+        Width 0.017,
+        Height 0.017,
+
+        SetPoint TOPLEFT, "HeroPanelElementFrame", TOPLEFT, 0.04, -0.124,  // Bottom Left Ability
+    }
+
+    Frame "SIMPLEBUTTON" "AbilityButton_22" {
+        UseActiveContext,
+        Width 0.017,
+        Height 0.017,
+
+        SetPoint TOPLEFT, "HeroPanelElementFrame", TOPLEFT, 0.058, -0.106,  // Top Right Ability
+    }
+
+    Frame "SIMPLEBUTTON" "AbilityButton_23" {
+        UseActiveContext,
+        Width 0.017,
+        Height 0.017,
+
+        SetPoint TOPLEFT, "HeroPanelElementFrame", TOPLEFT, 0.058, -0.124,  // Bottom Right Ability
+    }
+
+    /////////////////////////////////////////////////////////////////
+    /////////// Inventory Buttons - Maximum of 6 per hero ///////////
+    /////////////////////////////////////////////////////////////////
+
+    // Hero 0 Inventory Buttons
+
+    Frame "SIMPLEBUTTON" "InventoryButton_00" {
+        UseActiveContext,
+        Width 0.011,
+        Height 0.011,
+
+        SetPoint TOPLEFT, "HeroPanelElementFrame", TOPLEFT, 0.076, -0.028,  // Top Left Inventory Item
+    }
+
+    Frame "SIMPLEBUTTON" "InventoryButton_01" {
+        UseActiveContext,
+        Width 0.011,
+        Height 0.011,
+
+        SetPoint TOPLEFT, "HeroPanelElementFrame", TOPLEFT, 0.076, -0.040,  // Middle Left Inventory Item
+    }
+
+    Frame "SIMPLEBUTTON" "InventoryButton_02" {
+        UseActiveContext,
+        Width 0.011,
+        Height 0.011,
+
+        SetPoint TOPLEFT, "HeroPanelElementFrame", TOPLEFT, 0.076, -0.052,  // Bottom Left Inventory Item
+    }
+
+    Frame "SIMPLEBUTTON" "InventoryButton_03" {
+        UseActiveContext,
+        Width 0.011,
+        Height 0.011,
+
+        SetPoint TOPLEFT, "HeroPanelElementFrame", TOPLEFT, 0.088, -0.028,  // Top Right Inventory Item
+    }
+
+     Frame "SIMPLEBUTTON" "InventoryButton_04" {
+        UseActiveContext,
+        Width 0.011,
+        Height 0.011,
+
+        SetPoint TOPLEFT, "HeroPanelElementFrame", TOPLEFT, 0.088, -0.040,  // Middle Right Inventory Item
+    }
+
+    Frame "SIMPLEBUTTON" "InventoryButton_05" {
+        UseActiveContext,
+        Width 0.011,
+        Height 0.011,
+
+        SetPoint TOPLEFT, "HeroPanelElementFrame", TOPLEFT, 0.088, -0.052,  // Bottom Right Inventory Item
+    }
+
+    // Hero 1 Inventory Buttons
+
+    Frame "SIMPLEBUTTON" "InventoryButton_10" {
+        UseActiveContext,
+        Width 0.011,
+        Height 0.011,
+
+        SetPoint TOPLEFT, "HeroPanelElementFrame", TOPLEFT, 0.076, -0.067,  // Top Left Inventory Item
+    }
+
+    Frame "SIMPLEBUTTON" "InventoryButton_11" {
+        UseActiveContext,
+        Width 0.011,
+        Height 0.011,
+
+        SetPoint TOPLEFT, "HeroPanelElementFrame", TOPLEFT, 0.076, -0.079,  // Middle Left Inventory Item
+    }
+
+    Frame "SIMPLEBUTTON" "InventoryButton_12" {
+        UseActiveContext,
+        Width 0.011,
+        Height 0.011,
+
+        SetPoint TOPLEFT, "HeroPanelElementFrame", TOPLEFT, 0.076, -0.091,  // Bottom Left Inventory Item
+    }
+
+    Frame "SIMPLEBUTTON" "InventoryButton_13" {
+        UseActiveContext,
+        Width 0.011,
+        Height 0.011,
+
+        SetPoint TOPLEFT, "HeroPanelElementFrame", TOPLEFT, 0.088, -0.067,  // Top Right Inventory Item
+    }
+
+     Frame "SIMPLEBUTTON" "InventoryButton_14" {
+        UseActiveContext,
+        Width 0.011,
+        Height 0.011,
+
+        SetPoint TOPLEFT, "HeroPanelElementFrame", TOPLEFT, 0.088, -0.079,  // Middle Right Inventory Item
+    }
+
+    Frame "SIMPLEBUTTON" "InventoryButton_15" {
+        UseActiveContext,
+        Width 0.011,
+        Height 0.011,
+
+        SetPoint TOPLEFT, "HeroPanelElementFrame", TOPLEFT, 0.088, -0.091,  // Bottom Right Inventory Item
+    }
+
+    // Hero 2 Inventory Buttons
+
+    Frame "SIMPLEBUTTON" "InventoryButton_20" {
+        UseActiveContext,
+        Width 0.011,
+        Height 0.011,
+
+        SetPoint TOPLEFT, "HeroPanelElementFrame", TOPLEFT, 0.076, -0.106,  // Top Left Inventory Item
+    }
+
+    Frame "SIMPLEBUTTON" "InventoryButton_21" {
+        UseActiveContext,
+        Width 0.011,
+        Height 0.011,
+
+        SetPoint TOPLEFT, "HeroPanelElementFrame", TOPLEFT, 0.076, -0.118,  // Middle Left Inventory Item
+    }
+
+    Frame "SIMPLEBUTTON" "InventoryButton_22" {
+        UseActiveContext,
+        Width 0.011,
+        Height 0.011,
+
+        SetPoint TOPLEFT, "HeroPanelElementFrame", TOPLEFT, 0.076, -0.130,  // Bottom Left Inventory Item
+    }
+
+    Frame "SIMPLEBUTTON" "InventoryButton_23" {
+        UseActiveContext,
+        Width 0.011,
+        Height 0.011,
+
+        SetPoint TOPLEFT, "HeroPanelElementFrame", TOPLEFT, 0.088, -0.106,  // Top Right Inventory Item
+    }
+
+     Frame "SIMPLEBUTTON" "InventoryButton_24" {
+        UseActiveContext,
+        Width 0.011,
+        Height 0.011,
+
+        SetPoint TOPLEFT, "HeroPanelElementFrame", TOPLEFT, 0.088, -0.118,  // Middle Right Inventory Item
+    }
+
+    Frame "SIMPLEBUTTON" "InventoryButton_25" {
+        UseActiveContext,
+        Width 0.011,
+        Height 0.011,
+
+        SetPoint TOPLEFT, "HeroPanelElementFrame", TOPLEFT, 0.088, -0.130,  // Bottom Right Inventory Item
+    }
+}
+
+
+
+

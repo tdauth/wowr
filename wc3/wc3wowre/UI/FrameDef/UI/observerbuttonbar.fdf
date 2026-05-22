@@ -1,0 +1,154 @@
+Texture "ObserverButtonBackground" {
+    File "ObserverConsoleButtonTexture",
+    TexCoord 0.0859375, 0.8984375, 0.15625, 0.8203125,
+}
+Texture "ObserverButtonPushedBackground" {
+    File "ObserverConsoleButtonPressedTexture",
+    TexCoord 0.0859375, 0.8984375, 0.15625, 0.8203125,
+}
+Texture "ObserverButtonDisabledBackground" {
+    File "ObserverConsoleButtonTexture",
+    TexCoord 0.0859375, 0.8984375, 0.15625, 0.8203125,
+}
+Texture "ObserverButtonHighlight" {
+    File "ObserverConsoleButtonHoverTexture",
+    AlphaMode "ADD",
+}
+
+Frame "SIMPLECHECKBOX" "ObserverButtonBarCheckBoxTemplate" {
+    DecorateFileNames,
+    Width 0.035,
+    Height 0.035,
+}
+
+Frame "SIMPLEBUTTON" "ObserverButtonBarButtonTemplate" {
+    DecorateFileNames,
+    Width 0.035,
+    Height 0.035,
+    ButtonPushedTextOffset 0.0 -0.0,
+}
+
+Frame "SIMPLEBUTTON" "ObserverButtonBarInfoButtonTemplate" {
+    DecorateFileNames,
+    Width 0.018,
+    Height 0.018,
+    ButtonPushedTextOffset 0.001 -0.001,
+    NormalTexture "ObserverButtonBackground",
+    PushedTexture "ObserverButtonPushedBackground",
+    DisabledTexture "ObserverButtonDisabledBackground",
+}
+
+String "ObserverButtonBarButtonTextTemplate" {
+    Font "MasterFont",0.01,
+    FontColor 1.0 1.0 1.0,
+}
+
+String "ObserverButtonBarButtonDisabledTextTemplate" INHERITS "ObserverButtonBarButtonTextTemplate" {
+    FontColor 0.4 0.4 0.4,
+}
+
+String "ObserverButtonBarButtonHighlightTextTemplate" INHERITS "ObserverButtonBarButtonTextTemplate" {
+    FontColor 1.0 0.83 0.07,
+}
+
+Frame "SIMPLEFRAME" "ObserverButtonBarFrame" {
+    Width 0.05,
+    Height 0.06,
+    DecorateFileNames,
+
+    Frame "SIMPLEFRAME" "ObserverButtons" {
+        DecorateFileNames,
+
+        // Hint button
+        Frame "SIMPLEBUTTON" "ObserverButtonBarHintButton" INHERITS "ObserverButtonBarInfoButtonTemplate" {
+            SetPoint TOPLEFT,"ObserverButtonBarFrame",TOPLEFT, 0.011, 0.283,
+            NormalTexture "ObserverControlMenuButtonHintResting",
+            UseHighlight "ObserverControlMenuButtonHintHover",
+            DisabledTexture "ObserverControlMenuButtonHintDisabled",
+            PushedTexture "ObserverControlMenuButtonHintHover",
+        }
+
+        // Menu popup
+        Frame "SIMPLEBUTTON" "ObserverButtonBarMenuButton" INHERITS "ObserverButtonBarButtonTemplate" {
+            SetPoint TOPLEFT,"ObserverButtonBarHintButton",TOPLEFT, -0.0085, -0.022,
+            NormalTexture "ObserverControlMenuButtonMenuResting",
+            DisabledTexture "ObserverControlMenuButtonMenuDisabled",
+            PushedTexture "ObserverControlMenuButtonMenuPressed",
+        }
+
+        // Replay panel
+        Frame "SIMPLECHECKBOX" "ObserverButtonBarReplayCheckbox" INHERITS "ObserverButtonBarCheckBoxTemplate" {
+            SetPoint TOPLEFT,"ObserverButtonBarMenuButton",TOPLEFT, 0.0, -0.0285,            
+            NormalTexture "ObserverControlMenuButtonReplayPressed",
+            DisabledTexture "ObserverControlMenuButtonReplayDisabled",
+            PushedTexture "ObserverControlMenuButtonReplayResting",
+            CheckedTexture "ObserverControlMenuButtonReplayResting",
+        }
+
+        // Hero panel
+        Frame "SIMPLECHECKBOX" "ObserverButtonBarHeroCheckbox" INHERITS "ObserverButtonBarCheckBoxTemplate" {
+            SetPoint TOPLEFT,"ObserverButtonBarReplayCheckbox",TOPLEFT, 0.0, -0.0285,
+            NormalTexture "ObserverControlMenuButtonHeroesPressed",
+            DisabledTexture "ObserverControlMenuButtonHeroesDisabled",
+            PushedTexture "ObserverControlMenuButtonHeroesResting",
+            CheckedTexture "ObserverControlMenuButtonHeroesResting",
+        }
+
+        //Statistics panel
+        Frame "SIMPLECHECKBOX" "ObserverButtonBarStatisticsCheckbox" INHERITS "ObserverButtonBarCheckBoxTemplate" {
+            SetPoint TOPLEFT, "ObserverButtonBarHeroCheckbox", TOPLEFT, 0.0, -0.0285,
+            NormalTexture "ObserverControlMenuButtonPlayersPressed",
+            DisabledTexture "ObserverControlMenuButtonPlayersDisabled",
+            PushedTexture "ObserverControlMenuButtonPlayersResting",
+            CheckedTexture "ObserverControlMenuButtonPlayersResting",
+        }
+
+        // Production queue
+        Frame "SIMPLECHECKBOX" "ObserverButtonBarProductionCheckbox" INHERITS "ObserverButtonBarCheckBoxTemplate" {
+            SetPoint TOPLEFT,"ObserverButtonBarStatisticsCheckbox",TOPLEFT, 0.0, -0.0285,
+            NormalTexture "ObserverControlMenuButtonProductionPressed",
+            DisabledTexture "ObserverControlMenuButtonProductionDisabled",
+            PushedTexture "ObserverControlMenuButtonProductionResting",
+            CheckedTexture "ObserverControlMenuButtonProductionResting",
+        }
+
+        // Selection panel
+        Frame "SIMPLECHECKBOX" "ObserverButtonBarUnitCheckbox" INHERITS "ObserverButtonBarCheckBoxTemplate" {            
+            SetPoint TOPLEFT, "ObserverButtonBarProductionCheckbox", TOPLEFT, 0.0, -0.0285,
+            NormalTexture "ObserverControlMenuButtonSelectionPressed",
+            DisabledTexture "ObserverControlMenuButtonSelectionDisabled",
+            PushedTexture "ObserverControlMenuButtonSelectionResting",
+            CheckedTexture "ObserverControlMenuButtonSelectionResting",
+        }
+
+        // Minimap panel
+        Frame "SIMPLECHECKBOX" "ObserverButtonBarMinimapCheckbox" INHERITS "ObserverButtonBarCheckBoxTemplate" {
+            SetPoint TOPLEFT,"ObserverButtonBarUnitCheckbox",TOPLEFT, 0.0, -0.0285,
+            NormalTexture "ObserverControlMenuButtonMapPressed",
+            DisabledTexture "ObserverControlMenuButtonMapDisabled",
+            PushedTexture "ObserverControlMenuButtonMapResting",
+            CheckedTexture "ObserverControlMenuButtonMapResting",
+        }
+
+        // Day/night cycle
+        Frame "SIMPLECHECKBOX" "ObserverButtonBarDayNightCheckbox" INHERITS "ObserverButtonBarCheckBoxTemplate" {
+            SetPoint TOPLEFT,"ObserverButtonBarMinimapCheckbox",TOPLEFT, 0.0, -0.0285,
+            NormalTexture "ObserverControlMenuButtonTimePressed",
+            PushedTexture "ObserverControlMenuButtonTimeResting",
+            CheckedTexture "ObserverControlMenuButtonTimeResting",
+        }
+    }
+	
+    Layer "BACKGROUND" {
+        Texture "SimpleObserverPanelBackdropFrame" {
+            File "ObserverControlMenuFrame",
+            Width 0.04,
+            Height 0.28,
+            SetPoint TOPLEFT, "ObserverButtonBarFrame", TOPLEFT, 0.0, 0.3,
+            TexCoord 0.41796875, 1.0, 0.48291015625, 1.0,
+        }
+    }
+}
+
+
+

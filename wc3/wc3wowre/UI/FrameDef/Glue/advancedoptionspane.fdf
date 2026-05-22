@@ -1,0 +1,141 @@
+// -- INCLUDE FILES ---------------------------------------------
+
+IncludeFile "UI\FrameDef\Glue\StandardTemplates.fdf",
+
+// -- LOCAL TEMPLATES -------------------------------------------
+
+Frame "POPUPMENU" "AdvancedPopupMenuTemplate" INHERITS "StandardPopupMenuTemplate" {
+    Height 0.032,
+    Width 0.145,
+
+    ControlBackdrop "AdvancedPopupMenuBackdrop",
+    Frame "BACKDROP" "AdvancedPopupMenuBackdrop" {
+        BackdropTileBackground,
+        BackdropBackground  "UI\Widgets\Glues\GlueScreen-Button1-BackdropBackground.blp",
+        BackdropCornerFlags "UL|UR|BL|BR|T|L|B|R",
+        BackdropCornerSize  0.016,
+        BackdropBackgroundSize  0.032,
+        BackdropBackgroundInsets 0.004 0.004 0.004 0.004,
+        BackdropEdgeFile  "UI\Widgets\Glues\GlueScreen-Button1-BorderedBackdropBorder.blp",
+    }
+
+    ControlDisabledBackdrop "AdvancedPopupMenuDisabledBackdrop",
+    Frame "BACKDROP" "AdvancedPopupMenuDisabledBackdrop" {
+        BackdropTileBackground,
+        BackdropBackground  "UI\Widgets\Glues\GlueScreen-Button1-BackdropBackground-Disabled.blp",
+        BackdropCornerFlags "UL|UR|BL|BR|T|L|B|R",
+        BackdropCornerSize  0.016,
+        BackdropBackgroundSize  0.032,
+        BackdropBackgroundInsets 0.004 0.004 0.004 0.004,
+        BackdropEdgeFile  "UI\Widgets\Glues\GlueScreen-Button1-BorderedBackdropBorder-Disabled.blp",
+    }
+
+    PopupTitleFrame "AdvancedPopupMenuTitle",
+    Frame "GLUETEXTBUTTON" "AdvancedPopupMenuTitle" INHERITS WITHCHILDREN "StandardPopupMenuTitleTemplate" {
+    }
+
+    PopupArrowFrame "AdvancedPopupMenuArrow",
+    Frame "BUTTON" "AdvancedPopupMenuArrow" INHERITS WITHCHILDREN "StandardPopupMenuArrowTemplate" { 
+    }
+}
+
+// -- FRAMES ----------------------------------------------------
+
+Frame "FRAME" "AdvancedOptionsPane" {
+
+/*
+    // NOTE: use this highlight to position this guy on any new screens
+    Frame "HIGHLIGHT" "DebugTestFrame" {
+        SetAllPoints,
+        HighlightColor 1.0 0.0 0.0 0.2,
+        HighlightType "SHADE",
+    }
+*/
+
+    Frame "TEXT" "AdvancedOptionsTitle" INHERITS "StandardTitleTextTemplate" {
+        SetPoint TOPLEFT, "AdvancedOptionsPane", TOPLEFT, 0.004, -0.004,
+        Text "ADVANCED_OPTIONS",
+        FontColor 1.0 1.0 1.0 1.0,
+    }
+
+    Frame "TEXT" "LockTeamsLabel" INHERITS "StandardLabelTextTemplate" {
+        Height 0.024,
+        SetPoint TOPLEFT, "AdvancedOptionsPane", TOPLEFT, 0.004, -0.03,
+        Text "COLON_LOCK_TEAMS",
+    }
+    Frame "TEXT" "TeamsTogetherLabel" INHERITS "StandardLabelTextTemplate" {
+        Height 0.024,
+        SetPoint TOPLEFT, "LockTeamsLabel", BOTTOMLEFT, 0.0, -0.008,
+        Text "COLON_TEAMS_TOGETHER",
+    }
+    Frame "TEXT" "AdvSharedControlLabel" INHERITS "StandardLabelTextTemplate" {
+        Height 0.024,
+        SetPoint TOPLEFT, "TeamsTogetherLabel", BOTTOMLEFT, 0.0, -0.008,
+        Text "COLON_ADV_SHARED_CONTROL",
+    }
+    Frame "TEXT" "RandomRacesLabel" INHERITS "StandardLabelTextTemplate" {
+        Height 0.024,
+        SetPoint TOPLEFT, "AdvSharedControlLabel", BOTTOMLEFT, 0.0, -0.008,
+        Text "COLON_RANDOM_RACES",
+    }
+    Frame "TEXT" "RandomHeroLabel" INHERITS "StandardLabelTextTemplate" {
+        Height 0.024,
+        SetPoint TOPLEFT, "RandomRacesLabel", BOTTOMLEFT, 0.0, -0.008,
+        Text "COLON_RANDOM_HERO",
+    }
+    Frame "TEXT" "ObserversLabel" INHERITS "StandardLabelTextTemplate" {
+        Height 0.032,
+        SetPoint TOPLEFT, "RandomHeroLabel", BOTTOMLEFT, 0.0, -0.008,
+        Text "COLON_OBSERVERS",
+    }
+    Frame "TEXT" "MapVisibilityLabel" INHERITS "StandardLabelTextTemplate" {
+        Height 0.032,
+        SetPoint TOPLEFT, "ObserversLabel", BOTTOMLEFT, 0.0, -0.008,
+        Text "COLON_VISIBILITY",
+    }
+
+
+    Frame "GLUECHECKBOX" "LockTeamsCheckBox" INHERITS WITHCHILDREN "StandardCheckBoxTemplate" {
+        SetPoint TOPRIGHT, "AdvancedOptionsPane", TOPRIGHT, -0.004, -0.03,
+    }
+    Frame "GLUECHECKBOX" "TeamsTogetherCheckBox" INHERITS WITHCHILDREN "StandardCheckBoxTemplate" {
+        SetPoint TOPRIGHT, "LockTeamsCheckBox", BOTTOMRIGHT, 0.0, -0.008,
+    }
+    Frame "GLUECHECKBOX" "AdvSharedControlCheckBox" INHERITS WITHCHILDREN "StandardCheckBoxTemplate" {
+        SetPoint TOPRIGHT, "TeamsTogetherCheckBox", BOTTOMRIGHT, 0.0, -0.008,
+    }
+    Frame "GLUECHECKBOX" "RandomRacesCheckBox" INHERITS WITHCHILDREN "StandardCheckBoxTemplate" {
+        SetPoint TOPRIGHT, "AdvSharedControlCheckBox", BOTTOMRIGHT, 0.0, -0.008,
+    }
+    Frame "GLUECHECKBOX" "RandomHeroCheckBox" INHERITS WITHCHILDREN "StandardCheckBoxTemplate" {
+        SetPoint TOPRIGHT, "RandomRacesCheckBox", BOTTOMRIGHT, 0.0, -0.008,
+    }
+    Frame "POPUPMENU" "ObserversMenu" INHERITS WITHCHILDREN "AdvancedPopupMenuTemplate" {
+        SetPoint TOPRIGHT, "RandomHeroCheckBox", BOTTOMRIGHT, 0.005, -0.008,
+
+        PopupMenuFrame "ObserversPopupMenuMenu",
+        Frame "MENU" "ObserversPopupMenuMenu" INHERITS WITHCHILDREN "StandardPopupMenuMenuTemplate" {
+            UseActiveContext,
+
+            MenuItem "FULL_OBSERVERS",          -2,
+            MenuItem "OBSERVERS_ON_DEFEAT",     -2,
+            MenuItem "REFEREES",                -2,
+            MenuItem "NO_OBSERVERS",            -2,
+        }
+    }
+    Frame "POPUPMENU" "MapVisibilityMenu" INHERITS WITHCHILDREN "AdvancedPopupMenuTemplate" {
+        SetPoint TOPRIGHT, "ObserversMenu", BOTTOMRIGHT, 0.0, -0.008,
+
+        PopupMenuFrame "MapVisibilityPopupMenuMenu",
+        Frame "MENU" "MapVisibilityPopupMenuMenu" INHERITS WITHCHILDREN "StandardPopupMenuMenuTemplate" {
+            UseActiveContext,
+
+            MenuItem "DEFAULT",                 -2,
+            MenuItem "HIDE_TERRAIN",            -2,
+            MenuItem "MAP_EXPLORED",            -2,
+            MenuItem "ALWAYS_VISIBLE",          -2,
+        }
+    }
+
+}
+

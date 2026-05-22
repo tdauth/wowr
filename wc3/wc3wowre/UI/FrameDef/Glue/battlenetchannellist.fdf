@@ -1,0 +1,48 @@
+// -- INCLUDE FILES ---------------------------------------------
+
+IncludeFile "UI\FrameDef\Glue\BattleNetTemplates.fdf",
+
+// -- LOCAL TEMPLATES -------------------------------------------
+
+// -- FRAMES ----------------------------------------------------
+
+Frame "FRAME" "BattleNetChannelList" {
+
+    Frame "LISTBOX" "ChannelListBox" INHERITS WITHCHILDREN "BattleNetListBoxTemplate" {
+        Height 0.2,
+        Width 0.4,
+        SetPoint TOPLEFT, "BattleNetChannelList", TOPLEFT, 0.02, -0.02,
+    }
+
+    Frame "TEXT" "ChannelEditLabel" INHERITS WITHCHILDREN "BattleNetLabelTextTemplate" {
+        SetPoint TOPLEFT, "ChannelListBox", TOPRIGHT, 0.02, 0.0,
+
+        Text "CHANNEL_NAME",
+    }
+
+    Frame "EDITBOX" "ChannelEditBox" INHERITS WITHCHILDREN "BattleNetEditBoxTemplate" {
+        Width 0.2,
+        SetPoint TOPLEFT, "ChannelEditLabel", BOTTOMLEFT, 0.0, -0.005, 
+    }
+
+    Frame "TEXTBUTTON" "ChannelEnterButton" INHERITS WITHCHILDREN "BattleNetButtonTemplate" {
+        Width 0.08,        
+        SetPoint TOPRIGHT, "ChannelEditBox", BOTTOMRIGHT, 0.0, -0.02,
+
+        ButtonText "ChannelEnterButtonText",
+        Frame "TEXT" "ChannelEnterButtonText" INHERITS "BattleNetButtonTextTemplate" {
+            Text "ENTER",			
+        }
+    }
+
+    Frame "TEXTBUTTON" "ChannelCancelButton" INHERITS WITHCHILDREN "BattleNetButtonTemplate" {
+        Width 0.08,        
+        SetPoint RIGHT, "ChannelEnterButton", LEFT, -0.02, 0.0,
+
+        ButtonText "ChannelCancelButtonText",
+        Frame "TEXT" "ChannelCancelButtonText" INHERITS "BattleNetButtonTextTemplate" {
+            Text "CANCEL",			
+        }
+    }
+}
+

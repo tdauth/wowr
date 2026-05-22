@@ -1,0 +1,209 @@
+Frame "SIMPLEBUTTON" "PlayerRowButtonTemplate" {
+    DecorateFileNames,
+    Width 0.35,
+    Height 0.02,
+    //NormalTexture "ObserverButtonBackground",
+    //PushedTexture "ObserverButtonPushedBackground",
+    //DisabledTexture "ObserverButtonDisabledBackground",
+    //UseHighlight "ObserverButtonHighlight",
+}
+
+Frame "TEXT" "PlayerNameTextTemplate" {
+    DecorateFileNames,
+    FrameFont "EscMenuTextFont", 0.008, "",
+    FontJustificationH JUSTIFYLEFT,
+    FontJustificationV JUSTIFYMIDDLE,    
+    FontFlags "FIXEDSIZE",
+    FontColor 1.0 0.96 0.8 1.0,
+    FontHighlightColor 1.0 1.0 1.0 1.0,
+    FontDisabledColor 0.2 0.2 0.2 1.0,
+    LayerStyle "IGNORETRACKEVENTS", 
+}
+
+Frame "TEXT" "TeamNameTextTemplate" {
+    DecorateFileNames,
+    FrameFont "EscMenuTextFont", 0.008, "",
+    FontJustificationH JUSTIFYCENTER,
+    FontJustificationV JUSTIFYMIDDLE,    
+    FontFlags "FIXEDSIZE",
+    FontColor 1.0 0.96 0.8 1.0,
+    FontHighlightColor 1.0 1.0 1.0 1.0,
+    FontDisabledColor 0.2 0.2 0.2 1.0,
+    LayerStyle "IGNORETRACKEVENTS", 
+}
+
+Frame "TEXT" "ResourceTextTemplate" {
+    DecorateFileNames,
+    FrameFont "EscMenuTextFont", 0.008, "",
+    FontJustificationH JUSTIFYLEFT,
+    FontJustificationV JUSTIFYMIDDLE,    
+    FontFlags "FIXEDSIZE",
+    FontColor 1.0 1.0 1.0 1.0,
+    FontHighlightColor 1.0 1.0 1.0 1.0,
+    FontDisabledColor 0.2 0.2 0.2 1.0,
+    LayerStyle "IGNORETRACKEVENTS", 
+}
+
+
+Frame "SIMPLEFRAME" "PlayerStatisticsRowFrame" {
+    Width 0.35,
+    Height 0.02,
+    DecorateFileNames,
+	UseActiveContext,
+
+    Frame "SIMPLEFRAME" "PlayerBackground" {
+        DecorateFileNames,
+	    UseActiveContext,
+
+        Layer "BACKGROUND" {
+            Texture "RowBorder" {
+                File  "ObserverStatisticsRowBackgroundLight",
+                Width 0.6,
+                Height 0.02,
+                SetPoint TOPLEFT, "PlayerStatisticsRowFrame", TOPLEFT, 0.005, -0.002,
+            }
+        }
+
+        Layer "ARTWORK" {
+            Texture "PlayerColourBackdrop" {
+                Width 0.006,
+                Height 0.0205,
+                SetPoint LEFT, "PlayerStatisticsRowFrame", LEFT, -0.0005, -0.0022,
+                File "ObserverStatisticsPlayerColour",
+            }
+        }
+    }
+
+    Frame "SIMPLEFRAME" "PlayerBackdrop" {
+        DecorateFileNames,
+	    UseActiveContext,
+
+        
+        Texture "StatisticsMiddleFrame" {
+            SetPoint TOPLEFT, "StatisticsUpperFrame", TOPLEFT, -0.03, 0.0,
+            Width 0.365,
+            Height 0.02,
+            File "ObserverStatisticsFrameMiddle",
+            TexCoord 0.3876953125, 1, 0, 1,
+        }
+    }
+
+    Frame "TEXT" "TeamNumberText" INHERITS "TeamNameTextTemplate" {
+        SetPoint CENTER, "PlayerStatisticsRowFrame", CENTER, -0.161, -0.002,
+        Text "10",
+		UseActiveContext,
+		
+		LayerStyle "SCROLLCHILD",
+    }
+
+    Frame "SIMPLEFRAME" "PlayerBanner" {
+        DecorateFileNames,
+	    UseActiveContext,
+
+        Layer "ARTWORK_OVERLAY" {
+            Texture "PlayerRaceBanner" {
+                Width 0.015,
+                Height 0.015,
+                SetPoint LEFT, "PlayerStatisticsRowFrame", LEFT, 0.02, -0.002,
+                File "ObserverStatisticsRaceBanner",
+            }
+        }
+    }
+
+
+    Frame "TEXT" "PlayerNameText" INHERITS "PlayerNameTextTemplate" {
+        SetPoint LEFT, "PlayerRaceBanner", LEFT, 0.018, 0.0,
+        Text "PLAYER_NAME",
+		UseActiveContext,
+		
+		LayerStyle "SCROLLCHILD",
+    }
+
+    Frame "BACKDROP" "GoldIcon" {
+        Width 0.01640625,
+        Height 0.01640625,
+
+        SetPoint LEFT, "PlayerStatisticsRowFrame", LEFT, 0.12, -0.002,
+
+        DecorateFileNames,
+        BackdropBackground  "ObserverResourceGold",
+        BackdropBlendAll,
+		UseActiveContext,
+		
+		LayerStyle "SCROLLCHILD",
+    }
+
+    Frame "TEXT" "GoldText" INHERITS "ResourceTextTemplate" {
+        SetPoint LEFT, "PlayerStatisticsRowFrame", LEFT, 0.14, -0.002,
+        Text "GOLD",
+		UseActiveContext,
+		
+		LayerStyle "SCROLLCHILD",
+    }
+
+    Frame "BACKDROP" "LumberIcon" {
+        Width 0.01640625,
+        Height 0.01640625,
+
+        SetPoint LEFT, "PlayerStatisticsRowFrame", LEFT, 0.185, -0.002,
+
+        DecorateFileNames,
+        BackdropBackground  "ObserverResourceLumber",
+        BackdropBlendAll,
+		UseActiveContext,
+		
+		LayerStyle "SCROLLCHILD",
+    }
+
+    Frame "TEXT" "LumberText" INHERITS "ResourceTextTemplate" {
+        SetPoint LEFT, "PlayerStatisticsRowFrame", LEFT, 0.205, -0.002,
+        Text "LUMBER",
+		UseActiveContext,
+		
+		LayerStyle "SCROLLCHILD",
+    }
+
+    Frame "BACKDROP" "SupplyIcon" {
+        Width 0.01640625,
+        Height 0.01640625,
+
+        SetPoint LEFT, "PlayerStatisticsRowFrame", LEFT, 0.25, -0.002,
+
+        DecorateFileNames,
+        BackdropBackground  "ObserverResourceSupply",
+        BackdropBlendAll,
+		UseActiveContext,
+		
+		LayerStyle "SCROLLCHILD",
+    }
+
+    Frame "TEXT" "SupplyText" INHERITS "ResourceTextTemplate" {
+        SetPoint LEFT, "PlayerStatisticsRowFrame", LEFT, 0.27, -0.002,
+        Text "SUPPLY",
+		UseActiveContext,
+		
+		LayerStyle "SCROLLCHILD",
+    }
+
+    Frame "BACKDROP" "UpkeepIcon" {
+        Width 0.01640625,
+        Height 0.01640625,
+
+        SetPoint LEFT, "PlayerStatisticsRowFrame", LEFT, 0.31, -0.002,
+
+        DecorateFileNames,
+        BackdropBackground  "ObserverStatisticsIconAPM",
+        BackdropBlendAll,
+		UseActiveContext,
+		
+		LayerStyle "SCROLLCHILD",
+    }
+
+    Frame "TEXT" "APMText" INHERITS "ResourceTextTemplate" {
+        SetPoint LEFT, "PlayerStatisticsRowFrame", LEFT, 0.33, -0.002,
+        Text "APM",
+		UseActiveContext,
+		
+		LayerStyle "SCROLLCHILD",
+    }
+}

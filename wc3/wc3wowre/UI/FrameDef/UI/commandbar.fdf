@@ -1,0 +1,66 @@
+Frame "SIMPLEBUTTON" "CommandButtonTemplate" {
+	Width 0.039,
+	Height 0.039,	
+}
+
+Frame "SIMPLEFRAME" "CommandBarFrame" {
+    UseActiveContext,
+    SetAllPoints,
+	Width 0.1745,
+	Height 0.129,
+		
+	Frame "SIMPLEBUTTON" "CommandButton_0" INHERITS "CommandButtonTemplate" {
+		SetPoint TOPLEFT, "CommandBarFrame", TOPLEFT, 0.0, 0.0,
+	}
+	
+	Frame "SIMPLEBUTTON" "CommandButton_1" INHERITS "CommandButtonTemplate" {
+		SetPoint TOPLEFT, "CommandBarFrame", TOPLEFT, 0.0434, 0.0,
+	}
+	
+	Frame "SIMPLEBUTTON" "CommandButton_2" INHERITS "CommandButtonTemplate" {
+		SetPoint TOPLEFT, "CommandBarFrame", TOPLEFT, 0.0868, 0.0,
+	}
+	
+	Frame "SIMPLEBUTTON" "CommandButton_3" INHERITS "CommandButtonTemplate" {
+		SetPoint TOPLEFT, "CommandBarFrame", TOPLEFT, 0.1302, 0.0,
+	}
+	
+	Frame "SIMPLEBUTTON" "CommandButton_4" INHERITS "CommandButtonTemplate" {
+		SetPoint TOPLEFT, "CommandBarFrame", TOPLEFT, 0.0000, -0.044,
+	}		
+		
+	Frame "SIMPLEBUTTON" "CommandButton_5" INHERITS "CommandButtonTemplate" {
+		SetPoint TOPLEFT, "CommandBarFrame", TOPLEFT, 0.0434, -0.044,
+	}
+	
+	Frame "SIMPLEBUTTON" "CommandButton_6" INHERITS "CommandButtonTemplate" {
+		SetPoint TOPLEFT, "CommandBarFrame", TOPLEFT, 0.0868, -0.044,
+	}
+	
+	Frame "SIMPLEBUTTON" "CommandButton_7" INHERITS "CommandButtonTemplate" {
+		SetPoint TOPLEFT, "CommandBarFrame", TOPLEFT, 0.1302, -0.044,
+	}
+	
+	Frame "SIMPLEBUTTON" "CommandButton_8" INHERITS "CommandButtonTemplate" {
+		SetPoint TOPLEFT, "CommandBarFrame", TOPLEFT, 0.0000, -0.0880,
+	}
+	
+	Frame "SIMPLEBUTTON" "CommandButton_9" INHERITS "CommandButtonTemplate" {
+		SetPoint TOPLEFT, "CommandBarFrame", TOPLEFT, 0.0434, -0.0880,
+	}
+	
+	Frame "SIMPLEBUTTON" "CommandButton_10" INHERITS "CommandButtonTemplate" {
+		SetPoint TOPLEFT, "CommandBarFrame", TOPLEFT, 0.0868, -0.0880,
+	}
+	
+	Frame "SIMPLEBUTTON" "CommandButton_11" INHERITS "CommandButtonTemplate" {
+		SetPoint TOPLEFT, "CommandBarFrame", TOPLEFT, 0.1302, -0.0880,
+	}			
+}
+
+Frame "SIMPLEFRAME" "ReplayCommandBarFrame" {
+    UseActiveContext,
+    SetAllPoints,
+	Width 0.0,
+	Height 0.0,
+}
