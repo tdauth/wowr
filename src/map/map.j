@@ -4,6 +4,7 @@
 //! import "map/WoWReforgedMapComputerStartLocations.j"
 //! import "map/WoWReforgedMapData.j"
 //! import "map/WoWReforgedMapLevers.j"
+//! import "map/WoWReforgedMapMaelstrom.j"
 //! import "map/WoWReforgedMapQuelThalas.j"
 //! import "map/WoWReforgedMapQuests.j"
 //! import "map/WoWReforgedMapRacingTracks.j"

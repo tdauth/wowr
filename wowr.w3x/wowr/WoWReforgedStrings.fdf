@@ -825,6 +825,8 @@ StringList {
     DEMON_GATE                         "Demon Gate",
     FEL_ORC_CAMP                       "Fel Orc Camp",
     GRUULS_LIAR                        "Gruul's Lair",
+    // Maelstrom
+    MAELSTROM_ENTER                    "Some Units have entered the most hazardous area of the |cffff0000Maelstrom|r and have been totally destroyed by the tempest.",
     // Racing Tracks
     RACE_HAS_ENDED                     "Race %1% has ended and the winners are: %2%",
     RACE_ALREADY_RUNNING               "Race is already running: %1%",
