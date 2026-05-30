@@ -9319,13 +9319,13 @@ Hunting Hawk
 }
 
 STRING 1579
-// Abilities: A03V (Demon Gate), Name (Name)
+// Units: u005 (Demon Gate), Name (Name)
 {
 Demon Gate
 }
 
 STRING 1580
-// Abilities: A03V (Demon Gate), Tip (Tooltip - Normal)
+// Abilities: A03V (Demon Gate), Name (Name)
 {
 Demon Gate
 }
@@ -32455,7 +32455,7 @@ Dalaran Town Hall
 }
 
 STRING 6945
-// Units: u005 (Demon Gate), Name (Name)
+// Abilities: A03V (Demon Gate), Tip (Tooltip - Normal)
 {
 Demon Gate
 }
