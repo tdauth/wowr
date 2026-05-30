@@ -103,7 +103,7 @@ function AddLog takes player whichPlayer, string msg returns nothing
     local integer max = 0
 
     if (ARRAY_MAX >= JASS_MAX_ARRAY_SIZE) then
-        call BJDebugMsg("AddLog: ARRAY_MAX is too large with value " + I2S() + ", so decrease LOG_MAXIMUM.")
+        call BJDebugMsg("AddLog: ARRAY_MAX is too large with value " + I2S(ARRAY_MAX) + ", so decrease LOG_MAXIMUM.")
     endif
 
     if (IsLogEnabled(whichPlayer)) then
