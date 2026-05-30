@@ -1,4 +1,4 @@
-library WoWReforgedMapQuelThalas
+library WoWReforgedMapQuelThalas initializer Init requires OnStartGame
 
 globals
     constant integer HIGH_ELF_BUILDING_SMALL_SOUTH_WEST_FACING = 'nefm'
@@ -108,6 +108,76 @@ function HealQuelThalasTerrain takes nothing returns nothing
     call ReplaceRectWithTerrain(gg_rct_Zone_Sunwell_Grove, TILE_TYPE_SQUARE_TILES, TILE_TYPE_BRICK)
     call ReplaceRectWithTerrain(gg_rct_Zone_Sunwell_Grove, TILE_TYPE_ROUGH_DIRT, TILE_TYPE_GRASS)
     call NewOpLimit(function RemoveQuelThalasBlight)
+endfunction
+
+private function EnumHealQuelThalasBuilding takes nothing returns nothing
+    call GroupRemoveUnitSimple( GetEnumUnit(), udg_QuelThalasRuinedElvenBuildings )
+    call ReplaceQuelThalasBuildingFixed(GetEnumUnit())
+    call SetUnitInvulnerable( GetLastReplacedUnitBJ(), true )
+    call GroupAddUnitSimple( GetLastReplacedUnitBJ(), udg_QuelThalasRuinedElvenBuildings )
+endfunction
+
+function QuelThalasHeal takes nothing returns nothing
+    local destructable d = null
+    call SetDoodadAnimationRectBJ( "Stand", 'YOsw', gg_rct_Sunwell )
+    call RemoveWeatherEffectBJ( udg_QuelThalasWeatherEffect )
+    call AddWeatherEffectSaveLast( gg_rct_Weather_Sunwell_Grove, 'LRaa' )
+    set udg_QuelThalasWeatherEffect = GetLastCreatedWeatherEffect()
+    call RemoveWeatherEffectBJ( udg_QuelThalasWeatherEffectForest )
+    call AddWeatherEffectSaveLast( gg_rct_Weather_Sunwell_Grove, 'LRaa' )
+    set udg_QuelThalasWeatherEffectForest = GetLastCreatedWeatherEffect()
+    call HealQuelThalasTerrain()
+    call ForGroup(udg_QuelThalasRuinedElvenBuildings, function EnumHealQuelThalasBuilding)
+    set d = ReplaceDestructable(gg_dest_B01E_0969, 'B01F', 0.0, 1.0, 0, bj_UNIT_STATE_METHOD_MAXIMUM)
+    call SetDestructableInvulnerable(d, true)
+    set d = ReplaceDestructable(gg_dest_LTe1_0968, 'LTe1', 0.0, 1.0, 0, bj_UNIT_STATE_METHOD_MAXIMUM)
+    call SetDestructableInvulnerable(d, true)
+    call ModifyGateBJ( bj_GATEOPERATION_OPEN, d )
+endfunction
+
+private function EnumUpdateQuelThalasBuilding takes nothing returns nothing
+    local unit replacedUnit = null
+    call GroupRemoveUnit(udg_QuelThalasRuinedElvenBuildings, GetEnumUnit())
+    set replacedUnit = ReplaceQuelThalasBuildingRuined(GetEnumUnit())
+    call SetUnitInvulnerable(replacedUnit, true )
+    call GroupAddUnit(udg_QuelThalasRuinedElvenBuildings, replacedUnit)
+    set replacedUnit = null
+endfunction
+
+private function StartGame takes nothing returns nothing
+    call SetDoodadAnimationRectBJ( "Stand Third", 'YOsw', gg_rct_Sunwell )
+    call AddWeatherEffectSaveLast( gg_rct_Weather_Sunwell_Grove, 'FDrl' )
+    set udg_QuelThalasWeatherEffect = GetLastCreatedWeatherEffect()
+    call AddWeatherEffectSaveLast( gg_rct_Weather_Quel_Thalas, 'FDwl' )
+    set udg_QuelThalasWeatherEffectForest = GetLastCreatedWeatherEffect()
+endfunction
+
+private function Init takes nothing returns nothing
+    call GroupAddUnit(udg_QuelThalasRuinedElvenBuildings, gg_unit_nef6_0509)
+    call GroupAddUnit(udg_QuelThalasRuinedElvenBuildings, gg_unit_nef7_0603)
+    call GroupAddUnit(udg_QuelThalasRuinedElvenBuildings, gg_unit_nef6_0460)
+    call GroupAddUnit(udg_QuelThalasRuinedElvenBuildings, gg_unit_nef6_0456)
+    call GroupAddUnit(udg_QuelThalasRuinedElvenBuildings, gg_unit_nefm_0488)
+    call GroupAddUnit(udg_QuelThalasRuinedElvenBuildings, gg_unit_nef4_0515)
+    call GroupAddUnit(udg_QuelThalasRuinedElvenBuildings, gg_unit_nefm_0461)
+    call GroupAddUnit(udg_QuelThalasRuinedElvenBuildings, gg_unit_nef2_0529)
+    call GroupAddUnit(udg_QuelThalasRuinedElvenBuildings, gg_unit_nef2_0511)
+    call GroupAddUnit(udg_QuelThalasRuinedElvenBuildings, gg_unit_nef3_0543)
+    call GroupAddUnit(udg_QuelThalasRuinedElvenBuildings, gg_unit_nefm_0682)
+    call GroupAddUnit(udg_QuelThalasRuinedElvenBuildings, gg_unit_nefm_0681)
+    call GroupAddUnit(udg_QuelThalasRuinedElvenBuildings, gg_unit_nef6_0602)
+    call GroupAddUnit(udg_QuelThalasRuinedElvenBuildings, gg_unit_nefm_0688)
+    call GroupAddUnit(udg_QuelThalasRuinedElvenBuildings, gg_unit_nef3_0625)
+    call GroupAddUnit(udg_QuelThalasRuinedElvenBuildings, gg_unit_nef6_0680)
+    call GroupAddUnit(udg_QuelThalasRuinedElvenBuildings, gg_unit_nefm_0686)
+    call GroupAddUnit(udg_QuelThalasRuinedElvenBuildings, gg_unit_nefm_0683)
+    call GroupAddUnit(udg_QuelThalasRuinedElvenBuildings, gg_unit_nef6_0677)
+    call GroupAddUnit(udg_QuelThalasRuinedElvenBuildings, gg_unit_nef7_0636)
+    call GroupAddUnit(udg_QuelThalasRuinedElvenBuildings, gg_unit_nefm_0678)
+    call GroupAddUnit(udg_QuelThalasRuinedElvenBuildings, gg_unit_nef7_0679)
+    call ForGroup(udg_QuelThalasRuinedElvenBuildings, function EnumUpdateQuelThalasBuilding)
+
+    call OnStartGame(function StartGame)
 endfunction
 
 endlibrary
