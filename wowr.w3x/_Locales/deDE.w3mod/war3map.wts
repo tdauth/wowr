@@ -2200,7 +2200,7 @@ E
 }
 
 STRING 369
-// Units: h0IA (Drachenfeste), EditorSuffix (Name - Editor Suffix)
+// Units: h0IA (Dragon's Reach), EditorSuffix (Name - Editor Suffix)
 {
 (Vrykul)
 }
@@ -2522,7 +2522,7 @@ STRING 422
 }
 
 STRING 423
-// Items: I025 (Talisman der Ewigkeit), Tip (Tooltip - Basic)
+// Items: I025 (Talisman of Everlasting), Tip (Tooltip - Basic)
 {
 Talisman der Ewigkeit erwerben
 }
@@ -2564,7 +2564,7 @@ The Kräuterkundler uses his gathered herbs and minerals to create a Heath Stone
 }
 
 STRING 430
-// Units: h0IB (Hoch entwickelte Drachenfeste), EditorSuffix (Name - Editor Suffix)
+// Units: h0IB (Advanced Dragon's Reach), EditorSuffix (Name - Editor Suffix)
 {
 (Vrykul)
 }
@@ -8437,13 +8437,13 @@ S
 }
 
 STRING 1430
-// Items: I025 (Talisman der Ewigkeit), Name (Name)
+// Items: I025 (Talisman of Everlasting), Name (Name)
 {
 Talisman der Ewigkeit
 }
 
 STRING 1431
-// Items: I025 (Talisman der Ewigkeit), Description (Description)
+// Items: I025 (Talisman of Everlasting), Description (Description)
 {
 Erhöht das Leben um 600 und gewährt eine zusätzliche Trefferpunkt-Regeneration von 2 pro Sekunde.
 }
@@ -9151,7 +9151,7 @@ Blocks an enemy spell every 15 seconds and adds 250 Mana.
 }
 
 STRING 1551
-// Items: I025 (Talisman der Ewigkeit), Ubertip (Tooltip - Extended)
+// Items: I025 (Talisman of Everlasting), Ubertip (Tooltip - Extended)
 {
 Erhöht das Leben um 600 und gewährt eine zusätzliche Trefferpunkt-Regeneration von 2 pro Sekunde.
 }
@@ -9319,13 +9319,13 @@ Jagdfalke
 }
 
 STRING 1579
-// Abilities: A03V (Demon Gate), Name (Name)
+// Units: u005 (Demon Gate), Name (Name)
 {
 Dämonentor
 }
 
 STRING 1580
-// Abilities: A03V (Demon Gate), Tip (Tooltip - Normal)
+// Abilities: A03V (Demon Gate), Name (Name)
 {
 Dämonentor
 }
@@ -10201,7 +10201,7 @@ STRING 1729
 }
 
 STRING 1732
-// Abilities: A03O (Heldenfähigkeiten passend zur Klasse), Name (Name)
+// Abilities: A03O (Hero Abilities Matching Class), Name (Name)
 {
 Heldenfähigkeiten passend zur Klasse
 }
@@ -15514,13 +15514,13 @@ Heavily armored vehicle, effective at destroying buildings and has the abilities
 }
 
 STRING 2977
-// Abilities: A05R (Erhöhte Moral), Name (Name)
+// Abilities: A05R (Increased Morale), Name (Name)
 {
 Erhöhte Moral
 }
 
 STRING 2978
-// Abilities: A05R (Erhöhte Moral), Tip (Tooltip - Normal)
+// Abilities: A05R (Increased Morale), Tip (Tooltip - Normal)
 {
 Erhöhte Moral
 }
@@ -18664,7 +18664,7 @@ STRING 3694
 }
 
 STRING 3695
-// Units: n0JG (Wache), EditorSuffix (Name - Editor Suffix)
+// Units: n0JG (Vigilant), EditorSuffix (Name - Editor Suffix)
 {
 (Draenei)
 }
@@ -21850,7 +21850,7 @@ Verlies-Stacheln
 }
 
 STRING 4497
-// Units: h0IC (Befestigte Drachenfeste), EditorSuffix (Name - Editor Suffix)
+// Units: h0IC (Fortified Dragon's Reach), EditorSuffix (Name - Editor Suffix)
 {
 (Vrykul)
 }
@@ -28613,7 +28613,7 @@ Increases the damage by <A1P4,DataA1> and causes area of effect damage.
 }
 
 STRING 5899
-// Abilities: A05R (Erhöhte Moral), EditorSuffix (Editor Suffix)
+// Abilities: A05R (Increased Morale), EditorSuffix (Editor Suffix)
 {
 (Blutelfen)
 }
@@ -32456,7 +32456,7 @@ Dalaran-Rathaus
 }
 
 STRING 6945
-// Units: u005 (Demon Gate), Name (Name)
+// Abilities: A03V (Demon Gate), Tip (Tooltip - Normal)
 {
 Dämonentor
 }
@@ -38942,7 +38942,7 @@ Sperrfeuer
 }
 
 STRING 8426
-// Abilities: A03O (Heldenfähigkeiten passend zur Klasse), EditorSuffix (Editor Suffix)
+// Abilities: A03O (Hero Abilities Matching Class), EditorSuffix (Editor Suffix)
 {
 B
 }
@@ -65371,13 +65371,13 @@ Haus errichten
 }
 
 STRING 26422
-// Units: h0IA (Drachenfeste), Name (Name)
+// Units: h0IA (Dragon's Reach), Name (Name)
 {
 Drachenfeste
 }
 
 STRING 26423
-// Units: h0IA (Drachenfeste), Tip (Tooltip - Basic)
+// Units: h0IA (Dragon's Reach), Tip (Tooltip - Basic)
 {
 Drachenfeste errichten
 }
@@ -65389,13 +65389,13 @@ STRING 26424
 }
 
 STRING 26425
-// Units: h0IB (Hoch entwickelte Drachenfeste), Name (Name)
+// Units: h0IB (Advanced Dragon's Reach), Name (Name)
 {
 Hoch entwickelte Drachenfeste
 }
 
 STRING 26426
-// Units: h0IB (Hoch entwickelte Drachenfeste), Tip (Tooltip - Basic)
+// Units: h0IB (Advanced Dragon's Reach), Tip (Tooltip - Basic)
 {
 Ausbau zur Hoch entwickelten Drachenfeste
 }
@@ -65977,7 +65977,7 @@ S
 }
 
 STRING 26865
-// Units: h0IC (Befestigte Drachenfeste), Name (Name)
+// Units: h0IC (Fortified Dragon's Reach), Name (Name)
 {
 Befestigte Drachenfeste
 }
@@ -68869,31 +68869,31 @@ Bewegliche Form
 }
 
 STRING 30453
-// Abilities: A16J (Artillerie-Stellung), Name (Name)
+// Abilities: A16J (Artillery Position), Name (Name)
 {
 Artillerie-Stellung
 }
 
 STRING 30454
-// Abilities: A16J (Artillerie-Stellung), Tip (Tooltip - Normal)
+// Abilities: A16J (Artillery Position), Tip (Tooltip - Normal)
 {
 Artillerie-Stellung
 }
 
 STRING 30455
-// Abilities: A16J (Artillerie-Stellung), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A16J (Artillery Position), Ubertip (Tooltip - Normal - Extended)
 {
 Nimmt eine Artilleriestellung ein, die es der Artillerie ermöglicht, zu feuern. Allerdings kann sie sich nicht mehr bewegen.
 }
 
 STRING 30456
-// Abilities: A16J (Artillerie-Stellung), Untip (Tooltip - Turn Off)
+// Abilities: A16J (Artillery Position), Untip (Tooltip - Turn Off)
 {
 Bewegliche Form
 }
 
 STRING 30457
-// Abilities: A16J (Artillerie-Stellung), Unubertip (Tooltip - Turn Off - Extended)
+// Abilities: A16J (Artillery Position), Unubertip (Tooltip - Turn Off - Extended)
 {
 Packt die Artillerie zusammen, um sich erneut zu bewegen, wodurch jegliche Angriffe unterbunden werden.
 }
@@ -68935,7 +68935,7 @@ Digs up the target area. This is not kept in savegames.
 }
 
 STRING 30479
-// Units: h0IC (Befestigte Drachenfeste), Tip (Tooltip - Basic)
+// Units: h0IC (Fortified Dragon's Reach), Tip (Tooltip - Basic)
 {
 Ausbau zur Befestigten Drachenfeste
 }
@@ -69127,25 +69127,25 @@ Zepter der Vrykul erwerben
 }
 
 STRING 30834
-// Items: I0HM (Tiny Drachenfeste), Description (Description)
+// Items: I0HM (Tiny Dragon's Reach), Description (Description)
 {
 Errichtet eine Drachenfeste.
 }
 
 STRING 30835
-// Items: I0HM (Tiny Drachenfeste), Name (Name)
+// Items: I0HM (Tiny Dragon's Reach), Name (Name)
 {
 Winzige Drachenfeste
 }
 
 STRING 30836
-// Items: I0HM (Tiny Drachenfeste), Tip (Tooltip - Basic)
+// Items: I0HM (Tiny Dragon's Reach), Tip (Tooltip - Basic)
 {
 Winzige Drachenfeste erwerben
 }
 
 STRING 30837
-// Items: I0HM (Tiny Drachenfeste), Ubertip (Tooltip - Extended)
+// Items: I0HM (Tiny Dragon's Reach), Ubertip (Tooltip - Extended)
 {
 Errichtet am Zielort eine Drachenfeste.
 }
@@ -69169,7 +69169,7 @@ STRING 30840
 }
 
 STRING 30841
-// Abilities: A11I (Build Tiny Drachenfeste), Name (Name)
+// Abilities: A11I (Build Tiny Dragon's Reach), Name (Name)
 {
 Winzige Drachenfeste errichten
 }
@@ -74311,7 +74311,7 @@ STRING 33988
 }
 
 STRING 33994
-// Abilities: A16J (Artillerie-Stellung), EditorSuffix (Editor Suffix)
+// Abilities: A16J (Artillery Position), EditorSuffix (Editor Suffix)
 {
 (Blutelfen) (Dezimator)
 }
@@ -86149,19 +86149,19 @@ Ein listiger Held, adept at manipulating opponents. Can learn Stille, Todesmante
 }
 
 STRING 38606
-// Units: h0IA (Drachenfeste), Ubertip (Tooltip - Extended)
+// Units: h0IA (Dragon's Reach), Ubertip (Tooltip - Extended)
 {
 Primäres Gebäude, wird zum Ausbilden von Vrykul-Arbeitern und zum Einlagern gesammelter Rohstoffe verwendet. Kann erst zur Hoch entwickelten Drachenfeste und dann zur Befestigten Drachenfeste ausgebaut werden, um die Produktion weiterer Gebäude- und Einheitenarten zu ermöglichen.
 }
 
 STRING 38607
-// Units: h0IB (Hoch entwickelte Drachenfeste), Ubertip (Tooltip - Extended)
+// Units: h0IB (Advanced Dragon's Reach), Ubertip (Tooltip - Extended)
 {
 Ausbau zur Hoch entwickelten Drachenfeste ermöglicht die Produktion weiterer Gebäude- und Einheitenarten.
 }
 
 STRING 38608
-// Units: h0IC (Befestigte Drachenfeste), Ubertip (Tooltip - Extended)
+// Units: h0IC (Fortified Dragon's Reach), Ubertip (Tooltip - Extended)
 {
 Ausbau zur Befestigten Drachenfeste ermöglicht die Produktion weiterer Gebäude- und Einheitenarten.
 }
@@ -88335,7 +88335,7 @@ Build Tiny Keep
 STRING 39906
 // Abilities: A17U (Build Tiny House), Name (Name)
 {
-Build Tiny House
+Winziges Haus errichten
 }
 
 STRING 39907
@@ -105511,19 +105511,19 @@ STRING 49957
 }
 
 STRING 49960
-// Units: n0J6 (Wache), Name (Name)
+// Units: n0J6 (Vigilant), Name (Name)
 {
 Wache
 }
 
 STRING 49961
-// Units: n0J6 (Wache), EditorSuffix (Name - Editor Suffix)
+// Units: n0J6 (Vigilant), EditorSuffix (Name - Editor Suffix)
 {
 (Argus) (Unhold)
 }
 
 STRING 49962
-// Units: n0J6 (Wache), Tip (Tooltip - Basic)
+// Units: n0J6 (Vigilant), Tip (Tooltip - Basic)
 {
 Hire Wache
 }
@@ -106402,13 +106402,13 @@ Belagerungsbrecher ausbilden
 }
 
 STRING 50212
-// Units: n0JG (Wache), Name (Name)
+// Units: n0JG (Vigilant), Name (Name)
 {
 Wachsamer
 }
 
 STRING 50214
-// Units: n0JG (Wache), Tip (Tooltip - Basic)
+// Units: n0JG (Vigilant), Tip (Tooltip - Basic)
 {
 Wachsamen anheuern
 }
@@ -123760,7 +123760,7 @@ Birdiepult
 STRING 61085
 // Units: e00N (Birdiepult), Tip (Tooltip - Basic)
 {
-Train Birdiepult
+Birdiepult ausbilden
 }
 
 STRING 61088
