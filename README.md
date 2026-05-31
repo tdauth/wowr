@@ -228,6 +228,10 @@ WarsmashModEngine is currently not fully supporting Reforged and hence Reforged 
 Hence, the directory [wc3wowre](./wc3/wc3wowre) (Warcraft III World of Warcraft Reforged Edition) is used in the as data source and contains necessary files from Reforged.
 The goal is to create a custom MPQ containing all data from Reforged which is required to play the map together with the MPQ archives from the original Frozen Throne game to allow anyone to play this map with WarsmashModEngine.
 
+## Linux Support
+
+Playing Warcraft III can be played on Ubuntu using Steam, adding it as non-Steam game and Proton for compatibility as long as you have the 32 bit drivers for your graphics processor.
+
 ## Credits
 
 * Baradé: Creator.
