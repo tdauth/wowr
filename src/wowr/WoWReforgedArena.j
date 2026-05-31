@@ -11,6 +11,7 @@ endstruct
 globals
     private ArenaTicket array tickets
     private integer ticketsCounter = 0
+    private group arenaEnemies = CreateGroup()
 endglobals
 
 function GetArenaTicketsMax takes nothing returns integer
@@ -76,14 +77,18 @@ function IsArenaOpponent takes integer unitTypeId returns boolean
     return GetArenaTicketByOpponent(unitTypeId) != 0
 endfunction
 
+function IsUnitEnemyFromArena takes unit whichUnit returns boolean
+    return IsUnitInGroup(whichUnit, arenaEnemies)
+endfunction
+
 function AddArenaTicket takes integer itemTypeId, integer rewardItemTypeId returns ArenaTicket
     local ArenaTicket this = ArenaTicket.create()
     set this.itemTypeId = itemTypeId
     set this.rewardItemTypeId = rewardItemTypeId
-    
+
     set tickets[ticketsCounter] = this
     set ticketsCounter = ticketsCounter + 1
-    
+
     return this
 endfunction
 
@@ -115,6 +120,7 @@ function SpawnArenaEnemies takes ArenaTicket t, rect whichRect, rect targetRect 
             set x = GetLocationX(l)
             set y = GetLocationY(l)
             set u = CreateUnit(Player(PLAYER_NEUTRAL_AGGRESSIVE), t.unitTypeIds[i], x, y, AngleBetweenCoordinatesDeg(x, y, targetX, targetY))
+            call GroupAddUnit(arenaEnemies, u)
             call UnitAddSleepPerm(u, false)
             call UnitAddSleep(u, false)
             call IssuePointOrder(u, "patrol", targetX, targetY)
@@ -188,5 +194,13 @@ private function Init takes nothing returns nothing
     call AddArenaTicketUnitType('nogo', 2)
     call AddArenaTicketUnitType('n00B', 1)
 endfunction
+
+private function RemoveUnitHook takes unit whichUnit returns nothing
+    if (IsUnitInGroup(whichUnit, arenaEnemies)) then
+        call GroupRemoveUnit(arenaEnemies, whichUnit)
+    endif
+endfunction
+
+hook RemoveUnit RemoveUnitHook
 
 endlibrary

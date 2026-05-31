@@ -1,3 +1,4 @@
+//! import "map/WoWReforgedMapArena.j"
 //! import "map/WoWReforgedMapBosses.j"
 //! import "map/WoWReforgedMapCheatSaveCodes.j"
 //! import "map/WoWReforgedMapCinematics.j"

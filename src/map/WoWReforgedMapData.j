@@ -88,6 +88,14 @@ function AddMapSettings takes framehandle textArea returns nothing
     call BlzFrameAddText(textArea, Format(GetLocalizedString("SETTINGS_VICTORY")).s(B2Option(udg_VictoryByKillingArchimonde)).result())
 endfunction
 
+private function TimerFunctionPlayMusic takes nothing returns nothing
+    local timer t = GetExpiredTimer()
+    call PlayThematicMusicBJ("Comradeship")
+    call PauseTimer(t)
+    call DestroyTimer(t)
+    set t = null
+endfunction
+
 private function Init takes nothing returns nothing
     local player slotPlayer = null
     local integer team = 0
@@ -123,6 +131,8 @@ private function Init takes nothing returns nothing
     call AddMapTile(TILE_TYPE_DARK_GRASS)
     call AddMapTile(TILE_TYPE_OUTLAND_ROUGH_DIRT)
     call AddMapTile(TILE_TYPE_UNDERGROUND_BRICK)
+
+    call TimerStart(CreateTimer(), 1.0, false, function TimerFunctionPlayMusic)
 endfunction
 
 endlibrary

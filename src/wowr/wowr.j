@@ -41,6 +41,7 @@
 //! import "wowr/WoWReforgedDemigod.j"
 //! import "wowr/WoWReforgedDependencyEquivalents.j"
 //! import "wowr/WoWReforgedElevator.j"
+//! import "wowr/WoWReforgedEngineer.j"
 //! import "wowr/WoWReforgedProfessionEnchanter.j"
 //! import "wowr/WoWReforgedEnslave.j"
 //! import "wowr/WoWReforgedEquipment.j"
