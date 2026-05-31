@@ -111,6 +111,7 @@
 //! import "wowr/WoWReforgedResources.j"
 //! import "wowr/WoWReforgedResurrectionStone.j"
 //! import "wowr/WoWReforgedSaddle.j"
+//! import "wowr/WoWReforgedSaveGames.j"
 //! import "wowr/WoWReforgedSay.j"
 //! import "wowr/WoWReforgedSceptersShop.j"
 //! import "wowr/WoWReforgedSkinDependencyEquivalents.j"
