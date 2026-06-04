@@ -2,15 +2,19 @@ library WowReforgedProfessionCook initializer Init requires NewBonusUtils, Craft
 
 globals
     constant integer ITEM_TYPE_ID_RECIPE = 'I0XC'
-    
+
     constant integer ITEM_TYPE_ID_GARLIC = 'I0WW'
     constant integer ITEM_TYPE_ID_BANANA = 'I0S8'
     constant integer ITEM_TYPE_ID_ORANGE = 'I0U3'
     constant integer ITEM_TYPE_ID_LEMON = 'I0U2'
     constant integer ITEM_TYPE_ID_MEAT = 'I0X1'
-    
+
     private integer array foodItemTypeIds
     private integer foodItemTypeIdsCounter = 0
+
+    private trigger channelTrigger = CreateTrigger()
+    private trigger constructFinishTrigger = CreateTrigger()
+    private trigger useItemTrigger = CreateTrigger()
 endglobals
 
 function GetRandomFoodItemTypeId takes nothing returns integer
@@ -44,7 +48,7 @@ function AddCookFirePit takes unit whichUnit returns nothing
         set i = i + 1
     endloop
     //call SetItemCraftingRecipeEnabled(whichUnit, udg_RecipeHolyGrail, false)
-    
+
     //call SetPagedButtonsPage(whichUnit, GetRecipePage(udg_RecipeCooking))
 endfunction
 
@@ -115,7 +119,42 @@ function CookCutKitchenKnife takes unit hero, item whichItem returns nothing
     endif
 endfunction
 
+private function TriggerConditionChannel takes nothing returns boolean
+    if (GetSpellAbilityId() == 'A1UM') then
+        call CookCutKitchenKnife(GetTriggerUnit(), GetSpellTargetItem())
+    endif
+    return false
+endfunction
+
+private function TriggerConditionConstructFinish takes nothing returns boolean
+    if (GetUnitTypeId(GetConstructedStructure()) == 'h0U1') then
+        call AddCookFirePit(GetConstructedStructure())
+    endif
+    return false
+endfunction
+
+private function TriggerConditionUseItem takes nothing returns boolean
+    local integer itemTypeId = GetItemTypeId(GetManipulatedItem())
+    if (itemTypeId == 'I0X0') then
+        call WarriorsMenu(GetTriggerUnit())
+    elseif (itemTypeId == 'I0X4') then
+        call RangersMenu(GetTriggerUnit())
+    elseif (itemTypeId == 'I0X7') then
+        call MagiciansMenu(GetTriggerUnit())
+    endif
+    return true
+endfunction
+
 private function Init takes nothing returns nothing
+    call TriggerRegisterAnyUnitEventBJ(channelTrigger, EVENT_PLAYER_UNIT_SPELL_CHANNEL)
+    call TriggerAddCondition(channelTrigger, Condition(function TriggerConditionChannel))
+
+    call TriggerRegisterAnyUnitEventBJ(constructFinishTrigger, EVENT_PLAYER_UNIT_CONSTRUCT_FINISH)
+    call TriggerAddCondition(constructFinishTrigger, Condition(function TriggerConditionConstructFinish))
+
+    call TriggerRegisterAnyUnitEventBJ(useItemTrigger, EVENT_PLAYER_UNIT_USE_ITEM)
+    call TriggerAddCondition(useItemTrigger, Condition( function TriggerConditionUseItem))
+
     call AddFoodItemTypeId(ITEM_TYPE_ID_GARLIC)
     call AddFoodItemTypeId(ITEM_TYPE_ID_BANANA)
     call AddFoodItemTypeId(ITEM_TYPE_ID_ORANGE)

@@ -95,6 +95,7 @@
 //! import "wowr/WoWReforgedProfessionMerchant.j"
 //! import "wowr/WoWReforgedProfessionMiner.j"
 //! import "wowr/WoWReforgedProfessionProspector.j"
+//! import "wowr/WoWReforgedProfessionSculptor.j"
 //! import "wowr/WoWReforgedProfessionTamer.j"
 //! import "wowr/WoWReforgedProfessionWeaponSmith.j"
 //! import "wowr/WoWReforgedProperties.j"

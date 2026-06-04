@@ -1,4 +1,9 @@
-library WoWReforgedProfessionFisherman requires SimError
+library WoWReforgedProfessionFisherman initializer Init requires SimError
+
+globals
+    private trigger sellItemTrigger = CreateTrigger()
+    private trigger channelTrigger = CreateTrigger()
+endglobals
 
 private function ShowFishFloatingText takes unit hero, item whichItem returns nothing
     local force whichForce = CreateForce()
@@ -25,14 +30,14 @@ function CreateFishForFishingRod takes unit hero returns item
         if (GetRandomInt(0, 100) <= 15) then
             call SetItemCharges(whichItem, GetItemCharges(whichItem) + GetRandomInt(2, 6))
         endif
-        
+
         call ShowFishFloatingText(hero, whichItem)
-        
+
         return whichItem
     else
         call ShowNoFishFloatingText(hero)
     endif
-    
+
     return null
 endfunction
 
@@ -49,6 +54,28 @@ function SellFishToFishMarket takes unit hero, unit shop, item whichItem returns
     local integer gold = GetItemCharges(whichItem) * 10
     call AdjustPlayerStateBJ(gold, GetOwningPlayer(hero), PLAYER_STATE_RESOURCE_GOLD)
     call Bounty(bj_FORCE_PLAYER[GetPlayerId(GetOwningPlayer(hero))], GetUnitX(shop), GetUnitY(shop), gold)
+endfunction
+
+private function TriggerConditionSellItem takes nothing returns boolean
+    if (GetItemTypeId(GetSoldItem()) == 'I0KN' and GetUnitAbilityLevel(GetSellingUnit(), 'A1UI') > 0) then
+        call SellFishToFishMarket(GetTriggerUnit(), GetSellingUnit(), GetSoldItem())
+    endif
+    return false
+endfunction
+
+private function TriggerConditionChannel takes nothing returns boolean
+    if (GetSpellAbilityId() == 'A1UG') then
+        call UseFishingRod(GetTriggerUnit(), GetSpellTargetX(), GetSpellTargetY())
+    endif
+    return false
+endfunction
+
+private function Init takes nothing returns nothing
+    call TriggerRegisterAnyUnitEventBJ(sellItemTrigger, EVENT_PLAYER_UNIT_PAWN_ITEM)
+    call TriggerAddCondition(sellItemTrigger, Condition(function TriggerConditionSellItem))
+
+    call TriggerRegisterAnyUnitEventBJ(channelTrigger, EVENT_PLAYER_UNIT_SPELL_CHANNEL)
+    call TriggerAddCondition(channelTrigger, Condition(function TriggerConditionChannel))
 endfunction
 
 endlibrary

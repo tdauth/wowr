@@ -1,11 +1,14 @@
-library WoWReforgedProfessionMiner requires Resources
+library WoWReforgedProfessionMiner initializer Init requires Resources
 
 globals
     private integer array oreItemTypeIds
     private integer oreItemTypeIdsCounter = 0
-    
+
     private integer array mineralResources
     private integer mineralResourcesCounter = 0
+
+    private trigger itemStartSpawnTrigger = CreateTrigger()
+    private trigger summonTrigger = CreateTrigger()
 endglobals
 
 function GetRandomOreItemTypeId takes nothing returns integer
@@ -63,12 +66,32 @@ function MinerPickup takes unit hero, item whichItem returns nothing
     endif
 endfunction
 
-function InitMiner takes nothing returns nothing
+private function TriggerActionItemSpawn takes nothing returns nothing
+    call MinerPickup(GetTriggerUnit(), GetTriggerRespawnItem())
+endfunction
+
+private function TriggerConditionSummon takes nothing returns boolean
+    local integer unitTypeId = GetUnitTypeId(GetSummonedUnit())
+    if (unitTypeId == 'h0T9') then
+        call AddWorkerMiner(GetSummonedUnit())
+    elseif (unitTypeId == 'o08H') then
+        call AddMinerMine(GetSummonedUnit())
+    endif
+    return false
+endfunction
+
+private function Init takes nothing returns nothing
+    call TriggerRegisterItemRespawnStartsEvent(itemStartSpawnTrigger)
+    call TriggerAddAction(itemStartSpawnTrigger, function TriggerActionItemSpawn)
+
+    call TriggerRegisterAnyUnitEventBJ(summonTrigger, EVENT_PLAYER_UNIT_SUMMON)
+    call TriggerAddCondition(summonTrigger, Condition(function TriggerConditionSummon))
+
     call AddOreItemTypeId(ITEM_ROCKS)
     call AddOreItemTypeId(ITEM_ORE_GOLD)
     call AddOreItemTypeId(ITEM_ORE_IRON)
     call AddOreItemTypeId(ITEM_ORE_SILVER)
-    
+
     // do after initializing resources
     call AddMineralResource(udg_ResourceSilver)
     call AddMineralResource(udg_ResourceIron)
