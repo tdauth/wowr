@@ -1434,7 +1434,7 @@ function CreateAiPlayersUiEx takes force aiPlayers returns nothing
 
     // previous page button
 
-    set previousPageButton = CreateFullScreenpreviousPageButton(backgroundFrame, GetLocalizedStringSafe("PREVIOUS_PLAYER_YELLOW"))
+    set previousPageButton = CreateFullScreenPreviousPageButton(backgroundFrame, GetLocalizedStringSafe("PREVIOUS_PLAYER_YELLOW"))
     call BlzFrameSetEnable(previousPageButton, counter > 1)
 
     if (previousPageTrigger != null) then
@@ -1448,7 +1448,7 @@ function CreateAiPlayersUiEx takes force aiPlayers returns nothing
 
     // next page button
 
-    set nextPageButton = CreateFullScreennextPageButton(backgroundFrame, GetLocalizedStringSafe("NEXT_PLAYER_YELLOW"))
+    set nextPageButton = CreateFullScreenNextPageButton(backgroundFrame, GetLocalizedStringSafe("NEXT_PLAYER_YELLOW"))
     call BlzFrameSetEnable(nextPageButton, counter > 1)
 
     if (nextPageTrigger != null) then
