@@ -2713,7 +2713,7 @@ STRING 454
 STRING 455
 // Upgrades: R019 (Burning Oil), Ubertip (Tooltip - Extended)
 {
-Night Elf and Undead AI cannot use housings. They need a bonus.
+Nachtelfen-, Untote- und Zwergen-KI kann Unterkünfte nicht benutzen. Sie brauchen einen Bonus.
 }
 
 STRING 456
@@ -5207,7 +5207,7 @@ Keine KI
 STRING 878
 // Upgrades: R019 (Burning Oil), Tip (Tooltip)
 {
-KI-Goldbonus Game Type Fast
+KI-Goldbonus
 }
 
 STRING 879
@@ -5219,7 +5219,7 @@ Night Elf and Undead AI cannot use housings. They need a bonus.
 STRING 880
 // Upgrades: R019 (Burning Oil), Name (Name)
 {
-KI-Goldbonus Game Type Fast
+KI-Goldbonus
 }
 
 STRING 881
@@ -10977,7 +10977,7 @@ Bildet Wanderfalken und Albatrossreiter aus. |nBietet auch die Ausbaustufen 'Dur
 STRING 1886
 // Upgrades: R019 (Burning Oil), EditorSuffix (Editor Suffix)
 {
-(Undead, Night Elf, Dwarf, Dalaran)
+(Untote, Nachtelfen, Zwerge, Dalaran)
 }
 
 STRING 1887
@@ -123022,7 +123022,7 @@ STRING 59721
 STRING 59722
 // Upgrades: R019 (Burning Oil), Ubertip (Tooltip - Extended)
 {
-Night Elf, Undead and Dwarf AI cannot use housings. They need a bonus.
+Nachtelfen-, Untote- und Zwergen-KI kann Unterkünfte nicht benutzen. Sie brauchen einen Bonus.
 }
 
 STRING 60131

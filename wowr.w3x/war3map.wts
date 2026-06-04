@@ -5207,7 +5207,7 @@ No AI
 STRING 878
 // Upgrades: R019 (Burning Oil), Tip (Tooltip)
 {
-AI Gold Bonus Game Type Fast
+AI Gold Bonus
 }
 
 STRING 879
@@ -5219,7 +5219,7 @@ Night Elf and Undead AI cannot use housings. They need a bonus.
 STRING 880
 // Upgrades: R019 (Burning Oil), Name (Name)
 {
-AI Gold Bonus Game Type Fast
+AI Gold Bonus
 }
 
 STRING 881
