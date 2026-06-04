@@ -2789,20 +2789,17 @@ globals
 
     // Hero Journey
     constant integer HERO_JOURNEY_HERO_STANDARD_ABILITIES            = 5
-    constant integer HERO_JOURNEY_RANDOM_EVENTS                      = 10
+    constant integer HERO_JOURNEY_PROPERTIES                         = 10
     constant integer HERO_JOURNEY_EQUIPMENT_BAG_1                    = 15
     constant integer HERO_JOURNEY_MOUNTS                             = 20
     constant integer HERO_JOURNEY_PROFESSION_2                       = 25
     constant integer HERO_JOURNEY_BONUS_RACES                        = 30
-    constant integer HERO_JOURNEY_HAND_OF_GOD                        = 35
-    constant integer HERO_JOURNEY_HIDDEN_BASES                       = 35
+    constant integer HERO_JOURNEY_EQUIPMENT_BAG_2                    = 35
     constant integer HERO_JOURNEY_BONUS_HEROS                        = 40
-    constant integer HERO_JOURNEY_EQUIPMENT_BAG_2                    = 40
     constant integer HERO_JOURNEY_HERO_2                             = 45
     constant integer HERO_JOURNEY_PROFESSION_3                       = 50
     constant integer HERO_JOURNEY_BOSS_HEROES                        = 55
     constant integer HERO_JOURNEY_BONUS_MOUNTS                       = 55
-    constant integer HERO_JOURNEY_BOSS_FIGHT_ISLAND                  = 55
     constant integer HERO_JOURNEY_RACE_2                             = 60
     constant integer HERO_JOURNEY_EQUIPMENT_BAG_3                    = 60
     constant integer HERO_JOURNEY_HERO_3                             = 65

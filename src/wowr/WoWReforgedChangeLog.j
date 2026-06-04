@@ -79,6 +79,7 @@ private function Init takes nothing returns nothing
     call AddChange("Reduce history size of Log to avoid exceeding JASS array limit.")
     call AddChange("Fix PagedButtonsUI init loop for players.")
     call AddChange("Fix integer literal in WoWReforgedComputer.")
+    call AddChange("Second Equipment Bag replaces Divine Golems in hero journey.")
 
 static if (MAP_DEBUG_MODE_ENABLED) then
     call AddVersion("4.6")
