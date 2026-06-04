@@ -42,7 +42,7 @@ struct ComputerStartLocation
     integer possibleRacesCounter = 0
     boolean taken = false
 
-    method getRandomPossibleRace takes integer team returns integer
+    method getRandomPossibleRaceWarlord takes integer team returns integer
         local integer raceTeam = TEAM_NONE
         local integer i = 0
         local integer array r
@@ -51,18 +51,20 @@ struct ComputerStartLocation
             exitwhen (i == possibleRacesCounter)
             set raceTeam = GetRaceTeam(possibleRaces[i])
             if (raceTeam == team or raceTeam == TEAM_NONE) then
-                call BJDebugMsg("Possible race " + GetRaceName(possibleRaces[i]) + " for start location " + I2S(this))
+                call BJDebugMsg("Possible race " + GetRaceName(possibleRaces[i]) + " for start location " + I2S(this) + " with team " + I2S(team))
                 set r[c] = possibleRaces[i]
                 set c = c + 1
             endif
             set i = i + 1
         endloop
 
-        call BJDebugMsg("Possible races count" + I2S(c))
+        call BJDebugMsg("Possible races count " + I2S(c))
 
         if (c > 0) then
             return r[GetRandomInt(0, c)]
         endif
+
+        call BJDebugMsg("Found no matching race and now choosing by team only.")
 
         if (team == TEAM_ALLIANCE) then
             return GetRandomWarlordAllianceRaceWithAISupport()
@@ -133,7 +135,7 @@ function AddComputerStartLocation takes real x, real y, boolean hasShipyard, rea
     set computerStartLocationsCounter = index + 1
 
     set lastCreatedComputerStartLocation = l
-    
+
     return l
 endfunction
 

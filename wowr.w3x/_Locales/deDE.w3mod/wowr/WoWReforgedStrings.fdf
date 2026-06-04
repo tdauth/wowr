@@ -890,7 +890,7 @@ StringList {
     AI_HOST_CHOOSES                    "Der Host %1% muss die Einstellungen für die Computer-Spieler vornehmen.",
     AI_UI_TITLE                        "Computer-Spieler (%1%/%2%)",
     COLOR                              "Farbe",
-    LOCATION_WARLORD_ONLY              "Ort (nur Kriegsherr)",
+    LOCATION                           "Ort",
     RACE                               "Volk",
     PROFESSION                         "Beruf",
     //FOOD_MAXIMUM                       "Max. Nahrung",

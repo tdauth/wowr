@@ -35,14 +35,14 @@ globals
     private constant real COLUMN_TEAM_WIDTH = 0.07
 
     private constant real COLUMN_HERO_X = COLUMN_TEAM_X + COLUMN_TEAM_WIDTH + COLUMN_SPACING_X
-    private constant real COLUMN_HERO_WIDTH = 0.15
+    private constant real COLUMN_HERO_WIDTH = 0.16
 
     private constant real COLUMN_HERO_START_LEVEL_X = COLUMN_HERO_X + COLUMN_HERO_WIDTH + COLUMN_SPACING_X
     private constant real COLUMN_HERO_START_LEVEL_WIDTH = 0.04
 
     // new line
     private constant real COLUMN_START_LOCATION_X = START_X
-    private constant real COLUMN_START_LOCATION_WIDTH = 0.13
+    private constant real COLUMN_START_LOCATION_WIDTH = 0.16
 
     private constant real COLUMN_RACE_X = COLUMN_START_LOCATION_X + COLUMN_START_LOCATION_WIDTH + COLUMN_SPACING_X
     private constant real COLUMN_RACE_WIDTH = 0.15
@@ -52,28 +52,19 @@ globals
 
     // new line
     private constant real COLUMN_START_GOLD_X = START_X
-    private constant real COLUMN_START_GOLD_WIDTH = 0.06
+    private constant real COLUMN_START_GOLD_WIDTH = 0.07
 
     private constant real COLUMN_START_LUMBER_X = COLUMN_START_GOLD_X + COLUMN_START_GOLD_WIDTH + COLUMN_SPACING_X
-    private constant real COLUMN_START_LUMBER_WIDTH = 0.06
+    private constant real COLUMN_START_LUMBER_WIDTH = 0.07
 
     private constant real COLUMN_FOOD_LIMIT_X = COLUMN_START_LUMBER_X + COLUMN_START_LUMBER_WIDTH + COLUMN_SPACING_X
-    private constant real COLUMN_FOOD_LIMIT_WIDTH = 0.06
+    private constant real COLUMN_FOOD_LIMIT_WIDTH = 0.07
 
     private constant real COLUMN_START_EVOLUTION_X = COLUMN_FOOD_LIMIT_X + COLUMN_FOOD_LIMIT_WIDTH + COLUMN_SPACING_X
     private constant real COLUMN_START_EVOLUTION_WIDTH = 0.06
 
-    private constant real COLUMN_START_IMPROVED_POWER_GENERATOR_X = COLUMN_START_EVOLUTION_X + COLUMN_START_EVOLUTION_WIDTH + COLUMN_SPACING_X
-    private constant real COLUMN_START_IMPROVED_POWER_GENERATOR_WIDTH = 0.06
-
-    private constant real COLUMN_START_IMPROVED_CREEP_HUNTER_X = COLUMN_START_IMPROVED_POWER_GENERATOR_X + COLUMN_START_IMPROVED_POWER_GENERATOR_WIDTH + COLUMN_SPACING_X
-    private constant real COLUMN_START_IMPROVED_CREEP_HUNTER_WIDTH = 0.06
-
-    private constant real COLUMN_START_IMPROVED_NAVY_X = COLUMN_START_IMPROVED_CREEP_HUNTER_X + COLUMN_START_IMPROVED_CREEP_HUNTER_WIDTH + COLUMN_SPACING_X
-    private constant real COLUMN_START_IMPROVED_NAVY_WIDTH = 0.06
-
     private constant real COLUMN_ATTACK_PLAYERS_X = COLUMN_START_EVOLUTION_X + COLUMN_START_EVOLUTION_WIDTH + COLUMN_SPACING_X
-    private constant real COLUMN_ATTACK_PLAYERS_WIDTH = 0.03
+    private constant real COLUMN_ATTACK_PLAYERS_WIDTH = 0.04
 
     private constant real COLUMN_HEROES_X = COLUMN_ATTACK_PLAYERS_X + COLUMN_ATTACK_PLAYERS_WIDTH + COLUMN_SPACING_X
     private constant real COLUMN_HEROES_WIDTH = 0.06
@@ -82,10 +73,10 @@ globals
     private constant real COLUMN_EXPANSIONS_WIDTH = 0.06
 
     private constant real COLUMN_SHARED_CONTROL_X = COLUMN_EXPANSIONS_X + COLUMN_EXPANSIONS_WIDTH + COLUMN_SPACING_X
-    private constant real COLUMN_SHARED_CONTROL_WIDTH = 0.03
+    private constant real COLUMN_SHARED_CONTROL_WIDTH = 0.04
 
     private constant real COLUMN_DIFFICULTY_X = COLUMN_SHARED_CONTROL_X + COLUMN_SHARED_CONTROL_WIDTH + COLUMN_SPACING_X
-    private constant real COLUMN_DIFFICULTY_WIDTH = 0.08
+    private constant real COLUMN_DIFFICULTY_WIDTH = 0.10
 
     private constant real BUTTONS_Y = 0.24
 
@@ -616,7 +607,7 @@ function AiPlayersUIGetPlayerRace takes player whichPlayer, integer startLocatio
         set frameValue = Races[index]
         if (frameValue == RACES_MENU_ITEM_MATCHING_START_LOCATION) then
             call BJDebugMsg("RACES_MENU_ITEM_MATCHING_START_LOCATION")
-            return GetComputerStartLocation(startLocation).getRandomPossibleRace(team)
+            return GetComputerStartLocation(startLocation).getRandomPossibleRaceWarlord(team)
         elseif (frameValue == RACES_MENU_ITEM_RANDOM_WARLORD) then
             return GetRandomWarlordRaceWithAISupport()
         elseif (frameValue == RACES_MENU_ITEM_RANDOM_ALLIANCE) then
@@ -1010,7 +1001,7 @@ function CreateAiPlayersUiEx takes force aiPlayers returns nothing
     set startLocationLabel = BlzCreateFrameByType("TEXT", "AiPlayersGuiHeaderLineStartLocation", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), "", 0)
     call BlzFrameSetAbsPoint(startLocationLabel, FRAMEPOINT_TOPLEFT, COLUMN_START_LOCATION_X, y)
     call BlzFrameSetAbsPoint(startLocationLabel, FRAMEPOINT_BOTTOMRIGHT, COLUMN_START_LOCATION_X + COLUMN_START_LOCATION_WIDTH, y - LINE_HEADERS_HEIGHT)
-    call BlzFrameSetText(startLocationLabel, GetLocalizedStringSafe("LOCATION_WARLORD_ONLY"))
+    call BlzFrameSetText(startLocationLabel, GetLocalizedStringSafe("LOCATION"))
     call BlzFrameSetTextAlignment(startLocationLabel, TEXT_JUSTIFY_TOP, TEXT_JUSTIFY_CENTER)
 
     set raceLabel = BlzCreateFrameByType("TEXT", "AiPlayersGuiHeaderLineRace", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), "", 0)
