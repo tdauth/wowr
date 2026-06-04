@@ -188,6 +188,7 @@
 //! import "wowr/WoWReforgedVIPs.j"
 //! import "wowr/WoWReforgedVotekick.j"
 //! import "wowr/WoWReforgedVotes.j"
+//! import "wowr/WoWReforgedWalls.j"
 //! import "wowr/WoWReforgedWitchHut.j"
 //! import "wowr/WoWReforgedWrapUp.j"
 //! import "wowr/WoWReforgedZones.j"
