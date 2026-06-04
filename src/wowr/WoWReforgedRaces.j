@@ -82,16 +82,16 @@ globals
     constant integer RACE_OBJECT_TYPE_SHIP_SPECIAL_2 = 75
 
     constant integer RACE_MAX_OBJECT_TYPES = 76
-    
+
     private hashtable objectTypeHashTable = InitHashtable()
     private integer array objectTypeIds
-    
+
     private integer array objectTypeAbilities
     private integer array objectTypeAbilitiesLevels
     private integer array objectTypeAbilitiesRace
     private integer objectTypeAbilitiesCounter = 0
 
-    private integer racesCounter = 0
+    private integer racesCounter = 1 // udg_RaceNone = 0
 endglobals
 
 function GetRacesMax takes nothing returns integer
@@ -138,7 +138,7 @@ function IsRaceUnit takes integer t returns boolean
     elseif (t == RACE_OBJECT_TYPE_SPELLBREAKER) then
         return true
    elseif (t == RACE_OBJECT_TYPE_ARCANE_SANCTUM_4) then
-        return true 
+        return true
     elseif (t == RACE_OBJECT_TYPE_SIEGE_ENGINE) then
         return true
     elseif (t == RACE_OBJECT_TYPE_MORTAR) then
@@ -174,43 +174,43 @@ function IsRaceItem takes integer t returns boolean
         return true
     elseif (t == RACE_OBJECT_TYPE_TIER_1_ITEM) then
         return true
-    elseif (t == RACE_OBJECT_TYPE_TIER_2_ITEM) then    
+    elseif (t == RACE_OBJECT_TYPE_TIER_2_ITEM) then
         return true
     elseif (t == RACE_OBJECT_TYPE_TIER_3_ITEM) then
         return true
-    elseif (t == RACE_OBJECT_TYPE_FARM_ITEM) then    
+    elseif (t == RACE_OBJECT_TYPE_FARM_ITEM) then
         return true
-    elseif (t == RACE_OBJECT_TYPE_ALTAR_ITEM) then    
+    elseif (t == RACE_OBJECT_TYPE_ALTAR_ITEM) then
         return true
-    elseif (t == RACE_OBJECT_TYPE_MILL_ITEM) then    
+    elseif (t == RACE_OBJECT_TYPE_MILL_ITEM) then
         return true
-    elseif (t == RACE_OBJECT_TYPE_BLACK_SMITH_ITEM) then    
+    elseif (t == RACE_OBJECT_TYPE_BLACK_SMITH_ITEM) then
         return true
-    elseif (t == RACE_OBJECT_TYPE_BARRACKS_ITEM) then    
+    elseif (t == RACE_OBJECT_TYPE_BARRACKS_ITEM) then
         return true
-    elseif (t == RACE_OBJECT_TYPE_SHOP_ITEM) then    
+    elseif (t == RACE_OBJECT_TYPE_SHOP_ITEM) then
         return true
-    elseif (t == RACE_OBJECT_TYPE_SCOUT_TOWER_ITEM) then    
+    elseif (t == RACE_OBJECT_TYPE_SCOUT_TOWER_ITEM) then
         return true
-    elseif (t == RACE_OBJECT_TYPE_GUARD_TOWER_ITEM) then    
+    elseif (t == RACE_OBJECT_TYPE_GUARD_TOWER_ITEM) then
         return true
-    elseif (t == RACE_OBJECT_TYPE_CANNON_TOWER_ITEM) then    
+    elseif (t == RACE_OBJECT_TYPE_CANNON_TOWER_ITEM) then
         return true
-    elseif (t == RACE_OBJECT_TYPE_ARCANE_TOWER_ITEM) then    
+    elseif (t == RACE_OBJECT_TYPE_ARCANE_TOWER_ITEM) then
         return true
-    elseif (t == RACE_OBJECT_TYPE_ARCANE_SANCTUM_ITEM) then    
+    elseif (t == RACE_OBJECT_TYPE_ARCANE_SANCTUM_ITEM) then
         return true
-    elseif (t == RACE_OBJECT_TYPE_WORKSHOP_ITEM) then    
+    elseif (t == RACE_OBJECT_TYPE_WORKSHOP_ITEM) then
         return true
-    elseif (t == RACE_OBJECT_TYPE_GRYPHON_AVIARY_ITEM) then    
+    elseif (t == RACE_OBJECT_TYPE_GRYPHON_AVIARY_ITEM) then
         return true
-    elseif (t == RACE_OBJECT_TYPE_SACRIFICIAL_PIT_ITEM) then    
+    elseif (t == RACE_OBJECT_TYPE_SACRIFICIAL_PIT_ITEM) then
         return true
-    elseif (t == RACE_OBJECT_TYPE_HOUSING_ITEM) then    
+    elseif (t == RACE_OBJECT_TYPE_HOUSING_ITEM) then
         return true
-    elseif (t == RACE_OBJECT_TYPE_SHIPYARD_ITEM) then    
+    elseif (t == RACE_OBJECT_TYPE_SHIPYARD_ITEM) then
         return true
-    elseif (t == RACE_OBJECT_TYPE_SPECIAL_BUILDING_ITEM) then    
+    elseif (t == RACE_OBJECT_TYPE_SPECIAL_BUILDING_ITEM) then
         return true
     endif
     return false
@@ -320,13 +320,13 @@ function IsWater takes integer unitTypeId returns boolean
     if (IsWaterRaceUnit(GetObjectRace(unitTypeId))) then
         return true
     endif
-    
+
     if (unitTypeId == GNOMISH_SUBMARINE) then
         return true
     elseif (unitTypeId == ENGINEER_SHIP) then
         return true
     endif
-    
+
     return false
 endfunction
 
@@ -979,7 +979,7 @@ endfunction
 
 private function AddNone takes nothing returns nothing
     local integer r = udg_RaceNone
-    
+
     call AddResearch(r, UPG_EVOLUTION)
     call AddResearch(r, UPG_TEMPLE_OF_DEMIGODS_BLUEPRINTS)
     call AddResearch(r, UPG_STORM_PROTECTION)
@@ -1567,7 +1567,7 @@ private function AddNaga takes nothing returns nothing
     call SetRaceAiScript(r, "wowr\\Naga.ai")
     call SetRaceItemType(r, ITEM_NAGA_SCEPTER)
     call SetRaceTeam(r, TEAM_HORDE)
-    
+
     // buildings
     call SetRaceTier1(r, NAGA_TEMPLE_1)
     call SetRaceTier1Item(r, ITEM_NAGA_TIER_1)
@@ -1701,7 +1701,7 @@ private function AddDraenei takes nothing returns nothing
     //call SetRaceSpecialBuildingItem(r, ITEM_HIGH_ELF_SUNWELL)
     call SetRaceShipyard(r, EREDAR_SHIPYARD)
     //call SetRaceShipyardItem(r, ITEM_HIGH_ELF_SHIPYARD)
-    
+
     // researches
     call AddResearch(r, UPG_EREDAR_BACKPACK)
     call AddResearch(r, UPG_EREDAR_DEFEND)
@@ -1710,7 +1710,7 @@ private function AddDraenei takes nothing returns nothing
     call AddResearch(r, UPG_EREDAR_HIGH_TEMPLAR)
     call AddResearch(r, UPG_EREDAR_SPACE_TRAVEL)
     call AddResearch(r, UPG_EREDAR_EXODAR)
-    
+
     // units
     call SetRaceWorker(r, EREDAR_ARTIFICER)
     call SetRaceFootman(r, EREDAR_PEACEKEEPER)
@@ -1783,7 +1783,7 @@ private function AddLostOnes takes nothing returns nothing
     //call SetRaceSpecialBuildingItem(r, ITEM_HIGH_ELF_SUNWELL)
     call SetRaceShipyard(r, DRAENEI_SHIPYARD)
     //call SetRaceShipyardItem(r, ITEM_HIGH_ELF_SHIPYARD)
-    
+
     // researches
     call AddResearch(r, UPG_DRAENEI_DEVOUR)
     call AddResearch(r, UPG_DRAENEI_DEMON_FIRE)
@@ -3824,7 +3824,7 @@ private function AddFacelessOne takes nothing returns nothing
     call AddResearch(r, UPG_FACELESS_ONE_FORGOTTEN_ONE)
     call AddResearch(r, UPG_FACELESS_ONE_TENTACLE)
     call AddResearch(r, UPG_FACELESS_ONE_WITCH)
-    
+
     // units
     call SetRaceWorker(r, FACELESS_ONE_WORKER)
     call SetRaceFootman(r, FACELESS_ONE_UNBROCKEN_DARKHUNTER)
@@ -4440,7 +4440,7 @@ private function AddRaceStandardObjectIdFields takes nothing returns nothing
         call AddObjectDependencyEquivalents(i, RACE_OBJECT_TYPE_SCOUT_TOWER, RACE_OBJECT_TYPE_GUARD_TOWER)
         call AddObjectDependencyEquivalents(i, RACE_OBJECT_TYPE_SCOUT_TOWER, RACE_OBJECT_TYPE_CANNON_TOWER)
         call AddObjectDependencyEquivalents(i, RACE_OBJECT_TYPE_SCOUT_TOWER, RACE_OBJECT_TYPE_ARCANE_TOWER)
-        
+
         call AddObjectMappingTinyItem(i, RACE_OBJECT_TYPE_TIER_1, RACE_OBJECT_TYPE_TIER_1_ITEM)
         call AddObjectMappingTinyItem(i, RACE_OBJECT_TYPE_TIER_2, RACE_OBJECT_TYPE_TIER_2_ITEM)
         call AddObjectMappingTinyItem(i, RACE_OBJECT_TYPE_TIER_3, RACE_OBJECT_TYPE_TIER_3_ITEM)
@@ -4463,7 +4463,7 @@ private function AddRaceStandardObjectIdFields takes nothing returns nothing
         call AddObjectMappingTinyItem(i, RACE_OBJECT_TYPE_SPECIAL_BUILDING, RACE_OBJECT_TYPE_SPECIAL_BUILDING_ITEM)
         call AddObjectMappingTinyItem(i, RACE_OBJECT_TYPE_SPECIAL_BUILDING_2, RACE_OBJECT_TYPE_SPECIAL_BUILDING_2_ITEM)
         //call AddObjectMappingTinyItem(i, RACE_OBJECT_TYPE_MINE, RACE_OBJECT_TYPE_MINE_ITEM)
-        
+
         set i = i + 1
     endloop
 endfunction
@@ -4508,13 +4508,13 @@ private function Init takes nothing returns nothing
     call AddBandit()
     call AddDungeon()
     call AddDragonkin()
-    
+
     call AddRaceScepterItems()
-    
+
     call AddRaceStandardObjectIdFields() // Do this after the hero initialization!
-    
+
     // Abilities
-    
+
     // RESKILLABLE
     call AddAbility('A14U', 1, udg_RaceNone)
     call AddAbility('Abds', 1, udg_RaceNone)
