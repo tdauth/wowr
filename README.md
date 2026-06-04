@@ -16,7 +16,6 @@ This map is not a recreation of the game World of Warcraft but is inspired by an
 | Send me your Battle.net ID on Discord after subscribing to get it unlocked with the next map release. |
 
 * Discuss the map on its [Discord Server](https://discord.gg/eM34z36).
-* Support the [YouTube Channel](https://www.youtube.com/channel/UCzGcsuPfRVqdaE87JYCK5zw).
 
 ## Play the Map
 
