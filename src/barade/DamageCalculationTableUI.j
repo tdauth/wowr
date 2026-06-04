@@ -244,7 +244,7 @@ public function CreateUI takes nothing returns nothing
             set cells[index] = f
             call BlzFrameSetAbsPoint(f, FRAMEPOINT_TOPLEFT, TABLE_X + (j + 1) * TABLE_CELL_WIDTH, TABLE_Y - (i + 1) * TABLE_LINE_HEIGHT)
             call BlzFrameSetAbsPoint(f, FRAMEPOINT_BOTTOMRIGHT, TABLE_X + (j + 1) * TABLE_CELL_WIDTH + TABLE_CELL_WIDTH, TABLE_Y - (i + 1) * TABLE_LINE_HEIGHT - TABLE_LINE_HEIGHT)
-            call BlzFrameSetText(f, I2S(R2I(100 * GetDamageCalculationTableValue(i, j))) + " %%")
+            call BlzFrameSetText(f, I2S(R2I(100 * GetDamageCalculationTableValue(i, j))) + " %")
             call BlzFrameSetTextAlignment(f, TEXT_JUSTIFY_CENTER, TEXT_JUSTIFY_CENTER)
 
             set f = BlzCreateFrameByType("TEXT", "CellTooltip" + I2S(index), BackgroundFrame, "", 0)
