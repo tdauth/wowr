@@ -2749,11 +2749,12 @@ globals
     constant integer PLAYER_RESCUABLE                                = 11
     constant integer MAX_PLAYERS                                     = 12
 
+    // Support all 4 race UI borders.
     constant real UI_FULLSCREEN_X                                    = 0.0
     constant real UI_FULLSCREEN_Y                                    = 0.57
     constant real UI_FULLSCREEN_WIDTH                                = 0.80
     constant real UI_FULLSCREEN_HEIGHT                               = 0.42
-    constant real UI_FULLSCREEN_TITLE_Y                              = 0.548
+    constant real UI_FULLSCREEN_TITLE_Y                              = 0.546
     constant real UI_FULLSCREEN_TITLE_HEIGHT                         = 0.1
     constant real UI_FULLSCREEN_BOTTOM_BUTTON_Y                      = 0.20
     constant real UI_FULLSCREEN_BOTTOM_BUTTON_WIDTH                  = 0.12

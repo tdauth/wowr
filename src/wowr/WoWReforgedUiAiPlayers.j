@@ -8,8 +8,6 @@ library WoWReforgedUiAiPlayers initializer Init requires OnStartGame, FrameLoade
 globals
     private constant string PREFIX = "WoWReforgedUiAiPlayers"
 
-    private constant integer MAX_PLAYERS = 1 // less players make combo boxes visible
-
     private constant real LINE_HEADERS_Y = UI_FULLSCREEN_Y - 0.05
     private constant real LINE_HEADERS_HEIGHT = 0.006
 
@@ -138,35 +136,34 @@ globals
     private constant integer PROFESSIONS_MENU_ITEM_ASTROMANCER = 18
 
     private hashtable h = InitHashtable()
-    private integer Counter = 0
-    private integer MaxPages = 0
+    private integer Counter = 0 // number of players and pages
     private force Force = CreateForce()
     private integer Page = 0 // async
 
-    private framehandle BackgroundFrame
-    private framehandle TitleFrame
+    private framehandle backgroundFrame
+    private framehandle titleFrame
 
     // header line
-    private framehandle LabelFrameColumnPlayerName
-    private framehandle LabelFrameColumnColor
-    private framehandle LabelFrameColumnTeam
-    private framehandle LabelFrameColumnHero
-    private framehandle LabelFrameColumnHeroStartLevel
-    private framehandle LabelFrameColumnStartLocation
-    private framehandle LabelFrameColumnRace // including freelancer
-    private framehandle LabelFrameColumnProfession
-    private framehandle LabelFrameColumnStartGold
-    private framehandle LabelFrameColumnStartLumber
-    private framehandle LabelFrameColumnFoodLimit
-    private framehandle LabelFrameColumnStartEvolution
-    private framehandle LabelFrameColumnStartImprovedPowerGenerator
-    private framehandle LabelFrameColumnStartImprovedCreepHunter
-    private framehandle LabelFrameColumnStartImprovedNavy
-    private framehandle LabelFrameColumnAttackPlayers
-    private framehandle LabelFrameColumnHeroes
-    private framehandle LabelFrameColumnExpansions
-    private framehandle LabelFrameColumnSharedControl
-    private framehandle LabelFrameColumnDifficulty
+    private framehandle playerNameLabel
+    private framehandle colorLabel
+    private framehandle teamLabel
+    private framehandle heroLabel
+    private framehandle heroLabelStartLevel
+    private framehandle startLocationLabel
+    private framehandle raceLabel // including freelancer
+    private framehandle labelProfession
+    private framehandle goldLabel
+    private framehandle lumberLabel
+    private framehandle foodLimitLabel
+    private framehandle evolutionLabel
+    private framehandle labelStartImprovedPowerGenerator
+    private framehandle labelStartImprovedCreepHunter
+    private framehandle labelStartImprovedNavy
+    private framehandle attacksLabel
+    private framehandle heroesLabel
+    private framehandle expansionsLabel
+    private framehandle sharedControlLabel
+    private framehandle difficultyLabel
 
     // sync data
     private string array PlayerNames
@@ -188,73 +185,73 @@ globals
     private integer array Difficulty
     private boolean array SyncDone
 
-    private trigger SyncTrigger
+    private trigger syncTrigger = CreateTrigger()
 
     // player lines
-    private framehandle array LabelFrameColumnPlayerNameEdit
-    private framehandle array LabelFrameColumnColorPopup
-    private framehandle array LabelFrameColumnColorEdit
-    private framehandle array LabelFrameColumnColorArrowUp
-    private framehandle array LabelFrameColumnColorArrowUpFrame
-    private framehandle array LabelFrameColumnColorArrowDown
-    private framehandle array LabelFrameColumnColorArrowDownFrame
-    private trigger array ColorPopupMenuTrigger
-    private trigger array ColorUpTrigger
-    private trigger array ColorDownTrigger
-    private framehandle array LabelFrameColumnTeamEdit
-    private framehandle array LabelFrameColumnHeroEdit
-    private framehandle array LabelFrameColumnHeroEditArrowUp
-    private framehandle array LabelFrameColumnHeroEditArrowUpFrame
-    private framehandle array LabelFrameColumnHeroEditArrowDown
-    private framehandle array LabelFrameColumnHeroEditArrowDownFrame
-    private trigger array HeroUpTrigger
-    private trigger array HeroDownTrigger
-    private framehandle array LabelFrameColumnHeroStartLevelEdit
-    private framehandle array LabelFrameColumnStartLocationEdit
-    private framehandle array LabelFrameColumnStartLocationEditArrowUp
-    private framehandle array LabelFrameColumnStartLocationEditArrowUpFrame
-    private framehandle array LabelFrameColumnStartLocationEditArrowDown
-    private framehandle array LabelFrameColumnStartLocationEditArrowDownFrame
-    private trigger array StartLocationUpTrigger
-    private trigger array StartLocationDownTrigger
-    private framehandle array LabelFrameColumnRaceEdit
-    private framehandle array LabelFrameColumnRaceEditArrowUp
-    private framehandle array LabelFrameColumnRaceEditArrowUpFrame
-    private framehandle array LabelFrameColumnRaceEditArrowDown
-    private framehandle array LabelFrameColumnRaceEditArrowDownFrame
-    private trigger array RaceUpTrigger
-    private trigger array RaceDownTrigger
-    private framehandle array LabelFrameColumnProfessionEdit
-    private framehandle array LabelFrameColumnStartGoldEdit
-    private framehandle array LabelFrameColumnStartLumberEdit
-    private framehandle array LabelFrameColumnFoodLimitEdit
-    private framehandle array LabelFrameColumnStartEvolutionEdit
-    private framehandle array LabelFrameColumnStartImprovedPowerGeneratorEdit
-    private framehandle array LabelFrameColumnStartImprovedCreepHunterEdit
-    private framehandle array LabelFrameColumnStartImprovedNavyEdit
-    private framehandle array LabelFrameColumnAttackPlayerCheckbox
-    private framehandle array LabelFrameColumnHeroesEdit
-    private framehandle array LabelFrameColumnExpansionsEdit
-    private framehandle array LabelFrameColumnSharedControlCheckbox
-    private framehandle array LabelFrameColumnDifficultyEdit
+    private framehandle array playerNameEdit
+    private framehandle array colorLabelPopup
+    private framehandle array colorComboBox
+    private framehandle array colorLabelArrowUp
+    private framehandle array colorLabelArrowUpFrame
+    private framehandle array colorLabelArrowDown
+    private framehandle array colorLabelArrowDownFrame
+    private trigger array colorPopupMenuTrigger
+    private trigger array colorUpTrigger
+    private trigger array colorDownTrigger
+    private framehandle array teamComboBox
+    private framehandle array heroComboBox
+    private framehandle array heroComboBoxArrowUp
+    private framehandle array heroComboBoxArrowUpFrame
+    private framehandle array heroComboBoxArrowDown
+    private framehandle array heroComboBoxArrowDownFrame
+    private trigger array heroUpTrigger
+    private trigger array heroDownTrigger
+    private framehandle array heroLabelStartLevelEdit
+    private framehandle array startLocationComboBox
+    private framehandle array startLocationComboBoxArrowUp
+    private framehandle array startLocationComboBoxArrowUpFrame
+    private framehandle array startLocationComboBoxArrowDown
+    private framehandle array startLocationComboBoxArrowDownFrame
+    private trigger array startLocationUpTrigger
+    private trigger array startLocationDownTrigger
+    private framehandle array raceLabelEdit
+    private framehandle array raceLabelEditArrowUp
+    private framehandle array raceLabelEditArrowUpFrame
+    private framehandle array raceLabelEditArrowDown
+    private framehandle array raceLabelEditArrowDownFrame
+    private trigger array raceUpTrigger
+    private trigger array raceDownTrigger
+    private framehandle array professionComboBox
+    private framehandle array goldEdit
+    private framehandle array lumberEdit
+    private framehandle array foodEdit
+    private framehandle array evolutionEdit
+    private framehandle array labelStartImprovedPowerGeneratorEdit
+    private framehandle array labelStartImprovedCreepHunterEdit
+    private framehandle array labelStartImprovedNavyEdit
+    private framehandle array attacksCheckBox
+    private framehandle array heroesEdit
+    private framehandle array expansionsEdit
+    private framehandle array sharedControlCheckBox
+    private framehandle array difficultyComboBox
 
     // bottom buttons
-    private framehandle PreviousPageButton
-    private trigger PreviousPageTrigger = null
+    private framehandle previousPageButton
+    private trigger previousPageTrigger = null
 
-    private framehandle NextPageButton
-    private trigger NextPageTrigger = null
+    private framehandle nextPageButton
+    private trigger nextPageTrigger = null
 
-    private framehandle ApplyButton
-    private trigger ApplyTrigger = null
+    private framehandle applyButton
+    private trigger applyTrigger = null
 endglobals
 
 function DisplayAISettingsInfo takes nothing returns nothing
-      call DisplayTextToForce(GetPlayersAll(), Format(GetLocalizedString("AI_HOST_CHOOSES")).s(GetPlayerNameColored(GetHost())).result())
+      call DisplayTextToForce(GetPlayersAll(), Format(GetLocalizedStringSafe("AI_HOST_CHOOSES")).s(GetPlayerNameColored(GetHost())).result())
 endfunction
 
 private function UpdateComputerPlayersTitle takes nothing returns nothing
-    call BlzFrameSetText(TitleFrame, Format(GetLocalizedString("AI_UI_TITLE")).i(Page + 1).i(MaxPages).result()) // Computer Players (%1%/%2%)
+    call BlzFrameSetText(titleFrame, Format(GetLocalizedStringSafe("AI_UI_TITLE")).i(Page + 1).i(Counter).result())
 endfunction
 
 function GetAiPlayersWithConfig takes nothing returns force
@@ -284,73 +281,73 @@ endfunction
 
 private function SetVisible takes boolean visible returns nothing
     local integer currentPage = Page
-    local integer counterStart = currentPage * MAX_PLAYERS
-    local integer counterEnd = counterStart + MAX_PLAYERS - 1
+    local integer counterStart = currentPage
+    local integer counterEnd = counterStart
     local integer counter = 0
     local integer i = 0
 
-    call BlzFrameSetVisible(BackgroundFrame, visible)
-    call BlzFrameSetVisible(TitleFrame, visible)
-    call BlzFrameSetVisible(LabelFrameColumnPlayerName, visible)
-    call BlzFrameSetVisible(LabelFrameColumnColor, visible)
-    call BlzFrameSetVisible(LabelFrameColumnTeam, visible)
-    call BlzFrameSetVisible(LabelFrameColumnHero, visible)
-    call BlzFrameSetVisible(LabelFrameColumnHeroStartLevel, visible)
-    call BlzFrameSetVisible(LabelFrameColumnStartLocation, visible)
-    call BlzFrameSetVisible(LabelFrameColumnRace, visible)
-    call BlzFrameSetVisible(LabelFrameColumnProfession, visible)
-    call BlzFrameSetVisible(LabelFrameColumnStartGold, visible)
-    call BlzFrameSetVisible(LabelFrameColumnStartLumber, visible)
-    call BlzFrameSetVisible(LabelFrameColumnFoodLimit, visible)
-    call BlzFrameSetVisible(LabelFrameColumnStartEvolution, visible)
-    call BlzFrameSetVisible(LabelFrameColumnAttackPlayers, visible)
-    call BlzFrameSetVisible(LabelFrameColumnHeroes, visible)
-    call BlzFrameSetVisible(LabelFrameColumnExpansions, visible)
-    call BlzFrameSetVisible(LabelFrameColumnSharedControl, visible)
-    call BlzFrameSetVisible(LabelFrameColumnDifficulty, visible)
-    call BlzFrameSetVisible(ApplyButton, visible)
-    call BlzFrameSetVisible(PreviousPageButton, visible)
-    call BlzFrameSetVisible(NextPageButton, visible)
+    call BlzFrameSetVisible(backgroundFrame, visible)
+    call BlzFrameSetVisible(titleFrame, visible)
+    call BlzFrameSetVisible(playerNameLabel, visible)
+    call BlzFrameSetVisible(colorLabel, visible)
+    call BlzFrameSetVisible(teamLabel, visible)
+    call BlzFrameSetVisible(heroLabel, visible)
+    call BlzFrameSetVisible(heroLabelStartLevel, visible)
+    call BlzFrameSetVisible(startLocationLabel, visible)
+    call BlzFrameSetVisible(raceLabel, visible)
+    call BlzFrameSetVisible(labelProfession, visible)
+    call BlzFrameSetVisible(goldLabel, visible)
+    call BlzFrameSetVisible(lumberLabel, visible)
+    call BlzFrameSetVisible(foodLimitLabel, visible)
+    call BlzFrameSetVisible(evolutionLabel, visible)
+    call BlzFrameSetVisible(attacksLabel, visible)
+    call BlzFrameSetVisible(heroesLabel, visible)
+    call BlzFrameSetVisible(expansionsLabel, visible)
+    call BlzFrameSetVisible(sharedControlLabel, visible)
+    call BlzFrameSetVisible(difficultyLabel, visible)
+    call BlzFrameSetVisible(applyButton, visible)
+    call BlzFrameSetVisible(previousPageButton, visible)
+    call BlzFrameSetVisible(nextPageButton, visible)
 
     set i = 0
     loop
         exitwhen (i >= bj_MAX_PLAYERS)
         if (IsPlayerInForce(Player(i), Force)) then
             if ((visible and counter >= counterStart and counter <= counterEnd) or not visible) then
-                call BlzFrameSetVisible(LabelFrameColumnPlayerNameEdit[counter], visible)
-                call BlzFrameSetVisible(LabelFrameColumnColorPopup[counter], visible)
-                call BlzFrameSetVisible(LabelFrameColumnColorEdit[counter], visible)
-                call BlzFrameSetVisible(LabelFrameColumnColorArrowUp[counter], visible)
-                call BlzFrameSetVisible(LabelFrameColumnColorArrowUpFrame[counter], visible)
-                call BlzFrameSetVisible(LabelFrameColumnColorArrowDown[counter], visible)
-                call BlzFrameSetVisible(LabelFrameColumnColorArrowDownFrame[counter], visible)
-                call BlzFrameSetVisible(LabelFrameColumnTeamEdit[counter], visible)
-                call BlzFrameSetVisible(LabelFrameColumnHeroEdit[counter], visible)
-                call BlzFrameSetVisible(LabelFrameColumnHeroEditArrowUp[counter], visible)
-                call BlzFrameSetVisible(LabelFrameColumnHeroEditArrowUpFrame[counter], visible)
-                call BlzFrameSetVisible(LabelFrameColumnHeroEditArrowDown[counter], visible)
-                call BlzFrameSetVisible(LabelFrameColumnHeroEditArrowDownFrame[counter], visible)
-                call BlzFrameSetVisible(LabelFrameColumnHeroStartLevelEdit[counter], visible)
-                call BlzFrameSetVisible(LabelFrameColumnStartLocationEdit[counter], visible)
-                call BlzFrameSetVisible(LabelFrameColumnStartLocationEditArrowUp[counter], visible)
-                call BlzFrameSetVisible(LabelFrameColumnStartLocationEditArrowUpFrame[counter], visible)
-                call BlzFrameSetVisible(LabelFrameColumnStartLocationEditArrowDown[counter], visible)
-                call BlzFrameSetVisible(LabelFrameColumnStartLocationEditArrowDownFrame[counter], visible)
-                call BlzFrameSetVisible(LabelFrameColumnRaceEdit[counter], visible)
-                call BlzFrameSetVisible(LabelFrameColumnRaceEditArrowUp[counter], visible)
-                call BlzFrameSetVisible(LabelFrameColumnRaceEditArrowUpFrame[counter], visible)
-                call BlzFrameSetVisible(LabelFrameColumnRaceEditArrowDown[counter], visible)
-                call BlzFrameSetVisible(LabelFrameColumnRaceEditArrowDownFrame[counter], visible)
-                call BlzFrameSetVisible(LabelFrameColumnProfessionEdit[counter], visible)
-                call BlzFrameSetVisible(LabelFrameColumnStartGoldEdit[counter], visible)
-                call BlzFrameSetVisible(LabelFrameColumnStartLumberEdit[counter], visible)
-                call BlzFrameSetVisible(LabelFrameColumnFoodLimitEdit[counter], visible)
-                call BlzFrameSetVisible(LabelFrameColumnStartEvolutionEdit[counter], visible)
-                call BlzFrameSetVisible(LabelFrameColumnAttackPlayerCheckbox[counter], visible)
-                call BlzFrameSetVisible(LabelFrameColumnHeroesEdit[counter], visible)
-                call BlzFrameSetVisible(LabelFrameColumnExpansionsEdit[counter], visible)
-                call BlzFrameSetVisible(LabelFrameColumnSharedControlCheckbox[counter], visible)
-                call BlzFrameSetVisible(LabelFrameColumnDifficultyEdit[counter], visible)
+                call BlzFrameSetVisible(playerNameEdit[counter], visible)
+                call BlzFrameSetVisible(colorLabelPopup[counter], visible)
+                call BlzFrameSetVisible(colorComboBox[counter], visible)
+                call BlzFrameSetVisible(colorLabelArrowUp[counter], visible)
+                call BlzFrameSetVisible(colorLabelArrowUpFrame[counter], visible)
+                call BlzFrameSetVisible(colorLabelArrowDown[counter], visible)
+                call BlzFrameSetVisible(colorLabelArrowDownFrame[counter], visible)
+                call BlzFrameSetVisible(teamComboBox[counter], visible)
+                call BlzFrameSetVisible(heroComboBox[counter], visible)
+                call BlzFrameSetVisible(heroComboBoxArrowUp[counter], visible)
+                call BlzFrameSetVisible(heroComboBoxArrowUpFrame[counter], visible)
+                call BlzFrameSetVisible(heroComboBoxArrowDown[counter], visible)
+                call BlzFrameSetVisible(heroComboBoxArrowDownFrame[counter], visible)
+                call BlzFrameSetVisible(heroLabelStartLevelEdit[counter], visible)
+                call BlzFrameSetVisible(startLocationComboBox[counter], visible)
+                call BlzFrameSetVisible(startLocationComboBoxArrowUp[counter], visible)
+                call BlzFrameSetVisible(startLocationComboBoxArrowUpFrame[counter], visible)
+                call BlzFrameSetVisible(startLocationComboBoxArrowDown[counter], visible)
+                call BlzFrameSetVisible(startLocationComboBoxArrowDownFrame[counter], visible)
+                call BlzFrameSetVisible(raceLabelEdit[counter], visible)
+                call BlzFrameSetVisible(raceLabelEditArrowUp[counter], visible)
+                call BlzFrameSetVisible(raceLabelEditArrowUpFrame[counter], visible)
+                call BlzFrameSetVisible(raceLabelEditArrowDown[counter], visible)
+                call BlzFrameSetVisible(raceLabelEditArrowDownFrame[counter], visible)
+                call BlzFrameSetVisible(professionComboBox[counter], visible)
+                call BlzFrameSetVisible(goldEdit[counter], visible)
+                call BlzFrameSetVisible(lumberEdit[counter], visible)
+                call BlzFrameSetVisible(foodEdit[counter], visible)
+                call BlzFrameSetVisible(evolutionEdit[counter], visible)
+                call BlzFrameSetVisible(attacksCheckBox[counter], visible)
+                call BlzFrameSetVisible(heroesEdit[counter], visible)
+                call BlzFrameSetVisible(expansionsEdit[counter], visible)
+                call BlzFrameSetVisible(sharedControlCheckBox[counter], visible)
+                call BlzFrameSetVisible(difficultyComboBox[counter], visible)
             endif
 
             set counter = counter + 1
@@ -439,23 +436,23 @@ private function SyncData takes player whichPlayer returns nothing
         exitwhen (i >= counter)
         set index = i
         if (GetLocalPlayer() == whichPlayer) then
-            call BlzSendSyncData(PREFIX, "PlayerName_" + I2S(index) + "_" + BlzFrameGetText(LabelFrameColumnPlayerNameEdit[index]))
-            call BlzSendSyncData(PREFIX, "Color_" + I2S(index) + "_" + I2S(R2I(BlzFrameGetValue(LabelFrameColumnColorPopup[index]))))
-            call BlzSendSyncData(PREFIX, "Team_" + I2S(index) + "_" + I2S(R2I(BlzFrameGetValue(LabelFrameColumnTeamEdit[index]))))
-            call BlzSendSyncData(PREFIX, "StartHero_" + I2S(index) + "_" + I2S(R2I(BlzFrameGetValue(LabelFrameColumnHeroEdit[index]))))
-            call BlzSendSyncData(PREFIX, "HeroStartLevel_" + I2S(index) + "_" + BlzFrameGetText(LabelFrameColumnHeroStartLevelEdit[index]))
-            call BlzSendSyncData(PREFIX, "StartLocation_" + I2S(index) + "_" + I2S(R2I(BlzFrameGetValue(LabelFrameColumnStartLocationEdit[index]))))
-            call BlzSendSyncData(PREFIX, "Races_" + I2S(index) + "_" + I2S(R2I(BlzFrameGetValue(LabelFrameColumnRaceEdit[index]))))
-            call BlzSendSyncData(PREFIX, "Profession_" + I2S(index) + "_" + I2S(R2I(BlzFrameGetValue(LabelFrameColumnProfessionEdit[index]))))
-            call BlzSendSyncData(PREFIX, "StartGold_" + I2S(index) + "_" + BlzFrameGetText(LabelFrameColumnStartGoldEdit[index]))
-            call BlzSendSyncData(PREFIX, "StartLumber_" + I2S(index) + "_" + BlzFrameGetText(LabelFrameColumnStartLumberEdit[index]))
-            call BlzSendSyncData(PREFIX, "FoodLimit_" + I2S(index) + "_" + BlzFrameGetText(LabelFrameColumnFoodLimitEdit[index]))
-            call BlzSendSyncData(PREFIX, "StartEvolution_" + I2S(index) + "_" + BlzFrameGetText(LabelFrameColumnStartEvolutionEdit[index]))
-            call BlzSendSyncData(PREFIX, "AttackPlayers_" + I2S(index) + "_" + I2S(R2I(BlzFrameGetValue(LabelFrameColumnAttackPlayerCheckbox[index]))))
-            call BlzSendSyncData(PREFIX, "HeroesCount_" + I2S(index) + "_" + BlzFrameGetText(LabelFrameColumnHeroesEdit[index]))
-            call BlzSendSyncData(PREFIX, "Expansions_" + I2S(index) + "_" + BlzFrameGetText(LabelFrameColumnExpansionsEdit[index]))
-            call BlzSendSyncData(PREFIX, "SharedControl_" + I2S(index) + "_" + I2S(R2I(BlzFrameGetValue(LabelFrameColumnSharedControlCheckbox[index]))))
-            call BlzSendSyncData(PREFIX, "Difficulty_" + I2S(index) + "_" + I2S(R2I(BlzFrameGetValue(LabelFrameColumnDifficultyEdit[index]))))
+            call BlzSendSyncData(PREFIX, "PlayerName_" + I2S(index) + "_" + BlzFrameGetText(playerNameEdit[index]))
+            call BlzSendSyncData(PREFIX, "Color_" + I2S(index) + "_" + I2S(R2I(BlzFrameGetValue(colorLabelPopup[index]))))
+            call BlzSendSyncData(PREFIX, "Team_" + I2S(index) + "_" + I2S(R2I(BlzFrameGetValue(teamComboBox[index]))))
+            call BlzSendSyncData(PREFIX, "StartHero_" + I2S(index) + "_" + I2S(R2I(BlzFrameGetValue(heroComboBox[index]))))
+            call BlzSendSyncData(PREFIX, "HeroStartLevel_" + I2S(index) + "_" + BlzFrameGetText(heroLabelStartLevelEdit[index]))
+            call BlzSendSyncData(PREFIX, "StartLocation_" + I2S(index) + "_" + I2S(R2I(BlzFrameGetValue(startLocationComboBox[index]))))
+            call BlzSendSyncData(PREFIX, "Races_" + I2S(index) + "_" + I2S(R2I(BlzFrameGetValue(raceLabelEdit[index]))))
+            call BlzSendSyncData(PREFIX, "Profession_" + I2S(index) + "_" + I2S(R2I(BlzFrameGetValue(professionComboBox[index]))))
+            call BlzSendSyncData(PREFIX, "StartGold_" + I2S(index) + "_" + BlzFrameGetText(goldEdit[index]))
+            call BlzSendSyncData(PREFIX, "StartLumber_" + I2S(index) + "_" + BlzFrameGetText(lumberEdit[index]))
+            call BlzSendSyncData(PREFIX, "FoodLimit_" + I2S(index) + "_" + BlzFrameGetText(foodEdit[index]))
+            call BlzSendSyncData(PREFIX, "StartEvolution_" + I2S(index) + "_" + BlzFrameGetText(evolutionEdit[index]))
+            call BlzSendSyncData(PREFIX, "AttackPlayers_" + I2S(index) + "_" + I2S(R2I(BlzFrameGetValue(attacksCheckBox[index]))))
+            call BlzSendSyncData(PREFIX, "HeroesCount_" + I2S(index) + "_" + BlzFrameGetText(heroesEdit[index]))
+            call BlzSendSyncData(PREFIX, "Expansions_" + I2S(index) + "_" + BlzFrameGetText(expansionsEdit[index]))
+            call BlzSendSyncData(PREFIX, "SharedControl_" + I2S(index) + "_" + I2S(R2I(BlzFrameGetValue(sharedControlCheckBox[index]))))
+            call BlzSendSyncData(PREFIX, "Difficulty_" + I2S(index) + "_" + I2S(R2I(BlzFrameGetValue(difficultyComboBox[index]))))
         endif
         set i = i + 1
     endloop
@@ -795,7 +792,7 @@ private function ColorPopupMenuFunction takes nothing returns nothing
     local integer index = LoadInteger(h, GetHandleId(GetTriggeringTrigger()), 0)
 
     if (GetTriggerPlayer() == GetLocalPlayer()) then
-        call BlzFrameSetTexture(LabelFrameColumnColorEdit[index], GetPlayerColorTexture(ConvertPlayerColor(R2I(BlzFrameGetValue(LabelFrameColumnColorPopup[index])))), 0, true)
+        call BlzFrameSetTexture(colorComboBox[index], GetPlayerColorTexture(ConvertPlayerColor(R2I(BlzFrameGetValue(colorLabelPopup[index])))), 0, true)
     endif
 endfunction
 
@@ -804,14 +801,14 @@ private function ColorUpFunction takes nothing returns nothing
     local integer c = 0
 
     if (GetTriggerPlayer() == GetLocalPlayer()) then
-        set c = R2I(BlzFrameGetValue(LabelFrameColumnColorPopup[index]))
+        set c = R2I(BlzFrameGetValue(colorLabelPopup[index]))
         if (c == 0) then
             set c = 23
         else
             set c = c - 1
         endif
-        call BlzFrameSetValue(LabelFrameColumnColorPopup[index], c)
-        call BlzFrameSetTexture(LabelFrameColumnColorEdit[index], GetPlayerColorTexture(ConvertPlayerColor(c)), 0, true)
+        call BlzFrameSetValue(colorLabelPopup[index], c)
+        call BlzFrameSetTexture(colorComboBox[index], GetPlayerColorTexture(ConvertPlayerColor(c)), 0, true)
     endif
     call PlayClickSound(GetTriggerPlayer())
 endfunction
@@ -821,14 +818,14 @@ private function ColorDownFunction takes nothing returns nothing
     local integer c = 0
 
     if (GetTriggerPlayer() == GetLocalPlayer()) then
-        set c = R2I(BlzFrameGetValue(LabelFrameColumnColorPopup[index]))
+        set c = R2I(BlzFrameGetValue(colorLabelPopup[index]))
         if (c == 23) then
             set c = 0
         else
             set c = c + 1
         endif
-        call BlzFrameSetValue(LabelFrameColumnColorPopup[index], c)
-        call BlzFrameSetTexture(LabelFrameColumnColorEdit[index], GetPlayerColorTexture(ConvertPlayerColor(c)), 0, true)
+        call BlzFrameSetValue(colorLabelPopup[index], c)
+        call BlzFrameSetTexture(colorComboBox[index], GetPlayerColorTexture(ConvertPlayerColor(c)), 0, true)
     endif
     call PlayClickSound(GetTriggerPlayer())
 endfunction
@@ -837,10 +834,10 @@ private function HeroUpFunction takes nothing returns nothing
     local integer index = LoadInteger(h, GetHandleId(GetTriggeringTrigger()), 0)
 
     if (GetTriggerPlayer() == GetLocalPlayer()) then
-        if (BlzFrameGetValue(LabelFrameColumnHeroEdit[index]) == 0) then
-            call BlzFrameSetValue(LabelFrameColumnHeroEdit[index], HEROES_MENU_ITEM_FINAL)
+        if (BlzFrameGetValue(heroComboBox[index]) == 0) then
+            call BlzFrameSetValue(heroComboBox[index], HEROES_MENU_ITEM_FINAL)
         else
-            call BlzFrameSetValue(LabelFrameColumnHeroEdit[index], BlzFrameGetValue(LabelFrameColumnHeroEdit[index]) - 1)
+            call BlzFrameSetValue(heroComboBox[index], BlzFrameGetValue(heroComboBox[index]) - 1)
         endif
     endif
 
@@ -851,10 +848,10 @@ private function HeroDownFunction takes nothing returns nothing
     local integer index = LoadInteger(h, GetHandleId(GetTriggeringTrigger()), 0)
 
     if (GetTriggerPlayer() == GetLocalPlayer()) then
-        if (BlzFrameGetValue(LabelFrameColumnHeroEdit[index]) == HEROES_MENU_ITEM_FINAL) then
-            call BlzFrameSetValue(LabelFrameColumnHeroEdit[index], 0)
+        if (BlzFrameGetValue(heroComboBox[index]) == HEROES_MENU_ITEM_FINAL) then
+            call BlzFrameSetValue(heroComboBox[index], 0)
         else
-            call BlzFrameSetValue(LabelFrameColumnHeroEdit[index], BlzFrameGetValue(LabelFrameColumnHeroEdit[index]) + 1)
+            call BlzFrameSetValue(heroComboBox[index], BlzFrameGetValue(heroComboBox[index]) + 1)
         endif
     endif
 
@@ -869,10 +866,10 @@ private function StartLocationUpFunction takes nothing returns nothing
     local integer index = LoadInteger(h, GetHandleId(GetTriggeringTrigger()), 0)
 
     if (GetTriggerPlayer() == GetLocalPlayer()) then
-        if (BlzFrameGetValue(LabelFrameColumnStartLocationEdit[index]) == 0) then
-            call BlzFrameSetValue(LabelFrameColumnStartLocationEdit[index], GetStartLocationsLastIndex())
+        if (BlzFrameGetValue(startLocationComboBox[index]) == 0) then
+            call BlzFrameSetValue(startLocationComboBox[index], GetStartLocationsLastIndex())
         else
-            call BlzFrameSetValue(LabelFrameColumnStartLocationEdit[index], BlzFrameGetValue(LabelFrameColumnStartLocationEdit[index]) - 1)
+            call BlzFrameSetValue(startLocationComboBox[index], BlzFrameGetValue(startLocationComboBox[index]) - 1)
         endif
     endif
 
@@ -883,10 +880,10 @@ private function StartLocationDownFunction takes nothing returns nothing
     local integer index = LoadInteger(h, GetHandleId(GetTriggeringTrigger()), 0)
 
     if (GetTriggerPlayer() == GetLocalPlayer()) then
-        if (BlzFrameGetValue(LabelFrameColumnStartLocationEdit[index]) == GetStartLocationsLastIndex()) then
-            call BlzFrameSetValue(LabelFrameColumnStartLocationEdit[index], 0)
+        if (BlzFrameGetValue(startLocationComboBox[index]) == GetStartLocationsLastIndex()) then
+            call BlzFrameSetValue(startLocationComboBox[index], 0)
         else
-            call BlzFrameSetValue(LabelFrameColumnStartLocationEdit[index], BlzFrameGetValue(LabelFrameColumnStartLocationEdit[index]) + 1)
+            call BlzFrameSetValue(startLocationComboBox[index], BlzFrameGetValue(startLocationComboBox[index]) + 1)
         endif
     endif
 
@@ -901,10 +898,10 @@ private function RaceUpFunction takes nothing returns nothing
     local integer index = LoadInteger(h, GetHandleId(GetTriggeringTrigger()), 0)
 
     if (GetTriggerPlayer() == GetLocalPlayer()) then
-        if (BlzFrameGetValue(LabelFrameColumnRaceEdit[index]) == 0) then
-            call BlzFrameSetValue(LabelFrameColumnRaceEdit[index], GetRacesLastIndex())
+        if (BlzFrameGetValue(raceLabelEdit[index]) == 0) then
+            call BlzFrameSetValue(raceLabelEdit[index], GetRacesLastIndex())
         else
-            call BlzFrameSetValue(LabelFrameColumnRaceEdit[index], BlzFrameGetValue(LabelFrameColumnRaceEdit[index]) - 1)
+            call BlzFrameSetValue(raceLabelEdit[index], BlzFrameGetValue(raceLabelEdit[index]) - 1)
         endif
     endif
 
@@ -915,10 +912,10 @@ private function RaceDownFunction takes nothing returns nothing
     local integer index = LoadInteger(h, GetHandleId(GetTriggeringTrigger()), 0)
 
     if (GetTriggerPlayer() == GetLocalPlayer()) then
-        if (BlzFrameGetValue(LabelFrameColumnRaceEdit[index]) == GetRacesLastIndex()) then
-            call BlzFrameSetValue(LabelFrameColumnRaceEdit[index], 0)
+        if (BlzFrameGetValue(raceLabelEdit[index]) == GetRacesLastIndex()) then
+            call BlzFrameSetValue(raceLabelEdit[index], 0)
         else
-            call BlzFrameSetValue(LabelFrameColumnRaceEdit[index], BlzFrameGetValue(LabelFrameColumnRaceEdit[index]) + 1)
+            call BlzFrameSetValue(raceLabelEdit[index], BlzFrameGetValue(raceLabelEdit[index]) + 1)
         endif
     endif
 
@@ -928,7 +925,7 @@ endfunction
 private function PreviousPageFunction takes nothing returns nothing
     if (GetTriggerPlayer() == GetLocalPlayer()) then
         if (Page == 0) then
-            set Page = MaxPages - 1
+            set Page = Counter - 1
         else
             set Page = Page - 1
         endif
@@ -942,7 +939,7 @@ endfunction
 
 private function NextPageFunction takes nothing returns nothing
     if (GetTriggerPlayer() == GetLocalPlayer()) then
-        if (Page == MaxPages - 1) then
+        if (Page == Counter - 1) then
             set Page = 0
         else
             set Page = Page + 1
@@ -965,128 +962,125 @@ function CreateAiPlayersUiEx takes force aiPlayers returns nothing
     local integer playerColor = 0
     local integer team = 0
 
-    set BackgroundFrame = BlzCreateFrame("EscMenuBackdrop", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), 0, 0)
-    call BlzFrameSetAbsPoint(BackgroundFrame, FRAMEPOINT_TOPLEFT, UI_FULLSCREEN_X, UI_FULLSCREEN_Y)
-    call BlzFrameSetAbsPoint(BackgroundFrame, FRAMEPOINT_BOTTOMRIGHT, UI_FULLSCREEN_X + UI_FULLSCREEN_WIDTH, UI_FULLSCREEN_Y - UI_FULLSCREEN_HEIGHT)
+    set backgroundFrame = BlzCreateFrame("EscMenuBackdrop", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), 0, 0)
+    call BlzFrameSetAbsPoint(backgroundFrame, FRAMEPOINT_TOPLEFT, UI_FULLSCREEN_X, UI_FULLSCREEN_Y)
+    call BlzFrameSetAbsPoint(backgroundFrame, FRAMEPOINT_BOTTOMRIGHT, UI_FULLSCREEN_X + UI_FULLSCREEN_WIDTH, UI_FULLSCREEN_Y - UI_FULLSCREEN_HEIGHT)
 
-    set TitleFrame = BlzCreateFrameByType("TEXT", "AiPlayersGuiTitle", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), "", 0)
-    call BlzFrameSetAbsPoint(TitleFrame, FRAMEPOINT_TOPLEFT, UI_FULLSCREEN_X, UI_FULLSCREEN_TITLE_Y)
-    call BlzFrameSetAbsPoint(TitleFrame, FRAMEPOINT_BOTTOMRIGHT, UI_FULLSCREEN_X + UI_FULLSCREEN_WIDTH, UI_FULLSCREEN_TITLE_Y - UI_FULLSCREEN_TITLE_HEIGHT)
-    call BlzFrameSetTextAlignment(TitleFrame, TEXT_JUSTIFY_TOP, TEXT_JUSTIFY_CENTER)
+    set titleFrame = BlzCreateFrameByType("TEXT", "AiPlayersGuiTitle", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), "", 0)
+    call BlzFrameSetAbsPoint(titleFrame, FRAMEPOINT_TOPLEFT, UI_FULLSCREEN_X, UI_FULLSCREEN_TITLE_Y)
+    call BlzFrameSetAbsPoint(titleFrame, FRAMEPOINT_BOTTOMRIGHT, UI_FULLSCREEN_X + UI_FULLSCREEN_WIDTH, UI_FULLSCREEN_TITLE_Y - UI_FULLSCREEN_TITLE_HEIGHT)
+    call BlzFrameSetTextAlignment(titleFrame, TEXT_JUSTIFY_TOP, TEXT_JUSTIFY_CENTER)
 
-    // header line
+    // line 1
     set y = LINE_HEADERS_Y
 
-    set LabelFrameColumnPlayerName = BlzCreateFrameByType("TEXT", "AiPlayersGuiHeaderLinePlayerName", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), "", 0)
-    call BlzFrameSetAbsPoint(LabelFrameColumnPlayerName, FRAMEPOINT_TOPLEFT, COLUMN_PLAYER_NAME_X, y)
-    call BlzFrameSetAbsPoint(LabelFrameColumnPlayerName, FRAMEPOINT_BOTTOMRIGHT, COLUMN_PLAYER_NAME_X + COLUMN_PLAYER_NAME_WIDTH, y - LINE_HEADERS_HEIGHT)
-    call BlzFrameSetText(LabelFrameColumnPlayerName, GetLocalizedString("NAME")) // Name
-    call BlzFrameSetTextAlignment(LabelFrameColumnPlayerName, TEXT_JUSTIFY_TOP, TEXT_JUSTIFY_CENTER)
+    set playerNameLabel = BlzCreateFrameByType("TEXT", "AiPlayersGuiHeaderLinePlayerName", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), "", 0)
+    call BlzFrameSetAbsPoint(playerNameLabel, FRAMEPOINT_TOPLEFT, COLUMN_PLAYER_NAME_X, y)
+    call BlzFrameSetAbsPoint(playerNameLabel, FRAMEPOINT_BOTTOMRIGHT, COLUMN_PLAYER_NAME_X + COLUMN_PLAYER_NAME_WIDTH, y - LINE_HEADERS_HEIGHT)
+    call BlzFrameSetText(playerNameLabel, GetLocalizedStringSafe("NAME"))
+    call BlzFrameSetTextAlignment(playerNameLabel, TEXT_JUSTIFY_TOP, TEXT_JUSTIFY_CENTER)
 
-    set LabelFrameColumnColor = BlzCreateFrameByType("TEXT", "AiPlayersGuiHeaderLineColor", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), "", 0)
-    call BlzFrameSetAbsPoint(LabelFrameColumnColor, FRAMEPOINT_TOPLEFT, COLUMN_COLOR_X, y)
-    call BlzFrameSetAbsPoint(LabelFrameColumnColor, FRAMEPOINT_BOTTOMRIGHT, COLUMN_COLOR_X + COLUMN_COLOR_WIDTH, y - LINE_HEADERS_HEIGHT)
-    call BlzFrameSetText(LabelFrameColumnColor, GetLocalizedString("COLOR")) // Color
-    call BlzFrameSetTextAlignment(LabelFrameColumnColor, TEXT_JUSTIFY_TOP, TEXT_JUSTIFY_CENTER)
+    set colorLabel = BlzCreateFrameByType("TEXT", "AiPlayersGuiHeaderLineColor", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), "", 0)
+    call BlzFrameSetAbsPoint(colorLabel, FRAMEPOINT_TOPLEFT, COLUMN_COLOR_X, y)
+    call BlzFrameSetAbsPoint(colorLabel, FRAMEPOINT_BOTTOMRIGHT, COLUMN_COLOR_X + COLUMN_COLOR_WIDTH, y - LINE_HEADERS_HEIGHT)
+    call BlzFrameSetText(colorLabel, GetLocalizedStringSafe("COLOR")) // Color
+    call BlzFrameSetTextAlignment(colorLabel, TEXT_JUSTIFY_TOP, TEXT_JUSTIFY_CENTER)
 
-    set LabelFrameColumnTeam = BlzCreateFrameByType("TEXT", "AiPlayersGuiHeaderLineTeam", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), "", 0)
-    call BlzFrameSetAbsPoint(LabelFrameColumnTeam, FRAMEPOINT_TOPLEFT, COLUMN_TEAM_X, y)
-    call BlzFrameSetAbsPoint(LabelFrameColumnTeam, FRAMEPOINT_BOTTOMRIGHT, COLUMN_TEAM_X + COLUMN_TEAM_WIDTH, y - LINE_HEADERS_HEIGHT)
-    call BlzFrameSetText(LabelFrameColumnTeam, GetLocalizedString("TEAM")) // Team
-    call BlzFrameSetTextAlignment(LabelFrameColumnTeam, TEXT_JUSTIFY_TOP, TEXT_JUSTIFY_CENTER)
+    set teamLabel = BlzCreateFrameByType("TEXT", "AiPlayersGuiHeaderLineTeam", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), "", 0)
+    call BlzFrameSetAbsPoint(teamLabel, FRAMEPOINT_TOPLEFT, COLUMN_TEAM_X, y)
+    call BlzFrameSetAbsPoint(teamLabel, FRAMEPOINT_BOTTOMRIGHT, COLUMN_TEAM_X + COLUMN_TEAM_WIDTH, y - LINE_HEADERS_HEIGHT)
+    call BlzFrameSetText(teamLabel, GetLocalizedStringSafe("TEAM"))
+    call BlzFrameSetTextAlignment(teamLabel, TEXT_JUSTIFY_TOP, TEXT_JUSTIFY_CENTER)
 
-    set LabelFrameColumnHero = BlzCreateFrameByType("TEXT", "AiPlayersGuiHeaderLineHero", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), "", 0)
-    call BlzFrameSetAbsPoint(LabelFrameColumnHero, FRAMEPOINT_TOPLEFT, COLUMN_HERO_X, y)
-    call BlzFrameSetAbsPoint(LabelFrameColumnHero, FRAMEPOINT_BOTTOMRIGHT, COLUMN_HERO_X + COLUMN_HERO_WIDTH, y - LINE_HEADERS_HEIGHT)
-    call BlzFrameSetText(LabelFrameColumnHero, GetLocalizedString("HERO")) // Hero
-    call BlzFrameSetTextAlignment(LabelFrameColumnHero, TEXT_JUSTIFY_TOP, TEXT_JUSTIFY_CENTER)
+    set heroLabel = BlzCreateFrameByType("TEXT", "AiPlayersGuiHeaderLineHero", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), "", 0)
+    call BlzFrameSetAbsPoint(heroLabel, FRAMEPOINT_TOPLEFT, COLUMN_HERO_X, y)
+    call BlzFrameSetAbsPoint(heroLabel, FRAMEPOINT_BOTTOMRIGHT, COLUMN_HERO_X + COLUMN_HERO_WIDTH, y - LINE_HEADERS_HEIGHT)
+    call BlzFrameSetText(heroLabel, GetLocalizedStringSafe("HERO"))
+    call BlzFrameSetTextAlignment(heroLabel, TEXT_JUSTIFY_TOP, TEXT_JUSTIFY_CENTER)
 
-    set LabelFrameColumnHeroStartLevel = BlzCreateFrameByType("TEXT", "AiPlayersGuiHeaderLineHeroStartLevel", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), "", 0)
-    call BlzFrameSetAbsPoint(LabelFrameColumnHeroStartLevel, FRAMEPOINT_TOPLEFT, COLUMN_HERO_START_LEVEL_X, y)
-    call BlzFrameSetAbsPoint(LabelFrameColumnHeroStartLevel, FRAMEPOINT_BOTTOMRIGHT, COLUMN_HERO_START_LEVEL_X + COLUMN_HERO_START_LEVEL_WIDTH, y - LINE_HEADERS_HEIGHT)
-    call BlzFrameSetText(LabelFrameColumnHeroStartLevel, GetLocalizedString("LEVEL")) // Level
-    call BlzFrameSetTextAlignment(LabelFrameColumnHeroStartLevel, TEXT_JUSTIFY_TOP, TEXT_JUSTIFY_CENTER)
+    set heroLabelStartLevel = BlzCreateFrameByType("TEXT", "AiPlayersGuiHeaderLineHeroStartLevel", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), "", 0)
+    call BlzFrameSetAbsPoint(heroLabelStartLevel, FRAMEPOINT_TOPLEFT, COLUMN_HERO_START_LEVEL_X, y)
+    call BlzFrameSetAbsPoint(heroLabelStartLevel, FRAMEPOINT_BOTTOMRIGHT, COLUMN_HERO_START_LEVEL_X + COLUMN_HERO_START_LEVEL_WIDTH, y - LINE_HEADERS_HEIGHT)
+    call BlzFrameSetText(heroLabelStartLevel, GetLocalizedStringSafe("LEVEL"))
+    call BlzFrameSetTextAlignment(heroLabelStartLevel, TEXT_JUSTIFY_TOP, TEXT_JUSTIFY_CENTER)
 
-    // new line
-    set y = LINE_HEADERS_Y - LINE_HEADERS_HEIGHT - LINE_HEIGHT_SPACING
+    // line 2
+    set y = y - LINE_HEADERS_HEIGHT - LINE_HEIGHT - LINE_HEIGHT_SPACING
 
-    set LabelFrameColumnStartLocation = BlzCreateFrameByType("TEXT", "AiPlayersGuiHeaderLineStartLocation", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), "", 0)
-    call BlzFrameSetAbsPoint(LabelFrameColumnStartLocation, FRAMEPOINT_TOPLEFT, COLUMN_START_LOCATION_X, y)
-    call BlzFrameSetAbsPoint(LabelFrameColumnStartLocation, FRAMEPOINT_BOTTOMRIGHT, COLUMN_START_LOCATION_X + COLUMN_START_LOCATION_WIDTH, y - LINE_HEADERS_HEIGHT)
-    call BlzFrameSetText(LabelFrameColumnStartLocation, GetLocalizedString("LOCATION_WARLORD_ONLY")) // Location (Warlord only)
-    call BlzFrameSetTextAlignment(LabelFrameColumnStartLocation, TEXT_JUSTIFY_TOP, TEXT_JUSTIFY_CENTER)
+    set startLocationLabel = BlzCreateFrameByType("TEXT", "AiPlayersGuiHeaderLineStartLocation", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), "", 0)
+    call BlzFrameSetAbsPoint(startLocationLabel, FRAMEPOINT_TOPLEFT, COLUMN_START_LOCATION_X, y)
+    call BlzFrameSetAbsPoint(startLocationLabel, FRAMEPOINT_BOTTOMRIGHT, COLUMN_START_LOCATION_X + COLUMN_START_LOCATION_WIDTH, y - LINE_HEADERS_HEIGHT)
+    call BlzFrameSetText(startLocationLabel, GetLocalizedStringSafe("LOCATION_WARLORD_ONLY"))
+    call BlzFrameSetTextAlignment(startLocationLabel, TEXT_JUSTIFY_TOP, TEXT_JUSTIFY_CENTER)
 
-    set LabelFrameColumnRace = BlzCreateFrameByType("TEXT", "AiPlayersGuiHeaderLineRace", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), "", 0)
-    call BlzFrameSetAbsPoint(LabelFrameColumnRace, FRAMEPOINT_TOPLEFT, COLUMN_RACE_X, y)
-    call BlzFrameSetAbsPoint(LabelFrameColumnRace, FRAMEPOINT_BOTTOMRIGHT, COLUMN_RACE_X + COLUMN_RACE_WIDTH, y - LINE_HEADERS_HEIGHT)
-    call BlzFrameSetText(LabelFrameColumnRace, GetLocalizedString("RACE")) // Race
-    call BlzFrameSetTextAlignment(LabelFrameColumnRace, TEXT_JUSTIFY_TOP, TEXT_JUSTIFY_CENTER)
+    set raceLabel = BlzCreateFrameByType("TEXT", "AiPlayersGuiHeaderLineRace", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), "", 0)
+    call BlzFrameSetAbsPoint(raceLabel, FRAMEPOINT_TOPLEFT, COLUMN_RACE_X, y)
+    call BlzFrameSetAbsPoint(raceLabel, FRAMEPOINT_BOTTOMRIGHT, COLUMN_RACE_X + COLUMN_RACE_WIDTH, y - LINE_HEADERS_HEIGHT)
+    call BlzFrameSetText(raceLabel, GetLocalizedStringSafe("RACE"))
+    call BlzFrameSetTextAlignment(raceLabel, TEXT_JUSTIFY_TOP, TEXT_JUSTIFY_CENTER)
 
-    set LabelFrameColumnProfession = BlzCreateFrameByType("TEXT", "AiPlayersGuiHeaderLineProfession", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), "", 0)
-    call BlzFrameSetAbsPoint(LabelFrameColumnProfession, FRAMEPOINT_TOPLEFT, COLUMN_PROFESSION_X, y)
-    call BlzFrameSetAbsPoint(LabelFrameColumnProfession, FRAMEPOINT_BOTTOMRIGHT, COLUMN_PROFESSION_X + COLUMN_PROFESSION_WIDTH, y - LINE_HEADERS_HEIGHT)
-    call BlzFrameSetText(LabelFrameColumnProfession, GetLocalizedString("PROFESSION")) // Profession
-    call BlzFrameSetTextAlignment(LabelFrameColumnProfession, TEXT_JUSTIFY_TOP, TEXT_JUSTIFY_CENTER)
+    set labelProfession = BlzCreateFrameByType("TEXT", "AiPlayersGuiHeaderLineProfession", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), "", 0)
+    call BlzFrameSetAbsPoint(labelProfession, FRAMEPOINT_TOPLEFT, COLUMN_PROFESSION_X, y)
+    call BlzFrameSetAbsPoint(labelProfession, FRAMEPOINT_BOTTOMRIGHT, COLUMN_PROFESSION_X + COLUMN_PROFESSION_WIDTH, y - LINE_HEADERS_HEIGHT)
+    call BlzFrameSetText(labelProfession, GetLocalizedStringSafe("PROFESSION"))
+    call BlzFrameSetTextAlignment(labelProfession, TEXT_JUSTIFY_TOP, TEXT_JUSTIFY_CENTER)
 
-    // new line
-    set y = y - LINE_HEIGHT - LINE_HEIGHT_SPACING
+    // line 3
+    set y = y - LINE_HEADERS_HEIGHT - LINE_HEIGHT - LINE_HEIGHT_SPACING
 
-    set LabelFrameColumnStartGold = BlzCreateFrameByType("TEXT", "AiPlayersGuiHeaderLineStartGold", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), "", 0)
-    call BlzFrameSetAbsPoint(LabelFrameColumnStartGold, FRAMEPOINT_TOPLEFT, COLUMN_START_GOLD_X, y)
-    call BlzFrameSetAbsPoint(LabelFrameColumnStartGold, FRAMEPOINT_BOTTOMRIGHT, COLUMN_START_GOLD_X + COLUMN_START_GOLD_WIDTH, y - LINE_HEADERS_HEIGHT)
-    call BlzFrameSetText(LabelFrameColumnStartGold, GetLocalizedString("GOLD")) // Gold
-    call BlzFrameSetTextAlignment(LabelFrameColumnStartGold, TEXT_JUSTIFY_TOP, TEXT_JUSTIFY_CENTER)
+    set goldLabel = BlzCreateFrameByType("TEXT", "AiPlayersGuiHeaderLineStartGold", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), "", 0)
+    call BlzFrameSetAbsPoint(goldLabel, FRAMEPOINT_TOPLEFT, COLUMN_START_GOLD_X, y)
+    call BlzFrameSetAbsPoint(goldLabel, FRAMEPOINT_BOTTOMRIGHT, COLUMN_START_GOLD_X + COLUMN_START_GOLD_WIDTH, y - LINE_HEADERS_HEIGHT)
+    call BlzFrameSetText(goldLabel, GetLocalizedStringSafe("GOLD"))
+    call BlzFrameSetTextAlignment(goldLabel, TEXT_JUSTIFY_TOP, TEXT_JUSTIFY_CENTER)
 
-    set LabelFrameColumnStartLumber = BlzCreateFrameByType("TEXT", "AiPlayersGuiHeaderLineStartLumber", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), "", 0)
-    call BlzFrameSetAbsPoint(LabelFrameColumnStartLumber, FRAMEPOINT_TOPLEFT, COLUMN_START_LUMBER_X, y)
-    call BlzFrameSetAbsPoint(LabelFrameColumnStartLumber, FRAMEPOINT_BOTTOMRIGHT, COLUMN_START_LUMBER_X + COLUMN_START_LUMBER_WIDTH, y - LINE_HEADERS_HEIGHT)
-    call BlzFrameSetText(LabelFrameColumnStartLumber, GetLocalizedString("LUMBER")) // Lumber
-    call BlzFrameSetTextAlignment(LabelFrameColumnStartLumber, TEXT_JUSTIFY_TOP, TEXT_JUSTIFY_CENTER)
+    set lumberLabel = BlzCreateFrameByType("TEXT", "AiPlayersGuiHeaderLineStartLumber", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), "", 0)
+    call BlzFrameSetAbsPoint(lumberLabel, FRAMEPOINT_TOPLEFT, COLUMN_START_LUMBER_X, y)
+    call BlzFrameSetAbsPoint(lumberLabel, FRAMEPOINT_BOTTOMRIGHT, COLUMN_START_LUMBER_X + COLUMN_START_LUMBER_WIDTH, y - LINE_HEADERS_HEIGHT)
+    call BlzFrameSetText(lumberLabel, GetLocalizedStringSafe("LUMBER"))
+    call BlzFrameSetTextAlignment(lumberLabel, TEXT_JUSTIFY_TOP, TEXT_JUSTIFY_CENTER)
 
-    set LabelFrameColumnFoodLimit = BlzCreateFrameByType("TEXT", "AiPlayersGuiHeaderLineFoodLimit", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), "", 0)
-    call BlzFrameSetAbsPoint(LabelFrameColumnFoodLimit, FRAMEPOINT_TOPLEFT, COLUMN_FOOD_LIMIT_X, y)
-    call BlzFrameSetAbsPoint(LabelFrameColumnFoodLimit, FRAMEPOINT_BOTTOMRIGHT, COLUMN_FOOD_LIMIT_X + COLUMN_FOOD_LIMIT_WIDTH, y - LINE_HEADERS_HEIGHT)
-    call BlzFrameSetText(LabelFrameColumnFoodLimit, GetLocalizedString("FOOD_MAXIMUM")) // Food Maximum
-    call BlzFrameSetTextAlignment(LabelFrameColumnFoodLimit, TEXT_JUSTIFY_TOP, TEXT_JUSTIFY_CENTER)
+    set foodLimitLabel = BlzCreateFrameByType("TEXT", "AiPlayersGuiHeaderLineFoodLimit", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), "", 0)
+    call BlzFrameSetAbsPoint(foodLimitLabel, FRAMEPOINT_TOPLEFT, COLUMN_FOOD_LIMIT_X, y)
+    call BlzFrameSetAbsPoint(foodLimitLabel, FRAMEPOINT_BOTTOMRIGHT, COLUMN_FOOD_LIMIT_X + COLUMN_FOOD_LIMIT_WIDTH, y - LINE_HEADERS_HEIGHT)
+    call BlzFrameSetText(foodLimitLabel, GetLocalizedStringSafe("FOOD_MAXIMUM"))
+    call BlzFrameSetTextAlignment(foodLimitLabel, TEXT_JUSTIFY_TOP, TEXT_JUSTIFY_CENTER)
 
-    set LabelFrameColumnStartEvolution = BlzCreateFrameByType("TEXT", "AiPlayersGuiHeaderLineStartEvolution", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), "", 0)
-    call BlzFrameSetAbsPoint(LabelFrameColumnStartEvolution, FRAMEPOINT_TOPLEFT, COLUMN_START_EVOLUTION_X, y)
-    call BlzFrameSetAbsPoint(LabelFrameColumnStartEvolution, FRAMEPOINT_BOTTOMRIGHT, COLUMN_START_EVOLUTION_X + COLUMN_START_EVOLUTION_WIDTH, y - LINE_HEADERS_HEIGHT)
-    call BlzFrameSetText(LabelFrameColumnStartEvolution, GetLocalizedString("EVOLUTION")) // Evolution
-    call BlzFrameSetTextAlignment(LabelFrameColumnStartEvolution, TEXT_JUSTIFY_TOP, TEXT_JUSTIFY_CENTER)
+    set evolutionLabel = BlzCreateFrameByType("TEXT", "AiPlayersGuiHeaderLineStartEvolution", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), "", 0)
+    call BlzFrameSetAbsPoint(evolutionLabel, FRAMEPOINT_TOPLEFT, COLUMN_START_EVOLUTION_X, y)
+    call BlzFrameSetAbsPoint(evolutionLabel, FRAMEPOINT_BOTTOMRIGHT, COLUMN_START_EVOLUTION_X + COLUMN_START_EVOLUTION_WIDTH, y - LINE_HEADERS_HEIGHT)
+    call BlzFrameSetText(evolutionLabel, GetLocalizedStringSafe("EVOLUTION"))
+    call BlzFrameSetTextAlignment(evolutionLabel, TEXT_JUSTIFY_TOP, TEXT_JUSTIFY_CENTER)
 
-    set LabelFrameColumnAttackPlayers = BlzCreateFrameByType("TEXT", "AiPlayersGuiHeaderLineAttackPlayers", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), "", 0)
-    call BlzFrameSetAbsPoint(LabelFrameColumnAttackPlayers, FRAMEPOINT_TOPLEFT, COLUMN_ATTACK_PLAYERS_X, y)
-    call BlzFrameSetAbsPoint(LabelFrameColumnAttackPlayers, FRAMEPOINT_BOTTOMRIGHT, COLUMN_ATTACK_PLAYERS_X + COLUMN_ATTACK_PLAYERS_WIDTH, y - LINE_HEADERS_HEIGHT)
-    call BlzFrameSetText(LabelFrameColumnAttackPlayers, GetLocalizedString("ATTACKS")) // Attacks
-    call BlzFrameSetTextAlignment(LabelFrameColumnAttackPlayers, TEXT_JUSTIFY_TOP, TEXT_JUSTIFY_CENTER)
+    set attacksLabel = BlzCreateFrameByType("TEXT", "AiPlayersGuiHeaderLineAttackPlayers", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), "", 0)
+    call BlzFrameSetAbsPoint(attacksLabel, FRAMEPOINT_TOPLEFT, COLUMN_ATTACK_PLAYERS_X, y)
+    call BlzFrameSetAbsPoint(attacksLabel, FRAMEPOINT_BOTTOMRIGHT, COLUMN_ATTACK_PLAYERS_X + COLUMN_ATTACK_PLAYERS_WIDTH, y - LINE_HEADERS_HEIGHT)
+    call BlzFrameSetText(attacksLabel, GetLocalizedStringSafe("ATTACKS")) // Attacks
+    call BlzFrameSetTextAlignment(attacksLabel, TEXT_JUSTIFY_TOP, TEXT_JUSTIFY_CENTER)
 
-    set LabelFrameColumnHeroes = BlzCreateFrameByType("TEXT", "AiPlayersGuiHeaderLineHeroes", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), "", 0)
-    call BlzFrameSetAbsPoint(LabelFrameColumnHeroes, FRAMEPOINT_TOPLEFT, COLUMN_HEROES_X, y)
-    call BlzFrameSetAbsPoint(LabelFrameColumnHeroes, FRAMEPOINT_BOTTOMRIGHT, COLUMN_HEROES_X + COLUMN_HEROES_WIDTH, y - LINE_HEADERS_HEIGHT)
-    call BlzFrameSetText(LabelFrameColumnHeroes, GetLocalizedString("HEROES")) // Heroes
-    call BlzFrameSetTextAlignment(LabelFrameColumnHeroes, TEXT_JUSTIFY_TOP, TEXT_JUSTIFY_CENTER)
+    set heroesLabel = BlzCreateFrameByType("TEXT", "AiPlayersGuiHeaderLineHeroes", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), "", 0)
+    call BlzFrameSetAbsPoint(heroesLabel, FRAMEPOINT_TOPLEFT, COLUMN_HEROES_X, y)
+    call BlzFrameSetAbsPoint(heroesLabel, FRAMEPOINT_BOTTOMRIGHT, COLUMN_HEROES_X + COLUMN_HEROES_WIDTH, y - LINE_HEADERS_HEIGHT)
+    call BlzFrameSetText(heroesLabel, GetLocalizedStringSafe("HEROES"))
+    call BlzFrameSetTextAlignment(heroesLabel, TEXT_JUSTIFY_TOP, TEXT_JUSTIFY_CENTER)
 
-    set LabelFrameColumnExpansions = BlzCreateFrameByType("TEXT", "AiPlayersGuiHeaderLineExpansions", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), "", 0)
-    call BlzFrameSetAbsPoint(LabelFrameColumnExpansions, FRAMEPOINT_TOPLEFT, COLUMN_EXPANSIONS_X, y)
-    call BlzFrameSetAbsPoint(LabelFrameColumnExpansions, FRAMEPOINT_BOTTOMRIGHT, COLUMN_EXPANSIONS_X + COLUMN_EXPANSIONS_WIDTH, y - LINE_HEADERS_HEIGHT)
-    call BlzFrameSetText(LabelFrameColumnExpansions, GetLocalizedString("EXPANSIONS")) // Expansions
-    call BlzFrameSetTextAlignment(LabelFrameColumnExpansions, TEXT_JUSTIFY_TOP, TEXT_JUSTIFY_CENTER)
+    set expansionsLabel = BlzCreateFrameByType("TEXT", "AiPlayersGuiHeaderLineExpansions", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), "", 0)
+    call BlzFrameSetAbsPoint(expansionsLabel, FRAMEPOINT_TOPLEFT, COLUMN_EXPANSIONS_X, y)
+    call BlzFrameSetAbsPoint(expansionsLabel, FRAMEPOINT_BOTTOMRIGHT, COLUMN_EXPANSIONS_X + COLUMN_EXPANSIONS_WIDTH, y - LINE_HEADERS_HEIGHT)
+    call BlzFrameSetText(expansionsLabel, GetLocalizedStringSafe("EXPANSIONS"))
+    call BlzFrameSetTextAlignment(expansionsLabel, TEXT_JUSTIFY_TOP, TEXT_JUSTIFY_CENTER)
 
-    set LabelFrameColumnSharedControl = BlzCreateFrameByType("TEXT", "AiPlayersGuiHeaderLineSharedControl", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), "", 0)
-    call BlzFrameSetAbsPoint(LabelFrameColumnSharedControl, FRAMEPOINT_TOPLEFT, COLUMN_SHARED_CONTROL_X, y)
-    call BlzFrameSetAbsPoint(LabelFrameColumnSharedControl, FRAMEPOINT_BOTTOMRIGHT, COLUMN_SHARED_CONTROL_X + COLUMN_SHARED_CONTROL_WIDTH, y - LINE_HEADERS_HEIGHT)
-    call BlzFrameSetText(LabelFrameColumnSharedControl, GetLocalizedString("SHARED")) // Shared
-    call BlzFrameSetTextAlignment(LabelFrameColumnSharedControl, TEXT_JUSTIFY_TOP, TEXT_JUSTIFY_CENTER)
+    set sharedControlLabel = BlzCreateFrameByType("TEXT", "AiPlayersGuiHeaderLineSharedControl", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), "", 0)
+    call BlzFrameSetAbsPoint(sharedControlLabel, FRAMEPOINT_TOPLEFT, COLUMN_SHARED_CONTROL_X, y)
+    call BlzFrameSetAbsPoint(sharedControlLabel, FRAMEPOINT_BOTTOMRIGHT, COLUMN_SHARED_CONTROL_X + COLUMN_SHARED_CONTROL_WIDTH, y - LINE_HEADERS_HEIGHT)
+    call BlzFrameSetText(sharedControlLabel, GetLocalizedStringSafe("SHARED"))
+    call BlzFrameSetTextAlignment(sharedControlLabel, TEXT_JUSTIFY_TOP, TEXT_JUSTIFY_CENTER)
 
-    set LabelFrameColumnDifficulty = BlzCreateFrameByType("TEXT", "AiPlayersGuiHeaderLineDifficulty", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), "", 0)
-    call BlzFrameSetAbsPoint(LabelFrameColumnDifficulty, FRAMEPOINT_TOPLEFT, COLUMN_DIFFICULTY_X, y)
-    call BlzFrameSetAbsPoint(LabelFrameColumnDifficulty, FRAMEPOINT_BOTTOMRIGHT, COLUMN_DIFFICULTY_X + COLUMN_DIFFICULTY_WIDTH, y - LINE_HEADERS_HEIGHT)
-    call BlzFrameSetText(LabelFrameColumnDifficulty, GetLocalizedString("DIFFICULTY")) // Difficulty
-    call BlzFrameSetTextAlignment(LabelFrameColumnDifficulty, TEXT_JUSTIFY_TOP, TEXT_JUSTIFY_CENTER)
-
-    // new line
-    set y = y - LINE_HEIGHT - LINE_HEIGHT_SPACING
+    set difficultyLabel = BlzCreateFrameByType("TEXT", "AiPlayersGuiHeaderLineDifficulty", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), "", 0)
+    call BlzFrameSetAbsPoint(difficultyLabel, FRAMEPOINT_TOPLEFT, COLUMN_DIFFICULTY_X, y)
+    call BlzFrameSetAbsPoint(difficultyLabel, FRAMEPOINT_BOTTOMRIGHT, COLUMN_DIFFICULTY_X + COLUMN_DIFFICULTY_WIDTH, y - LINE_HEADERS_HEIGHT)
+    call BlzFrameSetText(difficultyLabel, GetLocalizedStringSafe("DIFFICULTY"))
+    call BlzFrameSetTextAlignment(difficultyLabel, TEXT_JUSTIFY_TOP, TEXT_JUSTIFY_CENTER)
 
     if (Force != null) then
         call ForceClear(Force)
@@ -1106,369 +1100,365 @@ function CreateAiPlayersUiEx takes force aiPlayers returns nothing
 
             set index = counter
 
-            set LabelFrameColumnPlayerNameEdit[index] = BlzCreateFrame("EscMenuEditBoxTemplate", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), 0, 0)
-            call BlzFrameSetAbsPoint(LabelFrameColumnPlayerNameEdit[index], FRAMEPOINT_TOPLEFT, COLUMN_PLAYER_NAME_X, y)
-            call BlzFrameSetAbsPoint(LabelFrameColumnPlayerNameEdit[index], FRAMEPOINT_BOTTOMRIGHT, COLUMN_PLAYER_NAME_X + COLUMN_PLAYER_NAME_WIDTH, y - LINE_HEIGHT)
-            call BlzFrameSetText(LabelFrameColumnPlayerNameEdit[index], GetPlayerName(aiPlayer))
+            // line 1
+            set y = LINE_HEADERS_Y - LINE_HEADERS_HEIGHT
+
+            set playerNameEdit[index] = BlzCreateFrame("EscMenuEditBoxTemplate", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), 0, 0)
+            call BlzFrameSetAbsPoint(playerNameEdit[index], FRAMEPOINT_TOPLEFT, COLUMN_PLAYER_NAME_X, y)
+            call BlzFrameSetAbsPoint(playerNameEdit[index], FRAMEPOINT_BOTTOMRIGHT, COLUMN_PLAYER_NAME_X + COLUMN_PLAYER_NAME_WIDTH, y - LINE_HEIGHT)
+            call BlzFrameSetText(playerNameEdit[index], GetPlayerName(aiPlayer))
             set PlayerNames[index] = GetPlayerName(aiPlayer)
-            call BlzFrameSetEnable(LabelFrameColumnPlayerNameEdit[index], true)
+            call BlzFrameSetEnable(playerNameEdit[index], true)
 
-            set LabelFrameColumnColorPopup[index] = BlzCreateFrame("PlayerColorsPopup", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), 0, 0)
-            call BlzFrameSetAbsPoint(LabelFrameColumnColorPopup[index], FRAMEPOINT_TOPLEFT, COLUMN_COLOR_X, y)
-            call BlzFrameSetAbsPoint(LabelFrameColumnColorPopup[index], FRAMEPOINT_BOTTOMRIGHT, COLUMN_COLOR_X + COLUMN_COLOR_WIDTH, y - LINE_HEIGHT)
+            set colorLabelPopup[index] = BlzCreateFrame("PlayerColorsPopup", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), 0, 0)
+            call BlzFrameSetAbsPoint(colorLabelPopup[index], FRAMEPOINT_TOPLEFT, COLUMN_COLOR_X, y)
+            call BlzFrameSetAbsPoint(colorLabelPopup[index], FRAMEPOINT_BOTTOMRIGHT, COLUMN_COLOR_X + COLUMN_COLOR_WIDTH, y - LINE_HEIGHT)
             set playerColor = IMinBJ(23, GetHandleId(GetPlayerColor(aiPlayer)))
-            call BlzFrameSetValue(LabelFrameColumnColorPopup[index], playerColor)
-            call BlzFrameSetEnable(LabelFrameColumnColorPopup[index], true)
+            call BlzFrameSetValue(colorLabelPopup[index], playerColor)
+            call BlzFrameSetEnable(colorLabelPopup[index], true)
 
-            if (ColorPopupMenuTrigger[index] != null) then
-                call DestroyTrigger(ColorPopupMenuTrigger[index])
-                set ColorPopupMenuTrigger[index] = null
+            if (colorPopupMenuTrigger[index] != null) then
+                call DestroyTrigger(colorPopupMenuTrigger[index])
+                set colorPopupMenuTrigger[index] = null
             endif
 
-            set ColorPopupMenuTrigger[index] = CreateTrigger()
-            call BlzTriggerRegisterFrameEvent(ColorPopupMenuTrigger[index], LabelFrameColumnColorPopup[index], FRAMEEVENT_POPUPMENU_ITEM_CHANGED)
-            call TriggerAddAction(ColorPopupMenuTrigger[index], function ColorPopupMenuFunction)
-            call SaveInteger(h, GetHandleId(ColorPopupMenuTrigger[index]), 0, index)
+            set colorPopupMenuTrigger[index] = CreateTrigger()
+            call BlzTriggerRegisterFrameEvent(colorPopupMenuTrigger[index], colorLabelPopup[index], FRAMEEVENT_POPUPMENU_ITEM_CHANGED)
+            call TriggerAddAction(colorPopupMenuTrigger[index], function ColorPopupMenuFunction)
+            call SaveInteger(h, GetHandleId(colorPopupMenuTrigger[index]), 0, index)
 
-            set LabelFrameColumnColorEdit[index] = BlzCreateFrameByType("BACKDROP", "ColorFrame" + I2S(index), BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), "", 0)
-            call BlzFrameSetAbsPoint(LabelFrameColumnColorEdit[index], FRAMEPOINT_TOPLEFT, COLUMN_COLOR_EDIT_X, y - 0.04)
-            call BlzFrameSetAbsPoint(LabelFrameColumnColorEdit[index], FRAMEPOINT_BOTTOMRIGHT, COLUMN_COLOR_EDIT_X + COLUMN_COLOR_EDIT_WIDTH, y - 0.04 - COLUMN_COLOR_EDIT_HEIGHT)
-            call BlzFrameSetTexture(LabelFrameColumnColorEdit[index], GetPlayerColorTexture(GetPlayerColor(aiPlayer)), 0, true)
-            call BlzFrameSetEnable(LabelFrameColumnColorEdit[index], true)
+            set colorComboBox[index] = BlzCreateFrameByType("BACKDROP", "ColorFrame" + I2S(index), BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), "", 0)
+            call BlzFrameSetAbsPoint(colorComboBox[index], FRAMEPOINT_TOPLEFT, COLUMN_COLOR_EDIT_X, y - 0.04)
+            call BlzFrameSetAbsPoint(colorComboBox[index], FRAMEPOINT_BOTTOMRIGHT, COLUMN_COLOR_EDIT_X + COLUMN_COLOR_EDIT_WIDTH, y - 0.04 - COLUMN_COLOR_EDIT_HEIGHT)
+            call BlzFrameSetTexture(colorComboBox[index], GetPlayerColorTexture(GetPlayerColor(aiPlayer)), 0, true)
+            call BlzFrameSetEnable(colorComboBox[index], true)
 
             //call BJDebugMsg("Texture: " + GetPlayerColorTexture(GetPlayerColor(aiPlayer)))
 
-            set LabelFrameColumnColorArrowUp[index] = BlzCreateFrameByType("BUTTON", "ColorUpButton" + I2S(index), BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), "ScoreScreenTabButtonTemplate", 0)
-            call BlzFrameSetAbsPoint(LabelFrameColumnColorArrowUp[index], FRAMEPOINT_TOPLEFT, COLUMN_COLOR_X, y - 0.04)
-            call BlzFrameSetAbsPoint(LabelFrameColumnColorArrowUp[index], FRAMEPOINT_BOTTOMRIGHT, COLUMN_COLOR_X + 0.02, y - 0.02 - 0.04)
-            call BlzFrameSetEnable(LabelFrameColumnColorArrowUp[index], true)
+            set colorLabelArrowUp[index] = BlzCreateFrameByType("BUTTON", "ColorUpButton" + I2S(index), BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), "ScoreScreenTabButtonTemplate", 0)
+            call BlzFrameSetAbsPoint(colorLabelArrowUp[index], FRAMEPOINT_TOPLEFT, COLUMN_COLOR_X, y - 0.04)
+            call BlzFrameSetAbsPoint(colorLabelArrowUp[index], FRAMEPOINT_BOTTOMRIGHT, COLUMN_COLOR_X + 0.02, y - 0.02 - 0.04)
+            call BlzFrameSetEnable(colorLabelArrowUp[index], true)
 
-            set LabelFrameColumnColorArrowUpFrame[index] = BlzCreateFrameByType("BACKDROP", "ColorUpFrame" + I2S(index), LabelFrameColumnColorArrowUp[index], "", 0)
-            call BlzFrameSetAllPoints(LabelFrameColumnColorArrowUpFrame[index], LabelFrameColumnColorArrowUp[index])
-            call BlzFrameSetTexture(LabelFrameColumnColorArrowUpFrame[index], "ReplaceableTextures\\CommandButtons\\BTNReplay-SpeedUp.blp", 0, true)
-            call BlzFrameSetEnable(LabelFrameColumnColorArrowUpFrame[index], true)
+            set colorLabelArrowUpFrame[index] = BlzCreateFrameByType("BACKDROP", "ColorUpFrame" + I2S(index), colorLabelArrowUp[index], "", 0)
+            call BlzFrameSetAllPoints(colorLabelArrowUpFrame[index], colorLabelArrowUp[index])
+            call BlzFrameSetTexture(colorLabelArrowUpFrame[index], "ReplaceableTextures\\CommandButtons\\BTNReplay-SpeedUp.blp", 0, true)
+            call BlzFrameSetEnable(colorLabelArrowUpFrame[index], true)
 
-            if (ColorUpTrigger[index] != null) then
-                call DestroyTrigger(ColorUpTrigger[index])
-                set ColorUpTrigger[index] = null
+            if (colorUpTrigger[index] != null) then
+                call DestroyTrigger(colorUpTrigger[index])
+                set colorUpTrigger[index] = null
             endif
 
-            set ColorUpTrigger[index] = CreateTrigger()
-            call BlzTriggerRegisterFrameEvent(ColorUpTrigger[index], LabelFrameColumnColorArrowUp[index], FRAMEEVENT_CONTROL_CLICK)
-            call TriggerAddAction(ColorUpTrigger[index], function ColorUpFunction)
-            call SaveInteger(h, GetHandleId(ColorUpTrigger[index]), 0, index)
+            set colorUpTrigger[index] = CreateTrigger()
+            call BlzTriggerRegisterFrameEvent(colorUpTrigger[index], colorLabelArrowUp[index], FRAMEEVENT_CONTROL_CLICK)
+            call TriggerAddAction(colorUpTrigger[index], function ColorUpFunction)
+            call SaveInteger(h, GetHandleId(colorUpTrigger[index]), 0, index)
 
-            set LabelFrameColumnColorArrowDown[index] = BlzCreateFrameByType("BUTTON", "ColorDownButton" + I2S(index), BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), "ScoreScreenTabButtonTemplate", 0)
-            call BlzFrameSetAbsPoint(LabelFrameColumnColorArrowDown[index], FRAMEPOINT_TOPLEFT, COLUMN_COLOR_X, y - 0.07)
-            call BlzFrameSetAbsPoint(LabelFrameColumnColorArrowDown[index], FRAMEPOINT_BOTTOMRIGHT, COLUMN_COLOR_X + 0.02, y - 0.02 - 0.07)
-            call BlzFrameSetEnable(LabelFrameColumnColorArrowDown[index], true)
+            set colorLabelArrowDown[index] = BlzCreateFrameByType("BUTTON", "ColorDownButton" + I2S(index), BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), "ScoreScreenTabButtonTemplate", 0)
+            call BlzFrameSetAbsPoint(colorLabelArrowDown[index], FRAMEPOINT_TOPLEFT, COLUMN_COLOR_X, y - 0.07)
+            call BlzFrameSetAbsPoint(colorLabelArrowDown[index], FRAMEPOINT_BOTTOMRIGHT, COLUMN_COLOR_X + 0.02, y - 0.02 - 0.07)
+            call BlzFrameSetEnable(colorLabelArrowDown[index], true)
 
-            set LabelFrameColumnColorArrowDownFrame[index] = BlzCreateFrameByType("BACKDROP", "ColoreDownFrame" + I2S(index), LabelFrameColumnColorArrowDown[index], "", 0)
-            call BlzFrameSetAllPoints(LabelFrameColumnColorArrowDownFrame[index], LabelFrameColumnColorArrowDown[index])
-            call BlzFrameSetTexture(LabelFrameColumnColorArrowDownFrame[index], "ReplaceableTextures\\CommandButtons\\BTNReplay-SpeedDown.blp", 0, true)
-            call BlzFrameSetEnable(LabelFrameColumnColorArrowDownFrame[index], true)
+            set colorLabelArrowDownFrame[index] = BlzCreateFrameByType("BACKDROP", "ColoreDownFrame" + I2S(index), colorLabelArrowDown[index], "", 0)
+            call BlzFrameSetAllPoints(colorLabelArrowDownFrame[index], colorLabelArrowDown[index])
+            call BlzFrameSetTexture(colorLabelArrowDownFrame[index], "ReplaceableTextures\\CommandButtons\\BTNReplay-SpeedDown.blp", 0, true)
+            call BlzFrameSetEnable(colorLabelArrowDownFrame[index], true)
 
-            if (ColorDownTrigger[index] != null) then
-                call DestroyTrigger(ColorDownTrigger[index])
-                set ColorDownTrigger[index] = null
+            if (colorDownTrigger[index] != null) then
+                call DestroyTrigger(colorDownTrigger[index])
+                set colorDownTrigger[index] = null
             endif
 
-            set ColorDownTrigger[index] = CreateTrigger()
-            call BlzTriggerRegisterFrameEvent(ColorDownTrigger[index], LabelFrameColumnColorArrowDown[index], FRAMEEVENT_CONTROL_CLICK)
-            call TriggerAddAction(ColorDownTrigger[index], function ColorDownFunction)
-            call SaveInteger(h, GetHandleId(ColorDownTrigger[index]), 0, index)
+            set colorDownTrigger[index] = CreateTrigger()
+            call BlzTriggerRegisterFrameEvent(colorDownTrigger[index], colorLabelArrowDown[index], FRAMEEVENT_CONTROL_CLICK)
+            call TriggerAddAction(colorDownTrigger[index], function ColorDownFunction)
+            call SaveInteger(h, GetHandleId(colorDownTrigger[index]), 0, index)
 
-            set LabelFrameColumnTeamEdit[index] = BlzCreateFrame("TeamPopup", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), 0, 0)
-            call BlzFrameSetAbsPoint(LabelFrameColumnTeamEdit[index], FRAMEPOINT_TOPLEFT, COLUMN_TEAM_X, y)
-            call BlzFrameSetAbsPoint(LabelFrameColumnTeamEdit[index], FRAMEPOINT_BOTTOMRIGHT, COLUMN_TEAM_X + COLUMN_TEAM_WIDTH, y - LINE_HEIGHT)
+            set teamComboBox[index] = BlzCreateFrame("TeamPopup", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), 0, 0)
+            call BlzFrameSetAbsPoint(teamComboBox[index], FRAMEPOINT_TOPLEFT, COLUMN_TEAM_X, y)
+            call BlzFrameSetAbsPoint(teamComboBox[index], FRAMEPOINT_BOTTOMRIGHT, COLUMN_TEAM_X + COLUMN_TEAM_WIDTH, y - LINE_HEIGHT)
             set team = IMinBJ(TEAM_MAX_AI - 1, GetPlayerTeam(aiPlayer))
-            call BlzFrameSetValue(LabelFrameColumnTeamEdit[index], team)
+            call BlzFrameSetValue(teamComboBox[index], team)
             set Teams[index] = team
-            call BlzFrameSetEnable(LabelFrameColumnTeamEdit[index], true)
+            call BlzFrameSetEnable(teamComboBox[index], true)
 
-            set LabelFrameColumnHeroEdit[index] = BlzCreateFrame("HeroesPopup", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), 0, 0)
-            call BlzFrameSetAbsPoint(LabelFrameColumnHeroEdit[index], FRAMEPOINT_TOPLEFT, COLUMN_HERO_X, y)
-            call BlzFrameSetAbsPoint(LabelFrameColumnHeroEdit[index], FRAMEPOINT_BOTTOMRIGHT, COLUMN_HERO_X + COLUMN_HERO_WIDTH, y - LINE_HEIGHT)
-            call BlzFrameSetValue(LabelFrameColumnHeroEdit[index], HEROES_MENU_ITEM_RANDOM_MATCHING_RACE)
+            set heroComboBox[index] = BlzCreateFrame("HeroesPopup", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), 0, 0)
+            call BlzFrameSetAbsPoint(heroComboBox[index], FRAMEPOINT_TOPLEFT, COLUMN_HERO_X, y)
+            call BlzFrameSetAbsPoint(heroComboBox[index], FRAMEPOINT_BOTTOMRIGHT, COLUMN_HERO_X + COLUMN_HERO_WIDTH, y - LINE_HEIGHT)
+            call BlzFrameSetValue(heroComboBox[index], HEROES_MENU_ITEM_RANDOM_MATCHING_RACE)
             set Heroes[index] = HEROES_MENU_ITEM_RANDOM_MATCHING_RACE
-            call BlzFrameSetEnable(LabelFrameColumnHeroEdit[index], true)
+            call BlzFrameSetEnable(heroComboBox[index], true)
 
-            set LabelFrameColumnHeroEditArrowUp[index] = BlzCreateFrameByType("BUTTON", "HeroUpButton" + I2S(index), BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), "ScoreScreenTabButtonTemplate", 0)
-            call BlzFrameSetAbsPoint(LabelFrameColumnHeroEditArrowUp[index], FRAMEPOINT_TOPLEFT, COLUMN_HERO_X, y - 0.04)
-            call BlzFrameSetAbsPoint(LabelFrameColumnHeroEditArrowUp[index], FRAMEPOINT_BOTTOMRIGHT, COLUMN_HERO_X + 0.02, y - 0.02 - 0.04)
-            call BlzFrameSetEnable(LabelFrameColumnHeroEditArrowUp[index], true)
+            set heroComboBoxArrowUp[index] = BlzCreateFrameByType("BUTTON", "HeroUpButton" + I2S(index), BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), "ScoreScreenTabButtonTemplate", 0)
+            call BlzFrameSetAbsPoint(heroComboBoxArrowUp[index], FRAMEPOINT_TOPLEFT, COLUMN_HERO_X, y - 0.04)
+            call BlzFrameSetAbsPoint(heroComboBoxArrowUp[index], FRAMEPOINT_BOTTOMRIGHT, COLUMN_HERO_X + 0.02, y - 0.02 - 0.04)
+            call BlzFrameSetEnable(heroComboBoxArrowUp[index], true)
 
-            set LabelFrameColumnHeroEditArrowUpFrame[index] = BlzCreateFrameByType("BACKDROP", "HeroUpFrame" + I2S(index), LabelFrameColumnHeroEditArrowUp[index], "", 0)
-            call BlzFrameSetAllPoints(LabelFrameColumnHeroEditArrowUpFrame[index], LabelFrameColumnHeroEditArrowUp[index])
-            call BlzFrameSetTexture(LabelFrameColumnHeroEditArrowUpFrame[index], "ReplaceableTextures\\CommandButtons\\BTNReplay-SpeedUp.blp", 0, true)
-            call BlzFrameSetEnable(LabelFrameColumnHeroEditArrowUpFrame[index], true)
+            set heroComboBoxArrowUpFrame[index] = BlzCreateFrameByType("BACKDROP", "HeroUpFrame" + I2S(index), heroComboBoxArrowUp[index], "", 0)
+            call BlzFrameSetAllPoints(heroComboBoxArrowUpFrame[index], heroComboBoxArrowUp[index])
+            call BlzFrameSetTexture(heroComboBoxArrowUpFrame[index], "ReplaceableTextures\\CommandButtons\\BTNReplay-SpeedUp.blp", 0, true)
+            call BlzFrameSetEnable(heroComboBoxArrowUpFrame[index], true)
 
-            if (HeroUpTrigger[index] != null) then
-                call DestroyTrigger(HeroUpTrigger[index])
-                set HeroUpTrigger[index] = null
+            if (heroUpTrigger[index] != null) then
+                call DestroyTrigger(heroUpTrigger[index])
+                set heroUpTrigger[index] = null
             endif
 
-            set HeroUpTrigger[index] = CreateTrigger()
-            call BlzTriggerRegisterFrameEvent(HeroUpTrigger[index], LabelFrameColumnHeroEditArrowUp[index], FRAMEEVENT_CONTROL_CLICK)
-            call TriggerAddAction(HeroUpTrigger[index], function HeroUpFunction)
-            call SaveInteger(h, GetHandleId(HeroUpTrigger[index]), 0, index)
+            set heroUpTrigger[index] = CreateTrigger()
+            call BlzTriggerRegisterFrameEvent(heroUpTrigger[index], heroComboBoxArrowUp[index], FRAMEEVENT_CONTROL_CLICK)
+            call TriggerAddAction(heroUpTrigger[index], function HeroUpFunction)
+            call SaveInteger(h, GetHandleId(heroUpTrigger[index]), 0, index)
 
-            set LabelFrameColumnHeroEditArrowDown[index] = BlzCreateFrameByType("BUTTON", "HeroDownButton" + I2S(index), BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), "ScoreScreenTabButtonTemplate", 0)
-            call BlzFrameSetAbsPoint(LabelFrameColumnHeroEditArrowDown[index], FRAMEPOINT_TOPLEFT, COLUMN_HERO_X, y - 0.07)
-            call BlzFrameSetAbsPoint(LabelFrameColumnHeroEditArrowDown[index], FRAMEPOINT_BOTTOMRIGHT, COLUMN_HERO_X + 0.02, y - 0.02 - 0.07)
-            call BlzFrameSetEnable(LabelFrameColumnHeroEditArrowDown[index], true)
+            set heroComboBoxArrowDown[index] = BlzCreateFrameByType("BUTTON", "HeroDownButton" + I2S(index), BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), "ScoreScreenTabButtonTemplate", 0)
+            call BlzFrameSetAbsPoint(heroComboBoxArrowDown[index], FRAMEPOINT_TOPLEFT, COLUMN_HERO_X, y - 0.07)
+            call BlzFrameSetAbsPoint(heroComboBoxArrowDown[index], FRAMEPOINT_BOTTOMRIGHT, COLUMN_HERO_X + 0.02, y - 0.02 - 0.07)
+            call BlzFrameSetEnable(heroComboBoxArrowDown[index], true)
 
-            set LabelFrameColumnHeroEditArrowDownFrame[index] = BlzCreateFrameByType("BACKDROP", "HeroeDownFrame" + I2S(index), LabelFrameColumnHeroEditArrowDown[index], "", 0)
-            call BlzFrameSetAllPoints(LabelFrameColumnHeroEditArrowDownFrame[index], LabelFrameColumnHeroEditArrowDown[index])
-            call BlzFrameSetTexture(LabelFrameColumnHeroEditArrowDownFrame[index], "ReplaceableTextures\\CommandButtons\\BTNReplay-SpeedDown.blp", 0, true)
-            call BlzFrameSetEnable(LabelFrameColumnHeroEditArrowDownFrame[index], true)
+            set heroComboBoxArrowDownFrame[index] = BlzCreateFrameByType("BACKDROP", "HeroeDownFrame" + I2S(index), heroComboBoxArrowDown[index], "", 0)
+            call BlzFrameSetAllPoints(heroComboBoxArrowDownFrame[index], heroComboBoxArrowDown[index])
+            call BlzFrameSetTexture(heroComboBoxArrowDownFrame[index], "ReplaceableTextures\\CommandButtons\\BTNReplay-SpeedDown.blp", 0, true)
+            call BlzFrameSetEnable(heroComboBoxArrowDownFrame[index], true)
 
-            if (HeroDownTrigger[index] != null) then
-                call DestroyTrigger(HeroDownTrigger[index])
-                set HeroDownTrigger[index] = null
+            if (heroDownTrigger[index] != null) then
+                call DestroyTrigger(heroDownTrigger[index])
+                set heroDownTrigger[index] = null
             endif
 
-            set HeroDownTrigger[index] = CreateTrigger()
-            call BlzTriggerRegisterFrameEvent(HeroDownTrigger[index], LabelFrameColumnHeroEditArrowDown[index], FRAMEEVENT_CONTROL_CLICK)
-            call TriggerAddAction(HeroDownTrigger[index], function HeroDownFunction)
-            call SaveInteger(h, GetHandleId(HeroDownTrigger[index]), 0, index)
+            set heroDownTrigger[index] = CreateTrigger()
+            call BlzTriggerRegisterFrameEvent(heroDownTrigger[index], heroComboBoxArrowDown[index], FRAMEEVENT_CONTROL_CLICK)
+            call TriggerAddAction(heroDownTrigger[index], function HeroDownFunction)
+            call SaveInteger(h, GetHandleId(heroDownTrigger[index]), 0, index)
 
-            set LabelFrameColumnHeroStartLevelEdit[index] = BlzCreateFrame("EscMenuEditBoxTemplate", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), 0, 0)
-            call BlzFrameSetAbsPoint(LabelFrameColumnHeroStartLevelEdit[index], FRAMEPOINT_TOPLEFT, COLUMN_HERO_START_LEVEL_X, y)
-            call BlzFrameSetAbsPoint(LabelFrameColumnHeroStartLevelEdit[index], FRAMEPOINT_BOTTOMRIGHT, COLUMN_HERO_START_LEVEL_X + COLUMN_HERO_START_LEVEL_WIDTH, y - LINE_HEIGHT)
-            call BlzFrameSetText(LabelFrameColumnHeroStartLevelEdit[index], "1")
+            set heroLabelStartLevelEdit[index] = BlzCreateFrame("EscMenuEditBoxTemplate", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), 0, 0)
+            call BlzFrameSetAbsPoint(heroLabelStartLevelEdit[index], FRAMEPOINT_TOPLEFT, COLUMN_HERO_START_LEVEL_X, y)
+            call BlzFrameSetAbsPoint(heroLabelStartLevelEdit[index], FRAMEPOINT_BOTTOMRIGHT, COLUMN_HERO_START_LEVEL_X + COLUMN_HERO_START_LEVEL_WIDTH, y - LINE_HEIGHT)
+            call BlzFrameSetText(heroLabelStartLevelEdit[index], "1")
             set HeroStartLevels[index] = 1
-            call BlzFrameSetEnable(LabelFrameColumnHeroStartLevelEdit[index], true)
+            call BlzFrameSetEnable(heroLabelStartLevelEdit[index], true)
 
-            set LabelFrameColumnStartLocationEdit[index] = BlzCreateFrame("StartLocationsPopup", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), 0, 0)
-            call BlzFrameSetAbsPoint(LabelFrameColumnStartLocationEdit[index], FRAMEPOINT_TOPLEFT, COLUMN_START_LOCATION_X, y)
-            call BlzFrameSetAbsPoint(LabelFrameColumnStartLocationEdit[index], FRAMEPOINT_BOTTOMRIGHT, COLUMN_START_LOCATION_X + COLUMN_START_LOCATION_WIDTH, y - LINE_HEIGHT)
-            call BlzFrameSetValue(LabelFrameColumnStartLocationEdit[index], 0)
+            // line 2
+            set y = y - LINE_HEIGHT - LINE_HEIGHT_SPACING - LINE_HEADERS_HEIGHT
+
+            set startLocationComboBox[index] = BlzCreateFrame("StartLocationsPopup", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), 0, 0)
+            call BlzFrameSetAbsPoint(startLocationComboBox[index], FRAMEPOINT_TOPLEFT, COLUMN_START_LOCATION_X, y)
+            call BlzFrameSetAbsPoint(startLocationComboBox[index], FRAMEPOINT_BOTTOMRIGHT, COLUMN_START_LOCATION_X + COLUMN_START_LOCATION_WIDTH, y - LINE_HEIGHT)
+            call BlzFrameSetValue(startLocationComboBox[index], 0)
             set StartLocations[index] = 0
-            call BlzFrameSetEnable(LabelFrameColumnStartLocationEdit[index], true)
+            call BlzFrameSetEnable(startLocationComboBox[index], true)
 
-            set LabelFrameColumnStartLocationEditArrowUp[index] = BlzCreateFrameByType("BUTTON", "StartLocationUpButton" + I2S(index), BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), "ScoreScreenTabButtonTemplate", 0)
-            call BlzFrameSetAbsPoint(LabelFrameColumnStartLocationEditArrowUp[index], FRAMEPOINT_TOPLEFT, COLUMN_START_LOCATION_X, y - 0.04)
-            call BlzFrameSetAbsPoint(LabelFrameColumnStartLocationEditArrowUp[index], FRAMEPOINT_BOTTOMRIGHT, COLUMN_START_LOCATION_X + 0.02, y - 0.02 - 0.04)
-            call BlzFrameSetEnable(LabelFrameColumnStartLocationEditArrowUp[index], true)
+            set startLocationComboBoxArrowUp[index] = BlzCreateFrameByType("BUTTON", "StartLocationUpButton" + I2S(index), BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), "ScoreScreenTabButtonTemplate", 0)
+            call BlzFrameSetAbsPoint(startLocationComboBoxArrowUp[index], FRAMEPOINT_TOPLEFT, COLUMN_START_LOCATION_X, y - 0.04)
+            call BlzFrameSetAbsPoint(startLocationComboBoxArrowUp[index], FRAMEPOINT_BOTTOMRIGHT, COLUMN_START_LOCATION_X + 0.02, y - 0.02 - 0.04)
+            call BlzFrameSetEnable(startLocationComboBoxArrowUp[index], true)
 
-            set LabelFrameColumnStartLocationEditArrowUpFrame[index] = BlzCreateFrameByType("BACKDROP", "StartLocationUpFrame" + I2S(index), LabelFrameColumnStartLocationEditArrowUp[index], "", 0)
-            call BlzFrameSetAllPoints(LabelFrameColumnStartLocationEditArrowUpFrame[index], LabelFrameColumnStartLocationEditArrowUp[index])
-            call BlzFrameSetTexture(LabelFrameColumnStartLocationEditArrowUpFrame[index], "ReplaceableTextures\\CommandButtons\\BTNReplay-SpeedUp.blp", 0, true)
-            call BlzFrameSetEnable(LabelFrameColumnStartLocationEditArrowUpFrame[index], true)
+            set startLocationComboBoxArrowUpFrame[index] = BlzCreateFrameByType("BACKDROP", "StartLocationUpFrame" + I2S(index), startLocationComboBoxArrowUp[index], "", 0)
+            call BlzFrameSetAllPoints(startLocationComboBoxArrowUpFrame[index], startLocationComboBoxArrowUp[index])
+            call BlzFrameSetTexture(startLocationComboBoxArrowUpFrame[index], "ReplaceableTextures\\CommandButtons\\BTNReplay-SpeedUp.blp", 0, true)
+            call BlzFrameSetEnable(startLocationComboBoxArrowUpFrame[index], true)
 
-            if (StartLocationUpTrigger[index] != null) then
-                call DestroyTrigger(StartLocationUpTrigger[index])
-                set StartLocationUpTrigger[index] = null
+            if (startLocationUpTrigger[index] != null) then
+                call DestroyTrigger(startLocationUpTrigger[index])
+                set startLocationUpTrigger[index] = null
             endif
 
-            set StartLocationUpTrigger[index] = CreateTrigger()
-            call BlzTriggerRegisterFrameEvent(StartLocationUpTrigger[index], LabelFrameColumnStartLocationEditArrowUp[index], FRAMEEVENT_CONTROL_CLICK)
-            call TriggerAddAction(StartLocationUpTrigger[index], function StartLocationUpFunction)
-            call SaveInteger(h, GetHandleId(StartLocationUpTrigger[index]), 0, index)
+            set startLocationUpTrigger[index] = CreateTrigger()
+            call BlzTriggerRegisterFrameEvent(startLocationUpTrigger[index], startLocationComboBoxArrowUp[index], FRAMEEVENT_CONTROL_CLICK)
+            call TriggerAddAction(startLocationUpTrigger[index], function StartLocationUpFunction)
+            call SaveInteger(h, GetHandleId(startLocationUpTrigger[index]), 0, index)
 
-            set LabelFrameColumnStartLocationEditArrowDown[index] = BlzCreateFrameByType("BUTTON", "StartLocationDownButton" + I2S(index), BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), "ScoreScreenTabButtonTemplate", 0)
-            call BlzFrameSetAbsPoint(LabelFrameColumnStartLocationEditArrowDown[index], FRAMEPOINT_TOPLEFT, COLUMN_START_LOCATION_X, y - 0.07)
-            call BlzFrameSetAbsPoint(LabelFrameColumnStartLocationEditArrowDown[index], FRAMEPOINT_BOTTOMRIGHT, COLUMN_START_LOCATION_X + 0.02, y - 0.02 - 0.07)
-            call BlzFrameSetEnable(LabelFrameColumnStartLocationEditArrowDown[index], true)
+            set startLocationComboBoxArrowDown[index] = BlzCreateFrameByType("BUTTON", "StartLocationDownButton" + I2S(index), BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), "ScoreScreenTabButtonTemplate", 0)
+            call BlzFrameSetAbsPoint(startLocationComboBoxArrowDown[index], FRAMEPOINT_TOPLEFT, COLUMN_START_LOCATION_X, y - 0.07)
+            call BlzFrameSetAbsPoint(startLocationComboBoxArrowDown[index], FRAMEPOINT_BOTTOMRIGHT, COLUMN_START_LOCATION_X + 0.02, y - 0.02 - 0.07)
+            call BlzFrameSetEnable(startLocationComboBoxArrowDown[index], true)
 
-            set LabelFrameColumnStartLocationEditArrowDownFrame[index] = BlzCreateFrameByType("BACKDROP", "StartLocationDownFrame" + I2S(index), LabelFrameColumnStartLocationEditArrowDown[index], "", 0)
-            call BlzFrameSetAllPoints(LabelFrameColumnStartLocationEditArrowDownFrame[index], LabelFrameColumnStartLocationEditArrowDown[index])
-            call BlzFrameSetTexture(LabelFrameColumnStartLocationEditArrowDownFrame[index], "ReplaceableTextures\\CommandButtons\\BTNReplay-SpeedDown.blp", 0, true)
-            call BlzFrameSetEnable(LabelFrameColumnStartLocationEditArrowDownFrame[index], true)
+            set startLocationComboBoxArrowDownFrame[index] = BlzCreateFrameByType("BACKDROP", "StartLocationDownFrame" + I2S(index), startLocationComboBoxArrowDown[index], "", 0)
+            call BlzFrameSetAllPoints(startLocationComboBoxArrowDownFrame[index], startLocationComboBoxArrowDown[index])
+            call BlzFrameSetTexture(startLocationComboBoxArrowDownFrame[index], "ReplaceableTextures\\CommandButtons\\BTNReplay-SpeedDown.blp", 0, true)
+            call BlzFrameSetEnable(startLocationComboBoxArrowDownFrame[index], true)
 
-            if (StartLocationDownTrigger[index] != null) then
-                call DestroyTrigger(StartLocationDownTrigger[index])
-                set StartLocationDownTrigger[index] = null
+            if (startLocationDownTrigger[index] != null) then
+                call DestroyTrigger(startLocationDownTrigger[index])
+                set startLocationDownTrigger[index] = null
             endif
 
-            set StartLocationDownTrigger[index] = CreateTrigger()
-            call BlzTriggerRegisterFrameEvent(StartLocationDownTrigger[index], LabelFrameColumnStartLocationEditArrowDown[index], FRAMEEVENT_CONTROL_CLICK)
-            call TriggerAddAction(StartLocationDownTrigger[index], function StartLocationDownFunction)
-            call SaveInteger(h, GetHandleId(StartLocationDownTrigger[index]), 0, index)
+            set startLocationDownTrigger[index] = CreateTrigger()
+            call BlzTriggerRegisterFrameEvent(startLocationDownTrigger[index], startLocationComboBoxArrowDown[index], FRAMEEVENT_CONTROL_CLICK)
+            call TriggerAddAction(startLocationDownTrigger[index], function StartLocationDownFunction)
+            call SaveInteger(h, GetHandleId(startLocationDownTrigger[index]), 0, index)
 
-            set LabelFrameColumnRaceEdit[index] = BlzCreateFrame("RacesPopup", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), 0, 0)
-            call BlzFrameSetAbsPoint(LabelFrameColumnRaceEdit[index], FRAMEPOINT_TOPLEFT, COLUMN_RACE_X, y)
-            call BlzFrameSetAbsPoint(LabelFrameColumnRaceEdit[index], FRAMEPOINT_BOTTOMRIGHT, COLUMN_RACE_X + COLUMN_RACE_WIDTH, y - LINE_HEIGHT)
-            call BlzFrameSetValue(LabelFrameColumnRaceEdit[index], RACES_MENU_ITEM_MATCHING_START_LOCATION)
+            set raceLabelEdit[index] = BlzCreateFrame("RacesPopup", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), 0, 0)
+            call BlzFrameSetAbsPoint(raceLabelEdit[index], FRAMEPOINT_TOPLEFT, COLUMN_RACE_X, y)
+            call BlzFrameSetAbsPoint(raceLabelEdit[index], FRAMEPOINT_BOTTOMRIGHT, COLUMN_RACE_X + COLUMN_RACE_WIDTH, y - LINE_HEIGHT)
+            call BlzFrameSetValue(raceLabelEdit[index], RACES_MENU_ITEM_MATCHING_START_LOCATION)
             set Races[index] = RACES_MENU_ITEM_MATCHING_START_LOCATION
-            call BlzFrameSetEnable(LabelFrameColumnRaceEdit[index], true)
+            call BlzFrameSetEnable(raceLabelEdit[index], true)
 
-            set LabelFrameColumnRaceEditArrowUp[index] = BlzCreateFrameByType("BUTTON", "RaceUpButton" + I2S(index), BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), "ScoreScreenTabButtonTemplate", 0)
-            call BlzFrameSetAbsPoint(LabelFrameColumnRaceEditArrowUp[index], FRAMEPOINT_TOPLEFT, COLUMN_RACE_X, y - 0.04)
-            call BlzFrameSetAbsPoint(LabelFrameColumnRaceEditArrowUp[index], FRAMEPOINT_BOTTOMRIGHT, COLUMN_RACE_X + 0.02, y - 0.02 - 0.04)
-            call BlzFrameSetEnable(LabelFrameColumnRaceEditArrowUp[index], true)
+            set raceLabelEditArrowUp[index] = BlzCreateFrameByType("BUTTON", "RaceUpButton" + I2S(index), BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), "ScoreScreenTabButtonTemplate", 0)
+            call BlzFrameSetAbsPoint(raceLabelEditArrowUp[index], FRAMEPOINT_TOPLEFT, COLUMN_RACE_X, y - 0.04)
+            call BlzFrameSetAbsPoint(raceLabelEditArrowUp[index], FRAMEPOINT_BOTTOMRIGHT, COLUMN_RACE_X + 0.02, y - 0.02 - 0.04)
+            call BlzFrameSetEnable(raceLabelEditArrowUp[index], true)
 
-            set LabelFrameColumnRaceEditArrowUpFrame[index] = BlzCreateFrameByType("BACKDROP", "RaceUpFrame" + I2S(index), LabelFrameColumnRaceEditArrowUp[index], "", 0)
-            call BlzFrameSetAllPoints(LabelFrameColumnRaceEditArrowUpFrame[index], LabelFrameColumnRaceEditArrowUp[index])
-            call BlzFrameSetTexture(LabelFrameColumnRaceEditArrowUpFrame[index], "ReplaceableTextures\\CommandButtons\\BTNReplay-SpeedUp.blp", 0, true)
-            call BlzFrameSetEnable(LabelFrameColumnRaceEditArrowUpFrame[index], true)
+            set raceLabelEditArrowUpFrame[index] = BlzCreateFrameByType("BACKDROP", "RaceUpFrame" + I2S(index), raceLabelEditArrowUp[index], "", 0)
+            call BlzFrameSetAllPoints(raceLabelEditArrowUpFrame[index], raceLabelEditArrowUp[index])
+            call BlzFrameSetTexture(raceLabelEditArrowUpFrame[index], "ReplaceableTextures\\CommandButtons\\BTNReplay-SpeedUp.blp", 0, true)
+            call BlzFrameSetEnable(raceLabelEditArrowUpFrame[index], true)
 
-            if (RaceUpTrigger[index] != null) then
-                call DestroyTrigger(RaceUpTrigger[index])
-                set RaceUpTrigger[index] = null
+            if (raceUpTrigger[index] != null) then
+                call DestroyTrigger(raceUpTrigger[index])
+                set raceUpTrigger[index] = null
             endif
 
-            set RaceUpTrigger[index] = CreateTrigger()
-            call BlzTriggerRegisterFrameEvent(RaceUpTrigger[index], LabelFrameColumnRaceEditArrowUp[index], FRAMEEVENT_CONTROL_CLICK)
-            call TriggerAddAction(RaceUpTrigger[index], function RaceUpFunction)
-            call SaveInteger(h, GetHandleId(RaceUpTrigger[index]), 0, index)
+            set raceUpTrigger[index] = CreateTrigger()
+            call BlzTriggerRegisterFrameEvent(raceUpTrigger[index], raceLabelEditArrowUp[index], FRAMEEVENT_CONTROL_CLICK)
+            call TriggerAddAction(raceUpTrigger[index], function RaceUpFunction)
+            call SaveInteger(h, GetHandleId(raceUpTrigger[index]), 0, index)
 
-            set LabelFrameColumnRaceEditArrowDown[index] = BlzCreateFrameByType("BUTTON", "RaceDownButton" + I2S(index), BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), "ScoreScreenTabButtonTemplate", 0)
-            call BlzFrameSetAbsPoint(LabelFrameColumnRaceEditArrowDown[index], FRAMEPOINT_TOPLEFT, COLUMN_RACE_X, y - 0.07)
-            call BlzFrameSetAbsPoint(LabelFrameColumnRaceEditArrowDown[index], FRAMEPOINT_BOTTOMRIGHT, COLUMN_RACE_X + 0.02, y - 0.02 - 0.07)
-            call BlzFrameSetEnable(LabelFrameColumnRaceEditArrowDown[index], true)
+            set raceLabelEditArrowDown[index] = BlzCreateFrameByType("BUTTON", "RaceDownButton" + I2S(index), BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), "ScoreScreenTabButtonTemplate", 0)
+            call BlzFrameSetAbsPoint(raceLabelEditArrowDown[index], FRAMEPOINT_TOPLEFT, COLUMN_RACE_X, y - 0.07)
+            call BlzFrameSetAbsPoint(raceLabelEditArrowDown[index], FRAMEPOINT_BOTTOMRIGHT, COLUMN_RACE_X + 0.02, y - 0.02 - 0.07)
+            call BlzFrameSetEnable(raceLabelEditArrowDown[index], true)
 
-            set LabelFrameColumnRaceEditArrowDownFrame[index] = BlzCreateFrameByType("BACKDROP", "RaceDownFrame" + I2S(index), LabelFrameColumnRaceEditArrowDown[index], "", 0)
-            call BlzFrameSetAllPoints(LabelFrameColumnRaceEditArrowDownFrame[index], LabelFrameColumnRaceEditArrowDown[index])
-            call BlzFrameSetTexture(LabelFrameColumnRaceEditArrowDownFrame[index], "ReplaceableTextures\\CommandButtons\\BTNReplay-SpeedDown.blp", 0, true)
-            call BlzFrameSetEnable(LabelFrameColumnRaceEditArrowDownFrame[index], true)
+            set raceLabelEditArrowDownFrame[index] = BlzCreateFrameByType("BACKDROP", "RaceDownFrame" + I2S(index), raceLabelEditArrowDown[index], "", 0)
+            call BlzFrameSetAllPoints(raceLabelEditArrowDownFrame[index], raceLabelEditArrowDown[index])
+            call BlzFrameSetTexture(raceLabelEditArrowDownFrame[index], "ReplaceableTextures\\CommandButtons\\BTNReplay-SpeedDown.blp", 0, true)
+            call BlzFrameSetEnable(raceLabelEditArrowDownFrame[index], true)
 
-            if (RaceDownTrigger[index] != null) then
-                call DestroyTrigger(RaceDownTrigger[index])
-                set RaceDownTrigger[index] = null
+            if (raceDownTrigger[index] != null) then
+                call DestroyTrigger(raceDownTrigger[index])
+                set raceDownTrigger[index] = null
             endif
 
-            set RaceDownTrigger[index] = CreateTrigger()
-            call BlzTriggerRegisterFrameEvent(RaceDownTrigger[index], LabelFrameColumnRaceEditArrowDown[index], FRAMEEVENT_CONTROL_CLICK)
-            call TriggerAddAction(RaceDownTrigger[index], function RaceDownFunction)
-            call SaveInteger(h, GetHandleId(RaceDownTrigger[index]), 0, index)
+            set raceDownTrigger[index] = CreateTrigger()
+            call BlzTriggerRegisterFrameEvent(raceDownTrigger[index], raceLabelEditArrowDown[index], FRAMEEVENT_CONTROL_CLICK)
+            call TriggerAddAction(raceDownTrigger[index], function RaceDownFunction)
+            call SaveInteger(h, GetHandleId(raceDownTrigger[index]), 0, index)
 
-            // new line
-            set y = y - LINE_HEIGHT - LINE_HEIGHT_SPACING
-
-            set LabelFrameColumnProfessionEdit[index] = BlzCreateFrame("ProfessionsPopup", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), 0, 0)
-            call BlzFrameSetAbsPoint(LabelFrameColumnProfessionEdit[index], FRAMEPOINT_TOPLEFT, COLUMN_PROFESSION_X, y)
-            call BlzFrameSetAbsPoint(LabelFrameColumnProfessionEdit[index], FRAMEPOINT_BOTTOMRIGHT, COLUMN_PROFESSION_X + COLUMN_PROFESSION_WIDTH, y - LINE_HEIGHT)
-            call BlzFrameSetValue(LabelFrameColumnProfessionEdit[index], 0)
+            set professionComboBox[index] = BlzCreateFrame("ProfessionsPopup", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), 0, 0)
+            call BlzFrameSetAbsPoint(professionComboBox[index], FRAMEPOINT_TOPLEFT, COLUMN_PROFESSION_X, y)
+            call BlzFrameSetAbsPoint(professionComboBox[index], FRAMEPOINT_BOTTOMRIGHT, COLUMN_PROFESSION_X + COLUMN_PROFESSION_WIDTH, y - LINE_HEIGHT)
+            call BlzFrameSetValue(professionComboBox[index], 0)
             set Professions[index] = 0
-            call BlzFrameSetEnable(LabelFrameColumnProfessionEdit[index], true)
+            call BlzFrameSetEnable(professionComboBox[index], true)
 
-            set LabelFrameColumnStartGoldEdit[index] = BlzCreateFrame("EscMenuEditBoxTemplate", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), 0, 0)
-            call BlzFrameSetAbsPoint(LabelFrameColumnStartGoldEdit[index], FRAMEPOINT_TOPLEFT, COLUMN_START_GOLD_X, y)
-            call BlzFrameSetAbsPoint(LabelFrameColumnStartGoldEdit[index], FRAMEPOINT_BOTTOMRIGHT, COLUMN_START_GOLD_X + COLUMN_START_GOLD_WIDTH, y - LINE_HEIGHT)
-            call BlzFrameSetText(LabelFrameColumnStartGoldEdit[index], I2S(START_GOLD))
+            // line 3
+            set y = y - LINE_HEIGHT - LINE_HEIGHT_SPACING - LINE_HEADERS_HEIGHT
+
+            set goldEdit[index] = BlzCreateFrame("EscMenuEditBoxTemplate", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), 0, 0)
+            call BlzFrameSetAbsPoint(goldEdit[index], FRAMEPOINT_TOPLEFT, COLUMN_START_GOLD_X, y)
+            call BlzFrameSetAbsPoint(goldEdit[index], FRAMEPOINT_BOTTOMRIGHT, COLUMN_START_GOLD_X + COLUMN_START_GOLD_WIDTH, y - LINE_HEIGHT)
+            call BlzFrameSetText(goldEdit[index], I2S(START_GOLD))
             set StartGold[index] = START_GOLD
-            call BlzFrameSetEnable(LabelFrameColumnStartGoldEdit[index], true)
+            call BlzFrameSetEnable(goldEdit[index], true)
 
-            set LabelFrameColumnStartLumberEdit[index] = BlzCreateFrame("EscMenuEditBoxTemplate", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), 0, 0)
-            call BlzFrameSetAbsPoint(LabelFrameColumnStartLumberEdit[index], FRAMEPOINT_TOPLEFT, COLUMN_START_LUMBER_X, y)
-            call BlzFrameSetAbsPoint(LabelFrameColumnStartLumberEdit[index], FRAMEPOINT_BOTTOMRIGHT, COLUMN_START_LUMBER_X + COLUMN_START_LUMBER_WIDTH, y - LINE_HEIGHT)
-            call BlzFrameSetText(LabelFrameColumnStartLumberEdit[index], I2S(START_LUMBER))
+            set lumberEdit[index] = BlzCreateFrame("EscMenuEditBoxTemplate", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), 0, 0)
+            call BlzFrameSetAbsPoint(lumberEdit[index], FRAMEPOINT_TOPLEFT, COLUMN_START_LUMBER_X, y)
+            call BlzFrameSetAbsPoint(lumberEdit[index], FRAMEPOINT_BOTTOMRIGHT, COLUMN_START_LUMBER_X + COLUMN_START_LUMBER_WIDTH, y - LINE_HEIGHT)
+            call BlzFrameSetText(lumberEdit[index], I2S(START_LUMBER))
             set StartLumber[index] = START_LUMBER
-            call BlzFrameSetEnable(LabelFrameColumnStartLumberEdit[index], true)
+            call BlzFrameSetEnable(lumberEdit[index], true)
 
-            set LabelFrameColumnFoodLimitEdit[index] = BlzCreateFrame("EscMenuEditBoxTemplate", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), 0, 0)
-            call BlzFrameSetAbsPoint(LabelFrameColumnFoodLimitEdit[index], FRAMEPOINT_TOPLEFT, COLUMN_FOOD_LIMIT_X, y)
-            call BlzFrameSetAbsPoint(LabelFrameColumnFoodLimitEdit[index], FRAMEPOINT_BOTTOMRIGHT, COLUMN_FOOD_LIMIT_X + COLUMN_FOOD_LIMIT_WIDTH, y - LINE_HEIGHT)
-            call BlzFrameSetText(LabelFrameColumnFoodLimitEdit[index], "100")
+            set foodEdit[index] = BlzCreateFrame("EscMenuEditBoxTemplate", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), 0, 0)
+            call BlzFrameSetAbsPoint(foodEdit[index], FRAMEPOINT_TOPLEFT, COLUMN_FOOD_LIMIT_X, y)
+            call BlzFrameSetAbsPoint(foodEdit[index], FRAMEPOINT_BOTTOMRIGHT, COLUMN_FOOD_LIMIT_X + COLUMN_FOOD_LIMIT_WIDTH, y - LINE_HEIGHT)
+            call BlzFrameSetText(foodEdit[index], "100")
             set FoodLimit[index] = 100
-            call BlzFrameSetEnable(LabelFrameColumnFoodLimitEdit[index], true)
+            call BlzFrameSetEnable(foodEdit[index], true)
 
-            set LabelFrameColumnStartEvolutionEdit[index] = BlzCreateFrame("EscMenuEditBoxTemplate", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), 0, 0)
-            call BlzFrameSetAbsPoint(LabelFrameColumnStartEvolutionEdit[index], FRAMEPOINT_TOPLEFT, COLUMN_START_EVOLUTION_X, y)
-            call BlzFrameSetAbsPoint(LabelFrameColumnStartEvolutionEdit[index], FRAMEPOINT_BOTTOMRIGHT, COLUMN_START_EVOLUTION_X + COLUMN_START_EVOLUTION_WIDTH, y - LINE_HEIGHT)
-            call BlzFrameSetText(LabelFrameColumnStartEvolutionEdit[index], "1")
+            set evolutionEdit[index] = BlzCreateFrame("EscMenuEditBoxTemplate", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), 0, 0)
+            call BlzFrameSetAbsPoint(evolutionEdit[index], FRAMEPOINT_TOPLEFT, COLUMN_START_EVOLUTION_X, y)
+            call BlzFrameSetAbsPoint(evolutionEdit[index], FRAMEPOINT_BOTTOMRIGHT, COLUMN_START_EVOLUTION_X + COLUMN_START_EVOLUTION_WIDTH, y - LINE_HEIGHT)
+            call BlzFrameSetText(evolutionEdit[index], "1")
             set StartEvolution[index] = 1
-            call BlzFrameSetEnable(LabelFrameColumnStartEvolutionEdit[index], true)
+            call BlzFrameSetEnable(evolutionEdit[index], true)
 
-            set LabelFrameColumnAttackPlayerCheckbox[index] = BlzCreateFrame("QuestCheckBox2", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), 0, 0)
-            call BlzFrameSetAbsPoint(LabelFrameColumnAttackPlayerCheckbox[index], FRAMEPOINT_TOPLEFT, COLUMN_ATTACK_PLAYERS_X, y)
-            call BlzFrameSetAbsPoint(LabelFrameColumnAttackPlayerCheckbox[index], FRAMEPOINT_BOTTOMRIGHT, COLUMN_ATTACK_PLAYERS_X + COLUMN_ATTACK_PLAYERS_WIDTH, y - LINE_HEIGHT)
+            set attacksCheckBox[index] = BlzCreateFrame("QuestCheckBox2", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), 0, 0)
+            call BlzFrameSetAbsPoint(attacksCheckBox[index], FRAMEPOINT_TOPLEFT, COLUMN_ATTACK_PLAYERS_X, y)
+            call BlzFrameSetAbsPoint(attacksCheckBox[index], FRAMEPOINT_BOTTOMRIGHT, COLUMN_ATTACK_PLAYERS_X + COLUMN_ATTACK_PLAYERS_WIDTH, y - LINE_HEIGHT)
             set AttackPlayers[index] = 0
-            call BlzFrameSetEnable(LabelFrameColumnAttackPlayerCheckbox[index], true)
+            call BlzFrameSetEnable(attacksCheckBox[index], true)
             if (GetAIDifficulty(aiPlayer) == AI_DIFFICULTY_INSANE) then
-                call BlzFrameSetValue(LabelFrameColumnAttackPlayerCheckbox[index], 1.0)
+                call BlzFrameSetValue(attacksCheckBox[index], 1.0)
             endif
 
-            set LabelFrameColumnHeroesEdit[index] = BlzCreateFrame("EscMenuEditBoxTemplate", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), 0, 0)
-            call BlzFrameSetAbsPoint(LabelFrameColumnHeroesEdit[index], FRAMEPOINT_TOPLEFT, COLUMN_HEROES_X, y)
-            call BlzFrameSetAbsPoint(LabelFrameColumnHeroesEdit[index], FRAMEPOINT_BOTTOMRIGHT, COLUMN_HEROES_X + COLUMN_HEROES_WIDTH, y - LINE_HEIGHT)
-            call BlzFrameSetText(LabelFrameColumnHeroesEdit[index], "1")
+            set heroesEdit[index] = BlzCreateFrame("EscMenuEditBoxTemplate", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), 0, 0)
+            call BlzFrameSetAbsPoint(heroesEdit[index], FRAMEPOINT_TOPLEFT, COLUMN_HEROES_X, y)
+            call BlzFrameSetAbsPoint(heroesEdit[index], FRAMEPOINT_BOTTOMRIGHT, COLUMN_HEROES_X + COLUMN_HEROES_WIDTH, y - LINE_HEIGHT)
+            call BlzFrameSetText(heroesEdit[index], "1")
             set HeroesCount[index] = 1
-            call BlzFrameSetEnable(LabelFrameColumnHeroesEdit[index], true)
+            call BlzFrameSetEnable(heroesEdit[index], true)
 
-            set LabelFrameColumnExpansionsEdit[index] = BlzCreateFrame("EscMenuEditBoxTemplate", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), 0, 0)
-            call BlzFrameSetAbsPoint(LabelFrameColumnExpansionsEdit[index], FRAMEPOINT_TOPLEFT, COLUMN_EXPANSIONS_X, y)
-            call BlzFrameSetAbsPoint(LabelFrameColumnExpansionsEdit[index], FRAMEPOINT_BOTTOMRIGHT, COLUMN_EXPANSIONS_X + COLUMN_EXPANSIONS_WIDTH, y - LINE_HEIGHT)
-            call BlzFrameSetText(LabelFrameColumnExpansionsEdit[index], "0")
+            set expansionsEdit[index] = BlzCreateFrame("EscMenuEditBoxTemplate", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), 0, 0)
+            call BlzFrameSetAbsPoint(expansionsEdit[index], FRAMEPOINT_TOPLEFT, COLUMN_EXPANSIONS_X, y)
+            call BlzFrameSetAbsPoint(expansionsEdit[index], FRAMEPOINT_BOTTOMRIGHT, COLUMN_EXPANSIONS_X + COLUMN_EXPANSIONS_WIDTH, y - LINE_HEIGHT)
+            call BlzFrameSetText(expansionsEdit[index], "0")
             set Expansions[index] = 0
-            call BlzFrameSetEnable(LabelFrameColumnExpansionsEdit[index], true)
+            call BlzFrameSetEnable(expansionsEdit[index], true)
 
-            set LabelFrameColumnSharedControlCheckbox[index] = BlzCreateFrame("QuestCheckBox2", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), 0, 0)
-            call BlzFrameSetAbsPoint(LabelFrameColumnSharedControlCheckbox[index], FRAMEPOINT_TOPLEFT, COLUMN_SHARED_CONTROL_X, y)
-            call BlzFrameSetAbsPoint(LabelFrameColumnSharedControlCheckbox[index], FRAMEPOINT_BOTTOMRIGHT, COLUMN_SHARED_CONTROL_X + COLUMN_SHARED_CONTROL_WIDTH, y - LINE_HEIGHT)
+            set sharedControlCheckBox[index] = BlzCreateFrame("QuestCheckBox2", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), 0, 0)
+            call BlzFrameSetAbsPoint(sharedControlCheckBox[index], FRAMEPOINT_TOPLEFT, COLUMN_SHARED_CONTROL_X, y)
+            call BlzFrameSetAbsPoint(sharedControlCheckBox[index], FRAMEPOINT_BOTTOMRIGHT, COLUMN_SHARED_CONTROL_X + COLUMN_SHARED_CONTROL_WIDTH, y - LINE_HEIGHT)
             set SharedControl[index] = 0
-            call BlzFrameSetEnable(LabelFrameColumnSharedControlCheckbox[index], true)
+            call BlzFrameSetEnable(sharedControlCheckBox[index], true)
 
-            set LabelFrameColumnDifficultyEdit[index] = BlzCreateFrame("DifficultyPopup", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), 0, 0)
-            call BlzFrameSetAbsPoint(LabelFrameColumnDifficultyEdit[index], FRAMEPOINT_TOPLEFT, COLUMN_DIFFICULTY_X , y)
-            call BlzFrameSetAbsPoint(LabelFrameColumnDifficultyEdit[index], FRAMEPOINT_BOTTOMRIGHT, COLUMN_DIFFICULTY_X  + COLUMN_DIFFICULTY_WIDTH , y - LINE_HEIGHT)
-            call BlzFrameSetValue(LabelFrameColumnDifficultyEdit[index], 1) // normal
+            set difficultyComboBox[index] = BlzCreateFrame("DifficultyPopup", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), 0, 0)
+            call BlzFrameSetAbsPoint(difficultyComboBox[index], FRAMEPOINT_TOPLEFT, COLUMN_DIFFICULTY_X , y)
+            call BlzFrameSetAbsPoint(difficultyComboBox[index], FRAMEPOINT_BOTTOMRIGHT, COLUMN_DIFFICULTY_X  + COLUMN_DIFFICULTY_WIDTH, y - LINE_HEIGHT)
+            call BlzFrameSetValue(difficultyComboBox[index], 1) // normal
             set Difficulty[index] = 1 // normal
-            call BlzFrameSetEnable(LabelFrameColumnDifficultyEdit[index], true)
+            call BlzFrameSetEnable(difficultyComboBox[index], true)
 
-            set y = y - LINE_HEIGHT - LINE_SPACING_Y
             set counter = counter + 1
-
-            if (ModuloInteger(counter, MAX_PLAYERS) == 0) then
-                set y = LINE_HEADERS_Y - 2 * (LINE_HEADERS_HEIGHT + LINE_SPACING_Y)
-            endif
         endif
         set aiPlayer = null
         set i = i + 1
     endloop
 
     set Counter = counter
-    set MaxPages = counter / MAX_PLAYERS
-
-    if (ModuloInteger(counter, MAX_PLAYERS) > 0) then
-        set MaxPages = MaxPages + 1
-    endif
 
     // apply button
 
-    set ApplyButton = BlzCreateFrame("ScriptDialogButton", BackgroundFrame, 0, 0)
-    call BlzFrameSetAbsPoint(ApplyButton, FRAMEPOINT_TOPLEFT, UI_FULLSCREEN_CLOSE_BUTTON_X, UI_FULLSCREEN_BOTTOM_BUTTON_Y)
-    call BlzFrameSetAbsPoint(ApplyButton, FRAMEPOINT_BOTTOMRIGHT, UI_FULLSCREEN_CLOSE_BUTTON_X + UI_FULLSCREEN_BOTTOM_BUTTON_WIDTH, UI_FULLSCREEN_BOTTOM_BUTTON_Y - UI_FULLSCREEN_BOTTOM_BUTTON_HEIGHT)
-    call BlzFrameSetText(ApplyButton, GetLocalizedString("APPLY_YELLOW"))
+    set applyButton = BlzCreateFrame("ScriptDialogButton", backgroundFrame, 0, 0)
+    call BlzFrameSetAbsPoint(applyButton, FRAMEPOINT_TOPLEFT, UI_FULLSCREEN_CLOSE_BUTTON_X, UI_FULLSCREEN_BOTTOM_BUTTON_Y)
+    call BlzFrameSetAbsPoint(applyButton, FRAMEPOINT_BOTTOMRIGHT, UI_FULLSCREEN_CLOSE_BUTTON_X + UI_FULLSCREEN_BOTTOM_BUTTON_WIDTH, UI_FULLSCREEN_BOTTOM_BUTTON_Y - UI_FULLSCREEN_BOTTOM_BUTTON_HEIGHT)
+    call BlzFrameSetText(applyButton, GetLocalizedStringSafe("APPLY_YELLOW"))
 
-    if (ApplyTrigger != null) then
-        call DestroyTrigger(ApplyTrigger)
-        set ApplyTrigger = null
+    if (applyTrigger != null) then
+        call DestroyTrigger(applyTrigger)
+        set applyTrigger = null
     endif
 
-    set ApplyTrigger = CreateTrigger()
-    call BlzTriggerRegisterFrameEvent(ApplyTrigger, ApplyButton, FRAMEEVENT_CONTROL_CLICK)
-    call TriggerAddAction(ApplyTrigger, function ApplyFunction)
+    set applyTrigger = CreateTrigger()
+    call BlzTriggerRegisterFrameEvent(applyTrigger, applyButton, FRAMEEVENT_CONTROL_CLICK)
+    call TriggerAddAction(applyTrigger, function ApplyFunction)
 
     // previous page button
 
-    set PreviousPageButton = CreateFullScreenPreviousPageButton(BackgroundFrame, GetLocalizedString("PREVIOUS_PLAYER_YELLOW"))
-    call BlzFrameSetEnable(PreviousPageButton, counter > MAX_PLAYERS)
+    set previousPageButton = CreateFullScreenpreviousPageButton(backgroundFrame, GetLocalizedStringSafe("PREVIOUS_PLAYER_YELLOW"))
+    call BlzFrameSetEnable(previousPageButton, counter > 1)
 
-    if (PreviousPageTrigger != null) then
-        call DestroyTrigger(PreviousPageTrigger)
-        set PreviousPageTrigger = null
+    if (previousPageTrigger != null) then
+        call DestroyTrigger(previousPageTrigger)
+        set previousPageTrigger = null
     endif
 
-    set PreviousPageTrigger = CreateTrigger()
-    call BlzTriggerRegisterFrameEvent(PreviousPageTrigger, PreviousPageButton, FRAMEEVENT_CONTROL_CLICK)
-    call TriggerAddAction(PreviousPageTrigger, function PreviousPageFunction)
+    set previousPageTrigger = CreateTrigger()
+    call BlzTriggerRegisterFrameEvent(previousPageTrigger, previousPageButton, FRAMEEVENT_CONTROL_CLICK)
+    call TriggerAddAction(previousPageTrigger, function PreviousPageFunction)
 
     // next page button
 
-    set NextPageButton = CreateFullScreenNextPageButton(BackgroundFrame, GetLocalizedString("NEXT_PLAYER_YELLOW"))
-    call BlzFrameSetEnable(NextPageButton, counter > MAX_PLAYERS)
+    set nextPageButton = CreateFullScreennextPageButton(backgroundFrame, GetLocalizedStringSafe("NEXT_PLAYER_YELLOW"))
+    call BlzFrameSetEnable(nextPageButton, counter > 1)
 
-    if (NextPageTrigger != null) then
-        call DestroyTrigger(NextPageTrigger)
-        set NextPageTrigger = null
+    if (nextPageTrigger != null) then
+        call DestroyTrigger(nextPageTrigger)
+        set nextPageTrigger = null
     endif
 
-    set NextPageTrigger = CreateTrigger()
-    call BlzTriggerRegisterFrameEvent(NextPageTrigger, NextPageButton, FRAMEEVENT_CONTROL_CLICK)
-    call TriggerAddAction(NextPageTrigger, function NextPageFunction)
+    set nextPageTrigger = CreateTrigger()
+    call BlzTriggerRegisterFrameEvent(nextPageTrigger, nextPageButton, FRAMEEVENT_CONTROL_CLICK)
+    call TriggerAddAction(nextPageTrigger, function NextPageFunction)
 
     // hide
     call HideAiPlayersUi()
@@ -1484,9 +1474,8 @@ endfunction
 
 private function Init takes nothing returns nothing
     // sync trigger
-    set SyncTrigger = CreateTrigger()
-    call TriggerRegisterAnyPlayerSyncEvent(SyncTrigger, PREFIX, false)
-    call TriggerAddAction(SyncTrigger, function TriggerActionSyncData)
+    call TriggerRegisterAnyPlayerSyncEvent(syncTrigger, PREFIX, false)
+    call TriggerAddAction(syncTrigger, function TriggerActionSyncData)
 
     call OnStartGame(function CreateAiPlayersUI)
 
