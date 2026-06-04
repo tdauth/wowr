@@ -312,6 +312,7 @@ private function StartingUnitsAndPickAIStandard takes player whichPlayer, locati
     call StartingUnitsPeons(whichPlayer, l, whichRace)
     call StartingUnitsShredders(whichPlayer, l, whichRace)
     if (not recreate) then
+        call BJDebugMsg("Start Campaign AI " + GetRaceAIScript(whichRace))
         call StartCampaignAI(whichPlayer, GetRaceAIScript(whichRace))
     endif
     if (GetRaceHasFootmanWorker(whichRace)) then
@@ -711,9 +712,12 @@ private function EnumStartLobbySettings takes nothing returns nothing
         call RemoveRandomMinesAtAIStartLocation(startLocationIndex)
         // Race
         set playerRace = AiPlayersUIGetPlayerRace(GetEnumPlayer(), startLocationIndex, GetPlayerTeam(GetEnumPlayer()))
+        call BJDebugMsg("Player " + GetPlayerName(GetEnumPlayer()) + " chooses race " + GetRaceName(playerRace) + " and start location " + I2S(startLocationIndex))
         set udg_PlayerRace[convertedPlayerId] = playerRace
         // Start Main Building and Workers
         call StartingUnitsAndPickAI(GetEnumPlayer(), l, playerRace)
+        call RemoveLocation(l)
+        set l = null
 
         // Reveal start location once
         set i = 0
