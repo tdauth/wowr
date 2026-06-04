@@ -118077,7 +118077,7 @@ Revive Shaman
 STRING 56877
 // Units: O0AK (Shaman), Revivetip (Tooltip - Revive)
 {
-Summon Shaman
+Revive Shaman
 }
 
 STRING 56878

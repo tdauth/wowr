@@ -27078,7 +27078,7 @@ STRING 5600
 STRING 5603
 // Items: I05U (Human), Ubertip (Tooltip - Extended)
 {
-Kombination of Menschen, Zwergen und Elfen.|n- Schnelle Gebäudeaufbau mit mehreren Arbeitern.|n- Starke Gebäude.|n- Sammeln mehr Holz.|n- Viele verschiedene Typen von Einheiten.|n|n|cffffcc00Fraktion: Allianz.|r
+Kombination von Menschen, Zwergen und Elfen.|n- Schnelle Gebäudeaufbau mit mehreren Arbeitern.|n- Starke Gebäude.|n- Sammeln mehr Holz.|n- Viele verschiedene Typen von Einheiten.|n|n|cffffcc00Fraktion: Allianz.|r
 }
 
 STRING 5604
@@ -118078,13 +118078,13 @@ Schamane wiederbeleben
 STRING 56877
 // Units: O0AK (Shaman), Revivetip (Tooltip - Revive)
 {
-Schamane beschwören
+Schamane wiederbeleben
 }
 
 STRING 56878
 // Units: O0AK (Shaman), Tip (Tooltip - Basic)
 {
-Schamane wiederbeleben
+Schamane beschwören
 }
 
 STRING 56879
