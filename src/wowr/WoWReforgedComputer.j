@@ -396,7 +396,7 @@ endfunction
 
 private function EnumAITechnologies takes nothing returns nothing
     // No Portals for AI to avoid crashes
-    call SetPlayerUnitAvailableBJ('h014', false, GetEnumPlayer())
+    call SetPlayerUnitAvailableBJ(PORTAL, false, GetEnumPlayer())
     call SetPlayerAbilityAvailableBJ(false, 'A05V', GetEnumPlayer())
     call SetPlayerAbilityAvailableBJ(false, 'A05W', GetEnumPlayer())
     call SetPlayerAbilityAvailableBJ(false, 'A05U', GetEnumPlayer())

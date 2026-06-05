@@ -1,6 +1,6 @@
 // TODO Create a system SaveCodeObjectSystem depending on the SaveCodeSystem which allows registering any IDs in a 2D array.
 // Init after races and professions.
-library WoWReforgedSaveCodeObjects initializer Init requires SaveCodeSystem, WoWReforgedRaces, WoWReforgedNeutral, WoWReforgedProfessions, WoWReforgedResearches, WoWReforgedQuests, WoWReforgedBanners, WoWReforgedObjectMappings, WoWReforgedProfessionHunter, WoWReforgedArena, WoWReforgedEquipment, WoWReforgedEquipment
+library WoWReforgedSaveCodeObjects initializer Init requires SaveCodeSystem, WoWReforgedRaces, WoWReforgedNeutral, WoWReforgedProfessions, WoWReforgedResearches, WoWReforgedQuests, WoWReforgedBanners, WoWReforgedObjectMappings, WoWReforgedProfessionHunter, WoWReforgedArena, WoWReforgedEquipment, WoWReforgedWalls
 
 globals
     private hashtable h = InitHashtable()
@@ -78,7 +78,7 @@ function DisplayDuplicateSaveObjects takes nothing returns nothing
             endif
             set j = j + 1
         endloop
-        
+
         set j = 0
         loop
             exitwhen (j == GetQuestsMax())
@@ -118,13 +118,13 @@ private function AddBuilding takes integer id returns integer
     call SaveInteger(h, id, 0, index)
     set buildingIds[index] = id
     set buildingIdsCounter = buildingIdsCounter + 1
-    
+
     if (mappingId != 0) then
         call SaveInteger(h, mappingId, 0, index + 1)
         set buildingIds[index + 1] = mappingId
         set buildingIdsCounter = buildingIdsCounter + 1
     endif
-    
+
     return index
 endfunction
 
@@ -379,6 +379,21 @@ private function AddItemsFromItemSets takes nothing returns nothing
             call AddItem(s.components[j])
             set j = j + 1
         endloop
+        set i = i + 1
+    endloop
+endfunction
+
+private function AddWallBuildingsSaveObjects takes nothing returns nothing
+    local integer i = 0
+    loop
+        exitwhen (i == MAX_WALL_PIECES)
+        call AddBuilding(GetWallTypeGround(i))
+        set i = i + 1
+    endloop
+    set i = 0
+    loop
+        exitwhen (i == MAX_WALL_PIECES)
+        call AddBuilding(GetWallTypeAir(i))
         set i = i + 1
     endloop
 endfunction
@@ -703,33 +718,31 @@ endfunction
 
 private function AddBuildings takes nothing returns nothing
     // All Races
-    call AddBuilding('n025')
-    call AddBuilding('n042')
-    call AddBuilding('n054')
-    call AddBuilding('h014')
-    call AddBuilding('h04V')
-    call AddBuilding('o04H')
-    call AddBuilding('o054')
-    call AddBuilding('o025')
-    call AddBuilding('n09D')
-    call AddBuilding('nmrk')
-    call AddBuilding('n09L')
-    call AddBuilding('o01Z')
-    call AddBuilding('n04J')
-    call AddBuilding('n079')
-    call AddBuilding('n0GD')
-    call AddBuilding('o05F')
-    call AddBuilding('n0IS')
-    call AddBuilding('n0E6')
-    call AddBuilding('h04Q')
-    call AddBuilding('h04R')
-    call AddBuilding('h04S')
-    call AddBuilding('h020')
-    call AddBuilding('h021')
-    call AddBuilding('n0ND')
-    call AddBuilding('n0NE')
-    call AddBuilding('h00M')
-    call AddBuilding('h00N')
+    call AddBuilding(POWER_GENERATOR)
+    call AddBuilding(RESEARCH_TENT)
+    call AddBuilding(EVENT_HOUSE)
+    call AddBuilding(PORTAL)
+    call AddBuilding(CRAFTING_STASH)
+    call AddBuilding(MOUNTS_CAGE)
+    call AddBuilding(ALCHEMIST_LAB)
+    call AddBuilding(THIEVES_GUILD)
+    call AddBuilding(MARKETPLACE)
+    call AddBuilding(DRAGON_ROOST)
+    call AddBuilding(ANTIMAGIC_WARD)
+    call AddBuilding(TRADING_POST)
+    call AddBuilding(TRAINER)
+    call AddBuilding(SKINS)
+    call AddBuilding(WITCH_HUT)
+    call AddBuilding(ARMORY)
+    call AddBuilding(BANNER_SHOP)
+    call AddBuilding(GATE_CLOSED_HORIZONTAL)
+    call AddBuilding(GATE_OPEN_HORIZONTAL)
+    call AddBuilding(WATER_TOWER)
+    call AddBuilding(ADVANCED_WATER_TOWER)
+    call AddBuilding(TEMPLE_OF_LIGHT)
+    call AddBuilding(TEMPLE_OF_DARKNESS)
+    // WALLS
+    call AddWallBuildingsSaveObjects()
     // RACES
     call AddRaceBuildingsSaveObjects()
     // BANNER BUILDINGS

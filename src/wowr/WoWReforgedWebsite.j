@@ -23,10 +23,10 @@ endglobals
 
 private function CreateTmpUnit takes integer unitTypeId returns unit
     local unit whichUnit = CreateUnit(Player(0), unitTypeId, 0.0, 0.0, 0.0)
-        
+
     call SetUnitLifePercentBJ(whichUnit, 100.0)
     call SetUnitManaPercentBJ(whichUnit, 100.0)
-    
+
     return whichUnit
 endfunction
 
@@ -44,7 +44,7 @@ private function FormatToken takes string token, boolean isInColorBlock returns 
         if (subString == "<" or subString == ">") then
             set i = i + 1
         // prevents the string from getting too long for Warcraft III strings and to be cut off:
-        // MAX_STRING_LENGTH 
+        // MAX_STRING_LENGTH
         elseif (subString == " " and StringLength(result) >= 50) then
             call FileWriteLine(result + subString)
             set result = ""
@@ -82,12 +82,12 @@ private function FormatToken takes string token, boolean isInColorBlock returns 
             endif
         endif
     endloop
-    
+
     if (StringLength(result) > 0) then
         call FileWriteLine(result)
         set result = ""
     endif
-    
+
     return isInColorBlock
 endfunction
 
@@ -100,15 +100,15 @@ private function FormatTooltip takes string tooltip returns nothing
         set max = StringCount(tooltip, "|n") + 1
         loop
             exitwhen (index >= max)
-            
+
             if (index > 0) then
                 call FileWriteLine("<br/>")
             endif
-            
+
             set isInColorBlock = FormatToken(StringSplit(tooltip, index, "|n"), isInColorBlock)
             set index = index + 1
         endloop
-        
+
         // close an unclosed color code to prevent invalid HTML
         if (isInColorBlock) then
             call FileWriteLine("</div>")
@@ -198,7 +198,7 @@ private function ColumnDataOrder takes string order, string search returns strin
         set txt = txt + " data-search=\"" + search + "\""
     endif
     set txt = txt + ">"
-    
+
     return txt
 endfunction
 
@@ -215,7 +215,7 @@ private function GenerateFoodIcon takes nothing returns nothing
 endfunction
 
 private function GenerateUnitTypeIdGoldCostPopover takes integer unitTypeId returns nothing
-    local integer goldCost = GetUnitGoldCostSafe(unitTypeId) 
+    local integer goldCost = GetUnitGoldCostSafe(unitTypeId)
     if (goldCost > 0) then
         call FileWriteLine(I2S(goldCost))
         call GenerateGoldIcon()
@@ -403,7 +403,7 @@ private function GenerateUnitBountyGold takes unit creep returns nothing
     local integer bountyNumberOfDice = BlzGetUnitIntegerField(creep, UNIT_IF_GOLD_BOUNTY_AWARDED_NUMBER_OF_DICE)
     local integer bountySidesPerDice = BlzGetUnitIntegerField(creep, UNIT_IF_GOLD_BOUNTY_AWARDED_SIDES_PER_DIE)
     local integer bountyMax = bountyBase + bountyNumberOfDice * bountySidesPerDice
-    
+
     if (bountyBase > 0) then
         call FileWriteLine(I2S(bountyBase) + " - " + I2S(bountyMax))
         call GenerateGoldIcon()
@@ -417,11 +417,11 @@ private function GetUnitDamage takes unit creep returns string
     local integer damageNumberOfDice = BlzGetUnitWeaponIntegerField(creep, UNIT_WEAPON_IF_ATTACK_DAMAGE_NUMBER_OF_DICE, 0)
     local integer damageSidesPerDice = BlzGetUnitWeaponIntegerField(creep, UNIT_WEAPON_IF_ATTACK_DAMAGE_SIDES_PER_DIE, 0)
     local integer damageMax = damageBase + damageNumberOfDice * damageSidesPerDice
-    
+
     if (damageBase > 0) then
         return I2S(damageBase) + " - " + I2S(damageMax)
     endif
-    
+
     return "-"
 endfunction
 
@@ -440,7 +440,7 @@ private function GetMoveType takes unit hero returns string
     elseif (v == MOVE_TYPE_AMPHIBIOUS) then
         return "Amphibious"
     endif
-    
+
     return "None"
 endfunction
 
@@ -524,7 +524,7 @@ private function GenerateUnitAttack takes unit whichUnit returns nothing
         call FileWriteLine("-")
     endif
     call FileWriteLine("</td>")
-    
+
     // attack range
     call FileWriteLine("<td>")
     if (attack0Enabled) then
@@ -533,7 +533,7 @@ private function GenerateUnitAttack takes unit whichUnit returns nothing
         call FileWriteLine("-")
     endif
     call FileWriteLine("</td>")
-    
+
     // attack damage
     call FileWriteLine("<td>")
     if (attack0Enabled) then
@@ -546,7 +546,7 @@ endfunction
 
 private function WriteBuildingPopoverWithIcon takes integer unitTypeId returns nothing
     call FileWriteLine("<div class=\"wowr-popover-wrapper\">")
-        
+
     // popover
     call FileWriteLine("<div class=\"wowr-popover\">")
     call IconToHtmlEx(unitTypeId, "buildings.html")
@@ -557,49 +557,49 @@ private function WriteBuildingPopoverWithIcon takes integer unitTypeId returns n
     call GenerateUnitTypeIdGoldCostPopover(unitTypeId)
     // wood cost
     call GenerateUnitTypeIdLumberCostPopover(unitTypeId)
-    
+
     // tooltip
     call FileWriteLine("<br/>")
     call FormatTooltip(BlzGetAbilityExtendedTooltip(unitTypeId, 0))
     call FileWriteLine("</div>")
     // popover end
-    
+
     // icon
     call IconButton(unitTypeId)
-    
+
     call FileWriteLine("</div>")
 endfunction
 
 private function WriteUnitPopoverWithIconExExEx takes unit whichUnit, integer iconUnitTypeId, string file returns nothing
     local integer unitTypeId = GetUnitTypeId(whichUnit)
-    
+
     call FileWriteLine("<div class=\"wowr-popover-wrapper\">")
-        
+
     // popover
     call FileWriteLine("<div class=\"wowr-popover\">")
     call IconToHtmlEx(iconUnitTypeId, file)
     // name
     call FileWriteLine(GetActualObjectName(unitTypeId))
     call FileWriteLine("<br/>")
-    
+
     // gold cost
     call GenerateUnitTypeIdGoldCostPopover(unitTypeId)
 
     // wood cost
     call GenerateUnitTypeIdLumberCostPopover(unitTypeId)
-    
+
     // food cost
     call GenerateUnitTypeIdFoodCostPopover(unitTypeId)
-    
+
     // tooltip
     call FileWriteLine("<br/>")
     call FormatTooltip(BlzGetAbilityExtendedTooltip(unitTypeId, 0))
     call FileWriteLine("</div>")
     // popover end
-    
+
     // icon
     call IconButton(iconUnitTypeId)
-    
+
     call FileWriteLine("</div>")
 endfunction
 
@@ -623,7 +623,7 @@ endfunction
 
 private function WriteUnitPopoverWithIcon takes integer unitTypeId, string file returns nothing
     local unit whichUnit = null
-    
+
     if (unitTypeId != 0) then
         set whichUnit = CreateTmpUnit(unitTypeId)
         call WriteUnitPopoverWithIconEx(whichUnit, file)
@@ -636,35 +636,35 @@ endfunction
 
 private function WriteItemPopoverWithIconEx takes integer itemTypeId, string file returns nothing
     call FileWriteLine("<div class=\"wowr-popover-wrapper\">")
-        
+
     // popover
     call FileWriteLine("<div class=\"wowr-popover\">")
     call IconToHtmlEx(itemTypeId, file)
     // name
     call FileWriteLine(GetObjectName(itemTypeId))
     call FileWriteLine("<br/>")
-    
+
     // gold cost
     if (GetItemGoldCost(itemTypeId) > 0) then
         call FileWriteLine(I2S(GetItemGoldCost(itemTypeId)))
         call GenerateGoldIcon()
     endif
-    
+
     // lumber cost
     if (GetItemWoodCost(itemTypeId) > 0) then
         call FileWriteLine(I2S(GetItemWoodCost(itemTypeId)))
         call GenerateLumberIcon()
     endif
-    
+
     // tooltip
     call FileWriteLine("<br/>")
     call FormatTooltip(BlzGetAbilityExtendedTooltip(itemTypeId, 0))
     call FileWriteLine("</div>")
     // popover end
-    
+
     // icon
     call IconButton(itemTypeId)
-    
+
     call FileWriteLine("</div>")
 endfunction
 
@@ -684,14 +684,14 @@ endfunction
 
 private function WriteAbilityPopoverWithIcon takes integer abilityId, string file returns nothing
     call FileWriteLine("<div class=\"wowr-popover-wrapper\">")
-    
+
     // popover
     call FileWriteLine("<div class=\"wowr-popover\">")
     call IconToHtmlEx(abilityId, file)
     // name
     call FileWriteLine(GetObjectName(abilityId))
     call FileWriteLine("<br/>")
-    
+
     // tooltip
     call FileWriteLine("<br/>")
     if (HasAbilitySkillExtendedTooltip(abilityId, 0)) then
@@ -702,61 +702,61 @@ private function WriteAbilityPopoverWithIcon takes integer abilityId, string fil
 
     call FileWriteLine("</div>")
     // popover end
-    
+
     // icon
     call IconButton(abilityId)
-    
+
     call FileWriteLine("</div>")
 endfunction
 
 private function WriteResearchPopoverWithIcon takes integer researchId returns nothing
     call FileWriteLine("<div class=\"wowr-popover-wrapper\">")
-        
+
     // popover
     call FileWriteLine("<div class=\"wowr-popover\">")
     call IconToHtmlEx(researchId, "researches.html")
-    
+
     // name
     call FileWriteLine(GetObjectName(researchId))
     call FileWriteLine("<br/>")
-    
+
     // research levels
     call FileWriteLine("Levels: ")
     call FileWriteLine(I2S(GetPlayerTechMaxAllowed(Player(0), researchId)))
-    
+
     // tooltip
     call FileWriteLine("<br/>")
     call FormatTooltip(BlzGetAbilityExtendedTooltip(researchId, 0))
     call FileWriteLine("</div>")
     // popover end
-    
+
     // icon
     call IconButton(researchId)
-    
+
     call FileWriteLine("</div>")
 endfunction
 
 private function WriteRacePopoverWithIconExEx takes item whichItem, string file returns nothing
     local integer itemTypeId = GetItemTypeId(whichItem)
-    
+
     call FileWriteLine("<div class=\"wowr-popover-wrapper\">")
-        
+
     // popover
     call FileWriteLine("<div class=\"wowr-popover\">")
     call IconToHtmlEx(itemTypeId, file)
     // name
     call FileWriteLine(GetItemName(whichItem))
     call FileWriteLine("<br/>")
-    
+
     // tooltip
     call FileWriteLine("<br/>")
     call FormatTooltip(BlzGetItemExtendedTooltip(whichItem))
     call FileWriteLine("</div>")
     // popover end
-    
+
     // icon
     call IconButton(itemTypeId)
-    
+
     call FileWriteLine("</div>")
 endfunction
 
@@ -778,23 +778,23 @@ private function GenerateHeroClass takes integer unitTypeId returns nothing
     local integer c = GetHeroClass(unitTypeId)
     if (c != CLASS_NONE) then
         call FileWriteLine("<div class=\"wowr-popover-wrapper\">")
-        
+
         // popover
         call FileWriteLine("<div class=\"wowr-popover\">")
         call IconToHtmlEx(GetHeroClassItemTypeId(c), "classes.html")
         // name
         call FileWriteLine(GetHeroClassName(c))
         call FileWriteLine("<br/>")
-        
+
         // tooltip
         call FileWriteLine("<br/>")
         call FormatTooltip(GetHeroClassDescription(c))
         call FileWriteLine("</div>")
         // popover end
-        
+
         // icon
         call IconButton(GetHeroClassItemTypeId(c))
-        
+
         call FileWriteLine("</div>")
     else
         call FileWriteLine("-")
@@ -805,17 +805,17 @@ endfunction
 private function GenerateDamageCalculationTable takes nothing returns nothing
     local integer i = 0
     local integer j = 0
-    
+
     call FileStart()
 
     call FileWriteLine("<!-- Damage Calculation Table generated with chat command \"-website\". -->")
     call FileWriteLine("<tr>")
-    
+
     call FileWriteLine("<td>")
     call FileWriteLine("</td>")
     call FileWriteLine("<td>")
     call FileWriteLine("</td>")
-    
+
     set i = 0
     loop
         exitwhen (i >= MAX_DEFENSE_TYPES)
@@ -824,42 +824,42 @@ private function GenerateDamageCalculationTable takes nothing returns nothing
         call FileWriteLine("</td>")
         set i = i + 1
     endloop
-    
+
     call FileWriteLine("</tr>")
-    
+
     call FileWriteLine("<tr>")
-    
+
     call FileWriteLine("<td>")
     call FileWriteLine("</td>")
     call FileWriteLine("<td>")
     call FileWriteLine("</td>")
-    
+
     set i = 0
     loop
         exitwhen (i >= MAX_DEFENSE_TYPES)
         call FileWriteLine("<td>")
-        
+
         call FileWriteLine("<img")
         call FileWriteLine("class=\"wowr-icon\"")
         call FileWriteLine("src=\"" + GetDefenseTypeIcon(i) + "\"")
         call FileWriteLine("title=\"" + GetDefenseTypeName(i) + "\"")
         call FileWriteLine("/>")
-            
+
         call FileWriteLine("</td>")
         set i = i + 1
     endloop
-    
+
     call FileWriteLine("</tr>")
-    
+
     set i = 0
     loop
         exitwhen (i >= MAX_ATTACK_TYPES)
         call FileWriteLine("<tr>")
-        
+
         call FileWriteLine("<td>")
         call FileWriteLine(GetAttackTypeName(i))
         call FileWriteLine("</td>")
-        
+
         call FileWriteLine("<td>")
         call FileWriteLine("<img")
         call FileWriteLine("class=\"wowr-icon\"")
@@ -867,7 +867,7 @@ private function GenerateDamageCalculationTable takes nothing returns nothing
         call FileWriteLine("title=\"" + GetAttackTypeName(i) + "\"")
         call FileWriteLine("/>")
         call FileWriteLine("</td>")
-        
+
         set j = 0
         loop
             exitwhen (j >= MAX_DEFENSE_TYPES)
@@ -880,11 +880,11 @@ private function GenerateDamageCalculationTable takes nothing returns nothing
             call FileWriteLine("</td>")
             set j = j + 1
         endloop
-        
+
         call FileWriteLine("</tr>")
         set i = i + 1
     endloop
-    
+
     call FileWriteLine("<!-- Heroes generated with chat command \"-website\". -->")
 
     // The line below creates the file at the specified location
@@ -899,7 +899,7 @@ private function GenerateHeroEx takes integer heroTypeId, integer whichRace, int
     local integer mount = 0
     local integer baseId = GetPrimaryDependencyEquivalent(heroTypeId)
     local boolean primary = IsPrimaryDependencyEquivalent(heroTypeId)
-    
+
     call FileWriteLine("<tr id=\"" + A2S(heroTypeId) + "\">")
     // icon
     call FileWriteLine(ColumnDataOrder(I2S(index), GetActualObjectName(heroTypeId)))
@@ -919,7 +919,7 @@ private function GenerateHeroEx takes integer heroTypeId, integer whichRace, int
     call FileWriteLine("</td>")
     // primary attribute
     call WriteHeroPrimaryAttributeColumn(hero)
-    
+
     // mount
     call FileWriteLine("<td>")
     set mount = GetHeroMountUnitTypeId(GetHeroIndexByUnitTypeId(baseId))
@@ -929,12 +929,12 @@ private function GenerateHeroEx takes integer heroTypeId, integer whichRace, int
         call FileWriteLine("-")
     endif
     call FileWriteLine("</td>")
-    
+
     // hero class
     call FileWriteLine("<td>")
     call GenerateHeroClass(heroTypeId)
     call FileWriteLine("</td>")
-    
+
     // start strength
     call FileWriteLine("<td>")
     call FileWriteLine(I2S(BlzGetUnitIntegerField(hero, UNIT_IF_STRENGTH)))
@@ -954,7 +954,7 @@ private function GenerateHeroEx takes integer heroTypeId, integer whichRace, int
     call FileWriteLine("<td>")
     call FileWriteLine(R2SHtml(BlzGetUnitRealField(hero, UNIT_RF_STRENGTH_PER_LEVEL)))
     call FileWriteLine("</td>")
-    
+
     // agility per level
     call FileWriteLine("<td>")
     call FileWriteLine(R2SHtml(BlzGetUnitRealField(hero, UNIT_RF_AGILITY_PER_LEVEL)))
@@ -976,24 +976,24 @@ private function GenerateHeroEx takes integer heroTypeId, integer whichRace, int
     call FileWriteLine("</td>")
 
     call GenerateUnitAttack(hero)
-    
+
     // armor type
     call FileWriteLine("<td>")
     call GenerateArmorCell(hero)
     call FileWriteLine("</td>")
-    
+
     // armor
     call FileWriteLine("<td>")
     call FileWriteLine(I2S(R2I(BlzGetUnitArmor(hero))))
     call FileWriteLine("</td>")
-    
+
     // day sight range
     call FileWriteLine("<td>")
     call FileWriteLine(I2S(R2I(BlzGetUnitRealField(hero, UNIT_RF_SIGHT_RADIUS))))
     call FileWriteLine("</td>")
 
     call FileWriteLine("</tr>")
-    
+
     call RemoveUnit(hero)
     set hero = null
 endfunction
@@ -1017,9 +1017,9 @@ private function GenerateHeroes takes nothing returns nothing
     local integer j = 0
     local integer max2 = 0
     local integer index = 0
-    
+
     call ClearGeneratedIds()
-    
+
     call FileStart()
 
     call FileWriteLine("<!-- Heroes generated with chat command \"-website\". -->")
@@ -1029,7 +1029,7 @@ private function GenerateHeroes takes nothing returns nothing
         set id = GetHeroUnitType(i)
         if (GenerateId(id)) then
             call GenerateHero(id, GetHeroRace(i), index)
-            
+
             set d = GetDependencyEquivalents(id)
             if (d != 0) then
                 set j = 0
@@ -1043,12 +1043,12 @@ private function GenerateHeroes takes nothing returns nothing
                     set j = j + 1
                 endloop
             endif
-            
+
             set index = index + 1
         endif
         set i = i + 1
     endloop
-    
+
     set i = 0
     set max = GetMaxHeroTransformationTypes()
     loop
@@ -1056,7 +1056,7 @@ private function GenerateHeroes takes nothing returns nothing
         set id = GetHeroTransformationType(i).unitTypeId
         if (GenerateId(id)) then
             call GenerateHero(id, udg_RaceNone, index)
-            
+
             set d = GetDependencyEquivalents(id)
             if (d != 0) then
                 set j = 0
@@ -1070,7 +1070,7 @@ private function GenerateHeroes takes nothing returns nothing
                     set j = j + 1
                 endloop
             endif
-            
+
             set index = index + 1
         endif
         set i = i + 1
@@ -1097,15 +1097,15 @@ private function GenerateBossEx takes unit hero, integer index returns nothing
     call FileWriteLine("<td>")
     call FileWriteLine(GetActualObjectName(heroTypeId))
     call FileWriteLine("</td>")
-    
+
     // level
     call FileWriteLine("<td>")
     call FileWriteLine(I2S(GetHeroLevel(hero)))
     call FileWriteLine("</td>")
-    
+
     // location
     call FileWriteLine("<td>")
-    
+
     set zone = GetZoneByCoordinates(GetUnitX(hero), GetUnitY(hero))
     if (zone != 0) then
         call IconToHtmlEx4(GetZoneIcon(zone), "zones.html", GetZoneName(zone), GetZoneId(zone))
@@ -1116,7 +1116,7 @@ private function GenerateBossEx takes unit hero, integer index returns nothing
 
     // legendary item
     set legendaryItemIndex = GetLegendaryItemByBoss(hero)
-    
+
     if (legendaryItemIndex != -1) then
         call FileWriteLine("<td>")
         call IconToHtmlEx(GetLegendaryItemTypeId(legendaryItemIndex), "items.html")
@@ -1126,7 +1126,7 @@ private function GenerateBossEx takes unit hero, integer index returns nothing
         call FileWriteLine("-")
         call FileWriteLine("</td>")
     endif
-    
+
     // hero class
     call FileWriteLine("<td>")
     call GenerateHeroClass(heroTypeId)
@@ -1144,12 +1144,12 @@ private function GenerateBossEx takes unit hero, integer index returns nothing
     call FileWriteLine("<td>")
     call FileWriteLine(I2S(BlzGetUnitIntegerField(hero, UNIT_IF_AGILITY)))
     call FileWriteLine("</td>")
-    
+
     // start intelligence
     call FileWriteLine("<td>")
     call FileWriteLine(I2S(BlzGetUnitIntegerField(hero, UNIT_IF_INTELLIGENCE)))
     call FileWriteLine("</td>")
-    
+
     // strength per level
     call FileWriteLine("<td>")
     call FileWriteLine(R2SHtml(BlzGetUnitRealField(hero, UNIT_RF_STRENGTH_PER_LEVEL)))
@@ -1184,12 +1184,12 @@ private function GenerateBossEx takes unit hero, integer index returns nothing
     call FileWriteLine("<td>")
     call FileWriteLine(R2SHtml(BlzGetUnitWeaponRealField(hero, UNIT_WEAPON_RF_ATTACK_BASE_COOLDOWN, 0)))
     call FileWriteLine("</td>")
-    
+
     // attack range
     call FileWriteLine("<td>")
     call FileWriteLine(I2S(R2I(BlzGetUnitWeaponRealField(hero, UNIT_WEAPON_RF_ATTACK_RANGE, 0))))
     call FileWriteLine("</td>")
-    
+
     // attack damage
     call FileWriteLine("<td>")
     call FileWriteLine(GetUnitDamage(hero))
@@ -1227,7 +1227,7 @@ private function GenerateBosses takes nothing returns nothing
     local integer i = 0
     local integer max = 0
     local integer index = 0
-    
+
     call FileStart()
     call FileWriteLine("<!-- Bosses generated with chat command \"-website\". -->")
 
@@ -1239,7 +1239,7 @@ private function GenerateBosses takes nothing returns nothing
         set index = index + 1
         set i = i + 1
     endloop
-    
+
     set i = 0
     set max = BlzGroupGetSize(udg_BossesQuests)
     loop
@@ -1248,7 +1248,7 @@ private function GenerateBosses takes nothing returns nothing
         set index = index + 1
         set i = i + 1
     endloop
-    
+
     call FileWriteLine("<!-- Bosses generated with chat command \"-website\". -->")
 
     // The line below creates the file at the specified location
@@ -1281,7 +1281,7 @@ private function GenerateUnitEx takes integer unitTypeId, integer whichRace, int
     local integer max = 0
     local integer abilityId = 0
     local boolean primary = IsPrimaryDependencyEquivalent(unitTypeId)
-    
+
     call FileWriteLine("<tr id=\"" + A2S(unitTypeId) + "\">")
     // icon
     call FileWriteLine(ColumnDataOrder(I2S(index), GetUnitName(creep)))
@@ -1296,12 +1296,12 @@ private function GenerateUnitEx takes integer unitTypeId, integer whichRace, int
         call FileWriteLine(" <div title=\"Depndency equivalent.\">(d)</div>")
     endif
     call FileWriteLine("</td>")
-    
+
     // count
     call FileWriteLine("<td>")
     call FileWriteLine(GetUnitCountInMap(unitTypeId))
     call FileWriteLine("</td>")
-    
+
     // abilities and description
     call FileWriteLine("<td>")
     call FileWriteLine("<div class=\"spells\">")
@@ -1321,12 +1321,12 @@ private function GenerateUnitEx takes integer unitTypeId, integer whichRace, int
     //call FormatTooltip(BlzGetAbilityExtendedTooltip(unitTypeId, 0))
     //call FileWriteLine("</div>")
     call FileWriteLine("</td>")
-    
+
     // race
     call FileWriteLine(ColumnDataOrder(I2S(whichRace), GetRaceName(whichRace)))
     call RaceOrProfessionOrQuestIconToHtml(unitTypeId, whichRace)
     call FileWriteLine("</td>")
-    
+
     // items
     if (GetUnitTypeIdTrophy(unitTypeId) != 0) then
         call FileWriteLine("<td>")
@@ -1337,7 +1337,7 @@ private function GenerateUnitEx takes integer unitTypeId, integer whichRace, int
         call FileWriteLine("-")
         call FileWriteLine("</td>")
     endif
-    
+
     // level
     call FileWriteLine("<td>")
     call FileWriteLine(I2S(GetUnitLevel(creep)))
@@ -1356,7 +1356,7 @@ private function GenerateUnitEx takes integer unitTypeId, integer whichRace, int
 
     // wood cost
     call GenerateUnitTypeIdLumberCost(unitTypeId)
-    
+
     // move type
     call FileWriteLine("<td>")
     call FileWriteLine(GetMoveType(creep))
@@ -1376,14 +1376,14 @@ private function GenerateUnitEx takes integer unitTypeId, integer whichRace, int
     call FileWriteLine("<td>")
     call FileWriteLine(I2S(R2I(BlzGetUnitArmor(creep))))
     call FileWriteLine("</td>")
-    
+
     call GenerateUnitAttack(creep)
-    
+
     // max hp
     call FileWriteLine("<td>")
     call FileWriteLine(I2S(R2I(BlzGetUnitRealField(creep, UNIT_RF_HP))))
     call FileWriteLine("</td>")
-    
+
     // hp regeneration
     call FileWriteLine("<td>")
     if (BlzGetUnitRealField(creep, UNIT_RF_HIT_POINTS_REGENERATION_RATE) > 0.0) then
@@ -1417,7 +1417,7 @@ private function GenerateUnitEx takes integer unitTypeId, integer whichRace, int
     call FileWriteLine("</td>")
 
     call FileWriteLine("</tr>")
-    
+
     call RemoveUnit(creep)
     set creep = null
 endfunction
@@ -1448,7 +1448,7 @@ private function GenerateNonCreepUnits takes nothing returns integer
         set id = GetSaveObjectUnitId(i)
         if (id != 0) then
             call GenerateUnit(id, index)
-            
+
             set d = GetDependencyEquivalents(id)
             if (d != 0) then
                 set j = 0
@@ -1466,7 +1466,7 @@ private function GenerateNonCreepUnits takes nothing returns integer
         set i = i + 1
         set index = index + 1
     endloop
-    
+
     return index
 endfunction
 
@@ -1482,7 +1482,7 @@ private function GenerateCreepUnits takes integer index returns nothing
         set id = GetNeutralUnit(i)
         if (id != 0) then
             call GenerateUnit(id, index)
-            
+
             set d = GetDependencyEquivalents(id)
             if (d != 0) then
                 set j = 0
@@ -1507,12 +1507,12 @@ private function GenerateUnits takes nothing returns nothing
 
     call FileStart()
     call FileWriteLine("<!-- Units generated with chat command \"-website\". -->")
-    
+
     call ClearGeneratedIds()
-    
+
     set index = GenerateNonCreepUnits()
     call GenerateCreepUnits(index)
-    
+
     call FileWriteLine("<!-- Units generated with chat command \"-website\". -->")
 
     // The line below creates the file at the specified location
@@ -1531,12 +1531,12 @@ private function GenerateBuildingEx takes integer unitTypeId, integer whichRace,
     //call IconToHtml(unitTypeId)
     call WriteUnitPopoverWithIconEx(creep, "buildings.html")
     call FileWriteLine("</td>")
-    
+
     // name
     call FileWriteLine("<td>")
     call FileWriteLine(GetUnitName(creep))
     call FileWriteLine("</td>")
-    
+
     // count
     call FileWriteLine("<td>")
     if (unitTypeId == RANDOM_MINE) then
@@ -1561,10 +1561,10 @@ private function GenerateBuildingEx takes integer unitTypeId, integer whichRace,
         set i = i + 1
     endloop
     call FileWriteLine("</div>")
-    
+
     /*
     set max = GetObjectIdIntegerListFieldValueCount(unitTypeId, OBJECT_DATA_FIELD_UMKI)
-    
+
     if (max > 0) then
         call FileWriteLine("<div class=\"items\">")
         set i = 0
@@ -1581,12 +1581,12 @@ private function GenerateBuildingEx takes integer unitTypeId, integer whichRace,
     //call FileWriteLine("</div>")
     */
     call FileWriteLine("</td>")
-    
+
     // race
     call FileWriteLine(ColumnDataOrder(I2S(whichRace), GetRaceName(whichRace)))
     call RaceIconToHtml(whichRace)
     call FileWriteLine("</td>")
-    
+
     // tiny item
     if (GetObjectMapping(unitTypeId) != 0) then
         call FileWriteLine(ColumnDataOrder(A2S(GetObjectMapping(unitTypeId)), GetObjectName(GetObjectMapping(unitTypeId))))
@@ -1600,23 +1600,23 @@ private function GenerateBuildingEx takes integer unitTypeId, integer whichRace,
 
     // gold cost
     call GenerateUnitTypeIdGoldCost(unitTypeId)
-    
+
     // wood cost
     call GenerateUnitTypeIdLumberCost(unitTypeId)
-    
+
     // food made
     call GenerateUnitTypeIdFoodMade(unitTypeId)
-    
+
     // armor type
     call FileWriteLine("<td>")
     call GenerateArmorCell(creep)
     call FileWriteLine("</td>")
-    
+
     // armor
     call FileWriteLine("<td>")
     call FileWriteLine(I2S(R2I(BlzGetUnitArmor(creep))))
     call FileWriteLine("</td>")
-    
+
     call GenerateUnitAttack(creep)
 
     // max hp
@@ -1657,7 +1657,7 @@ private function GenerateBuildingEx takes integer unitTypeId, integer whichRace,
     call FileWriteLine("</td>")
 
     call FileWriteLine("</tr>")
-    
+
     call RemoveUnit(creep)
     set creep = null
 endfunction
@@ -1698,13 +1698,13 @@ endfunction
 private function GenerateBuildings takes nothing returns nothing
     call FileStart()
     call FileWriteLine("<!-- Buildings generated with chat command \"-website\". -->")
-    
+
     call ClearGeneratedIds()
-    
+
     call NewOpLimit(function GenerateNeutralBuildings)
 
     call NewOpLimit(function GenerateRaceBuildings)
-    
+
     call FileWriteLine("<!-- Buildings generated with chat command \"-website\". -->")
 
     // The line below creates the file at the specified location
@@ -1715,29 +1715,29 @@ private function GenerateItemEx takes integer itemTypeId, integer whichRace, int
     local item whichItem = CreateItem(itemTypeId, 0.0, 0.0)
     local integer goldCost = 0
     local integer lumberCost = 0
-    
+
     call FileWriteLine("<tr id=\"" + A2S(itemTypeId) + "\">")
     // icon
     call FileWriteLine(ColumnDataOrder(I2S(index), GetItemName(whichItem)))
     //call IconToHtml(itemTypeId)
     call WriteItemPopoverWithIcon(itemTypeId, "items.html")
     call FileWriteLine("</td>")
-    
+
     // name
     call FileWriteLine("<td>")
     call FileWriteLine(GetItemName(whichItem))
     call FileWriteLine("</td>")
-    
+
     // count
     call FileWriteLine("<td>")
     call FileWriteLine(GetItemCountInMap(itemTypeId))
     call FileWriteLine("</td>")
-    
+
     // race
     call FileWriteLine(ColumnDataOrder(I2S(whichRace), GetRaceName(whichRace)))
     call RaceOrProfessionOrQuestIconToHtml(itemTypeId, whichRace)
     call FileWriteLine("</td>")
-    
+
     // building for tiny item
     if (GetObjectMapping(itemTypeId) != 0) then
         call FileWriteLine(ColumnDataOrder(A2S(GetObjectMapping(itemTypeId)), GetObjectName(GetObjectMapping(itemTypeId))))
@@ -1748,7 +1748,7 @@ private function GenerateItemEx takes integer itemTypeId, integer whichRace, int
         call FileWriteLine("-")
         call FileWriteLine("</td>")
     endif
-    
+
     // can be dropped by creeps
     /*
     call FileWriteLine("<td>")
@@ -1759,30 +1759,30 @@ private function GenerateItemEx takes integer itemTypeId, integer whichRace, int
     endif
     call FileWriteLine("</td>")
     */
-    
+
     // level
     call FileWriteLine("<td>")
     call FileWriteLine(I2S(GetItemLevel(whichItem)))
     call FileWriteLine("</td>")
-    
+
     // tooltip
     //call FileWriteLine("<td>")
     //call FormatTooltip(BlzGetItemExtendedTooltip(whichItem))
     //call FileWriteLine("</td>")
-    
+
     // gold cost
     call GenerateItemTypeIdGoldCost(itemTypeId)
-    
+
     // lumber cost
     call GenerateItemTypeIdLumberCost(itemTypeId)
-    
+
     // charges
     call FileWriteLine("<td>")
     call FileWriteLine(I2S(GetItemCharges(whichItem)))
     call FileWriteLine("</td>")
 
-    call FileWriteLine("</tr>")    
-    
+    call FileWriteLine("</tr>")
+
     call RemoveItem(whichItem)
     set whichItem = null
 endfunction
@@ -1858,9 +1858,9 @@ private function GenerateItems takes nothing returns nothing
     local integer max = GetSaveObjectItemMax()
     call FileStart()
     call FileWriteLine("<!-- Items generated with chat command \"-website\". -->")
-    
+
     call ClearGeneratedIds()
-    
+
     // contain race and profession items
     // split because of huge number
     loop
@@ -1868,11 +1868,11 @@ private function GenerateItems takes nothing returns nothing
         call GenerateNormalItems(i, 100)
         set i = i + 100
     endloop
-    
+
     call NewOpLimit(function GenerateLegendaryItems)
-    
+
     call NewOpLimit(function GenerateQuestRewardItems)
-    
+
     call FileWriteLine("<!-- Items generated with chat command \"-website\". -->")
 
     // The line below creates the file at the specified location
@@ -1888,7 +1888,7 @@ private function GenerateAllRaceIconsEx takes integer whichRace returns nothing
     local DependencyEquivalents d = 0
     local integer j = 0
     local integer max2 = 0
-    
+
     call ClearGeneratedIds()
     // heroes
     set i = 0
@@ -1922,7 +1922,7 @@ private function GenerateAllRaceIconsEx takes integer whichRace returns nothing
         set id = GetRaceObjectTypeId(whichRace, i)
         if (id != 0 and GenerateId(id)) then
             call WriteUnitPopoverWithIcon(id, "units.html")
-            
+
             set d = GetDependencyEquivalents(id)
             if (d != 0) then
                 set j = 0
@@ -1975,14 +1975,14 @@ private function GenerateRaceEx takes integer i returns nothing
     call FileWriteLine("<td data-order=\"" + I2S(i) + "\">")
     call WriteRacePopoverWithIconEx(whichItem, "races.html")
     call FileWriteLine("</td>")
-    
+
     // name
     call FileWriteLine("<td>")
     call FileWriteLine("<a href=\"" + GetItemName(whichItem) + ".html\">")
     call FileWriteLine(GetItemName(whichItem))
     call FileWriteLine("</a>")
     call FileWriteLine("</td>")
-    
+
     // scepter
     call FileWriteLine("<td>")
     if (udg_RaceItemType[i] != 0) then
@@ -1991,17 +1991,17 @@ private function GenerateRaceEx takes integer i returns nothing
         call FileWriteLine("-")
     endif
     call FileWriteLine("</td>")
-    
+
     // start building
     call FileWriteLine("<td>")
     call IconToHtmlEx(GetItemTypeId(tinyItem), "items.html")
     call FileWriteLine("</td>")
-    
+
     // team
     call FileWriteLine("<td>")
     call FileWriteLine(GetRaceTeamName(GetRaceTeam(i)))
     call FileWriteLine("</td>")
-    
+
     // bonus/required hero level
     call FileWriteLine("<td>")
     if (IsRaceBonus(i)) then
@@ -2010,14 +2010,14 @@ private function GenerateRaceEx takes integer i returns nothing
         call FileWriteLine("-")
     endif
     call FileWriteLine("</td>")
-    
+
     // all heroes buildings, units and researches
     call FileWriteLine("<td>")
     call GenerateAllRaceIcons(i)
     call FileWriteLine("</td>")
-    
+
     call FileWriteLine("</tr>")
-    
+
     call RemoveItem(whichItem)
     set whichItem = null
     call RemoveItem(tinyItem)
@@ -2038,20 +2038,20 @@ private function GenerateRaceTechnologyTreeBuildingEx takes integer unitTypeId r
     local integer i = 0
     local integer max = 0
     local integer t = 0
-    
+
     if (unitTypeId != 0 and GenerateId(unitTypeId)) then
         set whichUnit = CreateTmpUnit(unitTypeId)
-        
+
         call FileWriteLine("<td>")
-    
+
         call FileWriteLine("<table>")
         call FileWriteLine("<tbody>")
         call FileWriteLine("<tr>")
         call FileWriteLine("<td>")
-        
+
         call WriteBuildingPopoverWithIcon(unitTypeId)
         call FileWriteLine("<br/>")
-        
+
         // name
         call FileWriteLine(GetUnitName(whichUnit))
         call FileWriteLine("<br/>")
@@ -2067,13 +2067,13 @@ private function GenerateRaceTechnologyTreeBuildingEx takes integer unitTypeId r
             loop
                 exitwhen (i >= max or max <= 0)
                 set t = GetObjectIdIntegerListFieldValue(unitTypeId, OBJECT_DATA_FIELD_UTRA, i)
-                
+
                 if (t != 0) then
                     // icon
-                    call WriteUnitPopoverWithIcon(t)     
+                    call WriteUnitPopoverWithIcon(t)
                     //call BJDebugMsg("List value with index " + I2S(i) + " of type " + GetObjectName(unitTypeId) + " with field utra is " + A2S(t))
                 endif
-                
+
                 set i = i + 1
             endloop
         endif
@@ -2088,16 +2088,16 @@ private function GenerateRaceTechnologyTreeBuildingEx takes integer unitTypeId r
             loop
                 exitwhen (i >= max)
                 set t = GetObjectIdIntegerListFieldValue(unitTypeId, OBJECT_DATA_FIELD_UMKI, i)
-                
+
                 if (t != 0) then
                     // icon
                     call WriteItemPopoverWithIcon(t)
                 endif
-                
+
                 set i = i + 1
             endloop
         endif
-        
+
         // researches
         if (GetObjectIdIntegerListFieldValueCount(unitTypeId, OBJECT_DATA_FIELD_URES) > 0) then
             call FileWriteLine("<br/>")
@@ -2108,19 +2108,19 @@ private function GenerateRaceTechnologyTreeBuildingEx takes integer unitTypeId r
             loop
                 exitwhen (i >= max)
                 set t = GetObjectIdIntegerListFieldValue(unitTypeId, OBJECT_DATA_FIELD_URES, i)
-                
+
                 if (t != 0) then
                     // icon
                     call WriteResearchPopoverWithIcon(t)
                 endif
-                
+
                 set i = i + 1
             endloop
         endif
-        
+
         call FileWriteLine("</td>")
         call FileWriteLine("</tr>")
-        
+
         // upgrades to:
         if (GetObjectIdIntegerListFieldValueCount(unitTypeId, OBJECT_DATA_FIELD_UUPT) > 0) then
             call FileWriteLine("<br/>")
@@ -2135,11 +2135,11 @@ private function GenerateRaceTechnologyTreeBuildingEx takes integer unitTypeId r
             endloop
         endif
         */
-        
+
         call FileWriteLine("</tbody>")
         call FileWriteLine("</table>")
         call FileWriteLine("</td>")
-        
+
         call RemoveUnit(whichUnit)
         set whichUnit = null
     endif
@@ -2157,26 +2157,26 @@ endfunction
 private function GenerateRaceTechnologyTreeEx takes integer whichRace returns nothing
     local integer i = 0
     local integer max = 0
-    
+
     call ClearGeneratedIds()
-    
+
     // tier 1
     call FileWriteLine("<tr id=\"tier1\">")
-    
+
     // tier 1
     call FileWriteLine("<td>")
     call FileWriteLine("Tier 1")
     call FileWriteLine("</td>")
-    
+
     call FileWriteLine("<td>")
     call FileWriteLine("<table>")
     call FileWriteLine("<tr>")
-    
+
     call GenerateRaceTechnologyTreeBuilding(GetRaceObjectTypeId(whichRace, RACE_OBJECT_TYPE_TIER_1))
     call GenerateRaceTechnologyTreeBuilding(GetRaceObjectTypeId(whichRace, RACE_OBJECT_TYPE_HOUSING))
     call GenerateRaceTechnologyTreeBuilding(GetRaceObjectTypeId(whichRace, RACE_OBJECT_TYPE_FARM))
     call GenerateRaceTechnologyTreeBuilding(GetRaceObjectTypeId(whichRace, RACE_OBJECT_TYPE_ALTAR))
-    
+
     // summoned heroes
     /*
     call FileWriteLine("<br/>")
@@ -2190,78 +2190,78 @@ private function GenerateRaceTechnologyTreeEx takes integer whichRace returns no
             // icon
             //call WriteUnitPopoverWithIcon(udg_HeroUnitType[i])
         endif
-        
+
         set i = i + 1
     endloop
     */
-    
+
     call GenerateRaceTechnologyTreeBuilding(GetRaceObjectTypeId(whichRace, RACE_OBJECT_TYPE_BARRACKS))
     call GenerateRaceTechnologyTreeBuilding(GetRaceObjectTypeId(whichRace, RACE_OBJECT_TYPE_MILL))
-    
+
     if (GetRaceObjectTypeId(whichRace, RACE_OBJECT_TYPE_MILL) != GetRaceObjectTypeId(whichRace, RACE_OBJECT_TYPE_BLACK_SMITH)) then
         call GenerateRaceTechnologyTreeBuilding(GetRaceObjectTypeId(whichRace, RACE_OBJECT_TYPE_BLACK_SMITH))
     endif
-    
+
     // tower
     call GenerateRaceTechnologyTreeBuilding(GetRaceObjectTypeId(whichRace, RACE_OBJECT_TYPE_SCOUT_TOWER))
-    
+
     call GenerateRaceTechnologyTreeBuilding(GetRaceObjectTypeId(whichRace, RACE_OBJECT_TYPE_GUARD_TOWER))
     call GenerateRaceTechnologyTreeBuilding(GetRaceObjectTypeId(whichRace, RACE_OBJECT_TYPE_CANNON_TOWER))
     call GenerateRaceTechnologyTreeBuilding(GetRaceObjectTypeId(whichRace, RACE_OBJECT_TYPE_ARCANE_TOWER))
-    
+
     call GenerateRaceTechnologyTreeBuilding(GetRaceObjectTypeId(whichRace, RACE_OBJECT_TYPE_SHOP))
     call GenerateRaceTechnologyTreeBuilding(GetRaceObjectTypeId(whichRace, RACE_OBJECT_TYPE_MINE))
     call GenerateRaceTechnologyTreeBuilding(GetRaceObjectTypeId(whichRace, RACE_OBJECT_TYPE_SHIPYARD))
-    
+
     call FileWriteLine("</tr>")
     call FileWriteLine("</table>")
     call FileWriteLine("</td>")
-    
+
     call FileWriteLine("</tr>")
-    
+
     // tier 2
     call FileWriteLine("<tr id=\"tier2\">")
-    
+
     // tier 2
     call FileWriteLine("<td>")
     call FileWriteLine("Tier 2")
     call FileWriteLine("</td>")
-    
+
     call FileWriteLine("<td>")
     call FileWriteLine("<table>")
     call FileWriteLine("<tr>")
-    
+
     call GenerateRaceTechnologyTreeBuilding(GetRaceObjectTypeId(whichRace, RACE_OBJECT_TYPE_TIER_2))
     call GenerateRaceTechnologyTreeBuilding(GetRaceObjectTypeId(whichRace, RACE_OBJECT_TYPE_ARCANE_SANCTUM))
     call GenerateRaceTechnologyTreeBuilding(GetRaceObjectTypeId(whichRace, RACE_OBJECT_TYPE_GRYPHON_AVIARY))
     call GenerateRaceTechnologyTreeBuilding(GetRaceObjectTypeId(whichRace, RACE_OBJECT_TYPE_WORKSHOP))
-    
+
     if (GetRaceObjectTypeId(whichRace, RACE_OBJECT_TYPE_SACRIFICIAL_PIT) != 0) then
         call GenerateRaceTechnologyTreeBuilding(GetRaceObjectTypeId(whichRace, RACE_OBJECT_TYPE_SACRIFICIAL_PIT))
     endif
-    
+
     call FileWriteLine("</tr>")
     call FileWriteLine("</table>")
     call FileWriteLine("</td>")
-    
+
     call FileWriteLine("</tr>")
-    
+
     // tier 3
     call FileWriteLine("<tr id=\"tier3\">")
-    
+
     // tier 3
     call FileWriteLine("<td>")
     call FileWriteLine("Tier 3")
     call FileWriteLine("</td>")
-    
+
     call FileWriteLine("<td>")
     call FileWriteLine("<table>")
     call FileWriteLine("<tr>")
-    
+
     call GenerateRaceTechnologyTreeBuilding(GetRaceObjectTypeId(whichRace, RACE_OBJECT_TYPE_TIER_3))
     call GenerateRaceTechnologyTreeBuilding(GetRaceObjectTypeId(whichRace, RACE_OBJECT_TYPE_SPECIAL_BUILDING))
     call GenerateRaceTechnologyTreeBuilding(GetRaceObjectTypeId(whichRace, RACE_OBJECT_TYPE_SPECIAL_BUILDING_2))
-    
+
     // Citizen Male
     call GenerateRaceTechnologyTreeBuilding(CRAFTING_STASH)
     call GenerateRaceTechnologyTreeBuilding(WALL)
@@ -2270,49 +2270,47 @@ private function GenerateRaceTechnologyTreeEx takes integer whichRace returns no
     call GenerateRaceTechnologyTreeBuilding(RESEARCH_TENT)
     call GenerateRaceTechnologyTreeBuilding(POWER_GENERATOR)
     call GenerateRaceTechnologyTreeBuilding(PORTAL)
-    
+
     // Citizen Female
     call GenerateRaceTechnologyTreeBuilding(TRAINER)
     call GenerateRaceTechnologyTreeBuilding(SKINS)
-    call GenerateRaceTechnologyTreeBuilding(HERO_ABILITIES)
     call GenerateRaceTechnologyTreeBuilding(WITCH_HUT)
     call GenerateRaceTechnologyTreeBuilding(ALCHEMIST_LAB)
     call GenerateRaceTechnologyTreeBuilding(MOUNTS_CAGE)
-    call GenerateRaceTechnologyTreeBuilding(SPELL_BOOK)
     call GenerateRaceTechnologyTreeBuilding(DRAGON_ROOST)
     call GenerateRaceTechnologyTreeBuilding(THIEVES_GUILD)
     call GenerateRaceTechnologyTreeBuilding(MARKETPLACE)
     call GenerateRaceTechnologyTreeBuilding(ANTIMAGIC_WARD)
-    
+
     // Child
     call GenerateRaceTechnologyTreeBuilding(ARMORY)
     call GenerateRaceTechnologyTreeBuilding(BANNER_SHOP)
-    
+
     call FileWriteLine("</tr>")
     call FileWriteLine("</table>")
     call FileWriteLine("</td>")
-    
+
     call FileWriteLine("</tr>")
-    
+
     // tier 4
     call FileWriteLine("<tr id=\"tier4\">")
-    
+
     // tier 4
     call FileWriteLine("<td>")
     call FileWriteLine("Tier 4")
     call FileWriteLine("</td>")
-    
+
     call FileWriteLine("<td>")
     call FileWriteLine("<table>")
     call FileWriteLine("<tr>")
-    
+
     call GenerateRaceTechnologyTreeBuilding(TEMPLE_OF_LIGHT)
     call GenerateRaceTechnologyTreeBuilding(TEMPLE_OF_DARKNESS)
-    
+
     call FileWriteLine("</tr>")
     call FileWriteLine("</table>")
     call FileWriteLine("</td>")
-    
+
     call FileWriteLine("</tr>")
 endfunction
 
@@ -2337,12 +2335,12 @@ private function GenerateRaces takes nothing returns nothing
         call GenerateRace(i)
         set i = i + 1
     endloop
-    
+
     call FileWriteLine("<!-- Races generated with chat command \"-website\". -->")
 
     // The line below creates the file at the specified location
     call FileSave("WorldOfWarcraftReforged-Races.txt")
-    
+
     set i = 0
     loop
         exitwhen (i == max)
@@ -2350,7 +2348,7 @@ private function GenerateRaces takes nothing returns nothing
         call FileWriteLine("<!-- Races generated with chat command \"-website\". -->")
         call GenerateRaceTechnologyTree(i)
         call FileWriteLine("<!-- Races generated with chat command \"-website\". -->")
-        
+
         // The line below creates the file at the specified location
         call FileSave("WorldOfWarcraftReforged-Race-" + GetRaceName(i) + ".txt")
         set i = i + 1
@@ -2399,7 +2397,7 @@ private function GenerateProfessionEx takes integer p returns nothing
     call FileWriteLine("<td>")
     call WriteItemPopoverWithIcon(GetProfessionBookItemTypeId(p), "items.html")
     call FileWriteLine("</td>")
-    
+
     call FileWriteLine("</tr>")
 endfunction
 
@@ -2454,7 +2452,7 @@ endfunction
 private function GenerateClasses takes nothing returns nothing
     local integer i = 0
     local integer max = GetMaxHeroClasses()
-    
+
     call FileStart()
     call FileWriteLine("<!-- Classes generated with chat command \"-website\". -->")
     loop
@@ -2462,7 +2460,7 @@ private function GenerateClasses takes nothing returns nothing
         call GenerateClass(i)
         set i = i + 1
     endloop
-    
+
     call FileWriteLine("<!-- Classes generated with chat command \"-website\". -->")
 
     // The line below creates the file at the specified location
@@ -2472,7 +2470,7 @@ endfunction
 private function GenerateClassesOverview takes nothing returns nothing
     local integer i = 0
     local integer max = GetMaxHeroClasses()
-    
+
     call FileStart()
     call FileWriteLine("<!-- Classes generated with chat command \"-website\". -->")
     loop
@@ -2480,7 +2478,7 @@ private function GenerateClassesOverview takes nothing returns nothing
         call WriteItemPopoverWithIcon(GetHeroClassItemTypeId(i), "classes.html")
         set i = i + 1
     endloop
-    
+
     call FileWriteLine("<!-- Classes generated with chat command \"-website\". -->")
 
     // The line below creates the file at the specified location
@@ -2499,7 +2497,7 @@ private function GenerateProfessions takes nothing returns nothing
         call GenerateProfession(i)
         set i = i + 1
     endloop
-    
+
     call FileWriteLine("<!-- Professions generated with chat command \"-website\". -->")
 
     // The line below creates the file at the specified location
@@ -2518,7 +2516,7 @@ private function GenerateProfessionsOverview takes nothing returns nothing
         call WriteItemPopoverWithIcon(GetProfessionItemTypeId(i), "professions.html")
         set i = i + 1
     endloop
-    
+
     call FileWriteLine("<!-- Professions generated with chat command \"-website\". -->")
 
     // The line below creates the file at the specified location
@@ -2531,24 +2529,24 @@ private function GeneratePlayers takes nothing returns nothing
     local string saveCode = ""
     local string playerName = ""
     local Account a = 0
-    
+
     call FileStart()
     call FileWriteLine("<!-- Players generated with chat command \"-website\". -->")
-    
+
     call ClearGeneratedStringIds()
-    
+
     set i = 0
     loop
         exitwhen (i == max)
         if (GetPrestoredSaveCodeTypeByIndex(i) == PRESTORED_SAVECODE_TYPE_HEROES) then
             set playerName = GetPrestoredSaveCodePlayerNameByIndex(i)
-            
+
             if (GenerateIdString(playerName)) then
                 set saveCode = GetPrestoredSaveCodeByIndex(i)
                 set a = GetAccountByName(playerName)
-            
+
                 call FileWriteLine("<tr id=\"" + playerName + "\">")
-                
+
                 // icon
                 call FileWriteLine("<td>")
                 if (a != 0 and StringLength(a.icon) > 0) then
@@ -2557,14 +2555,14 @@ private function GeneratePlayers takes nothing returns nothing
                     call FileWriteLine("-")
                 endif
                 call FileWriteLine("</td>")
-                
+
                 // name
                 call FileWriteLine("<td>")
                 call FileWriteLine("<a href=\"https://us.forums.blizzard.com/en/warcraft3/u/" + playerName + "\">")
                 call FileWriteLine(playerName)
                 call FileWriteLine("</a>")
                 call FileWriteLine("</td>")
-                
+
                 // VIP
                 call FileWriteLine("<td>")
                 if (IsAccountVIP(playerName)) then
@@ -2578,27 +2576,27 @@ private function GeneratePlayers takes nothing returns nothing
                 call FileWriteLine("<td>")
                 call FileWriteLine(I2S(IMinBJ(MAX_HERO_LEVEL, GetHeroLevelByXP(GetSaveCodeXp1(playerName, saveCode)))))
                 call FileWriteLine("</td>")
-                
+
                 // hero level 2
                 call FileWriteLine("<td>")
                 call FileWriteLine(I2S(IMinBJ(MAX_HERO_LEVEL, GetHeroLevelByXP(GetSaveCodeXp2(playerName, saveCode)))))
                 call FileWriteLine("</td>")
-                
+
                 // hero level 3
                 call FileWriteLine("<td>")
                 call FileWriteLine(I2S(IMinBJ(MAX_HERO_LEVEL, GetHeroLevelByXP(GetSaveCodeXp3(playerName, saveCode)))))
                 call FileWriteLine("</td>")
-                
+
                 // gold
                 call FileWriteLine("<td>")
                 call FileWriteLine(I2S(GetSaveCodeGold(playerName, saveCode)))
                 call FileWriteLine("</td>")
-                
+
                 // lumber
                 call FileWriteLine("<td>")
                 call FileWriteLine(I2S(GetSaveCodeLumber(playerName, saveCode)))
                 call FileWriteLine("</td>")
-                
+
                 // unlocked
                 if (a != 0) then
                     call FileWriteLine("<td>")
@@ -2620,19 +2618,19 @@ private function GeneratePlayers takes nothing returns nothing
         endif
         set i = i + 1
     endloop
-    
+
     set i = 0
     set max = GetAccountsMax()
     loop
         exitwhen (i == max)
         set a = GetAccount(i)
-        
+
         set saveCode = "-"
         set playerName = a.name
-        
+
         if (GenerateIdString(playerName)) then
             call FileWriteLine("<tr id=\"" + playerName + "\">")
-            
+
             // icon
             call FileWriteLine("<td>")
             if (a != 0 and StringLength(a.icon) > 0) then
@@ -2641,14 +2639,14 @@ private function GeneratePlayers takes nothing returns nothing
                 call FileWriteLine("-")
             endif
             call FileWriteLine("</td>")
-            
+
             // name
             call FileWriteLine("<td>")
             call FileWriteLine("<a href=\"https://us.forums.blizzard.com/en/warcraft3/u/" + playerName + "\">")
             call FileWriteLine(playerName)
             call FileWriteLine("</a>")
             call FileWriteLine("</td>")
-            
+
             // VIP
             call FileWriteLine("<td>")
             if (IsAccountVIP(playerName)) then
@@ -2662,27 +2660,27 @@ private function GeneratePlayers takes nothing returns nothing
             call FileWriteLine("<td>")
             call FileWriteLine("-")
             call FileWriteLine("</td>")
-            
+
             // hero level 2
             call FileWriteLine("<td>")
             call FileWriteLine("-")
             call FileWriteLine("</td>")
-            
+
             // hero level 3
             call FileWriteLine("<td>")
             call FileWriteLine("-")
             call FileWriteLine("</td>")
-            
+
             // gold
             call FileWriteLine("<td>")
             call FileWriteLine("-")
             call FileWriteLine("</td>")
-            
+
             // lumber
             call FileWriteLine("<td>")
             call FileWriteLine("-")
             call FileWriteLine("</td>")
-            
+
             // unlocked
             call FileWriteLine("<td>")
             call FileWriteLine(UnlockedAccountIds(a))
@@ -2695,34 +2693,34 @@ private function GeneratePlayers takes nothing returns nothing
 
             call FileWriteLine("</tr>")
         endif
-        
+
         set i = i + 1
     endloop
-    
+
     set i = 0
     set max = GetVIPsMax()
     loop
         exitwhen (i == max)
         set a = 0
-        
+
         set saveCode = "-"
         set playerName = GetVIP(i)
-        
+
         if (GenerateIdString(playerName)) then
             call FileWriteLine("<tr id=\"" + playerName + "\">")
-            
+
             // icon
             call FileWriteLine("<td>")
             call FileWriteLine("-")
             call FileWriteLine("</td>")
-            
+
             // name
             call FileWriteLine("<td>")
             call FileWriteLine("<a href=\"https://us.forums.blizzard.com/en/warcraft3/u/" + playerName + "\">")
             call FileWriteLine(playerName)
             call FileWriteLine("</a>")
             call FileWriteLine("</td>")
-            
+
             // VIP
             call FileWriteLine("<td>")
             call FileWriteLine("yes")
@@ -2732,37 +2730,37 @@ private function GeneratePlayers takes nothing returns nothing
             call FileWriteLine("<td>")
             call FileWriteLine("-")
             call FileWriteLine("</td>")
-            
+
             // hero level 2
             call FileWriteLine("<td>")
             call FileWriteLine("-")
             call FileWriteLine("</td>")
-            
+
             // hero level 3
             call FileWriteLine("<td>")
             call FileWriteLine("-")
             call FileWriteLine("</td>")
-            
+
             // gold
             call FileWriteLine("<td>")
             call FileWriteLine("-")
             call FileWriteLine("</td>")
-            
+
             // lumber
             call FileWriteLine("<td>")
             call FileWriteLine("-")
             call FileWriteLine("</td>")
-            
+
             // hero kills
             call FileWriteLine("<td>")
             call FileWriteLine("-")
             call FileWriteLine("</td>")
-            
+
             // hero deaths
             call FileWriteLine("<td>")
             call FileWriteLine("-")
             call FileWriteLine("</td>")
-            
+
             // unlocked
             call FileWriteLine("<td>")
             call FileWriteLine("-")
@@ -2775,10 +2773,10 @@ private function GeneratePlayers takes nothing returns nothing
 
             call FileWriteLine("</tr>")
         endif
-        
+
         set i = i + 1
     endloop
-    
+
     call FileWriteLine("<!-- Players generated with chat command \"-website\". -->")
 
     // The line below creates the file at the specified location
@@ -2796,17 +2794,17 @@ private function GenerateQuestEx takes integer i returns nothing
     call FileWriteLine("<img class=\"wowr-icon\" src=\"" + GetQuestIcon(i) + "\" title=\"" + GetQuestIcon(i) + "\" />")
     call FileWriteLine("</a>")
     call FileWriteLine("</td>")
-    
+
     // name
     call FileWriteLine("<td>")
     call FileWriteLine(GetQuestTitle(i))
     call FileWriteLine("</td>")
-    
+
      // npc
     call FileWriteLine("<td>")
     call IconToHtmlEx2(GetUnitTypeId(GetQuestNpc(i)), "npcs.html", GetActualObjectName(GetUnitTypeId(GetQuestNpc(i))))
     call FileWriteLine("</td>")
-    
+
     // reward
     call FileWriteLine("<td>")
     call IconToHtmlEx(GetQuestReward(i), "items.html")
@@ -2831,7 +2829,7 @@ private function GenerateQuestEx takes integer i returns nothing
     // description
     call FileWriteLine("<td>")
     call FormatTooltip(GetQuestDescription(i))
-    
+
     set j = 0
     set max2 = QuestGetItemCount(GetQuest(i))
     if (max2 > 0) then
@@ -2846,7 +2844,7 @@ private function GenerateQuestEx takes integer i returns nothing
         endloop
         call FileWriteLine("</ul>")
     endif
-    
+
     call FileWriteLine("</td>")
 
     call FileWriteLine("</tr>")
@@ -2859,7 +2857,7 @@ endfunction
 private function GenerateQuests takes nothing returns nothing
     local integer i = 0
     local integer max = GetQuestsMax()
-    
+
     call FileStart()
     call FileWriteLine("<!-- Quests generated with chat command \"-website\". -->")
     set i = 0
@@ -2869,7 +2867,7 @@ private function GenerateQuests takes nothing returns nothing
         call NewOpLimit(function GenerateQuest)
         set i = i + 1
     endloop
-    
+
     call FileWriteLine("<!-- Quests generated with chat command \"-website\". -->")
 
     // The line below creates the file at the specified location
@@ -2880,7 +2878,7 @@ private function GenerateInfoQuest takes integer i returns nothing
     local string id = StringReplace(GetInfoQuestId(i), " ", "")
     local integer j = 0
     local integer max2 = 0
-    
+
     call FileWriteLine("<tr id=\"" + id + "\">")
     // icon
     call FileWriteLine("<td data-order=\"" + I2S(i) + "\">")
@@ -2888,7 +2886,7 @@ private function GenerateInfoQuest takes integer i returns nothing
     call FileWriteLine("<img class=\"wowr-icon\" src=\"" + GetInfoQuestIcon(i) + "\" title=\"" + GetInfoQuestIcon(i) + "\" />")
     call FileWriteLine("</a>")
     call FileWriteLine("</td>")
-    
+
     // name
     call FileWriteLine("<td>")
     call FileWriteLine(GetInfoQuestTitle(i))
@@ -2898,7 +2896,7 @@ private function GenerateInfoQuest takes integer i returns nothing
     call FileWriteLine("<td>")
     call FormatTooltip(GetInfoQuestDescription(i))
     call FileWriteLine("</td>")
-    
+
     // items
     call FileWriteLine("<td>")
     call FileWriteLine("<ul class=\"questitems\">")
@@ -2929,7 +2927,7 @@ endfunction
 private function GenerateInfoQuests takes nothing returns nothing
     local integer i = 0
     local integer max = GetInfoQuestsMax()
-    
+
     call FileStart()
     call FileWriteLine("<!-- Info quests generated with chat command \"-website\". -->")
     set i = 0
@@ -2938,7 +2936,7 @@ private function GenerateInfoQuests takes nothing returns nothing
         call GenerateInfoQuestOpLimit(i)
         set i = i + 1
     endloop
-    
+
     call FileWriteLine("<!-- Info quests generated with chat command \"-website\". -->")
 
     // The line below creates the file at the specified location
@@ -2951,7 +2949,7 @@ private function GenerateNpcs takes nothing returns nothing
     local integer unitTypeId = 0
     local Zone zone = 0
     local unit u = null
-    
+
     call FileStart()
     call FileWriteLine("<!-- NPCs generated with chat command \"-website\". -->")
     set i = 0
@@ -2959,19 +2957,19 @@ private function GenerateNpcs takes nothing returns nothing
         exitwhen (i == max)
         set unitTypeId = GetNpc(i)
         set u = GetNpcUnitByUnitTypeId(unitTypeId)
-        
+
         if (u != null) then
             call FileWriteLine("<tr id=\"" + A2S(unitTypeId) + "\">")
             // icon
             call FileWriteLine("<td>")
             call IconToHtml(unitTypeId)
             call FileWriteLine("</td>")
-            
+
             // name
             call FileWriteLine("<td>")
             call FileWriteLine(GetActualObjectName(unitTypeId))
             call FileWriteLine("</td>")
-            
+
             // location
             call FileWriteLine("<td>")
             set zone = GetZoneByCoordinates(GetUnitX(u), GetUnitY(u))
@@ -3004,12 +3002,12 @@ private function GenerateResearchEx takes integer researchId, integer whichRace,
     call FileWriteLine("<td>")
     call FileWriteLine(GetObjectName(researchId))
     call FileWriteLine("</td>")
-    
+
     // race
     call FileWriteLine(ColumnDataOrder(I2S(whichRace), GetRaceName(whichRace)))
     call RaceIconToHtml(whichRace)
     call FileWriteLine("</td>")
-    
+
     // description
     /*
     call FileWriteLine("<td>")
@@ -3018,12 +3016,12 @@ private function GenerateResearchEx takes integer researchId, integer whichRace,
     call FileWriteLine("</div>")
     call FileWriteLine("</td>")
     */
-    
+
      // levels
     call FileWriteLine("<td>")
     call FileWriteLine(I2S(GetPlayerTechMaxAllowed(Player(0), researchId)))
     call FileWriteLine("</td>")
-    
+
     call FileWriteLine("</tr>")
 endfunction
 
@@ -3057,9 +3055,9 @@ private function GenerateResearches takes nothing returns nothing
         endif
         set i = i + 1
     endloop
-    
+
     call FileWriteLine("<!-- Researches generated with chat command \"-website\". -->")
-    
+
     // The line below creates the file at the specified location
     call FileSave("WorldOfWarcraftReforged-Researches.txt")
 endfunction
@@ -3068,30 +3066,30 @@ private function GenerateSpellEx takes SkillMenuAbility skillMenuAbility, intege
     local integer abilityId = 0
     if (skillMenuAbility != 0) then
         set abilityId = skillMenuAbility.abilityId
-        
+
         call FileWriteLine("<tr id=\"" + A2S(abilityId) + "\">")
         // icon
         call FileWriteLine("<td data-order=\"" + I2S(counter) + "\">")
         //call IconToHtml(GetLearnableSkillAbilityId(i))
         call WriteAbilityPopoverWithIcon(abilityId, "spells.html")
-        
+
         call FileWriteLine("</td>")
-        
+
         // name
         call FileWriteLine("<td>")
         call FileWriteLine(GetObjectName(abilityId))
         call FileWriteLine("</td>")
-        
+
         // race
         call FileWriteLine("<td>")
         call FileWriteLine("-")
         call FileWriteLine("</td>")
-        
+
         // hero
         call FileWriteLine("<td>")
         call FileWriteLine("yes")
         call FileWriteLine("</td>")
-        
+
         // slot
         call FileWriteLine("<td>")
         call FileWriteLine(I2S(slot + 1))
@@ -3105,7 +3103,7 @@ private function GenerateSpellEx takes SkillMenuAbility skillMenuAbility, intege
             call FileWriteLine("yes")
         endif
         call FileWriteLine("</td>")
-        
+
         call FileWriteLine("</tr>")
     endif
 endfunction
@@ -3127,10 +3125,10 @@ private function GenerateSpells takes nothing returns nothing
     local integer max2 = 0
     local integer counter = 0
     local integer abilityId = 0
-    
+
     call FileStart()
     call FileWriteLine("<!-- Spells generated with chat command \"-website\". -->")
-    
+
     set i = 0
     loop
         exitwhen (i == WoWReforgedSkillMenu_MAX_SLOTS)
@@ -3144,7 +3142,7 @@ private function GenerateSpells takes nothing returns nothing
         endloop
         set i = i + 1
     endloop
-    
+
     set i = 0
     set max2 = GetAbilitiesMax()
     loop
@@ -3164,7 +3162,7 @@ private function GenerateSpells takes nothing returns nothing
         call FileWriteLine(ColumnDataOrder(I2S(GetAbilityRace(i)), GetRaceName(GetAbilityRace(i))))
         call RaceIconToHtml(GetAbilityRace(i))
         call FileWriteLine("</td>")
-        
+
         // hero
         call FileWriteLine("<td>")
         call FileWriteLine("no")
@@ -3179,16 +3177,16 @@ private function GenerateSpells takes nothing returns nothing
         //call FileWriteLine("<td>")
         //call FileWriteLine(I2S(GetAbilityLevels(i)))
         //call FileWriteLine("</td>")
-        
+
         // equipment bag
         call FileWriteLine("<td>")
         call FileWriteLine("-")
         call FileWriteLine("</td>")
-        
+
         call FileWriteLine("</tr>")
-        
+
         set counter = counter + 1
-        
+
         set i = i + 1
     endloop
 
@@ -3205,17 +3203,17 @@ private function GenerateMountEx takes integer i returns nothing
     local integer abilityId = 0
     local unit mount = CreateTmpUnit(GetMountType(i).unitTypeId)
     call FileWriteLine("<tr id=\"" + A2S(GetUnitTypeId(mount)) + "\">")
-    
+
     // icon
     call FileWriteLine(ColumnDataOrder(I2S(i), GetObjectName(GetMountType(i).unitTypeId)))
     call WriteUnitPopoverWithIcon(GetMountType(i).unitTypeId, "items.html")
     call FileWriteLine("</td>")
-    
+
     // name
     call FileWriteLine("<td>")
     call FileWriteLine(GetUnitName(mount))
     call FileWriteLine("</td>")
-    
+
     // abilities
     call FileWriteLine("<td>")
     call FileWriteLine("<div class=\"spells\">")
@@ -3235,7 +3233,7 @@ private function GenerateMountEx takes integer i returns nothing
     call FileWriteLine("<td>")
     call FileWriteLine(GetMoveType(mount))
     call FileWriteLine("</td>")
-    
+
     // move speed
     call FileWriteLine("<td>")
     call FileWriteLine(I2S(R2I(GetUnitMoveSpeed(mount))))
@@ -3245,7 +3243,7 @@ private function GenerateMountEx takes integer i returns nothing
     call FileWriteLine("<td>")
     call GenerateAttackTypeCell(mount)
     call FileWriteLine("</td>")
-    
+
     // attack speed
     call FileWriteLine("<td>")
     call FileWriteLine(R2SHtml(BlzGetUnitWeaponRealField(mount, UNIT_WEAPON_RF_ATTACK_BASE_COOLDOWN, 0)))
@@ -3255,7 +3253,7 @@ private function GenerateMountEx takes integer i returns nothing
     call FileWriteLine("<td>")
     call FileWriteLine(I2S(R2I(BlzGetUnitWeaponRealField(mount, UNIT_WEAPON_RF_ATTACK_RANGE, 0))))
     call FileWriteLine("</td>")
-    
+
     // attack damage
     call FileWriteLine("<td>")
     call FileWriteLine(GetUnitDamage(mount))
@@ -3265,7 +3263,7 @@ private function GenerateMountEx takes integer i returns nothing
     call FileWriteLine("<td>")
     call GenerateArmorCell(mount)
     call FileWriteLine("</td>")
-    
+
     // armor
     call FileWriteLine("<td>")
     call FileWriteLine(I2S(R2I(BlzGetUnitArmor(mount))))
@@ -3277,7 +3275,7 @@ private function GenerateMountEx takes integer i returns nothing
     call FileWriteLine("</td>")
 
     call FileWriteLine("</tr>")
-    
+
     call RemoveUnit(mount)
     set mount = null
 endfunction
@@ -3289,7 +3287,7 @@ endfunction
 private function GenerateMounts takes nothing returns nothing
     local integer i = 0
     local integer max = GetMountTypesMax()
-    
+
     call FileStart()
     call FileWriteLine("<!-- Mounts generated with chat command \"-website\". -->")
 
@@ -3298,10 +3296,10 @@ private function GenerateMounts takes nothing returns nothing
         exitwhen (i == max)
         set tmpInteger = i
         call NewOpLimit(function GenerateMount)
-        
+
         set i = i + 1
     endloop
-    
+
     call FileWriteLine("<!-- Mounts generated with chat command \"-website\". -->")
 
     // The line below creates the file at the specified location
@@ -3311,7 +3309,7 @@ endfunction
 private function GenerateChatCommands takes nothing returns nothing
     local integer i = 0
     local integer max = QuestGetItemCount(udg_QuestChatCommands)
-    
+
     call FileStart()
     call FileWriteLine("<!-- Chat Commands generated with chat command \"-website\". -->")
     call FileWriteLine("<ul>")
@@ -3320,7 +3318,7 @@ private function GenerateChatCommands takes nothing returns nothing
         call FileWriteLine("<li>" + GetLocalizedStringSafe(QuestItemGetDescription(QuestGetItem(udg_QuestChatCommands, i))) + "</li>")
         set i = i + 1
     endloop
-    
+
     call FileWriteLine("</ul>")
     call FileWriteLine("<!-- Chat Commands generated with chat command \"-website\". -->")
 
@@ -3331,7 +3329,7 @@ endfunction
 private function GenerateHeroJourney takes nothing returns nothing
     local integer i = 0
     local integer max = QuestGetItemCount(udg_QuestHeroJourney)
-    
+
     call FileStart()
     call FileWriteLine("<!-- Hero journey generated with chat command \"-website\". -->")
     call FileWriteLine("<ul>")
@@ -3340,7 +3338,7 @@ private function GenerateHeroJourney takes nothing returns nothing
         call FileWriteLine("<li>" + QuestItemGetDescription(QuestGetItem(udg_QuestHeroJourney, i)) + "</li>")
         set i = i + 1
     endloop
-    
+
     call FileWriteLine("</ul>")
     call FileWriteLine("<!-- Hero journey generated with chat command \"-website\". -->")
 
@@ -3351,7 +3349,7 @@ endfunction
 private function GenerateCredits takes nothing returns nothing
     local integer i = 0
     local integer max = QuestGetItemCount(udg_QuestCredits)
-    
+
     call FileStart()
     call FileWriteLine("<!-- Credits generated with chat command \"-website\". -->")
     call FileWriteLine("<ul>")
@@ -3360,7 +3358,7 @@ private function GenerateCredits takes nothing returns nothing
         call FileWriteLine("<li>" + QuestItemGetDescription(QuestGetItem(udg_QuestCredits, i)) + "</li>")
         set i = i + 1
     endloop
-    
+
     call FileWriteLine("</ul>")
     call FileWriteLine("<!-- Credits generated with chat command \"-website\". -->")
 
@@ -3381,7 +3379,7 @@ private function GenerateZoneEx takes integer i returns nothing
     call FileWriteLine("<td>")
     call FileWriteLine(GetZoneName(zone))
     call FileWriteLine("</td>")
-    
+
     // type
     call FileWriteLine("<td>")
     if (zone.zoneType == ZONE_TYPE_ZONE) then
@@ -3416,7 +3414,7 @@ private function GenerateZones takes nothing returns nothing
     local integer i = 0
     local integer max = GetZonesMax()
     local Zone zone = 0
-    
+
     call FileStart()
     call FileWriteLine("<!-- Zones generated with chat command \"-website\". -->")
     loop
@@ -3424,7 +3422,7 @@ private function GenerateZones takes nothing returns nothing
         call GenerateZone(i)
         set i = i + 1
     endloop
-    
+
     call FileWriteLine("<!-- Zones generated with chat command \"-website\". -->")
 
     // The line below creates the file at the specified location
@@ -3434,20 +3432,20 @@ endfunction
 private function GenerateRecipeEx takes integer i returns nothing
     local integer j = 0
     local integer max2 = 0
-    
+
     call FileWriteLine("<tr id=\"" + A2S(GetRecipeUIItemTypeId(i)) + "\">")
-            
+
     // icon
     call FileWriteLine(ColumnDataOrder(I2S(i), GetObjectName(GetRecipeUIItemTypeId(i))))
     //call IconToHtml(itemTypeId)
     call WriteItemPopoverWithIcon(GetRecipeUIItemTypeId(i), "items.html") // BlzGetAbilityExtendedTooltip(GetRecipeUIItemTypeId(i), 0)
     call FileWriteLine("</td>")
-    
+
     // name
     call FileWriteLine("<td>")
     call FileWriteLine(GetRecipeName(i))
     call FileWriteLine("</td>")
-    
+
     // item/unit
     call FileWriteLine("<td>")
     if (GetRecipeIsUnit(i)) then
@@ -3456,19 +3454,19 @@ private function GenerateRecipeEx takes integer i returns nothing
         call IconToHtmlEx(GetRecipeItemTypeId(i), "items.html")
     endif
     call FileWriteLine("</td>")
-    
+
     // requirements
     call FileWriteLine("<td>")
     set j = 0
     set max2 = GetRecipeRequirementsCount(i)
-    
+
     loop
         exitwhen (j == max2)
         call IconToHtmlEx(GetRecipeRequirementItemTypeId(i, j), "items.html")
         call FileWriteLine(" (" + I2S(GetRecipeRequirementCharges(i, j)) + ")")
         set j = j + 1
     endloop
-    
+
      call FileWriteLine("</td>")
 
     call FileWriteLine("</tr>")
@@ -3486,7 +3484,7 @@ endfunction
 private function GenerateRecipes takes nothing returns nothing
     local integer i = 0
     local integer max = GetRecipesMax()
-    
+
     call FileStart()
     call FileWriteLine("<!-- Recipes generated with chat command \"-website\". -->")
     loop
@@ -3507,30 +3505,30 @@ private function GenerateResources takes nothing returns nothing
     local integer i = 0
     local integer max = GetMaxResources()
     local integer r = 0
-    
+
     call FileStart()
     call FileWriteLine("<!-- Resources generated with chat command \"-website\". -->")
-    
+
     loop
         exitwhen (i == max)
         set r = GetResource(i)
         call FileWriteLine("<tr id=\"" + GetResourceName(r) + "\">")
-            
+
         // icon
         call FileWriteLine("<td data-order=\"" + I2S(i) + "\">")
         call IconToHtmlEx3(GetResourceIcon(r), "resources.html", GetResourceName(r))
         call FileWriteLine("</td>")
-        
+
         // name
         call FileWriteLine("<td>")
         call FileWriteLine(GetResourceName(r))
         call FileWriteLine("</td>")
-        
+
         // gold exchange rate
         call FileWriteLine("<td>")
         call FileWriteLine(R2SW(GetResourceGoldExchangeRate(r), 0, 2))
         call FileWriteLine("</td>")
-        
+
         // tax levels
         call FileWriteLine("<td>")
         if (r == Resources_GOLD) then
@@ -3551,7 +3549,7 @@ private function GenerateResources takes nothing returns nothing
             call FileWriteLine("-")
         endif
         call FileWriteLine("</td>")
-        
+
         // description
         call FileWriteLine("<td>")
         call FileWriteLine(GetResourceDescription(r))
@@ -3560,7 +3558,7 @@ private function GenerateResources takes nothing returns nothing
         call FileWriteLine("</tr>")
         set i = i + 1
     endloop
-    
+
     call FileWriteLine("<!-- Resources generated with chat command \"-website\". -->")
 
     // The line below creates the file at the specified location
@@ -3570,19 +3568,19 @@ endfunction
 private function GenerateSkins takes nothing returns nothing
     local integer i = 0
     local integer max = GetMaxSkins()
-    
+
     call FileStart()
     call FileWriteLine("<!-- Skins generated with chat command \"-website\". -->")
-    
+
     loop
         exitwhen (i == max)
         call FileWriteLine("<tr id=\"" + A2S(GetSkinItemTypeId(i)) + "\">")
-            
+
         // icon
         call FileWriteLine("<td>")
         call IconToHtml(GetSkinItemTypeId(i))
         call FileWriteLine("</td>")
-        
+
         // name
         call FileWriteLine("<td>")
         call FileWriteLine(GetObjectName(GetSkinItemTypeId(i)))
@@ -3591,28 +3589,28 @@ private function GenerateSkins takes nothing returns nothing
         call FileWriteLine("</tr>")
         set i = i + 1
     endloop
-    
+
     set i = 0
     set max = GetHeroesMax()
     loop
         exitwhen (i == max)
         call FileWriteLine("<tr id=\"" + A2S(GetHeroUnitType(i)) + "\">")
-            
+
         // icon
         call FileWriteLine("<td>")
         call IconToHtml(GetHeroUnitType(i))
         call FileWriteLine("</td>")
-        
+
         // name
         call FileWriteLine("<td>")
         call FileWriteLine(GetActualObjectName(GetHeroUnitType(i)))
         call FileWriteLine("</td>")
 
         call FileWriteLine("</tr>")
-        
+
         set i = i + 1
     endloop
-        
+
     call FileWriteLine("<!-- Skins generated with chat command \"-website\". -->")
 
     // The line below creates the file at the specified location
@@ -3624,56 +3622,56 @@ private function GenerateEquipment takes nothing returns nothing
     local integer max = GetMaxEquipmentItemTypes()
     local integer itemTypeId = 0
     local item whichItem = null
-    
+
     call FileStart()
     call FileWriteLine("<!-- Equipment generated with chat command \"-website\". -->")
-    
+
     loop
         exitwhen (i == max)
         set itemTypeId = GetEquipmentItemTypeId(i)
         if (itemTypeId != 0) then
             set whichItem = CreateItem(itemTypeId, 0.0, 0.0)
             call FileWriteLine("<tr id=\"" + A2S(itemTypeId) + "\">")
-                
+
             // icon
             call FileWriteLine("<td>")
             call IconToHtml(itemTypeId)
             call FileWriteLine("</td>")
-            
+
             // name
             call FileWriteLine("<td>")
             call FileWriteLine(GetObjectName(itemTypeId))
             call FileWriteLine("</td>")
-            
+
             // level
             call FileWriteLine("<td>")
             call FileWriteLine(I2S(GetItemLevel(whichItem)))
             call FileWriteLine("</td>")
-            
+
             // tooltip
             //call FileWriteLine("<td>")
             //call FormatTooltip(BlzGetItemExtendedTooltip(whichItem))
             //call FileWriteLine("</td>")
-            
+
             // gold cost
             call GenerateItemTypeIdGoldCost(itemTypeId)
-            
+
             // lumber cost
             call GenerateItemTypeIdLumberCost(itemTypeId)
-            
+
             // description
             call FileWriteLine("<td>")
             call FormatTooltip(BlzGetAbilityExtendedTooltip(itemTypeId, 0))
             call FileWriteLine("</td>")
 
             call FileWriteLine("</tr>")
-            
+
             call RemoveItem(whichItem)
             set whichItem = null
         endif
         set i = i + 1
     endloop
-        
+
     call FileWriteLine("<!-- Equipment generated with chat command \"-website\". -->")
 
     // The line below creates the file at the specified location
@@ -3691,12 +3689,12 @@ private function GenerateAttribute takes integer attribute, integer index return
     call FileWriteLine("alt=\"" + GetAttributeIcon(attribute) + "\"")
     call FileWriteLine("/></a>")
     call FileWriteLine("</td>")
-    
+
     // name
     call FileWriteLine("<td>")
     call FileWriteLine(GetAttributeName(attribute))
     call FileWriteLine("</td>")
-    
+
     // description
     call FileWriteLine("<td>")
     call FormatTooltip(GetAttributeDescription(attribute))
@@ -3710,7 +3708,7 @@ private function GenerateAttributes takes nothing returns nothing
     local integer max = 0
     call FileStart()
     call FileWriteLine("<!-- Attributes generated with chat command \"-website\". -->")
-    
+
     // Strength
     call FileWriteLine("<tr id=\"" + I2S(0) + "\">")
 
@@ -3722,19 +3720,19 @@ private function GenerateAttributes takes nothing returns nothing
     call FileWriteLine("alt=\"" + GetHeroAttributeInfocardIcon(GetHandleId(HERO_ATTRIBUTE_STR)) + "\"")
     call FileWriteLine("/></a>")
     call FileWriteLine("</td>")
-    
+
     // name
     call FileWriteLine("<td>")
     call FileWriteLine(GetHeroAttributeName(GetHandleId(HERO_ATTRIBUTE_STR)))
     call FileWriteLine("</td>")
-    
+
     // description
     call FileWriteLine("<td>")
     call FormatTooltip("Increases maximum hit points and hit points regeneration.")
     call FileWriteLine("</td>")
 
     call FileWriteLine("</tr>")
-    
+
     // Agility
     call FileWriteLine("<tr id=\"" + I2S(1) + "\">")
 
@@ -3746,19 +3744,19 @@ private function GenerateAttributes takes nothing returns nothing
     call FileWriteLine("alt=\"" + GetHeroAttributeInfocardIcon(GetHandleId(HERO_ATTRIBUTE_AGI)) + "\"")
     call FileWriteLine("/></a>")
     call FileWriteLine("</td>")
-    
+
     // name
     call FileWriteLine("<td>")
     call FileWriteLine(GetHeroAttributeName(GetHandleId(HERO_ATTRIBUTE_AGI)))
     call FileWriteLine("</td>")
-    
+
     // description
     call FileWriteLine("<td>")
     call FormatTooltip("Increases the armor and attack speed.")
     call FileWriteLine("</td>")
 
     call FileWriteLine("</tr>")
-    
+
     // Intelligence
     call FileWriteLine("<tr id=\"" + I2S(2) + "\">")
 
@@ -3770,19 +3768,19 @@ private function GenerateAttributes takes nothing returns nothing
     call FileWriteLine("alt=\"" + GetHeroAttributeInfocardIcon(GetHandleId(HERO_ATTRIBUTE_INT)) + "\"")
     call FileWriteLine("/></a>")
     call FileWriteLine("</td>")
-    
+
     // name
     call FileWriteLine("<td>")
     call FileWriteLine(GetHeroAttributeName(GetHandleId(HERO_ATTRIBUTE_INT)))
     call FileWriteLine("</td>")
-    
+
     // description
     call FileWriteLine("<td>")
     call FormatTooltip("Increases the maximum mana and mana regeneration.")
     call FileWriteLine("</td>")
 
     call FileWriteLine("</tr>")
-    
+
     set max = GetMaxAttributes()
     set i = 0
     loop
@@ -3790,7 +3788,7 @@ private function GenerateAttributes takes nothing returns nothing
         call GenerateAttribute(GetAttribute(i), i + 3)
         set i = i + 1
     endloop
-    
+
     call FileWriteLine("<!-- Attributes generated with chat command \"-website\". -->")
 
     // The line below creates the file at the specified location
@@ -3811,69 +3809,69 @@ private function GenerateProperties takes nothing returns nothing
     local integer max = GetMaxProperties()
     local Zone zone = 0
     local unit creep = null
-    
+
     call FileStart()
     call FileWriteLine("<!-- Properties generated with chat command \"-website\". -->")
-    
+
     loop
         exitwhen (i == max)
         call FileWriteLine("<tr id=\"" + A2S(GetProperty(i).unitTypeId) + "\">")
-            
+
         // icon
         call FileWriteLine(ColumnDataOrder(I2S(i), GetObjectName(GetProperty(i).unitTypeId)))
-        
+
         call FileWriteLine("<div class=\"wowr-popover-wrapper\">")
-        
+
         // popover
         call FileWriteLine("<div class=\"wowr-popover\">")
         call IconToHtmlEx(GetProperty(i).unitTypeId, "buildings.html")
         // name
         call FileWriteLine(GetObjectName(GetProperty(i).unitTypeId))
         call FileWriteLine("<br/>")
-        
+
         // gold cost
         call GenerateUnitTypeIdGoldCostPopover(GetProperty(i).purchaseUnitTypeId)
 
         // wood cost
         call GenerateUnitTypeIdLumberCostPopover(GetProperty(i).purchaseUnitTypeId)
-        
+
         // tooltip
         call FileWriteLine("<br/>")
         call FormatTooltip(BlzGetAbilityExtendedTooltip(GetProperty(i).purchaseUnitTypeId, 0))
         call FileWriteLine("</div>")
         // popover end
-        
+
         // icon
         call IconButton(GetProperty(i).unitTypeId)
-        
+
         call FileWriteLine("</div>")
-        
+
         call FileWriteLine("</td>")
-        
+
         // name
         call FileWriteLine(ColumnDataOrder(I2S(i), GetObjectName(GetProperty(i).unitTypeId)))
         call FileWriteLine(GetObjectName(GetProperty(i).unitTypeId))
         call FileWriteLine("</td>")
-        
+
         // gold
         call GenerateUnitTypeIdGoldCost(GetProperty(i).purchaseUnitTypeId)
-        
+
         // lumber
         call GenerateUnitTypeIdLumberCost(GetProperty(i).purchaseUnitTypeId)
-        
+
         // race
         call FileWriteLine(ColumnDataOrder(I2S(GetProperty(i).soldRace), GetRaceName(GetProperty(i).soldRace)))
         call RaceIconToHtml(GetProperty(i).soldRace)
         call FileWriteLine("</td>")
-        
+
         // food made
         call GenerateUnitTypeIdFoodMade(GetProperty(i).unitTypeId)
-        
+
         // resource
         call FileWriteLine("<td>")
         call IconToHtmlEx3(GetResourceIcon(GetProperty(i).resource), "resources.html", GetResourceName(GetProperty(i).resource))
         call FileWriteLine("</td>")
-        
+
         // shipyard
         call FileWriteLine("<td>")
         if (GetProperty(i).shipyard) then
@@ -3882,10 +3880,10 @@ private function GenerateProperties takes nothing returns nothing
             call FileWriteLine("-")
         endif
         call FileWriteLine("</td>")
-        
+
         // location
         call FileWriteLine("<td>")
-        
+
         set creep = FirstUnitOfTypeId(GetProperty(i).unitTypeId)
         set zone = GetZoneByCoordinates(GetUnitX(creep), GetUnitY(creep))
         set creep = null
@@ -3900,7 +3898,7 @@ private function GenerateProperties takes nothing returns nothing
         call FileWriteLine("</tr>")
         set i = i + 1
     endloop
-        
+
     call FileWriteLine("<!-- Properties generated with chat command \"-website\". -->")
 
     // The line below creates the file at the specified location
@@ -3911,38 +3909,38 @@ private function GenerateRacingTracks takes nothing returns nothing
     local integer i = 0
     local integer max = GetRacingTracksCount()
     local RacingTrack t = 0
-    
+
     call FileStart()
     call FileWriteLine("<!-- Racing tracks generated with chat command \"-website\". -->")
-    
+
     loop
         exitwhen (i == max)
         set t = GetRacingTrack(i)
         call FileWriteLine("<tr id=\"" + A2S(t.itemTypeId) + "\">")
-            
+
         // icon
         call FileWriteLine(ColumnDataOrder(I2S(i), GetObjectName(t.itemTypeId)))
         call WriteItemPopoverWithIcon(t.itemTypeId, "items.html")
         call FileWriteLine("</td>")
-        
+
         // name
         call FileWriteLine(ColumnDataOrder(I2S(i), t.name))
         call FileWriteLine(t.name)
         call FileWriteLine("</td>")
-        
+
         // gold
         call GenerateUnitTypeIdGoldCost(t.itemTypeId)
-        
+
         // lumber
         call GenerateItemTypeIdLumberCost(t.itemTypeId)
-        
+
         // trophies
         call FileWriteLine("<td>")
         call WriteItemPopoverWithIcon(t.firstPlaceTrophyItemTypeId, "items.html")
         call WriteItemPopoverWithIcon(t.secondPlaceTrophyItemTypeId, "items.html")
         call WriteItemPopoverWithIcon(t.thirdPlaceTrophyItemTypeId, "items.html")
         call FileWriteLine("</td>")
-        
+
         // checkpoints
         call FileWriteLine("<td>")
         call FileWriteLine(I2S(t.checkpointsCounter ))
@@ -3952,7 +3950,7 @@ private function GenerateRacingTracks takes nothing returns nothing
         call FileWriteLine("<td>")
         call FileWriteLine(I2S(R2I(GetRacingTrackDistance(t))))
         call FileWriteLine("</td>")
-        
+
         // durations
         call FileWriteLine("<td>")
         call FileWriteLine(I2S(R2I(GetRacingTrackDuration(t))))
@@ -3961,7 +3959,7 @@ private function GenerateRacingTracks takes nothing returns nothing
         call FileWriteLine("</tr>")
         set i = i + 1
     endloop
-        
+
     call FileWriteLine("<!-- Racing tracks generated with chat command \"-website\". -->")
 
     // The line below creates the file at the specified location
@@ -3973,19 +3971,19 @@ private function GenerateSeason takes integer season, integer startDay, integer 
     call FileWriteLine(ColumnDataOrder(I2S(season), GetSeasonName(season)))
     call Icon(GetSeasonName(season), GetSeasonIcon(season))
     call FileWriteLine("</td>")
-    
+
     // name
     call FileWriteLine(ColumnDataOrder(I2S(season), GetSeasonName(season)))
     call FileWriteLine(GetSeasonName(season))
     call FileWriteLine("</td>")
-    
+
     // start day
     call FileWriteLine(ColumnDataOrder(I2S(season), I2S(startDay)))
     call FileWriteLine(I2S(startDay))
     call FileWriteLine(" day, ")
     call FileWriteLine(FormatTimeOfDayEx(0.0))
     call FileWriteLine("</td>")
-    
+
     // end day
     call FileWriteLine(ColumnDataOrder(I2S(season), I2S(endDay)))
     call FileWriteLine(I2S(endDay))
@@ -4001,41 +3999,41 @@ private function GenerateCalendarEvents takes nothing returns nothing
     local integer index = 0
     local integer max = GetCalendarEventsMax()
     local CalendarEvent t = 0
-    
+
     call FileStart()
     call FileWriteLine("<!-- Calendar events generated with chat command \"-website\". -->")
-    
+
     call FileWriteLine("<tr id=\"" + I2S(t) + "\">")
-    
+
     // seasons
     call GenerateSeason(SEASON_SPRING, SPRING_DAY, SUMMER_DAY - 1)
     call GenerateSeason(SEASON_SUMMER, SUMMER_DAY, FALL_DAY - 1)
     call GenerateSeason(SEASON_FALL, FALL_DAY, DAYS_PER_YEAR - 1)
     call GenerateSeason(SEASON_WINTER, WINTER_DAY, SPRING_DAY - 1)
-    
+
     loop
         exitwhen (i == max)
         set index = i + SEASON_WINTER
         set t = GetCalendarEvent(i)
         call FileWriteLine("<tr id=\"" + I2S(t) + "\">")
-            
+
         // icon
         call FileWriteLine(ColumnDataOrder(I2S(index), GetLocalizedStringSafe(t.name)))
         call Icon(GetLocalizedStringSafe(t.name), t.icon)
         call FileWriteLine("</td>")
-        
+
         // name
         call FileWriteLine(ColumnDataOrder(I2S(index), GetLocalizedStringSafe(t.name)))
         call FileWriteLine(GetLocalizedStringSafe(t.name))
         call FileWriteLine("</td>")
-        
+
         // start day
         call FileWriteLine(ColumnDataOrder(I2S(index), I2S(t.startDay)))
         call FileWriteLine(I2S(t.startDay))
         call FileWriteLine(" day, ")
         call FileWriteLine(FormatTimeOfDayEx(t.startTimeOfDay))
         call FileWriteLine("</td>")
-        
+
         // end day
         call FileWriteLine(ColumnDataOrder(I2S(index), I2S(t.endDay)))
         call FileWriteLine(I2S(t.endDay))
@@ -4046,7 +4044,7 @@ private function GenerateCalendarEvents takes nothing returns nothing
         call FileWriteLine("</tr>")
         set i = i + 1
     endloop
-        
+
     call FileWriteLine("<!-- Calendar events generated with chat command \"-website\". -->")
 
     // The line below creates the file at the specified location
@@ -4063,7 +4061,7 @@ private function GenerateChangeLogs takes nothing returns nothing
         exitwhen (i == max)
         call FileStart()
         call FileWriteLine("<!-- ChangeLogs generated with chat command \"-website\". -->")
-        
+
         set j = 0
         set max2 = QuestGetItemCount(GetVersionQuest(i))
         loop
@@ -4071,7 +4069,7 @@ private function GenerateChangeLogs takes nothing returns nothing
             call FileWriteLine("- " + QuestItemGetDescription(QuestGetItem(GetVersionQuest(i), j)))
             set j = j + 1
         endloop
-            
+
         call FileWriteLine("<!-- ChangeLogs generated with chat command \"-website\". -->")
 
         // The line below creates the file at the specified location
@@ -4088,24 +4086,24 @@ private function GenerateStartLocations takes nothing returns nothing
     local string icon
     local string name
     local integer whichRace
-    
+
     call FileStart()
     call FileWriteLine("<!-- StartLocations generated with chat command \"-website\". -->")
-        
+
     loop
         exitwhen (i >= GetMaxStartLocations())
          call FileWriteLine("<tr id=\"" + I2S(index) + "\">")
-    
+
         // icon
         call FileWriteLine(ColumnDataOrder(I2S(index), GetStartLocationName(i)))
         call Icon(GetStartLocationName(i), GetStartLocationIcon(i))
         call FileWriteLine("</td>")
-        
+
         // name
         call FileWriteLine(ColumnDataOrder(I2S(i), GetStartLocationName(i)))
         call FileWriteLine(GetStartLocationName(i))
         call FileWriteLine("</td>")
-        
+
         // zone
         set zone = GetZoneByCoordinates(GetStartLocationCoordinateX(i), GetStartLocationCoordinateY(i))
         if (zone != 0) then
@@ -4116,23 +4114,23 @@ private function GenerateStartLocations takes nothing returns nothing
             call FileWriteLine("-")
         endif
         call FileWriteLine("</td>")
-        
+
         // has navy
         call FileWriteLine(ColumnDataOrder(I2S(index), "no"))
         call FileWriteLine("no")
         call FileWriteLine("</td>")
-        
+
         // race
         call FileWriteLine(ColumnDataOrder(I2S(index), "-"))
         call FileWriteLine("-")
         call FileWriteLine("</td>")
-        
+
         call FileWriteLine("</tr>")
-        
+
         set index = index + 1
         set i = i + 1
     endloop
-    
+
     set i = 0
     loop
         exitwhen (i == GetMaxComputerStartLocations())
@@ -4143,17 +4141,17 @@ private function GenerateStartLocations takes nothing returns nothing
         endif
         set name = "Computer Start Location " + I2S(i + 1)
         call FileWriteLine("<tr id=\"" + I2S(index) + "\">")
-    
+
         // icon
         call FileWriteLine(ColumnDataOrder(I2S(index), name))
         call Icon(name, icon)
         call FileWriteLine("</td>")
-        
+
         // name
         call FileWriteLine(ColumnDataOrder(I2S(i), name))
         call FileWriteLine(name)
         call FileWriteLine("</td>")
-        
+
         // zone
         if (zone != 0) then
             call FileWriteLine(ColumnDataOrder(I2S(index), GetZoneName(zone)))
@@ -4163,7 +4161,7 @@ private function GenerateStartLocations takes nothing returns nothing
             call FileWriteLine("-")
         endif
         call FileWriteLine("</td>")
-        
+
         // has shipyard
          if (udg_TownHallHasNavy[i]) then
             call FileWriteLine(ColumnDataOrder(I2S(index), "yes"))
@@ -4173,19 +4171,19 @@ private function GenerateStartLocations takes nothing returns nothing
             call FileWriteLine("no")
         endif
         call FileWriteLine("</td>")
-        
+
         // race
         set whichRace = udg_TownHallRace[i]
         call FileWriteLine(ColumnDataOrder(I2S(whichRace), GetRaceName(whichRace)))
         call RaceIconToHtml(whichRace)
         call FileWriteLine("</td>")
-        
+
         call FileWriteLine("</tr>")
-        
+
         set index = index + 1
         set i = i + 1
     endloop
-    
+
     // The line below creates the file at the specified location
     call FileSave("WorldOfWarcraftReforged-StartLocations.txt")
 endfunction
@@ -4195,9 +4193,9 @@ private function TriggerConditionIsSinglePlayer takes nothing returns boolean
     if (result) then
         return true
     endif
-    
+
     call SimError(GetTriggerPlayer(), "Requires single player.")
-    
+
     return false
 endfunction
 
@@ -4208,7 +4206,7 @@ private function TriggerActionWebsite takes nothing returns nothing
     call TriggerSleepAction(1.0)
     call SetTimeOfDay(12.0)
     call SuspendTimeOfDay(true)
-    
+
     call NewOpLimit(function GenerateClasses)
     call NewOpLimit(function GenerateClassesOverview)
     call NewOpLimit(function GenerateSpells)
@@ -4243,7 +4241,7 @@ private function TriggerActionWebsite takes nothing returns nothing
     call NewOpLimit(function GenerateRaces)
 
     call SuspendTimeOfDay(false)
-    
+
     /*
     call BJDebugMsg("String token 0 " + StringSplit("1|n|n|n2", 0, "|n") + " and token 3 " + StringSplit("1|n|n|n2", 3, "|n"))
     call BJDebugMsg("String token 0 " + StringSplit("1|n2|n3|n4", 0, "|n") + " and token 3 " + StringSplit("1|n2|n3|n4", 3, "|n"))
@@ -4266,7 +4264,7 @@ private function Init takes nothing returns nothing
     endloop
     call TriggerAddCondition(chatCommandTrigger, Condition(function TriggerConditionIsSinglePlayer))
     call TriggerAddAction(chatCommandTrigger, function TriggerActionWebsite)
-    
+
     call AddIgnoredAbility('A1YZ')
     call AddIgnoredAbility('A02Z')
     call AddIgnoredAbility('AInv')

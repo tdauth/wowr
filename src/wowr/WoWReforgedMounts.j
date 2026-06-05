@@ -18,7 +18,7 @@ globals
     private MountData array mountData1
     private MountData array mountData2
     private MountData array mountData3
-    
+
     private constant integer KEY_MOUNT = 0
     private constant integer KEY_HERO = 1
 endglobals
@@ -274,14 +274,14 @@ function SelectNextMount takes player whichPlayer returns unit
     call GroupClear(mounts)
     call DestroyGroup(mounts)
     set mounts = null
-    
+
     if (result != null) then
         call SelectUnitForPlayerSingle(result, whichPlayer)
         call SmartCameraPanToUnit(whichPlayer, result, 0.0)
     else
         call SimError(whichPlayer, GetLocalizedString("NO_MOUNTS"))
     endif
-    
+
     return result
 endfunction
 
@@ -289,7 +289,7 @@ private struct M
     public integer unitTypeId
     public boolean bonus
     public integer index
-    
+
     public static method create takes integer unitTypeId, boolean bonus, integer index returns thistype
         local thistype this = thistype.allocate()
         set this.unitTypeId = unitTypeId
@@ -300,12 +300,9 @@ private struct M
 endstruct
 
 globals
-    public constant integer MOUNTS_HERO_LEVEL = 20
-    public constant integer MOUNTS_CAGE = 'o04H'
-
     private M array mountTypes
     private integer mountTypesCounter = 0
-    
+
     private trigger levelTrigger = CreateTrigger()
     private trigger summonTrigger = CreateTrigger()
     private trigger pickupItemTrigger = CreateTrigger()
@@ -388,12 +385,12 @@ endfunction
 private function TriggerConditionLevel takes nothing returns boolean
     local unit hero = GetLevelingUnit()
     local player owner = GetOwningPlayer(hero)
-    if (GetPlayerHero1(owner) == hero and GetHeroLevel(hero) >= MOUNTS_HERO_LEVEL and not GetPlayerHasMounts(owner)) then
+    if (GetPlayerHero1(owner) == hero and GetHeroLevel(hero) >= HERO_JOURNEY_MOUNTS and not GetPlayerHasMounts(owner)) then
         call SetPlayerHasMounts(owner, true)
     endif
     set hero = null
     set owner = null
-    
+
     return false
 endfunction
 
@@ -505,22 +502,22 @@ private function Init takes nothing returns nothing
         set mountData3[i] = MountData.create()
         set i = i + 1
     endloop
-    
+
     call TriggerRegisterAnyUnitEventBJ(levelTrigger, EVENT_PLAYER_HERO_LEVEL)
     call TriggerAddCondition(levelTrigger, Condition(function TriggerConditionLevel))
-  
+
     call TriggerRegisterAnyUnitEventBJ(summonTrigger, EVENT_PLAYER_UNIT_SPELL_CHANNEL)
     call TriggerAddCondition(summonTrigger, Condition(function TriggerConditionSummonMount))
-    
+
     call TriggerRegisterAnyUnitEventBJ(pickupItemTrigger, EVENT_PLAYER_UNIT_PICKUP_ITEM)
     call TriggerAddCondition(pickupItemTrigger, Condition(function TriggerConditionPickupItem))
-    
+
     call TriggerRegisterAnyUnitEventBJ(dropItemTrigger, EVENT_PLAYER_UNIT_DROP_ITEM)
     call TriggerAddCondition(dropItemTrigger, Condition(function TriggerConditionDropItem))
-    
+
     call TriggerRegisterAnyUnitEventBJ(sellTrigger, EVENT_PLAYER_UNIT_SELL)
     call TriggerAddCondition(sellTrigger, Condition(function TriggerConditionSell))
-    
+
     // All mounts
     call AddMountType(GRYPHON_MOUNT, false)
     call AddMountType(WYVERN_MOUNT, false)

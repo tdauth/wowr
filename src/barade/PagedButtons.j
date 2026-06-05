@@ -1340,7 +1340,7 @@ endif
 endfunction
 
 private function TriggerConditionIsMarketplace takes nothing returns boolean
-    return GetUnitTypeId(GetSellingUnit()) == 'nmrk'
+    return GetUnitTypeId(GetSellingUnit()) == MARKETPLACE
 endfunction
 
 private function Init takes nothing returns nothing

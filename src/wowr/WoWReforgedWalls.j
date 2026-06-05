@@ -3,6 +3,8 @@ library WoWReforgedWalls initializer Init
 // This system is based on [Medieval Wall Trigger Map](https://www.hiveworkshop.com/pastebin/907781cf76579f09be5b3697c14733b8.24012) by The_Silent
 
 globals
+	constant integer MAX_WALL_PIECES = 15
+
 	private constant integer DIR_NORTH = 0
 	private constant integer DIR_SOUTH = 1
 	private constant integer DIR_EAST = 2
@@ -18,6 +20,14 @@ globals
 	private trigger constructFinishTrigger = CreateTrigger()
 	private trigger upgradeFinishTrigger = CreateTrigger()
 endglobals
+
+function GetWallTypeGround takes integer index returns integer
+	return wallTypeGround[index]
+endfunction
+
+function GetWallTypeAir takes integer index returns integer
+	return wallTypeAir[index]
+endfunction
 
 private function UnitIsWall takes unit u, boolean ground returns boolean
 	local integer unitTypeId = GetUnitTypeId(u)
@@ -198,9 +208,8 @@ endfunction
 
 private function IsWallTypeGround takes integer unitTypeId returns boolean
 	local integer i = 0
-	local integer max = 15
 	loop
-		exitwhen (i == max)
+		exitwhen (i == MAX_WALL_PIECES)
 		if (wallTypeGround[i] == unitTypeId) then
 			return true
 		endif
@@ -211,9 +220,8 @@ endfunction
 
 private function IsWallTypeAir takes integer unitTypeId returns boolean
 	local integer i = 0
-	local integer max = 15
 	loop
-		exitwhen (i == max)
+		exitwhen (i == MAX_WALL_PIECES)
 		if (wallTypeAir[i] == unitTypeId) then
 			return true
 		endif
@@ -295,12 +303,12 @@ private function Init takes nothing returns nothing
 	call TriggerAddCondition(upgradeFinishTrigger, Condition(function TriggerConditionUpgradeFinish))
 
 	// Main piece and cross
-	set wallTypeGround[0] = 'h04Q'
+	set wallTypeGround[0] = WALL
 	// Wall Ends
 	// North End
 	set wallTypeGround[1] = 'h094'
 	// West End
-	set wallTypeGround[2] = 'h04S'
+	set wallTypeGround[2] = WALL_WEST_END
 	// East End
 	set wallTypeGround[3] = 'h093'
 	// South End
@@ -316,7 +324,7 @@ private function Init takes nothing returns nothing
 	set wallTypeGround[8] = 'h0DS'
 	// Wall Straight
 	// Horizontal
-	set wallTypeGround[9] = 'h04R'
+	set wallTypeGround[9] = WALL_STRAIGHT_HORIZONTAL
 	// Vertical
 	set wallTypeGround[10] = 'h096'
 	// Wall Corner

@@ -32,7 +32,6 @@ private function Init takes nothing returns nothing
     call AddObjectMapping(ARMORY, ITEM_TINY_ARMORY)
     call AddObjectMapping(TRADING_POST, ITEM_TINY_TRADING_POST)
     call AddObjectMapping(WITCH_HUT, ITEM_TINY_WITCH_HUT)
-    call AddObjectMapping(HERO_ABILITIES, ITEM_TINY_HERO_ABILITIES)
     call AddObjectMapping(SKINS, ITEM_TINY_SKINS)
     call AddObjectMapping(FRUIT_STAND_ALL_RACES, ITEM_TINY_FRUIT_STAND_ALL_RACES)
     call AddObjectMapping(THIEVES_GUILD, ITEM_TINY_THIEVES_GUILD)

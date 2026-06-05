@@ -2855,7 +2855,6 @@ globals
     constant real ATTRIBUTE_POINTS_PER_LEVEL                         = 5.0
 
     // All Races
-    constant integer SPELL_BOOK                                      = 'o025'
     constant integer TRADING_POST                                    = 'n04J'
     constant integer ITEM_TINY_TRADING_POST                          = 'I0L9'
     constant integer ANTIMAGIC_WARD                                  = 'o01Z'
@@ -2866,8 +2865,6 @@ globals
     constant integer ALCHEMIST_LAB                                   = 'o054'
     constant integer WITCH_HUT                                       = 'o05F'
     constant integer ITEM_TINY_WITCH_HUT                             = 'I0MX'
-    constant integer HERO_ABILITIES                                  = 'n0E3'
-    constant integer ITEM_TINY_HERO_ABILITIES                        = 'I0J6'
     constant integer SKINS                                           = 'n0GD'
     constant integer ITEM_TINY_SKINS                                 = 'I0QM'
     constant integer SKINS_NEUTRAL                                   = 'n0GB'
@@ -2885,8 +2882,6 @@ globals
     constant integer ITEM_TINY_POWER_GENERATOR                       = 'I05C'
     constant integer PORTAL                                          = 'h014'
     constant integer ITEM_TINY_PORTAL                                = 'I05B'
-    constant integer WALL                                            = 'h04Q'
-    constant integer ITEM_TINY_WALL                                  = 'I0L8'
     constant integer ENGINEER_SHIP                                   = 'n03H'
     constant integer GNOMISH_SUBMARINE                               = 'h029'
     constant integer ARMORY                                          = 'n0IS'
@@ -2895,6 +2890,15 @@ globals
     constant integer ITEM_TINY_FRUIT_STAND_ALL_RACES                 = 'I0WV'
     constant integer WATER_TOWER                                     = 'n0ND'
     constant integer ADVANCED_WATER_TOWER                            = 'n0NE'
+
+    // Walls
+    constant integer WALL                                            = 'h04Q'
+    constant integer ITEM_TINY_WALL                                  = 'I0L8'
+    constant integer WALL_STRAIGHT_HORIZONTAL                        = 'h04R'
+    constant integer WALL_WEST_END                                   = 'h04S'
+
+    constant integer GATE_CLOSED_HORIZONTAL                          = 'h020'
+    constant integer GATE_OPEN_HORIZONTAL                            = 'h021'
 
     // Neutral Buildings
     constant integer SCEPTERS_SHOP                                   = 'n06Q'
