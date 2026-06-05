@@ -94,7 +94,7 @@ These are the existing translations so far:
 * 🇺🇸 English: [map strings](./wowr.w3x/war3map.wts), [global strings](./wowr.w3x/wowr/WoWReforgedStrings.fdf), [Gameplay Constants](./wowr.w3x/war3mapMisc.txt)
 * 🇩🇪 German: [map strings](./wowr.w3x/_Locales/deDE.w3mod/war3map.wts), [global strings](./wowr.w3x/_Locales/deDE.w3mod/wowr/WoWReforgedStrings.fdf), [Gameplay Constants](./wowr.w3x/_Locales/deDE.w3mod/war3mapMisc.txt) The German translation uses the German translations from of Warcraft III: The Frozen Throne rather than Warcraft III: Reforged which is more nostalgic and overall much better in the oppinion of the map creator.
 
-The files have to be updated according to the English files which are the main files with the script [diffstrings.bat](./scripts/diffstrings.bat).
+The files have to be updated according to the English files which are the main files with the script [diffstrings.bat](./scripts/diffstrings.bat) (Windows) or [diffstrings.sh](./scripts/diffstrings.sh) (Linux).
 It uses the tool [wc3trans](https://github.com/tdauth/wc3trans) to update the map strings and [Meld](https://meldmerge.org/) to diff the files.
 
 
@@ -110,11 +110,11 @@ Open the folder [wowr.w3x](./wowr.w3x) with the World Editor and save the map as
 Use this check list when releasing a new version of the map:
 
 * Add all credits from this README to the map to make them appear in the quest log.
-* Add all changes to the ChangeLog in the quest log.
+* Add all changes to the ChangeLog in the quest log by adding them in [WoWReforgedCredits.j](./src/wowr/WoWReforgedCredits.j).
 * Make sure that the global variables for the map and the game are split into the proper trigger editor folders. There should be no top level "Variables" folder in trigger editor.
 * Make sure that the modified files [common.j](./wowr.w3x/scripts/common.j) and [common.ai](./wowr.w3x/scripts/common.ai) are up to date with the latest Warcraft III: Reforged patch.
-* Use [check.bat](./scripts/check.bat) to check all JASS scripts and FDF files. It uses the JAR fdfparser-1.0.jar from [WarsmashModEngine](https://github.com/Retera/WarsmashModEngine) for FDF parsing.
-* Check all translation files in the [_Locales](./wowr.w3x/_Locales/) folder. Use [diffstrings.bat](./diffstrings.bat) to compare the translation files with the original ones.
+* Use [check.bat](./scripts/check.bat) (Windows) or [check.sh](./scripts/check.sh) (Linux) to check all JASS scripts and FDF files. It uses the JAR fdfparser-1.0.jar from [WarsmashModEngine](https://github.com/Retera/WarsmashModEngine) for FDF parsing.
+* Check all translation files in the [_Locales](./wowr.w3x/_Locales/) folder. Use [diffstrings.bat](./scripts/diffstrings.bat) (Windows) or [diffstrings.sh](./scripts/diffstrings.sh) (Linux) to compare the translation files with the original ones.
 * Make sure that savegames still work by saving and loading.
 * Remove all compressable modifications in object data using the script [compress.sh](./scripts/compress.sh).
 * Use the cheat "-savecodeduplicates" to check for duplicated save code objects.
@@ -123,9 +123,9 @@ Use this check list when releasing a new version of the map:
 * Disable triggers for debugging or generating data only like "WoW Reforged Website" which only adds more code to the map script.
 * Enable JassHelper optimizer with `EnableJassHelperOptimizer=true` in the trigger editor GUI before saving the map.
 * Make sure the imported data is working and there are no corrupted or big files added by mistake. Check for imported files with a big size or 0 size.
-* Save the map as wowrX.Y.w3x and tag the repo with X.Y and create a release on GitHub based on the tag.
-* Upload the release on as many modding websites as possible.
-* Announce the new release on Discord.
+* Save the map as wowrX.Y.w3x and tag the repo with X.Y and create a release on GitHub based on the tag. This is the offical release link.
+* Announce the new release on Discord by linking the release from GitHub.
+* Upload the release on as many Warcraft III map websites as possible.
 
 ## Multiplayer Tests
 
