@@ -1857,6 +1857,7 @@ StringList {
     IQ_RACES_DESCRIPTION               "This selection is restricted to warlords. They receive a scepter and tiny town hall of their race which allows them to summon two workers and therefore to build their first base.",
     IQ_RACES_0                         "For Warlords only.",
     IQ_RACES_1                         "Additional races require a higher hero level of your first hero.",
+    IQ_RACES_2                         "Special building limited to 1 by Male Citizen at tier 3.",
     IQ_START_LOCATIONS_TITLE           "Start Locations",
     IQ_START_LOCATIONS_DESCRIPTION     "The start locations allow you to start the game at some specified area on the map. Some start locations may be occupied by other players including Warlord AI.",
     IQ_VICTORY_TITLE                   "Victory (%1%)",

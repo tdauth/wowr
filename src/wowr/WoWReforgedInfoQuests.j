@@ -18,7 +18,7 @@ function AddInfoQuest takes string title, string description, string iconPath re
     set questTitle[index] = title
     set questDescription[index] = description
     set questsMax = questsMax + 1
-    
+
     set questHandle[questsMax - 1] = q
     call QuestSetTitle(q, title)
     call QuestSetDescription(q, description)
@@ -26,7 +26,7 @@ function AddInfoQuest takes string title, string description, string iconPath re
     call QuestSetRequired(q, true)
     call QuestSetDiscovered(q, true)
     call QuestSetCompleted(q, false)
-    
+
     return q
 endfunction
 
@@ -336,7 +336,7 @@ private function Init takes nothing returns nothing
     call AddInfoQuestItem(GetLocalizedStringSafe("CC_REVEAL"))
     call AddInfoQuestItem(GetLocalizedStringSafe("CC_CHEATS"))
     call AddInfoQuestItem(GetLocalizedStringSafe("CC_RESET_REVOLUTION"))
-    
+
     call AddInfoQuest(GetLocalizedStringSafe("IQ_U_CHAT_COMMANDS_TITLE"), GetLocalizedStringSafe("IQ_U_CHAT_COMMANDS_DESCRIPTION"), "ReplaceableTextures\\CommandButtons\\BTNDisenchant.blp")
     call AddInfoQuestItem(GetLocalizedStringSafe("IQ_U_CHAT_COMMANDS_0"))
     call AddInfoQuestItem(GetLocalizedStringSafe("IQ_U_CHAT_COMMANDS_1"))
@@ -419,6 +419,7 @@ private function Init takes nothing returns nothing
     call AddInfoQuestItem(GetLocalizedStringSafe("CC_P_X"))
     call AddInfoQuestItem(GetLocalizedStringSafe("IQ_RACES_0"))
     call AddInfoQuestItem(GetLocalizedStringSafe("IQ_RACES_1"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("IQ_RACES_2"))
     call AddInfoQuestItem(GetLocalizedStringSafe("CC_R_X"))
 
     call AddInfoQuest(GetLocalizedStringSafe("IQ_START_LOCATIONS_TITLE"), GetLocalizedStringSafe("IQ_START_LOCATIONS_DESCRIPTION"), "ReplaceableTextures\\WorldEditUI\\StartingLocation.blp")
