@@ -1,10 +1,13 @@
-library WoWReforgedGoblinToolBox requires NewBonus, Attributes, UnitCost, HeroUtils, PlayerColorUtils, WoWReforgedSaveCodeObjects, ItemTypeUtils, WoWReforgedRaces, WoWReforgedHeroes, WoWReforgedTerrain, WoWReforgedAbilityFields, WoWReforgedAttributes, WoWReforgedRespawn
+library WoWReforgedGoblinToolBox initializer Init requires NewBonus, Attributes, UnitCost, HeroUtils, PlayerColorUtils, WoWReforgedSaveCodeObjects, ItemTypeUtils, WoWReforgedRaces, WoWReforgedHeroes, WoWReforgedTerrain, WoWReforgedAbilityFields, WoWReforgedAttributes, WoWReforgedRespawn
 
 globals
     private terraindeformation array playerTerrainDeformations
     private integer array playerTerrainDeformationsCounters
-    
+
     constant integer MAX_BONUSES = 28
+
+    private player filterOwner = null
+    private trigger channelTrigger = CreateTrigger()
 endglobals
 
 function GetBonusName takes integer b returns string
@@ -124,41 +127,41 @@ function ExamineUnit takes unit caster, unit whichUnit returns nothing
     local integer max = 0
     local integer countClassifications = 0
     local integer heroIndex = 0
-    
+
     set msg = msg + "\nSkin: " + GetObjectName(BlzGetUnitSkin(whichUnit))
     set msg = msg + "\nOwner: " + GetPlayerNameColored(GetOwningPlayer(whichUnit))
-    
+
     if (IsUnitType(whichUnit, UNIT_TYPE_HERO)) then
         set heroIndex = GetHeroIndexByUnitTypeId(id)
         if (heroIndex != -1) then
             set whichRace = GetHeroRace(heroIndex)
         endif
     endif
-    
+
     if (whichRace == udg_RaceNone) then
-        set msg = msg + "\nNo race." 
+        set msg = msg + "\nNo race."
     else
         set msg = msg + "\nRace: " + GetRaceName(whichRace)
     endif
-    
+
     if (whichProfession == udg_ProfessionNone) then
-        set msg = msg + "\nNo profession." 
+        set msg = msg + "\nNo profession."
     else
         set msg = msg + "\nProfession: " + GetProfessionName(whichProfession)
     endif
-    
+
     if (saveCodeIndex == -1) then
         set saveCodeIndex = GetSaveObjectBuildingType(id)
     endif
-    
+
     if (saveCodeIndex == -1) then
-        set msg = msg + "\nNot savable." 
+        set msg = msg + "\nNot savable."
     else
         set msg = msg + "\nSave code index: "  + I2S(saveCodeIndex)
     endif
-    
+
     set msg = msg + "\n" + I2S(GetUnitGoldCostSafe(id)) + " gold, " + I2S(GetUnitWoodCostSafe(id)) + " lumber, " + I2S(GetUnitFoodUsed(whichUnit))  + " food used, " + I2S(GetUnitFoodMade(whichUnit))  + " food made"
-    
+
     /*
     TODO Get all spells from SkillMenu.
     if (IsUnitType(whichUnit, UNIT_TYPE_HERO)) then
@@ -178,14 +181,14 @@ function ExamineUnit takes unit caster, unit whichUnit returns nothing
         endif
     endif
     */
-    
+
     set msg = msg + "\nClassifications: "
-    
+
     if (IsUnitType(whichUnit, UNIT_TYPE_HERO)) then
         set msg = msg + "hero"
         set countClassifications = countClassifications + 1
     endif
-    
+
     if (IsUnitType(whichUnit, UNIT_TYPE_ANCIENT)) then
         if (countClassifications > 0) then
             set msg = msg + ", "
@@ -193,7 +196,7 @@ function ExamineUnit takes unit caster, unit whichUnit returns nothing
         set msg = msg + "ancient"
         set countClassifications = countClassifications + 1
     endif
-    
+
     if (IsUnitType(whichUnit, UNIT_TYPE_STRUCTURE)) then
         if (countClassifications > 0) then
             set msg = msg + ", "
@@ -201,7 +204,7 @@ function ExamineUnit takes unit caster, unit whichUnit returns nothing
         set msg = msg + "structure"
         set countClassifications = countClassifications + 1
     endif
-    
+
     if (IsUnitType(whichUnit, UNIT_TYPE_MECHANICAL)) then
         if (countClassifications > 0) then
             set msg = msg + ", "
@@ -209,7 +212,7 @@ function ExamineUnit takes unit caster, unit whichUnit returns nothing
         set msg = msg + "mechanical"
         set countClassifications =  countClassifications + 1
     endif
-    
+
     if (IsUnitType(whichUnit, UNIT_TYPE_ETHEREAL)) then
         if (countClassifications > 0) then
             set msg = msg + ", "
@@ -217,7 +220,7 @@ function ExamineUnit takes unit caster, unit whichUnit returns nothing
         set msg = msg + "ethereal"
         set countClassifications = countClassifications + 1
     endif
-    
+
     if (IsUnitType(whichUnit, UNIT_TYPE_FLYING)) then
         if (countClassifications > 0) then
             set msg = msg + ", "
@@ -225,7 +228,7 @@ function ExamineUnit takes unit caster, unit whichUnit returns nothing
         set msg = msg + "flying"
         set countClassifications = countClassifications + 1
     endif
-    
+
     if (IsUnitType(whichUnit, UNIT_TYPE_GROUND)) then
         if (countClassifications > 0) then
             set msg = msg + ", "
@@ -233,7 +236,7 @@ function ExamineUnit takes unit caster, unit whichUnit returns nothing
         set msg = msg + "ground"
         set countClassifications = countClassifications + 1
     endif
-    
+
      if (IsUnitType(whichUnit, UNIT_TYPE_MAGIC_IMMUNE)) then
         if (countClassifications > 0) then
             set msg = msg + ", "
@@ -241,7 +244,7 @@ function ExamineUnit takes unit caster, unit whichUnit returns nothing
         set msg = msg + "magic immune"
         set countClassifications = countClassifications + 1
     endif
-    
+
     if (IsUnitType(whichUnit, UNIT_TYPE_PEON)) then
         if (countClassifications > 0) then
             set msg = msg + ", "
@@ -249,7 +252,7 @@ function ExamineUnit takes unit caster, unit whichUnit returns nothing
         set msg = msg + "peon"
         set countClassifications = countClassifications + 1
     endif
-    
+
     if (IsUnitType(whichUnit, UNIT_TYPE_PLAGUED)) then
         if (countClassifications > 0) then
             set msg = msg + ", "
@@ -257,13 +260,13 @@ function ExamineUnit takes unit caster, unit whichUnit returns nothing
         set msg = msg + "plagued"
         set countClassifications = countClassifications + 1
     endif
-    
+
     if (countClassifications == 0) then
         set msg = msg + "-"
     endif
-    
+
     set msg = msg + "\nAbilities: "
-    
+
     set i = 0
     loop
         exitwhen (i >= MAX_UNIT_ABILITIES)
@@ -288,7 +291,7 @@ function ExamineUnit takes unit caster, unit whichUnit returns nothing
         set msg = msg + GetBonusName(BONUS_DAMAGE) + ": " + R2S(GetUnitBonus(whichUnit, BONUS_DAMAGE))
         set countClassifications = countClassifications + 1
     endif
-    
+
     if (GetUnitBonus(whichUnit, BONUS_ARMOR) > 0.0) then
         if (countClassifications > 0) then
             set msg = msg + ", "
@@ -296,7 +299,7 @@ function ExamineUnit takes unit caster, unit whichUnit returns nothing
         set msg = msg + GetBonusName(BONUS_ARMOR) + ": " + R2S(GetUnitBonus(whichUnit, BONUS_ARMOR))
         set countClassifications = countClassifications + 1
     endif
-    
+
     if (GetUnitBonus(whichUnit, BONUS_HEALTH) > 0.0) then
         if (countClassifications > 0) then
             set msg = msg + ", "
@@ -304,7 +307,7 @@ function ExamineUnit takes unit caster, unit whichUnit returns nothing
         set msg = msg + GetBonusName(BONUS_HEALTH) + ": " + R2S(GetUnitBonus(whichUnit, BONUS_HEALTH))
         set countClassifications = countClassifications + 1
     endif
-    
+
     if (GetUnitBonus(whichUnit, BONUS_MANA) > 0.0) then
         if (countClassifications > 0) then
             set msg = msg + ", "
@@ -312,7 +315,7 @@ function ExamineUnit takes unit caster, unit whichUnit returns nothing
         set msg = msg + GetBonusName(BONUS_MANA) + ": " + R2S(GetUnitBonus(whichUnit, BONUS_MANA))
         set countClassifications = countClassifications + 1
     endif
-    
+
     if (GetUnitBonus(whichUnit, BONUS_AGILITY) > 0.0) then
         if (countClassifications > 0) then
             set msg = msg + ", "
@@ -320,7 +323,7 @@ function ExamineUnit takes unit caster, unit whichUnit returns nothing
         set msg = msg + GetBonusName(BONUS_AGILITY) + ": " + R2S(GetUnitBonus(whichUnit, BONUS_AGILITY))
         set countClassifications = countClassifications + 1
     endif
-    
+
     if (GetUnitBonus(whichUnit, BONUS_STRENGTH) > 0.0) then
         if (countClassifications > 0) then
             set msg = msg + ", "
@@ -328,7 +331,7 @@ function ExamineUnit takes unit caster, unit whichUnit returns nothing
         set msg = msg + GetBonusName(BONUS_STRENGTH) + ": " + R2S(GetUnitBonus(whichUnit, BONUS_STRENGTH))
         set countClassifications = countClassifications + 1
     endif
-    
+
     if (GetUnitBonus(whichUnit, BONUS_INTELLIGENCE) > 0.0) then
         if (countClassifications > 0) then
             set msg = msg + ", "
@@ -336,7 +339,7 @@ function ExamineUnit takes unit caster, unit whichUnit returns nothing
         set msg = msg + GetBonusName(BONUS_INTELLIGENCE) + ": " + R2S(GetUnitBonus(whichUnit, BONUS_INTELLIGENCE))
         set countClassifications = countClassifications + 1
     endif
-    
+
     if (GetUnitBonus(whichUnit, BONUS_MOVEMENT_SPEED) > 0.0) then
         if (countClassifications > 0) then
             set msg = msg + ", "
@@ -344,7 +347,7 @@ function ExamineUnit takes unit caster, unit whichUnit returns nothing
         set msg = msg + GetBonusName(BONUS_MOVEMENT_SPEED) + ": " + R2S(GetUnitBonus(whichUnit, BONUS_MOVEMENT_SPEED))
         set countClassifications = countClassifications + 1
     endif
-    
+
     if (GetUnitBonus(whichUnit, BONUS_SIGHT_RANGE) > 0.0) then
         if (countClassifications > 0) then
             set msg = msg + ", "
@@ -352,7 +355,7 @@ function ExamineUnit takes unit caster, unit whichUnit returns nothing
         set msg = msg + GetBonusName(BONUS_SIGHT_RANGE) + ": " + R2S(GetUnitBonus(whichUnit, BONUS_SIGHT_RANGE))
         set countClassifications = countClassifications + 1
     endif
-    
+
     if (GetUnitBonus(whichUnit, BONUS_HEALTH_REGEN) > 0.0) then
         if (countClassifications > 0) then
             set msg = msg + ", "
@@ -360,7 +363,7 @@ function ExamineUnit takes unit caster, unit whichUnit returns nothing
         set msg = msg + GetBonusName(BONUS_HEALTH_REGEN) + ": " + R2S(GetUnitBonus(whichUnit, BONUS_HEALTH_REGEN))
         set countClassifications = countClassifications + 1
     endif
-    
+
     if (GetUnitBonus(whichUnit, BONUS_MANA_REGEN) > 0.0) then
         if (countClassifications > 0) then
             set msg = msg + ", "
@@ -368,21 +371,21 @@ function ExamineUnit takes unit caster, unit whichUnit returns nothing
         set msg = msg + GetBonusName(BONUS_MANA_REGEN) + ": " + R2S(GetUnitBonus(whichUnit, BONUS_MANA_REGEN))
         set countClassifications = countClassifications + 1
     endif
-    
+
     if (countClassifications == 0) then
         set msg = msg + "-"
     endif
-    
+
     set msg = msg + "\nAttributes: "
     set countClassifications = 0
-    
+
     if (IsUnitType(whichUnit, UNIT_TYPE_HERO)) then
          set msg = msg + "Strength: " + I2S(GetHeroStr(whichUnit, false)) + " (+ " + I2S(GetHeroStrBonus(whichUnit)) + ")"
          set msg = msg + ", Agility: " + I2S(GetHeroAgi(whichUnit, false)) + " (+ " + I2S(GetHeroAgiBonus(whichUnit)) + ")"
          set msg = msg + ", Intelligence: " + I2S(GetHeroInt(whichUnit, false)) + " (+ " + I2S(GetHeroIntBonus(whichUnit)) + ")"
          set countClassifications = countClassifications + 3
     endif
-    
+
     set i = 0
     loop
         exitwhen (i >= GetMaxAttributes())
@@ -395,11 +398,11 @@ function ExamineUnit takes unit caster, unit whichUnit returns nothing
         endif
         set i = i + 1
     endloop
-    
+
     if (countClassifications == 0) then
         set msg = msg + "-"
     endif
-    
+
     call DisplayTimedTextToPlayer(GetOwningPlayer(caster), 0.0, 0.0, bj_TEXT_DELAY_HINT, msg)
 endfunction
 
@@ -410,85 +413,85 @@ function ExamineItem takes unit caster, item whichItem returns nothing
     local integer whichProfession = GetObjectProfession(id)
     local integer saveCodeIndex = GetSaveObjectItemType(id)
     local integer i = 0
-    
+
     set msg = msg + "\nSkin: " + GetObjectName(BlzGetItemSkin(whichItem))
 
     if (GetItemPlayer(whichItem) == null) then
-        set msg = msg + "\nNo owner." 
+        set msg = msg + "\nNo owner."
     else
         set msg = msg + "\nOwner: " + GetPlayerNameColored(GetItemPlayer(whichItem))
     endif
-    
+
     if (whichRace == udg_RaceNone) then
-        set msg = msg + "\nNo race." 
+        set msg = msg + "\nNo race."
     else
         set msg = msg + "\nRace: " + GetRaceName(whichRace)
     endif
-    
+
     if (whichProfession == udg_ProfessionNone) then
-        set msg = msg + "\nNo profession." 
+        set msg = msg + "\nNo profession."
     else
         set msg = msg + "\nProfession: " + GetProfessionName(whichProfession)
     endif
-    
+
     if (saveCodeIndex == -1) then
-        set msg = msg + "\nNot savable." 
+        set msg = msg + "\nNot savable."
     else
         set msg = msg + "\nSave code index: "  + I2S(saveCodeIndex)
     endif
-    
+
     set msg = msg + "\n" + I2S(GetItemValueGold(id)) + " gold, " + I2S(GetItemValueLumber(id)) + " lumber"
-    
+
     set msg = msg + "\nType: "
-    
+
     if (GetItemType(whichItem) == ITEM_TYPE_PERMANENT) then
         set msg = msg + "permanent"
     endif
-    
+
     if (GetItemType(whichItem) == ITEM_TYPE_CHARGED) then
         set msg = msg + "charged"
     endif
-    
+
     if (GetItemType(whichItem) == ITEM_TYPE_POWERUP) then
         set msg = msg + "powerup"
     endif
-    
+
     if (GetItemType(whichItem) == ITEM_TYPE_ARTIFACT) then
         set msg = msg + "artifact"
     endif
-    
+
     if (GetItemType(whichItem) == ITEM_TYPE_PURCHASABLE) then
         set msg = msg + "purchasable"
     endif
-    
+
     if (GetItemType(whichItem) == ITEM_TYPE_CAMPAIGN) then
         set msg = msg + "campaign"
     endif
-    
+
     if (GetItemType(whichItem) == ITEM_TYPE_MISCELLANEOUS) then
         set msg = msg + "misc"
     endif
-    
+
     if (GetItemType(whichItem) == ITEM_TYPE_ANY) then
         set msg = msg + "any"
     endif
-    
+
     if (IsItemInvulnerable(whichItem)) then
         set msg = msg + ", invulnerable"
     endif
-    
+
     if (IsItemSellable(whichItem)) then
         set msg = msg + ", sellable"
     endif
-    
+
     if (IsItemPawnable(whichItem)) then
         set msg = msg + ", pawnable"
     endif
-    
+
     set msg = msg + "\n " + I2S(GetItemCharges(whichItem)) + " charges"
-    
+
     set msg = msg + "\nAbilities: "
-    
+
     set i = 0
     loop
         exitwhen (i >= MAX_ITEM_ABILITIES)
@@ -502,23 +505,23 @@ function ExamineItem takes unit caster, item whichItem returns nothing
         endif
         set i = i + 1
     endloop
-    
+
     call DisplayTimedTextToPlayer(GetOwningPlayer(caster), 0.0, 0.0, bj_TEXT_DELAY_HINT, msg)
 endfunction
 
 function ExamineDestructable takes unit caster, destructable whichDestructable returns nothing
     local string msg = GetDestructableName(whichDestructable)
-    
+
     set msg = msg + "\nHit Points: " + I2S(R2I(GetDestructableLife(whichDestructable))) + "/" + I2S(R2I(GetDestructableMaxLife(whichDestructable)))
 
     if (IsDestructableInvulnerable(whichDestructable)) then
         set msg = msg + "\ninvulnerable"
     endif
-    
+
     if (IsDestructableTree(whichDestructable)) then
         set msg = msg + "\nTree"
     endif
-    
+
     set msg = msg + "\nOccluder height: " + R2S(GetDestructableOccluderHeight(whichDestructable))
 
     call DisplayTimedTextToPlayer(GetOwningPlayer(caster), 0.0, 0.0, bj_TEXT_DELAY_HINT, msg)
@@ -533,47 +536,123 @@ function ExamineGround takes unit caster, real x, real y returns nothing
     local integer cliffLevel = GetTerrainCliffLevel(x, y)
     local string pathing = ""
     local string msg = ""
-    
+
     if (not IsTerrainPathable(x, y, PATHING_TYPE_WALKABILITY)) then
         if (StringLength(pathing) > 0) then
             set pathing = pathing + ","
         endif
         set pathing = pathing + "walkable"
     endif
-    
+
     if (not IsTerrainPathable(x, y, PATHING_TYPE_FLOATABILITY)) then
         if (StringLength(pathing) > 0) then
             set pathing = pathing + ","
         endif
         set pathing = pathing + "floatable"
     endif
-    
+
     if (not IsTerrainPathable(x, y, PATHING_TYPE_FLYABILITY)) then
         if (StringLength(pathing) > 0) then
             set pathing = pathing + ","
         endif
         set pathing = pathing + "flyable"
     endif
-    
+
     if (IsPointBlighted(x, y)) then
         if (StringLength(pathing) > 0) then
             set pathing = pathing + ","
         endif
         set pathing = pathing + "blight"
     endif
-    
+
     set msg = tileName + " (variant " + I2S(v) + ")\nCliff level: " + I2S(cliffLevel) + "\nHeight: " + R2S(z) + "\n" + pathing
-    
+
     if (RespawnCoordinatesContainNoBuilding(x, y)) then
         set msg = msg + ", creeps will respawn here."
     else
         set msg = msg + ", creeps won't respawn here because of buildings nearby."
     endif
-    
+
     call RemoveLocation(l)
     set l = null
 
     call DisplayTimedTextToPlayer(GetOwningPlayer(caster), 0.0, 0.0, bj_TEXT_DELAY_HINT, msg)
+endfunction
+
+private function FilterFunctionIsLivingEnemy takes nothing returns boolean
+    return IsUnitEnemy(GetFilterUnit(), filterOwner) and IsUnitAliveBJ(GetFilterUnit())
+endfunction
+
+private function HasNoEnemiesNearby takes unit caster returns boolean
+    local group g = CreateGroup()
+    local filterfunc f =  Filter(function FilterFunctionIsLivingEnemy)
+    local boolean result = false
+    set filterOwner = GetOwningPlayer(caster)
+    call GroupEnumUnitsInRange(g, GetUnitX(caster), GetUnitY(caster), 512.0, filter)
+    set result = BlzGroupGetSize(g) == 0
+    call DestroyBoolExpr(filter)
+    call GroupClear(g)
+    call DestroyGroup(g)
+    set g = null
+    return result
+endfunction
+
+private function ReinforceDestructable takes unit caster, destructable d, real bonus returns nothing
+    if (HasNoEnemiesNearby(caster)) then
+        if (GetDestructableMaxLife(d) < 10000.0) then
+            if (GetPlayerState(GetOwningPlayer(caster), PLAYER_STATE_RESOURCE_GOLD) >= 100 and GetPlayerState(GetOwningPlayer(caster), PLAYER_STATE_RESOURCE_LUMBER) >= 50) then
+                call SetDestructableMaxLifeBJ(d, RMaxBJ(RMinBJ((GetDestructableMaxLife(d) + bonus), 10000.0), 400.0))
+                call AdjustPlayerStateBJ(-100, GetOwningPlayer(caster), PLAYER_STATE_RESOURCE_GOLD)
+                call AdjustPlayerStateBJ(-50, GetOwningPlayer(caster), PLAYER_STATE_RESOURCE_LUMBER)
+                call DisplayTextToPlayer(GetOwningPlayer(caster), 0, 0, Format(GetLocalizedString("HITPOINTS_INFO")).i(R2I(GetDestructableLife(d))).i(R2I(GetDestructableMaxLife(d))).result())
+            else
+                call IssueImmediateOrder(caster, "stop")
+                call SimError(GetOwningPlayer(caster), GetLocalizedString("REINFORCE_REQUIRES_RESOURCES"))
+            endif
+        else
+            call IssueImmediateOrder(caster, "stop")
+            if (bonus >= 0.0) then
+                call SimError(GetOwningPlayer(caster), GetLocalizedString("TARGET_HAS_MAXIMUM_HP"))
+            else
+                call SimError(GetOwningPlayer(caster), GetLocalizedString("TARGET_HAS_MINIMUM_HP"))
+            endif
+        endif
+    else
+        call IssueImmediateOrder(caster, "stop")
+        call SimError(GetOwningPlayer(caster), GetLocalizedString("ENEMY_UNITS_NEARBY"))
+    endif
+endfunction
+
+private function TriggerConditionChannel takes nothing returns boolean
+    local integer abilityId = GetSpellAbilityId()
+    if (abilityId == 'A24Q') then // Dig Down
+        call TerrainDeformationCraterBJ(0.5, true, GetSpellTargetLoc(), 128.00, 64)
+        call AddPlayerTerrainDeformation(GetOwningPlayer(GetTriggerUnit()))
+    elseif (abilityId == 'A24P') then // Dig Up
+        call TerrainDeformationCraterBJ( 0.5, true, GetSpellTargetLoc(), 128.00, -64.00)
+        call AddPlayerTerrainDeformation(GetOwningPlayer(GetTriggerUnit()))
+    elseif (abilityId == 'A264') then // Flatten All
+        call RemoveAllPlayerTerrainDeformations(GetOwningPlayer(GetTriggerUnit()))
+    elseif (abilityId == 'A1YT') then // Examine Unit
+        call ExamineUnit(GetTriggerUnit(), GetSpellTargetUnit())
+    elseif (abilityId == 'A1YU') then // Examine Item
+        call ExamineItem(GetTriggerUnit(), GetSpellTargetItem())
+    elseif (abilityId == 'A1HN') then // Examine Destructable
+        call ExamineDestructable(GetTriggerUnit(), GetSpellTargetDestructable())
+    elseif (abilityId == 'A24D') then // Examine Ground
+        call ExamineGround(GetTriggerUnit(), GetSpellTargetX(), GetSpellTargetY())
+    elseif (abilityId == 'A1HL') then // Reinforce
+        call ReinforceDestructable(GetTriggerUnit(), GetSpellTargetDestructable(), 100.0)
+    elseif (abilityId == 'A1IA') then // Reduce
+        call ReinforceDestructable(GetTriggerUnit(), GetSpellTargetDestructable(), -100.0)
+    endif
+    return false
+endfunction
+
+
+private function Init takes nothing returns nothing
+    call TriggerRegisterAnyUnitEventBJ(channelTrigger, EVENT_PLAYER_UNIT_SPELL_CHANNEL)
+    call TriggerAddCondition(channelTrigger, Condition(function TriggerConditionChannel))
 endfunction
 
 endlibrary

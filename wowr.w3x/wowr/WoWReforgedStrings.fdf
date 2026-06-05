@@ -72,6 +72,7 @@ StringList {
     TARGET_HAS_MAXIMUM_HP              "Target has already reached minimum hit points.",
     REINFORCE_REQUIRES_RESOURCES       "Requires 100 gold and 50 lumber.",
     ENEMY_UNITS_NEARBY                 "There are enemy units nearby.",
+    HITPOINTS_INFO                     "Hitpoints: %1%/%2%",
     // Magical Item Summoner
     NO_VALID_ITEMS                     "No valid items.",
     // Item Locker
