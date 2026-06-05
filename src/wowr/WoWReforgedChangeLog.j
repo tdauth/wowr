@@ -83,6 +83,7 @@ private function Init takes nothing returns nothing
     call AddChange("Support save codes for all wall buildings.")
     call AddChange("Settings UI lists personal player settings now.")
     call AddChange("Revise info quests.")
+    call AddChange("Reduce model scalings of neutral Dimensional Ships.")
 
 static if (MAP_DEBUG_MODE_ENABLED) then
     call AddVersion("4.6")
