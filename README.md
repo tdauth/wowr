@@ -12,9 +12,9 @@ This map is not a recreation of the game World of Warcraft but is inspired by an
 
 | <div style="width:50%">[Subscribe](https://www.paypal.com/webapps/billing/plans/subscribe?plan_id=P-2H6673288J5283354M6TTVVY) to become a VIP</div> | <div style="width:50%">[Donate](https://www.paypal.com/donate?hosted_button_id=ZAAKMQLSNGDK8)</div> |
 | :---: | :---: |
-| <img src="images/QR_Code_Subscribe.png" alt="Subscribe" width="200" height="200" /> | <img src="images/QR_Code_Donate.png" alt="Donate" width="200" height="200" /> |
-| Send me your Battle.net ID on Discord after subscribing to get it unlocked with the next map release. |
+| <img src="images/QR_Code_Subscribe.png" alt="Subscribe" width="200" height="200" valign="top" /> | <img src="images/QR_Code_Donate.png" alt="Donate" width="200" height="200" valign="top" /> |
 
+* Send me your Battle.net ID on Discord after subscribing to get it unlocked with the next map release.
 * Discuss the map on its [Discord Server](https://discord.gg/eM34z36).
 
 ## Play the Map
