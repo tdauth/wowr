@@ -1,9 +1,6 @@
 # World of Warcraft Reforged
 
-![Logo](images/Logo.png "Logo")
-
-Open world role-playing game and strategy map for Warcraft III: Reforged based on [World of Warcraft Reborn](https://maps.w3reforged.com/maps/categories/other/world-of-warcraft-rebornr) featuring computer AI support which allows you to play the map offline.
-This map is not a recreation of the game World of Warcraft but is inspired by and uses some lore from the game.
+Warcraft III: Reforged open world role-playing game and strategy map.
 
 
 [Official website](https://tdauth.github.io/wowr-website) with its own [repository](https://github.com/tdauth/wowr-website).
@@ -174,7 +171,7 @@ Replays will contain lots of MouseActions if you have any `EVENT_PLAYER_MOUSE_MO
 
 ## History of the Map
 
-Warcraft III: Reforged is a fun map based on [World of Warcraft Reborn](https://www.hiveworkshop.com/threads/world-of-warcraft-reborn.80480/#resource-3941) which has been created by the users DeMoNiKuS and EvilPitlord.
+This map is based on [World of Warcraft Reborn](https://www.hiveworkshop.com/threads/world-of-warcraft-reborn.80480/#resource-3941) which has been created by the users DeMoNiKuS and EvilPitlord.
 DeMoNiKuS modified the map World of Warcraft by EvilPitlord.
 The original map had no trigger data, so all triggers had to be recreated based on the original map script.
 The original map script has been added to this repository as well as the original map strings:
@@ -234,8 +231,8 @@ Playing Warcraft III can be played on Ubuntu using Steam, adding it as non-Steam
 ## Credits
 
 * Baradé: Creator.
-* EvilPitlord: Original map World of Warcraft Reborn.
-* DeMoNiKuS: Original map World of Warcraft Reborn.
+* EvilPitlord: Original map [World of Warcraft Reborn](https://maps.w3reforged.com/maps/categories/other/world-of-warcraft-rebornr).
+* DeMoNiKuS: Original map [World of Warcraft Reborn](https://maps.w3reforged.com/maps/categories/other/world-of-warcraft-rebornr).
 * Runeblade14: Tests.
 * Toasty Toast UwU: Tests.
 * Lissai: Tests.
