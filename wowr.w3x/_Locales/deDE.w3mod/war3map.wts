@@ -3448,7 +3448,7 @@ P
 }
 
 STRING 576
-// Abilities: A0KD (Enslavement), EditorSuffix (Editor Suffix)
+// Abilities: A0KD (Versklavung), EditorSuffix (Editor Suffix)
 {
  (Icon) (Neutral Feindlich)
 }
@@ -12174,7 +12174,7 @@ STRING 2233
 STRING 2234
 // Units: o0BC (Kennel), Ubertip (Tooltip - Extended)
 {
-Primäres Truppen-Produktionsgebäude. Trains Gnoll Brutes, Gnoll-Auftragsmörders, Gnoll-Aufsehers and Gnoll Rocketbreakers. |nBietet auch die Ausbaustufen Enslavement, Vergiftete Waffen, and Barrel Form upgrades.
+Primäres Truppen-Produktionsgebäude. Trains Gnoll Brutes, Gnoll-Auftragsmörders, Gnoll-Aufsehers and Gnoll Rocketbreakers. |nBietet auch die Ausbaustufen Versklavung, Vergiftete Waffen, and Barrel Form upgrades.
 }
 
 STRING 2235
@@ -12238,25 +12238,25 @@ STRING 2244
 }
 
 STRING 2245
-// Abilities: A030 (Enslavement), Name (Name)
+// Abilities: A030 (Versklavung), Name (Name)
 {
 Versklavung
 }
 
 STRING 2246
-// Abilities: A030 (Enslavement), Tip (Tooltip - Normal)
+// Abilities: A030 (Versklavung), Tip (Tooltip - Normal)
 {
 Versklavung
 }
 
 STRING 2247
-// Abilities: A030 (Enslavement), EditorSuffix (Editor Suffix)
+// Abilities: A030 (Versklavung), EditorSuffix (Editor Suffix)
 {
  (Icon) (Gnolle)
 }
 
 STRING 2248
-// Abilities: A030 (Enslavement), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A030 (Versklavung), Ubertip (Tooltip - Normal - Extended)
 {
 Verwandelt einen getöteten Feind im nächstgelegenen Rathaus in einen Sklaven.
 }
@@ -12328,7 +12328,7 @@ STRING 2259
 }
 
 STRING 2260
-// Abilities: A03J (Enslavement), Name (Name)
+// Abilities: A03J (Versklavung), Name (Name)
 {
 Versklavung
 }
@@ -12348,7 +12348,7 @@ STRING 2262
 STRING 2263
 // Upgrades: R028 (Pillage), Ubertip (Tooltip - Extended)
 {
-Gives Gnoll melee units the ability Enslavement which allows them to enslave weak enemies on killing them, making them weak slave units with no food costs who cannot be resurrected.
+Gives Gnoll melee units the ability Versklavung which allows them to enslave weak enemies on killing them, making them weak slave units with no food costs who cannot be resurrected.
 }
 
 STRING 2264
@@ -13596,7 +13596,7 @@ Käfigwagen ausbilden
 STRING 2505
 // Units: h05T (Slave), EditorSuffix (Name - Editor Suffix)
 {
-(Gnolle) (Banditen) (Enslavement)
+(Gnolle) (Banditen) (Versklavung)
 }
 
 STRING 2506
@@ -14236,31 +14236,31 @@ STRING 2614
 }
 
 STRING 2615
-// Abilities: A03J (Enslavement), Tip (Tooltip - Normal)
+// Abilities: A03J (Versklavung), Tip (Tooltip - Normal)
 {
 Versklavung
 }
 
 STRING 2616
-// Abilities: A03J (Enslavement), EditorSuffix (Editor Suffix)
+// Abilities: A03J (Versklavung), EditorSuffix (Editor Suffix)
 {
  (Icon) (Banditen)
 }
 
 STRING 2617
-// Abilities: A03J (Enslavement), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A03J (Versklavung), Ubertip (Tooltip - Normal - Extended)
 {
 Converts a killed enemy into a Slave at your nearest town hall.
 }
 
 STRING 2618
-// Abilities: A0KD (Enslavement), Name (Name)
+// Abilities: A0KD (Versklavung), Name (Name)
 {
 Versklavung
 }
 
 STRING 2619
-// Abilities: A0KD (Enslavement), Tip (Tooltip - Normal)
+// Abilities: A0KD (Versklavung), Tip (Tooltip - Normal)
 {
 Versklavung
 }
@@ -14280,7 +14280,7 @@ STRING 2621
 STRING 2622
 // Upgrades: R06K (Pillage), Ubertip (Tooltip - Extended)
 {
-Gives Bandit melee units the ability Enslavement which allows them to enslave weak enemies on killing them, making them weak slave units with no food costs who cannot be resurrected.
+Gives Bandit melee units the ability Versklavung which allows them to enslave weak enemies on killing them, making them weak slave units with no food costs who cannot be resurrected.
 }
 
 STRING 2623
@@ -15052,7 +15052,7 @@ B
 }
 
 STRING 2851
-// Abilities: A0KD (Enslavement), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0KD (Versklavung), Ubertip (Tooltip - Normal - Extended)
 {
 Converts a killed enemy into a Slave at your nearest town hall.
 }
@@ -15720,7 +15720,7 @@ STRING 3020
 STRING 3021
 // Items: I1AB (Tome of Life Regeneration), Description (Description)
 {
-Permanently increases Lebensregeneration.
+Erhöht dauerhaft die Lebensregeneration.
 }
 
 STRING 3023
@@ -15738,13 +15738,13 @@ Permanently increases the Lebensregeneration of the Hero by 1% when used.
 STRING 3025
 // Items: I02B (Akama's Message), Ubertip (Tooltip - Extended)
 {
-A message from Akama for Illidan in Outland.
+Eine Nachricht von Akam für Illidan in Fremdland.
 }
 
 STRING 3026
 // Items: I02B (Akama's Message), Description (Description)
 {
-A message from Akama for Illidan in Outland.
+Eine Nachricht von Akam für Illidan in Fremdland.
 }
 
 STRING 3027
@@ -16114,7 +16114,7 @@ STRING 3087
 }
 
 STRING 3088
-// Abilities: A0LA (Feather Attack), EditorSuffix (Editor Suffix)
+// Abilities: A0LA (Federangriff), EditorSuffix (Editor Suffix)
 {
 (Banditen)
 }
@@ -16126,7 +16126,7 @@ STRING 3089
 }
 
 STRING 3090
-// Abilities: A0LF (Storm Hammers), EditorSuffix (Editor Suffix)
+// Abilities: A0LF (Sturmhammer), EditorSuffix (Editor Suffix)
 {
 (Banditen)
 }
@@ -16168,25 +16168,25 @@ STRING 3096
 }
 
 STRING 3100
-// Abilities: A0LA (Feather Attack), Name (Name)
+// Abilities: A0LA (Federangriff), Name (Name)
 {
-Feather Attack
+Federangriff
 }
 
 STRING 3101
-// Abilities: A0LA (Feather Attack), Tip (Tooltip - Normal)
+// Abilities: A0LA (Federangriff), Tip (Tooltip - Normal)
 {
-Feather Attack
+Federangriff
 }
 
 STRING 3102
-// Abilities: A0LA (Feather Attack), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0LA (Federangriff), Ubertip (Tooltip - Normal - Extended)
 {
 Gives the Crow the ability to strike additional units with its feather attacks.
 }
 
 STRING 3103
-// Abilities: A0LF (Storm Hammers), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0LF (Sturmhammer), Ubertip (Tooltip - Normal - Extended)
 {
 Causes a Greifenräuber's attacks to damage multiple units.
 }
@@ -16278,7 +16278,7 @@ STRING 3148
 STRING 3149
 // Upgrades: R07A (Upgrade Moon Glaive), Tip (Tooltip)
 {
-Upgrade Feather Attack
+Federangriff erforschen
 }
 
 STRING 3150
@@ -16324,7 +16324,7 @@ STRING 3156
 }
 
 STRING 3157
-// Upgrades: R07D (Storm Hammers), Ubertip (Tooltip - Extended)
+// Upgrades: R07D (Sturmhammer), Ubertip (Tooltip - Extended)
 {
 Causes a Greifenräuber's attacks to damage multiple units.
 }
@@ -16332,7 +16332,7 @@ Causes a Greifenräuber's attacks to damage multiple units.
 STRING 3158
 // Units: h060 (Barracks), Ubertip (Tooltip - Extended)
 {
-Primäres Truppen-Produktionsgebäude. Trains Bandits, Brigands and Banditenlords. |nBietet auch die Ausbaustufen Shadow Meld, Einschnüren, Vergiftete Waffen, and Niederreiten upgrades.
+Primäres Truppen-Produktionsgebäude. Bildet Banditen, Briganten und Banditenlords aus. |nBietet auch die Ausbaustufen Shadow Meld, Einschnüren, Vergiftete Waffen, and Niederreiten upgrades.
 }
 
 STRING 3159
@@ -16344,13 +16344,13 @@ Heavy melee unit. Can learn Niederreiten, Einschnüren, Shadow Meld and Rob abil
 STRING 3160
 // Units: n07L (Brigand), Ubertip (Tooltip - Extended)
 {
-Light ranged. Can learn Einschnüren, Rob, Shadowmeld, Enslavement and Vergiftete Waffen. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
+Light ranged. Can learn Einschnüren, Rob, Shadowmeld, Versklavung and Vergiftete Waffen. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
 }
 
 STRING 3161
 // Units: n07M (Bandit), Ubertip (Tooltip - Extended)
 {
-Light melee unit. Can learn Shadowmeld, Rob, Einschnüren and Enslavement. |n|n|cffffcc00Greift Land-Einheiten an.|r
+Light melee unit. Can learn Shadowmeld, Rob, Einschnüren and Versklavung. |n|n|cffffcc00Greift Land-Einheiten an.|r
 }
 
 STRING 3162
@@ -16368,37 +16368,37 @@ Dient als Abladepunkt für das geschlagene Holz. |nBietet auch die Ausbaustufen 
 STRING 3164
 // Units: h079 (Prison), Ubertip (Tooltip - Extended)
 {
-Produces Armbrustmen, Käfig Carts, and Schwergewichts. |nBietet auch die Ausbaustufen Enslavement and Festhaut upgrades.
+Produces Armbrustmen, Käfig Carts, and Schwergewichts. |nBietet auch die Ausbaustufen 'Versklavung' und 'Festhaut'.
 }
 
 STRING 3165
 // Units: h07D (Aviary), Ubertip (Tooltip - Extended)
 {
-Trains Crows and Greifenräubers. Bietet auch die Ausbaustufen Durchblick, Feather Attack, and Storm Hammers upgrades.
+Bildet Krähen und Greifenräuber aus. Bietet auch die Ausbaustufen 'Durchblick', 'Federangriff' und 'Sturmhammer'.
 }
 
 STRING 3166
 // Units: n092 (Crow), Ubertip (Tooltip - Extended)
 {
-Light flying ranged unit that hurls pin-feathers against ground units and has strong melee attacks against air units. Can learn the Durchblick and Feather Attack abilities. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
+Light flying ranged unit that hurls pin-feathers against ground units and has strong melee attacks against air units. Can learn the Durchblick and Federangriff abilities. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
 }
 
 STRING 3167
 // Units: n093 (Ambal), Ubertip (Tooltip - Extended)
 {
-Large brutal bandit warrior. Can learn Einschnüren, Shadow Meld, Rob, Enslavement, and Festhaut.  |n|n|cffffcc00Greift Land-Einheiten an.|r
+Large brutal bandit warrior. Can learn Einschnüren, Shadow Meld, Rob, Versklavung und Festhaut.  |n|n|cffffcc00Greift Land-Einheiten an.|r
 }
 
 STRING 3168
 // Units: h07M (Gryphon Raider), Ubertip (Tooltip - Extended)
 {
-Powerful flying creature, mounted by a Bandit hammer-thrower. Can learn the Rob, Enslavement, Einschnüren, and Storm Hammers abilities. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
+Powerful flying creature, mounted by a Bandit hammer-thrower. Can learn the Rob, Versklavung, Einschnüren, and Sturmhammer abilities. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
 }
 
 STRING 3169
 // Units: n094 (Crossbowman), Ubertip (Tooltip - Extended)
 {
-Light ranged unit. Can learn Enslavement, Rob, Shadow Meld, and Vergiftete Waffen. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
+Light ranged unit. Can learn Versklavung, Rob, Shadow Meld, and Vergiftete Waffen. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
 }
 
 STRING 3170
@@ -16464,7 +16464,7 @@ Käfig
 STRING 3182
 // Buffs/Effects: B00N (Slave), Buffubertip (Tooltip - Extended)
 {
-This unit is a slave. It is a weak warrior which costs no food and fights for you.
+Diese Einheit ist ein Sklave. Es handelt sich um einen schwachen Krieger, der keine Nahrung verbraucht und für Sie kämpft.
 }
 
 STRING 3183
@@ -16864,7 +16864,7 @@ STRING 3281
 }
 
 STRING 3282
-// Upgrades: R07D (Storm Hammers), EditorSuffix (Editor Suffix)
+// Upgrades: R07D (Sturmhammer), EditorSuffix (Editor Suffix)
 {
 (Banditen)
 }
@@ -17190,7 +17190,7 @@ Fliegenden Speerwerfer ausbilden
 STRING 3354
 // Units: h07Q (Flying Spear Thrower), Ubertip (Tooltip - Extended)
 {
-Powerful flying unit, mounted by a Bandit spear thrower. Can learn the Rob, Enslavement, Einschnüren, Durchblick, and Vergiftete Waffen abilities. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
+Powerful flying unit, mounted by a Bandit spear thrower. Can learn the Rob, Versklavung, Einschnüren, Durchblick, and Vergiftete Waffen abilities. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
 }
 
 STRING 3355
@@ -18948,7 +18948,7 @@ STRING 3747
 STRING 3748
 // Abilities: A187 (Summon Workers), Name (Name)
 {
-Summon Arbeiters
+Arbeiter beschwören
 }
 
 STRING 3749
@@ -51970,7 +51970,7 @@ Primäres Truppen-Produktionsgebäude. Trains Troll-Schlächters, Dwarf Riflemen
 STRING 14944
 // Units: h02Z (Dwarf Beastiary), Ubertip (Tooltip - Extended)
 {
-Bildet Greife, Rieseneisbären und Greifenreiter aus. |nBietet auch die Ausbaustufen Breeding, Verschlingen, and Storm Hammers upgrades.
+Bildet Greife, Rieseneisbären und Greifenreiter aus. |nBietet auch die Ausbaustufen Breeding, Verschlingen, and Sturmhammer upgrades.
 }
 
 STRING 14961
@@ -53200,7 +53200,7 @@ Ein herzlicher Dalaran-Bürger. Hat eine Lebensregenerations-Aura.
 STRING 16262
 // Items: I0SS (Gnoll), Ubertip (Tooltip - Extended)
 {
-Vicious but simple-minded hyena-like humanoids:|n- Packs and clans.|n- Enslavements.|n- Strong melee warriors.
+Vicious but simple-minded hyena-like humanoids:|n- Packs and clans.|n- Versklavungs.|n- Strong melee warriors.
 }
 
 STRING 16263
@@ -63193,7 +63193,7 @@ Ermöglicht die Ausbildung aller Drachen.|n|n|cffffcc00Begrenzt auf 1.|r
 }
 
 STRING 24336
-// Upgrades: R0DO (Storm Hammers), Name (Name)
+// Upgrades: R0DO (Sturmhammer), Name (Name)
 {
 Kettenblitz
 }
@@ -95131,13 +95131,13 @@ Provides Feuerwerk-Teams with the Feuerwerk ability. Feuerwerks can be used to r
 }
 
 STRING 42460
-// Upgrades: R0DO (Storm Hammers), Tip (Tooltip)
+// Upgrades: R0DO (Sturmhammer), Tip (Tooltip)
 {
 Kettenblitz erforschen
 }
 
 STRING 42461
-// Upgrades: R0DO (Storm Hammers), Ubertip (Tooltip - Extended)
+// Upgrades: R0DO (Sturmhammer), Ubertip (Tooltip - Extended)
 {
 Gibt Wolkenschlangen die Fähigkeit 'Kettenblitz'.
 }
@@ -95305,7 +95305,7 @@ STRING 42493
 }
 
 STRING 42494
-// Upgrades: R0DO (Storm Hammers), Hotkey (Hotkey)
+// Upgrades: R0DO (Sturmhammer), Hotkey (Hotkey)
 {
 L
 }
@@ -95419,7 +95419,7 @@ STRING 42514
 }
 
 STRING 42515
-// Upgrades: R0DO (Storm Hammers), EditorSuffix (Editor Suffix)
+// Upgrades: R0DO (Sturmhammer), EditorSuffix (Editor Suffix)
 {
 (Pandaren)
 }
@@ -121160,7 +121160,7 @@ STRING 58011
 }
 
 STRING 58012
-// Abilities: A0EW (Storm Hammers), EditorSuffix (Editor Suffix)
+// Abilities: A0EW (Sturmhammer), EditorSuffix (Editor Suffix)
 {
 (Zwerge)
 }
@@ -122306,7 +122306,7 @@ STRING 58552
 }
 
 STRING 58553
-// Upgrades: R045 (Storm Hammers), EditorSuffix (Editor Suffix)
+// Upgrades: R045 (Sturmhammer), EditorSuffix (Editor Suffix)
 {
 (Zwerge)
 }
