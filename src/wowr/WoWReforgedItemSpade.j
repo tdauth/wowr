@@ -1,4 +1,4 @@
-library WoWReforgedSpade initializer Init requires WoWReforgedTerrain
+library WoWReforgedItemSpade initializer Init requires WoWReforgedTerrain
 
 globals
     private integer array playerTile

@@ -1,4 +1,4 @@
-library WoWReforgedSaddle initializer Init requires SimError, UnitEventEx, WoWReforgedMounts
+library WoWReforgedItemSaddle initializer Init requires SimError, UnitEventEx, WoWReforgedMounts
 
 globals
     public constant integer ITEM_TYPE_ID = 'I0W4'
@@ -18,7 +18,7 @@ function Saddle takes unit mount returns boolean
         endif
         set i = i + 1
     endloop
-    
+
     if (result) then
         if (GetUnitAbilityLevel(mount, ABILITY_ID) == 0) then
             call UnitAddAbility(mount, ABILITY_ID)
@@ -28,11 +28,11 @@ function Saddle takes unit mount returns boolean
     else
         call UnitRemoveAbility(mount, ABILITY_ID)
     endif
-    
+
     call GroupClear(cargo)
     call DestroyGroup(cargo)
     set cargo = null
-    
+
     return result
 endfunction
 
