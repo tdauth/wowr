@@ -111,28 +111,26 @@ function HealQuelThalasTerrain takes nothing returns nothing
 endfunction
 
 private function EnumHealQuelThalasBuilding takes nothing returns nothing
-    call GroupRemoveUnitSimple( GetEnumUnit(), udg_QuelThalasRuinedElvenBuildings )
+    call GroupRemoveUnit(udg_QuelThalasRuinedElvenBuildings, GetEnumUnit())
     call ReplaceQuelThalasBuildingFixed(GetEnumUnit())
-    call SetUnitInvulnerable( GetLastReplacedUnitBJ(), true )
-    call GroupAddUnitSimple( GetLastReplacedUnitBJ(), udg_QuelThalasRuinedElvenBuildings )
+    call SetUnitInvulnerable(GetLastReplacedUnitBJ(), true)
+    call GroupAddUnit(udg_QuelThalasRuinedElvenBuildings, GetLastReplacedUnitBJ())
 endfunction
 
 function QuelThalasHeal takes nothing returns nothing
     local destructable d = null
-    call SetDoodadAnimationRectBJ( "Stand", 'YOsw', gg_rct_Sunwell )
-    call RemoveWeatherEffectBJ( udg_QuelThalasWeatherEffect )
-    call AddWeatherEffectSaveLast( gg_rct_Weather_Sunwell_Grove, 'LRaa' )
-    set udg_QuelThalasWeatherEffect = GetLastCreatedWeatherEffect()
-    call RemoveWeatherEffectBJ( udg_QuelThalasWeatherEffectForest )
-    call AddWeatherEffectSaveLast( gg_rct_Weather_Sunwell_Grove, 'LRaa' )
-    set udg_QuelThalasWeatherEffectForest = GetLastCreatedWeatherEffect()
+    call SetDoodadAnimationRectBJ("Stand", 'YOsw', gg_rct_Sunwell)
+    call RemoveWeatherEffect(udg_QuelThalasWeatherEffect)
+    set udg_QuelThalasWeatherEffect = AddWeatherEffect(gg_rct_Weather_Sunwell_Grove, 'LRaa')
+    call RemoveWeatherEffect(udg_QuelThalasWeatherEffectForest)
+    set udg_QuelThalasWeatherEffectForest = AddWeatherEffect(gg_rct_Weather_Sunwell_Grove, 'LRaa')
     call HealQuelThalasTerrain()
     call ForGroup(udg_QuelThalasRuinedElvenBuildings, function EnumHealQuelThalasBuilding)
     set d = ReplaceDestructable(gg_dest_B01E_0969, 'B01F', 0.0, 1.0, 0, bj_UNIT_STATE_METHOD_MAXIMUM)
     call SetDestructableInvulnerable(d, true)
     set d = ReplaceDestructable(gg_dest_LTe1_0968, 'LTe1', 0.0, 1.0, 0, bj_UNIT_STATE_METHOD_MAXIMUM)
     call SetDestructableInvulnerable(d, true)
-    call ModifyGateBJ( bj_GATEOPERATION_OPEN, d )
+    call ModifyGateBJ(bj_GATEOPERATION_OPEN, d)
 endfunction
 
 private function EnumUpdateQuelThalasBuilding takes nothing returns nothing
@@ -145,11 +143,9 @@ private function EnumUpdateQuelThalasBuilding takes nothing returns nothing
 endfunction
 
 private function StartGame takes nothing returns nothing
-    call SetDoodadAnimationRectBJ( "Stand Third", 'YOsw', gg_rct_Sunwell )
-    call AddWeatherEffectSaveLast( gg_rct_Weather_Sunwell_Grove, 'FDrl' )
-    set udg_QuelThalasWeatherEffect = GetLastCreatedWeatherEffect()
-    call AddWeatherEffectSaveLast( gg_rct_Weather_Quel_Thalas, 'FDwl' )
-    set udg_QuelThalasWeatherEffectForest = GetLastCreatedWeatherEffect()
+    call SetDoodadAnimationRectBJ("Stand Third", 'YOsw', gg_rct_Sunwell)
+    set udg_QuelThalasWeatherEffect = AddWeatherEffect(gg_rct_Weather_Sunwell_Grove, 'FDrl')
+    set udg_QuelThalasWeatherEffectForest = AddWeatherEffect(gg_rct_Weather_Quel_Thalas, 'FDwl')
 endfunction
 
 private function Init takes nothing returns nothing
