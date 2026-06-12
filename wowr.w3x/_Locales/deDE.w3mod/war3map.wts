@@ -55466,7 +55466,7 @@ STRING 17694
 }
 
 STRING 17752
-// Units: o06Y (Gnoll Runt), Ubertip (Tooltip - Extended)
+// Units: o06Y (Gnoll-Wicht), Ubertip (Tooltip - Extended)
 {
 Einfache Arbeiter-Einheit. Kann Gold und Holz abbauen, Gebäude errichten und 'Reparieren'. |n|n|cffffcc00Greif Land-Einheiten und Bäume an.|r
 }
@@ -66675,7 +66675,7 @@ STRING 27928
 STRING 27936
 // Units: o06X (Gnoll Camp), Ubertip (Tooltip - Extended)
 {
-Primary structure, used to train Gnoll Runts and receive gathered resources. Can be upgraded to Außenposten and then Fort ermöglicht die Produktion weiterer Gebäude- und Einheitenarten.
+Primary structure, used to train Gnoll-Wichte and receive gathered resources. Can be upgraded to Außenposten and then Fort ermöglicht die Produktion weiterer Gebäude- und Einheitenarten.
 }
 
 STRING 27938
@@ -97843,21 +97843,21 @@ Gnoll-Lager errichten
 }
 
 STRING 43550
-// Units: o06Y (Gnoll Runt), Name (Name)
+// Units: o06Y (Gnoll-Wicht), Name (Name)
 {
-Gnoll Runt
+Gnoll-Wicht
 }
 
 STRING 43551
-// Units: o06Y (Gnoll Runt), EditorSuffix (Name - Editor Suffix)
+// Units: o06Y (Gnoll-Wicht), EditorSuffix (Name - Editor Suffix)
 {
 (Gnolle) (Arbeiter)
 }
 
 STRING 43552
-// Units: o06Y (Gnoll Runt), Tip (Tooltip - Basic)
+// Units: o06Y (Gnoll-Wicht), Tip (Tooltip - Basic)
 {
-Train Gnoll Runt
+Gnoll-Wicht ausbilden
 }
 
 STRING 43553
