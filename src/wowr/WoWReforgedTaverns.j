@@ -4,13 +4,13 @@ globals
     private unit tmpUnit = null
     private integer index = 0
     private string tmpString = null
-    
+
     private group gameModeTaverns = CreateGroup()
     private group heroesTaverns = CreateGroup()
     private group racesTaverns = CreateGroup()
     private group professionsTaverns = CreateGroup()
     private group startLocationsTaverns = CreateGroup()
-    
+
     private trigger sellTrigger = CreateTrigger()
 endglobals
 
@@ -37,10 +37,9 @@ function AddHeroesTavern takes unit tavern returns nothing
     call GroupAddUnit(heroesTaverns, tavern)
     call EnablePagedButtons(tavern)
     call SetPagedButtonsSlotsPerPage(tavern, 9)
-    
+
     call AddPagedButtonsItemType(tavern, ITEM_TYPE_RANDOM_HERO)
-    
-    set i = 0
+
     loop
         exitwhen (i >= max)
         set index = i
@@ -50,7 +49,7 @@ function AddHeroesTavern takes unit tavern returns nothing
         set pageName = tmpString
         set i = i + 1
     endloop
-    
+
     call NextPagedButtonsPage(tavern, GetLocalizedString("BOSSES"))
     set i = 0
     set max = BlzGroupGetSize(udg_Bosses)
@@ -59,21 +58,21 @@ function AddHeroesTavern takes unit tavern returns nothing
         call AddPagedButtonsUnitType(tavern, GetUnitTypeId(BlzGroupUnitAt(udg_Bosses, i)))
         set i = i + 1
     endloop
-    
+
     call SetPagedButtonsPage(tavern, 0)
 endfunction
 
 function AddRacesTavern takes unit tavern returns nothing
-    local integer i = 1 // skip udg_RaceNone
+    local integer i = 2 // skip udg_RaceNone and udg_RaceFreelancer
+    local integer max = GetRacesMax()
     call GroupAddUnit(racesTaverns, tavern)
     call EnablePagedButtons(tavern)
     call SetPagedButtonsSlotsPerPage(tavern, 9)
-    
+
     call AddPagedButtonsItemType(tavern, ITEM_TYPE_RANDOM_RACE)
-    
-    set i = 1 // skip udg_RaceNone
+
     loop
-        exitwhen (i >= GetRacesMax())
+        exitwhen (i >= max)
         call AddPagedButtonsItemType(tavern, udg_RaceTavernItemType[i])
         set i = i + 1
     endloop
@@ -82,15 +81,15 @@ endfunction
 
 function AddProfessionsTavern takes unit tavern returns nothing
     local integer i = 0
+    local integer max = GetProfessionsMax()
     call GroupAddUnit(professionsTaverns, tavern)
     call EnablePagedButtons(tavern)
     call SetPagedButtonsSlotsPerPage(tavern, 9)
-    
+
     call AddPagedButtonsItemType(tavern, ITEM_TYPE_RANDOM_PROFESSION)
-    
-    set i = 0
+
     loop
-        exitwhen (i >= GetProfessionsMax())
+        exitwhen (i >= max)
         call AddPagedButtonsItemType(tavern, GetProfessionItemTypeId(i))
         set i = i + 1
     endloop
@@ -99,13 +98,13 @@ endfunction
 
 function AddStartLocationsTavern takes unit tavern returns nothing
     local integer i = 0
+    local integer max = GetMaxStartLocations()
     call GroupAddUnit(startLocationsTaverns, tavern)
     call EnablePagedButtons(tavern)
     call SetPagedButtonsSlotsPerPage(tavern, 9)
     call AddPagedButtonsItemType(tavern, ITEM_TYPE_RANDOM_START_LOCATION)
-    set i = 0
     loop
-        exitwhen (i >= GetMaxStartLocations())
+        exitwhen (i >= max)
         call AddPagedButtonsItemType(tavern, GetStartLocationItemTypeId(i))
         set i = i + 1
     endloop
@@ -118,11 +117,11 @@ function SelectRandomGameMode takes unit buyingUnit, unit tavern returns integer
     if (GetRandomInt(0, 1) == 0) then
         set id = ITEM_FREELANCER
     endif
-    
+
     call IssueNeutralImmediateOrderById(owner, tavern, id)
-    
+
     set owner = null
-    
+
     return id
 endfunction
 
@@ -157,7 +156,7 @@ function SelectRandomHero takes unit buyingUnit, unit tavern returns nothing
             set i = i + 1
         endloop
     endif
-    
+
     set random = GetRandomInt(0, availableIdsCounter - 1)
     set id = availableIds[random]
     //call BJDebugMsg("Selected random " + GetObjectName(id))
@@ -167,7 +166,7 @@ function SelectRandomHero takes unit buyingUnit, unit tavern returns nothing
     //call BJDebugMsg("page " + I2S(page))
     call SetPagedButtonsPage(tavern, page)
     call IssueNeutralImmediateOrderById(owner, tavern, id)
-    
+
     set owner = null
 endfunction
 
@@ -195,7 +194,7 @@ function SelectRandomRace takes unit buyingUnit, unit tavern returns nothing
         endif
         set i = i + 1
     endloop
-    
+
     set random = GetRandomInt(0, availableIdsCounter - 1)
     set id = availableIds[random]
     //call BJDebugMsg("Selected random " + GetObjectName(id))
@@ -205,7 +204,7 @@ function SelectRandomRace takes unit buyingUnit, unit tavern returns nothing
     //call BJDebugMsg("page " + I2S(page))
     call SetPagedButtonsPage(tavern, page)
     call IssueNeutralImmediateOrderById(owner, tavern, id)
-    
+
     set owner = null
 endfunction
 
@@ -228,7 +227,7 @@ function SelectRandomProfession takes unit buyingUnit, unit tavern returns nothi
         endif
         set i = i + 1
     endloop
-    
+
     set random = GetRandomInt(0, availableIdsCounter - 1)
     set id = availableIds[random]
     //call BJDebugMsg("Selected random " + GetObjectName(id))
@@ -238,7 +237,7 @@ function SelectRandomProfession takes unit buyingUnit, unit tavern returns nothi
     //call BJDebugMsg("page " + I2S(page))
     call SetPagedButtonsPage(tavern, page)
     call IssueNeutralImmediateOrderById(owner, tavern, id)
-    
+
     set owner = null
 endfunction
 
@@ -266,7 +265,7 @@ function SelectRandomStartLocation takes unit buyingUnit, unit tavern returns no
         endif
         set i = i + 1
     endloop
-    
+
     set random = GetRandomInt(0, availableIdsCounter - 1)
     set id = availableIds[random]
     //call BJDebugMsg("Selected random " + GetObjectName(id))
@@ -276,7 +275,7 @@ function SelectRandomStartLocation takes unit buyingUnit, unit tavern returns no
     //call BJDebugMsg("page " + I2S(page))
     call SetPagedButtonsPage(tavern, page)
     call IssueNeutralImmediateOrderById(owner, tavern, id)
-    
+
     set owner = null
 endfunction
 

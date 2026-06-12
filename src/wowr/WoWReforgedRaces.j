@@ -91,7 +91,7 @@ globals
     private integer array objectTypeAbilitiesRace
     private integer objectTypeAbilitiesCounter = 0
 
-    private integer racesCounter = 1 // udg_RaceNone = 0
+    private integer racesCounter = 1 // udg_RaceNone = 0, start with 1
 endglobals
 
 function GetRacesMax takes nothing returns integer
