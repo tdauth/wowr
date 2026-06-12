@@ -7893,7 +7893,7 @@ Dunkles Portal
 STRING 1333
 // Abilities: A1L5 (+1 Strength), Ubertip (Tooltip - Normal - Extended)
 {
-Adds 1 strength. Use chat command "-str X" to add X strength. Use chat command "-str" to add maximum strength.
+Fügt 1 Kraft hinzu. Benutzen Sie den Chat-Befehl "-str -X", um X Kraft hinzuzufügen. Benutzen Sie den Chat-Befehl "-str", um die maximale Kraft hinzuzufügen.
 }
 
 STRING 1335
@@ -50920,7 +50920,7 @@ Sonar
 STRING 14274
 // Units: H0OG (Peon), Ubertip (Tooltip - Extended)
 {
-|cffffcc00Volk:|r Orcs|n|cffffcc00Klasse:|r Tüftler|n|cffffcc00Reittier:|r Flügeldrache|n|cffffcc00Primäres Attribut:|r Kraft|n|cffffcc00Kraft:|r 22/2,7|n|cffffcc00Beweglichekit:|r 13/1,5|n|cffffcc00Intelligenz:|r 17/2,25|n|n|cffffcc00Greift Land-Einheiten an.|r
+|cffffcc00Volk:|r Orcs|n|cffffcc00Klasse:|r Tüftler|n|cffffcc00Reittier:|r Flügeldrache|n|cffffcc00Primäres Attribut:|r Kraft|n|cffffcc00Kraft:|r 22/2,7|n|cffffcc00Beweglichkeit:|r 13/1,5|n|cffffcc00Intelligenz:|r 17/2,25|n|n|cffffcc00Greift Land-Einheiten an.|r
 }
 
 STRING 14301
@@ -57625,7 +57625,7 @@ E
 STRING 19762
 // Abilities: A1L6 (+1 Agility), Ubertip (Tooltip - Normal - Extended)
 {
-Adds 1 agility. Use chat command "-agi X" to add X agility. Use chat command "-agi" to add maximum agility.
+Fügt 1 Beweglichkeit hinzu. Benutzen Sie den Chat-Befehl "-agi -X", um X Beweglichkeit hinzuzufügen. Benutzen Sie den Chat-Befehl "-agi", um die maximale Beweglichkeit hinzuzufügen.
 }
 
 STRING 19763
@@ -71217,7 +71217,7 @@ Schädel des Gul'dan erforschen
 STRING 32113
 // Units: u01P (Nerubian Worker), Tip (Tooltip - Basic)
 {
-Nerubian-Arbeiter ausbilden
+Neruber-Arbeiter ausbilden
 }
 
 STRING 32138
@@ -72729,13 +72729,13 @@ Wolkenschlange
 STRING 33229
 // Items: I0J1 (Randomize Spells), Ubertip (Tooltip - Extended)
 {
-Randomizes the learned spells of your hero.|n|n|cffffcc00Only allowed for heroes who can change their spells. Requires all hero spells to have no cooldown.|r
+Wählt die erlernten Zauber Ihres Helden zufällig aus. |n|n|cffffcc00Nur für Helden erlaubt, die ihre Zauber ändern können. Erfordert, dass alle Heldenzauber keine Abklingzeit haben.|r
 }
 
 STRING 33230
 // Abilities: A14U (Randomize Spells), Ubertip (Tooltip - Normal - Extended)
 {
-Randomizes the learned spells of your hero.|n|n|cffffcc00Only allowed for heroes who can change their spells. Requires all hero spells to have no cooldown.|r
+Wählt die erlernten Zauber Ihres Helden zufällig aus. |n|n|cffffcc00Nur für Helden erlaubt, die ihre Zauber ändern können. Erfordert, dass alle Heldenzauber keine Abklingzeit haben.|r
 }
 
 STRING 33281
@@ -75369,7 +75369,7 @@ Taschendiebstahl
 STRING 34530
 // Abilities: A1L7 (+1 Intelligence), Ubertip (Tooltip - Normal - Extended)
 {
-Adds 1 intelligence. Use chat command "-int X" to add X intelligence. Use chat command "-int" to add maximum intelligence.
+Fügt 1 Intelligenz hinzu. Benutzen Sie den Chat-Befehl "-int -X", um X Intelligenz hinzuzufügen. Benutzen Sie den Chat-Befehl "-int", um die maximale Intelligenz hinzuzufügen.
 }
 
 STRING 34546
@@ -82395,7 +82395,7 @@ Novizen-Glyphe erwerben
 STRING 37317
 // Abilities: A1CI (Hatch Spiderling), Ubertip (Tooltip - Normal - Extended)
 {
-Summons a Spinnling every <A1CI,DataA1> seconds which lasts for <A1CI,Dur1> Sekunden lang an.
+Beschwört alle <A1CI,DataA1> Sekunden einen Spinnling, der <A1CI,Dur1> Sekunden lang hält.
 }
 
 STRING 37318
@@ -95997,7 +95997,7 @@ Attributpunkte
 STRING 42858
 // Abilities: A1LB (Attribute Points), Ubertip (Tooltip - Normal - Extended)
 {
-Show attribute points.
+Zeigt die Attributpunkte.
 }
 
 STRING 42860
@@ -96075,7 +96075,7 @@ Entfernt 1 Kraft. Benutzen Sie den Chat-Befehl "-str -X", um X Kraft zu entferne
 STRING 42894
 // Abilities: A1L9 (-1 Agility), Ubertip (Tooltip - Normal - Extended)
 {
-Entfernt 1 Beweglichkeit. Benutzen Sie den Chat-Befehl "-agi -X", um X Beweglichekit zu entfernen.
+Entfernt 1 Beweglichkeit. Benutzen Sie den Chat-Befehl "-agi -X", um X Beweglichkeit zu entfernen.
 }
 
 STRING 42895
@@ -96429,7 +96429,7 @@ Gibt dem Spieler bei Benutzung 30 Früchte.
 STRING 43190
 // Abilities: A1LD (Equal Attributes), Ubertip (Tooltip - Normal - Extended)
 {
-All attributes get equal values. Use chat command "-equala".
+Alle Attribute erhalten den gleichen Wert. Benutzen Sie den Chat-Befehl "-equala".
 }
 
 STRING 43192
@@ -111930,7 +111930,7 @@ Zufälliger Skin
 STRING 52000
 // Items: I0YS (Randomize Skin), Ubertip (Tooltip - Extended)
 {
-Randomizes the skin of your hero.|n|n|cffffcc00Only allowed for heroes who can change their skin.|r
+Wählt den Skin Ihres Helden zufällig aus.|n|n|cffffcc00Nur für Helden erlaubt, die ihren Skin ändern können.|r
 }
 
 STRING 52001
