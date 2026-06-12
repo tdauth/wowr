@@ -6,6 +6,7 @@
 //! import "wowr/WoWReforgedAlchemistLab.j"
 //! import "wowr/WoWReforgedAllResearches.j"
 //! import "wowr/WoWReforgedAltars.j"
+//! import "wowr/WoWReforgedAnimations.j"
 //! import "wowr/WoWReforgedAntimagicWards.j"
 //! import "wowr/WoWReforgedArena.j"
 //! import "wowr/WoWReforgedArmory.j"
