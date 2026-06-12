@@ -1910,7 +1910,7 @@ StringList {
     IQ_CREDITS_DESCRIPTION             "Alle Leute, die an dieser Karte mitgewirkt haben.",
     // Quests
     // MainQuest1
-    Q_ARCHIMONDE_DESCRIPTION           "Archimonde has returned to this world to conquer it with the help of his Burning Legion. Travel to Outland, find and defeat him to protect Azeroth.",
+    Q_ARCHIMONDE_DESCRIPTION           "Archimonde ist zurückgekehrt, um diese Welt mit Hilfe seiner Brennenden Legion zu erobern. Reist nach Fremdland, findet und besiegt ihn, um Azeroth zu beschützen.",
     Q_ARCHIMONDE_0                     "Besiegt Archimonde.",
     // HumanQuest1
     Q_DRAGON_SLAYER_TITLE              "Drachentöter",
