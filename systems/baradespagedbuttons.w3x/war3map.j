@@ -1,32 +1,32 @@
 globals
 //globals from FrameLoader:
 constant boolean LIBRARY_FrameLoader=true
-trigger FrameLoader___eventTrigger= CreateTrigger()
-trigger FrameLoader___actionTrigger= CreateTrigger()
-timer FrameLoader___t= CreateTimer()
+trigger FrameLoader__eventTrigger= CreateTrigger()
+trigger FrameLoader__actionTrigger= CreateTrigger()
+timer FrameLoader__t= CreateTimer()
 //endglobals from FrameLoader
 //globals from FrameSaver:
 constant boolean LIBRARY_FrameSaver=true
-constant real FrameSaver___DELAY= 5.0
-trigger FrameSaver___saveTrigger= CreateTrigger()
-trigger FrameSaver___loadTrigger= CreateTrigger()
-trigger FrameSaver___afterSaveTrigger= CreateTrigger()
-timer FrameSaver___t= CreateTimer()
+constant real FrameSaver__DELAY= 5.0
+trigger FrameSaver__saveTrigger= CreateTrigger()
+trigger FrameSaver__loadTrigger= CreateTrigger()
+trigger FrameSaver__afterSaveTrigger= CreateTrigger()
+timer FrameSaver__t= CreateTimer()
 //endglobals from FrameSaver
 //globals from ItemTypeUtils:
 constant boolean LIBRARY_ItemTypeUtils=true
     // Barade: Cache all the values for better performance.
-hashtable ItemTypeUtils___h= InitHashtable()
+hashtable ItemTypeUtils__h= InitHashtable()
     
-constant integer ItemTypeUtils___SHOP= 'ngme'
-constant integer ItemTypeUtils___SELL_UNIT= 'HPal'
-constant real ItemTypeUtils___PAWN_ITEM_RATE= 0.5
+constant integer ItemTypeUtils__SHOP= 'ngme'
+constant integer ItemTypeUtils__SELL_UNIT= 'HPal'
+constant real ItemTypeUtils__PAWN_ITEM_RATE= 0.5
     
-constant integer ItemTypeUtils___KEY_VALUE_GOLD= 0
-constant integer ItemTypeUtils___KEY_VALUE_LUMBER= 1
-constant integer ItemTypeUtils___KEY_PERISHABLE= 2
-constant integer ItemTypeUtils___KEY_MODEL= 3
-constant integer ItemTypeUtils___KEY_ICON= 4
+constant integer ItemTypeUtils__KEY_VALUE_GOLD= 0
+constant integer ItemTypeUtils__KEY_VALUE_LUMBER= 1
+constant integer ItemTypeUtils__KEY_PERISHABLE= 2
+constant integer ItemTypeUtils__KEY_MODEL= 3
+constant integer ItemTypeUtils__KEY_ICON= 4
 //endglobals from ItemTypeUtils
 //globals from OnStartGame:
 constant boolean LIBRARY_OnStartGame=true
@@ -603,18 +603,18 @@ endfunction
 // function FrameLoaderAdd takes code func returns nothing
     // func runs when the game is loaded.
     function FrameLoaderAdd takes code func returns nothing
-        call TriggerAddAction(FrameLoader___actionTrigger, func)
+        call TriggerAddAction(FrameLoader__actionTrigger, func)
     endfunction
 
-    function FrameLoader___timerAction takes nothing returns nothing
-        call TriggerExecute(FrameLoader___actionTrigger)
+    function FrameLoader__timerAction takes nothing returns nothing
+        call TriggerExecute(FrameLoader__actionTrigger)
     endfunction
-    function FrameLoader___eventAction takes nothing returns nothing
-        call TimerStart(FrameLoader___t, 0, false, function FrameLoader___timerAction)
+    function FrameLoader__eventAction takes nothing returns nothing
+        call TimerStart(FrameLoader__t, 0, false, function FrameLoader__timerAction)
     endfunction
-    function FrameLoader___init_function takes nothing returns nothing
-        call TriggerRegisterGameEvent(FrameLoader___eventTrigger, EVENT_GAME_LOADED)
-        call TriggerAddAction(FrameLoader___eventTrigger, function FrameLoader___eventAction)
+    function FrameLoader__init_function takes nothing returns nothing
+        call TriggerRegisterGameEvent(FrameLoader__eventTrigger, EVENT_GAME_LOADED)
+        call TriggerAddAction(FrameLoader__eventTrigger, function FrameLoader__eventAction)
     endfunction
 
 //library FrameLoader ends
@@ -622,32 +622,32 @@ endfunction
 
 
 function FrameSaverAdd takes code func returns nothing
-    call TriggerAddAction(FrameSaver___saveTrigger, func)
+    call TriggerAddAction(FrameSaver__saveTrigger, func)
 endfunction
 
 function FrameSaverAddEx takes code func,code func2 returns nothing
-    call TriggerAddAction(FrameSaver___saveTrigger, (func)) // INLINED!!
-    call TriggerAddAction(FrameSaver___afterSaveTrigger, func2)
+    call TriggerAddAction(FrameSaver__saveTrigger, (func)) // INLINED!!
+    call TriggerAddAction(FrameSaver__afterSaveTrigger, func2)
 endfunction
 
-function FrameSaver___TimerFunctionAfterSave takes nothing returns nothing
-    call TriggerExecute(FrameSaver___afterSaveTrigger)
+function FrameSaver__TimerFunctionAfterSave takes nothing returns nothing
+    call TriggerExecute(FrameSaver__afterSaveTrigger)
 endfunction
 
-function FrameSaver___TriggerActionStartAfterSaveTimer takes nothing returns nothing
-    call TimerStart(FrameSaver___t, FrameSaver___DELAY, false, function FrameSaver___TimerFunctionAfterSave)
+function FrameSaver__TriggerActionStartAfterSaveTimer takes nothing returns nothing
+    call TimerStart(FrameSaver__t, FrameSaver__DELAY, false, function FrameSaver__TimerFunctionAfterSave)
 endfunction
 
-function FrameSaver___TriggerActionCancelAfterSaveTimer takes nothing returns nothing
-    call PauseTimer(FrameSaver___t)
+function FrameSaver__TriggerActionCancelAfterSaveTimer takes nothing returns nothing
+    call PauseTimer(FrameSaver__t)
 endfunction
 
-function FrameSaver___Init takes nothing returns nothing
-    call TriggerRegisterGameEvent(FrameSaver___saveTrigger, EVENT_GAME_SAVE)
-    call TriggerAddAction(FrameSaver___saveTrigger, function FrameSaver___TriggerActionStartAfterSaveTimer)
+function FrameSaver__Init takes nothing returns nothing
+    call TriggerRegisterGameEvent(FrameSaver__saveTrigger, EVENT_GAME_SAVE)
+    call TriggerAddAction(FrameSaver__saveTrigger, function FrameSaver__TriggerActionStartAfterSaveTimer)
     
-    call TriggerRegisterGameEvent(FrameSaver___loadTrigger, EVENT_GAME_LOADED)
-    call TriggerAddAction(FrameSaver___loadTrigger, function FrameSaver___TriggerActionCancelAfterSaveTimer)
+    call TriggerRegisterGameEvent(FrameSaver__loadTrigger, EVENT_GAME_LOADED)
+    call TriggerAddAction(FrameSaver__loadTrigger, function FrameSaver__TriggerActionCancelAfterSaveTimer)
 endfunction
 
 
@@ -658,20 +658,20 @@ endfunction
 // https://www.hiveworkshop.com/threads/detecting-item-price.120355/
 
 // This is the x position where we create the dummy units. Dont place it in the water.
-function ItemTypeUtils___GetShopDummyX takes nothing returns real
+function ItemTypeUtils__GetShopDummyX takes nothing returns real
     return GetRectCenterX(gg_rct_dummy_sell_item)
 endfunction
 
 // This is the y position where we create the dummy units. Dont place it in the water.
-function ItemTypeUtils___GetShopDummyY takes nothing returns real
+function ItemTypeUtils__GetShopDummyY takes nothing returns real
     return GetRectCenterY(gg_rct_dummy_sell_item)
 endfunction
 
 function GetItemValueGoldFresh takes integer i returns integer
     local real x= (GetRectCenterX(gg_rct_dummy_sell_item)) // INLINED!!
     local real y= (GetRectCenterY(gg_rct_dummy_sell_item)) // INLINED!!
-    local unit u1= CreateUnit(Player(PLAYER_NEUTRAL_PASSIVE), ItemTypeUtils___SHOP, x, y, 0)
-    local unit u2= CreateUnit(Player(PLAYER_NEUTRAL_PASSIVE), ItemTypeUtils___SELL_UNIT, x, y - 100, 90)
+    local unit u1= CreateUnit(Player(PLAYER_NEUTRAL_PASSIVE), ItemTypeUtils__SHOP, x, y, 0)
+    local unit u2= CreateUnit(Player(PLAYER_NEUTRAL_PASSIVE), ItemTypeUtils__SELL_UNIT, x, y - 100, 90)
     local item a= UnitAddItemById(u2, i)
     local integer g1= GetPlayerState(Player(PLAYER_NEUTRAL_PASSIVE), PLAYER_STATE_RESOURCE_GOLD)
     local integer g2= 0
@@ -689,25 +689,25 @@ function GetItemValueGoldFresh takes integer i returns integer
 endfunction
 
 function GetItemValueGold takes integer i returns integer
-    if ( not HaveSavedInteger(ItemTypeUtils___h, i, ItemTypeUtils___KEY_VALUE_GOLD) ) then
-        call SaveInteger(ItemTypeUtils___h, i, ItemTypeUtils___KEY_VALUE_GOLD, GetItemValueGoldFresh(i))
+    if ( not HaveSavedInteger(ItemTypeUtils__h, i, ItemTypeUtils__KEY_VALUE_GOLD) ) then
+        call SaveInteger(ItemTypeUtils__h, i, ItemTypeUtils__KEY_VALUE_GOLD, GetItemValueGoldFresh(i))
     endif
-    return LoadInteger(ItemTypeUtils___h, i, ItemTypeUtils___KEY_VALUE_GOLD)
+    return LoadInteger(ItemTypeUtils__h, i, ItemTypeUtils__KEY_VALUE_GOLD)
 endfunction
 
 function GetItemCostGold takes integer i returns integer
-    return R2I(I2R(GetItemValueGold(i)) * ItemTypeUtils___PAWN_ITEM_RATE)
+    return R2I(I2R(GetItemValueGold(i)) * ItemTypeUtils__PAWN_ITEM_RATE)
 endfunction
 
 function GetItemGoldCost takes integer i returns integer
-    return (R2I(I2R(GetItemValueGold((i))) * ItemTypeUtils___PAWN_ITEM_RATE)) // INLINED!!
+    return (R2I(I2R(GetItemValueGold((i))) * ItemTypeUtils__PAWN_ITEM_RATE)) // INLINED!!
 endfunction
 
 function GetItemValueLumberFresh takes integer i returns integer
     local real x= (GetRectCenterX(gg_rct_dummy_sell_item)) // INLINED!!
     local real y= (GetRectCenterY(gg_rct_dummy_sell_item)) // INLINED!!
-    local unit u1= CreateUnit(Player(PLAYER_NEUTRAL_PASSIVE), ItemTypeUtils___SHOP, x, y, 0)
-    local unit u2= CreateUnit(Player(PLAYER_NEUTRAL_PASSIVE), ItemTypeUtils___SELL_UNIT, x, y - 100, 90)
+    local unit u1= CreateUnit(Player(PLAYER_NEUTRAL_PASSIVE), ItemTypeUtils__SHOP, x, y, 0)
+    local unit u2= CreateUnit(Player(PLAYER_NEUTRAL_PASSIVE), ItemTypeUtils__SELL_UNIT, x, y - 100, 90)
     local item a= UnitAddItemById(u2, i)
     local integer g1= GetPlayerState(Player(PLAYER_NEUTRAL_PASSIVE), PLAYER_STATE_RESOURCE_LUMBER)
     local integer g2= 0
@@ -725,18 +725,18 @@ function GetItemValueLumberFresh takes integer i returns integer
 endfunction
 
 function GetItemValueLumber takes integer i returns integer
-    if ( not HaveSavedInteger(ItemTypeUtils___h, i, ItemTypeUtils___KEY_VALUE_LUMBER) ) then
-        call SaveInteger(ItemTypeUtils___h, i, ItemTypeUtils___KEY_VALUE_LUMBER, GetItemValueLumberFresh(i))
+    if ( not HaveSavedInteger(ItemTypeUtils__h, i, ItemTypeUtils__KEY_VALUE_LUMBER) ) then
+        call SaveInteger(ItemTypeUtils__h, i, ItemTypeUtils__KEY_VALUE_LUMBER, GetItemValueLumberFresh(i))
     endif
-    return LoadInteger(ItemTypeUtils___h, i, ItemTypeUtils___KEY_VALUE_LUMBER)
+    return LoadInteger(ItemTypeUtils__h, i, ItemTypeUtils__KEY_VALUE_LUMBER)
 endfunction
 
 function GetItemCostLumber takes integer i returns integer
-    return R2I(I2R(GetItemValueLumber(i)) * ItemTypeUtils___PAWN_ITEM_RATE)
+    return R2I(I2R(GetItemValueLumber(i)) * ItemTypeUtils__PAWN_ITEM_RATE)
 endfunction
 
 function GetItemWoodCost takes integer i returns integer
-    return (R2I(I2R(GetItemValueLumber((i))) * ItemTypeUtils___PAWN_ITEM_RATE)) // INLINED!!
+    return (R2I(I2R(GetItemValueLumber((i))) * ItemTypeUtils__PAWN_ITEM_RATE)) // INLINED!!
 endfunction
 
 function GetItemTypePerishableFresh takes integer i returns boolean
@@ -749,10 +749,10 @@ function GetItemTypePerishableFresh takes integer i returns boolean
 endfunction
 
 function GetItemTypePerishable takes integer i returns boolean
-    if ( not HaveSavedBoolean(ItemTypeUtils___h, i, ItemTypeUtils___KEY_PERISHABLE) ) then
-        call SaveBoolean(ItemTypeUtils___h, i, ItemTypeUtils___KEY_PERISHABLE, GetItemTypePerishableFresh(i))
+    if ( not HaveSavedBoolean(ItemTypeUtils__h, i, ItemTypeUtils__KEY_PERISHABLE) ) then
+        call SaveBoolean(ItemTypeUtils__h, i, ItemTypeUtils__KEY_PERISHABLE, GetItemTypePerishableFresh(i))
     endif
-    return LoadBoolean(ItemTypeUtils___h, i, ItemTypeUtils___KEY_PERISHABLE)
+    return LoadBoolean(ItemTypeUtils__h, i, ItemTypeUtils__KEY_PERISHABLE)
 endfunction
 
 function GetItemTypeModelFresh takes integer i returns string
@@ -765,10 +765,10 @@ function GetItemTypeModelFresh takes integer i returns string
 endfunction
 
 function GetItemTypeModel takes integer i returns string
-    if ( not HaveSavedString(ItemTypeUtils___h, i, ItemTypeUtils___KEY_MODEL) ) then
-        call SaveStr(ItemTypeUtils___h, i, ItemTypeUtils___KEY_MODEL, GetItemTypeModelFresh(i))
+    if ( not HaveSavedString(ItemTypeUtils__h, i, ItemTypeUtils__KEY_MODEL) ) then
+        call SaveStr(ItemTypeUtils__h, i, ItemTypeUtils__KEY_MODEL, GetItemTypeModelFresh(i))
     endif
-    return LoadStr(ItemTypeUtils___h, i, ItemTypeUtils___KEY_MODEL)
+    return LoadStr(ItemTypeUtils__h, i, ItemTypeUtils__KEY_MODEL)
 endfunction
 
 function GetItemTypeIconFresh takes integer i returns string
@@ -781,10 +781,10 @@ function GetItemTypeIconFresh takes integer i returns string
 endfunction
 
 function GetItemTypeIcon takes integer i returns string
-    if ( not HaveSavedString(ItemTypeUtils___h, i, ItemTypeUtils___KEY_ICON) ) then
-        call SaveStr(ItemTypeUtils___h, i, ItemTypeUtils___KEY_ICON, GetItemTypeIconFresh(i))
+    if ( not HaveSavedString(ItemTypeUtils__h, i, ItemTypeUtils__KEY_ICON) ) then
+        call SaveStr(ItemTypeUtils__h, i, ItemTypeUtils__KEY_ICON, GetItemTypeIconFresh(i))
     endif
-    return LoadStr(ItemTypeUtils___h, i, ItemTypeUtils___KEY_ICON)
+    return LoadStr(ItemTypeUtils__h, i, ItemTypeUtils__KEY_ICON)
 endfunction
 
 
@@ -1263,10 +1263,10 @@ endfunction
 
 //textmacro instance: AFormatMethod("i", "integer", "i", "I2S(value)", "")
         function s__AFormat_i takes integer this,integer value returns integer
-            local string positionString= "%i"
+            local string positionString= "%%i"
             local integer index= (IndexOfStringEx((positionString ) , ( s__AFormat_m_text[this]) , 0)) // INLINED!!
             if ( index == - 1 ) then
-                set positionString="%" + I2S(s__AFormat_m_position[this] + 1) + "%"
+                set positionString="%%" + I2S(s__AFormat_m_position[this] + 1) + "%%"
                 set index=(IndexOfStringEx((positionString ) , ( s__AFormat_m_text[this]) , 0)) // INLINED!!
             endif
             
@@ -1282,10 +1282,10 @@ endfunction
 //end of: AFormatMethod("i", "integer", "i", "I2S(value)", "")
 //textmacro instance: AFormatMethod("integer", "integer", "i", "I2S(value)", "")
         function s__AFormat_integer takes integer this,integer value returns integer
-            local string positionString= "%i"
+            local string positionString= "%%i"
             local integer index= (IndexOfStringEx((positionString ) , ( s__AFormat_m_text[this]) , 0)) // INLINED!!
             if ( index == - 1 ) then
-                set positionString="%" + I2S(s__AFormat_m_position[this] + 1) + "%"
+                set positionString="%%" + I2S(s__AFormat_m_position[this] + 1) + "%%"
                 set index=(IndexOfStringEx((positionString ) , ( s__AFormat_m_text[this]) , 0)) // INLINED!!
             endif
             
@@ -1301,10 +1301,10 @@ endfunction
 //end of: AFormatMethod("integer", "integer", "i", "I2S(value)", "")
 //textmacro instance: AFormatMethod("r", "real", "r", "R2S(value)", "")
         function s__AFormat_r takes integer this,real value returns integer
-            local string positionString= "%r"
+            local string positionString= "%%r"
             local integer index= (IndexOfStringEx((positionString ) , ( s__AFormat_m_text[this]) , 0)) // INLINED!!
             if ( index == - 1 ) then
-                set positionString="%" + I2S(s__AFormat_m_position[this] + 1) + "%"
+                set positionString="%%" + I2S(s__AFormat_m_position[this] + 1) + "%%"
                 set index=(IndexOfStringEx((positionString ) , ( s__AFormat_m_text[this]) , 0)) // INLINED!!
             endif
             
@@ -1320,10 +1320,10 @@ endfunction
 //end of: AFormatMethod("r", "real", "r", "R2S(value)", "")
 //textmacro instance: AFormatMethod("real", "real", "r", "R2S(value)", "")
         function s__AFormat_real takes integer this,real value returns integer
-            local string positionString= "%r"
+            local string positionString= "%%r"
             local integer index= (IndexOfStringEx((positionString ) , ( s__AFormat_m_text[this]) , 0)) // INLINED!!
             if ( index == - 1 ) then
-                set positionString="%" + I2S(s__AFormat_m_position[this] + 1) + "%"
+                set positionString="%%" + I2S(s__AFormat_m_position[this] + 1) + "%%"
                 set index=(IndexOfStringEx((positionString ) , ( s__AFormat_m_text[this]) , 0)) // INLINED!!
             endif
             
@@ -1339,10 +1339,10 @@ endfunction
 //end of: AFormatMethod("real", "real", "r", "R2S(value)", "")
 //textmacro instance: AFormatMethod("rw", "real", "r", "R2SW(value, width, precision)", ", integer width, integer precision")
         function s__AFormat_rw takes integer this,real value,integer width,integer precision returns integer
-            local string positionString= "%r"
+            local string positionString= "%%r"
             local integer index= (IndexOfStringEx((positionString ) , ( s__AFormat_m_text[this]) , 0)) // INLINED!!
             if ( index == - 1 ) then
-                set positionString="%" + I2S(s__AFormat_m_position[this] + 1) + "%"
+                set positionString="%%" + I2S(s__AFormat_m_position[this] + 1) + "%%"
                 set index=(IndexOfStringEx((positionString ) , ( s__AFormat_m_text[this]) , 0)) // INLINED!!
             endif
             
@@ -1358,10 +1358,10 @@ endfunction
 //end of: AFormatMethod("rw", "real", "r", "R2SW(value, width, precision)", ", integer width, integer precision")
 //textmacro instance: AFormatMethod("realWidth", "real", "r", "R2SW(value, width, precision)", ", integer width, integer precision")
         function s__AFormat_realWidth takes integer this,real value,integer width,integer precision returns integer
-            local string positionString= "%r"
+            local string positionString= "%%r"
             local integer index= (IndexOfStringEx((positionString ) , ( s__AFormat_m_text[this]) , 0)) // INLINED!!
             if ( index == - 1 ) then
-                set positionString="%" + I2S(s__AFormat_m_position[this] + 1) + "%"
+                set positionString="%%" + I2S(s__AFormat_m_position[this] + 1) + "%%"
                 set index=(IndexOfStringEx((positionString ) , ( s__AFormat_m_text[this]) , 0)) // INLINED!!
             endif
             
@@ -1377,10 +1377,10 @@ endfunction
 //end of: AFormatMethod("realWidth", "real", "r", "R2SW(value, width, precision)", ", integer width, integer precision")
 //textmacro instance: AFormatMethod("s", "string", "s", "value", "")
         function s__AFormat_s takes integer this,string value returns integer
-            local string positionString= "%s"
+            local string positionString= "%%s"
             local integer index= (IndexOfStringEx((positionString ) , ( s__AFormat_m_text[this]) , 0)) // INLINED!!
             if ( index == - 1 ) then
-                set positionString="%" + I2S(s__AFormat_m_position[this] + 1) + "%"
+                set positionString="%%" + I2S(s__AFormat_m_position[this] + 1) + "%%"
                 set index=(IndexOfStringEx((positionString ) , ( s__AFormat_m_text[this]) , 0)) // INLINED!!
             endif
             
@@ -1396,10 +1396,10 @@ endfunction
 //end of: AFormatMethod("s", "string", "s", "value", "")
 //textmacro instance: AFormatMethod("string", "string", "s", "value", "")
         function s__AFormat_string takes integer this,string value returns integer
-            local string positionString= "%s"
+            local string positionString= "%%s"
             local integer index= (IndexOfStringEx((positionString ) , ( s__AFormat_m_text[this]) , 0)) // INLINED!!
             if ( index == - 1 ) then
-                set positionString="%" + I2S(s__AFormat_m_position[this] + 1) + "%"
+                set positionString="%%" + I2S(s__AFormat_m_position[this] + 1) + "%%"
                 set index=(IndexOfStringEx((positionString ) , ( s__AFormat_m_text[this]) , 0)) // INLINED!!
             endif
             
@@ -1415,10 +1415,10 @@ endfunction
 //end of: AFormatMethod("string", "string", "s", "value", "")
 //textmacro instance: AFormatMethod("h", "handle", "h", "I2S(GetHandleId(value))", "")
         function s__AFormat_h takes integer this,handle value returns integer
-            local string positionString= "%h"
+            local string positionString= "%%h"
             local integer index= (IndexOfStringEx((positionString ) , ( s__AFormat_m_text[this]) , 0)) // INLINED!!
             if ( index == - 1 ) then
-                set positionString="%" + I2S(s__AFormat_m_position[this] + 1) + "%"
+                set positionString="%%" + I2S(s__AFormat_m_position[this] + 1) + "%%"
                 set index=(IndexOfStringEx((positionString ) , ( s__AFormat_m_text[this]) , 0)) // INLINED!!
             endif
             
@@ -1434,10 +1434,10 @@ endfunction
 //end of: AFormatMethod("h", "handle", "h", "I2S(GetHandleId(value))", "")
 //textmacro instance: AFormatMethod("handle", "handle", "h", "I2S(GetHandleId(value))", "")
         function s__AFormat_handle takes integer this,handle value returns integer
-            local string positionString= "%h"
+            local string positionString= "%%h"
             local integer index= (IndexOfStringEx((positionString ) , ( s__AFormat_m_text[this]) , 0)) // INLINED!!
             if ( index == - 1 ) then
-                set positionString="%" + I2S(s__AFormat_m_position[this] + 1) + "%"
+                set positionString="%%" + I2S(s__AFormat_m_position[this] + 1) + "%%"
                 set index=(IndexOfStringEx((positionString ) , ( s__AFormat_m_text[this]) , 0)) // INLINED!!
             endif
             
@@ -1453,10 +1453,10 @@ endfunction
 //end of: AFormatMethod("handle", "handle", "h", "I2S(GetHandleId(value))", "")
 //textmacro instance: AFormatMethod("u", "unit", "u", "GetUnitName(value)", "")
         function s__AFormat_u takes integer this,unit value returns integer
-            local string positionString= "%u"
+            local string positionString= "%%u"
             local integer index= (IndexOfStringEx((positionString ) , ( s__AFormat_m_text[this]) , 0)) // INLINED!!
             if ( index == - 1 ) then
-                set positionString="%" + I2S(s__AFormat_m_position[this] + 1) + "%"
+                set positionString="%%" + I2S(s__AFormat_m_position[this] + 1) + "%%"
                 set index=(IndexOfStringEx((positionString ) , ( s__AFormat_m_text[this]) , 0)) // INLINED!!
             endif
             
@@ -1472,10 +1472,10 @@ endfunction
 //end of: AFormatMethod("u", "unit", "u", "GetUnitName(value)", "")
 //textmacro instance: AFormatMethod("unit", "unit", "u", "GetUnitName(value)", "")
         function s__AFormat_unit takes integer this,unit value returns integer
-            local string positionString= "%u"
+            local string positionString= "%%u"
             local integer index= (IndexOfStringEx((positionString ) , ( s__AFormat_m_text[this]) , 0)) // INLINED!!
             if ( index == - 1 ) then
-                set positionString="%" + I2S(s__AFormat_m_position[this] + 1) + "%"
+                set positionString="%%" + I2S(s__AFormat_m_position[this] + 1) + "%%"
                 set index=(IndexOfStringEx((positionString ) , ( s__AFormat_m_text[this]) , 0)) // INLINED!!
             endif
             
@@ -1491,10 +1491,10 @@ endfunction
 //end of: AFormatMethod("unit", "unit", "u", "GetUnitName(value)", "")
 //textmacro instance: AFormatMethod("it", "item", "it", "GetItemName(value)", "")
         function s__AFormat_it takes integer this,item value returns integer
-            local string positionString= "%it"
+            local string positionString= "%%it"
             local integer index= (IndexOfStringEx((positionString ) , ( s__AFormat_m_text[this]) , 0)) // INLINED!!
             if ( index == - 1 ) then
-                set positionString="%" + I2S(s__AFormat_m_position[this] + 1) + "%"
+                set positionString="%%" + I2S(s__AFormat_m_position[this] + 1) + "%%"
                 set index=(IndexOfStringEx((positionString ) , ( s__AFormat_m_text[this]) , 0)) // INLINED!!
             endif
             
@@ -1510,10 +1510,10 @@ endfunction
 //end of: AFormatMethod("it", "item", "it", "GetItemName(value)", "")
 //textmacro instance: AFormatMethod("item", "item", "it", "GetItemName(value)", "")
         function s__AFormat_item takes integer this,item value returns integer
-            local string positionString= "%it"
+            local string positionString= "%%it"
             local integer index= (IndexOfStringEx((positionString ) , ( s__AFormat_m_text[this]) , 0)) // INLINED!!
             if ( index == - 1 ) then
-                set positionString="%" + I2S(s__AFormat_m_position[this] + 1) + "%"
+                set positionString="%%" + I2S(s__AFormat_m_position[this] + 1) + "%%"
                 set index=(IndexOfStringEx((positionString ) , ( s__AFormat_m_text[this]) , 0)) // INLINED!!
             endif
             
@@ -1529,10 +1529,10 @@ endfunction
 //end of: AFormatMethod("item", "item", "it", "GetItemName(value)", "")
 //textmacro instance: AFormatMethod("d", "destructable", "d", "GetDestructableName(value)", "")
         function s__AFormat_d takes integer this,destructable value returns integer
-            local string positionString= "%d"
+            local string positionString= "%%d"
             local integer index= (IndexOfStringEx((positionString ) , ( s__AFormat_m_text[this]) , 0)) // INLINED!!
             if ( index == - 1 ) then
-                set positionString="%" + I2S(s__AFormat_m_position[this] + 1) + "%"
+                set positionString="%%" + I2S(s__AFormat_m_position[this] + 1) + "%%"
                 set index=(IndexOfStringEx((positionString ) , ( s__AFormat_m_text[this]) , 0)) // INLINED!!
             endif
             
@@ -1548,10 +1548,10 @@ endfunction
 //end of: AFormatMethod("d", "destructable", "d", "GetDestructableName(value)", "")
 //textmacro instance: AFormatMethod("destructable", "destructable", "d", "GetDestructableName(value)", "")
         function s__AFormat_destructable takes integer this,destructable value returns integer
-            local string positionString= "%d"
+            local string positionString= "%%d"
             local integer index= (IndexOfStringEx((positionString ) , ( s__AFormat_m_text[this]) , 0)) // INLINED!!
             if ( index == - 1 ) then
-                set positionString="%" + I2S(s__AFormat_m_position[this] + 1) + "%"
+                set positionString="%%" + I2S(s__AFormat_m_position[this] + 1) + "%%"
                 set index=(IndexOfStringEx((positionString ) , ( s__AFormat_m_text[this]) , 0)) // INLINED!!
             endif
             
@@ -1567,10 +1567,10 @@ endfunction
 //end of: AFormatMethod("destructable", "destructable", "d", "GetDestructableName(value)", "")
 //textmacro instance: AFormatMethod("p", "player", "p", "GetPlayerName(value)", "")
         function s__AFormat_p takes integer this,player value returns integer
-            local string positionString= "%p"
+            local string positionString= "%%p"
             local integer index= (IndexOfStringEx((positionString ) , ( s__AFormat_m_text[this]) , 0)) // INLINED!!
             if ( index == - 1 ) then
-                set positionString="%" + I2S(s__AFormat_m_position[this] + 1) + "%"
+                set positionString="%%" + I2S(s__AFormat_m_position[this] + 1) + "%%"
                 set index=(IndexOfStringEx((positionString ) , ( s__AFormat_m_text[this]) , 0)) // INLINED!!
             endif
             
@@ -1586,10 +1586,10 @@ endfunction
 //end of: AFormatMethod("p", "player", "p", "GetPlayerName(value)", "")
 //textmacro instance: AFormatMethod("player", "player", "p", "GetPlayerName(value)", "")
         function s__AFormat_player takes integer this,player value returns integer
-            local string positionString= "%p"
+            local string positionString= "%%p"
             local integer index= (IndexOfStringEx((positionString ) , ( s__AFormat_m_text[this]) , 0)) // INLINED!!
             if ( index == - 1 ) then
-                set positionString="%" + I2S(s__AFormat_m_position[this] + 1) + "%"
+                set positionString="%%" + I2S(s__AFormat_m_position[this] + 1) + "%%"
                 set index=(IndexOfStringEx((positionString ) , ( s__AFormat_m_text[this]) , 0)) // INLINED!!
             endif
             
@@ -1605,10 +1605,10 @@ endfunction
 //end of: AFormatMethod("player", "player", "p", "GetPlayerName(value)", "")
 //textmacro instance: AFormatMethod("he", "unit", "he", "GetHeroProperName(value)", "")
         function s__AFormat_he takes integer this,unit value returns integer
-            local string positionString= "%he"
+            local string positionString= "%%he"
             local integer index= (IndexOfStringEx((positionString ) , ( s__AFormat_m_text[this]) , 0)) // INLINED!!
             if ( index == - 1 ) then
-                set positionString="%" + I2S(s__AFormat_m_position[this] + 1) + "%"
+                set positionString="%%" + I2S(s__AFormat_m_position[this] + 1) + "%%"
                 set index=(IndexOfStringEx((positionString ) , ( s__AFormat_m_text[this]) , 0)) // INLINED!!
             endif
             
@@ -1624,10 +1624,10 @@ endfunction
 //end of: AFormatMethod("he", "unit", "he", "GetHeroProperName(value)", "")
 //textmacro instance: AFormatMethod("hero", "unit", "he", "GetHeroProperName(value)", "")
         function s__AFormat_hero takes integer this,unit value returns integer
-            local string positionString= "%he"
+            local string positionString= "%%he"
             local integer index= (IndexOfStringEx((positionString ) , ( s__AFormat_m_text[this]) , 0)) // INLINED!!
             if ( index == - 1 ) then
-                set positionString="%" + I2S(s__AFormat_m_position[this] + 1) + "%"
+                set positionString="%%" + I2S(s__AFormat_m_position[this] + 1) + "%%"
                 set index=(IndexOfStringEx((positionString ) , ( s__AFormat_m_text[this]) , 0)) // INLINED!!
             endif
             
@@ -1643,10 +1643,10 @@ endfunction
 //end of: AFormatMethod("hero", "unit", "he", "GetHeroProperName(value)", "")
 //textmacro instance: AFormatMethod("o", "integer", "o", "GetObjectName(value)", "")
         function s__AFormat_o takes integer this,integer value returns integer
-            local string positionString= "%o"
+            local string positionString= "%%o"
             local integer index= (IndexOfStringEx((positionString ) , ( s__AFormat_m_text[this]) , 0)) // INLINED!!
             if ( index == - 1 ) then
-                set positionString="%" + I2S(s__AFormat_m_position[this] + 1) + "%"
+                set positionString="%%" + I2S(s__AFormat_m_position[this] + 1) + "%%"
                 set index=(IndexOfStringEx((positionString ) , ( s__AFormat_m_text[this]) , 0)) // INLINED!!
             endif
             
@@ -1662,10 +1662,10 @@ endfunction
 //end of: AFormatMethod("o", "integer", "o", "GetObjectName(value)", "")
 //textmacro instance: AFormatMethod("object", "integer", "o", "GetObjectName(value)", "")
         function s__AFormat_object takes integer this,integer value returns integer
-            local string positionString= "%o"
+            local string positionString= "%%o"
             local integer index= (IndexOfStringEx((positionString ) , ( s__AFormat_m_text[this]) , 0)) // INLINED!!
             if ( index == - 1 ) then
-                set positionString="%" + I2S(s__AFormat_m_position[this] + 1) + "%"
+                set positionString="%%" + I2S(s__AFormat_m_position[this] + 1) + "%%"
                 set index=(IndexOfStringEx((positionString ) , ( s__AFormat_m_text[this]) , 0)) // INLINED!!
             endif
             
@@ -1681,10 +1681,10 @@ endfunction
 //end of: AFormatMethod("object", "integer", "o", "GetObjectName(value)", "")
 //textmacro instance: AFormatMethod("l", "string", "l", "GetLocalizedString(value)", "")
         function s__AFormat_l takes integer this,string value returns integer
-            local string positionString= "%l"
+            local string positionString= "%%l"
             local integer index= (IndexOfStringEx((positionString ) , ( s__AFormat_m_text[this]) , 0)) // INLINED!!
             if ( index == - 1 ) then
-                set positionString="%" + I2S(s__AFormat_m_position[this] + 1) + "%"
+                set positionString="%%" + I2S(s__AFormat_m_position[this] + 1) + "%%"
                 set index=(IndexOfStringEx((positionString ) , ( s__AFormat_m_text[this]) , 0)) // INLINED!!
             endif
             
@@ -1700,10 +1700,10 @@ endfunction
 //end of: AFormatMethod("l", "string", "l", "GetLocalizedString(value)", "")
 //textmacro instance: AFormatMethod("localizedString", "string", "l", "GetLocalizedString(value)", "")
         function s__AFormat_localizedString takes integer this,string value returns integer
-            local string positionString= "%l"
+            local string positionString= "%%l"
             local integer index= (IndexOfStringEx((positionString ) , ( s__AFormat_m_text[this]) , 0)) // INLINED!!
             if ( index == - 1 ) then
-                set positionString="%" + I2S(s__AFormat_m_position[this] + 1) + "%"
+                set positionString="%%" + I2S(s__AFormat_m_position[this] + 1) + "%%"
                 set index=(IndexOfStringEx((positionString ) , ( s__AFormat_m_text[this]) , 0)) // INLINED!!
             endif
             
@@ -1719,10 +1719,10 @@ endfunction
 //end of: AFormatMethod("localizedString", "string", "l", "GetLocalizedString(value)", "")
 //textmacro instance: AFormatMethod("k", "string", "k", "I2S(GetLocalizedHotkey(value))", "")
         function s__AFormat_k takes integer this,string value returns integer
-            local string positionString= "%k"
+            local string positionString= "%%k"
             local integer index= (IndexOfStringEx((positionString ) , ( s__AFormat_m_text[this]) , 0)) // INLINED!!
             if ( index == - 1 ) then
-                set positionString="%" + I2S(s__AFormat_m_position[this] + 1) + "%"
+                set positionString="%%" + I2S(s__AFormat_m_position[this] + 1) + "%%"
                 set index=(IndexOfStringEx((positionString ) , ( s__AFormat_m_text[this]) , 0)) // INLINED!!
             endif
             
@@ -1738,10 +1738,10 @@ endfunction
 //end of: AFormatMethod("k", "string", "k", "I2S(GetLocalizedHotkey(value))", "")
 //textmacro instance: AFormatMethod("localizedHotkey", "string", "k", "I2S(GetLocalizedHotkey(value))", "")
         function s__AFormat_localizedHotkey takes integer this,string value returns integer
-            local string positionString= "%k"
+            local string positionString= "%%k"
             local integer index= (IndexOfStringEx((positionString ) , ( s__AFormat_m_text[this]) , 0)) // INLINED!!
             if ( index == - 1 ) then
-                set positionString="%" + I2S(s__AFormat_m_position[this] + 1) + "%"
+                set positionString="%%" + I2S(s__AFormat_m_position[this] + 1) + "%%"
                 set index=(IndexOfStringEx((positionString ) , ( s__AFormat_m_text[this]) , 0)) // INLINED!!
             endif
             
@@ -1757,10 +1757,10 @@ endfunction
 //end of: AFormatMethod("localizedHotkey", "string", "k", "I2S(GetLocalizedHotkey(value))", "")
 //textmacro instance: AFormatMethod("e", "integer", "e", "GetExternalString(value)", "")
         function s__AFormat_e takes integer this,integer value returns integer
-            local string positionString= "%e"
+            local string positionString= "%%e"
             local integer index= (IndexOfStringEx((positionString ) , ( s__AFormat_m_text[this]) , 0)) // INLINED!!
             if ( index == - 1 ) then
-                set positionString="%" + I2S(s__AFormat_m_position[this] + 1) + "%"
+                set positionString="%%" + I2S(s__AFormat_m_position[this] + 1) + "%%"
                 set index=(IndexOfStringEx((positionString ) , ( s__AFormat_m_text[this]) , 0)) // INLINED!!
             endif
             
@@ -1776,10 +1776,10 @@ endfunction
 //end of: AFormatMethod("e", "integer", "e", "GetExternalString(value)", "")
 //textmacro instance: AFormatMethod("externalString", "integer", "e", "GetExternalString(value)", "")
         function s__AFormat_externalString takes integer this,integer value returns integer
-            local string positionString= "%e"
+            local string positionString= "%%e"
             local integer index= (IndexOfStringEx((positionString ) , ( s__AFormat_m_text[this]) , 0)) // INLINED!!
             if ( index == - 1 ) then
-                set positionString="%" + I2S(s__AFormat_m_position[this] + 1) + "%"
+                set positionString="%%" + I2S(s__AFormat_m_position[this] + 1) + "%%"
                 set index=(IndexOfStringEx((positionString ) , ( s__AFormat_m_text[this]) , 0)) // INLINED!!
             endif
             
@@ -1796,10 +1796,10 @@ endfunction
     /// Use seconds as parameter!
 //textmacro instance: AFormatMethod("t", "integer", "t", "FormatTimeString(value)", "")
         function s__AFormat_t takes integer this,integer value returns integer
-            local string positionString= "%t"
+            local string positionString= "%%t"
             local integer index= (IndexOfStringEx((positionString ) , ( s__AFormat_m_text[this]) , 0)) // INLINED!!
             if ( index == - 1 ) then
-                set positionString="%" + I2S(s__AFormat_m_position[this] + 1) + "%"
+                set positionString="%%" + I2S(s__AFormat_m_position[this] + 1) + "%%"
                 set index=(IndexOfStringEx((positionString ) , ( s__AFormat_m_text[this]) , 0)) // INLINED!!
             endif
             
@@ -1816,10 +1816,10 @@ endfunction
     /// Use seconds as parameter!
 //textmacro instance: AFormatMethod("time", "integer", "t", "FormatTimeString(value)", "")
         function s__AFormat_time takes integer this,integer value returns integer
-            local string positionString= "%t"
+            local string positionString= "%%t"
             local integer index= (IndexOfStringEx((positionString ) , ( s__AFormat_m_text[this]) , 0)) // INLINED!!
             if ( index == - 1 ) then
-                set positionString="%" + I2S(s__AFormat_m_position[this] + 1) + "%"
+                set positionString="%%" + I2S(s__AFormat_m_position[this] + 1) + "%%"
                 set index=(IndexOfStringEx((positionString ) , ( s__AFormat_m_text[this]) , 0)) // INLINED!!
             endif
             
@@ -1864,7 +1864,7 @@ endfunction
 //library MapConfigs:
 
 
-function MapConfigs___Init takes nothing returns nothing
+function MapConfigs__Init takes nothing returns nothing
     call SetPagedButtonsConfigHeroCostsDefault(425 , 100)
     call AddPagedButtonsConfigHero(PALADIN , 0 , 0 , 1 , 3 , 30 , 120 , "units\\human\\HeroPaladin\\HeroPaladin")
     call AddPagedButtonsConfigUnit(BLACK_DRAGON_WHELP , 1 , 1 , 160 , 440 , "units\\creeps\\BlackDragonWelp\\BlackDragonWelp")
@@ -2658,7 +2658,7 @@ function NextPagedButtonsPage takes unit shop,string name returns integer
     if ( s != 0 ) then
         // find the next page
         loop
-            exitwhen ( nextPage > s__PagedButtons_Shop_maxPages[s] or StringLength(s__PagedButtons_Page_name[s___PagedButtons_Shop_pages[s__PagedButtons_Shop_pages[s]+nextPage]]) == 0 )
+            exitwhen ( nextPage > s__PagedButtons_Shop_maxPages[s] or s___PagedButtons_Shop_pages[s__PagedButtons_Shop_pages[s]+nextPage] == 0 or StringLength(s__PagedButtons_Page_name[s___PagedButtons_Shop_pages[s__PagedButtons_Shop_pages[s]+nextPage]]) == 0 )
             set nextPage=nextPage + 1
         endloop
         if ( nextPage > 0 ) then
@@ -3206,8 +3206,8 @@ function PagedButtonsUI___EnterItemFunction takes nothing returns nothing
             endif
             set foodCost=GetFoodUsed(id)
         elseif ( (s__PagedButtons_Type_whichType[GetPagedButton((shop ) , ( slot))] == PagedButtons_BUTTON_TYPE_ITEM) ) then // INLINED!!
-            set goldCost=(R2I(I2R(GetItemValueGold((id))) * ItemTypeUtils___PAWN_ITEM_RATE)) // INLINED!!
-            set lumberCost=(R2I(I2R(GetItemValueLumber((id))) * ItemTypeUtils___PAWN_ITEM_RATE)) // INLINED!!
+            set goldCost=(R2I(I2R(GetItemValueGold((id))) * ItemTypeUtils__PAWN_ITEM_RATE)) // INLINED!!
+            set lumberCost=(R2I(I2R(GetItemValueLumber((id))) * ItemTypeUtils__PAWN_ITEM_RATE)) // INLINED!!
         endif
         
 
@@ -3678,11 +3678,15 @@ function PagedButtonsUI___Init takes nothing returns nothing
     local player slotPlayer= null
     local integer i= 0
     loop
-        exitwhen ( i >= PagedButtonsUI_MAX_SLOTS )
+        exitwhen ( i == PagedButtonsUI_MAX_SLOTS )
         set PagedButtonsUI___SlotClickTrigger[i]=null
         set PagedButtonsUI___SlotTooltipOnTrigger[i]=null
         set PagedButtonsUI___SlotTooltipOffTrigger[i]=null
-        
+        set i=i + 1
+    endloop
+    set i=0
+    loop
+        exitwhen ( i == bj_MAX_PLAYERS )
         set slotPlayer=Player(i)
         if ( GetPlayerSlotState(slotPlayer) == PLAYER_SLOT_STATE_PLAYING and GetPlayerController(slotPlayer) == MAP_CONTROL_USER ) then
             set PagedButtonsUI___enabledForPlayer[i]=true
@@ -3715,10 +3719,10 @@ function PagedButtonsUI___Init takes nothing returns nothing
     call TriggerAddCondition(PagedButtonsUI___deathTrigger, Condition(function PagedButtonsUI___TriggerConditionDeath))
 
     call TriggerAddAction(OnStartGame___startGameTrigger, (function PagedButtonsUI_CreateUI)) // INLINED!!
-    call TriggerAddAction(FrameLoader___actionTrigger, (function PagedButtonsUI_CreateUI)) // INLINED!!
-    call TriggerAddAction(FrameSaver___saveTrigger, (function HidePagedButtonsUI)) // INLINED!!
+    call TriggerAddAction(FrameLoader__actionTrigger, (function PagedButtonsUI_CreateUI)) // INLINED!!
+    call TriggerAddAction(FrameSaver__saveTrigger, (function HidePagedButtonsUI)) // INLINED!!
 
-    call TriggerAddAction(FrameSaver___saveTrigger, (function PagedButtonsUI___ResetPreviewFrame)) // Destroying the frame will crash the game. // INLINED!!
+    call TriggerAddAction(FrameSaver__saveTrigger, (function PagedButtonsUI___ResetPreviewFrame)) // Destroying the frame will crash the game. // INLINED!!
 
 endfunction
 
@@ -3726,11 +3730,11 @@ endfunction
 //library PagedButtonsUI ends
 //===========================================================================
 // 
-// Baradé's Paged Buttons 1.6
+// 
 // 
 //   Warcraft III map script
 //   Generated by the Warcraft III World Editor
-//   Map Author: Baradé
+//   Map Author: 
 // 
 //===========================================================================
 
@@ -5407,7 +5411,7 @@ function InitCustomPlayerSlots takes nothing returns nothing
 endfunction
 
 function InitCustomTeams takes nothing returns nothing
-    // Force: TRIGSTR_006
+    // Force: 
     call SetPlayerTeam(Player(0), 0)
     call SetPlayerState(Player(0), PLAYER_STATE_ALLIED_VICTORY, 1)
     call SetPlayerTeam(Player(1), 0)
@@ -5458,12 +5462,12 @@ function main takes nothing returns nothing
     call CreateAllUnits()
     call InitBlizzard()
 
-call ExecuteFunc("jasshelper__initstructs671848390")
-call ExecuteFunc("FrameLoader___init_function")
-call ExecuteFunc("FrameSaver___Init")
+call ExecuteFunc("jasshelper__initstructs3517645")
+call ExecuteFunc("FrameLoader__init_function")
+call ExecuteFunc("FrameSaver__Init")
 call ExecuteFunc("OnStartGame___Init")
 call ExecuteFunc("PagedButtonsConfig___Init")
-call ExecuteFunc("MapConfigs___Init")
+call ExecuteFunc("MapConfigs__Init")
 call ExecuteFunc("PagedButtons___Init")
 call ExecuteFunc("PagedButtonsUI___Init")
 
@@ -5538,7 +5542,7 @@ function sa___prototype56_AddItemToMarketplaceWidget takes nothing returns boole
     return true
 endfunction
 
-function jasshelper__initstructs671848390 takes nothing returns nothing
+function jasshelper__initstructs3517645 takes nothing returns nothing
     set st__PagedButtons_Type_onDestroy[3]=null
     set st__PagedButtons_Type_onDestroy[5]=CreateTrigger()
     call TriggerAddCondition(st__PagedButtons_Type_onDestroy[5],Condition( function sa__PagedButtons_SlotType_onDestroy))
