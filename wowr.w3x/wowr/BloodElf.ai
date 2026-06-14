@@ -28,7 +28,7 @@ function BuildingStrategy takes nothing returns nothing
         call SetBuildUnit(1, BLOOD_ELF_KEEP)
         call SetBuildUnit(1, BLOOD_ELF_LUMBER_MILL)
         call SetBuildUnit(1, BLOOD_ELF_BLACK_SMITH)
-        call SetBuildUnit(1, BLOOD_ELF_ARCANE_SACNTUM)
+        call SetBuildUnit(1, BLOOD_ELF_ARCANE_SANCTUM)
         call SetBuildUnit(4, BLOOD_ELF_FARM)
         call SetBuildUnit(2, BLOOD_ELF_SCOUT_TOWER)
         call SetBuildUnit(citizens_female, BLOOD_ELF_CITIZEN_FEMALE)

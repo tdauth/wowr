@@ -3,10 +3,10 @@ library WoWReforgedNeutral initializer Init requires WoWReforgedResources
 globals
     private integer array objectTypeCreeps
     private integer objectTypeCreepsCounter = 0
-    
+
     private integer array objectTypeNeutralUnits
     private integer objectTypeNeutralUnitsCounter = 0
-    
+
     private integer array objectTypeNeutralBuildings
     private integer objectTypeNeutralBuildingsCounter = 0
 endglobals
@@ -25,7 +25,7 @@ endfunction
 function GetCreep takes integer index returns integer
     return objectTypeCreeps[index]
 endfunction
-    
+
 private function AddNeutralUnit takes integer objectTypeId returns integer
     local integer index = objectTypeNeutralUnitsCounter
     set objectTypeNeutralUnits[index] = objectTypeId
@@ -119,7 +119,7 @@ private function Init takes nothing returns nothing
     call AddNeutralBuilding(BLACK_DRAGON_ROOST)
     call AddNeutralBuilding(BLUE_DRAGON_ROOST)
     call AddNeutralBuilding(BRONZE_DRAGON_ROOST)
-    call AddNeutralBuilding(NETHER_DRAGON_ROOST) 
+    call AddNeutralBuilding(NETHER_DRAGON_ROOST)
     call AddNeutralBuilding(PHOENIX_ROOST)
     call AddNeutralBuilding(MOUNTS_SHOP)
     call AddNeutralBuilding(BANNER_SHOP_NEUTRAL)
@@ -164,7 +164,7 @@ private function Init takes nothing returns nothing
     call AddNeutralBuilding(MERCENARY_CAMP_SHADOWLANDS)
     call AddNeutralBuilding(MERCENARY_CAMP_NYALOTHA)
     call AddNeutralBuilding(MERCENARY_CAMP_DESERT)
-    
+
     // Story
     call AddNeutralBuilding(WOUNDED_WORLD_TREE)
     call AddNeutralBuilding(AZJOL_NERUBIAN_OBELISK)
@@ -202,9 +202,9 @@ private function Init takes nothing returns nothing
     call AddNeutralBuilding(HARPY_NEST_NEUTRAL)
     call AddNeutralBuilding(MURLOC_HUT_NEUTRAL_1)
     call AddNeutralBuilding(MURLOC_HUT_NEUTRAL_2)
-    
+
     call AddNeutralBuildingMines()
-    
+
     // Neutral Units
     call AddNeutralUnit('hwat')
     call AddNeutralUnit('hwt2')
@@ -276,19 +276,19 @@ private function Init takes nothing returns nothing
     call AddNeutralUnit('n06F')
     call AddNeutralUnit('n06D')
     call AddNeutralUnit('n06A')
-    
+
     // Creeps
 
     // Critters
     call AddCreep('nalb')
-    call AddCreep('nder')
-    call AddCreep('nech')
+    call AddCreep(STAG)
+    call AddCreep(CHICKEN)
     call AddCreep('nrac')
     call AddCreep('nfro')
     call AddCreep('ncrb')
     call AddCreep('ndog')
-    call AddCreep('nshe')
-    call AddCreep('npig')
+    call AddCreep(SHEEP)
+    call AddCreep(PIG)
     call AddCreep('nhmc')
     call AddCreep('nskk')
     call AddCreep('nrat')
@@ -307,7 +307,7 @@ private function Init takes nothing returns nothing
     call AddCreep('n0BR')
     call AddCreep('n0BS')
     call AddCreep('n0BS')
-    call AddCreep('n0DX')
+    call AddCreep(COW)
     // Dragons
     call AddCreep('ngrw')
     call AddCreep('ngdk')

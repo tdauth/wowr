@@ -84,6 +84,7 @@ private function Init takes nothing returns nothing
     call AddChange("Settings UI lists personal player settings now.")
     call AddChange("Revise info quests.")
     call AddChange("Reduce model scalings of neutral Dimensional Ships.")
+    call AddChange("Blood Elf and High Elf arcane sanctums are faith mines now.")
 
 static if (MAP_DEBUG_MODE_ENABLED) then
     call AddVersion("4.6")

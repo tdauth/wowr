@@ -1,5 +1,9 @@
 library WoWReforgedResources initializer Init requires Resources, ForceUtils, PlayerColorUtils, StringUtils, SafeString, SimError, SelectionUtils, WoWReforgedUtils, WoWReforgedRaces, WoWReforgedStats, WoWReforgedComputerStartLocations
 
+/*
+ * Custom resources in addition to gold and lumber make the game more interesting.
+ */
+
 globals
     private integer maxMines = 0
     private integer array mineTypes
@@ -20,6 +24,9 @@ globals
     private trigger deathTrigger = CreateTrigger()
     private trigger constructFinishTrigger = CreateTrigger()
     private trigger useItemTrigger = CreateTrigger()
+    private trigger summonUnitTrigger = CreateTrigger()
+    private trigger sellUnitTrigger = CreateTrigger()
+    private trigger trainFinishTrigger = CreateTrigger()
 endglobals
 
 function GetMaxMines takes nothing returns integer
@@ -69,7 +76,7 @@ function AddWoWReforgedReturnBuilding takes unit whichUnit returns nothing
     endloop
 endfunction
 
-function AddWoWReforgedOilShip takes unit producer, unit worker returns nothing
+private function AddWoWReforgedOilShip takes unit producer, unit worker returns nothing
     call AddWorker(worker)
     call AddResourceToWorker(worker, udg_ResourceOil, 'A1PL', "harvest", 'A1PN', "spies", 'A1PO', "robogoblin", 200, 20, "gold")
     if (producer != null) then
@@ -93,7 +100,7 @@ function AddWoWReforgedWorker takes unit producer, unit worker returns nothing
     endif
 endfunction
 
-function AddWoWReforgedFaithWorker takes unit producer, unit worker returns nothing
+private function AddWoWReforgedFaithWorker takes unit producer, unit worker returns nothing
     call AddWorker(worker)
     call AddResourceToWorker(worker, udg_ResourceFavor, 'A1PM', "heal", 'A1PN', "spies", 'A1PO', "robogoblin", 20, 5, "gold")
     if (producer != null) then
@@ -101,11 +108,11 @@ function AddWoWReforgedFaithWorker takes unit producer, unit worker returns noth
     endif
 endfunction
 
-function AddWoWReforgedFaithMine takes unit mine returns nothing
+private function AddWoWReforgedFaithMine takes unit mine returns nothing
     call AddMineEx(mine, udg_ResourceFavor, 200)
 endfunction
 
-function AddRandomMine takes integer buildingTypeId, integer resource, integer startAmount returns integer
+private function AddRandomMine takes integer buildingTypeId, integer resource, integer startAmount returns integer
     local integer index = maxMines
     set maxMines = maxMines + 1
     set mineTypes[index] = buildingTypeId
@@ -129,24 +136,6 @@ endfunction
 
 function AddBerryBush takes unit whichUnit returns nothing
     call AddMineEx(whichUnit, udg_ResourceFruits, 500)
-endfunction
-
-// Call after initializing the global variables.
-function InitRandomMines takes nothing returns nothing
-    call AddRandomMine(GEMSTONES_MINE, udg_ResourceGemstones, 500)
-    call AddRandomMine(ORE_MINE, udg_ResourceIron, 5000)
-    call AddRandomMine(WELL, udg_ResourceWater, 5000)
-    call AddRandomMine(OIL_PLATFORM, udg_ResourceOil, 1000)
-    call AddRandomMine(FOOD_FARM, udg_ResourceGrain, 5000)
-    call AddRandomMine(POWER_CRYSTAL_MINE, udg_ResourceElectricity, 2000)
-    call AddRandomMine(MONUMENT, udg_ResourceFavor, 2000)
-    call AddRandomMine(FRUIT_STAND, udg_ResourceFruits, 5000)
-    call AddRandomMine(ROCKS_MINE, udg_ResourceRock, 2000)
-    call AddRandomMine(ARGUNITE_MINE, udg_ResourceArgunite, 2000)
-    call AddRandomMine(FEL_MINE, udg_ResourceFel, 2000)
-    call AddRandomMine(ANIMAL_PEN, udg_ResourceWool, 2000)
-
-    call AddRandomWaterMine(WATER_OIL_PLATFORM, udg_ResourceOil, 20000)
 endfunction
 
 private function FilterIsRandomMine takes nothing returns boolean
@@ -174,16 +163,16 @@ function CreateMine takes unit source, integer index returns unit
     call SetUnitOwner(result, Player(PLAYER_NEUTRAL_PASSIVE), true)
     call SetUnitX(result, x)
     call SetUnitY(result, y)
-    
+
     call AddMineEx(result, mineResource[index], mineStartAmount[index])
-    
+
     return result
 endfunction
 
 function CreateRandomMine takes unit source returns unit
     local unit result = CreateMine(source, GetRandomInt(0, maxMines - 1))
     set randomMinesCounter = randomMinesCounter + 1
-    
+
     return result
 endfunction
 
@@ -195,9 +184,9 @@ function CreateRandomWaterMine takes unit source returns unit
     call SetUnitX(result, x)
     call SetUnitY(result, y)
     set randomWaterMinesCounter = randomWaterMinesCounter + 1
-    
+
     call AddMineEx(result, waterMineResource[random], waterMineStartAmount[random])
-    
+
     return result
 endfunction
 
@@ -216,75 +205,75 @@ function GetRandomResourceExceptFood takes nothing returns Resource
         endif
         set i = i + 1
     endloop
-    
+
     return resources[GetRandomInt(0, counter - 1)]
 endfunction
 
-function CreateRandomResources takes unit hero returns nothing
+private function CreateRandomResources takes unit hero returns nothing
     if (GetRandomInt(0, 1) == 0) then
         call CustomBounty(hero, GetRandomResourceExceptFood(), GetRandomInt(0, 50))
     endif
 endfunction
 
-function RewardFlotsam takes unit flotsam, unit killer returns nothing
+private function RewardFlotsam takes unit flotsam, unit killer returns nothing
     if (GetRandomInt(0, 1) == 0) then
         call CustomBounty(flotsam, GetRandomResourceExceptFood(), GetRandomInt(5, 50))
     endif
 endfunction
 
-function UseMeatItem takes unit hero returns nothing
+private function UseMeatItem takes unit hero returns nothing
     call CustomBounty(hero, udg_ResourceMeat, 30)
 endfunction
 
-function UseFishItem takes unit hero returns nothing
+private function UseFishItem takes unit hero returns nothing
     call CustomBounty(hero, udg_ResourceMeat, 30)
 endfunction
 
-function UseBananaItem takes unit hero returns nothing
+private function UseBananaItem takes unit hero returns nothing
     call CustomBounty(hero, udg_ResourceFruits, 30)
 endfunction
 
-function UseLemonItem takes unit hero returns nothing
+private function UseLemonItem takes unit hero returns nothing
     call CustomBounty(hero, udg_ResourceFruits, 30)
 endfunction
 
-function UseOrangeItem takes unit hero returns nothing
+private function UseOrangeItem takes unit hero returns nothing
     call CustomBounty(hero, udg_ResourceFruits, 30)
 endfunction
 
-function UseGarlicItem takes unit hero returns nothing
+private function UseGarlicItem takes unit hero returns nothing
     call CustomBounty(hero, udg_ResourceFruits, 30)
 endfunction
 
-function UsePumpkinItem takes unit hero returns nothing
+private function UsePumpkinItem takes unit hero returns nothing
     call CustomBounty(hero, udg_ResourceFruits, 30)
 endfunction
 
-function UseAppleItem takes unit hero returns nothing
+private function UseAppleItem takes unit hero returns nothing
     call CustomBounty(hero, udg_ResourceFruits, 30)
 endfunction
 
-function UseBundleOfWheatItem takes unit hero returns nothing
+private function UseBundleOfWheatItem takes unit hero returns nothing
     call CustomBounty(hero, udg_ResourceGrain, 30)
 endfunction
 
-function UseBlackPowderItem takes unit hero returns nothing
+private function UseBlackPowderItem takes unit hero returns nothing
     call CustomBounty(hero, udg_ResourceBlackPowder, 12)
 endfunction
 
-function UseRockItem takes unit hero returns nothing
+private function UseRockItem takes unit hero returns nothing
     call CustomBounty(hero, udg_ResourceRock, 25)
 endfunction
 
-function UseMilkItem takes unit hero returns nothing
+private function UseMilkItem takes unit hero returns nothing
     call CustomBounty(hero, udg_ResourceMilk, 30)
 endfunction
 
-function UseWoolItem takes unit hero returns nothing
+private function UseWoolItem takes unit hero returns nothing
     call CustomBounty(hero, udg_ResourceWool, 30)
 endfunction
 
-function AddFishingBoat takes unit producer, unit worker returns nothing
+private function AddFishingBoat takes unit producer, unit worker returns nothing
     call AddWorker(worker)
     call AddResourceToWorker(worker, udg_ResourceMeat, 'A1PM', "heal", 'A1PN', "spies", 'A1PO', "robogoblin", 200, 20, "gold")
     if (producer != null) then
@@ -354,7 +343,7 @@ function AddWindMill takes unit whichUnit returns nothing
      call SetMineExplodesOnDeath(whichUnit, false)
 endfunction
 
-function AddOilBoat takes unit producer, unit worker returns nothing
+private function AddOilBoat takes unit producer, unit worker returns nothing
     call AddWorker(worker)
     call AddResourceToWorker(worker, udg_ResourceOil, 'A1PM', "heal", 'A1PN', "spies", 'A1PO', "robogoblin", 100, 100, "gold")
     if (producer != null) then
@@ -371,7 +360,7 @@ private function Add takes string id, string name, string description, real exch
     call SetResourceColorRed(r, red)
     call SetResourceColorGreen(r, green)
     call SetResourceColorBlue(r, blue)
-    
+
     return r
 endfunction
 
@@ -410,7 +399,7 @@ function ShowResourceInfo takes player whichPlayer returns nothing
                     if (msg != "") then
                         set msg = msg + ", "
                     endif
-                
+
                     set msg = msg + "Per Hit " + GetResourceName(r) + ": " + I2S(GetUnitResourcePerHit(first, r))
                 endif
             endif
@@ -418,7 +407,7 @@ function ShowResourceInfo takes player whichPlayer returns nothing
                 if (msg != "") then
                     set msg = msg + ", "
                 endif
-            
+
                 set msg = msg + "Allows returning " + GetResourceName(r)
             endif
             set i = i + 1
@@ -516,9 +505,44 @@ private function TriggerConditionChatCommandInfo takes nothing returns boolean
     return false
 endfunction
 
+private function IsHuntableAnimal takes integer unitTypeId returns boolean
+    return unitTypeId == STAG or unitTypeId == PIG or unitTypeId == SHEEP or unitTypeId == CHICKEN or unitTypeId == COW
+endfunction
+
+// TODO Register these for custom unit types, so we do not need to handle them manually in sell, train and summon triggers.
+private function IsFaithMine takes integer unitTypeId returns boolean
+    return unitTypeId == ARCANE_SANCTUM or unitTypeId == BLOOD_ELF_ARCANE_SANCTUM or unitTypeId == HIGH_ELF_MAGE_TOWER
+endfunction
+
+private function IsFaithWorker takes integer unitTypeId returns boolean
+    return unitTypeId == PRIEST or unitTypeId == BLOOD_ELF_PRIEST or unitTypeId == HIGH_ELF_PRIEST
+endfunction
+
+private function IsOilShip takes integer unitTypeId returns boolean
+    return unitTypeId == 'h0R5' or unitTypeId == 'h0R6' or unitTypeId == 'o07K' or unitTypeId == 'o07M'
+endfunction
+
+private function IsOilBoat takes integer unitTypeId returns boolean
+    return unitTypeId == ENGINEER_SHIP
+endfunction
+
+private function IsFishingBoat takes integer unitTypeId returns boolean
+    return unitTypeId == 'h0MY' or unitTypeId == TUSKARR_FISHING_BOAT or unitTypeId == ENGINEER_SHIP
+endfunction
+
+private function ReplaceUnitWithAnimalCorpse takes unit whichUnit returns nothing
+    local unit corpse = CreateUnit(GetOwningPlayer(whichUnit), 'n0A2', GetUnitX(whichUnit), GetUnitY(whichUnit), GetUnitFacing(whichUnit))
+    call BlzSetUnitSkin(corpse, BlzGetUnitSkin(whichUnit))
+    call SetUnitAnimation(corpse, "decay flesh")
+    call AddMineEx(corpse, udg_ResourceMeat, 200)
+    set corpse = null
+endfunction
+
 private function TriggerConditionDeath takes nothing returns boolean
-    if (GetUnitTypeId(GetTriggerUnit()) == 'n0DJ') then
+    if (GetUnitTypeId(GetTriggerUnit()) == FLOTSAM) then
         call RewardFlotsam(GetTriggerUnit(), GetKillingUnit())
+    elseif (IsHuntableAnimal(GetUnitTypeId(GetTriggerUnit()))) then
+        call ReplaceUnitWithAnimalCorpse(GetTriggerUnit())
     endif
     return false
 endfunction
@@ -526,6 +550,9 @@ endfunction
 private function TriggerConditionConstructFinish takes nothing returns boolean
     if (GetUnitAbilityLevel(GetConstructedStructure(), 'Argl') > 0 or GetUnitAbilityLevel(GetConstructedStructure(), 'Argd') > 0 or GetUnitAbilityLevel(GetConstructedStructure(), 'Arlm') > 0) then
         //call AddWoWReforgedReturnBuilding(GetConstructedStructure())
+    endif
+    if (IsFaithMine(GetUnitTypeId(GetConstructedStructure()))) then
+        call AddWoWReforgedFaithMine(GetConstructedStructure())
     endif
     return false
 endfunction
@@ -568,6 +595,59 @@ private function TriggerConditionUseItem takes nothing returns boolean
     return false
 endfunction
 
+private function TriggerConditionSummonUnit takes nothing returns boolean
+    local integer unitTypeId = GetUnitTypeId(GetSummonedUnit())
+    if (IsUnitType(GetSummonedUnit(), UNIT_TYPE_PEON) and unitTypeId != MINER) then
+        // Before specific worker units.
+        call AddWoWReforgedWorker(null, GetSummonedUnit())
+    endif
+    if (IsFaithWorker(unitTypeId)) then
+        call AddWoWReforgedFaithWorker(null, GetSummonedUnit())
+    endif
+    return false
+endfunction
+
+private function TriggerConditionSellUnit takes nothing returns boolean
+    local integer unitTypeId = GetUnitTypeId(GetSoldUnit())
+    if (IsUnitType(GetSoldUnit(), UNIT_TYPE_PEON)) then
+        // Shredders. Before specific worker units.
+        call AddWoWReforgedWorker(null, GetSoldUnit())
+    endif
+    if (IsFaithWorker(unitTypeId)) then
+        call AddWoWReforgedFaithWorker(GetTriggerUnit(), GetSoldUnit())
+    endif
+    if (IsOilShip(unitTypeId)) then
+       call AddWoWReforgedOilShip(GetTriggerUnit(), GetSoldUnit())
+    endif
+    if (IsOilBoat(unitTypeId)) then
+        call AddOilBoat(GetTriggerUnit(), GetSoldUnit())
+    endif
+    if (IsFishingBoat(unitTypeId)) then
+        call AddFishingBoat(GetTriggerUnit(), GetSoldUnit())
+    endif
+    return false
+endfunction
+
+private function TriggerConditionTrainFinish takes nothing returns boolean
+    local integer unitTypeId = GetUnitTypeId(GetTrainedUnit())
+    if (IsUnitType(GetTrainedUnit(), UNIT_TYPE_PEON)) then
+        call AddWoWReforgedWorker(GetTriggerUnit(), GetTrainedUnit())
+    endif
+    if (IsFaithWorker(unitTypeId)) then
+        call AddWoWReforgedFaithWorker(GetTriggerUnit(), GetTrainedUnit())
+    endif
+    if (IsOilShip(unitTypeId)) then
+        call AddWoWReforgedOilShip(GetTriggerUnit(), GetTrainedUnit())
+    endif
+    if (IsOilBoat(unitTypeId)) then
+        call AddOilBoat(GetTriggerUnit(), GetTrainedUnit())
+    endif
+    if (IsFishingBoat(unitTypeId)) then
+        call AddFishingBoat(GetTriggerUnit(), GetTrainedUnit())
+    endif
+    return false
+endfunction
+
 private function Init takes nothing returns nothing
     call ForForce(GetAllPlayingUsers(), function EnumRegisterChatCommandEvents)
     call TriggerAddCondition(triggerChatCommandGuiOn, Condition(function TriggerConditionChatCommandGuiOn))
@@ -586,7 +666,7 @@ private function Init takes nothing returns nothing
     set udg_ResourceWool = Add("wool", GetLocalizedStringSafe("WOOL"), GetLocalizedStringSafe("WOOL_DESCRIPTION"), 1.2, 255, 255, 255, "ReplaceableTextures\\CommandButtons\\BTNSheep.blp", "ReplaceableTextures\\CommandButtons\\BTNSheep.blp")
     set udg_ResourceRock = Add("rock", GetLocalizedStringSafe("ROCKS"), GetLocalizedStringSafe("ROCKS_DESCRIPTION"), 0.4, 128, 128, 128, "ReplaceableTextures\\CommandButtons\\BTNINV_Misc_Rock_01.blp", "ReplaceableTextures\\CommandButtons\\BTNINV_Misc_Rock_01.blp")
     set udg_ResourceIron = Add("iron", GetLocalizedStringSafe("IRON"), GetLocalizedStringSafe("IRON_DESCRIPTION"), 0.5, 161, 157, 148, "ReplaceableTextures\\CommandButtons\\BTNINV_Ingot_Iron.blp", "ReplaceableTextures\\CommandButtons\\BTNINV_Ingot_Iron.blp")
-    set udg_ResourceBlackPowder = Add("blackpowder", GetLocalizedStringSafe("BLACK_POWDER"), GetLocalizedStringSafe("BLACK_POWDER_DESCRIPTION"), 0.8, 0, 0, 0, "ReplaceableTextures\\CommandButtons\\BTNHumanMissileUpOne.blp", "ReplaceableTextures\\CommandButtons\\BTNHumanMissileUpOne.blp")    
+    set udg_ResourceBlackPowder = Add("blackpowder", GetLocalizedStringSafe("BLACK_POWDER"), GetLocalizedStringSafe("BLACK_POWDER_DESCRIPTION"), 0.8, 0, 0, 0, "ReplaceableTextures\\CommandButtons\\BTNHumanMissileUpOne.blp", "ReplaceableTextures\\CommandButtons\\BTNHumanMissileUpOne.blp")
     set udg_ResourceWater = Add("water", GetLocalizedStringSafe("WATER"), GetLocalizedStringSafe("WATER_DESCRIPTION"), 0.20, 14, 135, 204, "ReplaceableTextures\\CommandButtons\\BTNINV_WaterBucket.blp", "ReplaceableTextures\\CommandButtons\\BTNINV_WaterBucket.blp")
     set udg_ResourceElectricity = Add("power", GetLocalizedStringSafe("POWER"), GetLocalizedStringSafe("POWER_DESCRIPTION"), 1.30, 179, 206, 255, "ReplaceableTextures\\CommandButtons\\BTNElectricity Breakout.blp", "ReplaceableTextures\\CommandButtons\\BTNElectricity Breakout.blp")
     set udg_ResourceFavor = Add("favor", GetLocalizedStringSafe("FAVOR"), GetLocalizedStringSafe("FAVOR_DESCRIPTION"), 1.1, 234, 208, 35, "ReplaceableTextures\\CommandButtons\\BTNTestOfFaith.blp", "ReplaceableTextures\\CommandButtons\\BTNTestOfFaith.blp")
@@ -603,7 +683,30 @@ private function Init takes nothing returns nothing
     call TriggerRegisterAnyUnitEventBJ(useItemTrigger, EVENT_PLAYER_UNIT_USE_ITEM)
     call TriggerAddCondition(useItemTrigger, Condition(function TriggerConditionUseItem))
 
-    call InitRandomMines()
+    call TriggerRegisterAnyUnitEventBJ(summonUnitTrigger, EVENT_PLAYER_UNIT_SUMMON)
+    call TriggerAddCondition(summonUnitTrigger, Condition(function TriggerConditionSummonUnit))
+
+    call TriggerRegisterAnyUnitEventBJ(sellUnitTrigger, EVENT_PLAYER_UNIT_SELL)
+    call TriggerAddCondition(sellUnitTrigger, Condition(function TriggerConditionSellUnit))
+
+    call TriggerRegisterAnyUnitEventBJ(trainFinishTrigger, EVENT_PLAYER_UNIT_TRAIN_FINISH )
+    call TriggerAddCondition(trainFinishTrigger, Condition(function TriggerConditionTrainFinish))
+
+    // Call after initializing the global variables for resources.
+    call AddRandomMine(GEMSTONES_MINE, udg_ResourceGemstones, 500)
+    call AddRandomMine(ORE_MINE, udg_ResourceIron, 5000)
+    call AddRandomMine(WELL, udg_ResourceWater, 5000)
+    call AddRandomMine(OIL_PLATFORM, udg_ResourceOil, 1000)
+    call AddRandomMine(FOOD_FARM, udg_ResourceGrain, 5000)
+    call AddRandomMine(POWER_CRYSTAL_MINE, udg_ResourceElectricity, 2000)
+    call AddRandomMine(MONUMENT, udg_ResourceFavor, 2000)
+    call AddRandomMine(FRUIT_STAND, udg_ResourceFruits, 5000)
+    call AddRandomMine(ROCKS_MINE, udg_ResourceRock, 2000)
+    call AddRandomMine(ARGUNITE_MINE, udg_ResourceArgunite, 2000)
+    call AddRandomMine(FEL_MINE, udg_ResourceFel, 2000)
+    call AddRandomMine(ANIMAL_PEN, udg_ResourceWool, 2000)
+
+    call AddRandomWaterMine(WATER_OIL_PLATFORM, udg_ResourceOil, 20000)
 endfunction
 
 endlibrary

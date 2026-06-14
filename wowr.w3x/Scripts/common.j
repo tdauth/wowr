@@ -3547,6 +3547,7 @@ globals
     constant integer ITEM_DIAMOND                                    = 'I0OI' // adept
     constant integer ITEM_RANDOM_ORE                                 = 'I0W9' // advanced
     constant integer ITEM_PICKAXE                                    = 'I0W7' // novice
+    constant integer MINER                                           = 'h0T9'
 
     // Cook
     constant integer ITEM_FRUIT_STAND                                = 'I0WV' // grand master
@@ -4159,7 +4160,7 @@ globals
     constant integer BLOOD_ELF_SCOUT_TOWER                           = 'h00I' // tower
     constant integer BLOOD_ELF_GUARD_TOWER                           = ELF_GUARD_TOWER // guard tower
     constant integer BLOOD_ELF_ARCANE_TOWER                          = 'h0WK' // arcane tower
-    constant integer BLOOD_ELF_ARCANE_SACNTUM                        = 'h00E' // arcane
+    constant integer BLOOD_ELF_ARCANE_SANCTUM                        = 'h00E' // arcane
     constant integer BLOOD_ELF_ALTAR                                 = 'h0GH' // altar
     constant integer BLOOD_ELF_FARM                                  = 'h0GI' // farm
     constant integer BLOOD_ELF_ARCANE_VAULT                          = 'h00H' // shop

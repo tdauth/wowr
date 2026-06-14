@@ -1486,7 +1486,7 @@ private function AddBloodElf takes nothing returns nothing
     call SetRaceMillItem(r, ITEM_BLOOD_ELF_LUMBER_MILL)
     call SetRaceAltar(r, BLOOD_ELF_ALTAR)
     call SetRaceAltarItem(r, ITEM_BLOOD_ELF_ALTAR)
-    call SetRaceArcaneSanctum(r, BLOOD_ELF_ARCANE_SACNTUM)
+    call SetRaceArcaneSanctum(r, BLOOD_ELF_ARCANE_SANCTUM)
     call SetRaceArcaneSanctumItem(r, ITEM_BLOOD_ELF_ARCANE_SANCTUM)
     call SetRaceShop(r, BLOOD_ELF_ARCANE_VAULT)
     call SetRaceShopItem(r, ITEM_BLOOD_ELF_ARCANE_VAULT)
