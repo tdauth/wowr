@@ -43,7 +43,7 @@ endfunction
 
 function ShowUrlUi takes player whichPlayer, string title, string text returns nothing
     call SetUrlUiVisibleForPlayer(whichPlayer, true)
-    
+
     if (whichPlayer == GetLocalPlayer()) then
         call BlzFrameSetText(TitleFrame, title)
         call BlzFrameSetText(EditBox, text)
@@ -60,6 +60,18 @@ endfunction
 
 function ShowDownloadUI takes player whichPlayer returns nothing
     call ShowUrlUi(whichPlayer, "Download", URL_DOWNLOAD)
+endfunction
+
+function ShowDonateUI takes player whichPlayer returns nothing
+    call ShowUrlUi(whichPlayer, GetLocalizedString("DONATE"), URL_DONATE)
+endfunction
+
+function ShowSubscribeUI takes player whichPlayer returns nothing
+    call ShowUrlUi(whichPlayer, GetLocalizedString("SUBSCRIBE"), URL_SUBSCRIBE)
+endfunction
+
+function ShowPatreonUI takes player whichPlayer returns nothing
+    call ShowUrlUi(whichPlayer, GetLocalizedString("PATREON"), URL_PATREON)
 endfunction
 
 function HideUrlUiForPlayer takes player whichPlayer returns nothing
@@ -87,7 +99,7 @@ private function CreateUrlUi takes nothing returns nothing
     call BlzFrameSetAbsPoint(EditBox, FRAMEPOINT_TOPLEFT, UI_LINEEDIT_X, UI_LINEEDIT_Y)
     call BlzFrameSetAbsPoint(EditBox, FRAMEPOINT_BOTTOMRIGHT, UI_LINEEDIT_X + UI_LINEEDIT_WIDTH, UI_LINEEDIT_Y - UI_LINE_HEIGHT)
     call BlzFrameSetEnable(EditBox, true)
-    
+
     set CloseButton = BlzCreateFrame("ScriptDialogButton", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), 0, 0)
     call BlzFrameSetAbsPoint(CloseButton, FRAMEPOINT_TOPLEFT, UI_CLOSE_BUTTON_X, UI_CLOSE_BUTTON_Y)
     call BlzFrameSetAbsPoint(CloseButton, FRAMEPOINT_BOTTOMRIGHT, UI_CLOSE_BUTTON_X + UI_CLOSE_BUTTON_WIDTH, UI_CLOSE_BUTTON_Y - UI_CLOSE_BUTTON_HEIGHT)

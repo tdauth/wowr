@@ -955,6 +955,10 @@ StringList {
     COLON_WEBSITE                      "Website:",
     NEWS_LINE_1                        "- Release %1%.",
     NEWS_LINE_2                        "- Support the project by becoming a VIP or with single donations.",
+    // URL UI
+    DONATE                             "Donate",
+    SUBSCRIBE                          "Subscribe",
+    PATREON                            "Patreon",
     // Save Codes UI
     HEROES_NEW_LINE                    "Heroes:|n %1%",
     ITEMS_NEW_LINE                     "Items:|n %1%",
@@ -1562,6 +1566,7 @@ StringList {
     TELEKINESIS_TOOLTIP                "Marks a target unit, item or destructable for moving it. Moves the marked target to the given location when cast on the ground. Has a cooldown of <this,acdn,x> seconds and a range of <this,aran,x>.|n|n|cffffcc00Increases the maximum distance and reduces the cooldown with every level.|r",
     // Chat Commands
     CC_HELP                            "'-h/-help': Lists chat commands.",
+    CC_HELP_DONATE                     "'-helpdonate': Lists donation chat commands.",
     CC_HELP_PING                       "'-helpping': Lists ping chat commands.",
     CC_HELP_AI                         "'-helpai': Lists AI chat commands.",
     CC_HELP_ALLY                       "'-helpally': Lists alliance chat commands.",
@@ -1587,6 +1592,9 @@ StringList {
     CC_DOWNLOAD                        "'-o/-download': Shows the download URL.",
     CC_VERSION                         "'-v/-version': Shows the map version.",
     CC_NEWS                            "'-q/-news': Shows news with links and QR codes.",
+    CC_DONATE                          "'-donate': Shows the donation link.",
+    CC_SUBSCRIBE                       "'-subscribe': Shows the subscription link.",
+    CC_PATREON                         "'-patreon': Shows the Patreon link.",
     CC_SETTINGS                        "'-st/-settings': Shows global game settings.",
     CC_LOG                             "'-l/-log': Shows a messages log which even works in multiplayer.",
     CC_DIPLOMACY                       "'-dp/-diplomacy': Allows the host changing diplomacy settings.",

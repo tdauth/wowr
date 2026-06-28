@@ -2769,8 +2769,9 @@ globals
     constant string URL_DISCORD                                      = "https://discord.com/invite/eM34z36"
     constant string URL_WEBSITE                                      = "https://tdauth.github.io/wowr-website"
     constant string URL_DOWNLOAD                                     = "https://github.com/tdauth/wowr/releases"
-    constant string URL_SUBSCRIBE                                    = "https://www.paypal.com/webapps/billing/plans/subscribe?plan_id=P-2H6673288J5283354M6TTVVY"
     constant string URL_DONATE                                       = "https://www.paypal.com/donate?hosted_button_id=ZAAKMQLSNGDK8"
+    constant string URL_SUBSCRIBE                                    = "https://www.paypal.com/webapps/billing/plans/subscribe?plan_id=P-2H6673288J5283354M6TTVVY"
+    constant string URL_PATREON                                      = "https://www.patreon.com/c/WoWReforged"
 
     constant string QR_CODE_SUBSCRIBE                                = "ReplaceableTextures\\CommandButtons\\BTNQR_Code_Subscribe.blp"
     constant string QR_CODE_DONATE                                   = "ReplaceableTextures\\CommandButtons\\BTNQR_Code_Donate.blp"

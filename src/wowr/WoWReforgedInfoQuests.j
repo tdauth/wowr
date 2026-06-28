@@ -101,6 +101,9 @@ private function Init takes nothing returns nothing
 
     call AddInfoQuest(GetLocalizedStringSafe("IQ_SUPPORT_TITLE"), GetLocalizedStringSafe("IQ_SUPPORT_DESCRIPTION"), "ReplaceableTextures\\CommandButtons\\BTNQR_Code_Donate.blp")
     call AddInfoQuestItem(GetLocalizedStringSafe("CC_NEWS"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_DONATE"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_SUBSCRIBE"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_PATREON"))
     call AddInfoQuestItem(GetLocalizedStringSafe("IQ_SUPPORT_1"))
     call AddInfoQuestItem(GetLocalizedStringSafe("IQ_SUPPORT_2"))
     call AddInfoQuestItem(GetLocalizedStringSafe("CC_VIPS"))
@@ -109,6 +112,7 @@ private function Init takes nothing returns nothing
 
     call AddInfoQuest(GetLocalizedStringSafe("IQ_CHAT_COMMANDS_TITLE"), GetLocalizedStringSafe("IQ_CHAT_COMMANDS_DESCRIPTION"), "ReplaceableTextures\\CommandButtons\\BTNBrilliance.blp")
     call AddInfoQuestItem(GetLocalizedStringSafe("CC_HELP"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_HELP_DONATE"))
     call AddInfoQuestItem(GetLocalizedStringSafe("CC_HELP_PING"))
     call AddInfoQuestItem(GetLocalizedStringSafe("CC_HELP_AI"))
     call AddInfoQuestItem(GetLocalizedStringSafe("CC_HELP_ALLY"))
@@ -134,6 +138,9 @@ private function Init takes nothing returns nothing
     call AddInfoQuestItem(GetLocalizedStringSafe("CC_DOWNLOAD"))
     call AddInfoQuestItem(GetLocalizedStringSafe("CC_VERSION"))
     call AddInfoQuestItem(GetLocalizedStringSafe("CC_NEWS"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_DONATE"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_SUBSCRIBE"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_PATREON"))
     call AddInfoQuestItem(GetLocalizedStringSafe("CC_SETTINGS"))
     call AddInfoQuestItem(GetLocalizedStringSafe("CC_LOG"))
     call AddInfoQuestItem(GetLocalizedStringSafe("CC_DIPLOMACY"))

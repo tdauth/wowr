@@ -229,6 +229,10 @@ private function Help takes nothing returns nothing
     call DisplayTextToPlayer(GetTriggerPlayer(), 0, 0, GetHelpText())
 endfunction
 
+private function HelpDonate takes nothing returns nothing
+    call DisplayTextToPlayer(GetTriggerPlayer(), 0, 0, GetHelpTextDonate())
+endfunction
+
 private function HelpPing takes nothing returns nothing
     call DisplayTextToPlayer(GetTriggerPlayer(), 0, 0, GetHelpTextPing())
 endfunction
@@ -287,6 +291,18 @@ endfunction
 
 private function Download takes nothing returns nothing
     call ShowDownloadUI(GetTriggerPlayer())
+endfunction
+
+private function Donate takes nothing returns nothing
+    call ShowDonateUI(GetTriggerPlayer())
+endfunction
+
+private function Subscribe takes nothing returns nothing
+    call ShowSubscribeUI(GetTriggerPlayer())
+endfunction
+
+private function Patreon takes nothing returns nothing
+    call ShowPatreonUI(GetTriggerPlayer())
 endfunction
 
 private function Version takes nothing returns nothing
@@ -1248,6 +1264,7 @@ private function Init takes nothing returns nothing
     call AddAlias("-h", true)
     call AddAlias("help", true)
     call AddAlias("h", true)
+    call Add("-helpdonate", true, function HelpDonate)
     call Add("-helpping", true, function HelpPing)
     call Add("-helpai", true, function HelpAi)
     call Add("-helpally", true, function HelpAlly)
@@ -1266,6 +1283,10 @@ private function Init takes nothing returns nothing
     call AddAlias("-w", true)
     call Add("-download", true, function Download)
     call AddAlias("-o", true)
+    call Add("-donate", true, function Donate)
+    call Add("-subscribe", true, function Subscribe)
+    call Add("-patreon", true, function Patreon)
+
     call Add("-version", true, function Version)
     call AddAlias("-v", true)
     call Add("-time", true, function Time)

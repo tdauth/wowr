@@ -5,6 +5,10 @@ function GetHelpText takes nothing returns string
     return "-h/-help, -helpping, -helpai, -helpally, -helpcamera, -helpvisual, -helpresources, -helpattributes, -helpsave, -helpfood, -helptime, -helpreset, -helpcheats, -c/-clear, -uion/off, -uiqueueon/off, -uiqueueclear, -d/-discord, -w/-website, -o/-download, -v/-version, -q/-news, -x/-revive, -l/-log, -dp/-diplomacy, -sel, -host, -p/-players, -a/-accounts, -i/-info X, -qr/-questrewards, -gold X Y, -lumber X Y, -cooldowns, -aireset, -repick, -fullrepick, -g/-get, -auto, -e/-enchanter, -n/-inscriptor, -log, -it/-items, -pi/pickup, -o/-order, -baginfoon/off, -baguion/off -h1/2/3, -p1/2/3, -r1/2/3, -passive, -k/-suicide, -anim X, -gaiaon/off, -camlockon/off, -votekick X, -yes, -wrapup, -goblindeposit, -maxbosslevels, -z/-zoneson/off, -letter X Y, -mailbox, -dice X, -unlock, -lock, -tomes, -notomes, -legion, -nolegion, -vips, -vipson/off, -mountname1/2/3 X"
 endfunction
 
+function GetHelpTextDonate takes nothing returns string
+    return "-q/-news, -donate, -subscribe, -patreon"
+endfunction
+
 function GetHelpTextPing takes nothing returns string
     return "-ping, -pingh, -pingf, -pingl, -pingm, -pingbosses/pingb/bosses, -pingportals, -pingkey, -pingdragons, -pinggoldmines, -pingnpcs, -pingaistarts, -pingproperties, -pingaltars, -pingres/resurrectionstones, -pingrace, -pinghuman, -pingvillage, -pingdalaran, -pingkultiras, -pingnightelf, -pingorc, -pingnaga, -pingbloodelf, -pingforsaken, -pinglichking, -pingdraenei, -pingdemon, -pingpanda, -pingeredar, -pingtuskarr, -pinggoblin, -pingjaina"
 endfunction
@@ -59,7 +63,7 @@ function ShowPlayers takes player to returns nothing
         if (GetPlayerSlotState(listedPlayer) == PLAYER_SLOT_STATE_PLAYING) then
             if (IsPlayerVIP(listedPlayer)) then
                 set vip = ", VIP"
-            else 
+            else
                 set vip = ""
             endif
             call DisplayTimedTextToPlayer(to, 0, 0, 20.0, I2S(GetPlayerTeam(listedPlayer) + 1) + " [" + I2S(i + 1) + "]" + GetPlayerColorString(GetPlayerColor(listedPlayer), GetPlayerName(listedPlayer)) + ": " + GetPlayerColorName(listedPlayer) + vip)
@@ -185,7 +189,7 @@ private function GetPlayerSelectionModeName takes integer mode returns string
     endif
     return "-"
 endfunction
-    
+
 function GetPlayerSelectionSettings takes player whichPlayer returns string
     local integer convertedPlayerId = GetConvertedPlayerId(whichPlayer)
     local string playerSelectionMode = GetPlayerSelectionModeName(udg_PlayerSelectionMode[convertedPlayerId])
