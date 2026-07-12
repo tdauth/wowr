@@ -109721,7 +109721,7 @@ Fel
 STRING 51129
 // Buffs/Effects: B03O (), Buffubertip (Tooltip - Extended)
 {
-This unit is filled with Fel; it will deal more damage, but also take more damage from attacks.
+This unit is affected by Fel; it causes Chaos damage.
 }
 
 STRING 51130
@@ -109991,7 +109991,7 @@ Research Improved Crossbows
 STRING 51175
 // Upgrades: R0H3 (Improved Bows), Ubertip (Tooltip - Extended)
 {
-Increases the Crossbowmen's and Lancersr' attack range.
+Increases the Crossbowmen's and Lancers' attack range.
 }
 
 STRING 51176
@@ -110093,7 +110093,7 @@ STRING 51335
 STRING 51336
 // Buffs/Effects: B03P (Fel), Buffubertip (Tooltip - Extended)
 {
-This unit is affected by Fel. It causes Chaos damage.
+This unit is affected by Fel; it causes Chaos damage.
 }
 
 STRING 51350
