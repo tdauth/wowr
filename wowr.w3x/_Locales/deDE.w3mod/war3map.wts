@@ -410,7 +410,7 @@ Druide
 }
 
 STRING 69
-// Items: I07X (Random Class), Name (Name)
+// Items: I07X (Zufällige Klasse), Name (Name)
 {
 Zufällige Klasse
 }
@@ -4731,7 +4731,7 @@ Goblin-Dynamit
 STRING 792
 // Items: I137 (Goblin Dynamite), Tip (Tooltip - Basic)
 {
-Purchase Goblin-Dynamit
+Goblin-Dynamit erwerben
 }
 
 STRING 794
@@ -5935,7 +5935,7 @@ G
 }
 
 STRING 1003
-// Items: I07X (Random Class), Tip (Tooltip - Basic)
+// Items: I07X (Zufällige Klasse), Tip (Tooltip - Basic)
 {
 Zufällige Klasse
 }
@@ -5970,7 +5970,7 @@ STRING 1008
 }
 
 STRING 1009
-// Abilities: A08Y (Random Class), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A08Y (Zufällige Klasse), Ubertip (Tooltip - Normal - Extended)
 {
 Picks a random class for your hero which replaces all abilities.
 }
@@ -6545,7 +6545,7 @@ Wechselt die Klasse zum Wassermagier:|n- Wasserschaden|n- Frostschaden|n- Frostr
 }
 
 STRING 1105
-// Items: I07X (Random Class), Ubertip (Tooltip - Extended)
+// Items: I07X (Zufällige Klasse), Ubertip (Tooltip - Extended)
 {
 Wählt eine zufällige verfügbare Klasse.
 }
@@ -6580,7 +6580,7 @@ Doctor Thieving
 }
 
 STRING 1111
-// Abilities: A08Y (Random Class), Name (Name)
+// Abilities: A08Y (Zufällige Klasse), Name (Name)
 {
 Zufällige Klasse
 }
@@ -6602,7 +6602,7 @@ Primäres Gebäude, wird zum Ausbilden von Elementardienern und zum Einlagern ge
 }
 
 STRING 1115
-// Abilities: A08Y (Random Class), Tip (Tooltip - Normal)
+// Abilities: A08Y (Zufällige Klasse), Tip (Tooltip - Normal)
 {
 Zufällige Klasse
 }
@@ -6735,7 +6735,7 @@ Zepter der Untoten erwerben
 STRING 1138
 // Abilities: A202 (Demolishing - Advanced), Tip (Tooltip - Normal)
 {
-Advanced Demolieren
+Fortgeschrittenes Demolieren
 }
 
 STRING 1139
@@ -6765,7 +6765,7 @@ Buch der Alchemie erwerben
 STRING 1144
 // Items: I00E (Book of Armoring), Tip (Tooltip - Basic)
 {
-Purchase Book of Panzerung
+Buch der Panzerung erwerben
 }
 
 STRING 1145
@@ -6793,15 +6793,15 @@ Legendäres Artefakt
 }
 
 STRING 1149
-// Abilities: A0AE (Hero Abilities Random Class), Name (Name)
+// Abilities: A0AE (Hero Abilities Zufällige Klasse), Name (Name)
 {
-Heldenfähigkeiten Random Class
+Heldenfähigkeiten Zufällige Klasse
 }
 
 STRING 1150
 // Items: pnvu (Potion of Invulnerability), Ubertip (Tooltip - Extended)
 {
-Gives the Hero Divine armor for <AIvu,Dur1> seconds when used.
+Verleiht dem Helden bei Benutzung <AIvu,Dur1> Sekunden lang Gottesschild.
 }
 
 STRING 1151
@@ -6879,19 +6879,19 @@ Gefangene Maiev
 STRING 1163
 // Items: pnvu (Potion of Invulnerability), Description (Description)
 {
-Gives the Hero Divine armor.
+Verleiht dem Helden Gottesschild.
 }
 
 STRING 1164
 // Items: pnvl (Potion of Lesser Invulnerability), Ubertip (Tooltip - Extended)
 {
-Gives the Hero Divine armor for <AIvl,Dur1> seconds when used.
+Verleiht dem Helden bei Benutzung <AIvl,Dur1> Sekunden lang Gottesschild.
 }
 
 STRING 1165
 // Items: pnvl (Potion of Lesser Invulnerability), Description (Description)
 {
-Gibt dem Helden göttliche Rüstung.
+Verleiht dem Helden Gottesschild.
 }
 
 STRING 1166
@@ -6937,9 +6937,9 @@ R
 }
 
 STRING 1174
-// Units: e005 (Chimaera Mount), Name (Name)
+// Units: e005 (Schimären-Reittier), Name (Name)
 {
-Chimaera Mount
+Schimären-Reittier
 }
 
 STRING 1175
@@ -6975,7 +6975,7 @@ Varimathras der Verräter wiederbeleben
 STRING 1180
 // Items: sehr (Dragon Heart), Description (Description)
 {
-The heart of the Dragon.
+Das Herz des Drachen.
 }
 
 STRING 1181
@@ -6987,25 +6987,25 @@ STRING 1181
 STRING 1182
 // Items: sehr (Dragon Heart), Ubertip (Tooltip - Extended)
 {
-The still beating heart of a Dragon.
+Das immer noch schlagende Herz eines Drachens.
 }
 
 STRING 1183
 // Items: pdi2 (Potion of Divinity), Ubertip (Tooltip - Extended)
 {
-Gives the Hero Divine armor for <AIvg,Dur1> seconds when used.
+Verleiht dem Helden bei Benutzung <AIvg,Dur1> Sekunden lang Gottesschild.
 }
 
 STRING 1184
 // Items: I019 (Letter for Muradin), Name (Name)
 {
-Letter for Muradin
+Brief für Muradin
 }
 
 STRING 1185
 // Items: I019 (Letter for Muradin), Ubertip (Tooltip - Extended)
 {
-The letter is magically sealed. On the front, written in large scrawling letters is the word Muradin.
+Der Brief ist magisch versiegelt. Auf der Vorderseite, steht in großen gekritzelten Buchstaben das Wort Muradin geschrieben.
 }
 
 STRING 1186
@@ -7017,19 +7017,19 @@ Ein Brief für Muradin.
 STRING 1187
 // Items: I01A (Urn of Muradin Bronzebeard), Name (Name)
 {
-Urn von Muradin Bronzebeard
+Urne von Muradin Bronzebeard
 }
 
 STRING 1188
 // Items: I01A (Urn of Muradin Bronzebeard), Description (Description)
 {
-This urn contains the remains of Muradin Bronzebeard.
+Diese Urne enthält die Überreste von Muradin Bronzebeard.
 }
 
 STRING 1189
 // Items: I01A (Urn of Muradin Bronzebeard), Ubertip (Tooltip - Extended)
 {
-This urn contains the remains of Muradin Bronzebeard. After his death during Frostmourne´s recovery, the dwarves cremated Muradin and buried the urn at a secret place in Northrend.
+Diese Urne enthält die Überreste von Muradin Bronzebeard. Nach seinem Tod während Frostmournes Rückführung, äscherten die Zwerge Muradien ein und begruben die Urne an einem geheimen Ort in Northrend.
 }
 
 STRING 1190
@@ -7041,7 +7041,7 @@ STRING 1190
 STRING 1191
 // Items: pdi2 (Potion of Divinity), Description (Description)
 {
-Gives the Hero Divine armor.
+Verleiht dem Helden Gottesschild.
 }
 
 STRING 1192
@@ -7065,7 +7065,7 @@ STRING 1194
 STRING 1195
 // Units: h01Q (Arcane Observatory), Ubertip (Tooltip - Extended)
 {
-Special building with a high sight range. Has Truesight, Resurrect and Reveal. |n|n|cffffcc00Begrenzt auf 1.|r
+Spezialgebäude mit einer hohen Sichtweite. Hat die Fähgkeiten 'Durchblick' und 'Sichtbar machen'. |n|n|cffffcc00Begrenzt auf 1.|r
 }
 
 STRING 1196
@@ -7089,13 +7089,13 @@ Ein mystischer Held, adept at damaging enemies. Can learn Chain Lightning, Gabel
 STRING 1199
 // Items: bfhr (Heart of the Harpy Queen), Description (Description)
 {
-The heart of the Harpyien-Königin that terrorized the Tauren tribe of Donnerfels.
+Das Herz der Harpyien-Königin, welche die Tauren des Stammes von Donnerfels terrorisiert hat.
 }
 
 STRING 1200
 // Items: bfhr (Heart of the Harpy Queen), Ubertip (Tooltip - Extended)
 {
-The heart of the Harpyien-Königin that terrorized the Tauren tribe of Donnerfels. Return it to Cairne for a reward!
+Das Herz der Harpyien-Königin, welche die Tauren des Stammes von Donnerfels terrorisiert hat. Bringt es zu Cairne zurück, um eure Belohnung zu erhalten!
 }
 
 STRING 1201
@@ -7131,7 +7131,7 @@ Varimathras der Verräter beschwören
 STRING 1206
 // Items: I01K (Tyrande´s Letter for Thrall), Ubertip (Tooltip - Extended)
 {
-A letter from Tyrande for Thrall in Orgrimmar. She is thankful for the copy of the Orcs´ Code of Laws.
+Ein Brief von Tyrande für Thrall in Orgrimmar. Sie ist dankbar für die Kopie des Gesetzbuchs der Orcs.
 }
 
 STRING 1207
@@ -8043,7 +8043,7 @@ Spell Shield
 STRING 1360
 // Items: pdiv (Potion of Divinity), Description (Description)
 {
-Gives the Hero Divine armor.
+Verleiht dem Helden Gottesschild.
 }
 
 STRING 1361
@@ -33968,7 +33968,7 @@ STRING 7417
 }
 
 STRING 7418
-// Items: I07X (Random Class), Hotkey (Hotkey)
+// Items: I07X (Zufällige Klasse), Hotkey (Hotkey)
 {
 W
 }
@@ -35474,7 +35474,7 @@ Gesichtsloser Albtraum
 }
 
 STRING 7758
-// Units: e005 (Chimaera Mount), Tip (Tooltip - Basic)
+// Units: e005 (Schimären-Reittier), Tip (Tooltip - Basic)
 {
 Schimären-Reittier
 }
@@ -41258,7 +41258,7 @@ B
 }
 
 STRING 9747
-// Abilities: A08Y (Random Class), EditorSuffix (Editor Suffix)
+// Abilities: A08Y (Zufällige Klasse), EditorSuffix (Editor Suffix)
 {
 B
 }
@@ -41876,7 +41876,7 @@ Der Skin von Arthas benutzt Frostmourne.|n|n|cffffcc00Beschränkt auf Benutzer B
 }
 
 STRING 10141
-// Abilities: A0AE (Hero Abilities Random Class), EditorSuffix (Editor Suffix)
+// Abilities: A0AE (Hero Abilities Zufällige Klasse), EditorSuffix (Editor Suffix)
 {
 B
 }
@@ -54050,13 +54050,13 @@ Produces Neruben-Königin. Bietet auch die Ausbaustufen Freezing Breath upgrade.
 }
 
 STRING 16957
-// Units: u026 (Vault of Relics), Name (Name)
+// Units: u026 (Gewölbe der Reliquien), Name (Name)
 {
 Grabmal der Relikte
 }
 
 STRING 16958
-// Units: u026 (Vault of Relics), Tip (Tooltip - Basic)
+// Units: u026 (Gewölbe der Reliquien), Tip (Tooltip - Basic)
 {
 Grabmal der Relikte beschwören
 }
@@ -81913,7 +81913,7 @@ STRING 37139
 }
 
 STRING 37140
-// Units: u026 (Vault of Relics), EditorSuffix (Name - Editor Suffix)
+// Units: u026 (Gewölbe der Reliquien), EditorSuffix (Name - Editor Suffix)
 {
 (Neruber)
 }
@@ -82285,7 +82285,7 @@ Summons an immovable ward that explodes and summons Spinnlings.
 }
 
 STRING 37292
-// Units: u02K (Burrowed Vault of Relics), EditorSuffix (Name - Editor Suffix)
+// Units: u02K (Burrowed Gewölbe der Reliquien), EditorSuffix (Name - Editor Suffix)
 {
 (Neruber)
 }
@@ -83349,13 +83349,13 @@ Netzspinner-Meisterausbildung
 STRING 37498
 // Units: u02J (Burrowed Spawning Ground), Name (Name)
 {
-Eingegraben Brutstätte
+Eingegrabene Brutstätte
 }
 
 STRING 37499
 // Units: u02J (Burrowed Spawning Ground), Tip (Tooltip - Basic)
 {
-Summon Brutstätte
+Brutstätte beschwören
 }
 
 STRING 37500
@@ -83365,15 +83365,15 @@ Bildet Neruben-Königin aus. Bietet auch die Ausbaustufen Freezing Breath upgrad
 }
 
 STRING 37501
-// Units: u02K (Burrowed Vault of Relics), Name (Name)
+// Units: u02K (Burrowed Gewölbe der Reliquien), Name (Name)
 {
-Eingegraben Vault of Relics
+Eingegrabenes Gewölbe der Reliquien
 }
 
 STRING 37502
-// Units: u02K (Burrowed Vault of Relics), Tip (Tooltip - Basic)
+// Units: u02K (Burrowed Gewölbe der Reliquien), Tip (Tooltip - Basic)
 {
-Summon Vault of Relics
+Gewölbe der Reliquien beschwören
 }
 
 STRING 37503
@@ -83391,13 +83391,13 @@ Nest beschwören
 STRING 37505
 // Units: u02L (Burrowed Nest), Ubertip (Tooltip - Extended)
 {
-Produces Neruber-Speerwerfers, Neruber-Spinnenlords, and Fliegender Bombers.
+Produziert Neruber-Speerwerfers, Neruber-Spinnenlords und Fliegende Bomber.
 }
 
 STRING 37506
 // Units: u02M (Burrowed Spawning Pit), Name (Name)
 {
-Eingegraben Brutgrube
+Eingegrabene Brutgrube
 }
 
 STRING 37507
@@ -83415,7 +83415,7 @@ Brutgrube beschwören
 STRING 37509
 // Units: u02M (Burrowed Spawning Pit), Ubertip (Tooltip - Extended)
 {
-Primäres Truppen-Produktionsgebäude. Trains Neruber-Kriegers, Gruftbesties, and Gruftdrohnes. Bietet auch die Ausbaustufen upgrades Ghoul Frenzy, Kannibalismus, Stone Form, Web and Eingraben.
+Primäres Truppen-Produktionsgebäude. Bildet Neruber-Krieger, Gruftbestien und Gruftdrohnen aus. Bietet auch die Ausbaustufen 'Ghoul Frenzy', 'Kannibalismus', 'Steinform', 'Netz' und 'Eingraben'.
 }
 
 STRING 37510
@@ -83475,7 +83475,7 @@ Die Brutstätte bricht aus der Erde hervor und wird wieder sichtbar.
 STRING 37519
 // Abilities: A1CZ (Burrow), EditorSuffix (Editor Suffix)
 {
-(Neruber) (Vault of Relics)
+(Neruber) (Gewölbe der Reliquien)
 }
 
 STRING 37520
@@ -96055,7 +96055,7 @@ HAHAHAHAHAHAHAHAHAHAHA!
 }
 
 STRING 42889
-// Abilities: A08Y (Random Class), Hotkey (Hotkey - Normal)
+// Abilities: A08Y (Zufällige Klasse), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -99783,7 +99783,7 @@ N
 STRING 45800
 // Items: I10Q (Book of Thieving), Tip (Tooltip - Basic)
 {
-Purchase Buch des Diebstahls
+Buch des Diebstahls erwerben
 }
 
 STRING 45801
@@ -109794,7 +109794,7 @@ Fel
 STRING 51127
 // Items: I0Y7 (Demon Blood), Ubertip (Tooltip - Extended)
 {
-Gives the target unit Dämonenblut which enables Chaos damage.
+Gibt der Zieleinheit Dämonenblut, das Chaos-Schaden aktiviert.
 }
 
 STRING 51128
@@ -109806,7 +109806,7 @@ Fel
 STRING 51129
 // Buffs/Effects: B03O (), Buffubertip (Tooltip - Extended)
 {
-This unit is filled with Fel; it will deal more damage, but also take more damage from attacks.
+Diese Einheit ist von 'Fel' beeinflusst; sie verursacht Chaos-Schaden.
 }
 
 STRING 51130
@@ -109830,7 +109830,7 @@ Fel erforschen
 STRING 51133
 // Upgrades: R0GS (Berserker Upgrade), Ubertip (Tooltip - Extended)
 {
-Gives Höllenorcs units the Fel ability.
+Verleiht Höllenorc-Einheiten die Fähigkeit 'Fel'.
 }
 
 STRING 51134
@@ -109866,7 +109866,7 @@ Long-range siege weaponry. Effective against buildings but slow and vulnerable. 
 STRING 51139
 // Units: o09C (Beastiary), Ubertip (Tooltip - Extended)
 {
-Trains Räubers, Kodo-Besties, and Lancers. |nBietet auch die Ausbaustufen Einschnüren, and War Drums upgrades.
+Bildet Räuber, Kodo-Bestien, und Lanzenreiter aus. |nBietet auch die Ausbaustufen 'Einschnüren' und 'Kriegstrommeln'.
 }
 
 STRING 51140
@@ -110004,7 +110004,7 @@ STRING 51161
 STRING 51162
 // Abilities: A1WB (Marksmanship), Ubertip (Tooltip - Normal - Extended)
 {
-Increases damage of Armbrustmen and Lancers by <Remk,base1>.
+Erhöht den Schaden von Armbrustschützen und Lanzenreitern um <Remk,base1>.
 }
 
 STRING 51163
@@ -110076,7 +110076,7 @@ Verbesserte Armbrüste erforschen
 STRING 51175
 // Upgrades: R0H3 (Improved Bows), Ubertip (Tooltip - Extended)
 {
-Increases the Armbrustmen's and Lancersr' attack range.
+Erhöht die Angriffsreichweite von Armbrustschützen und Lanzenreitern.
 }
 
 STRING 51176
@@ -110148,19 +110148,19 @@ Ein Kriegerheld, adept at terrorizing enemies. Can learn Massen-Feuerblitz, Krie
 STRING 51323
 // Items: I0ZH (Demon's Head (Trophy)), Name (Name)
 {
-Demon's Head (Trophäe)
+Kopf eines Dämons (Trophäe)
 }
 
 STRING 51324
 // Items: I0ZH (Demon's Head (Trophy)), Description (Description)
 {
-Return this trophy to Velen the Prophet at Argus.
+Bringt diese Trophäe zu Velen dem Propheten auf Argus.
 }
 
 STRING 51325
 // Items: I0ZH (Demon's Head (Trophy)), Ubertip (Tooltip - Extended)
 {
-Return this trophy to Velen the Prophet at Argus.
+Bringt diese Trophäe zu Velen dem Propheten auf Argus.
 }
 
 STRING 51334
@@ -110178,7 +110178,7 @@ STRING 51335
 STRING 51336
 // Buffs/Effects: B03P (Fel), Buffubertip (Tooltip - Extended)
 {
-This unit is affected by Fel. It causes Chaos damage.
+Diese Einheit ist von 'Fel' beeinflusst; sie verursacht Chaos-Schaden.
 }
 
 STRING 51350
@@ -110838,7 +110838,7 @@ A book that contains knowledge of summoning demons and crafting demonic items.
 STRING 51593
 // Items: I0YF (Book of Warlockery), Tip (Tooltip - Basic)
 {
-Purchase Buch der Hexenmeisterei
+Buch der Hexenmeisterei erweben
 }
 
 STRING 51594
@@ -122572,25 +122572,25 @@ The cup for the winner of the third place.
 STRING 58731
 // Items: I156 (Tome of Skill Points), Name (Name)
 {
-Tome of Skill Points
+Foliant der Fähigkeitenpunkte
 }
 
 STRING 58732
 // Items: I156 (Tome of Skill Points), Tip (Tooltip - Basic)
 {
-Purchase Tome of Skill Points
+Foliant der Fähigkeitenpunkte erwerben
 }
 
 STRING 58733
 // Items: I156 (Tome of Skill Points), Description (Description)
 {
-Permanently increases Skill Points.
+Erhöht dauerhaft die Fähigkeitenpunkte.
 }
 
 STRING 58734
 // Items: I156 (Tome of Skill Points), Ubertip (Tooltip - Extended)
 {
-Permanently increases the Skill Points of the Hero by 1 when used.
+Erhöht bei Benutzung die Fähigkeitenpunkte des Helden dauerhaft um 1 .
 }
 
 STRING 58739
@@ -122612,21 +122612,21 @@ Arkaner Spähposten
 }
 
 STRING 58760
-// Items: I151 (Ironforge Gold Treasure), Name (Name)
+// Items: I151 (Ironforge Goldschatz), Name (Name)
 {
-Ironforge Gold Treasure
+Ironforge Goldschatz
 }
 
 STRING 58761
-// Items: I151 (Ironforge Gold Treasure), Ubertip (Tooltip - Extended)
+// Items: I151 (Ironforge Goldschatz), Ubertip (Tooltip - Extended)
 {
-Bring this treasure to Kezan to get your reward.
+Bringt diesen Schatz nach Kezan, um Eure Belohnung zu erhalten.
 }
 
 STRING 58762
-// Items: I151 (Ironforge Gold Treasure), Description (Description)
+// Items: I151 (Ironforge Goldschatz), Description (Description)
 {
-A big gold treasure from the mines of Ironforge.
+Ein großer Goldschatz aus den Minen von Ironforge.
 }
 
 STRING 59091
