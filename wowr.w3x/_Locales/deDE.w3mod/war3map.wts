@@ -110274,7 +110274,7 @@ Roter Großdrachenhorst errichten
 STRING 51370
 // Abilities: A1VZ (Fel), Tip (Tooltip - Normal)
 {
-Advanced Fel
+Hoch entwickeltes Fel
 }
 
 STRING 51371
@@ -110916,13 +110916,13 @@ Seelendiebstahl
 STRING 51606
 // Abilities: A1WX (Warlockery - Advanced), Name (Name)
 {
-Hexenmeisterei - Advanced
+Hexenmeisterei - Fortgeschritten
 }
 
 STRING 51607
 // Abilities: A1WX (Warlockery - Advanced), Tip (Tooltip - Normal)
 {
-Advanced Hexenmeisterei
+Fortgeschrittene Hexenmeisterei
 }
 
 STRING 51608
@@ -110940,13 +110940,13 @@ Hexenmeisterei - Adept
 STRING 51610
 // Abilities: A1WY (Warlockery - Adept), Tip (Tooltip - Normal)
 {
-Adept Hexenmeisterei
+Adepten-Hexenmeisterei
 }
 
 STRING 51611
 // Abilities: A1WW (Warlockery - Novice), Ubertip (Tooltip - Normal - Extended)
 {
-The Hexenmeister crafts a Zauberstab des Absaugens.
+Stellt Zauberstäb des Absaugens her.
 }
 
 STRING 51612
@@ -110958,7 +110958,7 @@ Hexenmeisterei - Meister
 STRING 51613
 // Abilities: A1WZ (Warlockery - Master), Tip (Tooltip - Normal)
 {
-Meister Hexenmeisterei
+Meister-Hexenmeisterei
 }
 
 STRING 51615
@@ -111036,19 +111036,19 @@ Stiefel der Teleportation herstellen
 STRING 51638
 // Abilities: A1WX (Warlockery - Advanced), Ubertip (Tooltip - Normal - Extended)
 {
-Der Hexenmeisterei stellt einen Höllenstein her.
+Stellt Höllensteine her.
 }
 
 STRING 51639
 // Abilities: A1WY (Warlockery - Adept), Ubertip (Tooltip - Normal - Extended)
 {
-Der Hexenmeister stellt Dämonenblut her.
+Stellt Dämonenblut her.
 }
 
 STRING 51640
 // Abilities: A1WZ (Warlockery - Master), Ubertip (Tooltip - Normal - Extended)
 {
-Der Hexenmeister stellt ein Winziges Dämonen-Portal her.
+Stellt Winzige Dämonen-Portale her.
 }
 
 STRING 51641
@@ -112856,7 +112856,7 @@ Basic watch tower. Can be upgraded into a Dalaran Sky Guard Tower. Can learn the
 STRING 53818
 // Units: n08E (Dalaran Sky Guard Tower), Ubertip (Tooltip - Extended)
 {
-Advanced watch tower. Can learn the Rückkopplung ability.|n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
+Hoch entwickelter Wachturm. Kann die Fähigkeit 'Rückkopplung' erlernen.|n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
 }
 
 STRING 53819
@@ -112874,7 +112874,7 @@ STRING 53820
 STRING 54021
 // Upgrades: R0BU (Pulverize Damage Increase), Name (Name)
 {
-Improved Kritischer Schlag
+Verbesserter Kritischer Schlag
 }
 
 STRING 54022
@@ -112940,31 +112940,31 @@ Kraft der Sonne
 STRING 54035
 // Upgrades: R008 (Strength of the Moon,Improved Strength of the Moon,Advanced Strength of the Moo), Name (Name)
 {
-Improved Kraft der Sonne
+Verbesserte Kraft der Sonne
 }
 
 STRING 54036
 // Upgrades: R008 (Strength of the Moon,Improved Strength of the Moon,Advanced Strength of the Moo), Name (Name)
 {
-Advanced Kraft der Sonne
+Hoch entwickelte Kraft der Sonne
 }
 
 STRING 54037
 // Upgrades: R008 (Strength of the Moon,Improved Strength of the Moon,Advanced Strength of the Moo), Tip (Tooltip)
 {
-Ausbau zum Kraft der Sonne
+Ausbau zur Kraft der Sonne
 }
 
 STRING 54038
 // Upgrades: R008 (Strength of the Moon,Improved Strength of the Moon,Advanced Strength of the Moo), Tip (Tooltip)
 {
-Ausbau zum Improved Kraft der Sonne
+Ausbau zur Verbesserten Kraft der Sonne
 }
 
 STRING 54039
 // Upgrades: R008 (Strength of the Moon,Improved Strength of the Moon,Advanced Strength of the Moo), Tip (Tooltip)
 {
-Ausbau zum Advanced Kraft der Sonne
+Ausbau zur Hoch entwickelten Kraft der Sonne
 }
 
 STRING 54040
@@ -112976,31 +112976,31 @@ Sonnenrüstung
 STRING 54041
 // Upgrades: R04N (Iron Plating,Steel Plating,Mithril Plating), Name (Name)
 {
-Improved Sonnenrüstung
+Verbesserte Sonnenrüstung
 }
 
 STRING 54042
 // Upgrades: R04N (Iron Plating,Steel Plating,Mithril Plating), Name (Name)
 {
-Advanced Sonnenrüstung
+Hoch entwickelte Sonnenrüstung
 }
 
 STRING 54043
 // Upgrades: R04N (Iron Plating,Steel Plating,Mithril Plating), Tip (Tooltip)
 {
-Ausbau zum Sonnenrüstung
+Ausbau zur Sonnenrüstung
 }
 
 STRING 54044
 // Upgrades: R04N (Iron Plating,Steel Plating,Mithril Plating), Tip (Tooltip)
 {
-Ausbau zum Improved Sonnenrüstung
+Ausbau zur Verbesserten Sonnenrüstung
 }
 
 STRING 54045
 // Upgrades: R04N (Iron Plating,Steel Plating,Mithril Plating), Tip (Tooltip)
 {
-Ausbau zum Advanced Sonnenrüstung
+Ausbau zur Hoch entwickelten Sonnenrüstung
 }
 
 STRING 54048
@@ -113552,7 +113552,7 @@ C
 STRING 54473
 // Items: I10R (Tiny Thieves Guild), Ubertip (Tooltip - Extended)
 {
-Creates a Diebesgilde at a target location.|n|n|cffffcc00Beruf Dieb.|r
+Errichtet am Zielort eine Diebesgilde.|n|n|cffffcc00Beruf Dieb.|r
 }
 
 STRING 54474
@@ -113570,25 +113570,25 @@ Novize Diebstahl
 STRING 54476
 // Abilities: A20L (Thieving - Novice), Ubertip (Tooltip - Normal - Extended)
 {
-The Thief uses the skills to craft Lock Picks.
+Stellt Dietriche her.
 }
 
 STRING 54477
 // Abilities: A20M (Thieving - Advanced), Name (Name)
 {
-Diebstahl - Advanced
+Diebstahl - Fortgeschritten
 }
 
 STRING 54478
 // Abilities: A20M (Thieving - Advanced), Tip (Tooltip - Normal)
 {
-Advanced Diebstahl
+Fortgeschrittener Diebstahl
 }
 
 STRING 54479
 // Abilities: A20M (Thieving - Advanced), Ubertip (Tooltip - Normal - Extended)
 {
-The Thief uses his skills to craft Beschwörer weggesperrter Gegenstände, Schließfach and Winzige Tresore.
+Stellt Beschwörer weggesperrter Gegenstände, Schließfächer und Winzige Tresore her.
 }
 
 STRING 54480
@@ -113738,13 +113738,13 @@ Draenei Banner
 STRING 54867
 // Items: I04X (Draenei Banner), Description (Description)
 {
-The Banner of a fallen Draenei.
+Das Banner eines gefallenen Draenei.
 }
 
 STRING 54868
 // Items: I04X (Draenei Banner), Ubertip (Tooltip - Extended)
 {
-The Banner of a fallen Draenei. Bring it to the Queen of the New Citadel to collect your reward.
+Das Banner eines gefallenen Draenei. Bringt es zu Lady Hederine, um eure Belohnung zu erhalten.
 }
 
 STRING 54869
@@ -118312,13 +118312,13 @@ Buch der Astromantie
 STRING 57078
 // Items: I12Y (Book of Astromancy), Description (Description)
 {
-A book that contains knowledge of crafting Astromantie items.
+Ein Buch, welches das Wissen enthält, Astromantie-Gegenstände herzustellen.
 }
 
 STRING 57079
 // Items: I12Y (Book of Astromancy), Ubertip (Tooltip - Extended)
 {
-A book that contains knowledge of crafting Astromantie items.
+Ein Buch, welches das Wissen enthält, Astromantie-Gegenstände herzustellen.
 }
 
 STRING 57080
@@ -118354,7 +118354,7 @@ STRING 57084
 STRING 57085
 // Abilities: A22V (Item Meteor), Name (Name)
 {
-Item Meteor
+Gegenstand Meteor
 }
 
 STRING 57086
