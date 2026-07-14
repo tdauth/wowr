@@ -110861,7 +110861,7 @@ Adept Warlockery
 STRING 51611
 // Abilities: A1WW (Warlockery - Novice), Ubertip (Tooltip - Normal - Extended)
 {
-The Warlock crafts a Wand of Drain.
+Crafts Wands of Drain.
 }
 
 STRING 51612
@@ -110951,19 +110951,19 @@ Craft Boots of Teleportation
 STRING 51638
 // Abilities: A1WX (Warlockery - Advanced), Ubertip (Tooltip - Normal - Extended)
 {
-The Warlock crafts an Inferno Stone.
+Crafts Inferno Stones.
 }
 
 STRING 51639
 // Abilities: A1WY (Warlockery - Adept), Ubertip (Tooltip - Normal - Extended)
 {
-The Warlock crafts Demon Blood.
+Crafts Demon Blood.
 }
 
 STRING 51640
 // Abilities: A1WZ (Warlockery - Master), Ubertip (Tooltip - Normal - Extended)
 {
-The Warlock crafts a Tiny Demon Portal.
+Crafts Tiny Demon Portals.
 }
 
 STRING 51641
@@ -113485,7 +113485,7 @@ Novice Thieving
 STRING 54476
 // Abilities: A20L (Thieving - Novice), Ubertip (Tooltip - Normal - Extended)
 {
-The Thief uses the skills to craft Lock Picks.
+Crafts Lock Picks.
 }
 
 STRING 54477
@@ -113503,7 +113503,7 @@ Advanced Thieving
 STRING 54479
 // Abilities: A20M (Thieving - Advanced), Ubertip (Tooltip - Normal - Extended)
 {
-The Thief uses his skills to craft Locked Item Summoners, Item Locker and Tiny Safes.
+Crafts Locked Item Summoners, Item Lockers and Tiny Safes.
 }
 
 STRING 54480
@@ -113659,7 +113659,7 @@ The Banner of a fallen Draenei.
 STRING 54868
 // Items: I04X (Draenei Banner), Ubertip (Tooltip - Extended)
 {
-The Banner of a fallen Draenei. Bring it to the Queen of the New Citadel to collect your reward.
+The Banner of a fallen Draenei. Bring it to Lady Hederine to collect your reward.
 }
 
 STRING 54869
