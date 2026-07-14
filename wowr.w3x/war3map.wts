@@ -37170,7 +37170,7 @@ Grand Master Enchanting
 STRING 8088
 // Abilities: A0YJ (Enchanting - Grand Master), Ubertip (Tooltip - Normal - Extended)
 {
-The Enchanter uses his knowledge to create a Grand Master Enchanting Formula.
+Crafts Grand Master Enchanting Formulas.
 }
 
 STRING 8089
@@ -37188,7 +37188,7 @@ Doctor Enchanting
 STRING 8091
 // Abilities: A0YL (Enchanting - Doctor), Ubertip (Tooltip - Normal - Extended)
 {
-The Enchanter uses his knowledge to create a Doctor Enchanter Formula.
+Crafts Doctor Enchanter Formulas.
 }
 
 STRING 8092
@@ -70946,43 +70946,43 @@ Buy Property Darkspear Isle
 STRING 31843
 // Abilities: A0IS (Enchanting - Novice), Ubertip (Tooltip - Normal - Extended)
 {
-The Enchanter uses his knowledge to craft a Novice Enchanting Formula.
+Crafts Novice Enchanting Formulas.
 }
 
 STRING 31844
 // Abilities: A0IT (Enchanting - Advanced), Ubertip (Tooltip - Normal - Extended)
 {
-The Enchanter uses his knowledge to craft an Advanced Enchanting Formula.
+Crafts Advanced Enchanting Formulas.
 }
 
 STRING 31845
 // Abilities: A0IU (Enchanting - Adept), Ubertip (Tooltip - Normal - Extended)
 {
-The Enchanter uses his knowledge to create an Adept Enchanting Formula.
+Crafts Adept Enchanting Formulas.
 }
 
 STRING 31846
 // Abilities: A0IV (Enchanting - Master), Ubertip (Tooltip - Normal - Extended)
 {
-The Enchanter uses his knowledge to craft a Master Enchanting Formula.
+Crafts Master Enchanting Formulas.
 }
 
 STRING 31847
 // Abilities: A0U3 (Merchant - Novice), Ubertip (Tooltip - Normal - Extended)
 {
-The Merchant issues a Small Bill.
+Issues Small Bills.
 }
 
 STRING 31848
 // Abilities: A0U9 (Merchant - Advanced), Ubertip (Tooltip - Normal - Extended)
 {
-The Merchant issues a Bill.
+Issues Bills.
 }
 
 STRING 31849
 // Abilities: A0UA (Merchant - Adept), Ubertip (Tooltip - Normal - Extended)
 {
-The Merchant issues a Large Bill.
+Issues Large Bills.
 }
 
 STRING 31913
