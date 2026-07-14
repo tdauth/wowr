@@ -8995,7 +8995,7 @@ Boosts defense by 10 and casts Heiliges Licht. Also needed for the Guardian Tran
 }
 
 STRING 1525
-// Units: H08E (Guardian of Tirisfal), Hotkey (Hotkey)
+// Units: H08E (Wächter von Tirisfal), Hotkey (Hotkey)
 {
 J
 }
@@ -31588,7 +31588,7 @@ Banner Kul Tiras
 STRING 6643
 // Items: I15R (Grand Master Enchanting Formula), Name (Name)
 {
-Großmeister Verzauberformel
+Großmeister-Verzauberformel
 }
 
 STRING 6677
@@ -31774,7 +31774,7 @@ Allows you to pickpocket a unit which gives you a chance of 20% to steal a rando
 STRING 6717
 // Items: I03F (Pickpocketing), Tip (Tooltip - Basic)
 {
-Purchase Taschendiebstahl
+Taschendiebstahl erwerben
 }
 
 STRING 6718
@@ -31798,7 +31798,7 @@ Taschendiebstahl
 STRING 6721
 // Items: I15R (Grand Master Enchanting Formula), Tip (Tooltip - Basic)
 {
-Purchase Großmeister Verzauberformel
+Großmeister-Verzauberformel erwerben
 }
 
 STRING 6722
@@ -36829,19 +36829,19 @@ Beschwört ein Kapitänsschiff, um das Meer zu überqueren.
 STRING 8010
 // Abilities: A0JK (Captain - Novice), Name (Name)
 {
-Captain - Novize
+Kapitän - Novize
 }
 
 STRING 8011
 // Abilities: A0JK (Captain - Novice), Tip (Tooltip - Normal)
 {
-Novize Captain
+Novizen-Kapitän
 }
 
 STRING 8012
 // Abilities: A0JK (Captain - Novice), Ubertip (Tooltip - Normal - Extended)
 {
-The captain crafts a Winziges Kapitänsschiff to cross the sea.
+Der Kapitän stellt ein Winziges Kapitänsschiff her, um das Meer zu überqueren.
 }
 
 STRING 8013
@@ -36865,31 +36865,31 @@ Kapitänsschiff beschwören
 STRING 8016
 // Abilities: A0JN (Captain - Advanced), Name (Name)
 {
-Captain - Advanced
+Kapitän - Fortgeschritten
 }
 
 STRING 8017
 // Abilities: A0JN (Captain - Advanced), Tip (Tooltip - Normal)
 {
-Advanced Captain
+Fortgeschrittener Kapitän
 }
 
 STRING 8018
 // Abilities: A0JN (Captain - Advanced), Ubertip (Tooltip - Normal - Extended)
 {
-The captain gets a treasure map which shows the location of a hidden treasure.
+Der Kapitän erhält eine Schatzkarte, welche den Ort eines versteckten Schatzes zeigt.
 }
 
 STRING 8019
 // Abilities: A0JP (Captain - Adept), Name (Name)
 {
-Captain - Adept
+Kapitän - Adept
 }
 
 STRING 8020
 // Abilities: A0JP (Captain - Adept), Tip (Tooltip - Normal)
 {
-Adept Captain
+Adept-Kapitän
 }
 
 STRING 8021
@@ -36913,7 +36913,7 @@ Meister-Kapitän
 STRING 8024
 // Abilities: A0JQ (Captain - Master), Ubertip (Tooltip - Normal - Extended)
 {
-The captain crafts a Steuerrad which increases the stats of any ship which transports the captain.
+Der Kapitän stellt ein Steuerrad her, der die Werte von jedem Schiff erhöht, das den Kapitän befördert.
 }
 
 STRING 8025
@@ -37045,7 +37045,7 @@ Mythische Giftklinge erwerben
 STRING 8066
 // Abilities: A0YE (Item Shadow Strike), Name (Name)
 {
-Item Shadow Strike
+Gegenstand Schattenschlag
 }
 
 STRING 8067
@@ -37171,13 +37171,13 @@ Verzaubern - Großmeister
 STRING 8087
 // Abilities: A0YJ (Enchanting - Grand Master), Tip (Tooltip - Normal)
 {
-Großmeister Verzaubern
+Großmeister-Verzaubern
 }
 
 STRING 8088
 // Abilities: A0YJ (Enchanting - Grand Master), Ubertip (Tooltip - Normal - Extended)
 {
-The Enchanter uses his knowledge to create a Großmeister Verzauberformel.
+Stellt Großmeister-Verzauberformeln her.
 }
 
 STRING 8089
@@ -37195,7 +37195,7 @@ Doktor-Verzaubern
 STRING 8091
 // Abilities: A0YL (Enchanting - Doctor), Ubertip (Tooltip - Normal - Extended)
 {
-The Enchanter uses his knowledge to create a Doctor Enchanter Formula.
+Stellt Doktor-Verzauberformeln her.
 }
 
 STRING 8092
@@ -40172,7 +40172,7 @@ STRING 8703
 }
 
 STRING 8705
-// Units: H08E (Guardian of Tirisfal), Tip (Tooltip - Basic)
+// Units: H08E (Wächter von Tirisfal), Tip (Tooltip - Basic)
 {
 Aegwynn beschwören
 }
@@ -40214,7 +40214,7 @@ Verwaltet Ihre Unterkunft.
 }
 
 STRING 8713
-// Units: H08E (Guardian of Tirisfal), Awakentip (Tooltip - Awaken)
+// Units: H08E (Wächter von Tirisfal), Awakentip (Tooltip - Awaken)
 {
 Aegwynn wiederbeleben
 }
@@ -40504,13 +40504,13 @@ STRING 8913
 STRING 8922
 // Doodads: D014 (Crystal Small), Name (Name)
 {
-Crystal Small
+Kristall Klein
 }
 
 STRING 8924
 // Doodads: D015 (Coral Small), Name (Name)
 {
-Coral Small
+Koralle Klein
 }
 
 STRING 8925
@@ -40520,21 +40520,21 @@ Volcano Small
 }
 
 STRING 8926
-// Units: H08E (Guardian of Tirisfal), Revivetip (Tooltip - Revive)
+// Units: H08E (Wächter von Tirisfal), Revivetip (Tooltip - Revive)
 {
 Aegwynn wiederbeleben
 }
 
 STRING 8928
-// Units: H08E (Guardian of Tirisfal), Propernames (Proper Names)
+// Units: H08E (Wächter von Tirisfal), Propernames (Proper Names)
 {
 Aegwynn
 }
 
 STRING 8929
-// Units: H08E (Guardian of Tirisfal), Name (Name)
+// Units: H08E (Wächter von Tirisfal), Name (Name)
 {
-Guardian of Tirisfal
+Wächter von Tirisfal
 }
 
 STRING 8951
@@ -40606,7 +40606,7 @@ Feuer-Elementargeist
 STRING 9109
 // Abilities: A003 (Summon Mur'gul Slaves), Name (Name)
 {
-Summon Mur'gul Slaves
+Mur'gul-Sklaven beschwören
 }
 
 STRING 9110
@@ -40622,15 +40622,15 @@ Storm Hammer Lightning
 }
 
 STRING 9112
-// Units: h0BT (Siege Land Ship), Name (Name)
+// Units: h0BT (Belagerungs-Landschiff), Name (Name)
 {
-Siege Land Ship
+Belagerungs-Landschiff
 }
 
 STRING 9113
 // Abilities: A043 (Summon Imps), Name (Name)
 {
-Summon Imps
+Imps beschwören
 }
 
 STRING 9114
@@ -41846,7 +41846,7 @@ Kartenersteller.|n|n|cffffcc00Volk:|r -|n|cffffcc00Klasse:|r Mönch|n|cffffcc00R
 }
 
 STRING 10133
-// Units: H08E (Guardian of Tirisfal), Ubertip (Tooltip - Extended)
+// Units: H08E (Wächter von Tirisfal), Ubertip (Tooltip - Extended)
 {
 Ein mystischer Held, adept at ranged assaults. Can learn Heilige Magie, Arkane Magie, Dunkle Magie, Fel-Magie and Feuermagie. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r|n|n|cffffcc00Bonus-Held erfordert Stufe 40. Benutzen Sie -unlock, um diese Beschränkung aufzuheben Beschränkt auf Benutzer Barade#2569.|r
 }
@@ -47980,7 +47980,7 @@ STRING 11976
 STRING 11988
 // Units: h05H (Workshop), Ubertip (Tooltip - Extended)
 {
-Produces Skyfire-Kanonenschiffs, Canoneer Teams, Siege Land Ships, and Flying Dreadnoughts. |nBietet auch die Ausbaustufen Flare, Fragmentation Shards, and Land Cannons upgrades.
+Produces Skyfire-Kanonenschiffs, Canoneer Teams, Belagerungs-Landschiffs, and Flying Dreadnoughts. |nBietet auch die Ausbaustufen Flare, Fragmentation Shards, and Land Cannons upgrades.
 }
 
 STRING 11989
@@ -54826,19 +54826,19 @@ Dalaran-Schild aktivieren - [|cffffcc00Stufe 1|r]
 STRING 17444
 // Items: I07G (Book of Enchanting), Name (Name)
 {
-Buch des Verzaubern
+Buch des Verzauberns
 }
 
 STRING 17445
 // Items: I07G (Book of Enchanting), Description (Description)
 {
-A book that contains knowledge of crafting Verzauberformels.
+Ein Buch, welches das Wissen zur Herstellung von Verzauberformeln enthält.
 }
 
 STRING 17446
 // Items: I07G (Book of Enchanting), Ubertip (Tooltip - Extended)
 {
-A book that contains knowledge of crafting Verzauberformels.
+Ein Buch, welches das Wissen zur Herstellung von Verzauberformeln enthält.
 }
 
 STRING 17447
@@ -54916,13 +54916,13 @@ Dalaran-Schild aktivieren - [|cffffcc00Stufe 2|r]
 STRING 17460
 // Items: I07I (Adept Enchanting Formula), Name (Name)
 {
-Adept Verzauberformel
+Adepten-Verzauberformel
 }
 
 STRING 17461
 // Items: I07I (Adept Enchanting Formula), Tip (Tooltip - Basic)
 {
-Purchase Adept Verzauberformel
+Adepten-Verzauberformel erwerben
 }
 
 STRING 17462
@@ -54964,7 +54964,7 @@ STRING 17467
 STRING 17468
 // Abilities: A0IT (Enchanting - Advanced), Name (Name)
 {
-Verzaubern - Advanced
+Verzaubern - Fortgeschritten
 }
 
 STRING 17470
@@ -56066,7 +56066,7 @@ STRING 18313
 }
 
 STRING 18321
-// Units: h0BT (Siege Land Ship), Tip (Tooltip - Basic)
+// Units: h0BT (Belagerungs-Landschiff), Tip (Tooltip - Basic)
 {
 Belagerungslandschiff ausbilden
 }
@@ -56759,7 +56759,7 @@ Hafen von Kul Tiras errichten
 }
 
 STRING 18939
-// Units: h0BT (Siege Land Ship), EditorSuffix (Name - Editor Suffix)
+// Units: h0BT (Belagerungs-Landschiff), EditorSuffix (Name - Editor Suffix)
 {
 (Kul Tiras)
 }
@@ -70971,43 +70971,43 @@ Immobilie Dunkelspeer-Insel kaufen
 STRING 31843
 // Abilities: A0IS (Enchanting - Novice), Ubertip (Tooltip - Normal - Extended)
 {
-The Enchanter uses his knowledge to craft a Novize Verzauberformel.
+Stellt Novizen-Verzauberformeln her.
 }
 
 STRING 31844
 // Abilities: A0IT (Enchanting - Advanced), Ubertip (Tooltip - Normal - Extended)
 {
-The Enchanter uses his knowledge to craft an Advanced Verzauberformel.
+Stellt Fortgeschrittene Verzauberformeln her.
 }
 
 STRING 31845
 // Abilities: A0IU (Enchanting - Adept), Ubertip (Tooltip - Normal - Extended)
 {
-The Enchanter uses his knowledge to create an Adept Verzauberformel.
+Stellt Adepten-Verzauberformel her.
 }
 
 STRING 31846
 // Abilities: A0IV (Enchanting - Master), Ubertip (Tooltip - Normal - Extended)
 {
-The Enchanter uses his knowledge to craft a Meister-Verzauberformel.
+Stellt Meister-Verzauberformeln her.
 }
 
 STRING 31847
 // Abilities: A0U3 (Merchant - Novice), Ubertip (Tooltip - Normal - Extended)
 {
-Der Händler schreibt eine Kleine Rechnung.
+Schreibt Kleine Rechnungen.
 }
 
 STRING 31848
 // Abilities: A0U9 (Merchant - Advanced), Ubertip (Tooltip - Normal - Extended)
 {
-Der Händler schreibt eine Rechnung.
+Schreibt Rechnungen.
 }
 
 STRING 31849
 // Abilities: A0UA (Merchant - Adept), Ubertip (Tooltip - Normal - Extended)
 {
-Der Händler schreibt eine Große Rechnung.
+Schreibt Große Rechnungen.
 }
 
 STRING 31913
@@ -84817,7 +84817,7 @@ Schattenkugel +4 herstellen
 }
 
 STRING 37886
-// Units: H08E (Guardian of Tirisfal), EditorSuffix (Name - Editor Suffix)
+// Units: H08E (Wächter von Tirisfal), EditorSuffix (Name - Editor Suffix)
 {
 (Bonus-Held)
 }
