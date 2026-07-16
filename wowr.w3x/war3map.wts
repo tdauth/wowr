@@ -19332,7 +19332,7 @@ N
 STRING 3845
 // Abilities: A06F (Sorcery - Novice), Ubertip (Tooltip - Normal - Extended)
 {
-The Sorcerer uses his gathered material to craft a Wand of Neutralization.
+Crafts Wands of Neutralization.
 }
 
 STRING 3846
@@ -21732,7 +21732,7 @@ Provides food. Can cast Battle Stations which leads to Furbolgs entering the hut
 STRING 4471
 // Units: n02B (Defiled Fountain of Life), Ubertip (Tooltip - Extended)
 {
-Building to train Furbolg Shamans and Furbolg Elder Shamans which are useful spell casting units. Restores life and mana of units.
+Trains Furbolg Shamans and Furbolg Elder Shamans which are useful spell casting units. Restores life and mana of units.
 }
 
 STRING 4472
@@ -21798,7 +21798,7 @@ S
 STRING 4482
 // Units: n03C (Center of the new Citadel), Name (Name)
 {
-Center of the new Citadel
+Center of the New Citadel
 }
 
 STRING 4483
@@ -39471,7 +39471,7 @@ Grand Master Runeforging
 STRING 8547
 // Abilities: A10R (Runeforging - Grand Master), Ubertip (Tooltip - Normal - Extended)
 {
-The Runeforger uses his knowledge to craft a Rune of Lesser Resurrection.
+Crafts Runes of Lesser Resurrection.
 }
 
 STRING 8548
@@ -39489,7 +39489,7 @@ Doctor Runeforging
 STRING 8550
 // Abilities: A10T (Runeforging - Doctor), Ubertip (Tooltip - Normal - Extended)
 {
-The Runeforger uses his knowledge to craft a Rune of Greater Resurrection.
+Crafts Runes of Greater Resurrection.
 }
 
 STRING 8551
