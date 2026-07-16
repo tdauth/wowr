@@ -1164,13 +1164,13 @@ Kopf eines Untoten (Trophäe)
 }
 
 STRING 195
-// Items: I01E (Druid Letter), Description (Description)
+// Items: I01E (Druiden-Brief), Description (Description)
 {
 A letter for the Druids of the Talon in the Barrow Dens.
 }
 
 STRING 196
-// Items: I01E (Druid Letter), Ubertip (Tooltip - Extended)
+// Items: I01E (Druiden-Brief), Ubertip (Tooltip - Extended)
 {
 A letter for the Druids of the Talon in the Barrow Dens.
 }
@@ -3310,7 +3310,7 @@ STRING 552
 }
 
 STRING 553
-// Items: I00W (Order Stone Fragment), Tip (Tooltip - Basic)
+// Items: I00W (Stein der Ordnung Fragment), Tip (Tooltip - Basic)
 {
 Steinfragment der Ordnung erwerben
 }
@@ -3334,7 +3334,7 @@ Luftmagier
 }
 
 STRING 557
-// Items: I00W (Order Stone Fragment), Description (Description)
+// Items: I00W (Stein der Ordnung Fragment), Description (Description)
 {
 Boosts defense by 10 and casts Heiliges Licht. Also needed for the Guardian Transformation Ritual.
 }
@@ -8989,7 +8989,7 @@ Wechselt die Klasse zum Luftmagier:|n- Luftmagie|n- Entwaffnung|n- Wirbelstürme
 }
 
 STRING 1524
-// Items: I00W (Order Stone Fragment), Ubertip (Tooltip - Extended)
+// Items: I00W (Stein der Ordnung Fragment), Ubertip (Tooltip - Extended)
 {
 Boosts defense by 10 and casts Heiliges Licht. Also needed for the Guardian Transformation Ritual.
 }
@@ -11551,25 +11551,25 @@ The flag of the Orc clan which should be brought to Illidan in Outland.
 }
 
 STRING 2052
-// Items: I02C (Illidan's Orb), Ubertip (Tooltip - Extended)
+// Items: I02C (Illidans Kugel), Ubertip (Tooltip - Extended)
 {
 A powerful orb against Demons from Illidan. This item is required to attack Magtheridon.
 }
 
 STRING 2053
-// Items: I02C (Illidan's Orb), Description (Description)
+// Items: I02C (Illidans Kugel), Description (Description)
 {
 A powerful orb against Demons from Illidan. This item is required to attack Magtheridon.
 }
 
 STRING 2054
-// Items: I02D (Maghteridon's Heart), Ubertip (Tooltip - Extended)
+// Items: I02D (Maghteridons Herz), Ubertip (Tooltip - Extended)
 {
 The heart of the powerful Grubenlord Magtheridon. It must be returned to Illidan in Outland.
 }
 
 STRING 2055
-// Items: I02D (Maghteridon's Heart), Description (Description)
+// Items: I02D (Maghteridons Herz), Description (Description)
 {
 The heart of the powerful Grubenlord Magtheridon. It must be returned to Illidan in Outland.
 }
@@ -36188,7 +36188,7 @@ Banner Stormpike
 }
 
 STRING 7882
-// Items: I00W (Order Stone Fragment), Name (Name)
+// Items: I00W (Stein der Ordnung Fragment), Name (Name)
 {
 Steinfragment der Ordnung
 }
@@ -39874,13 +39874,13 @@ Heiliges Wappen erwerben
 STRING 8637
 // Items: I16G (Holy Crest), Description (Description)
 {
-Provides a +3 bonus to Agility, Strength, and Intelligence.
+Verleiht einen Bonus von +3 auf Beweglichkeit, Kraft und Intelligenz.
 }
 
 STRING 8638
 // Items: I16G (Holy Crest), Ubertip (Tooltip - Extended)
 {
-Increases the Strength, Intelligence, and Agility of the Hero by 3 when worn.|n|n|cffffcc00Erhöht die Rüstung um 10 together with all other items from the Holy Set.|r
+Increases the Strength, Intelligence, and Agility of the Hero by 3 when worn.|n|n|cffffcc00Erhöht die Rüstung um 10 zusammen mit allen anderen Gegenständen aus dem Heiligen Set.|r
 }
 
 STRING 8639
@@ -39898,13 +39898,13 @@ Heilige Stiefel erwerben
 STRING 8641
 // Items: I16H (Holy Boots), Description (Description)
 {
-Provides a +3 bonus to armor and a movement speed bonus.
+Verleiht einen Bonus von +3 auf Rüstung und einen Bonus auf die Bewegungsgeschwindigkeit.
 }
 
 STRING 8642
 // Items: I16H (Holy Boots), Ubertip (Tooltip - Extended)
 {
-Increases armor by 3 and the movement speed of the Hero when worn.|n|n|cffffcc00Erhöht die Rüstung um 10 together with all other items from the Holy Set.|r
+Increases armor by 3 and the movement speed of the Hero when worn.|n|n|cffffcc00Erhöht die Rüstung um 10 zusammen mit allen anderen Gegenständen aus dem Heiligen Set.|r
 }
 
 STRING 8643
@@ -39922,13 +39922,13 @@ Heiligen Panzerhandschuh erwerben
 STRING 8645
 // Items: I16I (Holy Gauntlet), Description (Description)
 {
-Provides a +3 bonus to armor and a attack speed bonus.
+Verleiht einen Bonus von +3 auf Rüstung und einen Bonus auf die Angriffsgeschwindigkeit.
 }
 
 STRING 8646
 // Items: I16I (Holy Gauntlet), Ubertip (Tooltip - Extended)
 {
-Increases armor by 3 and the attack speed of the Hero when worn.|n|n|cffffcc00Erhöht die Rüstung um 10 together with all other items from the Holy Set.|r
+Increases armor by 3 and the attack speed of the Hero when worn.|n|n|cffffcc00Erhöht die Rüstung um 10 zusammen mit allen anderen Gegenständen aus dem Heiligen Set.|r
 }
 
 STRING 8647
@@ -39946,13 +39946,13 @@ Heilige Rüstung erwerben
 STRING 8649
 // Items: I16J (Holy Armor), Description (Description)
 {
-Provides a +7 bonus to armor.
+Bietet einen Bonus von +7 auf die Rüstung.
 }
 
 STRING 8650
 // Items: I16J (Holy Armor), Ubertip (Tooltip - Extended)
 {
-Increases armor by 7 of the Hero when worn.|n|n|cffffcc00Erhöht die Rüstung um 10 together with all other items from the Holy Set.|r
+Increases armor by 7 of the Hero when worn.|n|n|cffffcc00Erhöht die Rüstung um 10 zusammen mit allen anderen Gegenständen aus dem Heiligen Set.|r
 }
 
 STRING 8651
@@ -39976,7 +39976,7 @@ Erhöht die Rüstung um 6.
 STRING 8654
 // Items: I16K (Holy Shield), Ubertip (Tooltip - Extended)
 {
-Increases armor by 6 of the Hero when worn.|n|n|cffffcc00Erhöht die Rüstung um 10 together with all other items from the Holy Set.|r
+Increases armor by 6 of the Hero when worn.|n|n|cffffcc00Erhöht die Rüstung um 10 zusammen mit allen anderen Gegenständen aus dem Heiligen Set.|r
 }
 
 STRING 8655
@@ -39994,13 +39994,13 @@ Heiliges Schwert erwerben
 STRING 8657
 // Items: I16L (Holy Sword), Description (Description)
 {
-Provides a +12 bonus to damage.
+Bietet einen Bonus von +12 auf den Schaden.
 }
 
 STRING 8658
 // Items: I16L (Holy Sword), Ubertip (Tooltip - Extended)
 {
-Increases damage by 12 of the Hero when worn.|n|n|cffffcc00Erhöht die Rüstung um 10 together with all other items from the Holy Set.|r
+Erhöht beim Tragen den Schaden des Helden um 12.|n|n|cffffcc00Erhöht die Rüstung um 10 zusammen mit allen anderen Gegenständen aus dem Heiligen Set.|r
 }
 
 STRING 8659
@@ -40114,19 +40114,19 @@ Q
 STRING 8691
 // Destructibles: B01A (Village Tree Wall Winter), Name (Name)
 {
-Village Baumwand Winter
+Dorf Baumwand Winter
 }
 
 STRING 8692
 // Destructibles: B01B (Village Tree Wall Fall), Name (Name)
 {
-Village Baumwand Fall
+Dorf Baumwand Herbst
 }
 
 STRING 8693
 // Destructibles: B01C (Village Snowy Tree Wall), Name (Name)
 {
-Village Snowy Baumwand
+Dorf Schneebedeckte Baumwand
 }
 
 STRING 8694
@@ -40516,7 +40516,7 @@ Koralle Klein
 STRING 8925
 // Doodads: D016 (Volcano Small), Name (Name)
 {
-Volcano Small
+Vulkan Klein
 }
 
 STRING 8926
@@ -40616,9 +40616,9 @@ STRING 9110
 }
 
 STRING 9111
-// Abilities: A020 (Storm Hammer Lightning), Name (Name)
+// Abilities: A020 (Sturmhammer-Blitz), Name (Name)
 {
-Storm Hammer Lightning
+Sturmhammer-Blitz
 }
 
 STRING 9112
@@ -40640,9 +40640,9 @@ STRING 9114
 }
 
 STRING 9132
-// Units: n003 (Order Stone), Name (Name)
+// Units: n003 (Stein der Ordnung), Name (Name)
 {
-Order Stone
+Stein der Ordnung
 }
 
 STRING 9133
@@ -40660,7 +40660,7 @@ W
 STRING 9140
 // Items: I02B (Akama's Message), Name (Name)
 {
-Akama's Message
+Akamas Nachricht
 }
 
 STRING 9143
@@ -40678,13 +40678,13 @@ Heilige Aura
 STRING 9145
 // Abilities: A117 (Holy Aura), Ubertip (Tooltip - Normal - Extended)
 {
-Gives all enemy Undead nearby units a malus of <A117,DataA1>  to hit point regeneration. The aura does not stack with the regenerative effects of Blight.
+Gibt in der Nähe befindlichen feindlichen Untoten-Einheiten einen Malus von <A117,DataA1> zur Trefferpunkt-Regeneration. Die Aura ergänzt sich nicht mit den Regenerationseffekten von 'Verseuchung'.
 }
 
 STRING 9146
 // Abilities: A02K (Summon Blood Elf Workers), Name (Name)
 {
-Summon Blood Elf Arbeiters
+Blutelfen-Arbeiter beschwören
 }
 
 STRING 9147
@@ -40792,31 +40792,31 @@ Massen-Inneres-Feuer
 STRING 9169
 // Units: h01M (Young Furbolg), Ubertip (Tooltip - Extended)
 {
-Basic worker. Can construct structures, harvest gold, lumber and repair structures. |n|n|cffffcc00Greift Land-Einheiten an.|r
+Einfache Arbeiter-Einheit. Kann Gold und Holz abbauen, Gebäude errichten und 'Reparieren'. |n|n|cffffcc00Greift Land-Einheiten und Bäume an.|r
 }
 
 STRING 9180
-// Items: I01E (Druid Letter), Name (Name)
+// Items: I01E (Druiden-Brief), Name (Name)
 {
-Druid Letter
+Druiden-Brief
 }
 
 STRING 9182
-// Items: I02C (Illidan's Orb), Name (Name)
+// Items: I02C (Illidans Kugel), Name (Name)
 {
-Illidan's Orb
+Illidans Kugel
 }
 
 STRING 9185
-// Items: I02D (Maghteridon's Heart), Name (Name)
+// Items: I02D (Maghteridons Herz), Name (Name)
 {
-Maghteridon's Heart
+Maghteridons Herz
 }
 
 STRING 9193
 // Items: I02F (Demon Gate Stone), Name (Name)
 {
-Dämonentor Stone
+Dämonentor-Stein
 }
 
 STRING 9214
@@ -64087,9 +64087,9 @@ Hexe ausbilden
 }
 
 STRING 24815
-// Abilities: A020 (Storm Hammer Lightning), Tip (Tooltip - Normal)
+// Abilities: A020 (Sturmhammer-Blitz), Tip (Tooltip - Normal)
 {
-Storm Hammer Lightning
+Sturmhammer-Blitz
 }
 
 STRING 24817
