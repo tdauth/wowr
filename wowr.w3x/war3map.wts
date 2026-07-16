@@ -20208,7 +20208,7 @@ A book that contains knowledge of breeding dragons.
 STRING 4100
 // Abilities: A06I (Runeforging - Novice), Ubertip (Tooltip - Normal - Extended)
 {
-The Runeforger uses magical power to create a Rune of Speed.
+Crafts Runes of Speed.
 }
 
 STRING 4101
@@ -20226,7 +20226,7 @@ E
 STRING 4104
 // Abilities: A06J (Runeforging - Adept), Ubertip (Tooltip - Normal - Extended)
 {
-The Runeforger uses magic to craft a Rune of Restoration.
+Crafts Runes of Restoration.
 }
 
 STRING 4105
@@ -20238,7 +20238,7 @@ Runeforging - Advanced
 STRING 4107
 // Abilities: A06K (Runeforging - Advanced), Ubertip (Tooltip - Normal - Extended)
 {
-The Runeforger uses magic to create a Rune of Dispel Magic.
+Crafts Runes of Dispel Magic.
 }
 
 STRING 4108
@@ -20250,7 +20250,7 @@ Runeforging - Master
 STRING 4110
 // Abilities: A06L (Runeforging - Master), Ubertip (Tooltip - Normal - Extended)
 {
-The Runeforger uses magic to craft a Rune of Rebirth.
+Crafts Runes of Rebirth.
 }
 
 STRING 4111
