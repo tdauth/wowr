@@ -15358,19 +15358,19 @@ STRING 2948
 }
 
 STRING 2949
-// Items: I02T (Kil'jaedens Chaos Stone), Name (Name)
+// Items: I02T (Kil'jaedens Chaos-Stein), Name (Name)
 {
-Kil'jaedens Chaos Stone
+Kil'jaedens Chaos-Stein
 }
 
 STRING 2950
-// Items: I02T (Kil'jaedens Chaos Stone), Description (Description)
+// Items: I02T (Kil'jaedens Chaos-Stein), Description (Description)
 {
 A powerful stone from Kil'jaeden. Return it to the Lich-König.
 }
 
 STRING 2951
-// Items: I02T (Kil'jaedens Chaos Stone), Ubertip (Tooltip - Extended)
+// Items: I02T (Kil'jaedens Chaos-Stein), Ubertip (Tooltip - Extended)
 {
 A powerful stone from Kil'jaeden. Return it to the Lich-König.
 }
@@ -18334,7 +18334,7 @@ Lebensregeneration
 }
 
 STRING 3633
-// Units: n0JC (High Templar), EditorSuffix (Name - Editor Suffix)
+// Units: n0JC (Großtempler), EditorSuffix (Name - Editor Suffix)
 {
 (Draenei)
 }
@@ -19002,7 +19002,7 @@ Söldnerlager Brachland
 STRING 3757
 // Units: nmr8 (Mercenary Camp Cityscape), Name (Name)
 {
-Söldnerlager Cityscape
+Söldnerlager Stadt
 }
 
 STRING 3758
@@ -19110,7 +19110,7 @@ Further increases the armor of Draenei Verteidigers, Draenei Stalkers, Draenei-H
 STRING 3776
 // Units: nmre (Mercenary Camp Outland), Name (Name)
 {
-Söldnerlager Outland
+Söldnerlager Fremdland
 }
 
 STRING 3777
@@ -19164,13 +19164,13 @@ Powerful mounted warrior. Can cast Storm Bolt. Can learn Kampftierausbildung. |n
 STRING 3789
 // Units: h032 (Dwarf Workshop), Ubertip (Tooltip - Extended)
 {
-Produces Belagerungsmaschines, Flugapparats, Mörser-Trupps and Dampf-Festunges. |nBietet auch die Ausbaustufen Leuchtsignal, Fragmentation Shards, Sperrfeuer, Flugapparat Bombs, Flak Cannons, and Elite-Belagerungspanzer upgrades.
+Stellt Belagerungsmaschinen, Flugapparate, Mörser-Trupps und Dampf-Festungen her. |nBietet auch die Ausbaustufen Leuchtsignal, Fragmentation Shards, Sperrfeuer, Flugapparat Bombs, Flak Cannons, and Elite-Belagerungspanzer upgrades.
 }
 
 STRING 3790
 // Units: n04X (War Golem), Ubertip (Tooltip - Extended)
 {
-Heavy melee unit. Resistant to spells. Can also learn Schlafgestalt and Schmettern. |n|n|cffffcc00Greift Land-Einheiten an.|r
+Schwere Nahkampf-Einheit. Resistant to spells. Can also learn Schlafgestalt and Schmettern. |n|n|cffffcc00Greift Land-Einheiten an.|r
 }
 
 STRING 3791
@@ -19332,7 +19332,7 @@ N
 STRING 3845
 // Abilities: A06F (Sorcery - Novice), Ubertip (Tooltip - Normal - Extended)
 {
-The Sorcerer uses his gathered material to craft a Wand of Neutralization.
+Stellt Zauberstäb der Neutralisierung her.
 }
 
 STRING 3846
@@ -20164,27 +20164,27 @@ D
 }
 
 STRING 4093
-// Items: I02Z (Rune of Restoration (Runeforger)), Name (Name)
+// Items: I02Z (Rune of Restoration (Runenschmied)), Name (Name)
 {
-Rune der Wiederherstellung (Runeforger)
+Rune der Wiederherstellung (Runenschmied)
 }
 
 STRING 4094
-// Items: I030 (Rune of Speed (Runeforger)), Name (Name)
+// Items: I030 (Rune of Speed (Runenschmied)), Name (Name)
 {
-Rune der Geschwindigkeit (Runeforger)
+Rune der Geschwindigkeit (Runenschmied)
 }
 
 STRING 4095
-// Items: I031 (Rune of Dispel Magic (Runeforger)), Name (Name)
+// Items: I031 (Rune of Dispel Magic (Runenschmied)), Name (Name)
 {
-Rune of Magie bannen (Runeforger)
+Rune of Magie bannen (Runenschmied)
 }
 
 STRING 4096
-// Items: I032 (Rune of Rebirth (Runeforger)), Name (Name)
+// Items: I032 (Rune of Rebirth (Runenschmied)), Name (Name)
 {
-Rune der Wiedergeburt (Runeforger)
+Rune der Wiedergeburt (Runenschmied)
 }
 
 STRING 4097
@@ -20208,7 +20208,7 @@ A book that contains knowledge of breeding dragons.
 STRING 4100
 // Abilities: A06I (Runeforging - Novice), Ubertip (Tooltip - Normal - Extended)
 {
-The Runeforger uses magical power to create a Rune der Geschwindigkeit.
+The Runenschmied uses magical power to create a Rune der Geschwindigkeit.
 }
 
 STRING 4101
@@ -20226,7 +20226,7 @@ E
 STRING 4104
 // Abilities: A06J (Runeforging - Adept), Ubertip (Tooltip - Normal - Extended)
 {
-The Runeforger uses magic to craft a Rune der Wiederherstellung.
+The Runenschmied uses magic to craft a Rune der Wiederherstellung.
 }
 
 STRING 4105
@@ -20238,7 +20238,7 @@ Runenschmieden - Fortgeschritten
 STRING 4107
 // Abilities: A06K (Runeforging - Advanced), Ubertip (Tooltip - Normal - Extended)
 {
-The Runeforger uses magic to create a Rune of Magie bannen.
+The Runenschmied uses magic to create a Rune of Magie bannen.
 }
 
 STRING 4108
@@ -20250,7 +20250,7 @@ Runenschmieden - Meister
 STRING 4110
 // Abilities: A06L (Runeforging - Master), Ubertip (Tooltip - Normal - Extended)
 {
-The Runeforger uses magic to craft a Rune der Wiedergeburt.
+The Runenschmied uses magic to craft a Rune der Wiedergeburt.
 }
 
 STRING 4111
@@ -20872,7 +20872,7 @@ Verderbnis
 }
 
 STRING 4292
-// Items: I032 (Rune of Rebirth (Runeforger)), Ubertip (Tooltip - Extended)
+// Items: I032 (Rune of Rebirth (Runenschmied)), Ubertip (Tooltip - Extended)
 {
 Places the monster that held this rune under your control. Give it to one of your units and when the unit dies use it to recreate the unit.
 }
@@ -21318,7 +21318,7 @@ Bewachender Furbolg
 STRING 4396
 // Units: h016 (Guarding Furbolg), Tip (Tooltip - Basic)
 {
-Bewachender Furbolg errichten
+Bewachenden Furbolg errichten
 }
 
 STRING 4397
@@ -21732,7 +21732,7 @@ Liefert Essen. Can cast Battle Stations which leads to Furbolgs entering the hut
 STRING 4471
 // Units: n02B (Defiled Fountain of Life), Ubertip (Tooltip - Extended)
 {
-Building to train Furbolg-Schamanes and Furbolg-Ahnenschamanes which are useful spell casting units. Restores life and mana of units.
+Bildet Furbolg-Schamanen und Furbolg-Ahnenschamanen aus, die nützliche zaubernden Einheiten sind. Stellt LEben und Mana von Einheiten wieder her.
 }
 
 STRING 4472
@@ -21798,7 +21798,7 @@ S
 STRING 4482
 // Units: n03C (Center of the new Citadel), Name (Name)
 {
-Center of the new Citadel
+Zentrum der Neuen Zitadelle
 }
 
 STRING 4483
@@ -21840,7 +21840,7 @@ Drachenhorst errichten
 STRING 4495
 // Units: o03W (Dragon Roost), Ubertip (Tooltip - Extended)
 {
-Trains Red Dragons. |nAlso contains upgrades for Red Dragons.
+Bildet Rotdrachen aus. |nBietet auch Ausbaustufen für Rotdrachen.
 }
 
 STRING 4496
@@ -26218,7 +26218,7 @@ H
 }
 
 STRING 5403
-// Units: n0JC (High Templar), Hotkey (Hotkey)
+// Units: n0JC (Großtempler), Hotkey (Hotkey)
 {
 H
 }
@@ -31858,7 +31858,7 @@ Vorherige Tasche
 STRING 6731
 // Items: I1AE (Skin Villager Child), Tip (Tooltip - Basic)
 {
-Skin Dorfbewohner-Kindes
+Skin Dorfbewohner-Kind
 }
 
 STRING 6732
@@ -31870,7 +31870,7 @@ Der Skin eines Dorfbewohner-Kindes.
 STRING 6733
 // Items: I1AF (Skin Villager Child 2), Name (Name)
 {
-Skin Dorfbewohner-Kindes 2
+Skin Dorfbewohner-Kind 2
 }
 
 STRING 6734
@@ -32402,9 +32402,9 @@ Schwarzmarkt
 }
 
 STRING 6936
-// Units: n004 (Chaos Stone), Name (Name)
+// Units: n004 (Chaos-Stein), Name (Name)
 {
-Chaos Stone
+Chaos-Stein
 }
 
 STRING 6937
@@ -36194,25 +36194,25 @@ Steinfragment der Ordnung
 }
 
 STRING 7883
-// Items: I00X (Chaos Stone Fragment), Name (Name)
+// Items: I00X (Chaos-Stein Fragment), Name (Name)
 {
 Steinfragment des Chaos
 }
 
 STRING 7884
-// Items: I00X (Chaos Stone Fragment), Description (Description)
+// Items: I00X (Chaos-Stein Fragment), Description (Description)
 {
 Verstärkt den Angriffsschaden um 20 and casts Vampirism. Also needed for the Destroyer Transformation Ritual.
 }
 
 STRING 7885
-// Items: I00X (Chaos Stone Fragment), Ubertip (Tooltip - Extended)
+// Items: I00X (Chaos-Stein Fragment), Ubertip (Tooltip - Extended)
 {
 Verstärkt den Angriffsschaden um 20 and casts Vampirism. Also needed for the Destroyer Transformation Ritual.
 }
 
 STRING 7886
-// Items: I00X (Chaos Stone Fragment), Tip (Tooltip - Basic)
+// Items: I00X (Chaos-Stein Fragment), Tip (Tooltip - Basic)
 {
 Steinfragment des Chaos erwerben
 }
@@ -38834,13 +38834,13 @@ STRING 8397
 }
 
 STRING 8398
-// Units: n0JC (High Templar), Tip (Tooltip - Basic)
+// Units: n0JC (Großtempler), Tip (Tooltip - Basic)
 {
 Hohen Templer ausbilden
 }
 
 STRING 8399
-// Units: n0JC (High Templar), Name (Name)
+// Units: n0JC (Großtempler), Name (Name)
 {
 Hoher Templer
 }
@@ -39022,7 +39022,7 @@ H
 STRING 8439
 // Upgrades: R086 (Sorceress Adept Training,Sorceress Master Training), Name (Name)
 {
-Mystic Adeptenausbildung
+Mystiker-Adeptenausbildung
 }
 
 STRING 8440
@@ -39034,19 +39034,19 @@ STRING 8440
 STRING 8441
 // Upgrades: R086 (Sorceress Adept Training,Sorceress Master Training), Name (Name)
 {
-Mystic Meisterausbildung
+Mystiker-Meisterausbildung
 }
 
 STRING 8442
 // Upgrades: R086 (Sorceress Adept Training,Sorceress Master Training), Tip (Tooltip)
 {
-Mystic Adeptenausbildung
+Mystiker-Adeptenausbildung
 }
 
 STRING 8443
 // Upgrades: R086 (Sorceress Adept Training,Sorceress Master Training), Tip (Tooltip)
 {
-Mystic Meisterausbildung
+Mystiker-Meisterausbildung
 }
 
 STRING 8444
@@ -39058,25 +39058,25 @@ STRING 8444
 STRING 8445
 // Upgrades: R087 (Priest Adept Training,Priest Master Training), Name (Name)
 {
-High Templar Adeptenausbildung
+Großtempler-Adeptenausbildung
 }
 
 STRING 8446
 // Upgrades: R087 (Priest Adept Training,Priest Master Training), Name (Name)
 {
-High Templar Meisterausbildung
+Großtempler-Meisterausbildung
 }
 
 STRING 8447
 // Upgrades: R087 (Priest Adept Training,Priest Master Training), Tip (Tooltip)
 {
-High Templar Adeptenausbildung
+Großtempler-Adeptenausbildung
 }
 
 STRING 8448
 // Upgrades: R087 (Priest Adept Training,Priest Master Training), Tip (Tooltip)
 {
-High Templar Meisterausbildung
+Großtempler-Meisterausbildung
 }
 
 STRING 8449
@@ -39106,7 +39106,7 @@ STRING 8452
 STRING 8453
 // Abilities: A0K3 (Catch Kael), Name (Name)
 {
-Catch Kael
+Kael fangen
 }
 
 STRING 8454
@@ -39142,13 +39142,13 @@ Lor'themar Theron's Käfig
 STRING 8459
 // Items: I0JC (Lor'themar Theron's Cage), Description (Description)
 {
-A cage to capture Kael in Outland.
+Ein Käfig, um Kael in Fremdland zu fangen.
 }
 
 STRING 8460
 // Items: I0JC (Lor'themar Theron's Cage), Ubertip (Tooltip - Extended)
 {
-A cage to capture Kael in Outland.
+Ein Käfig, um Kael in Fremdland zu fangen.
 }
 
 STRING 8461
@@ -39356,9 +39356,9 @@ STRING 8526
 }
 
 STRING 8527
-// Items: I06S (Runeforger), Ubertip (Tooltip - Extended)
+// Items: I06S (Runenschmied), Ubertip (Tooltip - Extended)
 {
-Stellt Runen mit mehreren Aufladungen her:|n- Rune der Geschwindigkeit|n- Rune of Magie bannen|n- Rune der Wiederherstellung|n- Rune der Wiedergeburt|n- Rune of Lesser Auferstehung|n- Rune der Großen Auferstehung
+Stellt Runen mit mehreren Aufladungen her:|n- Rune der Geschwindigkeit|n- Rune der Magie-Bannung|n- Rune der Wiederherstellung|n- Rune der Wiedergeburt|n- Rune der Geringen Auferstehung|n- Rune der Großen Auferstehung
 }
 
 STRING 8528
@@ -39368,15 +39368,15 @@ STRING 8528
 }
 
 STRING 8529
-// Items: I163 (Rune of Lesser Resurrection (Runeforger)), Name (Name)
+// Items: I163 (Rune of Lesser Resurrection (Runenschmied)), Name (Name)
 {
-Rune of Lesser Auferstehung (Runeforger)
+Rune der Geringen Auferstehung (Runenschmied)
 }
 
 STRING 8530
-// Items: I164 (Rune of Greater Resurrection (Runeforger)), Name (Name)
+// Items: I164 (Rune of Greater Resurrection (Runenschmied)), Name (Name)
 {
-Rune der Großen Auferstehung (Runeforger)
+Rune der Großen Auferstehung (Runenschmied)
 }
 
 STRING 8531
@@ -39454,13 +39454,13 @@ Material für Khadgar
 STRING 8543
 // Items: I168 (Material for Khadgar), Description (Description)
 {
-Material for the reconstruction of Dalaran.
+Material für den Wiederaufbau von Dalran.
 }
 
 STRING 8544
 // Items: I168 (Material for Khadgar), Ubertip (Tooltip - Extended)
 {
-Material for the reconstruction of Dalaran which must be returned to Khadgar.
+Material für den Wiederaufbau von Dalran, das zu Khadgar gebracht werden muss.
 }
 
 STRING 8545
@@ -39472,43 +39472,43 @@ Runenschmieden - Großmeister
 STRING 8546
 // Abilities: A10R (Runeforging - Grand Master), Tip (Tooltip - Normal)
 {
-Großmeister Runenschmieden
+Großmeister-Runenschmieden
 }
 
 STRING 8547
 // Abilities: A10R (Runeforging - Grand Master), Ubertip (Tooltip - Normal - Extended)
 {
-The Runeforger uses his knowledge to craft a Rune of Lesser Auferstehung.
+Stellt Runen der Geringen Auferstehung her.
 }
 
 STRING 8548
 // Abilities: A10T (Runeforging - Doctor), Name (Name)
 {
-Runenschmieden - Doctor
+Runenschmieden - Doktor
 }
 
 STRING 8549
 // Abilities: A10T (Runeforging - Doctor), Tip (Tooltip - Normal)
 {
-Doctor Runenschmieden
+Doktor-Runenschmieden
 }
 
 STRING 8550
 // Abilities: A10T (Runeforging - Doctor), Ubertip (Tooltip - Normal - Extended)
 {
-The Runeforger uses his knowledge to craft a Rune der Großen Auferstehung.
+Stellt Runen der Großen Auferstehung her.
 }
 
 STRING 8551
 // Abilities: A10U (Item Hero Stat Bonus), EditorSuffix (Editor Suffix)
 {
-(+6 All Stats)
+(+6 Alle Werte)
 }
 
 STRING 8552
 // Abilities: A10V (Item Hero Stat Bonus), EditorSuffix (Editor Suffix)
 {
-(+7 All Stats)
+(+7 Alle Werte)
 }
 
 STRING 8553
@@ -39724,7 +39724,7 @@ E
 STRING 8612
 // Units: h09R (Fire Mage), Ubertip (Tooltip - Extended)
 {
-Damaging spellcaster. Can initially cast Feuerblitz. Can also learn Feuerregen and Feuer-Elementargeist beschwören. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
+Schaden zufügender Zauberer. Kann zu Beginn den Zauber 'Feuerblitz' wirken. Kann auch 'Feuerregen' und 'Feuer-Elementargeist beschwören' erlernen. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
 }
 
 STRING 8613
@@ -42014,7 +42014,7 @@ G
 }
 
 STRING 10174
-// Items: I06S (Runeforger), Hotkey (Hotkey)
+// Items: I06S (Runenschmied), Hotkey (Hotkey)
 {
 F
 }
@@ -42808,7 +42808,7 @@ S
 STRING 10320
 // Items: I06R (Sorcerer), Ubertip (Tooltip - Extended)
 {
-Craft wands with temporary effects and multiple charges:|n- Wand of Neutralization|n- Wand of the Wind|n- Wand of Reanimation|n- Wand of Sorcerer Illusion|n- Wand of Shadowsight|n- Wand of Telekinese
+Craft wands with temporary effects and multiple charges:|n- Zauberstab der Neutralisierung|n- Wand of the Wind|n- Wand of Reanimation|n- Wand of Sorcerer Illusion|n- Wand of Shadowsight|n- Wand of Telekinese
 }
 
 STRING 10321
@@ -43558,7 +43558,7 @@ STRING 10512
 STRING 10514
 // Abilities: A08D (Item Dark Portal), EditorSuffix (Editor Suffix)
 {
-(VIP Flag)
+(VIP-Flagge)
 }
 
 STRING 10517
@@ -43576,7 +43576,7 @@ In Bäumen verstecken
 STRING 10522
 // Abilities: S007 (Cargo Hold), EditorSuffix (Editor Suffix)
 {
-(VIP Car)
+(VIP-Auto)
 }
 
 STRING 10524
@@ -102121,13 +102121,13 @@ Zauberer
 }
 
 STRING 47696
-// Items: I06S (Runeforger), Name (Name)
+// Items: I06S (Runenschmied), Name (Name)
 {
 Runenschmied
 }
 
 STRING 47697
-// Items: I06S (Runeforger), Tip (Tooltip - Basic)
+// Items: I06S (Runenschmied), Tip (Tooltip - Basic)
 {
 Runenschmied
 }
