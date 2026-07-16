@@ -20178,7 +20178,7 @@ Rune der Geschwindigkeit (Runenschmied)
 STRING 4095
 // Items: I031 (Rune of Dispel Magic (Runenschmied)), Name (Name)
 {
-Rune of Magie bannen (Runenschmied)
+Rune der Magie-Bannung (Runenschmied)
 }
 
 STRING 4096
@@ -20196,19 +20196,19 @@ Buch des Drachenzüchtens
 STRING 4098
 // Items: I033 (Book of Dragon Breeding), Description (Description)
 {
-A book that contains knowledge of breeding dragons.
+Ein Buch, welches das Wissen Drachen zu züchten enthält.
 }
 
 STRING 4099
 // Items: I033 (Book of Dragon Breeding), Ubertip (Tooltip - Extended)
 {
-A book that contains knowledge of breeding dragons.
+Ein Buch, welches das Wissen Drachen zu züchten enthält.
 }
 
 STRING 4100
 // Abilities: A06I (Runeforging - Novice), Ubertip (Tooltip - Normal - Extended)
 {
-The Runenschmied uses magical power to create a Rune der Geschwindigkeit.
+Stellt Runen der Geschwindigkeit her.
 }
 
 STRING 4101
@@ -20226,7 +20226,7 @@ E
 STRING 4104
 // Abilities: A06J (Runeforging - Adept), Ubertip (Tooltip - Normal - Extended)
 {
-The Runenschmied uses magic to craft a Rune der Wiederherstellung.
+Stellt Runen der Wiederherstellung her.
 }
 
 STRING 4105
@@ -20238,7 +20238,7 @@ Runenschmieden - Fortgeschritten
 STRING 4107
 // Abilities: A06K (Runeforging - Advanced), Ubertip (Tooltip - Normal - Extended)
 {
-The Runenschmied uses magic to create a Rune of Magie bannen.
+Stellt Runen der Magie-Bannung.
 }
 
 STRING 4108
@@ -20250,7 +20250,7 @@ Runenschmieden - Meister
 STRING 4110
 // Abilities: A06L (Runeforging - Master), Ubertip (Tooltip - Normal - Extended)
 {
-The Runenschmied uses magic to craft a Rune der Wiedergeburt.
+Stellt Runen der Wiedergeburt her.
 }
 
 STRING 4111
