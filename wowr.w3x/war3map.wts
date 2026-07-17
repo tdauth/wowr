@@ -19332,7 +19332,7 @@ N
 STRING 3845
 // Abilities: A06F (Sorcery - Novice), Ubertip (Tooltip - Normal - Extended)
 {
-Crafts Wands of Neutralization.
+Craft Wands of Neutralization.
 }
 
 STRING 3846
@@ -20208,7 +20208,7 @@ A book that contains knowledge of breeding dragons.
 STRING 4100
 // Abilities: A06I (Runeforging - Novice), Ubertip (Tooltip - Normal - Extended)
 {
-Crafts Runes of Speed.
+Craft Runes of Speed.
 }
 
 STRING 4101
@@ -20226,7 +20226,7 @@ E
 STRING 4104
 // Abilities: A06J (Runeforging - Adept), Ubertip (Tooltip - Normal - Extended)
 {
-Crafts Runes of Restoration.
+Craft Runes of Restoration.
 }
 
 STRING 4105
@@ -20238,7 +20238,7 @@ Runeforging - Advanced
 STRING 4107
 // Abilities: A06K (Runeforging - Advanced), Ubertip (Tooltip - Normal - Extended)
 {
-Crafts Runes of Dispel Magic.
+Craft Runes of Dispel Magic.
 }
 
 STRING 4108
@@ -20250,7 +20250,7 @@ Runeforging - Master
 STRING 4110
 // Abilities: A06L (Runeforging - Master), Ubertip (Tooltip - Normal - Extended)
 {
-Crafts Runes of Rebirth.
+Craft Runes of Rebirth.
 }
 
 STRING 4111
@@ -21120,13 +21120,13 @@ Build Furbolg Barracks
 STRING 4361
 // Units: n027 (Furbolg Barracks), Ubertip (Tooltip - Extended)
 {
-Building to train Furbolg warrior units.
+Trains Furbolg warrior units.
 }
 
 STRING 4362
 // Units: n027 (Furbolg Barracks), Description (Description)
 {
-Building to train Furbolg warrior units.
+Trains Furbolg warrior units.
 }
 
 STRING 4363
@@ -37062,7 +37062,7 @@ Grand Master Weaponsmithing
 STRING 8070
 // Abilities: A0YG (Weaponsmithing - Grand Master), Ubertip (Tooltip - Normal - Extended)
 {
-Crafts Mythical Poison Blades.
+Craft Mythical Poison Blades.
 }
 
 STRING 8071
@@ -37080,7 +37080,7 @@ Doctor Scribing
 STRING 8073
 // Abilities: A0YH (Scribing - Doctor), Ubertip (Tooltip - Normal - Extended)
 {
-Crafts Tomes of Power.
+Craft Tomes of Power.
 }
 
 STRING 8074
@@ -37098,7 +37098,7 @@ Grand Master Scribing
 STRING 8076
 // Abilities: A0YI (Scribing - Grand Master), Ubertip (Tooltip - Normal - Extended)
 {
-Crafts Tomes of Greater Experince.
+Craft Tomes of Greater Experince.
 }
 
 STRING 8077
@@ -37170,7 +37170,7 @@ Grand Master Enchanting
 STRING 8088
 // Abilities: A0YJ (Enchanting - Grand Master), Ubertip (Tooltip - Normal - Extended)
 {
-Crafts Grand Master Enchanting Formulas.
+Craft Grand Master Enchanting Formulas.
 }
 
 STRING 8089
@@ -37188,7 +37188,7 @@ Doctor Enchanting
 STRING 8091
 // Abilities: A0YL (Enchanting - Doctor), Ubertip (Tooltip - Normal - Extended)
 {
-Crafts Doctor Enchanter Formulas.
+Craft Doctor Enchanter Formulas.
 }
 
 STRING 8092
@@ -37248,7 +37248,7 @@ Grand Master Armoring
 STRING 8101
 // Abilities: A0YM (Armoring - Grand Master), Ubertip (Tooltip - Normal - Extended)
 {
-Crafts Mythical Golden Armors.
+Craft Mythical Golden Armors.
 }
 
 STRING 8102
@@ -37638,7 +37638,7 @@ Grand Master Inscription
 STRING 8184
 // Abilities: A108 (Inscription - Grand Master), Ubertip (Tooltip - Normal - Extended)
 {
-Crafts Grand Master Glyphs.
+Craft Grand Master Glyphs.
 }
 
 STRING 8185
@@ -37656,7 +37656,7 @@ Doctor Inscription
 STRING 8187
 // Abilities: A109 (Inscription - Doctor), Ubertip (Tooltip - Normal - Extended)
 {
-Crafts Doctor Glyphs.
+Craft Doctor Glyphs.
 }
 
 STRING 8188
@@ -38181,7 +38181,7 @@ Doctor Warlockery
 STRING 8277
 // Abilities: A10B (Warlockery - Doctor), Ubertip (Tooltip - Normal - Extended)
 {
-Crafts Tiny Fel Fountains.
+Craft Tiny Fel Fountains.
 }
 
 STRING 8279
@@ -39471,7 +39471,7 @@ Grand Master Runeforging
 STRING 8547
 // Abilities: A10R (Runeforging - Grand Master), Ubertip (Tooltip - Normal - Extended)
 {
-Crafts Runes of Lesser Resurrection.
+Craft Runes of Lesser Resurrection.
 }
 
 STRING 8548
@@ -39489,7 +39489,7 @@ Doctor Runeforging
 STRING 8550
 // Abilities: A10T (Runeforging - Doctor), Ubertip (Tooltip - Normal - Extended)
 {
-Crafts Runes of Greater Resurrection.
+Craft Runes of Greater Resurrection.
 }
 
 STRING 8551
@@ -69554,7 +69554,7 @@ Master Herbalism
 STRING 30972
 // Abilities: A01D (Herbalism - Master), Ubertip (Tooltip - Normal - Extended)
 {
-Crafts Talismans of Everlasting.
+Craft Talismans of Everlasting.
 }
 
 STRING 30973
@@ -70946,43 +70946,43 @@ Buy Property Darkspear Isle
 STRING 31843
 // Abilities: A0IS (Enchanting - Novice), Ubertip (Tooltip - Normal - Extended)
 {
-Crafts Novice Enchanting Formulas.
+Craft Novice Enchanting Formulas.
 }
 
 STRING 31844
 // Abilities: A0IT (Enchanting - Advanced), Ubertip (Tooltip - Normal - Extended)
 {
-Crafts Advanced Enchanting Formulas.
+Craft Advanced Enchanting Formulas.
 }
 
 STRING 31845
 // Abilities: A0IU (Enchanting - Adept), Ubertip (Tooltip - Normal - Extended)
 {
-Crafts Adept Enchanting Formulas.
+Craft Adept Enchanting Formulas.
 }
 
 STRING 31846
 // Abilities: A0IV (Enchanting - Master), Ubertip (Tooltip - Normal - Extended)
 {
-Crafts Master Enchanting Formulas.
+Craft Master Enchanting Formulas.
 }
 
 STRING 31847
 // Abilities: A0U3 (Merchant - Novice), Ubertip (Tooltip - Normal - Extended)
 {
-Issues Small Bills.
+Issue Small Bills.
 }
 
 STRING 31848
 // Abilities: A0U9 (Merchant - Advanced), Ubertip (Tooltip - Normal - Extended)
 {
-Issues Bills.
+Issue Bills.
 }
 
 STRING 31849
 // Abilities: A0UA (Merchant - Adept), Ubertip (Tooltip - Normal - Extended)
 {
-Issues Large Bills.
+Issue Large Bills.
 }
 
 STRING 31913
@@ -85166,19 +85166,19 @@ Provides +4 to hero stats, summoned units and defense, +9 to damage and +200 to 
 STRING 38072
 // Abilities: A1CQ (Inscription - Adept), Ubertip (Tooltip - Normal - Extended)
 {
-Crafts Adept Glyphs.
+Craft Adept Glyphs.
 }
 
 STRING 38073
 // Abilities: A1CR (Inscription - Master), Ubertip (Tooltip - Normal - Extended)
 {
-Crafts Master Glyphs.
+Craft Master Glyphs.
 }
 
 STRING 38074
 // Abilities: A1CS (Inscription - Advanced), Ubertip (Tooltip - Normal - Extended)
 {
-Crafts Advanced Glyphs.
+Craft Advanced Glyphs.
 }
 
 STRING 38075
@@ -105062,7 +105062,7 @@ Advanced Cooking
 STRING 49561
 // Abilities: A1UJ (Cooking - Advanced), Ubertip (Tooltip - Normal - Extended)
 {
-Crafts Kitchen Knives.
+Craft Kitchen Knives.
 }
 
 STRING 49562
@@ -110861,7 +110861,7 @@ Adept Warlockery
 STRING 51611
 // Abilities: A1WW (Warlockery - Novice), Ubertip (Tooltip - Normal - Extended)
 {
-Crafts Wands of Drain.
+Craft Wands of Drain.
 }
 
 STRING 51612
@@ -110951,19 +110951,19 @@ Craft Boots of Teleportation
 STRING 51638
 // Abilities: A1WX (Warlockery - Advanced), Ubertip (Tooltip - Normal - Extended)
 {
-Crafts Inferno Stones.
+Craft Inferno Stones.
 }
 
 STRING 51639
 // Abilities: A1WY (Warlockery - Adept), Ubertip (Tooltip - Normal - Extended)
 {
-Crafts Demon Blood.
+Craft Demon Blood.
 }
 
 STRING 51640
 // Abilities: A1WZ (Warlockery - Master), Ubertip (Tooltip - Normal - Extended)
 {
-Crafts Tiny Demon Portals.
+Craft Tiny Demon Portals.
 }
 
 STRING 51641
@@ -113485,7 +113485,7 @@ Novice Thieving
 STRING 54476
 // Abilities: A20L (Thieving - Novice), Ubertip (Tooltip - Normal - Extended)
 {
-Crafts Lock Picks.
+Craft Lock Picks.
 }
 
 STRING 54477
@@ -113503,7 +113503,7 @@ Advanced Thieving
 STRING 54479
 // Abilities: A20M (Thieving - Advanced), Ubertip (Tooltip - Normal - Extended)
 {
-Crafts Locked Item Summoners, Item Lockers and Tiny Safes.
+Craft Locked Item Summoners, Item Lockers and Tiny Safes.
 }
 
 STRING 54480
