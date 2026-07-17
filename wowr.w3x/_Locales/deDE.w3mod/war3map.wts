@@ -10599,7 +10599,7 @@ Diamant erwerben
 STRING 1806
 // Items: I0OT (Summon Guard of the Old Gods), Ubertip (Tooltip - Extended)
 {
-Heavy warrior. Can cast Stille, Feuerblitz, Schmetter-Angriff, Hieb, Festhaut and Animate Dead. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r|n|n|cffffcc00Requires 4 Diamonds and 10 food.|r|n|n|cff808080Drop the required items in the inventory of the Crafting Stash.|r
+Heavy warrior. Can cast Stille, Feuerblitz, Schmetter-Angriff, Hieb, Festhaut and Animate Dead. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r|n|n|cffffcc00Requires 4 Diamonds and 10 food.|r|n|n|cff808080Legen Sie die benötigten Gegenstände in das Inventar des Herstellungslagers.|r
 }
 
 STRING 1807
@@ -14988,7 +14988,7 @@ Käfig
 STRING 2825
 // Items: I09B (Craft Goblin Land Mines), Ubertip (Tooltip - Extended)
 {
-Places a hidden land mine at a target point. Enemy units that move near the land mine will activate the mine, destroying the mine and causing area of effect damage to nearby units. |nContains <gobm,uses> charges.|n|n|cffffcc00Requirements:|n- 3 Schwarzpulvers|n- Profession Sprengmeister.|r|n|n|cff808080Drop the required items in the inventory of the Crafting Stash.|r
+Places a hidden land mine at a target point. Enemy units that move near the land mine will activate the mine, destroying the mine and causing area of effect damage to nearby units. |nContains <gobm,uses> charges.|n|n|cffffcc00Requirements:|n- 3 Schwarzpulvers|n- Profession Sprengmeister.|r|n|n|cff808080Legen Sie die benötigten Gegenstände in das Inventar des Herstellungslagers.|r
 }
 
 STRING 2826
@@ -39640,7 +39640,7 @@ Feuerhand-Handschuhe herstellen
 STRING 8595
 // Items: I16D (Craft Firehand Gauntlets), Ubertip (Tooltip - Extended)
 {
-Increases armor by <AId5,DataA1> and attack rate by <AIs2,DataA1,%>% when worn.|n|n|cffffcc00Requires 3 Orbs of Fire per Firehand Gauntles.|r|n|n|cff808080Drop the required items in the inventory of the Crafting Stash.|r
+Increases armor by <AId5,DataA1> and attack rate by <AIs2,DataA1,%>% when worn.|n|n|cffffcc00Requires 3 Orbs of Fire per Firehand Gauntles.|r|n|n|cff808080Legen Sie die benötigten Gegenstände in das Inventar des Herstellungslagers.|r
 }
 
 STRING 8596
@@ -41086,37 +41086,37 @@ W
 STRING 9618
 // Items: I091 (Craft Potion of Mana), Ubertip (Tooltip - Extended)
 {
-Restores <AIm1,DataA1> mana when used.|n|n|cffffcc00Requires 3 Mana Herbs per potion.|r|n|n|cff808080Drop the required items in the inventory of the Crafting Stash.|r
+Restores <AIm1,DataA1> mana when used.|n|n|cffffcc00Benötigt 3 Manakräuter pro Trank.|r|n|n|cff808080Legen Sie die benötigten Gegenstände in das Inventar des Herstellungslagers.|r
 }
 
 STRING 9619
 // Items: I093 (Craft Potion of Healing), Ubertip (Tooltip - Extended)
 {
-Heilens <AIh1,DataA1> hit points when used.|n|n|cffffcc00Requires 3 Heilening Herbs per potion.|r|n|n|cff808080Drop the required items in the inventory of the Crafting Stash.|r
+Heilt bei Benutzung <AIh1,DataA1> Trefferpunkte.|n|n|cffffcc00Benötigt 3 Heilkräuter pro Trank.|r|n|n|cff808080Legen Sie die benötigten Gegenstände in das Inventar des Herstellungslagers.|r
 }
 
 STRING 9620
 // Items: I094 (Craft Stone Token), Ubertip (Tooltip - Extended)
 {
-Summons a Granit-Golem to fight for you. |nHält <AIfr,Dur1> Sekunden lang an.|n|n|cffffcc00Requires 3 Steine per token.|r|n|n|cff808080Drop the required items in the inventory of the Crafting Stash.|r
+Beschwört einen Granit-Golem, um für Sie zu kämpfen. |nHält <AIfr,Dur1> Sekunden lang an.|n|n|cffffcc00Benötigt 3 Steine pro Marke.|r|n|n|cff808080Legen Sie die benötigten Gegenstände in das Inventar des Herstellungslagers.|r
 }
 
 STRING 9621
 // Items: I096 (Craft Gold Bars), Ubertip (Tooltip - Extended)
 {
-Gives <A0EI,DataA1> gold to the player when used.|n|n|cffffcc00Requires 3 Gold Ores per Goldbarren.|r|n|n|cff808080Drop the required items in the inventory of the Crafting Stash.|r
+Gibt dem Spieler bei Benutzung <A0EI,DataA1> Gold.|n|n|cffffcc00Benötigt 3 Goldbrocken pro Goldbarren.|r|n|n|cff808080Legen Sie die benötigten Gegenstände in das Inventar des Herstellungslagers.|r
 }
 
 STRING 9622
 // Items: I097 (Craft Boards), Ubertip (Tooltip - Extended)
 {
-Gives <A0M7,DataA1> lumber to the player when used.|n|n|cffffcc00Requires 3 Branches per Boards.|r|n|n|cff808080Drop the required items in the inventory of the Crafting Stash.|r
+Gibt dem Spieler bei Benutzung <A0M7,DataA1> Holz.|n|n|cffffcc00Benötigt 3 Äste pro Bretter.|r|n|n|cff808080Legen Sie die benötigten Gegenstände in das Inventar des Herstellungslagers.|r
 }
 
 STRING 9623
 // Items: I098 (Craft Potion of Greater Restoration), Ubertip (Tooltip - Extended)
 {
-Heilens <AIh2,DataA1> hit points and restores <AIm2,DataA1> mana when used.|n|n|cffffcc00Requires 1 Potion of Greater Heilening and 1 Potion of Greater Mana.|r|n|n|cff808080Drop the required items in the inventory of the Crafting Stash.|r
+Heilens <AIh2,DataA1> hit points and restores <AIm2,DataA1> mana when used.|n|n|cffffcc00Requires 1 Potion of Greater Heilening and 1 Potion of Greater Mana.|r|n|n|cff808080Legen Sie die benötigten Gegenstände in das Inventar des Herstellungslagers.|r
 }
 
 STRING 9624
@@ -41170,13 +41170,13 @@ STRING 9631
 STRING 9634
 // Items: I099 (Craft Restoration Stone), Ubertip (Tooltip - Extended)
 {
-Increases the life regeneration rate of the Hero by <Arll,DataA1> hit points per second when worn. Can be consumed for <AIh2,DataA1> health. Increases the mana regeneration rate of the Hero by <AIrn,DataA1,%>% when worn. Can be consumed for <AIm2,DataA1> mana.|n|n|cffffcc00Requires 1 Heilenth Stone and 1 Mana Stone per Wiederherstellungsstein.|r|n|n|cff808080Drop the required items in the inventory of the Crafting Stash.|r
+Increases the life regeneration rate of the Hero by <Arll,DataA1> hit points per second when worn. Can be consumed for <AIh2,DataA1> health. Increases the mana regeneration rate of the Hero by <AIrn,DataA1,%>% when worn. Can be consumed for <AIm2,DataA1> mana.|n|n|cffffcc00Requires 1 Heilenth Stone and 1 Mana Stone per Wiederherstellungsstein.|r|n|n|cff808080Legen Sie die benötigten Gegenstände in das Inventar des Herstellungslagers.|r
 }
 
 STRING 9635
 // Items: I09A (Craft Orb of Orbs), Ubertip (Tooltip - Extended)
 {
-Combines effects of known orbs to one single item. Adds 60 bonus damage to the attack of a Hero when carried. The Hero's attack also becomes ranged when attacking air and it has the following effects:|n- AOE damage.|n- Langsams movement speed.|n- Summons a Dark Minion on the unit's death.|n- Langsams attack rate.|n- Decreases armor.|n- Poisons the target.|n- Chance to dispel magic and dealing extra damage to summoned units.|n- Resurrects up to 6 dead organic player units.|n- Destroys <A0GO,DataD1,%> % mana of the caused damage.|n- Deals 5 % extra damage against Undead units.|n- Give a chance of 30 % to web enemy units for <A1C9,Dur1> Sekunden lang an.|n- Restores <A15P,DataA1,%> % of the caused damage as hit points.|n- Reduce the enemy's attack damage by 5 % for 5 seconds.|n|n|cffffcc00Requires 6 Orbs.|r|n|n|cff808080Drop the required items in the inventory of the Crafting Stash.|r
+Combines effects of known orbs to one single item. Adds 60 bonus damage to the attack of a Hero when carried. The Hero's attack also becomes ranged when attacking air and it has the following effects:|n- AOE damage.|n- Langsams movement speed.|n- Summons a Dark Minion on the unit's death.|n- Langsams attack rate.|n- Decreases armor.|n- Poisons the target.|n- Chance to dispel magic and dealing extra damage to summoned units.|n- Resurrects up to 6 dead organic player units.|n- Destroys <A0GO,DataD1,%> % mana of the caused damage.|n- Deals 5 % extra damage against Undead units.|n- Give a chance of 30 % to web enemy units for <A1C9,Dur1> Sekunden lang an.|n- Restores <A15P,DataA1,%> % of the caused damage as hit points.|n- Reduce the enemy's attack damage by 5 % for 5 seconds.|n|n|cffffcc00Requires 6 Orbs.|r|n|n|cff808080Legen Sie die benötigten Gegenstände in das Inventar des Herstellungslagers.|r
 }
 
 STRING 9638
@@ -41188,31 +41188,31 @@ Stellt Gegenstände her, die euch erlauben als Kapität zur See zu leben. Arrr!|
 STRING 9639
 // Items: I09W (Craft Claws of Attack +12), Ubertip (Tooltip - Extended)
 {
-Increases the attack damage of the Hero by 12 when worn.|n|n|cffffcc00Requirements:|n- Klauen des Angriffs +9|n- Klauen des Angriffs +3|r|n|n|cff808080Drop the required items in the inventory of the Crafting Stash.|r
+Increases the attack damage of the Hero by 12 when worn.|n|n|cffffcc00Requirements:|n- Klauen des Angriffs +9|n- Klauen des Angriffs +3|r|n|n|cff808080Legen Sie die benötigten Gegenstände in das Inventar des Herstellungslagers.|r
 }
 
 STRING 9640
 // Items: I09X (Craft Claws of Attack +15), Ubertip (Tooltip - Extended)
 {
-Increases the attack damage of the Hero by 15 when worn.|n|n|cffffcc00Requirements:|n- Klauen des Angriffs +12|n- Klauen des Angriffs +3|r|n|n|cff808080Drop the required items in the inventory of the Crafting Stash.|r
+Increases the attack damage of the Hero by 15 when worn.|n|n|cffffcc00Requirements:|n- Klauen des Angriffs +12|n- Klauen des Angriffs +3|r|n|n|cff808080Legen Sie die benötigten Gegenstände in das Inventar des Herstellungslagers.|r
 }
 
 STRING 9641
 // Items: I09Y (Craft Ring of Protection +3), Ubertip (Tooltip - Extended)
 {
-Increases the armor of the Hero by 3 when worn.|n|n|cffffcc00Requirements:|n- Ring des Schutzes +2|n- Ring des Schutzes +1|r|n|n|cff808080Drop the required items in the inventory of the Crafting Stash.|r
+Increases the armor of the Hero by 3 when worn.|n|n|cffffcc00Requirements:|n- Ring des Schutzes +2|n- Ring des Schutzes +1|r|n|n|cff808080Legen Sie die benötigten Gegenstände in das Inventar des Herstellungslagers.|r
 }
 
 STRING 9642
 // Items: I09Z (Craft Ring of Protection +4), Ubertip (Tooltip - Extended)
 {
-Increases the armor of the Hero by 4 when worn.|n|n|cffffcc00Requirements:|n- Ring des Schutzes +3|n- Ring des Schutzes +1|r|n|n|cff808080Drop the required items in the inventory of the Crafting Stash.|r
+Increases the armor of the Hero by 4 when worn.|n|n|cffffcc00Requirements:|n- Ring des Schutzes +3|n- Ring des Schutzes +1|r|n|n|cff808080Legen Sie die benötigten Gegenstände in das Inventar des Herstellungslagers.|r
 }
 
 STRING 9643
 // Items: I0A0 (Craft Demonic Figurine), Ubertip (Tooltip - Extended)
 {
-Summons a Unheilshüter to fight for you. |nHält <AIfu,Dur1> Sekunden lang an.|n|n|cffffcc00Requirements:|n- 3 Stachelhalsbands|r|n|n|cff808080Drop the required items in the inventory of the Crafting Stash.|r
+Summons a Unheilshüter to fight for you. |nHält <AIfu,Dur1> Sekunden lang an.|n|n|cffffcc00Requirements:|n- 3 Stachelhalsbands|r|n|n|cff808080Legen Sie die benötigten Gegenstände in das Inventar des Herstellungslagers.|r
 }
 
 STRING 9650
@@ -52018,7 +52018,7 @@ Dryade
 STRING 15027
 // Items: I0YJ (Craft Boots of Teleportation), Ubertip (Tooltip - Extended)
 {
-Move orders teleport the hero instantly to the target location if it has been discovered.|n|n|cffffcc00Requires 6 legendary items which are not consumed on crafting.|r|n|n|cff808080Drop the required items in the inventory of the Crafting Stash.|r
+Move orders teleport the hero instantly to the target location if it has been discovered.|n|n|cffffcc00Requires 6 legendary items which are not consumed on crafting.|r|n|n|cff808080Legen Sie die benötigten Gegenstände in das Inventar des Herstellungslagers.|r
 }
 
 STRING 15028
@@ -96129,115 +96129,115 @@ Neutrales Kind ausbilden
 STRING 42962
 // Items: I0H6 (Craft Iron Bars), Ubertip (Tooltip - Extended)
 {
-Can be used to craft anything made of iron.|n|n|cffffcc00Requires 3 Iron Ores per Eisenbarren.|r|n|n|cff808080Drop the required items in the inventory of the Crafting Stash.|r
+Can be used to craft anything made of iron.|n|n|cffffcc00Requires 3 Iron Ores per Eisenbarren.|r|n|n|cff808080Legen Sie die benötigten Gegenstände in das Inventar des Herstellungslagers.|r
 }
 
 STRING 42963
 // Items: I0JO (Craft Inferno Stone), Ubertip (Tooltip - Extended)
 {
-Calls an Höllenbestie down from the sky, dealing <AIin,DataA1> damage and stunning enemy land units for <AIin,Dur1> seconds in an area. The Höllenbestie lasts <AIin,DataB1> Sekunden lang an.|n|n|cffffcc00Requirements:|n- 2 Stachelhalsbands|n- 1 Dämonen-Statuette|r|n|n|cff808080Drop the required items in the inventory of the Crafting Stash.|r
+Calls an Höllenbestie down from the sky, dealing <AIin,DataA1> damage and stunning enemy land units for <AIin,Dur1> seconds in an area. The Höllenbestie lasts <AIin,DataB1> Sekunden lang an.|n|n|cffffcc00Requirements:|n- 2 Stachelhalsbands|n- 1 Dämonen-Statuette|r|n|n|cff808080Legen Sie die benötigten Gegenstände in das Inventar des Herstellungslagers.|r
 }
 
 STRING 42964
 // Items: I0JQ (Craft Ice Shards), Ubertip (Tooltip - Extended)
 {
-Summons an Ice Geist. The Ice Geist lasts <AIir,Dur1> Sekunden lang an.|n|n|cffffcc00Requires 3 Ice per Ice Shard.|r|n|n|cff808080Drop the required items in the inventory of the Crafting Stash.|r
+Summons an Ice Geist. The Ice Geist lasts <AIir,Dur1> Sekunden lang an.|n|n|cffffcc00Requires 3 Ice per Ice Shard.|r|n|n|cff808080Legen Sie die benötigten Gegenstände in das Inventar des Herstellungslagers.|r
 }
 
 STRING 42965
 // Items: I0KJ (Craft Spiked Collar), Ubertip (Tooltip - Extended)
 {
-Summons a Teufels-Pirscher to fight for you. |nHält <AIfh,Dur1> Sekunden lang an.|n|n|cffffcc00Requirements:|n- 3 Spikes|r|n|n|cff808080Drop the required items in the inventory of the Crafting Stash.|r
+Summons a Teufels-Pirscher to fight for you. |nHält <AIfh,Dur1> Sekunden lang an.|n|n|cffffcc00Requirements:|n- 3 Spikes|r|n|n|cff808080Legen Sie die benötigten Gegenstände in das Inventar des Herstellungslagers.|r
 }
 
 STRING 42966
 // Items: I0KR (Craft Silver Bars), Ubertip (Tooltip - Extended)
 {
-Gives <A18G,DataA1> gold to the player when used.|n|n|cffffcc00Requires 3 Silver Ores per Silver Bars.|r|n|n|cff808080Drop the required items in the inventory of the Crafting Stash.|r
+Gives <A18G,DataA1> gold to the player when used.|n|n|cffffcc00Requires 3 Silver Ores per Silver Bars.|r|n|n|cff808080Legen Sie die benötigten Gegenstände in das Inventar des Herstellungslagers.|r
 }
 
 STRING 42967
 // Items: I0NV (Craft Shadow Orb +1), Ubertip (Tooltip - Extended)
 {
-This artifact was imbued with special powers by the Orc Shadow Council. It increases your attack damage by 1.|n|n|cffffcc00Requirements:|n- Schattenkugel Fragment|r|n|n|cff808080Drop the required items in the inventory of the Crafting Stash.|r
+This artifact was imbued with special powers by the Orc Shadow Council. It increases your attack damage by 1.|n|n|cffffcc00Requirements:|n- Schattenkugel Fragment|r|n|n|cff808080Legen Sie die benötigten Gegenstände in das Inventar des Herstellungslagers.|r
 }
 
 STRING 42968
 // Items: I0NW (Craft Shadow Orb +2), Ubertip (Tooltip - Extended)
 {
-This artifact was imbued with special powers by the Orc Shadow Council. It increases your attack damage by 2.|n|n|cffffcc00Requirements:|n- 2 Schattenkugel Fragments|r|n|n|cff808080Drop the required items in the inventory of the Crafting Stash.|r
+This artifact was imbued with special powers by the Orc Shadow Council. It increases your attack damage by 2.|n|n|cffffcc00Requirements:|n- 2 Schattenkugel Fragments|r|n|n|cff808080Legen Sie die benötigten Gegenstände in das Inventar des Herstellungslagers.|r
 }
 
 STRING 42969
 // Items: I0NX (Craft Shadow Orb +3), Ubertip (Tooltip - Extended)
 {
-This artifact was imbued with special powers by the Orc Shadow Council. It increases your attack damage by 3.|n|n|cffffcc00Requirements:|n- 3 Schattenkugel Fragments|r|n|n|cff808080Drop the required items in the inventory of the Crafting Stash.|r
+This artifact was imbued with special powers by the Orc Shadow Council. It increases your attack damage by 3.|n|n|cffffcc00Requirements:|n- 3 Schattenkugel Fragments|r|n|n|cff808080Legen Sie die benötigten Gegenstände in das Inventar des Herstellungslagers.|r
 }
 
 STRING 42970
 // Items: I0NY (Craft Shadow Orb +4), Ubertip (Tooltip - Extended)
 {
-This artifact was imbued with special powers by the Orc Shadow Council. It increases your attack damage by 4 and armor by 1.|n|n|cffffcc00Requirements:|n- 4 Schattenkugel Fragments|r|n|n|cff808080Drop the required items in the inventory of the Crafting Stash.|r
+This artifact was imbued with special powers by the Orc Shadow Council. It increases your attack damage by 4 and armor by 1.|n|n|cffffcc00Requirements:|n- 4 Schattenkugel Fragments|r|n|n|cff808080Legen Sie die benötigten Gegenstände in das Inventar des Herstellungslagers.|r
 }
 
 STRING 42971
 // Items: I0NZ (Craft Shadow Orb +5), Ubertip (Tooltip - Extended)
 {
-This artifact was imbued with special powers by the Orc Shadow Council. It increases your attack damage by 5 and armor by 1.|n|n|cffffcc00Requirements:|n- 5 Schattenkugel Fragments|r|n|n|cff808080Drop the required items in the inventory of the Crafting Stash.|r
+This artifact was imbued with special powers by the Orc Shadow Council. It increases your attack damage by 5 and armor by 1.|n|n|cffffcc00Requirements:|n- 5 Schattenkugel Fragments|r|n|n|cff808080Legen Sie die benötigten Gegenstände in das Inventar des Herstellungslagers.|r
 }
 
 STRING 42972
 // Items: I0O0 (Craft Shadow Orb +6), Ubertip (Tooltip - Extended)
 {
-This artifact was imbued with special powers by the Orc Shadow Council. It increases your attack damage by 6 and armor by 1.|n|n|cffffcc00Requirements:|n- 6 Schattenkugel Fragments|r|n|n|cff808080Drop the required items in the inventory of the Crafting Stash.|r
+This artifact was imbued with special powers by the Orc Shadow Council. It increases your attack damage by 6 and armor by 1.|n|n|cffffcc00Requirements:|n- 6 Schattenkugel Fragments|r|n|n|cff808080Legen Sie die benötigten Gegenstände in das Inventar des Herstellungslagers.|r
 }
 
 STRING 42973
 // Items: I0O1 (Craft Shadow Orb +7), Ubertip (Tooltip - Extended)
 {
-This artifact was imbued with special powers by the Orc Shadow Council. It increases your attack damage by 7 and armor by 2.|n|n|cffffcc00Requirements:|n- 7 Schattenkugel Fragments|r|n|n|cff808080Drop the required items in the inventory of the Crafting Stash.|r
+This artifact was imbued with special powers by the Orc Shadow Council. It increases your attack damage by 7 and armor by 2.|n|n|cffffcc00Requirements:|n- 7 Schattenkugel Fragments|r|n|n|cff808080Legen Sie die benötigten Gegenstände in das Inventar des Herstellungslagers.|r
 }
 
 STRING 42974
 // Items: I0O2 (Craft Shadow Orb +8), Ubertip (Tooltip - Extended)
 {
-This artifact was imbued with special powers by the Orc Shadow Council. It increases your attack damage by 8 and armor by 2.|n|n|cffffcc00Requirements:|n- 8 Schattenkugel Fragments|r|n|n|cff808080Drop the required items in the inventory of the Crafting Stash.|r
+This artifact was imbued with special powers by the Orc Shadow Council. It increases your attack damage by 8 and armor by 2.|n|n|cffffcc00Requirements:|n- 8 Schattenkugel Fragments|r|n|n|cff808080Legen Sie die benötigten Gegenstände in das Inventar des Herstellungslagers.|r
 }
 
 STRING 42975
 // Items: I0O3 (Craft Shadow Orb +9), Ubertip (Tooltip - Extended)
 {
-This artifact was imbued with special powers by the Orc Shadow Council. It increases your attack damage by 9, armor by 2 and grants enhanced hit point regeneration.|n|n|cffffcc00Requirements:|n- 9 Schattenkugel Fragments|r|n|n|cff808080Drop the required items in the inventory of the Crafting Stash.|r
+This artifact was imbued with special powers by the Orc Shadow Council. It increases your attack damage by 9, armor by 2 and grants enhanced hit point regeneration.|n|n|cffffcc00Requirements:|n- 9 Schattenkugel Fragments|r|n|n|cff808080Legen Sie die benötigten Gegenstände in das Inventar des Herstellungslagers.|r
 }
 
 STRING 42976
 // Items: I0O4 (Craft Shadow Orb +10), Ubertip (Tooltip - Extended)
 {
-This artifact was imbued with special powers by the Orc Shadow Council. It increases your attack damage by 10, armor by 3 and grants enhanced hit point regeneration.|n|n|cffffcc00Requirements:|n- 10 Schattenkugel Fragments|r|n|n|cff808080Drop the required items in the inventory of the Crafting Stash.|r
+This artifact was imbued with special powers by the Orc Shadow Council. It increases your attack damage by 10, armor by 3 and grants enhanced hit point regeneration.|n|n|cffffcc00Requirements:|n- 10 Schattenkugel Fragments|r|n|n|cff808080Legen Sie die benötigten Gegenstände in das Inventar des Herstellungslagers.|r
 }
 
 STRING 42977
 // Items: I0O7 (Craft Shield of Honor), Ubertip (Tooltip - Extended)
 {
-Grants nearby friendly units a <AIcd,DataA1,%>% bonus to attack damage. Also increases the armor of the Hero by <AId8,DataA1> when worn.|n|n|cffffcc00Requires 5 Silver Bars.|r|n|n|cff808080Drop the required items in the inventory of the Crafting Stash.|r
+Grants nearby friendly units a <AIcd,DataA1,%>% bonus to attack damage. Also increases the armor of the Hero by <AId8,DataA1> when worn.|n|n|cffffcc00Requires 5 Silver Bars.|r|n|n|cff808080Legen Sie die benötigten Gegenstände in das Inventar des Herstellungslagers.|r
 }
 
 STRING 42978
 // Items: I0O9 (Craft Frostguard), Ubertip (Tooltip - Extended)
 {
-Adds <AIft,DataA1> bonus cold damage to the attack of a Hero and <AId5,DataA1> bonus armor when carried. The Hero's attacks also slow the movement speed and attack rate of the enemy.|n|n|cffffcc00Requires 3 Klauen des Angriffs +12.|r|n|n|cff808080Drop the required items in the inventory of the Crafting Stash.|r
+Adds <AIft,DataA1> bonus cold damage to the attack of a Hero and <AId5,DataA1> bonus armor when carried. The Hero's attacks also slow the movement speed and attack rate of the enemy.|n|n|cffffcc00Requires 3 Klauen des Angriffs +12.|r|n|n|cff808080Legen Sie die benötigten Gegenstände in das Inventar des Herstellungslagers.|r
 }
 
 STRING 42979
 // Items: I0OA (Craft Enchanted Shield), Ubertip (Tooltip - Extended)
 {
-Increases the Hero's armor by <AId2,DataA1> and hit points by <AIlz,DataA1> when worn.|n|n|cffffcc00Requires 2 Eisenbarren and 2 Silver Bars.|r|n|n|cff808080Drop the required items in the inventory of the Crafting Stash.|r
+Increases the Hero's armor by <AId2,DataA1> and hit points by <AIlz,DataA1> when worn.|n|n|cffffcc00Requires 2 Eisenbarren and 2 Silver Bars.|r|n|n|cff808080Legen Sie die benötigten Gegenstände in das Inventar des Herstellungslagers.|r
 }
 
 STRING 42980
 // Items: I0OB (Craft Searing Blade), Ubertip (Tooltip - Extended)
 {
-Adds <AIfw,DataA1> bonus fire damage to the attack of a Hero when carried. The Hero's attacks also do splash damage to nearby enemy units, and have a <AIcs,DataA1>% chance to deal <AIcs,DataB1> times their total damage.|n|n|cffffcc00Requirements:|n- 5 Klauen des Angriffs +12|r|n|n|cff808080Drop the required items in the inventory of the Crafting Stash.|r
+Adds <AIfw,DataA1> bonus fire damage to the attack of a Hero when carried. The Hero's attacks also do splash damage to nearby enemy units, and have a <AIcs,DataA1>% chance to deal <AIcs,DataB1> times their total damage.|n|n|cffffcc00Requirements:|n- 5 Klauen des Angriffs +12|r|n|n|cff808080Legen Sie die benötigten Gegenstände in das Inventar des Herstellungslagers.|r
 }
 
 STRING 42982
@@ -96249,7 +96249,7 @@ Ein winziger Dorfbewohner, der Entwaffnung zaubern kann.
 STRING 42983
 // Items: I0RL (Craft Ring of Protection +8), Ubertip (Tooltip - Extended)
 {
-Increases the armor of the Hero by 8 when worn.|n|n|cffffcc00Requirements:|n- 2 Ring des Schutzes +4|n- 4 Goldbarren|r|n|n|cff808080Drop the required items in the inventory of the Crafting Stash.|r
+Increases the armor of the Hero by 8 when worn.|n|n|cffffcc00Requirements:|n- 2 Ring des Schutzes +4|n- 4 Goldbarren|r|n|n|cff808080Legen Sie die benötigten Gegenstände in das Inventar des Herstellungslagers.|r
 }
 
 STRING 42984
@@ -102345,37 +102345,37 @@ Heldenstufe 40
 STRING 48521
 // Items: I0B0 (Summon Red Dragon), Ubertip (Tooltip - Extended)
 {
-Summons a permanent Red Dragon.|n|n|cffffcc00Requires 5 Dracheneis and 8 food.|r|n|n|cff808080Drop the required items in the inventory of the Crafting Stash.|r
+Summons a permanent Red Dragon.|n|n|cffffcc00Requires 5 Dracheneis and 8 food.|r|n|n|cff808080Legen Sie die benötigten Gegenstände in das Inventar des Herstellungslagers.|r
 }
 
 STRING 48522
 // Items: I0AL (Summon Green Dragon), Ubertip (Tooltip - Extended)
 {
-Summons a permanent Green Dragon.|n|n|cffffcc00Requires 5 Dracheneis and 8 food.|r|n|n|cff808080Drop the required items in the inventory of the Crafting Stash.|r
+Summons a permanent Green Dragon.|n|n|cffffcc00Requires 5 Dracheneis and 8 food.|r|n|n|cff808080Legen Sie die benötigten Gegenstände in das Inventar des Herstellungslagers.|r
 }
 
 STRING 48523
 // Items: I0AM (Summon Black Dragon), Ubertip (Tooltip - Extended)
 {
-Summons a permanent Schwarzer Großdrache.|n|n|cffffcc00Requires 5 Dracheneis and 8 food.|r|n|n|cff808080Drop the required items in the inventory of the Crafting Stash.|r
+Summons a permanent Schwarzer Großdrache.|n|n|cffffcc00Requires 5 Dracheneis and 8 food.|r|n|n|cff808080Legen Sie die benötigten Gegenstände in das Inventar des Herstellungslagers.|r
 }
 
 STRING 48524
 // Items: I0AN (Summon Bronze Dragon), Ubertip (Tooltip - Extended)
 {
-Summons a permanent Bronzener Großdrache.|n|n|cffffcc00Requires 5 Dracheneis and 8 food.|r|n|n|cff808080Drop the required items in the inventory of the Crafting Stash.|r
+Summons a permanent Bronzener Großdrache.|n|n|cffffcc00Requires 5 Dracheneis and 8 food.|r|n|n|cff808080Legen Sie die benötigten Gegenstände in das Inventar des Herstellungslagers.|r
 }
 
 STRING 48525
 // Items: I0B2 (Summon Blue Dragon), Ubertip (Tooltip - Extended)
 {
-Summons a permanent Blauer Großdrache.|n|n|cffffcc00Requires 5 Dracheneis and 8 food.|r|n|n|cff808080Drop the required items in the inventory of the Crafting Stash.|r
+Summons a permanent Blauer Großdrache.|n|n|cffffcc00Requires 5 Dracheneis and 8 food.|r|n|n|cff808080Legen Sie die benötigten Gegenstände in das Inventar des Herstellungslagers.|r
 }
 
 STRING 48526
 // Items: I0B3 (Summon Niederdrache), Ubertip (Tooltip - Extended)
 {
-Summons a permanent Niederdrache.|n|n|cffffcc00Requires 5 Dracheneis and 8 food.|r|n|n|cff808080Drop the required items in the inventory of the Crafting Stash.|r
+Summons a permanent Niederdrache.|n|n|cffffcc00Requires 5 Dracheneis and 8 food.|r|n|n|cff808080Legen Sie die benötigten Gegenstände in das Inventar des Herstellungslagers.|r
 }
 
 STRING 48528
@@ -114248,7 +114248,7 @@ Großen Heiltrank herstellen
 STRING 55276
 // Items: I10Z (Craft Potion of Greater Healing), Ubertip (Tooltip - Extended)
 {
-Heilens <AIh2,DataA1> hit points when used.|n|n|cffffcc00Requires:|n- 5 Heilening Herbs per potion.|n- Profession Kräuterkundler.|r|n|n|cff808080Drop the required items in the inventory of the Crafting Stash.|r
+Heilens <AIh2,DataA1> hit points when used.|n|n|cffffcc00Requires:|n- 5 Heilening Herbs per potion.|n- Profession Kräuterkundler.|r|n|n|cff808080Legen Sie die benötigten Gegenstände in das Inventar des Herstellungslagers.|r
 }
 
 STRING 55277
@@ -114266,7 +114266,7 @@ Großen Manatrank herstellen
 STRING 55279
 // Items: I111 (Craft Potion of Greater Mana), Ubertip (Tooltip - Extended)
 {
-Restores <AIm2,DataA1> mana when used.|n|n|cffffcc00Requires:|n- 5 Mana Herbs per potion.|n- Profession Alchemist.|r|n|n|cff808080Drop the required items in the inventory of the Crafting Stash.|r
+Restores <AIm2,DataA1> mana when used.|n|n|cffffcc00Requires:|n- 5 Mana Herbs per potion.|n- Profession Alchemist.|r|n|n|cff808080Legen Sie die benötigten Gegenstände in das Inventar des Herstellungslagers.|r
 }
 
 STRING 55280
@@ -114284,7 +114284,7 @@ Unsichtbarkeitstrank herstellen
 STRING 55282
 // Items: I112 (Craft Potion of Invisibility), Ubertip (Tooltip - Extended)
 {
-|cff87ceebNon-Combat Consumable|r|nRenders the Hero invisible for <AIv1,Dur1> seconds when used. An invisible Hero is untargetable by the enemy unless detected. If the Hero attacks, uses an ability, or casts a spell, the invisibility effect is lost.|n|n|cffffcc00Requires:|n- 3 Heilening Herbs per potion.|n- 3 Mana Herbs per potion.|r|n|n|cff808080Drop the required items in the inventory of the Crafting Stash.|r
+|cff87ceebNon-Combat Consumable|r|nRenders the Hero invisible for <AIv1,Dur1> seconds when used. An invisible Hero is untargetable by the enemy unless detected. If the Hero attacks, uses an ability, or casts a spell, the invisibility effect is lost.|n|n|cffffcc00Requires:|n- 3 Heilening Herbs per potion.|n- 3 Mana Herbs per potion.|r|n|n|cff808080Legen Sie die benötigten Gegenstände in das Inventar des Herstellungslagers.|r
 }
 
 STRING 55283
@@ -114302,7 +114302,7 @@ Großen Unsichtbarkeitstrank herstellen
 STRING 55285
 // Items: I113 (Craft Potion of Greater Invisibility), Ubertip (Tooltip - Extended)
 {
-|cff87ceebNon-Combat Consumable|r|nRenders the Hero invisible for <AIv2,Dur1> seconds when used. An invisible Hero is untargetable by the enemy unless detected. If the Hero attacks, uses an ability, or casts a spell, the invisibility effect is lost.|n|n|cffffcc00Requires:|n- 5 Heilening Herbs per potion.|n- 5 Mana Herbs per potion.|r|n|n|cff808080Drop the required items in the inventory of the Crafting Stash.|r
+|cff87ceebNon-Combat Consumable|r|nRenders the Hero invisible for <AIv2,Dur1> seconds when used. An invisible Hero is untargetable by the enemy unless detected. If the Hero attacks, uses an ability, or casts a spell, the invisibility effect is lost.|n|n|cffffcc00Requires:|n- 5 Heilening Herbs per potion.|n- 5 Mana Herbs per potion.|r|n|n|cff808080Legen Sie die benötigten Gegenstände in das Inventar des Herstellungslagers.|r
 }
 
 STRING 55293
@@ -115223,25 +115223,25 @@ Random Gem item.
 STRING 55680
 // Items: I0WQ (Cook Fish Menu), Ubertip (Tooltip - Extended)
 {
-Increases the attack speed for some time.|n|n|cffffcc00Requirements:|n- 3 Fishes|n- 1 Lemon|n- Profession Cook|r|n|n|cff808080Drop the required items in the inventory of the Crafting Stash.|r
+Increases the attack speed for some time.|n|n|cffffcc00Requirements:|n- 3 Fishes|n- 1 Lemon|n- Profession Cook|r|n|n|cff808080Legen Sie die benötigten Gegenstände in das Inventar des Herstellungslagers.|r
 }
 
 STRING 55681
 // Items: I0WZ (Cook Warrior Menu), Ubertip (Tooltip - Extended)
 {
-Increases the strength, maximum hit points, hit points regeneration and damage for some time.|n|n|cffffcc00Requirements:|n- 5 Meat|n- 2 Oranges|n- Profession Cook|r|n|n|cff808080Drop the required items in the inventory of the Crafting Stash.|r
+Increases the strength, maximum hit points, hit points regeneration and damage for some time.|n|n|cffffcc00Requirements:|n- 5 Meat|n- 2 Oranges|n- Profession Cook|r|n|n|cff808080Legen Sie die benötigten Gegenstände in das Inventar des Herstellungslagers.|r
 }
 
 STRING 55682
 // Items: I0X5 (Cook Ranger Menu), Ubertip (Tooltip - Extended)
 {
-Increases the agility, movement and attack speed and armor for some time.|n|n|cffffcc00Requirements:|n- 5 Bananas|n- 2 Oranges|n- Profession Cook|r|n|n|cff808080Drop the required items in the inventory of the Crafting Stash.|r
+Increases the agility, movement and attack speed and armor for some time.|n|n|cffffcc00Requirements:|n- 5 Bananas|n- 2 Oranges|n- Profession Cook|r|n|n|cff808080Legen Sie die benötigten Gegenstände in das Inventar des Herstellungslagers.|r
 }
 
 STRING 55683
 // Items: I0X6 (Cook Magician Menu), Ubertip (Tooltip - Extended)
 {
-Increases the intelligence, magic resistance, maximum mana and mana regeneration for some time.|n|n|cffffcc00Requirements:|n- 5 Garlics|n- 2 Oranges|n- Profession Cook|r|n|n|cff808080Drop the required items in the inventory of the Crafting Stash.|r
+Increases the intelligence, magic resistance, maximum mana and mana regeneration for some time.|n|n|cffffcc00Requirements:|n- 5 Garlics|n- 2 Oranges|n- Profession Cook|r|n|n|cff808080Legen Sie die benötigten Gegenstände in das Inventar des Herstellungslagers.|r
 }
 
 STRING 55684
