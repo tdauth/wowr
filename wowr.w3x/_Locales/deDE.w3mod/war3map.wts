@@ -630,7 +630,7 @@ STRING 105
 }
 
 STRING 106
-// Abilities: A0M5 (Loading Goods), EditorSuffix (Editor Suffix)
+// Abilities: A0M5 (Güter beladen), EditorSuffix (Editor Suffix)
 {
  (Icon) (Kul Tiras)
 }
@@ -2711,7 +2711,7 @@ STRING 454
 }
 
 STRING 455
-// Upgrades: R019 (Burning Oil), Ubertip (Tooltip - Extended)
+// Upgrades: R019 (Ölbrand), Ubertip (Tooltip - Extended)
 {
 Nachtelfen-, Untote- und Zwergen-KI kann Unterkünfte nicht benutzen. Sie brauchen einen Bonus.
 }
@@ -2737,19 +2737,19 @@ Mitwirkende: Quest-Log (F9).
 }
 
 STRING 457
-// Upgrades: R019 (Burning Oil), Name (Name)
+// Upgrades: R019 (Ölbrand), Name (Name)
 {
 KI-Goldbonus
 }
 
 STRING 458
-// Upgrades: R019 (Burning Oil), Tip (Tooltip)
+// Upgrades: R019 (Ölbrand), Tip (Tooltip)
 {
 KI-Goldbonus
 }
 
 STRING 459
-// Upgrades: R019 (Burning Oil), effect1 (Effect 1)
+// Upgrades: R019 (Ölbrand), effect1 (Effect 1)
 {
 rmin
 }
@@ -5049,7 +5049,7 @@ Panzerung - Advanced
 }
 
 STRING 852
-// Upgrades: R019 (Burning Oil), effect2 (Effect 2)
+// Upgrades: R019 (Ölbrand), effect2 (Effect 2)
 {
 rent
 }
@@ -5145,7 +5145,7 @@ Skins
 }
 
 STRING 868
-// Upgrades: R01B (Burning Oil), effect3 (Effect 3)
+// Upgrades: R01B (Ölbrand), effect3 (Effect 3)
 {
 rent
 }
@@ -5187,37 +5187,37 @@ Lich-König
 }
 
 STRING 875
-// Upgrades: R01C (Burning Oil), Ubertip (Tooltip - Extended)
+// Upgrades: R01C (Ölbrand), Ubertip (Tooltip - Extended)
 {
 Spieler ist keine KI.
 }
 
 STRING 876
-// Upgrades: R01C (Burning Oil), Name (Name)
+// Upgrades: R01C (Ölbrand), Name (Name)
 {
 Keine KI
 }
 
 STRING 877
-// Upgrades: R01C (Burning Oil), Tip (Tooltip)
+// Upgrades: R01C (Ölbrand), Tip (Tooltip)
 {
 Keine KI
 }
 
 STRING 878
-// Upgrades: R019 (Burning Oil), Tip (Tooltip)
+// Upgrades: R019 (Ölbrand), Tip (Tooltip)
 {
 KI-Goldbonus
 }
 
 STRING 879
-// Upgrades: R01C (Burning Oil), Ubertip (Tooltip - Extended)
+// Upgrades: R01C (Ölbrand), Ubertip (Tooltip - Extended)
 {
 Night Elf and Undead AI cannot use housings. They need a bonus.
 }
 
 STRING 880
-// Upgrades: R019 (Burning Oil), Name (Name)
+// Upgrades: R019 (Ölbrand), Name (Name)
 {
 KI-Goldbonus
 }
@@ -7417,7 +7417,7 @@ Günstige Evolution erforschen - [|cffffcc00Stufe 27|r]
 }
 
 STRING 1254
-// Units: h00Z (Canoneer Team), EditorSuffix (Name - Editor Suffix)
+// Units: h00Z (Kanonier-Team), EditorSuffix (Name - Editor Suffix)
 {
 (Kul Tiras)
 }
@@ -9847,7 +9847,7 @@ E
 }
 
 STRING 1667
-// Units: h0BW (Flying Dreadnought), Hotkey (Hotkey)
+// Units: h0BW (Fliegende Dreadnought), Hotkey (Hotkey)
 {
 D
 }
@@ -10975,13 +10975,13 @@ Bildet Wanderfalken und Albatrossreiter aus. |nBietet auch die Ausbaustufen 'Dur
 }
 
 STRING 1886
-// Upgrades: R019 (Burning Oil), EditorSuffix (Editor Suffix)
+// Upgrades: R019 (Ölbrand), EditorSuffix (Editor Suffix)
 {
 (Untote, Nachtelfen, Zwerge, Dalaran)
 }
 
 STRING 1887
-// Upgrades: R02E (Burning Oil), Name (Name)
+// Upgrades: R02E (Ölbrand), Name (Name)
 {
 AI Freiberufler Fast Gold Bonus
 }
@@ -11151,7 +11151,7 @@ STRING 1949
 STRING 1960
 // Units: h013 (Workshop), Ubertip (Tooltip - Extended)
 {
-Produces Ballistes, Wagons, and Käfigs. |nBietet auch die Ausbaustufen Improved Belagerungswaffen, and Burning Oil upgrades.
+Produziert Ballisten, Wagen und Käfige. |nBietet auch die Ausbaustufen 'Verbesserte Belagerungswaffen' und 'Ölbrand'.
 }
 
 STRING 1961
@@ -14166,7 +14166,7 @@ Krähe
 STRING 2603
 // Abilities: S00S (Cargo Hold), EditorSuffix (Editor Suffix)
 {
-(Banditen) (Käfig Cart)
+(Banditen) (Käfig-Karren)
 }
 
 STRING 2604
@@ -14560,13 +14560,13 @@ Diebesgilde
 }
 
 STRING 2669
-// Upgrades: R078 (Burning Oil), Tip (Tooltip)
+// Upgrades: R078 (Ölbrand), Tip (Tooltip)
 {
 Diebesgilde erforschen
 }
 
 STRING 2670
-// Upgrades: R078 (Burning Oil), Ubertip (Tooltip - Extended)
+// Upgrades: R078 (Ölbrand), Ubertip (Tooltip - Extended)
 {
 Erlaubt Bürgern den Bau a Diebesgilde to sell killed units and dropped items.
 }
@@ -15106,7 +15106,7 @@ STRING 2860
 }
 
 STRING 2861
-// Upgrades: R060 (Flare), effect3 (Effect 3)
+// Upgrades: R060 (Leuchtfeuer), effect3 (Effect 3)
 {
 rhpo
 }
@@ -15340,13 +15340,13 @@ Ausbilder
 }
 
 STRING 2943
-// Abilities: A05Q (Burning Oil), EditorSuffix (Editor Suffix)
+// Abilities: A05Q (Ölbrand), EditorSuffix (Editor Suffix)
 {
 (Ballisten)
 }
 
 STRING 2945
-// Abilities: A05Q (Burning Oil), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A05Q (Ölbrand), Ubertip (Tooltip - Normal - Extended)
 {
 Drenches the Balliste ammo in burning oil, causing them to light the ground on fire and burn enemy units.
 }
@@ -15376,7 +15376,7 @@ A powerful stone from Kil'jaeden. Return it to the Lich-König.
 }
 
 STRING 2952
-// Upgrades: R00Y (Burning Oil), Ubertip (Tooltip - Extended)
+// Upgrades: R00Y (Ölbrand), Ubertip (Tooltip - Extended)
 {
 Upgrades Ballisten to fire missiles smothered in burning oil, which causes the ground to burn.
 }
@@ -15480,7 +15480,7 @@ Verbessert Panzerung und Trefferpunkte der Blutelfen-Belagerungswaffen noch weit
 STRING 2971
 // Units: e00C (Ballista), Ubertip (Tooltip - Extended)
 {
-Long-range siege weaponry. Exceptional damage versus buildings. Can gain the Burning Oil upgrade to damage units on the ground. |n|n|cffffcc00Greift Land-Einheiten an.|r
+Long-range siege weaponry. Exceptional damage versus buildings. Can gain the Ölbrand upgrade to damage units on the ground. |n|n|cffffcc00Greift Land-Einheiten an.|r
 }
 
 STRING 2972
@@ -15510,7 +15510,7 @@ Allows to capture hostile organic units and to transport them somewhere. Cannot 
 STRING 2976
 // Units: h012 (Wagon), Ubertip (Tooltip - Extended)
 {
-Heavily armored vehicle, effective at destroying buildings and has the abilities Mana wiederherstellen and Increase Morale. Wagons can transport your units protecting them from enemy troops. Only organic units can be transported. |n|n|cffffcc00Attacks buildings.|r
+Heavily armored vehicle, effective at destroying buildings and has the abilities Mana wiederherstellen and Increase Morale. Wagen can transport your units protecting them from enemy troops. Only organic units can be transported. |n|n|cffffcc00Attacks buildings.|r
 }
 
 STRING 2977
@@ -15556,7 +15556,7 @@ Gefangen nehmen
 }
 
 STRING 2985
-// Upgrades: R02E (Burning Oil), Ubertip (Tooltip - Extended)
+// Upgrades: R02E (Ölbrand), Ubertip (Tooltip - Extended)
 {
 Freelancer AI must harvest gold a bit faster since they share one single Gold Mine.
 }
@@ -16368,7 +16368,7 @@ Dient als Abladepunkt für das geschlagene Holz. |nBietet auch die Ausbaustufen 
 STRING 3164
 // Units: h079 (Prison), Ubertip (Tooltip - Extended)
 {
-Produces Armbrustmen, Käfig Carts, and Schwergewichts. |nBietet auch die Ausbaustufen 'Versklavung' und 'Festhaut'.
+Produziert Armbrustschützen, Käfig-Karren und Schwergewichte. |nBietet auch die Ausbaustufen 'Versklavung' und 'Festhaut'.
 }
 
 STRING 3165
@@ -16434,7 +16434,7 @@ STRING 3174
 STRING 3175
 // Abilities: A03I (Capture), EditorSuffix (Editor Suffix)
 {
-(Banditen) (Käfig Cart)
+(Banditen) (Käfig-Karren)
 }
 
 STRING 3178
@@ -16606,7 +16606,7 @@ Upgrades Banditenlords to have the ability Niederreiten.
 }
 
 STRING 3206
-// Upgrades: R00D (Freezing Breath), Name (Name)
+// Upgrades: R00D (Eis-Atem), Name (Name)
 {
 Festhaut
 }
@@ -16618,7 +16618,7 @@ STRING 3207
 }
 
 STRING 3208
-// Upgrades: R00D (Freezing Breath), Tip (Tooltip)
+// Upgrades: R00D (Eis-Atem), Tip (Tooltip)
 {
 Festhaut erforschen
 }
@@ -16678,7 +16678,7 @@ B
 }
 
 STRING 3233
-// Upgrades: R078 (Burning Oil), EditorSuffix (Editor Suffix)
+// Upgrades: R078 (Ölbrand), EditorSuffix (Editor Suffix)
 {
 (Banditen)
 }
@@ -18774,7 +18774,7 @@ STRING 3716
 STRING 3717
 // Units: ndh4 (Seer's Den), Ubertip (Tooltip - Extended)
 {
-Produces Draenei-Sehers, Harbingers and Gezähmter Niederdraches.
+Produziert Draenei-Seher, Harbingers und Gezähmter Niederdrachen.
 }
 
 STRING 3718
@@ -19164,7 +19164,7 @@ Powerful mounted warrior. Can cast Storm Bolt. Can learn Kampftierausbildung. |n
 STRING 3789
 // Units: h032 (Dwarf Workshop), Ubertip (Tooltip - Extended)
 {
-Stellt Belagerungsmaschinen, Flugapparate, Mörser-Trupps und Dampf-Festungen her. |nBietet auch die Ausbaustufen Leuchtsignal, Fragmentation Shards, Sperrfeuer, Flugapparat Bombs, Flak Cannons, and Elite-Belagerungspanzer upgrades.
+Stellt Belagerungsmaschinen, Flugapparate, Mörser-Trupps und Dampf-Festungen her. |nBietet auch die Ausbaustufen Leuchtsignal, Schrapnell-Splitter, Sperrfeuer, Flugapparat Bombs, Flak Cannons, and Elite-Belagerungspanzer upgrades.
 }
 
 STRING 3790
@@ -19780,7 +19780,7 @@ STRING 3940
 }
 
 STRING 3941
-// Upgrades: R01C (Burning Oil), Tip (Tooltip)
+// Upgrades: R01C (Ölbrand), Tip (Tooltip)
 {
 KI-Goldbonus Game Type Fast
 }
@@ -19792,37 +19792,37 @@ Günstige Evolution erforschen - [|cffffcc00Stufe 46|r]
 }
 
 STRING 3946
-// Upgrades: R01C (Burning Oil), Name (Name)
+// Upgrades: R01C (Ölbrand), Name (Name)
 {
 KI-Goldbonus Game Type Fast
 }
 
 STRING 3947
-// Upgrades: R01B (Burning Oil), Name (Name)
+// Upgrades: R01B (Ölbrand), Name (Name)
 {
 AI Lumber Bonus Game Type Fast
 }
 
 STRING 3948
-// Upgrades: R01B (Burning Oil), Tip (Tooltip)
+// Upgrades: R01B (Ölbrand), Tip (Tooltip)
 {
 AI Lumber Bonus Game Type Fast
 }
 
 STRING 3949
-// Upgrades: R01B (Burning Oil), Ubertip (Tooltip - Extended)
+// Upgrades: R01B (Ölbrand), Ubertip (Tooltip - Extended)
 {
 All races shouldn't have too many lumber workers to safe space. They need a lumber harvesting bonus.
 }
 
 STRING 3950
-// Upgrades: R01B (Burning Oil), effect2 (Effect 2)
+// Upgrades: R01B (Ölbrand), effect2 (Effect 2)
 {
 rmin
 }
 
 STRING 3951
-// Upgrades: R01B (Burning Oil), Ubertip (Tooltip - Extended)
+// Upgrades: R01B (Ölbrand), Ubertip (Tooltip - Extended)
 {
 All races shouldn't have too many lumber workers to safe space. They need a lumber harvesting bonus.
 }
@@ -19834,37 +19834,37 @@ STRING 3952
 }
 
 STRING 3953
-// Upgrades: R01B (Burning Oil), Name (Name)
+// Upgrades: R01B (Ölbrand), Name (Name)
 {
 Fast Gold and Lumber Bonus
 }
 
 STRING 3954
-// Upgrades: R01B (Burning Oil), Tip (Tooltip)
+// Upgrades: R01B (Ölbrand), Tip (Tooltip)
 {
 Fast Gold and Lumber Bonus
 }
 
 STRING 3955
-// Upgrades: R01B (Burning Oil), effect1 (Effect 1)
+// Upgrades: R01B (Ölbrand), effect1 (Effect 1)
 {
 rlum
 }
 
 STRING 3956
-// Upgrades: R02E (Burning Oil), Name (Name)
+// Upgrades: R02E (Ölbrand), Name (Name)
 {
 AI Lumber Bonus Game Type Fast
 }
 
 STRING 3957
-// Upgrades: R02E (Burning Oil), Tip (Tooltip)
+// Upgrades: R02E (Ölbrand), Tip (Tooltip)
 {
 AI Lumber Bonus Game Type Fast
 }
 
 STRING 3958
-// Upgrades: R02E (Burning Oil), Ubertip (Tooltip - Extended)
+// Upgrades: R02E (Ölbrand), Ubertip (Tooltip - Extended)
 {
 All races shouldn't have too many lumber workers to safe space. They need a lumber harvesting bonus.
 }
@@ -20592,31 +20592,31 @@ Primäres Truppen-Produktionsgebäude. Trains Schwertkämpfer, Bogenschützinnen
 STRING 4172
 // Upgrades: R000 (Animal War Training), Ubertip (Tooltip - Extended)
 {
-Increases the maximum hit points of Drachenfalken-Reiter and Falkenschreiter-Reiters by <Rhan,base1>.
+Erhöht die maximalen Trefferpunkte von Drachenfalken-Reitern und Falkenschreiter-Reitern um <Rhan,base1>.
 }
 
 STRING 4173
 // Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
 {
-Increases the attack damage of Schwertkämpfer, Zauberbrechers, Drachenfalken-Reiter, Falkenschreiter-Reiters and Wagons.
+Erhöht den Angriffsschaden von Schwertkämpfern, Zauberbrechern, Drachenfalken-Reitern,  Falkenschreiter-Reitern und Wagen.
 }
 
 STRING 4174
 // Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
 {
-Further increases the attack damage of Schwertkämpfer, Zauberbrechers, Drachenfalken-Reiter, Falkenschreiter-Reiters and Wagons.
+Erhöht den Angriffsschaden von Schwertkämpfern, Zauberbrechern, Drachenfalken-Reitern,  Falkenschreiter-Reitern und Wagen noch weiter.
 }
 
 STRING 4175
 // Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
 {
-Further increases the attack damage of Schwertkämpfer, Zauberbrechers, Drachenfalken-Reiter, Falkenschreiter-Reiters and Wagons.
+Erhöht den Angriffsschaden von Schwertkämpfern, Zauberbrechern, Drachenfalken-Reitern,  Falkenschreiter-Reitern und Wagen noch weiter.
 }
 
 STRING 4176
 // Upgrades: R002 (Iron Plating,Steel Plating,Mithril Plating), Ubertip (Tooltip - Extended)
 {
-Increases the armor of Schwertkämpfer, Zauberbrecher, Falkenschreiter-Reiters, Ballisten, Käfige, Wagons, and Dezimators.
+Erhöht die Rüstung von Schwertkämpfern, Zauberbrechern, Falkenschreiter-Reitern, Ballisten, Käfigen, Wagen und Dezimatoren.
 }
 
 STRING 4177
@@ -20688,7 +20688,7 @@ Ingenieur wiederbeleben
 STRING 4228
 // Upgrades: R002 (Iron Plating,Steel Plating,Mithril Plating), Ubertip (Tooltip - Extended)
 {
-Further increases the armor of Schwertkämpfer, Zauberbrechers, Falkenschreiter-Reiters, Ballistes, Käfigs, Wagons, and Dezimators.
+Erhöht die Rüstung von Schwertkämpfern, Zauberbrechern, Falkenschreiter-Reitern, Ballisten, Käfigen, Wagen und Dezimatoren noch weiter.
 }
 
 STRING 4241
@@ -20892,7 +20892,7 @@ STRING 4294
 STRING 4295
 // Upgrades: R002 (Iron Plating,Steel Plating,Mithril Plating), Ubertip (Tooltip - Extended)
 {
-Further increases the armor of Schwertkämpfer, Zauberbrechers, Falkenschreiter-Reiters, Ballistes, Käfigs, Wagons, and Dezimators.
+Erhöht die Rüstung von Schwertkämpfern, Zauberbrechern, Falkenschreiter-Reitern, Ballisten, Käfigen, Wagen und Dezimatoren noch weiter.
 }
 
 STRING 4298
@@ -20908,13 +20908,13 @@ STRING 4300
 }
 
 STRING 4301
-// Upgrades: R021 (Burning Oil), Name (Name)
+// Upgrades: R021 (Ölbrand), Name (Name)
 {
 Magisches Gewölbe
 }
 
 STRING 4302
-// Upgrades: R021 (Burning Oil), Tip (Tooltip)
+// Upgrades: R021 (Ölbrand), Tip (Tooltip)
 {
 Magisches Gewölbe
 }
@@ -20964,7 +20964,7 @@ Further increases the armor of Bogenschützinnen, Drachenfalken-Reiter and Phön
 STRING 4313
 // Upgrades: R008 (Strength of the Moon,Improved Strength of the Moon,Advanced Strength of the Moo), Ubertip (Tooltip - Extended)
 {
-Increases the damage of Bogenschützinnen, Ballistes, Phönixes, and Dezimators.
+Increases the damage of Bogenschützinnen, Ballistes, Phönixes, and Dezimatoren.
 }
 
 STRING 4317
@@ -20988,13 +20988,13 @@ Mannoroth beschwören
 STRING 4320
 // Upgrades: R008 (Strength of the Moon,Improved Strength of the Moon,Advanced Strength of the Moo), Ubertip (Tooltip - Extended)
 {
-Further increases the damage of Bogenschützinnen, Ballistes, Phönixes, and Dezimators.
+Erhöht den Schaden von Bogenschützinnen, Ballisten, Phönixen und Dezimatoren noch weiter.
 }
 
 STRING 4321
 // Upgrades: R008 (Strength of the Moon,Improved Strength of the Moon,Advanced Strength of the Moo), Ubertip (Tooltip - Extended)
 {
-Further increases the damage of Bogenschützinnen, Ballistes, Phönixes, and Dezimators.
+Erhöht den Schaden von Bogenschützinnen, Ballisten, Phönixen und Dezimatoren noch weiter.
 }
 
 STRING 4323
@@ -21120,13 +21120,13 @@ Furbolg-Kaserne errichten
 STRING 4361
 // Units: n027 (Furbolg Barracks), Ubertip (Tooltip - Extended)
 {
-Building to train Furbolg warrior units.
+Bildet Furbolg-Krieger-Einheiten aus.
 }
 
 STRING 4362
 // Units: n027 (Furbolg Barracks), Description (Description)
 {
-Building to train Furbolg warrior units.
+Bildet Furbolg-Krieger-Einheiten aus.
 }
 
 STRING 4363
@@ -22609,19 +22609,19 @@ STRING 4687
 }
 
 STRING 4688
-// Upgrades: R07K (Burning Oil), Name (Name)
+// Upgrades: R07K (Ölbrand), Name (Name)
 {
 Thron
 }
 
 STRING 4689
-// Upgrades: R07K (Burning Oil), Tip (Tooltip)
+// Upgrades: R07K (Ölbrand), Tip (Tooltip)
 {
 Thron erforschen
 }
 
 STRING 4690
-// Upgrades: R07K (Burning Oil), Ubertip (Tooltip - Extended)
+// Upgrades: R07K (Ölbrand), Ubertip (Tooltip - Extended)
 {
 Erlaubt Bürgern den Bau eines Throns, der Verlies-Lords ausbildet.
 }
@@ -23836,7 +23836,7 @@ STRING 4927
 }
 
 STRING 4928
-// Upgrades: R05Y (Flare), Hotkey (Hotkey)
+// Upgrades: R05Y (Leuchtfeuer), Hotkey (Hotkey)
 {
 B
 }
@@ -23914,7 +23914,7 @@ STRING 4969
 }
 
 STRING 4970
-// Upgrades: R07O (Freezing Breath), Name (Name)
+// Upgrades: R07O (Eis-Atem), Name (Name)
 {
 Skelettknochen
 }
@@ -23926,13 +23926,13 @@ H
 }
 
 STRING 4972
-// Upgrades: R07O (Freezing Breath), Tip (Tooltip)
+// Upgrades: R07O (Eis-Atem), Tip (Tooltip)
 {
 Skelettknochen erforschen
 }
 
 STRING 4973
-// Upgrades: R07O (Freezing Breath), Ubertip (Tooltip - Extended)
+// Upgrades: R07O (Eis-Atem), Ubertip (Tooltip - Extended)
 {
 Allows all Skeleton units to use the ability Skeleton Bones which reduces received range damage.
 }
@@ -24346,7 +24346,7 @@ X
 }
 
 STRING 5048
-// Upgrades: R06D (Freezing Breath), Name (Name)
+// Upgrades: R06D (Eis-Atem), Name (Name)
 {
 Kriegsdonner
 }
@@ -24358,13 +24358,13 @@ W
 }
 
 STRING 5050
-// Upgrades: R06D (Freezing Breath), Tip (Tooltip)
+// Upgrades: R06D (Eis-Atem), Tip (Tooltip)
 {
 Kriegsdonner erforschen
 }
 
 STRING 5051
-// Upgrades: R07U (Freezing Breath), Ubertip (Tooltip - Extended)
+// Upgrades: R07U (Eis-Atem), Ubertip (Tooltip - Extended)
 {
 Ermöglicht Kriegs-Golems und Berserker-Wildekins, die 'Kriegsdonner'-Fähigkeit zu benutzen.
 }
@@ -24628,7 +24628,7 @@ STRING 5100
 }
 
 STRING 5101
-// Upgrades: R07K (Burning Oil), EditorSuffix (Editor Suffix)
+// Upgrades: R07K (Ölbrand), EditorSuffix (Editor Suffix)
 {
 (Verlies)
 }
@@ -24888,7 +24888,7 @@ Gezeiten-Wyrm
 STRING 5157
 // Abilities: A0C0 (Spawn Tidal Wyrm), Name (Name)
 {
-Spawn Gezeiten-Wyrm
+Gezeiten-Wyrm erzeugen
 }
 
 STRING 5159
@@ -25816,7 +25816,7 @@ STRING 5324
 }
 
 STRING 5325
-// Upgrades: R07O (Freezing Breath), EditorSuffix (Editor Suffix)
+// Upgrades: R07O (Eis-Atem), EditorSuffix (Editor Suffix)
 {
 (Verlies)
 }
@@ -25852,7 +25852,7 @@ STRING 5330
 }
 
 STRING 5331
-// Upgrades: R07U (Freezing Breath), EditorSuffix (Editor Suffix)
+// Upgrades: R07U (Eis-Atem), EditorSuffix (Editor Suffix)
 {
 (Verlies)
 }
@@ -26050,13 +26050,13 @@ Festhaut erforschen
 }
 
 STRING 5365
-// Upgrades: R07Z (Freezing Breath), Ubertip (Tooltip - Extended)
+// Upgrades: R07Z (Eis-Atem), Ubertip (Tooltip - Extended)
 {
 Gives Kriegs-Golems and Red Dragons the ability Festhaut.
 }
 
 STRING 5366
-// Upgrades: R07Z (Freezing Breath), EditorSuffix (Editor Suffix)
+// Upgrades: R07Z (Eis-Atem), EditorSuffix (Editor Suffix)
 {
 (Verlies)
 }
@@ -26314,7 +26314,7 @@ H
 }
 
 STRING 5426
-// Upgrades: R00K (Freezing Breath), Hotkey (Hotkey)
+// Upgrades: R00K (Eis-Atem), Hotkey (Hotkey)
 {
 H
 }
@@ -26458,7 +26458,7 @@ H
 }
 
 STRING 5465
-// Upgrades: R07O (Freezing Breath), Hotkey (Hotkey)
+// Upgrades: R07O (Eis-Atem), Hotkey (Hotkey)
 {
 H
 }
@@ -28379,7 +28379,7 @@ M
 }
 
 STRING 5850
-// Upgrades: R061 (Flare), Hotkey (Hotkey)
+// Upgrades: R061 (Leuchtfeuer), Hotkey (Hotkey)
 {
 M
 }
@@ -28787,7 +28787,7 @@ Winzigen Arkaner Turm erwerben
 }
 
 STRING 5928
-// Upgrades: R081 (Freezing Breath), Ubertip (Tooltip - Extended)
+// Upgrades: R081 (Eis-Atem), Ubertip (Tooltip - Extended)
 {
 Gives Dragonkin warriors the ability Festhaut.
 }
@@ -28817,7 +28817,7 @@ Feuerangriff erforschen
 }
 
 STRING 5933
-// Upgrades: R082 (Flare), Ubertip (Tooltip - Extended)
+// Upgrades: R082 (Leuchtfeuer), Ubertip (Tooltip - Extended)
 {
 Gives Schwarzer Großdraches area of effect damage.
 }
@@ -34408,7 +34408,7 @@ Befestigte Höllenmaschine
 STRING 7576
 // Units: u00B (Portal), Ubertip (Tooltip - Extended)
 {
-Produces Unheilshüters, Greater Voidwalker and Höllenbestie Machines. Bietet auch die Ausbaustufen Verteidigen, Verkrüppeln, Slow and Feuerregen upgrades.
+Produziert Unheilshüters, Große Leerwandler und Höllenbestien-Maschinen. Bietet auch die Ausbaustufen 'Verteidigen', 'Verkrüppeln', 'Langsamkeit' und 'Feuerregen'.
 }
 
 STRING 7577
@@ -34430,7 +34430,7 @@ STRING 7579
 }
 
 STRING 7580
-// Units: n01E (Greater Voidwalker), EditorSuffix (Name - Editor Suffix)
+// Units: n01E (Große Leerwandler), EditorSuffix (Name - Editor Suffix)
 {
 (Dämonen)
 }
@@ -34588,7 +34588,7 @@ C
 STRING 7606
 // Upgrades: R00N (Exhume Corpses), Ubertip (Tooltip - Extended)
 {
-Gives Höllenbestie Machines the ability Verteidigen.
+Gives Höllenbestien-Maschinen the ability Verteidigen.
 }
 
 STRING 7607
@@ -34642,7 +34642,7 @@ Bildet Rotdrachen aus.
 STRING 7616
 // Upgrades: R00Q (Destroyer Form), Ubertip (Tooltip - Extended)
 {
-Gives the Greater Voidwalkers the ability Slow.
+Gives the Große Leerwandlers the ability Slow.
 }
 
 STRING 7617
@@ -34676,7 +34676,7 @@ Ausbau zum Gigantischen Dämonentor ermöglicht die Produktion weiterer Gebäude
 }
 
 STRING 7623
-// Upgrades: R00C (Freezing Breath), Name (Name)
+// Upgrades: R00C (Eis-Atem), Name (Name)
 {
 Dauerhafter Feuerbrand
 }
@@ -34706,7 +34706,7 @@ Tiny Banner High Elf
 }
 
 STRING 7628
-// Upgrades: R00K (Freezing Breath), Name (Name)
+// Upgrades: R00K (Eis-Atem), Name (Name)
 {
 Harthaut
 }
@@ -34762,11 +34762,11 @@ R
 STRING 7637
 // Units: npgf (Pig Farm), Ubertip (Tooltip - Extended)
 {
-Produces food.
+Erzeugt Nahrung.
 }
 
 STRING 7638
-// Upgrades: R00D (Freezing Breath), Ubertip (Tooltip - Extended)
+// Upgrades: R00D (Eis-Atem), Ubertip (Tooltip - Extended)
 {
 Gives Höllenbesties the ability Festhaut.
 }
@@ -34906,7 +34906,7 @@ Heavy defensive structure. Particularly effective against clusters of troops. Ca
 STRING 7661
 // Units: h03D (Dwarf Cannon Tower), Ubertip (Tooltip - Extended)
 {
-Heavy defensive structure. Particularly effective against clusters of troops. Can learn Fragmentation Shards ability. |n|n|cffffcc00Greif Land-Einheiten und Bäume an.|r
+Heavy defensive structure. Particularly effective against clusters of troops. Can learn Schrapnell-Splitter ability. |n|n|cffffcc00Greif Land-Einheiten und Bäume an.|r
 }
 
 STRING 7662
@@ -35732,7 +35732,7 @@ STRING 7805
 }
 
 STRING 7806
-// Upgrades: R05S (Burning Oil), Name (Name)
+// Upgrades: R05S (Ölbrand), Name (Name)
 {
 Violette Zitadelle
 }
@@ -36002,7 +36002,7 @@ Dämonen-Bürger anheuern
 }
 
 STRING 7851
-// Upgrades: R05S (Burning Oil), Tip (Tooltip)
+// Upgrades: R05S (Ölbrand), Tip (Tooltip)
 {
 Violette Zitadelle
 }
@@ -36020,7 +36020,7 @@ Dämonen-Bürgerin
 }
 
 STRING 7854
-// Upgrades: R05S (Burning Oil), Ubertip (Tooltip - Extended)
+// Upgrades: R05S (Ölbrand), Ubertip (Tooltip - Extended)
 {
 Erlaubt Bürgern den Bau der Violette Zitadelle.
 }
@@ -38864,7 +38864,7 @@ STRING 8402
 }
 
 STRING 8403
-// Upgrades: R02D (Burning Oil), EditorSuffix (Editor Suffix)
+// Upgrades: R02D (Ölbrand), EditorSuffix (Editor Suffix)
 {
 (Verlorene)
 }
@@ -42650,13 +42650,13 @@ Wyrmrest-Tempel
 }
 
 STRING 10282
-// Upgrades: R084 (Burning Oil), Tip (Tooltip)
+// Upgrades: R084 (Ölbrand), Tip (Tooltip)
 {
 Wyrmrest-Tempel erforschen
 }
 
 STRING 10283
-// Upgrades: R084 (Burning Oil), Ubertip (Tooltip - Extended)
+// Upgrades: R084 (Ölbrand), Ubertip (Tooltip - Extended)
 {
 Ermöglicht es Bürgern einen Wyrmrest-Tempel zu errichten, um Drachen auszubilden.
 }
@@ -44000,7 +44000,7 @@ STRING 10624
 }
 
 STRING 10626
-// Upgrades: R084 (Burning Oil), Name (Name)
+// Upgrades: R084 (Ölbrand), Name (Name)
 {
 Wyrmrest-Tempel
 }
@@ -45758,7 +45758,7 @@ Bildet Fledermausreiter, Fledermäuse, Troll-Golems und Zalandari Throne of Wars
 }
 
 STRING 11122
-// Upgrades: R01Y (Burning Oil), Ubertip (Tooltip - Extended)
+// Upgrades: R01Y (Ölbrand), Ubertip (Tooltip - Extended)
 {
 Erlaubt Bürgern den Bau des Brunnen des Blutes zur AUsbildung und Umwandlung von Chaos-Orcs.
 }
@@ -45824,7 +45824,7 @@ Converts Orc units into Höllenorcs units which makes them stronger. |n|n|cffffc
 }
 
 STRING 11151
-// Upgrades: R01Z (Burning Oil), Name (Name)
+// Upgrades: R01Z (Ölbrand), Name (Name)
 {
 Weltenbaum
 }
@@ -45902,7 +45902,7 @@ Power of Cenarius
 }
 
 STRING 11165
-// Upgrades: R020 (Burning Oil), Name (Name)
+// Upgrades: R020 (Ölbrand), Name (Name)
 {
 Lich-König
 }
@@ -46244,7 +46244,7 @@ X
 }
 
 STRING 11344
-// Upgrades: R021 (Burning Oil), Ubertip (Tooltip - Extended)
+// Upgrades: R021 (Ölbrand), Ubertip (Tooltip - Extended)
 {
 Erlaubt Bürgern den Bau eines Magischen Gewölbes mit den Fähigkeiten Mana verbrennen und Mana abziehen.
 }
@@ -46478,7 +46478,7 @@ Opens a portal, allowing Schemens to step through somewhere on the map in a visi
 }
 
 STRING 11410
-// Upgrades: R020 (Burning Oil), Ubertip (Tooltip - Extended)
+// Upgrades: R020 (Ölbrand), Ubertip (Tooltip - Extended)
 {
 Erlaubt Bürgern den Bau des Lich-Königs, um feindliche Einheiten in Untote umzuwandeln und Schemen irgendwo auf der Karte zu beschwören.
 }
@@ -46610,7 +46610,7 @@ Arkaner Spähposten
 }
 
 STRING 11438
-// Upgrades: R022 (Burning Oil), Ubertip (Tooltip - Extended)
+// Upgrades: R022 (Ölbrand), Ubertip (Tooltip - Extended)
 {
 Erlaubt Bürgern den Bau eines Arkanen Spähpostens, um feindliche Einheiten aufzudecken und tote Spielereinheiten auferstehen zu lassen.
 }
@@ -46670,19 +46670,19 @@ STRING 11448
 }
 
 STRING 11449
-// Upgrades: R023 (Burning Oil), Name (Name)
+// Upgrades: R023 (Ölbrand), Name (Name)
 {
 Buch des Beschwörung-Postaments
 }
 
 STRING 11450
-// Upgrades: R023 (Burning Oil), Tip (Tooltip)
+// Upgrades: R023 (Ölbrand), Tip (Tooltip)
 {
 Buch des Beschwörung-Postaments
 }
 
 STRING 11451
-// Upgrades: R023 (Burning Oil), Ubertip (Tooltip - Extended)
+// Upgrades: R023 (Ölbrand), Ubertip (Tooltip - Extended)
 {
 Erlaubt Bürgern den Bau des Buches des Beschwörung-Postaments, um Höllenbestien vom Himmel herbeizurufen.
 }
@@ -46982,19 +46982,19 @@ STRING 11595
 }
 
 STRING 11596
-// Upgrades: R08C (Burning Oil), Name (Name)
+// Upgrades: R08C (Ölbrand), Name (Name)
 {
 Dorne
 }
 
 STRING 11597
-// Upgrades: R08C (Burning Oil), Tip (Tooltip)
+// Upgrades: R08C (Ölbrand), Tip (Tooltip)
 {
 Dorne erforschen
 }
 
 STRING 11598
-// Upgrades: R08C (Burning Oil), Ubertip (Tooltip - Extended)
+// Upgrades: R08C (Ölbrand), Ubertip (Tooltip - Extended)
 {
 Erlaubt Bürgern eine Dorne zu errichten.
 }
@@ -47468,7 +47468,7 @@ Stonemaul-Lager
 }
 
 STRING 11821
-// Upgrades: R0EN (Burning Oil), Tip (Tooltip)
+// Upgrades: R0EN (Ölbrand), Tip (Tooltip)
 {
 Stonemaul-Lager erforschen
 }
@@ -47540,7 +47540,7 @@ Further increases the Distanzangriff-Schaden for Ogre units.
 }
 
 STRING 11835
-// Upgrades: R0EN (Burning Oil), Ubertip (Tooltip - Extended)
+// Upgrades: R0EN (Ölbrand), Ubertip (Tooltip - Extended)
 {
 Erlaubt Bürgern den Bau eines Stonemaul-Lagers, um Stonemaul-Clan-Oger auszubilden.
 }
@@ -47980,7 +47980,7 @@ STRING 11976
 STRING 11988
 // Units: h05H (Workshop), Ubertip (Tooltip - Extended)
 {
-Produces Skyfire-Kanonenschiffs, Canoneer Teams, Belagerungs-Landschiffs, and Flying Dreadnoughts. |nBietet auch die Ausbaustufen Flare, Fragmentation Shards, and Land Cannons upgrades.
+Produziert Skyfire-Kanonenschiffe, Kanonier-Teams, Belagerungs-Landschiffe und Fliegende Dreadnoughts. |nBietet auch die Ausbaustufen 'Leuchtfeuer', 'Schrapnell-Splitter' und 'Landkanonen'.
 }
 
 STRING 11989
@@ -50084,7 +50084,7 @@ STRING 13925
 }
 
 STRING 13926
-// Upgrades: R02B (Burning Oil), Name (Name)
+// Upgrades: R02B (Ölbrand), Name (Name)
 {
 Statue von Azshara
 }
@@ -50096,7 +50096,7 @@ Reduce
 }
 
 STRING 13928
-// Upgrades: R02B (Burning Oil), Ubertip (Tooltip - Extended)
+// Upgrades: R02B (Ölbrand), Ubertip (Tooltip - Extended)
 {
 Erlaubt Bürgern den Bau einer Statue von Azshara, um Ihre Stadt mit mächtigen Stürmen zu beschützen.
 }
@@ -50162,19 +50162,19 @@ Infects nearby enemy living units with Seuchenwolke. Seuchenwolke deals <A09R,Da
 }
 
 STRING 13940
-// Upgrades: R02C (Burning Oil), Name (Name)
+// Upgrades: R02C (Ölbrand), Name (Name)
 {
 Verderbter Urtum-Beschützer
 }
 
 STRING 13941
-// Upgrades: R02C (Burning Oil), Tip (Tooltip)
+// Upgrades: R02C (Ölbrand), Tip (Tooltip)
 {
 Verderbter Urtum-Beschützer
 }
 
 STRING 13942
-// Upgrades: R02C (Burning Oil), Ubertip (Tooltip - Extended)
+// Upgrades: R02C (Ölbrand), Ubertip (Tooltip - Extended)
 {
 Erlaubt Bürgern den Bau eines Verderbten Urtum-Beschützers, um Ihre Basis zu beschützen.
 }
@@ -50210,13 +50210,13 @@ E
 }
 
 STRING 13974
-// Upgrades: R02E (Burning Oil), Tip (Tooltip)
+// Upgrades: R02E (Ölbrand), Tip (Tooltip)
 {
 Fast Gold Bonus
 }
 
 STRING 13976
-// Upgrades: R02E (Burning Oil), effect1 (Effect 1)
+// Upgrades: R02E (Ölbrand), effect1 (Effect 1)
 {
 rmin
 }
@@ -50468,7 +50468,7 @@ Item Attack Wind Bonus
 }
 
 STRING 14062
-// Abilities: A0JE (Land Cannons), EditorSuffix (Editor Suffix)
+// Abilities: A0JE (Landkanonen), EditorSuffix (Editor Suffix)
 {
  (Icon - Kul Tiras)
 }
@@ -50720,13 +50720,13 @@ Loads a targeted enemy land unit.
 }
 
 STRING 14137
-// Upgrades: R01Z (Burning Oil), Ubertip (Tooltip - Extended)
+// Upgrades: R01Z (Ölbrand), Ubertip (Tooltip - Extended)
 {
 Erlaubt Bürgern den Bau eines gigantischen Weltenbaums, um Nachtelfeneinheiten überall auf der Karte zu heilen und auferstehen zu lassen!
 }
 
 STRING 14138
-// Upgrades: R02D (Burning Oil), Name (Name)
+// Upgrades: R02D (Ölbrand), Name (Name)
 {
 Draenei-Gefängnis
 }
@@ -50738,7 +50738,7 @@ Ein Kriegerheld, adept at terrorizing enemies. Can learn Schockwelle, Schreckgeh
 }
 
 STRING 14140
-// Upgrades: R02D (Burning Oil), Ubertip (Tooltip - Extended)
+// Upgrades: R02D (Ölbrand), Ubertip (Tooltip - Extended)
 {
 Erlaubt Bürgern den Bau eines Draenei-Gefängnis', um feindliche Einheiten überall auf der Karte einzusperren!
 }
@@ -50882,7 +50882,7 @@ Hurls a torpedo that stuns a target enemy ground unit.
 }
 
 STRING 14267
-// Abilities: A0A4 (Flare), EditorSuffix (Editor Suffix)
+// Abilities: A0A4 (Leuchtfeuer), EditorSuffix (Editor Suffix)
 {
 (Gnomisches U-Boot)
 }
@@ -50894,7 +50894,7 @@ STRING 14268
 }
 
 STRING 14269
-// Abilities: A0A4 (Flare), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0A4 (Leuchtfeuer), Ubertip (Tooltip - Normal - Extended)
 {
 Launches a flare above a target point, which reveals that area for <Afla,Dur1> Sekunden lang an. |nReveals invisible units.
 }
@@ -51386,7 +51386,7 @@ rlev
 }
 
 STRING 14497
-// Upgrades: R060 (Flare), effect1 (Effect 1)
+// Upgrades: R060 (Leuchtfeuer), effect1 (Effect 1)
 {
 rarm
 }
@@ -51430,7 +51430,7 @@ W
 STRING 14583
 // Units: o067 (Murloc Hut), Tip (Tooltip - Basic)
 {
-Build Murlock Hut
+Murloc-Hütte errichten
 }
 
 STRING 14585
@@ -51464,7 +51464,7 @@ Unsichtbarkeit
 }
 
 STRING 14593
-// Upgrades: R07Z (Freezing Breath), Name (Name)
+// Upgrades: R07Z (Eis-Atem), Name (Name)
 {
 Festhaut
 }
@@ -51590,7 +51590,7 @@ Priester
 }
 
 STRING 14657
-// Upgrades: R0G5 (Burning Oil), EditorSuffix (Editor Suffix)
+// Upgrades: R0G5 (Ölbrand), EditorSuffix (Editor Suffix)
 {
 (Draenei)
 }
@@ -51788,7 +51788,7 @@ R
 }
 
 STRING 14880
-// Upgrades: R00D (Freezing Breath), Hotkey (Hotkey)
+// Upgrades: R00D (Eis-Atem), Hotkey (Hotkey)
 {
 R
 }
@@ -51812,7 +51812,7 @@ R
 }
 
 STRING 14885
-// Upgrades: R06D (Freezing Breath), Hotkey (Hotkey)
+// Upgrades: R06D (Eis-Atem), Hotkey (Hotkey)
 {
 W
 }
@@ -51884,7 +51884,7 @@ E
 }
 
 STRING 14899
-// Upgrades: R0CB (Burning Oil), Hotkey (Hotkey)
+// Upgrades: R0CB (Ölbrand), Hotkey (Hotkey)
 {
 W
 }
@@ -51956,7 +51956,7 @@ E
 }
 
 STRING 14942
-// Upgrades: R07Z (Freezing Breath), Hotkey (Hotkey)
+// Upgrades: R07Z (Eis-Atem), Hotkey (Hotkey)
 {
 R
 }
@@ -52040,7 +52040,7 @@ Clans
 }
 
 STRING 15086
-// Upgrades: R07U (Freezing Breath), Hotkey (Hotkey)
+// Upgrades: R07U (Eis-Atem), Hotkey (Hotkey)
 {
 W
 }
@@ -52640,7 +52640,7 @@ Errichtet einen Tresor.
 }
 
 STRING 15806
-// Upgrades: R081 (Freezing Breath), Hotkey (Hotkey)
+// Upgrades: R081 (Eis-Atem), Hotkey (Hotkey)
 {
 R
 }
@@ -53450,7 +53450,7 @@ V
 }
 
 STRING 16543
-// Upgrades: R05I (Burning Oil), Name (Name)
+// Upgrades: R05I (Ölbrand), Name (Name)
 {
 Burg Prachtmeer
 }
@@ -53636,7 +53636,7 @@ D
 }
 
 STRING 16579
-// Upgrades: R05I (Burning Oil), Tip (Tooltip)
+// Upgrades: R05I (Ölbrand), Tip (Tooltip)
 {
 Burg Prachtmeer
 }
@@ -53678,7 +53678,7 @@ T
 }
 
 STRING 16586
-// Upgrades: R05I (Burning Oil), Ubertip (Tooltip - Extended)
+// Upgrades: R05I (Ölbrand), Ubertip (Tooltip - Extended)
 {
 Erlaubt Bürgern den Bau der Burg Prachtmeer, um Ihren Stützpunkt zu verteidigen.
 }
@@ -54046,7 +54046,7 @@ Aroom,Chieftain Oomooroo,Cukkaw,Lunaclaw,Razortalon
 STRING 16956
 // Units: u025 (Spawning Ground), Ubertip (Tooltip - Extended)
 {
-Produces Neruben-Königin. Bietet auch die Ausbaustufen Freezing Breath upgrade.
+Produziert Neruben-Königin. Bietet auch die Ausbaustufe 'Eis-Atem'.
 }
 
 STRING 16957
@@ -54224,13 +54224,13 @@ D
 }
 
 STRING 17303
-// Units: h00Z (Canoneer Team), Name (Name)
+// Units: h00Z (Kanonier-Team), Name (Name)
 {
 Kanonier-Team
 }
 
 STRING 17304
-// Units: h00Z (Canoneer Team), Tip (Tooltip - Basic)
+// Units: h00Z (Kanonier-Team), Tip (Tooltip - Basic)
 {
 Kanonier-Team ausbilden
 }
@@ -55142,21 +55142,21 @@ Priester wiederbeleben
 }
 
 STRING 17553
-// Abilities: A0M5 (Loading Goods), Name (Name)
+// Abilities: A0M5 (Güter beladen), Name (Name)
 {
-Loading Goods
+Güter beladen
 }
 
 STRING 17554
-// Abilities: A0M5 (Loading Goods), Tip (Tooltip - Normal)
+// Abilities: A0M5 (Güter beladen), Tip (Tooltip - Normal)
 {
-Loading Goods
+Güter beladen
 }
 
 STRING 17555
-// Abilities: A0M5 (Loading Goods), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0M5 (Güter beladen), Ubertip (Tooltip - Normal - Extended)
 {
-Produces 60 gold and 30 lumber every 10 seconds. If you build multiple Cranes the produced resources are divided by the number of platforms.
+Erzeugt alle 10 Sekunden 60 Gold und 30 Holz. Die erzeugten Rohstoffe werden durch die Anzahl der Krane geteilt, falls Sie mehrere errichten,
 }
 
 STRING 17557
@@ -55582,19 +55582,19 @@ Bretter herstellen
 STRING 17808
 // Items: I08U (Boards), Ubertip (Tooltip - Extended)
 {
-Gives <A0M7,DataA1> lumber to the player when used.
+Gibt dem Spieler bei Benutzung <A0M7,DataA1> Holz.
 }
 
 STRING 17809
 // Items: I08U (Boards), Description (Description)
 {
-Gives lumber to player.
+Gibt dem Spieler Holz.
 }
 
 STRING 17810
 // Abilities: A0M7 (Boards), Name (Name)
 {
-Boards
+Bretter
 }
 
 STRING 17811
@@ -55762,7 +55762,7 @@ E
 STRING 18100
 // Abilities: A0J2 (Spell Book of the Old Gods), Ubertip (Tooltip - Normal - Extended)
 {
-Contains useful spells.
+Enthält nützliche Zauber.
 }
 
 STRING 18101
@@ -56789,7 +56789,7 @@ STRING 18945
 }
 
 STRING 18946
-// Units: h0BW (Flying Dreadnought), EditorSuffix (Name - Editor Suffix)
+// Units: h0BW (Fliegende Dreadnought), EditorSuffix (Name - Editor Suffix)
 {
 (Kul Tiras)
 }
@@ -56849,19 +56849,19 @@ Schiffskanonen
 }
 
 STRING 18957
-// Abilities: A0JE (Land Cannons), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0JE (Landkanonen), Ubertip (Tooltip - Normal - Extended)
 {
 Increases the damage of land cannons against ships.
 }
 
 STRING 18958
-// Abilities: A0JE (Land Cannons), Tip (Tooltip - Normal)
+// Abilities: A0JE (Landkanonen), Tip (Tooltip - Normal)
 {
 Landkanonen
 }
 
 STRING 18960
-// Abilities: A0JE (Land Cannons), Name (Name)
+// Abilities: A0JE (Landkanonen), Name (Name)
 {
 Landkanonen
 }
@@ -57599,7 +57599,7 @@ Draenei-Unterkunft errichten
 }
 
 STRING 19756
-// Abilities: A0MH (Burning Oil), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0MH (Ölbrand), Ubertip (Tooltip - Normal - Extended)
 {
 Drenches the Oger-Goblin-Trupp ammo in burning oil, causing them to light the ground on fire and burn enemy units.
 }
@@ -57707,7 +57707,7 @@ STRING 19847
 }
 
 STRING 19848
-// Upgrades: R04P (Burning Oil), Ubertip (Tooltip - Extended)
+// Upgrades: R04P (Ölbrand), Ubertip (Tooltip - Extended)
 {
 Upgrades Oger-Goblin-Trupps to fire rocks smothered in burning oil, which causes the ground to burn.
 }
@@ -59501,13 +59501,13 @@ STRING 20517
 }
 
 STRING 20518
-// Upgrades: R05Y (Flare), Tip (Tooltip)
+// Upgrades: R05Y (Leuchtfeuer), Tip (Tooltip)
 {
 Gebäude-Blinzeln erforschen
 }
 
 STRING 20519
-// Upgrades: R05Y (Flare), Name (Name)
+// Upgrades: R05Y (Leuchtfeuer), Name (Name)
 {
 Gebäude-Blinzeln
 }
@@ -59519,13 +59519,13 @@ STRING 20520
 }
 
 STRING 20521
-// Upgrades: R05Y (Flare), Ubertip (Tooltip - Extended)
+// Upgrades: R05Y (Leuchtfeuer), Ubertip (Tooltip - Extended)
 {
 Allows Dalaran buildings to use the ability Blinzeln.
 }
 
 STRING 20522
-// Upgrades: R05Z (Flare), Tip (Tooltip)
+// Upgrades: R05Z (Leuchtfeuer), Tip (Tooltip)
 {
 Spawn Feuer-Elementargeister beschwören erforschen
 }
@@ -59543,7 +59543,7 @@ STRING 20524
 }
 
 STRING 20525
-// Upgrades: R05Z (Flare), Ubertip (Tooltip - Extended)
+// Upgrades: R05Z (Leuchtfeuer), Ubertip (Tooltip - Extended)
 {
 Allows Dalaran buildings to spawn 2 Feuer-Elementargeister whenever it gets destroyed.
 }
@@ -59585,13 +59585,13 @@ STRING 20531
 }
 
 STRING 20532
-// Upgrades: R060 (Flare), Name (Name)
+// Upgrades: R060 (Leuchtfeuer), Name (Name)
 {
 Elementare Konvergenz
 }
 
 STRING 20533
-// Upgrades: R060 (Flare), Tip (Tooltip)
+// Upgrades: R060 (Leuchtfeuer), Tip (Tooltip)
 {
 Elementare Konvergenz erforschen
 }
@@ -59603,7 +59603,7 @@ Fliegende Stadt
 }
 
 STRING 20535
-// Upgrades: R060 (Flare), effect2 (Effect 2)
+// Upgrades: R060 (Leuchtfeuer), effect2 (Effect 2)
 {
 ratd
 }
@@ -59627,13 +59627,13 @@ STRING 20538
 }
 
 STRING 20539
-// Upgrades: R061 (Flare), Tip (Tooltip)
+// Upgrades: R061 (Leuchtfeuer), Tip (Tooltip)
 {
 Gebäude-Manaschild erforschen
 }
 
 STRING 20540
-// Upgrades: R061 (Flare), Name (Name)
+// Upgrades: R061 (Leuchtfeuer), Name (Name)
 {
 Gebäude-Manaschild
 }
@@ -59645,7 +59645,7 @@ STRING 20541
 }
 
 STRING 20542
-// Upgrades: R061 (Flare), Ubertip (Tooltip - Extended)
+// Upgrades: R061 (Leuchtfeuer), Ubertip (Tooltip - Extended)
 {
 Allows Dalaran buildings to use the ability Manaschild.
 }
@@ -59723,7 +59723,7 @@ This tower's attacks destroy <A0NU,DataA1> mana per hit against any unit, causin
 }
 
 STRING 20560
-// Upgrades: R05Z (Flare), Name (Name)
+// Upgrades: R05Z (Leuchtfeuer), Name (Name)
 {
 Feuer-Elementargeister erzeugen
 }
@@ -59921,7 +59921,7 @@ STRING 20607
 }
 
 STRING 20608
-// Upgrades: R05S (Burning Oil), EditorSuffix (Editor Suffix)
+// Upgrades: R05S (Ölbrand), EditorSuffix (Editor Suffix)
 {
 (Dalaran)
 }
@@ -59935,13 +59935,13 @@ Dalaran-Wachturm errichten
 STRING 20611
 // Units: n089 (Dalaran Reject), Ubertip (Tooltip - Extended)
 {
-An unfortunate creature with no friends. |n|n|cffffcc00Greift Land-Einheiten an.|r
+Eine unglückliche Kreature, ohne Freunde. |n|n|cffffcc00Greift Land-Einheiten an.|r
 }
 
 STRING 20612
 // Units: n08D (Dalaran Mutant), Ubertip (Tooltip - Extended)
 {
-Weak warrior unit. |n|n|cffffcc00Greift Land-Einheiten an.|r
+Schwache Krieger-Einheit. |n|n|cffffcc00Greift Land-Einheiten an.|r
 }
 
 STRING 20613
@@ -60017,7 +60017,7 @@ C
 }
 
 STRING 20628
-// Upgrades: R060 (Flare), Ubertip (Tooltip - Extended)
+// Upgrades: R060 (Leuchtfeuer), Ubertip (Tooltip - Extended)
 {
 Erhöht die Rüstung, maximalen Trefferpunkte und den Schaden von allen elementaren Einheiten.
 }
@@ -60203,7 +60203,7 @@ The Troll-Medizinmann uses gathered material to craft Manaschutzzaubers.
 }
 
 STRING 20683
-// Upgrades: R08W (Burning Oil), Name (Name)
+// Upgrades: R08W (Ölbrand), Name (Name)
 {
 Kathedrale
 }
@@ -60215,7 +60215,7 @@ Sturmschlag
 }
 
 STRING 20780
-// Upgrades: R08W (Burning Oil), Tip (Tooltip)
+// Upgrades: R08W (Ölbrand), Tip (Tooltip)
 {
 Kathedrale erforschen
 }
@@ -60386,13 +60386,13 @@ P
 }
 
 STRING 21303
-// Upgrades: R05Y (Flare), EditorSuffix (Editor Suffix)
+// Upgrades: R05Y (Leuchtfeuer), EditorSuffix (Editor Suffix)
 {
 (Dalaran)
 }
 
 STRING 21304
-// Upgrades: R05Z (Flare), EditorSuffix (Editor Suffix)
+// Upgrades: R05Z (Leuchtfeuer), EditorSuffix (Editor Suffix)
 {
 (Dalaran)
 }
@@ -60404,7 +60404,7 @@ rlev
 }
 
 STRING 21306
-// Upgrades: R060 (Flare), EditorSuffix (Editor Suffix)
+// Upgrades: R060 (Leuchtfeuer), EditorSuffix (Editor Suffix)
 {
 (Dalaran)
 }
@@ -60422,7 +60422,7 @@ Feuermagier-Meister-Ausbildung
 }
 
 STRING 21309
-// Upgrades: R061 (Flare), EditorSuffix (Editor Suffix)
+// Upgrades: R061 (Leuchtfeuer), EditorSuffix (Editor Suffix)
 {
 (Dalaran)
 }
@@ -61112,19 +61112,19 @@ Beschwört <A0P4,DataA1> friendly units from a target area to the caster.
 }
 
 STRING 22360
-// Upgrades: R00C (Freezing Breath), Tip (Tooltip)
+// Upgrades: R00C (Eis-Atem), Tip (Tooltip)
 {
 Dauerhafter Feuerbrand erforschen
 }
 
 STRING 22361
-// Upgrades: R00C (Freezing Breath), Ubertip (Tooltip - Extended)
+// Upgrades: R00C (Eis-Atem), Ubertip (Tooltip - Extended)
 {
 Allows Höllenbesties and Reavers to use the ability Dauerhafter Feuerbrand.
 }
 
 STRING 22362
-// Upgrades: R07Z (Freezing Breath), Tip (Tooltip)
+// Upgrades: R07Z (Eis-Atem), Tip (Tooltip)
 {
 Festhaut erforschen
 }
@@ -61136,13 +61136,13 @@ D
 }
 
 STRING 22364
-// Upgrades: R00K (Freezing Breath), Tip (Tooltip)
+// Upgrades: R00K (Eis-Atem), Tip (Tooltip)
 {
 Harthaut erforschen
 }
 
 STRING 22365
-// Upgrades: R00K (Freezing Breath), Ubertip (Tooltip - Extended)
+// Upgrades: R00K (Eis-Atem), Ubertip (Tooltip - Extended)
 {
 Allows Höllenbesties and Reavers to use the ability Harthaut.
 }
@@ -61184,7 +61184,7 @@ Kriegsdonner erforschen
 }
 
 STRING 22387
-// Upgrades: R06D (Freezing Breath), Ubertip (Tooltip - Extended)
+// Upgrades: R06D (Eis-Atem), Ubertip (Tooltip - Extended)
 {
 Ermöglicht es den Reavers, die Fähigkeit 'Kriegsdonner' einzusetzen.
 }
@@ -61250,7 +61250,7 @@ Unheilshüter ausbilden
 }
 
 STRING 22398
-// Units: n01E (Greater Voidwalker), Tip (Tooltip - Basic)
+// Units: n01E (Große Leerwandler), Tip (Tooltip - Basic)
 {
 Großen Leerwandler ausbilden
 }
@@ -61498,37 +61498,37 @@ STRING 22444
 STRING 22445
 // Upgrades: R00H (Unholy Strength,Improved Unholy Strength,Advanced Unholy Strength), Ubertip (Tooltip - Extended)
 {
-Increases the attack damage of  Anführers, Höllenbestie Machines, Inquisitors and Unheilshüters.
+Increases the attack damage of  Anführers, Höllenbestien-Maschinen, Inquisitors and Unheilshüters.
 }
 
 STRING 22446
 // Upgrades: R00H (Unholy Strength,Improved Unholy Strength,Advanced Unholy Strength), Ubertip (Tooltip - Extended)
 {
-Increases the attack damage of  Anführers, Höllenbestie Machines, Inquisitors and Unheilshüters.
+Increases the attack damage of  Anführers, Höllenbestien-Maschinen, Inquisitors and Unheilshüters.
 }
 
 STRING 22447
 // Upgrades: R00H (Unholy Strength,Improved Unholy Strength,Advanced Unholy Strength), Ubertip (Tooltip - Extended)
 {
-Increases the attack damage of  Anführers, Höllenbestie Machines, Inquisitors and Unheilshüters.
+Increases the attack damage of  Anführers, Höllenbestien-Maschinen, Inquisitors and Unheilshüters.
 }
 
 STRING 22448
 // Upgrades: R00R (Unholy Armor,Improved Unholy Armor,Advanced Unholy Armor), Ubertip (Tooltip - Extended)
 {
-Increases the armor of Anführers, Höllenbestie Machines, Inquisitors and Unheilshüters.
+Increases the armor of Anführers, Höllenbestien-Maschinen, Inquisitors and Unheilshüters.
 }
 
 STRING 22449
 // Upgrades: R00R (Unholy Armor,Improved Unholy Armor,Advanced Unholy Armor), Ubertip (Tooltip - Extended)
 {
-Increases the armor of Anführers, Höllenbestie Machines, Inquisitors and Unheilshüters.
+Increases the armor of Anführers, Höllenbestien-Maschinen, Inquisitors and Unheilshüters.
 }
 
 STRING 22450
 // Upgrades: R00R (Unholy Armor,Improved Unholy Armor,Advanced Unholy Armor), Ubertip (Tooltip - Extended)
 {
-Increases the armor of Anführers, Höllenbestie Machines, Inquisitors and Unheilshüters.
+Increases the armor of Anführers, Höllenbestien-Maschinen, Inquisitors and Unheilshüters.
 }
 
 STRING 22451
@@ -62222,7 +62222,7 @@ Windlauf
 }
 
 STRING 22746
-// Upgrades: R07U (Freezing Breath), Name (Name)
+// Upgrades: R07U (Eis-Atem), Name (Name)
 {
 Kriegsdonner
 }
@@ -62463,7 +62463,7 @@ Mana abziehen
 STRING 22958
 // Units: e01G (Manticore), Ubertip (Tooltip - Extended)
 {
-Long-range siege weaponry. Exceptional damage versus buildings. Can gain the Burning Oil upgrade to damage units on the ground. |n|n|cffffcc00Greift Land-Einheiten an.|r
+Long-range siege weaponry. Exceptional damage versus buildings. Can gain the Ölbrand upgrade to damage units on the ground. |n|n|cffffcc00Greift Land-Einheiten an.|r
 }
 
 STRING 22962
@@ -62761,7 +62761,7 @@ Adds <A0QH,DataA1> bonus damage to the hero's attack and causes his attacks to d
 }
 
 STRING 23407
-// Upgrades: R078 (Burning Oil), Name (Name)
+// Upgrades: R078 (Ölbrand), Name (Name)
 {
 Diebesgilde
 }
@@ -63487,7 +63487,7 @@ STRING 24440
 }
 
 STRING 24441
-// Abilities: A0S8 (Flare), EditorSuffix (Editor Suffix)
+// Abilities: A0S8 (Leuchtfeuer), EditorSuffix (Editor Suffix)
 {
 (Kul Tiras)
 }
@@ -63499,7 +63499,7 @@ Enables Wachen to use the Einschnüren ability. Einschnüren causes a target ene
 }
 
 STRING 24443
-// Abilities: A0S9 (Fragmentation Shards), EditorSuffix (Editor Suffix)
+// Abilities: A0S9 (Schrapnell-Splitter), EditorSuffix (Editor Suffix)
 {
 (Kul Tiras)
 }
@@ -63553,7 +63553,7 @@ STRING 24462
 }
 
 STRING 24463
-// Upgrades: R05I (Burning Oil), EditorSuffix (Editor Suffix)
+// Upgrades: R05I (Ölbrand), EditorSuffix (Editor Suffix)
 {
 (Kul Tiras)
 }
@@ -63619,19 +63619,19 @@ Wanderfalken ausbilden
 }
 
 STRING 24476
-// Units: h0BW (Flying Dreadnought), Name (Name)
+// Units: h0BW (Fliegende Dreadnought), Name (Name)
 {
-Flying Dreadnought
+Fliegende Dreadnought
 }
 
 STRING 24477
-// Units: h0BW (Flying Dreadnought), Tip (Tooltip - Basic)
+// Units: h0BW (Fliegende Dreadnought), Tip (Tooltip - Basic)
 {
-Train Flying Dreadnought
+Train Fliegende Dreadnought
 }
 
 STRING 24478
-// Units: h0BW (Flying Dreadnought), Ubertip (Tooltip - Extended)
+// Units: h0BW (Fliegende Dreadnought), Ubertip (Tooltip - Extended)
 {
 Massive battleship good at destroying enemy ships and bombarding buildings from the sea. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
 }
@@ -63967,13 +63967,13 @@ STRING 24556
 }
 
 STRING 24557
-// Upgrades: R071 (Fragmentation Shards), EditorSuffix (Editor Suffix)
+// Upgrades: R071 (Schrapnell-Splitter), EditorSuffix (Editor Suffix)
 {
 (Kul Tiras)
 }
 
 STRING 24558
-// Upgrades: R072 (Flare), EditorSuffix (Editor Suffix)
+// Upgrades: R072 (Leuchtfeuer), EditorSuffix (Editor Suffix)
 {
 (Kul Tiras)
 }
@@ -64705,7 +64705,7 @@ Kleine Rechnung
 }
 
 STRING 25558
-// Upgrades: R022 (Burning Oil), Tip (Tooltip)
+// Upgrades: R022 (Ölbrand), Tip (Tooltip)
 {
 Arkanes Observatorium erforschen
 }
@@ -66649,19 +66649,19 @@ STRING 27924
 }
 
 STRING 27925
-// Upgrades: R0IW (Burning Oil), Name (Name)
+// Upgrades: R0IW (Ölbrand), Name (Name)
 {
 Kobold-Minen
 }
 
 STRING 27926
-// Upgrades: R0IW (Burning Oil), Tip (Tooltip)
+// Upgrades: R0IW (Ölbrand), Tip (Tooltip)
 {
 Kobold-Minen erforschen
 }
 
 STRING 27927
-// Upgrades: R0IW (Burning Oil), Ubertip (Tooltip - Extended)
+// Upgrades: R0IW (Ölbrand), Ubertip (Tooltip - Extended)
 {
 Erlaubt Bürgern den Bau von Kobold-Minen Kobold-Minen, welche Auren mit Effekten hat, die von der Anzahl der Einheiten, die an Gegener verloren wurden, abhängen.
 }
@@ -67827,7 +67827,7 @@ Checkpoint
 STRING 28989
 // Buffs/Effects: B01R (), EditorSuffix (Editor Suffix)
 {
-(Burning Oil)
+(Ölbrand)
 }
 
 STRING 28991
@@ -68959,7 +68959,7 @@ Sacrifice
 }
 
 STRING 30613
-// Upgrades: R01Z (Burning Oil), Tip (Tooltip)
+// Upgrades: R01Z (Ölbrand), Tip (Tooltip)
 {
 Weltenbaum erforschen
 }
@@ -69007,7 +69007,7 @@ Herold der Tiefenmutter
 }
 
 STRING 30774
-// Upgrades: R0HC (Burning Oil), Name (Name)
+// Upgrades: R0HC (Ölbrand), Name (Name)
 {
 Schädel des Gul'dan
 }
@@ -69901,7 +69901,7 @@ STRING 31063
 }
 
 STRING 31064
-// Upgrades: R0EN (Burning Oil), Name (Name)
+// Upgrades: R0EN (Ölbrand), Name (Name)
 {
 Stonemaul-Lager
 }
@@ -70729,13 +70729,13 @@ STRING 31666
 }
 
 STRING 31675
-// Upgrades: R00C (Freezing Breath), EditorSuffix (Editor Suffix)
+// Upgrades: R00C (Eis-Atem), EditorSuffix (Editor Suffix)
 {
 (Dämonen)
 }
 
 STRING 31676
-// Upgrades: R00D (Freezing Breath), EditorSuffix (Editor Suffix)
+// Upgrades: R00D (Eis-Atem), EditorSuffix (Editor Suffix)
 {
 (Dämonen)
 }
@@ -70885,7 +70885,7 @@ Basic melee unit which can learn Schmetter-Angriff. |n|n|cffffcc00Greift Land-Ei
 }
 
 STRING 31757
-// Units: n01E (Greater Voidwalker), Ubertip (Tooltip - Extended)
+// Units: n01E (Große Leerwandler), Ubertip (Tooltip - Extended)
 {
 Unarmed unit who casts Heilen, Fill Mana and Slow. Has Durchblick to detect enemy hidden units.
 }
@@ -71209,7 +71209,7 @@ Bor Stonebreaker,Munin Ironcliff,Thorgas Broadaxe,Kelv Sternhammer,Grim Thunderb
 }
 
 STRING 32098
-// Upgrades: R0HC (Burning Oil), Tip (Tooltip)
+// Upgrades: R0HC (Ölbrand), Tip (Tooltip)
 {
 Schädel des Gul'dan erforschen
 }
@@ -71455,7 +71455,7 @@ STRING 32478
 }
 
 STRING 32480
-// Upgrades: R0HC (Burning Oil), Ubertip (Tooltip - Extended)
+// Upgrades: R0HC (Ölbrand), Ubertip (Tooltip - Extended)
 {
 Erlaubt Bürgern den Bau des Schädel des Gul'dan, um Chaosregen überall auf der Karte zu wirken.
 }
@@ -71743,7 +71743,7 @@ Changes position, so the squad can walk again but not attack.
 }
 
 STRING 32544
-// Abilities: A0MH (Burning Oil), EditorSuffix (Editor Suffix)
+// Abilities: A0MH (Ölbrand), EditorSuffix (Editor Suffix)
 {
 (Oger-Goblin-Trupp)
 }
@@ -71833,13 +71833,13 @@ P
 }
 
 STRING 32583
-// Upgrades: R05Z (Flare), Hotkey (Hotkey)
+// Upgrades: R05Z (Leuchtfeuer), Hotkey (Hotkey)
 {
 F
 }
 
 STRING 32584
-// Upgrades: R00C (Freezing Breath), Hotkey (Hotkey)
+// Upgrades: R00C (Eis-Atem), Hotkey (Hotkey)
 {
 P
 }
@@ -73537,7 +73537,7 @@ Basic worker. Can summon structures, harvest gold and lumber, and Repair.|n|n|cf
 }
 
 STRING 33705
-// Upgrades: R01Y (Burning Oil), Tip (Tooltip)
+// Upgrades: R01Y (Ölbrand), Tip (Tooltip)
 {
 Fel erforschen
 }
@@ -73549,19 +73549,19 @@ F
 }
 
 STRING 33707
-// Upgrades: R09C (Burning Oil), Name (Name)
+// Upgrades: R09C (Ölbrand), Name (Name)
 {
 Opfertempel
 }
 
 STRING 33708
-// Upgrades: R09C (Burning Oil), Tip (Tooltip)
+// Upgrades: R09C (Ölbrand), Tip (Tooltip)
 {
 Opfertempel erforschen
 }
 
 STRING 33709
-// Upgrades: R09C (Burning Oil), Ubertip (Tooltip - Extended)
+// Upgrades: R09C (Ölbrand), Ubertip (Tooltip - Extended)
 {
 Erlaubt Bürgern den Bau a Brunnen des Blutes to train and convert Höllenorcss.
 }
@@ -74119,7 +74119,7 @@ Ausbau zur Hoch entwickelten Troll-Rüstung
 }
 
 STRING 33939
-// Upgrades: R09C (Burning Oil), EditorSuffix (Editor Suffix)
+// Upgrades: R09C (Ölbrand), EditorSuffix (Editor Suffix)
 {
 (Trolle)
 }
@@ -74815,7 +74815,7 @@ L
 }
 
 STRING 34196
-// Upgrades: R023 (Burning Oil), Hotkey (Hotkey)
+// Upgrades: R023 (Ölbrand), Hotkey (Hotkey)
 {
 P
 }
@@ -76701,7 +76701,7 @@ STRING 35179
 STRING 35180
 // Upgrades: R0A6 (Barrage), Ubertip (Tooltip - Extended)
 {
-Upgrades Bogenschützinnen to Armbrustmen, giving them more damage but slower cooldown.
+Upgrades Bogenschützinnen to Armbrustschützen, giving them more damage but slower cooldown.
 }
 
 STRING 35181
@@ -77317,13 +77317,13 @@ STRING 35441
 }
 
 STRING 35442
-// Upgrades: R0AD (Burning Oil), Name (Name)
+// Upgrades: R0AD (Ölbrand), Name (Name)
 {
 Scharlachrotes Kloster
 }
 
 STRING 35443
-// Upgrades: R0AD (Burning Oil), Tip (Tooltip)
+// Upgrades: R0AD (Ölbrand), Tip (Tooltip)
 {
 Scharlachrotes Kloster erforschen
 }
@@ -77527,7 +77527,7 @@ STRING 35577
 }
 
 STRING 35578
-// Upgrades: R0AD (Burning Oil), EditorSuffix (Editor Suffix)
+// Upgrades: R0AD (Ölbrand), EditorSuffix (Editor Suffix)
 {
 (Lordaeron)
 }
@@ -78823,7 +78823,7 @@ STRING 35907
 }
 
 STRING 35908
-// Upgrades: R022 (Burning Oil), EditorSuffix (Editor Suffix)
+// Upgrades: R022 (Ölbrand), EditorSuffix (Editor Suffix)
 {
 (Menschen)
 }
@@ -81045,7 +81045,7 @@ STRING 36309
 STRING 36310
 // Upgrades: R0AM (Improved Bows), Ubertip (Tooltip - Extended)
 {
-Increases the Archer's, Armbrustmen's and Greifenreiters attack range.
+Increases the Archer's, Armbrustschützen's and Greifenreiters attack range.
 }
 
 STRING 36311
@@ -82627,7 +82627,7 @@ Azjol-Nerub
 }
 
 STRING 37360
-// Upgrades: R020 (Burning Oil), Tip (Tooltip)
+// Upgrades: R020 (Ölbrand), Tip (Tooltip)
 {
 Lich-König erforschen
 }
@@ -82639,19 +82639,19 @@ STRING 37361
 }
 
 STRING 37362
-// Upgrades: R0B5 (Burning Oil), Name (Name)
+// Upgrades: R0B5 (Ölbrand), Name (Name)
 {
 Azjol-Nerub
 }
 
 STRING 37363
-// Upgrades: R0B5 (Burning Oil), Tip (Tooltip)
+// Upgrades: R0B5 (Ölbrand), Tip (Tooltip)
 {
 Azjol-Nerub erforschen
 }
 
 STRING 37364
-// Upgrades: R0B5 (Burning Oil), Ubertip (Tooltip - Extended)
+// Upgrades: R0B5 (Ölbrand), Ubertip (Tooltip - Extended)
 {
 Erlaubt Bürgern den Bau des Azjol-Nerub.
 }
@@ -83361,7 +83361,7 @@ Brutstätte beschwören
 STRING 37500
 // Units: u02J (Burrowed Spawning Ground), Ubertip (Tooltip - Extended)
 {
-Bildet Neruben-Königin aus. Bietet auch die Ausbaustufen Freezing Breath upgrade.
+Bildet Neruben-Königin aus. Bietet auch die Ausbaustufen Eis-Atem upgrade.
 }
 
 STRING 37501
@@ -84085,19 +84085,19 @@ Schweren Panzer bauen
 }
 
 STRING 37673
-// Upgrades: R02X (Burning Oil), Name (Name)
+// Upgrades: R02X (Ölbrand), Name (Name)
 {
 Schwerer Panzer
 }
 
 STRING 37674
-// Upgrades: R02X (Burning Oil), Tip (Tooltip)
+// Upgrades: R02X (Ölbrand), Tip (Tooltip)
 {
 Schwerer Panzer
 }
 
 STRING 37675
-// Upgrades: R02X (Burning Oil), Ubertip (Tooltip - Extended)
+// Upgrades: R02X (Ölbrand), Ubertip (Tooltip - Extended)
 {
 Erlaubt Bürgern den Bau a Heavy Tank to fight enemy troops!
 }
@@ -84487,7 +84487,7 @@ STRING 37796
 }
 
 STRING 37797
-// Upgrades: R0B5 (Burning Oil), EditorSuffix (Editor Suffix)
+// Upgrades: R0B5 (Ölbrand), EditorSuffix (Editor Suffix)
 {
 (Neruber)
 }
@@ -86467,13 +86467,13 @@ Hallen der Tapferkeit
 }
 
 STRING 38752
-// Upgrades: R0BH (Burning Oil), Tip (Tooltip)
+// Upgrades: R0BH (Ölbrand), Tip (Tooltip)
 {
 Hallen der Tapferkeit erforschen
 }
 
 STRING 38753
-// Upgrades: R0BH (Burning Oil), Ubertip (Tooltip - Extended)
+// Upgrades: R0BH (Ölbrand), Ubertip (Tooltip - Extended)
 {
 Erlaubt Bürgern den Bau the Hallen der Tapferkeit to bring back dead warriors as champions.
 }
@@ -86599,7 +86599,7 @@ STRING 38786
 }
 
 STRING 38787
-// Upgrades: R0BH (Burning Oil), Name (Name)
+// Upgrades: R0BH (Ölbrand), Name (Name)
 {
 Hallen der Tapferkeit
 }
@@ -86611,7 +86611,7 @@ STRING 38788
 }
 
 STRING 38789
-// Upgrades: R0BH (Burning Oil), EditorSuffix (Editor Suffix)
+// Upgrades: R0BH (Ölbrand), EditorSuffix (Editor Suffix)
 {
 (Vrykul)
 }
@@ -86695,13 +86695,13 @@ D
 }
 
 STRING 38809
-// Upgrades: R081 (Freezing Breath), Tip (Tooltip)
+// Upgrades: R081 (Eis-Atem), Tip (Tooltip)
 {
 Festhaut erforschen
 }
 
 STRING 38810
-// Upgrades: R081 (Freezing Breath), Name (Name)
+// Upgrades: R081 (Eis-Atem), Name (Name)
 {
 Festhaut
 }
@@ -87613,7 +87613,7 @@ Changes the time of day to midnight for <A1F5,Dur1> Sekunden lang an.
 }
 
 STRING 39697
-// Upgrades: R08W (Burning Oil), Ubertip (Tooltip - Extended)
+// Upgrades: R08W (Ölbrand), Ubertip (Tooltip - Extended)
 {
 Erlaubt Bürgern den Bau a Kathedrale which can force the moon to appear.
 }
@@ -88249,19 +88249,19 @@ STRING 39889
 }
 
 STRING 39891
-// Upgrades: R0CB (Burning Oil), Name (Name)
+// Upgrades: R0CB (Ölbrand), Name (Name)
 {
 Graumähnenmauer
 }
 
 STRING 39892
-// Upgrades: R0CB (Burning Oil), Tip (Tooltip)
+// Upgrades: R0CB (Ölbrand), Tip (Tooltip)
 {
 Graumähnenmauer erforschen
 }
 
 STRING 39893
-// Upgrades: R0CB (Burning Oil), Ubertip (Tooltip - Extended)
+// Upgrades: R0CB (Ölbrand), Ubertip (Tooltip - Extended)
 {
 Erlaubt Bürgern den Bau the Graumähnenmauer which protects your base.
 }
@@ -88339,7 +88339,7 @@ Winziges Haus errichten
 }
 
 STRING 39907
-// Upgrades: R08W (Burning Oil), EditorSuffix (Editor Suffix)
+// Upgrades: R08W (Ölbrand), EditorSuffix (Editor Suffix)
 {
 (Worgen)
 }
@@ -88933,7 +88933,7 @@ STRING 40008
 }
 
 STRING 40009
-// Upgrades: R0CB (Burning Oil), EditorSuffix (Editor Suffix)
+// Upgrades: R0CB (Ölbrand), EditorSuffix (Editor Suffix)
 {
 (Worgen)
 }
@@ -89899,7 +89899,7 @@ Hoch entwickelte Fischerei
 }
 
 STRING 40560
-// Abilities: A1GO (Freezing Breath), EditorSuffix (Editor Suffix)
+// Abilities: A1GO (Eis-Atem), EditorSuffix (Editor Suffix)
 {
 (Tuskarr)
 }
@@ -90213,7 +90213,7 @@ STRING 40631
 STRING 40632
 // Units: o067 (Murloc Hut), Ubertip (Tooltip - Extended)
 {
-Increases food.
+Erhöht die Nahrung.
 }
 
 STRING 40633
@@ -91177,7 +91177,7 @@ Bergmann anheuern
 }
 
 STRING 41094
-// Abilities: A1GO (Freezing Breath), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A1GO (Eis-Atem), Ubertip (Tooltip - Normal - Extended)
 {
 When used on a units, temporarily stops all unit activities. |nHält <Afrz,Dur1> Sekunden lang an.
 }
@@ -91447,7 +91447,7 @@ STRING 41209
 }
 
 STRING 41211
-// Upgrades: R07U (Freezing Breath), Tip (Tooltip)
+// Upgrades: R07U (Eis-Atem), Tip (Tooltip)
 {
 Kriegsdonner erforschen
 }
@@ -91699,13 +91699,13 @@ Grabstätte
 }
 
 STRING 41256
-// Upgrades: R0CU (Burning Oil), Name (Name)
+// Upgrades: R0CU (Ölbrand), Name (Name)
 {
 Grabstätte
 }
 
 STRING 41257
-// Upgrades: R0CU (Burning Oil), Ubertip (Tooltip - Extended)
+// Upgrades: R0CU (Ölbrand), Ubertip (Tooltip - Extended)
 {
 Erlaubt Bürgern den Bau a Grabstätte which has auras with effects depending on the number of units lost to enemies.
 }
@@ -91891,7 +91891,7 @@ STRING 41288
 }
 
 STRING 41290
-// Upgrades: R0CU (Burning Oil), Tip (Tooltip)
+// Upgrades: R0CU (Ölbrand), Tip (Tooltip)
 {
 Grabstätte
 }
@@ -92191,7 +92191,7 @@ STRING 41372
 }
 
 STRING 41374
-// Upgrades: R02B (Burning Oil), Tip (Tooltip)
+// Upgrades: R02B (Ölbrand), Tip (Tooltip)
 {
 Statue von Azshara erforschen
 }
@@ -92215,13 +92215,13 @@ Verleiht bestimmten Murloc-Land-Einheiten die Fähigkeit, Gegenstände zu tragen
 }
 
 STRING 41384
-// Upgrades: R0CW (Burning Oil), Name (Name)
+// Upgrades: R0CW (Ölbrand), Name (Name)
 {
 Murloc-Fischer
 }
 
 STRING 41385
-// Upgrades: R0CW (Burning Oil), Tip (Tooltip)
+// Upgrades: R0CW (Ölbrand), Tip (Tooltip)
 {
 Murloc-Fischer erforschen
 }
@@ -93697,19 +93697,19 @@ STRING 41990
 }
 
 STRING 41991
-// Upgrades: R0DA (Burning Oil), Name (Name)
+// Upgrades: R0DA (Ölbrand), Name (Name)
 {
 Totempfahl
 }
 
 STRING 41992
-// Upgrades: R0DA (Burning Oil), Tip (Tooltip)
+// Upgrades: R0DA (Ölbrand), Tip (Tooltip)
 {
 Totempfahl erforschen
 }
 
 STRING 41993
-// Upgrades: R0DA (Burning Oil), Ubertip (Tooltip - Extended)
+// Upgrades: R0DA (Ölbrand), Ubertip (Tooltip - Extended)
 {
 Erlaubt Bürgern den Bau a Totem Pole to reincarnate dead Tauren units.
 }
@@ -93781,7 +93781,7 @@ STRING 42025
 }
 
 STRING 42026
-// Upgrades: R0DA (Burning Oil), EditorSuffix (Editor Suffix)
+// Upgrades: R0DA (Ölbrand), EditorSuffix (Editor Suffix)
 {
 (Tauren)
 }
@@ -94111,7 +94111,7 @@ Feuerangriff
 }
 
 STRING 42207
-// Upgrades: R082 (Flare), Name (Name)
+// Upgrades: R082 (Leuchtfeuer), Name (Name)
 {
 Feuerangriff
 }
@@ -94957,7 +94957,7 @@ Entwaffnung
 }
 
 STRING 42423
-// Upgrades: R03J (Burning Oil), Tip (Tooltip)
+// Upgrades: R03J (Ölbrand), Tip (Tooltip)
 {
 Zwergen-Sägewerk erforschen
 }
@@ -94999,7 +94999,7 @@ D
 }
 
 STRING 42432
-// Abilities: A1KM (Fragmentation Shards), EditorSuffix (Editor Suffix)
+// Abilities: A1KM (Schrapnell-Splitter), EditorSuffix (Editor Suffix)
 {
 (Pandaren)
 }
@@ -95113,19 +95113,19 @@ STRING 42455
 }
 
 STRING 42456
-// Upgrades: R0DN (Flare), Name (Name)
+// Upgrades: R0DN (Leuchtfeuer), Name (Name)
 {
 Feuerwerk
 }
 
 STRING 42457
-// Upgrades: R0DN (Flare), Tip (Tooltip)
+// Upgrades: R0DN (Leuchtfeuer), Tip (Tooltip)
 {
 Feuerwerk erforschen
 }
 
 STRING 42458
-// Upgrades: R0DN (Flare), Ubertip (Tooltip - Extended)
+// Upgrades: R0DN (Leuchtfeuer), Ubertip (Tooltip - Extended)
 {
 Provides Feuerwerk-Teams with the Feuerwerk ability. Feuerwerks can be used to reveal any area of the map. |nCan see invisible units.
 }
@@ -95161,19 +95161,19 @@ Provides Wolkenschlanges with the Cloud ability, which stops ranged buildings fr
 }
 
 STRING 42465
-// Upgrades: R0DQ (Burning Oil), Name (Name)
+// Upgrades: R0DQ (Ölbrand), Name (Name)
 {
 Jade-Wald
 }
 
 STRING 42466
-// Upgrades: R0DQ (Burning Oil), Tip (Tooltip)
+// Upgrades: R0DQ (Ölbrand), Tip (Tooltip)
 {
 Jade-Wald erforschen
 }
 
 STRING 42467
-// Upgrades: R0DQ (Burning Oil), Ubertip (Tooltip - Extended)
+// Upgrades: R0DQ (Ölbrand), Ubertip (Tooltip - Extended)
 {
 Erlaubt Bürgern den Bau the Jade-Wald which prevents enemies from fighting.
 }
@@ -95187,13 +95187,13 @@ STRING 42468
 STRING 42469
 // Units: h0A8 (Firework Team), Ubertip (Tooltip - Extended)
 {
-Long-range siege weaponry. Exceptional damage versus buildings, but slow and vulnerable. Can learn the Fragmentation Shards and Feuerwerk abilities. |n|n|cffffcc00Greif Land-Einheiten und Bäume an.|r
+Long-range siege weaponry. Exceptional damage versus buildings, but slow and vulnerable. Can learn the Schrapnell-Splitter and Feuerwerk abilities. |n|n|cffffcc00Greif Land-Einheiten und Bäume an.|r
 }
 
 STRING 42470
 // Units: h0A9 (Workshop), Ubertip (Tooltip - Extended)
 {
-Produziert Drachenschildkröten, Feuerwerk-Teams und Urpandas. Allows researching upgrades Feuerwerk and Fragmentation Shards.
+Produziert Drachenschildkröten, Feuerwerk-Teams und Urpandas. Allows researching upgrades Feuerwerk and Schrapnell-Splitter.
 }
 
 STRING 42472
@@ -95377,7 +95377,7 @@ STRING 42506
 }
 
 STRING 42507
-// Upgrades: R0DT (Fragmentation Shards), Ubertip (Tooltip - Extended)
+// Upgrades: R0DT (Schrapnell-Splitter), Ubertip (Tooltip - Extended)
 {
 Upgrades the mortar shells on Feuerwerk-Teams to increase the damage they deal to Unarmored and Medium armor units.
 }
@@ -95413,7 +95413,7 @@ STRING 42513
 }
 
 STRING 42514
-// Upgrades: R0DN (Flare), EditorSuffix (Editor Suffix)
+// Upgrades: R0DN (Leuchtfeuer), EditorSuffix (Editor Suffix)
 {
 (Pandaren)
 }
@@ -95431,7 +95431,7 @@ STRING 42516
 }
 
 STRING 42517
-// Upgrades: R0DQ (Burning Oil), EditorSuffix (Editor Suffix)
+// Upgrades: R0DQ (Ölbrand), EditorSuffix (Editor Suffix)
 {
 (Pandaren)
 }
@@ -95689,7 +95689,7 @@ D
 }
 
 STRING 42626
-// Upgrades: R0DT (Fragmentation Shards), EditorSuffix (Editor Suffix)
+// Upgrades: R0DT (Schrapnell-Splitter), EditorSuffix (Editor Suffix)
 {
 (Pandaren)
 }
@@ -97093,7 +97093,7 @@ STRING 43394
 }
 
 STRING 43395
-// Upgrades: R00Y (Burning Oil), EditorSuffix (Editor Suffix)
+// Upgrades: R00Y (Ölbrand), EditorSuffix (Editor Suffix)
 {
 (Blutelfen)
 }
@@ -99613,7 +99613,7 @@ STRING 45592
 }
 
 STRING 45593
-// Upgrades: R047 (Burning Oil), Ubertip (Tooltip - Extended)
+// Upgrades: R047 (Ölbrand), Ubertip (Tooltip - Extended)
 {
 Erlaubt Bürgern den Bau a Sonnenbrunnen with abilities Sun Key and Life and Manaregeneration for player units.
 }
@@ -100153,7 +100153,7 @@ STRING 45950
 }
 
 STRING 45954
-// Upgrades: R0AD (Burning Oil), Ubertip (Tooltip - Extended)
+// Upgrades: R0AD (Ölbrand), Ubertip (Tooltip - Extended)
 {
 Erlaubt Bürgern den Bau the Scharlachrotes Kloster.
 }
@@ -100165,19 +100165,19 @@ STRING 45955
 }
 
 STRING 45956
-// Upgrades: R0EQ (Burning Oil), Name (Name)
+// Upgrades: R0EQ (Ölbrand), Name (Name)
 {
 Kathedrale des Lichts
 }
 
 STRING 45957
-// Upgrades: R0EQ (Burning Oil), Tip (Tooltip)
+// Upgrades: R0EQ (Ölbrand), Tip (Tooltip)
 {
 Kathedrale des Lichts erforschen
 }
 
 STRING 45958
-// Upgrades: R0EQ (Burning Oil), Ubertip (Tooltip - Extended)
+// Upgrades: R0EQ (Ölbrand), Ubertip (Tooltip - Extended)
 {
 Ermöglicht Bürgern das Errichten der Kathedrale des Lichts.
 }
@@ -100525,7 +100525,7 @@ STRING 46023
 }
 
 STRING 46024
-// Upgrades: R0EQ (Burning Oil), EditorSuffix (Editor Suffix)
+// Upgrades: R0EQ (Ölbrand), EditorSuffix (Editor Suffix)
 {
 (Sturmwind)
 }
@@ -100573,7 +100573,7 @@ Increases the damage by <A1P4,DataA1> and causes area of effect damage.
 }
 
 STRING 46036
-// Upgrades: R082 (Flare), Tip (Tooltip)
+// Upgrades: R082 (Leuchtfeuer), Tip (Tooltip)
 {
 Feuerangriff erforschen
 }
@@ -100675,7 +100675,7 @@ STRING 46052
 }
 
 STRING 46053
-// Upgrades: R0EN (Burning Oil), EditorSuffix (Editor Suffix)
+// Upgrades: R0EN (Ölbrand), EditorSuffix (Editor Suffix)
 {
 (Oger)
 }
@@ -101643,7 +101643,7 @@ Gnomisches Erfinderlabor errichten
 STRING 46588
 // Units: h0KS (Gnomish Inventor Lab), Ubertip (Tooltip - Extended)
 {
-Produces Bohrmaschines, Flugapparats, Mörser-Trupps, and Bombardiers.
+Bildet Bohrmaschinen, Flugapparate, Mörser-Trupps und Bombardierer aus.
 }
 
 STRING 46589
@@ -101685,7 +101685,7 @@ Magier ausbilden
 STRING 46595
 // Abilities: A1Q3 (Wind Walk), Ubertip (Tooltip - Normal - Extended)
 {
-Allows the Rogue to become invisible, and move <A1Q3,DataB1,%>% faster. If the Rogue attacks a unit to break invisibility, the attack will do <A1Q3,DataC1> bonus damage.
+Macht den Schurken unsichtbar und lässt ihn <A1Q3,DataB1,%>% schneller laufen. Wenn der Schurke eine Einheit angreift, um wieder sichtbar zu werden, verursacht der Angriff einen zusätzlichen Schaden von <A1Q3,DataC1> Punkten.
 }
 
 STRING 46596
@@ -101731,7 +101731,7 @@ Ermöglicht Schurken, die 'Windlauf'-Fähigkeit zu benutzen.
 }
 
 STRING 46604
-// Upgrades: R0HD (Burning Oil), EditorSuffix (Editor Suffix)
+// Upgrades: R0HD (Ölbrand), EditorSuffix (Editor Suffix)
 {
 (Gnome)
 }
@@ -101935,7 +101935,7 @@ STRING 47452
 }
 
 STRING 47453
-// Upgrades: R08C (Burning Oil), EditorSuffix (Editor Suffix)
+// Upgrades: R08C (Ölbrand), EditorSuffix (Editor Suffix)
 {
 (Stacheleber)
 }
@@ -102259,7 +102259,7 @@ STRING 48164
 }
 
 STRING 48165
-// Upgrades: R020 (Burning Oil), EditorSuffix (Editor Suffix)
+// Upgrades: R020 (Ölbrand), EditorSuffix (Editor Suffix)
 {
 (Untote)
 }
@@ -106480,7 +106480,7 @@ Altar der Naaru errichten
 }
 
 STRING 50242
-// Upgrades: R02D (Burning Oil), Tip (Tooltip)
+// Upgrades: R02D (Ölbrand), Tip (Tooltip)
 {
 Draenei-Gefängnis erforschen
 }
@@ -106516,13 +106516,13 @@ Exodar
 }
 
 STRING 50251
-// Upgrades: R0G5 (Burning Oil), Tip (Tooltip)
+// Upgrades: R0G5 (Ölbrand), Tip (Tooltip)
 {
 Exodar erforschen
 }
 
 STRING 50252
-// Upgrades: R0G5 (Burning Oil), Ubertip (Tooltip - Extended)
+// Upgrades: R0G5 (Ölbrand), Ubertip (Tooltip - Extended)
 {
 Erlaubt Bürgern den Bau Exodar a powerful dimensional ship and the capital of the Draenei.
 }
@@ -106600,7 +106600,7 @@ Den Geist eines Talbuks herbeirufen, um den Spieler zu retten.
 }
 
 STRING 50269
-// Upgrades: R02B (Burning Oil), EditorSuffix (Editor Suffix)
+// Upgrades: R02B (Ölbrand), EditorSuffix (Editor Suffix)
 {
 (Naga)
 }
@@ -106666,7 +106666,7 @@ STRING 50314
 }
 
 STRING 50317
-// Upgrades: R081 (Freezing Breath), EditorSuffix (Editor Suffix)
+// Upgrades: R081 (Eis-Atem), EditorSuffix (Editor Suffix)
 {
 (Dragonkin)
 }
@@ -106690,7 +106690,7 @@ Altar der Flügel errichten
 }
 
 STRING 50322
-// Upgrades: R082 (Flare), EditorSuffix (Editor Suffix)
+// Upgrades: R082 (Leuchtfeuer), EditorSuffix (Editor Suffix)
 {
 (Dragonkin)
 }
@@ -106804,7 +106804,7 @@ Winzigen Drachenhorst errichten
 }
 
 STRING 50344
-// Upgrades: R084 (Burning Oil), EditorSuffix (Editor Suffix)
+// Upgrades: R084 (Ölbrand), EditorSuffix (Editor Suffix)
 {
 (Dragonkin)
 }
@@ -107344,7 +107344,7 @@ Initiand, Adept, Meister
 }
 
 STRING 50467
-// Upgrades: R01Z (Burning Oil), EditorSuffix (Editor Suffix)
+// Upgrades: R01Z (Ölbrand), EditorSuffix (Editor Suffix)
 {
 (Nachtelfen)
 }
@@ -107830,7 +107830,7 @@ STRING 50606
 }
 
 STRING 50607
-// Upgrades: R0CW (Burning Oil), Ubertip (Tooltip - Extended)
+// Upgrades: R0CW (Ölbrand), Ubertip (Tooltip - Extended)
 {
 Erlaubt Bürgern den Bau a Murloc-Fischer to protect your base.
 }
@@ -107854,7 +107854,7 @@ STRING 50616
 }
 
 STRING 50617
-// Upgrades: R0CW (Burning Oil), EditorSuffix (Editor Suffix)
+// Upgrades: R0CW (Ölbrand), EditorSuffix (Editor Suffix)
 {
 (Murlocs)
 }
@@ -108742,19 +108742,19 @@ STRING 50873
 }
 
 STRING 50874
-// Upgrades: R0GI (Burning Oil), Name (Name)
+// Upgrades: R0GI (Ölbrand), Name (Name)
 {
 Vergessener
 }
 
 STRING 50875
-// Upgrades: R0GI (Burning Oil), Tip (Tooltip)
+// Upgrades: R0GI (Ölbrand), Tip (Tooltip)
 {
 Vergessenen erforschen
 }
 
 STRING 50876
-// Upgrades: R0GI (Burning Oil), Ubertip (Tooltip - Extended)
+// Upgrades: R0GI (Ölbrand), Ubertip (Tooltip - Extended)
 {
 Erlaubt Bürgern den Bau a Vergessener, a powerful creature from ancient times.
 }
@@ -108976,7 +108976,7 @@ Kultisten-Meisterausbildung
 }
 
 STRING 50934
-// Upgrades: R0GI (Burning Oil), EditorSuffix (Editor Suffix)
+// Upgrades: R0GI (Ölbrand), EditorSuffix (Editor Suffix)
 {
 (Gesichtslose)
 }
@@ -109696,13 +109696,13 @@ Höllenfeuer-Zitadelle
 }
 
 STRING 51111
-// Upgrades: R0GV (Burning Oil), Tip (Tooltip)
+// Upgrades: R0GV (Ölbrand), Tip (Tooltip)
 {
 Höllenfeuer-Zitadelle erforschen
 }
 
 STRING 51112
-// Upgrades: R0GV (Burning Oil), Ubertip (Tooltip - Extended)
+// Upgrades: R0GV (Ölbrand), Ubertip (Tooltip - Extended)
 {
 Erlaubt Bürgern den Bau the Hellfire Citadel to defend your base.
 }
@@ -109732,7 +109732,7 @@ Dient als Abladepunkt für das geschlagene Holz. |nAlso contains upgrades for im
 }
 
 STRING 51117
-// Abilities: A1W9 (Burning Oil), EditorSuffix (Editor Suffix)
+// Abilities: A1W9 (Ölbrand), EditorSuffix (Editor Suffix)
 {
 (Höllenorcs)
 }
@@ -109854,13 +109854,13 @@ Causes this unit to attack <A1VZ,DataB1,%>% faster, but take <A1VZ,DataC1,%>% mo
 STRING 51137
 // Units: o097 (Barracks), Ubertip (Tooltip - Extended)
 {
-Primäres Truppen-Produktionsgebäude. Trains Grunts, Armbrustmen and Kriegsmaschines. |nBietet auch die Ausbaustufen Fel, and Burning Oil upgrades.
+Primäres Truppen-Produktionsgebäude. Trains Grunts, Armbrustschützen and Kriegsmaschines. |nBietet auch die Ausbaustufen Fel, and Ölbrand upgrades.
 }
 
 STRING 51138
 // Units: o098 (War Machine), Ubertip (Tooltip - Extended)
 {
-Long-range siege weaponry. Effective against buildings but slow and vulnerable. Can cast Deploy to increase the attack range but lose movement. Can learn the Burning Oil ability. |n|n|cffffcc00Greif Land-Einheiten und Bäume an.|r
+Long-range siege weaponry. Effective against buildings but slow and vulnerable. Can cast Deploy to increase the attack range but lose movement. Can learn the Ölbrand ability. |n|n|cffffcc00Greif Land-Einheiten und Bäume an.|r
 }
 
 STRING 51139
@@ -109890,7 +109890,7 @@ STRING 51142
 STRING 51143
 // Units: o09H (War Machine), Ubertip (Tooltip - Extended)
 {
-Long-range siege weaponry. Effective against buildings but slow and vulnerable. Can cast Deploy to increase the attack range but lose movement. Can learn the Burning Oil ability. |n|n|cffffcc00Greif Land-Einheiten und Bäume an.|r
+Long-range siege weaponry. Effective against buildings but slow and vulnerable. Can cast Deploy to increase the attack range but lose movement. Can learn the Ölbrand ability. |n|n|cffffcc00Greif Land-Einheiten und Bäume an.|r
 }
 
 STRING 51144
@@ -110050,7 +110050,7 @@ STRING 51170
 }
 
 STRING 51171
-// Upgrades: R0GV (Burning Oil), EditorSuffix (Editor Suffix)
+// Upgrades: R0GV (Ölbrand), EditorSuffix (Editor Suffix)
 {
 (Höllenorcs)
 }
@@ -110058,7 +110058,7 @@ STRING 51171
 STRING 51172
 // Upgrades: R0H2 (Marksmanship), Ubertip (Tooltip - Extended)
 {
-Increases damage of Armbrustmen and Lancers by <Remk,base1>.
+Increases damage of Armbrustschützen and Lancers by <Remk,base1>.
 }
 
 STRING 51173
@@ -110092,7 +110092,7 @@ Unheils-Lord von Sargeras
 }
 
 STRING 51260
-// Upgrades: R01Y (Burning Oil), Name (Name)
+// Upgrades: R01Y (Ölbrand), Name (Name)
 {
 Fel
 }
@@ -110650,7 +110650,7 @@ Allows Pig Farms to train Teufelsebers and to slaughter them for Meat.
 }
 
 STRING 51456
-// Upgrades: R0H1 (Burning Oil), EditorSuffix (Editor Suffix)
+// Upgrades: R0H1 (Ölbrand), EditorSuffix (Editor Suffix)
 {
 (Höllenorcs)
 }
@@ -111060,7 +111060,7 @@ Primäres Gebäude, wird zum Ausbilden von Arbeitern und zum Einlagern gesammelt
 STRING 51642
 // Units: h0MH (Barracks), Ubertip (Tooltip - Extended)
 {
-Primäres Truppen-Produktionsgebäude. Trains Footmen, Bogenschützinnen, and Knights. |nBietet auch die Ausbaustufen Verteidigen, Verbessertes Bogenschießen, Armbrustmen, Speerkämpfer, and Kampftierausbildung upgrades.
+Primäres Truppen-Produktionsgebäude. Trains Footmen, Bogenschützinnen, and Knights. |nBietet auch die Ausbaustufen Verteidigen, Verbessertes Bogenschießen, Armbrustschützen, Speerkämpfer, and Kampftierausbildung upgrades.
 }
 
 STRING 51643
@@ -111766,7 +111766,7 @@ Höllenbestie ausbilden
 }
 
 STRING 51808
-// Upgrades: R0HC (Burning Oil), EditorSuffix (Editor Suffix)
+// Upgrades: R0HC (Ölbrand), EditorSuffix (Editor Suffix)
 {
 (Satyr)
 }
@@ -111964,7 +111964,7 @@ STRING 52045
 }
 
 STRING 52046
-// Upgrades: R0G5 (Burning Oil), Name (Name)
+// Upgrades: R0G5 (Ölbrand), Name (Name)
 {
 Exodar
 }
@@ -112710,19 +112710,19 @@ Ermöglicht das Erlernen von Heldenattributen und die Heldenzauber und -skins zu
 }
 
 STRING 53417
-// Upgrades: R0HD (Burning Oil), Name (Name)
+// Upgrades: R0HD (Ölbrand), Name (Name)
 {
 Skyfire-Kanonenschiff
 }
 
 STRING 53418
-// Upgrades: R0HD (Burning Oil), Tip (Tooltip)
+// Upgrades: R0HD (Ölbrand), Tip (Tooltip)
 {
 Skyfire-Kanonenschiff erforschen
 }
 
 STRING 53419
-// Upgrades: R0HD (Burning Oil), Ubertip (Tooltip - Extended)
+// Upgrades: R0HD (Ölbrand), Ubertip (Tooltip - Extended)
 {
 Erlaubt Bürgern den Bau a Skyfire-Kanonenschiff tp attack enemy troops from the sky.
 }
@@ -113058,19 +113058,19 @@ Ein winziger Dorfbewohner, der Entwaffnung zaubern kann.
 }
 
 STRING 54057
-// Upgrades: R00K (Freezing Breath), EditorSuffix (Editor Suffix)
+// Upgrades: R00K (Eis-Atem), EditorSuffix (Editor Suffix)
 {
 (Dämonen)
 }
 
 STRING 54058
-// Upgrades: R023 (Burning Oil), EditorSuffix (Editor Suffix)
+// Upgrades: R023 (Ölbrand), EditorSuffix (Editor Suffix)
 {
 (Dämonen)
 }
 
 STRING 54059
-// Upgrades: R06D (Freezing Breath), EditorSuffix (Editor Suffix)
+// Upgrades: R06D (Eis-Atem), EditorSuffix (Editor Suffix)
 {
 (Dämonen)
 }
@@ -113106,7 +113106,7 @@ STRING 54064
 }
 
 STRING 54065
-// Upgrades: R021 (Burning Oil), EditorSuffix (Editor Suffix)
+// Upgrades: R021 (Ölbrand), EditorSuffix (Editor Suffix)
 {
 (Blutelfen)
 }
@@ -113334,7 +113334,7 @@ STRING 54103
 }
 
 STRING 54104
-// Upgrades: R02X (Burning Oil), EditorSuffix (Editor Suffix)
+// Upgrades: R02X (Ölbrand), EditorSuffix (Editor Suffix)
 {
 (Goblins)
 }
@@ -113876,7 +113876,7 @@ Dient als Abladepunkt für das geschlagene Holz. |nAlso contains upgrades for im
 STRING 54953
 // Units: o060 (Block of Ice), Ubertip (Tooltip - Extended)
 {
-Verteidigungsgebäude with close attack range. Has the Freezing Breath ability. Can be upgraded to Spinnenschrein, Ice Wall, and Frost-Schneemann.  |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
+Verteidigungsgebäude with close attack range. Has the Eis-Atem ability. Can be upgraded to Spinnenschrein, Ice Wall, and Frost-Schneemann.  |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
 }
 
 STRING 54954
@@ -113898,7 +113898,7 @@ Ein winziger Dorfbewohner, der Entwaffnung zaubern kann.
 }
 
 STRING 54957
-// Upgrades: R0CU (Burning Oil), EditorSuffix (Editor Suffix)
+// Upgrades: R0CU (Ölbrand), EditorSuffix (Editor Suffix)
 {
 (Tuskarr)
 }
@@ -114927,7 +114927,7 @@ Leuchtender Pilz
 }
 
 STRING 55445
-// Upgrades: R0IW (Burning Oil), EditorSuffix (Editor Suffix)
+// Upgrades: R0IW (Ölbrand), EditorSuffix (Editor Suffix)
 {
 (Kobolde)
 }
@@ -115638,7 +115638,7 @@ STRING 55813
 }
 
 STRING 55814
-// Upgrades: R0GV (Burning Oil), Name (Name)
+// Upgrades: R0GV (Ölbrand), Name (Name)
 {
 Höllenfeuer-Zitadelle
 }
@@ -115782,7 +115782,7 @@ C
 }
 
 STRING 55866
-// Upgrades: R01Y (Burning Oil), EditorSuffix (Editor Suffix)
+// Upgrades: R01Y (Ölbrand), EditorSuffix (Editor Suffix)
 {
 (Orc)
 }
@@ -116430,7 +116430,7 @@ Magische Münze
 }
 
 STRING 56235
-// Abilities: A0JV (Freezing Breath), EditorSuffix (Editor Suffix)
+// Abilities: A0JV (Eis-Atem), EditorSuffix (Editor Suffix)
 {
 (Neutral)
 }
@@ -116904,7 +116904,7 @@ STRING 56366
 }
 
 STRING 56367
-// Upgrades: R01B (Burning Oil), EditorSuffix (Editor Suffix)
+// Upgrades: R01B (Ölbrand), EditorSuffix (Editor Suffix)
 {
 (Alle Völker)
 }
@@ -117540,13 +117540,13 @@ Zauberinnen-Meisterausbildung
 }
 
 STRING 56618
-// Upgrades: R0I9 (Burning Oil), Name (Name)
+// Upgrades: R0I9 (Ölbrand), Name (Name)
 {
 Shok'Thokar
 }
 
 STRING 56619
-// Upgrades: R0I9 (Burning Oil), Tip (Tooltip)
+// Upgrades: R0I9 (Ölbrand), Tip (Tooltip)
 {
 Shok'Thokar
 }
@@ -117558,7 +117558,7 @@ STRING 56620
 }
 
 STRING 56621
-// Upgrades: R0I9 (Burning Oil), EditorSuffix (Editor Suffix)
+// Upgrades: R0I9 (Ölbrand), EditorSuffix (Editor Suffix)
 {
 (Zentauren)
 }
@@ -117738,7 +117738,7 @@ Erhöht die Mana-Kapazität, die Mana-Regenerationsrate und die Trefferpunkte vo
 }
 
 STRING 56667
-// Upgrades: R0I9 (Burning Oil), Ubertip (Tooltip - Extended)
+// Upgrades: R0I9 (Ölbrand), Ubertip (Tooltip - Extended)
 {
 Erlaubt Bürgern den Bau Shok'Thokar.
 }
@@ -120938,7 +120938,7 @@ Fliegt wieder.
 }
 
 STRING 57956
-// Upgrades: R03J (Burning Oil), Name (Name)
+// Upgrades: R03J (Ölbrand), Name (Name)
 {
 Zwergen-Sägewerk
 }
@@ -121010,7 +121010,7 @@ STRING 57969
 }
 
 STRING 57971
-// Upgrades: R03J (Burning Oil), Ubertip (Tooltip - Extended)
+// Upgrades: R03J (Ölbrand), Ubertip (Tooltip - Extended)
 {
 Erlaubt Bürgern den Bau eines Zwergen-Sägewerks, um Holz von nahegelegenen Bäumen zu sammeln.
 }
@@ -121124,7 +121124,7 @@ Zwergenmagier beschwören
 }
 
 STRING 58005
-// Abilities: A0EU (Fragmentation Shards), EditorSuffix (Editor Suffix)
+// Abilities: A0EU (Schrapnell-Splitter), EditorSuffix (Editor Suffix)
 {
 (Zwerge)
 }
@@ -121154,7 +121154,7 @@ STRING 58010
 }
 
 STRING 58011
-// Abilities: A0EV (Flare), EditorSuffix (Editor Suffix)
+// Abilities: A0EV (Leuchtfeuer), EditorSuffix (Editor Suffix)
 {
 (Zwerge)
 }
@@ -121304,7 +121304,7 @@ STRING 58037
 }
 
 STRING 58038
-// Upgrades: R03J (Burning Oil), EditorSuffix (Editor Suffix)
+// Upgrades: R03J (Ölbrand), EditorSuffix (Editor Suffix)
 {
 (Zwerge)
 }
@@ -122264,13 +122264,13 @@ STRING 58545
 }
 
 STRING 58546
-// Upgrades: R03Y (Fragmentation Shards), EditorSuffix (Editor Suffix)
+// Upgrades: R03Y (Schrapnell-Splitter), EditorSuffix (Editor Suffix)
 {
 (Zwerge)
 }
 
 STRING 58547
-// Upgrades: R03Z (Flare), EditorSuffix (Editor Suffix)
+// Upgrades: R03Z (Leuchtfeuer), EditorSuffix (Editor Suffix)
 {
 (Zwerge)
 }
@@ -122606,7 +122606,7 @@ STRING 58740
 }
 
 STRING 58741
-// Upgrades: R022 (Burning Oil), Name (Name)
+// Upgrades: R022 (Ölbrand), Name (Name)
 {
 Arkaner Spähposten
 }
@@ -123020,7 +123020,7 @@ STRING 59721
 }
 
 STRING 59722
-// Upgrades: R019 (Burning Oil), Ubertip (Tooltip - Extended)
+// Upgrades: R019 (Ölbrand), Ubertip (Tooltip - Extended)
 {
 Nachtelfen-, Untote- und Zwergen-KI kann Unterkünfte nicht benutzen. Sie brauchen einen Bonus.
 }
@@ -123614,7 +123614,7 @@ STRING 61055
 }
 
 STRING 61056
-// Upgrades: R047 (Burning Oil), EditorSuffix (Editor Suffix)
+// Upgrades: R047 (Ölbrand), EditorSuffix (Editor Suffix)
 {
 (Hochelfen)
 }
@@ -123878,13 +123878,13 @@ Macht des Sonnenbrunnens
 }
 
 STRING 61113
-// Upgrades: R047 (Burning Oil), Name (Name)
+// Upgrades: R047 (Ölbrand), Name (Name)
 {
 Sonnenbrunnen
 }
 
 STRING 61114
-// Upgrades: R047 (Burning Oil), Tip (Tooltip)
+// Upgrades: R047 (Ölbrand), Tip (Tooltip)
 {
 Sonnenbrunnen
 }
@@ -124106,7 +124106,7 @@ Dismounts the Archer from the War Eagle.
 }
 
 STRING 62100
-// Upgrades: R04P (Burning Oil), EditorSuffix (Editor Suffix)
+// Upgrades: R04P (Ölbrand), EditorSuffix (Editor Suffix)
 {
 (Goblins)
 }

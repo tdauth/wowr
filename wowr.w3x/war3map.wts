@@ -55149,7 +55149,7 @@ Loading Goods
 STRING 17555
 // Abilities: A0M5 (Loading Goods), Ubertip (Tooltip - Normal - Extended)
 {
-Produces 60 gold and 30 lumber every 10 seconds. If you build multiple Cranes the produced resources are divided by the number of platforms.
+Produces 60 gold and 30 lumber every 10 seconds. The produced resources are divided by the number of Cranes if you build multiple.
 }
 
 STRING 17557
