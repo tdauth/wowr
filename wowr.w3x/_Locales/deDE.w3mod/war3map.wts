@@ -218,7 +218,7 @@ Goblin-Randalier ausbilden
 }
 
 STRING 37
-// Units: h09K (Lightning Elemental), Name (Name)
+// Units: h09K (Blitz-Elementargeist), Name (Name)
 {
 Blitz-Elementar
 }
@@ -380,7 +380,7 @@ STRING 63
 }
 
 STRING 64
-// Abilities: A0AQ (Summon Water Elemental), Tip (Tooltip - Normal)
+// Abilities: A0AQ (Summon Wasser-Elementargeist), Tip (Tooltip - Normal)
 {
 Wasser-Elementargeist beschwören
 }
@@ -2767,7 +2767,7 @@ Zauberschadenreduzierung (einzigartig)
 }
 
 STRING 462
-// Abilities: A0AQ (Summon Water Elemental), Name (Name)
+// Abilities: A0AQ (Summon Wasser-Elementargeist), Name (Name)
 {
 Wasser-Elementargeist beschwören
 }
@@ -3052,7 +3052,7 @@ Heldenfähigkeiten Nächste Seite
 }
 
 STRING 510
-// Units: h09K (Lightning Elemental), Tip (Tooltip - Basic)
+// Units: h09K (Blitz-Elementargeist), Tip (Tooltip - Basic)
 {
 Blitzelementar ausbilden
 }
@@ -4496,7 +4496,7 @@ Maiev fangen
 }
 
 STRING 752
-// Units: N02T (Nether Dragon), Ubertip (Tooltip - Extended)
+// Units: N02T (Niederdrache), Ubertip (Tooltip - Extended)
 {
 Flying boss hero from Outland who can cast Kritischer Schlag, Evasion, Life Steal, Dämonenmeister and Reinkarnation.|n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r|n|n|cffffcc00Boss hero requires level 50. Benutzen Sie -unlock, um diese Beschränkung aufzuheben.|r
 }
@@ -6646,7 +6646,7 @@ K
 }
 
 STRING 1123
-// Units: h09K (Lightning Elemental), Hotkey (Hotkey)
+// Units: h09K (Blitz-Elementargeist), Hotkey (Hotkey)
 {
 L
 }
@@ -6853,7 +6853,7 @@ W
 }
 
 STRING 1159
-// Units: h001 (Water Elemental), EditorSuffix (Name - Editor Suffix)
+// Units: h001 (Wasser-Elementargeist), EditorSuffix (Name - Editor Suffix)
 {
 (Stufe 4)
 }
@@ -8679,7 +8679,7 @@ Herz der Harpyien-Königin
 STRING 1472
 // Units: h046 (Dragonhawk Rider), Ubertip (Tooltip - Extended)
 {
-Swift flying unit, mounted by an Elven warrior. Has the Aerial Shackles ability, which allows it to immobilize and disarm enemy air units temporarily. Can learn Blood Elf Kampftierausbildung, and the Cloud ability. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
+Swift flying unit, mounted by an Elven warrior. Has the Aerial Shackles ability, which allows it to immobilize and disarm enemy air units temporarily. Can learn Blutelfen-Kampftierausbildung, and the Cloud ability. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
 }
 
 STRING 1473
@@ -8983,7 +8983,7 @@ D
 }
 
 STRING 1523
-// Units: h09H (Water Elemental), Ubertip (Tooltip - Extended)
+// Units: h09H (Wasser-Elementargeist), Ubertip (Tooltip - Extended)
 {
 Wechselt die Klasse zum Luftmagier:|n- Luftmagie|n- Entwaffnung|n- Wirbelstürme
 }
@@ -9277,7 +9277,7 @@ STRING 1571
 }
 
 STRING 1572
-// Units: h09H (Water Elemental), Hotkey (Hotkey)
+// Units: h09H (Wasser-Elementargeist), Hotkey (Hotkey)
 {
 W
 }
@@ -10795,7 +10795,7 @@ Mauer beschwören
 }
 
 STRING 1849
-// Abilities: A0AQ (Summon Water Elemental), EditorSuffix (Editor Suffix)
+// Abilities: A0AQ (Summon Wasser-Elementargeist), EditorSuffix (Editor Suffix)
 {
 (Neutral Feindlich)
 }
@@ -11605,7 +11605,7 @@ Foliant der Göttlichkeit erwerben
 }
 
 STRING 2061
-// Items: I0B3 (Summon Nether Dragon), Name (Name)
+// Items: I0B3 (Summon Niederdrache), Name (Name)
 {
 Niederdrachen beschwören
 }
@@ -14704,7 +14704,7 @@ Schwarzen Großdrachen beschwören
 }
 
 STRING 2695
-// Units: n08E (Dalaran Sky Guard Tower), Hotkey (Hotkey)
+// Units: n08E (Dalaran-Himmelswachturm), Hotkey (Hotkey)
 {
 T
 }
@@ -16188,7 +16188,7 @@ Gives the Crow the ability to strike additional units with its feather attacks.
 STRING 3103
 // Abilities: A0LF (Sturmhammer), Ubertip (Tooltip - Normal - Extended)
 {
-Causes a Greifenräuber's attacks to damage multiple units.
+Ermöglicht den Angriffen eines Greifenräubers, mehrere Einheiten zu beschädigen.
 }
 
 STRING 3105
@@ -16326,7 +16326,7 @@ STRING 3156
 STRING 3157
 // Upgrades: R07D (Sturmhammer), Ubertip (Tooltip - Extended)
 {
-Causes a Greifenräuber's attacks to damage multiple units.
+Ermöglicht den Angriffen eines Greifenräubers, mehrere Einheiten zu beschädigen.
 }
 
 STRING 3158
@@ -16422,7 +16422,7 @@ Sperrt gegnerische Einheiten ein.
 STRING 3173
 // Items: I0P1 (Cages), Ubertip (Tooltip - Extended)
 {
-Summons an immovable ward that imprisons enemy units until its death.
+Beschwört einen unbeweglichen Schutzzauber, der bis zu seinem Tod gegenerische Einheiten einsperrt.
 }
 
 STRING 3174
@@ -16938,13 +16938,13 @@ M
 STRING 3312
 // Upgrades: R07G (Sorceress Adept Training,Sorceress Master Training), Ubertip (Tooltip - Extended)
 {
-Increases Sklaven-Meisters' mana capacity, mana regeneration rate, hit points, and gives them the ability to cast Hunde freilassen.
+Erhöht die Mana-Kapazität, die Mana-Regenerationsrate und die Trefferpunkte von Sklaven-Meistern und ermöglicht ihnen, 'Hunde freilassen' zu wirken.
 }
 
 STRING 3313
 // Upgrades: R07G (Sorceress Adept Training,Sorceress Master Training), Ubertip (Tooltip - Extended)
 {
-Increases Sklaven-Meisters' mana capacity, mana regeneration rate, hit points, and gives them the ability to cast Käfig platzieren.
+Erhöht die Mana-Kapazität, die Mana-Regenerationsrate und die Trefferpunkte von Sklaven-Meistern und ermöglicht ihnen, 'Käfig platzieren' zu wirken.
 }
 
 STRING 3314
@@ -17004,7 +17004,7 @@ STRING 3322
 STRING 3323
 // Items: I142 (Seed Pumpkin), Ubertip (Tooltip - Extended)
 {
-Grows a Pumpkin at a target location. |n|n|cffffcc00Erhöht die Anzahl der Aufladungen von Gegenständen, wenn sich Wasservorräte in der Nähe befinden.|r
+Lässt am Zielort einen Kürbis wachsen. |n|n|cffffcc00Erhöht die Anzahl der Aufladungen von Gegenständen, wenn sich Wasservorräte in der Nähe befinden.|r
 }
 
 STRING 3324
@@ -17046,7 +17046,7 @@ Manaregeneration
 STRING 3330
 // Abilities: A07W (Mana Regeneration), Ubertip (Tooltip - Normal - Extended)
 {
-Gives additional mana regeneration to nearby friendly units of <A07W,DataA1,%> % mana per second.
+Gibt nahegelegenen befreundeten Einheiten eine zusätzliche Manaregeneration von <A07W,DataA1,%> % Mana pro Sekunde.
 }
 
 STRING 3331
@@ -17082,7 +17082,7 @@ Winzigen Bienenstock erwerben
 STRING 3336
 // Items: I0E1 (Tiny Beehive), Ubertip (Tooltip - Extended)
 {
-Creates a Bienenstock at a target location which produces Honey.
+Errichtet an Zielort einen Bienenstock, der Honig erzeugt.
 }
 
 STRING 3337
@@ -17250,7 +17250,7 @@ STRING 3363
 STRING 3364
 // Units: n0GX (Corrupted Tree of Life), Ubertip (Tooltip - Extended)
 {
-Primary structure, used to train Arbeiters, Satyr Bürger (male) and entangle gold mines. Can be upgraded to Verderbter Tree of Ages and then Verderbter Tree of Eternity ermöglicht die Produktion weiterer Gebäude- und Einheitenarten.
+Primäres Gebäude, wird zum Ausbilden von Arbeitern, Satyr-Bürgern und Durchwuchern von Goldminen verwendet. Kann erst zum Verderbten Baum des Alters und dann zum Verderbten Baum der Ewigkeit ausgebaut werden, um die Produktion weiterer Gebäude- und Einheitenarten zu ermöglichen. |n|n|cffffcc00Greift Land-Einheiten an.|
 }
 
 STRING 3365
@@ -19632,7 +19632,7 @@ STRING 3901
 STRING 3902
 // Units: o03O (Skeleton Barracks), Ubertip (Tooltip - Extended)
 {
-Primäres Truppen-Produktionsgebäude. Trains Skelett-Kriegers, Skeleton Archers and Skelett-Berserkers.
+Primäres Truppen-Produktionsgebäude. Trains Skelett-Kriegers, Skeleton Bogenschützinnen and Skelett-Berserkers.
 }
 
 STRING 3903
@@ -19980,7 +19980,7 @@ rlum
 STRING 4018
 // Units: h04O (Phoenix), Ubertip (Tooltip - Extended)
 {
-Trains Phönixes and Dragonhawk Riders.  |nBietet auch die Ausbaustufen upgrade Cloud.
+Trains Phönixes and Drachenfalken-Reiter.  |nBietet auch die Ausbaustufen upgrade Cloud.
 }
 
 STRING 4019
@@ -20586,31 +20586,31 @@ Falkenschreiter-Reiter ausbilden
 STRING 4171
 // Units: h00C (Barracks), Ubertip (Tooltip - Extended)
 {
-Primäres Truppen-Produktionsgebäude. Trains Schwertkämpfer, Archers, and Falkenschreiter-Reiters. |nBietet auch die Ausbaustufen Verteidigen, Marksmanship, Improved Bows and Kampftierausbildung upgrades.
+Primäres Truppen-Produktionsgebäude. Trains Schwertkämpfer, Bogenschützinnen, and Falkenschreiter-Reiters. |nBietet auch die Ausbaustufen Verteidigen, Marksmanship, Improved Bows and Kampftierausbildung upgrades.
 }
 
 STRING 4172
 // Upgrades: R000 (Animal War Training), Ubertip (Tooltip - Extended)
 {
-Increases the maximum hit points of Dragonhawk Riders and Falkenschreiter-Reiters by <Rhan,base1>.
+Increases the maximum hit points of Drachenfalken-Reiter and Falkenschreiter-Reiters by <Rhan,base1>.
 }
 
 STRING 4173
 // Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
 {
-Increases the attack damage of Schwertkämpfer, Zauberbrechers, Dragonhawk Riders, Falkenschreiter-Reiters and Wagons.
+Increases the attack damage of Schwertkämpfer, Zauberbrechers, Drachenfalken-Reiter, Falkenschreiter-Reiters and Wagons.
 }
 
 STRING 4174
 // Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
 {
-Further increases the attack damage of Schwertkämpfer, Zauberbrechers, Dragonhawk Riders, Falkenschreiter-Reiters and Wagons.
+Further increases the attack damage of Schwertkämpfer, Zauberbrechers, Drachenfalken-Reiter, Falkenschreiter-Reiters and Wagons.
 }
 
 STRING 4175
 // Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
 {
-Further increases the attack damage of Schwertkämpfer, Zauberbrechers, Dragonhawk Riders, Falkenschreiter-Reiters and Wagons.
+Further increases the attack damage of Schwertkämpfer, Zauberbrechers, Drachenfalken-Reiter, Falkenschreiter-Reiters and Wagons.
 }
 
 STRING 4176
@@ -20946,25 +20946,25 @@ Q
 STRING 4310
 // Upgrades: R005 (Studded Leather Armor,Reinforced Leather Armor,Dragonhide Armor), Ubertip (Tooltip - Extended)
 {
-Increases the armor of Archers, Dragonhawk Riders and Phönixes.
+Increases the armor of Bogenschützinnen, Drachenfalken-Reiter and Phönixes.
 }
 
 STRING 4311
 // Upgrades: R005 (Studded Leather Armor,Reinforced Leather Armor,Dragonhide Armor), Ubertip (Tooltip - Extended)
 {
-Further increases the armor of Archers, Dragonhawk Riders and Phönixes.
+Further increases the armor of Bogenschützinnen, Drachenfalken-Reiter and Phönixes.
 }
 
 STRING 4312
 // Upgrades: R005 (Studded Leather Armor,Reinforced Leather Armor,Dragonhide Armor), Ubertip (Tooltip - Extended)
 {
-Further increases the armor of Archers, Dragonhawk Riders and Phönixes.
+Further increases the armor of Bogenschützinnen, Drachenfalken-Reiter and Phönixes.
 }
 
 STRING 4313
 // Upgrades: R008 (Strength of the Moon,Improved Strength of the Moon,Advanced Strength of the Moo), Ubertip (Tooltip - Extended)
 {
-Increases the damage of Archers, Ballistes, Phönixes, and Dezimators.
+Increases the damage of Bogenschützinnen, Ballistes, Phönixes, and Dezimators.
 }
 
 STRING 4317
@@ -20988,13 +20988,13 @@ Mannoroth beschwören
 STRING 4320
 // Upgrades: R008 (Strength of the Moon,Improved Strength of the Moon,Advanced Strength of the Moo), Ubertip (Tooltip - Extended)
 {
-Further increases the damage of Archers, Ballistes, Phönixes, and Dezimators.
+Further increases the damage of Bogenschützinnen, Ballistes, Phönixes, and Dezimators.
 }
 
 STRING 4321
 // Upgrades: R008 (Strength of the Moon,Improved Strength of the Moon,Advanced Strength of the Moo), Ubertip (Tooltip - Extended)
 {
-Further increases the damage of Archers, Ballistes, Phönixes, and Dezimators.
+Further increases the damage of Bogenschützinnen, Ballistes, Phönixes, and Dezimators.
 }
 
 STRING 4323
@@ -21030,7 +21030,7 @@ STRING 4331
 STRING 4332
 // Upgrades: R00A (Marksmanship), Ubertip (Tooltip - Extended)
 {
-Increases damage of Archers by <Remk,base1>.
+Increases damage of Bogenschützinnen by <Remk,base1>.
 }
 
 STRING 4333
@@ -21558,11 +21558,11 @@ STRING 4439
 STRING 4440
 // Items: I03H (Unique - Mask of Death), Description (Description)
 {
-|cff8b00ffEinzigartig|r|nThis mask causes the Hero's attacks to drain life and allows your hero to summon a Nether Dragon.
+|cff8b00ffEinzigartig|r|nThis mask causes the Hero's attacks to drain life and allows your hero to summon a Niederdrache.
 }
 
 STRING 4443
-// Units: N02T (Nether Dragon), EditorSuffix (Name - Editor Suffix)
+// Units: N02T (Niederdrache), EditorSuffix (Name - Editor Suffix)
 {
 (Boss)
 }
@@ -21822,7 +21822,7 @@ STRING 4491
 STRING 4492
 // Units: h045 (Dragonhawk Aviary), Ubertip (Tooltip - Extended)
 {
-Trains War Eagles, Dragonhawks, and Dragonhawk Riders. |nBietet auch die Ausbaustufen Kriegsadler-Zähmung, Drachenfalken-Zähmung and Cloud upgrades.
+Trains War Eagles, Dragonhawks, and Drachenfalken-Reiter. |nBietet auch die Ausbaustufen Kriegsadler-Zähmung, Drachenfalken-Zähmung and Cloud upgrades.
 }
 
 STRING 4493
@@ -21864,7 +21864,7 @@ Ein Kriegerheld, adept at terrorizing enemies. Can learn Feuerregen, Schreckgehe
 STRING 4499
 // Upgrades: R01S (Improved Lumber Harvesting,Advanced Lumber Harvesting), Ubertip (Tooltip - Extended)
 {
-Increases the amount of lumber that Junger Furbolgs can carry by 10.
+Erhöht die Holzmenge, die Junge Furbolgs tragen können, um 10.
 }
 
 STRING 4500
@@ -22461,7 +22461,7 @@ D
 STRING 4646
 // Upgrades: R07J (Magic Sentry), Ubertip (Tooltip - Extended)
 {
-Gives Sekeleton Archers the passive ability Brennende Pfeile.
+Gives Sekeleton Bogenschützinnen the passive ability Brennende Pfeile.
 }
 
 STRING 4647
@@ -25992,19 +25992,19 @@ STRING 5354
 STRING 5355
 // Upgrades: R07X (Steel Armor,Thorium Armor,Arcanite Armor), Ubertip (Tooltip - Extended)
 {
-Increases the armor of Skelett-Kriegers, Skeleton Archers, Skelett-Berserkers, Kriegs-Golems, Salamander, Schlamm-Monster, Wildekins, Red Dragons and Verlies Lords.
+Increases the armor of Skelett-Kriegers, Skeleton Bogenschützinnen, Skelett-Berserkers, Kriegs-Golems, Salamander, Schlamm-Monster, Wildekins, Red Dragons and Verlies Lords.
 }
 
 STRING 5356
 // Upgrades: R07X (Steel Armor,Thorium Armor,Arcanite Armor), Ubertip (Tooltip - Extended)
 {
-Further increases the armor of Skelett-Kriegers, Skeleton Archers, Skelett-Berserkers, Kriegs-Golems, Salamander, Schlamm-Monster, Wildekins, Red Dragons and Verlies Lords.
+Further increases the armor of Skelett-Kriegers, Skeleton Bogenschützinnen, Skelett-Berserkers, Kriegs-Golems, Salamander, Schlamm-Monster, Wildekins, Red Dragons and Verlies Lords.
 }
 
 STRING 5357
 // Upgrades: R07X (Steel Armor,Thorium Armor,Arcanite Armor), Ubertip (Tooltip - Extended)
 {
-Further increases the armor of Skelett-Kriegers, Skeleton Archers, Skelett-Berserkers, Kriegs-Golems, Salamander, Schlamm-Monster, Wildekins, Red Dragons and Verlies Lords.
+Further increases the armor of Skelett-Kriegers, Skeleton Bogenschützinnen, Skelett-Berserkers, Kriegs-Golems, Salamander, Schlamm-Monster, Wildekins, Red Dragons and Verlies Lords.
 }
 
 STRING 5358
@@ -29237,7 +29237,7 @@ Medium ranged unit that can Hieb opponents. |n|n|cffffcc00Greift Land- und Luft-
 }
 
 STRING 6011
-// Units: h084 (Lightning Elemental), Name (Name)
+// Units: h084 (Blitz-Elementargeist), Name (Name)
 {
 Blitzelementar
 }
@@ -29249,7 +29249,7 @@ STRING 6012
 }
 
 STRING 6013
-// Units: h084 (Lightning Elemental), Tip (Tooltip - Basic)
+// Units: h084 (Blitz-Elementargeist), Tip (Tooltip - Basic)
 {
 Blitzelementar anheuern
 }
@@ -30515,9 +30515,9 @@ STRING 6331
 }
 
 STRING 6332
-// Abilities: A08A (Item Nether Dragon Summon), Name (Name)
+// Abilities: A08A (Item Niederdrache Summon), Name (Name)
 {
-Item Nether Dragon Summon
+Item Niederdrache Summon
 }
 
 STRING 6335
@@ -33554,7 +33554,7 @@ Luft-Elementargeist ausbilden
 }
 
 STRING 7262
-// Units: h09K (Lightning Elemental), Ubertip (Tooltip - Extended)
+// Units: h09K (Blitz-Elementargeist), Ubertip (Tooltip - Extended)
 {
 Medium ranged unit that can Hieb opponents. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
 }
@@ -34394,7 +34394,7 @@ STRING 7572
 }
 
 STRING 7573
-// Units: h09W (Poison Elemental), Hotkey (Hotkey)
+// Units: h09W (Gift-Elementargeist), Hotkey (Hotkey)
 {
 P
 }
@@ -34946,7 +34946,7 @@ Primäres Verteidigungsgebäude. |n|n|cffffcc00Greift Land- und Luft-Einheiten a
 }
 
 STRING 7668
-// Units: h09H (Water Elemental), EditorSuffix (Name - Editor Suffix)
+// Units: h09H (Wasser-Elementargeist), EditorSuffix (Name - Editor Suffix)
 {
 (Dalaran)
 }
@@ -36284,13 +36284,13 @@ Medium ranged unit that can Hieb opponents. |n|n|cffffcc00Greift Land- und Luft-
 }
 
 STRING 7902
-// Units: h09H (Water Elemental), Tip (Tooltip - Basic)
+// Units: h09H (Wasser-Elementargeist), Tip (Tooltip - Basic)
 {
-Train Water Elemental
+Wasser-Elementargeist ausbilden
 }
 
 STRING 7903
-// Units: h09W (Poison Elemental), Ubertip (Tooltip - Extended)
+// Units: h09W (Gift-Elementargeist), Ubertip (Tooltip - Extended)
 {
 Medium ranged unit that can Hieb opponents. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
 }
@@ -36298,7 +36298,7 @@ Medium ranged unit that can Hieb opponents. |n|n|cffffcc00Greift Land- und Luft-
 STRING 7904
 // Units: h09I (Fire Elemental), Tip (Tooltip - Basic)
 {
-Train Feuer-Elementargeist
+Feuer-Elementargeist ausbilden
 }
 
 STRING 7905
@@ -36418,7 +36418,7 @@ Purchase Tiny Banner Wildhammer
 STRING 7926
 // Abilities: A1VS (Spawn Tentacle), Ubertip (Tooltip - Normal - Extended)
 {
-Unleashes a mighty tentacle upon the enemy.
+Lässt ein mächtiges Tentakel über den Gegner kommen.
 }
 
 STRING 7927
@@ -37063,13 +37063,13 @@ Waffenschmiedekunst - Großmeister
 STRING 8069
 // Abilities: A0YG (Weaponsmithing - Grand Master), Tip (Tooltip - Normal)
 {
-Großmeister Waffenschmiedekunst
+Großmeister-Waffenschmiedekunst
 }
 
 STRING 8070
 // Abilities: A0YG (Weaponsmithing - Grand Master), Ubertip (Tooltip - Normal - Extended)
 {
-The Weapon Smith uses his craftsmanship to create a Mythische Giftklinge.
+Stellt Mythische Giftklingen her.
 }
 
 STRING 8071
@@ -37087,7 +37087,7 @@ Doktor-Schreiben
 STRING 8073
 // Abilities: A0YH (Scribing - Doctor), Ubertip (Tooltip - Normal - Extended)
 {
-The Scribe uses his knowledge to craft a Tome of Power.
+Stellt Folianten der Macht her.
 }
 
 STRING 8074
@@ -37105,7 +37105,7 @@ Großmeister-Schreiben
 STRING 8076
 // Abilities: A0YI (Scribing - Grand Master), Ubertip (Tooltip - Normal - Extended)
 {
-The Scribe uses his knowledge to craft a Tome of Greater Experince.
+Stellt Folianten der Größeren Erfahrung her.
 }
 
 STRING 8077
@@ -37249,13 +37249,13 @@ Panzerung - Großmeister
 STRING 8100
 // Abilities: A0YM (Armoring - Grand Master), Tip (Tooltip - Normal)
 {
-Großmeister Panzerung
+Großmeister-Panzerung
 }
 
 STRING 8101
 // Abilities: A0YM (Armoring - Grand Master), Ubertip (Tooltip - Normal - Extended)
 {
-The Armorer uses his knowledge to create a Mythische goldene Rüstung.
+Stellt Mythische goldene Rüstungen her.
 }
 
 STRING 8102
@@ -37543,7 +37543,7 @@ Doktor-Glyphe
 STRING 8164
 // Upgrades: R01S (Improved Lumber Harvesting,Advanced Lumber Harvesting), Ubertip (Tooltip - Extended)
 {
-Further increases the amount of lumber that Junger Furbolgs can carry by 10.
+Erhöht die Holzmenge, die Junge Furbolgs tragen können, nochmals um 10.
 }
 
 STRING 8165
@@ -37585,7 +37585,7 @@ STRING 8170
 STRING 8171
 // Units: h01D (Stables), Ubertip (Tooltip - Extended)
 {
-Trains Nether Rays and Elekk-Ritters.
+Bildet Nether Rays und Elekk-Ritters aus.
 }
 
 STRING 8172
@@ -37595,13 +37595,13 @@ Versorgungswagen
 }
 
 STRING 8175
-// Units: N02T (Nether Dragon), Name (Name)
+// Units: N02T (Niederdrache), Name (Name)
 {
-Nether Dragon
+Niederdrache
 }
 
 STRING 8176
-// Units: N02T (Nether Dragon), Propernames (Proper Names)
+// Units: N02T (Niederdrache), Propernames (Proper Names)
 {
 Veraku
 }
@@ -37609,19 +37609,19 @@ Veraku
 STRING 8177
 // Items: I03G (Stonemaul Arena Master Belt), Name (Name)
 {
-Stonemaul Arena Meister Belt
+Stonemaul-Arena-Meistergürtel
 }
 
 STRING 8178
 // Items: I03G (Stonemaul Arena Master Belt), Tip (Tooltip - Basic)
 {
-Purchase Stonemaul Arena Meister Belt
+Stonemaul-Arena-Meistergürtel erwerben
 }
 
 STRING 8179
 // Units: h044 (High Elf Barracks), Ubertip (Tooltip - Extended)
 {
-Primäres Truppen-Produktionsgebäude. Trains Blood Elf Lieutenants, Schwertkämpfer, Dragonhawk Riders, and Archers. |nBietet auch die Ausbaustufen Verteidigen, Blood Elf Kampftierausbildung, and Cloud upgrades.
+Primäres Truppen-Produktionsgebäude. Bildet Blutelfen-Leutnants, Schwertkämpfer, Drachenfalken-Reiter und Bogenschützinnen aus. |nBietet auch die Ausbaustufen 'Verteidigen', 'Blutelfen-Kampftierausbildung' und 'Wolke'.
 }
 
 STRING 8180
@@ -37639,13 +37639,13 @@ Inschrift - Großmeister
 STRING 8183
 // Abilities: A108 (Inscription - Grand Master), Tip (Tooltip - Normal)
 {
-Großmeister Inschrift
+Großmeister-Inschrift
 }
 
 STRING 8184
 // Abilities: A108 (Inscription - Grand Master), Ubertip (Tooltip - Normal - Extended)
 {
-The Inscriptor uses his knowledge to create a Großmeister Glyph.
+Stellt Großmeister-Glyphen her.
 }
 
 STRING 8185
@@ -37657,13 +37657,13 @@ Inschrift - Doctor
 STRING 8186
 // Abilities: A109 (Inscription - Doctor), Tip (Tooltip - Normal)
 {
-Doctor Inschrift
+Doktor-Inschrift
 }
 
 STRING 8187
 // Abilities: A109 (Inscription - Doctor), Ubertip (Tooltip - Normal - Extended)
 {
-The Inscriptor uses his knowledge to craft a Doctor Glyph.
+Stellt Doktor-Glyphen her.
 }
 
 STRING 8188
@@ -37954,7 +37954,7 @@ Archäologie - Meister
 STRING 8236
 // Upgrades: R000 (Animal War Training), Name (Name)
 {
-Blood Elf Kampftierausbildung
+Blutelfen-Kampftierausbildung
 }
 
 STRING 8237
@@ -38020,19 +38020,19 @@ STRING 8246
 STRING 8247
 // Upgrades: R004 (Moon Armor,Improved Moon Armor,Advanced Moon Armor), Ubertip (Tooltip - Extended)
 {
-Increases the armor of Archers.
+Erhöht die Rüstung von Bogenschützinnen.
 }
 
 STRING 8248
 // Upgrades: R004 (Moon Armor,Improved Moon Armor,Advanced Moon Armor), Ubertip (Tooltip - Extended)
 {
-Further increases the armor of Archers.
+Erhöht die Rüstung von Bogenschützinnen noch weiter.
 }
 
 STRING 8249
 // Upgrades: R004 (Moon Armor,Improved Moon Armor,Advanced Moon Armor), Ubertip (Tooltip - Extended)
 {
-Further increases the armor of Archers.
+Erhöht die Rüstung von Bogenschützinnen noch weiter.
 }
 
 STRING 8250
@@ -38050,7 +38050,7 @@ STRING 8251
 STRING 8252
 // Upgrades: R04G (Improved Bows), Ubertip (Tooltip - Extended)
 {
-Increases the Archer's attack range.
+Erhöht die Angriffsreichweite von Bogenschützinnen.
 }
 
 STRING 8253
@@ -38062,7 +38062,7 @@ STRING 8253
 STRING 8254
 // Upgrades: R04D (Marksmanship), Ubertip (Tooltip - Extended)
 {
-Increases damage of Archers by <Remk,base1>.
+Erhöht den Schaden von Bogenschützinnen um <Remk,base1>.
 }
 
 STRING 8255
@@ -38188,7 +38188,7 @@ Doktor-Hexenmeisterei
 STRING 8277
 // Abilities: A10B (Warlockery - Doctor), Ubertip (Tooltip - Normal - Extended)
 {
-The Hexenmeister uses his powers to create a Winziger Fel-Brunnen.
+Stellt Winzige Fel-Brunnen her.
 }
 
 STRING 8279
@@ -38444,7 +38444,7 @@ Banner Pandaren
 }
 
 STRING 8332
-// Units: h084 (Lightning Elemental), EditorSuffix (Name - Editor Suffix)
+// Units: h084 (Blitz-Elementargeist), EditorSuffix (Name - Editor Suffix)
 {
 (Unhold)
 }
@@ -39130,13 +39130,13 @@ STRING 8456
 STRING 8457
 // Units: H01J (Blood Mage), EditorSuffix (Name - Editor Suffix)
 {
-(Blood Elf Quest 2) (Outland)
+(Blutelfen-Quest 2) (Fremdland)
 }
 
 STRING 8458
 // Items: I0JC (Lor'themar Theron's Cage), Name (Name)
 {
-Lor'themar Theron's Käfig
+Lor'themar Therons Käfig
 }
 
 STRING 8459
@@ -39154,7 +39154,7 @@ Ein Käfig, um Kael in Fremdland zu fangen.
 STRING 8461
 // Abilities: A0KB (Item Phoenix Summon), Name (Name)
 {
-Item Phönix Summon
+Gegenstand Phönix beschwören
 }
 
 STRING 8462
@@ -39382,7 +39382,7 @@ Rune der Großen Auferstehung (Runenschmied)
 STRING 8531
 // Items: I165 (Golden Crown), Ubertip (Tooltip - Extended)
 {
-Increases all hero stats by 7.
+Erhöht alle Heldenwerte um 7.
 }
 
 STRING 8532
@@ -39400,13 +39400,13 @@ Goldene Krone erwerben
 STRING 8534
 // Items: I165 (Golden Crown), Description (Description)
 {
-Increases all hero stats by 7.
+Erhöht alle Heldenwerte um 7.
 }
 
 STRING 8535
 // Items: I166 (Bracelet), Ubertip (Tooltip - Extended)
 {
-Increases all hero stats by 6.
+Erhöht alle Heldenwerte um 6.
 }
 
 STRING 8536
@@ -39424,7 +39424,7 @@ Armreif erwerben
 STRING 8538
 // Items: I166 (Bracelet), Description (Description)
 {
-Increases all hero stats by 6.
+Erhöht alle Heldenwerte um 6.
 }
 
 STRING 8539
@@ -39598,7 +39598,7 @@ Heavy melee unit that can cast Feuerblitz and Dauerhafter Feuerbrand. Immune to 
 STRING 8575
 // Abilities: A1VS (Spawn Tentacle), Ubertip (Tooltip - Normal - Extended)
 {
-Unleashes a mighty tentacle upon the enemy.
+Lässt ein mächtiges Tentakel über den Gegner kommen.
 }
 
 STRING 8576
@@ -45232,7 +45232,7 @@ Magier-Meister-Ausbildung
 STRING 10957
 // Abilities: A08H (Roar), EditorSuffix (Editor Suffix)
 {
-(Stonemaul Arena Meister Belt)
+(Stonemaul-Arena-Meistergürtel)
 }
 
 STRING 10962
@@ -47444,7 +47444,7 @@ Dorniger Turm
 }
 
 STRING 11785
-// Items: I0B3 (Summon Nether Dragon), Tip (Tooltip - Basic)
+// Items: I0B3 (Summon Niederdrache), Tip (Tooltip - Basic)
 {
 Niederdrachen beschwören
 }
@@ -49816,7 +49816,7 @@ Increases the armor of the Hero by 2 when worn.|n|n|cffffcc00Head.|r
 STRING 13721
 // Items: I03H (Unique - Mask of Death), Ubertip (Tooltip - Extended)
 {
-|cff8b00ffEinzigartig|r|nWhile wearing this mask, a Hero will recover hit points equal to <A089,DataA1,%>% of the attack damage dealt to an enemy unit. Allows your hero to summon a Nether Dragon for <A08A,Dur1> Sekunden lang an.
+|cff8b00ffEinzigartig|r|nWhile wearing this mask, a Hero will recover hit points equal to <A089,DataA1,%>% of the attack damage dealt to an enemy unit. Allows your hero to summon a Niederdrache for <A08A,Dur1> Sekunden lang an.
 }
 
 STRING 13751
@@ -51142,7 +51142,7 @@ STRING 14360
 STRING 14361
 // Items: I03X (Unique - The Eye of Sargeras), Ubertip (Tooltip - Extended)
 {
-|cff8b00ffEinzigartig|r|nDas Auge von Sargeras was hidden in another tomb after being used by Illidan. It contains immense powers from the titan Sargeras.|nIncreases all hero stats by <A0AA,DataA1>. Slows down the attack speed of hit targets by <A0A9,DataC1,%> % and the movement speed by <A0A9,DataB1,%> % and causes <A0A9,DataA1> damage per second. Allows taking over the control permanently of units up to level <A0A8,DataA1>.
+|cff8b00ffEinzigartig|r|nDas Auge von Sargeras was hidden in another tomb after being used by Illidan. It contains immense powers from the titan Sargeras.|nErhöht alle Heldenwerte um <A0AA,DataA1>. Slows down the attack speed of hit targets by <A0A9,DataC1,%> % and the movement speed by <A0A9,DataB1,%> % and causes <A0A9,DataA1> damage per second. Allows taking over the control permanently of units up to level <A0A8,DataA1>.
 }
 
 STRING 14362
@@ -53542,7 +53542,7 @@ Juwelenherstellung
 STRING 16560
 // Items: I077 (Enchanted Gemstone), Ubertip (Tooltip - Extended)
 {
-Increases all hero stats by 3.
+Erhöht alle Heldenwerte um 3.
 }
 
 STRING 16561
@@ -53560,7 +53560,7 @@ Grünen Edelstein erwerben
 STRING 16563
 // Items: I078 (Green Gemstone), Ubertip (Tooltip - Extended)
 {
-Increases all hero stats by 4.
+Erhöht alle Heldenwerte um 4.
 }
 
 STRING 16564
@@ -53822,7 +53822,7 @@ STRING 16859
 }
 
 STRING 16860
-// Items: I0B3 (Summon Nether Dragon), Hotkey (Hotkey)
+// Items: I0B3 (Summon Niederdrache), Hotkey (Hotkey)
 {
 S
 }
@@ -53894,7 +53894,7 @@ T
 }
 
 STRING 16896
-// Units: h084 (Lightning Elemental), Hotkey (Hotkey)
+// Units: h084 (Blitz-Elementargeist), Hotkey (Hotkey)
 {
 L
 }
@@ -54712,7 +54712,7 @@ Restores lost hit and mana points.
 STRING 17422
 // Upgrades: R069 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
 {
-Increases the attack damage of Pikenier, Zauberlehrlings and Dragonhawk Riders.
+Increases the attack damage of Pikenier, Zauberlehrlings and Drachenfalken-Reiter.
 }
 
 STRING 17423
@@ -55742,7 +55742,7 @@ Dalaran-Missgeburt ausbilden
 }
 
 STRING 17975
-// Units: h09K (Lightning Elemental), EditorSuffix (Name - Editor Suffix)
+// Units: h09K (Blitz-Elementargeist), EditorSuffix (Name - Editor Suffix)
 {
 (Dalaran)
 }
@@ -56006,7 +56006,7 @@ STRING 18225
 }
 
 STRING 18226
-// Units: h09W (Poison Elemental), EditorSuffix (Name - Editor Suffix)
+// Units: h09W (Gift-Elementargeist), EditorSuffix (Name - Editor Suffix)
 {
 (Dalaran)
 }
@@ -58552,7 +58552,7 @@ F
 STRING 20158
 // Upgrades: R069 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
 {
-Further increases the attack damage of Pikenier, Zauberlehrlings and Dragonhawk Riders.
+Further increases the attack damage of Pikenier, Zauberlehrlings and Drachenfalken-Reiter.
 }
 
 STRING 20159
@@ -59155,7 +59155,7 @@ Kriegszelt errichten
 STRING 20412
 // Units: o0A8 (War Tent), Ubertip (Tooltip - Extended)
 {
-Primäres Truppen-Produktionsgebäude. Trains Zentauren-Schufters, Centaur Archers and Zentauren-Läufers.  |nBietet auch die Ausbaustufen Searing Pfeile, and Niederreiten upgrades.
+Primäres Truppen-Produktionsgebäude. Trains Zentauren-Schufters, Centaur Bogenschützinnen and Zentauren-Läufers.  |nBietet auch die Ausbaustufen Searing Pfeile, and Niederreiten upgrades.
 }
 
 STRING 20413
@@ -59237,7 +59237,7 @@ STRING 20462
 }
 
 STRING 20463
-// Units: n08E (Dalaran Sky Guard Tower), EditorSuffix (Name - Editor Suffix)
+// Units: n08E (Dalaran-Himmelswachturm), EditorSuffix (Name - Editor Suffix)
 {
 (Dalaran)
 }
@@ -59549,19 +59549,19 @@ Allows Dalaran buildings to spawn 2 Feuer-Elementargeister whenever it gets dest
 }
 
 STRING 20526
-// Units: h09W (Poison Elemental), Name (Name)
+// Units: h09W (Gift-Elementargeist), Name (Name)
 {
 Gift-Elementargeist
 }
 
 STRING 20527
-// Units: h09W (Poison Elemental), Tip (Tooltip - Basic)
+// Units: h09W (Gift-Elementargeist), Tip (Tooltip - Basic)
 {
 Gift-Elementargeist ausbilden
 }
 
 STRING 20528
-// Units: h084 (Lightning Elemental), Ubertip (Tooltip - Extended)
+// Units: h084 (Blitz-Elementargeist), Ubertip (Tooltip - Extended)
 {
 Medium ranged unit that can Hieb opponents. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
 }
@@ -59755,7 +59755,7 @@ Einkerkern
 STRING 20565
 // Abilities: A0O6 (Imprison), Ubertip (Tooltip - Normal - Extended)
 {
-Einkerkerns an enemy land unit. If the Magischer Pferch is destroyed while the unit is still imprisoned, the unit that was imprisoned will be released.
+Kerkert eine gegnerische Land-Einheit ein. Falls der Magische Pferch zerstört wird während die Einheit noch eingekerkert ist, wird die Einheit, die eingekerkert war, freigelassen.
 }
 
 STRING 20566
@@ -59779,7 +59779,7 @@ Dalaran-Schild deaktivieren
 STRING 20569
 // Abilities: A0O7 (Disable Dalaran Shield), Ubertip (Tooltip - Normal - Extended)
 {
-Disables a shield which causes units to enemy units.
+Deaktiviert den Schild, der Schaden an gegnerischen Einheit verursacht.
 }
 
 STRING 20570
@@ -59797,7 +59797,7 @@ Dalaran-Gebäude
 STRING 20573
 // Abilities: A0O4 (Spell Book), Ubertip (Tooltip - Normal - Extended)
 {
-Dalaran buildings can cast several abilities.
+Dalaran-Gebäude können mehrere Fähgikeiten wirken.
 }
 
 STRING 20574
@@ -59839,13 +59839,13 @@ STRING 20581
 STRING 20582
 // Units: h03O (Void Elemental), Name (Name)
 {
-Leerenelementar
+Leeren-Elementargeist
 }
 
 STRING 20583
 // Units: h09Z (Void Elemental), Tip (Tooltip - Basic)
 {
-Leerenelementar ausbilden
+Leeren-Elementargeist ausbilden
 }
 
 STRING 20584
@@ -59893,13 +59893,13 @@ Leereregen
 STRING 20603
 // Buffs/Effects: B00X (Rain of Void (Area)), EditorName (Name (Editor Only))
 {
-Leereregen (Area)
+Leereregen (Gebiet)
 }
 
 STRING 20604
 // Buffs/Effects: X003 (Rain of Void (Effect)), EditorName (Name (Editor Only))
 {
-Leereregen (Effect)
+Leereregen (Effekt)
 }
 
 STRING 20605
@@ -59945,15 +59945,15 @@ Weak warrior unit. |n|n|cffffcc00Greift Land-Einheiten an.|r
 }
 
 STRING 20613
-// Units: n08E (Dalaran Sky Guard Tower), Tip (Tooltip - Basic)
+// Units: n08E (Dalaran-Himmelswachturm), Tip (Tooltip - Basic)
 {
-Ausbau zum Dalaran Sky Guard Tower
+Ausbau zum Dalaran-Himmelswachturm
 }
 
 STRING 20615
-// Units: n08E (Dalaran Sky Guard Tower), Name (Name)
+// Units: n08E (Dalaran-Himmelswachturm), Name (Name)
 {
-Dalaran Sky Guard Tower
+Dalaran-Himmelswachturm
 }
 
 STRING 20616
@@ -59995,13 +59995,13 @@ Meisterhaften Dalaran-Schild erforschen
 STRING 20624
 // Upgrades: R05R (Cloud), Ubertip (Tooltip - Extended)
 {
-Increases the damage caused by Stromgenerator shields.
+Erhöht den Schaden, der von Stromgenerator-Schilden verursacht wird.
 }
 
 STRING 20625
 // Upgrades: R05R (Cloud), Ubertip (Tooltip - Extended)
 {
-Further increases the damage caused by Stromgenerator shields.
+Erhöht den Schaden, der von Stromgenerator-Schilden verursacht wird noch weiter.
 }
 
 STRING 20626
@@ -60019,7 +60019,7 @@ C
 STRING 20628
 // Upgrades: R060 (Flare), Ubertip (Tooltip - Extended)
 {
-Increases the armor, maximum hit points and damage of all elemental units.
+Erhöht die Rüstung, maximalen Trefferpunkte und den Schaden von allen elementaren Einheiten.
 }
 
 STRING 20630
@@ -60055,19 +60055,19 @@ Ausbau zum Elementaren Sanktum
 STRING 20635
 // Units: h09F (Elemental Sanctuary), Ubertip (Tooltip - Extended)
 {
-Trains Luft-Elementargeists, Water Elementals, Feuer-Elementargeister and Meeres-Elementargeists. |nBietet auch die Ausbaustufen Elemental Convergence upgrade.
+Bildet Luft-Elementargeister, Wasser-Elementargeister, Feuer-Elementargeister und Meeres-Elementargeister aus. |nBietet auch die Ausbaustufe 'Elementare Konvergenz'.
 }
 
 STRING 20636
 // Units: h09O (Dalaran Zoo), Ubertip (Tooltip - Extended)
 {
-Produces Dalaran-Mutanten, Dalaran-Missgeburten, Wächter-Golems, and Fleischgolems.
+Bildet Dalaran-Mutanten, Dalaran-Missgeburten, Wächter-Golems und Fleischgolems aus.
 }
 
 STRING 20637
 // Units: h09X (Elemental Sanctuary Extended), Ubertip (Tooltip - Extended)
 {
-Trains Leerenelementars, Poison Elementals, Frost-Elementargeists, Lightning Elementals and Sand-Elementargeists. |nBietet auch die Ausbaustufen Elemental Convergence upgrade.
+Bildet Leeren-Elementargeister, Gift-Elementargeister, Frost-Elementargeists, Blitz-Elementargeister und Sand-Elementargeister aus. |nBietet auch die Ausbaustufe 'Elementare Konvergenz'.
 }
 
 STRING 20638
@@ -60460,7 +60460,7 @@ STRING 21319
 STRING 21320
 // Upgrades: R066 (Animal War Training), Ubertip (Tooltip - Extended)
 {
-Increases the maximum hit points of Dragonhawk Riders and Versorgungswagens by <Rhan,base1>.
+Increases the maximum hit points of Drachenfalken-Reiter and Versorgungswagens by <Rhan,base1>.
 }
 
 STRING 21321
@@ -60568,7 +60568,7 @@ G
 STRING 21359
 // Upgrades: R069 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
 {
-Further increases the attack damage of Pikenier, Zauberlehrlings and Dragonhawk Riders.
+Further increases the attack damage of Pikenier, Zauberlehrlings and Drachenfalken-Reiter.
 }
 
 STRING 21365
@@ -63081,19 +63081,19 @@ STRING 23852
 STRING 23854
 // Upgrades: R06A (Iron Plating,Steel Plating,Mithril Plating), Ubertip (Tooltip - Extended)
 {
-Increases the armor of of Pikenier, Zauberlehrlings and Dragonhawk Riders.
+Increases the armor of of Pikenier, Zauberlehrlings and Drachenfalken-Reiter.
 }
 
 STRING 23855
 // Upgrades: R06A (Iron Plating,Steel Plating,Mithril Plating), Ubertip (Tooltip - Extended)
 {
-Further increases the armor of of Pikenier, Zauberlehrlings and Dragonhawk Riders.
+Further increases the armor of of Pikenier, Zauberlehrlings and Drachenfalken-Reiter.
 }
 
 STRING 23856
 // Upgrades: R06A (Iron Plating,Steel Plating,Mithril Plating), Ubertip (Tooltip - Extended)
 {
-Further increases the armor of of Pikenier, Zauberlehrlings and Dragonhawk Riders.
+Further increases the armor of of Pikenier, Zauberlehrlings and Drachenfalken-Reiter.
 }
 
 STRING 23857
@@ -70605,7 +70605,7 @@ STRING 31554
 STRING 31555
 // Upgrades: R04I (Hippogryph Taming), Ubertip (Tooltip - Extended)
 {
-Trains War Eagles to allow Archers to mount them. This allows them to attack both air and ground units.
+Trains War Eagles to allow Bogenschützinnen to mount them. This allows them to attack both air and ground units.
 }
 
 STRING 31556
@@ -70647,7 +70647,7 @@ X
 STRING 31562
 // Upgrades: R04R (Hippogryph Taming), Ubertip (Tooltip - Extended)
 {
-Trains Dragonhawks to allow Archers to mount them. This allows them to attack both air and ground units.
+Trains Dragonhawks to allow Bogenschützinnen to mount them. This allows them to attack both air and ground units.
 }
 
 STRING 31563
@@ -74367,7 +74367,7 @@ Blutelfen-Bogenschützin ausbilden
 STRING 34008
 // Upgrades: R000 (Animal War Training), Tip (Tooltip)
 {
-Research Blood Elf Kampftierausbildung
+Research Blutelfen-Kampftierausbildung
 }
 
 STRING 34015
@@ -74599,9 +74599,9 @@ Purchase Rennqualifikation - Track Outland
 }
 
 STRING 34112
-// Items: I153 (Outland First Place Cup), Name (Name)
+// Items: I153 (Outland-Pokal des ersten Platzes), Name (Name)
 {
-Outland First Place Cup
+Outland-Pokal des ersten Platzes
 }
 
 STRING 34113
@@ -74617,21 +74617,21 @@ STRING 34114
 }
 
 STRING 34115
-// Items: I14U (Northrend Race First Place Cup), Description (Description)
+// Items: I14U (Northrend Race-Pokal des ersten Platzes), Description (Description)
 {
-The cup for the winner of the first place.
+Der Pokal für den Sieger des ersten Platzes.
 }
 
 STRING 34116
-// Items: I14U (Northrend Race First Place Cup), Ubertip (Tooltip - Extended)
+// Items: I14U (Northrend Race-Pokal des ersten Platzes), Ubertip (Tooltip - Extended)
 {
-The cup for the winner of the first place.
+Der Pokal für den Sieger des ersten Platzes.
 }
 
 STRING 34117
-// Items: I154 (Outland Second Place Cup), Name (Name)
+// Items: I154 (Outland-Pokal des zweiten Platzes), Name (Name)
 {
-Outland Second Place Cup
+Outland-Pokal des zweiten Platzes
 }
 
 STRING 34118
@@ -76701,7 +76701,7 @@ STRING 35179
 STRING 35180
 // Upgrades: R0A6 (Barrage), Ubertip (Tooltip - Extended)
 {
-Upgrades Archers to Armbrustmen, giving them more damage but slower cooldown.
+Upgrades Bogenschützinnen to Armbrustmen, giving them more damage but slower cooldown.
 }
 
 STRING 35181
@@ -89973,25 +89973,25 @@ STRING 40579
 STRING 40591
 // Items: I077 (Enchanted Gemstone), Description (Description)
 {
-Increases all hero stats by 3.
+Erhöht alle Heldenwerte um 3.
 }
 
 STRING 40592
 // Items: I078 (Green Gemstone), Description (Description)
 {
-Increases all hero stats by 4.
+Erhöht alle Heldenwerte um 4.
 }
 
 STRING 40593
 // Items: I079 (Jewel Amulet), Ubertip (Tooltip - Extended)
 {
-Increases all hero stats by 5.
+Erhöht alle Heldenwerte um 5.
 }
 
 STRING 40594
 // Items: I079 (Jewel Amulet), Description (Description)
 {
-Increases all hero stats by 5.
+Erhöht alle Heldenwerte um 5.
 }
 
 STRING 40595
@@ -95205,7 +95205,7 @@ Mächtiger Nahkampfkrieger. Kann 'Befehls-Aura' erlernen. |n|n|cffffcc00Greift L
 STRING 42473
 // Units: h0AH (Dojo), Ubertip (Tooltip - Extended)
 {
-Primäres Truppen-Produktionsgebäude. Trains Honorguards, Archers and Kriegsherrs. |nBietet auch die Ausbaustufen Verteidigen, Improved Bows, and Befehls-Aura upgrades.
+Primäres Truppen-Produktionsgebäude. Trains Honorguards, Bogenschützinnen and Kriegsherrs. |nBietet auch die Ausbaustufen Verteidigen, Improved Bows, and Befehls-Aura upgrades.
 }
 
 STRING 42474
@@ -96445,9 +96445,9 @@ STRING 43195
 }
 
 STRING 43197
-// Items: I14V (Northrend Race Second Place Cup), Description (Description)
+// Items: I14V (Northrend Race-Pokal des zweiten Platzes), Description (Description)
 {
-The cup for the winner of the second place.
+Der Pokal für den Sieger des zweiten Platzes.
 }
 
 STRING 43199
@@ -101485,19 +101485,19 @@ Die Seelen der Wilden Götter.
 }
 
 STRING 46512
-// Units: N02T (Nether Dragon), Awakentip (Tooltip - Awaken)
+// Units: N02T (Niederdrache), Awakentip (Tooltip - Awaken)
 {
 Veraku wiederbeleben
 }
 
 STRING 46513
-// Units: N02T (Nether Dragon), Revivetip (Tooltip - Revive)
+// Units: N02T (Niederdrache), Revivetip (Tooltip - Revive)
 {
 Veraku wiederbeleben
 }
 
 STRING 46514
-// Units: N02T (Nether Dragon), Tip (Tooltip - Basic)
+// Units: N02T (Niederdrache), Tip (Tooltip - Basic)
 {
 Veraku beschwören
 }
@@ -102373,9 +102373,9 @@ Summons a permanent Blauer Großdrache.|n|n|cffffcc00Requires 5 Dracheneis and 8
 }
 
 STRING 48526
-// Items: I0B3 (Summon Nether Dragon), Ubertip (Tooltip - Extended)
+// Items: I0B3 (Summon Niederdrache), Ubertip (Tooltip - Extended)
 {
-Summons a permanent Nether Dragon.|n|n|cffffcc00Requires 5 Dracheneis and 8 food.|r|n|n|cff808080Drop the required items in the inventory of the Crafting Stash.|r
+Summons a permanent Niederdrache.|n|n|cffffcc00Requires 5 Dracheneis and 8 food.|r|n|n|cff808080Drop the required items in the inventory of the Crafting Stash.|r
 }
 
 STRING 48528
@@ -105055,9 +105055,9 @@ Der Stachel einer Biene.
 }
 
 STRING 49526
-// Items: I14V (Northrend Race Second Place Cup), Ubertip (Tooltip - Extended)
+// Items: I14V (Northrend Race-Pokal des zweiten Platzes), Ubertip (Tooltip - Extended)
 {
-The cup for the winner of the second place.
+Der Pokal für den Sieger des zweiten Platzes.
 }
 
 STRING 49528
@@ -105099,7 +105099,7 @@ Increases the number of crafted menus per charge.|n|nPlace in the inventory of a
 STRING 49551
 // Units: n0M6 (Whale), Ubertip (Tooltip - Extended)
 {
-Heavy water unit with Feenfeuer. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
+Schwere Wassereinheit mit 'Feenfeuer'. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
 }
 
 STRING 49552
@@ -105129,19 +105129,19 @@ Rezept erwerben
 STRING 49559
 // Abilities: A1UJ (Cooking - Advanced), Name (Name)
 {
-Kochen - Advanced
+Kochen - Fortgeschritten
 }
 
 STRING 49560
 // Abilities: A1UJ (Cooking - Advanced), Tip (Tooltip - Normal)
 {
-Advanced Kochen
+Fortgeschrittenes Kochen
 }
 
 STRING 49561
 // Abilities: A1UJ (Cooking - Advanced), Ubertip (Tooltip - Normal - Extended)
 {
-The Cook uses knowledge to craft a Kitchen Knive.
+Stellt Küchenmesser her.
 }
 
 STRING 49562
@@ -105153,13 +105153,13 @@ Kochen - Adept
 STRING 49563
 // Abilities: A1UK (Cooking - Adept), Tip (Tooltip - Normal)
 {
-Adept Kochen
+Adepten-Kochen
 }
 
 STRING 49564
 // Abilities: A1UK (Cooking - Adept), Ubertip (Tooltip - Normal - Extended)
 {
-The Cook gathers random ingredients for the menus.
+Sammelt zufällige Zutaten für Menüs.
 }
 
 STRING 49568
@@ -105321,19 +105321,19 @@ Rangari
 STRING 49659
 // Units: n0LC (Rangari), Tip (Tooltip - Basic)
 {
-Hire Rangari
+Rangari anheuern
 }
 
 STRING 49660
 // Items: I0Z2 (Velen's Spellbook), Name (Name)
 {
-Velen's Spellbook
+Velens Zauberbuch
 }
 
 STRING 49661
 // Items: I0Z2 (Velen's Spellbook), Tip (Tooltip - Basic)
 {
-Purchase Velen's Spellbook
+Velens Zauberbuch erwerben
 }
 
 STRING 49662
@@ -105381,7 +105381,7 @@ Tcha'kaz,Anthriss,Kirix,Beth'tilac,Bloodtip,Charlotte,Shadra
 STRING 49670
 // Units: N0LD (Brood Mother), EditorSuffix (Name - Editor Suffix)
 {
-(Spider)
+(Spinne)
 }
 
 STRING 49676
@@ -105483,25 +105483,25 @@ Fischmarkt
 STRING 49953
 // Items: I0WO (Tiny Fire Pit), Name (Name)
 {
-Tiny Feuerstelle
+Winzige Feuerstelle
 }
 
 STRING 49954
 // Items: I0WO (Tiny Fire Pit), Tip (Tooltip - Basic)
 {
-Purchase Tiny Feuerstelle
+Winzige Feuerstelle erwerben
 }
 
 STRING 49955
 // Items: I0WO (Tiny Fire Pit), Description (Description)
 {
-Creates a Feuerstelle.
+Errichtet eine Feuerstelle.
 }
 
 STRING 49956
 // Items: I0WO (Tiny Fire Pit), Ubertip (Tooltip - Extended)
 {
-Creates a Feuerstelle at a target location.
+Errichtet am Zielort eine Feuerstelle.
 }
 
 STRING 49957
@@ -105543,13 +105543,13 @@ Buch des Kochens
 STRING 49965
 // Items: I0WP (Book of Cooking), Description (Description)
 {
-A book that contains knowledge of cooking recipes.
+Ein Buch, welches das Wissen zum Kochen von Rezepten enthält.
 }
 
 STRING 49966
 // Items: I0WP (Book of Cooking), Ubertip (Tooltip - Extended)
 {
-A book that contains knowledge of cooking recipes.
+Ein Buch, welches das Wissen zum Kochen von Rezepten enthält.
 }
 
 STRING 49967
@@ -111060,7 +111060,7 @@ Primäres Gebäude, wird zum Ausbilden von Arbeitern und zum Einlagern gesammelt
 STRING 51642
 // Units: h0MH (Barracks), Ubertip (Tooltip - Extended)
 {
-Primäres Truppen-Produktionsgebäude. Trains Footmen, Archers, and Knights. |nBietet auch die Ausbaustufen Verteidigen, Verbessertes Bogenschießen, Armbrustmen, Speerkämpfer, and Kampftierausbildung upgrades.
+Primäres Truppen-Produktionsgebäude. Trains Footmen, Bogenschützinnen, and Knights. |nBietet auch die Ausbaustufen Verteidigen, Verbessertes Bogenschießen, Armbrustmen, Speerkämpfer, and Kampftierausbildung upgrades.
 }
 
 STRING 51643
@@ -112850,11 +112850,11 @@ C
 STRING 53817
 // Units: n085 (Dalaran Guard Tower), Ubertip (Tooltip - Extended)
 {
-Basic watch tower. Can be upgraded into a Dalaran Sky Guard Tower. Can learn the Rückkopplung ability. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
+Basic watch tower. Can be upgraded into a Dalaran-Himmelswachturm. Can learn the Rückkopplung ability. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
 }
 
 STRING 53818
-// Units: n08E (Dalaran Sky Guard Tower), Ubertip (Tooltip - Extended)
+// Units: n08E (Dalaran-Himmelswachturm), Ubertip (Tooltip - Extended)
 {
 Hoch entwickelter Wachturm. Kann die Fähigkeit 'Rückkopplung' erlernen.|n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
 }
@@ -117074,13 +117074,13 @@ STRING 56505
 STRING 56507
 // Items: I123 (Tuskarr Ancestral Stone), Ubertip (Tooltip - Extended)
 {
-|cffff8c00Artefakt|r|nIncreases all hero stats by 3. Summons a Tuskarr-Häuptling who fights for you for <A21S,Dur1> Sekunden lang an. |n|cffffcc00History|r|n|cffffdeadThe Ältester Ko'nani has lost his father and burried him in the sea but his spirit remains in this world and can be summoned from the realm of the dead.|r
+|cffff8c00Artefakt|r|nErhöht alle Heldenwerte um 3. Summons a Tuskarr-Häuptling who fights for you for <A21S,Dur1> Sekunden lang an. |n|cffffcc00History|r|n|cffffdeadThe Ältester Ko'nani has lost his father and burried him in the sea but his spirit remains in this world and can be summoned from the realm of the dead.|r
 }
 
 STRING 56508
 // Items: I128 (Tuskarr Statue), Ubertip (Tooltip - Extended)
 {
-|cffff8c00Artefakt|r|nIncreases all hero stats by 5. Resurrects up to <A222,DataA1> dead friendly units nearby. Has a cooldown of <A222,Cool1> Sekunden lang an. |n|cffffcc00History|r|n|cffffdeadThe Ältester Ko'nani uses statues to communicate to his ancestors to get advice.|r
+|cffff8c00Artefakt|r|nErhöht alle Heldenwerte um 5. Resurrects up to <A222,DataA1> dead friendly units nearby. Has a cooldown of <A222,Cool1> Sekunden lang an. |n|cffffcc00History|r|n|cffffdeadThe Ältester Ko'nani uses statues to communicate to his ancestors to get advice.|r
 }
 
 STRING 56509
@@ -117662,7 +117662,7 @@ Sengpfeile erforschen
 STRING 56651
 // Upgrades: R0IA (Troll Regeneration,Improved Troll Regeneration,Advanced Troll Regeneration), Ubertip (Tooltip - Extended)
 {
-Gives Centaur Archers the ability Searing Pfeile.
+Gives Centaur Bogenschützinnen the ability Searing Pfeile.
 }
 
 STRING 56652
@@ -118808,7 +118808,7 @@ STRING 57299
 }
 
 STRING 57305
-// Items: I155 (Outland Third Place Cup), Name (Name)
+// Items: I155 (Outland-Pokal des dritten Platzes), Name (Name)
 {
 Pokal Dritter Platz Fremdland
 }
@@ -122066,9 +122066,9 @@ STRING 58501
 }
 
 STRING 58502
-// Items: I14W (Northrend Race Third Place Cup), Description (Description)
+// Items: I14W (Northrend Race-Pokal des dritten Platzes), Description (Description)
 {
-The cup for the winner of the third place.
+Der Pokal für den Sieger des dritten Platzes.
 }
 
 STRING 58503
@@ -122108,39 +122108,39 @@ Purchase Rennqualifikation - Track Northrend
 }
 
 STRING 58509
-// Items: I14U (Northrend Race First Place Cup), Name (Name)
+// Items: I14U (Northrend Race-Pokal des ersten Platzes), Name (Name)
 {
-Northrend Race First Place Cup
+Northrend Race-Pokal des ersten Platzes
 }
 
 STRING 58510
-// Items: I14Y (Azeroth Grand Prix First Place Cup), Description (Description)
+// Items: I14Y (Azeroth Grand Prix-Pokal des ersten Platzes), Description (Description)
 {
-The cup for the winner of the first place.
+Der Pokal für den Sieger des ersten Platzes.
 }
 
 STRING 58511
-// Items: I14Y (Azeroth Grand Prix First Place Cup), Ubertip (Tooltip - Extended)
+// Items: I14Y (Azeroth Grand Prix-Pokal des ersten Platzes), Ubertip (Tooltip - Extended)
 {
-The cup for the winner of the first place.
+Der Pokal für den Sieger des ersten Platzes.
 }
 
 STRING 58512
-// Items: I14V (Northrend Race Second Place Cup), Name (Name)
+// Items: I14V (Northrend Race-Pokal des zweiten Platzes), Name (Name)
 {
-Northrend Race Second Place Cup
+Northrend Race-Pokal des zweiten Platzes
 }
 
 STRING 58513
-// Items: I14Z (Azeroth Grand Prix Second Place Cup), Description (Description)
+// Items: I14Z (Azeroth Grand Prix-Pokal des zweiten Platzes), Description (Description)
 {
-The cup for the winner of the second place.
+Der Pokal für den Sieger des zweiten Platzes.
 }
 
 STRING 58520
-// Items: I14Z (Azeroth Grand Prix Second Place Cup), Ubertip (Tooltip - Extended)
+// Items: I14Z (Azeroth Grand Prix-Pokal des zweiten Platzes), Ubertip (Tooltip - Extended)
 {
-The cup for the winner of the second place.
+Der Pokal für den Sieger des zweiten Platzes.
 }
 
 STRING 58522
@@ -122168,15 +122168,15 @@ Dwarven Celestial Orb of Souls
 }
 
 STRING 58526
-// Items: I14W (Northrend Race Third Place Cup), Name (Name)
+// Items: I14W (Northrend Race-Pokal des dritten Platzes), Name (Name)
 {
-Northrend Race Third Place Cup
+Northrend Race-Pokal des dritten Platzes
 }
 
 STRING 58527
-// Items: I14W (Northrend Race Third Place Cup), Ubertip (Tooltip - Extended)
+// Items: I14W (Northrend Race-Pokal des dritten Platzes), Ubertip (Tooltip - Extended)
 {
-The cup for the winner of the third place.
+Der Pokal für den Sieger des dritten Platzes.
 }
 
 STRING 58528
@@ -122204,9 +122204,9 @@ Winzigen Zwergen-Beobachtungsturm erwerben
 }
 
 STRING 58532
-// Items: I150 (Azeroth Grand Prix Third Place Cup), Description (Description)
+// Items: I150 (Azeroth Grand Prix-Pokal des dritten Platzes), Description (Description)
 {
-The cup for the winner of the third place.
+Der Pokal für den Sieger des dritten Platzes.
 }
 
 STRING 58535
@@ -122500,73 +122500,73 @@ STRING 58604
 STRING 58605
 // Abilities: A0F5 (Spawn Doom Guard), Name (Name)
 {
-Spawn Unheilshüter
+Unheilshüter erzeugen
 }
 
 STRING 58606
-// Items: I14Y (Azeroth Grand Prix First Place Cup), Name (Name)
+// Items: I14Y (Azeroth Grand Prix-Pokal des ersten Platzes), Name (Name)
 {
-Azeroth Grand Prix First Place Cup
+Azeroth Grand Prix-Pokal des ersten Platzes
 }
 
 STRING 58607
-// Items: I153 (Outland First Place Cup), Description (Description)
+// Items: I153 (Outland-Pokal des ersten Platzes), Description (Description)
 {
-The cup for the winner of the first place.
+Der Pokal für den Sieger des ersten Platzes.
 }
 
 STRING 58608
-// Items: I153 (Outland First Place Cup), Ubertip (Tooltip - Extended)
+// Items: I153 (Outland-Pokal des ersten Platzes), Ubertip (Tooltip - Extended)
 {
-The cup for the winner of the first place.
+Der Pokal für den Sieger des ersten Platzes.
 }
 
 STRING 58609
 // Abilities: A0F6 (Barrage), EditorSuffix (Editor Suffix)
 {
-(Zauberbuch of Sargeras)
+(Zauberbuch von Sargeras)
 }
 
 STRING 58615
-// Items: I14Z (Azeroth Grand Prix Second Place Cup), Name (Name)
+// Items: I14Z (Azeroth Grand Prix-Pokal des zweiten Platzes), Name (Name)
 {
-Azeroth Grand Prix Second Place Cup
+Azeroth Grand Prix-Pokal des zweiten Platzes
 }
 
 STRING 58627
-// Items: I154 (Outland Second Place Cup), Description (Description)
+// Items: I154 (Outland-Pokal des zweiten Platzes), Description (Description)
 {
-The cup for the winner of the second place.
+Der Pokal für den Sieger des zweiten Platzes.
 }
 
 STRING 58628
-// Items: I154 (Outland Second Place Cup), Ubertip (Tooltip - Extended)
+// Items: I154 (Outland-Pokal des zweiten Platzes), Ubertip (Tooltip - Extended)
 {
-The cup for the winner of the second place.
+Der Pokal für den Sieger des zweiten Platzes.
 }
 
 STRING 58637
-// Items: I150 (Azeroth Grand Prix Third Place Cup), Name (Name)
+// Items: I150 (Azeroth Grand Prix-Pokal des dritten Platzes), Name (Name)
 {
-Azeroth Grand Prix Third Place Cup
+Azeroth Grand Prix-Pokal des dritten Platzes
 }
 
 STRING 58640
-// Items: I150 (Azeroth Grand Prix Third Place Cup), Ubertip (Tooltip - Extended)
+// Items: I150 (Azeroth Grand Prix-Pokal des dritten Platzes), Ubertip (Tooltip - Extended)
 {
-The cup for the winner of the third place.
+Der Pokal für den Sieger des dritten Platzes.
 }
 
 STRING 58641
-// Items: I155 (Outland Third Place Cup), Description (Description)
+// Items: I155 (Outland-Pokal des dritten Platzes), Description (Description)
 {
-The cup for the winner of the third place.
+Der Pokal für den Sieger des dritten Platzes.
 }
 
 STRING 58730
-// Items: I155 (Outland Third Place Cup), Ubertip (Tooltip - Extended)
+// Items: I155 (Outland-Pokal des dritten Platzes), Ubertip (Tooltip - Extended)
 {
-The cup for the winner of the third place.
+Der Pokal für den Sieger des dritten Platzes.
 }
 
 STRING 58731
@@ -123238,7 +123238,7 @@ STRING 60178
 STRING 60179
 // Units: h04M (Dragonhawk Rider), Ubertip (Tooltip - Extended)
 {
-Swift flying unit, mounted by an Elven warrior. Has the Aerial Shackles ability, which allows it to immobilize and disarm enemy air units temporarily. Can learn Blood Elf Kampftierausbildung, and the Cloud ability. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
+Swift flying unit, mounted by an Elven warrior. Has the Aerial Shackles ability, which allows it to immobilize and disarm enemy air units temporarily. Can learn Blutelfen-Kampftierausbildung, and the Cloud ability. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
 }
 
 STRING 60180

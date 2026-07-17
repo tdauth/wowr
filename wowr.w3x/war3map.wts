@@ -17250,7 +17250,7 @@ STRING 3363
 STRING 3364
 // Units: n0GX (Corrupted Tree of Life), Ubertip (Tooltip - Extended)
 {
-Primary structure, used to train Workers, Satyr Citizens (male) and entangle gold mines. Can be upgraded to Corrupted Tree of Ages and then Corrupted Tree of Eternity to enable the production of additional types of structures and units.
+Primary structure, used to train Workers, Satyr Citizens (male) and entangle gold mines. Can be upgraded to Corrupted Tree of Ages and then Corrupted Tree of Eternity to enable the production of additional types of structures and units. |n|n|cffffcc00Attacks land units.|r
 }
 
 STRING 3365
@@ -37062,7 +37062,7 @@ Grand Master Weaponsmithing
 STRING 8070
 // Abilities: A0YG (Weaponsmithing - Grand Master), Ubertip (Tooltip - Normal - Extended)
 {
-The Weapon Smith uses his craftsmanship to create a Mythical Poison Blade.
+Crafts Mythical Poison Blades.
 }
 
 STRING 8071
@@ -37080,7 +37080,7 @@ Doctor Scribing
 STRING 8073
 // Abilities: A0YH (Scribing - Doctor), Ubertip (Tooltip - Normal - Extended)
 {
-The Scribe uses his knowledge to craft a Tome of Power.
+Crafts Tomes of Power.
 }
 
 STRING 8074
@@ -37098,7 +37098,7 @@ Grand Master Scribing
 STRING 8076
 // Abilities: A0YI (Scribing - Grand Master), Ubertip (Tooltip - Normal - Extended)
 {
-The Scribe uses his knowledge to craft a Tome of Greater Experince.
+Crafts Tomes of Greater Experince.
 }
 
 STRING 8077
@@ -37248,7 +37248,7 @@ Grand Master Armoring
 STRING 8101
 // Abilities: A0YM (Armoring - Grand Master), Ubertip (Tooltip - Normal - Extended)
 {
-The Armorer uses his knowledge to create a Mythical Golden Armor.
+Crafts Mythical Golden Armors.
 }
 
 STRING 8102
@@ -37638,7 +37638,7 @@ Grand Master Inscription
 STRING 8184
 // Abilities: A108 (Inscription - Grand Master), Ubertip (Tooltip - Normal - Extended)
 {
-The Inscriptor uses his knowledge to create a Grand Master Glyph.
+Crafts Grand Master Glyphs.
 }
 
 STRING 8185
@@ -37656,7 +37656,7 @@ Doctor Inscription
 STRING 8187
 // Abilities: A109 (Inscription - Doctor), Ubertip (Tooltip - Normal - Extended)
 {
-The Inscriptor uses his knowledge to craft a Doctor Glyph.
+Crafts Doctor Glyphs.
 }
 
 STRING 8188
@@ -38181,7 +38181,7 @@ Doctor Warlockery
 STRING 8277
 // Abilities: A10B (Warlockery - Doctor), Ubertip (Tooltip - Normal - Extended)
 {
-The Warlock uses his powers to create a Tiny Fel Fountain.
+Crafts Tiny Fel Fountains.
 }
 
 STRING 8279
@@ -59772,7 +59772,7 @@ Disable Dalaran Shield
 STRING 20569
 // Abilities: A0O7 (Disable Dalaran Shield), Ubertip (Tooltip - Normal - Extended)
 {
-Disables a shield which causes units to enemy units.
+Disables a shield which causes damage to enemy units.
 }
 
 STRING 20570
@@ -105062,7 +105062,7 @@ Advanced Cooking
 STRING 49561
 // Abilities: A1UJ (Cooking - Advanced), Ubertip (Tooltip - Normal - Extended)
 {
-The Cook uses knowledge to craft a Kitchen Knive.
+Crafts Kitchen Knives.
 }
 
 STRING 49562
@@ -105080,7 +105080,7 @@ Adept Cooking
 STRING 49564
 // Abilities: A1UK (Cooking - Adept), Ubertip (Tooltip - Normal - Extended)
 {
-The Cook gathers random ingredients for the menus.
+Gathers random ingredients for the menus.
 }
 
 STRING 49568
