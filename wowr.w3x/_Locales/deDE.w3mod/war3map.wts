@@ -332,7 +332,7 @@ STRING 55
 }
 
 STRING 56
-// Abilities: A0K5 (Finish Construction), EditorSuffix (Editor Suffix)
+// Abilities: A0K5 (Bau fertigstellen), EditorSuffix (Editor Suffix)
 {
 (Neutral Feindlich)
 }
@@ -1710,13 +1710,13 @@ Wechselt die Klasse zum Nekromanten:|n- Totenerweckung|n- Kannibalismus|n- Todes
 }
 
 STRING 286
-// Units: N0HH (Geomancer), Name (Name)
+// Units: N0HH (Erdmagier), Name (Name)
 {
 Erdmagier
 }
 
 STRING 287
-// Units: N0AF (Geomancer), Name (Name)
+// Units: N0AF (Erdmagier), Name (Name)
 {
 Erdmagier
 }
@@ -1854,9 +1854,9 @@ STRING 309
 }
 
 STRING 310
-// Abilities: A01J (Thieving - Doctor), Name (Name)
+// Abilities: A01J (Diebstahl - Doctor), Name (Name)
 {
-Thieving - Doctor
+Diebstahl - Doctor
 }
 
 STRING 311
@@ -1896,9 +1896,9 @@ Drain
 }
 
 STRING 317
-// Abilities: A027 (Demigod´s Protection), Name (Name)
+// Abilities: A027 (Schutz des Halbgotts), Name (Name)
 {
-Demigod´s Protection
+Schutz des Halbgotts
 }
 
 STRING 318
@@ -2066,13 +2066,13 @@ Arkanist
 STRING 346
 // Units: Udea (Death Knight), Ubertip (Tooltip - Extended)
 {
-|cffffcc00Race:|r Undead|n|cffffcc00Class:|r Death Knight|n|cffffcc00Mount:|r Frost Wyrm|n|cffffcc00Primary Attribute:|r Strength|n|cffffcc00Strength:|r 23/2.7|n|cffffcc00Agility:|r 12/1.5|n|cffffcc00Intelligence:|r 17/1.8|n|n|cffffcc00Attacks land units.|r
+|cffffcc00Race:|r Undead|n|cffffcc00Class:|r Death Knight|n|cffffcc00Reittier:|r Frost Wyrm|n|cffffcc00Primäres Attribut:|r Strength|n|cffffcc00Kraft:|r 23/2.7|n|cffffcc00Beweglichkeit:|r 12/1.5|n|cffffcc00Intelligenz:|r 17/1.8|n|n|cffffcc00Attacks land units.|r
 }
 
 STRING 347
 // Units: Ulic (Lich), Ubertip (Tooltip - Extended)
 {
-|cffffcc00Race:|r Undead|n|cffffcc00Class:|r Necromancer|n|cffffcc00Mount:|r Frost Wyrm|n|cffffcc00Primary Attribute:|r Intelligence|n|cffffcc00Strength:|r 15/2|n|cffffcc00Agility:|r 14/1|n|cffffcc00Intelligence:|r 20/3.4|n|n|cffffcc00Attacks land and air units.|r
+|cffffcc00Race:|r Undead|n|cffffcc00Class:|r Necromancer|n|cffffcc00Reittier:|r Frost Wyrm|n|cffffcc00Primäres Attribut:|r Intelligenz|n|cffffcc00Kraft:|r 15/2|n|cffffcc00Beweglichkeit:|r 14/1|n|cffffcc00Intelligenz:|r 20/3.4|n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
 }
 
 STRING 348
@@ -3396,7 +3396,7 @@ STRING 566
 STRING 567
 // Units: o01B (Goblin Shipyard), Ubertip (Tooltip - Extended)
 {
-Boat construction facility. Produces Goblin-U-Boots, Ingenieurschiffs, Transportschiffs, Orc Frigates, and Orc Schlachtschiffs.
+Bootsbauanlage. Produces Goblin-U-Boots, Ingenieurschiffs, Transportschiffs, Orc Frigates, and Orc Schlachtschiffs.
 }
 
 STRING 568
@@ -3807,7 +3807,7 @@ Sägewerk errichten
 }
 
 STRING 636
-// Units: o03C (Wyvern Roost), Name (Name)
+// Units: o03C (Flügeldrache Roost), Name (Name)
 {
 Flügeldrachen-Horst
 }
@@ -3819,13 +3819,13 @@ STRING 637
 }
 
 STRING 638
-// Units: o03C (Wyvern Roost), Tip (Tooltip - Basic)
+// Units: o03C (Flügeldrache Roost), Tip (Tooltip - Basic)
 {
 Flügeldrachen-Horst errichten
 }
 
 STRING 639
-// Units: o03D (Wyvern), Name (Name)
+// Units: o03D (Flügeldrache), Name (Name)
 {
 Flügeldrache
 }
@@ -3837,37 +3837,37 @@ STRING 640
 }
 
 STRING 641
-// Units: o03D (Wyvern), Tip (Tooltip - Basic)
+// Units: o03D (Flügeldrache), Tip (Tooltip - Basic)
 {
 Flügeldrachen ausbilden
 }
 
 STRING 642
-// Units: o03D (Wyvern), Ubertip (Tooltip - Extended)
+// Units: o03D (Flügeldrache), Ubertip (Tooltip - Extended)
 {
 Highly mobile flying creature. Excellent at scouting. |n|n|cffffcc00Attacks air units.|r
 }
 
 STRING 643
-// Units: o03E (Spirit Wyvern), Name (Name)
+// Units: o03E (Spirit Flügeldrache), Name (Name)
 {
 Geisterflügeldrache
 }
 
 STRING 644
-// Units: o03C (Wyvern Roost), EditorSuffix (Name - Editor Suffix)
+// Units: o03C (Flügeldrache Roost), EditorSuffix (Name - Editor Suffix)
 {
 (Tauren)
 }
 
 STRING 645
-// Units: o03E (Spirit Wyvern), Tip (Tooltip - Basic)
+// Units: o03E (Spirit Flügeldrache), Tip (Tooltip - Basic)
 {
 Geisterflügeldrachen ausbilden
 }
 
 STRING 646
-// Units: o03E (Spirit Wyvern), Ubertip (Tooltip - Extended)
+// Units: o03E (Spirit Flügeldrache), Ubertip (Tooltip - Extended)
 {
 Highly mobile flying creature. Excellent at scouting. Causes magic damage. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
 }
@@ -3879,13 +3879,13 @@ Geisterhaus
 }
 
 STRING 648
-// Units: o03D (Wyvern), EditorSuffix (Name - Editor Suffix)
+// Units: o03D (Flügeldrache), EditorSuffix (Name - Editor Suffix)
 {
 (Tauren)
 }
 
 STRING 649
-// Units: o03E (Spirit Wyvern), EditorSuffix (Name - Editor Suffix)
+// Units: o03E (Spirit Flügeldrache), EditorSuffix (Name - Editor Suffix)
 {
 (Tauren)
 }
@@ -4220,9 +4220,9 @@ STRING 705
 }
 
 STRING 706
-// Abilities: A01H (Thieving - Grand Master), Name (Name)
+// Abilities: A01H (Diebstahl - Grand Master), Name (Name)
 {
-Thieving - Grand Master
+Diebstahl - Grand Master
 }
 
 STRING 707
@@ -4420,7 +4420,7 @@ STRING 738
 STRING 739
 // Units: O09O (Raider), Ubertip (Tooltip - Extended)
 {
-|cffffcc00Race:|r Orc|n|cffffcc00Class:|r Rogue|n|cffffcc00Mount:|r Wyvern|n|cffffcc00Primary Attribute:|r Agility|n|cffffcc00Strength:|r 18/2|n|cffffcc00Agility:|r 22/1.75|n|cffffcc00Intelligence:|r 16/2.25|n|n|cffffcc00Attacks land units.|r
+|cffffcc00Volk:|r Orcs|n|cffffcc00Klasse:|r Rogue|n|cffffcc00Reittier:|r Flügeldrache|n|cffffcc00Primäres Attribut:|r Agility|n|cffffcc00Kraft:|r 18/2|n|cffffcc00Beweglichkeit:|r 22/1.75|n|cffffcc00Intelligenz:|r 16/2.25|n|n|cffffcc00Attacks land units.|r
 }
 
 STRING 740
@@ -4515,12 +4515,12 @@ Powerful flying boss hero who can cast Feueratem, Feuer-Elementargeist beschwör
 
 STRING 755
 {
-|cffffcc00Race:|r Orc|n|cffffcc00Class:|r Geomancer|n|cffffcc00Mount:|r Wyvern|n|cffffcc00Primary Attribute:|r Intelligence|n|cffffcc00Strength:|r 15/2|n|cffffcc00Agility:|r 18/1|n|cffffcc00Intelligence:|r 19/3|n|n|cffffcc00Attacks land and air units.|r
+|cffffcc00Volk:|r Orcs|n|cffffcc00Klasse:|r Erdmagier|n|cffffcc00Reittier:|r Flügeldrache|n|cffffcc00Primäres Attribut:|r Intelligenz|n|cffffcc00Kraft:|r 15/2|n|cffffcc00Beweglichkeit:|r 18/1|n|cffffcc00Intelligenz:|r 19/3|n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
 }
 
 STRING 756
 {
-|cffffcc00Race:|r Orc|n|cffffcc00Class:|r Geomancer|n|cffffcc00Mount:|r Wyvern|n|cffffcc00Primary Attribute:|r Intelligence|n|cffffcc00Strength:|r 15/2|n|cffffcc00Agility:|r 18/1|n|cffffcc00Intelligence:|r 19/3|n|n|cffffcc00Attacks land and air units.|r
+|cffffcc00Volk:|r Orcs|n|cffffcc00Klasse:|r Erdmagier|n|cffffcc00Reittier:|r Flügeldrache|n|cffffcc00Primäres Attribut:|r Intelligenz|n|cffffcc00Kraft:|r 15/2|n|cffffcc00Beweglichkeit:|r 18/1|n|cffffcc00Intelligenz:|r 19/3|n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
 }
 
 STRING 757
@@ -4531,12 +4531,12 @@ Dynamitstab
 
 STRING 758
 {
-|cffffcc00Race:|r Orc|n|cffffcc00Class:|r Geomancer|n|cffffcc00Mount:|r Wyvern|n|cffffcc00Primary Attribute:|r Intelligence|n|cffffcc00Strength:|r 15/2|n|cffffcc00Agility:|r 18/1|n|cffffcc00Intelligence:|r 19/3|n|n|cffffcc00Attacks land and air units.|r
+|cffffcc00Volk:|r Orcs|n|cffffcc00Klasse:|r Erdmagier|n|cffffcc00Reittier:|r Flügeldrache|n|cffffcc00Primäres Attribut:|r Intelligenz|n|cffffcc00Kraft:|r 15/2|n|cffffcc00Beweglichkeit:|r 18/1|n|cffffcc00Intelligenz:|r 19/3|n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
 }
 
 STRING 759
 {
-|cffffcc00Race:|r Orc|n|cffffcc00Class:|r Geomancer|n|cffffcc00Mount:|r Wyvern|n|cffffcc00Primary Attribute:|r Intelligence|n|cffffcc00Strength:|r 15/2|n|cffffcc00Agility:|r 18/1|n|cffffcc00Intelligence:|r 19/3|n|n|cffffcc00Attacks land and air units.|r
+|cffffcc00Volk:|r Orcs|n|cffffcc00Klasse:|r Erdmagier|n|cffffcc00Reittier:|r Flügeldrache|n|cffffcc00Primäres Attribut:|r Intelligenz|n|cffffcc00Kraft:|r 15/2|n|cffffcc00Beweglichkeit:|r 18/1|n|cffffcc00Intelligenz:|r 19/3|n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
 }
 
 STRING 760
@@ -4571,7 +4571,7 @@ STRING 764
 
 STRING 765
 {
-|cffffcc00Race:|r Orc|n|cffffcc00Class:|r Geomancer|n|cffffcc00Mount:|r Wyvern|n|cffffcc00Primary Attribute:|r Intelligence|n|cffffcc00Strength:|r 15/2|n|cffffcc00Agility:|r 18/1|n|cffffcc00Intelligence:|r 19/3|n|n|cffffcc00Attacks land and air units.|r
+|cffffcc00Volk:|r Orcs|n|cffffcc00Klasse:|r Erdmagier|n|cffffcc00Reittier:|r Flügeldrache|n|cffffcc00Primäres Attribut:|r Intelligenz|n|cffffcc00Kraft:|r 15/2|n|cffffcc00Beweglichkeit:|r 18/1|n|cffffcc00Intelligenz:|r 19/3|n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
 }
 
 STRING 766
@@ -4714,12 +4714,12 @@ S
 
 STRING 789
 {
-|cffffcc00Race:|r Orc|n|cffffcc00Class:|r Geomancer|n|cffffcc00Mount:|r Wyvern|n|cffffcc00Primary Attribute:|r Intelligence|n|cffffcc00Strength:|r 15/2|n|cffffcc00Agility:|r 18/1|n|cffffcc00Intelligence:|r 19/3|n|n|cffffcc00Attacks land and air units.|r
+|cffffcc00Volk:|r Orcs|n|cffffcc00Klasse:|r Erdmagier|n|cffffcc00Reittier:|r Flügeldrache|n|cffffcc00Primäres Attribut:|r Intelligenz|n|cffffcc00Kraft:|r 15/2|n|cffffcc00Beweglichkeit:|r 18/1|n|cffffcc00Intelligenz:|r 19/3|n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
 }
 
 STRING 790
 {
-|cffffcc00Race:|r Orc|n|cffffcc00Class:|r Geomancer|n|cffffcc00Mount:|r Wyvern|n|cffffcc00Primary Attribute:|r Intelligence|n|cffffcc00Strength:|r 15/2|n|cffffcc00Agility:|r 18/1|n|cffffcc00Intelligence:|r 19/3|n|n|cffffcc00Attacks land and air units.|r
+|cffffcc00Volk:|r Orcs|n|cffffcc00Klasse:|r Erdmagier|n|cffffcc00Reittier:|r Flügeldrache|n|cffffcc00Primäres Attribut:|r Intelligenz|n|cffffcc00Kraft:|r 15/2|n|cffffcc00Beweglichkeit:|r 18/1|n|cffffcc00Intelligenz:|r 19/3|n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
 }
 
 STRING 791
@@ -4850,17 +4850,17 @@ Alchemie - Meister
 
 STRING 816
 {
-|cffffcc00Race:|r Orc|n|cffffcc00Class:|r Geomancer|n|cffffcc00Mount:|r Wyvern|n|cffffcc00Primary Attribute:|r Intelligence|n|cffffcc00Strength:|r 15/2|n|cffffcc00Agility:|r 18/1|n|cffffcc00Intelligence:|r 19/3|n|n|cffffcc00Attacks land and air units.|r
+|cffffcc00Volk:|r Orcs|n|cffffcc00Klasse:|r Erdmagier|n|cffffcc00Reittier:|r Flügeldrache|n|cffffcc00Primäres Attribut:|r Intelligenz|n|cffffcc00Kraft:|r 15/2|n|cffffcc00Beweglichkeit:|r 18/1|n|cffffcc00Intelligenz:|r 19/3|n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
 }
 
 STRING 817
 {
-|cffffcc00Race:|r Orc|n|cffffcc00Class:|r Geomancer|n|cffffcc00Mount:|r Wyvern|n|cffffcc00Primary Attribute:|r Intelligence|n|cffffcc00Strength:|r 15/2|n|cffffcc00Agility:|r 18/1|n|cffffcc00Intelligence:|r 19/3|n|n|cffffcc00Attacks land and air units.|r
+|cffffcc00Volk:|r Orcs|n|cffffcc00Klasse:|r Erdmagier|n|cffffcc00Reittier:|r Flügeldrache|n|cffffcc00Primäres Attribut:|r Intelligenz|n|cffffcc00Kraft:|r 15/2|n|cffffcc00Beweglichkeit:|r 18/1|n|cffffcc00Intelligenz:|r 19/3|n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
 }
 
 STRING 818
 {
-|cffffcc00Race:|r Orc|n|cffffcc00Class:|r Geomancer|n|cffffcc00Mount:|r Wyvern|n|cffffcc00Primary Attribute:|r Intelligence|n|cffffcc00Strength:|r 15/2|n|cffffcc00Agility:|r 18/1|n|cffffcc00Intelligence:|r 19/3|n|n|cffffcc00Attacks land and air units.|r
+|cffffcc00Volk:|r Orcs|n|cffffcc00Klasse:|r Erdmagier|n|cffffcc00Reittier:|r Flügeldrache|n|cffffcc00Primäres Attribut:|r Intelligenz|n|cffffcc00Kraft:|r 15/2|n|cffffcc00Beweglichkeit:|r 18/1|n|cffffcc00Intelligenz:|r 19/3|n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
 }
 
 STRING 819
@@ -4886,13 +4886,13 @@ Spieler 5
 STRING 823
 // Items: I192 (Book of Demolishing), Description (Description)
 {
-A book that contains knowledge of explosives.
+Ein Buch, das Wissen über Sprengstoffe enthält.
 }
 
 STRING 824
 // Items: I192 (Book of Demolishing), Ubertip (Tooltip - Extended)
 {
-A book that contains knowledge of explosives.
+Ein Buch, das Wissen über Sprengstoffe enthält.
 }
 
 STRING 825
@@ -5279,7 +5279,7 @@ Wechselt die Klasse zum Mönch:|n- Gleiten|n- Aufladung|n- Trunkenbold|n- Entwaf
 STRING 890
 // Abilities: A06H (Sorcery - Advanced), Ubertip (Tooltip - Normal - Extended)
 {
-The Sorcerer uses his gathered material to craft a Wand of the Wind.
+Stellt Zauberstäbe des Windes her.
 }
 
 STRING 891
@@ -5306,7 +5306,7 @@ Computer
 
 STRING 895
 {
-|cffffcc00Race:|r Orc|n|cffffcc00Class:|r Geomancer|n|cffffcc00Mount:|r Wyvern|n|cffffcc00Primary Attribute:|r Intelligence|n|cffffcc00Strength:|r 15/2|n|cffffcc00Agility:|r 18/1|n|cffffcc00Intelligence:|r 19/3|n|n|cffffcc00Attacks land and air units.|r
+|cffffcc00Volk:|r Orcs|n|cffffcc00Klasse:|r Erdmagier|n|cffffcc00Reittier:|r Flügeldrache|n|cffffcc00Primäres Attribut:|r Intelligenz|n|cffffcc00Kraft:|r 15/2|n|cffffcc00Beweglichkeit:|r 18/1|n|cffffcc00Intelligenz:|r 19/3|n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
 }
 
 STRING 896
@@ -5316,7 +5316,7 @@ Spieler 1
 
 STRING 897
 {
-|cffffcc00Race:|r Orc|n|cffffcc00Class:|r Geomancer|n|cffffcc00Mount:|r Wyvern|n|cffffcc00Primary Attribute:|r Intelligence|n|cffffcc00Strength:|r 15/2|n|cffffcc00Agility:|r 18/1|n|cffffcc00Intelligence:|r 19/3|n|n|cffffcc00Attacks land and air units.|r
+|cffffcc00Volk:|r Orcs|n|cffffcc00Klasse:|r Erdmagier|n|cffffcc00Reittier:|r Flügeldrache|n|cffffcc00Primäres Attribut:|r Intelligenz|n|cffffcc00Kraft:|r 15/2|n|cffffcc00Beweglichkeit:|r 18/1|n|cffffcc00Intelligenz:|r 19/3|n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
 }
 
 STRING 898
@@ -5326,7 +5326,7 @@ Spieler 1
 
 STRING 899
 {
-|cffffcc00Race:|r Orc|n|cffffcc00Class:|r Geomancer|n|cffffcc00Mount:|r Wyvern|n|cffffcc00Primary Attribute:|r Intelligence|n|cffffcc00Strength:|r 15/2|n|cffffcc00Agility:|r 18/1|n|cffffcc00Intelligence:|r 19/3|n|n|cffffcc00Attacks land and air units.|r
+|cffffcc00Volk:|r Orcs|n|cffffcc00Klasse:|r Erdmagier|n|cffffcc00Reittier:|r Flügeldrache|n|cffffcc00Primäres Attribut:|r Intelligenz|n|cffffcc00Kraft:|r 15/2|n|cffffcc00Beweglichkeit:|r 18/1|n|cffffcc00Intelligenz:|r 19/3|n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
 }
 
 STRING 900
@@ -5582,9 +5582,9 @@ Evolution erforschen - [|cffffcc00Stufe 42|r]
 }
 
 STRING 942
-// Abilities: A027 (Demigod´s Protection), Tip (Tooltip - Normal)
+// Abilities: A027 (Schutz des Halbgotts), Tip (Tooltip - Normal)
 {
-Demigod´s Protection
+Schutz des Halbgotts
 }
 
 STRING 943
@@ -5644,7 +5644,7 @@ Evolution erforschen - [|cffffcc00Stufe 50|r]
 STRING 952
 // Units: negt (Guard Tower), Ubertip (Tooltip - Extended)
 {
-Primary defensive structure witch magic attack. Can learn the Magic Sentry ability. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
+Primäres Verteidigungsgebäude. Kann die Fähigkeit 'Magischer Schutz' erlernen. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
 }
 
 STRING 953
@@ -5758,7 +5758,7 @@ Zepter der Goblins
 STRING 972
 // Abilities: A0B2 (Summon Goblins), Name (Name)
 {
-Summon Goblins
+Goblins beschwören
 }
 
 STRING 973
@@ -5770,25 +5770,25 @@ STRING 973
 STRING 975
 // Abilities: A029 (Fear), Name (Name)
 {
-Fear
+Furcht
 }
 
 STRING 976
 // Units: h0U7 (Temple), Ubertip (Tooltip - Extended)
 {
-Trains Priests, and Zauberinnen. |nAlso contains spell upgrades for Priests and Zauberinnen, and Magic Sentry.
+Bildet Priester und Zauberinnen aus. |nBietet auch die Ausbaustufen für Priester und Zauberrinen und 'Magischer Schutz'.
 }
 
 STRING 977
 // Items: I193 (Sledge Hammer), Description (Description)
 {
-Powerful hammer to destroy structures.
+Mächtiger Hammer um Gebäude zu zerstören.
 }
 
 STRING 978
 // Items: I193 (Sledge Hammer), Ubertip (Tooltip - Extended)
 {
-Powerful hammer to destroy structures. Multiplies the damage against structures by <A025,DataA1> and increases it by <A026,DataA1,%> %.
+Mächtiger Hammer um Gebäude zu zerstören. Multipliziert den Schaden gegen Gebäude mit <A025,DataA1> und erhöht ihn um <A026,DataA1,%> %.
 }
 
 STRING 979
@@ -5818,19 +5818,19 @@ Wechselt die Klasse zum Schurken:|n- Einschnüren|n- Dolchfächer|n- Kritischer 
 STRING 983
 // Items: I07W (Scroll of Construction), Description (Description)
 {
-Schließt den Bau und Ausbau von allen unvollendeten verbündeten Gebäuden ab.
+Stellt den Bau und Ausbau von allen unvollendeten verbündeten Gebäuden fertig.
 }
 
 STRING 984
 // Items: I07W (Scroll of Construction), Ubertip (Tooltip - Extended)
 {
-Schließt den Bau und Ausbau von allen unvollendeten verbündeten Gebäuden ab.
+Stellt den Bau und Ausbau von allen unvollendeten verbündeten Gebäuden fertig.
 }
 
 STRING 985
-// Abilities: A0K5 (Finish Construction), Name (Name)
+// Abilities: A0K5 (Bau fertigstellen), Name (Name)
 {
-Finish Construction
+Bau fertigstellen
 }
 
 STRING 986
@@ -5848,30 +5848,30 @@ W
 STRING 988
 // Items: I06P (Engineer), Ubertip (Tooltip - Extended)
 {
-Craft tiny towers to protect your base:|n- Tiny Flame Tower|n- Tiny Cold Tower|n- Tiny Boulder Tower|n- Tiny Death Tower|n- Scroll of Repair and Scroll of Construction|n- Tiny Engineering Power Generator
+Stellt winzige Gebäude und Gegenstände zum Schutz Ihreres Stützpunktes her:|n- Winzige Flammen-Türme|n- Winzige Kälte-Türme|n- Winzige Felsen-Türme|n- Winzige Todes-Türme|n- Spruchrollen der Reparatur und Spruchrollen der Konstrution|n- Winzige Baukunst-Energiegeneratoren
 }
 
 STRING 989
-// Abilities: A01H (Thieving - Grand Master), Tip (Tooltip - Normal)
+// Abilities: A01H (Diebstahl - Grand Master), Tip (Tooltip - Normal)
 {
-Grand Master Thieving
+Großmeister-Diebstahl
 }
 
 STRING 990
 // Units: Udre (Dreadlord), Ubertip (Tooltip - Extended)
 {
-|cffffcc00Race:|r Demon|n|cffffcc00Class:|r Death Knight|n|cffffcc00Mount:|r Frost Wyrm|n|cffffcc00Primary Attribute:|r Strength|n|cffffcc00Strength:|r 20/2.5|n|cffffcc00Agility:|r 16/1|n|cffffcc00Intelligence:|r 18/2.5|n|n|cffffcc00Attacks land units.|r
+|cffffcc00Race:|r Demon|n|cffffcc00Class:|r Death Knight|n|cffffcc00Reittier:|r Frost Wyrm|n|cffffcc00Primäres Attribut:|r Strength|n|cffffcc00Kraft:|r 20/2.5|n|cffffcc00Beweglichkeit:|r 16/1|n|cffffcc00Intelligenz:|r 18/2.5|n|n|cffffcc00Attacks land units.|r
 }
 
 STRING 991
 // Units: Ucrl (Crypt Lord), Ubertip (Tooltip - Extended)
 {
-|cffffcc00Race:|r Undead|n|cffffcc00Class:|r Warrior|n|cffffcc00Mount:|r Frost Wyrm|n|cffffcc00Primary Attribute:|r Strength|n|cffffcc00Strength:|r 26/3.2|n|cffffcc00Agility:|r 14/1.2|n|cffffcc00Intelligence:|r 14/1.6|n|n|cffffcc00Attacks land units.|r
+|cffffcc00Race:|r Undead|n|cffffcc00Class:|r Warrior|n|cffffcc00Reittier:|r Frost Wyrm|n|cffffcc00Primäres Attribut:|r Strength|n|cffffcc00Kraft:|r 26/3.2|n|cffffcc00Beweglichkeit:|r 14/1.2|n|cffffcc00Intelligenz:|r 14/1.6|n|n|cffffcc00Attacks land units.|r
 }
 
 STRING 992
 {
-The Thief uses his knowledge to create a Pickpocketing.
+Stellt Taschendiebstahle her.
 }
 
 STRING 993
@@ -5943,7 +5943,7 @@ Zufällige Klasse
 STRING 1004
 // Units: h04Y (High Elf Shipyard), Ubertip (Tooltip - Extended)
 {
-Boat construction facility. Produces High Elf Transportschiffs, High Elf Frigates, and High Elf Schlachtschiffs.
+Bootsbauanlage. Produces High Elf Transportschiffs, High Elf Frigates, and High Elf Schlachtschiffs.
 }
 
 STRING 1005
@@ -5960,7 +5960,7 @@ Zauberstab des Rohstoffabsaugens
 
 STRING 1007
 {
-Thieving - Doctor
+Diebstahl - Doctor
 }
 
 STRING 1008
@@ -5972,7 +5972,7 @@ STRING 1008
 STRING 1009
 // Abilities: A08Y (Zufällige Klasse), Ubertip (Tooltip - Normal - Extended)
 {
-Picks a random class for your hero which replaces all abilities.
+Wählt eine zufällige Klasse für den Helden und ersetzt alle Fähigkeiten.
 }
 
 STRING 1010
@@ -5984,7 +5984,7 @@ STRING 1010
 STRING 1011
 // Units: o04R (Ice Troll Hut), Ubertip (Tooltip - Extended)
 {
-Trains Eis-Troll-Hohepriesters and Eis-Troll-Kriegsherrs. |nAlso contains upgrades for Eis-Troll-Hohepriesters and Eis-Troll-Kriegsherrs.
+Bildet Eis-Troll-Hohepriester und Eis-Troll-Kriegsherren aus. |nBietet auch Ausbaustufen für Eis-Troll-Hohepriester und Eis-Troll-Kriegsherren.
 }
 
 STRING 1012
@@ -6127,7 +6127,7 @@ Speicher-Codes
 
 STRING 1035
 {
-Doctor Thieving
+Doctor Diebstahl
 }
 
 STRING 1036
@@ -6149,7 +6149,7 @@ STRING 1038
 }
 
 STRING 1039
-// Abilities: A01J (Thieving - Doctor), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A01J (Diebstahl - Doctor), Ubertip (Tooltip - Normal - Extended)
 {
 The Thief Alchemist uses his knowledge to create a Tiny Thieves Guild.
 }
@@ -6271,7 +6271,7 @@ Winziges Versteck errichten
 STRING 1059
 // Abilities: A025 (Tranquility), Researchubertip (Tooltip - Learn - Extended)
 {
-Causes rains of healing energy to pour down in a large area, healing friendly allied units for 80 Trefferpunkten pro Sekunde. |nHält <AEtq,Dur1> Sekunden lang an.
+Verursacht einen Regen aus heilender Energie, der über einem großen Gebiet niedergeht und befreundete verbündete Einheiten um 80 Trefferpunkten pro Sekunde heilt. |nHält <AEtq,Dur1> Sekunden lang an.
 }
 
 STRING 1060
@@ -6307,7 +6307,7 @@ Khanam Matra Sarest
 STRING 1065
 // Abilities: A029 (Fear), Ubertip (Tooltip - Normal - Extended)
 {
-Lets loose a terrifying howl that reduces all  enemy units' attack damage by 50% for 30 seconds. Affects the whole world.
+Stößt ein grauenvolles Geheul aus, das den Angriffsschaden in der Nähe befindlicher feindlicher Einheiten 30 Sekunden lang um 50% verringert. Wirkt sich auf die gesamte Welt aus.
 }
 
 STRING 1066
@@ -6371,7 +6371,7 @@ S
 }
 
 STRING 1076
-// Abilities: A01H (Thieving - Grand Master), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A01H (Diebstahl - Grand Master), Ubertip (Tooltip - Normal - Extended)
 {
 The Thief uses his knowledge to create a Pickpocketing.
 }
@@ -6515,7 +6515,7 @@ Wechselt die Klasse zum Paladin:|n- Heilen|n- Inneres Feuer|n- Heiliges Licht|n-
 }
 
 STRING 1100
-// Items: I04L (Geomancer), Ubertip (Tooltip - Extended)
+// Items: I04L (Erdmagier), Ubertip (Tooltip - Extended)
 {
 Wechselt die Klasse zum Erdmagier:|n- Felsen schleudern|n- Mauer beschwören|n- Ausdauer-Aura|n- Fernsicht|n- Schockwelle|n- Schmettern|n- Golem beschwören|n- Kampfrausch|n- Erdbeben|n- Stampede|n- Reinkarnation
 }
@@ -6570,13 +6570,13 @@ Hydra-Königin beschwören
 
 STRING 1109
 {
-Thieving - Doctor
+Diebstahl - Doctor
 }
 
 STRING 1110
-// Abilities: A01J (Thieving - Doctor), Tip (Tooltip - Normal)
+// Abilities: A01J (Diebstahl - Doctor), Tip (Tooltip - Normal)
 {
-Doctor Thieving
+Doctor Diebstahl
 }
 
 STRING 1111
@@ -6587,12 +6587,12 @@ Zufällige Klasse
 
 STRING 1112
 {
-Thieving - Doctor
+Diebstahl - Doctor
 }
 
 STRING 1113
 {
-Thieving - Doctor
+Diebstahl - Doctor
 }
 
 STRING 1114
@@ -6609,12 +6609,12 @@ Zufällige Klasse
 
 STRING 1116
 {
-Thieving - Doctor
+Diebstahl - Doctor
 }
 
 STRING 1117
 {
-Thieving - Doctor
+Diebstahl - Doctor
 }
 
 STRING 1118
@@ -6631,12 +6631,12 @@ Luft-Elementargeist
 
 STRING 1120
 {
-Thieving - Doctor
+Diebstahl - Doctor
 }
 
 STRING 1121
 {
-Thieving - Doctor
+Diebstahl - Doctor
 }
 
 STRING 1122
@@ -6659,12 +6659,12 @@ This unit is affected by Gottesschild. It hase Divine armor.
 
 STRING 1125
 {
-Thieving - Doctor
+Diebstahl - Doctor
 }
 
 STRING 1126
 {
-Thieving - Doctor
+Diebstahl - Doctor
 }
 
 STRING 1127
@@ -6681,7 +6681,7 @@ Goblin-Werkzeugkasten erwerben
 
 STRING 1129
 {
-Thieving - Doctor
+Diebstahl - Doctor
 }
 
 STRING 1130
@@ -6907,7 +6907,7 @@ F
 }
 
 STRING 1168
-// Units: o003 (Wyvern Mount), Tip (Tooltip - Basic)
+// Units: o003 (Flügeldrache Mount), Tip (Tooltip - Basic)
 {
 Flügeldrachen-Reittier
 }
@@ -9903,7 +9903,7 @@ Murmur beschwören
 STRING 1676
 // Abilities: A025 (Tranquility), Ubertip (Tooltip - Normal - Extended)
 {
-Causes rains of healing energy to pour down in a large area, healing friendly allied units for 80 Trefferpunkten pro Sekunde. |nHält <AEtq,Dur1> Sekunden lang an.
+Verursacht einen Regen aus heilender Energie, der über einem großen Gebiet niedergeht und befreundete verbündete Einheiten um 80 Trefferpunkten pro Sekunde heilt. |nHält <AEtq,Dur1> Sekunden lang an.
 }
 
 STRING 1677
@@ -9919,7 +9919,7 @@ STRING 1678
 }
 
 STRING 1679
-// Abilities: A027 (Demigod´s Protection), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A027 (Schutz des Halbgotts), Ubertip (Tooltip - Normal - Extended)
 {
 Turns all friendly units in the world invulnerable. |nThe Temple does not turn invulnerable. |nHält <AOvd,Dur1> Sekunden lang an.
 }
@@ -9951,7 +9951,7 @@ R
 STRING 1684
 // Abilities: A029 (Fear), Researchubertip (Tooltip - Learn - Extended)
 {
-Lets loose a terrifying howl that reduces all  enemy units' attack damage by 50% for 30 seconds. Affects the whole world.
+Stößt ein grauenvolles Geheul aus, das den Angriffsschaden in der Nähe befindlicher feindlicher Einheiten 30 Sekunden lang um 50% verringert. Wirkt sich auf die gesamte Welt aus.
 }
 
 STRING 1685
@@ -9987,7 +9987,7 @@ STRING 1689
 STRING 1690
 // Units: h050 (Dummy Orb of Orbs), EditorSuffix (Name - Editor Suffix)
 {
-(Orb of Verderbnis)
+(Verderbniskugel)
 }
 
 STRING 1691
@@ -10017,7 +10017,7 @@ Tempel der Meere
 STRING 1695
 // Upgrades: R04S (Animal War Training), Ubertip (Tooltip - Extended)
 {
-Player has become demigod at some point in time.
+Der Spieler ist zu einem Zeitpunkt Halbgott geworden.
 }
 
 STRING 1696
@@ -11736,7 +11736,7 @@ B
 STRING 2082
 // Items: I09V (Unique - Eye of Dalaran), Ubertip (Tooltip - Extended)
 {
-|cff8b00ffEinzigartig|r|nA powerful artifact from Dalaran. Gives your hero +15 Intelligence and 1500 Mana. Allows your hero to cast Manaschild.
+|cff8b00ffEinzigartig|r|nA powerful artifact from Dalaran. Gives your hero +15 Intelligenz and 1500 Mana. Allows your hero to cast Manaschild.
 }
 
 STRING 2083
@@ -11934,7 +11934,7 @@ H
 STRING 2192
 // Units: e026 (High Elf Shipyard), Ubertip (Tooltip - Extended)
 {
-Boat construction facility. Produces High Elf Transportschiffs, High Elf Frigates, and High Elf Schlachtschiffs.
+Bootsbauanlage. Produces High Elf Transportschiffs, High Elf Frigates, and High Elf Schlachtschiffs.
 }
 
 STRING 2193
@@ -12946,7 +12946,7 @@ A
 }
 
 STRING 2365
-// Abilities: A01H (Thieving - Grand Master), Hotkey (Hotkey - Normal)
+// Abilities: A01H (Diebstahl - Grand Master), Hotkey (Hotkey - Normal)
 {
 A
 }
@@ -18838,7 +18838,7 @@ Liefert Essen, wodurch die maximale Anzahl von Einheiten erhöht wird, die ausge
 }
 
 STRING 3728
-// Units: h00P (Keeper of the Grave), EditorSuffix (Name - Editor Suffix)
+// Units: h00P (Wächter des Grabes), EditorSuffix (Name - Editor Suffix)
 {
 (NPC)
 }
@@ -20136,13 +20136,13 @@ Buch des Runenschmiedens
 STRING 4087
 // Items: I02Y (Book of Runeforging), Description (Description)
 {
-Ein Buch, welches das Wissen enthält, Runen herzustellen.
+Ein Buch, das Wissen über die Herstellung von Runen enthält.
 }
 
 STRING 4088
 // Items: I02Y (Book of Runeforging), Ubertip (Tooltip - Extended)
 {
-Ein Buch, welches das Wissen enthält, Runen herzustellen.
+Ein Buch, das Wissen über die Herstellung von Runen enthält.
 }
 
 STRING 4089
@@ -20196,13 +20196,13 @@ Buch des Drachenzüchtens
 STRING 4098
 // Items: I033 (Book of Dragon Breeding), Description (Description)
 {
-Ein Buch, welches das Wissen Drachen zu züchten enthält.
+Ein Buch, das Wissen über Drachenzüchtung enthält.
 }
 
 STRING 4099
 // Items: I033 (Book of Dragon Breeding), Ubertip (Tooltip - Extended)
 {
-Ein Buch, welches das Wissen Drachen zu züchten enthält.
+Ein Buch, das Wissen über Drachenzüchtung enthält.
 }
 
 STRING 4100
@@ -22639,13 +22639,13 @@ H
 }
 
 STRING 4693
-// Items: I04L (Geomancer), Name (Name)
+// Items: I04L (Erdmagier), Name (Name)
 {
 Erdmagier
 }
 
 STRING 4694
-// Units: N0AF (Geomancer), Propernames (Proper Names)
+// Units: N0AF (Erdmagier), Propernames (Proper Names)
 {
 Flintdagger
 }
@@ -22876,7 +22876,7 @@ Initiand, Adept, Meister
 }
 
 STRING 4733
-// Units: n09B (Kobold Geomancer), Casterupgradetip (Caster Upgrade Tips)
+// Units: n09B (Kobold Erdmagier), Casterupgradetip (Caster Upgrade Tips)
 {
 - Wächterschutz,- Wächterschutz|n- Stasisfalle,- Wächterschutz|n- Stasisfalle|n- Heil-Schutzzauber
 }
@@ -24012,7 +24012,7 @@ STRING 4986
 STRING 4987
 // Units: h0WJ (Shipyard), Ubertip (Tooltip - Extended)
 {
-Boat construction facility. Produces Blood Elf Transportschiffs, Blood Elf Frigates, and Blood Elf Schlachtschiffs.
+Bootsbauanlage. Produces Blood Elf Transportschiffs, Blood Elf Frigates, and Blood Elf Schlachtschiffs.
 }
 
 STRING 4989
@@ -24690,31 +24690,31 @@ Schreiben - Novize
 STRING 5111
 // Abilities: A0SR (Scribing - Novice), Tip (Tooltip - Normal)
 {
-Novize Schreiben
+Novizen-Schreiben
 }
 
 STRING 5112
 // Abilities: A0SR (Scribing - Novice), Ubertip (Tooltip - Normal - Extended)
 {
-The Scribe crafts a Tome of Knowledge.
+Stellt Folianten des Wissens her.
 }
 
 STRING 5113
 // Abilities: A0SS (Scribing - Advanced), Name (Name)
 {
-Schreiben - Advanced
+Schreiben - Fortgeschritten
 }
 
 STRING 5114
 // Abilities: A0SS (Scribing - Advanced), Tip (Tooltip - Normal)
 {
-Advanced Schreiben
+Fortgeschrittenes Schreiben
 }
 
 STRING 5115
 // Abilities: A0SS (Scribing - Advanced), Ubertip (Tooltip - Normal - Extended)
 {
-Stellt ein Buch der Gesundheit und ein Buch der Manakraft her.
+Stellt Bücher der Gesundheit und der Manakraft her.
 }
 
 STRING 5116
@@ -24726,13 +24726,13 @@ Schreiben - Adept
 STRING 5117
 // Abilities: A0ST (Scribing - Adept), Tip (Tooltip - Normal)
 {
-Adept Schreiben
+Adept-Schreiben
 }
 
 STRING 5118
 // Abilities: A0ST (Scribing - Adept), Ubertip (Tooltip - Normal - Extended)
 {
-Crafts a Tome of Damage and a Tome of Armor.
+Stellt Folianten des Schadens und der Rüstung her.
 }
 
 STRING 5119
@@ -24744,13 +24744,13 @@ Schreiben - Meister
 STRING 5120
 // Abilities: A0SU (Scribing - Master), Tip (Tooltip - Normal)
 {
-Meister Schreiben
+Meister-Schreiben
 }
 
 STRING 5121
 // Abilities: A0SU (Scribing - Master), Ubertip (Tooltip - Normal - Extended)
 {
-Crafts a Tome of Experience.
+Stellt Folianten der Erfahrung her.
 }
 
 STRING 5122
@@ -24798,7 +24798,7 @@ Ein Kriegerheld, exceptional at defense and augmenting nearby friendly troops. C
 STRING 5141
 // Units: nnsg (Spawning Grounds), Ubertip (Tooltip - Extended)
 {
-Trains Mur'gul Reavers, Snap Dragons, and Naga Myrmidons. |nBietet auch die Ausbaustufe 'Einschnüren'.
+Bildet Mur'gul Reavers, Schnappdrachen und Naga-Myrmidons aus. |nBietet auch die Ausbaustufe 'Einschnüren'.
 }
 
 STRING 5142
@@ -24928,7 +24928,7 @@ T
 }
 
 STRING 5166
-// Items: tint (Tome of Intelligence), Hotkey (Hotkey)
+// Items: tint (Tome of Intelligenz), Hotkey (Hotkey)
 {
 E
 }
@@ -25662,7 +25662,7 @@ Verkauft von Unholden fallen gelassene Gegenstände.|n|n|cffffcc00Begrenzt auf 1
 STRING 5298
 // Units: h05G (Kul Tiras Shipyard), Ubertip (Tooltip - Extended)
 {
-Boat construction facility. Produces Human Transportschiffs, Human Frigates, Kul-Tiras-Schlachtschiffs, Ingenieurschiffs and Gnomisches U-Boots.|n|nProvides researches Shipyard Repair and Improved Navy.
+Bootsbauanlage. Produces Human Transportschiffs, Human Frigates, Kul-Tiras-Schlachtschiffs, Ingenieurschiffs and Gnomisches U-Boots.|n|nProvides researches Shipyard Repair and Improved Navy.
 }
 
 STRING 5299
@@ -26508,7 +26508,7 @@ O
 STRING 5475
 // Units: h0CR (Kul Tiras Advanced Shipyard), Ubertip (Tooltip - Extended)
 {
-Boat construction facility. Produces Dreadnoughts and Piraten-Schlachtschiffs. Provides research Transporters and Schiffskanonen.
+Bootsbauanlage. Produces Dreadnoughts and Piraten-Schlachtschiffs. Provides research Transporters and Schiffskanonen.
 }
 
 STRING 5476
@@ -31498,13 +31498,13 @@ Portal
 STRING 6607
 // Units: o02Y (Move Bridge Up), Name (Name)
 {
-Brücke nach upen bewegen
+Brücke nach oben bewegen
 }
 
 STRING 6608
 // Units: o02Y (Move Bridge Up), Tip (Tooltip - Basic)
 {
-Brücke nach upen bewegen
+Brücke nach oben bewegen
 }
 
 STRING 6609
@@ -31564,7 +31564,7 @@ R
 STRING 6621
 // Units: N07A (Engineer), Ubertip (Tooltip - Extended)
 {
-Ein listiger Held, exceptional at disrupting battles and enduring damage. Can learn Repair, Finish Construction, Place Goblin Land Mine and Söldnerlager beschwören.|n|n|cffffcc00Greift Land-Einheiten an.|r
+Ein listiger Held, exceptional at disrupting battles and enduring damage. Can learn Repair, Bau fertigstellen, Place Goblin Land Mine and Söldnerlager beschwören.|n|n|cffffcc00Greift Land-Einheiten an.|r
 }
 
 STRING 6634
@@ -31964,7 +31964,7 @@ Goblinschredder wiederbeleben
 }
 
 STRING 6755
-// Items: I0RQ (+1 Intelligence), Hotkey (Hotkey)
+// Items: I0RQ (+1 Intelligenz), Hotkey (Hotkey)
 {
 E
 }
@@ -32078,7 +32078,7 @@ Armor made of various animal hides. Grants +3 Defense and faster life regenerati
 }
 
 STRING 6802
-// Abilities: A08X (Finish Construction), Name (Name)
+// Abilities: A08X (Bau fertigstellen), Name (Name)
 {
 Bau abschließen
 }
@@ -32414,7 +32414,7 @@ Greifen-Reittier
 }
 
 STRING 6938
-// Units: o003 (Wyvern Mount), Name (Name)
+// Units: o003 (Flügeldrache Mount), Name (Name)
 {
 Flügeldrachenreittier
 }
@@ -32438,9 +32438,9 @@ Stops all enemies in a target area from attacking melee and ranged for <A16K,Dur
 }
 
 STRING 6942
-// Units: h00P (Keeper of the Grave), Name (Name)
+// Units: h00P (Wächter des Grabes), Name (Name)
 {
-Keeper of the Grave
+Wächter des Grabes
 }
 
 STRING 6943
@@ -32702,7 +32702,7 @@ E
 }
 
 STRING 6996
-// Items: I0OO (Intelligence), Hotkey (Hotkey)
+// Items: I0OO (Intelligenz), Hotkey (Hotkey)
 {
 Q
 }
@@ -35948,7 +35948,7 @@ Nachtelfen-Bürgerin anheuern
 }
 
 STRING 7842
-// Units: o03E (Spirit Wyvern), Hotkey (Hotkey)
+// Units: o03E (Spirit Flügeldrache), Hotkey (Hotkey)
 {
 P
 }
@@ -39880,7 +39880,7 @@ Verleiht einen Bonus von +3 auf Beweglichkeit, Kraft und Intelligenz.
 STRING 8638
 // Items: I16G (Holy Crest), Ubertip (Tooltip - Extended)
 {
-Increases the Strength, Intelligence, and Agility of the Hero by 3 when worn.|n|n|cffffcc00Erhöht die Rüstung um 10 zusammen mit allen anderen Gegenständen aus dem Heiligen Set.|r
+Increases the Strength, Intelligenz, and Agility of the Hero by 3 when worn.|n|n|cffffcc00Erhöht die Rüstung um 10 zusammen mit allen anderen Gegenständen aus dem Heiligen Set.|r
 }
 
 STRING 8639
@@ -40400,7 +40400,7 @@ W
 }
 
 STRING 8803
-// Abilities: A0K5 (Finish Construction), Hotkey (Hotkey - Normal)
+// Abilities: A0K5 (Bau fertigstellen), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -42904,7 +42904,7 @@ Obststand errichten
 STRING 10359
 // Abilities: A1BV (Tranquility), Ubertip (Tooltip - Normal - Extended)
 {
-Causes rains of healing energy to pour down in a large area, healing friendly allied units for 80 Trefferpunkten pro Sekunde. |nHält <AEtq,Dur1> Sekunden lang an.
+Verursacht einen Regen aus heilender Energie, der über einem großen Gebiet niedergeht und befreundete verbündete Einheiten um 80 Trefferpunkten pro Sekunde heilt. |nHält <AEtq,Dur1> Sekunden lang an.
 }
 
 STRING 10361
@@ -42928,7 +42928,7 @@ Build Blood Elf Shipyard
 STRING 10369
 // Units: e019 (Blood Elf Shipyard), Ubertip (Tooltip - Extended)
 {
-Boat construction facility. Produces High Elf Transportschiffs, High Elf Frigates, and High Elf Schlachtschiffs.
+Bootsbauanlage. Produces High Elf Transportschiffs, High Elf Frigates, and High Elf Schlachtschiffs.
 }
 
 STRING 10370
@@ -43430,7 +43430,7 @@ F
 }
 
 STRING 10488
-// Units: N0HH (Geomancer), Hotkey (Hotkey)
+// Units: N0HH (Erdmagier), Hotkey (Hotkey)
 {
 G
 }
@@ -43988,7 +43988,7 @@ Immobilie Wyrmrest-Tempel kaufen
 }
 
 STRING 10623
-// Units: N0AF (Geomancer), EditorSuffix (Name - Editor Suffix)
+// Units: N0AF (Erdmagier), EditorSuffix (Name - Editor Suffix)
 {
 (NPC)
 }
@@ -48308,19 +48308,19 @@ STRING 12089
 }
 
 STRING 12090
-// Items: I0OO (Intelligence), Name (Name)
+// Items: I0OO (Intelligenz), Name (Name)
 {
 Intelligenz
 }
 
 STRING 12091
-// Items: I0OO (Intelligence), Tip (Tooltip - Basic)
+// Items: I0OO (Intelligenz), Tip (Tooltip - Basic)
 {
 Intelligenz
 }
 
 STRING 12092
-// Items: I0OO (Intelligence), Ubertip (Tooltip - Extended)
+// Items: I0OO (Intelligenz), Ubertip (Tooltip - Extended)
 {
 Ändert das Primär-Attribut zu Intelligenz.
 }
@@ -49286,7 +49286,7 @@ Tor geöffnet
 }
 
 STRING 12336
-// Units: N0MY (Burrowed Geomancer), Hotkey (Hotkey)
+// Units: N0MY (Burrowed Erdmagier), Hotkey (Hotkey)
 {
 G
 }
@@ -49312,7 +49312,7 @@ STRING 12340
 STRING 12342
 // Abilities: A09J (Engineer Place Goblin Land Mine), Ubertip (Tooltip - Normal - Extended)
 {
-Places a Goblin Land Mine.
+Platziert eine Goblin-Landmine.
 }
 
 STRING 12343
@@ -49402,7 +49402,7 @@ Gnomisches U-Boot
 STRING 12357
 // Units: h023 (Bridge), Ubertip (Tooltip - Extended)
 {
-Allows crossing rivers.
+Ermöglicht es, Flüsse zu überqueren.
 }
 
 STRING 12358
@@ -49450,7 +49450,7 @@ STRING 12364
 STRING 12365
 // Units: h024 (Short Bridge), Ubertip (Tooltip - Extended)
 {
-Allows crossing rivers.
+Ermöglicht es, Flüsse zu überqueren.
 }
 
 STRING 12366
@@ -49480,7 +49480,7 @@ STRING 12369
 STRING 12370
 // Units: h025 (Short Bridge), Ubertip (Tooltip - Extended)
 {
-Allows crossing rivers.
+Ermöglicht es, Flüsse zu überqueren.
 }
 
 STRING 12372
@@ -49504,7 +49504,7 @@ STRING 12374
 STRING 12375
 // Units: h08X (Bridge), Ubertip (Tooltip - Extended)
 {
-Allows crossing rivers.
+Ermöglicht es, Flüsse zu überqueren.
 }
 
 STRING 12377
@@ -49540,7 +49540,7 @@ Säule einzeln errichten
 STRING 12383
 // Units: h027 (Column Single), Ubertip (Tooltip - Extended)
 {
-It looks nice.
+Sie sieht schön aus.
 }
 
 STRING 12385
@@ -49570,7 +49570,7 @@ The Nether Drake spreads enchanted flames to nearby enemies, dealing <A04G,DataA
 STRING 12390
 // Abilities: A05G (Demon Fire), Tip (Tooltip - Normal)
 {
-Improved Dämonen-Feuer
+Verbessertes Dämonen-Feuer
 }
 
 STRING 12391
@@ -49582,7 +49582,7 @@ Fires down streams of flame, lighting nearby enemies on fire.
 STRING 12392
 // Abilities: A063 (Demon Fire), Tip (Tooltip - Normal)
 {
-Improved Dämonen-Feuer
+Verbessertes Dämonen-Feuer
 }
 
 STRING 12393
@@ -50768,7 +50768,7 @@ STRING 14243
 }
 
 STRING 14244
-// Abilities: A027 (Demigod´s Protection), Researchhotkey (Hotkey - Learn)
+// Abilities: A027 (Schutz des Halbgotts), Researchhotkey (Hotkey - Learn)
 {
 I
 }
@@ -50836,7 +50836,7 @@ R
 STRING 14258
 // Units: h08Y (Bridge), Ubertip (Tooltip - Extended)
 {
-Allows crossing rivers.
+Ermöglicht es, Flüsse zu überqueren.
 }
 
 STRING 14260
@@ -50960,13 +50960,13 @@ STRING 14325
 }
 
 STRING 14329
-// Abilities: A027 (Demigod´s Protection), Hotkey (Hotkey - Normal)
+// Abilities: A027 (Schutz des Halbgotts), Hotkey (Hotkey - Normal)
 {
 I
 }
 
 STRING 14330
-// Units: N0AF (Geomancer), Hotkey (Hotkey)
+// Units: N0AF (Erdmagier), Hotkey (Hotkey)
 {
 G
 }
@@ -51232,7 +51232,7 @@ Velkar the Thief,Bink the Burglar,Vagnhild,Kang the Soul Thief,Thaddock the Thie
 STRING 14436
 // Items: rnsp (Ring of Superiority), Description (Description)
 {
-Provides a +2 bonus to Strength, Agility and Intelligence.
+Provides a +2 bonus to Strength, Agility and Intelligenz.
 }
 
 STRING 14437
@@ -51244,7 +51244,7 @@ E
 STRING 14463
 // Items: rnsp (Ring of Superiority), Ubertip (Tooltip - Extended)
 {
-Increases the Strength, Agility and Intelligence of the Hero by 2 when worn.
+Increases the Strength, Agility and Intelligenz of the Hero by 2 when worn.
 }
 
 STRING 14467
@@ -51422,7 +51422,7 @@ W
 }
 
 STRING 14580
-// Abilities: A08X (Finish Construction), Hotkey (Hotkey - Normal)
+// Abilities: A08X (Bau fertigstellen), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -51992,7 +51992,7 @@ Einfache Arbeiter-Einheit. Kann Gold und Holz abbauen, Gebäude errichten und 'R
 }
 
 STRING 14981
-// Items: I04L (Geomancer), Tip (Tooltip - Basic)
+// Items: I04L (Erdmagier), Tip (Tooltip - Basic)
 {
 Erdmagier
 }
@@ -52208,13 +52208,13 @@ Allows harvesting minerals and increases attack damage against structures.
 }
 
 STRING 15290
-// Units: N0HH (Geomancer), Awakentip (Tooltip - Awaken)
+// Units: N0HH (Erdmagier), Awakentip (Tooltip - Awaken)
 {
 Erdmagier wiederbeleben
 }
 
 STRING 15292
-// Units: N0HH (Geomancer), Tip (Tooltip - Basic)
+// Units: N0HH (Erdmagier), Tip (Tooltip - Basic)
 {
 Erdmagier beschwören
 }
@@ -52322,7 +52322,7 @@ STRING 15323
 }
 
 STRING 15327
-// Units: N0HH (Geomancer), Revivetip (Tooltip - Revive)
+// Units: N0HH (Erdmagier), Revivetip (Tooltip - Revive)
 {
 Erdmagier wiederbeleben
 }
@@ -52526,7 +52526,7 @@ Liefert Essen, wodurch die maximale Anzahl von Einheiten erhöht wird, die ausge
 }
 
 STRING 15751
-// Units: N0HH (Geomancer), Propernames (Proper Names)
+// Units: N0HH (Erdmagier), Propernames (Proper Names)
 {
 Flintdagger,Gibblesnik,Goldtooth,Gug Fatcandle,Narg the Taskmaster,Noggrin Onetooth,Taskmaster Snivvle,Kipp Brightwick,Snazzle Shinyfinder,Trytooth Hardchisel
 }
@@ -52976,7 +52976,7 @@ STRING 16008
 }
 
 STRING 16040
-// Units: N0HH (Geomancer), Ubertip (Tooltip - Extended)
+// Units: N0HH (Erdmagier), Ubertip (Tooltip - Extended)
 {
 Ein Kriegerheld, adept at summoning beasts into battle. Can learn Massen-Feuerblitz, Massenlangsam, Hieb, and Earthquake. |n|n|cffffcc00Greift Land-Einheiten an.|r
 }
@@ -53018,7 +53018,7 @@ E
 }
 
 STRING 16103
-// Abilities: A1L7 (+1 Intelligence), Hotkey (Hotkey - Normal)
+// Abilities: A1L7 (+1 Intelligenz), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -54832,13 +54832,13 @@ Buch des Verzauberns
 STRING 17445
 // Items: I07G (Book of Enchanting), Description (Description)
 {
-Ein Buch, welches das Wissen zur Herstellung von Verzauberformeln enthält.
+Ein Buch, das Wissen zur Herstellung von Verzauberformeln enthält.
 }
 
 STRING 17446
 // Items: I07G (Book of Enchanting), Ubertip (Tooltip - Extended)
 {
-Ein Buch, welches das Wissen zur Herstellung von Verzauberformeln enthält.
+Ein Buch, das Wissen zur Herstellung von Verzauberformeln enthält.
 }
 
 STRING 17447
@@ -56827,7 +56827,7 @@ STRING 18951
 STRING 18952
 // Abilities: A0ND (Item Hero Stat Bonus), EditorSuffix (Editor Suffix)
 {
-(+15 Intelligence)
+(+15 Intelligenz)
 }
 
 STRING 18953
@@ -57173,7 +57173,7 @@ E
 }
 
 STRING 19348
-// Abilities: A20N (Thieving - Adept), Hotkey (Hotkey - Normal)
+// Abilities: A20N (Diebstahl - Adept), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -64629,13 +64629,13 @@ Buch der Händler
 STRING 25489
 // Items: I0D2 (Book of Merchant), Description (Description)
 {
-Ein Buch, welches das Wissen enthält, Rechnungen zu stellen.
+Ein Buch, das Wissen über die Stellung von Rechnungen enthält.
 }
 
 STRING 25490
 // Items: I0D2 (Book of Merchant), Ubertip (Tooltip - Extended)
 {
-Ein Buch, welches das Wissen enthält, Rechnungen zu stellen.
+Ein Buch, das Wissen über die Stellung von Rechnungen enthält.
 }
 
 STRING 25491
@@ -67831,7 +67831,7 @@ STRING 28989
 }
 
 STRING 28991
-// Abilities: A1LA (-1 Intelligence), Hotkey (Hotkey - Normal)
+// Abilities: A1LA (-1 Intelligenz), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -73581,7 +73581,7 @@ Troll-Hafen errichten
 STRING 33712
 // Units: o051 (Troll Shipyard), Ubertip (Tooltip - Extended)
 {
-Boat construction facility. Produces Orc Transportschiffs, Orc Frigates, Orc Schlachtschiffs, Gnomisches U-Boots, and Troll-Tigerhai-Reiters.
+Bootsbauanlage. Produces Orc Transportschiffs, Orc Frigates, Orc Schlachtschiffs, Gnomisches U-Boots, and Troll-Tigerhai-Reiters.
 }
 
 STRING 33713
@@ -74899,7 +74899,7 @@ D
 }
 
 STRING 34215
-// Abilities: A01J (Thieving - Doctor), Hotkey (Hotkey - Normal)
+// Abilities: A01J (Diebstahl - Doctor), Hotkey (Hotkey - Normal)
 {
 S
 }
@@ -75367,7 +75367,7 @@ Taschendiebstahl
 }
 
 STRING 34530
-// Abilities: A1L7 (+1 Intelligence), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A1L7 (+1 Intelligenz), Ubertip (Tooltip - Normal - Extended)
 {
 Fügt 1 Intelligenz hinzu. Benutzen Sie den Chat-Befehl "-int -X", um X Intelligenz hinzuzufügen. Benutzen Sie den Chat-Befehl "-int", um die maximale Intelligenz hinzuzufügen.
 }
@@ -79749,7 +79749,7 @@ P
 STRING 36071
 // Units: H0UU (Fel Peon), Ubertip (Tooltip - Extended)
 {
-Constructing hero, exceptional at repairing mechanical units and constructing buildings. Can learn Harvest, Finish Construction, Reparaturaura and Mechanische Reparatur. |n|n|cffffcc00Greift Land-Einheiten an.|r|n|cffffcc00Reittier: Flügeldrache.|r|n|cffffcc00Standard Ability: Repair.|r
+Constructing hero, exceptional at repairing mechanical units and constructing buildings. Can learn Harvest, Bau fertigstellen, Reparaturaura and Mechanische Reparatur. |n|n|cffffcc00Greift Land-Einheiten an.|r|n|cffffcc00Reittier: Flügeldrache.|r|n|cffffcc00Standard Ability: Repair.|r
 }
 
 STRING 36074
@@ -86175,7 +86175,7 @@ Primäres Truppen-Produktionsgebäude. Trains Warriors, Speerträgers and Mammut
 STRING 38610
 // Units: h0IN (Vrykul Shipyard), Ubertip (Tooltip - Extended)
 {
-Boat construction facility. Produces Human Transportschiffs, Rakkar-Schiffs, and Gnomisches U-Boots.
+Bootsbauanlage. Produces Human Transportschiffs, Rakkar-Schiffs, and Gnomisches U-Boots.
 }
 
 STRING 38611
@@ -87181,7 +87181,7 @@ Stellt Gegenstände her, die Schlösserknacken und Taschendiebstahl ermöglichen
 }
 
 STRING 38923
-// Items: I10Q (Book of Thieving), Name (Name)
+// Items: I10Q (Book of Diebstahl), Name (Name)
 {
 Buch des Diebstahls
 }
@@ -87265,7 +87265,7 @@ Bäume fällen erforschen
 }
 
 STRING 39344
-// Items: I10Q (Book of Thieving), Description (Description)
+// Items: I10Q (Book of Diebstahl), Description (Description)
 {
 A book that contains knowledge of crafting thieving tools.
 }
@@ -90093,7 +90093,7 @@ Kämpfer
 STRING 40611
 // Units: o064 (Tuskarr Shipyard), Ubertip (Tooltip - Extended)
 {
-Boat construction facility. Produces Tuskarr-Fischerboots, Gnomisches U-Boots, Ingenieurschiffs, Orc Transportschiffs, Orc Frigates, and Orc Schlachtschiffs.
+Bootsbauanlage. Produces Tuskarr-Fischerboots, Gnomisches U-Boots, Ingenieurschiffs, Orc Transportschiffs, Orc Frigates, and Orc Schlachtschiffs.
 }
 
 STRING 40612
@@ -91585,7 +91585,7 @@ Summon Murloc Arbeiters
 }
 
 STRING 41236
-// Abilities: A08X (Finish Construction), EditorSuffix (Editor Suffix)
+// Abilities: A08X (Bau fertigstellen), EditorSuffix (Editor Suffix)
 {
 (Gegenstand)
 }
@@ -91945,7 +91945,7 @@ Increases the effect of all auras. The level is increased for every Tuskarr unit
 }
 
 STRING 41330
-// Abilities: A20M (Thieving - Advanced), Hotkey (Hotkey - Normal)
+// Abilities: A20M (Diebstahl - Advanced), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -92605,7 +92605,7 @@ K
 }
 
 STRING 41501
-// Abilities: A20L (Thieving - Novice), Hotkey (Hotkey - Normal)
+// Abilities: A20L (Diebstahl - Novice), Hotkey (Hotkey - Normal)
 {
 N
 }
@@ -93565,7 +93565,7 @@ Dient als Abladepunkt für das geschlagene Holz. |nAlso contains upgrades for im
 }
 
 STRING 41958
-// Units: o03C (Wyvern Roost), Ubertip (Tooltip - Extended)
+// Units: o03C (Flügeldrache Roost), Ubertip (Tooltip - Extended)
 {
 Bildet Flügeldrachen und Geisterflügeldrachen aus.
 }
@@ -94833,7 +94833,7 @@ Pandaren-Hafen errichten
 STRING 42402
 // Units: e01V (Pandaren Shipyard), Ubertip (Tooltip - Extended)
 {
-Boat construction facility. Produces Gnomisches U-Boots, Ingenieurschiffs, Pandaren Transportschiffs, Night Elf Frigates, and Pandaren Schlachtschiffs.
+Bootsbauanlage. Produces Gnomisches U-Boots, Ingenieurschiffs, Pandaren Transportschiffs, Night Elf Frigates, and Pandaren Schlachtschiffs.
 }
 
 STRING 42403
@@ -95587,19 +95587,19 @@ Fehlschlagsaura
 }
 
 STRING 42600
-// Items: I0RQ (+1 Intelligence), Name (Name)
+// Items: I0RQ (+1 Intelligenz), Name (Name)
 {
 +1 Intelligenz
 }
 
 STRING 42601
-// Items: I0RQ (+1 Intelligence), Tip (Tooltip - Basic)
+// Items: I0RQ (+1 Intelligenz), Tip (Tooltip - Basic)
 {
 +1 Intelligenz
 }
 
 STRING 42602
-// Items: I0RQ (+1 Intelligence), Ubertip (Tooltip - Extended)
+// Items: I0RQ (+1 Intelligenz), Ubertip (Tooltip - Extended)
 {
 Fügt 1 Intelligenz hinzu.
 }
@@ -95623,19 +95623,19 @@ Entfernt 1 Beweglichkeit.
 }
 
 STRING 42606
-// Items: I0RS (-1 Intelligence), Name (Name)
+// Items: I0RS (-1 Intelligenz), Name (Name)
 {
 -1 Intelligenz
 }
 
 STRING 42607
-// Items: I0RS (-1 Intelligence), Tip (Tooltip - Basic)
+// Items: I0RS (-1 Intelligenz), Tip (Tooltip - Basic)
 {
 -1 Intelligenz
 }
 
 STRING 42608
-// Items: I0RS (-1 Intelligence), Ubertip (Tooltip - Extended)
+// Items: I0RS (-1 Intelligenz), Ubertip (Tooltip - Extended)
 {
 Entfernt 1 Intelligenz.
 }
@@ -95929,13 +95929,13 @@ STRING 42841
 }
 
 STRING 42843
-// Abilities: A1L7 (+1 Intelligence), Name (Name)
+// Abilities: A1L7 (+1 Intelligenz), Name (Name)
 {
 +1 Intelligenz
 }
 
 STRING 42844
-// Abilities: A1L7 (+1 Intelligence), Tip (Tooltip - Normal)
+// Abilities: A1L7 (+1 Intelligenz), Tip (Tooltip - Normal)
 {
 +1 Intelligenz
 }
@@ -95965,13 +95965,13 @@ STRING 42850
 }
 
 STRING 42852
-// Abilities: A1LA (-1 Intelligence), Name (Name)
+// Abilities: A1LA (-1 Intelligenz), Name (Name)
 {
 -1 Intelligenz
 }
 
 STRING 42853
-// Abilities: A1LA (-1 Intelligence), Tip (Tooltip - Normal)
+// Abilities: A1LA (-1 Intelligenz), Tip (Tooltip - Normal)
 {
 -1 Intelligenz
 }
@@ -96079,7 +96079,7 @@ Entfernt 1 Beweglichkeit. Benutzen Sie den Chat-Befehl "-agi -X", um X Beweglich
 }
 
 STRING 42895
-// Abilities: A1LA (-1 Intelligence), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A1LA (-1 Intelligenz), Ubertip (Tooltip - Normal - Extended)
 {
 Entfernt 1 Intelligenz. Benutzen Sie den Chat-Befehl "-int -X", um X Intelligenz zu entfernen.
 }
@@ -99769,7 +99769,7 @@ Produces 60 gold and 30 lumber every 10 seconds. If you build multiple Bohrinsel
 }
 
 STRING 45794
-// Items: I10Q (Book of Thieving), Ubertip (Tooltip - Extended)
+// Items: I10Q (Book of Diebstahl), Ubertip (Tooltip - Extended)
 {
 A book that contains knowledge of crafting thieving tools.
 }
@@ -99781,7 +99781,7 @@ N
 }
 
 STRING 45800
-// Items: I10Q (Book of Thieving), Tip (Tooltip - Basic)
+// Items: I10Q (Book of Diebstahl), Tip (Tooltip - Basic)
 {
 Buch des Diebstahls erwerben
 }
@@ -105531,7 +105531,7 @@ Hire Wache
 STRING 49963
 // Doodads: D00D (Crystal Argus), Name (Name)
 {
-Crystal Argus
+Kristall Argus
 }
 
 STRING 49964
@@ -105543,13 +105543,13 @@ Buch des Kochens
 STRING 49965
 // Items: I0WP (Book of Cooking), Description (Description)
 {
-Ein Buch, welches das Wissen zum Kochen von Rezepten enthält.
+Ein Buch, das Wissen zum Kochen von Rezepten enthält.
 }
 
 STRING 49966
 // Items: I0WP (Book of Cooking), Ubertip (Tooltip - Extended)
 {
-Ein Buch, welches das Wissen zum Kochen von Rezepten enthält.
+Ein Buch, das Wissen zum Kochen von Rezepten enthält.
 }
 
 STRING 49967
@@ -105579,13 +105579,13 @@ Fischmenü erwerben
 STRING 49973
 // Items: I0WR (Fish Menu), Description (Description)
 {
-Increases attack and movement speed of the hero.
+Erhöht Angriffs- und Bewegungsgeschwindigkeit des Helden.
 }
 
 STRING 49974
 // Items: I0WR (Fish Menu), Ubertip (Tooltip - Extended)
 {
-Increases attack and movement speed of the hero.
+Erhöht Angriffs- und Bewegungsgeschwindigkeit des Helden.
 }
 
 STRING 49975
@@ -105649,37 +105649,37 @@ STRING 49985
 }
 
 STRING 49988
-// Items: I0WT (Throwing Axe), Name (Name)
+// Items: I0WT (Wurfaxt), Name (Name)
 {
 Wurfaxt
 }
 
 STRING 49989
-// Items: I0WT (Throwing Axe), Tip (Tooltip - Basic)
+// Items: I0WT (Wurfaxt), Tip (Tooltip - Basic)
 {
 Wurfaxt erwerben
 }
 
 STRING 49990
-// Items: I0WT (Throwing Axe), Description (Description)
+// Items: I0WT (Wurfaxt), Description (Description)
 {
 Verstärkt den Angriffsschaden um 8.
 }
 
 STRING 49991
-// Items: I0WT (Throwing Axe), Ubertip (Tooltip - Extended)
+// Items: I0WT (Wurfaxt), Ubertip (Tooltip - Extended)
 {
 Increases the attack damage of the Hero by 8 when worn.|n|n|cffffcc00Left Hand, One Hand and Range.|r
 }
 
 STRING 49992
-// Destructibles: B00L (Dice), Name (Name)
+// Destructibles: B00L (Würfel), Name (Name)
 {
-Dice
+Würfel
 }
 
 STRING 49993
-// Destructibles: B00L (Dice), EditorSuffix (Editor Suffix)
+// Destructibles: B00L (Würfel), EditorSuffix (Editor Suffix)
 {
 (Luck)
 }
@@ -105687,7 +105687,7 @@ STRING 49993
 STRING 49994
 // Abilities: A1U5 (Item Attack Slow Bonus), EditorSuffix (Editor Suffix)
 {
-(Throwing Axe)
+(Wurfaxt)
 }
 
 STRING 49995
@@ -105816,13 +105816,13 @@ STRING 50016
 STRING 50017
 // Units: h0U2 (Fishing Port), Ubertip (Tooltip - Extended)
 {
-Boat construction facility. Produces Fischerei Boats.
+Bootsbauanlage. Produziert Fischerbote.
 }
 
 STRING 50018
 // Items: I0WN (Cook), Ubertip (Tooltip - Extended)
 {
-Craft cooking equipment, recipes and tasty meals which allow increasing stats temporarily:|n- Tiny Feuerstelle|n- Ingredients|n- Kitchen Knive|n- Recipe
+Stellt Kochausrüstung, Rezepte und leckere Gerichte her, die ermöglichen Werte vorübergehend zu erhöhen:|n- Winzige Feuerstellen|n- Zutaten|n- Küchenmesser|n- Rezepte
 }
 
 STRING 50019
@@ -105900,13 +105900,13 @@ Kriegermenü erwerben
 STRING 50031
 // Items: I0X0 (Warrior Menu), Description (Description)
 {
-Increases attack and movement speed of the hero.
+Erhöht Angriffs- und Bewegungsgeschwindigkeit des Helden.
 }
 
 STRING 50032
 // Items: I0X0 (Warrior Menu), Ubertip (Tooltip - Extended)
 {
-Increases attack and movement speed of the hero.
+Erhöht Angriffs- und Bewegungsgeschwindigkeit des Helden.
 }
 
 STRING 50033
@@ -106044,13 +106044,13 @@ Waldläufermenü erwerben
 STRING 50060
 // Items: I0X4 (Ranger Menu), Description (Description)
 {
-Increases attack and movement speed of the hero.
+Erhöht Angriffs- und Bewegungsgeschwindigkeit des Helden.
 }
 
 STRING 50061
 // Items: I0X4 (Ranger Menu), Ubertip (Tooltip - Extended)
 {
-Increases attack and movement speed of the hero.
+Erhöht Angriffs- und Bewegungsgeschwindigkeit des Helden.
 }
 
 STRING 50062
@@ -106104,13 +106104,13 @@ Magiermenü erwerben
 STRING 50070
 // Items: I0X7 (Magician Menu), Description (Description)
 {
-Increases attack and movement speed of the hero.
+Erhöht Angriffs- und Bewegungsgeschwindigkeit des Helden.
 }
 
 STRING 50071
 // Items: I0X7 (Magician Menu), Ubertip (Tooltip - Extended)
 {
-Increases attack and movement speed of the hero.
+Erhöht Angriffs- und Bewegungsgeschwindigkeit des Helden.
 }
 
 STRING 50072
@@ -107512,7 +107512,7 @@ Initiand, Adept, Meister
 }
 
 STRING 50498
-// Units: n09B (Kobold Geomancer), Casterupgradename (Caster Upgrade Names)
+// Units: n09B (Kobold Erdmagier), Casterupgradename (Caster Upgrade Names)
 {
 Initiand, Adept, Meister
 }
@@ -113396,7 +113396,7 @@ Transports units to other tunnels. Can explode and cause massive damage.
 STRING 54119
 // Units: h038 (Dwarf Shipyard), Ubertip (Tooltip - Extended)
 {
-Boat construction facility. Produces Human Transportschiffs, Human Frigates, Menschen-Schlachtschiffs, Gepanzertes U-Boots, and Gnomisches U-Boots.
+Bootsbauanlage. Produces Human Transportschiffs, Human Frigates, Menschen-Schlachtschiffs, Gepanzertes U-Boots, and Gnomisches U-Boots.
 }
 
 STRING 54120
@@ -113556,79 +113556,79 @@ Errichtet am Zielort eine Diebesgilde.|n|n|cffffcc00Beruf Dieb.|r
 }
 
 STRING 54474
-// Abilities: A20L (Thieving - Novice), Name (Name)
+// Abilities: A20L (Diebstahl - Novice), Name (Name)
 {
 Diebstahl - Novize
 }
 
 STRING 54475
-// Abilities: A20L (Thieving - Novice), Tip (Tooltip - Normal)
+// Abilities: A20L (Diebstahl - Novice), Tip (Tooltip - Normal)
 {
 Novize Diebstahl
 }
 
 STRING 54476
-// Abilities: A20L (Thieving - Novice), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A20L (Diebstahl - Novice), Ubertip (Tooltip - Normal - Extended)
 {
 Stellt Dietriche her.
 }
 
 STRING 54477
-// Abilities: A20M (Thieving - Advanced), Name (Name)
+// Abilities: A20M (Diebstahl - Advanced), Name (Name)
 {
 Diebstahl - Fortgeschritten
 }
 
 STRING 54478
-// Abilities: A20M (Thieving - Advanced), Tip (Tooltip - Normal)
+// Abilities: A20M (Diebstahl - Advanced), Tip (Tooltip - Normal)
 {
 Fortgeschrittener Diebstahl
 }
 
 STRING 54479
-// Abilities: A20M (Thieving - Advanced), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A20M (Diebstahl - Advanced), Ubertip (Tooltip - Normal - Extended)
 {
 Stellt Beschwörer weggesperrter Gegenstände, Schließfächer und Winzige Tresore her.
 }
 
 STRING 54480
-// Abilities: A20N (Thieving - Adept), Name (Name)
+// Abilities: A20N (Diebstahl - Adept), Name (Name)
 {
 Diebstahl - Adept
 }
 
 STRING 54481
-// Abilities: A20N (Thieving - Adept), Tip (Tooltip - Normal)
+// Abilities: A20N (Diebstahl - Adept), Tip (Tooltip - Normal)
 {
 Adepten-Diebstahl
 }
 
 STRING 54482
-// Abilities: A20N (Thieving - Adept), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A20N (Diebstahl - Adept), Ubertip (Tooltip - Normal - Extended)
 {
 Der Dieb nutzt sein Wissen, um Taschendiebstahl herzustellen.
 }
 
 STRING 54483
-// Abilities: A20O (Thieving - Master), Name (Name)
+// Abilities: A20O (Diebstahl - Master), Name (Name)
 {
 Diebstahl - Meister
 }
 
 STRING 54484
-// Abilities: A20O (Thieving - Master), Tip (Tooltip - Normal)
+// Abilities: A20O (Diebstahl - Master), Tip (Tooltip - Normal)
 {
 Meister-Diebstahl
 }
 
 STRING 54485
-// Abilities: A20O (Thieving - Master), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A20O (Diebstahl - Master), Ubertip (Tooltip - Normal - Extended)
 {
 Der Dieb nutzt sein Wissen, um eine Winzige Diebesgilde herzustellen.
 }
 
 STRING 54486
-// Abilities: A20P (Thieving), Name (Name)
+// Abilities: A20P (Diebstahl), Name (Name)
 {
 Diebstahl
 }
@@ -114528,13 +114528,13 @@ Kobold-Laden errichten
 }
 
 STRING 55343
-// Units: n09B (Kobold Geomancer), EditorSuffix (Name - Editor Suffix)
+// Units: n09B (Kobold Erdmagier), EditorSuffix (Name - Editor Suffix)
 {
 (Kobolde) (Priest)
 }
 
 STRING 55344
-// Units: n09B (Kobold Geomancer), Tip (Tooltip - Basic)
+// Units: n09B (Kobold Erdmagier), Tip (Tooltip - Basic)
 {
 Train Kobold Erdmagier
 }
@@ -114995,7 +114995,7 @@ Upgrades the totem carried by Meeresrieses, increasing the damage of their Pulve
 STRING 55538
 // Units: n0G1 (Hatchling Ground), Ubertip (Tooltip - Extended)
 {
-Trains Snap Dragons, Drachenschildkrötes, and Meeresrieses. Bietet auch die Ausbaustufen Murloc-Eier upgrade.
+Trains Schnappdrachen, Drachenschildkrötes, and Meeresrieses. Bietet auch die Ausbaustufen Murloc-Eier upgrade.
 }
 
 STRING 55539
@@ -116408,13 +116408,13 @@ Buch der Schürferei
 STRING 56228
 // Items: I11Z (Book of Prospecting), Description (Description)
 {
-Ein Buch, welches das Wissen enthält, Schürfwerkzeuge herzustellen.
+Ein Buch, das Wissen über die Herstellung von Schürfwerkzeuge enthält.
 }
 
 STRING 56229
 // Items: I11Z (Book of Prospecting), Ubertip (Tooltip - Extended)
 {
-Ein Buch, welches das Wissen enthält, Schürfwerkzeuge herzustellen.
+Ein Buch, das Wissen über die Herstellung von Schürfwerkzeuge enthält.
 }
 
 STRING 56230
@@ -118312,13 +118312,13 @@ Buch der Astromantie
 STRING 57078
 // Items: I12Y (Book of Astromancy), Description (Description)
 {
-Ein Buch, welches das Wissen enthält, Astromantie-Gegenstände herzustellen.
+Ein Buch, das Wissen über die Herstellung von Astromantie-Gegenständen enthält.
 }
 
 STRING 57079
 // Items: I12Y (Book of Astromancy), Ubertip (Tooltip - Extended)
 {
-Ein Buch, welches das Wissen enthält, Astromantie-Gegenstände herzustellen.
+Ein Buch, das Wissen über die Herstellung von Astromantie-Gegenständen enthält.
 }
 
 STRING 57080
@@ -119600,37 +119600,37 @@ Samen
 }
 
 STRING 57514
-// Units: N0MY (Burrowed Geomancer), Name (Name)
+// Units: N0MY (Burrowed Erdmagier), Name (Name)
 {
 Eingegrabener Erdmagier
 }
 
 STRING 57515
-// Units: N0MY (Burrowed Geomancer), Awakentip (Tooltip - Awaken)
+// Units: N0MY (Burrowed Erdmagier), Awakentip (Tooltip - Awaken)
 {
 Erdmagier wiederbeleben
 }
 
 STRING 57516
-// Units: N0MY (Burrowed Geomancer), Tip (Tooltip - Basic)
+// Units: N0MY (Burrowed Erdmagier), Tip (Tooltip - Basic)
 {
 Erdmagier beschwören
 }
 
 STRING 57517
-// Units: N0MY (Burrowed Geomancer), Revivetip (Tooltip - Revive)
+// Units: N0MY (Burrowed Erdmagier), Revivetip (Tooltip - Revive)
 {
 Erdmagier wiederbeleben
 }
 
 STRING 57518
-// Units: N0MY (Burrowed Geomancer), Propernames (Proper Names)
+// Units: N0MY (Burrowed Erdmagier), Propernames (Proper Names)
 {
 Flintdagger,Gibblesnik,Goldtooth,Gug Fatcandle,Narg the Taskmaster,Noggrin Onetooth,Taskmaster Snivvle,Kipp Brightwick,Snazzle Shinyfinder,Trytooth Hardchisel
 }
 
 STRING 57519
-// Units: N0MY (Burrowed Geomancer), Ubertip (Tooltip - Extended)
+// Units: N0MY (Burrowed Erdmagier), Ubertip (Tooltip - Extended)
 {
 Ein Kriegerheld, adept at summoning beasts into battle. Can learn Massen-Feuerblitz, Massenlangsam, Hieb, and Earthquake. |n|n|cffffcc00Greift Land-Einheiten an.|r
 }
@@ -121876,7 +121876,7 @@ Hafen von Kul Tiras errichten
 STRING 58430
 // Units: h0YJ (Kul Tiras Shipyard), Ubertip (Tooltip - Extended)
 {
-Boat construction facility. Produces Human Transportschiffs, Human Frigates, Kul-Tiras-Schlachtschiffs, Ingenieurschiffs and Gnomisches U-Boots.|n|nProvides researches Shipyard Repair and Improved Navy.
+Bootsbauanlage. Produces Human Transportschiffs, Human Frigates, Kul-Tiras-Schlachtschiffs, Ingenieurschiffs and Gnomisches U-Boots.|n|nProvides researches Shipyard Repair and Improved Navy.
 }
 
 STRING 58468
@@ -123394,7 +123394,7 @@ Basar errichten
 STRING 60206
 // Units: n05I (High Elven Guard Tower), Ubertip (Tooltip - Extended)
 {
-Primary defensive structure witch magic attack. Can learn the Magic Sentry ability. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
+Primäres Verteidigungsgebäude. Kann die Fähigkeit 'Magischer Schutz' erlernen. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
 }
 
 STRING 60208

@@ -5279,7 +5279,7 @@ Changes the class to Monk:|n- Slide|n- Charge|n- Drunken Brawler|n- Disarmament|
 STRING 890
 // Abilities: A06H (Sorcery - Advanced), Ubertip (Tooltip - Normal - Extended)
 {
-The Sorcerer uses his gathered material to craft a Wand of the Wind.
+Craft Wands of the Wind.
 }
 
 STRING 891
@@ -5776,7 +5776,7 @@ Fear
 STRING 976
 // Units: h0U7 (Temple), Ubertip (Tooltip - Extended)
 {
-Trains Priests, and Sorceresses. |nAlso contains spell upgrades for Priests and Sorceresses, and Magic Sentry.
+Trains Priests, and Sorceresses. |nAlso contains upgrades for Priests and Sorceresses, and Magic Sentry.
 }
 
 STRING 977
@@ -5848,7 +5848,7 @@ W
 STRING 988
 // Items: I06P (Engineer), Ubertip (Tooltip - Extended)
 {
-Craft tiny towers to protect your base:|n- Tiny Flame Tower|n- Tiny Cold Tower|n- Tiny Boulder Tower|n- Tiny Death Tower|n- Scroll of Repair and Scroll of Construction|n- Tiny Engineering Power Generator
+Craft tiny buildings and items to protect your base:|n- Tiny Flame Towers|n- Tiny Cold Towers|n- Tiny Boulder Towers|n- Tiny Death Towers|n- Scrolls of Repair and Scrolls of Construction|n- Tiny Engineering Power Generators
 }
 
 STRING 989
@@ -5871,7 +5871,7 @@ STRING 991
 
 STRING 992
 {
-The Thief uses his knowledge to create a Pickpocketing.
+Craft Pickpocketings.
 }
 
 STRING 993
@@ -6307,7 +6307,7 @@ Khanam Matra Sarest
 STRING 1065
 // Abilities: A029 (Fear), Ubertip (Tooltip - Normal - Extended)
 {
-Lets loose a terrifying howl that reduces all  enemy units' attack damage by 50% for 30 seconds. Affects the whole world.
+Lets loose a terrifying howl that reduces all enemy units' attack damage by 50% for 30 seconds. Affects the whole world.
 }
 
 STRING 1066
@@ -9951,7 +9951,7 @@ R
 STRING 1684
 // Abilities: A029 (Fear), Researchubertip (Tooltip - Learn - Extended)
 {
-Lets loose a terrifying howl that reduces all  enemy units' attack damage by 50% for 30 seconds. Affects the whole world.
+Lets loose a terrifying howl that reduces all enemy units' attack damage by 50% for 30 seconds. Affects the whole world.
 }
 
 STRING 1685
@@ -24696,7 +24696,7 @@ Novice Scribing
 STRING 5112
 // Abilities: A0SR (Scribing - Novice), Ubertip (Tooltip - Normal - Extended)
 {
-The Scribe crafts a Tome of Knowledge.
+Craft Tomes of Knowledge.
 }
 
 STRING 5113
@@ -24750,7 +24750,7 @@ Master Scribing
 STRING 5121
 // Abilities: A0SU (Scribing - Master), Ubertip (Tooltip - Normal - Extended)
 {
-Craft Tome of Experiences.
+Craft Tomes of Experience.
 }
 
 STRING 5122
@@ -105743,7 +105743,7 @@ Boat construction facility. Produces Fishing Boats.
 STRING 50018
 // Items: I0WN (Cook), Ubertip (Tooltip - Extended)
 {
-Craft cooking equipment, recipes and tasty meals which allow increasing stats temporarily:|n- Tiny Fire Pit|n- Ingredients|n- Kitchen Knive|n- Recipe
+Craft cooking equipment, recipes and tasty meals which allow increasing stats temporarily:|n- Tiny Fire Pits|n- Ingredients|n- Kitchen Knives|n- Recipes
 }
 
 STRING 50019
