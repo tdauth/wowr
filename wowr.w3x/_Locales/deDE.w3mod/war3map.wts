@@ -72681,7 +72681,7 @@ STRING 33107
 STRING 33113
 // Items: I12Q (Unit Gavel), Ubertip (Tooltip - Extended)
 {
-Sells player units for <A22Q,DataA1,%> % of its value.
+Verkauft Einheiten des Spielers für <A22Q,DataA1,%> % ihres Wertes.
 }
 
 STRING 33114
@@ -117870,13 +117870,13 @@ STRING 56709
 }
 
 STRING 56710
-// Items: I12C (Unique - Ysera's Heart), Name (Name)
+// Items: I12C (Unique - Ysera's Herz), Name (Name)
 {
-Einzigartig - Ysera's Heart
+Einzigartig - Ysera's Herz
 }
 
 STRING 56711
-// Items: I12C (Unique - Ysera's Heart), Description (Description)
+// Items: I12C (Unique - Ysera's Herz), Description (Description)
 {
 |cff8b00ffEinzigartig|r|nThe heart of the powerful dragon Ysera.
 }
@@ -117902,7 +117902,7 @@ STRING 56751
 STRING 56756
 // Units: h0G3 (Music Storm, Earth and Fire), Name (Name)
 {
-Music Sturm, Erde und Feuer
+Musik Sturm, Erde und Feuer
 }
 
 STRING 56761
@@ -117920,13 +117920,13 @@ Dryaden-Faun anheuern
 STRING 56778
 // Items: I12R (Item Gavel), Ubertip (Tooltip - Extended)
 {
-Sells player units for <A22R,DataA1,%> % of its value.
+Verkauft Einheiten des Spielers für <A22R,DataA1,%> % ihres Wertes.
 }
 
 STRING 56779
 // Abilities: A22H (Spell Shield), EditorSuffix (Editor Suffix)
 {
-(Ysera's Heart)
+(Ysera's Herz)
 }
 
 STRING 56784
@@ -117950,13 +117950,13 @@ Entwürfe von Monte Glazlowe für Thrall in Orgrimmar.
 STRING 56787
 // Items: I12J (Thrall's Payment), Name (Name)
 {
-Thrall's Bezahlung
+Thralls Bezahlung
 }
 
 STRING 56788
 // Items: I12J (Thrall's Payment), Ubertip (Tooltip - Extended)
 {
-Thrall's Bezahlung für die Goblin-Entwürfe von Monte Glazlowe.
+Thralls Bezahlung für die Goblin-Entwürfe von Monte Glazlowe.
 }
 
 STRING 56789
@@ -117986,7 +117986,7 @@ Teufelsbestie wiederbeleben
 STRING 56793
 // Items: I12J (Thrall's Payment), Description (Description)
 {
-Thrall's payment for the Goblin Blue Prints from Monte Glazlowe.
+Thralls Bezahlung für die Goblin-Entwürfe von Monte Glazlowe.
 }
 
 STRING 56811
@@ -118046,7 +118046,7 @@ Wiederherstellungsstein erwerben
 }
 
 STRING 56863
-// Items: I12C (Unique - Ysera's Heart), Ubertip (Tooltip - Extended)
+// Items: I12C (Unique - Ysera's Herz), Ubertip (Tooltip - Extended)
 {
 |cff8b00ffEinzigartig|r|nThe heart of the powerful dragon Ysera. Gives the hero 15 intelligence and allows summoning a Green Dragon. Reduces spell damage by <A22L,DataA1,%> %.
 }
@@ -118150,7 +118150,7 @@ Schmettern
 STRING 56989
 // Units: h0Y4 (Ancient of War Mount), Tip (Tooltip - Basic)
 {
-Ancient of War Mount
+Urtum-des-Krieges-Reittier
 }
 
 STRING 56998
