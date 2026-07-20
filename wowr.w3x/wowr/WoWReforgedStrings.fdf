@@ -2115,22 +2115,22 @@ StringList {
     Q_LEGENDARY_ITEMS_TITLE            "Legendary Items",
     Q_LEGENDARY_ITEMS_DESCRIPTION      "Now it is time to craft some powerful items to protect the base of the Forsaken in Azeroth. Slyvanas knows how to craft items but needs some references to create really powerful items. You must kill at least two Bosses and bring their legendary artifacts to Sylvanas as references, so she can create powerful items and protect her city. Note that there is a limited number of bosses in the map and other players might pick up legendary artifacts as well.",
     Q_LEGENDARY_ITEMS_0                "Bring at least 2 legendary artifacts to Sylvanas in the Undercity.",
-    // UndeadQuest1
+    // LichKingQuest1
     Q_DEMIGODS_REMNANTS_TITLE          "Demigod´s Remnants",
     Q_DEMIGODS_REMNANTS_DESCRIPTION    "The Faceless Ones of Azjul-Nerub have drawn the Lich King´ interest in them. He wants them as part of the scourge, but he needs more magic power in order to control them. Anub´Arak has received word from Kel´Thuzad that the Lich King´s power could be increased to that extent with a special ritual. The Lich will however need some items first to unravel the spell. The ancient Night Elves´ Demigod, Cenarius, lies buried somewhere in Ashenvale Forest. First, your Hero must travel to Ashenvale and find a corpse probe of the dead creature. Afterwards take it to the Sunwell Grove in the Silvermoon Ruins where Kel´Thuzad will await your arrival.",
     Q_DEMIGODS_REMNANTS_0              "Find a corpse probe of the dead Cenarius in Ashenvale.",
     Q_DEMIGODS_REMNANTS_1              "Bring the probe to Kel'Thuzad in Sunwell Grove.",
-    // UndeadQuest2
+    // LichKingQuest2
     Q_DEMIGODS_HORN_TITLE              "Demigod´s Horn",
     Q_DEMIGODS_HORN_DESCRIPTION        "The next step to unravel Kel´Thzad´s spell requires the ancient Artifact known as the Horn of Cenarius. Fortunately as it is, the Horn seems to be guarded only by a few creatures and is vulnerable to theft. But in order to remove it from the pedestal that magically holds it, you need a special totem that Kel´Thuzad has created. The mission is simple: Sneak with the Lich´s relic to the Horn in Ashenvale Forest, destroy the Spirits who guard the Horn and afterwards return the Horn to Kel´Thuzad.",
     Q_DEMIGODS_HORN_0                  "Find Cenarius horn in Ashenvale.",
     Q_DEMIGODS_HORN_1                  "Bring the horn to Kel'Thuzad in Sunwell Grove.",
-    // UndeadQuest3
+    // LichKingQuest3
     Q_LICH_KINGS_ORDER_TITLE           "Lich King´s Order",
     Q_LICH_KINGS_ORDER_DESCRIPTION     "After having enabled the Lich King to control the the mysterious Faceless Ones, the time has come to unravel the Scourge´s Wrath. The Quest is as hard as easy it is to describe it: you are to destroy one Nation´s Capital (Tier 1, 2 or 3 Town Hall or a or a Demigod Temple). Hiring Faceless Ones in Draktharon Keep (Anub´Arak) might be clever in order to accomplish this difficult task. After you complete your Quest, return to Arthas and claim your reward!",
     Q_LICH_KINGS_ORDER_0               "Destroy one Nation´s Capital (Tier 1, 2 or 3 Town Hall or a or a Demigod Temple).",
     Q_LICH_KINGS_ORDER_1               "Return to Arthas to claim your reward.",
-    // UndeadQuest3
+    // LichKingQuest4
     Q_THE_BURNING_LEGION_TITLE         "The Burning Legion",
     Q_THE_BURNING_LEGION_DESCRIPTION   "The Lich King will now have his revenge on his original creator Kil'jaeden who is still active in the Outland area. The Lich King already betrayed his former master and creator but now it is time to act and to fight the Burning Legion. Use the help of the Draenei to attack Kil'jaeden and steal his Orb and bring it back to the Lich King. Note that you do not have to kill Kil'jaeden since he is pretty strong.",
     Q_THE_BURNING_LEGION_0             "Travel to the Draenei Mercenary Camp in Outland.",
@@ -2197,4 +2197,84 @@ StringList {
     Q_WORLD_PEACE_DESCRIPTION          "The Pandaren want to have world peace. No more fighting in Azeroth. No more fighting in the world. They are fed up with violence. To secure the peace Chen needs the source of violence to be destroyed: The Goblin Bankers. They cause most of the issues due to their financial tricks making people of Azeroth really unhappy. Travel to Kezan and kill the director of the Goblin Bank. Return to Chen with his bag of gold. Chen will use the gold to buy more food rescuing the starving Pandaren and craft a new item you can use to spread the peace in Azeroth.",
     Q_WORLD_PEACE_0                    "Kill the director of the Goblin Bank on Kezan.",
     Q_WORLD_PEACE_1                    "Bring the dropped bag of gold to Chen on Pandaria.",
+    // EredarQuest1
+    Q_INVASION_OF_ARGUS_TITLE          "Invasion of Argus",
+    Q_INVASION_OF_ARGUS_DESCRIPTION    "Velen the Prophet has started the invasion of Argus, the former planet of the Draenei civilization which is now corrupted by the Burning Legion. The planet is threatening Azeroth. Hence, the demonic leaders must be defeated. Velen needs the help of Illidan. Get a powerful artifact from Illidan in Outland and return it to Velen.",
+    Q_INVASION_OF_ARGUS_0              "Bring the message from Velen to Illidan in Outland.",
+    Q_INVASION_OF_ARGUS_1              "Return Illidan's Arkonite Crystal to Velen on Argus.",
+    // EredarQuest2
+    Q_ARMY_OF_THE_LIGHT_TITLE          "Army of the Light",
+    Q_ARMY_OF_THE_LIGHT_DESCRIPTION    "Velen the Prophet needs the help of the Naaru and the Army of Light to defeat the Demons on Argus. Visit the Naaru Xe'ra at the crashing site of the dimensional ship Xenedar, hire a Lightforged Peacekeeper and return him to Velen to get your reward.",
+    Q_ARMY_OF_THE_LIGHT_0              "Hire a Lightforged Peacekeeper at the Xenedar on Argus.",
+    Q_ARMY_OF_THE_LIGHT_1              "Return the Lightforged Peacekeeper to Velen on Argus.",
+    // EredarQuest3
+    Q_EXODAR_TITLE                     "Exodar",
+    Q_EXODAR_DESCRIPTION               "Velen the Prophet needs more troops from Exodar in Azeroth to fight the Burning Legion. Travel to Exodar at the Azuremyst Isle in Azeroth, hire 5 Rangari and return them to Velen to get your reward.",
+    Q_EXODAR_0                         "Hire 5 Rangari from Exodar at the Azuremyst Isle in Azeroth.",
+    Q_EXODAR_1                         "Return the 5 Rangari to Velen on Argus.",
+    // EredarQuest4
+    Q_DEMON_HUNT_TITLE                 "Demon Hunt",
+    Q_DEMON_HUNT_DESCRIPTION           "Velen the Prophet orders the attack on Argus with his whole army. Kill as many enemy Demon heroes as possible to defeat the Burning Legion once again. After killing 5 enemy Demon heroes return to Velen and receive your reward.",
+    Q_DEMON_HUNT_0                     "Kill 5 enemy Demon heroes.",
+    Q_DEMON_HUNT_1                     "Return the Demon's Head to Velen on Argus.",
+    // TuskarrQuest1
+    Q_FISHING_TITLE                    "Fishing",
+    Q_FISHING_DESCRIPTION              "Elder Ko'nani from the Tuskarr needs better fishing equipment to make his tribe survive in the cold harsh environment of the north. Travel to Theramore and get some goods to craft fishing equipment. Return the goods to Elder Ko'nani to get your reward.",
+    Q_FISHING_0                        "Get some goods to craft fishing equipment from Theramore.",
+    Q_FISHING_1                        "Return the goods to Elder Ko'nani.",
+    // TuskarrQuest2
+    Q_WHALING_TITLE                    "Whaling",
+    Q_WHALING_DESCRIPTION              "Elder Ko'nani from the Tuskarr wants you to hunt down the Whales of the sea. Hunt 6 Whales and return the Whale Fat to Elder Ko'nani to get your reward.",
+    Q_WHALING_0                        "Hunt 6 Whales.",
+    Q_WHALING_1                        "Return the Whale Fat to Elder Ko'nani.",
+    // TuskarrQuest3
+    Q_FUNERAL_TITLE                    "Funeral",
+    Q_FUNERAL_DESCRIPTION              "Elder Ko'nani from the Tuskarr wants you to celebrate his father's funeral in the tradional Tuskarr way. Take the boat with the body of his father and sink it in the Maelstrom. Return the spirit to Ko'nani.",
+    Q_FUNERAL_0                        "Sink the boat with the body in the Maelstrom.",
+    Q_FUNERAL_1                        "Return the spirit to Elder Ko'nani.",
+    // TuskarrQuest4
+    Q_ANCESTORS_TITLE                  "Ancestors",
+    Q_ANCESTORS_DESCRIPTION            "Elder Ko'nani from the Tuskarr wants you travel to the Tuskarr Statue created for their ancestors and summon a Tuskarr Chieftain from the past to get his advice. Travel to the statue, hire a Tuskarr Chieftain and return it to to Ko'nani to get your reward.",
+    Q_ANCESTORS_0                      "Hire a Tuskarr Chieftain from the statue.",
+    Q_ANCESTORS_1                      "Return the Tuskarr Chieftain to Elder Ko'nani.",
+    // GoblinQuest1
+    Q_BLUE_PRINTS_TITLE                "Blue Prints",
+    Q_BLUE_PRINTS_DESCRIPTION          "Monte Glazlowe has promised Thrall to support the horde with the Goblin Engineering skills. The Goblins have drafted some plans for building Orgrimmar. Bring these plans to Thrall and return the answer from Thrall to Monte Glazlowe to get your reward.",
+    Q_BLUE_PRINTS_0                    "Bring the plans to Thrall in Orgrimmar.",
+    Q_BLUE_PRINTS_1                    "Return the answer from Thrall to Monte Glazlowe on Kezan.",
+    // GoblinQuest2
+    Q_AZEROTH_GRAND_PRIX_TITLE         "Azeroth Grand Prix",
+    Q_AZEROTH_GRAND_PRIX_DESCRIPTION   "Monte Glazlowe organizes the famous Azeroth Grand Prix. Win the race for the Goblins and get your reward. You can win the race with your first hero by reaching all the checkpoints in time as the first player.",
+    Q_AZEROTH_GRAND_PRIX_0             "Win the race for the Goblins.",
+    Q_AZEROTH_GRAND_PRIX_1             "Get your reward from Monte Glazlowe on Kezan.",
+    // GoblinQuest3
+    Q_INVESTMENTS_TITLE                "Investments",
+    Q_INVESTMENTS_DESCRIPTION          "Monte Glazlowe needs you to invest some gold into different stocks of Azeroth. He needs to get some gold from the mines of Ironforge to invest since the Goblin's gold is already used for different things. Travel to the mines of Ironforge, get the gold treasure and return it to Monte Glazlowe to get your reward.",
+    Q_INVESTMENTS_0                    "Get the gold treasure in Ironforge.",
+    Q_INVESTMENTS_1                    "Bring the treasure to Monte Glazlowe on Kezan.",
+    // GoblinQuest4
+    Q_TRANSMUTATION_TITLE              "Transmutation",
+    Q_TRANSMUTATION_DESCRIPTION        "Monte Glazlowe wants to build an Alchemist Laboratory in which he can transform units into different races. Build an Alchemist Laboratory using a Female Citizen and transform a unit with at least food cost of 4 and return to Monte Glazlowe to get your reward.",
+    Q_TRANSMUTATION_0                  "Convert a unit with food costs of at least 4 with an Alchemist Lab.",
+    Q_TRANSMUTATION_1                  "Bring the Alchemist Lab Plans to Monte Glazlowe on Kezan.",
+    // JainaQuest1
+    Q_OLD_GODS_TITLE                   "Old Gods",
+    Q_OLD_GODS_DESCRIPTION             "Jaina got the information that the titan Sargeras imprisioned the old gods of Azeroth in a prison and killed the most powerful one. She needs the heart the most powerful old god to defeat the titan Sargeras. You must travel to Outland and fight all of the old of the gods to get the heart and return it to Jaina.",
+    Q_OLD_GODS_0                       "Defeat all of the old of the gods in Sargeras' prison.",
+    Q_OLD_GODS_1                       "Return the heart of the Old God to Jaina on Theramore.",
+    // JainaQuest2
+    Q_INVASION_TITLE                   "Invasion",
+    Q_INVASION_DESCRIPTION             "Sargeras is planning another invasion from the Burning Legion now as revenge for killing his imprisoned Old Gods. The whole planet will be invaded by his Demon creatures. Close all of his portals on Azeroth to stop the invasion!",
+    Q_INVASION_0                       "Destroy all Dimensional Gates on Azeroth.",
+    Q_INVASION_1                       "Return the Portal Stone to Jaina on Theramore.",
+    // JainaQuest3
+    Q_ELEMENTAL_LORDS_TITLE            "Elemental Lords",
+    Q_ELEMENTAL_LORDS_DESCRIPTION      "The Elemental Lords are back from the Elemental Plane for revenge on Azeroth. Defeat them and return to Jaina.",
+    Q_ELEMENTAL_LORDS_0                "Defeat all Elemental Lords.",
+    Q_ELEMENTAL_LORDS_1                "Return the Elemental Stone to Jaina on Theramore.",
+    // JainaQuest4
+    Q_WILD_GODS_TITLE                  "Wild Gods",
+    Q_WILD_GODS_DESCRIPTION            "Capture the remaining Wild Gods in Azeroth and bring their souls to Jaina.",
+    Q_WILD_GODS_0                      "Defeat all Wild Gods.",
+    Q_WILD_GODS_1                      "Return the Wild God Souls to Jaina on Theramore.",
 }

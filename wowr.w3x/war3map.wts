@@ -7923,7 +7923,6 @@ Adds 1 strength. Use chat command "-str X" to add X strength. Use chat command "
 }
 
 STRING 1334
-// Abilities: A1XD (Defend), EditorSuffix (Editor Suffix)
 {
 (Neutral)
 }
@@ -7980,6 +7979,11 @@ STRING 1343
 // Units: nhea (Blood Elf Archer), EditorSuffix (Name - Editor Suffix)
 {
 (Blood Elf)
+}
+
+STRING 1344
+{
+
 }
 
 STRING 1345
@@ -8082,6 +8086,12 @@ STRING 1361
 // Units: h0T4 (Dummy), EditorSuffix (Name - Editor Suffix)
 {
 (Reflection)
+}
+
+STRING 1363
+// Abilities: A1XD (Defend), EditorSuffix (Editor Suffix)
+{
+(Neutral)
 }
 
 STRING 1364

@@ -4469,6 +4469,17 @@ private function AddRaceStandardObjectIdFields takes nothing returns nothing
 endfunction
 
 private function Init takes nothing returns nothing
+    local integer convertedPlayerId = 1
+    local integer i = 0
+    loop
+        exitwhen (i == bj_MAX_PLAYERS)
+        set udg_PlayerRace[convertedPlayerId] = udg_RaceNone
+        set udg_PlayerRace2[convertedPlayerId] = udg_RaceNone
+        set udg_PlayerRace3[convertedPlayerId] = udg_RaceNone
+        set convertedPlayerId = convertedPlayerId + 1
+        set i = i + 1
+    endloop
+
     call AddNone()
     call AddFreelancer()
     call AddHuman()

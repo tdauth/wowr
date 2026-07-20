@@ -1,10 +1,11 @@
-library WoWReforgedVIPs initializer Init requires PlayerColorUtils, UnitGroupUtils, SafeString, OnStartGame, WoWReforgedUtils, WoWReforgedI18n, WoWReforgedMapData
+library WoWReforgedVIPs initializer Init requires SimError, PlayerColorUtils, UnitGroupUtils, SafeString, OnStartGame, WoWReforgedUtils, WoWReforgedI18n, WoWReforgedMapData
 
 globals
     private integer vipCounter = 0
     private string array vips
-    
+
     private force vipPlayers = CreateForce()
+    private trigger pickupItemTrigger = CreateTrigger()
 endglobals
 
 function GetVIPsMax takes nothing returns integer
@@ -116,7 +117,22 @@ private function SyncVIPsFromPlayers takes nothing returns nothing
     call WelcomeVIPs()
 endfunction
 
+private function IsVIPFlag takes integer itemTypeId returns boolean
+    return itemTypeId == 'I03I' or itemTypeId == 'I03N' or itemTypeId == 'I03M' or itemTypeId == 'I03O'
+endfunction
+
+private function TriggerConditionPickupItem takes nothing returns boolean
+    if (IsVIPFlag(GetItemTypeId(GetManipulatedItem())) and not IsPlayerVIP(GetOwningPlayer(GetTriggerUnit()))) then
+         call UnitRemoveItem(GetTriggerUnit(), GetManipulatedItem())
+         call SimError(GetOwningPlayer(GetTriggerUnit()), GetLocalizedStringSafe("ONLY_ALLOWED_FOR_VIPS"))
+    endif
+    return false
+endfunction
+
 private function Init takes nothing returns nothing
+    call TriggerRegisterAnyUnitEventBJ(pickupItemTrigger, EVENT_PLAYER_UNIT_PICKUP_ITEM)
+    call TriggerAddCondition(pickupItemTrigger, Condition(function TriggerConditionPickupItem))
+
     // Shame on you for adding yourself here! Support the project!
 static if (MAP_DEBUG_MODE_ENABLED) then
     call AddVIP("Barade")
@@ -128,7 +144,7 @@ endif
     call AddVIP("Antidenseman#1202")
     call AddVIP("Chaoskrieger#21738")
     call AddVIP("Etos7#2138")
-    
+
     // Do after starting the game because of the message and initialization of a global variable from GUI.
     call OnStartGame(function SyncVIPsFromPlayers)
 endfunction

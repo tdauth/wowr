@@ -7,7 +7,7 @@ globals
     constant real ADEPT_MANA_COST = 600.0
     constant real ADVANCED_MANA_COST = 400.0
     constant real NOVICE_MANA_COST = 200.0
-    
+
     constant integer PROFESSION_RANK_MAX = 6
     constant integer PROFESSION_RANK_DOCTOR = 5
     constant integer PROFESSION_RANK_GRAND_MASTER = 4
@@ -15,11 +15,11 @@ globals
     constant integer PROFESSION_RANK_ADEPT = 2
     constant integer PROFESSION_RANK_ADVANCED = 1
     constant integer PROFESSION_RANK_NOVICE = 0
-    
+
     constant integer PROFESSION_RANK_FINAL = PROFESSION_RANK_DOCTOR
-    
+
     constant integer PROFESSION_MAX_CRAFTED = 4
-    
+
     private integer professionsCounter = 0
     private Profession array professions
 
@@ -44,7 +44,7 @@ function GetRankName takes integer rank returns string
     elseif (rank == PROFESSION_RANK_NOVICE) then
         return GetLocalizedString("NOVICE")
     endif
-    
+
     return GetLocalizedString("UNKNOWN")
 endfunction
 
@@ -87,7 +87,7 @@ endfunction
 private function GetIconByProfessionEx takes integer profession returns string
     local Profession p = GetProfession(profession)
     local Rank r = p.ranks[PROFESSION_RANK_NOVICE]
-    
+
     if (r != 0 and r.craftedItemsCount > 0) then
         if (r.craftedItems[0] != 0) then
             return BlzGetAbilityIcon(r.craftedItems[0])
@@ -95,7 +95,7 @@ private function GetIconByProfessionEx takes integer profession returns string
             return BlzGetAbilityIcon(r.craftedUnits[0])
         endif
     endif
-    
+
     return "ReplaceableTextures\\WorldEditUI\\Editor-Random-Unit.blp"
 endfunction
 
@@ -103,7 +103,7 @@ function GetIconByProfession takes integer profession returns string
     if (profession == udg_ProfessionNone) then
         return "ReplaceableTextures\\WorldEditUI\\Editor-Random-Unit.blp"
     endif
-    
+
     return GetIconByProfessionEx(profession)
 endfunction
 
@@ -111,19 +111,19 @@ private function AddProfession takes integer tavernItemTypeId, integer bookItemT
     local Profession p = Profession.create()
     local integer index = GetProfessionsMax()
     local integer i = 0
-    
+
     set professions[index] = p
     set p.itemTypeId = tavernItemTypeId
     set p.bookItemTypeId = bookItemTypeId
-    
+
     loop
         exitwhen (i == PROFESSION_RANK_MAX)
         set p.ranks[i] = Rank.create()
         set i = i + 1
     endloop
-    
+
     set professionsCounter = professionsCounter + 1
-    
+
     return index
 endfunction
 
@@ -158,17 +158,17 @@ private function AddProfessionCrafted takes integer rank, integer itemTypeId, in
     local Profession p = GetProfession(index)
     local Rank r = p.ranks[rank]
     local integer index2 = r.craftedItemsCount
-    
+
     //call BJDebugMsg(GetProfessionName(index) + " - " + GetRankName(rank) + " count " + I2S(r.craftedItemsCount) + " index2 " + I2S(index2))
-    
+
     set r.craftedItems[index2] = itemTypeId
     set r.craftedUnits[index2] = unitTypeId
     set r.craftedCount[index2] = charges
     set r.craftedOnCast[index2] = onCast
-    
+
     set r.craftedItemAbilityId = abilityId
     set r.craftedItemsCount = r.craftedItemsCount + 1
-    
+
     set udg_TmpInteger = 1 // charges
     set udg_TmpBoolean = true // onCast
 endfunction
@@ -595,7 +595,7 @@ function CraftProfessionItemAI1 takes unit hero returns item
     if (itemTypeId != 0) then
         return CraftProfessionItemAIEx(hero, itemTypeId)
     endif
-    
+
     return null
 endfunction
 
@@ -604,7 +604,7 @@ function CraftProfessionItemAI2 takes unit hero returns item
     if (itemTypeId != 0) then
         return CraftProfessionItemAIEx(hero, itemTypeId)
     endif
-    
+
     return null
 endfunction
 
@@ -613,7 +613,7 @@ function CraftProfessionItemAI3 takes unit hero returns item
     if (itemTypeId != 0) then
         return CraftProfessionItemAIEx(hero, itemTypeId)
     endif
-    
+
     return null
 endfunction
 
@@ -774,7 +774,7 @@ function ProfessionCraft takes unit hero, integer abilityId, integer id, integer
     call TriggerSleepAction(0.1)
     if (GetUnitTypeId(hero) != 0) then
         call BlzStartUnitAbilityCooldown(hero, 'Aspb', cooldown)
-    endif    
+    endif
 endfunction
 
 function ProfessionCraftUnits takes unit hero, integer abilityId, integer unitTypeId, integer count returns nothing
@@ -814,6 +814,17 @@ private function TriggerActionCast takes nothing returns nothing
 endfunction
 
 private function Init takes nothing returns nothing
+    local integer convertedPlayerId = 1
+    local integer i = 0
+    loop
+        exitwhen (i == bj_MAX_PLAYERS)
+        set udg_PlayerProfession[convertedPlayerId] = udg_ProfessionNone
+        set udg_PlayerProfession2[convertedPlayerId] = udg_ProfessionNone
+        set udg_PlayerProfession3[convertedPlayerId] = udg_ProfessionNone
+        set convertedPlayerId = convertedPlayerId + 1
+        set i = i + 1
+    endloop
+
     call TriggerRegisterAnyUnitEventBJ(castTrigger, EVENT_PLAYER_UNIT_SPELL_CAST)
     call TriggerAddAction(castTrigger, function TriggerActionCast)
 
