@@ -218,7 +218,7 @@ Goblin-Randalier ausbilden
 }
 
 STRING 37
-// Units: h09K (Blitz-Elementargeist), Name (Name)
+// Units: h09K (Lightning Elemental), Name (Name)
 {
 Blitz-Elementar
 }
@@ -332,7 +332,7 @@ STRING 55
 }
 
 STRING 56
-// Abilities: A0K5 (Bau fertigstellen), EditorSuffix (Editor Suffix)
+// Abilities: A0K5 (Finish Construction), EditorSuffix (Editor Suffix)
 {
 (Neutral Feindlich)
 }
@@ -380,7 +380,7 @@ STRING 63
 }
 
 STRING 64
-// Abilities: A0AQ (Summon Wasser-Elementargeist), Tip (Tooltip - Normal)
+// Abilities: A0AQ (Summon Water Elemental), Tip (Tooltip - Normal)
 {
 Wasser-Elementargeist beschwören
 }
@@ -410,7 +410,7 @@ Druide
 }
 
 STRING 69
-// Items: I07X (Zufällige Klasse), Name (Name)
+// Items: I07X (Random Class), Name (Name)
 {
 Zufällige Klasse
 }
@@ -630,7 +630,7 @@ STRING 105
 }
 
 STRING 106
-// Abilities: A0M5 (Güter beladen), EditorSuffix (Editor Suffix)
+// Abilities: A0M5 (Loading Goods), EditorSuffix (Editor Suffix)
 {
  (Icon) (Kul Tiras)
 }
@@ -1164,13 +1164,13 @@ Kopf eines Untoten (Trophäe)
 }
 
 STRING 195
-// Items: I01E (Druiden-Brief), Description (Description)
+// Items: I01E (Druid Letter), Description (Description)
 {
 A letter for the Druids of the Talon in the Barrow Dens.
 }
 
 STRING 196
-// Items: I01E (Druiden-Brief), Ubertip (Tooltip - Extended)
+// Items: I01E (Druid Letter), Ubertip (Tooltip - Extended)
 {
 A letter for the Druids of the Talon in the Barrow Dens.
 }
@@ -1710,13 +1710,13 @@ Wechselt die Klasse zum Nekromanten:|n- Totenerweckung|n- Kannibalismus|n- Todes
 }
 
 STRING 286
-// Units: N0HH (Erdmagier), Name (Name)
+// Units: N0HH (Geomancer), Name (Name)
 {
 Erdmagier
 }
 
 STRING 287
-// Units: N0AF (Erdmagier), Name (Name)
+// Units: N0AF (Geomancer), Name (Name)
 {
 Erdmagier
 }
@@ -1854,7 +1854,7 @@ STRING 309
 }
 
 STRING 310
-// Abilities: A01J (Diebstahl - Doctor), Name (Name)
+// Abilities: A01J (Thieving - Doctor), Name (Name)
 {
 Diebstahl - Doctor
 }
@@ -1896,7 +1896,7 @@ Drain
 }
 
 STRING 317
-// Abilities: A027 (Schutz des Halbgotts), Name (Name)
+// Abilities: A027 (Demigod´s Protection), Name (Name)
 {
 Schutz des Halbgotts
 }
@@ -1941,6 +1941,12 @@ STRING 324
 // Units: Nrob (Tinker), EditorSuffix (Name - Editor Suffix)
 {
 (Robo-Goblin)
+}
+
+STRING 325
+// Units: n0NJ (Goblin Racing Organisation), EditorSuffix (Name - Editor Suffix)
+{
+(Neutral)
 }
 
 STRING 326
@@ -2711,7 +2717,7 @@ STRING 454
 }
 
 STRING 455
-// Upgrades: R019 (Ölbrand), Ubertip (Tooltip - Extended)
+// Upgrades: R019 (Burning Oil), Ubertip (Tooltip - Extended)
 {
 Nachtelfen-, Untote- und Zwergen-KI kann Unterkünfte nicht benutzen. Sie brauchen einen Bonus.
 }
@@ -2737,19 +2743,19 @@ Mitwirkende: Quest-Log (F9).
 }
 
 STRING 457
-// Upgrades: R019 (Ölbrand), Name (Name)
+// Upgrades: R019 (Burning Oil), Name (Name)
 {
 KI-Goldbonus
 }
 
 STRING 458
-// Upgrades: R019 (Ölbrand), Tip (Tooltip)
+// Upgrades: R019 (Burning Oil), Tip (Tooltip)
 {
 KI-Goldbonus
 }
 
 STRING 459
-// Upgrades: R019 (Ölbrand), effect1 (Effect 1)
+// Upgrades: R019 (Burning Oil), effect1 (Effect 1)
 {
 rmin
 }
@@ -2767,7 +2773,7 @@ Zauberschadenreduzierung (einzigartig)
 }
 
 STRING 462
-// Abilities: A0AQ (Summon Wasser-Elementargeist), Name (Name)
+// Abilities: A0AQ (Summon Water Elemental), Name (Name)
 {
 Wasser-Elementargeist beschwören
 }
@@ -3052,7 +3058,7 @@ Heldenfähigkeiten Nächste Seite
 }
 
 STRING 510
-// Units: h09K (Blitz-Elementargeist), Tip (Tooltip - Basic)
+// Units: h09K (Lightning Elemental), Tip (Tooltip - Basic)
 {
 Blitzelementar ausbilden
 }
@@ -3310,7 +3316,7 @@ STRING 552
 }
 
 STRING 553
-// Items: I00W (Stein der Ordnung Fragment), Tip (Tooltip - Basic)
+// Items: I00W (Order Stone Fragment), Tip (Tooltip - Basic)
 {
 Steinfragment der Ordnung erwerben
 }
@@ -3334,7 +3340,7 @@ Luftmagier
 }
 
 STRING 557
-// Items: I00W (Stein der Ordnung Fragment), Description (Description)
+// Items: I00W (Order Stone Fragment), Description (Description)
 {
 Boosts defense by 10 and casts Heiliges Licht. Also needed for the Guardian Transformation Ritual.
 }
@@ -3448,7 +3454,7 @@ P
 }
 
 STRING 576
-// Abilities: A0KD (Versklavung), EditorSuffix (Editor Suffix)
+// Abilities: A0KD (Enslavement), EditorSuffix (Editor Suffix)
 {
  (Icon) (Neutral Feindlich)
 }
@@ -3807,7 +3813,7 @@ Sägewerk errichten
 }
 
 STRING 636
-// Units: o03C (Flügeldrache Roost), Name (Name)
+// Units: o03C (Wyvern Roost), Name (Name)
 {
 Flügeldrachen-Horst
 }
@@ -3819,13 +3825,13 @@ STRING 637
 }
 
 STRING 638
-// Units: o03C (Flügeldrache Roost), Tip (Tooltip - Basic)
+// Units: o03C (Wyvern Roost), Tip (Tooltip - Basic)
 {
 Flügeldrachen-Horst errichten
 }
 
 STRING 639
-// Units: o03D (Flügeldrache), Name (Name)
+// Units: o03D (Wyvern), Name (Name)
 {
 Flügeldrache
 }
@@ -3837,37 +3843,37 @@ STRING 640
 }
 
 STRING 641
-// Units: o03D (Flügeldrache), Tip (Tooltip - Basic)
+// Units: o03D (Wyvern), Tip (Tooltip - Basic)
 {
 Flügeldrachen ausbilden
 }
 
 STRING 642
-// Units: o03D (Flügeldrache), Ubertip (Tooltip - Extended)
+// Units: o03D (Wyvern), Ubertip (Tooltip - Extended)
 {
 Highly mobile flying creature. Excellent at scouting. |n|n|cffffcc00Attacks air units.|r
 }
 
 STRING 643
-// Units: o03E (Spirit Flügeldrache), Name (Name)
+// Units: o03E (Spirit Wyvern), Name (Name)
 {
 Geisterflügeldrache
 }
 
 STRING 644
-// Units: o03C (Flügeldrache Roost), EditorSuffix (Name - Editor Suffix)
+// Units: o03C (Wyvern Roost), EditorSuffix (Name - Editor Suffix)
 {
 (Tauren)
 }
 
 STRING 645
-// Units: o03E (Spirit Flügeldrache), Tip (Tooltip - Basic)
+// Units: o03E (Spirit Wyvern), Tip (Tooltip - Basic)
 {
 Geisterflügeldrachen ausbilden
 }
 
 STRING 646
-// Units: o03E (Spirit Flügeldrache), Ubertip (Tooltip - Extended)
+// Units: o03E (Spirit Wyvern), Ubertip (Tooltip - Extended)
 {
 Highly mobile flying creature. Excellent at scouting. Causes magic damage. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
 }
@@ -3879,13 +3885,13 @@ Geisterhaus
 }
 
 STRING 648
-// Units: o03D (Flügeldrache), EditorSuffix (Name - Editor Suffix)
+// Units: o03D (Wyvern), EditorSuffix (Name - Editor Suffix)
 {
 (Tauren)
 }
 
 STRING 649
-// Units: o03E (Spirit Flügeldrache), EditorSuffix (Name - Editor Suffix)
+// Units: o03E (Spirit Wyvern), EditorSuffix (Name - Editor Suffix)
 {
 (Tauren)
 }
@@ -4220,7 +4226,7 @@ STRING 705
 }
 
 STRING 706
-// Abilities: A01H (Diebstahl - Grand Master), Name (Name)
+// Abilities: A01H (Thieving - Grand Master), Name (Name)
 {
 Diebstahl - Grand Master
 }
@@ -4496,7 +4502,7 @@ Maiev fangen
 }
 
 STRING 752
-// Units: N02T (Niederdrache), Ubertip (Tooltip - Extended)
+// Units: N02T (Nether Dragon), Ubertip (Tooltip - Extended)
 {
 Flying boss hero from Outland who can cast Kritischer Schlag, Evasion, Life Steal, Dämonenmeister and Reinkarnation.|n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r|n|n|cffffcc00Boss hero requires level 50. Benutzen Sie -unlock, um diese Beschränkung aufzuheben.|r
 }
@@ -4712,16 +4718,6 @@ STRING 788
 S
 }
 
-STRING 789
-{
-|cffffcc00Volk:|r Orcs|n|cffffcc00Klasse:|r Erdmagier|n|cffffcc00Reittier:|r Flügeldrache|n|cffffcc00Primäres Attribut:|r Intelligenz|n|cffffcc00Kraft:|r 15/2|n|cffffcc00Beweglichkeit:|r 18/1|n|cffffcc00Intelligenz:|r 19/3|n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
-}
-
-STRING 790
-{
-|cffffcc00Volk:|r Orcs|n|cffffcc00Klasse:|r Erdmagier|n|cffffcc00Reittier:|r Flügeldrache|n|cffffcc00Primäres Attribut:|r Intelligenz|n|cffffcc00Kraft:|r 15/2|n|cffffcc00Beweglichkeit:|r 18/1|n|cffffcc00Intelligenz:|r 19/3|n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
-}
-
 STRING 791
 // Buffs/Effects: B00U (), Bufftip (Tooltip)
 {
@@ -4732,6 +4728,12 @@ STRING 792
 // Items: I137 (Goblin Dynamite), Tip (Tooltip - Basic)
 {
 Goblin-Dynamit erwerben
+}
+
+STRING 793
+// Units: n0E4 (Banner Shop), EditorSuffix (Name - Editor Suffix)
+{
+(Neutral)
 }
 
 STRING 794
@@ -5049,7 +5051,7 @@ Panzerung - Advanced
 }
 
 STRING 852
-// Upgrades: R019 (Ölbrand), effect2 (Effect 2)
+// Upgrades: R019 (Burning Oil), effect2 (Effect 2)
 {
 rent
 }
@@ -5145,7 +5147,7 @@ Skins
 }
 
 STRING 868
-// Upgrades: R01B (Ölbrand), effect3 (Effect 3)
+// Upgrades: R01B (Burning Oil), effect3 (Effect 3)
 {
 rent
 }
@@ -5187,37 +5189,37 @@ Lich-König
 }
 
 STRING 875
-// Upgrades: R01C (Ölbrand), Ubertip (Tooltip - Extended)
+// Upgrades: R01C (Burning Oil), Ubertip (Tooltip - Extended)
 {
 Spieler ist keine KI.
 }
 
 STRING 876
-// Upgrades: R01C (Ölbrand), Name (Name)
+// Upgrades: R01C (Burning Oil), Name (Name)
 {
 Keine KI
 }
 
 STRING 877
-// Upgrades: R01C (Ölbrand), Tip (Tooltip)
+// Upgrades: R01C (Burning Oil), Tip (Tooltip)
 {
 Keine KI
 }
 
 STRING 878
-// Upgrades: R019 (Ölbrand), Tip (Tooltip)
+// Upgrades: R019 (Burning Oil), Tip (Tooltip)
 {
 KI-Goldbonus
 }
 
 STRING 879
-// Upgrades: R01C (Ölbrand), Ubertip (Tooltip - Extended)
+// Upgrades: R01C (Burning Oil), Ubertip (Tooltip - Extended)
 {
 Night Elf and Undead AI cannot use housings. They need a bonus.
 }
 
 STRING 880
-// Upgrades: R019 (Ölbrand), Name (Name)
+// Upgrades: R019 (Burning Oil), Name (Name)
 {
 KI-Goldbonus
 }
@@ -5582,7 +5584,7 @@ Evolution erforschen - [|cffffcc00Stufe 42|r]
 }
 
 STRING 942
-// Abilities: A027 (Schutz des Halbgotts), Tip (Tooltip - Normal)
+// Abilities: A027 (Demigod´s Protection), Tip (Tooltip - Normal)
 {
 Schutz des Halbgotts
 }
@@ -5657,6 +5659,12 @@ STRING 954
 // Units: H0Y0 (Rogue), Awakentip (Tooltip - Awaken)
 {
 Schurken wiederbeleben
+}
+
+STRING 955
+// Units: e019 (Blood Elf Shipyard), EditorSuffix (Name - Editor Suffix)
+{
+(Neutral)
 }
 
 STRING 956
@@ -5767,6 +5775,12 @@ STRING 973
 (Gegenstand)
 }
 
+STRING 974
+// Abilities: A043 (Summon Gan'arg Engineerss), Name (Name)
+{
+Summon Gan'arg Engineerss
+}
+
 STRING 975
 // Abilities: A029 (Fear), Name (Name)
 {
@@ -5828,7 +5842,7 @@ Stellt den Bau und Ausbau von allen unvollendeten verbündeten Gebäuden fertig.
 }
 
 STRING 985
-// Abilities: A0K5 (Bau fertigstellen), Name (Name)
+// Abilities: A0K5 (Finish Construction), Name (Name)
 {
 Bau fertigstellen
 }
@@ -5852,7 +5866,7 @@ Stellt winzige Gebäude und Gegenstände zum Schutz Ihreres Stützpunktes her:|n
 }
 
 STRING 989
-// Abilities: A01H (Diebstahl - Grand Master), Tip (Tooltip - Normal)
+// Abilities: A01H (Thieving - Grand Master), Tip (Tooltip - Normal)
 {
 Großmeister-Diebstahl
 }
@@ -5935,7 +5949,7 @@ G
 }
 
 STRING 1003
-// Items: I07X (Zufällige Klasse), Tip (Tooltip - Basic)
+// Items: I07X (Random Class), Tip (Tooltip - Basic)
 {
 Zufällige Klasse
 }
@@ -5970,7 +5984,7 @@ STRING 1008
 }
 
 STRING 1009
-// Abilities: A08Y (Zufällige Klasse), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A08Y (Random Class), Ubertip (Tooltip - Normal - Extended)
 {
 Wählt eine zufällige Klasse für den Helden und ersetzt alle Fähigkeiten.
 }
@@ -6149,7 +6163,7 @@ STRING 1038
 }
 
 STRING 1039
-// Abilities: A01J (Diebstahl - Doctor), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A01J (Thieving - Doctor), Ubertip (Tooltip - Normal - Extended)
 {
 The Thief Alchemist uses his knowledge to create a Tiny Thieves Guild.
 }
@@ -6371,7 +6385,7 @@ S
 }
 
 STRING 1076
-// Abilities: A01H (Diebstahl - Grand Master), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A01H (Thieving - Grand Master), Ubertip (Tooltip - Normal - Extended)
 {
 The Thief uses his knowledge to create a Pickpocketing.
 }
@@ -6515,7 +6529,7 @@ Wechselt die Klasse zum Paladin:|n- Heilen|n- Inneres Feuer|n- Heiliges Licht|n-
 }
 
 STRING 1100
-// Items: I04L (Erdmagier), Ubertip (Tooltip - Extended)
+// Items: I04L (Geomancer), Ubertip (Tooltip - Extended)
 {
 Wechselt die Klasse zum Erdmagier:|n- Felsen schleudern|n- Mauer beschwören|n- Ausdauer-Aura|n- Fernsicht|n- Schockwelle|n- Schmettern|n- Golem beschwören|n- Kampfrausch|n- Erdbeben|n- Stampede|n- Reinkarnation
 }
@@ -6545,7 +6559,7 @@ Wechselt die Klasse zum Wassermagier:|n- Wasserschaden|n- Frostschaden|n- Frostr
 }
 
 STRING 1105
-// Items: I07X (Zufällige Klasse), Ubertip (Tooltip - Extended)
+// Items: I07X (Random Class), Ubertip (Tooltip - Extended)
 {
 Wählt eine zufällige verfügbare Klasse.
 }
@@ -6574,13 +6588,13 @@ Diebstahl - Doctor
 }
 
 STRING 1110
-// Abilities: A01J (Diebstahl - Doctor), Tip (Tooltip - Normal)
+// Abilities: A01J (Thieving - Doctor), Tip (Tooltip - Normal)
 {
 Doctor Diebstahl
 }
 
 STRING 1111
-// Abilities: A08Y (Zufällige Klasse), Name (Name)
+// Abilities: A08Y (Random Class), Name (Name)
 {
 Zufällige Klasse
 }
@@ -6602,7 +6616,7 @@ Primäres Gebäude, wird zum Ausbilden von Elementardienern und zum Einlagern ge
 }
 
 STRING 1115
-// Abilities: A08Y (Zufällige Klasse), Tip (Tooltip - Normal)
+// Abilities: A08Y (Random Class), Tip (Tooltip - Normal)
 {
 Zufällige Klasse
 }
@@ -6646,7 +6660,7 @@ K
 }
 
 STRING 1123
-// Units: h09K (Blitz-Elementargeist), Hotkey (Hotkey)
+// Units: h09K (Lightning Elemental), Hotkey (Hotkey)
 {
 L
 }
@@ -6750,6 +6764,12 @@ STRING 1140
 Zepter der Nachtelfen erwerben
 }
 
+STRING 1141
+// Abilities: A0JV (Freezing Breath), EditorSuffix (Editor Suffix)
+{
+(Neutral)
+}
+
 STRING 1142
 // Units: O004 (Stormreaver Warlock), Name (Name)
 {
@@ -6793,7 +6813,7 @@ Legendäres Artefakt
 }
 
 STRING 1149
-// Abilities: A0AE (Hero Abilities Zufällige Klasse), Name (Name)
+// Abilities: A0AE (Hero Abilities Random Class), Name (Name)
 {
 Heldenfähigkeiten Zufällige Klasse
 }
@@ -6853,7 +6873,7 @@ W
 }
 
 STRING 1159
-// Units: h001 (Wasser-Elementargeist), EditorSuffix (Name - Editor Suffix)
+// Units: h001 (Water Elemental), EditorSuffix (Name - Editor Suffix)
 {
 (Stufe 4)
 }
@@ -6907,7 +6927,7 @@ F
 }
 
 STRING 1168
-// Units: o003 (Flügeldrache Mount), Tip (Tooltip - Basic)
+// Units: o003 (Wyvern Mount), Tip (Tooltip - Basic)
 {
 Flügeldrachen-Reittier
 }
@@ -6924,6 +6944,12 @@ STRING 1170
 Halbgott
 }
 
+STRING 1171
+// Abilities: A1X2 (Soul Theft), EditorSuffix (Editor Suffix)
+{
+(Neutral)
+}
+
 STRING 1172
 // Units: o01M (Railway East), Hotkey (Hotkey)
 {
@@ -6937,7 +6963,7 @@ R
 }
 
 STRING 1174
-// Units: e005 (Schimären-Reittier), Name (Name)
+// Units: e005 (Chimaera Mount), Name (Name)
 {
 Schimären-Reittier
 }
@@ -7417,7 +7443,7 @@ Günstige Evolution erforschen - [|cffffcc00Stufe 27|r]
 }
 
 STRING 1254
-// Units: h00Z (Kanonier-Team), EditorSuffix (Name - Editor Suffix)
+// Units: h00Z (Canoneer Team), EditorSuffix (Name - Editor Suffix)
 {
 (Kul Tiras)
 }
@@ -7896,6 +7922,11 @@ STRING 1333
 Fügt 1 Kraft hinzu. Benutzen Sie den Chat-Befehl "-str -X", um X Kraft hinzuzufügen. Benutzen Sie den Chat-Befehl "-str", um die maximale Kraft hinzuzufügen.
 }
 
+STRING 1334
+{
+(Neutral)
+}
+
 STRING 1335
 // Items: I08Z (Unique - Sulfuras), Ubertip (Tooltip - Extended)
 {
@@ -7948,6 +7979,11 @@ STRING 1343
 // Units: nhea (Blood Elf Archer), EditorSuffix (Name - Editor Suffix)
 {
 (Blutelfen)
+}
+
+STRING 1344
+{
+
 }
 
 STRING 1345
@@ -8050,6 +8086,12 @@ STRING 1361
 // Units: h0T4 (Dummy), EditorSuffix (Name - Editor Suffix)
 {
 (Spiegelung)
+}
+
+STRING 1363
+// Abilities: A1XD (Defend), EditorSuffix (Editor Suffix)
+{
+(Neutral)
 }
 
 STRING 1364
@@ -8983,19 +9025,19 @@ D
 }
 
 STRING 1523
-// Units: h09H (Wasser-Elementargeist), Ubertip (Tooltip - Extended)
+// Units: h09H (Water Elemental), Ubertip (Tooltip - Extended)
 {
 Wechselt die Klasse zum Luftmagier:|n- Luftmagie|n- Entwaffnung|n- Wirbelstürme
 }
 
 STRING 1524
-// Items: I00W (Stein der Ordnung Fragment), Ubertip (Tooltip - Extended)
+// Items: I00W (Order Stone Fragment), Ubertip (Tooltip - Extended)
 {
 Boosts defense by 10 and casts Heiliges Licht. Also needed for the Guardian Transformation Ritual.
 }
 
 STRING 1525
-// Units: H08E (Wächter von Tirisfal), Hotkey (Hotkey)
+// Units: H08E (Guardian of Tirisfal), Hotkey (Hotkey)
 {
 J
 }
@@ -9277,7 +9319,7 @@ STRING 1571
 }
 
 STRING 1572
-// Units: h09H (Wasser-Elementargeist), Hotkey (Hotkey)
+// Units: h09H (Water Elemental), Hotkey (Hotkey)
 {
 W
 }
@@ -9847,7 +9889,7 @@ E
 }
 
 STRING 1667
-// Units: h0BW (Fliegende Dreadnought), Hotkey (Hotkey)
+// Units: h0BW (Flying Dreadnought), Hotkey (Hotkey)
 {
 D
 }
@@ -9919,7 +9961,7 @@ STRING 1678
 }
 
 STRING 1679
-// Abilities: A027 (Schutz des Halbgotts), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A027 (Demigod´s Protection), Ubertip (Tooltip - Normal - Extended)
 {
 Turns all friendly units in the world invulnerable. |nThe Temple does not turn invulnerable. |nHält <AOvd,Dur1> Sekunden lang an.
 }
@@ -10663,7 +10705,7 @@ STRING 1816
 }
 
 STRING 1817
-// Units: n0IU (Armory), Hotkey (Hotkey)
+// Units: U03H (Burrowed Nerubian Queen), Hotkey (Hotkey)
 {
 Tank Hero, defending your army and destroying hostile towns. Can learn Schockwelle, Stachelpanzer, Hieb, and Avatar. |n|n|cffffcc00Greift Land-Einheiten an.|r
 }
@@ -10699,7 +10741,7 @@ Gnomfabrik errichten
 }
 
 STRING 1832
-// Units: U03H (Burrowed Nerubian Queen), Hotkey (Hotkey)
+// Units: o0C0 (Next Skin), Hotkey (Hotkey)
 {
 Q
 }
@@ -10795,7 +10837,7 @@ Mauer beschwören
 }
 
 STRING 1849
-// Abilities: A0AQ (Summon Wasser-Elementargeist), EditorSuffix (Editor Suffix)
+// Abilities: A0AQ (Summon Water Elemental), EditorSuffix (Editor Suffix)
 {
 (Neutral Feindlich)
 }
@@ -10975,13 +11017,13 @@ Bildet Wanderfalken und Albatrossreiter aus. |nBietet auch die Ausbaustufen 'Dur
 }
 
 STRING 1886
-// Upgrades: R019 (Ölbrand), EditorSuffix (Editor Suffix)
+// Upgrades: R019 (Burning Oil), EditorSuffix (Editor Suffix)
 {
 (Untote, Nachtelfen, Zwerge, Dalaran)
 }
 
 STRING 1887
-// Upgrades: R02E (Ölbrand), Name (Name)
+// Upgrades: R02E (Burning Oil), Name (Name)
 {
 AI Freiberufler Fast Gold Bonus
 }
@@ -11017,7 +11059,7 @@ STRING 1892
 }
 
 STRING 1893
-// Units: o0C0 (Next Skin), Hotkey (Hotkey)
+// Items: tstr (Tome of Strength), Hotkey (Hotkey)
 {
 Q
 }
@@ -11551,25 +11593,25 @@ The flag of the Orc clan which should be brought to Illidan in Outland.
 }
 
 STRING 2052
-// Items: I02C (Illidans Kugel), Ubertip (Tooltip - Extended)
+// Items: I02C (Illidan's Orb), Ubertip (Tooltip - Extended)
 {
 A powerful orb against Demons from Illidan. This item is required to attack Magtheridon.
 }
 
 STRING 2053
-// Items: I02C (Illidans Kugel), Description (Description)
+// Items: I02C (Illidan's Orb), Description (Description)
 {
 A powerful orb against Demons from Illidan. This item is required to attack Magtheridon.
 }
 
 STRING 2054
-// Items: I02D (Maghteridons Herz), Ubertip (Tooltip - Extended)
+// Items: I02D (Maghteridon's Heart), Ubertip (Tooltip - Extended)
 {
 The heart of the powerful Grubenlord Magtheridon. It must be returned to Illidan in Outland.
 }
 
 STRING 2055
-// Items: I02D (Maghteridons Herz), Description (Description)
+// Items: I02D (Maghteridon's Heart), Description (Description)
 {
 The heart of the powerful Grubenlord Magtheridon. It must be returned to Illidan in Outland.
 }
@@ -11605,7 +11647,7 @@ Foliant der Göttlichkeit erwerben
 }
 
 STRING 2061
-// Items: I0B3 (Summon Niederdrache), Name (Name)
+// Items: I0B3 (Summon Nether Dragon), Name (Name)
 {
 Niederdrachen beschwören
 }
@@ -11716,7 +11758,7 @@ STRING 2078
 }
 
 STRING 2079
-// Items: tstr (Tome of Strength), Hotkey (Hotkey)
+// Items: I00V (Magical Seed), Hotkey (Hotkey)
 {
 Q
 }
@@ -12238,25 +12280,25 @@ STRING 2244
 }
 
 STRING 2245
-// Abilities: A030 (Versklavung), Name (Name)
+// Abilities: A030 (Enslavement), Name (Name)
 {
 Versklavung
 }
 
 STRING 2246
-// Abilities: A030 (Versklavung), Tip (Tooltip - Normal)
+// Abilities: A030 (Enslavement), Tip (Tooltip - Normal)
 {
 Versklavung
 }
 
 STRING 2247
-// Abilities: A030 (Versklavung), EditorSuffix (Editor Suffix)
+// Abilities: A030 (Enslavement), EditorSuffix (Editor Suffix)
 {
  (Icon) (Gnolle)
 }
 
 STRING 2248
-// Abilities: A030 (Versklavung), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A030 (Enslavement), Ubertip (Tooltip - Normal - Extended)
 {
 Verwandelt einen getöteten Feind im nächstgelegenen Rathaus in einen Sklaven.
 }
@@ -12328,7 +12370,7 @@ STRING 2259
 }
 
 STRING 2260
-// Abilities: A03J (Versklavung), Name (Name)
+// Abilities: A03J (Enslavement), Name (Name)
 {
 Versklavung
 }
@@ -12921,12 +12963,6 @@ STRING 2360
 A
 }
 
-STRING 2361
-// Units: n00C (Unholy Cathedral), Description (Description)
-{
-Erlaubt Ihnen Skelettierte Orcs anzuheuern.
-}
-
 STRING 2362
 // Items: I0T3 (Combiner), Name (Name)
 {
@@ -12946,7 +12982,7 @@ A
 }
 
 STRING 2365
-// Abilities: A01H (Diebstahl - Grand Master), Hotkey (Hotkey - Normal)
+// Abilities: A01H (Thieving - Grand Master), Hotkey (Hotkey - Normal)
 {
 A
 }
@@ -14236,31 +14272,31 @@ STRING 2614
 }
 
 STRING 2615
-// Abilities: A03J (Versklavung), Tip (Tooltip - Normal)
+// Abilities: A03J (Enslavement), Tip (Tooltip - Normal)
 {
 Versklavung
 }
 
 STRING 2616
-// Abilities: A03J (Versklavung), EditorSuffix (Editor Suffix)
+// Abilities: A03J (Enslavement), EditorSuffix (Editor Suffix)
 {
  (Icon) (Banditen)
 }
 
 STRING 2617
-// Abilities: A03J (Versklavung), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A03J (Enslavement), Ubertip (Tooltip - Normal - Extended)
 {
 Converts a killed enemy into a Slave at your nearest town hall.
 }
 
 STRING 2618
-// Abilities: A0KD (Versklavung), Name (Name)
+// Abilities: A0KD (Enslavement), Name (Name)
 {
 Versklavung
 }
 
 STRING 2619
-// Abilities: A0KD (Versklavung), Tip (Tooltip - Normal)
+// Abilities: A0KD (Enslavement), Tip (Tooltip - Normal)
 {
 Versklavung
 }
@@ -14560,13 +14596,13 @@ Diebesgilde
 }
 
 STRING 2669
-// Upgrades: R078 (Ölbrand), Tip (Tooltip)
+// Upgrades: R078 (Burning Oil), Tip (Tooltip)
 {
 Diebesgilde erforschen
 }
 
 STRING 2670
-// Upgrades: R078 (Ölbrand), Ubertip (Tooltip - Extended)
+// Upgrades: R078 (Burning Oil), Ubertip (Tooltip - Extended)
 {
 Erlaubt Bürgern den Bau a Diebesgilde to sell killed units and dropped items.
 }
@@ -14704,7 +14740,7 @@ Schwarzen Großdrachen beschwören
 }
 
 STRING 2695
-// Units: n08E (Dalaran-Himmelswachturm), Hotkey (Hotkey)
+// Units: n08E (Dalaran Sky Guard Tower), Hotkey (Hotkey)
 {
 T
 }
@@ -14830,7 +14866,7 @@ Y
 }
 
 STRING 2784
-// Items: I00V (Magical Seed), Hotkey (Hotkey)
+// Items: I017 (Magical Seed (3)), Hotkey (Hotkey)
 {
 Q
 }
@@ -14878,7 +14914,7 @@ S
 }
 
 STRING 2801
-// Items: I017 (Magical Seed (3)), Hotkey (Hotkey)
+// Items: I018 (Tiny Hideout), Hotkey (Hotkey)
 {
 Q
 }
@@ -15052,7 +15088,7 @@ B
 }
 
 STRING 2851
-// Abilities: A0KD (Versklavung), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0KD (Enslavement), Ubertip (Tooltip - Normal - Extended)
 {
 Converts a killed enemy into a Slave at your nearest town hall.
 }
@@ -15106,7 +15142,7 @@ STRING 2860
 }
 
 STRING 2861
-// Upgrades: R060 (Leuchtfeuer), effect3 (Effect 3)
+// Upgrades: R060 (Flare), effect3 (Effect 3)
 {
 rhpo
 }
@@ -15340,13 +15376,13 @@ Ausbilder
 }
 
 STRING 2943
-// Abilities: A05Q (Ölbrand), EditorSuffix (Editor Suffix)
+// Abilities: A05Q (Burning Oil), EditorSuffix (Editor Suffix)
 {
 (Ballisten)
 }
 
 STRING 2945
-// Abilities: A05Q (Ölbrand), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A05Q (Burning Oil), Ubertip (Tooltip - Normal - Extended)
 {
 Drenches the Balliste ammo in burning oil, causing them to light the ground on fire and burn enemy units.
 }
@@ -15358,25 +15394,25 @@ STRING 2948
 }
 
 STRING 2949
-// Items: I02T (Kil'jaedens Chaos-Stein), Name (Name)
+// Items: I02T (Kil'jaedens Chaos Stone), Name (Name)
 {
 Kil'jaedens Chaos-Stein
 }
 
 STRING 2950
-// Items: I02T (Kil'jaedens Chaos-Stein), Description (Description)
+// Items: I02T (Kil'jaedens Chaos Stone), Description (Description)
 {
 A powerful stone from Kil'jaeden. Return it to the Lich-König.
 }
 
 STRING 2951
-// Items: I02T (Kil'jaedens Chaos-Stein), Ubertip (Tooltip - Extended)
+// Items: I02T (Kil'jaedens Chaos Stone), Ubertip (Tooltip - Extended)
 {
 A powerful stone from Kil'jaeden. Return it to the Lich-König.
 }
 
 STRING 2952
-// Upgrades: R00Y (Ölbrand), Ubertip (Tooltip - Extended)
+// Upgrades: R00Y (Burning Oil), Ubertip (Tooltip - Extended)
 {
 Upgrades Ballisten to fire missiles smothered in burning oil, which causes the ground to burn.
 }
@@ -15556,7 +15592,7 @@ Gefangen nehmen
 }
 
 STRING 2985
-// Upgrades: R02E (Ölbrand), Ubertip (Tooltip - Extended)
+// Upgrades: R02E (Burning Oil), Ubertip (Tooltip - Extended)
 {
 Freelancer AI must harvest gold a bit faster since they share one single Gold Mine.
 }
@@ -15688,7 +15724,7 @@ Steine
 }
 
 STRING 3016
-// Items: I018 (Tiny Hideout), Hotkey (Hotkey)
+// Items: I044 (Mana Burn), Hotkey (Hotkey)
 {
 Q
 }
@@ -16114,7 +16150,7 @@ STRING 3087
 }
 
 STRING 3088
-// Abilities: A0LA (Federangriff), EditorSuffix (Editor Suffix)
+// Abilities: A0LA (Feather Attack), EditorSuffix (Editor Suffix)
 {
 (Banditen)
 }
@@ -16126,7 +16162,7 @@ STRING 3089
 }
 
 STRING 3090
-// Abilities: A0LF (Sturmhammer), EditorSuffix (Editor Suffix)
+// Abilities: A0LF (Storm Hammers), EditorSuffix (Editor Suffix)
 {
 (Banditen)
 }
@@ -16168,31 +16204,31 @@ STRING 3096
 }
 
 STRING 3100
-// Abilities: A0LA (Federangriff), Name (Name)
+// Abilities: A0LA (Feather Attack), Name (Name)
 {
 Federangriff
 }
 
 STRING 3101
-// Abilities: A0LA (Federangriff), Tip (Tooltip - Normal)
+// Abilities: A0LA (Feather Attack), Tip (Tooltip - Normal)
 {
 Federangriff
 }
 
 STRING 3102
-// Abilities: A0LA (Federangriff), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0LA (Feather Attack), Ubertip (Tooltip - Normal - Extended)
 {
 Gives the Crow the ability to strike additional units with its feather attacks.
 }
 
 STRING 3103
-// Abilities: A0LF (Sturmhammer), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0LF (Storm Hammers), Ubertip (Tooltip - Normal - Extended)
 {
 Ermöglicht den Angriffen eines Greifenräubers, mehrere Einheiten zu beschädigen.
 }
 
 STRING 3105
-// Items: I044 (Mana Burn), Hotkey (Hotkey)
+// Items: I05U (Human), Hotkey (Hotkey)
 {
 Q
 }
@@ -16240,7 +16276,7 @@ Durchblick
 }
 
 STRING 3143
-// Items: I05U (Human), Hotkey (Hotkey)
+// Items: I05V (First Race), Hotkey (Hotkey)
 {
 Q
 }
@@ -16324,7 +16360,7 @@ STRING 3156
 }
 
 STRING 3157
-// Upgrades: R07D (Sturmhammer), Ubertip (Tooltip - Extended)
+// Upgrades: R07D (Storm Hammers), Ubertip (Tooltip - Extended)
 {
 Ermöglicht den Angriffen eines Greifenräubers, mehrere Einheiten zu beschädigen.
 }
@@ -16606,7 +16642,7 @@ Upgrades Banditenlords to have the ability Niederreiten.
 }
 
 STRING 3206
-// Upgrades: R00D (Eis-Atem), Name (Name)
+// Upgrades: R00D (Freezing Breath), Name (Name)
 {
 Festhaut
 }
@@ -16618,7 +16654,7 @@ STRING 3207
 }
 
 STRING 3208
-// Upgrades: R00D (Eis-Atem), Tip (Tooltip)
+// Upgrades: R00D (Freezing Breath), Tip (Tooltip)
 {
 Festhaut erforschen
 }
@@ -16678,7 +16714,7 @@ B
 }
 
 STRING 3233
-// Upgrades: R078 (Ölbrand), EditorSuffix (Editor Suffix)
+// Upgrades: R078 (Burning Oil), EditorSuffix (Editor Suffix)
 {
 (Banditen)
 }
@@ -16864,7 +16900,7 @@ STRING 3281
 }
 
 STRING 3282
-// Upgrades: R07D (Sturmhammer), EditorSuffix (Editor Suffix)
+// Upgrades: R07D (Storm Hammers), EditorSuffix (Editor Suffix)
 {
 (Banditen)
 }
@@ -16954,7 +16990,7 @@ L
 }
 
 STRING 3315
-// Units: n0E3 (Hero Abilities), Hotkey (Hotkey)
+// Units: n0EG (Nerubian Spider Lord), Hotkey (Hotkey)
 {
 L
 }
@@ -17854,13 +17890,13 @@ Specialized on healing, peace, cooking and alcohol.
 }
 
 STRING 3483
-// Items: I05V (First Race), Hotkey (Hotkey)
+// Items: I066 (New Stormwind (Azeroth)), Hotkey (Hotkey)
 {
 Q
 }
 
 STRING 3484
-// Items: I066 (New Stormwind (Azeroth)), Hotkey (Hotkey)
+// Items: I068 (Random Hero), Hotkey (Hotkey)
 {
 Q
 }
@@ -17878,7 +17914,7 @@ E
 }
 
 STRING 3487
-// Units: n0EG (Nerubian Spider Lord), Hotkey (Hotkey)
+// Units: n0EO (Burrowed Nerubian Spider Lord), Hotkey (Hotkey)
 {
 L
 }
@@ -18334,7 +18370,7 @@ Lebensregeneration
 }
 
 STRING 3633
-// Units: n0JC (Großtempler), EditorSuffix (Name - Editor Suffix)
+// Units: n0JC (High Templar), EditorSuffix (Name - Editor Suffix)
 {
 (Draenei)
 }
@@ -18838,7 +18874,7 @@ Liefert Essen, wodurch die maximale Anzahl von Einheiten erhöht wird, die ausge
 }
 
 STRING 3728
-// Units: h00P (Wächter des Grabes), EditorSuffix (Name - Editor Suffix)
+// Units: h00P (Keeper of the Grave), EditorSuffix (Name - Editor Suffix)
 {
 (NPC)
 }
@@ -19030,7 +19066,7 @@ E
 }
 
 STRING 3762
-// Items: I068 (Random Hero), Hotkey (Hotkey)
+// Items: I06N (Herbalist), Hotkey (Hotkey)
 {
 Q
 }
@@ -19540,7 +19576,7 @@ STRING 3884
 }
 
 STRING 3885
-// Items: I06N (Herbalist), Hotkey (Hotkey)
+// Items: I07B (Reset Equipment Bags), Hotkey (Hotkey)
 {
 Q
 }
@@ -19780,7 +19816,7 @@ STRING 3940
 }
 
 STRING 3941
-// Upgrades: R01C (Ölbrand), Tip (Tooltip)
+// Upgrades: R01C (Burning Oil), Tip (Tooltip)
 {
 KI-Goldbonus Game Type Fast
 }
@@ -19792,37 +19828,37 @@ Günstige Evolution erforschen - [|cffffcc00Stufe 46|r]
 }
 
 STRING 3946
-// Upgrades: R01C (Ölbrand), Name (Name)
+// Upgrades: R01C (Burning Oil), Name (Name)
 {
 KI-Goldbonus Game Type Fast
 }
 
 STRING 3947
-// Upgrades: R01B (Ölbrand), Name (Name)
+// Upgrades: R01B (Burning Oil), Name (Name)
 {
 AI Lumber Bonus Game Type Fast
 }
 
 STRING 3948
-// Upgrades: R01B (Ölbrand), Tip (Tooltip)
+// Upgrades: R01B (Burning Oil), Tip (Tooltip)
 {
 AI Lumber Bonus Game Type Fast
 }
 
 STRING 3949
-// Upgrades: R01B (Ölbrand), Ubertip (Tooltip - Extended)
+// Upgrades: R01B (Burning Oil), Ubertip (Tooltip - Extended)
 {
 All races shouldn't have too many lumber workers to safe space. They need a lumber harvesting bonus.
 }
 
 STRING 3950
-// Upgrades: R01B (Ölbrand), effect2 (Effect 2)
+// Upgrades: R01B (Burning Oil), effect2 (Effect 2)
 {
 rmin
 }
 
 STRING 3951
-// Upgrades: R01B (Ölbrand), Ubertip (Tooltip - Extended)
+// Upgrades: R01B (Burning Oil), Ubertip (Tooltip - Extended)
 {
 All races shouldn't have too many lumber workers to safe space. They need a lumber harvesting bonus.
 }
@@ -19834,37 +19870,37 @@ STRING 3952
 }
 
 STRING 3953
-// Upgrades: R01B (Ölbrand), Name (Name)
+// Upgrades: R01B (Burning Oil), Name (Name)
 {
 Fast Gold and Lumber Bonus
 }
 
 STRING 3954
-// Upgrades: R01B (Ölbrand), Tip (Tooltip)
+// Upgrades: R01B (Burning Oil), Tip (Tooltip)
 {
 Fast Gold and Lumber Bonus
 }
 
 STRING 3955
-// Upgrades: R01B (Ölbrand), effect1 (Effect 1)
+// Upgrades: R01B (Burning Oil), effect1 (Effect 1)
 {
 rlum
 }
 
 STRING 3956
-// Upgrades: R02E (Ölbrand), Name (Name)
+// Upgrades: R02E (Burning Oil), Name (Name)
 {
 AI Lumber Bonus Game Type Fast
 }
 
 STRING 3957
-// Upgrades: R02E (Ölbrand), Tip (Tooltip)
+// Upgrades: R02E (Burning Oil), Tip (Tooltip)
 {
 AI Lumber Bonus Game Type Fast
 }
 
 STRING 3958
-// Upgrades: R02E (Ölbrand), Ubertip (Tooltip - Extended)
+// Upgrades: R02E (Burning Oil), Ubertip (Tooltip - Extended)
 {
 All races shouldn't have too many lumber workers to safe space. They need a lumber harvesting bonus.
 }
@@ -20032,13 +20068,13 @@ Dezimator
 }
 
 STRING 4031
-// Items: I07B (Reset Equipment Bags), Hotkey (Hotkey)
+// Items: I07C (Potion of Greater Restoration), Hotkey (Hotkey)
 {
 Q
 }
 
 STRING 4032
-// Items: I07C (Potion of Greater Restoration), Hotkey (Hotkey)
+// Items: I098 (Craft Potion of Greater Restoration), Hotkey (Hotkey)
 {
 Q
 }
@@ -20062,7 +20098,7 @@ STRING 4036
 }
 
 STRING 4037
-// Items: I098 (Craft Potion of Greater Restoration), Hotkey (Hotkey)
+// Items: I09D (Archaeologist), Hotkey (Hotkey)
 {
 Q
 }
@@ -20164,25 +20200,25 @@ D
 }
 
 STRING 4093
-// Items: I02Z (Rune of Restoration (Runenschmied)), Name (Name)
+// Items: I02Z (Rune of Restoration (Runeforger)), Name (Name)
 {
 Rune der Wiederherstellung (Runenschmied)
 }
 
 STRING 4094
-// Items: I030 (Rune of Speed (Runenschmied)), Name (Name)
+// Items: I030 (Rune of Speed (Runeforger)), Name (Name)
 {
 Rune der Geschwindigkeit (Runenschmied)
 }
 
 STRING 4095
-// Items: I031 (Rune of Dispel Magic (Runenschmied)), Name (Name)
+// Items: I031 (Rune of Dispel Magic (Runeforger)), Name (Name)
 {
 Rune der Magie-Bannung (Runenschmied)
 }
 
 STRING 4096
-// Items: I032 (Rune of Rebirth (Runenschmied)), Name (Name)
+// Items: I032 (Rune of Rebirth (Runeforger)), Name (Name)
 {
 Rune der Wiedergeburt (Runenschmied)
 }
@@ -20872,7 +20908,7 @@ Verderbnis
 }
 
 STRING 4292
-// Items: I032 (Rune of Rebirth (Runenschmied)), Ubertip (Tooltip - Extended)
+// Items: I032 (Rune of Rebirth (Runeforger)), Ubertip (Tooltip - Extended)
 {
 Places the monster that held this rune under your control. Give it to one of your units and when the unit dies use it to recreate the unit.
 }
@@ -20908,13 +20944,13 @@ STRING 4300
 }
 
 STRING 4301
-// Upgrades: R021 (Ölbrand), Name (Name)
+// Upgrades: R021 (Burning Oil), Name (Name)
 {
 Magisches Gewölbe
 }
 
 STRING 4302
-// Upgrades: R021 (Ölbrand), Tip (Tooltip)
+// Upgrades: R021 (Burning Oil), Tip (Tooltip)
 {
 Magisches Gewölbe
 }
@@ -20938,7 +20974,7 @@ STRING 4305
 }
 
 STRING 4309
-// Items: I09D (Archaeologist), Hotkey (Hotkey)
+// Items: I0A6 (Reset Hero Spells), Hotkey (Hotkey)
 {
 Q
 }
@@ -21016,7 +21052,7 @@ Heldenstufe 10
 }
 
 STRING 4329
-// Items: I0A6 (Reset Hero Spells), Hotkey (Hotkey)
+// Items: I0AV (Accept), Hotkey (Hotkey)
 {
 Q
 }
@@ -21123,12 +21159,6 @@ STRING 4361
 Bildet Furbolg-Krieger-Einheiten aus.
 }
 
-STRING 4362
-// Units: n027 (Furbolg Barracks), Description (Description)
-{
-Bildet Furbolg-Krieger-Einheiten aus.
-}
-
 STRING 4363
 // Units: n02H (Furbolg Shaman), EditorSuffix (Name - Editor Suffix)
 {
@@ -21196,7 +21226,7 @@ Junge Furbolgs beschwören
 }
 
 STRING 4374
-// Abilities: A043 (Summon Imps), EditorSuffix (Editor Suffix)
+// Abilities: A043 (Summon Gan'arg Engineerss), EditorSuffix (Editor Suffix)
 {
 (Gegenstand)
 }
@@ -21289,12 +21319,6 @@ STRING 4390
 // Units: n02B (Defiled Fountain of Life), Tip (Tooltip - Basic)
 {
 Entweihte Quelle des Lebens errichten
-}
-
-STRING 4391
-// Units: n02B (Defiled Fountain of Life), Description (Description)
-{
-Building to train Furbolg magical casting units. Restores life and mana of units.
 }
 
 STRING 4393
@@ -21562,7 +21586,7 @@ STRING 4440
 }
 
 STRING 4443
-// Units: N02T (Niederdrache), EditorSuffix (Name - Editor Suffix)
+// Units: N02T (Nether Dragon), EditorSuffix (Name - Editor Suffix)
 {
 (Boss)
 }
@@ -21790,13 +21814,13 @@ STRING 4480
 }
 
 STRING 4481
-// Units: o025 (Spell Book), Hotkey (Hotkey)
+// Units: h0IM (Spear Carrier), Hotkey (Hotkey)
 {
 S
 }
 
 STRING 4482
-// Units: n03C (Center of the new Citadel), Name (Name)
+// Units: n03C (Center of the New Citadel), Name (Name)
 {
 Zentrum der Neuen Zitadelle
 }
@@ -21916,7 +21940,7 @@ W
 }
 
 STRING 4509
-// Units: n0EO (Burrowed Nerubian Spider Lord), Hotkey (Hotkey)
+// Units: o068 (Murloc Lumberkeep), Hotkey (Hotkey)
 {
 L
 }
@@ -22129,13 +22153,13 @@ STRING 4543
 }
 
 STRING 4544
-// Units: h0IM (Spear Carrier), Hotkey (Hotkey)
+// Units: h0IN (Vrykul Shipyard), Hotkey (Hotkey)
 {
 S
 }
 
 STRING 4545
-// Items: I0AV (Accept), Hotkey (Hotkey)
+// Items: I0KD (Lordaeron), Hotkey (Hotkey)
 {
 Q
 }
@@ -22369,13 +22393,13 @@ STRING 4604
 }
 
 STRING 4629
-// Items: I0KD (Lordaeron), Hotkey (Hotkey)
+// Items: I0QO (Ogre), Hotkey (Hotkey)
 {
 Q
 }
 
 STRING 4630
-// Items: I0QO (Ogre), Hotkey (Hotkey)
+// Items: I0RO (+1 Strength), Hotkey (Hotkey)
 {
 Q
 }
@@ -22399,7 +22423,7 @@ Gruul den Drachenschlächter beschwören
 }
 
 STRING 4634
-// Units: h0IN (Vrykul Shipyard), Hotkey (Hotkey)
+// Units: h0JB (Worgen Shipyard), Hotkey (Hotkey)
 {
 S
 }
@@ -22597,7 +22621,7 @@ G
 }
 
 STRING 4686
-// Units: h0JB (Worgen Shipyard), Hotkey (Hotkey)
+// Units: O04L (Spirit Walker), Hotkey (Hotkey)
 {
 S
 }
@@ -22609,19 +22633,19 @@ STRING 4687
 }
 
 STRING 4688
-// Upgrades: R07K (Ölbrand), Name (Name)
+// Upgrades: R07K (Burning Oil), Name (Name)
 {
 Thron
 }
 
 STRING 4689
-// Upgrades: R07K (Ölbrand), Tip (Tooltip)
+// Upgrades: R07K (Burning Oil), Tip (Tooltip)
 {
 Thron erforschen
 }
 
 STRING 4690
-// Upgrades: R07K (Ölbrand), Ubertip (Tooltip - Extended)
+// Upgrades: R07K (Burning Oil), Ubertip (Tooltip - Extended)
 {
 Erlaubt Bürgern den Bau eines Throns, der Verlies-Lords ausbildet.
 }
@@ -22639,13 +22663,13 @@ H
 }
 
 STRING 4693
-// Items: I04L (Erdmagier), Name (Name)
+// Items: I04L (Geomancer), Name (Name)
 {
 Erdmagier
 }
 
 STRING 4694
-// Units: N0AF (Erdmagier), Propernames (Proper Names)
+// Units: N0AF (Geomancer), Propernames (Proper Names)
 {
 Flintdagger
 }
@@ -22876,7 +22900,7 @@ Initiand, Adept, Meister
 }
 
 STRING 4733
-// Units: n09B (Kobold Erdmagier), Casterupgradetip (Caster Upgrade Tips)
+// Units: n09B (Kobold Geomancer), Casterupgradetip (Caster Upgrade Tips)
 {
 - Wächterschutz,- Wächterschutz|n- Stasisfalle,- Wächterschutz|n- Stasisfalle|n- Heil-Schutzzauber
 }
@@ -23836,7 +23860,7 @@ STRING 4927
 }
 
 STRING 4928
-// Upgrades: R05Y (Leuchtfeuer), Hotkey (Hotkey)
+// Upgrades: R05Y (Flare), Hotkey (Hotkey)
 {
 B
 }
@@ -23914,7 +23938,7 @@ STRING 4969
 }
 
 STRING 4970
-// Upgrades: R07O (Eis-Atem), Name (Name)
+// Upgrades: R07O (Freezing Breath), Name (Name)
 {
 Skelettknochen
 }
@@ -23926,13 +23950,13 @@ H
 }
 
 STRING 4972
-// Upgrades: R07O (Eis-Atem), Tip (Tooltip)
+// Upgrades: R07O (Freezing Breath), Tip (Tooltip)
 {
 Skelettknochen erforschen
 }
 
 STRING 4973
-// Upgrades: R07O (Eis-Atem), Ubertip (Tooltip - Extended)
+// Upgrades: R07O (Freezing Breath), Ubertip (Tooltip - Extended)
 {
 Allows all Skeleton units to use the ability Skeleton Bones which reduces received range damage.
 }
@@ -24346,7 +24370,7 @@ X
 }
 
 STRING 5048
-// Upgrades: R06D (Eis-Atem), Name (Name)
+// Upgrades: R06D (Freezing Breath), Name (Name)
 {
 Kriegsdonner
 }
@@ -24358,13 +24382,13 @@ W
 }
 
 STRING 5050
-// Upgrades: R06D (Eis-Atem), Tip (Tooltip)
+// Upgrades: R06D (Freezing Breath), Tip (Tooltip)
 {
 Kriegsdonner erforschen
 }
 
 STRING 5051
-// Upgrades: R07U (Eis-Atem), Ubertip (Tooltip - Extended)
+// Upgrades: R07U (Freezing Breath), Ubertip (Tooltip - Extended)
 {
 Ermöglicht Kriegs-Golems und Berserker-Wildekins, die 'Kriegsdonner'-Fähigkeit zu benutzen.
 }
@@ -24628,7 +24652,7 @@ STRING 5100
 }
 
 STRING 5101
-// Upgrades: R07K (Ölbrand), EditorSuffix (Editor Suffix)
+// Upgrades: R07K (Burning Oil), EditorSuffix (Editor Suffix)
 {
 (Verlies)
 }
@@ -24928,7 +24952,7 @@ T
 }
 
 STRING 5166
-// Items: tint (Tome of Intelligenz), Hotkey (Hotkey)
+// Items: tint (Tome of Intelligence), Hotkey (Hotkey)
 {
 E
 }
@@ -25006,7 +25030,7 @@ Flutwächters summon a Gezeiten-Wyrm when dying who defends your town.
 }
 
 STRING 5179
-// Units: O04L (Spirit Walker), Hotkey (Hotkey)
+// Units: O04M (Spirit Walker), Hotkey (Hotkey)
 {
 S
 }
@@ -25150,13 +25174,13 @@ STRING 5205
 }
 
 STRING 5208
-// Units: O04M (Spirit Walker), Hotkey (Hotkey)
+// Units: e01D (Cloud Serpent), Hotkey (Hotkey)
 {
 S
 }
 
 STRING 5209
-// Items: I0RO (+1 Strength), Hotkey (Hotkey)
+// Items: I0TA (Stormwind), Hotkey (Hotkey)
 {
 Q
 }
@@ -25816,7 +25840,7 @@ STRING 5324
 }
 
 STRING 5325
-// Upgrades: R07O (Eis-Atem), EditorSuffix (Editor Suffix)
+// Upgrades: R07O (Freezing Breath), EditorSuffix (Editor Suffix)
 {
 (Verlies)
 }
@@ -25852,7 +25876,7 @@ STRING 5330
 }
 
 STRING 5331
-// Upgrades: R07U (Eis-Atem), EditorSuffix (Editor Suffix)
+// Upgrades: R07U (Freezing Breath), EditorSuffix (Editor Suffix)
 {
 (Verlies)
 }
@@ -26050,13 +26074,13 @@ Festhaut erforschen
 }
 
 STRING 5365
-// Upgrades: R07Z (Eis-Atem), Ubertip (Tooltip - Extended)
+// Upgrades: R07Z (Freezing Breath), Ubertip (Tooltip - Extended)
 {
 Gives Kriegs-Golems and Red Dragons the ability Festhaut.
 }
 
 STRING 5366
-// Upgrades: R07Z (Eis-Atem), EditorSuffix (Editor Suffix)
+// Upgrades: R07Z (Freezing Breath), EditorSuffix (Editor Suffix)
 {
 (Verlies)
 }
@@ -26218,7 +26242,7 @@ H
 }
 
 STRING 5403
-// Units: n0JC (Großtempler), Hotkey (Hotkey)
+// Units: n0JC (High Templar), Hotkey (Hotkey)
 {
 H
 }
@@ -26314,7 +26338,7 @@ H
 }
 
 STRING 5426
-// Upgrades: R00K (Eis-Atem), Hotkey (Hotkey)
+// Upgrades: R00K (Freezing Breath), Hotkey (Hotkey)
 {
 H
 }
@@ -26458,7 +26482,7 @@ H
 }
 
 STRING 5465
-// Upgrades: R07O (Eis-Atem), Hotkey (Hotkey)
+// Upgrades: R07O (Freezing Breath), Hotkey (Hotkey)
 {
 H
 }
@@ -26734,7 +26758,7 @@ Der Skin von Thrall unberitten.
 }
 
 STRING 5542
-// Units: o068 (Murloc Lumberkeep), Hotkey (Hotkey)
+// Units: N0JU (Gronn), Hotkey (Hotkey)
 {
 L
 }
@@ -27767,7 +27791,7 @@ Dragonkin-Bürgerin anheuern
 }
 
 STRING 5748
-// Units: e01D (Cloud Serpent), Hotkey (Hotkey)
+// Units: H0K7 (Spellbreaker), Hotkey (Hotkey)
 {
 S
 }
@@ -28379,7 +28403,7 @@ M
 }
 
 STRING 5850
-// Upgrades: R061 (Leuchtfeuer), Hotkey (Hotkey)
+// Upgrades: R061 (Flare), Hotkey (Hotkey)
 {
 M
 }
@@ -28685,7 +28709,7 @@ STRING 5910
 }
 
 STRING 5911
-// Units: H0K7 (Spellbreaker), Hotkey (Hotkey)
+// Units: o051 (Troll Shipyard), Hotkey (Hotkey)
 {
 S
 }
@@ -28787,7 +28811,7 @@ Winzigen Arkaner Turm erwerben
 }
 
 STRING 5928
-// Upgrades: R081 (Eis-Atem), Ubertip (Tooltip - Extended)
+// Upgrades: R081 (Freezing Breath), Ubertip (Tooltip - Extended)
 {
 Gives Dragonkin warriors the ability Festhaut.
 }
@@ -28817,7 +28841,7 @@ Feuerangriff erforschen
 }
 
 STRING 5933
-// Upgrades: R082 (Leuchtfeuer), Ubertip (Tooltip - Extended)
+// Upgrades: R082 (Flare), Ubertip (Tooltip - Extended)
 {
 Gives Schwarzer Großdraches area of effect damage.
 }
@@ -29237,7 +29261,7 @@ Medium ranged unit that can Hieb opponents. |n|n|cffffcc00Greift Land- und Luft-
 }
 
 STRING 6011
-// Units: h084 (Blitz-Elementargeist), Name (Name)
+// Units: h084 (Lightning Elemental), Name (Name)
 {
 Blitzelementar
 }
@@ -29249,7 +29273,7 @@ STRING 6012
 }
 
 STRING 6013
-// Units: h084 (Blitz-Elementargeist), Tip (Tooltip - Basic)
+// Units: h084 (Lightning Elemental), Tip (Tooltip - Basic)
 {
 Blitzelementar anheuern
 }
@@ -29759,13 +29783,13 @@ STRING 6105
 }
 
 STRING 6106
-// Units: o051 (Troll Shipyard), Hotkey (Hotkey)
+// Units: h0MW (Spiked Trap), Hotkey (Hotkey)
 {
 S
 }
 
 STRING 6107
-// Items: I0TA (Stormwind), Hotkey (Hotkey)
+// Items: I0WQ (Cook Fish Menu), Hotkey (Hotkey)
 {
 Q
 }
@@ -29810,12 +29834,6 @@ STRING 6114
 // Units: n0DA (Green Dragon Roost), EditorSuffix (Name - Editor Suffix)
 {
 (Drachenzüchter)
-}
-
-STRING 6115
-// Units: n02R (Green Dragon Roost), Description (Description)
-{
-Building to train Green Drakes.
 }
 
 STRING 6116
@@ -29873,7 +29891,7 @@ Flutwächter beschwören beim Tod einen Gezeiten-Wyrm, der Ihre Stadt verteidigt
 }
 
 STRING 6155
-// Units: h0MW (Spiked Trap), Hotkey (Hotkey)
+// Units: h0NB (Lordaeron Shipyard), Hotkey (Hotkey)
 {
 S
 }
@@ -30089,7 +30107,7 @@ The Drachenzüchter uses his knowledge to create a Winziger Drachenhorst.
 }
 
 STRING 6199
-// Units: h0NB (Lordaeron Shipyard), Hotkey (Hotkey)
+// Units: h0OL (Human Fire Ship), Hotkey (Hotkey)
 {
 S
 }
@@ -30305,7 +30323,7 @@ rlev
 }
 
 STRING 6238
-// Units: h0OL (Human Fire Ship), Hotkey (Hotkey)
+// Units: n0FE (Spearman), Hotkey (Hotkey)
 {
 S
 }
@@ -30455,7 +30473,7 @@ E
 }
 
 STRING 6316
-// Items: I0WQ (Cook Fish Menu), Hotkey (Hotkey)
+// Items: I0WZ (Cook Warrior Menu), Hotkey (Hotkey)
 {
 B
 }
@@ -30515,13 +30533,13 @@ STRING 6331
 }
 
 STRING 6332
-// Abilities: A08A (Item Niederdrache Summon), Name (Name)
+// Abilities: A08A (Item Nether Dragon Summon), Name (Name)
 {
 Item Niederdrache Summon
 }
 
 STRING 6335
-// Items: I0WZ (Cook Warrior Menu), Hotkey (Hotkey)
+// Items: I0X5 (Cook Ranger Menu), Hotkey (Hotkey)
 {
 Q
 }
@@ -30605,7 +30623,7 @@ B
 }
 
 STRING 6371
-// Units: N0JU (Gronn), Hotkey (Hotkey)
+// Units: h0UM (Lion Rider), Hotkey (Hotkey)
 {
 L
 }
@@ -30881,7 +30899,7 @@ The Necromancer uses his gathered herbs and minerals to create a Tiny Necromance
 }
 
 STRING 6438
-// Units: n0FE (Spearman), Hotkey (Hotkey)
+// Units: o064 (Tuskarr Shipyard), Hotkey (Hotkey)
 {
 S
 }
@@ -31184,13 +31202,13 @@ W
 }
 
 STRING 6529
-// Items: I0X5 (Cook Ranger Menu), Hotkey (Hotkey)
+// Items: I0X6 (Cook Magician Menu), Hotkey (Hotkey)
 {
 Q
 }
 
 STRING 6530
-// Items: I0X6 (Cook Magician Menu), Hotkey (Hotkey)
+// Items: I120 (Magical Gold Coin), Hotkey (Hotkey)
 {
 Q
 }
@@ -31298,7 +31316,7 @@ T
 }
 
 STRING 6550
-// Items: I120 (Magical Gold Coin), Hotkey (Hotkey)
+// Items: I12Q (Unit Gavel), Hotkey (Hotkey)
 {
 Q
 }
@@ -31316,13 +31334,13 @@ E
 }
 
 STRING 6553
-// Items: I12Q (Unit Gavel), Hotkey (Hotkey)
+// Items: I14F (Kul Tiras), Hotkey (Hotkey)
 {
 Q
 }
 
 STRING 6554
-// Items: I14F (Kul Tiras), Hotkey (Hotkey)
+// Items: I15P (Dalaran), Hotkey (Hotkey)
 {
 Q
 }
@@ -31364,13 +31382,13 @@ Krallen-Druiden beschwören
 }
 
 STRING 6567
-// Items: I15P (Dalaran), Hotkey (Hotkey)
+// Items: I19L (Random Game Mode), Hotkey (Hotkey)
 {
 Q
 }
 
 STRING 6568
-// Items: I19L (Random Game Mode), Hotkey (Hotkey)
+// Items: I19T (Random), Hotkey (Hotkey)
 {
 Q
 }
@@ -31520,7 +31538,7 @@ Tor öffnen
 }
 
 STRING 6611
-// Units: o064 (Tuskarr Shipyard), Hotkey (Hotkey)
+// Units: n0G9 (Murloc Shadowcaster), Hotkey (Hotkey)
 {
 S
 }
@@ -31592,37 +31610,37 @@ Großmeister-Verzauberformel
 }
 
 STRING 6677
-// Units: n0G9 (Murloc Shadowcaster), Hotkey (Hotkey)
+// Units: n0GM (Ogre Stone Thrower), Hotkey (Hotkey)
 {
 S
 }
 
 STRING 6678
-// Items: I19T (Random), Hotkey (Hotkey)
-{
-Q
-}
-
-STRING 6679
 // Items: I0OJ (Foot), Hotkey (Hotkey)
 {
 Q
 }
 
-STRING 6680
+STRING 6679
 // Items: I0OK (Amphibious), Hotkey (Hotkey)
 {
 Q
 }
 
-STRING 6681
+STRING 6680
 // Items: I0OL (Fly), Hotkey (Hotkey)
 {
 Q
 }
 
-STRING 6682
+STRING 6681
 // Items: I0OM (Strength), Hotkey (Hotkey)
+{
+Q
+}
+
+STRING 6682
+// Items: I0ON (Agility), Hotkey (Hotkey)
 {
 Q
 }
@@ -31748,7 +31766,7 @@ W
 }
 
 STRING 6713
-// Units: n0GM (Ogre Stone Thrower), Hotkey (Hotkey)
+// Units: e01V (Pandaren Shipyard), Hotkey (Hotkey)
 {
 S
 }
@@ -31964,7 +31982,7 @@ Goblinschredder wiederbeleben
 }
 
 STRING 6755
-// Items: I0RQ (+1 Intelligenz), Hotkey (Hotkey)
+// Items: I0RQ (+1 Intelligence), Hotkey (Hotkey)
 {
 E
 }
@@ -32078,7 +32096,7 @@ Armor made of various animal hides. Grants +3 Defense and faster life regenerati
 }
 
 STRING 6802
-// Abilities: A08X (Bau fertigstellen), Name (Name)
+// Abilities: A08X (Finish Construction), Name (Name)
 {
 Bau abschließen
 }
@@ -32138,13 +32156,13 @@ Land
 }
 
 STRING 6861
-// Units: n0E4 (Banner Shop), Ubertip (Tooltip - Extended)
+// Units: n0E6 (Banner Shop), Ubertip (Tooltip - Extended)
 {
 Verkauft Banner.
 }
 
 STRING 6862
-// Units: n0E4 (Banner Shop), Description (Description)
+// Units: n0E6 (Banner Shop), Description (Description)
 {
 Verkauft Banner.
 }
@@ -32378,13 +32396,13 @@ Der Skin eines Dorfbewohner Männlich 2.
 }
 
 STRING 6932
-// Units: n0E3 (Hero Abilities), Name (Name)
+// Abilities: A0V5 (Hero Abilities), Name (Name)
 {
 Helden-Fähigkeiten
 }
 
 STRING 6933
-// Abilities: A0V5 (Hero Abilities), Name (Name)
+// Abilities: A0V5 (Hero Abilities), Tip (Tooltip - Normal)
 {
 Helden-Fähigkeiten
 }
@@ -32402,7 +32420,7 @@ Schwarzmarkt
 }
 
 STRING 6936
-// Units: n004 (Chaos-Stein), Name (Name)
+// Units: n004 (Chaos Stone), Name (Name)
 {
 Chaos-Stein
 }
@@ -32414,7 +32432,7 @@ Greifen-Reittier
 }
 
 STRING 6938
-// Units: o003 (Flügeldrache Mount), Name (Name)
+// Units: o003 (Wyvern Mount), Name (Name)
 {
 Flügeldrachenreittier
 }
@@ -32438,7 +32456,7 @@ Stops all enemies in a target area from attacking melee and ranged for <A16K,Dur
 }
 
 STRING 6942
-// Units: h00P (Wächter des Grabes), Name (Name)
+// Units: h00P (Keeper of the Grave), Name (Name)
 {
 Wächter des Grabes
 }
@@ -32465,12 +32483,6 @@ STRING 6946
 // Items: I072 (Unique - Heart of Y'Shaarj), Description (Description)
 {
 |cff8b00ffEinzigartig|r|nThe heart of the old god Y'Shaarj. Contains arcane spells to convert units into different races and summon the Old Gods.
-}
-
-STRING 6947
-// Abilities: A0V5 (Hero Abilities), Tip (Tooltip - Normal)
-{
-Heldenfähigkeiten
 }
 
 STRING 6948
@@ -32582,7 +32594,7 @@ STRING 6972
 }
 
 STRING 6973
-// Units: e01V (Pandaren Shipyard), Hotkey (Hotkey)
+// Units: e026 (High Elf Shipyard), Hotkey (Hotkey)
 {
 S
 }
@@ -32594,7 +32606,7 @@ Tiny Altar des Wirbelnden Jenseits
 }
 
 STRING 6975
-// Items: I0ON (Agility), Hotkey (Hotkey)
+// Items: I0OO (Intelligence), Hotkey (Hotkey)
 {
 Q
 }
@@ -32702,7 +32714,7 @@ E
 }
 
 STRING 6996
-// Items: I0OO (Intelligenz), Hotkey (Hotkey)
+// Abilities: A00E (Herbalism - Novice), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -32930,7 +32942,7 @@ Großes Dämonentor
 }
 
 STRING 7038
-// Abilities: A00E (Herbalism - Novice), Hotkey (Hotkey - Normal)
+// Abilities: A05U (Select Destination), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -33038,7 +33050,7 @@ Günstige Evolution erforschen - [|cffffcc00Stufe 55|r]
 }
 
 STRING 7058
-// Abilities: A05U (Select Destination), Hotkey (Hotkey - Normal)
+// Abilities: A08Q (Power of Cenarius), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -33104,7 +33116,7 @@ W
 }
 
 STRING 7075
-// Abilities: A08Q (Power of Cenarius), Hotkey (Hotkey - Normal)
+// Abilities: A09Y (Ping Included Units for Savecode), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -33145,22 +33157,10 @@ STRING 7084
 Erlaubt die Überquerung von Flüssen.
 }
 
-STRING 7086
-// Units: n0E6 (Banner Shop), Ubertip (Tooltip - Extended)
-{
-Verkauft Banner.
-}
-
 STRING 7087
 // Units: h023 (Bridge), Name (Name)
 {
 Brücke
-}
-
-STRING 7088
-// Units: n0E6 (Banner Shop), Description (Description)
-{
-Verkauft Banner.
 }
 
 STRING 7090
@@ -33212,7 +33212,7 @@ STRING 7110
 }
 
 STRING 7111
-// Abilities: A09Y (Ping Included Units for Savecode), Hotkey (Hotkey - Normal)
+// Abilities: A0AU (Convert Into Human), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -33290,7 +33290,7 @@ Y
 }
 
 STRING 7162
-// Abilities: A0AU (Convert Into Human), Hotkey (Hotkey - Normal)
+// Abilities: A0FN (Sun Key), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -33308,7 +33308,7 @@ R
 }
 
 STRING 7165
-// Units: e026 (High Elf Shipyard), Hotkey (Hotkey)
+// Units: o07C (Ogre Shipyard), Hotkey (Hotkey)
 {
 S
 }
@@ -33530,7 +33530,7 @@ Verleiht bestimmten Goblin-Land-Einheiten die Fähigkeit, Gegenstände zu tragen
 }
 
 STRING 7258
-// Abilities: A0FN (Sun Key), Hotkey (Hotkey - Normal)
+// Abilities: A0NI (Enable Dalaran Shield), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -33554,7 +33554,7 @@ Luft-Elementargeist ausbilden
 }
 
 STRING 7262
-// Units: h09K (Blitz-Elementargeist), Ubertip (Tooltip - Extended)
+// Units: h09K (Lightning Elemental), Ubertip (Tooltip - Extended)
 {
 Medium ranged unit that can Hieb opponents. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
 }
@@ -33614,7 +33614,7 @@ Goblin-Magier
 }
 
 STRING 7292
-// Abilities: A0NI (Enable Dalaran Shield), Hotkey (Hotkey - Normal)
+// Abilities: A0O7 (Disable Dalaran Shield), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -33680,7 +33680,7 @@ Further increases the amount of gold that Goblin-Arbeiters can carry by 1.
 }
 
 STRING 7304
-// Abilities: A0O7 (Disable Dalaran Shield), Hotkey (Hotkey - Normal)
+// Abilities: A0QD (Mass Invisibility), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -33704,7 +33704,7 @@ Winziges Banner Sturmwind
 }
 
 STRING 7315
-// Abilities: A0QD (Mass Invisibility), Hotkey (Hotkey - Normal)
+// Abilities: A0WC (Repair Aura), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -33968,7 +33968,7 @@ STRING 7417
 }
 
 STRING 7418
-// Items: I07X (Zufällige Klasse), Hotkey (Hotkey)
+// Items: I07X (Random Class), Hotkey (Hotkey)
 {
 W
 }
@@ -34052,7 +34052,7 @@ F
 }
 
 STRING 7432
-// Abilities: A0WC (Repair Aura), Researchhotkey (Hotkey - Learn)
+// Abilities: A0XZ (Telekinesis), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -34070,7 +34070,7 @@ Y
 }
 
 STRING 7435
-// Abilities: A0XZ (Telekinesis), Hotkey (Hotkey - Normal)
+// Abilities: A13N (Teleportation), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -34112,7 +34112,7 @@ Günstige Evolution erforschen - [|cffffcc00Stufe 56|r]
 }
 
 STRING 7443
-// Abilities: A13N (Teleportation), Hotkey (Hotkey - Normal)
+// Abilities: A14F (Mass Entangling Roots), Hotkey (Hotkey - Normal)
 {
 M
 }
@@ -34190,7 +34190,7 @@ Zauberin wiederbeleben
 }
 
 STRING 7492
-// Abilities: A14F (Mass Entangling Roots), Hotkey (Hotkey - Normal)
+// Abilities: A14T (Mass Control Magic), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -34394,7 +34394,7 @@ STRING 7572
 }
 
 STRING 7573
-// Units: h09W (Gift-Elementargeist), Hotkey (Hotkey)
+// Units: h09W (Poison Elemental), Hotkey (Hotkey)
 {
 P
 }
@@ -34430,7 +34430,7 @@ STRING 7579
 }
 
 STRING 7580
-// Units: n01E (Große Leerwandler), EditorSuffix (Name - Editor Suffix)
+// Units: n01E (Greater Voidwalker), EditorSuffix (Name - Editor Suffix)
 {
 (Dämonen)
 }
@@ -34676,7 +34676,7 @@ Ausbau zum Gigantischen Dämonentor ermöglicht die Produktion weiterer Gebäude
 }
 
 STRING 7623
-// Upgrades: R00C (Eis-Atem), Name (Name)
+// Upgrades: R00C (Freezing Breath), Name (Name)
 {
 Dauerhafter Feuerbrand
 }
@@ -34706,7 +34706,7 @@ Tiny Banner High Elf
 }
 
 STRING 7628
-// Upgrades: R00K (Eis-Atem), Name (Name)
+// Upgrades: R00K (Freezing Breath), Name (Name)
 {
 Harthaut
 }
@@ -34766,7 +34766,7 @@ Erzeugt Nahrung.
 }
 
 STRING 7638
-// Upgrades: R00D (Eis-Atem), Ubertip (Tooltip - Extended)
+// Upgrades: R00D (Freezing Breath), Ubertip (Tooltip - Extended)
 {
 Gives Höllenbesties the ability Festhaut.
 }
@@ -34946,7 +34946,7 @@ Primäres Verteidigungsgebäude. |n|n|cffffcc00Greift Land- und Luft-Einheiten a
 }
 
 STRING 7668
-// Units: h09H (Wasser-Elementargeist), EditorSuffix (Name - Editor Suffix)
+// Units: h09H (Water Elemental), EditorSuffix (Name - Editor Suffix)
 {
 (Dalaran)
 }
@@ -35252,7 +35252,7 @@ Wechselt zur ersten Tasche.
 }
 
 STRING 7720
-// Units: h0UM (Lion Rider), Hotkey (Hotkey)
+// Units: O09I (Fel Warlock), Hotkey (Hotkey)
 {
 L
 }
@@ -35306,13 +35306,13 @@ T
 }
 
 STRING 7729
-// Units: o07C (Ogre Shipyard), Hotkey (Hotkey)
+// Units: h0RG (Stormwind Shipyard), Hotkey (Hotkey)
 {
 S
 }
 
 STRING 7730
-// Units: h0RG (Stormwind Shipyard), Hotkey (Hotkey)
+// Units: h0U2 (Fishing Port), Hotkey (Hotkey)
 {
 S
 }
@@ -35348,7 +35348,7 @@ Increases Sukkubus' mana capacity, mana regeneration rate, hit points, and gives
 }
 
 STRING 7736
-// Units: h0U2 (Fishing Port), Hotkey (Hotkey)
+// Units: n0J9 (Shark), Hotkey (Hotkey)
 {
 S
 }
@@ -35474,7 +35474,7 @@ Gesichtsloser Albtraum
 }
 
 STRING 7758
-// Units: e005 (Schimären-Reittier), Tip (Tooltip - Basic)
+// Units: e005 (Chimaera Mount), Tip (Tooltip - Basic)
 {
 Schimären-Reittier
 }
@@ -35573,12 +35573,6 @@ STRING 7776
 // Units: h00N (Temple of Darkness), Name (Name)
 {
 Tempel der Dunkelheit
-}
-
-STRING 7777
-// Upgrades: R051 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Name (Name)
-{
-Keine Brennende Legion
 }
 
 STRING 7778
@@ -35732,7 +35726,7 @@ STRING 7805
 }
 
 STRING 7806
-// Upgrades: R05S (Ölbrand), Name (Name)
+// Upgrades: R05S (Burning Oil), Name (Name)
 {
 Violette Zitadelle
 }
@@ -35948,7 +35942,7 @@ Nachtelfen-Bürgerin anheuern
 }
 
 STRING 7842
-// Units: o03E (Spirit Flügeldrache), Hotkey (Hotkey)
+// Units: o03E (Spirit Wyvern), Hotkey (Hotkey)
 {
 P
 }
@@ -35971,18 +35965,6 @@ STRING 7845
 Edelstein-Mine
 }
 
-STRING 7846
-// Units: n0DC (Gemstones Mine), Tip (Tooltip - Basic)
-{
-Edelstein-Mine errichten
-}
-
-STRING 7847
-// Units: n0DC (Gemstones Mine), Description (Description)
-{
-Die Hauptquelle für Edelsteine.
-}
-
 STRING 7848
 // Units: h0ME (Altar of Lordaeron), EditorSuffix (Name - Editor Suffix)
 {
@@ -36002,7 +35984,7 @@ Dämonen-Bürger anheuern
 }
 
 STRING 7851
-// Upgrades: R05S (Ölbrand), Tip (Tooltip)
+// Upgrades: R05S (Burning Oil), Tip (Tooltip)
 {
 Violette Zitadelle
 }
@@ -36020,7 +36002,7 @@ Dämonen-Bürgerin
 }
 
 STRING 7854
-// Upgrades: R05S (Ölbrand), Ubertip (Tooltip - Extended)
+// Upgrades: R05S (Burning Oil), Ubertip (Tooltip - Extended)
 {
 Erlaubt Bürgern den Bau der Violette Zitadelle.
 }
@@ -36188,31 +36170,31 @@ Banner Stormpike
 }
 
 STRING 7882
-// Items: I00W (Stein der Ordnung Fragment), Name (Name)
+// Items: I00W (Order Stone Fragment), Name (Name)
 {
 Steinfragment der Ordnung
 }
 
 STRING 7883
-// Items: I00X (Chaos-Stein Fragment), Name (Name)
+// Items: I00X (Chaos Stone Fragment), Name (Name)
 {
 Steinfragment des Chaos
 }
 
 STRING 7884
-// Items: I00X (Chaos-Stein Fragment), Description (Description)
+// Items: I00X (Chaos Stone Fragment), Description (Description)
 {
 Verstärkt den Angriffsschaden um 20 and casts Vampirism. Also needed for the Destroyer Transformation Ritual.
 }
 
 STRING 7885
-// Items: I00X (Chaos-Stein Fragment), Ubertip (Tooltip - Extended)
+// Items: I00X (Chaos Stone Fragment), Ubertip (Tooltip - Extended)
 {
 Verstärkt den Angriffsschaden um 20 and casts Vampirism. Also needed for the Destroyer Transformation Ritual.
 }
 
 STRING 7886
-// Items: I00X (Chaos-Stein Fragment), Tip (Tooltip - Basic)
+// Items: I00X (Chaos Stone Fragment), Tip (Tooltip - Basic)
 {
 Steinfragment des Chaos erwerben
 }
@@ -36284,13 +36266,13 @@ Medium ranged unit that can Hieb opponents. |n|n|cffffcc00Greift Land- und Luft-
 }
 
 STRING 7902
-// Units: h09H (Wasser-Elementargeist), Tip (Tooltip - Basic)
+// Units: h09H (Water Elemental), Tip (Tooltip - Basic)
 {
 Wasser-Elementargeist ausbilden
 }
 
 STRING 7903
-// Units: h09W (Gift-Elementargeist), Ubertip (Tooltip - Extended)
+// Units: h09W (Poison Elemental), Ubertip (Tooltip - Extended)
 {
 Medium ranged unit that can Hieb opponents. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
 }
@@ -36731,7 +36713,7 @@ Drehens the unit by 15 degrees.
 }
 
 STRING 7994
-// Abilities: A14T (Mass Control Magic), Hotkey (Hotkey - Normal)
+// Abilities: A1E3 (Summon Wall), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -37109,7 +37091,7 @@ Stellt Folianten der Größeren Erfahrung her.
 }
 
 STRING 8077
-// Units: n0J9 (Shark), Hotkey (Hotkey)
+// Units: n0L6 (Satyr), Hotkey (Hotkey)
 {
 S
 }
@@ -37121,7 +37103,7 @@ Ein listiger Held, adept at manipulating opponents. Can learn Stille, Heiliges L
 }
 
 STRING 8079
-// Units: n0L6 (Satyr), Hotkey (Hotkey)
+// Units: h0WJ (Shipyard), Hotkey (Hotkey)
 {
 S
 }
@@ -37205,7 +37187,7 @@ Automatically brings the Hero back to life with <A1UT,DataB1> hit points when th
 }
 
 STRING 8093
-// Units: h0WJ (Shipyard), Hotkey (Hotkey)
+// Units: h0WN (Gnome Shipyard), Hotkey (Hotkey)
 {
 S
 }
@@ -37331,7 +37313,7 @@ STRING 8113
 }
 
 STRING 8114
-// Units: h0WN (Gnome Shipyard), Hotkey (Hotkey)
+// Units: o09W (Freelancer Shipyard), Hotkey (Hotkey)
 {
 S
 }
@@ -37421,7 +37403,7 @@ The Weapon Smithing uses his knowledge to create a Waffenschmiedehammer.
 }
 
 STRING 8129
-// Units: o09W (Freelancer Shipyard), Hotkey (Hotkey)
+// Units: u037 (Nerubian Shipyard), Hotkey (Hotkey)
 {
 S
 }
@@ -37472,12 +37454,6 @@ STRING 8152
 // Upgrades: R030 (Improved Masonry,Advanced Masonry,Imbued Masonry), effect4 (Effect 4)
 {
 rlev
-}
-
-STRING 8153
-// Units: n0DA (Green Dragon Roost), Description (Description)
-{
-Gebäude zur Ausbildung von Gründrachen.
 }
 
 STRING 8154
@@ -37595,13 +37571,13 @@ Versorgungswagen
 }
 
 STRING 8175
-// Units: N02T (Niederdrache), Name (Name)
+// Units: N02T (Nether Dragon), Name (Name)
 {
 Niederdrache
 }
 
 STRING 8176
-// Units: N02T (Niederdrache), Propernames (Proper Names)
+// Units: N02T (Nether Dragon), Propernames (Proper Names)
 {
 Veraku
 }
@@ -37673,7 +37649,7 @@ Ein mystischer Held, adept at using nature spells. Can learn Massenverjüngung, 
 }
 
 STRING 8189
-// Units: u037 (Nerubian Shipyard), Hotkey (Hotkey)
+// Units: o09X (Fel Orc Shipyard), Hotkey (Hotkey)
 {
 S
 }
@@ -38300,13 +38276,13 @@ STRING 8302
 }
 
 STRING 8304
-// Units: o09X (Fel Orc Shipyard), Hotkey (Hotkey)
+// Units: n0MG (Centaur Sorcerer), Hotkey (Hotkey)
 {
 S
 }
 
 STRING 8305
-// Units: n0MG (Centaur Sorcerer), Hotkey (Hotkey)
+// Units: h0YJ (Kul Tiras Shipyard), Hotkey (Hotkey)
 {
 S
 }
@@ -38444,7 +38420,7 @@ Banner Pandaren
 }
 
 STRING 8332
-// Units: h084 (Blitz-Elementargeist), EditorSuffix (Name - Editor Suffix)
+// Units: h084 (Lightning Elemental), EditorSuffix (Name - Editor Suffix)
 {
 (Unhold)
 }
@@ -38474,7 +38450,7 @@ M
 }
 
 STRING 8337
-// Abilities: A1E3 (Summon Wall), Hotkey (Hotkey - Normal)
+// Abilities: A1E5 (Summon Explosive Barrel), Hotkey (Hotkey - Normal)
 {
 M
 }
@@ -38618,7 +38594,7 @@ Draenei-Unterkunft errichten
 }
 
 STRING 8361
-// Units: O09I (Fel Warlock), Hotkey (Hotkey)
+// Units: h0VG (Lesser Thunder Phoenix), Hotkey (Hotkey)
 {
 L
 }
@@ -38834,13 +38810,13 @@ STRING 8397
 }
 
 STRING 8398
-// Units: n0JC (Großtempler), Tip (Tooltip - Basic)
+// Units: n0JC (High Templar), Tip (Tooltip - Basic)
 {
 Hohen Templer ausbilden
 }
 
 STRING 8399
-// Units: n0JC (Großtempler), Name (Name)
+// Units: n0JC (High Templar), Name (Name)
 {
 Hoher Templer
 }
@@ -38864,7 +38840,7 @@ STRING 8402
 }
 
 STRING 8403
-// Upgrades: R02D (Ölbrand), EditorSuffix (Editor Suffix)
+// Upgrades: R02D (Burning Oil), EditorSuffix (Editor Suffix)
 {
 (Verlorene)
 }
@@ -39218,7 +39194,7 @@ H
 }
 
 STRING 8477
-// Units: h0YJ (Kul Tiras Shipyard), Hotkey (Hotkey)
+// Units: o0B6 (Kobold Shipyard), Hotkey (Hotkey)
 {
 S
 }
@@ -39302,7 +39278,7 @@ P
 }
 
 STRING 8512
-// Units: o0B6 (Kobold Shipyard), Hotkey (Hotkey)
+// Units: h07O (Bandit Shipyard), Hotkey (Hotkey)
 {
 S
 }
@@ -39326,7 +39302,7 @@ O
 }
 
 STRING 8517
-// Units: h0VG (Lesser Thunder Phoenix), Hotkey (Hotkey)
+// Units: n07K (Bandit Lord), Hotkey (Hotkey)
 {
 L
 }
@@ -39356,7 +39332,7 @@ STRING 8526
 }
 
 STRING 8527
-// Items: I06S (Runenschmied), Ubertip (Tooltip - Extended)
+// Items: I06S (Runeforger), Ubertip (Tooltip - Extended)
 {
 Stellt Runen mit mehreren Aufladungen her:|n- Rune der Geschwindigkeit|n- Rune der Magie-Bannung|n- Rune der Wiederherstellung|n- Rune der Wiedergeburt|n- Rune der Geringen Auferstehung|n- Rune der Großen Auferstehung
 }
@@ -39368,13 +39344,13 @@ STRING 8528
 }
 
 STRING 8529
-// Items: I163 (Rune of Lesser Resurrection (Runenschmied)), Name (Name)
+// Items: I163 (Rune of Lesser Resurrection (Runeforger)), Name (Name)
 {
 Rune der Geringen Auferstehung (Runenschmied)
 }
 
 STRING 8530
-// Items: I164 (Rune of Greater Resurrection (Runenschmied)), Name (Name)
+// Items: I164 (Rune of Greater Resurrection (Runeforger)), Name (Name)
 {
 Rune der Großen Auferstehung (Runenschmied)
 }
@@ -39548,13 +39524,13 @@ The Jewelcrafter uses his gathered jewels to craft a Goldene Krone.
 }
 
 STRING 8561
-// Units: h07O (Bandit Shipyard), Hotkey (Hotkey)
+// Units: n09Y (Salamander), Hotkey (Hotkey)
 {
 S
 }
 
 STRING 8562
-// Units: n09Y (Salamander), Hotkey (Hotkey)
+// Units: u01O (Dungeon Shipyard), Hotkey (Hotkey)
 {
 S
 }
@@ -39674,13 +39650,13 @@ B
 }
 
 STRING 8602
-// Units: u01O (Dungeon Shipyard), Hotkey (Hotkey)
+// Units: o04E (Dragonkin Shipyard), Hotkey (Hotkey)
 {
 S
 }
 
 STRING 8603
-// Units: o04E (Dragonkin Shipyard), Hotkey (Hotkey)
+// Units: e019 (Blood Elf Shipyard), Hotkey (Hotkey)
 {
 B
 }
@@ -40100,13 +40076,13 @@ Flammensturm
 }
 
 STRING 8687
-// Units: e019 (Blood Elf Shipyard), Hotkey (Hotkey)
+// Units: h0AT (Shipyard), Hotkey (Hotkey)
 {
 S
 }
 
 STRING 8690
-// Abilities: A1E5 (Summon Explosive Barrel), Hotkey (Hotkey - Normal)
+// Abilities: A1GB (Mass Firebolt), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -40172,7 +40148,7 @@ STRING 8703
 }
 
 STRING 8705
-// Units: H08E (Wächter von Tirisfal), Tip (Tooltip - Basic)
+// Units: H08E (Guardian of Tirisfal), Tip (Tooltip - Basic)
 {
 Aegwynn beschwören
 }
@@ -40214,7 +40190,7 @@ Verwaltet Ihre Unterkunft.
 }
 
 STRING 8713
-// Units: H08E (Wächter von Tirisfal), Awakentip (Tooltip - Awaken)
+// Units: H08E (Guardian of Tirisfal), Awakentip (Tooltip - Awaken)
 {
 Aegwynn wiederbeleben
 }
@@ -40400,7 +40376,7 @@ W
 }
 
 STRING 8803
-// Abilities: A0K5 (Bau fertigstellen), Hotkey (Hotkey - Normal)
+// Abilities: A0K5 (Finish Construction), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -40466,7 +40442,7 @@ STRING 8827
 }
 
 STRING 8828
-// Abilities: A1GB (Mass Firebolt), Hotkey (Hotkey - Normal)
+// Abilities: A1H0 (Stag Form), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -40520,19 +40496,19 @@ Vulkan Klein
 }
 
 STRING 8926
-// Units: H08E (Wächter von Tirisfal), Revivetip (Tooltip - Revive)
+// Units: H08E (Guardian of Tirisfal), Revivetip (Tooltip - Revive)
 {
 Aegwynn wiederbeleben
 }
 
 STRING 8928
-// Units: H08E (Wächter von Tirisfal), Propernames (Proper Names)
+// Units: H08E (Guardian of Tirisfal), Propernames (Proper Names)
 {
 Aegwynn
 }
 
 STRING 8929
-// Units: H08E (Wächter von Tirisfal), Name (Name)
+// Units: H08E (Guardian of Tirisfal), Name (Name)
 {
 Wächter von Tirisfal
 }
@@ -40544,13 +40520,13 @@ R
 }
 
 STRING 8952
-// Abilities: A1H0 (Stag Form), Hotkey (Hotkey - Normal)
+// Abilities: A1H5 (Mass Rejuvenation), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 8953
-// Abilities: A1H5 (Mass Rejuvenation), Hotkey (Hotkey - Normal)
+// Abilities: A1H8 (Mass Cyclone), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -40586,7 +40562,7 @@ Ein heiliges Licht kann eine befreundete lebende Einheit um <A13Q,DataA1> Treffe
 }
 
 STRING 9011
-// Abilities: A1H8 (Mass Cyclone), Hotkey (Hotkey - Normal)
+// Abilities: A1L5 (+1 Strength), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -40616,21 +40592,15 @@ STRING 9110
 }
 
 STRING 9111
-// Abilities: A020 (Sturmhammer-Blitz), Name (Name)
+// Abilities: A020 (Storm Hammer Lightning), Name (Name)
 {
 Sturmhammer-Blitz
 }
 
 STRING 9112
-// Units: h0BT (Belagerungs-Landschiff), Name (Name)
+// Units: h0BT (Siege Land Ship), Name (Name)
 {
 Belagerungs-Landschiff
-}
-
-STRING 9113
-// Abilities: A043 (Summon Imps), Name (Name)
-{
-Imps beschwören
 }
 
 STRING 9114
@@ -40640,7 +40610,7 @@ STRING 9114
 }
 
 STRING 9132
-// Units: n003 (Stein der Ordnung), Name (Name)
+// Units: n003 (Order Stone), Name (Name)
 {
 Stein der Ordnung
 }
@@ -40765,12 +40735,6 @@ STRING 9160
 Gibt Einheiten einem anderen verbündeten Spieler
 }
 
-STRING 9161
-// Upgrades: R051 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Tip (Tooltip)
-{
-No Burning Legion
-}
-
 STRING 9162
 // Abilities: A11A (Mass Inner Fire), Name (Name)
 {
@@ -40796,19 +40760,19 @@ Einfache Arbeiter-Einheit. Kann Gold und Holz abbauen, Gebäude errichten und 'R
 }
 
 STRING 9180
-// Items: I01E (Druiden-Brief), Name (Name)
+// Items: I01E (Druid Letter), Name (Name)
 {
 Druiden-Brief
 }
 
 STRING 9182
-// Items: I02C (Illidans Kugel), Name (Name)
+// Items: I02C (Illidan's Orb), Name (Name)
 {
 Illidans Kugel
 }
 
 STRING 9185
-// Items: I02D (Maghteridons Herz), Name (Name)
+// Items: I02D (Maghteridon's Heart), Name (Name)
 {
 Maghteridons Herz
 }
@@ -40838,25 +40802,25 @@ Schutzmantel
 }
 
 STRING 9248
-// Abilities: A1L5 (+1 Strength), Hotkey (Hotkey - Normal)
-{
-Q
-}
-
-STRING 9249
 // Abilities: A1OC (Inspect), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
-STRING 9257
+STRING 9249
 // Abilities: A1QO (Sleep to Next Morning), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
-STRING 9258
+STRING 9257
 // Abilities: A1X3 (Command Buttons), Hotkey (Hotkey - Normal)
+{
+Q
+}
+
+STRING 9258
+// Abilities: A24Q (Dig Down), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -40874,7 +40838,7 @@ Fleischwagen beschwören
 }
 
 STRING 9334
-// Abilities: A24Q (Dig Down), Hotkey (Hotkey - Normal)
+// Abilities: A269 (Change Ground), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -40916,13 +40880,13 @@ R
 }
 
 STRING 9385
-// Abilities: A269 (Change Ground), Hotkey (Hotkey - Normal)
+// Abilities: A0V5 (Hero Abilities), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
 STRING 9386
-// Abilities: A0V5 (Hero Abilities), Hotkey (Hotkey - Normal)
+// Abilities: A0VL (Slot 1), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -40940,18 +40904,12 @@ Heavy unit causing Chaos damage. Immune to spells. Can cast Gottesschild. |n|n|c
 }
 
 STRING 9391
-// Abilities: A0VL (Slot 1), Hotkey (Hotkey - Normal)
-{
-Q
-}
-
-STRING 9392
 // Abilities: A0VS (Ability Placeholder), Hotkey (Hotkey - Normal)
 {
 Q
 }
 
-STRING 9401
+STRING 9392
 // Upgrades: R0IN (Liquid Fire), Hotkey (Hotkey)
 {
 Q
@@ -41258,7 +41216,7 @@ B
 }
 
 STRING 9747
-// Abilities: A08Y (Zufällige Klasse), EditorSuffix (Editor Suffix)
+// Abilities: A08Y (Random Class), EditorSuffix (Editor Suffix)
 {
 B
 }
@@ -41303,12 +41261,6 @@ STRING 9759
 // Units: o03T (Library), Name (Name)
 {
 Bibliothek
-}
-
-STRING 9760
-// Units: n075 (Library), Description (Description)
-{
-Verkauft Folianten.
 }
 
 STRING 9761
@@ -41612,7 +41564,7 @@ The Troll-Medizinmann uses his knowledge to create Friedens-Schutzzaubers.
 }
 
 STRING 10076
-// Units: h0AT (Shipyard), Hotkey (Hotkey)
+// Units: o016 (Draenei Shipyard), Hotkey (Hotkey)
 {
 S
 }
@@ -41654,7 +41606,7 @@ The Loreamster uses his knowledge to create a Arcane Scroll.
 }
 
 STRING 10085
-// Units: o016 (Draenei Shipyard), Hotkey (Hotkey)
+// Units: o007 (Tauren Shipyard), Hotkey (Hotkey)
 {
 S
 }
@@ -41846,7 +41798,7 @@ Kartenersteller.|n|n|cffffcc00Volk:|r -|n|cffffcc00Klasse:|r Mönch|n|cffffcc00R
 }
 
 STRING 10133
-// Units: H08E (Wächter von Tirisfal), Ubertip (Tooltip - Extended)
+// Units: H08E (Guardian of Tirisfal), Ubertip (Tooltip - Extended)
 {
 Ein mystischer Held, adept at ranged assaults. Can learn Heilige Magie, Arkane Magie, Dunkle Magie, Fel-Magie and Feuermagie. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r|n|n|cffffcc00Bonus-Held erfordert Stufe 40. Benutzen Sie -unlock, um diese Beschränkung aufzuheben Beschränkt auf Benutzer Barade#2569.|r
 }
@@ -41876,7 +41828,7 @@ Der Skin von Arthas benutzt Frostmourne.|n|n|cffffcc00Beschränkt auf Benutzer B
 }
 
 STRING 10141
-// Abilities: A0AE (Hero Abilities Zufällige Klasse), EditorSuffix (Editor Suffix)
+// Abilities: A0AE (Hero Abilities Random Class), EditorSuffix (Editor Suffix)
 {
 B
 }
@@ -42014,7 +41966,7 @@ G
 }
 
 STRING 10174
-// Items: I06S (Runenschmied), Hotkey (Hotkey)
+// Items: I06S (Runeforger), Hotkey (Hotkey)
 {
 F
 }
@@ -42650,13 +42602,13 @@ Wyrmrest-Tempel
 }
 
 STRING 10282
-// Upgrades: R084 (Ölbrand), Tip (Tooltip)
+// Upgrades: R084 (Burning Oil), Tip (Tooltip)
 {
 Wyrmrest-Tempel erforschen
 }
 
 STRING 10283
-// Upgrades: R084 (Ölbrand), Ubertip (Tooltip - Extended)
+// Upgrades: R084 (Burning Oil), Ubertip (Tooltip - Extended)
 {
 Ermöglicht es Bürgern einen Wyrmrest-Tempel zu errichten, um Drachen auszubilden.
 }
@@ -42800,7 +42752,7 @@ The Sorcerer uses his knowledge to create a Wand of Telekinese.
 }
 
 STRING 10319
-// Units: o007 (Tauren Shipyard), Hotkey (Hotkey)
+// Units: e00U (Murloc Shipyard), Hotkey (Hotkey)
 {
 S
 }
@@ -42860,7 +42812,7 @@ Tierstall
 }
 
 STRING 10345
-// Units: n0O5 (Animal Pen), Tip (Tooltip - Basic)
+// Units: h0AN (Animal Pen), Tip (Tooltip - Basic)
 {
 Tierstall errichten
 }
@@ -42896,7 +42848,7 @@ Obststand
 }
 
 STRING 10354
-// Units: n0GU (Fruit Stand), Tip (Tooltip - Basic)
+// Units: n0J7 (Fruit Stand), Tip (Tooltip - Basic)
 {
 Obststand errichten
 }
@@ -42968,7 +42920,7 @@ STRING 10375
 }
 
 STRING 10376
-// Units: e00U (Murloc Shipyard), Hotkey (Hotkey)
+// Units: u00U (Faceless One Shipyard), Hotkey (Hotkey)
 {
 S
 }
@@ -42980,7 +42932,7 @@ Bietet eine zusätzliche Quelle für Goldeinkommen.|n|n|cffffcc00Begrenzt auf 4.
 }
 
 STRING 10391
-// Units: u00U (Faceless One Shipyard), Hotkey (Hotkey)
+// Items: fgrg (Stone Token), Hotkey (Hotkey)
 {
 S
 }
@@ -43004,7 +42956,7 @@ U
 }
 
 STRING 10395
-// Items: fgrg (Stone Token), Hotkey (Hotkey)
+// Items: gomn (Glyph of Omniscience), Hotkey (Hotkey)
 {
 S
 }
@@ -43019,24 +42971,6 @@ STRING 10397
 // Units: h0AN (Animal Pen), Name (Name)
 {
 Tiergehege
-}
-
-STRING 10398
-// Units: h0AN (Animal Pen), Tip (Tooltip - Basic)
-{
-Tiergehege errichten
-}
-
-STRING 10399
-// Units: n0O5 (Animal Pen), Description (Description)
-{
-Die Hauptquelle für Wolle.
-}
-
-STRING 10400
-// Units: n0O5 (Animal Pen), Ubertip (Tooltip - Extended)
-{
-Die Hauptquelle für Wolle.
 }
 
 STRING 10401
@@ -43418,7 +43352,7 @@ Stellt Winzige Göttliche Golems her.
 }
 
 STRING 10485
-// Items: gomn (Glyph of Omniscience), Hotkey (Hotkey)
+// Items: rots (Scepter of the Sea), Hotkey (Hotkey)
 {
 S
 }
@@ -43430,7 +43364,7 @@ F
 }
 
 STRING 10488
-// Units: N0HH (Erdmagier), Hotkey (Hotkey)
+// Units: N0HH (Geomancer), Hotkey (Hotkey)
 {
 G
 }
@@ -43748,7 +43682,7 @@ STRING 10572
 }
 
 STRING 10573
-// Items: rots (Scepter of the Sea), Hotkey (Hotkey)
+// Items: I05Y (Second Profession), Hotkey (Hotkey)
 {
 S
 }
@@ -43988,7 +43922,7 @@ Immobilie Wyrmrest-Tempel kaufen
 }
 
 STRING 10623
-// Units: N0AF (Erdmagier), EditorSuffix (Name - Editor Suffix)
+// Units: N0AF (Geomancer), EditorSuffix (Name - Editor Suffix)
 {
 (NPC)
 }
@@ -44000,7 +43934,7 @@ STRING 10624
 }
 
 STRING 10626
-// Upgrades: R084 (Ölbrand), Name (Name)
+// Upgrades: R084 (Burning Oil), Name (Name)
 {
 Wyrmrest-Tempel
 }
@@ -44330,7 +44264,7 @@ D
 }
 
 STRING 10742
-// Items: I05Y (Second Profession), Hotkey (Hotkey)
+// Items: I065 (Naga Ruins (Sunken Kalimdor)), Hotkey (Hotkey)
 {
 S
 }
@@ -44522,13 +44456,13 @@ The Hunter uses his knowledge to summon a Jagdfalke.
 }
 
 STRING 10778
-// Units: n07K (Bandit Lord), Hotkey (Hotkey)
+// Units: h084 (Lightning Elemental), Hotkey (Hotkey)
 {
 L
 }
 
 STRING 10779
-// Items: I065 (Naga Ruins (Sunken Kalimdor)), Hotkey (Hotkey)
+// Items: I06F (Naga), Hotkey (Hotkey)
 {
 S
 }
@@ -44720,7 +44654,7 @@ W
 }
 
 STRING 10854
-// Items: I06F (Naga), Hotkey (Hotkey)
+// Items: I06Q (Loremaster), Hotkey (Hotkey)
 {
 S
 }
@@ -44960,19 +44894,19 @@ G
 }
 
 STRING 10900
-// Items: I06Q (Loremaster), Hotkey (Hotkey)
-{
-S
-}
-
-STRING 10901
 // Items: I08U (Boards), Hotkey (Hotkey)
 {
 S
 }
 
-STRING 10902
+STRING 10901
 // Items: I097 (Craft Boards), Hotkey (Hotkey)
+{
+S
+}
+
+STRING 10902
+// Items: I09H (Item Locker), Hotkey (Hotkey)
 {
 S
 }
@@ -45116,7 +45050,7 @@ Creates a Gnom-Geschütz.
 }
 
 STRING 10927
-// Items: I09H (Item Locker), Hotkey (Hotkey)
+// Items: I09Q (Troll), Hotkey (Hotkey)
 {
 S
 }
@@ -45464,7 +45398,7 @@ STRING 11015
 }
 
 STRING 11019
-// Items: I09Q (Troll), Hotkey (Hotkey)
+// Items: I0B0 (Summon Red Dragon), Hotkey (Hotkey)
 {
 S
 }
@@ -45758,7 +45692,7 @@ Bildet Fledermausreiter, Fledermäuse, Troll-Golems und Zalandari Throne of Wars
 }
 
 STRING 11122
-// Upgrades: R01Y (Ölbrand), Ubertip (Tooltip - Extended)
+// Upgrades: R01Y (Burning Oil), Ubertip (Tooltip - Extended)
 {
 Erlaubt Bürgern den Bau des Brunnen des Blutes zur AUsbildung und Umwandlung von Chaos-Orcs.
 }
@@ -45824,7 +45758,7 @@ Converts Orc units into Höllenorcs units which makes them stronger. |n|n|cffffc
 }
 
 STRING 11151
-// Upgrades: R01Z (Ölbrand), Name (Name)
+// Upgrades: R01Z (Burning Oil), Name (Name)
 {
 Weltenbaum
 }
@@ -45902,7 +45836,7 @@ Power of Cenarius
 }
 
 STRING 11165
-// Upgrades: R020 (Ölbrand), Name (Name)
+// Upgrades: R020 (Burning Oil), Name (Name)
 {
 Lich-König
 }
@@ -46244,7 +46178,7 @@ X
 }
 
 STRING 11344
-// Upgrades: R021 (Ölbrand), Ubertip (Tooltip - Extended)
+// Upgrades: R021 (Burning Oil), Ubertip (Tooltip - Extended)
 {
 Erlaubt Bürgern den Bau eines Magischen Gewölbes mit den Fähigkeiten Mana verbrennen und Mana abziehen.
 }
@@ -46478,7 +46412,7 @@ Opens a portal, allowing Schemens to step through somewhere on the map in a visi
 }
 
 STRING 11410
-// Upgrades: R020 (Ölbrand), Ubertip (Tooltip - Extended)
+// Upgrades: R020 (Burning Oil), Ubertip (Tooltip - Extended)
 {
 Erlaubt Bürgern den Bau des Lich-Königs, um feindliche Einheiten in Untote umzuwandeln und Schemen irgendwo auf der Karte zu beschwören.
 }
@@ -46610,7 +46544,7 @@ Arkaner Spähposten
 }
 
 STRING 11438
-// Upgrades: R022 (Ölbrand), Ubertip (Tooltip - Extended)
+// Upgrades: R022 (Burning Oil), Ubertip (Tooltip - Extended)
 {
 Erlaubt Bürgern den Bau eines Arkanen Spähpostens, um feindliche Einheiten aufzudecken und tote Spielereinheiten auferstehen zu lassen.
 }
@@ -46628,7 +46562,7 @@ Reveals an area of the map. |nDetects invisible units. |nHält <A096,Dur1> Sekun
 }
 
 STRING 11442
-// Items: I0B0 (Summon Red Dragon), Hotkey (Hotkey)
+// Items: I0AL (Summon Green Dragon), Hotkey (Hotkey)
 {
 S
 }
@@ -46670,19 +46604,19 @@ STRING 11448
 }
 
 STRING 11449
-// Upgrades: R023 (Ölbrand), Name (Name)
+// Upgrades: R023 (Burning Oil), Name (Name)
 {
 Buch des Beschwörung-Postaments
 }
 
 STRING 11450
-// Upgrades: R023 (Ölbrand), Tip (Tooltip)
+// Upgrades: R023 (Burning Oil), Tip (Tooltip)
 {
 Buch des Beschwörung-Postaments
 }
 
 STRING 11451
-// Upgrades: R023 (Ölbrand), Ubertip (Tooltip - Extended)
+// Upgrades: R023 (Burning Oil), Ubertip (Tooltip - Extended)
 {
 Erlaubt Bürgern den Bau des Buches des Beschwörung-Postaments, um Höllenbestien vom Himmel herbeizurufen.
 }
@@ -46982,19 +46916,19 @@ STRING 11595
 }
 
 STRING 11596
-// Upgrades: R08C (Ölbrand), Name (Name)
+// Upgrades: R08C (Burning Oil), Name (Name)
 {
 Dorne
 }
 
 STRING 11597
-// Upgrades: R08C (Ölbrand), Tip (Tooltip)
+// Upgrades: R08C (Burning Oil), Tip (Tooltip)
 {
 Dorne erforschen
 }
 
 STRING 11598
-// Upgrades: R08C (Ölbrand), Ubertip (Tooltip - Extended)
+// Upgrades: R08C (Burning Oil), Ubertip (Tooltip - Extended)
 {
 Erlaubt Bürgern eine Dorne zu errichten.
 }
@@ -47234,7 +47168,7 @@ W
 }
 
 STRING 11709
-// Items: I0AL (Summon Green Dragon), Hotkey (Hotkey)
+// Items: I0AM (Summon Black Dragon), Hotkey (Hotkey)
 {
 S
 }
@@ -47444,7 +47378,7 @@ Dorniger Turm
 }
 
 STRING 11785
-// Items: I0B3 (Summon Niederdrache), Tip (Tooltip - Basic)
+// Items: I0B3 (Summon Nether Dragon), Tip (Tooltip - Basic)
 {
 Niederdrachen beschwören
 }
@@ -47468,7 +47402,7 @@ Stonemaul-Lager
 }
 
 STRING 11821
-// Upgrades: R0EN (Ölbrand), Tip (Tooltip)
+// Upgrades: R0EN (Burning Oil), Tip (Tooltip)
 {
 Stonemaul-Lager erforschen
 }
@@ -47540,7 +47474,7 @@ Further increases the Distanzangriff-Schaden for Ogre units.
 }
 
 STRING 11835
-// Upgrades: R0EN (Ölbrand), Ubertip (Tooltip - Extended)
+// Upgrades: R0EN (Burning Oil), Ubertip (Tooltip - Extended)
 {
 Erlaubt Bürgern den Bau eines Stonemaul-Lagers, um Stonemaul-Clan-Oger auszubilden.
 }
@@ -48308,19 +48242,19 @@ STRING 12089
 }
 
 STRING 12090
-// Items: I0OO (Intelligenz), Name (Name)
+// Items: I0OO (Intelligence), Name (Name)
 {
 Intelligenz
 }
 
 STRING 12091
-// Items: I0OO (Intelligenz), Tip (Tooltip - Basic)
+// Items: I0OO (Intelligence), Tip (Tooltip - Basic)
 {
 Intelligenz
 }
 
 STRING 12092
-// Items: I0OO (Intelligenz), Ubertip (Tooltip - Extended)
+// Items: I0OO (Intelligence), Ubertip (Tooltip - Extended)
 {
 Ändert das Primär-Attribut zu Intelligenz.
 }
@@ -49286,7 +49220,7 @@ Tor geöffnet
 }
 
 STRING 12336
-// Units: N0MY (Burrowed Erdmagier), Hotkey (Hotkey)
+// Units: N0MY (Burrowed Geomancer), Hotkey (Hotkey)
 {
 G
 }
@@ -50084,7 +50018,7 @@ STRING 13925
 }
 
 STRING 13926
-// Upgrades: R02B (Ölbrand), Name (Name)
+// Upgrades: R02B (Burning Oil), Name (Name)
 {
 Statue von Azshara
 }
@@ -50096,7 +50030,7 @@ Reduce
 }
 
 STRING 13928
-// Upgrades: R02B (Ölbrand), Ubertip (Tooltip - Extended)
+// Upgrades: R02B (Burning Oil), Ubertip (Tooltip - Extended)
 {
 Erlaubt Bürgern den Bau einer Statue von Azshara, um Ihre Stadt mit mächtigen Stürmen zu beschützen.
 }
@@ -50162,19 +50096,19 @@ Infects nearby enemy living units with Seuchenwolke. Seuchenwolke deals <A09R,Da
 }
 
 STRING 13940
-// Upgrades: R02C (Ölbrand), Name (Name)
+// Upgrades: R02C (Burning Oil), Name (Name)
 {
 Verderbter Urtum-Beschützer
 }
 
 STRING 13941
-// Upgrades: R02C (Ölbrand), Tip (Tooltip)
+// Upgrades: R02C (Burning Oil), Tip (Tooltip)
 {
 Verderbter Urtum-Beschützer
 }
 
 STRING 13942
-// Upgrades: R02C (Ölbrand), Ubertip (Tooltip - Extended)
+// Upgrades: R02C (Burning Oil), Ubertip (Tooltip - Extended)
 {
 Erlaubt Bürgern den Bau eines Verderbten Urtum-Beschützers, um Ihre Basis zu beschützen.
 }
@@ -50210,13 +50144,13 @@ E
 }
 
 STRING 13974
-// Upgrades: R02E (Ölbrand), Tip (Tooltip)
+// Upgrades: R02E (Burning Oil), Tip (Tooltip)
 {
 Fast Gold Bonus
 }
 
 STRING 13976
-// Upgrades: R02E (Ölbrand), effect1 (Effect 1)
+// Upgrades: R02E (Burning Oil), effect1 (Effect 1)
 {
 rmin
 }
@@ -50426,7 +50360,7 @@ Dämonen-Hafen errichten
 }
 
 STRING 14055
-// Items: I0AM (Summon Black Dragon), Hotkey (Hotkey)
+// Items: I0AN (Summon Bronze Dragon), Hotkey (Hotkey)
 {
 S
 }
@@ -50468,7 +50402,7 @@ Item Attack Wind Bonus
 }
 
 STRING 14062
-// Abilities: A0JE (Landkanonen), EditorSuffix (Editor Suffix)
+// Abilities: A0JE (Land Cannons), EditorSuffix (Editor Suffix)
 {
  (Icon - Kul Tiras)
 }
@@ -50720,13 +50654,13 @@ Loads a targeted enemy land unit.
 }
 
 STRING 14137
-// Upgrades: R01Z (Ölbrand), Ubertip (Tooltip - Extended)
+// Upgrades: R01Z (Burning Oil), Ubertip (Tooltip - Extended)
 {
 Erlaubt Bürgern den Bau eines gigantischen Weltenbaums, um Nachtelfeneinheiten überall auf der Karte zu heilen und auferstehen zu lassen!
 }
 
 STRING 14138
-// Upgrades: R02D (Ölbrand), Name (Name)
+// Upgrades: R02D (Burning Oil), Name (Name)
 {
 Draenei-Gefängnis
 }
@@ -50738,7 +50672,7 @@ Ein Kriegerheld, adept at terrorizing enemies. Can learn Schockwelle, Schreckgeh
 }
 
 STRING 14140
-// Upgrades: R02D (Ölbrand), Ubertip (Tooltip - Extended)
+// Upgrades: R02D (Burning Oil), Ubertip (Tooltip - Extended)
 {
 Erlaubt Bürgern den Bau eines Draenei-Gefängnis', um feindliche Einheiten überall auf der Karte einzusperren!
 }
@@ -50768,7 +50702,7 @@ STRING 14243
 }
 
 STRING 14244
-// Abilities: A027 (Schutz des Halbgotts), Researchhotkey (Hotkey - Learn)
+// Abilities: A027 (Demigod´s Protection), Researchhotkey (Hotkey - Learn)
 {
 I
 }
@@ -50882,7 +50816,7 @@ Hurls a torpedo that stuns a target enemy ground unit.
 }
 
 STRING 14267
-// Abilities: A0A4 (Leuchtfeuer), EditorSuffix (Editor Suffix)
+// Abilities: A0A4 (Flare), EditorSuffix (Editor Suffix)
 {
 (Gnomisches U-Boot)
 }
@@ -50894,7 +50828,7 @@ STRING 14268
 }
 
 STRING 14269
-// Abilities: A0A4 (Leuchtfeuer), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0A4 (Flare), Ubertip (Tooltip - Normal - Extended)
 {
 Launches a flare above a target point, which reveals that area for <Afla,Dur1> Sekunden lang an. |nReveals invisible units.
 }
@@ -50960,13 +50894,13 @@ STRING 14325
 }
 
 STRING 14329
-// Abilities: A027 (Schutz des Halbgotts), Hotkey (Hotkey - Normal)
+// Abilities: A027 (Demigod´s Protection), Hotkey (Hotkey - Normal)
 {
 I
 }
 
 STRING 14330
-// Units: N0AF (Erdmagier), Hotkey (Hotkey)
+// Units: N0AF (Geomancer), Hotkey (Hotkey)
 {
 G
 }
@@ -51194,7 +51128,7 @@ Purchase Amulet of Martial Arts
 }
 
 STRING 14411
-// Items: I0AN (Summon Bronze Dragon), Hotkey (Hotkey)
+// Items: I0B2 (Summon Blue Dragon), Hotkey (Hotkey)
 {
 S
 }
@@ -51386,7 +51320,7 @@ rlev
 }
 
 STRING 14497
-// Upgrades: R060 (Leuchtfeuer), effect1 (Effect 1)
+// Upgrades: R060 (Flare), effect1 (Effect 1)
 {
 rarm
 }
@@ -51422,7 +51356,7 @@ W
 }
 
 STRING 14580
-// Abilities: A08X (Bau fertigstellen), Hotkey (Hotkey - Normal)
+// Abilities: A08X (Finish Construction), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -51464,7 +51398,7 @@ Unsichtbarkeit
 }
 
 STRING 14593
-// Upgrades: R07Z (Eis-Atem), Name (Name)
+// Upgrades: R07Z (Freezing Breath), Name (Name)
 {
 Festhaut
 }
@@ -51590,7 +51524,7 @@ Priester
 }
 
 STRING 14657
-// Upgrades: R0G5 (Ölbrand), EditorSuffix (Editor Suffix)
+// Upgrades: R0G5 (Burning Oil), EditorSuffix (Editor Suffix)
 {
 (Draenei)
 }
@@ -51674,7 +51608,7 @@ STRING 14726
 }
 
 STRING 14727
-// Items: I0B2 (Summon Blue Dragon), Hotkey (Hotkey)
+// Items: I0B3 (Summon Nether Dragon), Hotkey (Hotkey)
 {
 S
 }
@@ -51788,7 +51722,7 @@ R
 }
 
 STRING 14880
-// Upgrades: R00D (Eis-Atem), Hotkey (Hotkey)
+// Upgrades: R00D (Freezing Breath), Hotkey (Hotkey)
 {
 R
 }
@@ -51812,7 +51746,7 @@ R
 }
 
 STRING 14885
-// Upgrades: R06D (Eis-Atem), Hotkey (Hotkey)
+// Upgrades: R06D (Freezing Breath), Hotkey (Hotkey)
 {
 W
 }
@@ -51884,7 +51818,7 @@ E
 }
 
 STRING 14899
-// Upgrades: R0CB (Ölbrand), Hotkey (Hotkey)
+// Upgrades: R0CB (Burning Oil), Hotkey (Hotkey)
 {
 W
 }
@@ -51956,7 +51890,7 @@ E
 }
 
 STRING 14942
-// Upgrades: R07Z (Eis-Atem), Hotkey (Hotkey)
+// Upgrades: R07Z (Freezing Breath), Hotkey (Hotkey)
 {
 R
 }
@@ -51992,7 +51926,7 @@ Einfache Arbeiter-Einheit. Kann Gold und Holz abbauen, Gebäude errichten und 'R
 }
 
 STRING 14981
-// Items: I04L (Erdmagier), Tip (Tooltip - Basic)
+// Items: I04L (Geomancer), Tip (Tooltip - Basic)
 {
 Erdmagier
 }
@@ -52040,7 +51974,7 @@ Clans
 }
 
 STRING 15086
-// Upgrades: R07U (Eis-Atem), Hotkey (Hotkey)
+// Upgrades: R07U (Freezing Breath), Hotkey (Hotkey)
 {
 W
 }
@@ -52208,13 +52142,13 @@ Allows harvesting minerals and increases attack damage against structures.
 }
 
 STRING 15290
-// Units: N0HH (Erdmagier), Awakentip (Tooltip - Awaken)
+// Units: N0HH (Geomancer), Awakentip (Tooltip - Awaken)
 {
 Erdmagier wiederbeleben
 }
 
 STRING 15292
-// Units: N0HH (Erdmagier), Tip (Tooltip - Basic)
+// Units: N0HH (Geomancer), Tip (Tooltip - Basic)
 {
 Erdmagier beschwören
 }
@@ -52322,7 +52256,7 @@ STRING 15323
 }
 
 STRING 15327
-// Units: N0HH (Erdmagier), Revivetip (Tooltip - Revive)
+// Units: N0HH (Geomancer), Revivetip (Tooltip - Revive)
 {
 Erdmagier wiederbeleben
 }
@@ -52526,7 +52460,7 @@ Liefert Essen, wodurch die maximale Anzahl von Einheiten erhöht wird, die ausge
 }
 
 STRING 15751
-// Units: N0HH (Erdmagier), Propernames (Proper Names)
+// Units: N0HH (Geomancer), Propernames (Proper Names)
 {
 Flintdagger,Gibblesnik,Goldtooth,Gug Fatcandle,Narg the Taskmaster,Noggrin Onetooth,Taskmaster Snivvle,Kipp Brightwick,Snazzle Shinyfinder,Trytooth Hardchisel
 }
@@ -52640,7 +52574,7 @@ Errichtet einen Tresor.
 }
 
 STRING 15806
-// Upgrades: R081 (Eis-Atem), Hotkey (Hotkey)
+// Upgrades: R081 (Freezing Breath), Hotkey (Hotkey)
 {
 R
 }
@@ -52976,7 +52910,7 @@ STRING 16008
 }
 
 STRING 16040
-// Units: N0HH (Erdmagier), Ubertip (Tooltip - Extended)
+// Units: N0HH (Geomancer), Ubertip (Tooltip - Extended)
 {
 Ein Kriegerheld, adept at summoning beasts into battle. Can learn Massen-Feuerblitz, Massenlangsam, Hieb, and Earthquake. |n|n|cffffcc00Greift Land-Einheiten an.|r
 }
@@ -53018,7 +52952,7 @@ E
 }
 
 STRING 16103
-// Abilities: A1L7 (+1 Intelligenz), Hotkey (Hotkey - Normal)
+// Abilities: A1L7 (+1 Intelligence), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -53450,7 +53384,7 @@ V
 }
 
 STRING 16543
-// Upgrades: R05I (Ölbrand), Name (Name)
+// Upgrades: R05I (Burning Oil), Name (Name)
 {
 Burg Prachtmeer
 }
@@ -53636,7 +53570,7 @@ D
 }
 
 STRING 16579
-// Upgrades: R05I (Ölbrand), Tip (Tooltip)
+// Upgrades: R05I (Burning Oil), Tip (Tooltip)
 {
 Burg Prachtmeer
 }
@@ -53678,7 +53612,7 @@ T
 }
 
 STRING 16586
-// Upgrades: R05I (Ölbrand), Ubertip (Tooltip - Extended)
+// Upgrades: R05I (Burning Oil), Ubertip (Tooltip - Extended)
 {
 Erlaubt Bürgern den Bau der Burg Prachtmeer, um Ihren Stützpunkt zu verteidigen.
 }
@@ -53705,12 +53639,6 @@ STRING 16663
 // Units: n0MN (Auction House), Name (Name)
 {
 Auktionshaus
-}
-
-STRING 16664
-// Units: n0MN (Auction House), Tip (Tooltip - Basic)
-{
-Auktionshaus errichten
 }
 
 STRING 16741
@@ -53822,7 +53750,7 @@ STRING 16859
 }
 
 STRING 16860
-// Items: I0B3 (Summon Niederdrache), Hotkey (Hotkey)
+// Items: I0JQ (Craft Ice Shards), Hotkey (Hotkey)
 {
 S
 }
@@ -53894,7 +53822,7 @@ T
 }
 
 STRING 16896
-// Units: h084 (Blitz-Elementargeist), Hotkey (Hotkey)
+// Items: I03E (Alliance with the Burning Legion), Hotkey (Hotkey)
 {
 L
 }
@@ -53912,7 +53840,7 @@ T
 }
 
 STRING 16901
-// Items: I03E (Alliance with the Burning Legion), Hotkey (Hotkey)
+// Abilities: ACdr (Life Drain), Hotkey (Hotkey - Normal)
 {
 L
 }
@@ -53930,7 +53858,7 @@ O
 }
 
 STRING 16918
-// Items: I0JQ (Craft Ice Shards), Hotkey (Hotkey)
+// Items: I0NM (Inscriptor), Hotkey (Hotkey)
 {
 S
 }
@@ -54050,13 +53978,13 @@ Produziert Neruben-Königin. Bietet auch die Ausbaustufe 'Eis-Atem'.
 }
 
 STRING 16957
-// Units: u026 (Gewölbe der Reliquien), Name (Name)
+// Units: u026 (Vault of Relics), Name (Name)
 {
 Grabmal der Relikte
 }
 
 STRING 16958
-// Units: u026 (Gewölbe der Reliquien), Tip (Tooltip - Basic)
+// Units: u026 (Vault of Relics), Tip (Tooltip - Basic)
 {
 Grabmal der Relikte beschwören
 }
@@ -54122,7 +54050,7 @@ C
 }
 
 STRING 17004
-// Items: I0NM (Inscriptor), Hotkey (Hotkey)
+// Items: I0OT (Summon Guard of the Old Gods), Hotkey (Hotkey)
 {
 S
 }
@@ -54188,7 +54116,7 @@ Dient als Abladepunkt für das geschlagene Holz. |nAlso contains upgrades for im
 }
 
 STRING 17296
-// Items: I0OT (Summon Guard of the Old Gods), Hotkey (Hotkey)
+// Items: I0RR (-1 Agility), Hotkey (Hotkey)
 {
 S
 }
@@ -54224,13 +54152,13 @@ D
 }
 
 STRING 17303
-// Units: h00Z (Kanonier-Team), Name (Name)
+// Units: h00Z (Canoneer Team), Name (Name)
 {
 Kanonier-Team
 }
 
 STRING 17304
-// Units: h00Z (Kanonier-Team), Tip (Tooltip - Basic)
+// Units: h00Z (Canoneer Team), Tip (Tooltip - Basic)
 {
 Kanonier-Team ausbilden
 }
@@ -54560,7 +54488,7 @@ Equips the sword which allows only melee attacks.
 }
 
 STRING 17362
-// Items: I0RR (-1 Agility), Hotkey (Hotkey)
+// Items: I0WN (Cook), Hotkey (Hotkey)
 {
 S
 }
@@ -54668,7 +54596,7 @@ STRING 17397
 }
 
 STRING 17400
-// Items: I0WN (Cook), Hotkey (Hotkey)
+// Items: I0WX (Fisherman), Hotkey (Hotkey)
 {
 S
 }
@@ -55142,19 +55070,19 @@ Priester wiederbeleben
 }
 
 STRING 17553
-// Abilities: A0M5 (Güter beladen), Name (Name)
+// Abilities: A0M5 (Loading Goods), Name (Name)
 {
 Güter beladen
 }
 
 STRING 17554
-// Abilities: A0M5 (Güter beladen), Tip (Tooltip - Normal)
+// Abilities: A0M5 (Loading Goods), Tip (Tooltip - Normal)
 {
 Güter beladen
 }
 
 STRING 17555
-// Abilities: A0M5 (Güter beladen), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0M5 (Loading Goods), Ubertip (Tooltip - Normal - Extended)
 {
 Erzeugt alle 10 Sekunden 60 Gold und 30 Holz. Die erzeugten Rohstoffe werden durch die Anzahl der Krane geteilt, falls Sie mehrere errichten,
 }
@@ -55466,7 +55394,7 @@ STRING 17694
 }
 
 STRING 17752
-// Units: o06Y (Gnoll-Wicht), Ubertip (Tooltip - Extended)
+// Units: o06Y (Gnoll Runt), Ubertip (Tooltip - Extended)
 {
 Einfache Arbeiter-Einheit. Kann Gold und Holz abbauen, Gebäude errichten und 'Reparieren'. |n|n|cffffcc00Greif Land-Einheiten und Bäume an.|r
 }
@@ -55598,7 +55526,7 @@ Bretter
 }
 
 STRING 17811
-// Items: I0WX (Fisherman), Hotkey (Hotkey)
+// Items: I13G (Tome of Armor), Hotkey (Hotkey)
 {
 S
 }
@@ -55742,7 +55670,7 @@ Dalaran-Missgeburt ausbilden
 }
 
 STRING 17975
-// Units: h09K (Blitz-Elementargeist), EditorSuffix (Name - Editor Suffix)
+// Units: h09K (Lightning Elemental), EditorSuffix (Name - Editor Suffix)
 {
 (Dalaran)
 }
@@ -55862,7 +55790,7 @@ Nachtaktiv
 }
 
 STRING 18126
-// Items: I13G (Tome of Armor), Hotkey (Hotkey)
+// Items: I16D (Craft Firehand Gauntlets), Hotkey (Hotkey)
 {
 S
 }
@@ -56006,7 +55934,7 @@ STRING 18225
 }
 
 STRING 18226
-// Units: h09W (Gift-Elementargeist), EditorSuffix (Name - Editor Suffix)
+// Units: h09W (Poison Elemental), EditorSuffix (Name - Editor Suffix)
 {
 (Dalaran)
 }
@@ -56066,7 +55994,7 @@ STRING 18313
 }
 
 STRING 18321
-// Units: h0BT (Belagerungs-Landschiff), Tip (Tooltip - Basic)
+// Units: h0BT (Siege Land Ship), Tip (Tooltip - Basic)
 {
 Belagerungslandschiff ausbilden
 }
@@ -56156,7 +56084,7 @@ STRING 18706
 }
 
 STRING 18734
-// Items: I16D (Craft Firehand Gauntlets), Hotkey (Hotkey)
+// Items: I18B (Scepter of the Cult), Hotkey (Hotkey)
 {
 S
 }
@@ -56759,7 +56687,7 @@ Hafen von Kul Tiras errichten
 }
 
 STRING 18939
-// Units: h0BT (Belagerungs-Landschiff), EditorSuffix (Name - Editor Suffix)
+// Units: h0BT (Siege Land Ship), EditorSuffix (Name - Editor Suffix)
 {
 (Kul Tiras)
 }
@@ -56789,7 +56717,7 @@ STRING 18945
 }
 
 STRING 18946
-// Units: h0BW (Fliegende Dreadnought), EditorSuffix (Name - Editor Suffix)
+// Units: h0BW (Flying Dreadnought), EditorSuffix (Name - Editor Suffix)
 {
 (Kul Tiras)
 }
@@ -56849,19 +56777,19 @@ Schiffskanonen
 }
 
 STRING 18957
-// Abilities: A0JE (Landkanonen), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0JE (Land Cannons), Ubertip (Tooltip - Normal - Extended)
 {
 Increases the damage of land cannons against ships.
 }
 
 STRING 18958
-// Abilities: A0JE (Landkanonen), Tip (Tooltip - Normal)
+// Abilities: A0JE (Land Cannons), Tip (Tooltip - Normal)
 {
 Landkanonen
 }
 
 STRING 18960
-// Abilities: A0JE (Landkanonen), Name (Name)
+// Abilities: A0JE (Land Cannons), Name (Name)
 {
 Landkanonen
 }
@@ -57023,7 +56951,7 @@ Manaregeneration
 }
 
 STRING 18995
-// Items: I18B (Scepter of the Cult), Hotkey (Hotkey)
+// Items: I19U (Spade), Hotkey (Hotkey)
 {
 S
 }
@@ -57173,7 +57101,7 @@ E
 }
 
 STRING 19348
-// Abilities: A20N (Diebstahl - Adept), Hotkey (Hotkey - Normal)
+// Abilities: A20N (Thieving - Adept), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -57575,7 +57503,7 @@ E
 }
 
 STRING 19665
-// Items: I19U (Spade), Hotkey (Hotkey)
+// Abilities: A026 (Shroud of Protection), Hotkey (Hotkey - Normal)
 {
 S
 }
@@ -57599,7 +57527,7 @@ Draenei-Unterkunft errichten
 }
 
 STRING 19756
-// Abilities: A0MH (Ölbrand), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0MH (Burning Oil), Ubertip (Tooltip - Normal - Extended)
 {
 Drenches the Oger-Goblin-Trupp ammo in burning oil, causing them to light the ground on fire and burn enemy units.
 }
@@ -57707,7 +57635,7 @@ STRING 19847
 }
 
 STRING 19848
-// Upgrades: R04P (Ölbrand), Ubertip (Tooltip - Extended)
+// Upgrades: R04P (Burning Oil), Ubertip (Tooltip - Extended)
 {
 Upgrades Oger-Goblin-Trupps to fire rocks smothered in burning oil, which causes the ground to burn.
 }
@@ -57971,7 +57899,7 @@ E
 }
 
 STRING 19937
-// Abilities: A026 (Shroud of Protection), Hotkey (Hotkey - Normal)
+// Abilities: A0AY (Convert Into Naga), Hotkey (Hotkey - Normal)
 {
 S
 }
@@ -58157,7 +58085,7 @@ Y
 }
 
 STRING 20037
-// Abilities: A0AY (Convert Into Naga), Hotkey (Hotkey - Normal)
+// Abilities: A0DC (Play Clan Sound), Hotkey (Hotkey - Normal)
 {
 S
 }
@@ -58247,13 +58175,13 @@ P
 }
 
 STRING 20070
-// Abilities: A0DC (Play Clan Sound), Hotkey (Hotkey - Normal)
+// Abilities: A0PQ (Dark Summoning), Hotkey (Hotkey - Normal)
 {
 S
 }
 
 STRING 20071
-// Abilities: A0PQ (Dark Summoning), Hotkey (Hotkey - Normal)
+// Abilities: A0W7 (Slide), Hotkey (Hotkey - Normal)
 {
 S
 }
@@ -58496,7 +58424,7 @@ Y
 }
 
 STRING 20146
-// Abilities: A0W7 (Slide), Hotkey (Hotkey - Normal)
+// Abilities: A0XR (Club Strike), Hotkey (Hotkey - Normal)
 {
 S
 }
@@ -59237,7 +59165,7 @@ STRING 20462
 }
 
 STRING 20463
-// Units: n08E (Dalaran-Himmelswachturm), EditorSuffix (Name - Editor Suffix)
+// Units: n08E (Dalaran Sky Guard Tower), EditorSuffix (Name - Editor Suffix)
 {
 (Dalaran)
 }
@@ -59501,13 +59429,13 @@ STRING 20517
 }
 
 STRING 20518
-// Upgrades: R05Y (Leuchtfeuer), Tip (Tooltip)
+// Upgrades: R05Y (Flare), Tip (Tooltip)
 {
 Gebäude-Blinzeln erforschen
 }
 
 STRING 20519
-// Upgrades: R05Y (Leuchtfeuer), Name (Name)
+// Upgrades: R05Y (Flare), Name (Name)
 {
 Gebäude-Blinzeln
 }
@@ -59519,13 +59447,13 @@ STRING 20520
 }
 
 STRING 20521
-// Upgrades: R05Y (Leuchtfeuer), Ubertip (Tooltip - Extended)
+// Upgrades: R05Y (Flare), Ubertip (Tooltip - Extended)
 {
 Allows Dalaran buildings to use the ability Blinzeln.
 }
 
 STRING 20522
-// Upgrades: R05Z (Leuchtfeuer), Tip (Tooltip)
+// Upgrades: R05Z (Flare), Tip (Tooltip)
 {
 Spawn Feuer-Elementargeister beschwören erforschen
 }
@@ -59543,25 +59471,25 @@ STRING 20524
 }
 
 STRING 20525
-// Upgrades: R05Z (Leuchtfeuer), Ubertip (Tooltip - Extended)
+// Upgrades: R05Z (Flare), Ubertip (Tooltip - Extended)
 {
 Allows Dalaran buildings to spawn 2 Feuer-Elementargeister whenever it gets destroyed.
 }
 
 STRING 20526
-// Units: h09W (Gift-Elementargeist), Name (Name)
+// Units: h09W (Poison Elemental), Name (Name)
 {
 Gift-Elementargeist
 }
 
 STRING 20527
-// Units: h09W (Gift-Elementargeist), Tip (Tooltip - Basic)
+// Units: h09W (Poison Elemental), Tip (Tooltip - Basic)
 {
 Gift-Elementargeist ausbilden
 }
 
 STRING 20528
-// Units: h084 (Blitz-Elementargeist), Ubertip (Tooltip - Extended)
+// Units: h084 (Lightning Elemental), Ubertip (Tooltip - Extended)
 {
 Medium ranged unit that can Hieb opponents. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
 }
@@ -59585,13 +59513,13 @@ STRING 20531
 }
 
 STRING 20532
-// Upgrades: R060 (Leuchtfeuer), Name (Name)
+// Upgrades: R060 (Flare), Name (Name)
 {
 Elementare Konvergenz
 }
 
 STRING 20533
-// Upgrades: R060 (Leuchtfeuer), Tip (Tooltip)
+// Upgrades: R060 (Flare), Tip (Tooltip)
 {
 Elementare Konvergenz erforschen
 }
@@ -59603,7 +59531,7 @@ Fliegende Stadt
 }
 
 STRING 20535
-// Upgrades: R060 (Leuchtfeuer), effect2 (Effect 2)
+// Upgrades: R060 (Flare), effect2 (Effect 2)
 {
 ratd
 }
@@ -59627,13 +59555,13 @@ STRING 20538
 }
 
 STRING 20539
-// Upgrades: R061 (Leuchtfeuer), Tip (Tooltip)
+// Upgrades: R061 (Flare), Tip (Tooltip)
 {
 Gebäude-Manaschild erforschen
 }
 
 STRING 20540
-// Upgrades: R061 (Leuchtfeuer), Name (Name)
+// Upgrades: R061 (Flare), Name (Name)
 {
 Gebäude-Manaschild
 }
@@ -59645,7 +59573,7 @@ STRING 20541
 }
 
 STRING 20542
-// Upgrades: R061 (Leuchtfeuer), Ubertip (Tooltip - Extended)
+// Upgrades: R061 (Flare), Ubertip (Tooltip - Extended)
 {
 Allows Dalaran buildings to use the ability Manaschild.
 }
@@ -59723,7 +59651,7 @@ This tower's attacks destroy <A0NU,DataA1> mana per hit against any unit, causin
 }
 
 STRING 20560
-// Upgrades: R05Z (Leuchtfeuer), Name (Name)
+// Upgrades: R05Z (Flare), Name (Name)
 {
 Feuer-Elementargeister erzeugen
 }
@@ -59921,7 +59849,7 @@ STRING 20607
 }
 
 STRING 20608
-// Upgrades: R05S (Ölbrand), EditorSuffix (Editor Suffix)
+// Upgrades: R05S (Burning Oil), EditorSuffix (Editor Suffix)
 {
 (Dalaran)
 }
@@ -59945,13 +59873,13 @@ Schwache Krieger-Einheit. |n|n|cffffcc00Greift Land-Einheiten an.|r
 }
 
 STRING 20613
-// Units: n08E (Dalaran-Himmelswachturm), Tip (Tooltip - Basic)
+// Units: n08E (Dalaran Sky Guard Tower), Tip (Tooltip - Basic)
 {
 Ausbau zum Dalaran-Himmelswachturm
 }
 
 STRING 20615
-// Units: n08E (Dalaran-Himmelswachturm), Name (Name)
+// Units: n08E (Dalaran Sky Guard Tower), Name (Name)
 {
 Dalaran-Himmelswachturm
 }
@@ -60017,7 +59945,7 @@ C
 }
 
 STRING 20628
-// Upgrades: R060 (Leuchtfeuer), Ubertip (Tooltip - Extended)
+// Upgrades: R060 (Flare), Ubertip (Tooltip - Extended)
 {
 Erhöht die Rüstung, maximalen Trefferpunkte und den Schaden von allen elementaren Einheiten.
 }
@@ -60203,7 +60131,7 @@ The Troll-Medizinmann uses gathered material to craft Manaschutzzaubers.
 }
 
 STRING 20683
-// Upgrades: R08W (Ölbrand), Name (Name)
+// Upgrades: R08W (Burning Oil), Name (Name)
 {
 Kathedrale
 }
@@ -60215,7 +60143,7 @@ Sturmschlag
 }
 
 STRING 20780
-// Upgrades: R08W (Ölbrand), Tip (Tooltip)
+// Upgrades: R08W (Burning Oil), Tip (Tooltip)
 {
 Kathedrale erforschen
 }
@@ -60386,13 +60314,13 @@ P
 }
 
 STRING 21303
-// Upgrades: R05Y (Leuchtfeuer), EditorSuffix (Editor Suffix)
+// Upgrades: R05Y (Flare), EditorSuffix (Editor Suffix)
 {
 (Dalaran)
 }
 
 STRING 21304
-// Upgrades: R05Z (Leuchtfeuer), EditorSuffix (Editor Suffix)
+// Upgrades: R05Z (Flare), EditorSuffix (Editor Suffix)
 {
 (Dalaran)
 }
@@ -60404,7 +60332,7 @@ rlev
 }
 
 STRING 21306
-// Upgrades: R060 (Leuchtfeuer), EditorSuffix (Editor Suffix)
+// Upgrades: R060 (Flare), EditorSuffix (Editor Suffix)
 {
 (Dalaran)
 }
@@ -60422,7 +60350,7 @@ Feuermagier-Meister-Ausbildung
 }
 
 STRING 21309
-// Upgrades: R061 (Leuchtfeuer), EditorSuffix (Editor Suffix)
+// Upgrades: R061 (Flare), EditorSuffix (Editor Suffix)
 {
 (Dalaran)
 }
@@ -60620,7 +60548,7 @@ STRING 21375
 }
 
 STRING 21381
-// Abilities: A0XR (Club Strike), Hotkey (Hotkey - Normal)
+// Abilities: A1H2 (Bear Form), Hotkey (Hotkey - Normal)
 {
 S
 }
@@ -61112,19 +61040,19 @@ Beschwört <A0P4,DataA1> friendly units from a target area to the caster.
 }
 
 STRING 22360
-// Upgrades: R00C (Eis-Atem), Tip (Tooltip)
+// Upgrades: R00C (Freezing Breath), Tip (Tooltip)
 {
 Dauerhafter Feuerbrand erforschen
 }
 
 STRING 22361
-// Upgrades: R00C (Eis-Atem), Ubertip (Tooltip - Extended)
+// Upgrades: R00C (Freezing Breath), Ubertip (Tooltip - Extended)
 {
 Allows Höllenbesties and Reavers to use the ability Dauerhafter Feuerbrand.
 }
 
 STRING 22362
-// Upgrades: R07Z (Eis-Atem), Tip (Tooltip)
+// Upgrades: R07Z (Freezing Breath), Tip (Tooltip)
 {
 Festhaut erforschen
 }
@@ -61136,13 +61064,13 @@ D
 }
 
 STRING 22364
-// Upgrades: R00K (Eis-Atem), Tip (Tooltip)
+// Upgrades: R00K (Freezing Breath), Tip (Tooltip)
 {
 Harthaut erforschen
 }
 
 STRING 22365
-// Upgrades: R00K (Eis-Atem), Ubertip (Tooltip - Extended)
+// Upgrades: R00K (Freezing Breath), Ubertip (Tooltip - Extended)
 {
 Allows Höllenbesties and Reavers to use the ability Harthaut.
 }
@@ -61184,7 +61112,7 @@ Kriegsdonner erforschen
 }
 
 STRING 22387
-// Upgrades: R06D (Eis-Atem), Ubertip (Tooltip - Extended)
+// Upgrades: R06D (Freezing Breath), Ubertip (Tooltip - Extended)
 {
 Ermöglicht es den Reavers, die Fähigkeit 'Kriegsdonner' einzusetzen.
 }
@@ -61250,7 +61178,7 @@ Unheilshüter ausbilden
 }
 
 STRING 22398
-// Units: n01E (Große Leerwandler), Tip (Tooltip - Basic)
+// Units: n01E (Greater Voidwalker), Tip (Tooltip - Basic)
 {
 Großen Leerwandler ausbilden
 }
@@ -61274,7 +61202,7 @@ Eredar-Zauberer-Meisterausbildung
 }
 
 STRING 22403
-// Abilities: A1H2 (Bear Form), Hotkey (Hotkey - Normal)
+// Abilities: A1L9 (-1 Agility), Hotkey (Hotkey - Normal)
 {
 S
 }
@@ -61322,7 +61250,7 @@ Feuerregen erforschen
 }
 
 STRING 22411
-// Abilities: ACdr (Life Drain), Hotkey (Hotkey - Normal)
+// Abilities: A09J (Engineer Place Goblin Land Mine), Hotkey (Hotkey - Normal)
 {
 L
 }
@@ -62084,7 +62012,7 @@ Massives Drachenei.
 }
 
 STRING 22690
-// Abilities: A1L9 (-1 Agility), Hotkey (Hotkey - Normal)
+// Abilities: A1OH (Transfer), Hotkey (Hotkey - Normal)
 {
 S
 }
@@ -62156,31 +62084,31 @@ Blaudrachen beschwören
 }
 
 STRING 22714
-// Abilities: A1OH (Transfer), Hotkey (Hotkey - Normal)
-{
-S
-}
-
-STRING 22715
 // Abilities: A1X5 (Stop), Hotkey (Hotkey - Normal)
 {
 S
 }
 
-STRING 22716
+STRING 22715
 // Abilities: A1XO (Randomize Skin), Hotkey (Hotkey - Normal)
 {
 S
 }
 
-STRING 22717
+STRING 22716
 // Abilities: A0WS (Herbalism - Doctor), Hotkey (Hotkey - Normal)
 {
 S
 }
 
-STRING 22718
+STRING 22717
 // Abilities: A0WN (Dragon Breeding - Doctor), Hotkey (Hotkey - Normal)
+{
+S
+}
+
+STRING 22718
+// Abilities: A0WO (Alchemy - Doctor), Hotkey (Hotkey - Normal)
 {
 S
 }
@@ -62222,7 +62150,7 @@ Windlauf
 }
 
 STRING 22746
-// Upgrades: R07U (Eis-Atem), Name (Name)
+// Upgrades: R07U (Freezing Breath), Name (Name)
 {
 Kriegsdonner
 }
@@ -62252,7 +62180,7 @@ Weizenfeld
 }
 
 STRING 22772
-// Units: n0DL (Wheat Field), Tip (Tooltip - Basic)
+// Units: h0N5 (Wheat Field), Tip (Tooltip - Basic)
 {
 Weizenfeld errichten
 }
@@ -62503,7 +62431,7 @@ E
 }
 
 STRING 23064
-// Abilities: A0WO (Alchemy - Doctor), Hotkey (Hotkey - Normal)
+// Abilities: A0WY (Necromancy - Doctor), Hotkey (Hotkey - Normal)
 {
 S
 }
@@ -62761,7 +62689,7 @@ Adds <A0QH,DataA1> bonus damage to the hero's attack and causes his attacks to d
 }
 
 STRING 23407
-// Upgrades: R078 (Ölbrand), Name (Name)
+// Upgrades: R078 (Burning Oil), Name (Name)
 {
 Diebesgilde
 }
@@ -63061,7 +62989,7 @@ Stab der Teleportation
 }
 
 STRING 23843
-// Abilities: A0WY (Necromancy - Doctor), Hotkey (Hotkey - Normal)
+// Abilities: A0YH (Scribing - Doctor), Hotkey (Hotkey - Normal)
 {
 S
 }
@@ -63144,12 +63072,6 @@ STRING 23895
 Drachenhorst errichten
 }
 
-STRING 23896
-// Units: n09L (Dragon Roost), Description (Description)
-{
-Allows to train all Dragons.
-}
-
 STRING 23897
 // Upgrades: R066 (Animal War Training), EditorSuffix (Editor Suffix)
 {
@@ -63193,7 +63115,7 @@ Ermöglicht die Ausbildung aller Drachen.|n|n|cffffcc00Begrenzt auf 1.|r
 }
 
 STRING 24336
-// Upgrades: R0DO (Sturmhammer), Name (Name)
+// Upgrades: R0DO (Storm Hammers), Name (Name)
 {
 Kettenblitz
 }
@@ -63487,7 +63409,7 @@ STRING 24440
 }
 
 STRING 24441
-// Abilities: A0S8 (Leuchtfeuer), EditorSuffix (Editor Suffix)
+// Abilities: A0S8 (Flare), EditorSuffix (Editor Suffix)
 {
 (Kul Tiras)
 }
@@ -63499,7 +63421,7 @@ Enables Wachen to use the Einschnüren ability. Einschnüren causes a target ene
 }
 
 STRING 24443
-// Abilities: A0S9 (Schrapnell-Splitter), EditorSuffix (Editor Suffix)
+// Abilities: A0S9 (Fragmentation Shards), EditorSuffix (Editor Suffix)
 {
 (Kul Tiras)
 }
@@ -63553,7 +63475,7 @@ STRING 24462
 }
 
 STRING 24463
-// Upgrades: R05I (Ölbrand), EditorSuffix (Editor Suffix)
+// Upgrades: R05I (Burning Oil), EditorSuffix (Editor Suffix)
 {
 (Kul Tiras)
 }
@@ -63619,19 +63541,19 @@ Wanderfalken ausbilden
 }
 
 STRING 24476
-// Units: h0BW (Fliegende Dreadnought), Name (Name)
+// Units: h0BW (Flying Dreadnought), Name (Name)
 {
 Fliegende Dreadnought
 }
 
 STRING 24477
-// Units: h0BW (Fliegende Dreadnought), Tip (Tooltip - Basic)
+// Units: h0BW (Flying Dreadnought), Tip (Tooltip - Basic)
 {
 Train Fliegende Dreadnought
 }
 
 STRING 24478
-// Units: h0BW (Fliegende Dreadnought), Ubertip (Tooltip - Extended)
+// Units: h0BW (Flying Dreadnought), Ubertip (Tooltip - Extended)
 {
 Massive battleship good at destroying enemy ships and bombarding buildings from the sea. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
 }
@@ -63967,13 +63889,13 @@ STRING 24556
 }
 
 STRING 24557
-// Upgrades: R071 (Schrapnell-Splitter), EditorSuffix (Editor Suffix)
+// Upgrades: R071 (Fragmentation Shards), EditorSuffix (Editor Suffix)
 {
 (Kul Tiras)
 }
 
 STRING 24558
-// Upgrades: R072 (Leuchtfeuer), EditorSuffix (Editor Suffix)
+// Upgrades: R072 (Flare), EditorSuffix (Editor Suffix)
 {
 (Kul Tiras)
 }
@@ -64087,7 +64009,7 @@ Hexe ausbilden
 }
 
 STRING 24815
-// Abilities: A020 (Sturmhammer-Blitz), Tip (Tooltip - Normal)
+// Abilities: A020 (Storm Hammer Lightning), Tip (Tooltip - Normal)
 {
 Sturmhammer-Blitz
 }
@@ -64116,14 +64038,8 @@ STRING 24836
 Brunnen
 }
 
-STRING 24837
-// Units: n0DH (Well), Tip (Tooltip - Basic)
-{
-Brunnen errichten
-}
-
 STRING 24843
-// Abilities: A0YH (Scribing - Doctor), Hotkey (Hotkey - Normal)
+// Abilities: A0YL (Enchanting - Doctor), Hotkey (Hotkey - Normal)
 {
 S
 }
@@ -64567,7 +64483,7 @@ Captain wiederbeleben
 }
 
 STRING 25383
-// Abilities: A0YL (Enchanting - Doctor), Hotkey (Hotkey - Normal)
+// Abilities: A0ZK (Armoring - Doctor), Hotkey (Hotkey - Normal)
 {
 S
 }
@@ -64705,7 +64621,7 @@ Kleine Rechnung
 }
 
 STRING 25558
-// Upgrades: R022 (Ölbrand), Tip (Tooltip)
+// Upgrades: R022 (Burning Oil), Tip (Tooltip)
 {
 Arkanes Observatorium erforschen
 }
@@ -64831,7 +64747,7 @@ D
 }
 
 STRING 25611
-// Abilities: A0ZK (Armoring - Doctor), Hotkey (Hotkey - Normal)
+// Abilities: A107 (Weaponsmithing - Doctor), Hotkey (Hotkey - Normal)
 {
 S
 }
@@ -64861,7 +64777,7 @@ Goldmünzen
 }
 
 STRING 25758
-// Abilities: A09J (Engineer Place Goblin Land Mine), Hotkey (Hotkey - Normal)
+// Abilities: A0AI (Engineer Ship Place Goblin Water Mine), Hotkey (Hotkey - Normal)
 {
 L
 }
@@ -64975,7 +64891,7 @@ STRING 26003
 }
 
 STRING 26019
-// Abilities: A0AI (Engineer Ship Place Goblin Water Mine), Hotkey (Hotkey - Normal)
+// Abilities: A0DM (Bladestorm), Hotkey (Hotkey - Normal)
 {
 L
 }
@@ -65137,7 +65053,7 @@ Golden Claw
 }
 
 STRING 26168
-// Abilities: A107 (Weaponsmithing - Doctor), Hotkey (Hotkey - Normal)
+// Abilities: A109 (Inscription - Doctor), Hotkey (Hotkey - Normal)
 {
 S
 }
@@ -65155,7 +65071,7 @@ STRING 26209
 }
 
 STRING 26210
-// Units: o025 (Spell Book), EditorSuffix (Name - Editor Suffix)
+// Units: o04H (Mounts Cage), EditorSuffix (Name - Editor Suffix)
 {
 (Alle Völker)
 }
@@ -65341,7 +65257,7 @@ Mauer errichten
 }
 
 STRING 26251
-// Abilities: A109 (Inscription - Doctor), Hotkey (Hotkey - Normal)
+// Abilities: A10B (Warlockery - Doctor), Hotkey (Hotkey - Normal)
 {
 S
 }
@@ -65401,7 +65317,7 @@ Ausbau zur Hoch entwickelten Drachenfeste
 }
 
 STRING 26431
-// Abilities: A10B (Warlockery - Doctor), Hotkey (Hotkey - Normal)
+// Abilities: A10H (Archaeology - Doctor), Hotkey (Hotkey - Normal)
 {
 S
 }
@@ -65959,19 +65875,19 @@ STRING 26722
 }
 
 STRING 26730
-// Abilities: A10H (Archaeology - Doctor), Hotkey (Hotkey - Normal)
-{
-S
-}
-
-STRING 26853
 // Abilities: A10T (Runeforging - Doctor), Hotkey (Hotkey - Normal)
 {
 S
 }
 
-STRING 26862
+STRING 26853
 // Abilities: A10X (Jewelcrafting - Doctor), Hotkey (Hotkey - Normal)
+{
+S
+}
+
+STRING 26862
+// Abilities: A114 (Flame Storm), Hotkey (Hotkey - Normal)
 {
 S
 }
@@ -66103,19 +66019,13 @@ STRING 27085
 }
 
 STRING 27093
-// Units: o025 (Spell Book), Name (Name)
+// Items: I0FJ (Spell Book), Name (Name)
 {
 Zauberbuch
 }
 
-STRING 27094
-// Units: o025 (Spell Book), Tip (Tooltip - Basic)
-{
-Zauberbuch errichten
-}
-
 STRING 27096
-// Units: o04H (Mounts Cage), EditorSuffix (Name - Editor Suffix)
+// Units: o054 (Alchemist Lab), EditorSuffix (Name - Editor Suffix)
 {
 (Alle Völker)
 }
@@ -66289,7 +66199,7 @@ This ward provides life and mana regeneration for nearby friendly units.
 }
 
 STRING 27454
-// Items: I0FJ (Spell Book), Name (Name)
+// Abilities: A0W9 (Spell Book), Name (Name)
 {
 Zauberbuch
 }
@@ -66319,12 +66229,6 @@ STRING 27458
 }
 
 STRING 27459
-// Abilities: A0W9 (Spell Book), Name (Name)
-{
-Zauberbuch
-}
-
-STRING 27460
 // Buffs/Effects: B01C (), Bufftip (Tooltip)
 {
 Zauberbuch
@@ -66373,7 +66277,7 @@ G
 }
 
 STRING 27633
-// Abilities: A114 (Flame Storm), Hotkey (Hotkey - Normal)
+// Abilities: A17L (Witch Doctor - Doctor), Hotkey (Hotkey - Normal)
 {
 S
 }
@@ -66382,12 +66286,6 @@ STRING 27635
 // Items: I0A4 (Theramore (Neutral Zone)), Hotkey (Hotkey)
 {
 C
-}
-
-STRING 27693
-// Units: o025 (Spell Book), Ubertip (Tooltip - Extended)
-{
-Allows learning spells for reskillable heroes and Equipment Bags. Contains all available spells for all 5 slots. Use the Change Page abilities to change the listed ones.
 }
 
 STRING 27706
@@ -66415,7 +66313,7 @@ Schwarmraketen erforschen
 }
 
 STRING 27793
-// Abilities: A17L (Witch Doctor - Doctor), Hotkey (Hotkey - Normal)
+// Abilities: A17N (Loremastery - Doctor), Hotkey (Hotkey - Normal)
 {
 S
 }
@@ -66649,19 +66547,19 @@ STRING 27924
 }
 
 STRING 27925
-// Upgrades: R0IW (Ölbrand), Name (Name)
+// Upgrades: R0IW (Burning Oil), Name (Name)
 {
 Kobold-Minen
 }
 
 STRING 27926
-// Upgrades: R0IW (Ölbrand), Tip (Tooltip)
+// Upgrades: R0IW (Burning Oil), Tip (Tooltip)
 {
 Kobold-Minen erforschen
 }
 
 STRING 27927
-// Upgrades: R0IW (Ölbrand), Ubertip (Tooltip - Extended)
+// Upgrades: R0IW (Burning Oil), Ubertip (Tooltip - Extended)
 {
 Erlaubt Bürgern den Bau von Kobold-Minen Kobold-Minen, welche Auren mit Effekten hat, die von der Anzahl der Einheiten, die an Gegener verloren wurden, abhängen.
 }
@@ -67261,7 +67159,7 @@ Gibt den Angriffen in der Nähe befindlicher befreundeter Einheiten eine zusätz
 }
 
 STRING 28168
-// Abilities: A17N (Loremastery - Doctor), Hotkey (Hotkey - Normal)
+// Abilities: A1BF (Sorcery - Doctor), Hotkey (Hotkey - Normal)
 {
 S
 }
@@ -67453,7 +67351,7 @@ Balliste ausbilden
 }
 
 STRING 28420
-// Abilities: A1BF (Sorcery - Doctor), Hotkey (Hotkey - Normal)
+// Abilities: A1NT (Sculpting - Doctor), Hotkey (Hotkey - Normal)
 {
 S
 }
@@ -67831,7 +67729,7 @@ STRING 28989
 }
 
 STRING 28991
-// Abilities: A1LA (-1 Intelligenz), Hotkey (Hotkey - Normal)
+// Abilities: A1LA (-1 Intelligence), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -68182,12 +68080,6 @@ STRING 29165
 // Units: n0DJ (Flotsam), Ubertip (Tooltip - Extended)
 {
 There is a 50 % chance to get 5 - 50 units of a random custom resource (no gold and no lumber).
-}
-
-STRING 29166
-// Units: n0DQ (Fish School), Ubertip (Tooltip - Extended)
-{
-Allows harvesting 1000 meat.
 }
 
 STRING 29167
@@ -68611,7 +68503,7 @@ Abtauchend Lady Vashj
 }
 
 STRING 29678
-// Abilities: A1NT (Sculpting - Doctor), Hotkey (Hotkey - Normal)
+// Abilities: A1ZF (Merchant - Doctor), Hotkey (Hotkey - Normal)
 {
 S
 }
@@ -68695,7 +68587,7 @@ Schild der Ehre herstellen
 }
 
 STRING 30023
-// Abilities: A1ZF (Merchant - Doctor), Hotkey (Hotkey - Normal)
+// Abilities: A208 (Hunting - Doctor), Hotkey (Hotkey - Normal)
 {
 S
 }
@@ -68905,7 +68797,7 @@ STRING 30461
 }
 
 STRING 30463
-// Abilities: A208 (Hunting - Doctor), Hotkey (Hotkey - Normal)
+// Abilities: A20T (Farming - Doctor), Hotkey (Hotkey - Normal)
 {
 S
 }
@@ -68959,7 +68851,7 @@ Sacrifice
 }
 
 STRING 30613
-// Upgrades: R01Z (Ölbrand), Tip (Tooltip)
+// Upgrades: R01Z (Burning Oil), Tip (Tooltip)
 {
 Weltenbaum erforschen
 }
@@ -68983,7 +68875,7 @@ E
 }
 
 STRING 30703
-// Abilities: A20T (Farming - Doctor), Hotkey (Hotkey - Normal)
+// Abilities: A20Y (Engineering - Doctor), Hotkey (Hotkey - Normal)
 {
 S
 }
@@ -69007,7 +68899,7 @@ Herold der Tiefenmutter
 }
 
 STRING 30774
-// Upgrades: R0HC (Ölbrand), Name (Name)
+// Upgrades: R0HC (Burning Oil), Name (Name)
 {
 Schädel des Gul'dan
 }
@@ -69025,7 +68917,7 @@ P
 }
 
 STRING 30800
-// Abilities: A20Y (Engineering - Doctor), Hotkey (Hotkey - Normal)
+// Abilities: A21G (Captain - Doctor), Hotkey (Hotkey - Normal)
 {
 S
 }
@@ -69397,7 +69289,7 @@ STRING 30933
 }
 
 STRING 30934
-// Abilities: A21G (Captain - Doctor), Hotkey (Hotkey - Normal)
+// Abilities: A25W (Astromancy - Doctor), Hotkey (Hotkey - Normal)
 {
 S
 }
@@ -69901,7 +69793,7 @@ STRING 31063
 }
 
 STRING 31064
-// Upgrades: R0EN (Ölbrand), Name (Name)
+// Upgrades: R0EN (Burning Oil), Name (Name)
 {
 Stonemaul-Lager
 }
@@ -70159,19 +70051,19 @@ STRING 31170
 }
 
 STRING 31171
-// Units: n0DH (Well), EditorSuffix (Name - Editor Suffix)
+// Units: n0DC (Gemstones Mine), EditorSuffix (Name - Editor Suffix)
 {
 (Neutral)
 }
 
 STRING 31172
-// Units: n0DK (Oil Platform), EditorSuffix (Name - Editor Suffix)
+// Units: n0DF (Random Mine), EditorSuffix (Name - Editor Suffix)
 {
 (Neutral)
 }
 
 STRING 31173
-// Units: n0GB (Skins), EditorSuffix (Name - Editor Suffix)
+// Units: n0DH (Well), EditorSuffix (Name - Editor Suffix)
 {
 (Neutral)
 }
@@ -70183,7 +70075,7 @@ Reittierkäfig
 }
 
 STRING 31175
-// Units: n0GC (Graveyard), EditorSuffix (Name - Editor Suffix)
+// Units: n0DK (Oil Platform), EditorSuffix (Name - Editor Suffix)
 {
 (Neutral)
 }
@@ -70194,20 +70086,14 @@ STRING 31176
 Herstellungslager
 }
 
-STRING 31177
-// Units: h0J2 (Crafting Stash), Tip (Tooltip - Basic)
-{
-Herstellungslager errichten
-}
-
 STRING 31178
-// Units: h0J2 (Crafting Stash), Ubertip (Tooltip - Extended)
+// Units: h0U1 (Fire Pit), Ubertip (Tooltip - Extended)
 {
 Allows crafting items using the items in its inventory. You can drop items from your hero's inventory in a Crafting Stash to use them for crafting.
 }
 
 STRING 31179
-// Units: n0GT (Trainer), EditorSuffix (Name - Editor Suffix)
+// Units: n0DQ (Fish School), EditorSuffix (Name - Editor Suffix)
 {
 (Neutral)
 }
@@ -70459,7 +70345,7 @@ Korallengolem ausbilden
 }
 
 STRING 31525
-// Abilities: A25W (Astromancy - Doctor), Hotkey (Hotkey - Normal)
+// Abilities: A261 (Demolishing - Doctor), Hotkey (Hotkey - Normal)
 {
 S
 }
@@ -70468,12 +70354,6 @@ STRING 31528
 // Abilities: A1MC (Sculpting - Advanced), Hotkey (Hotkey - Normal)
 {
 D
-}
-
-STRING 31529
-// Units: n0CD (Alchemist Lab), Description (Description)
-{
-Erlaubt den Verkauf von Einheiten.
 }
 
 STRING 31530
@@ -70729,13 +70609,13 @@ STRING 31666
 }
 
 STRING 31675
-// Upgrades: R00C (Eis-Atem), EditorSuffix (Editor Suffix)
+// Upgrades: R00C (Freezing Breath), EditorSuffix (Editor Suffix)
 {
 (Dämonen)
 }
 
 STRING 31676
-// Upgrades: R00D (Eis-Atem), EditorSuffix (Editor Suffix)
+// Upgrades: R00D (Freezing Breath), EditorSuffix (Editor Suffix)
 {
 (Dämonen)
 }
@@ -70885,7 +70765,7 @@ Basic melee unit which can learn Schmetter-Angriff. |n|n|cffffcc00Greift Land-Ei
 }
 
 STRING 31757
-// Units: n01E (Große Leerwandler), Ubertip (Tooltip - Extended)
+// Units: n01E (Greater Voidwalker), Ubertip (Tooltip - Extended)
 {
 Unarmed unit who casts Heilen, Fill Mana and Slow. Has Durchblick to detect enemy hidden units.
 }
@@ -70954,12 +70834,6 @@ STRING 31834
 // Units: H005 (King of Azeroth), Name (Name)
 {
 König von Azeroth
-}
-
-STRING 31841
-// Units: n09D (Thieves Guild), Description (Description)
-{
-Verkauft getötete Einheiten von Unholden und gegnerischen Spielern.
 }
 
 STRING 31842
@@ -71047,7 +70921,7 @@ Djinn
 }
 
 STRING 32016
-// Abilities: A261 (Demolishing - Doctor), Hotkey (Hotkey - Normal)
+// Abilities: A268 (Taming - Doctor), Hotkey (Hotkey - Normal)
 {
 S
 }
@@ -71209,7 +71083,7 @@ Bor Stonebreaker,Munin Ironcliff,Thorgas Broadaxe,Kelv Sternhammer,Grim Thunderb
 }
 
 STRING 32098
-// Upgrades: R0HC (Ölbrand), Tip (Tooltip)
+// Upgrades: R0HC (Burning Oil), Tip (Tooltip)
 {
 Schädel des Gul'dan erforschen
 }
@@ -71245,7 +71119,7 @@ STRING 32275
 }
 
 STRING 32279
-// Abilities: A268 (Taming - Doctor), Hotkey (Hotkey - Normal)
+// Abilities: A07Z (Spell Steal), Hotkey (Hotkey - Normal)
 {
 S
 }
@@ -71455,7 +71329,7 @@ STRING 32478
 }
 
 STRING 32480
-// Upgrades: R0HC (Ölbrand), Ubertip (Tooltip - Extended)
+// Upgrades: R0HC (Burning Oil), Ubertip (Tooltip - Extended)
 {
 Erlaubt Bürgern den Bau des Schädel des Gul'dan, um Chaosregen überall auf der Karte zu wirken.
 }
@@ -71623,7 +71497,7 @@ Ein schönes Haustier.
 }
 
 STRING 32523
-// Abilities: A07Z (Spell Steal), Hotkey (Hotkey - Normal)
+// Abilities: A07Z (Spell Steal), Unhotkey (Hotkey - Turn Off)
 {
 S
 }
@@ -71743,7 +71617,7 @@ Changes position, so the squad can walk again but not attack.
 }
 
 STRING 32544
-// Abilities: A0MH (Ölbrand), EditorSuffix (Editor Suffix)
+// Abilities: A0MH (Burning Oil), EditorSuffix (Editor Suffix)
 {
 (Oger-Goblin-Trupp)
 }
@@ -71821,7 +71695,7 @@ STRING 32557
 }
 
 STRING 32579
-// Abilities: A07Z (Spell Steal), Unhotkey (Hotkey - Turn Off)
+// Abilities: A0X1 (Slot 6), Hotkey (Hotkey - Normal)
 {
 S
 }
@@ -71833,13 +71707,13 @@ P
 }
 
 STRING 32583
-// Upgrades: R05Z (Leuchtfeuer), Hotkey (Hotkey)
+// Upgrades: R05Z (Flare), Hotkey (Hotkey)
 {
 F
 }
 
 STRING 32584
-// Upgrades: R00C (Eis-Atem), Hotkey (Hotkey)
+// Upgrades: R00C (Freezing Breath), Hotkey (Hotkey)
 {
 P
 }
@@ -72859,7 +72733,7 @@ STRING 33301
 }
 
 STRING 33342
-// Abilities: A0X1 (Slot 6), Hotkey (Hotkey - Normal)
+// Abilities: A03N (Matching Class), Hotkey (Hotkey - Normal)
 {
 S
 }
@@ -72985,7 +72859,7 @@ Feuerregen erforschen
 }
 
 STRING 33423
-// Abilities: A03N (Matching Class), Hotkey (Hotkey - Normal)
+// Abilities: A08M (Sentinel), Hotkey (Hotkey - Normal)
 {
 S
 }
@@ -72997,13 +72871,13 @@ D
 }
 
 STRING 33426
-// Abilities: A0DM (Bladestorm), Hotkey (Hotkey - Normal)
+// Abilities: A0EF (Monster Lure), Hotkey (Hotkey - Normal)
 {
 L
 }
 
 STRING 33428
-// Abilities: A08M (Sentinel), Hotkey (Hotkey - Normal)
+// Abilities: A01I (Wind Gust), Hotkey (Hotkey - Normal)
 {
 S
 }
@@ -73537,7 +73411,7 @@ Basic worker. Can summon structures, harvest gold and lumber, and Repair.|n|n|cf
 }
 
 STRING 33705
-// Upgrades: R01Y (Ölbrand), Tip (Tooltip)
+// Upgrades: R01Y (Burning Oil), Tip (Tooltip)
 {
 Fel erforschen
 }
@@ -73549,19 +73423,19 @@ F
 }
 
 STRING 33707
-// Upgrades: R09C (Ölbrand), Name (Name)
+// Upgrades: R09C (Burning Oil), Name (Name)
 {
 Opfertempel
 }
 
 STRING 33708
-// Upgrades: R09C (Ölbrand), Tip (Tooltip)
+// Upgrades: R09C (Burning Oil), Tip (Tooltip)
 {
 Opfertempel erforschen
 }
 
 STRING 33709
-// Upgrades: R09C (Ölbrand), Ubertip (Tooltip - Extended)
+// Upgrades: R09C (Burning Oil), Ubertip (Tooltip - Extended)
 {
 Erlaubt Bürgern den Bau a Brunnen des Blutes to train and convert Höllenorcss.
 }
@@ -73597,7 +73471,7 @@ Troll-Tigerhai-Reiter ausbilden
 }
 
 STRING 33715
-// Abilities: A01I (Wind Gust), Hotkey (Hotkey - Normal)
+// Abilities: A01J (Thieving - Doctor), Hotkey (Hotkey - Normal)
 {
 S
 }
@@ -74119,7 +73993,7 @@ Ausbau zur Hoch entwickelten Troll-Rüstung
 }
 
 STRING 33939
-// Upgrades: R09C (Ölbrand), EditorSuffix (Editor Suffix)
+// Upgrades: R09C (Burning Oil), EditorSuffix (Editor Suffix)
 {
 (Trolle)
 }
@@ -74599,7 +74473,7 @@ Purchase Rennqualifikation - Track Outland
 }
 
 STRING 34112
-// Items: I153 (Outland-Pokal des ersten Platzes), Name (Name)
+// Items: I153 (Outland First Place Cup), Name (Name)
 {
 Outland-Pokal des ersten Platzes
 }
@@ -74617,19 +74491,19 @@ STRING 34114
 }
 
 STRING 34115
-// Items: I14U (Northrend Race-Pokal des ersten Platzes), Description (Description)
+// Items: I14U (Northrend Race First Place Cup), Description (Description)
 {
 Der Pokal für den Sieger des ersten Platzes.
 }
 
 STRING 34116
-// Items: I14U (Northrend Race-Pokal des ersten Platzes), Ubertip (Tooltip - Extended)
+// Items: I14U (Northrend Race First Place Cup), Ubertip (Tooltip - Extended)
 {
 Der Pokal für den Sieger des ersten Platzes.
 }
 
 STRING 34117
-// Items: I154 (Outland-Pokal des zweiten Platzes), Name (Name)
+// Items: I154 (Outland Second Place Cup), Name (Name)
 {
 Outland-Pokal des zweiten Platzes
 }
@@ -74653,7 +74527,7 @@ STRING 34157
 }
 
 STRING 34158
-// Units: o054 (Alchemist Lab), EditorSuffix (Name - Editor Suffix)
+// Units: o05F (Witch Hut), EditorSuffix (Name - Editor Suffix)
 {
 (Alle Völker)
 }
@@ -74809,13 +74683,13 @@ Ein listiger Held, adept at damaging and supporting magics. Can learn Feuerblitz
 }
 
 STRING 34195
-// Abilities: A0EF (Monster Lure), Hotkey (Hotkey - Normal)
+// Abilities: A0NO (Gather Lumber), Hotkey (Hotkey - Normal)
 {
 L
 }
 
 STRING 34196
-// Upgrades: R023 (Ölbrand), Hotkey (Hotkey)
+// Upgrades: R023 (Burning Oil), Hotkey (Hotkey)
 {
 P
 }
@@ -74899,7 +74773,7 @@ D
 }
 
 STRING 34215
-// Abilities: A01J (Diebstahl - Doctor), Hotkey (Hotkey - Normal)
+// Upgrades: R00F (Banshee Adept Training,Banshee Master Training), Hotkey (Hotkey)
 {
 S
 }
@@ -75175,7 +75049,7 @@ K
 }
 
 STRING 34366
-// Abilities: A0NO (Gather Lumber), Hotkey (Hotkey - Normal)
+// Abilities: A0PB (Last Bag), Hotkey (Hotkey - Normal)
 {
 L
 }
@@ -75367,7 +75241,7 @@ Taschendiebstahl
 }
 
 STRING 34530
-// Abilities: A1L7 (+1 Intelligenz), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A1L7 (+1 Intelligence), Ubertip (Tooltip - Normal - Extended)
 {
 Fügt 1 Intelligenz hinzu. Benutzen Sie den Chat-Befehl "-int -X", um X Intelligenz hinzuzufügen. Benutzen Sie den Chat-Befehl "-int", um die maximale Intelligenz hinzuzufügen.
 }
@@ -75474,12 +75348,6 @@ STRING 34670
 Weizenfeld
 }
 
-STRING 34671
-// Units: h0N5 (Wheat Field), Tip (Tooltip - Basic)
-{
-Weizenfeld errichten
-}
-
 STRING 34672
 // Units: h0N5 (Wheat Field), Ubertip (Tooltip - Extended)
 {
@@ -75559,7 +75427,7 @@ STRING 34709
 }
 
 STRING 34728
-// Upgrades: R00F (Banshee Adept Training,Banshee Master Training), Hotkey (Hotkey)
+// Upgrades: R093 (Flak Cannons), Hotkey (Hotkey)
 {
 S
 }
@@ -75577,7 +75445,7 @@ Versatile foot soldier. Can learn the Berserk ability. |n|n|cffffcc00Greift Land
 }
 
 STRING 34735
-// Units: o05F (Witch Hut), EditorSuffix (Name - Editor Suffix)
+// Units: n0GD (Skins), EditorSuffix (Name - Editor Suffix)
 {
 (Alle Völker)
 }
@@ -75613,7 +75481,7 @@ C
 }
 
 STRING 34780
-// Upgrades: R093 (Flak Cannons), Hotkey (Hotkey)
+// Upgrades: R0GP (Chaos), Hotkey (Hotkey)
 {
 S
 }
@@ -76638,12 +76506,6 @@ STRING 35167
 Die Hauptquelle für Erz.
 }
 
-STRING 35170
-// Units: n0DH (Well), Description (Description)
-{
-Die Hauptquelle für Wasser.
-}
-
 STRING 35171
 // Units: n094 (Crossbowman), Name (Name)
 {
@@ -76734,18 +76596,6 @@ STRING 35227
 Bohrinsel
 }
 
-STRING 35228
-// Units: n0DK (Oil Platform), Tip (Tooltip - Basic)
-{
-Bohrinsel errichten
-}
-
-STRING 35229
-// Units: n0DK (Oil Platform), Description (Description)
-{
-Die Hauptquelle für Öl.
-}
-
 STRING 35232
 // Abilities: A1LC (Reset Attributes), Ubertip (Tooltip - Normal - Extended)
 {
@@ -76756,18 +76606,6 @@ STRING 35233
 // Units: n0DL (Wheat Field), EditorSuffix (Name - Editor Suffix)
 {
 (Neutrale Mine)
-}
-
-STRING 35236
-// Units: n0DZ (Power Crystal Mine), Description (Description)
-{
-Die Hauptquelle von Energie.
-}
-
-STRING 35239
-// Units: n0DZ (Power Crystal Mine), Ubertip (Tooltip - Extended)
-{
-Die Hauptquelle von Energie.
 }
 
 STRING 35240
@@ -77064,18 +76902,6 @@ STRING 35333
 Wasser-Bohrinsel
 }
 
-STRING 35334
-// Units: n0DU (Water Oil Platform), Tip (Tooltip - Basic)
-{
-Wasser-Bohrinsel errichten
-}
-
-STRING 35335
-// Units: n0DU (Water Oil Platform), Description (Description)
-{
-Die Hauptquelle von Öl.
-}
-
 STRING 35336
 // Units: o07B (Altar of War), EditorSuffix (Name - Editor Suffix)
 {
@@ -77227,7 +77053,7 @@ Bietet eine zusätzliche Quelle für Goldeinkommen.|n|n|cffffcc00Begrenzt auf 4.
 }
 
 STRING 35395
-// Upgrades: R0GP (Chaos), Hotkey (Hotkey)
+// Upgrades: R0I1 (Submerge), Hotkey (Hotkey)
 {
 S
 }
@@ -77317,13 +77143,13 @@ STRING 35441
 }
 
 STRING 35442
-// Upgrades: R0AD (Ölbrand), Name (Name)
+// Upgrades: R0AD (Burning Oil), Name (Name)
 {
 Scharlachrotes Kloster
 }
 
 STRING 35443
-// Upgrades: R0AD (Ölbrand), Tip (Tooltip)
+// Upgrades: R0AD (Burning Oil), Tip (Tooltip)
 {
 Scharlachrotes Kloster erforschen
 }
@@ -77472,22 +77298,10 @@ STRING 35519
 E
 }
 
-STRING 35520
-// Units: n0DC (Gemstones Mine), Ubertip (Tooltip - Extended)
-{
-Die Hauptquelle für Edelsteine.
-}
-
 STRING 35521
 // Units: n0DZ (Power Crystal Mine), Name (Name)
 {
 Power Crystal Mine
-}
-
-STRING 35522
-// Units: n0DZ (Power Crystal Mine), Tip (Tooltip - Basic)
-{
-Build Power Crystal Mine
 }
 
 STRING 35572
@@ -77509,7 +77323,7 @@ P
 }
 
 STRING 35575
-// Upgrades: R0I1 (Submerge), Hotkey (Hotkey)
+// Upgrades: R06L (Ensnare), Hotkey (Hotkey)
 {
 S
 }
@@ -77527,7 +77341,7 @@ STRING 35577
 }
 
 STRING 35578
-// Upgrades: R0AD (Ölbrand), EditorSuffix (Editor Suffix)
+// Upgrades: R0AD (Burning Oil), EditorSuffix (Editor Suffix)
 {
 (Lordaeron)
 }
@@ -78823,7 +78637,7 @@ STRING 35907
 }
 
 STRING 35908
-// Upgrades: R022 (Ölbrand), EditorSuffix (Editor Suffix)
+// Upgrades: R022 (Burning Oil), EditorSuffix (Editor Suffix)
 {
 (Menschen)
 }
@@ -80941,7 +80755,7 @@ Build Tiny Hexenhütte
 }
 
 STRING 36291
-// Units: n0E3 (Hero Abilities), EditorSuffix (Name - Editor Suffix)
+// Units: n079 (Trainer), EditorSuffix (Name - Editor Suffix)
 {
 (Alle Völker)
 }
@@ -81295,7 +81109,7 @@ STRING 36360
 }
 
 STRING 36361
-// Upgrades: R06L (Ensnare), Hotkey (Hotkey)
+// Upgrades: R088 (Flak Cannons), Hotkey (Hotkey)
 {
 S
 }
@@ -81330,12 +81144,6 @@ STRING 36418
 Lampe
 }
 
-STRING 36451
-// Upgrades: R088 (Flak Cannons), Hotkey (Hotkey)
-{
-S
-}
-
 STRING 36472
 // Upgrades: R0F5 (Priest Adept Training,Priest Master Training), Hotkey (Hotkey)
 {
@@ -81348,74 +81156,14 @@ STRING 36474
 F
 }
 
-STRING 36492
-// Units: n0E3 (Hero Abilities), Ubertip (Tooltip - Extended)
-{
-Allows changing the standard ability of your hero.
-}
-
-STRING 36493
-// Units: n0E3 (Hero Abilities), Description (Description)
-{
-Allows changing the standard ability of your hero.
-}
-
 STRING 36494
 // Units: H0Y5 (Sea Witch), Ubertip (Tooltip - Extended)
 {
 Ein mystischer Held, adept at ranged combat. Can learn Gabelblitz, Frostpfeile, Manaschild, and Tornado. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r|n|n|cffffcc00Bonus-Held erfordert Stufe 40. Benutzen Sie -unlock, um diese Beschränkung aufzuheben.|r
 }
 
-STRING 36495
-// Units: n0E3 (Hero Abilities), Tip (Tooltip - Basic)
-{
-Heldenfähigkeiten errichten
-}
-
-STRING 36496
-// Units: n0GB (Skins), Ubertip (Tooltip - Extended)
-{
-Allows changing the standard ability of your hero.
-}
-
-STRING 36497
-// Units: n0GB (Skins), Description (Description)
-{
-Allows changing the standard ability of your hero.
-}
-
-STRING 36498
-// Items: I0J6 (Tiny Hero Abilities), Name (Name)
-{
-Tiny Heldenfähigkeiten
-}
-
-STRING 36499
-// Items: I0J6 (Tiny Hero Abilities), Description (Description)
-{
-Creates Heldenfähigkeiten at a target location.
-}
-
-STRING 36500
-// Items: I0J6 (Tiny Hero Abilities), Tip (Tooltip - Basic)
-{
-Purchase Tiny Heldenfähigkeiten
-}
-
-STRING 36501
-// Items: I0J6 (Tiny Hero Abilities), Ubertip (Tooltip - Extended)
-{
-Creates Heldenfähigkeiten at a target location.
-}
-
-STRING 36502
-// Abilities: A1BG (Build Tiny Hero Abilities), Name (Name)
-{
-Build Tiny Heldenfähigkeiten
-}
-
 STRING 36503
-// Units: n0GD (Skins), EditorSuffix (Name - Editor Suffix)
+// Units: n0IS (Armory), EditorSuffix (Name - Editor Suffix)
 {
 (Alle Völker)
 }
@@ -81445,13 +81193,13 @@ Lebensregeneration
 }
 
 STRING 36508
-// Abilities: A0PB (Last Bag), Hotkey (Hotkey - Normal)
+// Abilities: A1WR (Healing Salve), Hotkey (Hotkey - Normal)
 {
 L
 }
 
 STRING 36513
-// Abilities: A1WR (Healing Salve), Hotkey (Hotkey - Normal)
+// Abilities: A227 (Bloodlust), Unhotkey (Hotkey - Turn Off)
 {
 L
 }
@@ -81913,7 +81661,7 @@ STRING 37139
 }
 
 STRING 37140
-// Units: u026 (Gewölbe der Reliquien), EditorSuffix (Name - Editor Suffix)
+// Units: u026 (Vault of Relics), EditorSuffix (Name - Editor Suffix)
 {
 (Neruber)
 }
@@ -82285,7 +82033,7 @@ Summons an immovable ward that explodes and summons Spinnlings.
 }
 
 STRING 37292
-// Units: u02K (Burrowed Gewölbe der Reliquien), EditorSuffix (Name - Editor Suffix)
+// Units: u02K (Burrowed Vault of Relics), EditorSuffix (Name - Editor Suffix)
 {
 (Neruber)
 }
@@ -82627,7 +82375,7 @@ Azjol-Nerub
 }
 
 STRING 37360
-// Upgrades: R020 (Ölbrand), Tip (Tooltip)
+// Upgrades: R020 (Burning Oil), Tip (Tooltip)
 {
 Lich-König erforschen
 }
@@ -82639,19 +82387,19 @@ STRING 37361
 }
 
 STRING 37362
-// Upgrades: R0B5 (Ölbrand), Name (Name)
+// Upgrades: R0B5 (Burning Oil), Name (Name)
 {
 Azjol-Nerub
 }
 
 STRING 37363
-// Upgrades: R0B5 (Ölbrand), Tip (Tooltip)
+// Upgrades: R0B5 (Burning Oil), Tip (Tooltip)
 {
 Azjol-Nerub erforschen
 }
 
 STRING 37364
-// Upgrades: R0B5 (Ölbrand), Ubertip (Tooltip - Extended)
+// Upgrades: R0B5 (Burning Oil), Ubertip (Tooltip - Extended)
 {
 Erlaubt Bürgern den Bau des Azjol-Nerub.
 }
@@ -83365,13 +83113,13 @@ Bildet Neruben-Königin aus. Bietet auch die Ausbaustufen Eis-Atem upgrade.
 }
 
 STRING 37501
-// Units: u02K (Burrowed Gewölbe der Reliquien), Name (Name)
+// Units: u02K (Burrowed Vault of Relics), Name (Name)
 {
 Eingegrabenes Gewölbe der Reliquien
 }
 
 STRING 37502
-// Units: u02K (Burrowed Gewölbe der Reliquien), Tip (Tooltip - Basic)
+// Units: u02K (Burrowed Vault of Relics), Tip (Tooltip - Basic)
 {
 Gewölbe der Reliquien beschwören
 }
@@ -84085,19 +83833,19 @@ Schweren Panzer bauen
 }
 
 STRING 37673
-// Upgrades: R02X (Ölbrand), Name (Name)
+// Upgrades: R02X (Burning Oil), Name (Name)
 {
 Schwerer Panzer
 }
 
 STRING 37674
-// Upgrades: R02X (Ölbrand), Tip (Tooltip)
+// Upgrades: R02X (Burning Oil), Tip (Tooltip)
 {
 Schwerer Panzer
 }
 
 STRING 37675
-// Upgrades: R02X (Ölbrand), Ubertip (Tooltip - Extended)
+// Upgrades: R02X (Burning Oil), Ubertip (Tooltip - Extended)
 {
 Erlaubt Bürgern den Bau a Heavy Tank to fight enemy troops!
 }
@@ -84487,7 +84235,7 @@ STRING 37796
 }
 
 STRING 37797
-// Upgrades: R0B5 (Ölbrand), EditorSuffix (Editor Suffix)
+// Upgrades: R0B5 (Burning Oil), EditorSuffix (Editor Suffix)
 {
 (Neruber)
 }
@@ -84612,12 +84360,6 @@ STRING 37818
 Azjol Nerubian Obelisk
 }
 
-STRING 37819
-// Units: n00D (Azjol Nerubian Obelisk), Description (Description)
-{
-Ermöglicht die Anheuerung gesichtsloser Einheiten.
-}
-
 STRING 37820
 // Units: n0EH (Azjol-Nerub), Ubertip (Tooltip - Extended)
 {
@@ -84703,7 +84445,7 @@ Uralter Schutzzauber
 }
 
 STRING 37850
-// Abilities: A227 (Bloodlust), Unhotkey (Hotkey - Turn Off)
+// Abilities: A227 (Bloodlust), Hotkey (Hotkey - Normal)
 {
 L
 }
@@ -84715,7 +84457,7 @@ F
 }
 
 STRING 37852
-// Abilities: A227 (Bloodlust), Hotkey (Hotkey - Normal)
+// Upgrades: R00Q (Destroyer Form), Hotkey (Hotkey)
 {
 L
 }
@@ -84817,7 +84559,7 @@ Schattenkugel +4 herstellen
 }
 
 STRING 37886
-// Units: H08E (Wächter von Tirisfal), EditorSuffix (Name - Editor Suffix)
+// Units: H08E (Guardian of Tirisfal), EditorSuffix (Name - Editor Suffix)
 {
 (Bonus-Held)
 }
@@ -85621,13 +85363,13 @@ STRING 38144
 }
 
 STRING 38145
-// Upgrades: R00Q (Destroyer Form), Hotkey (Hotkey)
+// Upgrades: R01O (Ensnare), Hotkey (Hotkey)
 {
 L
 }
 
 STRING 38146
-// Upgrades: R01O (Ensnare), Hotkey (Hotkey)
+// Upgrades: R09L (Witch Doctor Adept Training,Witch Doctor Master Training), Hotkey (Hotkey)
 {
 L
 }
@@ -85954,12 +85696,6 @@ STRING 38464
 // Upgrades: R030 (Improved Masonry,Advanced Masonry,Imbued Masonry), Ubertip (Tooltip - Extended)
 {
 Further increases the armor and hit points of Goblin buildings. Increases the speed of repairing buildings and mechanical units for Goblin-Arbeiters and warriors.
-}
-
-STRING 38465
-// Units: n076 (Thieves Guild (Thief)), Description (Description)
-{
-Sells killed units and dropped items from creeps and enemy players.
 }
 
 STRING 38472
@@ -86467,13 +86203,13 @@ Hallen der Tapferkeit
 }
 
 STRING 38752
-// Upgrades: R0BH (Ölbrand), Tip (Tooltip)
+// Upgrades: R0BH (Burning Oil), Tip (Tooltip)
 {
 Hallen der Tapferkeit erforschen
 }
 
 STRING 38753
-// Upgrades: R0BH (Ölbrand), Ubertip (Tooltip - Extended)
+// Upgrades: R0BH (Burning Oil), Ubertip (Tooltip - Extended)
 {
 Erlaubt Bürgern den Bau the Hallen der Tapferkeit to bring back dead warriors as champions.
 }
@@ -86599,7 +86335,7 @@ STRING 38786
 }
 
 STRING 38787
-// Upgrades: R0BH (Ölbrand), Name (Name)
+// Upgrades: R0BH (Burning Oil), Name (Name)
 {
 Hallen der Tapferkeit
 }
@@ -86611,7 +86347,7 @@ STRING 38788
 }
 
 STRING 38789
-// Upgrades: R0BH (Ölbrand), EditorSuffix (Editor Suffix)
+// Upgrades: R0BH (Burning Oil), EditorSuffix (Editor Suffix)
 {
 (Vrykul)
 }
@@ -86695,13 +86431,13 @@ D
 }
 
 STRING 38809
-// Upgrades: R081 (Eis-Atem), Tip (Tooltip)
+// Upgrades: R081 (Freezing Breath), Tip (Tooltip)
 {
 Festhaut erforschen
 }
 
 STRING 38810
-// Upgrades: R081 (Eis-Atem), Name (Name)
+// Upgrades: R081 (Freezing Breath), Name (Name)
 {
 Festhaut
 }
@@ -87181,7 +86917,7 @@ Stellt Gegenstände her, die Schlösserknacken und Taschendiebstahl ermöglichen
 }
 
 STRING 38923
-// Items: I10Q (Book of Diebstahl), Name (Name)
+// Items: I10Q (Book of Thieving), Name (Name)
 {
 Buch des Diebstahls
 }
@@ -87265,7 +87001,7 @@ Bäume fällen erforschen
 }
 
 STRING 39344
-// Items: I10Q (Book of Diebstahl), Description (Description)
+// Items: I10Q (Book of Thieving), Description (Description)
 {
 A book that contains knowledge of crafting thieving tools.
 }
@@ -87613,7 +87349,7 @@ Changes the time of day to midnight for <A1F5,Dur1> Sekunden lang an.
 }
 
 STRING 39697
-// Upgrades: R08W (Ölbrand), Ubertip (Tooltip - Extended)
+// Upgrades: R08W (Burning Oil), Ubertip (Tooltip - Extended)
 {
 Erlaubt Bürgern den Bau a Kathedrale which can force the moon to appear.
 }
@@ -88249,19 +87985,19 @@ STRING 39889
 }
 
 STRING 39891
-// Upgrades: R0CB (Ölbrand), Name (Name)
+// Upgrades: R0CB (Burning Oil), Name (Name)
 {
 Graumähnenmauer
 }
 
 STRING 39892
-// Upgrades: R0CB (Ölbrand), Tip (Tooltip)
+// Upgrades: R0CB (Burning Oil), Tip (Tooltip)
 {
 Graumähnenmauer erforschen
 }
 
 STRING 39893
-// Upgrades: R0CB (Ölbrand), Ubertip (Tooltip - Extended)
+// Upgrades: R0CB (Burning Oil), Ubertip (Tooltip - Extended)
 {
 Erlaubt Bürgern den Bau the Graumähnenmauer which protects your base.
 }
@@ -88339,7 +88075,7 @@ Winziges Haus errichten
 }
 
 STRING 39907
-// Upgrades: R08W (Ölbrand), EditorSuffix (Editor Suffix)
+// Upgrades: R08W (Burning Oil), EditorSuffix (Editor Suffix)
 {
 (Worgen)
 }
@@ -88933,7 +88669,7 @@ STRING 40008
 }
 
 STRING 40009
-// Upgrades: R0CB (Ölbrand), EditorSuffix (Editor Suffix)
+// Upgrades: R0CB (Burning Oil), EditorSuffix (Editor Suffix)
 {
 (Worgen)
 }
@@ -89899,7 +89635,7 @@ Hoch entwickelte Fischerei
 }
 
 STRING 40560
-// Abilities: A1GO (Eis-Atem), EditorSuffix (Editor Suffix)
+// Abilities: A1GO (Freezing Breath), EditorSuffix (Editor Suffix)
 {
 (Tuskarr)
 }
@@ -91177,7 +90913,7 @@ Bergmann anheuern
 }
 
 STRING 41094
-// Abilities: A1GO (Eis-Atem), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A1GO (Freezing Breath), Ubertip (Tooltip - Normal - Extended)
 {
 When used on a units, temporarily stops all unit activities. |nHält <Afrz,Dur1> Sekunden lang an.
 }
@@ -91447,7 +91183,7 @@ STRING 41209
 }
 
 STRING 41211
-// Upgrades: R07U (Eis-Atem), Tip (Tooltip)
+// Upgrades: R07U (Freezing Breath), Tip (Tooltip)
 {
 Kriegsdonner erforschen
 }
@@ -91585,7 +91321,7 @@ Summon Murloc Arbeiters
 }
 
 STRING 41236
-// Abilities: A08X (Bau fertigstellen), EditorSuffix (Editor Suffix)
+// Abilities: A08X (Finish Construction), EditorSuffix (Editor Suffix)
 {
 (Gegenstand)
 }
@@ -91699,13 +91435,13 @@ Grabstätte
 }
 
 STRING 41256
-// Upgrades: R0CU (Ölbrand), Name (Name)
+// Upgrades: R0CU (Burning Oil), Name (Name)
 {
 Grabstätte
 }
 
 STRING 41257
-// Upgrades: R0CU (Ölbrand), Ubertip (Tooltip - Extended)
+// Upgrades: R0CU (Burning Oil), Ubertip (Tooltip - Extended)
 {
 Erlaubt Bürgern den Bau a Grabstätte which has auras with effects depending on the number of units lost to enemies.
 }
@@ -91891,7 +91627,7 @@ STRING 41288
 }
 
 STRING 41290
-// Upgrades: R0CU (Ölbrand), Tip (Tooltip)
+// Upgrades: R0CU (Burning Oil), Tip (Tooltip)
 {
 Grabstätte
 }
@@ -91945,7 +91681,7 @@ Increases the effect of all auras. The level is increased for every Tuskarr unit
 }
 
 STRING 41330
-// Abilities: A20M (Diebstahl - Advanced), Hotkey (Hotkey - Normal)
+// Abilities: A20M (Thieving - Advanced), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -92191,7 +91927,7 @@ STRING 41372
 }
 
 STRING 41374
-// Upgrades: R02B (Ölbrand), Tip (Tooltip)
+// Upgrades: R02B (Burning Oil), Tip (Tooltip)
 {
 Statue von Azshara erforschen
 }
@@ -92215,13 +91951,13 @@ Verleiht bestimmten Murloc-Land-Einheiten die Fähigkeit, Gegenstände zu tragen
 }
 
 STRING 41384
-// Upgrades: R0CW (Ölbrand), Name (Name)
+// Upgrades: R0CW (Burning Oil), Name (Name)
 {
 Murloc-Fischer
 }
 
 STRING 41385
-// Upgrades: R0CW (Ölbrand), Tip (Tooltip)
+// Upgrades: R0CW (Burning Oil), Tip (Tooltip)
 {
 Murloc-Fischer erforschen
 }
@@ -92521,7 +92257,7 @@ Skins
 }
 
 STRING 41463
-// Units: e026 (High Elf Shipyard), EditorSuffix (Name - Editor Suffix)
+// Units: n0DZ (Power Crystal Mine), EditorSuffix (Name - Editor Suffix)
 {
 (Neutral)
 }
@@ -92605,7 +92341,7 @@ K
 }
 
 STRING 41501
-// Abilities: A20L (Diebstahl - Novice), Hotkey (Hotkey - Normal)
+// Abilities: A20L (Thieving - Novice), Hotkey (Hotkey - Normal)
 {
 N
 }
@@ -92689,7 +92425,7 @@ Friedhof
 }
 
 STRING 41522
-// Units: h0R5 (Human Oil Tanker), EditorSuffix (Name - Editor Suffix)
+// Units: n0GB (Skins), EditorSuffix (Name - Editor Suffix)
 {
 (Neutral)
 }
@@ -92929,7 +92665,7 @@ Künstlicher Tag
 }
 
 STRING 41720
-// Units: n079 (Trainer), EditorSuffix (Name - Editor Suffix)
+// Units: n0J7 (Fruit Stand), EditorSuffix (Name - Editor Suffix)
 {
 (Alle Völker)
 }
@@ -93565,7 +93301,7 @@ Dient als Abladepunkt für das geschlagene Holz. |nAlso contains upgrades for im
 }
 
 STRING 41958
-// Units: o03C (Flügeldrache Roost), Ubertip (Tooltip - Extended)
+// Units: o03C (Wyvern Roost), Ubertip (Tooltip - Extended)
 {
 Bildet Flügeldrachen und Geisterflügeldrachen aus.
 }
@@ -93697,19 +93433,19 @@ STRING 41990
 }
 
 STRING 41991
-// Upgrades: R0DA (Ölbrand), Name (Name)
+// Upgrades: R0DA (Burning Oil), Name (Name)
 {
 Totempfahl
 }
 
 STRING 41992
-// Upgrades: R0DA (Ölbrand), Tip (Tooltip)
+// Upgrades: R0DA (Burning Oil), Tip (Tooltip)
 {
 Totempfahl erforschen
 }
 
 STRING 41993
-// Upgrades: R0DA (Ölbrand), Ubertip (Tooltip - Extended)
+// Upgrades: R0DA (Burning Oil), Ubertip (Tooltip - Extended)
 {
 Erlaubt Bürgern den Bau a Totem Pole to reincarnate dead Tauren units.
 }
@@ -93781,7 +93517,7 @@ STRING 42025
 }
 
 STRING 42026
-// Upgrades: R0DA (Ölbrand), EditorSuffix (Editor Suffix)
+// Upgrades: R0DA (Burning Oil), EditorSuffix (Editor Suffix)
 {
 (Tauren)
 }
@@ -94069,7 +93805,7 @@ Combines effects of known orbs to one single item. Adds 60 bonus damage to the a
 }
 
 STRING 42162
-// Upgrades: R09L (Witch Doctor Adept Training,Witch Doctor Master Training), Hotkey (Hotkey)
+// Upgrades: R0DO (Storm Hammers), Hotkey (Hotkey)
 {
 L
 }
@@ -94111,7 +93847,7 @@ Feuerangriff
 }
 
 STRING 42207
-// Upgrades: R082 (Leuchtfeuer), Name (Name)
+// Upgrades: R082 (Flare), Name (Name)
 {
 Feuerangriff
 }
@@ -94222,24 +93958,6 @@ STRING 42281
 // Units: n0GJ (Rocks Mine), Name (Name)
 {
 Steinmine
-}
-
-STRING 42282
-// Units: n0GJ (Rocks Mine), Tip (Tooltip - Basic)
-{
-Steinmine errichten
-}
-
-STRING 42283
-// Units: n0GJ (Rocks Mine), Description (Description)
-{
-Die Hauptquelle für Steine.
-}
-
-STRING 42284
-// Units: n0GJ (Rocks Mine), Ubertip (Tooltip - Extended)
-{
-Die Hauptquelle für Steine.
 }
 
 STRING 42289
@@ -94957,7 +94675,7 @@ Entwaffnung
 }
 
 STRING 42423
-// Upgrades: R03J (Ölbrand), Tip (Tooltip)
+// Upgrades: R03J (Burning Oil), Tip (Tooltip)
 {
 Zwergen-Sägewerk erforschen
 }
@@ -94999,7 +94717,7 @@ D
 }
 
 STRING 42432
-// Abilities: A1KM (Schrapnell-Splitter), EditorSuffix (Editor Suffix)
+// Abilities: A1KM (Fragmentation Shards), EditorSuffix (Editor Suffix)
 {
 (Pandaren)
 }
@@ -95113,31 +94831,31 @@ STRING 42455
 }
 
 STRING 42456
-// Upgrades: R0DN (Leuchtfeuer), Name (Name)
+// Upgrades: R0DN (Flare), Name (Name)
 {
 Feuerwerk
 }
 
 STRING 42457
-// Upgrades: R0DN (Leuchtfeuer), Tip (Tooltip)
+// Upgrades: R0DN (Flare), Tip (Tooltip)
 {
 Feuerwerk erforschen
 }
 
 STRING 42458
-// Upgrades: R0DN (Leuchtfeuer), Ubertip (Tooltip - Extended)
+// Upgrades: R0DN (Flare), Ubertip (Tooltip - Extended)
 {
 Provides Feuerwerk-Teams with the Feuerwerk ability. Feuerwerks can be used to reveal any area of the map. |nCan see invisible units.
 }
 
 STRING 42460
-// Upgrades: R0DO (Sturmhammer), Tip (Tooltip)
+// Upgrades: R0DO (Storm Hammers), Tip (Tooltip)
 {
 Kettenblitz erforschen
 }
 
 STRING 42461
-// Upgrades: R0DO (Sturmhammer), Ubertip (Tooltip - Extended)
+// Upgrades: R0DO (Storm Hammers), Ubertip (Tooltip - Extended)
 {
 Gibt Wolkenschlangen die Fähigkeit 'Kettenblitz'.
 }
@@ -95161,19 +94879,19 @@ Provides Wolkenschlanges with the Cloud ability, which stops ranged buildings fr
 }
 
 STRING 42465
-// Upgrades: R0DQ (Ölbrand), Name (Name)
+// Upgrades: R0DQ (Burning Oil), Name (Name)
 {
 Jade-Wald
 }
 
 STRING 42466
-// Upgrades: R0DQ (Ölbrand), Tip (Tooltip)
+// Upgrades: R0DQ (Burning Oil), Tip (Tooltip)
 {
 Jade-Wald erforschen
 }
 
 STRING 42467
-// Upgrades: R0DQ (Ölbrand), Ubertip (Tooltip - Extended)
+// Upgrades: R0DQ (Burning Oil), Ubertip (Tooltip - Extended)
 {
 Erlaubt Bürgern den Bau the Jade-Wald which prevents enemies from fighting.
 }
@@ -95305,7 +95023,7 @@ STRING 42493
 }
 
 STRING 42494
-// Upgrades: R0DO (Sturmhammer), Hotkey (Hotkey)
+// Upgrades: R0EI (Ensnare), Hotkey (Hotkey)
 {
 L
 }
@@ -95377,7 +95095,7 @@ STRING 42506
 }
 
 STRING 42507
-// Upgrades: R0DT (Schrapnell-Splitter), Ubertip (Tooltip - Extended)
+// Upgrades: R0DT (Fragmentation Shards), Ubertip (Tooltip - Extended)
 {
 Upgrades the mortar shells on Feuerwerk-Teams to increase the damage they deal to Unarmored and Medium armor units.
 }
@@ -95401,7 +95119,7 @@ Reduces all attacks on the Drachenschildkrötes by <Assk,DataC1> damage. Attacks
 }
 
 STRING 42512
-// Upgrades: R0EI (Ensnare), Hotkey (Hotkey)
+// Upgrades: R0GD (Improved Lumber Harvesting,Advanced Lumber Harvesting), Hotkey (Hotkey)
 {
 L
 }
@@ -95413,13 +95131,13 @@ STRING 42513
 }
 
 STRING 42514
-// Upgrades: R0DN (Leuchtfeuer), EditorSuffix (Editor Suffix)
+// Upgrades: R0DN (Flare), EditorSuffix (Editor Suffix)
 {
 (Pandaren)
 }
 
 STRING 42515
-// Upgrades: R0DO (Sturmhammer), EditorSuffix (Editor Suffix)
+// Upgrades: R0DO (Storm Hammers), EditorSuffix (Editor Suffix)
 {
 (Pandaren)
 }
@@ -95431,7 +95149,7 @@ STRING 42516
 }
 
 STRING 42517
-// Upgrades: R0DQ (Ölbrand), EditorSuffix (Editor Suffix)
+// Upgrades: R0DQ (Burning Oil), EditorSuffix (Editor Suffix)
 {
 (Pandaren)
 }
@@ -95587,19 +95305,19 @@ Fehlschlagsaura
 }
 
 STRING 42600
-// Items: I0RQ (+1 Intelligenz), Name (Name)
+// Items: I0RQ (+1 Intelligence), Name (Name)
 {
 +1 Intelligenz
 }
 
 STRING 42601
-// Items: I0RQ (+1 Intelligenz), Tip (Tooltip - Basic)
+// Items: I0RQ (+1 Intelligence), Tip (Tooltip - Basic)
 {
 +1 Intelligenz
 }
 
 STRING 42602
-// Items: I0RQ (+1 Intelligenz), Ubertip (Tooltip - Extended)
+// Items: I0RQ (+1 Intelligence), Ubertip (Tooltip - Extended)
 {
 Fügt 1 Intelligenz hinzu.
 }
@@ -95623,19 +95341,19 @@ Entfernt 1 Beweglichkeit.
 }
 
 STRING 42606
-// Items: I0RS (-1 Intelligenz), Name (Name)
+// Items: I0RS (-1 Intelligence), Name (Name)
 {
 -1 Intelligenz
 }
 
 STRING 42607
-// Items: I0RS (-1 Intelligenz), Tip (Tooltip - Basic)
+// Items: I0RS (-1 Intelligence), Tip (Tooltip - Basic)
 {
 -1 Intelligenz
 }
 
 STRING 42608
-// Items: I0RS (-1 Intelligenz), Ubertip (Tooltip - Extended)
+// Items: I0RS (-1 Intelligence), Ubertip (Tooltip - Extended)
 {
 Entfernt 1 Intelligenz.
 }
@@ -95689,7 +95407,7 @@ D
 }
 
 STRING 42626
-// Upgrades: R0DT (Schrapnell-Splitter), EditorSuffix (Editor Suffix)
+// Upgrades: R0DT (Fragmentation Shards), EditorSuffix (Editor Suffix)
 {
 (Pandaren)
 }
@@ -95875,7 +95593,7 @@ K
 }
 
 STRING 42824
-// Units: o07K (Orc Oil Tanker), EditorSuffix (Name - Editor Suffix)
+// Units: n0GC (Graveyard), EditorSuffix (Name - Editor Suffix)
 {
 (Neutral)
 }
@@ -95887,7 +95605,7 @@ K
 }
 
 STRING 42826
-// Units: n0IS (Armory), EditorSuffix (Name - Editor Suffix)
+// Units: n0E6 (Banner Shop), EditorSuffix (Name - Editor Suffix)
 {
 (Alle Völker)
 }
@@ -95929,13 +95647,13 @@ STRING 42841
 }
 
 STRING 42843
-// Abilities: A1L7 (+1 Intelligenz), Name (Name)
+// Abilities: A1L7 (+1 Intelligence), Name (Name)
 {
 +1 Intelligenz
 }
 
 STRING 42844
-// Abilities: A1L7 (+1 Intelligenz), Tip (Tooltip - Normal)
+// Abilities: A1L7 (+1 Intelligence), Tip (Tooltip - Normal)
 {
 +1 Intelligenz
 }
@@ -95965,13 +95683,13 @@ STRING 42850
 }
 
 STRING 42852
-// Abilities: A1LA (-1 Intelligenz), Name (Name)
+// Abilities: A1LA (-1 Intelligence), Name (Name)
 {
 -1 Intelligenz
 }
 
 STRING 42853
-// Abilities: A1LA (-1 Intelligenz), Tip (Tooltip - Normal)
+// Abilities: A1LA (-1 Intelligence), Tip (Tooltip - Normal)
 {
 -1 Intelligenz
 }
@@ -96055,7 +95773,7 @@ HAHAHAHAHAHAHAHAHAHAHA!
 }
 
 STRING 42889
-// Abilities: A08Y (Zufällige Klasse), Hotkey (Hotkey - Normal)
+// Abilities: A08Y (Random Class), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -96079,7 +95797,7 @@ Entfernt 1 Beweglichkeit. Benutzen Sie den Chat-Befehl "-agi -X", um X Beweglich
 }
 
 STRING 42895
-// Abilities: A1LA (-1 Intelligenz), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A1LA (-1 Intelligence), Ubertip (Tooltip - Normal - Extended)
 {
 Entfernt 1 Intelligenz. Benutzen Sie den Chat-Befehl "-int -X", um X Intelligenz zu entfernen.
 }
@@ -96336,12 +96054,6 @@ STRING 43173
 D
 }
 
-STRING 43174
-// Units: n0DL (Wheat Field), Description (Description)
-{
-Die Hauptquelle für Getreide.
-}
-
 STRING 43175
 // Units: h07V (Sell 100 Wool), Ubertip (Tooltip - Extended)
 {
@@ -96382,18 +96094,6 @@ STRING 43181
 // Units: n0J7 (Fruit Stand), Name (Name)
 {
 Obststand
-}
-
-STRING 43182
-// Units: n0J7 (Fruit Stand), Tip (Tooltip - Basic)
-{
-Obststand errichten
-}
-
-STRING 43183
-// Units: n0GU (Fruit Stand), Description (Description)
-{
-Die Hauptquelle für Früchte.
 }
 
 STRING 43184
@@ -96445,7 +96145,7 @@ STRING 43195
 }
 
 STRING 43197
-// Items: I14V (Northrend Race-Pokal des zweiten Platzes), Description (Description)
+// Items: I14V (Northrend Race Second Place Cup), Description (Description)
 {
 Der Pokal für den Sieger des zweiten Platzes.
 }
@@ -97093,7 +96793,7 @@ STRING 43394
 }
 
 STRING 43395
-// Upgrades: R00Y (Ölbrand), EditorSuffix (Editor Suffix)
+// Upgrades: R00Y (Burning Oil), EditorSuffix (Editor Suffix)
 {
 (Blutelfen)
 }
@@ -97843,19 +97543,19 @@ Gnoll-Lager errichten
 }
 
 STRING 43550
-// Units: o06Y (Gnoll-Wicht), Name (Name)
+// Units: o06Y (Gnoll Runt), Name (Name)
 {
 Gnoll-Wicht
 }
 
 STRING 43551
-// Units: o06Y (Gnoll-Wicht), EditorSuffix (Name - Editor Suffix)
+// Units: o06Y (Gnoll Runt), EditorSuffix (Name - Editor Suffix)
 {
 (Gnolle) (Arbeiter)
 }
 
 STRING 43552
-// Units: o06Y (Gnoll-Wicht), Tip (Tooltip - Basic)
+// Units: o06Y (Gnoll Runt), Tip (Tooltip - Basic)
 {
 Gnoll-Wicht ausbilden
 }
@@ -98020,12 +97720,6 @@ STRING 43583
 // Units: h0U1 (Fire Pit), Tip (Tooltip - Basic)
 {
 Feuerstelle errichten
-}
-
-STRING 43584
-// Units: h0U1 (Fire Pit), Ubertip (Tooltip - Extended)
-{
-Allows crafting items using the items in its inventory. You can drop items from your hero's inventory in a Crafting Stash to use them for crafting.
 }
 
 STRING 43585
@@ -99613,7 +99307,7 @@ STRING 45592
 }
 
 STRING 45593
-// Upgrades: R047 (Ölbrand), Ubertip (Tooltip - Extended)
+// Upgrades: R047 (Burning Oil), Ubertip (Tooltip - Extended)
 {
 Erlaubt Bürgern den Bau a Sonnenbrunnen with abilities Sun Key and Life and Manaregeneration for player units.
 }
@@ -99769,7 +99463,7 @@ Produces 60 gold and 30 lumber every 10 seconds. If you build multiple Bohrinsel
 }
 
 STRING 45794
-// Items: I10Q (Book of Diebstahl), Ubertip (Tooltip - Extended)
+// Items: I10Q (Book of Thieving), Ubertip (Tooltip - Extended)
 {
 A book that contains knowledge of crafting thieving tools.
 }
@@ -99781,7 +99475,7 @@ N
 }
 
 STRING 45800
-// Items: I10Q (Book of Diebstahl), Tip (Tooltip - Basic)
+// Items: I10Q (Book of Thieving), Tip (Tooltip - Basic)
 {
 Buch des Diebstahls erwerben
 }
@@ -100153,7 +99847,7 @@ STRING 45950
 }
 
 STRING 45954
-// Upgrades: R0AD (Ölbrand), Ubertip (Tooltip - Extended)
+// Upgrades: R0AD (Burning Oil), Ubertip (Tooltip - Extended)
 {
 Erlaubt Bürgern den Bau the Scharlachrotes Kloster.
 }
@@ -100165,19 +99859,19 @@ STRING 45955
 }
 
 STRING 45956
-// Upgrades: R0EQ (Ölbrand), Name (Name)
+// Upgrades: R0EQ (Burning Oil), Name (Name)
 {
 Kathedrale des Lichts
 }
 
 STRING 45957
-// Upgrades: R0EQ (Ölbrand), Tip (Tooltip)
+// Upgrades: R0EQ (Burning Oil), Tip (Tooltip)
 {
 Kathedrale des Lichts erforschen
 }
 
 STRING 45958
-// Upgrades: R0EQ (Ölbrand), Ubertip (Tooltip - Extended)
+// Upgrades: R0EQ (Burning Oil), Ubertip (Tooltip - Extended)
 {
 Ermöglicht Bürgern das Errichten der Kathedrale des Lichts.
 }
@@ -100525,7 +100219,7 @@ STRING 46023
 }
 
 STRING 46024
-// Upgrades: R0EQ (Ölbrand), EditorSuffix (Editor Suffix)
+// Upgrades: R0EQ (Burning Oil), EditorSuffix (Editor Suffix)
 {
 (Sturmwind)
 }
@@ -100573,7 +100267,7 @@ Increases the damage by <A1P4,DataA1> and causes area of effect damage.
 }
 
 STRING 46036
-// Upgrades: R082 (Leuchtfeuer), Tip (Tooltip)
+// Upgrades: R082 (Flare), Tip (Tooltip)
 {
 Feuerangriff erforschen
 }
@@ -100675,7 +100369,7 @@ STRING 46052
 }
 
 STRING 46053
-// Upgrades: R0EN (Ölbrand), EditorSuffix (Editor Suffix)
+// Upgrades: R0EN (Burning Oil), EditorSuffix (Editor Suffix)
 {
 (Oger)
 }
@@ -101485,19 +101179,19 @@ Die Seelen der Wilden Götter.
 }
 
 STRING 46512
-// Units: N02T (Niederdrache), Awakentip (Tooltip - Awaken)
+// Units: N02T (Nether Dragon), Awakentip (Tooltip - Awaken)
 {
 Veraku wiederbeleben
 }
 
 STRING 46513
-// Units: N02T (Niederdrache), Revivetip (Tooltip - Revive)
+// Units: N02T (Nether Dragon), Revivetip (Tooltip - Revive)
 {
 Veraku wiederbeleben
 }
 
 STRING 46514
-// Units: N02T (Niederdrache), Tip (Tooltip - Basic)
+// Units: N02T (Nether Dragon), Tip (Tooltip - Basic)
 {
 Veraku beschwören
 }
@@ -101731,7 +101425,7 @@ Ermöglicht Schurken, die 'Windlauf'-Fähigkeit zu benutzen.
 }
 
 STRING 46604
-// Upgrades: R0HD (Ölbrand), EditorSuffix (Editor Suffix)
+// Upgrades: R0HD (Burning Oil), EditorSuffix (Editor Suffix)
 {
 (Gnome)
 }
@@ -101773,7 +101467,7 @@ U
 }
 
 STRING 46631
-// Upgrades: R0GD (Improved Lumber Harvesting,Advanced Lumber Harvesting), Hotkey (Hotkey)
+// Upgrades: R0I3 (Improved Lumber Harvesting,Advanced Lumber Harvesting), Hotkey (Hotkey)
 {
 L
 }
@@ -101935,7 +101629,7 @@ STRING 47452
 }
 
 STRING 47453
-// Upgrades: R08C (Ölbrand), EditorSuffix (Editor Suffix)
+// Upgrades: R08C (Burning Oil), EditorSuffix (Editor Suffix)
 {
 (Stacheleber)
 }
@@ -102121,13 +101815,13 @@ Zauberer
 }
 
 STRING 47696
-// Items: I06S (Runenschmied), Name (Name)
+// Items: I06S (Runeforger), Name (Name)
 {
 Runenschmied
 }
 
 STRING 47697
-// Items: I06S (Runenschmied), Tip (Tooltip - Basic)
+// Items: I06S (Runeforger), Tip (Tooltip - Basic)
 {
 Runenschmied
 }
@@ -102228,12 +101922,6 @@ STRING 48152
 Allows equipping units and heroes.
 }
 
-STRING 48153
-// Units: n0IU (Armory), Ubertip (Tooltip - Extended)
-{
-Allows equipping units and heroes.
-}
-
 STRING 48154
 // Units: n0IT (Undead Child), Name (Name)
 {
@@ -102253,13 +101941,13 @@ Ein winziger Dorfbewohner, der Entwaffnung zaubern kann.
 }
 
 STRING 48164
-// Units: n0J7 (Fruit Stand), EditorSuffix (Name - Editor Suffix)
+// Abilities: A1U6 (Build Tiny Fruit Stand), EditorSuffix (Editor Suffix)
 {
 (Alle Völker)
 }
 
 STRING 48165
-// Upgrades: R020 (Ölbrand), EditorSuffix (Editor Suffix)
+// Upgrades: R020 (Burning Oil), EditorSuffix (Editor Suffix)
 {
 (Untote)
 }
@@ -102373,7 +102061,7 @@ Summons a permanent Blauer Großdrache.|n|n|cffffcc00Requires 5 Dracheneis and 8
 }
 
 STRING 48526
-// Items: I0B3 (Summon Niederdrache), Ubertip (Tooltip - Extended)
+// Items: I0B3 (Summon Nether Dragon), Ubertip (Tooltip - Extended)
 {
 Summons a permanent Niederdrache.|n|n|cffffcc00Requires 5 Dracheneis and 8 food.|r|n|n|cff808080Legen Sie die benötigten Gegenstände in das Inventar des Herstellungslagers.|r
 }
@@ -102546,18 +102234,6 @@ STRING 48562
 Waffenkammer
 }
 
-STRING 48563
-// Units: n0IU (Armory), Tip (Tooltip - Basic)
-{
-Waffenkammer errichten
-}
-
-STRING 48564
-// Units: n0IU (Armory), Description (Description)
-{
-Ermöglicht das Ausrüsten von Einheiten und Helden.
-}
-
 STRING 48565
 // Items: I0U5 (Sword), Tip (Tooltip - Basic)
 {
@@ -102619,7 +102295,7 @@ Schwert
 }
 
 STRING 48575
-// Units: n0IU (Armory), EditorSuffix (Name - Editor Suffix)
+// Units: n0GJ (Rocks Mine), EditorSuffix (Name - Editor Suffix)
 {
 (Neutral)
 }
@@ -104515,7 +104191,7 @@ Ausbau zum Advanced Reinforced Walls
 }
 
 STRING 49294
-// Units: n0E6 (Banner Shop), EditorSuffix (Name - Editor Suffix)
+// Abilities: A21W (Build Tiny Thieves Guild), EditorSuffix (Editor Suffix)
 {
 (Alle Völker)
 }
@@ -105055,7 +104731,7 @@ Der Stachel einer Biene.
 }
 
 STRING 49526
-// Items: I14V (Northrend Race-Pokal des zweiten Platzes), Ubertip (Tooltip - Extended)
+// Items: I14V (Northrend Race Second Place Cup), Ubertip (Tooltip - Extended)
 {
 Der Pokal für den Sieger des zweiten Platzes.
 }
@@ -105649,37 +105325,37 @@ STRING 49985
 }
 
 STRING 49988
-// Items: I0WT (Wurfaxt), Name (Name)
+// Items: I0WT (Throwing Axe), Name (Name)
 {
 Wurfaxt
 }
 
 STRING 49989
-// Items: I0WT (Wurfaxt), Tip (Tooltip - Basic)
+// Items: I0WT (Throwing Axe), Tip (Tooltip - Basic)
 {
 Wurfaxt erwerben
 }
 
 STRING 49990
-// Items: I0WT (Wurfaxt), Description (Description)
+// Items: I0WT (Throwing Axe), Description (Description)
 {
 Verstärkt den Angriffsschaden um 8.
 }
 
 STRING 49991
-// Items: I0WT (Wurfaxt), Ubertip (Tooltip - Extended)
+// Items: I0WT (Throwing Axe), Ubertip (Tooltip - Extended)
 {
 Increases the attack damage of the Hero by 8 when worn.|n|n|cffffcc00Left Hand, One Hand and Range.|r
 }
 
 STRING 49992
-// Destructibles: B00L (Würfel), Name (Name)
+// Destructibles: B00L (Dice), Name (Name)
 {
 Würfel
 }
 
 STRING 49993
-// Destructibles: B00L (Würfel), EditorSuffix (Editor Suffix)
+// Destructibles: B00L (Dice), EditorSuffix (Editor Suffix)
 {
 (Luck)
 }
@@ -105784,13 +105460,13 @@ Winzigen Obststand errichten
 }
 
 STRING 50012
-// Abilities: A1U6 (Build Tiny Fruit Stand), EditorSuffix (Editor Suffix)
+// Abilities: A21X (Build Tiny Mounts Cage), EditorSuffix (Editor Suffix)
 {
 (Alle Völker)
 }
 
 STRING 50013
-// Abilities: A21W (Build Tiny Thieves Guild), EditorSuffix (Editor Suffix)
+// Abilities: A21Y (Build Tiny Dragon Roost), EditorSuffix (Editor Suffix)
 {
 (Alle Völker)
 }
@@ -106480,7 +106156,7 @@ Altar der Naaru errichten
 }
 
 STRING 50242
-// Upgrades: R02D (Ölbrand), Tip (Tooltip)
+// Upgrades: R02D (Burning Oil), Tip (Tooltip)
 {
 Draenei-Gefängnis erforschen
 }
@@ -106516,13 +106192,13 @@ Exodar
 }
 
 STRING 50251
-// Upgrades: R0G5 (Ölbrand), Tip (Tooltip)
+// Upgrades: R0G5 (Burning Oil), Tip (Tooltip)
 {
 Exodar erforschen
 }
 
 STRING 50252
-// Upgrades: R0G5 (Ölbrand), Ubertip (Tooltip - Extended)
+// Upgrades: R0G5 (Burning Oil), Ubertip (Tooltip - Extended)
 {
 Erlaubt Bürgern den Bau Exodar a powerful dimensional ship and the capital of the Draenei.
 }
@@ -106600,7 +106276,7 @@ Den Geist eines Talbuks herbeirufen, um den Spieler zu retten.
 }
 
 STRING 50269
-// Upgrades: R02B (Ölbrand), EditorSuffix (Editor Suffix)
+// Upgrades: R02B (Burning Oil), EditorSuffix (Editor Suffix)
 {
 (Naga)
 }
@@ -106666,7 +106342,7 @@ STRING 50314
 }
 
 STRING 50317
-// Upgrades: R081 (Eis-Atem), EditorSuffix (Editor Suffix)
+// Upgrades: R081 (Freezing Breath), EditorSuffix (Editor Suffix)
 {
 (Dragonkin)
 }
@@ -106690,7 +106366,7 @@ Altar der Flügel errichten
 }
 
 STRING 50322
-// Upgrades: R082 (Leuchtfeuer), EditorSuffix (Editor Suffix)
+// Upgrades: R082 (Flare), EditorSuffix (Editor Suffix)
 {
 (Dragonkin)
 }
@@ -106804,7 +106480,7 @@ Winzigen Drachenhorst errichten
 }
 
 STRING 50344
-// Upgrades: R084 (Ölbrand), EditorSuffix (Editor Suffix)
+// Upgrades: R084 (Burning Oil), EditorSuffix (Editor Suffix)
 {
 (Dragonkin)
 }
@@ -107344,7 +107020,7 @@ Initiand, Adept, Meister
 }
 
 STRING 50467
-// Upgrades: R01Z (Ölbrand), EditorSuffix (Editor Suffix)
+// Upgrades: R01Z (Burning Oil), EditorSuffix (Editor Suffix)
 {
 (Nachtelfen)
 }
@@ -107512,7 +107188,7 @@ Initiand, Adept, Meister
 }
 
 STRING 50498
-// Units: n09B (Kobold Erdmagier), Casterupgradename (Caster Upgrade Names)
+// Units: n09B (Kobold Geomancer), Casterupgradename (Caster Upgrade Names)
 {
 Initiand, Adept, Meister
 }
@@ -107620,7 +107296,7 @@ STRING 50519
 }
 
 STRING 50520
-// Upgrades: R0I3 (Improved Lumber Harvesting,Advanced Lumber Harvesting), Hotkey (Hotkey)
+// Upgrades: R07G (Sorceress Adept Training,Sorceress Master Training), Hotkey (Hotkey)
 {
 L
 }
@@ -107830,7 +107506,7 @@ STRING 50606
 }
 
 STRING 50607
-// Upgrades: R0CW (Ölbrand), Ubertip (Tooltip - Extended)
+// Upgrades: R0CW (Burning Oil), Ubertip (Tooltip - Extended)
 {
 Erlaubt Bürgern den Bau a Murloc-Fischer to protect your base.
 }
@@ -107854,7 +107530,7 @@ STRING 50616
 }
 
 STRING 50617
-// Upgrades: R0CW (Ölbrand), EditorSuffix (Editor Suffix)
+// Upgrades: R0CW (Burning Oil), EditorSuffix (Editor Suffix)
 {
 (Murlocs)
 }
@@ -107866,12 +107542,6 @@ STRING 50620
 }
 
 STRING 50621
-// Upgrades: R07G (Sorceress Adept Training,Sorceress Master Training), Hotkey (Hotkey)
-{
-L
-}
-
-STRING 50622
 // Upgrades: R07G (Sorceress Adept Training,Sorceress Master Training), Hotkey (Hotkey)
 {
 L
@@ -108742,19 +108412,19 @@ STRING 50873
 }
 
 STRING 50874
-// Upgrades: R0GI (Ölbrand), Name (Name)
+// Upgrades: R0GI (Burning Oil), Name (Name)
 {
 Vergessener
 }
 
 STRING 50875
-// Upgrades: R0GI (Ölbrand), Tip (Tooltip)
+// Upgrades: R0GI (Burning Oil), Tip (Tooltip)
 {
 Vergessenen erforschen
 }
 
 STRING 50876
-// Upgrades: R0GI (Ölbrand), Ubertip (Tooltip - Extended)
+// Upgrades: R0GI (Burning Oil), Ubertip (Tooltip - Extended)
 {
 Erlaubt Bürgern den Bau a Vergessener, a powerful creature from ancient times.
 }
@@ -108976,7 +108646,7 @@ Kultisten-Meisterausbildung
 }
 
 STRING 50934
-// Upgrades: R0GI (Ölbrand), EditorSuffix (Editor Suffix)
+// Upgrades: R0GI (Burning Oil), EditorSuffix (Editor Suffix)
 {
 (Gesichtslose)
 }
@@ -109696,13 +109366,13 @@ Höllenfeuer-Zitadelle
 }
 
 STRING 51111
-// Upgrades: R0GV (Ölbrand), Tip (Tooltip)
+// Upgrades: R0GV (Burning Oil), Tip (Tooltip)
 {
 Höllenfeuer-Zitadelle erforschen
 }
 
 STRING 51112
-// Upgrades: R0GV (Ölbrand), Ubertip (Tooltip - Extended)
+// Upgrades: R0GV (Burning Oil), Ubertip (Tooltip - Extended)
 {
 Erlaubt Bürgern den Bau the Hellfire Citadel to defend your base.
 }
@@ -109732,7 +109402,7 @@ Dient als Abladepunkt für das geschlagene Holz. |nAlso contains upgrades for im
 }
 
 STRING 51117
-// Abilities: A1W9 (Ölbrand), EditorSuffix (Editor Suffix)
+// Abilities: A1W9 (Burning Oil), EditorSuffix (Editor Suffix)
 {
 (Höllenorcs)
 }
@@ -110050,7 +109720,7 @@ STRING 51170
 }
 
 STRING 51171
-// Upgrades: R0GV (Ölbrand), EditorSuffix (Editor Suffix)
+// Upgrades: R0GV (Burning Oil), EditorSuffix (Editor Suffix)
 {
 (Höllenorcs)
 }
@@ -110092,7 +109762,7 @@ Unheils-Lord von Sargeras
 }
 
 STRING 51260
-// Upgrades: R01Y (Ölbrand), Name (Name)
+// Upgrades: R01Y (Burning Oil), Name (Name)
 {
 Fel
 }
@@ -110650,7 +110320,7 @@ Allows Pig Farms to train Teufelsebers and to slaughter them for Meat.
 }
 
 STRING 51456
-// Upgrades: R0H1 (Ölbrand), EditorSuffix (Editor Suffix)
+// Upgrades: R0H1 (Burning Oil), EditorSuffix (Editor Suffix)
 {
 (Höllenorcs)
 }
@@ -111358,7 +111028,7 @@ Grants the ability of Massen-Heiliges-Licht and Heilige Aura. The Heilige Aura r
 }
 
 STRING 51718
-// Units: n0M5 (Drillbot), EditorSuffix (Name - Editor Suffix)
+// Units: n0GT (Trainer), EditorSuffix (Name - Editor Suffix)
 {
 (Neutral)
 }
@@ -111766,7 +111436,7 @@ Höllenbestie ausbilden
 }
 
 STRING 51808
-// Upgrades: R0HC (Ölbrand), EditorSuffix (Editor Suffix)
+// Upgrades: R0HC (Burning Oil), EditorSuffix (Editor Suffix)
 {
 (Satyr)
 }
@@ -111964,7 +111634,7 @@ STRING 52045
 }
 
 STRING 52046
-// Upgrades: R0G5 (Ölbrand), Name (Name)
+// Upgrades: R0G5 (Burning Oil), Name (Name)
 {
 Exodar
 }
@@ -112710,19 +112380,19 @@ Ermöglicht das Erlernen von Heldenattributen und die Heldenzauber und -skins zu
 }
 
 STRING 53417
-// Upgrades: R0HD (Ölbrand), Name (Name)
+// Upgrades: R0HD (Burning Oil), Name (Name)
 {
 Skyfire-Kanonenschiff
 }
 
 STRING 53418
-// Upgrades: R0HD (Ölbrand), Tip (Tooltip)
+// Upgrades: R0HD (Burning Oil), Tip (Tooltip)
 {
 Skyfire-Kanonenschiff erforschen
 }
 
 STRING 53419
-// Upgrades: R0HD (Ölbrand), Ubertip (Tooltip - Extended)
+// Upgrades: R0HD (Burning Oil), Ubertip (Tooltip - Extended)
 {
 Erlaubt Bürgern den Bau a Skyfire-Kanonenschiff tp attack enemy troops from the sky.
 }
@@ -112854,7 +112524,7 @@ Basic watch tower. Can be upgraded into a Dalaran-Himmelswachturm. Can learn the
 }
 
 STRING 53818
-// Units: n08E (Dalaran-Himmelswachturm), Ubertip (Tooltip - Extended)
+// Units: n08E (Dalaran Sky Guard Tower), Ubertip (Tooltip - Extended)
 {
 Hoch entwickelter Wachturm. Kann die Fähigkeit 'Rückkopplung' erlernen.|n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
 }
@@ -113058,19 +112728,19 @@ Ein winziger Dorfbewohner, der Entwaffnung zaubern kann.
 }
 
 STRING 54057
-// Upgrades: R00K (Eis-Atem), EditorSuffix (Editor Suffix)
+// Upgrades: R00K (Freezing Breath), EditorSuffix (Editor Suffix)
 {
 (Dämonen)
 }
 
 STRING 54058
-// Upgrades: R023 (Ölbrand), EditorSuffix (Editor Suffix)
+// Upgrades: R023 (Burning Oil), EditorSuffix (Editor Suffix)
 {
 (Dämonen)
 }
 
 STRING 54059
-// Upgrades: R06D (Eis-Atem), EditorSuffix (Editor Suffix)
+// Upgrades: R06D (Freezing Breath), EditorSuffix (Editor Suffix)
 {
 (Dämonen)
 }
@@ -113106,7 +112776,7 @@ STRING 54064
 }
 
 STRING 54065
-// Upgrades: R021 (Ölbrand), EditorSuffix (Editor Suffix)
+// Upgrades: R021 (Burning Oil), EditorSuffix (Editor Suffix)
 {
 (Blutelfen)
 }
@@ -113334,7 +113004,7 @@ STRING 54103
 }
 
 STRING 54104
-// Upgrades: R02X (Ölbrand), EditorSuffix (Editor Suffix)
+// Upgrades: R02X (Burning Oil), EditorSuffix (Editor Suffix)
 {
 (Goblins)
 }
@@ -113556,79 +113226,79 @@ Errichtet am Zielort eine Diebesgilde.|n|n|cffffcc00Beruf Dieb.|r
 }
 
 STRING 54474
-// Abilities: A20L (Diebstahl - Novice), Name (Name)
+// Abilities: A20L (Thieving - Novice), Name (Name)
 {
 Diebstahl - Novize
 }
 
 STRING 54475
-// Abilities: A20L (Diebstahl - Novice), Tip (Tooltip - Normal)
+// Abilities: A20L (Thieving - Novice), Tip (Tooltip - Normal)
 {
 Novize Diebstahl
 }
 
 STRING 54476
-// Abilities: A20L (Diebstahl - Novice), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A20L (Thieving - Novice), Ubertip (Tooltip - Normal - Extended)
 {
 Stellt Dietriche her.
 }
 
 STRING 54477
-// Abilities: A20M (Diebstahl - Advanced), Name (Name)
+// Abilities: A20M (Thieving - Advanced), Name (Name)
 {
 Diebstahl - Fortgeschritten
 }
 
 STRING 54478
-// Abilities: A20M (Diebstahl - Advanced), Tip (Tooltip - Normal)
+// Abilities: A20M (Thieving - Advanced), Tip (Tooltip - Normal)
 {
 Fortgeschrittener Diebstahl
 }
 
 STRING 54479
-// Abilities: A20M (Diebstahl - Advanced), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A20M (Thieving - Advanced), Ubertip (Tooltip - Normal - Extended)
 {
 Stellt Beschwörer weggesperrter Gegenstände, Schließfächer und Winzige Tresore her.
 }
 
 STRING 54480
-// Abilities: A20N (Diebstahl - Adept), Name (Name)
+// Abilities: A20N (Thieving - Adept), Name (Name)
 {
 Diebstahl - Adept
 }
 
 STRING 54481
-// Abilities: A20N (Diebstahl - Adept), Tip (Tooltip - Normal)
+// Abilities: A20N (Thieving - Adept), Tip (Tooltip - Normal)
 {
 Adepten-Diebstahl
 }
 
 STRING 54482
-// Abilities: A20N (Diebstahl - Adept), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A20N (Thieving - Adept), Ubertip (Tooltip - Normal - Extended)
 {
 Der Dieb nutzt sein Wissen, um Taschendiebstahl herzustellen.
 }
 
 STRING 54483
-// Abilities: A20O (Diebstahl - Master), Name (Name)
+// Abilities: A20O (Thieving - Master), Name (Name)
 {
 Diebstahl - Meister
 }
 
 STRING 54484
-// Abilities: A20O (Diebstahl - Master), Tip (Tooltip - Normal)
+// Abilities: A20O (Thieving - Master), Tip (Tooltip - Normal)
 {
 Meister-Diebstahl
 }
 
 STRING 54485
-// Abilities: A20O (Diebstahl - Master), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A20O (Thieving - Master), Ubertip (Tooltip - Normal - Extended)
 {
 Der Dieb nutzt sein Wissen, um eine Winzige Diebesgilde herzustellen.
 }
 
 STRING 54486
-// Abilities: A20P (Diebstahl), Name (Name)
+// Abilities: A20P (Thieving), Name (Name)
 {
 Diebstahl
 }
@@ -113898,7 +113568,7 @@ Ein winziger Dorfbewohner, der Entwaffnung zaubern kann.
 }
 
 STRING 54957
-// Upgrades: R0CU (Ölbrand), EditorSuffix (Editor Suffix)
+// Upgrades: R0CU (Burning Oil), EditorSuffix (Editor Suffix)
 {
 (Tuskarr)
 }
@@ -113970,7 +113640,7 @@ STRING 54983
 }
 
 STRING 54984
-// Units: n0MN (Auction House), EditorSuffix (Name - Editor Suffix)
+// Units: e026 (High Elf Shipyard), EditorSuffix (Name - Editor Suffix)
 {
 (Neutral)
 }
@@ -114198,7 +113868,7 @@ STRING 55056
 }
 
 STRING 55061
-// Units: h0YJ (Kul Tiras Shipyard), EditorSuffix (Name - Editor Suffix)
+// Units: h0R5 (Human Oil Tanker), EditorSuffix (Name - Editor Suffix)
 {
 (Neutral)
 }
@@ -114443,12 +114113,6 @@ The capital of the the Blood Elves.
 |cff00ff00Empfohlenes Volk:|r Blutelfen.
 }
 
-STRING 55316
-// Units: n0FB (Fel Fountain), Tip (Tooltip - Basic)
-{
-Fel-Brunnen errichten
-}
-
 STRING 55317
 // Units: o0B8 (Advanced Watch Tower), EditorSuffix (Name - Editor Suffix)
 {
@@ -114528,13 +114192,13 @@ Kobold-Laden errichten
 }
 
 STRING 55343
-// Units: n09B (Kobold Erdmagier), EditorSuffix (Name - Editor Suffix)
+// Units: n09B (Kobold Geomancer), EditorSuffix (Name - Editor Suffix)
 {
 (Kobolde) (Priest)
 }
 
 STRING 55344
-// Units: n09B (Kobold Erdmagier), Tip (Tooltip - Basic)
+// Units: n09B (Kobold Geomancer), Tip (Tooltip - Basic)
 {
 Train Kobold Erdmagier
 }
@@ -114927,7 +114591,7 @@ Leuchtender Pilz
 }
 
 STRING 55445
-// Upgrades: R0IW (Ölbrand), EditorSuffix (Editor Suffix)
+// Upgrades: R0IW (Burning Oil), EditorSuffix (Editor Suffix)
 {
 (Kobolde)
 }
@@ -115370,24 +115034,6 @@ STRING 55722
 (Immobilie)
 }
 
-STRING 55741
-// Units: n0JT (Argunite Mine), Tip (Tooltip - Basic)
-{
-Argunit-Mine errichten
-}
-
-STRING 55742
-// Units: n0JT (Argunite Mine), Description (Description)
-{
-Die Hauptquelle für Argunit.
-}
-
-STRING 55743
-// Units: n0JT (Argunite Mine), Ubertip (Tooltip - Extended)
-{
-Die Hauptquelle für Argunit.
-}
-
 STRING 55744
 // Units: E02C (Dryad), Propernames (Proper Names)
 {
@@ -115398,18 +115044,6 @@ STRING 55745
 // Units: o0A9 (Spirit Tent), Name (Name)
 {
 Spirit Tent
-}
-
-STRING 55746
-// Units: n0FB (Fel Fountain), Description (Description)
-{
-Die Hauptquelle für Fel.
-}
-
-STRING 55747
-// Units: n0FB (Fel Fountain), Ubertip (Tooltip - Extended)
-{
-Die Hauptquelle für Fel.
 }
 
 STRING 55748
@@ -115452,19 +115086,19 @@ The tropical homeland of the goblins. Their capital of Undermine is located bene
 }
 
 STRING 55755
-// Units: n0NJ (Goblin Racing Organisation), EditorSuffix (Name - Editor Suffix)
+// Units: o07K (Orc Oil Tanker), EditorSuffix (Name - Editor Suffix)
 {
 (Neutral)
 }
 
 STRING 55756
-// Units: n0E4 (Banner Shop), EditorSuffix (Name - Editor Suffix)
+// Units: n0IU (Armory), EditorSuffix (Name - Editor Suffix)
 {
 (Neutral)
 }
 
 STRING 55757
-// Units: e019 (Blood Elf Shipyard), EditorSuffix (Name - Editor Suffix)
+// Units: n0JT (Argunite Mine), EditorSuffix (Name - Editor Suffix)
 {
 (Neutral)
 }
@@ -115638,7 +115272,7 @@ STRING 55813
 }
 
 STRING 55814
-// Upgrades: R0GV (Ölbrand), Name (Name)
+// Upgrades: R0GV (Burning Oil), Name (Name)
 {
 Höllenfeuer-Zitadelle
 }
@@ -115782,7 +115416,7 @@ C
 }
 
 STRING 55866
-// Upgrades: R01Y (Ölbrand), EditorSuffix (Editor Suffix)
+// Upgrades: R01Y (Burning Oil), EditorSuffix (Editor Suffix)
 {
 (Orc)
 }
@@ -116004,7 +115638,7 @@ Immobilie Murloc-Lager kaufen
 }
 
 STRING 55910
-// Abilities: A21X (Build Tiny Mounts Cage), EditorSuffix (Editor Suffix)
+// Upgrades: R01B (Burning Oil), EditorSuffix (Editor Suffix)
 {
 (Alle Völker)
 }
@@ -116430,7 +116064,7 @@ Magische Münze
 }
 
 STRING 56235
-// Abilities: A0JV (Eis-Atem), EditorSuffix (Editor Suffix)
+// Units: n0M5 (Drillbot), EditorSuffix (Name - Editor Suffix)
 {
 (Neutral)
 }
@@ -116706,13 +116340,13 @@ Massive Frozen Throne Tor
 }
 
 STRING 56302
-// Abilities: A1X2 (Soul Theft), EditorSuffix (Editor Suffix)
+// Units: n0MN (Auction House), EditorSuffix (Name - Editor Suffix)
 {
 (Neutral)
 }
 
 STRING 56303
-// Abilities: A1XD (Defend), EditorSuffix (Editor Suffix)
+// Units: h0YJ (Kul Tiras Shipyard), EditorSuffix (Name - Editor Suffix)
 {
 (Neutral)
 }
@@ -116898,18 +116532,6 @@ Winzigen Reittier-Käfig errichten
 }
 
 STRING 56366
-// Abilities: A21Y (Build Tiny Dragon Roost), EditorSuffix (Editor Suffix)
-{
-(Alle Völker)
-}
-
-STRING 56367
-// Upgrades: R01B (Ölbrand), EditorSuffix (Editor Suffix)
-{
-(Alle Völker)
-}
-
-STRING 56368
 // Upgrades: R0FQ (Improved Masonry,Advanced Masonry,Imbued Masonry), EditorSuffix (Editor Suffix)
 {
 (Alle Völker)
@@ -117540,13 +117162,13 @@ Zauberinnen-Meisterausbildung
 }
 
 STRING 56618
-// Upgrades: R0I9 (Ölbrand), Name (Name)
+// Upgrades: R0I9 (Burning Oil), Name (Name)
 {
 Shok'Thokar
 }
 
 STRING 56619
-// Upgrades: R0I9 (Ölbrand), Tip (Tooltip)
+// Upgrades: R0I9 (Burning Oil), Tip (Tooltip)
 {
 Shok'Thokar
 }
@@ -117558,7 +117180,7 @@ STRING 56620
 }
 
 STRING 56621
-// Upgrades: R0I9 (Ölbrand), EditorSuffix (Editor Suffix)
+// Upgrades: R0I9 (Burning Oil), EditorSuffix (Editor Suffix)
 {
 (Zentauren)
 }
@@ -117738,7 +117360,7 @@ Erhöht die Mana-Kapazität, die Mana-Regenerationsrate und die Trefferpunkte vo
 }
 
 STRING 56667
-// Upgrades: R0I9 (Ölbrand), Ubertip (Tooltip - Extended)
+// Upgrades: R0I9 (Burning Oil), Ubertip (Tooltip - Extended)
 {
 Erlaubt Bürgern den Bau Shok'Thokar.
 }
@@ -117870,13 +117492,13 @@ STRING 56709
 }
 
 STRING 56710
-// Items: I12C (Unique - Ysera's Herz), Name (Name)
+// Items: I12C (Unique - Ysera's Heart), Name (Name)
 {
 Einzigartig - Ysera's Herz
 }
 
 STRING 56711
-// Items: I12C (Unique - Ysera's Herz), Description (Description)
+// Items: I12C (Unique - Ysera's Heart), Description (Description)
 {
 |cff8b00ffEinzigartig|r|nThe heart of the powerful dragon Ysera.
 }
@@ -118046,7 +117668,7 @@ Wiederherstellungsstein erwerben
 }
 
 STRING 56863
-// Items: I12C (Unique - Ysera's Herz), Ubertip (Tooltip - Extended)
+// Items: I12C (Unique - Ysera's Heart), Ubertip (Tooltip - Extended)
 {
 |cff8b00ffEinzigartig|r|nThe heart of the powerful dragon Ysera. Gives the hero 15 intelligence and allows summoning a Green Dragon. Reduces spell damage by <A22L,DataA1,%> %.
 }
@@ -118181,12 +117803,6 @@ STRING 57055
 // Units: n042 (Research Tent), Ubertip (Tooltip - Extended)
 {
 A tent for important researches. Contains upgrades Improved Creep Hunter, Sturmschutz, Temple of Demigod Blue Prints, Improved Masonry, Improved Hand of God, Improved Mount, Evolution, and Günstige Evolution.
-}
-
-STRING 57056
-// Units: n0MO (Arcane Observatory), Description (Description)
-{
-Allows watching the stars.
 }
 
 STRING 57057
@@ -118808,7 +118424,7 @@ STRING 57299
 }
 
 STRING 57305
-// Items: I155 (Outland-Pokal des dritten Platzes), Name (Name)
+// Items: I155 (Outland Third Place Cup), Name (Name)
 {
 Pokal Dritter Platz Fremdland
 }
@@ -119600,37 +119216,37 @@ Samen
 }
 
 STRING 57514
-// Units: N0MY (Burrowed Erdmagier), Name (Name)
+// Units: N0MY (Burrowed Geomancer), Name (Name)
 {
 Eingegrabener Erdmagier
 }
 
 STRING 57515
-// Units: N0MY (Burrowed Erdmagier), Awakentip (Tooltip - Awaken)
+// Units: N0MY (Burrowed Geomancer), Awakentip (Tooltip - Awaken)
 {
 Erdmagier wiederbeleben
 }
 
 STRING 57516
-// Units: N0MY (Burrowed Erdmagier), Tip (Tooltip - Basic)
+// Units: N0MY (Burrowed Geomancer), Tip (Tooltip - Basic)
 {
 Erdmagier beschwören
 }
 
 STRING 57517
-// Units: N0MY (Burrowed Erdmagier), Revivetip (Tooltip - Revive)
+// Units: N0MY (Burrowed Geomancer), Revivetip (Tooltip - Revive)
 {
 Erdmagier wiederbeleben
 }
 
 STRING 57518
-// Units: N0MY (Burrowed Erdmagier), Propernames (Proper Names)
+// Units: N0MY (Burrowed Geomancer), Propernames (Proper Names)
 {
 Flintdagger,Gibblesnik,Goldtooth,Gug Fatcandle,Narg the Taskmaster,Noggrin Onetooth,Taskmaster Snivvle,Kipp Brightwick,Snazzle Shinyfinder,Trytooth Hardchisel
 }
 
 STRING 57519
-// Units: N0MY (Burrowed Erdmagier), Ubertip (Tooltip - Extended)
+// Units: N0MY (Burrowed Geomancer), Ubertip (Tooltip - Extended)
 {
 Ein Kriegerheld, adept at summoning beasts into battle. Can learn Massen-Feuerblitz, Massenlangsam, Hieb, and Earthquake. |n|n|cffffcc00Greift Land-Einheiten an.|r
 }
@@ -120938,7 +120554,7 @@ Fliegt wieder.
 }
 
 STRING 57956
-// Upgrades: R03J (Ölbrand), Name (Name)
+// Upgrades: R03J (Burning Oil), Name (Name)
 {
 Zwergen-Sägewerk
 }
@@ -121010,7 +120626,7 @@ STRING 57969
 }
 
 STRING 57971
-// Upgrades: R03J (Ölbrand), Ubertip (Tooltip - Extended)
+// Upgrades: R03J (Burning Oil), Ubertip (Tooltip - Extended)
 {
 Erlaubt Bürgern den Bau eines Zwergen-Sägewerks, um Holz von nahegelegenen Bäumen zu sammeln.
 }
@@ -121124,7 +120740,7 @@ Zwergenmagier beschwören
 }
 
 STRING 58005
-// Abilities: A0EU (Schrapnell-Splitter), EditorSuffix (Editor Suffix)
+// Abilities: A0EU (Fragmentation Shards), EditorSuffix (Editor Suffix)
 {
 (Zwerge)
 }
@@ -121154,13 +120770,13 @@ STRING 58010
 }
 
 STRING 58011
-// Abilities: A0EV (Leuchtfeuer), EditorSuffix (Editor Suffix)
+// Abilities: A0EV (Flare), EditorSuffix (Editor Suffix)
 {
 (Zwerge)
 }
 
 STRING 58012
-// Abilities: A0EW (Sturmhammer), EditorSuffix (Editor Suffix)
+// Abilities: A0EW (Storm Hammers), EditorSuffix (Editor Suffix)
 {
 (Zwerge)
 }
@@ -121304,7 +120920,7 @@ STRING 58037
 }
 
 STRING 58038
-// Upgrades: R03J (Ölbrand), EditorSuffix (Editor Suffix)
+// Upgrades: R03J (Burning Oil), EditorSuffix (Editor Suffix)
 {
 (Zwerge)
 }
@@ -122066,7 +121682,7 @@ STRING 58501
 }
 
 STRING 58502
-// Items: I14W (Northrend Race-Pokal des dritten Platzes), Description (Description)
+// Items: I14W (Northrend Race Third Place Cup), Description (Description)
 {
 Der Pokal für den Sieger des dritten Platzes.
 }
@@ -122108,37 +121724,37 @@ Purchase Rennqualifikation - Track Northrend
 }
 
 STRING 58509
-// Items: I14U (Northrend Race-Pokal des ersten Platzes), Name (Name)
+// Items: I14U (Northrend Race First Place Cup), Name (Name)
 {
 Northrend Race-Pokal des ersten Platzes
 }
 
 STRING 58510
-// Items: I14Y (Azeroth Grand Prix-Pokal des ersten Platzes), Description (Description)
+// Items: I14Y (Azeroth Grand Prix First Place Cup), Description (Description)
 {
 Der Pokal für den Sieger des ersten Platzes.
 }
 
 STRING 58511
-// Items: I14Y (Azeroth Grand Prix-Pokal des ersten Platzes), Ubertip (Tooltip - Extended)
+// Items: I14Y (Azeroth Grand Prix First Place Cup), Ubertip (Tooltip - Extended)
 {
 Der Pokal für den Sieger des ersten Platzes.
 }
 
 STRING 58512
-// Items: I14V (Northrend Race-Pokal des zweiten Platzes), Name (Name)
+// Items: I14V (Northrend Race Second Place Cup), Name (Name)
 {
 Northrend Race-Pokal des zweiten Platzes
 }
 
 STRING 58513
-// Items: I14Z (Azeroth Grand Prix-Pokal des zweiten Platzes), Description (Description)
+// Items: I14Z (Azeroth Grand Prix Second Place Cup), Description (Description)
 {
 Der Pokal für den Sieger des zweiten Platzes.
 }
 
 STRING 58520
-// Items: I14Z (Azeroth Grand Prix-Pokal des zweiten Platzes), Ubertip (Tooltip - Extended)
+// Items: I14Z (Azeroth Grand Prix Second Place Cup), Ubertip (Tooltip - Extended)
 {
 Der Pokal für den Sieger des zweiten Platzes.
 }
@@ -122168,13 +121784,13 @@ Dwarven Celestial Orb of Souls
 }
 
 STRING 58526
-// Items: I14W (Northrend Race-Pokal des dritten Platzes), Name (Name)
+// Items: I14W (Northrend Race Third Place Cup), Name (Name)
 {
 Northrend Race-Pokal des dritten Platzes
 }
 
 STRING 58527
-// Items: I14W (Northrend Race-Pokal des dritten Platzes), Ubertip (Tooltip - Extended)
+// Items: I14W (Northrend Race Third Place Cup), Ubertip (Tooltip - Extended)
 {
 Der Pokal für den Sieger des dritten Platzes.
 }
@@ -122204,7 +121820,7 @@ Winzigen Zwergen-Beobachtungsturm erwerben
 }
 
 STRING 58532
-// Items: I150 (Azeroth Grand Prix-Pokal des dritten Platzes), Description (Description)
+// Items: I150 (Azeroth Grand Prix Third Place Cup), Description (Description)
 {
 Der Pokal für den Sieger des dritten Platzes.
 }
@@ -122264,13 +121880,13 @@ STRING 58545
 }
 
 STRING 58546
-// Upgrades: R03Y (Schrapnell-Splitter), EditorSuffix (Editor Suffix)
+// Upgrades: R03Y (Fragmentation Shards), EditorSuffix (Editor Suffix)
 {
 (Zwerge)
 }
 
 STRING 58547
-// Upgrades: R03Z (Leuchtfeuer), EditorSuffix (Editor Suffix)
+// Upgrades: R03Z (Flare), EditorSuffix (Editor Suffix)
 {
 (Zwerge)
 }
@@ -122306,7 +121922,7 @@ STRING 58552
 }
 
 STRING 58553
-// Upgrades: R045 (Sturmhammer), EditorSuffix (Editor Suffix)
+// Upgrades: R045 (Storm Hammers), EditorSuffix (Editor Suffix)
 {
 (Zwerge)
 }
@@ -122504,19 +122120,19 @@ Unheilshüter erzeugen
 }
 
 STRING 58606
-// Items: I14Y (Azeroth Grand Prix-Pokal des ersten Platzes), Name (Name)
+// Items: I14Y (Azeroth Grand Prix First Place Cup), Name (Name)
 {
 Azeroth Grand Prix-Pokal des ersten Platzes
 }
 
 STRING 58607
-// Items: I153 (Outland-Pokal des ersten Platzes), Description (Description)
+// Items: I153 (Outland First Place Cup), Description (Description)
 {
 Der Pokal für den Sieger des ersten Platzes.
 }
 
 STRING 58608
-// Items: I153 (Outland-Pokal des ersten Platzes), Ubertip (Tooltip - Extended)
+// Items: I153 (Outland First Place Cup), Ubertip (Tooltip - Extended)
 {
 Der Pokal für den Sieger des ersten Platzes.
 }
@@ -122528,43 +122144,43 @@ STRING 58609
 }
 
 STRING 58615
-// Items: I14Z (Azeroth Grand Prix-Pokal des zweiten Platzes), Name (Name)
+// Items: I14Z (Azeroth Grand Prix Second Place Cup), Name (Name)
 {
 Azeroth Grand Prix-Pokal des zweiten Platzes
 }
 
 STRING 58627
-// Items: I154 (Outland-Pokal des zweiten Platzes), Description (Description)
+// Items: I154 (Outland Second Place Cup), Description (Description)
 {
 Der Pokal für den Sieger des zweiten Platzes.
 }
 
 STRING 58628
-// Items: I154 (Outland-Pokal des zweiten Platzes), Ubertip (Tooltip - Extended)
+// Items: I154 (Outland Second Place Cup), Ubertip (Tooltip - Extended)
 {
 Der Pokal für den Sieger des zweiten Platzes.
 }
 
 STRING 58637
-// Items: I150 (Azeroth Grand Prix-Pokal des dritten Platzes), Name (Name)
+// Items: I150 (Azeroth Grand Prix Third Place Cup), Name (Name)
 {
 Azeroth Grand Prix-Pokal des dritten Platzes
 }
 
 STRING 58640
-// Items: I150 (Azeroth Grand Prix-Pokal des dritten Platzes), Ubertip (Tooltip - Extended)
+// Items: I150 (Azeroth Grand Prix Third Place Cup), Ubertip (Tooltip - Extended)
 {
 Der Pokal für den Sieger des dritten Platzes.
 }
 
 STRING 58641
-// Items: I155 (Outland-Pokal des dritten Platzes), Description (Description)
+// Items: I155 (Outland Third Place Cup), Description (Description)
 {
 Der Pokal für den Sieger des dritten Platzes.
 }
 
 STRING 58730
-// Items: I155 (Outland-Pokal des dritten Platzes), Ubertip (Tooltip - Extended)
+// Items: I155 (Outland Third Place Cup), Ubertip (Tooltip - Extended)
 {
 Der Pokal für den Sieger des dritten Platzes.
 }
@@ -122606,25 +122222,25 @@ STRING 58740
 }
 
 STRING 58741
-// Upgrades: R022 (Ölbrand), Name (Name)
+// Upgrades: R022 (Burning Oil), Name (Name)
 {
 Arkaner Spähposten
 }
 
 STRING 58760
-// Items: I151 (Ironforge Goldschatz), Name (Name)
+// Items: I151 (Ironforge Gold Treasure), Name (Name)
 {
 Ironforge Goldschatz
 }
 
 STRING 58761
-// Items: I151 (Ironforge Goldschatz), Ubertip (Tooltip - Extended)
+// Items: I151 (Ironforge Gold Treasure), Ubertip (Tooltip - Extended)
 {
 Bringt diesen Schatz nach Kezan, um Eure Belohnung zu erhalten.
 }
 
 STRING 58762
-// Items: I151 (Ironforge Goldschatz), Description (Description)
+// Items: I151 (Ironforge Gold Treasure), Description (Description)
 {
 Ein großer Goldschatz aus den Minen von Ironforge.
 }
@@ -123020,7 +122636,7 @@ STRING 59721
 }
 
 STRING 59722
-// Upgrades: R019 (Ölbrand), Ubertip (Tooltip - Extended)
+// Upgrades: R019 (Burning Oil), Ubertip (Tooltip - Extended)
 {
 Nachtelfen-, Untote- und Zwergen-KI kann Unterkünfte nicht benutzen. Sie brauchen einen Bonus.
 }
@@ -123614,7 +123230,7 @@ STRING 61055
 }
 
 STRING 61056
-// Upgrades: R047 (Ölbrand), EditorSuffix (Editor Suffix)
+// Upgrades: R047 (Burning Oil), EditorSuffix (Editor Suffix)
 {
 (Hochelfen)
 }
@@ -123878,13 +123494,13 @@ Macht des Sonnenbrunnens
 }
 
 STRING 61113
-// Upgrades: R047 (Ölbrand), Name (Name)
+// Upgrades: R047 (Burning Oil), Name (Name)
 {
 Sonnenbrunnen
 }
 
 STRING 61114
-// Upgrades: R047 (Ölbrand), Tip (Tooltip)
+// Upgrades: R047 (Burning Oil), Tip (Tooltip)
 {
 Sonnenbrunnen
 }
@@ -124106,7 +123722,7 @@ Dismounts the Archer from the War Eagle.
 }
 
 STRING 62100
-// Upgrades: R04P (Ölbrand), EditorSuffix (Editor Suffix)
+// Upgrades: R04P (Burning Oil), EditorSuffix (Editor Suffix)
 {
 (Goblins)
 }
