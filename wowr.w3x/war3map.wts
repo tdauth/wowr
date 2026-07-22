@@ -100316,7 +100316,7 @@ Gronn
 STRING 46044
 // Units: n0I4 (Gronn), Ubertip (Tooltip - Extended)
 {
-Immense, brutal giants native to Draenor. Has ability Bash, War Stomp, and can Shockwave. |n|n|cffffcc00Attacks land units.|r
+Immense, brutal giants native to Draenor. Has abilities Bash, War Stomp, and Shockwave. |n|n|cffffcc00Attacks land units.|r
 }
 
 STRING 46045
@@ -100334,7 +100334,7 @@ Gronn with War Club
 STRING 46047
 // Units: n0I5 (Gronn with War Club), Ubertip (Tooltip - Extended)
 {
-Immense, brutal giants native to Draenor. Has ability Bash, War Stomp, and can Shockwave. |n|n|cffffcc00Attacks land units.|r
+Immense, brutal giants native to Draenor. Has abilities Bash, War Stomp, and Shockwave. |n|n|cffffcc00Attacks land units.|r
 }
 
 STRING 46048
@@ -100358,7 +100358,7 @@ Gronn
 STRING 46051
 // Units: n0I6 (Gronn), Ubertip (Tooltip - Extended)
 {
-Immense, brutal giants native to Draenor. Has ability Hurl Boulder, Bash, War Stomp, and can Shockwave. |n|n|cffffcc00Attacks land units.|r
+Immense, brutal giants native to Draenor. Has abilities Bash, War Stomp, and Shockwave. |n|n|cffffcc00Attacks land units.|r
 }
 
 STRING 46052
@@ -100400,7 +100400,7 @@ STRING 46057
 STRING 46058
 // Upgrades: R0F3 (Berserker Upgrade), Ubertip (Tooltip - Extended)
 {
-Transforms Gronn into Gronn with War Clubs, giving them increased damage.
+Transforms Gronns into Gronns with War Clubs, giving them increased damage.
 }
 
 STRING 46059

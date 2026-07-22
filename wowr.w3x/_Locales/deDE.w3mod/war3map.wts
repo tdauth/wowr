@@ -884,13 +884,13 @@ Einzigartig - Hydra Queen Scales
 STRING 148
 // Items: I00B (Unique - Hydra Queen Scales), Description (Description)
 {
-|cff8b00ffEinzigartig|r|nAn extremely rare Armor made of a Hydra Queen´s Skin. Apart from looking eerie, it has many powerful abilities.
+|cff8b00ffEinzigartig|r|nEine extrem seltene Rüstung gefertigt aus der Haut einer Hydren-Königin. Apart from looking eerie, it has many powerful abilities.
 }
 
 STRING 149
 // Items: I00B (Unique - Hydra Queen Scales), Ubertip (Tooltip - Extended)
 {
-|cff8b00ffEinzigartig|r|nAn extremely rare Armor made of a Hydra Queen´s Skin. Apart from looking eerie, it has many powerful abilities.|nGrants +10 defense, faster Lebensregeneration, Ausdauer-Aura and summons an Elder Hydra every 100 seconds (lasts 120 seconds).
+|cff8b00ffEinzigartig|r|nEine extrem seltene Rüstung gefertigt aus der Haut einer Hydren-Königin. Apart from looking eerie, it has many powerful abilities.|nGrants +10 defense, faster Lebensregeneration, Ausdauer-Aura and summons an Elder Hydra every 100 seconds (lasts 120 seconds).
 }
 
 STRING 150
@@ -1304,7 +1304,7 @@ STRING 217
 STRING 218
 // Items: I01N (Totem of Thunder Bluff), Name (Name)
 {
-Totem of Donnerfels
+Totem von Donnerfels
 }
 
 STRING 219
@@ -1328,13 +1328,13 @@ Sapphirons Kopf
 STRING 222
 // Items: I01S (Sapphiron´s Head), Description (Description)
 {
-The head of the mighty undead dragon Sapphiron.
+Der Kopf des mächtigen untoten Drachen Sapphiron.
 }
 
 STRING 223
 // Items: I01S (Sapphiron´s Head), Ubertip (Tooltip - Extended)
 {
-The head of the mighty undead dragon Sapphiron. Return it to Lord Illidan for a reward!
+Der Kopf des mächtigen untoten Drachen Sapphiron. Bringt ihn für eure Belohnung zu Lord Illiadn!
 }
 
 STRING 224
@@ -6555,7 +6555,7 @@ STRING 1103
 STRING 1104
 // Units: h03O (Void Elemental), Tip (Tooltip - Basic)
 {
-Wechselt die Klasse zum Wassermagier:|n- Wasserschaden|n- Frostschaden|n- Frostrüstung
+Leeren-Elementargeist anheuern
 }
 
 STRING 1105
@@ -6584,13 +6584,13 @@ Hydra-Königin beschwören
 
 STRING 1109
 {
-Diebstahl - Doctor
+Diebstahl - Doktor
 }
 
 STRING 1110
 // Abilities: A01J (Thieving - Doctor), Tip (Tooltip - Normal)
 {
-Doctor Diebstahl
+Doktor-Diebstahl
 }
 
 STRING 1111
@@ -6601,12 +6601,12 @@ Zufällige Klasse
 
 STRING 1112
 {
-Diebstahl - Doctor
+Diebstahl - Doktor
 }
 
 STRING 1113
 {
-Diebstahl - Doctor
+Diebstahl - Doktor
 }
 
 STRING 1114
@@ -10851,7 +10851,7 @@ B
 STRING 1851
 // Units: h04C (Arch Cleric), Ubertip (Tooltip - Extended)
 {
-Unterstützender Zauberer. Can initially cast Magical Laterne, which summons a Magical Laterne to watch a certain area for some time. Can also learn Entwaffnung, Manaschutzzauber and Sonnenbrunnen-Auferstehung. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
+Unterstützender Zauberer. Kann zu Beginn den Zauber 'Magische Laterne' wirken, which summons a Magical Laterne to watch a certain area for some time. Can also learn Entwaffnung, Manaschutzzauber and Sonnenbrunnen-Auferstehung. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
 }
 
 STRING 1852
@@ -13464,7 +13464,7 @@ Foliant der Bewegung erwerben
 STRING 2476
 // Units: h077 (Wizard), Ubertip (Tooltip - Extended)
 {
-Unterstützender Zauberer. Can initially cast Purge, which removes all buffs from a target unit and slows its movement speed. Can also learn Frost-Rüstung and Verwandlung. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
+Unterstützender Zauberer. Kann zu Beginn den Zauber 'Reinigen' wirken, which removes all buffs from a target unit and slows its movement speed. Can also learn Frost-Rüstung and Verwandlung. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
 }
 
 STRING 2477
@@ -13602,7 +13602,7 @@ STRING 2499
 STRING 2500
 // Units: hmpr (Priest), Ubertip (Tooltip - Extended)
 {
-Unterstützender Zauberer. Can initially cast Heilen, which increases the life of wounded units. Can also learn Magie bannen and Inneres Feuer. Can gather the resource Favor from Arkanes Sanktums. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
+Unterstützender Zauberer. Kann zu Beginn den Zauber 'Heilen' wirken, which increases the life of wounded units. Can also learn Magie bannen and Inneres Feuer. Can gather the resource Favor from Arkanes Sanktums. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
 }
 
 STRING 2501
@@ -14478,7 +14478,7 @@ STRING 2648
 STRING 2649
 // Units: h07K (Heretic), Ubertip (Tooltip - Extended)
 {
-Versatile spellcaster. Can initially cast Fluch, which gives enemies the chance to miss their attacks. Can also learn Aas-Schwarm and Besessenheit. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
+Versatile spellcaster. Kann zu Beginn den Zauber 'Fluch' wirken, which gives enemies the chance to miss their attacks. Can also learn Aas-Schwarm and Besessenheit. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
 }
 
 STRING 2650
@@ -14808,7 +14808,7 @@ STRING 2773
 STRING 2774
 // Units: o010 (Goblin Mage), Ubertip (Tooltip - Extended)
 {
-Primary spellcaster. Can initially cast Magie bannen, which removes negative buffs from allied units and positive buffs from enemy units and causes damage to enemy summoned units. Can also learn Kampfrausch and Verwandlung. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
+Primary spellcaster. Kann zu Beginn den Zauber 'Magie bannen' wirken, which removes negative buffs from allied units and positive buffs from enemy units and causes damage to enemy summoned units. Can also learn Kampfrausch and Verwandlung. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
 }
 
 STRING 2775
@@ -14820,7 +14820,7 @@ STRING 2775
 STRING 2776
 // Units: n03U (Goblin Alchemist), Ubertip (Tooltip - Extended)
 {
-Unterstützender Zauberer. Can initially cast Illusion, which confuses the enemy by creating one illusion of an allied unit. Can also learn Chemischer Zorn and Säurebombe. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
+Unterstützender Zauberer. Kann zu Beginn den Zauber 'Illusion' wirken, which confuses the enemy by creating one illusion of an allied unit. Can also learn Chemischer Zorn and Säurebombe. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
 }
 
 STRING 2777
@@ -14838,7 +14838,7 @@ STRING 2778
 STRING 2779
 // Units: o012 (Goblin Sorceress), Ubertip (Tooltip - Extended)
 {
-Versatile spellcaster. Can initially cast Feenfeuer, which temporarily reduces armor of enemies. Can also learn Heilspray and Transmutieren. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
+Versatile spellcaster. Kann zu Beginn den Zauber 'Feenfeuer' wirken, which temporarily reduces armor of enemies. Can also learn Heilspray and Transmutieren. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
 }
 
 STRING 2780
@@ -20124,13 +20124,13 @@ B
 STRING 4050
 // Units: h03A (Battle Priest), Ubertip (Tooltip - Extended)
 {
-Unterstützender Zauberer. Can initially cast Heiliges Licht, which heals wounded allied units and damages enemy Undead units. Can also learn Breath of Frost and Gebrüll. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
+Unterstützender Zauberer. Kann zu Beginn den Zauber 'Heiliges Licht' wirken, which heals wounded allied units and damages enemy Undead units. Can also learn Breath of Frost and Gebrüll. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
 }
 
 STRING 4051
 // Units: o01L (Dwarf Runecaster), Ubertip (Tooltip - Extended)
 {
-Primary spellcaster. Can initially cast Monsterköder, which draws nearby creeps to it. Can also learn Summon Granit-Golem and Rune der Wiedergeburt. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
+Primary spellcaster. Kann zu Beginn den Zauber 'Monsterköder' wirken, which draws nearby creeps to it. Can also learn Summon Granit-Golem and Rune der Wiedergeburt. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
 }
 
 STRING 4052
@@ -22944,7 +22944,7 @@ STRING 4739
 STRING 4740
 // Units: h07Z (Heretic), Ubertip (Tooltip - Extended)
 {
-Versatile spellcaster. Can initially cast Tote erwecken, which summons Skeletons from corpses. Can also learn Aas-Schwarm and Drain. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
+Versatile spellcaster. Kann zu Beginn den Zauber 'Tote erwecken' wirken, which summons Skeletons from corpses. Can also learn Aas-Schwarm and Drain. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
 }
 
 STRING 4741
@@ -48424,7 +48424,7 @@ STRING 12170
 STRING 12171
 // Units: o0AZ (Razormane Medicine Man), Ubertip (Tooltip - Extended)
 {
-Unterstützender Zauberer. Can initially cast Verjüngung, which regenerates mana for friendly units. Can also learn Wildgeist and Heil-Schutzzauber. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
+Unterstützender Zauberer. Kann zu Beginn den Zauber 'Verjüngung' wirken, which regenerates mana for friendly units. Can also learn Wildgeist and Heil-Schutzzauber. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
 }
 
 STRING 12172
@@ -51382,7 +51382,7 @@ Berserk
 STRING 14587
 // Units: n0LA (Naga Sorceror), Ubertip (Tooltip - Extended)
 {
-Powerful spellcaster. Can initially cast Heilen, which heals friendly units. Can also learn Magie aufheben, and Meeres-Elementargeist beschwören. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
+Powerful spellcaster. Kann zu Beginn den Zauber 'Heilen', which heals friendly units. Can also learn Magie aufheben, and Meeres-Elementargeist beschwören. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
 }
 
 STRING 14588
@@ -62955,7 +62955,7 @@ Verzauberung
 STRING 23761
 // Units: n0G9 (Murloc Shadowcaster), Ubertip (Tooltip - Extended)
 {
-Heavy ranged amphibious unit. Can initially cast Parasit. Can also learn Todesmantel, and Hex. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
+Heavy ranged amphibious unit. Kann zu Beginn den Zauber 'Parasit' wirken. Can also learn Todesmantel, and Hex. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
 }
 
 STRING 23794
@@ -73557,7 +73557,7 @@ STRING 33781
 STRING 33782
 // Units: o02L (Troll Bloodmage), Ubertip (Tooltip - Extended)
 {
-Unterstützender Zauberer. Can initially cast Kannibalismus, which heals hit points by eating enemy living ground units. Can also learn Unstable Concoction and Lebensauger. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
+Unterstützender Zauberer. Kann zu Beginn den Zauber 'Kannibalismus' wirken, which heals hit points by eating enemy living ground units. Can also learn Unstable Concoction and Lebensauger. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
 }
 
 STRING 33783
@@ -76083,7 +76083,7 @@ STRING 35089
 STRING 35090
 // Units: o0B4 (Necromancer), Ubertip (Tooltip - Extended)
 {
-Primary spellcaster. Can initially cast Tote erwecken, which raises skeletons from corpses. Can also learn Lightning Shield and Kampfrausch. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
+Primary spellcaster. Kann zu Beginn den Zauber 'Tote erwecken' wirken, which raises skeletons from corpses. Can also learn Lightning Shield and Kampfrausch. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
 }
 
 STRING 35091
@@ -76887,7 +76887,7 @@ Silberbarren
 STRING 35331
 // Units: h0IP (Runecarver), Ubertip (Tooltip - Extended)
 {
-Unterstützender Zauberer. Can initially cast Heilen, which increases the life of wounded units. Can also learn Magie bannen and Inneres Feuer. Can gather the resource Favor from Arkanes Sanktums. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
+Unterstützender Zauberer. Kann zu Beginn den Zauber 'Heilen' wirken, which increases the life of wounded units. Can also learn Magie bannen and Inneres Feuer. Can gather the resource Favor from Arkanes Sanktums. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
 }
 
 STRING 35332
@@ -77157,7 +77157,7 @@ Scharlachrotes Kloster erforschen
 STRING 35444
 // Units: h0QD (Arcanist), Ubertip (Tooltip - Extended)
 {
-Unterstützender Zauberer. Can initially cast Heilen, which increases the life of wounded units. Can also learn Magie bannen and Inneres Feuer. Can gather the resource Favor from Arkanes Sanktums. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
+Unterstützender Zauberer. Kann zu Beginn den Zauber 'Heilen' wirken, which increases the life of wounded units. Can also learn Magie bannen and Inneres Feuer. Can gather the resource Favor from Arkanes Sanktums. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
 }
 
 STRING 35445
@@ -85431,7 +85431,7 @@ Lady Vashj wiederbeleben
 STRING 38160
 // Upgrades: R0E6 (Ensnare), Ubertip (Tooltip - Extended)
 {
-Enables Ogre Hunters to use the Einschnüren ability. Einschnüren causes a target enemy unit to be bound to the ground so that it cannot move. Air units that are ensnared can be attacked as though they were land units.
+Enables Oger-Jäger to use the Einschnüren ability. Einschnüren causes a target enemy unit to be bound to the ground so that it cannot move. Air units that are ensnared can be attacked as though they were land units.
 }
 
 STRING 38163
@@ -86097,7 +86097,7 @@ Rieseneisbär ausbilden
 STRING 38731
 // Units: h0QE (Arcanist), Ubertip (Tooltip - Extended)
 {
-Unterstützender Zauberer. Can initially cast Heilen, which increases the life of wounded units. Can also learn Magie bannen and Inneres Feuer. Can gather the resource Favor from Arkanes Sanktums. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
+Unterstützender Zauberer. Kann zu Beginn den Zauber 'Heilen' wirken, which increases the life of wounded units. Can also learn Magie bannen and Inneres Feuer. Can gather the resource Favor from Arkanes Sanktums. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
 }
 
 STRING 38732
@@ -87165,7 +87165,7 @@ STRING 39658
 STRING 39659
 // Units: h0IX (Druid), Ubertip (Tooltip - Extended)
 {
-Unterstützender Zauberer. Can initially cast Wirbelsturm, which stuns enemy ground units. Can also learn Verjüngung and Sturmkrähengestalt. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
+Unterstützender Zauberer. Kann zu Beginn den Zauber 'Wirbelsturm' wirken, which stuns enemy ground units. Can also learn Verjüngung and Sturmkrähengestalt. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
 }
 
 STRING 39660
@@ -87465,7 +87465,7 @@ STRING 39716
 STRING 39717
 // Units: h0PJ (Nightstalker), Ubertip (Tooltip - Extended)
 {
-Versatile spellcaster. Can initially cast Windlauf, which increases the speed, makes the Night Stalker invisible and causes critical damage on the first hit. Can also learn Unsichtbarkeit and Verwandlung. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
+Versatile spellcaster. Kann zu Beginn den Zauber 'Windlauf' wirken, which increases the speed, makes the Night Stalker invisible and causes critical damage on the first hit. Can also learn Unsichtbarkeit and Verwandlung. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
 }
 
 STRING 39718
@@ -91041,7 +91041,7 @@ STRING 41180
 STRING 41181
 // Units: o05R (Shaman), Ubertip (Tooltip - Extended)
 {
-Primary spellcaster. Can initially cast Purge, which dispels magical buffs and can immobilize enemies. Can also learn Kampfrausch and Summon Meeresschildkröte. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
+Primary spellcaster. Kann zu Beginn den Zauber 'Reinigen' wirken, which dispels magical buffs and can immobilize enemies. Can also learn Kampfrausch and Summon Meeresschildkröte. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
 }
 
 STRING 41182
@@ -92373,7 +92373,7 @@ K
 STRING 41507
 // Units: o0AY (Razormane Mystic), Ubertip (Tooltip - Extended)
 {
-Unterstützender Zauberer. Can initially cast Verbannen, which removes negative buffs and damages summoned units. Can also learn Wirbelsturm and Stampede. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
+Unterstützender Zauberer. Kann zu Beginn den Zauber 'Verbannen' wirken, which removes negative buffs and damages summoned units. Can also learn Wirbelsturm and Stampede. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
 }
 
 STRING 41508
@@ -93243,7 +93243,7 @@ Verleiht bestimmten Lordaeron-Land-Einheiten die Fähigkeit, Gegenstände zu tra
 STRING 41907
 // Upgrades: R0EA (Ensnare), Ubertip (Tooltip - Extended)
 {
-Enables Ogre Hunters to use the Hinterhalt ability. Hinterhalt makes the Ogre Hunter invisible for some time.
+Enables Oger-Jäger to use the Hinterhalt ability. Hinterhalt makes the Ogre Hunter invisible for some time.
 }
 
 STRING 41908
@@ -93579,7 +93579,7 @@ Bildet Greifenreiter und Schwebekopter aus.
 STRING 42038
 // Units: h0QF (Arcanist), Ubertip (Tooltip - Extended)
 {
-Unterstützender Zauberer. Can initially cast Heilen, which increases the life of wounded units. Can also learn Magie bannen and Inneres Feuer. Can gather the resource Favor from Arkanes Sanktums. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
+Unterstützender Zauberer. Kann zu Beginn den Zauber 'Heilen' wirken, which increases the life of wounded units. Can also learn Magie bannen and Inneres Feuer. Can gather the resource Favor from Arkanes Sanktums. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
 }
 
 STRING 42039
@@ -93603,7 +93603,7 @@ STRING 42041
 STRING 42042
 // Units: h0RX (Priest), Ubertip (Tooltip - Extended)
 {
-Unterstützender Zauberer. Can initially cast Heilen, which increases the life of wounded units. Can also learn Magie bannen and Inneres Feuer. Can gather the resource Favor from Arkanes Sanktums. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
+Unterstützender Zauberer. Kann zu Beginn den Zauber 'Heilen' wirken, which increases the life of wounded units. Can also learn Magie bannen and Inneres Feuer. Can gather the resource Favor from Arkanes Sanktums. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
 }
 
 STRING 42043
@@ -94371,7 +94371,7 @@ Mönch
 STRING 42366
 // Units: o04N (Monk), Ubertip (Tooltip - Extended)
 {
-Primary spellcaster. Can initially cast Trunkenheit, which lets enemy units miss their attacks. Can also learn Windlauf and Gleiten. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
+Primary spellcaster. Kann zu Beginn den Zauber 'Trunkenheit' wirken, which lets enemy units miss their attacks. Can also learn Windlauf and Gleiten. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
 }
 
 STRING 42367
@@ -94479,7 +94479,7 @@ Flying attack beast. Melee attack against air units and range attack against gro
 STRING 42387
 // Units: e01E (Druid), Ubertip (Tooltip - Extended)
 {
-Melee spellcaster. Can initially cast Gebrüll, which increases attack damage. Can also learn Verjüngung, and Bärengestalt. |n|n|cffffcc00Greift Land-Einheiten an.|r
+Melee spellcaster. Kann zu Beginn den Zauber 'Gebrüll' wirken, which increases attack damage. Can also learn Verjüngung, and Bärengestalt. |n|n|cffffcc00Greift Land-Einheiten an.|r
 }
 
 STRING 42388
@@ -95193,7 +95193,7 @@ Stachelpanzerschale erforschen
 STRING 42526
 // Units: h0AA (Sage), Ubertip (Tooltip - Extended)
 {
-Unterstützender Zauberer. Can initially cast Heilen, which increases the life of wounded units. Can also learn Wirbelsturm and Entwaffnung. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
+Unterstützender Zauberer. Kann zu Beginn den Zauber 'Heilen' wirken, which increases the life of wounded units. Can also learn Wirbelsturm and Entwaffnung. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
 }
 
 STRING 42527
@@ -97839,7 +97839,7 @@ STRING 43623
 STRING 43624
 // Abilities: A0CG (Convert Into Goblin), Name (Name)
 {
-Convert Into Goblin
+In Goblins umwandeln
 }
 
 STRING 43625
@@ -98313,7 +98313,7 @@ Oger-Lord ausbilden
 STRING 44007
 // Units: o078 (Beastiary), Ubertip (Tooltip - Extended)
 {
-Trains Ogre Hunters, Grollhufs, Bronze Drakes, and Zeppelins. |nBietet auch die Ausbaustufen Einschnüren, Hinterhalt, and Blitzangriff upgrades.
+Bildet Oger-Jäger, Grollhufer, Bronzedrachen und Zeppeline aus. |nBietet auch die Ausbaustufen Einschnüren, Hinterhalt, and Blitzangriff upgrades.
 }
 
 STRING 44008
@@ -99699,13 +99699,13 @@ Versatile crossbowman infused with the blood of demons, effective against air un
 STRING 45921
 // Units: n0K0 (Cultist), Ubertip (Tooltip - Extended)
 {
-Orc spellcaster infused with the blood of demons. Can initially cast Todesmantel, which damages a target non-Undead enemy unit or heals a target Undead friendly unit. Can also learn Dunkle Beschwörung and Unheilshüter beschwören. Can learn Fel. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
+Orc spellcaster infused with the blood of demons. Kann zu Beginn den Zauber 'Todesmantel' wirken, which damages a target non-Undead enemy unit or heals a target Undead friendly unit. Can also learn Dunkle Beschwörung and Unheilshüter beschwören. Can learn Fel. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
 }
 
 STRING 45922
 // Units: n0K1 (Warlock), Ubertip (Tooltip - Extended)
 {
-Orc spellcaster infused with the blood of demons. Can initially cast Feuerblitz, which stuns and damages a target enemy unit. Can also learn Unholy Frenzy and Verkrüppeln. Can learn Fel. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
+Orc spellcaster infused with the blood of demons. Kann zu Beginn den Zauber 'Feuerblitz' wirken, which stuns and damages a target enemy unit. Can also learn Unholy Frenzy and Verkrüppeln. Can learn Fel. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
 }
 
 STRING 45923
@@ -99717,7 +99717,7 @@ STRING 45923
 STRING 45924
 // Units: n0K2 (Elder), Ubertip (Tooltip - Extended)
 {
-Primary healing and supporting spellcaster infused with the blood of demons. Can initially cast Heilsalbe, which heals friendly units. Can also learn Kampfrausch and Drain. Can learn Fel. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
+Primary healing and supporting spellcaster infused with the blood of demons. Kann zu Beginn den Zauber 'Heilsalbe' wirken, which heals friendly units. Can also learn Kampfrausch and Drain. Can learn Fel. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
 }
 
 STRING 45925
@@ -99741,7 +99741,7 @@ Lumbering war beast, mounted by an Orcish drummer. Has the abilities War Drums a
 STRING 45928
 // Units: n0KR (Raider), Ubertip (Tooltip - Extended)
 {
-Highly mobile wolf rider infused with the blood of demons. Can learn Einschnüren and Fel. |n|n|cffffcc00Greift Land-Einheiten an.|r
+Highly mobile wolf rider infused with the blood of demons. Kann 'Einschnüren' und 'Fel' erlernen. |n|n|cffffcc00Greift Land-Einheiten an.|r
 }
 
 STRING 45931
@@ -99897,7 +99897,7 @@ STRING 45961
 STRING 45963
 // Units: h0RL (Bishop), Ubertip (Tooltip - Extended)
 {
-Unterstützender Zauberer. Can initially cast Heilen, which increases the life of wounded units. Can also learn Magie bannen and Inneres Feuer. Can gather the resource Favor from Arkanes Sanktums. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r|n|n|cffffcc00Limit to 8.|r
+Unterstützender Zauberer. Kann zu Beginn den Zauber 'Heilen' wirken, which increases the life of wounded units. Can also learn Magie bannen and Inneres Feuer. Can gather the resource Favor from Arkanes Sanktums. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r|n|n|cffffcc00Limit to 8.|r
 }
 
 STRING 45965
@@ -100317,7 +100317,7 @@ Gronn
 STRING 46044
 // Units: n0I4 (Gronn), Ubertip (Tooltip - Extended)
 {
-Immense, brutal giants native to Draenor. Has ability Hieb, Kriegsdonner, and can Schockwelle. |n|n|cffffcc00Greift Land-Einheiten an.|r
+Immense, brutale Riesen, heimisch auf Draenor. Hat die Fähigkeiten 'Hieb', 'Kriegsdonner' und 'Schockwelle'. |n|n|cffffcc00Greift Land-Einheiten an.|r
 }
 
 STRING 46045
@@ -100335,7 +100335,7 @@ Gronn mit Kriegskeule
 STRING 46047
 // Units: n0I5 (Gronn with War Club), Ubertip (Tooltip - Extended)
 {
-Immense, brutal giants native to Draenor. Has ability Hieb, Kriegsdonner, and can Schockwelle. |n|n|cffffcc00Greift Land-Einheiten an.|r
+Immense, brutale Riesen, heimisch auf Draenor. Hat die Fähigkeiten 'Hieb', 'Kriegsdonner' und 'Schockwelle'. |n|n|cffffcc00Greift Land-Einheiten an.|r
 }
 
 STRING 46048
@@ -100359,7 +100359,7 @@ Gronn
 STRING 46051
 // Units: n0I6 (Gronn), Ubertip (Tooltip - Extended)
 {
-Immense, brutal giants native to Draenor. Has ability Hurl Boulder, Hieb, Kriegsdonner, and can Schockwelle. |n|n|cffffcc00Greift Land-Einheiten an.|r
+Immense, brutale Riesen, heimisch auf Draenor. Hat die Fähigkeiten 'Hieb', 'Kriegsdonner' und 'Schockwelle'. |n|n|cffffcc00Greift Land-Einheiten an.|r
 }
 
 STRING 46052
@@ -100401,7 +100401,7 @@ STRING 46057
 STRING 46058
 // Upgrades: R0F3 (Berserker Upgrade), Ubertip (Tooltip - Extended)
 {
-Transforms Gronn into Gronn with Kriegskeules, giving them increased damage.
+Verwandelt Gronns in Gronns mit Kriegskeule, wodurch sie erhöhten Schaden verursachen.
 }
 
 STRING 46059
@@ -100425,7 +100425,7 @@ STRING 46067
 STRING 46068
 // Units: h0RM (Mage), Ubertip (Tooltip - Extended)
 {
-Unterstützender Zauberer. Can initially cast Feuerblitz, which damages and stuns enemy units. Can also learn Teleport and Blizzard. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
+Unterstützender Zauberer. Kann zu Beginn den Zauber 'Feuerblitz' wirken, which damages and stuns enemy units. Can also learn Teleport and Blizzard. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
 }
 
 STRING 46069
@@ -107394,7 +107394,7 @@ STRING 50587
 STRING 50588
 // Units: n0JB (Murloc Cultist), Ubertip (Tooltip - Extended)
 {
-Heavy ranged amphibious unit. Can initially cast Fluch. Can also learn Meeresriesen beschwören, and Bezauberung. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
+Heavy ranged amphibious unit. Kann zu Beginn den Zauber 'Fluch' wirken. Can also learn Meeresriesen beschwören, and Bezauberung. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
 }
 
 STRING 50589
@@ -115442,7 +115442,7 @@ Grollhuf herbeirufen
 STRING 55870
 // Units: n0LQ (Pet Clefthoof), Ubertip (Tooltip - Extended)
 {
-Den Geist eines Grollhufs herbeirufen, um den Spieler zu retten.
+Den Geist eines Grollhufer herbeirufen, um den Spieler zu retten.
 }
 
 STRING 55872
