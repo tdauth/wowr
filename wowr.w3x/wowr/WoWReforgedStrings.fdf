@@ -994,6 +994,13 @@ StringList {
     TRIED_TO_LOAD_ALL_SAVE_CODES       "Tried to load all savecodes.",
     // Save Codes Dialog
     LOAD_SAVE_CODES_QUESTION           "Load Save Codes?",
+    // Save Masters
+    CLEARED_INCLUDED                   "Cleared included!",
+    CLEARED_EXCLUDED                   "Cleared excluded!",
+    UNIT_ALREADY_INCLUDED              "Unit is already included!",
+    UNIT_ALREADY_EXCLUDED              "Unit is already excluded!",
+    INCLUDED_UNIT                      "Included unit!",
+    EXCLUDED_UNIT                      "Excluded unit!",
     // ChangeLog
     ALL_CHANGES_OF_VERSION             "All changes of %1%.",
     // Quests

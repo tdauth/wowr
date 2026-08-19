@@ -1,4 +1,4 @@
-library WoWReforgedSaveCodes requires OpLimit, StringUtils, ForceUtils, MaxHpResearch, SaveCodeSystem, WoWReforgedSaveCodeObjects, WoWReforgedUtils, WoWReforgedMapData, WoWReforgedResources, WoWReforgedEquipmentBags, WoWReforgedHeroJourney, WoWReforgedEvolution, WoWReforgedDemigod, WoWReforgedDependencyEquivalents, WoWReforgedRaces, WoWReforgedProfessions, WoWReforgedItems, WoWReforgedTradingPosts, WoWReforgedPortals, WoWReforgedAntimagicWards, WoWReforgedBanners, WoWReforgedSkins, WoWReforgedRecordPlayer
+library WoWReforgedSaveCodes requires OpLimit, StringUtils, ForceUtils, MaxHpResearch, SaveCodeSystem, WoWReforgedSaveCodeObjects, WoWReforgedUtils, WoWReforgedMapData, WoWReforgedResources, WoWReforgedEquipmentBags, WoWReforgedHeroJourney, WoWReforgedEvolution, WoWReforgedDemigod, WoWReforgedDependencyEquivalents, WoWReforgedRaces, WoWReforgedProfessions, WoWReforgedItems, WoWReforgedTradingPosts, WoWReforgedPortals, WoWReforgedAntimagicWards, WoWReforgedBanners, WoWReforgedSkins, WoWReforgedRecordPlayer, WoWReforgedSaveMaster
 
 globals
     constant integer SAVE_CODE_INDEX_TYPE = 0
@@ -826,11 +826,10 @@ function GetPlayerBuildingsOrderedByPriority takes player whichPlayer, integer i
     local group buildingsToBeSaved = CreateGroup()
     local unit first = null
     local integer i = 0
-    local integer convertedPlayerId = GetConvertedPlayerId(whichPlayer)
-    call GroupAddGroup(udg_SaveCodeIncludedUnits[convertedPlayerId], buildingsToBeSaved)
+    call GroupAddGroup(GetPlayerIncludedSaveUnits(whichPlayer), buildingsToBeSaved)
     set bj_wantDestroyGroup = true
     call GroupAddGroup(GetUnitsOfPlayerMatching(whichPlayer, Filter(function FilterIsLivingBuildingToBeSaved)), buildingsToBeSaved)
-    call GroupRemoveGroup(udg_SaveCodeExcludedUnits[convertedPlayerId], buildingsToBeSaved)
+    call GroupRemoveGroup(GetPlayerExcludedSaveUnits(whichPlayer), buildingsToBeSaved)
     loop
         set first = FirstOfGroup(buildingsToBeSaved)
         exitwhen (first == null or i >= (index + 1) * SAVE_CODE_MAX_BUILDINGS)
@@ -1716,10 +1715,10 @@ function GetPlayerUnitsOrderedByPriority takes player whichPlayer, integer index
     local group whichGroup = CreateGroup()
     local group livingUnitsToBeSaved = CreateGroup()
     local unit first = null
-    call GroupAddGroup(udg_SaveCodeIncludedUnits[GetConvertedPlayerId(whichPlayer)], livingUnitsToBeSaved)
+    call GroupAddGroup(GetPlayerIncludedSaveUnits(whichPlayer), livingUnitsToBeSaved)
     set bj_wantDestroyGroup = true
     call GroupAddGroup(GetUnitsOfPlayerMatching(whichPlayer, Filter(function FilterIsLivingUnitToBeSaved)), livingUnitsToBeSaved)
-    call GroupRemoveGroup(udg_SaveCodeExcludedUnits[GetConvertedPlayerId(whichPlayer)], livingUnitsToBeSaved)
+    call GroupRemoveGroup(GetPlayerExcludedSaveUnits(whichPlayer), livingUnitsToBeSaved)
     //call BJDebugMsg("Size of units: " + I2S(BlzGroupGetSize(livingUnitsToBeSaved)))
     set bj_wantDestroyGroup = true
     set livingUnitsToBeSaved = DistinctGroup(livingUnitsToBeSaved)
