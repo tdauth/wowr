@@ -3409,6 +3409,7 @@ globals
     constant integer ITEM_SMALL_BILL                                 = 'I0D3' // novice
 
     // Farmer
+    constant integer FARMHAND                                        = 'h0N4'
     constant integer FARM_FARMER                                     = 'h0KW'
     constant integer ITEM_TINY_FARM_FARMER                           = 'I0JU' // novice
     constant integer WATER_SUPPLY                                    = 'h0KX'
@@ -3421,6 +3422,9 @@ globals
     constant integer ITEM_TINY_ANIMAL_PEN                            = 'I18G' // grand master
     constant integer BARN                                            = 'h0AS' // doctor
     constant integer ITEM_TINY_BARN                                  = 'I195' // doctor
+    constant integer SHEEPFOLD                                       = 'h07S'
+    constant integer COWSHED                                         = 'h07R'
+    constant integer WHEAT_FIELD                                     = 'h0N5'
 
     constant integer COW                                             = 'n0DX'
     constant integer CHICKEN                                         = 'nech'

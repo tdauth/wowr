@@ -1,7 +1,7 @@
 library CustomUnitTypes
 /*
  * Custom Unit Types 1.0
- * 
+ *
  * System to avoid enumerating all units in the map multiple times, for example with GetUnitsOfTypeIdAll.
  * Register handlers for all custom unit types.
  * Call the handlers ONCE in the beginning of the game and whenever a new unit enters the map.
@@ -16,11 +16,11 @@ globals
 endglobals
 
 struct CustomUnitType
-    
+
     public stub method filter takes unit whichUnit returns boolean
         return true
     endmethod
-    
+
     public stub method onEnter takes unit whichUnit returns nothing
     endmethod
 
@@ -34,6 +34,28 @@ endstruct
 
 function AddCustomUnitType takes integer unitTypeId, CustomUnitType c returns nothing
     call SaveInteger(h, unitTypeId, KEY_HANDLER, c)
+endfunction
+
+function interface CustomUnitTypeOnEnterFunction takes unit whichUnit returns nothing
+
+private struct CustomUnitTypeOnEnterOnly extends CustomUnitType
+    private CustomUnitTypeOnEnterFunction f
+
+    public stub method onEnter takes unit whichUnit returns nothing
+        call f.execute(whichUnit)
+    endmethod
+
+    public static method create takes CustomUnitTypeOnEnterFunction f returns thistype
+        local thistype this = thistype.allocate()
+        set this.f = f
+        return this
+    endmethod
+
+endstruct
+
+// Helper for simplified calls.
+function AddCustomUnitTypeOnEnterOnly takes integer unitTypeId, CustomUnitTypeOnEnterFunction f returns nothing
+    call AddCustomUnitType(unitTypeId, CustomUnitTypeOnEnterOnly.create(f))
 endfunction
 
 function IsCustomUnitType takes integer unitTypeId returns boolean
@@ -94,7 +116,7 @@ function InitCustomUnitTypes takes nothing returns nothing
         set init = true
         set bj_wantDestroyGroup = true
         call ForGroup(GetUnitsInRectMatching(GetPlayableMapRect(), Filter(function FilterHasCustomUnitType)), function EnumCustomUnitType)
-        
+
         call TriggerRegisterEnterRectSimple(enterTrigger, GetPlayableMapRect())
         call TriggerAddCondition(enterTrigger, Condition(function TriggerConditionEnter))
 

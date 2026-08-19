@@ -1,4 +1,4 @@
-library WoWReforgedCustomUnitTypes initializer Init requires CustomUnitTypes, UnitGroupRespawnSystem, UnitGroupRespawnSystemConfig, WoWReforgedAutoSkill, WoWReforgedPortals, WoWReforgedHeroes, WoWReforgedBosses, WoWReforgedRaces, WoWReforgedProfessions, WoWReforgedResources, WoWReforgedProperties, WoWReforgedSkins, WoWReforgedArmory, WoWReforgedTaverns, WoWReforgedSummonedUnits, WoWReforgedGaia, WoWReforgedChests, WoWReforegdHideout, WoWReforgedTrainer, WoWReforgedProfessionHunter, WoWReforgedCommandButtons, WoWReforgedGoldMines, WoWReforgedLevers, WoWReforgedRandomCorpse, WoWReforgedProfessionBooksShop, WoWReforgedSceptersShop, WoWReforgedBanners, WoWReforgedVIPs, WoWReforgedAlchemistLab, WoWReforgedMounts, WoWReforgedCraftingStash, WoWReforgedMapData
+library WoWReforgedCustomUnitTypes initializer Init requires CustomUnitTypes, UnitGroupRespawnSystem, UnitGroupRespawnSystemConfig, WoWReforgedAutoSkill, WoWReforgedPortals, WoWReforgedHeroes, WoWReforgedBosses, WoWReforgedRaces, WoWReforgedProfessions, WoWReforgedResources, WoWReforgedProperties, WoWReforgedSkins, WoWReforgedArmory, WoWReforgedTaverns, WoWReforgedSummonedUnits, WoWReforgedGaia, WoWReforgedChests, WoWReforegdHideout, WoWReforgedTrainer, WoWReforgedProfessionFarmer, WoWReforgedProfessionHunter, WoWReforgedCommandButtons, WoWReforgedGoldMines, WoWReforgedLevers, WoWReforgedRandomCorpse, WoWReforgedProfessionBooksShop, WoWReforgedSceptersShop, WoWReforgedBanners, WoWReforgedVIPs, WoWReforgedAlchemistLab, WoWReforgedMounts, WoWReforgedCraftingStash, WoWReforgedMapData
 
 private function AddCustomMine takes unit whichUnit returns nothing
     local integer index = GetMineTypeIndex(GetUnitTypeId(whichUnit))
@@ -19,7 +19,7 @@ private function AddTentacle takes unit whichUnit returns nothing
 endfunction
 
 private struct CustomUnitTypePlayerHideout extends CustomUnitType
-    
+
     public stub method onEnter takes unit whichUnit returns nothing
         call SetPlayerHideout(whichUnit)
     endmethod
@@ -27,7 +27,7 @@ private struct CustomUnitTypePlayerHideout extends CustomUnitType
 endstruct
 
 private struct CustomUnitTypeFishSchool extends CustomUnitType
-    
+
     public stub method onEnter takes unit whichUnit returns nothing
         call AddFishSchool(whichUnit)
     endmethod
@@ -35,7 +35,7 @@ private struct CustomUnitTypeFishSchool extends CustomUnitType
 endstruct
 
 private struct CustomUnitTypeBerryBush extends CustomUnitType
-    
+
     public stub method onEnter takes unit whichUnit returns nothing
         call AddBerryBush(whichUnit)
     endmethod
@@ -43,7 +43,7 @@ private struct CustomUnitTypeBerryBush extends CustomUnitType
 endstruct
 
 private struct CustomUnitTypePortal extends CustomUnitType
-    
+
     public stub method onEnter takes unit whichUnit returns nothing
         call UpdatePortalNameByItself(whichUnit)
     endmethod
@@ -51,7 +51,7 @@ private struct CustomUnitTypePortal extends CustomUnitType
 endstruct
 
 private struct CustomUnitTypeAddCustomMine extends CustomUnitType
-    
+
     public stub method onEnter takes unit whichUnit returns nothing
         call AddCustomMine(whichUnit)
     endmethod
@@ -59,7 +59,7 @@ private struct CustomUnitTypeAddCustomMine extends CustomUnitType
 endstruct
 
 private struct CustomUnitTypeAddProperty extends CustomUnitType
-    
+
     public stub method onEnter takes unit whichUnit returns nothing
         call AddCustomProperty(whichUnit)
     endmethod
@@ -67,7 +67,7 @@ private struct CustomUnitTypeAddProperty extends CustomUnitType
 endstruct
 
 private struct CustomUnitTypeHideLibrary extends CustomUnitType
-    
+
     public stub method onEnter takes unit whichUnit returns nothing
         call HideLibrary(whichUnit)
     endmethod
@@ -75,7 +75,7 @@ private struct CustomUnitTypeHideLibrary extends CustomUnitType
 endstruct
 
 private struct CustomUnitTypeAddResourcesShop extends CustomUnitType
-    
+
     public stub method onEnter takes unit whichUnit returns nothing
         call AddResourcesShop(whichUnit)
     endmethod
@@ -83,7 +83,7 @@ private struct CustomUnitTypeAddResourcesShop extends CustomUnitType
 endstruct
 
 private struct CustomUnitTypeAddAntimagicWard extends CustomUnitType
-    
+
     public stub method onEnter takes unit whichUnit returns nothing
         call AddAntimagicWard(whichUnit)
     endmethod
@@ -91,7 +91,7 @@ private struct CustomUnitTypeAddAntimagicWard extends CustomUnitType
 endstruct
 
 private struct CustomUnitTypeAddBannersShop extends CustomUnitType
-    
+
     public stub method onEnter takes unit whichUnit returns nothing
         call AddBannersShop(whichUnit)
     endmethod
@@ -99,7 +99,7 @@ private struct CustomUnitTypeAddBannersShop extends CustomUnitType
 endstruct
 
 private struct CustomUnitTypeAddMountsShop extends CustomUnitType
-    
+
     public stub method onEnter takes unit whichUnit returns nothing
         call AddMountsShop(whichUnit)
     endmethod
@@ -107,7 +107,7 @@ private struct CustomUnitTypeAddMountsShop extends CustomUnitType
 endstruct
 
 private struct CustomUnitTypeAddSceptersShop extends CustomUnitType
-    
+
     public stub method onEnter takes unit whichUnit returns nothing
         call AddSceptersShop(whichUnit)
     endmethod
@@ -115,7 +115,7 @@ private struct CustomUnitTypeAddSceptersShop extends CustomUnitType
 endstruct
 
 private struct CustomUnitTypeAddProfessionBooksShop extends CustomUnitType
-    
+
     public stub method onEnter takes unit whichUnit returns nothing
         call AddProfessionBooksShop(whichUnit)
     endmethod
@@ -123,7 +123,7 @@ private struct CustomUnitTypeAddProfessionBooksShop extends CustomUnitType
 endstruct
 
 private struct CustomUnitTypeAddTrainer extends CustomUnitType
-    
+
     public stub method onEnter takes unit whichUnit returns nothing
         call AddTrainer(whichUnit)
     endmethod
@@ -131,7 +131,7 @@ private struct CustomUnitTypeAddTrainer extends CustomUnitType
 endstruct
 
 private struct CustomUnitTypeAddSkinsShop extends CustomUnitType
-    
+
     public stub method onEnter takes unit whichUnit returns nothing
         call AddSkinsShop(whichUnit)
     endmethod
@@ -139,7 +139,7 @@ private struct CustomUnitTypeAddSkinsShop extends CustomUnitType
 endstruct
 
 private struct CustomUnitTypeAddArmory extends CustomUnitType
-    
+
     public stub method onEnter takes unit whichUnit returns nothing
         call AddArmory(whichUnit)
     endmethod
@@ -147,7 +147,7 @@ private struct CustomUnitTypeAddArmory extends CustomUnitType
 endstruct
 
 private struct CustomUnitTypeAddChest extends CustomUnitType
-    
+
     public stub method onEnter takes unit whichUnit returns nothing
         call AddChest(whichUnit)
     endmethod
@@ -155,7 +155,7 @@ private struct CustomUnitTypeAddChest extends CustomUnitType
 endstruct
 
 private struct CustomUnitTypeEnableItemCraftingUnit extends CustomUnitType
-    
+
     public stub method onEnter takes unit whichUnit returns nothing
         local integer i = udg_RecipeCooking
         local integer max = GetRecipesMax()
@@ -170,7 +170,7 @@ private struct CustomUnitTypeEnableItemCraftingUnit extends CustomUnitType
 endstruct
 
 private struct CustomUnitTypeAddAlchemistLab extends CustomUnitType
-    
+
     public stub method onEnter takes unit whichUnit returns nothing
         call AddAlchemistLab(whichUnit)
     endmethod
@@ -178,7 +178,7 @@ private struct CustomUnitTypeAddAlchemistLab extends CustomUnitType
 endstruct
 
 private struct CustomUnitTypeAddGameModesTavern extends CustomUnitType
-    
+
     public stub method onEnter takes unit whichUnit returns nothing
         call AddGameModesTavern(whichUnit)
     endmethod
@@ -186,7 +186,7 @@ private struct CustomUnitTypeAddGameModesTavern extends CustomUnitType
 endstruct
 
 private struct CustomUnitTypeAddHeroesTavern extends CustomUnitType
-    
+
     public stub method onEnter takes unit whichUnit returns nothing
         call AddHeroesTavern(whichUnit)
     endmethod
@@ -194,7 +194,7 @@ private struct CustomUnitTypeAddHeroesTavern extends CustomUnitType
 endstruct
 
 private struct CustomUnitTypeAddRacesTavern extends CustomUnitType
-    
+
     public stub method onEnter takes unit whichUnit returns nothing
         call AddRacesTavern(whichUnit)
     endmethod
@@ -202,7 +202,7 @@ private struct CustomUnitTypeAddRacesTavern extends CustomUnitType
 endstruct
 
 private struct CustomUnitTypeAddProfessionsTavern extends CustomUnitType
-    
+
     public stub method onEnter takes unit whichUnit returns nothing
         call AddProfessionsTavern(whichUnit)
     endmethod
@@ -210,7 +210,7 @@ private struct CustomUnitTypeAddProfessionsTavern extends CustomUnitType
 endstruct
 
 private struct CustomUnitTypeAddStartLocationsTavern extends CustomUnitType
-    
+
     public stub method onEnter takes unit whichUnit returns nothing
         call AddStartLocationsTavern(whichUnit)
     endmethod
@@ -218,7 +218,7 @@ private struct CustomUnitTypeAddStartLocationsTavern extends CustomUnitType
 endstruct
 
 private struct CustomUnitTypeCreateRandomMine extends CustomUnitType
-    
+
     public stub method onEnter takes unit whichUnit returns nothing
         call CreateRandomMine(whichUnit)
     endmethod
@@ -226,7 +226,7 @@ private struct CustomUnitTypeCreateRandomMine extends CustomUnitType
 endstruct
 
 private struct CustomUnitTypeCreateRandomWaterMine extends CustomUnitType
-    
+
     public stub method onEnter takes unit whichUnit returns nothing
         call CreateRandomWaterMine(whichUnit)
     endmethod
@@ -234,7 +234,7 @@ private struct CustomUnitTypeCreateRandomWaterMine extends CustomUnitType
 endstruct
 
 private struct CustomUnitTypeReplaceRandomCorpse extends CustomUnitType
-    
+
     public stub method onEnter takes unit whichUnit returns nothing
         call ReplaceRandomCorpse(whichUnit)
     endmethod
@@ -242,7 +242,7 @@ private struct CustomUnitTypeReplaceRandomCorpse extends CustomUnitType
 endstruct
 
 private struct CustomUnitTypeAddGoldMine extends CustomUnitType
-    
+
     public stub method onEnter takes unit whichUnit returns nothing
         call AddGoldMine(whichUnit)
     endmethod
@@ -250,7 +250,7 @@ private struct CustomUnitTypeAddGoldMine extends CustomUnitType
 endstruct
 
 private struct CustomUnitTypeAddRecordPlayer extends CustomUnitType
-    
+
     public stub method onEnter takes unit whichUnit returns nothing
         call AddRecordPlayer(whichUnit)
     endmethod
@@ -258,7 +258,7 @@ private struct CustomUnitTypeAddRecordPlayer extends CustomUnitType
 endstruct
 
 private struct CustomUnitTypeAddRespawnUnit extends CustomUnitType
-    
+
     public stub method onEnter takes unit whichUnit returns nothing
         call AddRespawnUnit(whichUnit)
     endmethod
@@ -266,7 +266,7 @@ private struct CustomUnitTypeAddRespawnUnit extends CustomUnitType
 endstruct
 
 private struct CustomUnitTypeEnableAllLevers extends CustomUnitType
-    
+
     public stub method onEnter takes unit whichUnit returns nothing
         call EnableAllLevers(whichUnit)
     endmethod
@@ -274,7 +274,7 @@ private struct CustomUnitTypeEnableAllLevers extends CustomUnitType
 endstruct
 
 private struct CustomUnitTypeAddVIPMercenaryCamp extends CustomUnitType
-    
+
     public stub method onEnter takes unit whichUnit returns nothing
         call AddVIPMercenaryCamp(whichUnit)
     endmethod
@@ -282,7 +282,7 @@ private struct CustomUnitTypeAddVIPMercenaryCamp extends CustomUnitType
 endstruct
 
 private struct CustomUnitTypeAddTentacle extends CustomUnitType
-    
+
     public stub method onEnter takes unit whichUnit returns nothing
         call AddTentacle(whichUnit)
     endmethod
@@ -320,11 +320,11 @@ private function EnumUnitInit takes nothing returns nothing
     if (IsCustomUnitType(unitTypeId)) then
         call CallCustomUnitTypeOnEnter(whichUnit)
     endif
-    
+
     //if (RectContainsUnit(GetMapPlayerSelectionRect(), whichUnit) and unitTypeId != 'n061') then
         //call Trig_Player_Selection_Floating_Texts_Func003A(whichUnit)
     //endif
-    
+
     if (IsUnitType(whichUnit, UNIT_TYPE_HERO) and GetHeroClass(unitTypeId) != CLASS_NONE) then
         //call AddCommandButtons(whichUnit) // Add before so they have command buttons, make sure the hero has no invulnerable ability and is owned by Neutral Passive.
         call ModifyHeroSkillPoints(whichUnit, bj_MODIFYMETHOD_SET, GetHeroLevel(whichUnit) * SKILL_POINTS_PER_LEVEL)
@@ -332,10 +332,10 @@ private function EnumUnitInit takes nothing returns nothing
         call ApplyHeroClass(whichUnit)
         call AutoSkillHero(whichUnit)
     endif
-    
+
     if (unitTypeId != LEGENDARY_ARTIFACT and unitTypeId != RANDOM_MINE and unitTypeId != RANDOM_WATER_MINE and not IsCrate(unitTypeId) and (owner == GetMapBossesPlayer() or owner == GetMapGaiaPlayer() or owner == Player(PLAYER_NEUTRAL_AGGRESSIVE))) then
          call AddRespawnUnitGroupFromUnitStart(whichUnit)
-         
+
          if (owner == GetMapGaiaPlayer()) then
             set index = GetUnitRespawnUnitIndex(whichUnit)
             if (IsRespawnUnitValid(index)) then
@@ -364,7 +364,7 @@ function InitAllPreplacedUnits takes nothing returns nothing
     local integer max = 0
     local CustomUnitType c = 0
     call TimerStart(t, 9999999.0, false, null)
-    
+
     set c = CustomUnitTypeAddCustomMine.create()
     set i = 0
     set max = GetMaxMines()
@@ -374,7 +374,7 @@ function InitAllPreplacedUnits takes nothing returns nothing
         call AddCustomUnitType(GetMineTypeId(i), c)
         set i = i + 1
     endloop
-    
+
     set c = CustomUnitTypeAddProperty.create()
     set i = 0
     set max = GetMaxProperties()
@@ -383,7 +383,7 @@ function InitAllPreplacedUnits takes nothing returns nothing
         call AddCustomUnitType(GetProperty(i).unitTypeId, c)
         set i = i + 1
     endloop
-    
+
     call ForceAddPlayer(UnitGroupRespawnSystemConfig_AUTO_ADDED_GROUP_PLAYERS, GetMapBossesPlayer())
     call ForceAddPlayer(UnitGroupRespawnSystemConfig_AUTO_ADDED_GROUP_PLAYERS, Player(PLAYER_NEUTRAL_AGGRESSIVE))
     call GroupEnumUnitsInRect(g, GetPlayableMapRect(), null) // This should be the only GroupEnumUnits during the initialization!!!
@@ -403,7 +403,7 @@ private function Init takes nothing returns nothing
     local integer max = 0
 
     call AddCustomUnitType(HIDEOUT, CustomUnitTypePlayerHideout.create())
-    
+
     call AddCustomUnitType(FISH_SCHOOL, CustomUnitTypeFishSchool.create())
     call AddCustomUnitType(BERRY_BUSHES, CustomUnitTypeBerryBush.create())
 
@@ -411,11 +411,11 @@ private function Init takes nothing returns nothing
     call AddCustomUnitType(PORTAL, c)
     call AddCustomUnitType(PORTAL_NEUTRAL, c)
     call AddCustomUnitType(PORTAL_NEUTRAL_WATER, c)
-    
+
     call AddCustomUnitType(LIBRARY, CustomUnitTypeHideLibrary.create())
-    
+
     call AddCustomUnitType(TRADING_POST, CustomUnitTypeAddResourcesShop.create())
-     
+
     call AddCustomUnitType(ANTIMAGIC_WARD, CustomUnitTypeAddAntimagicWard.create())
 
     set c = CustomUnitTypeAddBannersShop.create()
@@ -425,14 +425,14 @@ private function Init takes nothing returns nothing
     set c = CustomUnitTypeAddMountsShop.create()
     call AddCustomUnitType(MOUNTS_SHOP, c)
     call AddCustomUnitType(MOUNTS_CAGE, c)
-        
+
     call AddCustomUnitType(SCEPTERS_SHOP, CustomUnitTypeAddSceptersShop.create())
     call AddCustomUnitType(PROFESSION_BOOKS_SHOP, CustomUnitTypeAddProfessionBooksShop.create())
-    
+
     set c = CustomUnitTypeAddTrainer.create()
     call AddCustomUnitType(TRAINER, c)
     call AddCustomUnitType(TRAINER_NEUTRAL, c)
-    
+
     set c = CustomUnitTypeAddSkinsShop.create()
     call AddCustomUnitType(SKINS, c)
     call AddCustomUnitType(SKINS_NEUTRAL, c)
@@ -440,48 +440,58 @@ private function Init takes nothing returns nothing
     set c = CustomUnitTypeAddArmory.create()
     call AddCustomUnitType(ARMORY, c)
     call AddCustomUnitType(ARMORY_NEUTRAL, c)
-    
+
     call AddCustomUnitType(CHEST_NEUTRAL, CustomUnitTypeAddChest.create())
 
     set c = CustomUnitTypeEnableItemCraftingUnit.create()
     call AddCustomUnitType(CRAFTING_STASH, c)
     call AddCustomUnitType(CRAFTING_STASH_NEUTRAL, c)
-    
+
     set c = CustomUnitTypeAddAlchemistLab.create()
     call AddCustomUnitType(ALCHEMIST_LAB, c)
     call AddCustomUnitType(ALCHEMIST_LAB_NEUTRAL, c)
-    
+
     call AddCustomUnitType(GAME_MODE_TAVERN, CustomUnitTypeAddGameModesTavern.create())
     call AddCustomUnitType(HEROES_TAVERN, CustomUnitTypeAddHeroesTavern.create())
     call AddCustomUnitType(RACES_TAVERN, CustomUnitTypeAddRacesTavern.create())
     call AddCustomUnitType(PROFESSIONS_TAVERN, CustomUnitTypeAddProfessionsTavern.create())
     call AddCustomUnitType(START_LOCATIONS_TAVERN, CustomUnitTypeAddStartLocationsTavern.create())
-    
+
     call AddCustomUnitType(RANDOM_MINE, CustomUnitTypeCreateRandomMine.create())
     call AddCustomUnitType(RANDOM_WATER_MINE, CustomUnitTypeCreateRandomWaterMine.create())
-    
+
     call AddCustomUnitType(RANDOM_CORPSE, CustomUnitTypeReplaceRandomCorpse.create())
-    
+
     set c = CustomUnitTypeAddGoldMine.create()
     call AddCustomUnitType(OIL_PATCH, c)
     //call AddCustomUnitType(GOLD_MINE, c)
-    
+
     call AddCustomUnitType(RECORD_PLAYER, CustomUnitTypeAddRecordPlayer.create())
-    
+
     set c = CustomUnitTypeAddRespawnUnit.create()
     call AddCustomUnitType(CRATES_0, c)
     call AddCustomUnitType(CRATES_1, c)
     call AddCustomUnitType(BARREL_0, c)
     call AddCustomUnitType(BARREL_1, c)
-    
+
     set c = CustomUnitTypeEnableAllLevers.create()
     call AddCustomUnitType(LEVER_BRIDGE, c)
     call AddCustomUnitType(LEVER_GATE, c)
     call AddCustomUnitType(LEVER_GATE_AND_BRIDGE, c)
     call AddCustomUnitType(LEVER_GATE_AND_PORTAL, c)
     call AddCustomUnitType(LEVER_ALL, c)
-    
+
     call AddCustomUnitType(MERCENARY_CAMP_VIP, CustomUnitTypeAddVIPMercenaryCamp.create())
+
+    // Profession Farmer
+    call AddCustomUnitTypeOnEnterOnly(FARMHAND, AddFarmhand)
+    call AddCustomUnitTypeOnEnterOnly(FARM_FARMER, AddFarmFarmer)
+    call AddCustomUnitTypeOnEnterOnly(WATER_SUPPLY, AddWaterSupply)
+    call AddCustomUnitTypeOnEnterOnly(GRANARY, AddGranary)
+    call AddCustomUnitTypeOnEnterOnly(WIND_MILL, AddWindMill)
+    call AddCustomUnitTypeOnEnterOnly(SHEEPFOLD, AddSheepfold)
+    call AddCustomUnitTypeOnEnterOnly(COWSHED, AddCowshed)
+    call AddCustomUnitTypeOnEnterOnly(WHEAT_FIELD, AddWheatField)
 
     set c = CustomUnitTypeAddTentacle.create()
     call AddCustomUnitType(TENTACLE_CTHUN, c)

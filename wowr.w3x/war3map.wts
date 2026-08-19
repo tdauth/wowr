@@ -1944,7 +1944,7 @@ STRING 324
 }
 
 STRING 325
-// Units: n0NJ (Goblin Racing Organisation), EditorSuffix (Name - Editor Suffix)
+// Units: ushp (Undead Shipyard), EditorSuffix (Name - Editor Suffix)
 {
 (Neutral)
 }
@@ -4731,7 +4731,7 @@ Purchase Goblin Dynamite
 }
 
 STRING 793
-// Units: n0E4 (Banner Shop), EditorSuffix (Name - Editor Suffix)
+// Units: hshy (Human Shipyard), EditorSuffix (Name - Editor Suffix)
 {
 (Neutral)
 }
@@ -5662,7 +5662,7 @@ Revive Rogue
 }
 
 STRING 955
-// Units: e019 (Blood Elf Shipyard), EditorSuffix (Name - Editor Suffix)
+// Units: oshy (Orc Shipyard), EditorSuffix (Name - Editor Suffix)
 {
 (Neutral)
 }
@@ -6765,7 +6765,7 @@ Purchase Scepter of Night Elves
 }
 
 STRING 1141
-// Abilities: A0JV (Freezing Breath), EditorSuffix (Editor Suffix)
+// Units: eshy (Night Elf Shipyard), EditorSuffix (Name - Editor Suffix)
 {
 (Neutral)
 }
@@ -6945,7 +6945,7 @@ Demigod
 }
 
 STRING 1171
-// Abilities: A1X2 (Soul Theft), EditorSuffix (Editor Suffix)
+// Units: nshp (Goblin Shipyard), EditorSuffix (Name - Editor Suffix)
 {
 (Neutral)
 }
@@ -8089,7 +8089,7 @@ STRING 1361
 }
 
 STRING 1363
-// Abilities: A1XD (Defend), EditorSuffix (Editor Suffix)
+// Units: nwgt (Portal), EditorSuffix (Name - Editor Suffix)
 {
 (Neutral)
 }
@@ -33781,7 +33781,7 @@ Creates a Banner at a target location.
 }
 
 STRING 7377
-// Units: ushp (Undead Shipyard), EditorSuffix (Name - Editor Suffix)
+// Units: n04A (Water Portal), EditorSuffix (Name - Editor Suffix)
 {
 (Neutral)
 }
@@ -41317,7 +41317,7 @@ Tomes
 }
 
 STRING 9850
-// Units: hshy (Human Shipyard), EditorSuffix (Name - Editor Suffix)
+// Units: n06U (Mounts Cage), EditorSuffix (Name - Editor Suffix)
 {
 (Neutral)
 }
@@ -42907,7 +42907,7 @@ Allows the Hero to channel the Cloud ability, which stops an area of enemies fro
 }
 
 STRING 10374
-// Units: oshy (Orc Shipyard), EditorSuffix (Name - Editor Suffix)
+// Units: n07P (Goblin Merchant), EditorSuffix (Name - Editor Suffix)
 {
 (Neutral)
 }
@@ -45775,7 +45775,7 @@ STRING 11153
 }
 
 STRING 11154
-// Units: eshy (Night Elf Shipyard), EditorSuffix (Name - Editor Suffix)
+// Units: n0BF (Goblin Special Laboratory), EditorSuffix (Name - Editor Suffix)
 {
 (Neutral)
 }
@@ -48133,7 +48133,7 @@ A message from Ko'nani for the people of Theramore.
 }
 
 STRING 12055
-// Units: nshp (Goblin Shipyard), EditorSuffix (Name - Editor Suffix)
+// Units: h0J2 (Crafting Stash), EditorSuffix (Name - Editor Suffix)
 {
 (Neutral)
 }
@@ -50959,7 +50959,7 @@ Hire Orc Oil Tanker
 }
 
 STRING 14340
-// Units: nwgt (Portal), EditorSuffix (Name - Editor Suffix)
+// Units: n0CD (Alchemist Lab), EditorSuffix (Name - Editor Suffix)
 {
 (Neutral)
 }
@@ -53677,7 +53677,7 @@ Allows causing damage to a unit from its mana.
 }
 
 STRING 16749
-// Units: n04A (Water Portal), EditorSuffix (Name - Editor Suffix)
+// Units: n0DC (Gemstones Mine), EditorSuffix (Name - Editor Suffix)
 {
 (Neutral)
 }
@@ -54037,7 +54037,7 @@ STRING 16966
 }
 
 STRING 16968
-// Units: n06U (Mounts Cage), EditorSuffix (Name - Editor Suffix)
+// Units: n0DF (Random Mine), EditorSuffix (Name - Editor Suffix)
 {
 (Neutral)
 }
@@ -58966,7 +58966,7 @@ A sturdy transport ship capable of carrying huge amounts of Oil over the sea.
 }
 
 STRING 20352
-// Units: n07P (Goblin Merchant), EditorSuffix (Name - Editor Suffix)
+// Units: n0DH (Well), EditorSuffix (Name - Editor Suffix)
 {
 (Neutral)
 }
@@ -65268,7 +65268,7 @@ Eagle Mount
 }
 
 STRING 26394
-// Units: n0BF (Goblin Special Laboratory), EditorSuffix (Name - Editor Suffix)
+// Units: n0DK (Oil Platform), EditorSuffix (Name - Editor Suffix)
 {
 (Neutral)
 }
@@ -70038,31 +70038,31 @@ STRING 31168
 }
 
 STRING 31169
-// Units: h0J2 (Crafting Stash), EditorSuffix (Name - Editor Suffix)
+// Units: n0DQ (Fish School), EditorSuffix (Name - Editor Suffix)
 {
 (Neutral)
 }
 
 STRING 31170
-// Units: n0CD (Alchemist Lab), EditorSuffix (Name - Editor Suffix)
+// Units: n0DZ (Power Crystal Mine), EditorSuffix (Name - Editor Suffix)
 {
 (Neutral)
 }
 
 STRING 31171
-// Units: n0DC (Gemstones Mine), EditorSuffix (Name - Editor Suffix)
+// Units: n0GB (Skins), EditorSuffix (Name - Editor Suffix)
 {
 (Neutral)
 }
 
 STRING 31172
-// Units: n0DF (Random Mine), EditorSuffix (Name - Editor Suffix)
+// Units: n0GC (Graveyard), EditorSuffix (Name - Editor Suffix)
 {
 (Neutral)
 }
 
 STRING 31173
-// Units: n0DH (Well), EditorSuffix (Name - Editor Suffix)
+// Units: n0GJ (Rocks Mine), EditorSuffix (Name - Editor Suffix)
 {
 (Neutral)
 }
@@ -70074,7 +70074,7 @@ Mounts Cage
 }
 
 STRING 31175
-// Units: n0DK (Oil Platform), EditorSuffix (Name - Editor Suffix)
+// Units: n0GT (Trainer), EditorSuffix (Name - Editor Suffix)
 {
 (Neutral)
 }
@@ -70092,7 +70092,7 @@ Allows crafting items using the items in its inventory. You can drop items from 
 }
 
 STRING 31179
-// Units: n0DQ (Fish School), EditorSuffix (Name - Editor Suffix)
+// Units: e026 (High Elf Shipyard), EditorSuffix (Name - Editor Suffix)
 {
 (Neutral)
 }
@@ -92256,7 +92256,7 @@ Skins
 }
 
 STRING 41463
-// Units: n0DZ (Power Crystal Mine), EditorSuffix (Name - Editor Suffix)
+// Units: h0R5 (Human Oil Tanker), EditorSuffix (Name - Editor Suffix)
 {
 (Neutral)
 }
@@ -92424,7 +92424,7 @@ Graveyard
 }
 
 STRING 41522
-// Units: n0GB (Skins), EditorSuffix (Name - Editor Suffix)
+// Units: o07K (Orc Oil Tanker), EditorSuffix (Name - Editor Suffix)
 {
 (Neutral)
 }
@@ -95592,7 +95592,7 @@ K
 }
 
 STRING 42824
-// Units: n0GC (Graveyard), EditorSuffix (Name - Editor Suffix)
+// Units: n0IU (Armory), EditorSuffix (Name - Editor Suffix)
 {
 (Neutral)
 }
@@ -102294,7 +102294,7 @@ Sword
 }
 
 STRING 48575
-// Units: n0GJ (Rocks Mine), EditorSuffix (Name - Editor Suffix)
+// Units: n0JT (Argunite Mine), EditorSuffix (Name - Editor Suffix)
 {
 (Neutral)
 }
@@ -111027,7 +111027,7 @@ Grants the ability of Mass Holy Light and Holy Aura. The Holy Aura reduces enemy
 }
 
 STRING 51718
-// Units: n0GT (Trainer), EditorSuffix (Name - Editor Suffix)
+// Units: n0M5 (Drillbot), EditorSuffix (Name - Editor Suffix)
 {
 (Neutral)
 }
@@ -113639,7 +113639,7 @@ STRING 54983
 }
 
 STRING 54984
-// Units: e026 (High Elf Shipyard), EditorSuffix (Name - Editor Suffix)
+// Units: n0MN (Auction House), EditorSuffix (Name - Editor Suffix)
 {
 (Neutral)
 }
@@ -113867,7 +113867,7 @@ STRING 55056
 }
 
 STRING 55061
-// Units: h0R5 (Human Oil Tanker), EditorSuffix (Name - Editor Suffix)
+// Units: h0YJ (Kul Tiras Shipyard), EditorSuffix (Name - Editor Suffix)
 {
 (Neutral)
 }
@@ -115085,19 +115085,19 @@ The tropical homeland of the goblins. Their capital of Undermine is located bene
 }
 
 STRING 55755
-// Units: o07K (Orc Oil Tanker), EditorSuffix (Name - Editor Suffix)
+// Units: n0NJ (Goblin Racing Organisation), EditorSuffix (Name - Editor Suffix)
 {
 (Neutral)
 }
 
 STRING 55756
-// Units: n0IU (Armory), EditorSuffix (Name - Editor Suffix)
+// Units: n0E4 (Banner Shop), EditorSuffix (Name - Editor Suffix)
 {
 (Neutral)
 }
 
 STRING 55757
-// Units: n0JT (Argunite Mine), EditorSuffix (Name - Editor Suffix)
+// Units: e019 (Blood Elf Shipyard), EditorSuffix (Name - Editor Suffix)
 {
 (Neutral)
 }
@@ -116063,7 +116063,7 @@ Magical Coin
 }
 
 STRING 56235
-// Units: n0M5 (Drillbot), EditorSuffix (Name - Editor Suffix)
+// Abilities: A0JV (Freezing Breath), EditorSuffix (Editor Suffix)
 {
 (Neutral)
 }
@@ -116339,13 +116339,13 @@ Massive Frozen Throne Gate
 }
 
 STRING 56302
-// Units: n0MN (Auction House), EditorSuffix (Name - Editor Suffix)
+// Abilities: A1X2 (Soul Theft), EditorSuffix (Editor Suffix)
 {
 (Neutral)
 }
 
 STRING 56303
-// Units: h0YJ (Kul Tiras Shipyard), EditorSuffix (Name - Editor Suffix)
+// Abilities: A1XD (Defend), EditorSuffix (Editor Suffix)
 {
 (Neutral)
 }

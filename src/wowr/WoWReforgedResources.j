@@ -281,68 +281,6 @@ private function AddFishingBoat takes unit producer, unit worker returns nothing
     endif
 endfunction
 
-function AddFarmhand takes unit producer, unit worker returns nothing
-    call AddWorker(worker)
-    call AddResourceToWorker(worker, udg_ResourceMeat, 'A1PM', "heal", 'A1PN', "spies", 'A1PO', "robogoblin", 20, 5, "gold")
-    call AddResourceToWorker(worker, udg_ResourceGrain, 'A1PM', "heal", 'A1PN', "spies", 'A1PO', "robogoblin", 20, 5, "gold")
-    call AddResourceToWorker(worker, udg_ResourceWater, 'A1PM', "heal", 'A1PN', "spies", 'A1PO', "robogoblin", 20, 5, "gold")
-    if (producer != null) then
-        call ReorderWorkerToMineRally(producer, worker)
-    endif
-endfunction
-
-function AddFarmerSheep takes unit farm, unit whichUnit returns nothing
-    call AddMineEx(whichUnit, udg_ResourceMeat, 30)
-endfunction
-
-function AddFarmerChicken takes unit farm, unit whichUnit returns nothing
-    call AddMineEx(whichUnit, udg_ResourceMeat, 10)
-endfunction
-
-function AddFarmerCow takes unit farm, unit whichUnit returns nothing
-    call AddMineEx(whichUnit, udg_ResourceMeat, 100)
-endfunction
-
-function AddFarmerPig takes unit farm, unit whichUnit returns nothing
-    call AddMineEx(whichUnit, udg_ResourceMeat, 60)
-endfunction
-
-function AddFarm takes unit whichUnit returns nothing
-     call AddMineEx(whichUnit, udg_ResourceGrain, 200)
-     call SetMineExplodesOnDeath(whichUnit, false)
-endfunction
-
-function AddWheatField takes unit whichUnit returns nothing
-     call AddMineEx(whichUnit, udg_ResourceGrain, 300)
-endfunction
-
-function AddCowshed takes unit whichUnit returns nothing
-    call AddLoadedMine(whichUnit, udg_ResourceMilk, 800, 5)
-    call SetLoadedMineAllowedWorkerUnitTypeId(whichUnit, COW, true)
-    call SetMineExplodesOnDeath(whichUnit, true)
-endfunction
-
-function AddSheepfold takes unit whichUnit returns nothing
-    call AddLoadedMine(whichUnit, udg_ResourceWool, 800, 5)
-    call SetLoadedMineAllowedWorkerUnitTypeId(whichUnit, SHEEP, true)
-    call SetMineExplodesOnDeath(whichUnit, true)
-endfunction
-
-function AddWaterSupply takes unit whichUnit returns nothing
-     call AddMineEx(whichUnit, udg_ResourceWater, 500)
-     call SetMineExplodesOnDeath(whichUnit, false)
-endfunction
-
-function AddGranary takes unit whichUnit returns nothing
-     call AddMineEx(whichUnit, udg_ResourceGrain, 400)
-     call SetMineExplodesOnDeath(whichUnit, false)
-endfunction
-
-function AddWindMill takes unit whichUnit returns nothing
-     call AddMineEx(whichUnit, udg_ResourceGrain, 600)
-     call SetMineExplodesOnDeath(whichUnit, false)
-endfunction
-
 private function AddOilBoat takes unit producer, unit worker returns nothing
     call AddWorker(worker)
     call AddResourceToWorker(worker, udg_ResourceOil, 'A1PM', "heal", 'A1PN', "spies", 'A1PO', "robogoblin", 100, 100, "gold")
