@@ -1,34 +1,31 @@
-library WoWReforgedGates initializer Init
+library WoWReforgedGatesAndBridges initializer Init
 
 globals
-    private group gates = CreateGroup()
     private trigger spellFinishTrigger = CreateTrigger()
 endglobals
 
-function AddGate takes unit whichUnit returns nothing
-    call GroupAddUnit(gates, whichUnit)
-endfunction
-
-function RemoveGate takes unit whichUnit returns nothing
-    call GroupRemoveUnit(gates, whichUnit)
-endfunction
-
 private function TriggerConditionSpellFinish takes nothing returns boolean
-    return GetSpellAbilityId() == 'A09I'
+    return GetSpellAbilityId() == 'A09I' or GetSpellAbilityId() == 'A0M0'
 endfunction
 
 private function TriggerActionSpellFinish takes nothing returns nothing
     local unit whichUnit = GetTriggerUnit()
+    local integer unitTypeId = GetUnitTypeId(whichUnit)
     call PolledWait(0.10)
-    if (GetUnitTypeId(whichUnit) != 0 and whichUnit != null and IsUnitInGroup(whichUnit, gates) and IsUnitAliveBJ(whichUnit)) then
-        if (GetUnitTypeId(whichUnit) == GATE_OPEN_HORIZONTAL) then
+    if (unitTypeId != 0 and whichUnit != null and IsUnitAliveBJ(whichUnit)) then
+        if (unitTypeId == GATE_OPEN_HORIZONTAL) then
             call SetUnitAnimation(whichUnit, "death alternate")
-        else
+        elseif (unitTypeId == GATE_CLOSED_HORIZONTAL) then
+            call SetUnitAnimation(whichUnit, "stand")
+        elseif (unitTypeId == BRIDGE_DIAGONAL_DISABLED or unitTypeId == BRIDGE_HORIZONTAL_DISABLED) then
+            call SetUnitAnimation(whichUnit, "death")
+        elseif (unitTypeId == BRIDGE_DIAGONAL or unitTypeId == BRIDGE_HORIZONTAL) then
             call SetUnitAnimation(whichUnit, "stand")
         endif
     endif
     set whichUnit = null
 endfunction
+
 
 private function Init takes nothing returns nothing
     call TriggerRegisterAnyUnitEventBJ(spellFinishTrigger, EVENT_PLAYER_UNIT_SPELL_FINISH)

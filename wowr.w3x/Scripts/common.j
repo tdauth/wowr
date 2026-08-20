@@ -2901,6 +2901,11 @@ globals
     constant integer GATE_CLOSED_HORIZONTAL                          = 'h020'
     constant integer GATE_OPEN_HORIZONTAL                            = 'h021'
 
+    constant integer BRIDGE_DIAGONAL                                 = 'h023'
+    constant integer BRIDGE_DIAGONAL_DISABLED                        = 'h08X'
+    constant integer BRIDGE_HORIZONTAL                               = 'h022'
+    constant integer BRIDGE_HORIZONTAL_DISABLED                      = 'h08Y'
+
     // Neutral Buildings
     constant integer SCEPTERS_SHOP                                   = 'n06Q'
     constant integer PROFESSION_BOOKS_SHOP                           = 'n06R'
