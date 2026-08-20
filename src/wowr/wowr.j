@@ -47,6 +47,7 @@
 //! import "wowr/WoWReforgedEnslave.j"
 //! import "wowr/WoWReforgedEquipment.j"
 //! import "wowr/WoWReforgedEquipmentBags.j"
+//! import "wowr/WoWReforgedEventHouses.j"
 //! import "wowr/WoWReforgedEvolution.j"
 //! import "wowr/WoWReforgedFelOrcDemonGate.j"
 //! import "wowr/WoWReforgedFelOrcPiggery.j"
