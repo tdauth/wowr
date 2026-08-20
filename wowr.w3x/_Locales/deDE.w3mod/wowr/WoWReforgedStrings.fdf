@@ -994,6 +994,13 @@ StringList {
     TRIED_TO_LOAD_ALL_SAVE_CODES       "Versucht alle Speicher-Codes zu laden.",
     // Save Codes Dialog
     LOAD_SAVE_CODES_QUESTION           "Speicher-Codes laden?",
+    // Save Masters
+    CLEARED_INCLUDED                   "Einbezogene geleert!",
+    CLEARED_EXCLUDED                   "Ausgeschlossene geleert!",
+    UNIT_ALREADY_INCLUDED              "Einheit wurde bereits einbezogen!",
+    UNIT_ALREADY_EXCLUDED              "Einheit wurde bereits ausgeschlossen!",
+    INCLUDED_UNIT                      "Einheit einbezogen!",
+    EXCLUDED_UNIT                      "Einheit ausgeschlossen!",
     // ChangeLog
     ALL_CHANGES_OF_VERSION             "Alle Änderungen von %1%.",
     // Quests
@@ -1012,6 +1019,8 @@ StringList {
     DISABLED_PORTAL                    "Deaktiviertes Portal",
     PORTAL_IS_DISABLED                 "Portal ist deaktiviert.",
     TARGET_MUST_BE_A_PORTAL            "Ziel muss ein Portal sein.",
+    // Event Houses
+    INCREASE_HERO_LEVELS               "%1% hat die Heldenstufe aller Helden von %2% um %3% erhöht!",
     // Equipment
     PAGE_TITLE_MISC                    "(Verschiedenes)",
     PAGE_TITLE_MELEE_WEAPONS           "(Nahkampfwaffen)",
@@ -1866,6 +1875,7 @@ StringList {
     IQ_RACES_DESCRIPTION               "This selection is restricted to warlords. They receive a scepter and tiny town hall of their race which allows them to summon two workers and therefore to build their first base.",
     IQ_RACES_0                         "Nur für Kriegsherren.",
     IQ_RACES_1                         "Additional races require a higher hero level of your first hero.",
+    IQ_RACES_2                         "Special building limited to 1 by Male Citizen at tier 3.",
     IQ_START_LOCATIONS_TITLE           "Startorte",
     IQ_START_LOCATIONS_DESCRIPTION     "The start locations allow you to start the game at some specified area on the map. Some start locations may be occupied by other players including Warlord AI.",
     IQ_VICTORY_TITLE                   "Sieg (%1%)",
