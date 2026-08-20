@@ -1,4 +1,4 @@
-library WoWReforgedCustomUnitTypes initializer Init requires CustomUnitTypes, UnitGroupRespawnSystem, UnitGroupRespawnSystemConfig, WoWReforgedAutoSkill, WoWReforgedPortals, WoWReforgedHeroes, WoWReforgedBosses, WoWReforgedRaces, WoWReforgedProfessions, WoWReforgedResources, WoWReforgedProperties, WoWReforgedSkins, WoWReforgedArmory, WoWReforgedTaverns, WoWReforgedSummonedUnits, WoWReforgedGaia, WoWReforgedChests, WoWReforegdHideout, WoWReforgedTrainer, WoWReforgedProfessionFarmer, WoWReforgedProfessionHunter, WoWReforgedCommandButtons, WoWReforgedGoldMines, WoWReforgedLevers, WoWReforgedRandomCorpse, WoWReforgedProfessionBooksShop, WoWReforgedSceptersShop, WoWReforgedBanners, WoWReforgedVIPs, WoWReforgedAlchemistLab, WoWReforgedMounts, WoWReforgedCraftingStash, WoWReforgedMapData
+library WoWReforgedCustomUnitTypes initializer Init requires CustomUnitTypes, UnitGroupRespawnSystem, UnitGroupRespawnSystemConfig, WoWReforgedAutoSkill, WoWReforgedPortals, WoWReforgedHeroes, WoWReforgedBosses, WoWReforgedRaces, WoWReforgedProfessions, WoWReforgedResources, WoWReforgedProperties, WoWReforgedSkins, WoWReforgedArmory, WoWReforgedTaverns, WoWReforgedSummonedUnits, WoWReforgedGaia, WoWReforgedChests, WoWReforegdHideout, WoWReforgedTrainer, WoWReforgedProfessionFarmer, WoWReforgedProfessionHunter, WoWReforgedCommandButtons, WoWReforgedGoldMines, WoWReforgedLevers, WoWReforgedRandomCorpse, WoWReforgedProfessionBooksShop, WoWReforgedSceptersShop, WoWReforgedBanners, WoWReforgedVIPs, WoWReforgedAlchemistLab, WoWReforgedMounts, WoWReforgedCraftingStash, WoWReforgedGates, WoWReforgedMapData
 
 private function AddCustomMine takes unit whichUnit returns nothing
     local integer index = GetMineTypeIndex(GetUnitTypeId(whichUnit))
@@ -273,6 +273,22 @@ private struct CustomUnitTypeEnableAllLevers extends CustomUnitType
 
 endstruct
 
+private struct CustomUnitTypeGate extends CustomUnitType
+
+    public stub method onEnter takes unit whichUnit returns nothing
+        call AddGate(whichUnit)
+    endmethod
+
+    public stub method onDeath takes unit whichUnit returns nothing
+        call RemoveGate(whichUnit)
+    endmethod
+
+    public stub method onRemove takes unit whichUnit returns nothing
+        call RemoveGate(whichUnit)
+    endmethod
+
+endstruct
+
 private struct CustomUnitTypeAddVIPMercenaryCamp extends CustomUnitType
 
     public stub method onEnter takes unit whichUnit returns nothing
@@ -480,6 +496,10 @@ private function Init takes nothing returns nothing
     call AddCustomUnitType(LEVER_GATE_AND_BRIDGE, c)
     call AddCustomUnitType(LEVER_GATE_AND_PORTAL, c)
     call AddCustomUnitType(LEVER_ALL, c)
+
+    set c = CustomUnitTypeGate.create()
+    call AddCustomUnitType(GATE_CLOSED_HORIZONTAL, c)
+    call AddCustomUnitType(GATE_OPEN_HORIZONTAL, c)
 
     call AddCustomUnitType(MERCENARY_CAMP_VIP, CustomUnitTypeAddVIPMercenaryCamp.create())
 

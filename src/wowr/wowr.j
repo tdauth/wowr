@@ -51,6 +51,7 @@
 //! import "wowr/WoWReforgedFelOrcDemonGate.j"
 //! import "wowr/WoWReforgedFelOrcPiggery.j"
 //! import "wowr/WoWReforgedGaia.j"
+//! import "wowr/WoWReforgedGates.j"
 //! import "wowr/WoWReforgedGoblinToolBox.j"
 //! import "wowr/WoWReforgedGoldMines.j"
 //! import "wowr/WoWReforgedHeroes.j"
