@@ -1,4 +1,4 @@
-library WoWReforgedSaveCodes requires OpLimit, StringUtils, ForceUtils, MaxHpResearch, SaveCodeSystem, WoWReforgedSaveCodeObjects, WoWReforgedUtils, WoWReforgedMapData, WoWReforgedResources, WoWReforgedEquipmentBags, WoWReforgedHeroJourney, WoWReforgedEvolution, WoWReforgedDemigod, WoWReforgedDependencyEquivalents, WoWReforgedRaces, WoWReforgedProfessions, WoWReforgedItems, WoWReforgedTradingPosts, WoWReforgedPortals, WoWReforgedAntimagicWards, WoWReforgedBanners, WoWReforgedSkins, WoWReforgedRecordPlayer, WoWReforgedSaveMaster
+library WoWReforgedSaveCodes requires OpLimit, StringUtils, ForceUtils, MaxHpResearch, SaveCodeSystem, WoWReforgedSaveCodeObjects, WoWReforgedUtils, WoWReforgedMapData, WoWReforgedResources, WoWReforgedEquipmentBags, WoWReforgedHeroJourney, WoWReforgedEvolution, WoWReforgedDemigod, WoWReforgedDependencyEquivalents, WoWReforgedRaces, WoWReforgedProfessions, WoWReforgedItems, WoWReforgedTradingPosts, WoWReforgedPortals, WoWReforgedAntimagicWards, WoWReforgedBanners, WoWReforgedSkins, WoWReforgedRecordPlayer, WoWReforgedSaveMaster, WoWReforgedPowerGenerators
 
 globals
     constant integer SAVE_CODE_INDEX_TYPE = 0
@@ -427,8 +427,7 @@ function ApplySaveCode takes player whichPlayer, string s returns boolean
             call SetPlayerStateBJ(whichPlayer, PLAYER_STATE_RESOURCE_LUMBER, lumber)
             call SetPlayerTechResearchedIfHigher(whichPlayer, UPG_EVOLUTION, evolutionLevel)
             call SetPlayerTechResearchedIfHigher(whichPlayer, UPG_CHEAP_EVOLUTION, evolutionLevel)
-            set udg_TmpPlayer = whichPlayer
-            call TriggerExecute(gg_trg_Power_Generator_Update_Heal_Icons)
+            call UpdatePowerGeneratorHealIcons(whichPlayer)
 
             if (udg_Held[convertedPlayerId] != null and xp > GetHeroXP(udg_Held[convertedPlayerId])) then
                 call SetHeroXP(udg_Held[convertedPlayerId], xp, true)

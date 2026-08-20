@@ -85,6 +85,7 @@
 //! import "wowr/WoWReforgedPickpocketing.j"
 //! import "wowr/WoWReforgedPings.j"
 //! import "wowr/WoWReforgedPortals.j"
+//! import "wowr/WoWReforgedPowerGenerators.j"
 ///! import "wowr/WoWReforgedPreloadScript.j"
 //! import "wowr/WoWReforgedProfessions.j"
 //! import "wowr/WoWReforgedProfessionArchaeologist.j"
