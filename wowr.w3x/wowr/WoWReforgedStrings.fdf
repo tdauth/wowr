@@ -1021,6 +1021,10 @@ StringList {
     TARGET_MUST_BE_A_PORTAL            "Target must be a Portal.",
     // Event Houses
     INCREASE_HERO_LEVELS               "%1% has increased the hero level of all heroes owned by %2% by %3%!",
+    // Town Halls
+    X_HAS_REWARDED_YOU                 "%1% has rewarded you!",
+    SPELL_IS_READY_IN_X                "Spell is ready in %1%.",
+    OWNER_OF_TARGET_UNIT_FREELANCER    "Owner of target unit has to be a freelancer.",
     // Equipment
     PAGE_TITLE_MISC                    "(Misc)",
     PAGE_TITLE_MELEE_WEAPONS           "(Melee Weapons)",

@@ -177,6 +177,7 @@
 //! import "wowr/WoWReforgedThievesGuild.j"
 //! import "wowr/WoWReforgedTmpVariables.j"
 //! import "wowr/WoWReforgedTomes.j"
+//! import "wowr/WoWReforgedTownHalls.j"
 //! import "wowr/WoWReforgedTradingPosts.j"
 //! import "wowr/WoWReforgedTrainer.j"
 //! import "wowr/WoWReforgedTransformations.j"
