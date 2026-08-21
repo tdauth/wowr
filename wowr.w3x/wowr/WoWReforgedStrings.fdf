@@ -545,6 +545,9 @@ StringList {
     SNOW                               "Snow",
     EMERALD                            "Emerald",
     PEANUT                             "Peanut",
+    // Hero Revival
+    REVIVAL_HINT                       "Enter '-x/-revive' to select the your altar on Theramore to revive your hero or revive the hero at any other altar or hideout. Theramore is a safe area where heroes cannot kill each other. If you have no gold to leave, sell crafted items.",
+    MOVED_FLOATING_HERO                "Moved floating hero into the sea.",
     // Players Info
     VERSION_X                          "Version: %1%",
     // Heroes Info
@@ -1025,6 +1028,12 @@ StringList {
     X_HAS_REWARDED_YOU                 "%1% has rewarded you!",
     SPELL_IS_READY_IN_X                "Spell is ready in %1%.",
     OWNER_OF_TARGET_UNIT_FREELANCER    "Owner of target unit has to be a freelancer.",
+    GIVEN_UNITS_EMPTY                  "Your given units are empty.",
+    CLEAR_GIVE_UNITS                   "Cleared unit group to give.",
+    GIVE_UNITS_TO_X                    "Giving units to %1%.",
+    RECEIVING_UNITS_FROM_X             "Receiving units from %1%.",
+    CANNOT_GIVE_UNITS_TO_PLAYER_X      "Cannot give the units to %1% since the player is not allied with you.",
+    CANNOT_GIVE_UNITS_FOOD_MAX         "Cannot give unit %1% to the other player since it would exceed his/her food capacity.",
     // Equipment
     PAGE_TITLE_MISC                    "(Misc)",
     PAGE_TITLE_MELEE_WEAPONS           "(Melee Weapons)",

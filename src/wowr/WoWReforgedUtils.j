@@ -78,14 +78,14 @@ function SelectNextTownHall takes player whichPlayer returns unit
     call GroupClear(halls)
     call DestroyGroup(halls)
     set halls = null
-    
+
     if (result != null) then
         call SelectUnitForPlayerSingle(result, whichPlayer)
         call SmartCameraPanToUnit(whichPlayer, result, 0.0)
     else
         call SimError(whichPlayer, GetLocalizedString("NO_TOWN_HALLS"))
     endif
-    
+
     return result
 endfunction
 
@@ -117,7 +117,7 @@ function IsInSinglePlayer takes nothing returns boolean
         set isInSinglePlayer = ReloadGameCachesFromDisk()
         set initialized = true
     endif
-    
+
     return isInSinglePlayer
 endfunction
 
@@ -169,15 +169,15 @@ function GetLivingPlayerHero takes player whichPlayer returns unit
     if (GetPlayerHero1(whichPlayer) != null and IsUnitAliveBJ(GetPlayerHero1(whichPlayer))) then
         return GetPlayerHero1(whichPlayer)
     endif
-    
+
     if (GetPlayerHero2(whichPlayer) != null and IsUnitAliveBJ(GetPlayerHero2(whichPlayer))) then
         return GetPlayerHero2(whichPlayer)
     endif
-    
+
     if (GetPlayerHero3(whichPlayer) != null and IsUnitAliveBJ(GetPlayerHero3(whichPlayer))) then
         return GetPlayerHero3(whichPlayer)
     endif
-    
+
     return GetPlayerHero1(whichPlayer)
 endfunction
 
@@ -218,7 +218,7 @@ function GetPlayerHeroIndex takes player whichPlayer, unit hero returns integer
     elseif (GetPlayerHero3(whichPlayer) == hero) then
         return 2
     endif
-    
+
     return -1
 endfunction
 
@@ -230,7 +230,7 @@ function GetPlayerHeroByIndex takes player whichPlayer, integer index returns un
     elseif (index == 2) then
         return GetPlayerHero3(whichPlayer)
     endif
-    
+
     return GetPlayerHero1(whichPlayer)
 endfunction
 
@@ -248,7 +248,7 @@ function GetLivingHero takes player whichPlayer returns unit
     elseif (IsUnitAliveBJ(GetPlayerHero3(whichPlayer))) then
         return GetPlayerHero3(whichPlayer)
     endif
-    
+
     return GetPlayerHero1(whichPlayer)
 endfunction
 
@@ -482,7 +482,7 @@ function IsHauntedGoldMine takes integer unitTypeId returns boolean
     elseif (unitTypeId == SATYR_MINE) then
         return true
     endif
-    
+
     return false
 endfunction
 
@@ -557,21 +557,6 @@ endfunction
 
 function IsWall takes integer buildingId returns boolean
     return buildingId == WALL
-endfunction
-
-globals
-    private player tmpPlayer = null
-endglobals
-
-private function FilterIsGivableUnit takes nothing returns boolean
-    return GetOwningPlayer(GetFilterUnit()) == tmpPlayer and not IsUnitType(GetFilterUnit(), UNIT_TYPE_STRUCTURE) and not  IsUnitType(GetFilterUnit(), UNIT_TYPE_HERO) and not IsUnitType(GetFilterUnit(), UNIT_TYPE_PEON) and GetUnitAbilityLevel(GetFilterUnit(), 'Avul') <= 0
-endfunction
-
-function UpdateGiveUnitsForPlayer takes player whichPlayer, real x, real y returns nothing
-    local integer playerId = GetConvertedPlayerId(whichPlayer)
-    set tmpPlayer = whichPlayer
-    call GroupClear(udg_GivenUnitsToFreelancer[playerId])
-    call GroupEnumUnitsInRange(udg_GivenUnitsToFreelancer[playerId], x, y, 512.0, Filter(function FilterIsGivableUnit))
 endfunction
 
 function DisplayNewBonusConfig takes nothing returns nothing

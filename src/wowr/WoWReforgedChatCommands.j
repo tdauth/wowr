@@ -1,4 +1,4 @@
-library WoWReforgedChatCommands initializer Init requires Ascii, HostUtils, StringUtils, StringFormat, SafeString, ForceUtils, PlayerColorUtils, WoWReforgedUtils, WoWReforgedMapData, optional QueueUI, WoWReforgedPlayerInfos, WoWReforgedStats, WoWReforgedSaveCodeObjects, WoWReforgedHeroes, WoWReforgedBosses, WoWReforgedQuests, WoWReforgedProfessions, optional WoWReforgedUiActionsBar, WoWReforgedStats, WoWReforgedAttributes, WoWReforgedAccount, WoWReforgedComputerStartLocations, WoWReforgedSaveCodesAll, WoWReforgedZones, WoWReforgedCinematic, optional OrdersWatcher, OnStartGame
+library WoWReforgedChatCommands initializer Init requires Ascii, HostUtils, StringUtils, StringFormat, SafeString, ForceUtils, PlayerColorUtils, WoWReforgedUtils, WoWReforgedMapData, optional QueueUI, WoWReforgedPlayerInfos, WoWReforgedStats, WoWReforgedSaveCodeObjects, WoWReforgedHeroes, WoWReforgedBosses, WoWReforgedQuests, WoWReforgedProfessions, optional WoWReforgedUiActionsBar, WoWReforgedStats, WoWReforgedAttributes, WoWReforgedAccount, WoWReforgedComputerStartLocations, WoWReforgedSaveCodesAll, WoWReforgedZones, WoWReforgedCinematic, WoWReforgedTownHalls, optional OrdersWatcher, OnStartGame
 
 /*
  * Chat commands and cheats.
@@ -1405,6 +1405,9 @@ private function Init takes nothing returns nothing
 
     call Add("-say", false, function CommandSay)
     call Add("-shout", false, function CommandShout)
+
+    call Add("-transfer", false, function ChatCommandTransfer)
+    call Add("-notransfer", true, function ChatCommandNoTransfer)
 
     // Cheats
     call AddCheat("-kill", true, function CheatKill)

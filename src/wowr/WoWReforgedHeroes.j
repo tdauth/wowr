@@ -10,6 +10,9 @@ struct Hero
 endstruct
 
 globals
+    private trigger deathTrigger = CreateTrigger()
+    private trigger reviveFinishTrigger = CreateTrigger()
+
     private Hero array heroes
     private integer heroesCounter = 0
 endglobals
@@ -94,12 +97,12 @@ private function AddHero takes integer unitTypeId, integer whichClass, integer w
     set hero.accountNames= accountNames
     set heroes[index] = hero
     set heroesCounter = heroesCounter + 1
-    
+
     //call AddHeroPagedButtonsConfig(unitTypeId, "")
     if (whichClass != CLASS_NONE) then
         call AssignHeroClass(unitTypeId, whichClass)
     endif
-    
+
     return index
 endfunction
 
@@ -117,13 +120,13 @@ function ChooseRandomHeroFromRace takes integer whichRace returns integer
         endif
         set i = i + 1
     endloop
-    
+
     //call BJDebugMsg("Got " + I2S(heroIndicesCounter) + " possible heroes for race " + GetObjectName(udg_RaceTavernItemType[whichRace]))
-    
+
     if (heroIndicesCounter > 0) then
         return heroIndices[GetRandomInt(0, heroIndicesCounter - 1)]
     endif
-    
+
     return 0
 endfunction
 
@@ -139,11 +142,54 @@ function ApplyHeroMount takes unit hero returns nothing
     call SetHeroMountTypeByUnitTypeId(hero, GetHeroMountUnitTypeIdByUnitTypeId(GetPrimaryDependencyEquivalent(GetUnitTypeId(hero))))
 endfunction
 
+private function PingUnitForPlayer takes unit whichUnit, player whichPlayer returns nothing
+    call PingMinimapForPlayer(whichPlayer, GetUnitX(whichUnit), GetUnitY(whichUnit), 5.0)
+endfunction
+
+private function PingRectForPlayer takes rect whichRect, player whichPlayer returns nothing
+    call PingMinimapForPlayer(whichPlayer, GetRectCenterX(whichRect), GetRectCenterY(whichRect), 5.0)
+endfunction
+
+private function TriggerConditionDeath takes nothing returns boolean
+    if (GetOwningPlayer(GetTriggerUnit()) != Player(PLAYER_NEUTRAL_AGGRESSIVE) and GetOwningPlayer(GetTriggerUnit()) != Player(bj_PLAYER_NEUTRAL_VICTIM) and GetOwningPlayer(GetTriggerUnit()) != Player(bj_PLAYER_NEUTRAL_EXTRA) and GetOwningPlayer(GetTriggerUnit()) != Player(PLAYER_NEUTRAL_PASSIVE) and IsUnitType(GetTriggerUnit(), UNIT_TYPE_HERO)) then
+        // Legendary Artifacts
+        call ConditionalTriggerExecute(gg_trg_Bosses_Hero_Death_Event_Drop_All_Legendary_Artifacts)
+        // Revival Hints
+        if (IsPlayerFreelancer(GetOwningPlayer(GetTriggerUnit()))) then
+            if (udg_Hideout[GetConvertedPlayerId(GetOwningPlayer(GetTriggerUnit()))] != null and IsUnitAliveBJ(udg_Hideout[GetConvertedPlayerId(GetOwningPlayer(GetTriggerUnit()))])) then
+                call PingUnitForPlayer(udg_Hideout[GetConvertedPlayerId(GetOwningPlayer(GetTriggerUnit()))], GetOwningPlayer(GetTriggerUnit()))
+            endif
+            call PingRectForPlayer(gg_rct_Night_Elf_Quest_3_Jaina, GetOwningPlayer(GetTriggerUnit()))
+        else
+            call PingRectForPlayer(gg_rct_Night_Elf_Quest_3_Jaina, GetOwningPlayer(GetTriggerUnit()))
+        endif
+        call QuestMessageBJ(bj_FORCE_PLAYER[GetPlayerId(GetOwningPlayer(GetTriggerUnit()))], bj_QUESTMESSAGE_ALWAYSHINT, GetLocalizedStringSafe("REVIVAL_HINT"))
+    endif
+    return false
+endfunction
+
+private function TriggerConditionReviveFinish takes nothing returns boolean
+    if (BlzGetUnitIntegerField(GetRevivingUnit(), UNIT_IF_MOVE_TYPE) == GetHandleId(MOVE_TYPE_FLOAT)) then
+        // Move them into water. There is no way to get the altar's unit type.
+        call SetUnitPosition(GetRevivingUnit(), GetRectCenterX(gg_rct_Submarine_Revival), GetRectCenterY(gg_rct_Submarine_Revival))
+        call SetUnitFacingTimed(GetRevivingUnit(), 0.0, 0)
+        call DisplayTextToForce(bj_FORCE_PLAYER[GetPlayerId(GetOwningPlayer(GetRevivingUnit()))], GetLocalizedStringSafe("MOVED_FLOATING_HERO"))
+        call PingUnitForPlayer(GetRevivingUnit(), GetOwningPlayer(GetRevivingUnit()))
+    endif
+    return false
+endfunction
+
 // After races.
 private function Init takes nothing returns nothing
+    call TriggerRegisterAnyUnitEventBJ(deathTrigger, EVENT_PLAYER_UNIT_DEATH)
+    call TriggerAddCondition(deathTrigger, Condition(function TriggerConditionDeath))
+
+    call TriggerRegisterAnyUnitEventBJ(reviveFinishTrigger, EVENT_PLAYER_HERO_REVIVE_FINISH)
+    call TriggerAddCondition(reviveFinishTrigger, Condition(function TriggerConditionReviveFinish))
+
     // Customizable
     call AddHero(CUSTOMIZABLE_HERO, -1, udg_RaceNone, GRYPHON_MOUNT, false, GetLocalizedString("CUSTOMIZABLE"), "")
-    
+
     // Human
     call AddHero(PALADIN, CLASS_PALADIN, udg_RaceHuman, GRYPHON_MOUNT, false, GetLocalizedString("HUMAN"), "")
     call AddHero(WIZARD, CLASS_ARCANIST, udg_RaceHuman, GRYPHON_MOUNT, false, GetLocalizedString("HUMAN"), "")
@@ -158,7 +204,7 @@ private function Init takes nothing returns nothing
     call SetIsCampaign(LORD_GARITHOS, true)
     call AddHero(ANDUIN_WRYNN, CLASS_PALADIN, udg_RaceHuman, GRYPHON_MOUNT, true, GetLocalizedString("HUMAN"), "")
     call SetIsCampaign(ANDUIN_WRYNN, true)
-    
+
     // Dwarf
     call AddHero(MTN_KING, CLASS_WARRIOR, udg_RaceDwarf, GRYPHON_MOUNT, false, GetLocalizedString("DWARF"), "")
     call AddHero(MORTAR_TEAM, CLASS_HUNTER, udg_RaceDwarf, GRYPHON_MOUNT, false, GetLocalizedString("DWARF"), "")
@@ -169,7 +215,7 @@ private function Init takes nothing returns nothing
     call AddHero(MURADIN_BRONZEBEARD, CLASS_WARRIOR, udg_RaceDwarf, GRYPHON_MOUNT, true, GetLocalizedString("DWARF"), "")
     call SetIsCampaign(MURADIN_BRONZEBEARD, true)
     call AddHero(GRYPHON_RIDER, CLASS_WARRIOR, udg_RaceDwarf, GRYPHON_MOUNT, true, GetLocalizedString("DWARF"), "")
-    
+
     // Blood Elf
     call AddHero(BLOOD_MAGE, CLASS_PYROMANCER, udg_RaceBloodElf, DRAGONHAWK_MOUNT, false, GetLocalizedString("BLOOD_ELF"), "")
     call AddHero(SPELLBREAKER_HERO, CLASS_ARCANIST, udg_RaceBloodElf, DRAGONHAWK_MOUNT, false, GetLocalizedString("BLOOD_ELF"), "")
@@ -178,7 +224,7 @@ private function Init takes nothing returns nothing
     call SetIsCampaign(ANASTERIAN_SUNSTRIDER, true)
     call AddHero(KAEL_HERO, CLASS_PYROMANCER, udg_RaceBloodElf, DRAGONHAWK_MOUNT, true, GetLocalizedString("BLOOD_ELF"), "")
     call SetIsCampaign(KAEL_HERO, true)
-    
+
     // High Elf
     call AddHero(RANGER, CLASS_HUNTER, udg_RaceHighElf, DRAGONHAWK_MOUNT, false, GetLocalizedString("HIGH_ELF"), "")
     call AddHero(SORCERESS_HERO, CLASS_ARCANIST, udg_RaceHighElf, DRAGONHAWK_MOUNT, false, GetLocalizedString("HIGH_ELF"), "")
@@ -187,7 +233,7 @@ private function Init takes nothing returns nothing
     call SetIsCampaign(SYLVANAS_WINDRUNNER, true)
     call AddHero(THALORIEN_DAWNSEEKER, CLASS_WARRIOR, udg_RaceHighElf, DRAGONHAWK_MOUNT, true, GetLocalizedString("HIGH_ELF"), "")
     call SetIsCampaign(THALORIEN_DAWNSEEKER, true)
-    
+
     // Orc
     call AddHero(BLADE_MASTER, CLASS_ROGUE, udg_RaceOrc, WYVERN_MOUNT, false, GetLocalizedString("ORC"), "")
     call AddHero(FAR_SEER, CLASS_GEOMANCER, udg_RaceOrc, WYVERN_MOUNT, false, GetLocalizedString("ORC"), "")
@@ -208,7 +254,7 @@ private function Init takes nothing returns nothing
     call SetIsCampaign(NERZHUL, true)
     call AddHero(GULDAN, CLASS_WARLOCK, udg_RaceOrc, WYVERN_MOUNT, true, GetLocalizedString("ORC"), "")
     call SetIsCampaign(GULDAN, true)
-    
+
     // Undead
     call AddHero(DEATH_KNIGHT, CLASS_DEATH_KNIGHT, udg_RaceUndead, FROST_WYRM_MOUNT, false, GetLocalizedString("UNDEAD"), "")
     call AddHero(LICH, CLASS_NECROMANCER, udg_RaceUndead, FROST_WYRM_MOUNT, false, GetLocalizedString("UNDEAD"), "")
@@ -230,13 +276,13 @@ private function Init takes nothing returns nothing
     call SetIsCampaign(SYLVANAS_UNDEAD, true)
     call AddHero(LICH_KING, CLASS_DEATH_KNIGHT, udg_RaceUndead, FROST_WYRM_MOUNT, true, GetLocalizedString("UNDEAD"), "")
     call SetIsCampaign(LICH_KING, true)
-    
+
     // Nerubian
     call AddHero(CRYPT_LORD, CLASS_WARRIOR, udg_RaceNerubian, FROST_WYRM_MOUNT, false, GetLocalizedString("NERUBIAN"), "")
     call AddHero(NERUBIAN_QUEEN_HERO, CLASS_NECROMANCER, udg_RaceNerubian, FROST_WYRM_MOUNT, false, GetLocalizedString("NERUBIAN"), "")
     call AddHero(ANUBARAK_HERO, CLASS_WARRIOR, udg_RaceNerubian, FROST_WYRM_MOUNT, true, GetLocalizedString("NERUBIAN"), "")
     call SetIsCampaign(ANUBARAK_HERO, true)
-    
+
     // Night Elf
     call AddHero(RANGER_NIGHT_ELF, CLASS_HUNTER, udg_RaceNightElf, HIPPOGROPH_MOUNT, false, GetLocalizedString("NIGHT_ELF"), "")
     call AddHero(KEEPER, CLASS_DRUID, udg_RaceNightElf, CHIMAERA_MOUNT, false, GetLocalizedString("NIGHT_ELF"), "")
@@ -269,7 +315,7 @@ private function Init takes nothing returns nothing
     call AddHero(ARCHDRUID, CLASS_DRUID, udg_RaceNightElf, CHIMAERA_MOUNT, true, GetLocalizedString("NIGHT_ELF"), "")
     call AddHero(PRIESTESS_OF_THE_MOON_OWL, CLASS_HUNTER, udg_RaceNightElf, CHIMAERA_MOUNT, true, GetLocalizedString("NIGHT_ELF"), "")
     call AddHero(CHIMAERA_HERO, CLASS_WARRIOR, udg_RaceNightElf, CHIMAERA_MOUNT, true, GetLocalizedString("NIGHT_ELF"), "")
-    
+
     // Goblin
     call AddHero(ALCHEMIST, CLASS_TINKER, udg_RaceGoblin, ZEPPELIN_MOUNT, false, GetLocalizedString("GOBLIN"), "")
     call AddHero(TINKER, CLASS_TINKER, udg_RaceGoblin, ZEPPELIN_MOUNT, false, GetLocalizedString("GOBLIN"), "")
@@ -278,7 +324,7 @@ private function Init takes nothing returns nothing
     call AddHero(GOBLIN_GUNNER, CLASS_HUNTER, udg_RaceGoblin, ZEPPELIN_MOUNT, false, GetLocalizedString("GOBLIN"), "")
     call AddHero(ENGINEER, CLASS_TINKER, udg_RaceGoblin, ZEPPELIN_MOUNT, false, GetLocalizedString("GOBLIN"), "")
     call AddHero(SAPPER_HERO, CLASS_TINKER, udg_RaceGoblin, ZEPPELIN_MOUNT, false, GetLocalizedString("GOBLIN"), "")
-    
+
     // Naga
     call AddHero(NAGA_SORCERESS, CLASS_HYDROMANCER, udg_RaceNaga, COUATL_MOUNT, false, GetLocalizedString("NAGA"), "")
     call AddHero(NAGA_ROYAL_GUARD_HERO, CLASS_WARRIOR, udg_RaceNaga, COUATL_MOUNT, false, GetLocalizedString("NAGA"), "")
@@ -289,7 +335,7 @@ private function Init takes nothing returns nothing
     // Gnome
     call AddHero(GNOME_ENGINEER_HERO, CLASS_TINKER, udg_RaceGnome, FLYING_MACHINE_MOUNT, false, GetLocalizedString("GNOME"), "")
     call AddHero(GNOME_WARLOCK_HERO, CLASS_WARLOCK, udg_RaceGnome, FLYING_MACHINE_MOUNT, false, GetLocalizedString("GNOME"), "")
-    
+
     // Pandaren
     call AddHero(BREWMASTER, CLASS_MONK, udg_RacePandaren, CLOUD_SERPENT_MOUNT, false, GetLocalizedString("PANDAREN"), "")
     call AddHero(IRON_FIST, CLASS_WARLOCK, udg_RacePandaren, CLOUD_SERPENT_MOUNT, false, GetLocalizedString("PANDAREN"), "")
@@ -297,20 +343,20 @@ private function Init takes nothing returns nothing
     call AddHero(MONK, CLASS_MONK, udg_RacePandaren, CLOUD_SERPENT_MOUNT, false, GetLocalizedString("PANDAREN"), "")
     call AddHero(CHEN_STORMSTOUT, CLASS_MONK, udg_RacePandaren, CLOUD_SERPENT_MOUNT, true, GetLocalizedString("PANDAREN"), "")
     call SetIsCampaign(CHEN_STORMSTOUT, true)
-    
+
     // Troll
     call AddHero(SHADOW_HUNTER, CLASS_WITCH_DOCTOR, udg_RaceTroll, BAT_MOUNT, false, GetLocalizedString("TROLL"), "")
     call AddHero(WITCH_DOCTOR_HERO, CLASS_WITCH_DOCTOR, udg_RaceTroll, BAT_MOUNT, false, GetLocalizedString("TROLL"), "")
     call AddHero(TROLL_WARLORD, CLASS_WARRIOR, udg_RaceTroll, BAT_MOUNT, false, GetLocalizedString("TROLL"), "")
     call AddHero(ROKHAN, CLASS_WITCH_DOCTOR, udg_RaceTroll, BAT_MOUNT, true, GetLocalizedString("TROLL"), "")
     call SetIsCampaign(ROKHAN, true)
-    
+
     // Tauren
     call AddHero(TAUREN_CHIEF, CLASS_GEOMANCER, udg_RaceTauren, WYVERN_MOUNT, false, GetLocalizedString("TAUREN"), "")
     call AddHero(SPIRIT_WALKER_HERO, CLASS_WITCH_DOCTOR, udg_RaceTauren, WYVERN_MOUNT, false, GetLocalizedString("TAUREN"), "")
     call AddHero(CAIRNE_BLOODHOOF, CLASS_GEOMANCER, udg_RaceTauren, WYVERN_MOUNT, true, GetLocalizedString("TAUREN"), "")
     call SetIsCampaign(CAIRNE_BLOODHOOF, true)
-    
+
     // Demon
     call AddHero(DREAD_LORD, CLASS_DEATH_KNIGHT, udg_RaceDemon, NETHER_DRAKE_MOUNT, false, GetLocalizedString("DEMON"), "")
     call AddHero(PIT_LORD_HERO, CLASS_WARLOCK, udg_RaceDemon, NETHER_DRAKE_MOUNT, false, GetLocalizedString("DEMON"), "")
@@ -332,14 +378,14 @@ private function Init takes nothing returns nothing
     call AddHero(MAGTHERIDON, CLASS_WARLOCK, udg_RaceDemon, NETHER_DRAKE_MOUNT, true, GetLocalizedString("DEMON"), "")
     call SetIsCampaign(MAGTHERIDON, true)
     call AddHero(DOOM_LORD, CLASS_WARLOCK, udg_RaceDemon, NETHER_DRAKE_MOUNT, true, GetLocalizedString("DEMON"), "")
-    
+
     // Lost Ones
     call AddHero(ELDER_SAGE, CLASS_ROGUE, udg_RaceLostOnes, NETHER_DRAKE_MOUNT, false, GetLocalizedString("LOST_ONES"), "")
     call AddHero(VINDICATOR, CLASS_PALADIN, udg_RaceLostOnes, NETHER_DRAKE_MOUNT, false, GetLocalizedString("LOST_ONES"), "")
-    
+
     // Furbolg
     call AddHero(FURBOLG_URSA_WARRIOR_HERO, CLASS_DRUID, udg_RaceFurbolg, GREEN_DRAGON_MOUNT, false, GetLocalizedString("FURBOLG"), "")
-    
+
     // Dalaran
     call AddHero(ARCHMAGE, CLASS_ARCANIST, udg_RaceDalaran, DRAGONHAWK_MOUNT, false, GetLocalizedString("DALARAN"), "")
     call AddHero(ARCH_SORCERESS, CLASS_ARCANIST, udg_RaceDalaran, DRAGONHAWK_MOUNT, false, GetLocalizedString("DALARAN"), "")
@@ -353,7 +399,7 @@ private function Init takes nothing returns nothing
     call SetIsCampaign(MEDIVH, true)
     call AddHero(AEGWYNN, CLASS_ARCANIST, udg_RaceDalaran, DRAGONHAWK_MOUNT, true, GetLocalizedString("DALARAN"), "")
     call SetIsCampaign(AEGWYNN, true)
-    
+
     // Kul Tiras
     call AddHero(HYDROMANCER, CLASS_HYDROMANCER, udg_RaceKulTiras, ALBATROSS_MOUNT, false, GetLocalizedString("KUL_TIRAS"), "")
     call AddHero(TIDESAGE, CLASS_WITCH_DOCTOR, udg_RaceKulTiras, ALBATROSS_MOUNT, false, GetLocalizedString("KUL_TIRAS"), "")
@@ -361,30 +407,30 @@ private function Init takes nothing returns nothing
     call SetIsCampaign(JAINA_HERO, true)
     call AddHero(ADMIRAL_PROUDMOORE, CLASS_WARRIOR, udg_RaceKulTiras, ALBATROSS_MOUNT, true, GetLocalizedString("KUL_TIRAS"), "")
     call SetIsCampaign(ADMIRAL_PROUDMOORE, true)
-    
+
     // Stormwind
     call AddHero(LION_RIDER, CLASS_PALADIN, udg_RaceStormwind, GRYPHON_MOUNT, false, GetLocalizedString("STORMWIND"), "")
     call AddHero(BISHOP, CLASS_PALADIN, udg_RaceStormwind, GRYPHON_MOUNT, false, GetLocalizedString("STORMWIND"), "")
-    
+
     // Vrykul
     call AddHero(THANE, CLASS_WARRIOR, udg_RaceVrykul, PROTO_DRAKE_MOUNT, false, GetLocalizedString("VRYKUL"), "")
     call AddHero(FLAMEBINDER, CLASS_PYROMANCER, udg_RaceVrykul, PROTO_DRAKE_MOUNT, false, GetLocalizedString("VRYKUL"), "")
     call AddHero(WOLF_RIDER, CLASS_HUNTER, udg_RaceVrykul, PROTO_DRAKE_MOUNT, false, GetLocalizedString("VRYKUL"), "")
     call AddHero(DARK_VALKYR, CLASS_DEATH_KNIGHT, udg_RaceVrykul, PROTO_DRAKE_MOUNT, false, GetLocalizedString("VRYKUL"), "")
     call AddHero(GOLDEN_VALKYR, CLASS_PALADIN, udg_RaceVrykul, PROTO_DRAKE_MOUNT, false, GetLocalizedString("VRYKUL"), "")
-    
+
     // Worgen
     call AddHero(DEATHCLAW, CLASS_ROGUE, udg_RaceWorgen, CROW_MOUNT, false, GetLocalizedString("WORGEN"), "")
     call AddHero(WORGEN_DEATH_KNIGHT, CLASS_DEATH_KNIGHT, udg_RaceWorgen, CROW_MOUNT, false, GetLocalizedString("WORGEN"), "")
     call AddHero(GENN_GREYMANE, CLASS_ROGUE, udg_RaceWorgen, CROW_MOUNT, true, GetLocalizedString("WORGEN"), "")
     call SetIsCampaign(GENN_GREYMANE, true)
-    
+
     // Tuskarr
     call AddHero(HERO_TUSKARR_CHIEFTAIN, CLASS_WARRIOR, udg_RaceTuskarr, SNOWY_OWL_MOUNT, false, GetLocalizedString("TUSKARR"), "")
-    
+
     // Murloc
     call AddHero(MURLOC_SORCERER, CLASS_NECROMANCER, udg_RaceMurloc, COUATL_MOUNT, false, GetLocalizedString("MURLOC"), "")
-    
+
     // Ogre
     call AddHero(OGRE_LORD, CLASS_WARRIOR, udg_RaceOgre, BLACK_DRAGON_MOUNT, false, GetLocalizedString("OGRE"), "")
     call AddHero(OGRE_MAGI_HERO, CLASS_ARCANIST, udg_RaceOgre, BLACK_DRAGON_MOUNT, false, GetLocalizedString("OGRE"), "")
@@ -392,14 +438,14 @@ private function Init takes nothing returns nothing
     call AddHero(BEASTMASTER, CLASS_HUNTER, udg_RaceOgre, BLACK_DRAGON_MOUNT, false, GetLocalizedString("OGRE"), "")
     call AddHero(REXXAR, CLASS_HUNTER, udg_RaceOgre, BLACK_DRAGON_MOUNT, true, GetLocalizedString("OGRE"), "")
     call SetIsCampaign(REXXAR, true)
-    
+
     // Draenei
     call AddHero(EREDAR_ANNIHILATOR, CLASS_WARRIOR, udg_RaceDraenei, NETHER_DRAKE_MOUNT, false, GetLocalizedString("DRAENEI"), "")
     call AddHero(EREDAR_VINDICATOR, CLASS_PALADIN, udg_RaceDraenei, NETHER_DRAKE_MOUNT, false, GetLocalizedString("DRAENEI"), "")
     call AddHero(VELEN, CLASS_PALADIN, udg_RaceDraenei, NETHER_DRAKE_MOUNT, true, GetLocalizedString("DRAENEI"), "")
     call SetIsCampaign(VELEN, true)
     call AddHero(NAARU, CLASS_PALADIN, udg_RaceDraenei, NETHER_DRAKE_MOUNT, true, GetLocalizedString("DRAENEI"), "")
-    
+
     // Fel Orc
     call AddHero(FEL_BLADEMASTER, CLASS_ROGUE, udg_RaceFelOrc, BLACK_DRAGON_MOUNT, false, GetLocalizedString("FEL_ORC"), "")
     call AddHero(FEL_WARLOCK, CLASS_WARLOCK, udg_RaceFelOrc, BLACK_DRAGON_MOUNT, false, GetLocalizedString("FEL_ORC"), "")
@@ -411,34 +457,34 @@ private function Init takes nothing returns nothing
     call AddHero(FEL_GROMMASH_HELLSCREAM, CLASS_ROGUE, udg_RaceFelOrc, BLACK_DRAGON_MOUNT, true, GetLocalizedString("FEL_ORC"), "")
     call AddHero(KARGATH_BLADEFIST, CLASS_WARRIOR, udg_RaceFelOrc, BLACK_DRAGON_MOUNT, true, GetLocalizedString("FEL_ORC"), "")
     call SetIsCampaign(KARGATH_BLADEFIST, true)
-    
+
     // Faceless One
     call AddHero(UNBROKEN, CLASS_WITCH_DOCTOR, udg_RaceFacelessOne, BLACK_DRAGON_MOUNT, false, GetLocalizedString("FACELESS_ONE"), "")
     call AddHero(GENERAL_VEZAX, CLASS_WARRIOR, udg_RaceFacelessOne, BLACK_DRAGON_MOUNT, true, GetLocalizedString("FACELESS_ONE"), "")
     call SetIsCampaign(GENERAL_VEZAX, true)
-    
+
     // Satyr
     call AddHero(SATYR_HELLCALLER, CLASS_WARLOCK, udg_RaceSatyr, GREEN_DRAGON_MOUNT, false, GetLocalizedString("SATYR"), "")
     call AddHero(SATYR_TRICKSTER_HERO, CLASS_ROGUE, udg_RaceSatyr, GREEN_DRAGON_MOUNT, false, GetLocalizedString("SATYR"), "")
-    
+
     // Centaur
     call AddHero(CENTAUR_KHAN_HERO, CLASS_GEOMANCER, udg_RaceCentaur, EAGLE_MOUNT, false, GetLocalizedString("CENTAUR"), "")
-    
+
     // Gnoll
     call AddHero(GNOLL_ALPHA, CLASS_WARRIOR, udg_RaceGnoll, EAGLE_MOUNT, false, GetLocalizedString("GNOLL"), "")
-    
+
     // Kobold
     call AddHero(GEOMANCER, CLASS_GEOMANCER, udg_RaceKobold, EAGLE_MOUNT, false, GetLocalizedString("KOBOLD"), "")
-    
+
     // Quillboar
     call AddHero(RAZORMANE_CHIEFTAIN, CLASS_WARRIOR, udg_RaceQuillboar, EAGLE_MOUNT, false, GetLocalizedString("QUILLBOAR"), "")
-    
+
     // Bandit
     call AddHero(BANDIT_LORD, CLASS_WARRIOR, udg_RaceBandit, CROW_MOUNT, false, GetLocalizedString("BANDIT"), "")
     call AddHero(DARK_WIZARD, CLASS_NECROMANCER, udg_RaceBandit, CROW_MOUNT, false, GetLocalizedString("BANDIT"), "")
     call AddHero(ASSASSIN, CLASS_HUNTER, udg_RaceBandit, CROW_MOUNT, false, GetLocalizedString("BANDIT"), "")
     call AddHero(ROGUE, CLASS_ROGUE, udg_RaceBandit, CROW_MOUNT, false, GetLocalizedString("BANDIT"), "")
-    
+
     // Dungeon
     call AddHero(GIANT_SKELETON, CLASS_WARRIOR, udg_RaceDungeon, BLACK_DRAGON_MOUNT, false, GetLocalizedString("DUNGEON"), "")
     call AddHero(SIEGE_GOLEM, CLASS_WARRIOR, udg_RaceDungeon, BLACK_DRAGON_MOUNT, false, GetLocalizedString("DUNGEON"), "")
@@ -446,18 +492,18 @@ private function Init takes nothing returns nothing
     call AddHero(SALAMANDER_LORD, CLASS_WARRIOR, udg_RaceDungeon, BLACK_DRAGON_MOUNT, false, GetLocalizedString("DUNGEON"), "")
     call AddHero(SLUDGE_MONSTROSITY, CLASS_WARRIOR, udg_RaceDungeon, BLACK_DRAGON_MOUNT, false, GetLocalizedString("DUNGEON"), "")
     call AddHero(BERSERK_WILDKIN, CLASS_WARRIOR, udg_RaceDungeon, BLACK_DRAGON_MOUNT, false, GetLocalizedString("DUNGEON"), "")
-    
+
     // Dragonkin
     call AddHero(EVOKER, CLASS_ARCANIST, udg_RaceDragonkin, GREEN_DRAGON_MOUNT, false, GetLocalizedString("DRAGONKIN"), "")
     call AddHero(DRAGONSPAWN, CLASS_WARRIOR, udg_RaceDragonkin, GREEN_DRAGON_MOUNT, false, GetLocalizedString("DRAGONKIN"), "")
-    
+
     // Elements
     call AddHero(FIRELORD, CLASS_PYROMANCER, udg_RaceNone, PHOENIX_MOUNT, false, GetLocalizedString("ELEMENTS"), "")
     call AddHero(FROSTLORD, CLASS_HYDROMANCER, udg_RaceNone, FROST_WYRM_MOUNT, false, GetLocalizedString("ELEMENTS"), "")
     call AddHero(EARTHLORD, CLASS_GEOMANCER, udg_RaceNone, WYVERN_MOUNT, false, GetLocalizedString("ELEMENTS"), "")
     call AddHero(WINDLORD, CLASS_AEROMANCER, udg_RaceNone, CLOUD_SERPENT_MOUNT, false, GetLocalizedString("ELEMENTS"), "")
     call AddHero(VOID_LORD, CLASS_ARCANIST, udg_RaceNone, NETHER_DRAKE_MOUNT, false, GetLocalizedString("ELEMENTS"), "")
-    
+
     // Neutral
     call AddHero(SEA_GIANT, CLASS_HYDROMANCER, udg_RaceNone, COUATL_MOUNT, false, GetLocalizedString("NEUTRAL"), "")
     call AddHero(REVENANT_DEEPLORD, CLASS_HYDROMANCER, udg_RaceNone, COUATL_MOUNT, false, GetLocalizedString("NEUTRAL"), "")
@@ -471,7 +517,7 @@ private function Init takes nothing returns nothing
 
     call AddHero(HARPY_QUEEN, CLASS_AEROMANCER, udg_RaceNone, EAGLE_MOUNT, true, GetLocalizedString("NEUTRAL"), "")
     call AddHero(RED_DRAGON_HERO, CLASS_PYROMANCER, udg_RaceNone, BLACK_DRAGON_MOUNT, true, GetLocalizedString("NEUTRAL"), "")
-    
+
     // Navy
     call AddHero(HUMAN_BATTLESHIP_HERO, CLASS_TINKER, udg_RaceNone, GRYPHON_MOUNT, false, GetLocalizedString("TAVERN_NAVY"), "")
     call AddHero(CAPTAIN_HERO, CLASS_WARRIOR, udg_RaceNone, GRYPHON_MOUNT, false, GetLocalizedString("TAVERN_NAVY"), "")
@@ -481,18 +527,18 @@ private function Init takes nothing returns nothing
     call AddHero(GOBLIN_SUBMARINE_PILOT_HERO, CLASS_TINKER, udg_RaceNone, ZEPPELIN_MOUNT, false, GetLocalizedString("TAVERN_NAVY"), "")
     call AddHero(DWARF_SUBMARINE_HERO, CLASS_TINKER, udg_RaceNone, GRYPHON_MOUNT, false, GetLocalizedString("TAVERN_NAVY"), "")
     call AddHero(DWARF_SUBMARINE_PILOT_HERO, CLASS_TINKER, udg_RaceNone, GRYPHON_MOUNT, false, GetLocalizedString("TAVERN_NAVY"), "")
-    
+
     // Demigods
     call AddHero(DEMIGOD_LIGHT, CLASS_PALADIN, udg_RaceNone, GREEN_DRAGON_MOUNT, false, GetLocalizedString("DEMIGODS"), "")
     call AddHero(DEMIGOD_DARK, CLASS_DEATH_KNIGHT, udg_RaceNone, BLACK_DRAGON_MOUNT, false, GetLocalizedString("DEMIGODS"), "")
-    
+
     // VIP
     call AddHero(BARADE, CLASS_MONK, udg_RaceNone, SNOWY_OWL_MOUNT, false, GetLocalizedString("VIP"), "Barade#2569,Barade,WorldEdit")
     call SetIsCampaign(BARADE, true)
-    
+
     call AddHero(EYLON, CLASS_MONK, udg_RaceNone, DRAGONHAWK_MOUNT, false, GetLocalizedString("VIP"), "Etos7#2138")
     call SetIsCampaign(EYLON, true)
-    
+
     // TODO Enum all boss hero units, assign their classes and auto skill them.
 endfunction
 

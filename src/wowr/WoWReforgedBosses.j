@@ -49,7 +49,7 @@ function UpdateBossPlayerHeroes takes nothing returns nothing
         endif
         set i = i + 1
     endloop
-    
+
     call SetPlayerHero1(udg_BossesPlayer, boss1)
     call SetPlayerHero2(udg_BossesPlayer, boss2)
     call SetPlayerHero3(udg_BossesPlayer, boss3)
@@ -153,10 +153,10 @@ function AddLegendaryItem takes integer itemTypeId, unit boss, unit building, re
     set legendaryItemBoss[legendaryItemsCounter] = boss
     set legendaryItemBuilding[legendaryItemsCounter] = building
     set legendaryItemRect[legendaryItemsCounter] = r
-    
+
     set udg_LegendaryItemType[legendaryItemsCounter] = itemTypeId
     set udg_LegendaryItemDropRect[legendaryItemsCounter] = r
-    
+
     set legendaryItemsCounter = legendaryItemsCounter + 1
 endfunction
 
@@ -174,7 +174,7 @@ private function TriggerConditionDeath takes nothing returns boolean
             call SetItemInvulnerable(UnitDropItem(dyingUnit, GetLegendaryItemTypeId(index)), true)
         endif
     endif
-    
+
     set dyingUnit = null
 
     return false
@@ -189,7 +189,7 @@ private function Init takes nothing returns nothing
     set deathTrigger = CreateTrigger()
     call TriggerRegisterAnyUnitEventBJ(deathTrigger, EVENT_PLAYER_UNIT_DEATH)
     call TriggerAddCondition(deathTrigger, Condition(function TriggerConditionDeath))
-    
+
     call AddBoss(ARCHIMONDE_BOSS, CLASS_WARLOCK)
     call AddBoss(XALATATH, CLASS_WITCH_DOCTOR)
     call AddBoss(ARCH_LICH, CLASS_NECROMANCER)
@@ -239,7 +239,7 @@ private function Init takes nothing returns nothing
     call AddBoss(LICH_KING_BOSS, CLASS_DEATH_KNIGHT)
     call AddBoss(TARAN_ZHU, CLASS_MONK)
     call AddBoss(MURMUR, CLASS_DEATH_KNIGHT)
-    
+
     call AddBoss(MAIEV_BOSS, CLASS_ROGUE)
     call AddBoss(KAEL_BOSS, CLASS_PYROMANCER)
     call AddBoss(CAPTAIN_BOSS, CLASS_WARRIOR)
@@ -247,13 +247,30 @@ private function Init takes nothing returns nothing
     call AddBoss(HERALD_OF_THE_DEEP_MOTHER, CLASS_HYDROMANCER)
     call AddBoss(MAGTHERIDON_BOSS, CLASS_WARLOCK)
     call AddBoss(GHOST_BOSS, CLASS_DRUID)
-    
+
     call AddBoss(DETHEROC, CLASS_DEATH_KNIGHT)
     call AddBoss(DALVENGYR_BOSS, CLASS_DEATH_KNIGHT)
     call AddBoss(BALNAZZAR_BOSS, CLASS_DEATH_KNIGHT)
     call AddBoss(MALGANIS, CLASS_DEATH_KNIGHT)
-    
+
     call AddBoss(ILLIDAN, CLASS_WARLOCK)
 endfunction
+
+private function RemoveUnitHook takes unit whichUnit returns nothing
+    if (whichUnit == udg_BossesFrostmourneCarrier) then
+        set udg_BossesFrostmourneCarrier = null
+    endif
+    if (whichUnit == udg_BossesTurtleShellCarrier) then
+        set udg_BossesTurtleShellCarrier = null
+    endif
+    if (whichUnit == udg_BossesHeartCarrier) then
+        set udg_BossesHeartCarrier = null
+    endif
+    if (whichUnit == udg_BossesBowCarrier) then
+        set udg_BossesBowCarrier = null
+    endif
+endfunction
+
+hook RemoveUnit RemoveUnitHook
 
 endlibrary
