@@ -4,6 +4,10 @@ globals
     constant integer MAX_EQUIPMENT_BAGS = 3
 
     private group array playerEquipmentBags
+    private trigger sellItemTrigger = CreateTrigger()
+    private trigger pickupItemTrigger = CreateTrigger()
+    private trigger dropItemTrigger = CreateTrigger()
+    private trigger gainLevelTrigger = CreateTrigger()
 endglobals
 
 function GetMaxEquipmentBags takes player whichPlayer returns integer
@@ -13,13 +17,13 @@ function GetMaxEquipmentBags takes player whichPlayer returns integer
             if (heroLevel >= HERO_JOURNEY_EQUIPMENT_BAG_3) then
                 return MAX_EQUIPMENT_BAGS
             endif
-            
+
             return 2
         endif
-        
+
         return 1
     endif
-    
+
     return 0
 endfunction
 
@@ -35,7 +39,7 @@ function GetPlayerEquipmentBag takes player whichPlayer, integer index returns u
     return BlzGroupUnitAt(playerEquipmentBags[GetPlayerId(whichPlayer)], index)
 endfunction
 
-function EquipmentBagAddAbilities takes unit bag, item whichItem returns nothing
+private function EquipmentBagAddAbilities takes unit bag, item whichItem returns nothing
     local integer playerId = GetPlayerId(GetOwningPlayer(bag))
     local integer itemTypeId = GetItemTypeId(whichItem)
     local integer abilityId = 0
@@ -89,7 +93,7 @@ private function HeroHasItemsWithAbilityId takes unit hero, integer abilityId re
     return false
 endfunction
 
-function EquipmentBagRemoveAbilities takes unit bag, item whichItem returns nothing
+private function EquipmentBagRemoveAbilities takes unit bag, item whichItem returns nothing
     local integer playerId = GetPlayerId(GetOwningPlayer(bag))
     local integer itemTypeId = GetItemTypeId(whichItem)
     local integer abilityId = 0
@@ -114,7 +118,7 @@ function EquipmentBagRemoveAbilities takes unit bag, item whichItem returns noth
     set hero = null
 endfunction
 
-function RemoveEquipmentBags takes player whichPlayer returns nothing
+private function RemoveEquipmentBags takes player whichPlayer returns nothing
     local integer max = GetEquipmentBagsCount(whichPlayer)
     local unit equipmentBag = null
     local integer i = 0
@@ -130,7 +134,7 @@ function RemoveEquipmentBags takes player whichPlayer returns nothing
     call GroupClear(GetPlayerEquipmentBags(whichPlayer))
 endfunction
 
-function UpdateEquipmentBagHeroLevels takes player whichPlayer returns nothing
+private function UpdateEquipmentBagHeroLevels takes player whichPlayer returns nothing
     local integer highHeroLevel = GetHighestHeroLevel(whichPlayer)
     local integer max = GetEquipmentBagsCount(whichPlayer)
     local unit equipmentBag = null
@@ -152,7 +156,7 @@ endfunction
 private function CreateSingleEquipmentBag takes player whichPlayer, integer index, boolean addSkillMenu returns unit
     local integer playerId = GetPlayerId(whichPlayer)
     local unit equipmentBag = CreateUnit(whichPlayer, EQUIPMENT_BAG, GetUnitX(udg_Hero[playerId]), GetUnitY(udg_Hero[playerId]), bj_UNIT_FACING)
-    local string equipmentBagName = Format(GetLocalizedString("EQUIPMENT_BAG_INDEX")).i(index).result()
+    local string equipmentBagName = Format(GetLocalizedStringSafe("EQUIPMENT_BAG_INDEX")).i(index).result()
     call SuspendHeroXP(equipmentBag, true)
     call GroupAddUnit(GetPlayerEquipmentBags(whichPlayer), equipmentBag)
     call UnitRemoveAbility(equipmentBag, 'A02N')
@@ -244,13 +248,50 @@ function AddEquipmentBag takes player whichPlayer returns nothing
         call UpdateEquipmentBagHeroLevels(whichPlayer)
         call LinkItemCraftingGroupInventories(GetPlayerEquipmentBags(whichPlayer))
     else
-        call SimError(whichPlayer, Format(GetLocalizedString("MAXIMUM_EQUIPMENT_BAGS")).i(max).result())
+        call SimError(whichPlayer, Format(GetLocalizedStringSafe("MAXIMUM_EQUIPMENT_BAGS")).i(max).result())
     endif
 endfunction
 
 function RecreateAllEquipmentBags takes player whichPlayer returns nothing
     local integer count = GetEquipmentBagsCount(whichPlayer)
     call RecreateEquipmentBags(whichPlayer, count)
+endfunction
+
+private function TriggerConditionSellItem takes nothing returns boolean
+    if (GetItemTypeId(GetSoldItem()) == 'I07A') then // Purchase Equipment Bag
+        if (BlzGroupGetSize(udg_EquipmentBags[GetConvertedPlayerId(GetOwningPlayer(GetBuyingUnit()))]) < MAX_EQUIPMENT_BAGS) then
+            if (udg_UnlockedAll or GetPlayerTechCountSimple(UPG_HERO_LEVEL_15, GetOwningPlayer(GetBuyingUnit())) > 0) then
+                call AddEquipmentBag(GetOwningPlayer(GetBuyingUnit()))
+            else
+                call SimError(GetOwningPlayer(GetBuyingUnit()), GetLocalizedStringSafe("HERO_REQUIRES_LEVEL_15"))
+            endif
+        else
+            call SimError(GetOwningPlayer(GetBuyingUnit()), Format(GetLocalizedStringSafe("MAXIMUM_EQUIPMENT_BAGS")).i(3).result())
+        endif
+    elseif (GetItemTypeId(GetSoldItem()) == 'I07B') then // Reset Equipment Bags
+        call ResetEquipmentBags(GetOwningPlayer(GetBuyingUnit()))
+        call DisplayTextToForce(bj_FORCE_PLAYER[GetPlayerId(GetOwningPlayer(GetBuyingUnit()))], GetLocalizedStringSafe("RESET_EQUIPMENT_BAGS"))
+    endif
+    return false
+endfunction
+
+private function TriggerConditionPickupItem takes nothing returns boolean
+    if (IsUnitInGroup(GetTriggerUnit(), udg_EquipmentBags[GetConvertedPlayerId(GetOwningPlayer(GetTriggerUnit()))])) then
+        call EquipmentBagAddAbilities(GetTriggerUnit(), GetManipulatedItem())
+    endif
+    return false
+endfunction
+
+private function TriggerConditionDropItem takes nothing returns boolean
+    if (IsUnitInGroup(GetTriggerUnit(), udg_EquipmentBags[GetConvertedPlayerId(GetOwningPlayer(GetTriggerUnit()))])) then
+        call EquipmentBagRemoveAbilities(GetTriggerUnit(), GetManipulatedItem())
+    endif
+    return false
+endfunction
+
+private function TriggerConditionGainLevel takes nothing returns boolean
+    call UpdateEquipmentBagHeroLevels(GetOwningPlayer(GetTriggerUnit()))
+    return false
 endfunction
 
 private function Init takes nothing returns nothing
@@ -260,6 +301,18 @@ private function Init takes nothing returns nothing
         set playerEquipmentBags[i] = CreateGroup()
         set i = i + 1
     endloop
+
+    call TriggerRegisterAnyUnitEventBJ(sellItemTrigger, EVENT_PLAYER_UNIT_SELL_ITEM)
+    call TriggerAddCondition(sellItemTrigger, Condition(function TriggerConditionSellItem))
+
+    call TriggerRegisterAnyUnitEventBJ(pickupItemTrigger, EVENT_PLAYER_UNIT_PICKUP_ITEM)
+    call TriggerAddCondition(pickupItemTrigger, Condition(function TriggerConditionPickupItem))
+
+    call TriggerRegisterAnyUnitEventBJ(dropItemTrigger, EVENT_PLAYER_UNIT_DROP_ITEM)
+    call TriggerAddCondition(dropItemTrigger, Condition(function TriggerConditionDropItem))
+
+    call TriggerRegisterAnyUnitEventBJ(gainLevelTrigger, EVENT_PLAYER_HERO_LEVEL)
+    call TriggerAddCondition(gainLevelTrigger, Condition(function TriggerConditionGainLevel))
 endfunction
 
 endlibrary
