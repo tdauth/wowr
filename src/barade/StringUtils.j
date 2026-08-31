@@ -31,6 +31,9 @@ function StringReplace takes string source, string match, string replace returns
     local integer matchLength = StringLength(match)
     local integer index = 0
     local string result = ""
+    if (matchLength == 0) then
+        return source
+    endif
     loop
         exitwhen (i == max)
         set index = i + matchLength
@@ -183,8 +186,8 @@ function StringTokenEx takes string source, integer index, string separator, boo
             if (not inWhitespace) then
                 set inWhitespace = true
                 set currentIndex = currentIndex + 1
-                set i = i + separatorLength
             endif
+            set i = i + separatorLength
         else
             if (currentIndex == index) then
                 set result = result + SubString(source, i, i + 1)
@@ -302,7 +305,6 @@ endfunction
  * \param whichString String which is separated into sub strings ending with a line break character.
  * \param maxLineLength Maximum allowed length of one sub string line.
  * \return Returns \p whichString separated into sub strings of maximum length \p maxLineLength ending with '\n' character.
- * \todo bugged?
  */
 function InsertLineBreaks takes string whichString, integer maxLineLength returns string
     local integer i
@@ -319,7 +321,7 @@ function InsertLineBreaks takes string whichString, integer maxLineLength return
         set i = i + maxLineLength
     endloop
 
-    if (i < max) then
+    if (i - maxLineLength < max) then
         set result = result + SubString(whichString, i - maxLineLength, max)
     endif
 
