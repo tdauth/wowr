@@ -126,8 +126,8 @@ function InitCustomUnitTypes takes nothing returns nothing
 endfunction
 
 private function RemoveUnitHook takes unit whichUnit returns nothing
-    if (IsCustomUnitType(GetUnitTypeId(GetTriggerUnit()))) then
-        call CallCustomUnitTypeOnRemove(GetTriggerUnit())
+    if (IsCustomUnitType(GetUnitTypeId(whichUnit))) then
+        call CallCustomUnitTypeOnRemove(whichUnit)
     endif
 endfunction
 
