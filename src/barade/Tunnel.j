@@ -7,10 +7,10 @@ library Tunnel initializer Init requires UnitEventEx, SimError, SelectionUtils
  */
 
 globals
-    public constant integer UNIT_TYPE_ID = NERUBIAN_TUNNEL
-    public constant integer UNIT_TYPE_ID_2 = KOBOLD_TUNNEL
-    public constant integer UNIT_TYPE_ID_3 = GOBLIN_TUNNEL
     public constant integer REGENERATION_ABILITY_ID = 'A1DK'
+
+    private integer array tunnelUnitTypeIds
+    private integer tunnelUnitTypeIdsCounter = 0
 
     private group loaded = CreateGroup()
     private group copies = CreateGroup()
@@ -25,6 +25,27 @@ globals
     private constant integer KEY_X = 2
     private constant integer KEY_Y = 3
 endglobals
+
+function IsTunnel takes integer unitTypeId returns boolean
+    local integer i = 0
+    loop
+        exitwhen (i == tunnelUnitTypeIdsCounter)
+        if (unitTypeId == tunnelUnitTypeIds[i]) then
+            return true
+        endif
+        set i = i + 1
+    endloop
+    return false
+endfunction
+
+function IsUnitTunnel takes unit whichUnit returns boolean
+    return IsTunnel(GetUnitTypeId(whichUnit))
+endfunction
+
+function AddTunnel takes integer unitTypeId returns nothing
+    set tunnelUnitTypeIds[tunnelUnitTypeIdsCounter] = unitTypeId
+    set tunnelUnitTypeIdsCounter = tunnelUnitTypeIdsCounter + 1
+endfunction
 
 private function IsLoaded takes unit whichUnit returns boolean
     return IsUnitInGroup(whichUnit, loaded)
@@ -71,19 +92,6 @@ private function CopyUnit takes unit whichUnit, real x, real y, real face return
     call SaveUnitHandle(h, GetHandleId(copy), KEY_SOURCE, whichUnit)
     
     return copy
-endfunction
-
-function IsTunnel takes integer unitTypeId returns boolean
-    if (unitTypeId == UNIT_TYPE_ID) then
-        return true
-    elseif (unitTypeId == UNIT_TYPE_ID_2) then
-        return true
-    endif
-    return false
-endfunction
-
-function IsUnitTunnel takes unit whichUnit returns boolean
-    return IsTunnel(GetUnitTypeId(whichUnit))
 endfunction
 
 private function FilterIsDifferentTunnel takes nothing returns boolean
@@ -235,7 +243,7 @@ private function TriggerFunctionUnload takes nothing returns nothing
         set source = GetCopySource(eventUnit)
         call SetUnloadPosition(source, GetUnitX(eventUnit), GetUnitY(eventUnit))
         call IssueTargetOrder(GetTunnel(source), "unload", source)
-        call ClearCopies(eventUnit)
+        call ClearCopies(source)
     endif
     set eventUnit = null
 endfunction
@@ -257,6 +265,10 @@ private function Init takes nothing returns nothing
     
     call TriggerRegisterAnyUnitEventBJ(constructionTrigger, EVENT_PLAYER_UNIT_CONSTRUCT_FINISH)
     call TriggerAddCondition(constructionTrigger, Condition(function TriggerConditionConstructed))
+
+    call AddTunnel(NERUBIAN_TUNNEL)
+    call AddTunnel(KOBOLD_TUNNEL)
+    call AddTunnel(GOBLIN_TUNNEL)
 endfunction
 
 private function RemoveUnitHook takes unit whichUnit returns nothing

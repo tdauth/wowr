@@ -87,6 +87,8 @@ private function Init takes nothing returns nothing
     call AddChange("Blood Elf and High Elf arcane sanctums are faith mines now.")
     call AddChange("Add function AddCustomUnitTypeOnEnterOnly to library CustomUnitTypes.")
     call AddChange("Units for profession Farmer are registered as custom unit types now.")
+    call AddChange("Goblin Tunnels work as tunnels now.")
+    call AddChange("Fix a bug in the Tunnel system.")
 
 static if (MAP_DEBUG_MODE_ENABLED) then
     call AddVersion("4.6")
