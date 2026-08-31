@@ -8,7 +8,7 @@ function GetNextUnitToSelect takes group g, player whichPlayer returns unit
     local boolean found = false
     if (max > 0) then
         loop
-            exitwhen (i == max)
+            exitwhen (i == max or result != null)
             set u = BlzGroupUnitAt(g, i)
             if (IsUnitSelected(u, whichPlayer)) then
                 set found = true
@@ -18,13 +18,13 @@ function GetNextUnitToSelect takes group g, player whichPlayer returns unit
             set u = null
             set i = i + 1
         endloop
-    
+
         // this happens if none of them is selected or the last one
         if (result == null) then
             set result = BlzGroupUnitAt(g, 0) // start at first
         endif
     endif
-    
+
     return result
 endfunction
 
