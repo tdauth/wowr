@@ -23,10 +23,14 @@
 library SaveCodeSystem requires WoWReforgedUtils, Ascii
 
 globals
-    // ASCII without space, \, " and ~. The character \ caused issues and was duplicated by Warcraft. The characters " and \ are not supported by FileIO:
-    constant string SAVE_CODE_DIGITS = "_Ci{o98%*rQaHA=cM>Pj]NTUq/u7y(-S!)hzpR:}DKLvBJXI4O[k@e53<FVftm,6dlZ&bY2^#nx'+wG|?s`E1$;.0gW"
+    // ASCII without space, \, ", ? and ~.
+    // The character \ caused issues and was duplicated by Warcraft.
+    // The characters " and \ are not supported by FileIO.
+    // The character ? is reserved as unknown character.
+    // The character ~ is reserved as separator:
+    constant string SAVE_CODE_DIGITS = "_Ci{o98%*rQaHA=cM>Pj]NTUq/u7y(-S!)hzpR:}DKLvBJXI4O[k@e53<FVftm,6dlZ&bY2^#nx'+wG|s`E1$;.0gW"
     constant string SAVE_CODE_SEGMENT_SEPARATOR = "~" // must not be part of SAVE_CODE_DIGITS
-    constant string SAVE_CODE_SYMBOL_UNKNOWN = "~" // must not be part of SAVE_CODE_DIGITS
+    constant string SAVE_CODE_SYMBOL_UNKNOWN = "?" // must not be part of SAVE_CODE_DIGITS and different than SAVE_CODE_SEGMENT_SEPARATOR
     constant boolean SAVE_CODE_COMPRESS_STRING_HASHS = true
     constant boolean SAVE_CODE_OBFUSCATE = true
 endglobals
