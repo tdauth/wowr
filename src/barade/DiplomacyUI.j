@@ -424,8 +424,8 @@ private function DestroyUI takes nothing returns nothing
                     set index = Index2D(row, column, bj_MAX_PLAYERS)
                     
                     if (rowPlayer != columnPlayer) then
-                        call BlzDestroyFrame(Cells[row])
-                        call BlzDestroyFrame(CellsTooltip[row])
+                        call BlzDestroyFrame(Cells[index])
+                        call BlzDestroyFrame(CellsTooltip[index])
                     endif
                 endif
                 set columnPlayer = null
