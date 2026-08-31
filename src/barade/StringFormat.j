@@ -35,8 +35,7 @@ struct AFormat
 
     /**
      * This text macro generates a new method for a specified argument type which can be used when formatting strings.
-     * Searches for the first type token \p TYPECHARS (in form of %<type char like i>) and replaces it by \p value.
-     * If none is found it searches for the next position token (in form of %1% or %2% ...) and replaces it by \p value.
+     * Searches for the next position token (in form of %1% or %2% ...) and replaces it by \p value.
      * \param NAME Name of the argument method (usually it is equal to its type char).
      * \param TYPE JASS/vJass type of the argument.
      * \param CONVERSION Conversion call from argument to string (like "I2S(value)").
