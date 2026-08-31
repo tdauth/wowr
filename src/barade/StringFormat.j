@@ -12,7 +12,7 @@ library StringFormat requires StringUtils
  * This structure has been inspired by <a href="http://www.boost.org/doc/libs/1_43_0/libs/format/index.html">Boost C++ Libraries projects's format module</a>.
  * Unfortunately vJass does not allow operator and method overloading.
  * \sa String, Format, tr, sc
- * \author Tamino Dauth
+ * \author Baradé
  */
 struct AFormat
     private integer m_position
@@ -45,14 +45,14 @@ struct AFormat
     //! textmacro AFormatMethod takes NAME, TYPE, CONVERSION, PARAMETERS
         public method $NAME$ takes $TYPE$ value $PARAMETERS$ returns thistype
             local string positionString = "%" + I2S(this.m_position + 1) + "%"
-            local integer index = IndexOfString(positionString, this.m_text)            
+            local integer index = IndexOfString(positionString, this.m_text)
             if (index != -1) then
                 set this.m_text = SubString(this.m_text, 0, index) + $CONVERSION$ + SubString(this.m_text, index + StringLength(positionString), StringLength(this.m_text))
                 set this.m_position = this.m_position + 1
             else
                 call BJDebugMsg("Format error in string \"" + this.m_text + "\" at position " + I2S(this.m_position) + " for token argument \"" + $CONVERSION$ + "\".")
             endif
-            
+
             return this
         endmethod
     //! endtextmacro
