@@ -262,7 +262,7 @@ private function Init takes nothing returns nothing
 endfunction
 
 function GetPlayerColorName takes player whichPlayer returns string
-    return StringCase(PlayerColorNames[GetPlayerId(whichPlayer)], false)
+    return StringCase(PlayerColorNames[GetHandleId(GetPlayerColor(whichPlayer))], false)
 endfunction
 
 function GetPlayerColorFromString takes string whichString returns playercolor
@@ -299,7 +299,7 @@ endfunction
 function GetForceFromString takes string whichString returns force
     local force f = CreateForce()
     local player p = null
-    if (whichString == "all" and whichString == "*" or whichString == "any") then
+    if (whichString == "all" or whichString == "*" or whichString == "any") then
         call ForceAddForce(f, GetPlayersAll())
     else
         set p = GetPlayerFromString(whichString)
