@@ -257,7 +257,7 @@ function HeroDropRandomItem takes unit hero returns item
     endif
     set owner = null
     if (counter > 0) then
-        set i = GetRandomInt(0, counter)
+        set i = GetRandomInt(0, counter - 1)
         return UnitRemoveItemFromSlot(heroes[i], slots[i])
     endif
 
@@ -496,7 +496,7 @@ function AddItemToBackpackForPlayer takes player whichPlayer, item whichItem ret
         set slotItem = UnitItemInSlot(Backpack[playerId], i)
         if (slotItem == null or (GetItemCharges(whichItem) > 0 and GetItemTypeId(whichItem) == GetItemTypeId(slotItem) and GetMaxStacksByItemTypeId(GetItemTypeId(whichItem)) >= GetItemCharges(slotItem) + GetItemCharges(whichItem))) then
             if (UnitAddItem(Backpack[playerId], whichItem)) then
-                call BackpackMessage(whichPlayer, Format(GetLocalizedString("BAG_ADDED")).s(GetItemName(whichItem)).i(i + 1).i(j + 1).result()) // Added %1% to backpack bag %2% by stacking it to slot %3%.
+                call BackpackMessage(whichPlayer, Format(GetLocalizedString("BAG_ADDED")).s(GetItemName(whichItem)).i(BackpackPageNumber[playerId] + 1).i(i + 1).result()) // Added %1% to backpack bag %2% by stacking it to slot %3%.
 
                 set whichItem = null
                 return true
@@ -758,7 +758,7 @@ function OrderBackpack takes player whichPlayer returns integer
             set itemTypeId1 = BackpackItemType[index1]
             set charges1 = BackpackItemCharges[index1]
             set maxCharges1 = GetMaxStacksByItemTypeId(itemTypeId1)
-            set doneWithCurrentSlot = itemTypeId1 != 0 and (charges1 == 0) or (charges1 >= maxCharges1) // stop if the slot is already full
+            set doneWithCurrentSlot = itemTypeId1 != 0 and ((charges1 == 0) or (charges1 >= maxCharges1)) // stop if the slot is already full
             set countEmptySlotsAfter = 0
             set remainingSlotsAfter = (bj_MAX_INVENTORY - j - 1) + IMaxBJ(0, (BACKPACK_MAX_PAGES - i - 1)) * bj_MAX_INVENTORY
             set k = i
@@ -955,7 +955,7 @@ function DropAllItemsNotFromProfessionForHero takes unit hero returns nothing
                 set j = 0
                 loop
                     exitwhen (j == max2)
-                    if (GetProfession(i).itemTypeId == GetItemTypeId(slotItem) and playerProfession1 != j and playerProfession2 != j and playerProfession3 != j) then
+                    if (GetProfession(j).itemTypeId == GetItemTypeId(slotItem) and playerProfession1 != j and playerProfession2 != j and playerProfession3 != j) then
                         call BackpackMessage(owner, Format(GetLocalizedString("DROPPING_ITEM_OF_OTHER_PROFESSION")).s(GetItemName(slotItem)).result())
                         call UnitRemoveItemFromSlot(hero, i)
                         exitwhen (true)
