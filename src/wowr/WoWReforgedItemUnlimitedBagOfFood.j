@@ -8,7 +8,10 @@ globals
 endglobals
 
 private function GetRandomId takes nothing returns integer
-    return ids[GetRandomInt(0, counter)]
+    if (counter == 0) then
+        return 0
+    endif
+    return ids[GetRandomInt(0, counter - 1)]
 endfunction
 
 function UnlimitedBagOfFood takes unit whichUnit returns nothing

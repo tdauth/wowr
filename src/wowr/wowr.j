@@ -123,6 +123,7 @@
 //! import "wowr/WoWReforgedSaveMaster.j"
 //! import "wowr/WoWReforgedSay.j"
 //! import "wowr/WoWReforgedSceptersShop.j"
+//! import "wowr/WoWReforgedSelfdestruct.j"
 //! import "wowr/WoWReforgedSkinDependencyEquivalents.j"
 //! import "wowr/WoWReforgedRandomSaveCode.j"
 //! import "wowr/WoWReforgedRespawn.j"
