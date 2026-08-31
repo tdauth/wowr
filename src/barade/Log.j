@@ -17,8 +17,6 @@ globals
     private integer callbackTriggersCounter = 0
     private player triggerLogPlayer = null
     private string triggerLogMessage = null
-
-    private string tmpMessage = ""
 endglobals
 
 function TriggerRegisterLogEvent takes trigger whichTrigger returns nothing
@@ -69,7 +67,7 @@ function GetLogMaximum takes player whichPlayer returns integer
 endfunction
 
 function SetLogMaximum takes player whichPlayer, integer maximum returns nothing
-    set logMaximum[GetPlayerId(whichPlayer)] = maximum
+    set logMaximum[GetPlayerId(whichPlayer)] = IMaxBJ(1, maximum)
 endfunction
 
 function GetLogEntry takes player whichPlayer, integer index returns string
@@ -143,30 +141,34 @@ private function DisplayTimedTextFromPlayerHook takes player toPlayer, real x, r
     call AddLog(toPlayer, message)
 endfunction
 
-private function ForForceAddLog takes nothing returns nothing
-    call AddLog(GetEnumPlayer(), tmpMessage)
+private function ForForceAddLog takes force f, string msg returns nothing
+    local player p = null
+    local integer i = 0
+    loop
+        exitwhen (i == bj_MAX_PLAYERS)
+        set p = Player(i)
+        if (IsPlayerInForce(p, f)) then
+            call AddLog(p, msg)
+        endif
+        set i = i + 1
+    endloop
 endfunction
 
 private function DisplayTextToForceHook takes force toForce, string message returns nothing
-    set tmpMessage = message
-    call ForForce(toForce, function ForForceAddLog)
+    call ForForceAddLog(toForce, message)
 endfunction
 
 private function DisplayTimedTextToForceHook takes force toForce, real duration, string message returns nothing
-    set tmpMessage = message
-    call ForForce(toForce, function ForForceAddLog)
+    call ForForceAddLog(toForce, message)
 endfunction
 
 private function QuestMessageBJHook takes force f, integer messageType, string message returns nothing
-    set tmpMessage = " "
-    call ForForce(f, function ForForceAddLog)
-    set tmpMessage = message
-    call ForForce(f, function ForForceAddLog)
+    call ForForceAddLog(f, " ")
+    call ForForceAddLog(f, message)
 endfunction
 
 private function BJDebugMsgHook takes string msg returns nothing
-    set tmpMessage = msg
-    call ForForce(GetPlayersAll(), function ForForceAddLog)
+    call ForForceAddLog(GetPlayersAll(), msg)
 endfunction
 
 private function GetChatMessageRecipient takes integer recipient returns string
@@ -187,8 +189,7 @@ endfunction
 // 2: "Observers"
 // 3+: "Private"
 private function BlzDisplayChatMessageHook takes player whichPlayer, integer recipient, string message returns nothing
-    set tmpMessage = GetChatMessageRecipient(recipient) + " " + GetPlayerNameColoredSimple(whichPlayer) + ": " + message
-    call ForForce(GetPlayersAll(), function ForForceAddLog)
+    call ForForceAddLog(GetPlayersAll(), GetChatMessageRecipient(recipient) + " " + GetPlayerNameColoredSimple(whichPlayer) + ": " + message)
 endfunction
 
 hook DisplayTextToPlayer DisplayTextToPlayerHook
@@ -202,31 +203,23 @@ hook BlzDisplayChatMessage BlzDisplayChatMessageHook
 
 static if (LOG_CINEMATIC_TRANSMISSIONS) then
 private function TransmissionFromUnitWithNameBJHook takes force toForce, unit whichUnit, string unitName, sound soundHandle, string message, integer timeType, real timeVal, boolean wait returns nothing
-    set tmpMessage = " "
-    call ForForce(toForce, function ForForceAddLog)
-    set tmpMessage = "|cffffcc00" + GetLocalizedString(unitName) + ":|r " + GetLocalizedString(message)
-    call ForForce(toForce, function ForForceAddLog)
+    call ForForceAddLog(toForce, " ")
+    call ForForceAddLog(toForce, "|cffffcc00" + GetLocalizedString(unitName) + ":|r " + GetLocalizedString(message))
 endfunction
 
 private function TransmissionFromUnitTypeWithNameBJHook takes force toForce, player fromPlayer, integer unitId, string unitName, location loc, sound soundHandle, string message, integer timeType, real timeVal, boolean wait returns nothing
-    set tmpMessage = " "
-    call ForForce(toForce, function ForForceAddLog)
-    set tmpMessage = "|cffffcc00" + GetLocalizedString(GetObjectName(unitId)) + ":|r " + GetLocalizedString(message)
-    call ForForce(toForce, function ForForceAddLog)
+    call ForForceAddLog(toForce, " ")
+    call ForForceAddLog(toForce, "|cffffcc00" + GetLocalizedString(GetObjectName(unitId)) + ":|r " + GetLocalizedString(message))
 endfunction
 
 private function SetCinematicSceneHook takes integer portraitUnitId, playercolor color, string speakerTitle, string text, real sceneDuration, real voiceoverDuration returns nothing
-    set tmpMessage = " "
-    call ForForce(GetPlayersAll(), function ForForceAddLog)
-    set tmpMessage = "|cffffcc00" + speakerTitle + ":|r " + GetLocalizedString(text)
-    call ForForce(GetPlayersAll(), function ForForceAddLog)
+    call ForForceAddLog(GetPlayersAll(), " ")
+    call ForForceAddLog(GetPlayersAll(), "|cffffcc00" + speakerTitle + ":|r " + GetLocalizedString(text))
 endfunction
 
 private function SetCinematicSceneBJHook takes sound soundHandle, integer portraitUnitId, playercolor color, string speakerTitle, string text, real sceneDuration, real voiceoverDuration returns nothing
-    set tmpMessage = " "
-    call ForForce(GetPlayersAll(), function ForForceAddLog)
-    set tmpMessage = "|cffffcc00" + speakerTitle + ":|r " + GetLocalizedString(text)
-    call ForForce(GetPlayersAll(), function ForForceAddLog)
+    call ForForceAddLog(GetPlayersAll(), " ")
+    call ForForceAddLog(GetPlayersAll(), "|cffffcc00" + speakerTitle + ":|r " + GetLocalizedString(text))
 endfunction
 
 hook TransmissionFromUnitWithNameBJ TransmissionFromUnitWithNameBJHook
