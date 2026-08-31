@@ -181,7 +181,7 @@ private function GetButtonSlotIcon takes unit shop, integer index returns string
 endfunction
 
 private function GetMaxPageIndex takes integer playerId returns integer
-     return GetPagedButtonsNonSpacerButtonsCount(UIShop[playerId]) / MAX_SLOTS
+     return (GetPagedButtonsNonSpacerButtonsCount(UIShop[playerId]) - 1) / MAX_SLOTS
 endfunction
 
 private function SetSlotChargesVisible takes integer i, boolean visible returns nothing
@@ -730,6 +730,7 @@ public function CreateUI takes nothing returns nothing
         set SlotTooltipOffTrigger[i] = CreateTrigger()
         call BlzTriggerRegisterFrameEvent(SlotTooltipOffTrigger[i], SlotFrame[i], FRAMEEVENT_MOUSE_LEAVE)
         call TriggerAddAction(SlotTooltipOffTrigger[i], function LeaveItemFunction)
+        set handleId = GetHandleId(SlotTooltipOffTrigger[i])
         call SaveInteger(h, handleId, 0, i)
 
         // TODO Mouse down and mouse up to drag & drop to another bag or switch or do it like Warcraft's inventory with right click and left click. Add the icon of the item to the mouse cursor. If you click on the map it is dropped, if you click on the inventory it is dropped there.
