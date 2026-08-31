@@ -87,8 +87,17 @@ private function Init takes nothing returns nothing
     call AddChange("Blood Elf and High Elf arcane sanctums are faith mines now.")
     call AddChange("Add function AddCustomUnitTypeOnEnterOnly to library CustomUnitTypes.")
     call AddChange("Units for profession Farmer are registered as custom unit types now.")
+    call AddChange("QueueUI uses functions from other libraries now.")
+    call AddChange("Fix bugs in WoWReforgedBackpacks.")
+    call AddChange("Fix bugs in PagedButtons.")
+    call AddChange("Fix bugs in StringUtils.")
+    call AddChange("Fix bugs in Log.")
+    call AddChange("Fix bugs in PlayerColorUtils.")
+    call AddChange("Fix bugs in DiplomacyUI.")
+    call AddChange("GetNextUnitToSelect returns the actual next selected unit now and not the last one.")
+    call AddChange("Save codes use the character ? as unknown character now.")
+    call AddChange("Fix bugs in Tunnel.")
     call AddChange("Goblin Tunnels work as tunnels now.")
-    call AddChange("Fix a bug in the Tunnel system.")
 
 static if (MAP_DEBUG_MODE_ENABLED) then
     call AddVersion("4.6")
