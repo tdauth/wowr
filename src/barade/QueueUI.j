@@ -1,4 +1,4 @@
-library QueueUI initializer Init requires Queue, OnStartGame, optional QueueUIResearches, optional FrameLoader
+library QueueUI initializer Init requires Queue, MathUtils, CameraUtils, SelectionUtils, OnStartGame, optional QueueUIResearches, optional FrameLoader
 
 globals
     // Set to false if the TOC file should not be loaded automatically.
@@ -108,61 +108,6 @@ endfunction
 
 private function UpdateUI takes nothing returns nothing
     call ForForce(GetPlayersAll(), function ForForceUpdateUI)
-endfunction
-
-private function GetNextUnitToSelect takes group g,player whichPlayer returns unit
-    local integer max = BlzGroupGetSize(g)
-    local integer i= 0
-    local unit u= null
-    local unit result= null
-    local boolean found = false
-    if (max > 0) then
-        loop
-            exitwhen (i == max)
-            set u = BlzGroupUnitAt(g, i)
-            if (IsUnitSelected(u, whichPlayer)) then
-                set found = true
-            elseif (found) then
-                set result = u
-            endif
-            set u = null
-            set i = i + 1
-        endloop
-    
-        // this happens if none of them is selected or the last one
-        if (result == null) then
-            set result = BlzGroupUnitAt(g, 0) // start at first
-        endif
-    endif
-    
-    return result
-endfunction
-
-private function DistanceBetweenCoordinates takes real x1, real y1, real x2, real y2 returns real
-    local real dx = (x2 - x1)
-    local real dy = (y2 - y1)
-
-    return SquareRoot(dx * dx + dy * dy)
-endfunction
-
-private function SmartCameraPanToUnit takes player whichPlayer,unit target,real duration returns nothing
-    local real dist
-    local real x = GetUnitX(target)
-    local real y = GetUnitY(target)
-    if (GetLocalPlayer() == whichPlayer) then
-        // Use only local code (no net traffic) within this block to avoid desyncs.
-
-        set dist = DistanceBetweenCoordinates(x, y, GetCameraTargetPositionX(), GetCameraTargetPositionY())
-        if (dist >= bj_SMARTPAN_TRESHOLD_SNAP) then
-            // If the user is too far away, snap the camera.
-            call PanCameraToTimed(x, y, 0)
-        elseif (dist >= bj_SMARTPAN_TRESHOLD_PAN) then
-            // If the user is moderately close, pan the camera.
-            call PanCameraToTimed(x, y, duration)
-        else
-            // User is close enough, so don't touch the camera.
-        endif
-    endif
 endfunction
 
 private function SelectNextSource takes player whichPlayer, integer slot returns nothing
