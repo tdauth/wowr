@@ -1018,9 +1018,9 @@ private function RefreshMaxPagesEx takes unit shop, integer maxPages returns not
         set i = oldMaxPages
         loop
             exitwhen (i < maxPages)
-            if (s.pages[i] == 0) then
-                set s.pages[i] = 0
+            if (s.pages[i] != 0) then
                 call s.pages[i].destroy()
+                set s.pages[i] = 0
             endif
             set i = i - 1
         endloop
@@ -1042,14 +1042,14 @@ endfunction
 function RemovePagedButtonsIndex takes unit shop, integer index returns boolean
     local Shop s = GetPagedButtonsShop(shop)
     local Type t = 0
-    if (s != 0 and index >= 0 and index <= s.buttonsCount) then
+    if (s != 0 and index >= 0 and index < s.buttonsCount) then
         set t = s.buttons[index]
         if (t.shown) then
             if (t.whichType == BUTTON_TYPE_UNIT) then
                 call RemoveUnitFromStock(shop, SlotType(t).id)
             elseif (t.whichType == BUTTON_TYPE_ITEM) then
                 call RemoveItemFromStock(shop, SlotType(t).id)
-            elseif (t.whichType == BUTTON_TYPE_ITEM) then
+            elseif (t.whichType == BUTTON_TYPE_ABILITY) then
                 call UnitRemoveAbility(shop, SlotType(t).id)
             endif
         endif
