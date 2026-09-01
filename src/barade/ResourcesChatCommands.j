@@ -50,15 +50,17 @@ endfunction
 
 function GetResources takes nothing returns string
     local string msg = "Resources: "
+    local integer counter = 0
     local integer max = GetMaxResources()
     local integer i = 0
     loop
         exitwhen (i == max)
         if (GetResource(i) != Resources_FOOD and GetResource(i) != Resources_FOOD_MAX) then
-            if (i > 0) then
+            if (counter > 0) then
                 set msg = msg + ", "
             endif
             set msg = msg + I2S(i + 1) + " " + GetResourceName(GetResource(i))
+            set counter = counter + 1
         endif
         set i = i + 1
     endloop
@@ -100,8 +102,8 @@ function GetResourceFromString takes string s returns Resource
         set i = i + 1
     endloop
     
-    if (i >= 1 and i <= max) then
-        return GetResource(i - 1)
+    if (index >= 1 and index <= max) then
+        return GetResource(index - 1)
     endif
     
     return 0
@@ -155,7 +157,7 @@ private function AskChatCommand takes player whichPlayer, string msg returns not
                         if (a <= GetPlayerResource(f, r)) then
                             call AddPlayerResource(whichPlayer, r, a)
                             call RemovePlayerResource(f, r, a)
-                            call DisplayTimedTextToPlayer(whichPlayer, 0.0, 0.0, INFO_DURATION, Format(GetLocalizedString("RECEIVED_RESOURCES_FROM")).i(a).s(GetResourceName(r)).s(GetPlayerNameColored(whichPlayer)).result())
+                            call DisplayTimedTextToPlayer(whichPlayer, 0.0, 0.0, INFO_DURATION, Format(GetLocalizedString("RECEIVED_RESOURCES_FROM")).i(a).s(GetResourceName(r)).s(GetPlayerNameColored(f)).result())
                         else
                             call SimError(whichPlayer, Format(GetLocalizedString("TARGET_PLAYER_HAS_NOT_ENOUGH")).s(GetResourceName(r)).result())
                         endif
@@ -203,7 +205,7 @@ private function SellChatCommand takes player whichPlayer, string msg returns no
                     call SimError(whichPlayer, Format(GetLocalizedString("AMOUNT_MUST_BE_POSITIVE")).result())
                 endif
             else
-                call SimError(whichPlayer, GetLocalizedString("INVALID_PLAYER"))
+                call SimError(whichPlayer, GetLocalizedString("INVALID_RESOURCE"))
             endif
         else
             call SimError(whichPlayer, GetLocalizedString("RESOURCE_CANNOT_BE_TRANSFERRED"))
@@ -260,7 +262,7 @@ private function TriggerConditionChat takes nothing returns boolean
         set i = 0
         loop
             exitwhen (i == GetMaxResources())
-            if (StringStartsWith(msg, "-" + GetResourceId(i))) then
+            if (StringStartsWith(msg, "-" + GetResourceId(GetResource(i)))) then
                 call GiveChatCommand(GetTriggerPlayer(), msg)
             endif
             set i = i + 1
