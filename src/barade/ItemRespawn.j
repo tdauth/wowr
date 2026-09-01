@@ -1,6 +1,6 @@
 library ItemRespawn initializer Init
 
-// Baradé's Item Respawn 1.2
+// Baradé's Item Respawn 1.3
 //
 // Allows picked up or destroyed items to respawn after some time.
 //
@@ -39,7 +39,7 @@ library ItemRespawn initializer Init
 // function GetItemRespawnCounter takes nothing returns integer
 //
 // Returns the maximum number of item respawn indices. Note that not every index in between has to be valid. This function might help integer
-// loops to go through all existing item respawns. Please use IsRespawnItemValid to check if an index in between 0 and the return value of
+// loops to go through all existing item respawns. Please use IsRespawnItemValid to check if an index in between 1 and the return value of
 // this function is actually used.
 //
 // function IsRespawnItemValid takes integer index returns boolean
@@ -123,7 +123,7 @@ globals
     public constant integer ITEM_RESPAWN_TYPE_RANDOM_TYPE_AND_LEVEL = 3
 
     private integer respawnItemCounter = 0
-    private integer respawnItemFreeIndex = 0
+    private integer respawnItemFreeIndex = 1
     private boolean array respawnItemIsValid
     private integer array respawnItemType
     private item array respawnItemItem
@@ -223,10 +223,7 @@ function GetItemRespawnCounter takes nothing returns integer
 endfunction
 
 function IsRespawnItemValid takes integer index returns boolean
-    if (index < 0) then
-        return false
-    endif
-    return respawnItemIsValid[index]
+    return index > 0 and respawnItemIsValid[index]
 endfunction
 
 function RespawnItem takes integer index returns boolean
@@ -251,7 +248,7 @@ function RespawnItem takes integer index returns boolean
 endfunction
 
 function RespawnAllItems takes nothing returns nothing
-    local integer i = 0
+    local integer i = 1
     loop
         exitwhen (i >= respawnItemCounter)
         if (IsRespawnItemValid(i) and respawnItemItem[i] == null) then
@@ -262,7 +259,7 @@ function RespawnAllItems takes nothing returns nothing
 endfunction
 
 function PauseAllRespawnItems takes nothing returns nothing
-    local integer i = 0
+    local integer i = 1
     loop
         exitwhen (i >= respawnItemCounter)
         if (IsRespawnItemValid(i) and respawnItemItem[i] == null) then
@@ -273,7 +270,7 @@ function PauseAllRespawnItems takes nothing returns nothing
 endfunction
 
 function ResumeAllRespawnItems takes nothing returns nothing
-    local integer i = 0
+    local integer i = 1
     loop
         exitwhen (i >= respawnItemCounter)
         if (IsRespawnItemValid(i) and respawnItemItem[i] == null) then
@@ -310,9 +307,11 @@ private function RefreshDeathTrigger takes integer index returns nothing
         set respawnItemDeathTrigger[index] = null
     endif
 
-    set respawnItemDeathTrigger[index] = CreateTrigger()
-    call TriggerRegisterDeathEvent(respawnItemDeathTrigger[index], respawnItemItem[index])
-    call TriggerAddAction(respawnItemDeathTrigger[index], function TriggerActionDeath)
+    if (respawnItemItem[index] != null) then
+        set respawnItemDeathTrigger[index] = CreateTrigger()
+        call TriggerRegisterDeathEvent(respawnItemDeathTrigger[index], respawnItemItem[index])
+        call TriggerAddAction(respawnItemDeathTrigger[index], function TriggerActionDeath)
+    endif
 endfunction
 
 private function RefreshDeathTriggerEvaluate takes nothing returns boolean
@@ -420,6 +419,12 @@ function RemoveRespawnItem takes integer index returns boolean
         call PauseTimer(respawnItemTimer[index])
         call FlushChildHashtable(respawnItemHashTable, GetHandleId(respawnItemTimer[index]))
         call DestroyTimer(respawnItemTimer[index])
+        set respawnItemTimer[index] = null
+
+        if (respawnItemDeathTrigger[index] != null) then
+            call DestroyTrigger(respawnItemDeathTrigger[index])
+            set respawnItemDeathTrigger[index] = null
+        endif
 
         set respawnItemFreeIndex = index
 
@@ -466,7 +471,7 @@ function GetRespawnItemX takes integer index returns real
 endfunction
 
 function SetRespawnItemY takes integer index, real y returns nothing
-    set respawnItemX[index] = y
+    set respawnItemY[index] = y
 endfunction
 
 function GetRespawnItemY takes integer index returns real
@@ -474,7 +479,25 @@ function GetRespawnItemY takes integer index returns real
 endfunction
 
 function SetRespawnItem takes integer index, item whichItem returns nothing
+    local integer handleId = 0
+
+    if (respawnItemItem[index] != null) then
+        call ClearItemRespawnIndex(GetHandleId(respawnItemItem[index]))
+    endif
+
     set respawnItemItem[index] = whichItem
+
+    if (whichItem != null) then
+        set handleId = GetHandleId(whichItem)
+        set respawnItemHandleId[index] = handleId
+        set respawnItemItemTypeId[index] = GetItemTypeId(whichItem)
+        call SaveInteger(respawnItemHashTable, handleId, 0, index)
+    else
+        set respawnItemHandleId[index] = 0
+        set respawnItemItemTypeId[index] = 0
+    endif
+
+    call RefreshDeathTrigger(index)
 endfunction
 
 function GetRespawnItem takes integer index returns item
@@ -539,6 +562,9 @@ endfunction
 hook RemoveItem RemoveItemCleanup
 
 // Change Log:
+//
+// 1.3 2026-09-01:
+// - Fix multiple bugs.
 //
 // 1.2 2025-04-18:
 // - Add function PauseAllRespawnItems.
