@@ -29,6 +29,7 @@ private function Reset takes nothing returns nothing
     call TimerStart(cooldownTimer, 60.0, false, null)
     call TimerStart(playerCooldownTimer[GetPlayerId(targetPlayer)], 60.0, false, null)
     set yesCounter = 0
+    set targetPlayer = null
     call ForForce(GetAllPlayingUsers(), function EnumReset)
 endfunction
 
@@ -43,6 +44,7 @@ private function TriggerConditionStart takes nothing returns boolean
         set target = GetPlayerFromString(StringTokenEnteredChatMessage(1))
         if (target != GetTriggerPlayer() and GetMapAllowConfigureAIPlayer(target) and GetPlayerSlotState(target) == PLAYER_SLOT_STATE_PLAYING) then
             if (TimerGetRemaining(playerCooldownTimer[GetPlayerId(target)]) <= 0.0) then
+                set targetPlayer = target
                 set playerHasVoted[GetPlayerId(GetTriggerPlayer())] = true
                 set yesCounter = yesCounter + 1
                 call TimerStart(expireTimer, 30.0, false, function TimerFunctionExpire)
@@ -51,13 +53,13 @@ private function TriggerConditionStart takes nothing returns boolean
                 call TimerDialogDisplay(expireTimerDialog, true)
                 call DisplayTextToForce(GetAllPlayingUsers(), Format(GetLocalizedStringSafe("VOTEKICK_STARTED_AGAINST_X")).s(GetPlayerNameColored(GetTriggerPlayer())).s(GetPlayerNameColored(target)).result())
             else
-                call SimError(GetTriggerPlayer(), Format(GetLocalizedStringSafe("VOTEKICK_COOLDOWN")).s(FormatTime(TimerGetRemaining(cooldownTimer))).result())
+                call SimError(GetTriggerPlayer(), Format(GetLocalizedStringSafe("VOTEKICK_COOLDOWN")).s(FormatTime(TimerGetRemaining(playerCooldownTimer[GetPlayerId(target)]))).result())
             endif
         else
             call SimError(GetTriggerPlayer(), Format(GetLocalizedStringSafe("VOTEKICK_NOT_ALLOWED")).s(GetPlayerNameColored(target)).result())
         endif
     else
-        call SimError(GetTriggerPlayer(), Format(GetLocalizedStringSafe("VOTEKICK_COOLDOWN")).s(FormatTime(TimerGetRemaining(playerCooldownTimer[GetPlayerId(GetTriggerPlayer())]))).result())
+        call SimError(GetTriggerPlayer(), Format(GetLocalizedStringSafe("VOTEKICK_COOLDOWN")).s(FormatTime(TimerGetRemaining(cooldownTimer))).result())
     endif
     return false
 endfunction
@@ -65,6 +67,7 @@ endfunction
 private function TriggerConditionYes takes nothing returns boolean
     if (TimerGetRemaining(expireTimer) > 0.0) then
         if (not playerHasVoted[GetPlayerId(GetTriggerPlayer())]) then
+            set playerHasVoted[GetPlayerId(GetTriggerPlayer())] = true
             set yesCounter = yesCounter + 1
             if (yesCounter >= GetAllPlayingUsersCount() / 2) then
                 call DisplayTextToForce(GetAllPlayingUsers(), Format(GetLocalizedStringSafe("X_HAS_BEEN_KICKED")).s(GetPlayerNameColored(targetPlayer)).result())
