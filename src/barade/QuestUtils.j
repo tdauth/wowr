@@ -20,12 +20,32 @@ function QuestMessageForPlayer takes player whichPlayer, integer messageType, st
     set f = null
 endfunction
 
+function GetQuestItemIndex takes quest whichQuest, questitem whichQuestItem returns integer
+        local integer handleId = GetHandleId(whichQuest)
+        local integer counter = LoadInteger(h, handleId, KEY_COUNTER)
+        local integer i = 0
+        local questitem existing = null
+        loop
+            exitwhen (i >= counter)
+            set existing = LoadQuestItemHandle(h, handleId, i)
+            if (existing == whichQuestItem) then
+                return i
+            endif
+            set i = i + 1
+        endloop
+        return -1
+endfunction
+
 function AddQuestItemToQuest takes quest whichQuest, questitem whichQuestItem returns integer
     local integer handleId = GetHandleId(whichQuest)
     local integer counter = LoadInteger(h, handleId, KEY_COUNTER)
-    call SaveQuestItemHandle(h, handleId, counter, whichQuestItem)
-    call SaveInteger(h, handleId, KEY_COUNTER, counter + 1)
-    return counter
+    local integer index = GetQuestItemIndex(whichQuest, whichQuestItem)
+    if (index == -1) then
+        call SaveQuestItemHandle(h, handleId, counter, whichQuestItem)
+        call SaveInteger(h, handleId, KEY_COUNTER, counter + 1)
+        set index = counter
+    endif
+    return index
 endfunction
 
 function AddLastQuestItemToLastQuest takes nothing returns integer
@@ -64,28 +84,44 @@ function QuestItemGetDescription takes questitem whichQuestItem returns string
     return LoadStr(h, GetHandleId(whichQuestItem), KEY_DESCRIPTION)
 endfunction
 
-function QuestSetTitleHook takes quest whichQuest, string title returns nothing
+private function QuestSetTitleHook takes quest whichQuest, string title returns nothing
     call SaveStr(h, GetHandleId(whichQuest), KEY_TITLE, title)
 endfunction
 
-function QuestSetDescriptionHook takes quest whichQuest, string description returns nothing
+private function QuestSetDescriptionHook takes quest whichQuest, string description returns nothing
     call SaveStr(h, GetHandleId(whichQuest), KEY_DESCRIPTION, description)
 endfunction
 
-function QuestItemSetDescriptionHook takes questitem whichQuestItem, string description returns nothing
+private function QuestItemSetDescriptionHook takes questitem whichQuestItem, string description returns nothing
     call SaveStr(h, GetHandleId(whichQuestItem), KEY_DESCRIPTION, description)
 endfunction
 
-function DestroyQuestHook takes quest whichQuest returns nothing
-    call FlushChildHashtable(h, GetHandleId(whichQuest))
+private function DestroyQuestHook takes quest whichQuest returns nothing
+    local integer handleId = GetHandleId(whichQuest)
+    local integer i = 0
+    local integer max = LoadInteger(h, handleId, KEY_COUNTER)
+    local questitem qi = null
+
+    loop
+        exitwhen (i >= max)
+        set qi = LoadQuestItemHandle(h, handleId, i)
+        if (qi != null) then
+            call FlushChildHashtable(h, GetHandleId(qi))
+            call DestroyQuestItem(qi)
+            set qi = null
+        endif
+        set i = i + 1
+    endloop
+
+    call FlushChildHashtable(h, handleId)
 endfunction
 
-function CreateQuestBJHook takes integer questType, string title, string description, string iconPath returns nothing
+private function CreateQuestBJHook takes integer questType, string title, string description, string iconPath returns nothing
     set lastQuestTitle = title
     set lastQuestDescription = description
 endfunction
 
-function GetLastCreatedQuestBJHook takes nothing returns nothing
+private function GetLastCreatedQuestBJHook takes nothing returns nothing
     if (not HaveSavedString(h, GetHandleId(bj_lastCreatedQuest), KEY_TITLE)) then
         call QuestSetTitleHook(bj_lastCreatedQuest, lastQuestTitle)
     endif
@@ -94,12 +130,12 @@ function GetLastCreatedQuestBJHook takes nothing returns nothing
     endif
 endfunction
 
-function CreateQuestItemBJHook takes quest whichQuest, string description returns nothing
+private function CreateQuestItemBJHook takes quest whichQuest, string description returns nothing
     set lastQuestForQuestItem = whichQuest
     set lastQuestItemDescription = description
 endfunction
 
-function UpdateLastQuestItem takes nothing returns nothing
+private function GetLastCreatedQuestItemBJHook takes nothing returns nothing
     call QuestItemSetDescriptionHook(bj_lastCreatedQuestItem, lastQuestItemDescription)
     call AddQuestItemToQuest(lastQuestForQuestItem, bj_lastCreatedQuestItem)
 endfunction
@@ -115,6 +151,6 @@ hook DestroyQuestBJ DestroyQuestHook
 hook CreateQuestBJ CreateQuestBJHook
 hook GetLastCreatedQuestBJ GetLastCreatedQuestBJHook
 hook CreateQuestItemBJ CreateQuestItemBJHook
-hook GetLastCreatedQuestItemBJ UpdateLastQuestItem
+hook GetLastCreatedQuestItemBJ GetLastCreatedQuestItemBJHook
 
 endlibrary
