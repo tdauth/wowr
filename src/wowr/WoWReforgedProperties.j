@@ -7,11 +7,11 @@ globals
     public constant integer SELECT_HERO_ABILITY_ID = 'Aneu'
 
     private trigger purchaseTrigger = CreateTrigger()
-    
+
     private Property array properties
     private integer propertiesCounter = 0
-    
-    private group properiesGroup = CreateGroup()
+
+    private group propertiesGroup = CreateGroup()
     private hashtable h = InitHashtable()
     private timer resourcesTimer = CreateTimer()
     private boolean resourcesTimerStarted = false
@@ -21,7 +21,7 @@ endglobals
 struct Property
     integer unitTypeId
     integer purchaseUnitTypeId
-    integer resource
+    Resource resource
     integer soldRace
     boolean shipyard
 endstruct
@@ -50,37 +50,37 @@ function PlayerOwnsPropertyOfRace takes player whichPlayer, integer whichRace re
     if (whichRace == udg_RaceNone) then
         return true
     endif
-    
-    set max = BlzGroupGetSize(properiesGroup)
+
+    set max = BlzGroupGetSize(propertiesGroup)
     loop
         exitwhen (i == max)
-        set whichUnit = BlzGroupUnitAt(properiesGroup, i)
+        set whichUnit = BlzGroupUnitAt(propertiesGroup, i)
         set index = GetPropertyIndex(whichUnit)
-        if (index != -1 and GetProperty(index).soldRace == whichRace) then
+        if (index != -1 and GetOwningPlayer(whichUnit) == whichPlayer and GetProperty(index).soldRace == whichRace) then
             return true
         endif
         set whichUnit = null
         set i = i + 1
     endloop
-    
+
     return false
 endfunction
 
 function PropertyAllowsItemTypeId takes player whichPlayer, integer whichRace, integer itemTypeId returns boolean
     local integer t = GetRaceObjectType(whichRace, itemTypeId)
-    
+
     if (t == RACE_OBJECT_TYPE_NONE) then
         return true
     elseif (t == RACE_OBJECT_TYPE_SCEPTER_ITEM) then
         return false
-    elseif (t == RACE_OBJECT_TYPE_TIER_1_ITEM) then    
+    elseif (t == RACE_OBJECT_TYPE_TIER_1_ITEM) then
         return false
-    elseif (t == RACE_OBJECT_TYPE_TIER_2_ITEM) then    
+    elseif (t == RACE_OBJECT_TYPE_TIER_2_ITEM) then
         return false
-    elseif (t == RACE_OBJECT_TYPE_TIER_3_ITEM) then    
+    elseif (t == RACE_OBJECT_TYPE_TIER_3_ITEM) then
         return false
     endif
-    
+
     return PlayerOwnsPropertyOfRace(whichPlayer, GetObjectRace(itemTypeId))
 endfunction
 
@@ -105,17 +105,17 @@ function IsUnitProperty takes unit whichUnit returns boolean
     return IsProperty(GetUnitTypeId(whichUnit))
 endfunction
 
-private function AddProperty takes integer unitTypeId, integer purchaseUnitTypeId, integer resource, integer soldRace, boolean shipyard returns Property
+private function AddProperty takes integer unitTypeId, integer purchaseUnitTypeId, Resource resource, integer soldRace, boolean shipyard returns Property
     local Property property = Property.create()
     set property.unitTypeId = unitTypeId
     set property.purchaseUnitTypeId = purchaseUnitTypeId
     set property.resource = resource
     set property.soldRace = soldRace
     set property.shipyard = shipyard
-    
+
     set properties[propertiesCounter] = property
     set propertiesCounter = propertiesCounter + 1
-    
+
     return property
 endfunction
 
@@ -152,17 +152,17 @@ endfunction
 
 private function PurchaseProperty takes integer index, unit whichUnit, player whichPlayer returns nothing
     local integer playerId = GetPlayerId(whichPlayer)
-    
+
     call QuestMessageBJ(bj_FORCE_PLAYER[playerId], bj_QUESTMESSAGE_UNITACQUIRED, Format(GetLocalizedString("PURCHASED_PROPERTY_X")).s(GetUnitName(whichUnit)).result())
-    
+
     call GroupAddUnit(purchasedProperties, whichUnit)
-    
+
     call SetUnitOwner(whichUnit, whichPlayer, true)
-    
+
     call ResearchAllForPlayer(whichPlayer, GetProperty(index).soldRace)
-    
+
     call RemoveUnitFromStock(whichUnit, GetProperty(index).purchaseUnitTypeId)
-    
+
     call EnablePagedButtons(whichUnit)
     call SetPagedButtonsSlotsPerPage(whichUnit, 7)
     call ClearGeneratedIds()
@@ -189,18 +189,18 @@ private function PurchaseProperty takes integer index, unit whichUnit, player wh
     call AddUnitType(index, whichUnit, RACE_OBJECT_TYPE_WORKSHOP_4)
     call AddUnitType(index, whichUnit, RACE_OBJECT_TYPE_TAUREN)
     call AddUnitType(index, whichUnit, RACE_OBJECT_TYPE_SHADE)
-    
+
     if (GetProperty(index).shipyard) then
         call AddUnitType(index, whichUnit, RACE_OBJECT_TYPE_TRANSPORT_SHIP)
         call AddUnitType(index, whichUnit, RACE_OBJECT_TYPE_FRIGATE)
         call AddUnitType(index, whichUnit, RACE_OBJECT_TYPE_BATTLESHIP)
         call AddUnitType(index, whichUnit, RACE_OBJECT_TYPE_SHIP_SPECIAL_1)
         call AddUnitType(index, whichUnit, RACE_OBJECT_TYPE_SHIP_SPECIAL_2)
-        
+
         call AddPagedButtonsUnitType(whichUnit, GNOMISH_SUBMARINE)
         call AddPagedButtonsUnitType(whichUnit, ENGINEER_SHIP)
     endif
-    
+
     call NextPagedButtonsPage(whichUnit, GetLocalizedString("PAGE_TITLE_BUILDINGS"))
     call AddItemType(index, whichUnit, RACE_OBJECT_TYPE_FARM_ITEM)
     call AddItemType(index, whichUnit, RACE_OBJECT_TYPE_ALTAR_ITEM)
@@ -224,10 +224,10 @@ endfunction
 
 function PingProperties takes player whichPlayer returns nothing
     local integer i = 0
-    local integer max = BlzGroupGetSize(properiesGroup)
+    local integer max = BlzGroupGetSize(propertiesGroup)
     loop
         exitwhen (i >= max)
-        call PingUnitForPlayer(BlzGroupUnitAt(properiesGroup, i), whichPlayer)
+        call PingUnitForPlayer(BlzGroupUnitAt(propertiesGroup, i), whichPlayer)
         set i = i + 1
     endloop
 endfunction
@@ -252,7 +252,7 @@ private function TriggerActionPurchase takes nothing returns nothing
     local Property p = GetProperty(index)
     if (index != -1) then
         call RemoveUnit(GetSoldUnit())
-        
+
         if (PlayerHasUnlocked(owner, p.unitTypeId)) then
             if (PlayerHasUnlocked(owner, p.purchaseUnitTypeId)) then
                 if (PlayerHasFaction(owner, GetRaceTeam(p.soldRace)) or udg_UnlockedAll) then
@@ -271,7 +271,7 @@ private function TriggerActionPurchase takes nothing returns nothing
 endfunction
 
 function AddUnitProperty takes unit whichUnit, integer index returns nothing
-    call GroupAddUnit(properiesGroup, whichUnit)
+    call GroupAddUnit(propertiesGroup, whichUnit)
     call SaveInteger(h, GetHandleId(whichUnit), 0, index)
     call UnitAddAbility(whichUnit, 'Asud')
     call UnitAddAbility(whichUnit, SELECT_UNIT_ABILITY_ID)
