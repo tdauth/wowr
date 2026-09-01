@@ -56,7 +56,7 @@ function VoteGetTitle takes integer vote returns string
 endfunction
 
 function VoteGetDefaultChoiceChatCommand takes integer vote returns string
-    return VoteChoicesChatCommands[VoteDefaultChoice[vote]]
+    return VoteChoicesChatCommands[VoteChoiceIndex(VoteDefaultChoice[vote], vote)]
 endfunction
 
 private function TimerDialogDisplayForForce takes boolean show, timerdialog whichDialog, force whichForce returns nothing
@@ -209,7 +209,7 @@ private function VoteRecalculateAllChoices takes integer vote, boolean expired r
     if (votedChoice != -1) then
         call PauseTimer(VoteTimer[vote])
         call TimerDialogDisplayForForce(false, VoteTimerDialog[vote], VotePlayers[vote])
-        call ExecuteCallbacks(vote, votedChoice, maxChoiceVotes)
+        call ExecuteCallbacks(vote, votedChoice, votedVotes)
         call VoteResetVotes(vote)
         set VoteIsRunning[vote] = false
     elseif (expired) then
