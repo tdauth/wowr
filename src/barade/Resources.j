@@ -144,7 +144,6 @@ struct Resource
         set this.id = id
         set this.name = name
         set this.transferable = transferable
-        set this.goldExchangeRate = goldExchangeRate
         set thistype.resources[thistype.resourcesCount] = this
         set thistype.resourcesCount = thistype.resourcesCount + 1
         return this
@@ -188,7 +187,7 @@ function GetResourceId takes Resource resource returns string
 endfunction
 
 function SetResourceName takes Resource resource, string name returns nothing
-    set resource.name = resource.name
+    set resource.name = name
 endfunction
 
 function GetResourceName takes Resource resource returns string
@@ -324,7 +323,7 @@ endfunction
 
 function GivePlayerResource takes player from, player to, Resource resource, integer amount, real cost returns integer
     local integer actualAmount = R2I(I2R(amount) * cost)
-    set actualAmount = IMaxBJ(GetPlayerResource(from, resource), actualAmount)
+    set actualAmount = IMinBJ(GetPlayerResource(from, resource), actualAmount)
     call RemovePlayerResource(from, resource, actualAmount)
     call AddPlayerResource(to, resource, actualAmount)
     return actualAmount
@@ -709,7 +708,7 @@ endfunction
 function ExecuteDeathCallbacks takes unit whichUnit returns nothing
     local integer i = 0
     loop
-        exitwhen (i == callbackReturnTriggersCounter)
+        exitwhen (i == callbackDeathTriggersCounter)
         if (IsTriggerEnabled(callbackDeathTriggers[i])) then
             set triggerDyingResourceUnit = whichUnit
             call ConditionalTriggerExecute(callbackDeathTriggers[i])
@@ -828,6 +827,8 @@ function FindNearestMineOfResource takes unit worker, real radius, Resource reso
         set currentMine = BlzGroupUnitAt(mines, i)
         if (mine == null) then
             set mine = currentMine
+            set distance = DistBetweenCoordinates(x, y, GetUnitX(currentMine), GetUnitY(currentMine))
+            set currentDistance = distance
         else
             set currentDistance = DistBetweenCoordinates(x, y, GetUnitX(currentMine), GetUnitY(currentMine))
             if (currentDistance < distance) then
@@ -1322,7 +1323,7 @@ private function TriggerActionCast takes nothing returns nothing
         call IssueImmediateOrder(worker, "stop")
         //call SimError(GetOwningPlayer(worker), "Empty " + GetUnitName(mine) + ".")
         //call BJDebugMsg("Stop worker " + GetUnitName(worker))
-    elseif (not gatherInside and foundResource != 0 and amount == 0 or HasMaxOfMineResources(worker, mine)) then // return resources if necessary
+    elseif (not gatherInside and foundResource != 0 and (amount == 0 or HasMaxOfMineResources(worker, mine))) then // return resources if necessary
         call IssueImmediateOrder(worker, "stop")
         //call BJDebugMsg("has max looking for return building")
         if (GetWorkerTotalResources(worker) > 0) then
