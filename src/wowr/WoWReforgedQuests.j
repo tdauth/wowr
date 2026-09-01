@@ -110,6 +110,7 @@ function AddQuest takes string id, string title, string description, string icon
     call QuestSetDiscovered(q, false)
     call QuestSetCompleted(q, false)
 
+    set questHandle[index] = q
     set questId[index] = id
     set questTitle[index] = title
     set questDescription[index] = description
@@ -192,7 +193,7 @@ function QuestUpdate takes nothing returns nothing
 endfunction
 
 function QuestCompleteItem takes integer index returns nothing
-    if (index >= 0 and index <= QuestGetItemCount(udg_TmpQuest)) then
+    if (index >= 0 and index < QuestGetItemCount(udg_TmpQuest)) then
         call QuestItemSetCompleted(QuestGetItem(udg_TmpQuest, index), true)
     endif
     call QuestUpdate()
