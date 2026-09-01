@@ -310,7 +310,7 @@ endfunction
 
 private function LeaveItemFunction takes nothing returns nothing
     local integer playerId = GetPlayerId(GetTriggerPlayer())
-    local integer index = LoadInteger(h, GetHandleId(GetTriggeringTrigger()), 1)
+    local integer index = LoadInteger(h, GetHandleId(GetTriggeringTrigger()), KEY_INDEX)
     //call BJDebugMsg("Leave item " + I2S(index))
     if (GetLocalPlayer() == GetTriggerPlayer()) then
         call BlzFrameSetTexture(BackpackTooltipIcon, "", 0, false)
@@ -398,7 +398,7 @@ private function CreateBackpackUI takes nothing returns nothing
             set BackpackItemTooltipOffTrigger[index] = CreateTrigger()
             call BlzTriggerRegisterFrameEvent(BackpackItemTooltipOffTrigger[index], BackpackItemFrame[index], FRAMEEVENT_MOUSE_LEAVE)
             call TriggerAddAction(BackpackItemTooltipOffTrigger[index], function LeaveItemFunction)
-            call SaveInteger(h, GetHandleId(BackpackItemTooltipOffTrigger[index]), 1, index)
+            call SaveInteger(h, GetHandleId(BackpackItemTooltipOffTrigger[index]), KEY_INDEX, index)
 
             // TODO Mouse down and mouse up to drag & drop to another bag or switch or do it like Warcraft's inventory with right click and left click. Add the icon of the item to the mouse cursor. If you click on the map it is dropped, if you click on the inventory it is dropped there.
             
