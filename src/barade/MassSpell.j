@@ -86,8 +86,11 @@ private function TriggerActionMassSpell takes nothing returns nothing
             call GroupAddUnit(dummies, dummy)
             call ShowUnit(dummy, false)
             call UnitAddAbility(dummy, s.dummyAbilityId)
-            call s.dummyAbilityLevelFunction.evaluate(caster, abilityId, dummy, s)
+            if (s.dummyAbilityLevelFunction != 0) then
+                call s.dummyAbilityLevelFunction.evaluate(caster, abilityId, dummy, s)
+            endif
             call IssueTargetOrder(dummy, s.dummyAbilityOrder, target)
+            set dummy = null
             set target = null
             set i = i + 1
         endloop
