@@ -59,12 +59,6 @@ function GetAttribute takes integer index returns A
     return attributes[index]
 endfunction
 
-private struct V
-    real value
-    real max
-    real regeneration
-endstruct
-
 function GetUnitAttribute takes unit whichUnit, A a returns real
     return LoadReal(h, GetHandleId(whichUnit), a)
 endfunction
