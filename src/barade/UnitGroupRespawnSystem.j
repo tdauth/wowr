@@ -217,8 +217,6 @@ globals
 
     private trigger unitDeathOrCharmOrRescueTrigger = CreateTrigger()
     private hashtable respawnUnitHashTable = InitHashtable()
-
-    private unit filterUnit = null
 endglobals
 
 function GetRespawningUnit takes nothing returns unit
@@ -518,6 +516,7 @@ function RemoveRespawnUnit takes integer index returns boolean
         call PauseTimer(respawnUnitTimer[index])
         call FlushChildHashtable(respawnUnitHashTable, GetHandleId(respawnUnitTimer[index]))
         call DestroyTimer(respawnUnitTimer[index])
+        set respawnUnitTimer[index] = null
 
         set respawnUnitFreeIndex = index
 
@@ -579,7 +578,7 @@ function GetRespawnUnitX takes integer index returns real
 endfunction
 
 function SetRespawnUnitY takes integer index, real y returns nothing
-    set respawnUnitX[index] = y
+    set respawnUnitY[index] = y
 endfunction
 
 function GetRespawnUnitY takes integer index returns real
@@ -607,7 +606,7 @@ function SetRespawnUnit takes integer index, unit whichUnit returns nothing
     endif
     set respawnUnitUnit[index] = whichUnit
     set respawnUnitHandleId[index] = handleId
-    set respawnUnitType[index] = GetUnitTypeId(whichUnit)
+    set respawnUnitUnitTypeId[index] = GetUnitTypeId(whichUnit)
     call SaveInteger(respawnUnitHashTable, handleId, 0, index)
     set respawnUnitReadyForRespawn[index] = false
     if (validRespawnUnitGroup) then
@@ -748,7 +747,7 @@ function AddRespawnUnitGroupFromRandomCreepLevel takes integer minCreepLevel, in
     loop
         exitwhen (i >= countMembers)
         set whichLocation = GetRandomLocInRange(x, y, range)
-        call AddRespawnUnitRandomCreepEx(GetRandomInt(minCreepLevel, maxCreepLevel), GetLocationY(whichLocation), GetLocationY(whichLocation), groupIndex)
+        call AddRespawnUnitRandomCreepEx(GetRandomInt(minCreepLevel, maxCreepLevel), GetLocationX(whichLocation), GetLocationY(whichLocation), groupIndex)
         call RemoveLocation(whichLocation)
         set whichLocation = null
         set i = i + 1
@@ -757,7 +756,7 @@ function AddRespawnUnitGroupFromRandomCreepLevel takes integer minCreepLevel, in
 endfunction
 
 function RemoveRespawnUnitGroup takes integer index returns boolean
-    if (IsRespawnUnitValid(index)) then
+    if (IsRespawnUnitGroupValid(index)) then
         set respawnUnitGroupIsValid[index] = false
         set respawnUnitGroupEnabled[index] = false
 
@@ -770,11 +769,12 @@ function RemoveRespawnUnitGroup takes integer index returns boolean
         call PauseTimer(respawnUnitGroupTimer[index])
         call FlushChildHashtable(respawnUnitHashTable, GetHandleId(respawnUnitGroupTimer[index]))
         call DestroyTimer(respawnUnitGroupTimer[index])
+        set respawnUnitGroupTimer[index] = null
 
-        set respawnUnitFreeIndex = index
+        set respawnUnitGroupFreeIndex = index
 
-        if (index == respawnUnitCounter - 1) then
-            set respawnUnitCounter = respawnUnitCounter - 1
+        if (index == respawnUnitGroupCounter - 1) then
+            set respawnUnitGroupCounter = respawnUnitGroupCounter - 1
         endif
 
         return true
@@ -852,6 +852,7 @@ function StartUnitGroupRespawn takes integer index returns nothing
     endloop
     
     // start call backs
+    set i = 0
     loop
         exitwhen (i == BlzGroupGetSize(respawnUnitGroup[index]))
         set member = BlzGroupUnitAt(respawnUnitGroup[index], i)
