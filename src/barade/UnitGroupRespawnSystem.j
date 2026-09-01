@@ -1,5 +1,6 @@
 library UnitGroupRespawnSystem initializer Init requires UnitGroupRespawnSystemConfig
-// Baradé's Unit Group Respawn System 1.2
+
+// Baradé's Unit Group Respawn System 1.3
 //
 // Allows dying or charmed or rescued units from a group or individually to respawn after some time.
 // Respawning groups are automatically determined by default from preplaced creeps next to each other owned by player neutral aggressive.
@@ -991,6 +992,9 @@ hook RemoveUnit RemoveUnitCleanup
 
 /*
  * ChangeLog:
+ *
+ * 1.3 2026-09-01:
+ * - Fix multiple bugs.
  *
  * 1.2:
  * - Add function AddRespawnUnitGroupFromUnitStart.
