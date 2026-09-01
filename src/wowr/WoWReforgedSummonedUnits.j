@@ -3,7 +3,6 @@ library WoWReforgedSummonedUnits initializer Init requires WoWReforgedUtils, WoW
 globals
     private hashtable h = InitHashtable()
     private group array summonedUnits
-    private hashtable summonedUnitTypesForAbilities
     private integer blackArrowLevel = 0
     private trigger blackArrowSummonTrigger = CreateTrigger()
     private trigger summonTrigger = CreateTrigger()
@@ -85,7 +84,7 @@ function AddSummonedUnitBonus takes unit whichUnit, integer level returns nothin
 endfunction
 
 function RemoveSummonedUnitBonus takes unit whichUnit, integer level returns nothing
-    call AddSummonedUnitBonusEx(whichUnit, level, -11)
+    call AddSummonedUnitBonusEx(whichUnit, level, -1)
 endfunction
 
 private function ApplySummonedUnitBonusesEx takes unit caster, unit summonedUnit, SummonedUnitAbilityIds s returns unit
@@ -162,7 +161,6 @@ function AddSummonedUnit takes unit whichUnit returns nothing
 endfunction
 
 private function TriggerConditionSummon takes nothing returns boolean
-    local integer playerId = GetPlayerId(GetOwningPlayer(GetSummonedUnit()))
     call ApplySummonedUnitBonuses(GetSummoningUnit(), GetSummonedUnit())
     return false
 endfunction
