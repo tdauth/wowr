@@ -318,7 +318,7 @@ function RespawnUnit takes integer index returns boolean
     set respawnUnitReadyForRespawn[index] = false
     set respawnUnitHandleId[index] = GetHandleId(respawnUnitUnit[index])
     call SaveInteger(respawnUnitHashTable, respawnUnitHandleId[index], 0, index)
-    
+
 static if (UnitGroupRespawnSystemConfig_SET_MAX_DEATH_TIME_TO_UNITS) then
     if (IsUnitType(respawnUnitUnit[index], UNIT_TYPE_HERO)) then
         call BlzSetUnitRealField(respawnUnitUnit[index], UNIT_RF_DEATH_TIME, 99999999.0)
@@ -365,7 +365,7 @@ endfunction
 
 function StartUnitRespawn takes integer index returns nothing
     call EvaluateAndExecuteCallbackRespawnStartsTriggers(index)
-    
+
     if (not respawnUnitReadyForRespawn[index]) then
         call BJDebugMsg("Duplicated start respawn timer for index " + I2S(index) + " for unit " + GetUnitName(respawnUnitUnit[index]))
     endif
@@ -463,7 +463,7 @@ function AddRespawnUnitPoolEx takes unitpool whichUnitPool, real x, real y, inte
     call AddRespawnUnitDefault(index, x, y)
     // Set group index before respawning.
     call SetRespawnUnitGroupIndex(index, groupIndex)
-    
+
     call RespawnUnit(index)
 
     return index
@@ -850,7 +850,7 @@ function StartUnitGroupRespawn takes integer index returns nothing
         set member = null
         set i = i + 1
     endloop
-    
+
     // start call backs
     set i = 0
     loop
@@ -882,7 +882,7 @@ function StartUnitGroupRespawn takes integer index returns nothing
 
         set member = null
     endloop
-    
+
     //call BJDebugMsg("Starting respawn timer for group " + I2S(index))
 
     call TimerStart(respawnUnitGroupTimer[index], respawnUnitGroupTimeout[index], false, function TimerFunctionRespawnUnitGroup)
@@ -956,13 +956,13 @@ static if (UnitGroupRespawnSystemConfig_AUTO_ADD_ALL_PREPLACED_CREEPS) then
 private function AddAllPreplacedCreeps takes nothing returns nothing
     local timer expiredTimer = GetExpiredTimer()
     local group allCreeps = CreateGroup()
-    
+
     call UnitGroupRespawnSystemConfig_AddAllUserSpecifiedPreplacedCreeps(allCreeps)
     call ForGroup(allCreeps, function AddRespawnUnitGroupFromEnumUnit)
     call GroupClear(allCreeps)
     call DestroyGroup(allCreeps)
     set allCreeps = null
-    
+
     call PauseTimer(expiredTimer)
     call DestroyTimer(expiredTimer)
     set expiredTimer = null
@@ -1007,7 +1007,7 @@ hook RemoveUnit RemoveUnitCleanup
  * - Remove forces global variable and related code from the config library.
  * - Remove nulling from PreventUnitRespawn.
  * - GetUnitLevelByType caches the unit type level in a hashtable now for better performance.
- * - Add preplaced creeps after 0 seconds to include non neutral units. 
+ * - Add preplaced creeps after 0 seconds to include non neutral units.
  * - Add option RESPAWN_ON_RESCUE.
  * - StartAllUnitRespawnsNotRunning only respawns units which are ready to respawn now.
  * - Fix location for pool based unit group respawns.

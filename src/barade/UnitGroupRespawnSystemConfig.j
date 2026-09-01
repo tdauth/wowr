@@ -1,4 +1,4 @@
-library UnitGroupRespawnSystemConfig requires WoWReforgedProfessionHunter, WoWReforgedCalendarEvents, WoWReforgedCrateTypes, WoWReforgedCages
+library UnitGroupRespawnSystemConfig requires UnitTypeUtils, WoWReforgedProfessionHunter, WoWReforgedCalendarEvents, WoWReforgedCrateTypes, WoWReforgedCages
 
 globals
     // The default delay until a unit will be respawned.
@@ -18,28 +18,10 @@ globals
     public constant boolean AUTO_ADDED_DROP_RANDOM_ITEMS = true
     // Uses the unit type levels instead of the current levels of units which could have been changed with function calls for item drops.
     public constant boolean GET_UNIT_LEVEL_BY_TYPE = true
-    
+
     // Caches the unit levels for unit types.
     private hashtable respawnUnitLevelsHashTable = InitHashtable()
 endglobals
-    
-static if (GET_UNIT_LEVEL_BY_TYPE) then
-private function GetUnitLevelByTypeEx takes integer unitTypeId returns integer
-    local unit dummy = CreateUnit(Player(PLAYER_NEUTRAL_AGGRESSIVE), unitTypeId, 0.0, 0.0, 0.0)
-    local integer result = BlzGetUnitIntegerField(dummy , UNIT_IF_LEVEL)
-    call RemoveUnit(dummy)
-    set dummy = null
-    return result
-endfunction
-
-private function GetUnitLevelByType takes integer unitTypeId returns integer
-    local boolean cached = HaveSavedInteger(respawnUnitLevelsHashTable, unitTypeId, 0)
-    if (cached) then
-        return LoadInteger(respawnUnitLevelsHashTable, unitTypeId, 0)
-    endif
-    return GetUnitLevelByTypeEx(unitTypeId)
-endfunction
-endif
 
 private function GetMaxUnitLevelFromGroup takes group whichGroup returns integer
     local integer maxLevel = 0
@@ -47,11 +29,7 @@ private function GetMaxUnitLevelFromGroup takes group whichGroup returns integer
     local integer i = 0
     loop
         exitwhen (i == BlzGroupGetSize(whichGroup))
-static if (GET_UNIT_LEVEL_BY_TYPE) then
-        set unitLevel = GetUnitLevelByType(GetUnitTypeId(BlzGroupUnitAt(whichGroup, i)))
-else
-        set unitLevel = GetUnitLevel(BlzGroupUnitAt(whichGroup, i))
-endif
+        set unitLevel = GetUnitLevelByType(GetUnitTypeId(BlzGroupUnitAt(whichGroup, i)), Player(PLAYER_NEUTRAL_AGGRESSIVE))
         set maxLevel = IMaxBJ(unitLevel, maxLevel)
         set i = i + 1
     endloop
@@ -72,15 +50,15 @@ private function DropItem takes unit dyingUnit, group whichGroup returns nothing
     endif
 
     call UnitDropItem(dyingUnit, ChooseRandomItemEx(ITEM_TYPE_ANY, itemLevel))
-    
+
     if (IsChristmas()) then
         call UnitDropItem(dyingUnit, ITEM_CHRISTMAS_PRESENT)
     endif
-    
+
     if (IsEaster()) then
         call UnitDropItem(dyingUnit, ITEM_EASTER_EGG)
     endif
-    
+
     if (IsHalloween()) then
         call UnitDropItem(dyingUnit, ITEM_CANDY)
     endif
@@ -89,13 +67,13 @@ endfunction
 private function DropItemForGroupEx takes integer groupIndex, unit dyingUnit, group whichGroup returns nothing
     local integer unitLevel = GetMaxUnitLevelFromGroup(whichGroup)
     local integer chanceToDrop = GetRandomInt(0, 1)
-    
+
     // 50 percent chance to drop an item at all
     if (chanceToDrop == 0) then
         call DropItem(dyingUnit, whichGroup)
     endif
 endfunction
-    
+
 public function DropItemForGroup takes integer groupIndex, unit dyingUnit, group whichGroup, boolean drop returns nothing
     local integer unitTypeId = GetUnitTypeId(dyingUnit)
 static if (AUTO_ADDED_DROP_RANDOM_ITEMS) then
