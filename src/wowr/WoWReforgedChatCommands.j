@@ -1,4 +1,4 @@
-library WoWReforgedChatCommands initializer Init requires Ascii, HostUtils, StringUtils, StringFormat, SafeString, ForceUtils, PlayerColorUtils, WoWReforgedUtils, WoWReforgedMapData, optional QueueUI, WoWReforgedPlayerInfos, WoWReforgedStats, WoWReforgedSaveCodeObjects, WoWReforgedHeroes, WoWReforgedBosses, WoWReforgedQuests, WoWReforgedProfessions, optional WoWReforgedUiActionsBar, WoWReforgedStats, WoWReforgedAttributes, WoWReforgedAccount, WoWReforgedComputerStartLocations, WoWReforgedSaveCodesAll, WoWReforgedZones, WoWReforgedCinematic, WoWReforgedTownHalls, optional OrdersWatcher, OnStartGame
+library WoWReforgedChatCommands initializer Init requires Ascii, HostUtils, StringUtils, StringFormat, SafeString, ForceUtils, PlayerColorUtils, WoWReforgedUtils, WoWReforgedMapData, optional QueueUI, WoWReforgedPlayerInfos, WoWReforgedStats, WoWReforgedSaveCodeObjects, WoWReforgedHeroes, WoWReforgedBosses, WoWReforgedQuests, WoWReforgedProfessions, optional WoWReforgedUiActionsBar, WoWReforgedStats, WoWReforgedAttributes, WoWReforgedAccount, WoWReforgedComputerStartLocations, WoWReforgedSaveCodesAll, WoWReforgedZones, WoWReforgedCinematic, WoWReforgedTownHalls, WoWReforgedBackpacks, WoWReforgedUiBackpack, optional OrdersWatcher, OnStartGame
 
 /*
  * Chat commands and cheats.
@@ -679,6 +679,18 @@ private function Unlocked takes nothing returns nothing
     call ShowUnlockedAccountIds(GetTriggerPlayer())
 endfunction
 
+private function Items takes nothing returns nothing
+    call ShowBackpackUI(GetTriggerPlayer())
+endfunction
+
+private function Pickup takes nothing returns nothing
+    call PickupAllItemsAroundByPlayer(GetTriggerPlayer())
+endfunction
+
+private function Order takes nothing returns nothing
+    call OrderBackpack(GetTriggerPlayer())
+endfunction
+
 private function PingHeroes takes nothing returns nothing
     call PingAlliedHeroes(GetTriggerPlayer())
 endfunction
@@ -1351,6 +1363,13 @@ private function Init takes nothing returns nothing
 
     call Add("-unlocked", true, function Unlocked)
     call AddAlias("-u", true)
+
+    call Add("-items", true, function Items)
+    call AddAlias("-it", true)
+    call Add("-pickup", true, function Pickup)
+    call AddAlias("-pi", true)
+    call Add("-order", true, function Order)
+    call AddAlias("-or", true)
 
     call Add("-pingh", true, function PingHeroes)
     call Add("-pinggoldmines", true, function PingGoldMinesAction)

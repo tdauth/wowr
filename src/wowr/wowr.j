@@ -13,6 +13,7 @@
 //! import "wowr/WoWReforgedAttributes.j"
 //! import "wowr/WoWReforgedAuraAbilities.j"
 //! import "wowr/WoWReforgedAutoSkill.j"
+//! import "wowr/WoWReforgedBackpackAbilities.j"
 //! import "wowr/WoWReforgedBackpacks.j"
 //! import "wowr/WoWReforgedBan.j"
 //! import "wowr/WoWReforgedBanners.j"

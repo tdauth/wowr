@@ -601,6 +601,8 @@ StringList {
     ORDERED_ITEMS                      "Ordered %1% items.",
     DROPPED_ALL_ITEMS_FROM_BACKPACK    "Dropped all items (%1%) from backpack.",
     INVENTORY_IS_FULL                  "Inventory is full.",
+    BACKPACK_UI_ENABLE                 "Enable UI for backpack on selection.",
+    BACKPACK_UI_DISABLE                "Disable UI for backpack on selection.",
     // Items
     PICKUP_ERROR                       "%1% cannot be picked up: %2%",
     BELONGS_TO_RACE                    "%1% belongs to race %2%.",
@@ -1635,7 +1637,7 @@ StringList {
     CC_AUTO                            "'-auto': Auto skills all heroes in selection.",
     CC_ITEMS                           "'-it/-items': Shows all backpack items.",
     CC_PICKUP                          "'-pi/-pickup': Picks up all items around the first hero.",
-    CC_ORDER                           "'-o/-order': Orders your backpack.",
+    CC_ORDER                           "'-or/-order': Orders your backpack.",
     CC_FFA                             "'-ffa': Free For All. Every player has his/her own team.",
     CC_LOBBY                           "'-lobby': Use lobby teams.",
     CC_FRIENDS                         "'-friends': Ally all players.",

@@ -136,6 +136,7 @@ private function Init takes nothing returns nothing
     call AddChange("Localize error message for Sunwell Resurrection.")
     call AddChange("Fix changing ownership of targets for Sunwell Resurrection.")
     call AddChange("Simplify checks for periodic Dwarf Lumber Mill auto return.")
+    call AddChange("Change alias for chat command \"-order\" from \"-o\" into \"-or\".")
 
 static if (MAP_DEBUG_MODE_ENABLED) then
     call AddVersion("4.6")

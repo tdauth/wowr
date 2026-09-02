@@ -5,7 +5,7 @@ globals
     private constant integer KEY_TITLE = 0
     private constant integer KEY_DESCRIPTION = 1
     private constant integer KEY_COUNTER = 2
-    
+
     private string lastQuestTitle = ""
     private string lastQuestDescription = ""
     private quest lastQuestForQuestItem = null
@@ -107,7 +107,6 @@ private function DestroyQuestHook takes quest whichQuest returns nothing
         set qi = LoadQuestItemHandle(h, handleId, i)
         if (qi != null) then
             call FlushChildHashtable(h, GetHandleId(qi))
-            call DestroyQuestItem(qi)
             set qi = null
         endif
         set i = i + 1
