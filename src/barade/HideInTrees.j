@@ -6,19 +6,20 @@ globals
     public constant integer ABILITY_ID_UNHIDE = 'A1QF'
     public constant integer ABILITY_ID_LIFE_REGENERATION = 'A1QG'
     public constant integer ABILITY_ID_MANA_REGENERATION = 'A1U0'
-    
+
     private constant integer KEY_UNIT = 0
     private constant integer KEY_MOVE_TYPE = 1
     private constant integer KEY_ATTACK_0_ENABLED = 2
     private constant integer KEY_ATTACK_1_ENABLED = 3
 
+    private boolexpr filter = null
     private trigger castTrigger = CreateTrigger()
     private trigger orderTrigger = CreateTrigger()
     private trigger deathTrigger = CreateTrigger()
-    
+
     private unit filterCaster = null
     private destructable resultingTree = null
-    
+
     private group casters = CreateGroup()
     private hashtable h = InitHashtable()
 endglobals
@@ -61,11 +62,11 @@ private function UnhideUnit takes unit whichUnit returns nothing
         call UnitRemoveAbility(whichUnit, ABILITY_ID_MANA_REGENERATION)
         call UnitRemoveAbility(whichUnit, ABILITY_ID_UNHIDE)
         //call BJDebugMsg(GetUnitName(whichUnit) + " cast unhide")
-        
+
         call BlzSetUnitIntegerField(whichUnit, UNIT_IF_MOVE_TYPE, LoadInteger(h, GetHandleId(whichUnit), KEY_MOVE_TYPE))
         call BlzSetUnitWeaponBooleanField(whichUnit, UNIT_WEAPON_BF_ATTACKS_ENABLED, 0, LoadBoolean(h, GetHandleId(whichUnit), KEY_ATTACK_0_ENABLED))
         call BlzSetUnitWeaponBooleanField(whichUnit, UNIT_WEAPON_BF_ATTACKS_ENABLED, 1, LoadBoolean(h, GetHandleId(whichUnit), KEY_ATTACK_1_ENABLED))
-   
+
         call FlushChildHashtable(h, GetHandleId(whichUnit))
     endif
 endfunction
@@ -81,7 +82,7 @@ private function TriggerConditionCast takes nothing returns boolean
     elseif (GetSpellAbilityId() == ABILITY_ID_UNHIDE) then
         call UnhideUnit(GetTriggerUnit())
     endif
-    
+
     return false
 endfunction
 
@@ -117,7 +118,7 @@ private function TriggerConditionOrder takes nothing returns boolean
         //call BJDebugMsg("Order!")
         call OrderNextToTree(GetTriggerUnit(), GetOrderPointX(), GetOrderPointY())
     endif
-    
+
     return false
 endfunction
 
@@ -134,19 +135,21 @@ private function TriggerConditionDeath takes nothing returns boolean
         call UnhideUnit(GetTreeHiddenUnit(GetTriggerDestructable()))
         call FlushChildHashtable(h, GetHandleId(GetTriggerDestructable()))
     endif
-    
+
     return false
 endfunction
 
 private function Init takes nothing returns nothing
+    set filter = Filter(function FilterIsTree)
+
     call TriggerRegisterAnyUnitEventBJ(castTrigger, EVENT_PLAYER_UNIT_SPELL_CHANNEL)
     call TriggerAddCondition(castTrigger, Condition(function TriggerConditionCast))
-    
+
     call TriggerRegisterAnyUnitEventBJ(orderTrigger, EVENT_PLAYER_UNIT_ISSUED_POINT_ORDER)
     call TriggerAddCondition(orderTrigger, Condition(function TriggerConditionOrder))
-    
+
     set bj_destInRegionDiesTrig = deathTrigger
-    call EnumDestructablesInRect(GetPlayableMapRect(), Filter(function FilterIsTree), function RegisterDestDeathInRegionEnumX)
+    call EnumDestructablesInRect(GetPlayableMapRect(), filter, function RegisterDestDeathInRegionEnumX)
     call TriggerAddCondition(deathTrigger, Condition(function TriggerConditionDeath))
 endfunction
 
