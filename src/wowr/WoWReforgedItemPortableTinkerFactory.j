@@ -1,6 +1,7 @@
 library WoWReforgedItemPortableTinkerFactory initializer Init
 
 globals
+    private boolexpr filter = null
     private player filterPlayer = null
     private unittype filterType = null
     private boolean filterAdd = false
@@ -19,7 +20,7 @@ private function Convert takes unit caster, unittype t, boolean add, real x, rea
     set filterPlayer = GetOwningPlayer(caster)
     set filterType = t
     set filterAdd = add
-    call GroupEnumUnitsInRange(g, x, y, 512.0, Filter(function FilterIsValidTarget))
+    call GroupEnumUnitsInRange(g, x, y, 512.0, filter)
     set i = 0
     set max = BlzGroupGetSize(g)
     loop
@@ -55,6 +56,7 @@ private function TriggerConditionChannel takes nothing returns boolean
 endfunction
 
 private function Init takes nothing returns nothing
+    set filter = Filter(function FilterIsValidTarget)
     call TriggerRegisterAnyUnitEventBJ(channelTrigger, EVENT_PLAYER_UNIT_SPELL_CHANNEL)
     call TriggerAddCondition(channelTrigger, Condition(function TriggerConditionChannel))
 endfunction

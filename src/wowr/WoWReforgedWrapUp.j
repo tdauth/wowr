@@ -1,24 +1,22 @@
 library WoWReforgedWrapUp initializer Init requires ItemUtils, WoWReforgedRaces
 
 globals
+    private boolexpr filter = null
     private trigger constructionTrigger = CreateTrigger()
     private trigger deathTrigger = CreateTrigger()
     private group constructedBuildings = CreateGroup()
-    private player tmpPlayer = null
+    private player filterPlayer = null
 endglobals
 
-function GetBuildingItemId takes integer unitTypeId returns integer
+private function GetBuildingItemId takes integer unitTypeId returns integer
     return MapBuildingIDToItemID(unitTypeId, GetObjectRace(unitTypeId))
 endfunction
 
-function FilterIsWrapableBuilding takes nothing returns boolean
-    local unit filterUnit = GetFilterUnit()
-    local boolean result = GetOwningPlayer(filterUnit) == tmpPlayer and (not IsUnitType(filterUnit, UNIT_TYPE_STRUCTURE) or IsUnitInGroup(filterUnit, constructedBuildings)) and GetBuildingItemId(GetUnitTypeId(filterUnit)) != 0
-    set filterUnit = null
-    return result
+private function FilterIsWrapableBuilding takes nothing returns boolean
+    return GetOwningPlayer(GetFilterUnit()) == filterPlayer and (not IsUnitType(GetFilterUnit(), UNIT_TYPE_STRUCTURE) or IsUnitInGroup(GetFilterUnit(), constructedBuildings)) and GetBuildingItemId(GetUnitTypeId(GetFilterUnit())) != 0
 endfunction
 
-function CancelAllOrdersInBuilding takes unit whichBuilding returns nothing
+private function CancelAllOrdersInBuilding takes unit whichBuilding returns nothing
     local integer i = 0
     loop
         exitwhen (i == 8) // all slots
@@ -54,8 +52,8 @@ function WrapUpAllBuildings takes unit caster, real x, real y returns integer
     local item whichItem = null
     local item array allItems
     local integer allItemsCounter = 0
-    set tmpPlayer = whichPlayer
-    call GroupEnumUnitsInRange(allBuildings, x, y, 1024.0, Filter(function FilterIsWrapableBuilding))
+    set filterPlayer = whichPlayer
+    call GroupEnumUnitsInRange(allBuildings, x, y, 1024.0, filter)
     set max = BlzGroupGetSize(allBuildings)
     loop
         exitwhen (i == max)
@@ -73,7 +71,7 @@ function WrapUpAllBuildings takes unit caster, real x, real y returns integer
     call DestroyGroup(allBuildings)
     set allBuildings = null
     set whichPlayer = null
-    
+
     // group all items of the same type
     set i = 0
     set max = allItemsCounter
@@ -110,9 +108,11 @@ private function TriggerActionDeath takes nothing returns nothing
 endfunction
 
 private function Init takes nothing returns nothing
+    set filter = Filter(function FilterIsWrapableBuilding)
+
     call TriggerRegisterAnyUnitEventBJ(constructionTrigger, EVENT_PLAYER_UNIT_CONSTRUCT_FINISH)
     call TriggerAddAction(constructionTrigger, function TriggerActionConstructed)
-    
+
     call TriggerRegisterAnyUnitEventBJ(deathTrigger, EVENT_PLAYER_UNIT_DEATH)
     call TriggerAddCondition(deathTrigger, Condition(function TriggerConditionIsConstructed))
     call TriggerAddAction(deathTrigger, function TriggerActionDeath)

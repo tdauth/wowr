@@ -1,4 +1,4 @@
-library WoWReforgedItemSpade initializer Init requires WoWReforgedTerrain
+library WoWReforgedItemSpade initializer Init requires MathUtils, WoWReforgedTerrain
 
 globals
     private integer array playerTile
@@ -29,14 +29,11 @@ endfunction
 
 private function ChangeGround takes player whichPlayer, real x, real y returns nothing
     local integer index = playerTile[GetPlayerId(whichPlayer)]
-    local location l = Location(x, y)
-    local rect r = GetRectFromCircleBJ(l, 64.0)
+    local rect r = GetRectFromCircle(x, y, 64.0)
     call ReplaceWithTerrain(r, GetMapTile(index))
     call ShowCurrentTile(whichPlayer)
     call RemoveRect(r)
     set r = null
-    call RemoveLocation(l)
-    set l = null
 endfunction
 
 private function ChangeTile takes player whichPlayer, integer index returns nothing
