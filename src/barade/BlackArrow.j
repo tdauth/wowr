@@ -1,6 +1,6 @@
 library BlackArrow initializer Init
 
-// Baradé's Black Arrow 1.2
+// Baradé's Black Arrow 1.3
 //
 // Supports Black Arrow abilities for target units with levels greater than 5.
 // The standard Black Arrow abilities from Warcraft only work with target units up to level 5.
@@ -214,7 +214,7 @@ endfunction
 private function MarkTarget takes integer abilityIndex, unit source, unit target returns nothing
     local timer whichTimer = LoadTimerHandle(h, 0, GetHandleId(target))
     local real duration = 0.0
-    
+
     if (IsUnitType(target, UNIT_TYPE_HERO)) then
         set duration = BlackArrowAbiliyDurationHero[abilityIndex]
     else
@@ -480,6 +480,9 @@ endfunction
 hook RemoveUnit RemoveUnitHook
 
 // ChangeLog:
+//
+// 1.3 2026-09-03:
+// - Fix multiple bugs.
 //
 // 1.2 2025-04-16:
 // - Refactor.
