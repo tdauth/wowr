@@ -1,4 +1,5 @@
 library Votes initializer Init requires MathUtils, PlayerColorUtils, ForceUtils
+
 /*
  * Baradé's Votes 1.0
  *
@@ -15,12 +16,10 @@ globals
     constant integer MAX_CHOICES = 12
 
     // TODO introduce struct V and store it in a single array.
-    private integer VotesCounter = 0
+    private integer votesCounter = 0
     private string array VoteTitle
     private trigger array VoteYesTrigger
     private string array VoteStartChatCommand
-    //private dialog array VoteDialog
-    //private trigger array VoteButtonClickTrigger
     private timer array VoteTimer
     private real array VoteTimeout
     private timerdialog array VoteTimerDialog
@@ -31,16 +30,13 @@ globals
     private string array VoteChoicesNames
     private string array VoteChoicesChatCommands
     private force array VoteChoicesVotes
-    // choices
-    //private button array VoteSystemVoteDialogButton
-    //private trigger array VoteSystemVoteChoiceCallbackTrigger
-    
+
     private integer callbackVote = 0
     private integer callbackChoice = 0
     private integer callbackVotes = 0
-    
-    private integer CallbacksCounter = 0
-    private trigger array CallbackTriggers
+
+    private integer callbacksCounter = 0
+    private trigger array callbackTriggers
 
     private trigger chatCommandTrigger = CreateTrigger()
     private trigger leavesTrigger = CreateTrigger()
@@ -78,15 +74,15 @@ function GetTriggerVotesCount takes nothing returns integer
 endfunction
 
 function TriggerRegisterVoteEvent takes trigger whichTrigger returns integer
-    local integer t = CallbacksCounter
-    set CallbackTriggers[t] = whichTrigger
-    set CallbacksCounter = CallbacksCounter + 1
-    
+    local integer t = callbacksCounter
+    set callbackTriggers[t] = whichTrigger
+    set callbacksCounter = callbacksCounter + 1
+
     return t
 endfunction
 
 function VoteCreate takes string title returns integer
-    local integer vote = VotesCounter
+    local integer vote = votesCounter
     set VoteTitle[vote] = title
     set VoteTimer[vote] = CreateTimer()
     call SaveInteger(h, GetHandleId(VoteTimer[vote]), 0, vote)
@@ -96,22 +92,22 @@ function VoteCreate takes string title returns integer
     set VoteIsRunning[vote] = false
     set VoteDefaultChoice[vote] = -1
     set VoteChoices[vote] = 0
-    set VotesCounter = VotesCounter + 1
+    set votesCounter = votesCounter + 1
     return vote
 endfunction
 
 function VoteAddChoice takes integer vote, boolean default, string name, string chatCommand returns integer
     local integer choice = VoteChoices[vote]
     local integer index = VoteChoiceIndex(choice, vote)
-        
+
     set VoteChoicesNames[index] = name
     set VoteChoicesChatCommands[index] = chatCommand
     set VoteChoicesVotes[index] = CreateForce()
-    
+
     if (default) then
         set VoteDefaultChoice[vote] = choice
     endif
-    
+
     set VoteChoices[vote] = VoteChoices[vote] + 1
 
     return choice
@@ -133,13 +129,13 @@ private function ExecuteCallbacks takes integer vote, integer choice, integer vo
     local integer i = 0
     //call BJDebugMsg("Execute callbacks vote " + I2S(vote) + " with choice " + I2S(choice) + " and votes " + I2S(votes))
     loop
-        exitwhen (i >= CallbacksCounter)
+        exitwhen (i >= callbacksCounter)
         set callbackVote = vote
         set callbackChoice = choice
         set callbackVotes = votes
-        if (IsTriggerEnabled(CallbackTriggers[i])) then
+        if (IsTriggerEnabled(callbackTriggers[i])) then
             //call BJDebugMsg("Executing callback trigger " + I2S(i))
-            call ConditionalTriggerExecute(CallbackTriggers[i])
+            call ConditionalTriggerExecute(callbackTriggers[i])
         endif
         set i = i + 1
     endloop
@@ -205,7 +201,7 @@ private function VoteRecalculateAllChoices takes integer vote, boolean expired r
     endif
 
     //call BJDebugMsg("Voted choice: " + I2S(votedChoice))
-    
+
     if (votedChoice != -1) then
         call PauseTimer(VoteTimer[vote])
         call TimerDialogDisplayForForce(false, VoteTimerDialog[vote], VotePlayers[vote])
@@ -218,7 +214,7 @@ private function VoteRecalculateAllChoices takes integer vote, boolean expired r
         call VoteResetVotes(vote)
         set VoteIsRunning[vote] = false
     endif
-        
+
     return votedChoice
 endfunction
 
@@ -226,7 +222,7 @@ function VoteRecalculate takes integer vote, boolean expired returns integer
     if (not IsVoteRunning(vote)) then
         return -1
     endif
-    
+
     return VoteRecalculateAllChoices(vote, expired)
 endfunction
 
@@ -240,7 +236,7 @@ function VoteStart takes integer vote, force whichForce returns boolean
     if (IsVoteRunning(vote)) then
         return false
     endif
-    
+
     set VoteIsRunning[vote] = true
     call ForceClear(VotePlayers[vote])
     call ForceAddForce(VotePlayers[vote], whichForce)
@@ -248,7 +244,7 @@ function VoteStart takes integer vote, force whichForce returns boolean
     call TimerDialogSetTitle(VoteTimerDialog[vote], VoteTitle[vote])
     call TimerDialogDisplayForForce(true, VoteTimerDialog[vote], VotePlayers[vote])
     call VoteResetVotes(vote)
-    
+
     return true
 endfunction
 
@@ -266,17 +262,33 @@ private function VoteCheckChatCommandChoices takes integer vote, string command 
     return -1
 endfunction
 
+private function ClearPlayerFromVoteChoices takes integer vote, player whichPlayer returns nothing
+    local integer index = 0
+    local integer i = 0
+    local integer max = VoteChoices[vote]
+    loop
+        exitwhen (i == max)
+        set index = VoteChoiceIndex(i, vote)
+        if (IsPlayerInForce(whichPlayer, VoteChoicesVotes[index])) then
+            call ForceRemovePlayer(VoteChoicesVotes[index], whichPlayer)
+        endif
+        set i = i + 1
+    endloop
+endfunction
+
 function VoteAddVote takes integer vote, integer choice, player whichPlayer, boolean showMessage returns nothing
     local integer index = VoteChoiceIndex(choice, vote)
-    
+
     if (not IsPlayerInForce(whichPlayer, VoteChoicesVotes[index])) then
+        call ClearPlayerFromVoteChoices(vote, whichPlayer)
+
         //call BJDebugMsg("Add vote to choice " + I2S(choice))
         call ForceAddPlayer(VoteChoicesVotes[index], whichPlayer)
-        
+
         if (showMessage) then
             call DisplayTextToForce(VotePlayers[vote], Format(GetLocalizedString("VOTE_MESSAGE")).s(GetPlayerNameColored(whichPlayer)).s(VoteChoicesNames[index]).i(CountPlayersInForceBJ(VoteChoicesVotes[index])).i(CountPlayersInForceBJ(VotePlayers[vote])).result())
         endif
-    
+
         call VoteRecalculate(vote, false)
     else
         call SimError(whichPlayer, GetLocalizedString("UNABLE_TO_VOTE"))
@@ -297,6 +309,7 @@ function VoteSetYesTriggerAction takes integer vote, code triggerAction returns 
 endfunction
 
 function VoteRemovePlayer takes integer vote, player whichPlayer returns nothing
+    call ClearPlayerFromVoteChoices(vote, whichPlayer)
     call ForceRemovePlayer(VotePlayers[vote], whichPlayer)
 endfunction
 
@@ -325,14 +338,14 @@ private function TriggerActionChatCommand takes nothing returns nothing
     local integer matchingChoice = -1
     local integer i = 0
     loop
-        exitwhen (i >= VotesCounter)
+        exitwhen (i >= votesCounter)
         if (not IsVoteRunning(i)) then
             if (VoteYesTrigger[i] != null and VoteStartChatCommand[i] == chatCommand) then
                 call StartGlobalVote(i, triggerPlayer)
             endif
         else
             set matchingChoice = VoteCheckChatCommandChoices(i, chatCommand)
-            
+
             if (matchingChoice != -1) then
                 call VoteAddVote(i, matchingChoice, triggerPlayer, true)
             endif
@@ -345,7 +358,7 @@ endfunction
 private function TriggerActionPlayerLeaves takes nothing returns nothing
     local integer i = 0
     loop
-        exitwhen (i >= VotesCounter)
+        exitwhen (i >= votesCounter)
         if (IsVoteRunning(i)) then
             call VoteRemovePlayer(i, GetTriggerPlayer())
             call VoteRecalculate(i, false)
