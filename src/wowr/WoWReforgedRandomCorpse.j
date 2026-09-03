@@ -1,4 +1,4 @@
-library WoWReforgedRandomCorpse requires UnitGroupRespawnSystem
+library WoWReforgedRandomCorpse requires UnitGroupRespawn
 
 function IsRandomCorpse takes integer unitTypeId returns boolean
     return unitTypeId == RANDOM_CORPSE
@@ -16,16 +16,16 @@ function ReplaceRandomCorpse takes unit whichUnit returns unit
     local unit u = null
 
     call SetUnitPathing(whichUnit, false)
-    
+
     set u = CreatePermanentCorpseLocBJ(bj_CORPSETYPE_FLESH, ChooseRandomCreep(GetRandomInt(1, 10)), GetOwningPlayer(whichUnit), l, face)
     call UnitDropItem(u, 'rren')
     call AddRespawnUnit(u)
-    
+
     call RemoveUnit(whichUnit)
     set whichUnit = null
     call RemoveLocation(l)
     set l = null
-    
+
     return u
 endfunction
 

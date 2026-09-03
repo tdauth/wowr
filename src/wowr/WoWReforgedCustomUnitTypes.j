@@ -1,4 +1,4 @@
-library WoWReforgedCustomUnitTypes initializer Init requires CustomUnitTypes, UnitGroupRespawnSystem, UnitGroupRespawnSystemConfig, WoWReforgedAutoSkill, WoWReforgedPortals, WoWReforgedHeroes, WoWReforgedBosses, WoWReforgedRaces, WoWReforgedProfessions, WoWReforgedResources, WoWReforgedProperties, WoWReforgedSkins, WoWReforgedArmory, WoWReforgedTaverns, WoWReforgedSummonedUnits, WoWReforgedGaia, WoWReforgedChests, WoWReforegdHideout, WoWReforgedTrainer, WoWReforgedProfessionFarmer, WoWReforgedProfessionHunter, WoWReforgedCommandButtons, WoWReforgedGoldMines, WoWReforgedLevers, WoWReforgedRandomCorpse, WoWReforgedProfessionBooksShop, WoWReforgedSceptersShop, WoWReforgedBanners, WoWReforgedVIPs, WoWReforgedAlchemistLab, WoWReforgedMounts, WoWReforgedCraftingStash, WoWReforgedMapData
+library WoWReforgedCustomUnitTypes initializer Init requires CustomUnitTypes, UnitGroupRespawn, UnitGroupRespawnConfig, WoWReforgedAutoSkill, WoWReforgedPortals, WoWReforgedHeroes, WoWReforgedBosses, WoWReforgedRaces, WoWReforgedProfessions, WoWReforgedResources, WoWReforgedProperties, WoWReforgedSkins, WoWReforgedArmory, WoWReforgedTaverns, WoWReforgedSummonedUnits, WoWReforgedGaia, WoWReforgedChests, WoWReforegdHideout, WoWReforgedTrainer, WoWReforgedProfessionFarmer, WoWReforgedProfessionHunter, WoWReforgedCommandButtons, WoWReforgedGoldMines, WoWReforgedLevers, WoWReforgedRandomCorpse, WoWReforgedProfessionBooksShop, WoWReforgedSceptersShop, WoWReforgedBanners, WoWReforgedVIPs, WoWReforgedAlchemistLab, WoWReforgedMounts, WoWReforgedCraftingStash, WoWReforgedMapData
 
 private function AddCustomMine takes unit whichUnit returns nothing
     local integer index = GetMineTypeIndex(GetUnitTypeId(whichUnit))
@@ -384,8 +384,8 @@ function InitAllPreplacedUnits takes nothing returns nothing
         set i = i + 1
     endloop
 
-    call ForceAddPlayer(UnitGroupRespawnSystemConfig_AUTO_ADDED_GROUP_PLAYERS, GetMapBossesPlayer())
-    call ForceAddPlayer(UnitGroupRespawnSystemConfig_AUTO_ADDED_GROUP_PLAYERS, Player(PLAYER_NEUTRAL_AGGRESSIVE))
+    call ForceAddPlayer(UnitGroupRespawnConfig_AUTO_ADDED_GROUP_PLAYERS, GetMapBossesPlayer())
+    call ForceAddPlayer(UnitGroupRespawnConfig_AUTO_ADDED_GROUP_PLAYERS, Player(PLAYER_NEUTRAL_AGGRESSIVE))
     call GroupEnumUnitsInRect(g, GetPlayableMapRect(), null) // This should be the only GroupEnumUnits during the initialization!!!
     call ForGroup(g, function EnumUnitInit)
     call GroupClear(g)

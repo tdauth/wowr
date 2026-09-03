@@ -1,4 +1,4 @@
-library UnitGroupRespawnSystemConfig requires UnitTypeUtils, WoWReforgedProfessionHunter, WoWReforgedCalendarEvents, WoWReforgedCrateTypes, WoWReforgedCages
+library UnitGroupRespawnConfig requires UnitTypeUtils, WoWReforgedProfessionHunter, WoWReforgedCalendarEvents, WoWReforgedCrateTypes, WoWReforgedCages
 
 globals
     // The default delay until a unit will be respawned.

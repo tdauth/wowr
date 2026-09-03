@@ -1,6 +1,6 @@
-library UnitGroupRespawnSystem initializer Init requires UnitGroupRespawnSystemConfig
+library UnitGroupRespawn initializer Init requires UnitGroupRespawnConfig
 
-// Baradé's Unit Group Respawn System 1.3
+// Baradé's Unit Group Respawn 1.3
 //
 // Allows dying or charmed or rescued units from a group or individually to respawn after some time.
 // Respawning groups are automatically determined by default from preplaced creeps next to each other owned by player neutral aggressive.
@@ -9,7 +9,7 @@ library UnitGroupRespawnSystem initializer Init requires UnitGroupRespawnSystemC
 // - Copy this code into your map script or a trigger converted into code.
 // - Place some creeps on the map.
 //
-// You can change the default configuration by changing the code in the library UnitGroupRespawnSystemConfig.
+// You can change the default configuration by changing the code in the library UnitGroupRespawnConfig.
 //
 // Design:
 //
@@ -304,7 +304,7 @@ function RespawnUnit takes integer index returns boolean
     endif
     if (respawnUnitType[index] == UNIT_RESPAWN_TYPE_UNIT) then
         if (respawnUnitUnit[index] != null and IsUnitType(respawnUnitUnit[index], UNIT_TYPE_HERO)) then
-            call ReviveHero(respawnUnitUnit[index], respawnUnitX[index], respawnUnitY[index], UnitGroupRespawnSystemConfig_HERO_RESPAWN_DO_EYECANDY)
+            call ReviveHero(respawnUnitUnit[index], respawnUnitX[index], respawnUnitY[index], UnitGroupRespawnConfig_HERO_RESPAWN_DO_EYECANDY)
         else
             set respawnUnitUnit[index] = CreateUnit(respawnUnitOwner[index], respawnUnitUnitTypeId[index], respawnUnitX[index], respawnUnitY[index], respawnUnitFacing[index])
             set add = true
@@ -320,7 +320,7 @@ function RespawnUnit takes integer index returns boolean
     set respawnUnitHandleId[index] = GetHandleId(respawnUnitUnit[index])
     call SaveInteger(respawnUnitHashTable, respawnUnitHandleId[index], 0, index)
 
-static if (UnitGroupRespawnSystemConfig_SET_MAX_DEATH_TIME_TO_UNITS) then
+static if (UnitGroupRespawnConfig_SET_MAX_DEATH_TIME_TO_UNITS) then
     if (IsUnitType(respawnUnitUnit[index], UNIT_TYPE_HERO)) then
         call BlzSetUnitRealField(respawnUnitUnit[index], UNIT_RF_DEATH_TIME, 99999999.0)
     endif
@@ -400,7 +400,7 @@ private function AddRespawnUnitDefault takes integer index, real x, real y retur
     set respawnUnitUseDyingLoc[index] = false
     set respawnUnitOwner[index] = Player(PLAYER_NEUTRAL_AGGRESSIVE)
     set respawnUnitTimer[index] = CreateTimer()
-    set respawnUnitTimeout[index] = UnitGroupRespawnSystemConfig_DEFAULT_TIMEOUT
+    set respawnUnitTimeout[index] = UnitGroupRespawnConfig_DEFAULT_TIMEOUT
     call SaveInteger(respawnUnitHashTable, GetHandleId(respawnUnitTimer[index]), 0, index)
     set respawnUnitEnabled[index] = true
     set respawnUnitGroupIndex[index] = -1
@@ -431,7 +431,7 @@ function AddRespawnUnit takes unit whichUnit returns integer
     set respawnUnitFacing[index] = GetUnitFacing(whichUnit)
     set respawnUnitOwner[index] = GetOwningPlayer(whichUnit)
     set respawnUnitReadyForRespawn[index] = false
-static if (UnitGroupRespawnSystemConfig_SET_MAX_DEATH_TIME_TO_UNITS) then
+static if (UnitGroupRespawnConfig_SET_MAX_DEATH_TIME_TO_UNITS) then
     if (IsUnitType(whichUnit, UNIT_TYPE_HERO)) then
         call BlzSetUnitRealField(whichUnit, UNIT_RF_DEATH_TIME, 99999999.0)
     endif
@@ -648,10 +648,10 @@ function AddRespawnUnitGroup takes nothing returns integer
     set respawnUnitGroupIsValid[index] = true
     set respawnUnitGroup[index] = CreateGroup()
     set respawnUnitGroupTimer[index] = CreateTimer()
-    set respawnUnitGroupTimeout[index] = UnitGroupRespawnSystemConfig_DEFAULT_TIMEOUT
+    set respawnUnitGroupTimeout[index] = UnitGroupRespawnConfig_DEFAULT_TIMEOUT
     call SaveInteger(respawnUnitHashTable, GetHandleId(respawnUnitGroupTimer[index]), 0, index)
     set respawnUnitGroupEnabled[index] = true
-    set respawnUnitGroupItemDropEnabled[index] = UnitGroupRespawnSystemConfig_AUTO_ADDED_DROP_RANDOM_ITEMS
+    set respawnUnitGroupItemDropEnabled[index] = UnitGroupRespawnConfig_AUTO_ADDED_DROP_RANDOM_ITEMS
 
     loop
         set respawnUnitGroupFreeIndex = respawnUnitGroupFreeIndex + 1
@@ -709,7 +709,7 @@ function AddRespawnUnitGroupFromUnitEx takes unit whichUnit, force whichForce, r
 endfunction
 
 function AddRespawnUnitGroupFromUnit takes unit whichUnit returns integer
-    return AddRespawnUnitGroupFromUnitEx(whichUnit, UnitGroupRespawnSystemConfig_AUTO_ADDED_GROUP_PLAYERS, UnitGroupRespawnSystemConfig_AUTO_ADDED_GROUP_MAX_DISTANCE)
+    return AddRespawnUnitGroupFromUnitEx(whichUnit, UnitGroupRespawnConfig_AUTO_ADDED_GROUP_PLAYERS, UnitGroupRespawnConfig_AUTO_ADDED_GROUP_MAX_DISTANCE)
 endfunction
 
 private function PolarProjectionX takes real x, real dist, real angle returns real
@@ -924,7 +924,7 @@ private function TriggerActionRespawnUnit takes nothing returns nothing
 
     if (IsRespawnUnitGroupValid(groupIndex) and IsRespawnUnitGroupEnabled(groupIndex)) then
         if (IsUnitGroupReadyForRespawn(GetRespawnUnitGroupUnits(groupIndex))) then
-            call UnitGroupRespawnSystemConfig_DropItemForGroup(groupIndex, triggerUnit, GetRespawnUnitGroupUnits(groupIndex), GetRespawnUnitGroupItemDropEnabled(groupIndex))
+            call UnitGroupRespawnConfig_DropItemForGroup(groupIndex, triggerUnit, GetRespawnUnitGroupUnits(groupIndex), GetRespawnUnitGroupItemDropEnabled(groupIndex))
             //call BJDebugMsg("Start group unit respawn for index " + I2S(groupIndex) + " with " + I2S(BlzGroupGetSize(GetRespawnUnitGroupUnits(groupIndex))) + " members")
             call StartUnitGroupRespawn(groupIndex)
         endif
@@ -946,19 +946,19 @@ function AddRespawnUnitGroupFromUnitStartEx takes unit whichUnit, force whichFor
 endfunction
 
 function AddRespawnUnitGroupFromUnitStart takes unit whichUnit returns nothing
-    call AddRespawnUnitGroupFromUnitStartEx(whichUnit, UnitGroupRespawnSystemConfig_AUTO_ADDED_GROUP_PLAYERS, UnitGroupRespawnSystemConfig_AUTO_ADDED_GROUP_MAX_DISTANCE, UnitGroupRespawnSystemConfig_AUTO_ADDED_GROUPS)
+    call AddRespawnUnitGroupFromUnitStartEx(whichUnit, UnitGroupRespawnConfig_AUTO_ADDED_GROUP_PLAYERS, UnitGroupRespawnConfig_AUTO_ADDED_GROUP_MAX_DISTANCE, UnitGroupRespawnConfig_AUTO_ADDED_GROUPS)
 endfunction
 
 private function AddRespawnUnitGroupFromEnumUnit takes nothing returns nothing
     call AddRespawnUnitGroupFromUnitStart(GetEnumUnit())
 endfunction
 
-static if (UnitGroupRespawnSystemConfig_AUTO_ADD_ALL_PREPLACED_CREEPS) then
+static if (UnitGroupRespawnConfig_AUTO_ADD_ALL_PREPLACED_CREEPS) then
 private function AddAllPreplacedCreeps takes nothing returns nothing
     local timer expiredTimer = GetExpiredTimer()
     local group allCreeps = CreateGroup()
 
-    call UnitGroupRespawnSystemConfig_AddAllUserSpecifiedPreplacedCreeps(allCreeps)
+    call UnitGroupRespawnConfig_AddAllUserSpecifiedPreplacedCreeps(allCreeps)
     call ForGroup(allCreeps, function AddRespawnUnitGroupFromEnumUnit)
     call GroupClear(allCreeps)
     call DestroyGroup(allCreeps)
@@ -976,7 +976,7 @@ private function Init takes nothing returns nothing
     call TriggerAddCondition(unitDeathOrCharmOrRescueTrigger, Condition(function TriggerConditionRespawnUnit))
     call TriggerAddAction(unitDeathOrCharmOrRescueTrigger, function TriggerActionRespawnUnit)
 
-static if (UnitGroupRespawnSystemConfig_AUTO_ADD_ALL_PREPLACED_CREEPS) then
+static if (UnitGroupRespawnConfig_AUTO_ADD_ALL_PREPLACED_CREEPS) then
     // waiting makes sure that all units are already placed on the map
     call TimerStart(CreateTimer(), 0.0, false, function AddAllPreplacedCreeps)
 else
@@ -993,14 +993,15 @@ hook RemoveUnit RemoveUnitCleanup
 /*
  * ChangeLog:
  *
- * 1.3 2026-09-01:
+ * 1.3 2026-09-03:
  * - Fix multiple bugs.
+ * - Fix rename into UnitGroupRespawn.
  *
  * 1.2:
  * - Add function AddRespawnUnitGroupFromUnitStart.
  * - Add function AddRespawnUnitGroupFromUnitEx
- * - Add function UnitGroupRespawnSystemConfig_BeforeAddAllUserSpecifiedPreplacedCreeps.
- * - Add function UnitGroupRespawnSystemConfig_AfterAddAllUserSpecifiedPreplacedCreeps.
+ * - Add function UnitGroupRespawnConfig_BeforeAddAllUserSpecifiedPreplacedCreeps.
+ * - Add function UnitGroupRespawnConfig_AfterAddAllUserSpecifiedPreplacedCreeps.
  *
  * 1.1:
  * - Fix changing the unit type when changing the unit.

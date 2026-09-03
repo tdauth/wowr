@@ -1,4 +1,4 @@
-library WoWReforgedRespawn initializer Init requires UnitGroupRespawnSystem, TextTagUtils, WoWReforgedUtils, WoWReforgedEvolution, WoWReforgedMapData
+library WoWReforgedRespawn initializer Init requires UnitGroupRespawn, TextTagUtils, WoWReforgedUtils, WoWReforgedEvolution, WoWReforgedMapData
 
 globals
     private trigger deathTrigger = CreateTrigger()
@@ -90,7 +90,7 @@ private function TriggerConditionRespawn takes nothing returns boolean
         call PreventUnitRespawnTextTag(GetRespawningUnit())
         call PreventUnitRespawn(GetRespawningUnit())
     endif
-    
+
     return false
 endfunction
 

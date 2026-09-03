@@ -1,4 +1,4 @@
-library WoWReforgedUtils requires TreeUtils, MathUtils, CameraUtils, HeroUtils, ForceUtils, SelectionUtils, AttackRange, StringUtils, CopyGroup, Aura, Crafting, UnitGroupRespawnSystem, MassSpell, WoWReforgedI18n
+library WoWReforgedUtils requires TreeUtils, MathUtils, CameraUtils, HeroUtils, ForceUtils, SelectionUtils, AttackRange, StringUtils, CopyGroup, Aura, Crafting, UnitGroupRespawn, MassSpell, WoWReforgedI18n
 /*
 function GetNpcName takes unit hero returns string
     return GetUnitNameByType(GetUnitTypeId(hero), GetOwningPlayer(hero))
