@@ -1,4 +1,4 @@
-library DestructableUtils
+library DestructableUtils initializer Init requires MathUtils
 
 function ReplaceDestructable takes destructable d, integer objectid, real face, real scale, integer variation, integer stateMethod returns destructable
     local real x = GetDestructableX(d)
@@ -10,7 +10,7 @@ function ReplaceDestructable takes destructable d, integer objectid, real face, 
     call RemoveDestructable(d)
     set d = CreateDestructable(objectid, x, y, face, scale, variation)
     call SetDestructableMaxLife(d, max)
-    
+
      // Set the unit's life and mana according to the requested method.
     if (stateMethod == bj_UNIT_STATE_METHOD_RELATIVE) then
         // Set the replacement's current/max life ratio to that of the old unit.
@@ -31,9 +31,51 @@ function ReplaceDestructable takes destructable d, integer objectid, real face, 
     else
         // Unrecognized unit state method - ignore the request.
     endif
-    
+
     call SetDestructableInvulnerable(d, invulnerable)
     return d
+endfunction
+
+globals
+    private real filterCenterX = 0.0
+    private real filterCenterY = 0.0
+    private boolexpr filterEnumDestructablesInCircleWithFilter
+
+    private trigger filterEvalTrigger = CreateTrigger()
+endglobals
+
+private function EnumDestructablesInCircleFilter takes nothing returns boolean
+    return DistBetweenCoordinates(filterCenterX, filterCenterY, GetDestructableX(GetFilterDestructable()), GetDestructableY(GetFilterDestructable())) <= bj_enumDestructableRadius and TriggerEvaluate(filterEvalTrigger)
+endfunction
+
+private function ReturnTrue takes nothing returns boolean
+    return true
+endfunction
+
+function EnumDestructablesInCircle takes real centerX, real centerY, real radius, boolexpr filter, code actionFunc returns nothing
+    local rect r = null
+    local triggercondition cond = null
+
+    if (radius >= 0.0) then
+        set filterCenterX = centerX
+        set filterCenterY = centerY
+        set bj_enumDestructableRadius = radius
+        set r = GetRectFromCircle(centerX, centerY, radius)
+        if (filter != null) then
+            set cond = TriggerAddCondition(filterEvalTrigger, filter)
+        else
+            set cond = TriggerAddCondition(filterEvalTrigger, Condition(function ReturnTrue))
+        endif
+        call EnumDestructablesInRect(r, filterEnumDestructablesInCircleWithFilter, actionFunc)
+        call RemoveRect(r)
+        set r = null
+        call TriggerRemoveCondition(filterEvalTrigger, cond)
+        set cond = null
+    endif
+endfunction
+
+private function Init takes nothing returns nothing
+    set filterEnumDestructablesInCircleWithFilter = Filter(function EnumDestructablesInCircleFilter)
 endfunction
 
 endlibrary

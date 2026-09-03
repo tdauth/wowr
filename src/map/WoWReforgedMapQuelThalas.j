@@ -1,4 +1,4 @@
-library WoWReforgedMapQuelThalas initializer Init requires OnStartGame
+library WoWReforgedMapQuelThalas initializer Init requires DestructableUtils, OnStartGame
 
 globals
     constant integer HIGH_ELF_BUILDING_SMALL_SOUTH_WEST_FACING = 'nefm'

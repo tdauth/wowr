@@ -137,6 +137,7 @@ private function Init takes nothing returns nothing
     call AddChange("Fix changing ownership of targets for Sunwell Resurrection.")
     call AddChange("Simplify checks for periodic Dwarf Lumber Mill auto return.")
     call AddChange("Change alias for chat command \"-order\" from \"-o\" into \"-or\".")
+    call AddChange("Add JASS function EnumDestructablesInCircle to library DestructableUtils.")
 
 static if (MAP_DEBUG_MODE_ENABLED) then
     call AddVersion("4.6")
