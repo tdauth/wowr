@@ -1,4 +1,4 @@
-library WoWReforgedSaveCodesResources requires SaveCodeSystem, Resources, WoWReforgedUtils, WoWReforgedSaveCodes
+library WoWReforgedSaveCodesResources requires SaveCodes, Resources, WoWReforgedUtils, WoWReforgedSaveCodes
 
 function IsSavedResource takes integer index returns boolean
     local Resource r = GetResource(index)
@@ -27,21 +27,21 @@ function CreateSaveCodeResourcesTextFile takes player owner, string playerName, 
 
     set content = content + AppendFileContent("Code: -loadres " + saveCode)
     set content = content + AppendFileContent("")
-    
+
     // The line below creates the log
     call FileWriteLine(content)
     set content = ""
-    
+
     set i = 0
     loop
         exitwhen (i == max)
         if (IsSavedResource(i)) then
-            set content = content + AppendFileContent(GetResourceName(GetResource(i)) + " - " + I2S(GetPlayerResource(owner, GetResource(i))))     
+            set content = content + AppendFileContent(GetResourceName(GetResource(i)) + " - " + I2S(GetPlayerResource(owner, GetResource(i))))
             set fileName = fileName + "-" + I2S(GetPlayerResource(owner, GetResource(i)))
         endif
         set i = i + 1
     endloop
-    
+
     set content = content + AppendFileContent("")
 
     // The line below creates the log
@@ -138,7 +138,7 @@ function ApplySaveCodeResources takes player whichPlayer, string s returns boole
                 set i = i + 1
                 set pos = pos + 1
             endloop
-            
+
             call AddGeneratedSaveCode(s)
         endif
     else

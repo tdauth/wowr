@@ -1,3 +1,5 @@
+library SaveCodes requires WoWReforgedUtils, Ascii
+
 // Barade's Save Code System 1.0
 //
 // Allows storing and loading custom save codes which contain any information.
@@ -20,7 +22,6 @@
 // Compression: We want to keep the savecodes as short as possible. Hence, we combine flags like game mode and single/multiplayer in one number. We could go even further as long as we know the maximum number of a value.
 // Another form of compression is to make the string hashes much shorter by using the modulo operation. This comes with the risk of having less different string hashes for different player names or as checksums but as long
 // as there are enough possibilities it is hard enough to fake the correct string hash value.
-library SaveCodeSystem requires WoWReforgedUtils, Ascii
 
 globals
     // ASCII without space, \, ", ? and ~.

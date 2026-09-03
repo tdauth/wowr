@@ -61,7 +61,7 @@
 ///! import "barade/ResourcesTeamMultiboardGui.j"
 //! import "barade/ResourcesWarnings.j"
 //! import "barade/SafeString.j"
-//! import "barade/SaveCodeSystem.j"
+//! import "barade/SaveCodes.j"
 //! import "barade/SelectionUtils.j"
 //! import "barade/SoundUtils.j"
 //! import "barade/StringFormat.j"

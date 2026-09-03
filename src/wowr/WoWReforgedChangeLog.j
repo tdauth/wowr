@@ -139,6 +139,7 @@ private function Init takes nothing returns nothing
     call AddChange("Change alias for chat command \"-order\" from \"-o\" into \"-or\".")
     call AddChange("Add JASS function EnumDestructablesInCircle to library DestructableUtils.")
     call AddChange("Rename UnitGroupRespawnSystem into UnitGroupRespawn.")
+    call AddChange("Rename SaveCodeSystem into SaveCodes.")
 
 static if (MAP_DEBUG_MODE_ENABLED) then
     call AddVersion("4.6")

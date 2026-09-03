@@ -1,6 +1,6 @@
-// TODO Create a system SaveCodeObjectSystem depending on the SaveCodeSystem which allows registering any IDs in a 2D array.
+// TODO Create a system SaveCodeObjectSystem depending on the SaveCodes which allows registering any IDs in a 2D array.
 // Init after races and professions.
-library WoWReforgedSaveCodeObjects initializer Init requires SaveCodeSystem, WoWReforgedRaces, WoWReforgedNeutral, WoWReforgedProfessions, WoWReforgedResearches, WoWReforgedQuests, WoWReforgedBanners, WoWReforgedObjectMappings, WoWReforgedProfessionHunter, WoWReforgedArena, WoWReforgedEquipment, WoWReforgedWalls
+library WoWReforgedSaveCodeObjects initializer Init requires SaveCodes, WoWReforgedRaces, WoWReforgedNeutral, WoWReforgedProfessions, WoWReforgedResearches, WoWReforgedQuests, WoWReforgedBanners, WoWReforgedObjectMappings, WoWReforgedProfessionHunter, WoWReforgedArena, WoWReforgedEquipment, WoWReforgedWalls
 
 globals
     private hashtable h = InitHashtable()
