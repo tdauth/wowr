@@ -343,14 +343,18 @@ endfunction
 private function TriggerActionDamage takes nothing returns nothing
     local unit source = GetEventDamageSource()
     local unit target = GetTriggerUnit()
-    local integer itemIndex = -1
+    local integer itemSlot = -1
     local integer abilityIndex = GetMatchingAbilityIndex(source)
+    local integer itemTypeIndex = -1
     if (abilityIndex != -1) then
         call MarkTarget(abilityIndex, source, target)
     else
-        set itemIndex = BlackArrowUnitGetOrbItem(source, null)
-        if (itemIndex != -1) then
-            call MarkTarget(itemTypeAbilityIndex[itemIndex], source, target)
+        set itemSlot = BlackArrowUnitGetOrbItem(source, null)
+        if (itemSlot != -1) then
+            set itemTypeIndex = GetMatchingItemTypeIndex(GetItemTypeId(UnitItemInSlot(source, itemSlot)))
+            if (itemTypeIndex != -1) then
+                call MarkTarget(itemTypeAbilityIndex[itemTypeIndex], source, target)
+            endif
         endif
     endif
     set source = null
