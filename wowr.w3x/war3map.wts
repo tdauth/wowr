@@ -4718,6 +4718,12 @@ STRING 788
 S
 }
 
+STRING 789
+// Abilities: A21L (Magical Gold Coin), Name (Name)
+{
+Magical Gold Coin
+}
+
 STRING 791
 // Buffs/Effects: B00U (), Bufftip (Tooltip)
 {
@@ -116054,12 +116060,6 @@ STRING 56230
 // Items: I11Z (Book of Prospecting), Tip (Tooltip - Basic)
 {
 Purchase Book of Prospecting
-}
-
-STRING 56231
-// Abilities: A21L (Magical Coin), Name (Name)
-{
-Magical Coin
 }
 
 STRING 56235

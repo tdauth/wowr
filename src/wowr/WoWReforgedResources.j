@@ -387,7 +387,7 @@ function SellAllLumber takes player whichPlayer returns nothing
     call DisplayTextToPlayer(whichPlayer, 0.0, 0.0, Format(GetLocalizedString("SOLD_ALL_LUMBER_FOR_GOLD")).i(gold).result())
 endfunction
 
-private function RefillUnitResources takes unit mine returns nothing
+function RefillUnitResources takes unit mine returns nothing
     local integer i = 0
     local integer max = GetMaxResources()
     loop
@@ -395,20 +395,6 @@ private function RefillUnitResources takes unit mine returns nothing
         call SetUnitResource(mine, i, GetUnitResourceMax(mine, i))
         set i = i + 1
     endloop
-endfunction
-
-function MagicalFiller takes unit caster, unit mine returns nothing
-    if (IsMine(mine) or GetUnitAbilityLevel(mine, 'Agld') > 0) then
-        if (GetUnitAbilityLevel(mine, 'Agld') > 0) then
-            call SetResourceAmount(mine, 9999999999)
-        endif
-        if (IsMine(mine)) then
-            call RefillUnitResources(mine)
-        endif
-    else
-        call IssueImmediateOrder(caster, "stop")
-        call SimError(GetOwningPlayer(caster), GetLocalizedString("TARGET_MUST_BE_A_MINE"))
-    endif
 endfunction
 
 private function EnumRegisterChatCommandEvents takes nothing returns nothing
