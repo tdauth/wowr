@@ -435,11 +435,17 @@ private function DestroyUI takes nothing returns nothing
         set rowPlayer = null
         set row = row + 1
     endloop
-    
+
+    call DestroyTrigger(changeTrigger);
+    set changeTrigger = null
     call BlzDestroyFrame(CancelButton)
+    set CancelButton = null
     call DestroyTrigger(cancelTrigger)
+    set cancelTrigger = null
     call BlzDestroyFrame(ApplyButton)
+    set ApplyButton = null
     call DestroyTrigger(applyTrigger)
+    set applyTrigger = null
 endfunction
 
 function SetDiplomacyUIPlayers takes force whichForce returns nothing
