@@ -1,4 +1,4 @@
-library CargoLocationSystem requires UnitEventEx
+library CargoLocation requires UnitEventEx
 
 function GetUnitActualX takes unit whichUnit returns real
     local unit transporter = GetUnitTransporter(whichUnit)

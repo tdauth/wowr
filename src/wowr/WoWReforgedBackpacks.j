@@ -5,7 +5,7 @@
  * The pages are changed with abilities of the backpack hero.
  * The backpack hero is always moved to the location of the player's first hero automatically which allows exchanging items faster.
  */
-library WoWReforgedBackpacks initializer Init requires HeroUtils, ItemUtils, CargoLocationSystem, TextTagUtils, WoWReforgedUtils, WoWReforgedEquipmentBags, WoWReforgedItems, WoWReforgedUiBackpackEvaluate
+library WoWReforgedBackpacks initializer Init requires HeroUtils, ItemUtils, CargoLocation, TextTagUtils, WoWReforgedUtils, WoWReforgedEquipmentBags, WoWReforgedItems, WoWReforgedUiBackpackEvaluate
 
 globals
     constant integer BACKPACK_NEXT_PAGE_ABILITY_ID = 'A02L'

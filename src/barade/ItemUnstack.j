@@ -3,8 +3,9 @@ constant function ItemUnstackItemGetMaxStacks takes integer itemTypeId returns i
     return 1000
 endfunction
 
-library ItemUnstackSystem initializer Init requires optional MaxItemStacks
-// Baradé's Item Unstack System 1.9
+library ItemUnstack initializer Init requires optional MaxItemStacks
+
+// Baradé's Item Unstack 1.10
 //
 // Supports the missing Warcraft III feature of unstacking stacked items in your inventory.
 //
@@ -248,11 +249,14 @@ private function Init takes nothing returns nothing
     call TriggerRegisterAnyUnitEventBJ(orderTrigger, EVENT_PLAYER_UNIT_ISSUED_TARGET_ORDER)
     call TriggerAddCondition(orderTrigger, Condition(function TriggerConditionOrderUnstack))
     call TriggerAddAction(orderTrigger, function TriggerActionOrderUnstack)
-    
+
     call SetItemUnstackEnabled(MaxItemStacks_GetStackItemDummy(), false)
 endfunction
 
 // Change Log:
+//
+// 1.9 2026-09-03:
+// - Rename into ItemUnstack.
 //
 // 1.9 2023-01-10:
 // - Fix checking for the charges maximums of the corresponding item types when unstacking items.
