@@ -501,6 +501,7 @@ private function ConsumeRecipeRequirement takes integer recipe, integer requirem
         loop
             exitwhen (j >= BlzGroupGetSize(whichGroup))
             set groupUnit = BlzGroupUnitAt(whichGroup, j)
+            set i = 0
             loop
                 exitwhen (i == bj_MAX_INVENTORY)
                 set slotItem = UnitItemInSlot(groupUnit, i)
@@ -762,7 +763,7 @@ function CraftItem takes item soldItem, unit sellingUnit, unit buyingUnit return
     local integer j = 0
     local integer recipe = 0
     loop
-        exitwhen (recipe >= counter and craftedItem != null)
+        exitwhen (recipe >= counter or craftedUnit != null or craftedItem != null)
         if (not GetRecipeIsSpacer(recipe) and recipesUIItemTypeIds[recipe] == soldItemTypeId) then
             call RemoveItem(soldItem)
             set soldItem = null
@@ -1044,7 +1045,7 @@ function DisassembleItem takes item soldItem, unit sellingUnit returns integer
         set max = GetRecipeRequirementsCount(recipe)
         set minRequirements = GetRecipeMinRequirements(recipe)
         loop
-            exitwhen (i == max or (minRequirements > 0 and i > minRequirements))
+            exitwhen (i == max or (minRequirements > 0 and i >= minRequirements))
             set requirement = CreateItem(GetRecipeRequirementItemTypeId(recipe, i), GetUnitX(sellingUnit), GetUnitY(sellingUnit))
             set charges = GetRecipeRequirementCharges(recipe, i) * count
             if (GetItemCharges(requirement) > 0 or charges > 1) then
@@ -1077,7 +1078,7 @@ function DisassembleUnit takes unit target, unit sellingUnit returns integer
         set max = GetRecipeRequirementsCount(recipe)
         set minRequirements = GetRecipeMinRequirements(recipe)
         loop
-            exitwhen (i == max or (minRequirements > 0 and i > minRequirements))
+            exitwhen (i == max or (minRequirements > 0 and i >= minRequirements))
             set requirement = CreateItem(GetRecipeRequirementItemTypeId(recipe, i), GetUnitX(sellingUnit), GetUnitY(sellingUnit))
             set charges = GetRecipeRequirementCharges(recipe, i) * count
             if (GetItemCharges(requirement) > 0 or charges > 1) then
