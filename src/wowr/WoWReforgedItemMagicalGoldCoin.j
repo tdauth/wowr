@@ -1,4 +1,4 @@
-library WoWReforgedItemMagicalGoldCoin initializer Init requires SimError, WoWReforgedRaces
+library WoWReforgedItemMagicalGoldCoin initializer Init requires SimError, SafeString, WoWReforgedRaces
 
 globals
     private boolexpr filterEnumRefillMine = null
@@ -22,7 +22,7 @@ private function RefillGoldmines takes unit caster, real x, real y, real radius 
     call GroupEnumUnitsInRange(g, x, y, radius, filterEnumRefillMine)
     if (BlzGroupGetSize(g) == 0) then
         call IssueImmediateOrder(caster, "stop")
-        call SimError(GetOwningPlayer(caster), GetLocalizedString("NO_TARGETS"))
+        call SimError(GetOwningPlayer(caster), GetLocalizedStringSafe("NO_TARGETS"))
     else
         call ForGroup(g, function EnumRefillMine)
     endif

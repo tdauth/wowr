@@ -75,6 +75,9 @@ StringList {
     HITPOINTS_INFO                     "Hitpoints: %1%/%2%",
     // Magical Item Summoner
     NO_VALID_ITEMS                     "No valid items.",
+    RESPAWNED_X_ITEMS                  "Respawned %1% item(s).",
+    // Magical Creep Summoner
+    SUMMONED_X_CREEP_SPOTS             "Summoned %1% creep spot(s).",
     // Item Locker
     LOCKED_ITEM_X                      "Locked item %1%.",
     UNLOCKED_ITEM_X                    "Unlocked item %1%.",

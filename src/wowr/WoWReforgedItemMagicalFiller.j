@@ -1,4 +1,4 @@
-library WoWReforgedItemMagicalFiller initializer Init requires SimError, WoWReforgedResources
+library WoWReforgedItemMagicalFiller initializer Init requires SimError, SafeString, WoWReforgedResources
 
 globals
     private trigger castTrigger = CreateTrigger()
@@ -14,7 +14,7 @@ private function MagicalFiller takes unit caster, unit mine returns nothing
         endif
     else
         call IssueImmediateOrder(caster, "stop")
-        call SimError(GetOwningPlayer(caster), GetLocalizedString("TARGET_MUST_BE_A_MINE"))
+        call SimError(GetOwningPlayer(caster), GetLocalizedStringSafe("TARGET_MUST_BE_A_MINE"))
     endif
 endfunction
 
