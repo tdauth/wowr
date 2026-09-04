@@ -1,13 +1,17 @@
 library WoWReforgedPickpocketing requires ItemUtils, TextTagUtils, WoWReforgedUtils, WoWReforgedBackpacks
 
 globals
-    constant real PICKPOCKETING_CHANCE = 15.0
-    constant real PICKPOCKETING_BOUNTY_PERCENTAGE = 20.0
-    constant integer PICKPOCKETING_ITEM_TYPE_ID = 'I03F'
-    constant integer PICKPOCKETING_ABILITY_ID = 'A17B'
+    private constant real PICKPOCKETING_CHANCE = 15.0
+    private constant real PICKPOCKETING_BOUNTY_PERCENTAGE = 20.0
+    private constant integer PICKPOCKETING_ITEM_TYPE_ID = 'I03F'
+    private constant integer PICKPOCKETING_ABILITY_ID = 'A17B'
+
+    private player filterPlayer = null
+    private boolexpr filter = null
+    private trigger deathTrigger = CreateTrigger()
 endglobals
 
-function GetBountyGold takes unit whichUnit returns integer
+private function GetBountyGold takes unit whichUnit returns integer
     local integer bountyBase = BlzGetUnitIntegerField(whichUnit, UNIT_IF_GOLD_BOUNTY_AWARDED_BASE)
     local integer bountyNumberOfDice = BlzGetUnitIntegerField(whichUnit, UNIT_IF_GOLD_BOUNTY_AWARDED_NUMBER_OF_DICE)
     local integer bountySidesPerDice = BlzGetUnitIntegerField(whichUnit, UNIT_IF_GOLD_BOUNTY_AWARDED_SIDES_PER_DIE)
@@ -18,11 +22,11 @@ function GetBountyGold takes unit whichUnit returns integer
         set bounty = bounty + GetRandomInt(0, bountySidesPerDice)
         set i = i + 1
     endloop
-    
+
     return bounty
 endfunction
 
-function GetBountyLumber takes unit whichUnit returns integer
+private function GetBountyLumber takes unit whichUnit returns integer
     local integer bountyBase = BlzGetUnitIntegerField(whichUnit, UNIT_IF_LUMBER_BOUNTY_AWARDED_BASE)
     local integer bountyNumberOfDice = BlzGetUnitIntegerField(whichUnit, UNIT_IF_LUMBER_BOUNTY_AWARDED_NUMBER_OF_DICE)
     local integer bountySidesPerDice = BlzGetUnitIntegerField(whichUnit, UNIT_IF_LUMBER_BOUNTY_AWARDED_SIDES_PER_DIE)
@@ -33,11 +37,11 @@ function GetBountyLumber takes unit whichUnit returns integer
         set bounty = bounty + GetRandomInt(0, bountySidesPerDice)
         set i = i + 1
     endloop
-    
+
     return bounty
 endfunction
 
-function ThiefBounty takes unit hero, unit whichUnit returns nothing
+private function ThiefBounty takes unit hero, unit whichUnit returns nothing
     local force whichForce = CreateForce()
     local integer bountyGold = R2I(I2R(GetBountyGold(whichUnit)) * PICKPOCKETING_BOUNTY_PERCENTAGE)
     local integer bountyLumber = R2I(I2R(GetBountyLumber(whichUnit)) * PICKPOCKETING_BOUNTY_PERCENTAGE)
@@ -53,7 +57,7 @@ function ThiefBounty takes unit hero, unit whichUnit returns nothing
     set whichForce = null
 endfunction
 
-function PickpocketingStealItem takes unit hero, unit target returns item
+private function PickpocketingStealItem takes unit hero, unit target returns item
     local integer countStealingItem = 0
     local real random = 0.0
     local item stolenItem = null
@@ -82,12 +86,43 @@ function PickpocketingStealItem takes unit hero, unit target returns item
 
                 return stolenItem
             endif
-            
+
             call ThiefBounty(hero, target)
         endif
     endif
 
     return null
+endfunction
+
+private function FilterIsValidTarget takes nothing returns boolean
+    return UnitInventorySize(GetFilterUnit()) > 0 and IsUnitEnemy(GetFilterUnit(), filterPlayer) and IsUnitAliveBJ(GetFilterUnit())
+endfunction
+
+private function EnumStealItem takes nothing returns nothing
+    call PickpocketingStealItem(GetEnumUnit(), GetTriggerUnit())
+endfunction
+
+private function StealItemsFrom takes unit caster returns nothing
+    local group g = CreateGroup()
+    set filterPlayer = GetOwningPlayer(caster)
+    call GroupEnumUnitsInRange(g, GetUnitX(caster), GetUnitY(caster), 1024.0, filter)
+    call ForGroup(g, function EnumStealItem)
+    call DestroyGroup(g)
+    call GroupClear(g)
+    set g = null
+endfunction
+
+private function TriggerConditionDeath takes nothing returns boolean
+    if (UnitInventorySize(GetTriggerUnit()) > 0) then
+        call StealItemsFrom(GetTriggerUnit())
+    endif
+    return false
+endfunction
+
+private function Init takes nothing returns nothing
+    set filter = Filter(function FilterIsValidTarget)
+    call TriggerRegisterAnyUnitEventBJ(deathTrigger, EVENT_PLAYER_UNIT_DEATH)
+    call TriggerAddCondition(deathTrigger, Condition(function TriggerConditionDeath))
 endfunction
 
 endlibrary

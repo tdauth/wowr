@@ -1,10 +1,8 @@
-library WoWReforgedWrapUp initializer Init requires ItemUtils, WoWReforgedRaces
+library WoWReforgedItemMovingBoxes initializer Init requires ItemUtils, WoWReforgedRaces
 
 globals
     private boolexpr filter = null
-    private trigger constructionTrigger = CreateTrigger()
-    private trigger deathTrigger = CreateTrigger()
-    private group constructedBuildings = CreateGroup()
+    private trigger spellCastTrigger = CreateTrigger()
     private player filterPlayer = null
 endglobals
 
@@ -13,7 +11,7 @@ private function GetBuildingItemId takes integer unitTypeId returns integer
 endfunction
 
 private function FilterIsWrapableBuilding takes nothing returns boolean
-    return GetOwningPlayer(GetFilterUnit()) == filterPlayer and (not IsUnitType(GetFilterUnit(), UNIT_TYPE_STRUCTURE) or IsUnitInGroup(GetFilterUnit(), constructedBuildings)) and GetBuildingItemId(GetUnitTypeId(GetFilterUnit())) != 0
+    return GetOwningPlayer(GetFilterUnit()) == filterPlayer and IsUnitAliveBJ(GetFilterUnit()) and IsUnitType(GetFilterUnit(), UNIT_TYPE_STRUCTURE) and GetBuildingItemId(GetUnitTypeId(GetFilterUnit())) != 0
 endfunction
 
 private function CancelAllOrdersInBuilding takes unit whichBuilding returns nothing
@@ -42,7 +40,7 @@ function WrapUpBuilding takes real x, real y, unit source returns item
     return whichItem
 endfunction
 
-function WrapUpAllBuildings takes unit caster, real x, real y returns integer
+private function WrapUpAllBuildings takes unit caster, real x, real y returns integer
     local player whichPlayer = GetOwningPlayer(caster)
     local group allBuildings = CreateGroup()
     local integer counter = 0
@@ -95,35 +93,27 @@ function WrapUpAllBuildings takes unit caster, real x, real y returns integer
     return counter
 endfunction
 
-private function TriggerActionConstructed takes nothing returns nothing
-    call GroupAddUnit(constructedBuildings, GetConstructedStructure())
+private function WrapUpAllBuildingsInArea takes unit caster, real x, real y returns nothing
+    local integer count = WrapUpAllBuildings(caster, x, y)
+    if (count == 0) then
+        call IssueImmediateOrder(caster, "stop")
+        call SimError(GetOwningPlayer(caster), GetLocalizedString("NO_WRAPABLE_BUILDINGS"))
+    endif
 endfunction
 
-private function TriggerConditionIsConstructed takes nothing returns boolean
-    return IsUnitInGroup(GetTriggerUnit(), constructedBuildings)
-endfunction
-
-private function TriggerActionDeath takes nothing returns nothing
-    call GroupRemoveUnit(constructedBuildings, GetTriggerUnit())
+private function TriggerConditionSpellCast takes nothing returns boolean
+    if (GetSpellAbilityId() == 'A18Z') then
+        call WrapUpAllBuildingsInArea(GetTriggerUnit(), GetSpellTargetX(), GetSpellTargetY())
+    endif
+    return false
 endfunction
 
 private function Init takes nothing returns nothing
     set filter = Filter(function FilterIsWrapableBuilding)
 
-    call TriggerRegisterAnyUnitEventBJ(constructionTrigger, EVENT_PLAYER_UNIT_CONSTRUCT_FINISH)
-    call TriggerAddAction(constructionTrigger, function TriggerActionConstructed)
-
-    call TriggerRegisterAnyUnitEventBJ(deathTrigger, EVENT_PLAYER_UNIT_DEATH)
-    call TriggerAddCondition(deathTrigger, Condition(function TriggerConditionIsConstructed))
-    call TriggerAddAction(deathTrigger, function TriggerActionDeath)
+    call TriggerRegisterAnyUnitEventBJ(spellCastTrigger, EVENT_PLAYER_UNIT_SPELL_CAST)
+    call TriggerAddCondition(spellCastTrigger, Condition(function TriggerConditionSpellCast))
 endfunction
-
-private function HookRemoveConstructedBuilding takes unit whichUnit returns nothing
-    if (IsUnitInGroup(whichUnit, constructedBuildings)) then
-        call GroupRemoveUnit(constructedBuildings, whichUnit)
-    endif
-endfunction
-
-hook RemoveUnit HookRemoveConstructedBuilding
 
 endlibrary
+

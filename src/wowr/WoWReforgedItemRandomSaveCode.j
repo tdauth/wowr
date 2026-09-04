@@ -1,4 +1,8 @@
-library WoWReforgedRandomSaveCode requires WoWReforgedUtils, WoWReforgedSaveCodes, optional WoWReforgedUrlUi
+library WoWReforgedItemRandomSaveCode initializer Init requires WoWReforgedUtils, WoWReforgedSaveCodes, optional WoWReforgedUrlUi
+
+globals
+    private trigger pickupItemTrigger = CreateTrigger()
+endglobals
 
 private function CreateRandomUnits takes player whichPlayer returns group
     local location tmpLocation = Location(0.0, 0.0)
@@ -15,6 +19,10 @@ private function CreateRandomUnits takes player whichPlayer returns group
     set tmpLocation = null
 
     return allCreeps
+endfunction
+
+function ForGroupRemoveUnit takes nothing returns nothing
+    call RemoveUnit(GetEnumUnit())
 endfunction
 
 private function GetSaveCodeRandomUnits takes player whichPlayer returns string
@@ -86,12 +94,24 @@ else
 endif
 endfunction
 
-function GenerateRandomSaveCode takes unit hero returns nothing
+private function GenerateRandomSaveCode takes unit hero returns nothing
     if (GetRandomInt(0, 1) == 0) then
         call ShowUrl(GetOwningPlayer(hero), GetLocalizedString("UNITS_SAVE_CODE"), GetSaveCodeRandomUnits(GetOwningPlayer(hero)))
     else
         call ShowUrl(GetOwningPlayer(hero), GetLocalizedString("ITEMS_SAVE_CODE"), GetSaveCodeRandomItems(GetOwningPlayer(hero)))
     endif
+endfunction
+
+private function TriggerConditionPickupItem takes nothing returns boolean
+    if (GetItemTypeId(GetManipulatedItem()) ==  ITEM_RANDOM_SAVE_CODE) then
+        call GenerateRandomSaveCode(GetTriggerUnit())
+    endif
+    return false
+endfunction
+
+private function Init takes nothing returns nothing
+    call TriggerRegisterAnyUnitEventBJ(pickupItemTrigger, EVENT_PLAYER_UNIT_PICKUP_ITEM)
+    call TriggerAddCondition(pickupItemTrigger, Condition(function TriggerConditionPickupItem))
 endfunction
 
 endlibrary

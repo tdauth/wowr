@@ -1,4 +1,4 @@
-library WowReforgedSpellMultiply initializer Init requires SimError, WoWReforgedRaces, WoWReforgedBosses, WoWReforgedAbilitySkill
+library WowReforgedSpellMultiply initializer Init requires SimError, WoWReforgedRaces, WoWReforgedBosses, WoWReforgedAbilitySkill, WoWReforgedItemMovingBoxes
 
 globals
     public constant integer ABILITY_ID = ABILITY_MULTIPLY
@@ -31,7 +31,7 @@ function MultiplyUnit takes unit caster, unit target returns nothing
             loop
                 exitwhen (i == factor)
                 set copy = CreateUnit(GetOwningPlayer(caster), GetUnitTypeId(target), GetUnitX(target), GetUnitY(target), GetUnitFacing(target))
-                
+
                 //call ApplyAllMaxHpResearches(GetSummonedUnit(), null)
                 call SetUnitState(copy, UNIT_STATE_MAX_MANA, GetUnitState(target, UNIT_STATE_MAX_MANA))
                 //call SetUnitState(copy, UNIT_STATE_MAX_LIFE, GetUnitState(target, UNIT_STATE_MAX_LIFE))
@@ -84,7 +84,7 @@ endfunction
 private function Init takes nothing returns nothing
     call TriggerRegisterAnyUnitEventBJ(castTrigger, EVENT_PLAYER_UNIT_SPELL_CHANNEL)
     call TriggerAddCondition(castTrigger, Condition(function TriggerConditionCast))
-    
+
     call RegisterAbilityFieldCustomInteger0(ABILITY_ID, GetMultiplyCopies)
 endfunction
 

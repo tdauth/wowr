@@ -3646,6 +3646,8 @@ globals
 
     // Items
 
+    constant integer ITEM_QUIVER                                     = 'I0UE'
+    constant integer ITEM_RANDOM_SAVE_CODE                           = 'I0Y1'
     constant integer ITEM_GLOVES_OF_HASTE                            = 'gcel'
 
     // Quest Rewards

@@ -8,7 +8,7 @@ function GetSaveCodeNormal takes string playerName, boolean singlePlayer, boolea
     return GetSaveCodeEx(GetTriggerPlayer(), playerName, singlePlayer, warlord, xpRate, 30, 50000, 30, 50000, 30, 50000, 100000, 100000, 30, 0, 2)
 endfunction
 
-function ForGroupRemoveUnit takes nothing returns nothing
+private function ForGroupRemoveUnit takes nothing returns nothing
     call RemoveUnit(GetEnumUnit())
 endfunction
 

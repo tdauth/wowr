@@ -4719,7 +4719,7 @@ S
 }
 
 STRING 789
-// Abilities: A21L (Magical Gold Coin), Name (Name)
+// Items: I120 (Magical Gold Coin), Name (Name)
 {
 Magical Gold Coin
 }
@@ -116009,7 +116009,7 @@ Craft gold and tools to get more gold:|n- Gold Drill|n- Magical Gold Coins and G
 }
 
 STRING 56220
-// Items: I120 (Magical Gold Coin), Name (Name)
+// Abilities: A21L (Magical Gold Coin), Name (Name)
 {
 Magical Gold Coin
 }

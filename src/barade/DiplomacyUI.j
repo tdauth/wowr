@@ -6,7 +6,7 @@ globals
     public constant string PREFIX = "DiplomacyUI"
     public constant string TOC_FILE = "war3mapImported\\diplomacyui.toc"
     public constant boolean LOAD_TOC_FILE = false
-    
+
     public constant real PLAYER_SCALE = 0.1
     public constant real PLAYER_INDENTION = 0.013
     public constant real X = 0.0
@@ -31,7 +31,7 @@ globals
     public constant real TOOLTIP_Y = 0.50
     public constant real TOOLTIP_WIDTH = 0.20
     public constant real TOOLTIP_HEIGHT = 0.6
-    
+
     private framehandle Background
     private framehandle Title
     private framehandle TableTitle
@@ -62,20 +62,20 @@ function GetAllianceState takes player sourcePlayer, player otherPlayer returns 
         elseif (GetPlayerAlliance(sourcePlayer, otherPlayer, ALLIANCE_SHARED_VISION)) then
             return bj_ALLIANCE_ALLIED_VISION
         endif
-        
+
         return bj_ALLIANCE_ALLIED
     elseif (IsPlayerEnemy(sourcePlayer, otherPlayer)) then
         if (GetPlayerAlliance(sourcePlayer, otherPlayer, ALLIANCE_SHARED_VISION)) then
             return bj_ALLIANCE_UNALLIED_VISION
         endif
-        
+
         return bj_ALLIANCE_UNALLIED
     endif
-    
+
     if (GetPlayerAlliance(sourcePlayer, otherPlayer, ALLIANCE_SHARED_VISION)) then
         return bj_ALLIANCE_NEUTRAL_VISION
     endif
-    
+
     return bj_ALLIANCE_NEUTRAL
 endfunction
 
@@ -182,7 +182,7 @@ function SetDiplomacyUIVisible takes boolean visible returns nothing
         if (IsPlayerInForce(rowPlayer, allPlayers)) then
             call BlzFrameSetVisible(ColumnTitles[row], visible)
             call BlzFrameSetVisible(RowTitles[row], visible)
-            
+
             set column = 0
             loop
                 exitwhen (column == bj_MAX_PLAYERS)
@@ -191,7 +191,7 @@ function SetDiplomacyUIVisible takes boolean visible returns nothing
                     if (rowPlayer != columnPlayer) then
                         set index = Index2D(row, column, bj_MAX_PLAYERS)
                         call BlzFrameSetVisible(Cells[index], visible)
-                        
+
                         if (not visible) then
                             call BlzFrameSetVisible(CellsTooltip[index], visible)
                         endif
@@ -289,7 +289,7 @@ private function CreateUI takes nothing returns nothing
     set Background = BlzCreateFrame("EscMenuBackdrop", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), 0, 0)
     call BlzFrameSetAbsPoint(Background, FRAMEPOINT_TOPLEFT, X, Y)
     call BlzFrameSetAbsPoint(Background, FRAMEPOINT_BOTTOMRIGHT, X + WIDTH, Y - HEIGHT)
-    
+
     set Title = BlzCreateFrameByType("TEXT", "DiplomacyUITitle", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), "", 0)
     call BlzFrameSetAbsPoint(Title, FRAMEPOINT_TOPLEFT, X, TITLE_Y)
     call BlzFrameSetAbsPoint(Title, FRAMEPOINT_BOTTOMRIGHT, X + WIDTH, TITLE_Y - TITLE_HEIGHT)
@@ -299,27 +299,27 @@ private function CreateUI takes nothing returns nothing
     set y = Y - TITLE_HEIGHT - TITLE_VERTICAL_SPACE - cellHeight
     set headerX = indentionX + cellWidth
     set headerY = Y - TITLE_HEIGHT - TITLE_VERTICAL_SPACE
-    
+
     set TableTitle = BlzCreateFrameByType("TEXT", "DiplomacyUITableTitle", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), "", 0)
     call BlzFrameSetAbsPoint(TableTitle, FRAMEPOINT_TOPLEFT, indentionX, headerY)
     call BlzFrameSetAbsPoint(TableTitle, FRAMEPOINT_BOTTOMRIGHT, indentionX + cellWidth, headerY - cellHeight)
     call BlzFrameSetText(TableTitle, GetLocalizedString("SOURCE_TARGET"))
     call BlzFrameSetTextAlignment(TableTitle, TEXT_JUSTIFY_CENTER, TEXT_JUSTIFY_LEFT)
     call BlzFrameSetScale(TableTitle, scale)
-    
+
     set changeTrigger = CreateTrigger()
     set cancelTrigger = CreateTrigger()
     set applyTrigger = CreateTrigger()
-    
+
     call TriggerAddAction(changeTrigger, function UpdateTooltips)
-    
+
     set row = 0
     loop
         exitwhen (row == bj_MAX_PLAYERS)
         set rowPlayer = Player(row)
         if (IsPlayerInForce(rowPlayer, allPlayers)) then
             set x = indentionX
-            
+
             set RowTitles[row] = BlzCreateFrameByType("BACKDROP", PREFIX + "RowTitle" + I2S(row), BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), "", 0)
             call BlzFrameSetAbsPoint(RowTitles[row], FRAMEPOINT_TOPLEFT, x, y)
             call BlzFrameSetAbsPoint(RowTitles[row], FRAMEPOINT_BOTTOMRIGHT, x + cellHeight, y - cellHeight)
@@ -327,9 +327,9 @@ private function CreateUI takes nothing returns nothing
             call BlzFrameSetTexture(RowTitles[row], GetPlayerColorTexture(GetPlayerColor(rowPlayer)), 0, true)
             call BlzFrameSetTextAlignment(RowTitles[row], TEXT_JUSTIFY_TOP, TEXT_JUSTIFY_LEFT)
             call BlzFrameSetScale(RowTitles[row], scale)
-            
+
             set x = x + cellHeight
-            
+
             set ColumnTitles[row] = BlzCreateFrameByType("BACKDROP", PREFIX + "ColumnTitle" + I2S(row), BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), "", 0)
             call BlzFrameSetAbsPoint(ColumnTitles[row], FRAMEPOINT_TOPLEFT, headerX, headerY)
             call BlzFrameSetAbsPoint(ColumnTitles[row], FRAMEPOINT_BOTTOMRIGHT, headerX + cellHeight, headerY - cellHeight)
@@ -337,42 +337,42 @@ private function CreateUI takes nothing returns nothing
             call BlzFrameSetTexture(ColumnTitles[row], GetPlayerColorTexture(GetPlayerColor(rowPlayer)), 0, true)
             call BlzFrameSetTextAlignment(ColumnTitles[row], TEXT_JUSTIFY_TOP, TEXT_JUSTIFY_CENTER)
             call BlzFrameSetScale(ColumnTitles[row], scale)
-            
+
             set column = 0
             loop
                 exitwhen (column == bj_MAX_PLAYERS)
                 set columnPlayer = Player(column)
                 if (IsPlayerInForce(columnPlayer, allPlayers)) then
                     set index = Index2D(row, column, bj_MAX_PLAYERS)
-                    
+
                     if (rowPlayer != columnPlayer) then
                         set Cells[index] = BlzCreateFrame("AlliancePopup", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), 0, 0)
                         call BlzFrameSetAbsPoint(Cells[index], FRAMEPOINT_TOPLEFT, x, y)
                         call BlzFrameSetAbsPoint(Cells[index], FRAMEPOINT_BOTTOMRIGHT, x + cellWidth, y - cellHeight)
                         call BlzFrameSetScale(Cells[index], scale)
-                        
+
                         call BlzTriggerRegisterFrameEvent(changeTrigger, Cells[index], FRAMEEVENT_POPUPMENU_ITEM_CHANGED)
-                        
+
                         set CellsTooltip[index] = BlzCreateFrameByType("TEXT", PREFIX + "CellsTooltip" + I2S(index), BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), "", 0)
                         call BlzFrameSetTooltip(Cells[index], CellsTooltip[index])
                         call BlzFrameSetAbsPoint(CellsTooltip[index], FRAMEPOINT_TOPLEFT, TOOLTIP_X, TOOLTIP_Y)
                         call BlzFrameSetAbsPoint(CellsTooltip[index], FRAMEPOINT_BOTTOMRIGHT, TOOLTIP_X + TOOLTIP_WIDTH, TOOLTIP_Y - TOOLTIP_HEIGHT)
                         call BlzFrameSetFont(CellsTooltip[index], TOOLTIP_FONT, TOOLTIP_FONT_HEIGHT, 0)
                     endif
-                    
+
                     set x = x + cellWidth
                 endif
                 set columnPlayer = null
                 set column = column + 1
             endloop
-            
+
             set y = y - cellHeight
             set headerX = headerX + cellWidth
         endif
         set rowPlayer = null
         set row = row + 1
     endloop
-    
+
     set CancelButton = BlzCreateFrame("ScriptDialogButton", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), 0, 0)
     call BlzFrameSetAbsPoint(CancelButton, FRAMEPOINT_TOPLEFT, CANCEL_BUTTON_X, BUTTON_Y)
     call BlzFrameSetAbsPoint(CancelButton, FRAMEPOINT_BOTTOMRIGHT, CANCEL_BUTTON_X + BUTTON_WIDTH, BUTTON_Y - BUTTON_HEIGHT)
@@ -381,7 +381,7 @@ private function CreateUI takes nothing returns nothing
     set cancelTrigger = CreateTrigger()
     call BlzTriggerRegisterFrameEvent(cancelTrigger, CancelButton, FRAMEEVENT_CONTROL_CLICK)
     call TriggerAddAction(cancelTrigger, function HideDiplomacyUI)
-    
+
     set ApplyButton = BlzCreateFrame("ScriptDialogButton", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), 0, 0)
     call BlzFrameSetAbsPoint(ApplyButton, FRAMEPOINT_TOPLEFT, APPLY_BUTTON_X, BUTTON_Y)
     call BlzFrameSetAbsPoint(ApplyButton, FRAMEPOINT_BOTTOMRIGHT, APPLY_BUTTON_X + BUTTON_WIDTH, BUTTON_Y - BUTTON_HEIGHT)
@@ -401,13 +401,13 @@ private function DestroyUI takes nothing returns nothing
     local player rowPlayer = null
     local player columnPlayer = null
     local integer index = 0
-    
+
     call HideDiplomacyUI()
 
     call BlzDestroyFrame(Background)
     call BlzDestroyFrame(Title)
     call BlzDestroyFrame(TableTitle)
-    
+
     set row = 0
     loop
         exitwhen (row == bj_MAX_PLAYERS)
@@ -415,14 +415,14 @@ private function DestroyUI takes nothing returns nothing
         if (IsPlayerInForce(rowPlayer, allPlayers)) then
             call BlzDestroyFrame(RowTitles[row])
             call BlzDestroyFrame(ColumnTitles[row])
-          
+
             set column = 0
             loop
                 exitwhen (column == bj_MAX_PLAYERS)
                 set columnPlayer = Player(column)
                 if (IsPlayerInForce(columnPlayer, allPlayers)) then
                     set index = Index2D(row, column, bj_MAX_PLAYERS)
-                    
+
                     if (rowPlayer != columnPlayer) then
                         call BlzDestroyFrame(Cells[index])
                         call BlzDestroyFrame(CellsTooltip[index])
@@ -436,7 +436,7 @@ private function DestroyUI takes nothing returns nothing
         set row = row + 1
     endloop
 
-    call DestroyTrigger(changeTrigger);
+    call DestroyTrigger(changeTrigger)
     set changeTrigger = null
     call BlzDestroyFrame(CancelButton)
     set CancelButton = null
@@ -464,7 +464,7 @@ function SetDiplomacyUIPlayers takes force whichForce returns nothing
     set allPlayers = whichForce
     //call BJDebugMsg("with count " + I2S(cellsCount) + ": " + R2S(scale))
     set indentionX = X + (WIDTH - cellsCount * scale * CELL_WIDTH) / 2.0
-    
+
     call CreateUI()
 endfunction
 
@@ -484,13 +484,13 @@ private function Init takes nothing returns nothing
     endloop
     call TriggerAddAction(syncTrigger, function TriggerActionSyncData)
     call TriggerAddAction(chatTrigger, function TriggerActionChat)
-    
+
     call SetDiplomacyUIPlayers(DiplomacyUIConfig_GetValidPlayers())
-    
+
 static if (LOAD_TOC_FILE) then
     call BlzLoadTOCFile(TOC_FILE)
 endif
-    
+
 static if (LIBRARY_FrameLoader) then
     call FrameLoaderAdd(function CreateUI)
 endif
