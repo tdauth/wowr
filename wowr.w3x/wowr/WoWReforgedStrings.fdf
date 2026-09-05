@@ -65,7 +65,7 @@ StringList {
     DEACTIVATED_RESURRECTION_STONE     "Deactivated Resurrection Stone.",
     RESURRECTION_STONE_HERO_ONLY       "Only one of your heroes can activate the Resurrection Stone.",
     NO_HERO_X                          "No hero %1%.",
-    // Quiver
+    // Quiver and Arrows
     ALREADY_USED                       "Already used.",
     // Goblin Tool Box
     TARGET_HAS_MINIMUM_HP              "Target has already reached maximum hit points.",

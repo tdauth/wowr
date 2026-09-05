@@ -65,6 +65,8 @@
 //! import "wowr/WoWReforgedIcons.j"
 //! import "wowr/WoWReforgedIllusions.j"
 //! import "wowr/WoWReforgedInfoQuests.j"
+//! import "wowr/WoWReforgedItemArrows.j"
+//! import "wowr/WoWReforgedItemDemonSlayer.j"
 //! import "wowr/WoWReforgedItemItemLocker.j"
 //! import "wowr/WoWReforgedItemItemSummoner.j"
 //! import "wowr/WoWReforgedItemMagicalCreepSummoner.j"

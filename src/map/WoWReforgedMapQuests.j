@@ -225,7 +225,7 @@ private function Init takes nothing returns nothing
     set udg_Eredar_Quest[3] = AddQuest("EredarQuest3", GetLocalizedStringSafe("Q_EXODAR_TITLE"), GetLocalizedStringSafe("Q_EXODAR_DESCRIPTION"), "ReplaceableTextures\\CommandButtons\\BTNPowerGenerator.blp", gg_unit_H0U4_2415, 'I0Z2')
     call AddQuestItem(GetLocalizedStringSafe("Q_EXODAR_0"))
     call AddQuestItem(GetLocalizedStringSafe("Q_EXODAR_1"))
-    set udg_Eredar_Quest[4] = AddQuest("EredarQuest4", GetLocalizedStringSafe("Q_DEMON_HUNT_TITLE"), GetLocalizedStringSafe("Q_DEMON_HUNT_DESCRIPTION"), "ReplaceableTextures\\CommandButtons\\BTNHeroDemonHunter.blp", gg_unit_H0U4_2415, 'I0ZG')
+    set udg_Eredar_Quest[4] = AddQuest("EredarQuest4", GetLocalizedStringSafe("Q_DEMON_HUNT_TITLE"), GetLocalizedStringSafe("Q_DEMON_HUNT_DESCRIPTION"), "ReplaceableTextures\\CommandButtons\\BTNHeroDemonHunter.blp", gg_unit_H0U4_2415, ITEM_DEMON_SLAYER)
     call AddQuestItem(GetLocalizedStringSafe("Q_DEMON_HUNT_0"))
     call AddQuestItem(GetLocalizedStringSafe("Q_DEMON_HUNT_1"))
 

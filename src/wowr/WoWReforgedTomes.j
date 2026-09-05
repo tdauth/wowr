@@ -69,7 +69,7 @@ endfunction
 private function TriggerConditionCast takes nothing returns boolean
     local integer abilityId = GetSpellAbilityId()
     local boolean result = false
-    
+
     if (abilityId == 'AIsm') then
         set result = true
     elseif (abilityId == 'AInm') then
@@ -99,16 +99,16 @@ private function TriggerConditionCast takes nothing returns boolean
     elseif (abilityId == 'A24E') then
         set result = true
     endif
-    
+
     if (result and not udg_Tomes) then
         call IssueImmediateOrder(GetTriggerUnit(), "stop")
         call SimError(GetOwningPlayer(GetTriggerUnit()), GetLocalizedString("TOMES_DISABLED"))
     endif
-    
+
     return false
 endfunction
 
-function TriggerConditionUseItem takes nothing returns boolean
+private function TriggerConditionUseItem takes nothing returns boolean
     local integer itemTypeId = GetItemTypeId(GetManipulatedItem())
 
     if (udg_Tomes) then
@@ -176,7 +176,7 @@ endfunction
 private function Init takes nothing returns nothing
     call TriggerRegisterAnyUnitEventBJ(castTrigger, EVENT_PLAYER_UNIT_SPELL_CAST)
     call TriggerAddCondition(castTrigger, Condition(function TriggerConditionCast))
-    
+
     call TriggerRegisterAnyUnitEventBJ(useItemTrigger, EVENT_PLAYER_UNIT_USE_ITEM)
     call TriggerAddCondition(useItemTrigger, Condition(function TriggerConditionUseItem))
 endfunction

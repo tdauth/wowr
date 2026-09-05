@@ -606,7 +606,7 @@ private function AddItems takes nothing returns nothing
     call AddItem('I0KU')
     call AddItem('I0N5')
     call AddItem('I0Q4')
-    call AddItem('I0VO')
+    call AddItem(ITEM_ARROWS)
     // Misc
     call AddItem('gemt')
     call AddItem('fgrd')
