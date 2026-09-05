@@ -25,6 +25,7 @@
 //! import "wowr/WoWReforgedCalendarMultiboard.j"
 //! import "wowr/WoWReforgedCarHorn.j"
 //! import "wowr/WoWReforgedChangeLog.j"
+//! import "wowr/WoWReforgedCharm.j"
 //! import "wowr/WoWReforgedChatCommands.j"
 //! import "wowr/WoWReforgedChests.j"
 //! import "wowr/WoWReforgedCinematic.j"

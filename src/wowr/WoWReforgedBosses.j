@@ -1,6 +1,17 @@
 library WoWReforgedBosses initializer Init requires UnitTypeUtils, WoWReforgedUtils, WoWReforgedHeroes, WoWReforgedCommandButtons, WoWReforgedSkillMenu, WoWReforgedClasses, WoWReforgedAutoSkill, WoWReforgedMapData
 // Require WoWReforgedHeroes to assign the boss hero classes to the correct ones.
 
+globals
+    private trigger deathTrigger = CreateTrigger()
+    private trigger heroLevelTrigger = CreateTrigger()
+
+    private integer legendaryItemsCounter = 0
+    private integer array legendaryItemTypeId
+    private unit array legendaryItemBoss
+    private unit array legendaryItemBuilding
+    private rect array legendaryItemRect
+endglobals
+
 function IsBoss takes integer unitTypeId returns boolean
     local boolean result = false
     local unit boss = null
@@ -54,16 +65,6 @@ function UpdateBossPlayerHeroes takes nothing returns nothing
     call SetPlayerHero2(udg_BossesPlayer, boss2)
     call SetPlayerHero3(udg_BossesPlayer, boss3)
 endfunction
-
-globals
-    private trigger deathTrigger = CreateTrigger()
-
-    private integer legendaryItemsCounter = 0
-    private integer array legendaryItemTypeId
-    private unit array legendaryItemBoss
-    private unit array legendaryItemBuilding
-    private rect array legendaryItemRect
-endglobals
 
 function GetLegendaryItemsMax takes nothing returns integer
     return legendaryItemsCounter
@@ -168,15 +169,31 @@ private function TriggerConditionDeath takes nothing returns boolean
         if (index != -1) then
             call SetUnitInvulnerable(GetLegendaryItemBuilding(index), false)
         endif
+
+        if (GetKillingUnit() != null and not IsUnitIllusion(dyingUnit)) then
+            set udg_BossKills[GetConvertedPlayerId(GetOwningPlayer(GetKillingUnit()))] = udg_BossKills[GetConvertedPlayerId(GetOwningPlayer(GetKillingUnit()))] + 1
+            call DefeatBossMessage(GetOwningPlayer(GetKillingUnit()), dyingUnit)
+
+            if (not IsUnitInGroup(dyingUnit, udg_BossesKilledByPlayer[GetConvertedPlayerId(GetOwningPlayer(GetKillingUnit()))])) then
+                call GroupAddUnit(udg_BossesKilledByPlayer[GetConvertedPlayerId(GetOwningPlayer(GetKillingUnit()))], dyingUnit)
+            endif
+        endif
     elseif (GetUnitTypeId(dyingUnit) == LEGENDARY_ARTIFACT) then
         set index = GetLegendaryItemByBuilding(dyingUnit)
         if (index != -1) then
             call SetItemInvulnerable(UnitDropItem(dyingUnit, GetLegendaryItemTypeId(index)), true)
         endif
     endif
-
     set dyingUnit = null
 
+    return false
+endfunction
+
+private function TriggerConditionHeroLevel takes nothing returns boolean
+    if (IsUnitInGroup(GetTriggerUnit(), udg_Bosses)) then
+        call AutoSkillHero(GetTriggerUnit())
+        call UpdateBossPlayerHeroes()
+    endif
     return false
 endfunction
 
@@ -186,9 +203,16 @@ private function AddBoss takes integer id, integer class returns nothing
 endfunction
 
 private function Init takes nothing returns nothing
-    set deathTrigger = CreateTrigger()
     call TriggerRegisterAnyUnitEventBJ(deathTrigger, EVENT_PLAYER_UNIT_DEATH)
     call TriggerAddCondition(deathTrigger, Condition(function TriggerConditionDeath))
+
+    call TriggerRegisterAnyUnitEventBJ(heroLevelTrigger, EVENT_PLAYER_HERO_LEVEL)
+    call TriggerAddCondition(heroLevelTrigger, Condition(function TriggerConditionHeroLevel))
+
+    call SetPlayerFlagBJ(PLAYER_STATE_GIVES_BOUNTY, true, Player(PLAYER_NEUTRAL_AGGRESSIVE))
+    call SetPlayerFlagBJ(PLAYER_STATE_GIVES_BOUNTY, true, GetMapBossesPlayer())
+    call SetPlayerAllianceStateBJ(GetMapBossesPlayer(), Player(PLAYER_NEUTRAL_AGGRESSIVE), bj_ALLIANCE_ALLIED_ADVUNITS)
+    call SetPlayerAllianceStateBJ(Player(PLAYER_NEUTRAL_AGGRESSIVE), GetMapBossesPlayer(), bj_ALLIANCE_ALLIED_ADVUNITS)
 
     call AddBoss(ARCHIMONDE_BOSS, CLASS_WARLOCK)
     call AddBoss(XALATATH, CLASS_WITCH_DOCTOR)
