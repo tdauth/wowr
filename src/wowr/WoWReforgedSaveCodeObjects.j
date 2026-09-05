@@ -462,11 +462,11 @@ private function AddItems takes nothing returns nothing
     // Tauren Shop
     call AddItem('I0QW')
     // Dalaran Shop
-    call AddItem('I0OY')
+    call AddItem(ITEM_ORB_OF_MAGIC)
     // Kul Tiras Shop
     call AddItem('I09U')
     // Lordaeron Shop
-    call AddItem('I0JA')
+    call AddItem(ITEM_ORB_OF_LIGHT)
     call AddItem('I0KZ')
     // Worgen Shop
     call AddItem('I0P1')
@@ -475,7 +475,7 @@ private function AddItems takes nothing returns nothing
     // Vrykul Shop
     call AddItem('I0OX')
     // Nerubian Shop
-    call AddItem('I0NI')
+    call AddItem(ITEM_ORB_OF_WEB)
     call AddItem('I0NJ')
     // Murloc Shop
     call AddItem('I11G')

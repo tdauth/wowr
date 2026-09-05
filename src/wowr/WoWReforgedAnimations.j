@@ -19,7 +19,7 @@ private function TriggerConditionDeath takes nothing returns boolean
         return true
     elseif (unitTypeId == 'e00D') then
         return true
-    elseif (unitTypeId == 'h020') then
+    elseif (unitTypeId == GATE_CLOSED_HORIZONTAL) then
         return true
     elseif (unitTypeId == 'h021') then
         return true

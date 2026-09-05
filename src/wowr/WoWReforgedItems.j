@@ -227,6 +227,44 @@ private function OrbOfAncestorsEffect takes unit source, unit target returns not
     endif
 endfunction
 
+private function OrbOfMagicEffect takes unit source, unit target returns nothing
+    local integer i = 0
+    local integer max = 10
+    local integer abilityId = 0
+    if (not IsUnitType(target, UNIT_TYPE_MAGIC_IMMUNE) and not IsUnitAlly(target, GetOwningPlayer(source)) and GetRandomInt(1, 100) <= 30) then
+        loop
+            exitwhen (i == max)
+            set abilityId = BlzGetAbilityId(BlzGetUnitAbilityByIndex(target, i))
+            if (abilityId != 0) then
+                call BlzStartUnitAbilityCooldown(target, abilityId, BlzGetAbilityRealLevelField(BlzGetUnitAbility(target, abilityId), ABILITY_RLF_COOLDOWN, GetUnitAbilityLevel(target, abilityId)))
+                exitwhen (true)
+            endif
+            set i = i + 1
+        endloop
+    endif
+endfunction
+
+private function OrbOfWebEffect takes unit source, unit target returns nothing
+    local unit dummy = null
+    if (IsUnitType(target, UNIT_TYPE_FLYING) and not IsUnitType(target, UNIT_TYPE_MAGIC_IMMUNE) and not  IsUnitAlly(target, GetOwningPlayer(source)) and  GetRandomInt(1, 100) <= 30) then
+        set dummy = CreateUnit(GetOwningPlayer(source), 'h0OY', GetUnitX(source), GetUnitY(source), GetUnitFacing(source))
+        call ShowUnit(dummy, false)
+        call IssueTargetOrder(dummy, "web", target)
+        // Wait for attack and remove dummies
+        call PolledWait(1.5)
+        call RemoveUnit(dummy)
+        set dummy = null
+    endif
+endfunction
+
+private function OrbOfLightEffect takes unit source, unit target, real damage, trigger whichTrigger returns nothing
+    if (IsUnitType(target, UNIT_TYPE_UNDEAD)) then
+        call DisableTrigger(whichTrigger)
+        call UnitDamageTargetBJ(source, target, damage / 100.0 * 5.0, ATTACK_TYPE_NORMAL, DAMAGE_TYPE_NORMAL)
+        call EnableTrigger(whichTrigger)
+    endif
+endfunction
+
 private function EnumRemoveUnit takes nothing returns nothing
     call RemoveUnit(GetEnumUnit())
 endfunction
@@ -264,17 +302,26 @@ private function OrbOfOrbsEffect takes unit source, unit target returns nothing
     set dummies = null
 endfunction
 
-private function TriggerConditionDamage takes nothing returns boolean
+private function TriggerActionDamage takes nothing returns nothing
+    // Use trigger action because of PolledWait calls.
     if (IsUnitInItemCarrierGroup(GetTriggerUnit(), ITEM_ORB_OF_NATURE)) then
         call OrbOfNatureEffect(GetEventDamageSource(), GetTriggerUnit())
     elseif (IsUnitInItemCarrierGroup(GetTriggerUnit(), ITEM_ORB_OF_ANCESTORS)) then
         call OrbOfAncestorsEffect(GetEventDamageSource(), GetTriggerUnit())
+    elseif (IsUnitInItemCarrierGroup(GetTriggerUnit(), ITEM_ORB_OF_MAGIC)) then
+        call OrbOfMagicEffect(GetEventDamageSource(), GetTriggerUnit())
+    elseif (IsUnitInItemCarrierGroup(GetTriggerUnit(), ITEM_ORB_OF_WEB)) then
+        call OrbOfWebEffect(GetEventDamageSource(), GetTriggerUnit())
+    elseif (IsUnitInItemCarrierGroup(GetTriggerUnit(), ITEM_ORB_OF_LIGHT)) then
+        call OrbOfLightEffect(GetEventDamageSource(), GetTriggerUnit(), GetEventDamage(), GetTriggeringTrigger())
     elseif (IsUnitInItemCarrierGroup(GetTriggerUnit(), ITEM_ORB_OF_ORBS)) then
         call OrbOfOrbsEffect(GetEventDamageSource(), GetTriggerUnit())
         call OrbOfAncestorsEffect(GetEventDamageSource(), GetTriggerUnit())
         call OrbOfNatureEffect(GetEventDamageSource(), GetTriggerUnit())
+        call OrbOfMagicEffect(GetEventDamageSource(), GetTriggerUnit())
+        call OrbOfWebEffect(GetEventDamageSource(), GetTriggerUnit())
+        call OrbOfLightEffect(GetEventDamageSource(), GetTriggerUnit(), GetEventDamage(), GetTriggeringTrigger())
     endif
-    return false
 endfunction
 
 private function Init takes nothing returns nothing
@@ -294,13 +341,16 @@ private function Init takes nothing returns nothing
     call TriggerAddCondition(issuePointOrderTrigger, Condition(function TriggerConditionIssuePointOrder))
 
     call TriggerRegisterAnyUnitEventBJ(damageTrigger, EVENT_PLAYER_UNIT_DAMAGED)
-    call TriggerAddCondition(damageTrigger, Condition(function TriggerConditionDamage))
+    call TriggerAddAction(damageTrigger, function TriggerActionDamage)
 
     call AddItemCarrierGroup(ITEM_BOOTS_OF_TELEPORTATION)
     call AddItemCarrierGroup(ITEM_SCEPTER_OF_SARGERAS)
     call AddItemCarrierGroup(ITEM_ORB_OF_ORBS)
     call AddItemCarrierGroup(ITEM_ORB_OF_NATURE)
     call AddItemCarrierGroup(ITEM_ORB_OF_ANCESTORS)
+    call AddItemCarrierGroup(ITEM_ORB_OF_MAGIC)
+    call AddItemCarrierGroup(ITEM_ORB_OF_WEB)
+    call AddItemCarrierGroup(ITEM_ORB_OF_LIGHT)
 endfunction
 
 endlibrary
