@@ -3650,6 +3650,7 @@ globals
     constant integer ITEM_ARROWS                                     = 'I0VO'
     constant integer ITEM_RANDOM_SAVE_CODE                           = 'I0Y1'
     constant integer ITEM_DEMON_SLAYER                               = 'I0ZG'
+    constant integer ITEM_RANDOM_ARTIFACT                            = 'I0D7'
     constant integer ITEM_GLOVES_OF_HASTE                            = 'gcel'
 
     // Quest Rewards

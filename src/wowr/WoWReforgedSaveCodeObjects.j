@@ -610,7 +610,7 @@ private function AddItems takes nothing returns nothing
     // Misc
     call AddItem('gemt')
     call AddItem('fgrd')
-    call AddItem('I0D7')
+    call AddItem(ITEM_RANDOM_ARTIFACT)
     call AddItem('I0HJ')
     call AddItem('wild')
     call AddItem('pams')

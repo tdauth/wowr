@@ -1,0 +1,64 @@
+library WoWReforgedItemRandomArtifact initializer Init
+
+globals
+    private integer array abilityIds
+    private integer abilityIdsCounter = 0
+
+    private trigger useItemTrigger = CreateTrigger()
+    private trigger pickupItemTrigger = CreateTrigger()
+endglobals
+
+private function RegisterItemAbility takes integer abilityId returns nothing
+    set abilityIds[abilityIdsCounter] = abilityId
+    set abilityIdsCounter = abilityIdsCounter + 1
+endfunction
+
+private function RandomizeItemAbility takes item whichItem returns nothing
+    if (BlzGetItemAbilityByIndex(whichItem, 1) != null) then
+        call BlzItemRemoveAbility(whichItem, BlzGetAbilityId(BlzGetItemAbilityByIndex(whichItem, 1)))
+    endif
+    call BlzItemAddAbility(whichItem, abilityIds[GetRandomInt(0, abilityIdsCounter - 1)])
+endfunction
+
+private function InitialRandomizeItemAbility takes item whichItem returns nothing
+    if (BlzGetItemAbilityByIndex(whichItem, 1) == null) then
+        call RandomizeItemAbility(whichItem)
+    endif
+endfunction
+
+private function TriggerConditionUseItem takes nothing returns boolean
+    if (GetItemTypeId(GetManipulatedItem()) == ITEM_RANDOM_ARTIFACT) then
+        call RandomizeItemAbility(GetManipulatedItem())
+    endif
+    return false
+endfunction
+
+private function TriggerConditionPickupItem takes nothing returns boolean
+    if (GetItemTypeId(GetManipulatedItem()) == ITEM_RANDOM_ARTIFACT) then
+        call InitialRandomizeItemAbility(GetManipulatedItem())
+    endif
+    return false
+endfunction
+
+private function Init takes nothing returns nothing
+    call TriggerRegisterAnyUnitEventBJ(useItemTrigger, EVENT_PLAYER_UNIT_USE_ITEM)
+    call TriggerAddCondition(useItemTrigger, Condition(function TriggerConditionUseItem))
+
+    call TriggerRegisterAnyUnitEventBJ(pickupItemTrigger, EVENT_PLAYER_UNIT_PICKUP_ITEM)
+    call TriggerAddCondition(pickupItemTrigger, Condition(function TriggerConditionPickupItem))
+
+    call RegisterItemAbility('AIt6')
+    call RegisterItemAbility('AIt9')
+    call RegisterItemAbility('AId0')
+    call RegisterItemAbility('AId4')
+    call RegisterItemAbility('AId5')
+    call RegisterItemAbility('AId7')
+    call RegisterItemAbility('AIx1')
+    call RegisterItemAbility('AIx2')
+    call RegisterItemAbility('AIx3')
+    call RegisterItemAbility('AIx4')
+    call RegisterItemAbility('AI2m')
+    call RegisterItemAbility('AIl2')
+endfunction
+
+endlibrary
