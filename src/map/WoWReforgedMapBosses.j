@@ -21,8 +21,6 @@ private function Init takes nothing returns nothing
     call AddLegendaryItem('I045', gg_unit_Nswt_2458, gg_unit_nfrm_0993, gg_rct_Legendary_Sea_Witch_Tail) // Unique - Sea Witch Tail
     call AddLegendaryItem('I071', gg_unit_N068_0310, gg_unit_nfrm_0311, gg_rct_Legendary_Queen_Aszhara) // Unique - Heart of Aszhara
     call AddLegendaryItem('I09V', gg_unit_H09B_1916, gg_unit_nfrm_1915, gg_rct_Legendary_Eye_of_Dalaran) // Unique - Eye of Dalaran
-    call AddLegendaryItem('I0SG', gg_unit_E00Q_0956, gg_unit_E00Q_0956, gg_rct_Boss_Cenarius_Spawn) // Unique - Horn of Cenarius
-    call AddLegendaryItem('I0SH', gg_unit_N067_0957, gg_unit_N067_0957, gg_rct_Boss_Deathwing_Spawn) // Unique - Wings of Deathwing
 endfunction
 
 endlibrary

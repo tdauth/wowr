@@ -45,10 +45,6 @@ private function TriggerConditionPickupItem takes nothing returns boolean
         call ForGroupBJ(GetUnitsOfPlayerMatching(GetMapBossesPlayer(), f), function EnumIncreaseHeroLevel)
     elseif (itemTypeId == 'I05D') then // Feed AI
         call IncreaseAiHeroLevels(GetOwningPlayer(GetTriggerUnit()))
-    elseif (itemTypeId == 'I08V') then // Purchase Deathwing
-        call StartTimerBJ(udg_BossDeathwingTimer, false, 0.0)
-    elseif (itemTypeId == 'I08W') then // Purchase Cenarius
-        call StartTimerBJ(udg_BossCenariusTimer, false, 0.0)
     endif
     return false
 endfunction

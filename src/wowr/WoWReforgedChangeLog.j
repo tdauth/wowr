@@ -142,6 +142,7 @@ private function Init takes nothing returns nothing
     call AddChange("Rename SaveCodeSystem into SaveCodes.")
     call AddChange("Rename ItemUnstackSystem into ItemUnstack.")
     call AddChange("Rename CargoLocationSystem into CargoLocation.")
+    call AddChange("Remove moving bosses Cenarius and Deathwing.")
 
 static if (MAP_DEBUG_MODE_ENABLED) then
     call AddVersion("4.6")
