@@ -38,11 +38,20 @@ function IsUnitInItemCarrierGroup takes unit whichUnit, integer itemTypeId retur
     return false
 endfunction
 
-private function TriggerConditionPickupItem takes nothing returns boolean
-    local integer itemTypeId = GetItemTypeId(GetManipulatedItem())
+function AddUnitToItemCarrierGroup takes integer itemTypeId, unit whichUnit returns nothing
     if (HasItemCarrierGroup(itemTypeId)) then
         call GroupAddUnit(LoadItemCarrierGroup(itemTypeId), GetTriggerUnit())
     endif
+endfunction
+
+function RemoveUnitFromItemCarrierGroup takes integer itemTypeId, unit whichUnit returns nothing
+    if (HasItemCarrierGroup(itemTypeId)) then
+        call GroupRemoveUnit(LoadItemCarrierGroup(itemTypeId), whichUnit)
+    endif
+endfunction
+
+private function TriggerConditionPickupItem takes nothing returns boolean
+    call AddUnitToItemCarrierGroup(GetItemTypeId(GetManipulatedItem()), GetTriggerUnit())
     return false
 endfunction
 

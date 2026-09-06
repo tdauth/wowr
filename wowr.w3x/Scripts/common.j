@@ -2735,6 +2735,22 @@ globals
     // WoW Reforged
     // make constants available to triggers AND common.ai
 
+    constant integer ORDER_ID_SMART                                  = 851971
+    constant integer ORDER_ID_MOVE                                   = 851986
+    constant integer ORDER_ID_DROP_ITEM                              = 852001
+    constant integer ORDER_ID_MOVE_SLOT_0                            = 852002
+    constant integer ORDER_ID_MOVE_SLOT_1                            = 852003
+    constant integer ORDER_ID_MOVE_SLOT_2                            = 852004
+    constant integer ORDER_ID_MOVE_SLOT_3                            = 852005
+    constant integer ORDER_ID_MOVE_SLOT_4                            = 852006
+    constant integer ORDER_ID_MOVE_SLOT_5                            = 852007
+    constant integer ORDER_ID_USE_SLOT_0                             = 852008
+    constant integer ORDER_ID_USE_SLOT_1                             = 852009
+    constant integer ORDER_ID_USE_SLOT_2                             = 852010
+    constant integer ORDER_ID_USE_SLOT_3                             = 852011
+    constant integer ORDER_ID_USE_SLOT_4                             = 852012
+    constant integer ORDER_ID_USE_SLOT_5                             = 852013
+
     constant playercolor PLAYER_COLOR_BLACK                          = ConvertPlayerColor(24)
 
     constant string MAP_VERSION                                      = "4.7"
@@ -3494,6 +3510,9 @@ globals
     constant integer ITEM_HUNTING_DOG_CAGE                           = 'I0VX' // adept
     constant integer ITEM_SKINNING_RACKS                             = 'I0VW' // advanced
     constant integer ITEM_HUNTING_BOW                                = 'I0VR' // novice
+    constant integer SKINNING_RACK                                   = 'o08E'
+    constant integer HUNTING_DOG                                     = 'o08F'
+    constant integer BEAR_TRAP                                       = 'n0IY'
 
     // Critters
     constant integer STAG                                            = 'nder'

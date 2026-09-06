@@ -1,4 +1,4 @@
-library WoWReforgedProfessions initializer Init requires MaxItemStacks, MathUtils, TextTagUtils, ForceUtils, StringFormat, UnitTypeUtils
+library WoWReforgedProfessions initializer Init requires MaxItemStacks, MathUtils, TextTagUtils, ForceUtils, StringFormat, UnitTypeUtils, WoWReforgedProfessionMiner, WowReforgedProfessionCook
 
 globals
     constant real DOCTOR_MANA_COST = 1200.0
@@ -23,7 +23,7 @@ globals
     private integer professionsCounter = 0
     private Profession array professions
 
-    private trigger castTrigger = CreateTrigger()
+    private trigger channelTrigger = CreateTrigger()
 endglobals
 
 function PlayerCanPickProfession takes player whichPlayer, integer id returns boolean
@@ -692,7 +692,7 @@ private function CraftUnits takes unit hero, integer unitTypeId, integer charges
         exitwhen count < 0
         set u = CreateUnit(owner, unitTypeId, x, y, face)
         if (unitTypeId == HUNTING_HAWK) then
-            call GroupAddUnit(udg_Hunters, u)
+            call AddUnitToItemCarrierGroup(ITEM_HUNTING_BOW, u)
         endif
         set u = null
     endloop
@@ -805,12 +805,44 @@ private function CastCraft takes unit hero, integer abilityId, integer index ret
     endloop
 endfunction
 
-private function TriggerActionCast takes nothing returns nothing
+private function TriggerActionChannel takes nothing returns nothing
+    local unit caster = GetTriggerUnit()
     local integer abilityId = GetSpellAbilityId()
     local integer index = GetProfessionIndexByAbilityId(abilityId)
+    local unit dummy = null
+    local integer i = 0
+    local integer max = 0
+
     if (index != -1) then
-        call CastCraft(GetTriggerUnit(), abilityId, index)
+        call CastCraft(caster, abilityId, index)
     endif
+
+    // craft specific extra
+    if ('A06L' == abilityId) then // RUNEFORGER
+        set i = 0
+        set max = ProfessionBonusCharges(caster)
+        loop
+            exitwhen (i >= max)
+            set dummy = CreateUnit(Player(PLAYER_NEUTRAL_AGGRESSIVE), ChooseRandomCreepBJ(GetRandomInt(3, 6)), GetUnitX(caster), GetUnitY(caster), GetRandomDirectionDeg())
+            call UnitDropItem(dummy, 'I032')
+            call KillUnit(dummy)
+            set dummy = null
+            set i = i + 1
+        endloop
+    elseif ('A1T5' == abilityId) then // MINER
+        // all items could be different
+        call ProfessionCraftItems(caster, abilityId, GetRandomOreItemTypeId(), 1)
+        call ProfessionCraftItems(caster, abilityId, GetRandomOreItemTypeId(), 1)
+        call ProfessionCraftItems(caster, abilityId, GetRandomOreItemTypeId(), 1)
+        call ProfessionCraftItems(caster, abilityId, GetRandomOreItemTypeId(), 1)
+    elseif ('A1UK' == abilityId) then // COOK
+        call ProfessionCraftItems(caster, abilityId, GetRandomFoodItemTypeId(), 1)
+        call ProfessionCraftItems(caster, abilityId, GetRandomFoodItemTypeId(), 1)
+        call ProfessionCraftItems(caster, abilityId, GetRandomFoodItemTypeId(), 1)
+        call ProfessionCraftItems(caster, abilityId, GetRandomFoodItemTypeId(), 1)
+    endif
+
+    set caster = null
 endfunction
 
 private function Init takes nothing returns nothing
@@ -825,8 +857,8 @@ private function Init takes nothing returns nothing
         set i = i + 1
     endloop
 
-    call TriggerRegisterAnyUnitEventBJ(castTrigger, EVENT_PLAYER_UNIT_SPELL_CAST)
-    call TriggerAddAction(castTrigger, function TriggerActionCast)
+    call TriggerRegisterAnyUnitEventBJ(channelTrigger, EVENT_PLAYER_UNIT_SPELL_CHANNEL)
+    call TriggerAddAction(channelTrigger, function TriggerActionChannel)
 
     set udg_ProfessionHerbalist = AddProfession('I06N', 'I00G')
     call AddProfessionCraftedItem(PROFESSION_RANK_NOVICE, ITEM_POTION_OF_GREATER_HEALING, 1, true, 'A00E')

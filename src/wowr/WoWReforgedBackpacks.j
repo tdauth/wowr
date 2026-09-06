@@ -13,22 +13,6 @@ globals
     constant integer BACKPACK_MAX_PAGES = 30
     constant real BACKPACK_MOVE_INTERVAL = 0.10
 
-    constant integer A_ORDER_ID_SMART = 851971
-    constant integer A_ORDER_ID_MOVE = 851986
-    constant integer A_ORDER_ID_DROP_ITEM = 852001
-    constant integer A_ORDER_ID_MOVE_SLOT_0 = 852002
-    constant integer A_ORDER_ID_MOVE_SLOT_1 = 852003
-    constant integer A_ORDER_ID_MOVE_SLOT_2 = 852004
-    constant integer A_ORDER_ID_MOVE_SLOT_3 = 852005
-    constant integer A_ORDER_ID_MOVE_SLOT_4 = 852006
-    constant integer A_ORDER_ID_MOVE_SLOT_5 = 852007
-    constant integer A_ORDER_ID_USE_SLOT_0 = 852008
-    constant integer A_ORDER_ID_USE_SLOT_1 = 852009
-    constant integer A_ORDER_ID_USE_SLOT_2 = 852010
-    constant integer A_ORDER_ID_USE_SLOT_3 = 852011
-    constant integer A_ORDER_ID_USE_SLOT_4 = 852012
-    constant integer A_ORDER_ID_USE_SLOT_5 = 852013
-
     // item slot data
     private integer array BackpackItemType
     private integer array BackpackItemCharges
@@ -1056,11 +1040,11 @@ private function TriggerFunctionDropBackpackItem takes nothing returns nothing
 endfunction
 
 private function IsMoveItemOrder takes integer orderId returns boolean
-    return orderId >= A_ORDER_ID_MOVE_SLOT_0 and orderId <= A_ORDER_ID_MOVE_SLOT_5
+    return orderId >= ORDER_ID_MOVE_SLOT_0 and orderId <= ORDER_ID_MOVE_SLOT_5
 endfunction
 
 private function IsRedirectOrder takes integer orderId returns boolean
-    return orderId == A_ORDER_ID_SMART or orderId == A_ORDER_ID_MOVE or orderId == A_ORDER_ID_DROP_ITEM
+    return orderId == ORDER_ID_SMART or orderId == ORDER_ID_MOVE or orderId == ORDER_ID_DROP_ITEM
 endfunction
 
 private function TriggerConditionMoveBackpackItem takes nothing returns boolean
@@ -1103,9 +1087,9 @@ private function TriggerFunctionMoveBackpackItem takes nothing returns nothing
             // redirect order to hero
             call IssueTargetOrderById(GetPlayerHero1(owner), orderId, orderTargetItem)
         elseif (orderTargetUnit != null) then
-            if (orderId == A_ORDER_ID_DROP_ITEM) then
+            if (orderId == ORDER_ID_DROP_ITEM) then
                 if (DistanceBetweenUnits(triggerUnit, orderTargetUnit) > 200.0) then
-                    call IssueTargetOrderById(GetPlayerHero1(owner), A_ORDER_ID_MOVE, orderTargetUnit)
+                    call IssueTargetOrderById(GetPlayerHero1(owner), ORDER_ID_MOVE, orderTargetUnit)
                 endif
             else
                 call IssueTargetOrderById(GetPlayerHero1(owner), orderId, orderTargetUnit)
@@ -1135,7 +1119,7 @@ function InventoryIsFull takes unit whichUnit, integer itemTypeId returns boolea
 endfunction
 
 private function TriggerConditionOrderBackpackItem takes nothing returns boolean
-    return GetPlayerHero1(GetOwningPlayer(GetTriggerUnit())) == GetTriggerUnit() and GetIssuedOrderId() == A_ORDER_ID_SMART and GetOrderTargetItem() != null and not IsItemPowerup(GetOrderTargetItem()) and InventoryIsFull(GetTriggerUnit(), GetItemTypeId(GetOrderTargetItem()))
+    return GetPlayerHero1(GetOwningPlayer(GetTriggerUnit())) == GetTriggerUnit() and GetIssuedOrderId() == ORDER_ID_SMART and GetOrderTargetItem() != null and not IsItemPowerup(GetOrderTargetItem()) and InventoryIsFull(GetTriggerUnit(), GetItemTypeId(GetOrderTargetItem()))
 endfunction
 
 // This code is directly taken from the system "EasyItemStacknSplit v2.7.4" and allows picking up items even if the inventory is full.
