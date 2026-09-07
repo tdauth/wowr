@@ -1,4 +1,4 @@
-library WoWReforgedThievesGuild initializer Init requires WoWReforgedRaces
+library WoWReforgedThievesGuild initializer Init requires OnUnitRemoval, WoWReforgedRaces
 
 globals
     private trigger deathTrigger = CreateTrigger()
@@ -6,7 +6,7 @@ globals
     private trigger constructFinishTrigger = CreateTrigger()
     private trigger sellUnitTrigger = CreateTrigger()
     private trigger sellItemTrigger = CreateTrigger()
-    
+
     private timer stockUpdateTimer = CreateTimer()
 
     private group thievesGuilds = CreateGroup()
@@ -176,7 +176,7 @@ private function TriggerConditionConstructFinish takes nothing returns boolean
     local integer unitTypeId = GetUnitTypeId(b)
     if (IsThievesGuild(unitTypeId)) then
         call GroupAddUnit(thievesGuilds, b)
-    
+
         if (unitTypeId == THIEVES_GUILD_THIEF or unitTypeId == BANDIT_THIEVES_GUILD) then
             call SetItemTypeSlots(b, 6)
             call SetUnitTypeSlots(b, 6)
@@ -210,32 +210,32 @@ private function TriggerConditionSellItem takes nothing returns boolean
     return false
 endfunction
 
-private function Init takes nothing returns nothing
-    call TriggerRegisterAnyUnitEventBJ(deathTrigger, EVENT_PLAYER_UNIT_DEATH)
-    call TriggerAddCondition(deathTrigger, Condition(function TriggerConditionDeath))
-    
-    call TriggerRegisterAnyUnitEventBJ(changesOwnerTrigger, EVENT_PLAYER_UNIT_CHANGE_OWNER)
-    call TriggerAddCondition(changesOwnerTrigger, Condition(function TriggerConditionChangesOwner))
-    
-    call TriggerRegisterAnyUnitEventBJ(constructFinishTrigger, EVENT_PLAYER_UNIT_CONSTRUCT_FINISH)
-    call TriggerAddCondition(constructFinishTrigger, Condition(function TriggerConditionConstructFinish))
-    
-    call TriggerRegisterAnyUnitEventBJ(sellUnitTrigger, EVENT_PLAYER_UNIT_SELL)
-    call TriggerAddCondition(sellUnitTrigger, Condition(function TriggerConditionSell))
-    
-    call TriggerRegisterAnyUnitEventBJ(sellItemTrigger, EVENT_PLAYER_UNIT_SELL_ITEM)
-    call TriggerAddCondition(sellItemTrigger, Condition(function TriggerConditionSellItem))
-    
-    // Arrange the first update.
-    call TimerStart(stockUpdateTimer, bj_STOCK_RESTOCK_INITIAL_DELAY, false, function StartStockUpdates)
-endfunction
-
 private function RemoveUnitHook takes unit whichUnit returns nothing
     if (IsUnitInGroup(whichUnit, thievesGuilds)) then
         call GroupRemoveUnit(thievesGuilds, whichUnit)
     endif
 endfunction
 
-hook RemoveUnit RemoveUnitHook
+private function Init takes nothing returns nothing
+    call TriggerRegisterAnyUnitEventBJ(deathTrigger, EVENT_PLAYER_UNIT_DEATH)
+    call TriggerAddCondition(deathTrigger, Condition(function TriggerConditionDeath))
+
+    call TriggerRegisterAnyUnitEventBJ(changesOwnerTrigger, EVENT_PLAYER_UNIT_CHANGE_OWNER)
+    call TriggerAddCondition(changesOwnerTrigger, Condition(function TriggerConditionChangesOwner))
+
+    call TriggerRegisterAnyUnitEventBJ(constructFinishTrigger, EVENT_PLAYER_UNIT_CONSTRUCT_FINISH)
+    call TriggerAddCondition(constructFinishTrigger, Condition(function TriggerConditionConstructFinish))
+
+    call TriggerRegisterAnyUnitEventBJ(sellUnitTrigger, EVENT_PLAYER_UNIT_SELL)
+    call TriggerAddCondition(sellUnitTrigger, Condition(function TriggerConditionSell))
+
+    call TriggerRegisterAnyUnitEventBJ(sellItemTrigger, EVENT_PLAYER_UNIT_SELL_ITEM)
+    call TriggerAddCondition(sellItemTrigger, Condition(function TriggerConditionSellItem))
+
+    call OnUnitRemoval(RemoveUnitHook)
+
+    // Arrange the first update.
+    call TimerStart(stockUpdateTimer, bj_STOCK_RESTOCK_INITIAL_DELAY, false, function StartStockUpdates)
+endfunction
 
 endlibrary

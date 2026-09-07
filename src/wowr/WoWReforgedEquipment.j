@@ -1,4 +1,4 @@
-library WoWReforgedEquipment initializer Init requires SimError, Villager255, WoWReforgedUtils, WoWReforgedEquipmentBags, WoWReforgedBackpacks, WoWReforgedHeroTransformation
+library WoWReforgedEquipment initializer Init requires SimError, Villager255, OnUnitRemoval, WoWReforgedUtils, WoWReforgedEquipmentBags, WoWReforgedBackpacks, WoWReforgedHeroTransformation
 
 globals
     public constant integer CATEGORY_HEAD = 0
@@ -7,7 +7,7 @@ globals
     public constant integer CATEGORY_BODY = 3
     public constant integer CATEGORY_FOOT = 4
     public constant integer CATEGORY_MAX = 5
-    
+
     public constant integer CATEGORY_TYPE_ONE_HANDED = 0
     public constant integer CATEGORY_TYPE_TWO_HANDED = 1
     public constant integer CATEGORY_TYPE_RANGE = 2
@@ -19,7 +19,7 @@ globals
     private trigger pickupTrigger = CreateTrigger()
     private trigger dropTrigger = CreateTrigger()
     private trigger attackTrigger = CreateTrigger()
-    
+
     private integer array equipmentItemTypeId
     private string array equipmentItemTypeCategoryName
     private integer array equipmentItemTypeCategory
@@ -51,7 +51,7 @@ function SetEquipmentItemTypeCategoryType takes integer index, integer category,
 endfunction
 
 function GetEquipmentTypeAnimation takes integer index returns integer
-    return equipmentItemTypeAnimation[index] 
+    return equipmentItemTypeAnimation[index]
 endfunction
 
 function SetEquipmentTypeAnimation takes integer index, integer animation returns nothing
@@ -126,7 +126,7 @@ function DropEquipment takes unit hero, integer c returns nothing
         call SetUnitEquipmentTypeItem(hero, c, null)
     else
         //call BJDebugMsg("Item in category " + I2S(c) + " is null")
-    endif        
+    endif
 endfunction
 
 function ReplaceHeroForEquipment takes unit hero, integer unitTypeId returns unit
@@ -200,27 +200,27 @@ private function TriggerActionPickupItem takes nothing returns nothing
             if (GetUnitEquipmentType(hero, CATEGORY_LEFT_HAND) != 0 and GetEquipmentItemTypeCategoryType(GetUnitEquipmentType(hero, CATEGORY_LEFT_HAND), CATEGORY_TYPE_TWO_HANDED)) then
                 call DropEquipment(hero, CATEGORY_LEFT_HAND)
             endif
-            
+
             if (GetUnitEquipmentType(hero, CATEGORY_RIGHT_HAND) != 0 and GetEquipmentItemTypeCategoryType(GetUnitEquipmentType(hero, CATEGORY_RIGHT_HAND), CATEGORY_TYPE_TWO_HANDED)) then
                 call DropEquipment(hero, CATEGORY_RIGHT_HAND)
             endif
-            
+
             //call BJDebugMsg("Drop current weapon from category " + I2S(c))
             // always drop the replaced equipment
             call DropEquipment(hero, c)
         endif
-        
+
         call SetUnitEquipmentType(hero, c, index)
         call SetUnitEquipmentTypeItem(hero, c, whichItem)
-        
+
         //call BJDebugMsg("Set equipment " + I2S(c) + " to " + GetItemName(whichItem))
-        
+
         if (GetEquipmentItemTypeCategoryType(index, CATEGORY_TYPE_RANGE)) then
             call GiveHeroRangeAttack(hero, 0)
         else
             call GiveHeroMeleeAttack(hero, 0)
         endif
-        
+
         //call UpdateEquipmentFromInventory(hero)
     endif
     set whichItem = null
@@ -268,6 +268,12 @@ private function TriggerActionAttack takes nothing returns nothing
     set hero = null
 endfunction
 
+private function RemoveUnitHook takes unit whichUnit returns nothing
+    local integer handleId = GetHandleId(whichUnit)
+    call FlushChildHashtable(h, handleId)
+    call FlushChildHashtable(h2, handleId)
+endfunction
+
 private function Init takes nothing returns nothing
     call TriggerRegisterAnyUnitEventBJ(pickupTrigger, EVENT_PLAYER_UNIT_PICKUP_ITEM)
     call TriggerAddCondition(pickupTrigger, Condition(function TriggerConditionIsCustomizableAttriburesHero))
@@ -280,6 +286,8 @@ private function Init takes nothing returns nothing
     call TriggerRegisterAnyUnitEventBJ(attackTrigger, EVENT_PLAYER_UNIT_ATTACKED)
     call TriggerAddCondition(attackTrigger, Condition(function TriggerConditionAttack))
     call TriggerAddAction(attackTrigger, function TriggerActionAttack)
+
+    call OnUnitRemoval(RemoveUnitHook)
 
     // Misc
     call AddEquipmentItemType('I0UP', GetLocalizedStringSafe("PAGE_TITLE_MISC"), CATEGORY_LEFT_HAND, VILLAGER_255_ANIMATION_ATTACK_LEFT_HAND_WEAPON) // Torch
@@ -361,13 +369,5 @@ private function Init takes nothing returns nothing
     call AddEquipmentItemType('I0UD', GetLocalizedStringSafe("PAGE_TITLE_BOOTS"), CATEGORY_FOOT, VILLAGER_255_ANIMATION_ATTACK_NO_WEAPON) // Wolf Pelt Boots
     call AddEquipmentItemType('I10N', GetLocalizedStringSafe("PAGE_TITLE_BOOTS"), CATEGORY_FOOT, VILLAGER_255_ANIMATION_ATTACK_NO_WEAPON) // Metal Boots
 endfunction
-
-private function RemoveUnitHook takes unit whichUnit returns nothing
-    local integer handleId = GetHandleId(whichUnit)
-    call FlushChildHashtable(h, handleId)
-    call FlushChildHashtable(h2, handleId)
-endfunction
-
-hook RemoveUnit RemoveUnitHook
 
 endlibrary

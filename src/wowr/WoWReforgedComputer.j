@@ -1,4 +1,4 @@
-library WoWReforgedComputer initializer Init requires PlayerColorUtils, ItemUtils, WoWReforgedRaces, WoWReforgedZones, WoWReforgedUtils, WoWReforgedMounts, WoWReforgedRaces, WoWReforgedProfessions, WoWReforgedBackpacks, WoWReforgedResearches, WoWReforgedDependencyEquivalents, WoWReforgedAltars, WoWReforgedComputerStartLocations, WoWReforgedAutoSkill, WoWReforgedMapData, WoWReforgedUiAiPlayers
+library WoWReforgedComputer initializer Init requires PlayerColorUtils, ItemUtils, OnUnitRemoval, WoWReforgedRaces, WoWReforgedZones, WoWReforgedUtils, WoWReforgedMounts, WoWReforgedRaces, WoWReforgedProfessions, WoWReforgedBackpacks, WoWReforgedResearches, WoWReforgedDependencyEquivalents, WoWReforgedAltars, WoWReforgedComputerStartLocations, WoWReforgedAutoSkill, WoWReforgedMapData, WoWReforgedUiAiPlayers
 
 globals
     private force computerPlayers = CreateForce()
@@ -852,6 +852,21 @@ function ResetComputerPlayers takes nothing returns boolean
     return false
 endfunction
 
+private function RemoveUnitHook takes unit whichUnit returns nothing
+    local integer playerId = GetPlayerId(GetOwningPlayer(whichUnit))
+    if (IsUnitInGroup(whichUnit, computerTownHalls[playerId])) then
+        call GroupRemoveUnit(computerTownHalls[playerId], whichUnit)
+    endif
+
+    if (IsUnitInGroup(whichUnit, computerShipyards[playerId])) then
+        call GroupRemoveUnit(computerShipyards[playerId], whichUnit)
+    endif
+
+    if (IsUnitInGroup(whichUnit, computerUnits[playerId])) then
+        call GroupRemoveUnit(computerUnits[playerId], whichUnit)
+    endif
+endfunction
+
 private function Init takes nothing returns nothing
     local player slotPlayer = null
     local integer i = 0
@@ -918,24 +933,8 @@ private function Init takes nothing returns nothing
     call TimerStart(autoAttackNavyTimer, 360.0, true, function TimerFunctionAutoAttackNavy)
     call TimerStart(autoLoadMinesTimer, 120.0, true, function AutoloadComputerWorkersIntoMines)
 
+    call OnUnitRemoval(RemoveUnitHook)
     call OnStartGame(function StartGame)
 endfunction
-
-private function RemoveUnitHook takes unit whichUnit returns nothing
-    local integer playerId = GetPlayerId(GetOwningPlayer(whichUnit))
-    if (IsUnitInGroup(whichUnit, computerTownHalls[playerId])) then
-        call GroupRemoveUnit(computerTownHalls[playerId], whichUnit)
-    endif
-
-    if (IsUnitInGroup(whichUnit, computerShipyards[playerId])) then
-        call GroupRemoveUnit(computerShipyards[playerId], whichUnit)
-    endif
-
-    if (IsUnitInGroup(whichUnit, computerUnits[playerId])) then
-        call GroupRemoveUnit(computerUnits[playerId], whichUnit)
-    endif
-endfunction
-
-hook RemoveUnit RemoveUnitHook
 
 endlibrary

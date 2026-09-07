@@ -1,4 +1,4 @@
-library PocketFactory initializer Init requires WorldBounds, Utilities
+library PocketFactory initializer Init requires WorldBounds, Utilities, OnUnitRemoval
 
 /**
  * Summon unit events do not work for Pocket Factory and the Clockwerk Goblins.
@@ -18,9 +18,9 @@ globals
     private integer callbackTriggersCounter = 0
     private trigger array callbackTriggersClockwerkGoblin
     private integer callbackTriggersClockwerkGoblinCounter = 0
-    
+
     private group casters = CreateGroup()
-    
+
     private trigger castTrigger = CreateTrigger()
     private trigger enterTrigger = CreateTrigger()
     private player filterPlayer = null
@@ -130,20 +130,20 @@ private function FilterIsPocketFactory takes nothing returns boolean
     return IsUnitPocketFactory(GetFilterUnit()) and GetOwningPlayer(GetFilterUnit()) == filterPlayer
 endfunction
 
-private function Init takes nothing returns nothing
-    call TriggerRegisterAnyUnitEventBJ(castTrigger, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-    call TriggerAddCondition(castTrigger, Condition(function TriggerConditionCast))
-    
-    call TriggerRegisterEnterRegion(enterTrigger, WorldBounds.worldRegion, null)
-    call TriggerAddCondition(enterTrigger, Condition(function TriggerConditionEnter))
-    
-    set f = Filter(function FilterIsPocketFactory)
-endfunction
-
 private function RemoveUnitHook takes unit whichUnit returns nothing
     call GroupRemoveUnit(casters, whichUnit)
 endfunction
 
-hook RemoveUnit RemoveUnitHook
+private function Init takes nothing returns nothing
+    call TriggerRegisterAnyUnitEventBJ(castTrigger, EVENT_PLAYER_UNIT_SPELL_EFFECT)
+    call TriggerAddCondition(castTrigger, Condition(function TriggerConditionCast))
+
+    call TriggerRegisterEnterRegion(enterTrigger, WorldBounds.worldRegion, null)
+    call TriggerAddCondition(enterTrigger, Condition(function TriggerConditionEnter))
+
+    set f = Filter(function FilterIsPocketFactory)
+
+    call OnUnitRemoval(RemoveUnitHook)
+endfunction
 
 endlibrary

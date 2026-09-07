@@ -1,9 +1,9 @@
-library WoWReforgedFelOrcDemonGate initializer Init
+library WoWReforgedFelOrcDemonGate initializer Init requires OnUnitRemoval
 
 globals
     public constant integer UNIT_TYPE_ID = 'n0KO'
     public constant integer RESEARCH_ID = 'R0H4'
-    
+
     public constant integer DOOM_GUARD = 'n0KZ'
     public constant integer FEL_STALKER = 'n0L1'
     public constant integer INFERNAL = 'n0L0'
@@ -70,20 +70,20 @@ private function TriggerConditionDeath takes nothing returns boolean
     return false
 endfunction
 
-private function Init takes nothing returns nothing
-    call TriggerRegisterAnyUnitEventBJ(constructedTrigger, EVENT_PLAYER_UNIT_CONSTRUCT_FINISH)
-    call TriggerAddCondition(constructedTrigger, Condition(function TriggerConditionConstructed))
-    
-    call TriggerRegisterAnyUnitEventBJ(deathTrigger, EVENT_PLAYER_UNIT_DEATH)
-    call TriggerAddCondition(deathTrigger, Condition(function TriggerConditionDeath))
-endfunction
-
 private function RemoveUnitHook takes unit whichUnit returns nothing
     if (IsUnitInGroup(whichUnit, gates)) then
         call GroupRemoveUnit(gates, whichUnit)
     endif
 endfunction
 
-hook RemoveUnit RemoveUnitHook
+private function Init takes nothing returns nothing
+    call TriggerRegisterAnyUnitEventBJ(constructedTrigger, EVENT_PLAYER_UNIT_CONSTRUCT_FINISH)
+    call TriggerAddCondition(constructedTrigger, Condition(function TriggerConditionConstructed))
+
+    call TriggerRegisterAnyUnitEventBJ(deathTrigger, EVENT_PLAYER_UNIT_DEATH)
+    call TriggerAddCondition(deathTrigger, Condition(function TriggerConditionDeath))
+
+    call OnUnitRemoval(RemoveUnitHook)
+endfunction
 
 endlibrary

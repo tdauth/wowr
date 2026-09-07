@@ -1,4 +1,4 @@
-library WoWReforgedSaveMaster initializer Init requires SimError, SafeString, WoWReforgedSaveCodeObjects
+library WoWReforgedSaveMaster initializer Init requires SimError, SafeString, OnUnitRemoval, WoWReforgedSaveCodeObjects
 
 globals
     private group array includedUnits
@@ -75,19 +75,6 @@ private function TriggerConditionChannel takes nothing returns boolean
     return false
 endfunction
 
-private function Init takes nothing returns nothing
-    local integer i = 0
-    loop
-        exitwhen (i == bj_MAX_PLAYERS)
-        set includedUnits[i] = CreateGroup()
-        set excludedUnits[i] = CreateGroup()
-        set i = i + 1
-    endloop
-
-    call TriggerRegisterAnyUnitEventBJ(channelTrigger, EVENT_PLAYER_UNIT_SPELL_CHANNEL)
-    call TriggerAddCondition(channelTrigger, Condition(function TriggerConditionChannel))
-endfunction
-
 private function RemoveUnitHook takes unit whichUnit returns nothing
     local integer i = 0
     loop
@@ -102,6 +89,19 @@ private function RemoveUnitHook takes unit whichUnit returns nothing
     endloop
 endfunction
 
-hook RemoveUnit RemoveUnitHook
+private function Init takes nothing returns nothing
+    local integer i = 0
+    loop
+        exitwhen (i == bj_MAX_PLAYERS)
+        set includedUnits[i] = CreateGroup()
+        set excludedUnits[i] = CreateGroup()
+        set i = i + 1
+    endloop
+
+    call TriggerRegisterAnyUnitEventBJ(channelTrigger, EVENT_PLAYER_UNIT_SPELL_CHANNEL)
+    call TriggerAddCondition(channelTrigger, Condition(function TriggerConditionChannel))
+
+    call OnUnitRemoval(RemoveUnitHook)
+endfunction
 
 endlibrary

@@ -1,4 +1,4 @@
-library WoWReforgedSpellParry initializer Init requires SimError, MathUtils, TextTagUtils, WoWReforgedAbilitySkill
+library WoWReforgedSpellParry initializer Init requires SimError, MathUtils, TextTagUtils, OnUnitRemoval, WoWReforgedAbilitySkill
 
 globals
     public constant integer ABILITY_ID = ABILITY_PARRY
@@ -17,10 +17,10 @@ private function TimerFunctionExpires takes nothing returns nothing
     local timer t = GetExpiredTimer()
     local integer handleId = GetHandleId(t)
     local unit caster = LoadUnitHandle(h, handleId, 0)
-    
+
     call GroupRemoveUnit(casters, caster)
     call UnitRemoveAbility(caster, BUFF_ABILITY_ID)
-    
+
     call FlushChildHashtable(h, handleId)
     call PauseTimer(t)
     call DestroyTimer(t)
@@ -64,15 +64,6 @@ private function TriggerConditionAttack takes nothing returns boolean
     return false
 endfunction
 
-private function Init takes nothing returns nothing
-    call TriggerRegisterAnyUnitEventBJ(castTrigger, EVENT_PLAYER_UNIT_SPELL_CAST)
-    call TriggerAddCondition(castTrigger, Condition(function TriggerConditionCast))
-    call TriggerRegisterAnyUnitEventBJ(attackTrigger, EVENT_PLAYER_UNIT_ATTACKED)
-    call TriggerAddCondition(attackTrigger, Condition(function TriggerConditionAttack))
-    
-    call RegisterAbilityFieldCustomReal0(ABILITY_PARRY, GetParryDuration)
-endfunction
-
 private function StopEffect takes unit whichUnit returns nothing
     local integer handleId = GetHandleId(whichUnit)
     local timer t = LoadTimerHandle(h, handleId, 0)
@@ -89,6 +80,15 @@ private function RemoveUnitHook takes unit whichUnit returns nothing
     endif
 endfunction
 
-hook RemoveUnit RemoveUnitHook
+private function Init takes nothing returns nothing
+    call TriggerRegisterAnyUnitEventBJ(castTrigger, EVENT_PLAYER_UNIT_SPELL_CAST)
+    call TriggerAddCondition(castTrigger, Condition(function TriggerConditionCast))
+    call TriggerRegisterAnyUnitEventBJ(attackTrigger, EVENT_PLAYER_UNIT_ATTACKED)
+    call TriggerAddCondition(attackTrigger, Condition(function TriggerConditionAttack))
+
+    call OnUnitRemoval(RemoveUnitHook)
+
+    call RegisterAbilityFieldCustomReal0(ABILITY_PARRY, GetParryDuration)
+endfunction
 
 endlibrary

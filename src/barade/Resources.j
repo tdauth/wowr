@@ -1,4 +1,4 @@
-library Resources initializer Init requires SimError, MathUtils, StringFormat
+library Resources initializer Init requires SimError, MathUtils, StringFormat, OnUnitRemoval
 
 globals
     public constant real GOLD_GOLD_EXCHANGE_RATE = 1.0
@@ -13,7 +13,7 @@ globals
     public constant string FOOD_ICON_ATT = "UI\\Widgets\\Console\\Human\\infocard-supply.blp"
     public constant string FOOD_MAX_ICON = "UI\\Feedback\\Resources\\ResourceSupply.blp"
     public constant string FOOD_MAX_ICON_ATT = "UI\\Widgets\\Console\\Human\\infocard-supply.blp"
-    
+
     private hashtable h = InitHashtable()
     private trigger castTrigger = CreateTrigger()
     private trigger orderTrigger = CreateTrigger()
@@ -23,7 +23,7 @@ globals
     private group mines = CreateGroup()
     private group workers = CreateGroup()
     private group returnBuildings = CreateGroup()
-    
+
     // callbacks
     private trigger array callbackTriggers
     private integer callbackTriggersCounter = 0
@@ -37,7 +37,7 @@ globals
     private unit triggerWorker = null
     private Resource triggerResource = 0
     private integer triggerResourceAmount = 0
-    
+
     private constant integer KEY_RESOURCE = 0
     private constant integer KEY_MAX_RESOURCE = 1
     private constant integer KEY_RESOURCE_PER_HIT = 2
@@ -117,7 +117,7 @@ private function MovementTypesMatch takes unit u0, unit u1 returns boolean
     elseif ((mt0 == MOVE_TYPE_FOOT or mt0 == MOVE_TYPE_HORSE or mt0 == MOVE_TYPE_HOVER) and not IsTerrainPathable(targetX, targetY, PATHING_TYPE_WALKABILITY)) then
         return true
     endif
-    
+
     return false
 endfunction
 
@@ -137,7 +137,7 @@ struct Resource
     integer array playerUpkeepRate[28]
     static Resource array resources
     static integer resourcesCount = 0
-    
+
     public static method create takes string id, string name, boolean transferable returns thistype
         local thistype this = thistype.allocate()
         local integer i = 0
@@ -148,7 +148,7 @@ struct Resource
         set thistype.resourcesCount = thistype.resourcesCount + 1
         return this
     endmethod
-    
+
 endstruct
 
 function GetResource takes integer index returns Resource
@@ -280,7 +280,7 @@ function GetPlayerResource takes player whichPlayer, Resource resource returns i
     elseif (resource == FOOD_MAX) then
         return GetPlayerState(whichPlayer, PLAYER_STATE_RESOURCE_FOOD_CAP)
     endif
-    
+
     return resource.playerAmount[GetPlayerId(whichPlayer)]
 endfunction
 
@@ -336,14 +336,14 @@ endfunction
 function ExchangePlayerResource takes player whichPlayer, Resource source, Resource target, integer amount returns integer
     local integer actualAmount = IMinBJ(GetPlayerResource(whichPlayer, source), amount)
     local integer targetAmount = GetExchangedResource(source, target, actualAmount)
-    
+
     //call BJDebugMsg("Get target amount " + I2S(targetAmount) + " with source gold exchange rate " + R2S(source.goldExchangeRate) + " and source resource name " + GetResourceName(source))
-    
+
     if (targetAmount > 0) then
         call RemovePlayerResource(whichPlayer, source, actualAmount)
         call AddPlayerResource(whichPlayer, target, targetAmount)
     endif
-    
+
     return targetAmount
 endfunction
 
@@ -587,7 +587,7 @@ function AddResourceToWorker takes unit worker, Resource resource, integer abili
         call UnitAddAbility(worker, returnHiddenAbilityId)
         call UnitMakeAbilityPermanent(worker, true, returnHiddenAbilityId)
     endif
-    
+
 endfunction
 
 function RemoveWorker takes unit whichUnit returns nothing
@@ -746,7 +746,7 @@ function IsMineEmpty takes unit mine returns boolean
         endif
         set i = i + 1
     endloop
-    
+
     return empty
 endfunction
 
@@ -756,10 +756,10 @@ function Gather takes unit worker, unit mine returns integer
     local integer max = GetMaxResources()
     local Resource resource = 0
     local integer result = 0
-    
+
     // has to be a non-loop animation to stop automatically
     call QueueUnitAnimation(mine, "stand work")
-    
+
     loop
         exitwhen (i == max)
         set resource = GetResource(i)
@@ -784,9 +784,9 @@ function Gather takes unit worker, unit mine returns integer
         endif
         set i = i + 1
     endloop
-    
+
     call SetUnitMine(worker, mine)
-    
+
     if (IsMineEmpty(mine)) then
         if (GetMineExplodesOnDeath(mine)) then
             call KillUnit(mine)
@@ -794,7 +794,7 @@ function Gather takes unit worker, unit mine returns integer
             call RemoveMine(mine)
         endif
     endif
-    
+
     return result
 endfunction
 
@@ -867,7 +867,7 @@ function ConstructedReturnBuilding takes unit worker, unit returnBuilding return
         endif
         set i = i + 1
     endloop
-    
+
     if (result != 0) then
         if (returnOrder) then
             call IssueTargetOrderById(worker, GetUnitReturnHiddenOrderId(worker, result), returnBuilding)
@@ -893,14 +893,14 @@ function ConstructedMine takes unit worker, unit mine returns Resource
         //call BJDebugMsg("Checking resource " + GetResourceName(resource) + " for worker " + GetUnitName(worker) + " and mine " + GetUnitName(mine))
         if (GetUnitResource(mine, resource) > 0 and GetUnitResourceMax(worker, resource) > 0) then
             set result = resource
-            
+
             if (GetUnitResource(worker, resource) > 0 and GetUnitResource(worker, resource) == GetUnitResourceMax(worker, resource)) then
                 set returnOrder = true
             endif
         endif
         set i = i + 1
     endloop
-    
+
     if (result != 0) then
         if (returnOrder) then
             call IssueImmediateOrderById(worker, GetUnitReturnOrderId(worker, result))
@@ -910,7 +910,7 @@ function ConstructedMine takes unit worker, unit mine returns Resource
             //call BJDebugMsg("Order harvest for resource " + GetResourceName(result))
         endif
     endif
-    
+
     return result
 endfunction
 
@@ -929,7 +929,7 @@ function GetPrimaryResourceForWorker takes unit worker returns Resource
         endif
         set i = i + 1
     endloop
-    
+
     return result
 endfunction
 
@@ -954,7 +954,7 @@ function GetPrimaryMineResourceForWorker takes unit mine, unit worker returns Re
         endif
         set i = i + 1
     endloop
-    
+
     return result
 endfunction
 
@@ -973,7 +973,7 @@ function GetResourceFromReturnResourcesAbilityId takes unit worker, integer abil
         endif
         set i = i + 1
     endloop
-    
+
     return result
 endfunction
 
@@ -1041,12 +1041,12 @@ endfunction
 
 private function QueueOrder takes unit worker, integer orderId, integer abilityId, unit mine returns nothing
    local real cooldown = BlzGetUnitAbilityCooldownRemaining(worker, abilityId)
-   
+
    if (cooldown > 0.0) then
         // add threshold since the timer might not be as precise as the cooldown
         set cooldown = cooldown + 0.6
     endif
-    
+
     call QueueOrderEx(worker, orderId, abilityId, mine, cooldown)
 endfunction
 
@@ -1105,10 +1105,10 @@ function ReturnResources takes unit worker, unit returnBuilding returns integer
         // will find another mine
         call ConstructedReturnBuilding(worker, returnBuilding)
     endif
-    
+
     set owner = null
     set mine = null
-    
+
     return result
 endfunction
 
@@ -1135,7 +1135,7 @@ function NextReturnBuilding takes unit worker returns unit
         exitwhen (i == max)
         set groupMember = BlzGroupUnitAt(returnBuildings, i)
         //call BJDebugMsg("Checking return building "  + GetUnitName(groupMember))
-        
+
         set valid = false
         set j = 0
         set max2 = GetMaxResources()
@@ -1149,7 +1149,7 @@ function NextReturnBuilding takes unit worker returns unit
             endif
             set j = j + 1
         endloop
-        
+
         if (valid) then
             set groupMemberDistance = DistanceBetweenUnits(worker, groupMember)
             if (result == null or groupMemberDistance < distance) then
@@ -1162,11 +1162,11 @@ function NextReturnBuilding takes unit worker returns unit
         set groupMember = null
         set i = i + 1
     endloop
-    
+
     call GroupClear(returnBuildings)
     call DestroyGroup(returnBuildings)
     set returnBuildings = null
-    
+
     return result
 endfunction
 
@@ -1219,18 +1219,18 @@ private function TimerFunctionReleaseWorkerFromMine takes nothing returns nothin
     local unit mine = LoadUnitHandle(h, handleId, 1)
     local Resource resource = LoadInteger(h, handleId, 2)
     local integer amount = Gather(worker, mine)
-    
+
     // did not explode
     if (IsUnitAliveBJ(mine)) then
         call ReleaseWorkerFromMine(worker, mine)
         //all BJDebugMsg("Release worker with resource " + GetResourceName(resource))
     endif
-    
+
     //call BJDebugMsg("Show and order return ability " + GetObjectName(GetUnitReturnAbilityId(worker, resource)))
     call BlzUnitHideAbility(worker, GetUnitHarvestAbilityId(worker, resource), true)
     call BlzUnitHideAbility(worker, GetUnitReturnAbilityId(worker, resource), false)
     call IssueImmediateOrderById(worker, GetUnitReturnOrderId(worker, resource))
-    
+
     call FlushChildHashtable(h, handleId)
     call PauseTimer(t)
     call DestroyTimer(t)
@@ -1342,7 +1342,7 @@ private function TriggerActionCast takes nothing returns nothing
         //call BlzUnitClearOrders(worker, true)
         //call BlzQueueTargetOrderById(worker, GetUnitHarvestOrderId(worker, foundResource), mine)
         call BlzUnitHideAbility(worker, GetUnitReturnAbilityId(worker, foundResource), false)
-            
+
         call QueueOrderEx(worker, GetUnitHarvestOrderId(worker, foundResource), abilityId, mine, 0.5) // add some threshold to continue
         set queued = true
         //call IssueTargetOrderById(worker, GetUnitHarvestOrderId(worker, foundResource), mine)
@@ -1350,12 +1350,12 @@ private function TriggerActionCast takes nothing returns nothing
         call IssueImmediateOrder(worker, "stop")
         call SimError(GetOwningPlayer(worker), GetLocalizedString("TARGET_IS_NO_VALID_MINE"))
     endif
-    
+
     // cancel queue if any other ability has been cast
     if (not queued) then
         call CancelUnitQueueTimer(worker)
     endif
-    
+
     set mine = null
     set worker = null
 endfunction
@@ -1453,7 +1453,7 @@ private function TriggerActionOrder takes nothing returns nothing
             endif
         endif
     endif
-    
+
     // return resources
     if (IsReturnBuilding(mine) and IsWorker(worker) and IsSmartOrder(orderId) and movement) then
         set r = GetReturnResource(worker, mine)
@@ -1543,6 +1543,15 @@ private function TriggerActionDeath takes nothing returns nothing
     set dyingUnit = null
 endfunction
 
+private function RemoveUnitHook takes unit whichUnit returns nothing
+    call CancelUnitQueueTimer(whichUnit)
+    call CancelUnitQueueWorkerReleaseTimer(whichUnit)
+    call RemoveMine(whichUnit)
+    call RemoveWorker(whichUnit)
+    call RemoveReturnBuilding(whichUnit)
+    call FlushChildHashtable(h, GetHandleId(whichUnit))
+endfunction
+
 private function Init takes nothing returns nothing
     // use trigger actions to avoid issues with unfinished Channel abilities
     call TriggerRegisterAnyUnitEventBJ(castTrigger, EVENT_PLAYER_UNIT_SPELL_EFFECT)
@@ -1560,6 +1569,8 @@ private function Init takes nothing returns nothing
 
     call TriggerRegisterAnyUnitEventBJ(deathTrigger, EVENT_PLAYER_UNIT_DEATH)
     call TriggerAddAction(deathTrigger, function TriggerActionDeath)
+
+    call OnUnitRemoval(RemoveUnitHook)
 
     set GOLD = AddResource("gold", GetLocalizedString("GOLD"), true)
     call SetResourceIcon(GOLD, GOLD_ICON)
@@ -1589,16 +1600,5 @@ endfunction
 function IsStandardResource takes Resource r returns boolean
     return r == GOLD or r == LUMBER or r == FOOD or r == FOOD_MAX
 endfunction
-
-private function RemoveUnitHook takes unit whichUnit returns nothing
-    call CancelUnitQueueTimer(whichUnit)
-    call CancelUnitQueueWorkerReleaseTimer(whichUnit)
-    call RemoveMine(whichUnit)
-    call RemoveWorker(whichUnit)
-    call RemoveReturnBuilding(whichUnit)
-    call FlushChildHashtable(h, GetHandleId(whichUnit))
-endfunction
-
-hook RemoveUnit RemoveUnitHook
 
 endlibrary

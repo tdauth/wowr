@@ -554,12 +554,11 @@ static if (AUTO_ADD_ALL_PREPLACED_ITEMS) then
 endif
 endfunction
 
-private function RemoveItemCleanup takes item whichItem returns nothing
-    local integer handleID = GetHandleId(whichItem)
-    call ClearItemRespawnIndex(handleID)
+private function RemoveItemHook takes item whichItem returns nothing
+    call ClearItemRespawnIndex(GetHandleId(whichItem))
 endfunction
 
-hook RemoveItem RemoveItemCleanup
+hook RemoveItem RemoveItemHook
 
 // Change Log:
 //

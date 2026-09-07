@@ -1,4 +1,4 @@
-library BlackArrow initializer Init
+library BlackArrow initializer Init requires OnUnitRemoval
 
 // Baradé's Black Arrow 1.3
 //
@@ -428,6 +428,26 @@ private function AddAllUnitsWithOrbs takes nothing returns nothing
     set whichGroup = null
 endfunction
 
+private function RemoveUnitHook takes unit whichUnit returns nothing
+    local timer whichTimer = LoadTimerHandle(h, 0, GetHandleId(whichUnit))
+    if (IsUnitInGroup(whichUnit, targets)) then
+        call GroupRemoveUnit(targets, whichUnit)
+    endif
+    if (IsUnitInGroup(whichUnit, autoCasters)) then
+        call GroupRemoveUnit(autoCasters, whichUnit)
+    endif
+    if (IsUnitInGroup(whichUnit, itemUnits)) then
+        call GroupRemoveUnit(itemUnits, whichUnit)
+    endif
+    if (whichTimer != null) then
+        call FlushChildHashtable(h, GetHandleId(whichUnit))
+        call FlushChildHashtable(h, GetHandleId(whichTimer))
+        call PauseTimer(whichTimer)
+        call DestroyTimer(whichTimer)
+        set whichTimer = null
+    endif
+endfunction
+
 private function Init takes nothing returns nothing
     call TriggerRegisterAnyUnitEventBJ(damageTrigger, EVENT_PLAYER_UNIT_DAMAGED)
     call TriggerAddCondition(damageTrigger, Condition(function TriggerConditionDamage))
@@ -449,6 +469,8 @@ private function Init takes nothing returns nothing
     call TriggerAddCondition(dropTrigger, Condition(function TriggerConditionDropItem))
     call TriggerAddAction(dropTrigger, function TriggerActionDropItem)
 
+    call OnUnitRemoval(RemoveUnitHook)
+
 static if (ADD_STANDARD_OBJECT_DATA) then
     call AddStandardObjectData()
 endif
@@ -457,32 +479,11 @@ static if (ADD_ALL_UNITS_WITH_ORBS) then
 endif
 endfunction
 
-private function RemoveUnitHook takes unit whichUnit returns nothing
-    local timer whichTimer = LoadTimerHandle(h, 0, GetHandleId(whichUnit))
-    if (IsUnitInGroup(whichUnit, targets)) then
-        call GroupRemoveUnit(targets, whichUnit)
-    endif
-    if (IsUnitInGroup(whichUnit, autoCasters)) then
-        call GroupRemoveUnit(autoCasters, whichUnit)
-    endif
-    if (IsUnitInGroup(whichUnit, itemUnits)) then
-        call GroupRemoveUnit(itemUnits, whichUnit)
-    endif
-    if (whichTimer != null) then
-        call FlushChildHashtable(h, GetHandleId(whichUnit))
-        call FlushChildHashtable(h, GetHandleId(whichTimer))
-        call PauseTimer(whichTimer)
-        call DestroyTimer(whichTimer)
-        set whichTimer = null
-    endif
-endfunction
-
-hook RemoveUnit RemoveUnitHook
-
 // ChangeLog:
 //
-// 1.3 2026-09-03:
+// 1.3 2026-09-07:
 // - Fix multiple bugs.
+// - Use OnUnitRemoval.
 //
 // 1.2 2025-04-16:
 // - Refactor.

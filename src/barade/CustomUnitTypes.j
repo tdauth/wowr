@@ -1,4 +1,4 @@
-library CustomUnitTypes
+library CustomUnitTypes requires OnUnitRemoval
 /*
  * Custom Unit Types 1.0
  *
@@ -108,6 +108,12 @@ private function TriggerConditionDeath takes nothing returns boolean
     return false
 endfunction
 
+private function RemoveUnitHook takes unit whichUnit returns nothing
+    if (IsCustomUnitType(GetUnitTypeId(whichUnit))) then
+        call CallCustomUnitTypeOnRemove(whichUnit)
+    endif
+endfunction
+
 // Call this function AFTER all the AddCustomUnitType calls.
 function InitCustomUnitTypes takes nothing returns nothing
     if (init) then
@@ -123,14 +129,8 @@ function InitCustomUnitTypes takes nothing returns nothing
         call TriggerRegisterAnyUnitEventBJ(deathTrigger, EVENT_PLAYER_UNIT_DEATH)
         call TriggerAddCondition(deathTrigger, Condition(function TriggerConditionDeath))
     endif
-endfunction
 
-private function RemoveUnitHook takes unit whichUnit returns nothing
-    if (IsCustomUnitType(GetUnitTypeId(whichUnit))) then
-        call CallCustomUnitTypeOnRemove(whichUnit)
-    endif
+    call OnUnitRemoval(RemoveUnitHook)
 endfunction
-
-hook RemoveUnit RemoveUnitHook
 
 endlibrary

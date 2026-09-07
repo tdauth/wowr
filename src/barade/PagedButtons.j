@@ -1,6 +1,7 @@
-library PagedButtons initializer Init requires optional PagedButtonsConfig
+library PagedButtons initializer Init requires optional PagedButtonsConfig, OnUnitRemoval
+
 /*
-Baradé's Paged Buttons System 1.6
+Baradé's Paged Buttons System 1.7
 
 Allows using multiple pages of command buttons in shops for unit and items which can be purchased.
 Changing the pages is also done by purchasing units to change to the next or previous page.
@@ -344,7 +345,6 @@ globals
     public constant boolean AUTO_UPDATE_STOCKS = false
     // Define this as true to prevent items from being removed completely from non-marketplace shops.
     public constant boolean ENABLE_FAKE_MARKETPLACE_ITEM_REMOVAL = true
-    public constant boolean HOOK_REMOVE_UNIT = true
     // This delay hreshold is required to avoid wrong item or unit types being removed due to still refilling stocks.
     public constant integer STOCK_DELAY_THRESHOLD = 1
 
@@ -1362,14 +1362,17 @@ endif
 static if (ENABLE_FAKE_MARKETPLACE_ITEM_REMOVAL) then
     call TriggerAddCondition(bj_stockItemPurchased, Condition(function TriggerConditionIsMarketplace))
 endif
-endfunction
 
-static if (HOOK_REMOVE_UNIT) then
-hook RemoveUnit DisablePagedButtons
-endif
+    call OnUnitRemoval(DisablePagedButtons)
+endfunction
 
 /*
 ChangeLog:
+
+1.7
+
+- Fix bugs.
+- Use OnUnitRemoval.
 
 1.6
 

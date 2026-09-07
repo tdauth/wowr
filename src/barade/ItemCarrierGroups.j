@@ -1,4 +1,4 @@
-library ItemCarrierGroups initializer Init
+library ItemCarrierGroups initializer Init requires OnUnitRemoval
 
 /*
  * This system tries to improve the performance of UnitHasItemOfTypeBJ to check for specific item
@@ -91,14 +91,6 @@ private function TriggerActionDropItem takes nothing returns nothing
     set carrier = null
 endfunction
 
-private function Init takes nothing returns nothing
-    call TriggerRegisterAnyUnitEventBJ(pickupItemTrigger, EVENT_PLAYER_UNIT_PICKUP_ITEM)
-    call TriggerAddCondition(pickupItemTrigger, Condition(function TriggerConditionPickupItem))
-
-    call TriggerRegisterAnyUnitEventBJ(dropItemTrigger, EVENT_PLAYER_UNIT_DROP_ITEM)
-    call TriggerAddAction(dropItemTrigger, function TriggerActionDropItem)
-endfunction
-
 private function RemoveUnitHook takes unit whichUnit returns nothing
     local integer i = 0
     loop
@@ -108,6 +100,14 @@ private function RemoveUnitHook takes unit whichUnit returns nothing
     endloop
 endfunction
 
-hook RemoveUnit RemoveUnitHook
+private function Init takes nothing returns nothing
+    call TriggerRegisterAnyUnitEventBJ(pickupItemTrigger, EVENT_PLAYER_UNIT_PICKUP_ITEM)
+    call TriggerAddCondition(pickupItemTrigger, Condition(function TriggerConditionPickupItem))
+
+    call TriggerRegisterAnyUnitEventBJ(dropItemTrigger, EVENT_PLAYER_UNIT_DROP_ITEM)
+    call TriggerAddAction(dropItemTrigger, function TriggerActionDropItem)
+
+    call OnUnitRemoval(RemoveUnitHook)
+endfunction
 
 endlibrary

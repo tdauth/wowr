@@ -1,4 +1,4 @@
-library WoWReforgedSummonedUnits initializer Init requires WoWReforgedUtils, WoWReforgedI18n, WoWReforgedAbilitySkill, WoWReforgedProfessionInscriptor
+library WoWReforgedSummonedUnits initializer Init requires OnUnitRemoval, WoWReforgedUtils, WoWReforgedI18n, WoWReforgedAbilitySkill, WoWReforgedProfessionInscriptor
 
 globals
     private hashtable h = InitHashtable()
@@ -144,14 +144,14 @@ endfunction
 
 function SelectNextSummonedUnit takes player whichPlayer returns unit
     local unit result = GetNextUnitToSelect(summonedUnits[GetPlayerId(whichPlayer)], whichPlayer)
-    
+
     if (result != null) then
         call SelectUnitForPlayerSingle(result, whichPlayer)
         call SmartCameraPanToUnit(whichPlayer, result, 0.0)
     else
         call SimError(whichPlayer, GetLocalizedString("NO_SUMMONED_UNIT"))
     endif
-    
+
     return result
 endfunction
 
@@ -164,7 +164,7 @@ private function TriggerConditionSummon takes nothing returns boolean
     call ApplySummonedUnitBonuses(GetSummoningUnit(), GetSummonedUnit())
     return false
 endfunction
-        
+
 private function TriggerConditionDeath takes nothing returns boolean
     local integer playerId = GetPlayerId(GetOwningPlayer(GetTriggerUnit()))
     if (IsUnitInGroup(GetTriggerUnit(), summonedUnits[playerId])) then
@@ -192,6 +192,13 @@ private function TriggerConditionBlackArrowSummon takes nothing returns nothing
     call ForGroup(GetTriggerBlackArrowSummonedUnits(), function EnumBlackArrowSummon)
 endfunction
 
+private function RemoveUnitHook takes unit whichUnit returns nothing
+    local integer playerId = GetPlayerId(GetOwningPlayer(whichUnit))
+    if (IsUnitInGroup(whichUnit, summonedUnits[playerId])) then
+        call GroupRemoveUnit(summonedUnits[playerId], whichUnit)
+    endif
+endfunction
+
 private function Init takes nothing returns nothing
     local integer i = 0
     loop
@@ -215,71 +222,73 @@ private function Init takes nothing returns nothing
 
     call TriggerRegisterAnyUnitEventBJ(summonTrigger, EVENT_PLAYER_UNIT_SUMMON)
     call TriggerAddCondition(summonTrigger, Condition(function TriggerConditionSummon))
-        
+
     call TriggerRegisterAnyUnitEventBJ(deathTrigger, EVENT_PLAYER_UNIT_DEATH)
     call TriggerAddCondition(deathTrigger, Condition(function TriggerConditionDeath))
-    
+
     call TriggerRegisterAnyUnitEventBJ(changeOwnerTrigger, EVENT_PLAYER_UNIT_CHANGE_OWNER)
     call TriggerAddCondition(changeOwnerTrigger, Condition(function TriggerConditionChangeOwner))
-    
+
+    call OnUnitRemoval(RemoveUnitHook)
+
     // Register all summoned unit types for all abilities here, so summoned units will have increased stats depending on the ability level:
     // ABILITY_ILF_SUMMONED_UNIT_TYPE_HWE1
-    
+
     // Hero Classes
-    
+
     // Pyromancer
     call RegisterAbilitySummonedUnitType(ABILITY_SUMMON_LAVA_SPAWN, LAVA_SPAWN_1, LAVA_SPAWN_1, 1, 1, false)
     call RegisterAbilitySummonedUnitType(ABILITY_SUMMON_LAVA_SPAWN, LAVA_SPAWN_1, LAVA_SPAWN_2, 2, 2, false)
     call RegisterAbilitySummonedUnitType(ABILITY_SUMMON_LAVA_SPAWN, LAVA_SPAWN_1, LAVA_SPAWN_3, 3, -1, false)
-    
+
     call RegisterAbilitySummonedUnitType(ABILITY_PHOENIX, PHOENIX, PHOENIX, 1, 1, false)
     call RegisterAbilitySummonedUnitType(ABILITY_PHOENIX, PHOENIX, ANCIENT_PHOENIX, 2, -1, false)
-    
+
     // Hydromancer
     call RegisterAbilitySummonedUnitType(ABILITY_SUMMON_WATER_ELEMENTAL, WATER_ELEMENTAL_1, WATER_ELEMENTAL_1, 1, 1, false)
     call RegisterAbilitySummonedUnitType(ABILITY_SUMMON_WATER_ELEMENTAL, WATER_ELEMENTAL_1, WATER_ELEMENTAL_2, 2, 2, false)
     call RegisterAbilitySummonedUnitType(ABILITY_SUMMON_WATER_ELEMENTAL, WATER_ELEMENTAL_1, WATER_ELEMENTAL_3, 3, 3, false)
     call RegisterAbilitySummonedUnitType(ABILITY_SUMMON_WATER_ELEMENTAL, WATER_ELEMENTAL_1, WATER_ELEMENTAL_4, 4, -1, false)
-    
+
     // Geomancer
     call RegisterAbilitySummonedUnitType(ABILITY_SUMMON_GOLEM, GRANITE_GOLEM, GRANITE_GOLEM, 1, -1, false)
-    
+
     // Aeromancer
     call RegisterAbilitySummonedUnitType(ABILITY_SUMMON_DJINN, DJINN, DJINN, 1, -1, false)
-    
+
     // Death Knight
     call RegisterAbilitySummonedUnitType(ABILITY_BLACK_ARROW, DARK_MINION_1, DARK_MINION_1, 1, -1, false)
-    
+
     // Warlock
     call RegisterAbilitySummonedUnitType(ABILITY_DOOM, DOOM_GUARD_SUMMONED, DOOM_GUARD_SUMMONED, 1, -1, false)
-    
+
     call RegisterAbilitySummonedUnitType(ABILITY_DARK_PORTAL, FEL_STALKER, FEL_STALKER, 1, -1, true)
     call RegisterAbilitySummonedUnitType(ABILITY_DARK_PORTAL, CREEP_DOOM_GUARD, CREEP_DOOM_GUARD, 1, -1, true)
-    
+
     call RegisterAbilitySummonedUnitType(ABILITY_RAIN_OF_CHAOS, INFERNAL, INFERNAL, 1, -1, false)
-    
+
     // Hunter
     call RegisterAbilitySummonedUnitType(ABILITY_SCOUT, OWL_SCOUT_1, OWL_SCOUT_1, 1, 1, false)
     call RegisterAbilitySummonedUnitType(ABILITY_SCOUT, OWL_SCOUT_1, OWL_SCOUT_2, 2, 2, false)
     call RegisterAbilitySummonedUnitType(ABILITY_SCOUT, OWL_SCOUT_1, OWL_SCOUT_3, 3, 3, false)
     call RegisterAbilitySummonedUnitType(ABILITY_SCOUT, OWL_SCOUT_1, OWL_SCOUT_4, 4, -1, false)
-    
+
     call RegisterAbilitySummonedUnitType(ABILITY_SUMMON_BEAR, SPIRIT_BEAR_1, SPIRIT_BEAR_1, 1, 1, false)
     call RegisterAbilitySummonedUnitType(ABILITY_SUMMON_BEAR, SPIRIT_BEAR_1, SPIRIT_BEAR_2, 2, 2, false)
     call RegisterAbilitySummonedUnitType(ABILITY_SUMMON_BEAR, SPIRIT_BEAR_1, SPIRIT_BEAR_3, 3, -1, false)
-    
+
     call RegisterAbilitySummonedUnitType(ABILITY_SUMMON_QUILBEAST, QUILBEAST_1, QUILBEAST_1, 1, 1, false)
     call RegisterAbilitySummonedUnitType(ABILITY_SUMMON_QUILBEAST, QUILBEAST_1, QUILBEAST_2, 2, 2, false)
     call RegisterAbilitySummonedUnitType(ABILITY_SUMMON_QUILBEAST, QUILBEAST_1, QUILBEAST_3, 3, -1, false)
-    
+
     call RegisterAbilitySummonedUnitType(ABILITY_SUMMON_HAWK, SPIRIT_HAWK_1, SPIRIT_HAWK_1, 1, 1, false)
     call RegisterAbilitySummonedUnitType(ABILITY_SUMMON_HAWK, SPIRIT_HAWK_1, SPIRIT_HAWK_2, 2, 2, false)
     call RegisterAbilitySummonedUnitType(ABILITY_SUMMON_HAWK, SPIRIT_HAWK_1, SPIRIT_HAWK_3, 3, -1, false)
-    
+
     // Druid
     call RegisterAbilitySummonedUnitType(ABILITY_FORCE_OF_NATURE, TREANT, TREANT, 1, 1, false)
     call RegisterAbilitySummonedUnitType(ABILITY_FORCE_OF_NATURE, TREANT, TREANT_4, 2, -1, false)
-    
+
     // Monk
     call RegisterAbilitySummonedUnitType(ABILITY_STORM_EARTH_FIRE, FIRE_1, FIRE_1, 1, 1, false)
     call RegisterAbilitySummonedUnitType(ABILITY_STORM_EARTH_FIRE, STORM_1, STORM_1, 1, 1, false)
@@ -290,53 +299,43 @@ private function Init takes nothing returns nothing
     call RegisterAbilitySummonedUnitType(ABILITY_STORM_EARTH_FIRE, STORM_1, STORM_2, 2, -1, false)
     call RegisterAbilitySummonedUnitType(ABILITY_STORM_EARTH_FIRE, EARTH_1, EARTH_2, 2, -1, false)
     */
-    
+
     // Rogue
     call RegisterAbilitySummonedUnitType(ABILITY_FERAL_SPIRIT, SPIRIT_WOLF_1, SPIRIT_WOLF_1, 1, 1, false)
     call RegisterAbilitySummonedUnitType(ABILITY_FERAL_SPIRIT, SPIRIT_WOLF_1, SPIRIT_WOLF_2, 2, 2, false)
     call RegisterAbilitySummonedUnitType(ABILITY_FERAL_SPIRIT, SPIRIT_WOLF_1, SPIRIT_WOLF_3, 3, 3, false)
     call RegisterAbilitySummonedUnitType(ABILITY_FERAL_SPIRIT, SPIRIT_WOLF_1, SPIRIT_WOLF_4, 4, -1, false)
-    
+
     // Necromancer
     call RegisterAbilitySummonedUnitType(ABILITY_RAISE_DEAD, SKEL_WARRIOR, SKEL_WARRIOR, 1, -1, false)
     call RegisterAbilitySummonedUnitType(ABILITY_RAISE_DEAD, SKELETAL_MAGE, SKELETAL_MAGE, 1, -1, false)
-    
+
     call RegisterAbilitySummonedUnitType(ABILITY_CARRION_BEETLES, CARRION_BEETLE_1, CARRION_BEETLE_1, 1, 1, false)
     call RegisterAbilitySummonedUnitType(ABILITY_CARRION_BEETLES, CARRION_BEETLE_1, CARRION_BEETLE_2, 2, 2, false)
     call RegisterAbilitySummonedUnitType(ABILITY_CARRION_BEETLES, CARRION_BEETLE_1, CARRION_BEETLE_3, 3, -1, false)
-    
+
     call RegisterAbilitySummonedUnitType(ABILITY_SPAWN_TENTACLE, TENTACLE, TENTACLE, 1, -1, false)
 
     call RegisterAbilitySummonedUnitType(ABILITY_SUMMON_SAPPHIRON, SUMMONED_SAPPHIRON, SUMMONED_SAPPHIRON, 1, -1, false)
-    
+
     // Witch Doctor
     call RegisterAbilitySummonedUnitType(ABILITY_SERPENT_WARD, SERPENT_WARD_1, SERPENT_WARD_1, 1, 1, false)
     call RegisterAbilitySummonedUnitType(ABILITY_SERPENT_WARD, SERPENT_WARD_1, SERPENT_WARD_2, 2, 2, false)
     call RegisterAbilitySummonedUnitType(ABILITY_SERPENT_WARD, SERPENT_WARD_1, SERPENT_WARD_3, 3, 3, false)
     call RegisterAbilitySummonedUnitType(ABILITY_SERPENT_WARD, SERPENT_WARD_1, SERPENT_WARD_4, 4, -1, false)
-    
+
     // Rogue
     call RegisterAbilitySummonedUnitType(ABILITY_VENGEANCE, AVATAR_OF_VENGEANCE, AVATAR_OF_VENGEANCE, 1, 1, false)
     call RegisterAbilitySummonedUnitType(ABILITY_VENGEANCE, AVATAR_OF_VENGEANCE, ETERNAL_AVATAR_OF_VENGEANCE, 2, -1, false)
-    
+
     // Other
     call RegisterAbilitySummonedUnitType(ABILITY_SUMMON_FIRE_ELEMENTAL, FIRE_ELEMENTAL, FIRE_ELEMENTAL, 1, 1, false)
-    
+
     call RegisterAbilitySummonedUnitType(ABILITY_SUMMON_SEA_ELEMENTAL, SEA_ELEMENTAL, SEA_ELEMENTAL, 1, 1, false)
-    
+
     call RegisterAbilitySummonedUnitType(ABILITY_SUMMON_EARTH_ELEMENTAL, EARTH_ELEMENTAL, EARTH_ELEMENTAL, 1, -1, false)
-    
+
     call RegisterAbilitySummonedUnitType(ABILITY_INFERNO, INFERNAL, INFERNAL, 1, -1, false)
 endfunction
-
-private function RemoveUnitHook takes unit whichUnit returns nothing
-    local integer playerId = GetPlayerId(GetOwningPlayer(whichUnit))
-    if (IsUnitInGroup(whichUnit, summonedUnits[playerId])) then
-        call GroupRemoveUnit(summonedUnits[playerId], whichUnit)
-    endif
-endfunction
-
-hook RemoveUnit RemoveUnitHook
-
 
 endlibrary

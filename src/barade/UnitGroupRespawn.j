@@ -970,11 +970,17 @@ private function AddAllPreplacedCreeps takes nothing returns nothing
 endfunction
 endif
 
+private function RemoveUnitHook takes unit whichUnit returns nothing
+    call ClearRespawnUnitIndex(GetHandleId(whichUnit))
+endfunction
+
 private function Init takes nothing returns nothing
     call TriggerRegisterAnyUnitEventBJ(unitDeathOrCharmOrRescueTrigger, EVENT_PLAYER_UNIT_DEATH)
     call TriggerRegisterAnyUnitEventBJ(unitDeathOrCharmOrRescueTrigger, EVENT_PLAYER_UNIT_CHANGE_OWNER)
     call TriggerAddCondition(unitDeathOrCharmOrRescueTrigger, Condition(function TriggerConditionRespawnUnit))
     call TriggerAddAction(unitDeathOrCharmOrRescueTrigger, function TriggerActionRespawnUnit)
+
+    call OnUnitRemoval(RemoveUnitHook)
 
 static if (UnitGroupRespawnConfig_AUTO_ADD_ALL_PREPLACED_CREEPS) then
     // waiting makes sure that all units are already placed on the map
@@ -983,19 +989,13 @@ else
 endif
 endfunction
 
-private function RemoveUnitCleanup takes unit whichUnit returns nothing
-    local integer handleID = GetHandleId(whichUnit)
-    call ClearRespawnUnitIndex(handleID)
-endfunction
-
-hook RemoveUnit RemoveUnitCleanup
-
 /*
  * ChangeLog:
  *
  * 1.3 2026-09-03:
  * - Fix multiple bugs.
- * - Fix rename into UnitGroupRespawn.
+ * - Rename into UnitGroupRespawn.
+ * - Use OnUnitRemoval.
  *
  * 1.2:
  * - Add function AddRespawnUnitGroupFromUnitStart.

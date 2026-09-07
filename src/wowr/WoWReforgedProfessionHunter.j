@@ -1,4 +1,4 @@
-library WoWReforgedProfessionHunter initializer Init requires ItemCarrierGroups
+library WoWReforgedProfessionHunter initializer Init requires ItemCarrierGroups, OnUnitRemoval
 
 globals
     private filterfunc filterIsCritterWithTrophy = null
@@ -258,6 +258,8 @@ private function Init takes nothing returns nothing
     call TriggerRegisterAnyUnitEventBJ(channelTrigger, EVENT_PLAYER_UNIT_SPELL_CHANNEL)
     call TriggerAddCondition(channelTrigger, Condition(function TriggerConditionChannel))
 
+    call OnUnitRemoval(RemoveCritterSpawner)
+
     call AddItemCarrierGroup(ITEM_HUNTING_BOW)
 
     call AddTrophy(STAG, ITEM_ANTLER)
@@ -287,7 +289,5 @@ private function Init takes nothing returns nothing
     call AddTrophy(PIGEON, ITEM_PIGEON_FEATHER)
     call AddTrophy(TURTLE, ITEM_TURTLE_SHELL)
 endfunction
-
-hook RemoveUnit RemoveCritterSpawner
 
 endlibrary

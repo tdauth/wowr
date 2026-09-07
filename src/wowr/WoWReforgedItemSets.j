@@ -1,4 +1,4 @@
-library WoWReforgedItemSets initializer Init requires NewBonus, WoWReforgedI18n
+library WoWReforgedItemSets initializer Init requires OnUnitRemoval, NewBonus, WoWReforgedI18n
 
 function interface OnItemSetFunction takes unit hero, ItemSet s returns nothing
 
@@ -13,7 +13,7 @@ endstruct
 globals
     private ItemSet array itemSets
     private integer itemSetsCounter = 0
-    
+
     private trigger pickupTrigger = CreateTrigger()
     private trigger dropTrigger = CreateTrigger()
     private hashtable h = InitHashtable()
@@ -38,8 +38,6 @@ endfunction
 private function ClearUnitHasItemSet takes unit whichUnit returns nothing
     call FlushChildHashtable(h, GetHandleId(whichUnit))
 endfunction
-
-hook RemoveUnit ClearUnitHasItemSet
 
 private function CheckAllItemSets takes unit whichUnit returns nothing
     local ItemSet s = 0
@@ -110,13 +108,15 @@ endfunction
 
 private function Init takes nothing returns nothing
     local ItemSet s = 0
-    
+
     call TriggerRegisterAnyUnitEventBJ(pickupTrigger, EVENT_PLAYER_UNIT_PICKUP_ITEM)
     call TriggerAddAction(pickupTrigger, function TriggerActionPickup)
-    
+
     call TriggerRegisterAnyUnitEventBJ(dropTrigger, EVENT_PLAYER_UNIT_DROP_ITEM)
     call TriggerAddAction(dropTrigger, function TriggerActionDrop)
-    
+
+    call OnUnitRemoval(ClearUnitHasItemSet)
+
     // All sets
     set s = AddItemSet(GetLocalizedString("HOLY_SET"), OnCompleteHolySet, OnUncompleteHolySet)
     call AddItemSetComponent(s, ITEM_HOLY_CREST)

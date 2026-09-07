@@ -1,4 +1,5 @@
 library MaxItemStacks initializer Init
+
 // Baradé's Max Item Stacks System 1.1
 //
 // Supports the missing Warcraft III feature of calculating the value of 'ista' per item type ID.
@@ -57,7 +58,7 @@ function GetMaxStacksByItemTypeId takes integer itemTypeId returns integer
     if (HaveSavedInteger(stackHashTable, itemTypeId, 0)) then
         return LoadInteger(stackHashTable, itemTypeId, 0)
     endif
-    
+
     return GetMaxStacksByItemTypeIdFresh(itemTypeId)
 endfunction
 

@@ -1,4 +1,4 @@
-library WoWReforgedSpellTelekinesis initializer Init requires SimError, MathUtils
+library WoWReforgedSpellTelekinesis initializer Init requires SimError, MathUtils, OnUnitRemoval
 
 globals
     private constant integer ABILITY_ID = 'A0XZ'
@@ -8,10 +8,10 @@ globals
     private hashtable h = InitHashtable()
     private trigger castTrigger = CreateTrigger()
     private group casters = CreateGroup()
-    
+
     private constant integer KEY_TARGET = 0
     private constant integer KEY_TARGET_TYPE = 1
-    
+
     private constant integer TARGET_TYPE_UNIT = 0
     private constant integer TARGET_TYPE_ITEM = 1
     private constant integer TARGET_TYPE_DESTRUCTABLE = 2
@@ -21,7 +21,7 @@ private function GetMaxDistance takes unit caster returns real
     if (GetUnitAbilityLevel(caster, ABILITY_ID) > 0) then
         return BlzGetAbilityRealLevelField(BlzGetUnitAbility(caster, ABILITY_ID), ABILITY_RLF_CAST_RANGE, 0)
     endif
-    
+
     return 1200.0
 endfunction
 
@@ -71,7 +71,7 @@ private function IsTelekinesisTargetValid takes unit caster returns boolean
         set targetDestructable = LoadDestructableHandle(h, handleId, KEY_TARGET)
         return DistanceBetweenUnitAndDestructable(caster, targetDestructable) <= maxDistance
     endif
-    
+
     return false
 endfunction
 
@@ -189,7 +189,7 @@ endfunction
 
 private function TriggerConditionCast takes nothing returns boolean
     local integer abilityId = GetSpellAbilityId()
-    
+
     return abilityId == ABILITY_ID or abilityId == ITEM_ABILITY_ID
 endfunction
 
@@ -197,17 +197,17 @@ private function TriggerActionCast takes nothing returns nothing
     call CastTelekinesis()
 endfunction
 
-private function Init takes nothing returns nothing
-    call TriggerRegisterAnyUnitEventBJ(castTrigger, EVENT_PLAYER_UNIT_SPELL_CHANNEL)
-    call TriggerAddCondition(castTrigger, Condition(function TriggerConditionCast))
-    call TriggerAddAction(castTrigger, function TriggerActionCast)
-endfunction
-
 private function RemoveUnitTelekinesis takes unit whichUnit returns nothing
     call GroupRemoveUnit(casters, whichUnit)
     call TelekinesisClearTarget(whichUnit)
 endfunction
 
-hook RemoveUnit RemoveUnitTelekinesis
+private function Init takes nothing returns nothing
+    call TriggerRegisterAnyUnitEventBJ(castTrigger, EVENT_PLAYER_UNIT_SPELL_CHANNEL)
+    call TriggerAddCondition(castTrigger, Condition(function TriggerConditionCast))
+    call TriggerAddAction(castTrigger, function TriggerActionCast)
+
+    call OnUnitRemoval(RemoveUnitTelekinesis)
+endfunction
 
 endlibrary

@@ -1,4 +1,4 @@
-library WoWReforgedProfessionEnchanter initializer Init requires WoWReforgedAbilityFields, WoWReforgedEquipmentBags, WoWReforgedUtils
+library WoWReforgedProfessionEnchanter initializer Init requires OnUnitRemoval, WoWReforgedAbilityFields, WoWReforgedEquipmentBags, WoWReforgedUtils
 
 globals
     private hashtable EnchanterSystemHashTable = InitHashtable()
@@ -80,8 +80,6 @@ endfunction
 private function EnchanterSystemRemoveUnit takes unit whichUnit returns nothing
     call FlushChildHashtable(EnchanterSystemHashTable, GetHandleId(whichUnit))
 endfunction
-
-hook RemoveUnit EnchanterSystemRemoveUnit
 
 function EnchanterSetHeroBonus takes unit hero returns integer
     local item whichItem = null
@@ -285,6 +283,8 @@ private function Init takes nothing returns nothing
     call TriggerRegisterAnyUnitEventBJ(dropItemTrigger, EVENT_PLAYER_UNIT_DROP_ITEM)
     call TriggerAddCondition(dropItemTrigger, Condition(function TriggerConditionDropItem))
     call TriggerAddAction(dropItemTrigger, function TriggerActionSetHeroBonusDrop)
+
+    call OnUnitRemoval(EnchanterSystemRemoveUnit)
 endfunction
 
 endlibrary

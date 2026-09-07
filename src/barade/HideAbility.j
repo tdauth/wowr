@@ -1,4 +1,4 @@
-library HideAbility requires StringUtils
+library HideAbility initializer Init requires StringUtils, OnUnitRemoval
 /*
 https://www.hiveworkshop.com/threads/blzunithideability-and-blzunitdisableability-dont-work.312477/#post-3325089
 
@@ -18,7 +18,7 @@ function UnitHideAbilitySafely takes unit u, integer abilityId, boolean hide ret
         //call BJDebugMsg("Ignoring hide call for " + GetObjectName(abilityId) + " with hide value " + B2S(hide))
         return //do nothing
     endif
-    
+
     //call BJDebugMsg("Not ignoring hide call for " + GetObjectName(abilityId) + " with hide value " + B2S(hide))
     call SaveBoolean(h, handleId, abilityId, hide)
     call BlzUnitHideAbility(u, abilityId, hide)
@@ -28,6 +28,8 @@ private function RemoveUnitHook takes unit whichUnit returns nothing
     call FlushChildHashtable(h, GetHandleId(whichUnit))
 endfunction
 
-hook RemoveUnit RemoveUnitHook
+private function Init takes nothing returns nothing
+    call OnUnitRemoval(RemoveUnitHook)
+endfunction
 
 endlibrary

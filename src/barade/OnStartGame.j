@@ -1,5 +1,9 @@
 library OnStartGame initializer Init
 
+/*
+ * Register parameterless functions which are executed when starting the game in the order you have registered them.
+ */
+
 globals
     private trigger startGameTrigger = CreateTrigger()
 endglobals

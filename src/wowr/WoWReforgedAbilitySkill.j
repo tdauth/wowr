@@ -1,4 +1,4 @@
-library WoWReforgedAbilitySkill initializer Init requires Ascii, StringUtils, WoWReforgedAbilityFields
+library WoWReforgedAbilitySkill initializer Init requires Ascii, StringUtils, OnUnitRemoval, WoWReforgedAbilityFields
 // https://www.hiveworkshop.com/pastebin/b2769ab71109c3634b3115937deaa34a.24187
 
 globals
@@ -88,17 +88,6 @@ endfunction
 function GetItemAbilitySkillLevel takes item whichItem, integer abilityId returns integer
     return GetHandleIdAbilitySkillLevel(GetHandleId(whichItem), abilityId)
 endfunction
-
-private function HookRemoveUnit takes unit whichUnit returns nothing
-    call FlushChildHashtable(skillHashtable, GetHandleId(whichUnit))
-endfunction
-
-private function HookRemoveItem takes item whichItem returns nothing
-    call FlushChildHashtable(skillHashtable, GetHandleId(whichItem))
-endfunction
-
-hook RemoveUnit HookRemoveUnit
-hook RemoveItem HookRemoveItem
 
 function HasAbilitySkillExtendedTooltip takes integer abilityId, integer level returns boolean
     return HaveSavedString(h, abilityId, level)
@@ -330,8 +319,20 @@ function SkillItemAbility takes unit hero, item whichItem, integer abilityId, in
     endif
 endfunction
 
+private function HookRemoveUnit takes unit whichUnit returns nothing
+    call FlushChildHashtable(skillHashtable, GetHandleId(whichUnit))
+endfunction
+
 private function Init takes nothing returns nothing
     set DUMMY = CreateUnit(Player(PLAYER_NEUTRAL_PASSIVE), ITEM_VALUES_DUMMY_HERO, GetRectCenterX(gg_rct_Evolution_Dummy_Area), GetRectCenterY(gg_rct_Evolution_Dummy_Area), bj_UNIT_FACING)
+
+    call OnUnitRemoval(HookRemoveUnit)
 endfunction
+
+private function HookRemoveItem takes item whichItem returns nothing
+    call FlushChildHashtable(skillHashtable, GetHandleId(whichItem))
+endfunction
+
+hook RemoveItem HookRemoveItem
 
 endlibrary

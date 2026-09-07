@@ -1,4 +1,4 @@
-library HeroUtils initializer Init
+library HeroUtils initializer Init requires OnUnitRemoval
 
 globals
     public constant integer TOME_OF_RETRAINING = 'I0A7' // Tome of Retraining which is used immediately.
@@ -104,7 +104,7 @@ function UnskillHero takes unit hero returns nothing
         call UnitResetCooldown(hero)
         call UnitAddItemById(hero, TOME_OF_RETRAINING)
     endif
-    
+
     call ExecuteEvaluateCallbackUnskillTriggers(hero)
 endfunction
 
@@ -135,15 +135,15 @@ private function TriggerConditionLevel takes nothing returns boolean
     return false
 endfunction
 
-private function Init takes nothing returns nothing
-    call TriggerRegisterAnyUnitEventBJ(levelTrigger, EVENT_PLAYER_HERO_LEVEL)
-    call TriggerAddCondition(levelTrigger, Condition(function TriggerConditionLevel))
-endfunction
-
 private function RemoveUnitHook takes unit whichUnit returns nothing
     call FlushChildHashtable(h, GetHandleId(whichUnit))
 endfunction
 
-hook RemoveUnit RemoveUnitHook
+private function Init takes nothing returns nothing
+    call TriggerRegisterAnyUnitEventBJ(levelTrigger, EVENT_PLAYER_HERO_LEVEL)
+    call TriggerAddCondition(levelTrigger, Condition(function TriggerConditionLevel))
+
+    call OnUnitRemoval(RemoveUnitHook)
+endfunction
 
 endlibrary

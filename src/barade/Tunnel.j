@@ -1,4 +1,4 @@
-library Tunnel initializer Init requires UnitEventEx, SimError, SelectionUtils
+library Tunnel initializer Init requires UnitEventEx, SimError, SelectionUtils, OnUnitRemoval
 
 /*
  * The tunnel system allows loading units into tunnels and unloading them at any other tunnel building.
@@ -17,9 +17,9 @@ globals
     private trigger loadTrigger = CreateTrigger()
     private trigger constructionTrigger = CreateTrigger()
     private hashtable h = InitHashtable()
-    
+
     private unit tmpUnit = null
-    
+
     private constant integer KEY_SOURCE = 0
     private constant integer KEY_TUNNEL = 1
     private constant integer KEY_X = 2
@@ -60,11 +60,11 @@ private function IsCopyOf takes unit whichUnit, unit source returns boolean
 endfunction
 
 private function GetCopySource takes unit whichUnit returns unit
-    return LoadUnitHandle(h, GetHandleId(whichUnit), KEY_SOURCE) 
+    return LoadUnitHandle(h, GetHandleId(whichUnit), KEY_SOURCE)
 endfunction
 
 private function GetTunnel takes unit whichUnit returns unit
-    return LoadUnitHandle(h, GetHandleId(whichUnit), KEY_TUNNEL) 
+    return LoadUnitHandle(h, GetHandleId(whichUnit), KEY_TUNNEL)
 endfunction
 
 private function MoveToUnloadPosition takes unit whichUnit returns nothing
@@ -90,7 +90,7 @@ private function CopyUnit takes unit whichUnit, real x, real y, real face return
     endif
     call GroupAddUnit(copies, copy)
     call SaveUnitHandle(h, GetHandleId(copy), KEY_SOURCE, whichUnit)
-    
+
     return copy
 endfunction
 
@@ -201,11 +201,11 @@ function GetNextTunnel takes player whichPlayer returns unit
         endif
         set i = i + 1
     endloop
-    
+
     if (not foundNewTunnel) then
         set selectedTunnel = FirstOfGroup(tunnels)
     endif
-    
+
     call GroupClear(tunnels)
     call DestroyGroup(tunnels)
     set tunnels = null
@@ -257,26 +257,26 @@ private function TriggerConditionConstructed takes nothing returns boolean
     return false
 endfunction
 
-private function Init takes nothing returns nothing
-    call TriggerRegisterAnyUnitEventBJ(loadTrigger, EVENT_PLAYER_UNIT_LOADED)
-    call TriggerAddCondition(loadTrigger, Condition(function TriggerConditionLoad))
-    
-    call RegisterNativeEvent(EVENT_ON_CARGO_UNLOAD, function TriggerFunctionUnload)
-    
-    call TriggerRegisterAnyUnitEventBJ(constructionTrigger, EVENT_PLAYER_UNIT_CONSTRUCT_FINISH)
-    call TriggerAddCondition(constructionTrigger, Condition(function TriggerConditionConstructed))
-
-    call AddTunnel(NERUBIAN_TUNNEL)
-    call AddTunnel(KOBOLD_TUNNEL)
-    call AddTunnel(GOBLIN_TUNNEL)
-endfunction
-
 private function RemoveUnitHook takes unit whichUnit returns nothing
     call GroupRemoveUnit(loaded, whichUnit)
     call GroupRemoveUnit(copies, whichUnit)
     call FlushChildHashtable(h, GetHandleId(whichUnit))
 endfunction
 
-hook RemoveUnit RemoveUnitHook
+private function Init takes nothing returns nothing
+    call TriggerRegisterAnyUnitEventBJ(loadTrigger, EVENT_PLAYER_UNIT_LOADED)
+    call TriggerAddCondition(loadTrigger, Condition(function TriggerConditionLoad))
+
+    call RegisterNativeEvent(EVENT_ON_CARGO_UNLOAD, function TriggerFunctionUnload)
+
+    call TriggerRegisterAnyUnitEventBJ(constructionTrigger, EVENT_PLAYER_UNIT_CONSTRUCT_FINISH)
+    call TriggerAddCondition(constructionTrigger, Condition(function TriggerConditionConstructed))
+
+    call OnUnitRemoval(RemoveUnitHook)
+
+    call AddTunnel(NERUBIAN_TUNNEL)
+    call AddTunnel(KOBOLD_TUNNEL)
+    call AddTunnel(GOBLIN_TUNNEL)
+endfunction
 
 endlibrary

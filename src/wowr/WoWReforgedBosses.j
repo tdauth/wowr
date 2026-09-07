@@ -1,4 +1,4 @@
-library WoWReforgedBosses initializer Init requires UnitTypeUtils, WoWReforgedUtils, WoWReforgedHeroes, WoWReforgedCommandButtons, WoWReforgedSkillMenu, WoWReforgedClasses, WoWReforgedAutoSkill, WoWReforgedMapData
+library WoWReforgedBosses initializer Init requires UnitTypeUtils, OnUnitRemoval, WoWReforgedUtils, WoWReforgedHeroes, WoWReforgedCommandButtons, WoWReforgedSkillMenu, WoWReforgedClasses, WoWReforgedAutoSkill, WoWReforgedMapData
 // Require WoWReforgedHeroes to assign the boss hero classes to the correct ones.
 
 globals
@@ -202,6 +202,21 @@ private function AddBoss takes integer id, integer class returns nothing
     call SetIsCampaign(id, true)
 endfunction
 
+private function RemoveUnitHook takes unit whichUnit returns nothing
+    if (whichUnit == udg_BossesFrostmourneCarrier) then
+        set udg_BossesFrostmourneCarrier = null
+    endif
+    if (whichUnit == udg_BossesTurtleShellCarrier) then
+        set udg_BossesTurtleShellCarrier = null
+    endif
+    if (whichUnit == udg_BossesHeartCarrier) then
+        set udg_BossesHeartCarrier = null
+    endif
+    if (whichUnit == udg_BossesBowCarrier) then
+        set udg_BossesBowCarrier = null
+    endif
+endfunction
+
 private function Init takes nothing returns nothing
     call TriggerRegisterAnyUnitEventBJ(deathTrigger, EVENT_PLAYER_UNIT_DEATH)
     call TriggerAddCondition(deathTrigger, Condition(function TriggerConditionDeath))
@@ -213,6 +228,8 @@ private function Init takes nothing returns nothing
     call SetPlayerFlagBJ(PLAYER_STATE_GIVES_BOUNTY, true, GetMapBossesPlayer())
     call SetPlayerAllianceStateBJ(GetMapBossesPlayer(), Player(PLAYER_NEUTRAL_AGGRESSIVE), bj_ALLIANCE_ALLIED_ADVUNITS)
     call SetPlayerAllianceStateBJ(Player(PLAYER_NEUTRAL_AGGRESSIVE), GetMapBossesPlayer(), bj_ALLIANCE_ALLIED_ADVUNITS)
+
+    call OnUnitRemoval(RemoveUnitHook)
 
     call AddBoss(ARCHIMONDE_BOSS, CLASS_WARLOCK)
     call AddBoss(XALATATH, CLASS_WITCH_DOCTOR)
@@ -279,22 +296,5 @@ private function Init takes nothing returns nothing
 
     call AddBoss(ILLIDAN, CLASS_WARLOCK)
 endfunction
-
-private function RemoveUnitHook takes unit whichUnit returns nothing
-    if (whichUnit == udg_BossesFrostmourneCarrier) then
-        set udg_BossesFrostmourneCarrier = null
-    endif
-    if (whichUnit == udg_BossesTurtleShellCarrier) then
-        set udg_BossesTurtleShellCarrier = null
-    endif
-    if (whichUnit == udg_BossesHeartCarrier) then
-        set udg_BossesHeartCarrier = null
-    endif
-    if (whichUnit == udg_BossesBowCarrier) then
-        set udg_BossesBowCarrier = null
-    endif
-endfunction
-
-hook RemoveUnit RemoveUnitHook
 
 endlibrary

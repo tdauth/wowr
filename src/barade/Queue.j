@@ -1,4 +1,4 @@
-library Queue initializer Init requires optional HeroReviveEvents
+library Queue initializer Init requires optional HeroReviveEvents, OnUnitRemoval
 
 globals
     // This is an indicator for an invalid ObjectName. It has to be the same for every language to avoid desyncs.
@@ -17,15 +17,15 @@ globals
     private trigger finishReviveTrigger = CreateTrigger()
     private trigger orderTrigger = CreateTrigger()
     private trigger deathTrigger = CreateTrigger()
-    
+
     private Queue array playerQueue
     private boolean array isEnabledForPlayer
-    
+
     private hashtable h = InitHashtable()
     private group constructions = CreateGroup()
-    
+
     private group ignored = CreateGroup()
-    
+
     // callbacks
     private trigger array callbackTriggers
     private integer callbackTriggersCount = 0
@@ -40,16 +40,16 @@ struct Queue
 
     Queue previous = 0
     Queue next = 0
-    
+
     method onDestroy takes nothing returns nothing
         if (this.next != 0) then
             set this.next.previous = this.previous
         endif
-        
+
         if (this.previous != 0) then
             set this.previous.next = this.next
         endif
-        
+
         call GroupClear(sources)
         call DestroyGroup(sources)
         set sources = null
@@ -137,7 +137,7 @@ function ClearQueue takes Queue queue returns nothing
     loop
         exitwhen (current == 0)
         set queue = current.next
-        
+
         set j = 0
         set max = BlzGroupGetSize(queue.sources)
         loop
@@ -162,9 +162,9 @@ function AddQueue takes unit source, integer id returns nothing
         if (current.id == id) then
             set found = true
         endif
-        
+
         exitwhen (found)
-        
+
         set previous = current
         set current = current.next
     endloop
@@ -172,7 +172,7 @@ function AddQueue takes unit source, integer id returns nothing
         set current = Queue.create()
         set current.id = id
         //call BJDebugMsg("Creating new queue " + I2S(current) + " with previous " + I2S(previous))
-        
+
         if (playerQueue[GetPlayerId(GetOwningPlayer(source))] == 0) then
             set playerQueue[GetPlayerId(GetOwningPlayer(source))] = current
         elseif (previous != 0) then
@@ -180,16 +180,16 @@ function AddQueue takes unit source, integer id returns nothing
             set previous.next = current
         endif
     endif
-    
+
     //call BJDebugMsg("Current: " + I2S(current))
-    
+
     if (not IsUnitInGroup(source, current.sources)) then
         call GroupAddUnit(current.sources, source)
     endif
-    
+
     call SetSourceCounter(source, id, GetSourceCounter(source, id) + 1)
     set current.counter = current.counter + 1
-    
+
     call ExecuteTriggerCallbacks(source, id)
 endfunction
 
@@ -204,20 +204,20 @@ function RemoveQueue takes unit source, integer id returns nothing
         if (current.id == id and IsUnitInGroup(source, current.sources)) then
             set found = true
         endif
-        
+
         exitwhen (found)
-        
+
         set previous = current
         set current = current.next
     endloop
-    
+
     if (current != 0) then
         call SetSourceCounter(source, id, GetSourceCounter(source, id) - 1)
         set current.counter = current.counter - 1
         if (GetSourceCounter(source, id) == 0) then
             call GroupRemoveUnit(current.sources, source)
         endif
-        
+
         if (BlzGroupGetSize(current.sources) == 0) then
             if (GetPlayerQueue(owner) == current) then
                 set playerQueue[playerId] = current.next
@@ -226,7 +226,7 @@ function RemoveQueue takes unit source, integer id returns nothing
             call current.destroy()
         endif
     endif
-    
+
     call ExecuteTriggerCallbacks(source, id)
 endfunction
 
@@ -234,7 +234,7 @@ private function TriggerConditionCancelTrain takes nothing returns boolean
     if (IsQueueEnabledForPlayer(GetOwningPlayer(GetTriggerUnit()))) then
         call RemoveQueue(GetTriggerUnit(), GetTrainedUnitType())
     endif
-    
+
     return false
 endfunction
 
@@ -250,7 +250,7 @@ private function TriggerConditionCancelResearch takes nothing returns boolean
     if (IsQueueEnabledForPlayer(GetOwningPlayer(GetTriggerUnit()))) then
         call RemoveQueue(GetTriggerUnit(), GetResearched())
     endif
-    
+
     return false
 endfunction
 
@@ -266,7 +266,7 @@ private function TriggerConditionCancelUpgrade takes nothing returns boolean
     if (IsQueueEnabledForPlayer(GetOwningPlayer(GetTriggerUnit()))) then
         call RemoveQueue(GetTriggerUnit(), LoadInteger(h, GetHandleId(GetTriggerUnit()), 0)) // Use the ID from start upgrade.
     endif
-    
+
     return false
 endfunction
 
@@ -283,13 +283,13 @@ private function TriggerConditionStartConstruct takes nothing returns boolean
         call AddQueue(GetConstructingStructure(), GetUnitTypeId(GetConstructingStructure()))
         call GroupAddUnit(constructions, GetConstructingStructure())
     endif
-    
+
     return false
 endfunction
 
 private function TriggerConditionCancelConstruct takes nothing returns boolean
     //call BJDebugMsg("Cancel construction of " + GetUnitName(GetTriggerUnit()))
-    
+
     return false
 endfunction
 
@@ -317,7 +317,7 @@ private function TriggerConditionOrderReviveCancel takes nothing returns boolean
     if (IsQueueEnabledForPlayer(GetOwningPlayer(GetTriggerReviveAltar()))) then
         call RemoveQueue(GetTriggerReviveAltar(), GetUnitTypeId(GetTriggerReviveHero()))
     endif
-    
+
     return false
 endfunction
 
@@ -344,7 +344,7 @@ private function IsValidBuilding takes unit whichUnit returns boolean
         return false
     elseif (IsUnitInGroup(whichUnit, ignored)) then
         return false
-    endif 
+    endif
     return true
 endfunction
 
@@ -357,9 +357,9 @@ private function TriggerConditionOrder takes nothing returns boolean
         call SaveInteger(h, GetHandleId(building), 0, trainId)
         call AddQueue(building, trainId)
     endif
-    
+
     set building = null
-    
+
     return false
 endfunction
 
@@ -380,6 +380,13 @@ private function TriggerConditionDeath takes nothing returns boolean
     return false
 endfunction
 
+private function RemoveUnitHook takes unit whichUnit returns nothing
+    call ClearSourceCounterExtended(whichUnit)
+    if (IsQueueUnitIgnored(whichUnit)) then
+        call UnignoreQueueUnit(whichUnit)
+    endif
+endfunction
+
 private function Init takes nothing returns nothing
     local player slotPlayer = null
     local integer i = 0
@@ -395,53 +402,46 @@ private function Init takes nothing returns nothing
 
     call TriggerRegisterAnyUnitEventBJ(cancelTrainTrigger, EVENT_PLAYER_UNIT_TRAIN_CANCEL)
     call TriggerAddCondition(cancelTrainTrigger, Condition(function TriggerConditionCancelTrain))
-    
+
     call TriggerRegisterAnyUnitEventBJ(finishTrainTrigger, EVENT_PLAYER_UNIT_TRAIN_FINISH)
     call TriggerAddCondition(finishTrainTrigger, Condition(function TriggerConditionFinishTrain))
-    
+
     call TriggerRegisterAnyUnitEventBJ(cancelResearchTrigger, EVENT_PLAYER_UNIT_RESEARCH_CANCEL)
     call TriggerAddCondition(cancelResearchTrigger, Condition(function TriggerConditionCancelResearch))
-    
+
     call TriggerRegisterAnyUnitEventBJ(finishResearchTrigger, EVENT_PLAYER_UNIT_RESEARCH_FINISH)
     call TriggerAddCondition(finishResearchTrigger, Condition(function TriggerConditionFinishResearch))
-    
+
     call TriggerRegisterAnyUnitEventBJ(cancelUpgradeTrigger, EVENT_PLAYER_UNIT_UPGRADE_CANCEL)
     call TriggerAddCondition(cancelUpgradeTrigger, Condition(function TriggerConditionCancelUpgrade))
-    
+
     call TriggerRegisterAnyUnitEventBJ(finishUpgradeTrigger, EVENT_PLAYER_UNIT_UPGRADE_FINISH)
     call TriggerAddCondition(finishUpgradeTrigger, Condition(function TriggerConditionFinishUpgrade))
-    
+
     call TriggerRegisterAnyUnitEventBJ(startConstructTrigger, EVENT_PLAYER_UNIT_CONSTRUCT_START)
     call TriggerAddCondition(startConstructTrigger, Condition(function TriggerConditionStartConstruct))
-    
+
     call TriggerRegisterAnyUnitEventBJ(finishConstructTrigger, EVENT_PLAYER_UNIT_CONSTRUCT_FINISH)
     call TriggerAddCondition(finishConstructTrigger, Condition(function TriggerConditionFinishConstruct))
-    
+
 static if (LIBRARY_HeroReviveEvents) then
     call TriggerRegisterHeroReviveOrderStartEvent(orderReviveStartTrigger)
     call TriggerAddCondition(orderReviveStartTrigger, Condition(function TriggerConditionOrderReviveStart))
-    
+
     call TriggerRegisterHeroReviveOrderCancelEvent(orderReviveCancelTrigger)
     call TriggerAddCondition(orderReviveCancelTrigger, Condition(function TriggerConditionOrderReviveCancel))
-    
+
     call TriggerRegisterHeroReviveFinishEvent(finishReviveTrigger)
     call TriggerAddCondition(finishReviveTrigger, Condition(function TriggerConditionFinishRevive))
 endif
 
     call TriggerRegisterAnyUnitEventBJ(orderTrigger, EVENT_PLAYER_UNIT_ISSUED_ORDER)
     call TriggerAddCondition(orderTrigger, Condition(function TriggerConditionOrder))
-    
+
     call TriggerRegisterAnyUnitEventBJ(deathTrigger, EVENT_PLAYER_UNIT_DEATH)
     call TriggerAddCondition(deathTrigger, Condition(function TriggerConditionDeath))
-endfunction
 
-private function RemoveUnitHook takes unit whichUnit returns nothing
-    call ClearSourceCounterExtended(whichUnit)
-    if (IsQueueUnitIgnored(whichUnit)) then
-        call UnignoreQueueUnit(whichUnit)
-    endif
+    call OnUnitRemoval(RemoveUnitHook)
 endfunction
-
-hook RemoveUnit ClearSourceCounterExtended
 
 endlibrary

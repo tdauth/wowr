@@ -1,4 +1,4 @@
-library HideInTrees initializer Init requires TreeUtils, MathUtils
+library HideInTrees initializer Init requires TreeUtils, MathUtils, OnUnitRemoval
 
 globals
     public constant string ORDER_HIDE = "eattree"
@@ -139,6 +139,13 @@ private function TriggerConditionDeath takes nothing returns boolean
     return false
 endfunction
 
+private function RemoveUnitHook takes unit whichUnit returns nothing
+    if (IsUnitInGroup(whichUnit, casters)) then
+        call GroupRemoveUnit(casters, whichUnit)
+        call FlushChildHashtable(h, GetHandleId(whichUnit))
+    endif
+endfunction
+
 private function Init takes nothing returns nothing
     set filter = Filter(function FilterIsTree)
 
@@ -151,20 +158,14 @@ private function Init takes nothing returns nothing
     set bj_destInRegionDiesTrig = deathTrigger
     call EnumDestructablesInRect(GetPlayableMapRect(), filter, function RegisterDestDeathInRegionEnumX)
     call TriggerAddCondition(deathTrigger, Condition(function TriggerConditionDeath))
-endfunction
 
-private function RemoveUnitHook takes unit whichUnit returns nothing
-    if (IsUnitInGroup(whichUnit, casters)) then
-        call GroupRemoveUnit(casters, whichUnit)
-        call FlushChildHashtable(h, GetHandleId(whichUnit))
-    endif
+    call OnUnitRemoval(RemoveUnitHook)
 endfunction
 
 private function RemoveDestructableHook takes destructable whichDestructable returns nothing
     call FlushChildHashtable(h, GetHandleId(whichDestructable))
 endfunction
 
-hook RemoveUnit RemoveUnitHook
 hook RemoveDestructable RemoveDestructableHook
 
 endlibrary

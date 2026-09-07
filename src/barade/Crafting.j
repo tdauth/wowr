@@ -1,4 +1,4 @@
-library Crafting initializer Init requires MathUtils, PagedButtons, OpLimit, StringFormat
+library Crafting initializer Init requires MathUtils, PagedButtons, OpLimit, StringFormat, OnUnitRemoval
 
 /*
 Baradé's Crafting 1.0
@@ -8,7 +8,7 @@ Items sold by the the crafting unit are used as recipes.
 Buying the recipes will craft the matching item or unit and might consume the required items from
 the crafting unit's inventory.
 
-Recipes define which items 
+Recipes define which items
 
 Features:
 - Recipes based on sellable items to craft items.
@@ -150,7 +150,7 @@ globals
     private integer craftingCallbackUnitTriggersCounter = 0
     private trigger array disassembleCallbackTriggers
     private integer disassembleCallbackTriggersCounter = 0
-    
+
     private integer lastCreatedRecipe = 0
 
     private integer triggerRecipe = 0
@@ -168,7 +168,7 @@ globals
     private hashtable itemCraftingUnitsHashTable = InitHashtable()
     private trigger itemCraftingChangePageTrigger = CreateTrigger()
     private timer itemCraftingStockUpdateTimer = CreateTimer()
-    
+
     // update food available
     private trigger trainStartTrigger = CreateTrigger()
     private trigger trainCancelTrigger = CreateTrigger()
@@ -176,7 +176,7 @@ globals
     private trigger reviveStartTrigger = CreateTrigger()
     private trigger reviveCancelTrigger = CreateTrigger()
     private trigger deathTrigger = CreateTrigger()
-    
+
 
     private constant integer HASHTABLE_KEY_PAGE = 0
     private constant integer HASHTABLE_KEY_GROUP = 1 // For linking multiple crafting units.
@@ -450,10 +450,10 @@ private function CheckRecipeRequirement takes integer recipe, integer requiremen
     local item slotItem = null
     local integer i = 0
     local integer j = 0
-    
+
     if (requiredItemTypeId != 0) then
         //call BJDebugMsg("CheckRecipeRequirement for recipe " + GetRecipeName(recipe) + " with requirement item " + GetObjectName(requiredItemTypeId))
-    
+
         loop
             exitwhen (i == bj_MAX_INVENTORY)
             set slotItem = UnitItemInSlot(whichUnit, i)
@@ -472,7 +472,7 @@ private function CheckRecipeRequirement takes integer recipe, integer requiremen
                     set matchingCharges = matchingCharges + 1
                     set j = j + 1
                 endloop
-                
+
                 //call BJDebugMsg("CheckRecipeRequirement " + I2S(matchingCharges) + " for recipe " + GetRecipeName(recipe) + " with slot item " + GetItemName(slotItem))
             endif
 
@@ -560,7 +560,7 @@ private function CheckRecipeRequirements takes integer recipe, unit whichUnit re
                 else
                     set result = IMinBJ(result, requirementCheckCounter)
                 endif
-                
+
                 //call BJDebugMsg("Checking recipe requirement for recipe " + GetRecipeName(recipe) + " and found charges: " + I2S(requirementCheckCounter) + " resulting in requirements matching " + I2S(matchingRequirements))
             endif
             //call BJDebugMsg("Result: " + I2S(result))
@@ -569,19 +569,19 @@ private function CheckRecipeRequirements takes integer recipe, unit whichUnit re
         set i = i + 1
     endloop
     set whichGroup = null
-    
+
     // food check
     if (GetRecipeIsUnit(recipe)) then
         set result = IMinBJ((GetPlayerState(owner, PLAYER_STATE_RESOURCE_FOOD_CAP) - GetPlayerState(owner, PLAYER_STATE_RESOURCE_FOOD_USED)) / GetFoodUsed(recipesItemTypeIds[recipe]), result)
     endif
-    
+
     set owner = null
-    
+
     // make sure that it matches at least the number of minimum requirements is reached
     if (matchingRequirements >= minRequirements) then
         return result
     endif
-    
+
     return 0
 endfunction
 
@@ -647,7 +647,7 @@ private function CheckAllRecipesRequirementsForPageEx takes unit whichUnit, inte
                         //call BJDebugMsg("Item crafting is enabled." )
                         if (requirementCheckCounter > 0) then
                             set result = result + 1
-                           
+
                             //call BJDebugMsg("Adding UI item type " + GetObjectName(recipesUIItemTypeIds[recipe]) + " to unit " + GetUnitName(groupUnit))
                             call RemoveItemFromStock(groupUnit, recipesUIItemTypeIds[recipe])
                             //call BJDebugMsg("Crafted item: " + GetObjectName(recipesUIItemTypeIds[recipe]) + " with stock " + I2S(requirementCheckCounter))
@@ -778,7 +778,7 @@ function CraftItem takes item soldItem, unit sellingUnit, unit buyingUnit return
                             if (chargesWithFoodLimit < charges) then
                                 call SimError(owner, Format(GetLocalizedString("CAN_ONLY_SUMMON_FOOD_LIMIT")).i(chargesWithFoodLimit).result())
                             endif
-                        
+
                             set j = 0
                             loop
                                 exitwhen (j >= chargesWithFoodLimit)
@@ -793,14 +793,14 @@ function CraftItem takes item soldItem, unit sellingUnit, unit buyingUnit return
                         endif
                     else
                         set craftedItem = CreateItem(recipesItemTypeIds[recipe], GetUnitX(sellingUnit), GetUnitY(sellingUnit))
-                        
+
                         if (GetItemCharges(craftedItem) > 0) then
                             call SetItemCharges(craftedItem, charges)
                             call ExecuteCraftingCallbacks(recipe, sellingUnit, craftedItem)
                         // create non charged items separately
                         else
                             call ExecuteCraftingCallbacks(recipe, sellingUnit, craftedItem)
-                            
+
                             set j = 1
                             loop
                                 exitwhen (j >= charges)
@@ -811,9 +811,9 @@ function CraftItem takes item soldItem, unit sellingUnit, unit buyingUnit return
                                 set j = j + 1
                             endloop
                         endif
-                        
+
                         call ConsumeRecipeRequirements(recipe, charges, sellingUnit)
-                        
+
                         // add item after callbacks since it might lead to stacking and the crafted item may become null
                         // call ite also after consuming requirements since the inventory might have more slots now
                         call UnitAddItem(sellingUnit, craftedItem)
@@ -908,7 +908,7 @@ function DisableItemCraftingUnit takes unit whichUnit returns boolean
         if (BlzGroupGetSize(itemCraftingUnits) == 0) then
             call PauseTimer(itemCraftingStockUpdateTimer)
         endif
-        
+
         return true
     endif
     return false
@@ -942,7 +942,7 @@ function LinkItemCraftingUnitInventories takes unit whichUnit0, unit whichUnit1 
         call DestroyGroup(whichGroup1)
         set whichGroup1 = null
     endif
-    
+
     call UpdateStocks(whichUnit0)
     call UpdateStocks(whichUnit1)
 
@@ -985,7 +985,7 @@ function UnlinkItemCraftingUnitInventories takes unit whichUnit0, unit whichUnit
     call GroupAddUnit(whichGroup1, whichUnit1)
 
     call SetItemCraftingUnitGroup(whichUnit1, whichGroup1)
-    
+
     call UpdateStocks(whichUnit0)
     call UpdateStocks(whichUnit1)
 
@@ -1036,7 +1036,7 @@ function DisassembleItem takes item soldItem, unit sellingUnit returns integer
     local item requirement = null
     local integer minRequirements = 0
     local integer result = 0
-    
+
     if (recipe != -1) then
         call ExecuteDisassembleCallbacks(recipe, sellingUnit, soldItem, null)
         call RemoveItem(soldItem)
@@ -1056,7 +1056,7 @@ function DisassembleItem takes item soldItem, unit sellingUnit returns integer
             set i = i + 1
         endloop
     endif
-    
+
     return result
 endfunction
 
@@ -1069,7 +1069,7 @@ function DisassembleUnit takes unit target, unit sellingUnit returns integer
     local item requirement = null
     local integer minRequirements = 0
     local integer result = 0
-    
+
     if (recipe != -1) then
         call ExecuteDisassembleCallbacks(recipe, sellingUnit, null, target)
         call RemoveUnit(target)
@@ -1089,7 +1089,7 @@ function DisassembleUnit takes unit target, unit sellingUnit returns integer
             set i = i + 1
         endloop
     endif
-    
+
     return result
 endfunction
 
@@ -1143,27 +1143,27 @@ private function TriggerConditionTrainStart takes nothing returns boolean
     call UpdateAllStocks()
     return false
 endfunction
-    
+
 private function TriggerConditionTrainCancel takes nothing returns boolean
     call UpdateAllStocks()
     return false
 endfunction
-    
+
 private function TriggerConditionReviveStart takes nothing returns boolean
     call UpdateAllStocks()
     return false
 endfunction
-    
+
 private function TriggerConditionReviveCancel takes nothing returns boolean
     call UpdateAllStocks()
     return false
 endfunction
-    
+
 private function TriggerConditionSell takes nothing returns boolean
     call UpdateAllStocks()
     return false
 endfunction
-    
+
 private function TriggerConditionDeath takes nothing returns boolean
     call UpdateAllStocks()
     return false
@@ -1173,7 +1173,7 @@ private function Init takes nothing returns nothing
     call TriggerRegisterAnyUnitEventBJ(pickupTrigger, EVENT_PLAYER_UNIT_PICKUP_ITEM)
     call TriggerAddCondition(pickupTrigger, Condition(function TriggerConditionIsItemCraftingUnitEnabled))
     call TriggerAddAction(pickupTrigger, function TriggerActionCheckAllRecipesRequirements)
-    
+
     call TriggerRegisterAnyUnitEventBJ(dropTrigger, EVENT_PLAYER_UNIT_DROP_ITEM)
     call TriggerAddCondition(dropTrigger, Condition(function TriggerConditionIsItemCraftingUnitEnabled))
     call TriggerAddAction(dropTrigger, function TriggerActionCheckAllRecipesRequirementsDelayed)
@@ -1181,7 +1181,7 @@ private function Init takes nothing returns nothing
     call TriggerRegisterAnyUnitEventBJ(itemCraftTrigger, EVENT_PLAYER_UNIT_SELL_ITEM)
     call TriggerAddCondition(itemCraftTrigger, Condition(function TriggerConditionIsItemCraftingUnitEnabled))
     call TriggerAddAction(itemCraftTrigger, function TriggerActionCraftItem)
-    
+
     call TriggerRegisterAnyUnitEventBJ(itemDisassembleTrigger, EVENT_PLAYER_UNIT_SPELL_CHANNEL)
     call TriggerAddCondition(itemDisassembleTrigger, Condition(function TriggerConditionDisassemble))
     call TriggerAddAction(itemDisassembleTrigger, function TriggerActionDisassembleItem)
@@ -1189,27 +1189,27 @@ private function Init takes nothing returns nothing
     call TriggerRegisterChangePagedButtons(itemCraftingChangePageTrigger)
     call TriggerAddCondition(itemCraftingChangePageTrigger, Condition(function TriggerConditionChangePage))
     call TriggerAddAction(itemCraftingChangePageTrigger, function TriggerActionChangePage)
-    
+
     // update food available
     call TriggerRegisterAnyUnitEventBJ(trainStartTrigger, EVENT_PLAYER_UNIT_TRAIN_START)
     call TriggerAddCondition(trainStartTrigger, Condition(function TriggerConditionTrainStart))
-    
+
     call TriggerRegisterAnyUnitEventBJ(trainCancelTrigger, EVENT_PLAYER_UNIT_TRAIN_CANCEL)
     call TriggerAddCondition(trainCancelTrigger, Condition(function TriggerConditionTrainCancel))
-    
+
     call TriggerRegisterAnyUnitEventBJ(reviveStartTrigger, EVENT_PLAYER_HERO_REVIVE_START)
     call TriggerAddCondition(reviveStartTrigger, Condition(function TriggerConditionReviveStart))
-    
+
     call TriggerRegisterAnyUnitEventBJ(reviveCancelTrigger, EVENT_PLAYER_HERO_REVIVE_CANCEL)
     call TriggerAddCondition(reviveCancelTrigger, Condition(function TriggerConditionReviveCancel))
-    
+
     call TriggerRegisterAnyUnitEventBJ(sellTrigger, EVENT_PLAYER_UNIT_SELL)
     call TriggerAddCondition(sellTrigger, Condition(function TriggerConditionSell))
-    
+
     call TriggerRegisterAnyUnitEventBJ(deathTrigger, EVENT_PLAYER_UNIT_DEATH)
     call TriggerAddCondition(deathTrigger, Condition(function TriggerConditionDeath))
-endfunction
 
-hook RemoveUnit DisableItemCraftingUnit
+    call OnUnitRemoval(DisableItemCraftingUnit)
+endfunction
 
 endlibrary

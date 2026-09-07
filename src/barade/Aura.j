@@ -1,4 +1,4 @@
-library Aura initializer Init requires NewBonusUtils, OpLimit, HeroUtils
+library Aura initializer Init requires NewBonusUtils, OpLimit, HeroUtils, OnUnitRemoval
 
 globals
     public constant real TIMER_UPDATE_INTERVAL = 0.5 // Standard Warcraft III aura update interval
@@ -332,8 +332,6 @@ function RemoveAuraCaster takes unit caster returns nothing
     endif
 endfunction
 
-hook RemoveUnit RemoveAuraCaster
-
 function SetAuraMaxTargets takes unit caster, integer abilityId, integer max returns nothing
     local Aura aura = LoadAura(abilityId)
     if (aura != 0) then
@@ -356,6 +354,8 @@ private function Init takes nothing returns nothing
 
     call TriggerRegisterHeroUnskillEvent(unlearnTrigger)
     call TriggerAddAction(unlearnTrigger, function TriggerActionUnlearn)
+
+    call OnUnitRemoval(RemoveAuraCaster)
 endfunction
 
 endlibrary

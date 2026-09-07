@@ -1,4 +1,4 @@
-library WoWReforgedSkillMenu initializer Init requires SimError MathUtils, ForceUtils,, HideAbility, WoWReforgedAbilitySkill, WoWReforgedAccount
+library WoWReforgedSkillMenu initializer Init requires SimError MathUtils, ForceUtils,, HideAbility, OnUnitRemoval, WoWReforgedAbilitySkill, WoWReforgedAccount
 /*
 Custom skill menu which allows changing any slot ability of a corresponding hero.
 This is based on unit abilities rather than hero abilities which allows us to use more than 5 slots on the UI.
@@ -25,7 +25,7 @@ struct SkillMenuAbility
     integer array allowedUnitTypeIds2[MAX_ALLOWED_UNIT_TYPES]
     integer array mappedAbilityIds[MAX_ALLOWED_UNIT_TYPES]
     integer allowedUnitTypeIdsCounter = 0
-    
+
     method addAllowedUnitTypeId takes integer unitTypeId, integer unitTypeId2, integer allowedAbilityId returns nothing
         local integer c = this.allowedUnitTypeIdsCounter
         set this.allowedUnitTypeIds[c] = unitTypeId
@@ -33,7 +33,7 @@ struct SkillMenuAbility
         set this.mappedAbilityIds[c] = allowedAbilityId
         set this.allowedUnitTypeIdsCounter = c + 1
     endmethod
-    
+
     method matchingAbilityId takes integer unitTypeId returns integer
         local integer i = 0
         if (this.allowedUnitTypeIdsCounter > 0) then
@@ -48,24 +48,24 @@ struct SkillMenuAbility
         endif
         return this.abilityId
     endmethod
-    
+
     method available takes integer unitTypeId returns boolean
         return matchingAbilityId(unitTypeId) != 0
     endmethod
-    
+
     public static method create takes integer id returns thistype
         local thistype this = thistype.allocate()
         set this.abilityId = id
         return this
     endmethod
-    
+
 endstruct
 
 globals
     private constant integer MODE_CURRENTLY_LEARNED_ABILITIES = 0
     private constant integer MODE_SINGLE_ABILITY = 1
     private constant integer MODE_ALL_ABILITIES_FOR_SPECIFIC_SLOT = 2
-    
+
     private constant integer ABILITY_HERO_ABILITIES_HIDDEN = 'A0XJ' // Second spell book ability with same order ID and more abilities.
     private constant integer ABILITY_HERO_ABILITY_PLACEHOLDER = 'A0W3' // Add to any hero to show unspend skill points on the hero icon.
 
@@ -80,48 +80,48 @@ globals
     private constant integer ABILITY_SLOT_9 = 'A0Y9'
     private constant integer ABILITY_SLOT_10 = 'A0YA'
     private constant integer ABILITY_SLOT_11 = 'A0YC'
-    
+
     public constant integer MAX_SLOTS = 11
     private constant integer SLOTS_PER_PAGE = MAX_SLOTS - 3 // Back, Next/Previous Page
-    
+
     private constant integer ABILITY_PLACEHOLDER = 'A0VS'
     private constant integer ABILITY_PLACE_HOLDER_SPELLBOOK = 'A03S'
-    
+
     private constant integer ABILITY_INCREASE_ABILITY_LEVEL = 'A0VQ'
     private constant integer ABILITY_INCREASE_ABILITY_LEVEL_SPELLBOOK = 'A03T'
-    
+
     private constant integer ABILITY_DECREASE_ABILITY_LEVEL = 'A0W0'
     private constant integer ABILITY_DECREASE_ABILITY_LEVEL_SPELLBOOK = 'A03X'
-    
+
     constant integer ABILITY_AUTO_SKILL = 'A1XA'
-    
+
     constant integer ABILITY_MATCHING_CLASS = 'A03N'
     private constant integer ABILITY_MATCHING_CLASS_SPELL_BOOK = 'A03O'
-    
+
     constant integer ABILITY_RANDOM_CLASS = 'A08Y'
     private constant integer ABILITY_RANDOM_CLASS_SPELL_BOOK = 'A0AE'
-    
+
     constant integer ABILITY_RANDOMIZE_SPELLS = 'A14U'
-    
+
     constant integer ABILITY_RANDOM_SPELL = 'A0A7'
     private constant integer ABILITY_RANDOM_SPELL_SPELL_BOOK = 'A0AF'
-    
+
     constant integer ABILITY_NEXT_SPELL_VARIATION = 'A0CQ'
     private constant integer ABILITY_NEXT_SPELL_VARIATION_SPELL_BOOK = 'A0DH'
-    
+
     private constant integer ABILITY_BACK = 'A0VZ'
     private constant integer ABILITY_BACK_SPELLBOOK = 'A034'
-    
+
     private constant integer ABILITY_NEXT_PAGE = 'A0WU'
     private constant integer ABILITY_NEXT_PAGE_SPELL_BOOK = 'A03E'
-    
+
     private constant integer ABILITY_PREVIOUS_PAGE = 'A0WX'
     private constant integer ABILITY_PREVIOUS_PAGE_SPELL_BOOK = 'A03G'
-    
+
     private SkillMenuAbility array learnableAbilityIds
     private integer array learnableAbilityIdsCounter
     private SkillMenuAbility lastAddedAbility = 0
-    
+
     private integer array slotAbilityIds
     private hashtable h = InitHashtable()
     private trigger channelTrigger = CreateTrigger()
@@ -167,7 +167,7 @@ endfunction
 private function HideIncreaseAbilityLevelAbility takes unit whichUnit, boolean hide returns nothing
     call HideSpellBookAbility(whichUnit, ABILITY_INCREASE_ABILITY_LEVEL_SPELLBOOK, hide)
 endfunction
-    
+
 private function HideDecreaseAbilityLevelAbility takes unit whichUnit, boolean hide returns nothing
     call HideSpellBookAbility(whichUnit, ABILITY_DECREASE_ABILITY_LEVEL_SPELLBOOK, hide)
 endfunction
@@ -222,7 +222,7 @@ function AddLearnableAbilityId takes integer slot, integer abilityId returns int
     set lastAddedAbility = SkillMenuAbility.create(abilityId)
     set learnableAbilityIds[Index2D(count, slot, MAX_SLOTS)] = lastAddedAbility
     set learnableAbilityIdsCounter[slot] = count + 1
-    
+
     return count
 endfunction
 
@@ -310,7 +310,7 @@ private function ChangeAbilityToOtherAbility takes unit whichUnit, integer abili
         else
             call BlzSetAbilityStringLevelField(a, ABILITY_SLF_TOOLTIP_NORMAL_EXTENDED, 0, BlzGetAbilityExtendedTooltip(sourceAbilityId, 0))
         endif
-        
+
         // Required for all entries where "Set works by set level" is 1 but "Set works directly" is 0: https://www.hiveworkshop.com/pastebin/b2769ab71109c3634b3115937deaa34a.24187
         //call IncUnitAbilityLevel(whichUnit, abilityId)
         //call DecUnitAbilityLevel(whichUnit, abilityId)
@@ -383,13 +383,13 @@ function ShowCurrentlySkilledAbilities takes unit whichUnit returns nothing
     call HideRandomClassAbility(whichUnit, true)
     call HideRandomSpellAbility(whichUnit, true)
     call HideNextSpellVariationAbility(whichUnit, true)
-    
+
     //call BJDebugMsg("Show all currently skilled abilities: 2")
-    
+
     call HideAllSlotsAbilities(whichUnit, false)
-    
+
     //call BJDebugMsg("Show all currently skilled abilities: 3")
-    
+
     call UpdateCurrentlySkilledAbilities(skillMenu)
     //call BJDebugMsg("Show all currently skilled abilities: 4 for unit " + GetUnitName(whichUnit))
 endfunction
@@ -400,7 +400,7 @@ private function ShowAllAbilitiesForSpecificSlot takes unit whichUnit, integer s
     local integer max = 0
     set skillMenu.mode = MODE_ALL_ABILITIES_FOR_SPECIFIC_SLOT
     set skillMenu.page = page
-    
+
     call HidePlaceholderAbility(whichUnit, true)
     call HideIncreaseAbilityLevelAbility(whichUnit, true)
     call HideDecreaseAbilityLevelAbility(whichUnit, true)
@@ -408,14 +408,14 @@ private function ShowAllAbilitiesForSpecificSlot takes unit whichUnit, integer s
     call HideRandomClassAbility(whichUnit, true)
     call HideRandomSpellAbility(whichUnit, true)
     call HideNextSpellVariationAbility(whichUnit, true)
-    
+
     call HideNextPageAbility(whichUnit, false)
     call HidePreviousPageAbility(whichUnit, false)
     call HideBackAbility(whichUnit, false)
     call HideAllSlotsAbilitiesUpTo(whichUnit, MAX_SLOTS - 3, false)
-    
+
     call UpdatePageAbilities(whichUnit)
-    
+
     //call BJDebugMsg("Show all possible abilities for slot " + I2S(slot) + " with page " + I2S(page))
     set i = 0
     loop
@@ -450,11 +450,11 @@ function ShowSingleAbility takes unit whichUnit, integer slot returns nothing
     endif
     set skillMenu.slot = slot
     set skillMenu.mode = MODE_SINGLE_ABILITY
-    
+
     call HideAllSlotsAbilities(whichUnit, true)
     call HideNextPageAbility(whichUnit, true)
     call HidePreviousPageAbility(whichUnit, true)
-    
+
     call HidePlaceholderAbility(whichUnit, false)
     call HideIncreaseAbilityLevelAbility(whichUnit, false)
     call HideDecreaseAbilityLevelAbility(whichUnit, false)
@@ -465,18 +465,18 @@ function ShowSingleAbility takes unit whichUnit, integer slot returns nothing
     call HideNextSpellVariationAbility(whichUnit, false)
 
     set a2 = BlzGetUnitAbility(whichUnit, ABILITY_PLACEHOLDER) // assign after showing it
-    
+
     if (abilityId != 0) then
         set level = GetUnitAbilitySkillLevel(hero, abilityId)
         // TODO Changing it of an ability with spell book with the same ID has no effect.
         call BlzSetAbilityStringLevelField(a2, ABILITY_SLF_ICON_NORMAL, 0, BlzGetAbilityIcon(abilityId))
-        
+
         if (level > 0) then
             call BlzSetAbilityStringLevelField(a2, ABILITY_SLF_TOOLTIP_NORMAL, 0, Format(GetLocalizedString("ABILITY_LEVEL_X")).s(GetObjectName(abilityId)).i(level).result())
         else
             call BlzSetAbilityStringLevelField(a2, ABILITY_SLF_TOOLTIP_NORMAL, 0, Format(GetLocalizedString("LEARN_ABILITY_X")).s(GetObjectName(abilityId)).result())
         endif
-        
+
         if (GetUnitAbilityLevel(whichUnit, abilityId) > 0) then
             if (HasAbilitySkillExtendedTooltip(abilityId, 0)) then
                 call BlzSetAbilityStringLevelField(a2, ABILITY_SLF_TOOLTIP_NORMAL_EXTENDED, 0, FormatAbilityTooltip(hero, abilityId, level, GetLocalizedString(GetAbilitySkillExtendedTooltip(abilityId, 0))))
@@ -527,13 +527,13 @@ function ReplaceAbility takes unit whichUnit, integer slot, SkillMenuAbility new
                             // restore the old level
                             set oldLevel = GetUnitAbilitySkillLevel(whichUnit, oldAbilityId)
                             //set oldLevel = skillMenu.abilityLevels[slot]
-                            
+
                             // unskill and remove old ability
                             call SkillAbility(skillMenu.hero, oldAbilityId, 0)
                             if (GetUnitAbilityLevel(whichUnit, oldAbilityId) > 0) then
                                 call UnitRemoveAbility(whichUnit, oldAbilityId)
                             endif
-                            
+
                             if (oldLevel > 0) then
                                 call UnitAddAbility(whichUnit, abilityId)
                                 call UnitMakeAbilityPermanent(whichUnit, true, abilityId)
@@ -652,13 +652,13 @@ function IncreaseAbilityEx takes unit whichUnit, integer slot, boolean updateToo
                 if (GetUnitAbilityLevel(hero, abilityId) <= 0) then
                     //call BJDebugMsg("Learning ability " + GetObjectName(abilityId))
                     call UnitAddAbility(hero, abilityId)
-                    call UnitMakeAbilityPermanent(hero, true, abilityId)    
+                    call UnitMakeAbilityPermanent(hero, true, abilityId)
                 endif
                 //call BJDebugMsg("Increasing ability level to " + I2S(GetUnitAbilitySkillLevel(hero, abilityId) + 1))
                 call SkillAbilityEx2(hero, abilityId, GetUnitAbilitySkillLevel(hero, abilityId) + 1, updateTooltip)
                 set skillMenu.abilityLevels[slot] = skillMenu.abilityLevels[slot] + 1
                 call RemoveHeroSkillPoints(hero, 1)
-                
+
                 return true
             else
                 call SimError(GetOwningPlayer(whichUnit), Format(GetLocalizedString("REACHED_MAXIMUM_ABILITY_LEVEL")).i(MAX_HERO_SPELL_LEVEL).result())
@@ -678,7 +678,7 @@ function IncreaseAbility takes unit whichUnit, integer slot returns boolean
     if (result) then
         call ShowSingleAbility(whichUnit, slot)
     endif
-    
+
     return result
 endfunction
 
@@ -716,7 +716,7 @@ private function DecreaseAbility takes unit whichUnit, integer slot returns bool
     if (result) then
         call ShowSingleAbility(whichUnit, slot)
     endif
-    
+
     return result
 endfunction
 
@@ -783,8 +783,6 @@ function RemoveSkillMenu takes unit hero returns nothing
         call skillMenu.destroy()
     endif
 endfunction
-
-hook RemoveUnit RemoveSkillMenu
 
 function ShowAbilityOrderId takes unit hero, integer abilityId returns nothing
     call BJDebugMsg(GetObjectName(abilityId) + ": " + BlzGetAbilityStringLevelField(BlzGetUnitAbility(hero, abilityId), ABILITY_SLF_BASE_ORDER_ID_NCL6, 0))
@@ -949,7 +947,9 @@ endfunction
 private function Init takes nothing returns nothing
     call TriggerRegisterAnyUnitEventBJ(channelTrigger, EVENT_PLAYER_UNIT_SPELL_CHANNEL)
     call TriggerAddAction(channelTrigger, function TriggerActionChannel)
-    
+
+    call OnUnitRemoval(RemoveSkillMenu)
+
     set slotAbilityIds[0] = ABILITY_SLOT_1
     set slotAbilityIds[1] = ABILITY_SLOT_2
     set slotAbilityIds[2] = ABILITY_SLOT_3
@@ -961,7 +961,7 @@ private function Init takes nothing returns nothing
     set slotAbilityIds[8] = ABILITY_SLOT_9
     set slotAbilityIds[9] = ABILITY_SLOT_10
     set slotAbilityIds[10] = ABILITY_SLOT_11
-    
+
     call DisableAbilities()
 endfunction
 

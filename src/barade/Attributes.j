@@ -1,16 +1,16 @@
-library Attributes
+library Attributes initializer Init requires OnUnitRemoval
 
 private struct A
     string name
     string icon
     string description
-    
+
     public static method create takes string name returns thistype
         local thistype this = thistype.allocate()
         set this.name = name
         return this
     endmethod
-    
+
 endstruct
 
 globals
@@ -47,7 +47,7 @@ function AddAttribute takes string name returns A
     local A a = A.create(name)
     set attributes[attributesCounter] = a
     set attributesCounter = attributesCounter + 1
-    
+
     return a
 endfunction
 
@@ -84,6 +84,8 @@ private function HookRemoveUnit takes unit whichUnit returns nothing
     call FlushChildHashtable(h, GetHandleId(whichUnit))
 endfunction
 
-hook RemoveUnit HookRemoveUnit
+private function Init takes nothing returns nothing
+    call OnUnitRemoval(HookRemoveUnit)
+endfunction
 
 endlibrary

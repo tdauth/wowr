@@ -1,4 +1,4 @@
-library WoWReforgedArena initializer Init requires MathUtils
+library WoWReforgedArena initializer Init requires MathUtils, OnUnitRemoval
 
 struct ArenaTicket
     integer itemTypeId
@@ -170,7 +170,15 @@ function EnterArena takes unit hero, rect whichRect, rect targetRect, string ent
     return found
 endfunction
 
+private function RemoveUnitHook takes unit whichUnit returns nothing
+    if (IsUnitInGroup(whichUnit, arenaEnemies)) then
+        call GroupRemoveUnit(arenaEnemies, whichUnit)
+    endif
+endfunction
+
 private function Init takes nothing returns nothing
+    call OnUnitRemoval(RemoveUnitHook)
+
     call AddArenaTicket(ITEM_TICKET_1, ITEM_STONE_TOKEN)
     call AddArenaTicketUnitType('nogr', 2)
     call AddArenaTicket(ITEM_TICKET_2, ITEM_TALISMAN_OF_THE_WILD)
@@ -194,13 +202,5 @@ private function Init takes nothing returns nothing
     call AddArenaTicketUnitType('nogo', 2)
     call AddArenaTicketUnitType('n00B', 1)
 endfunction
-
-private function RemoveUnitHook takes unit whichUnit returns nothing
-    if (IsUnitInGroup(whichUnit, arenaEnemies)) then
-        call GroupRemoveUnit(arenaEnemies, whichUnit)
-    endif
-endfunction
-
-hook RemoveUnit RemoveUnitHook
 
 endlibrary

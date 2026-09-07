@@ -1,4 +1,4 @@
-library WoWReforgedProfessionCombiner initializer Init requires SimError
+library WoWReforgedProfessionCombiner initializer Init requires SimError, OnUnitRemoval
 
 globals
     private constant integer ABILITY_ID_INSPECT = 'A1OC'
@@ -139,15 +139,15 @@ private function TriggerConditionCast takes nothing returns boolean
     return false
 endfunction
 
-private function Init takes nothing returns nothing
-    call TriggerRegisterAnyUnitEventBJ(castTrigger, EVENT_PLAYER_UNIT_SPELL_CHANNEL)
-    call TriggerAddCondition(castTrigger, Condition(function TriggerConditionCast))
-endfunction
-
 private function RemoveUnitHook takes unit whichUnit returns nothing
     call FlushChildHashtable(h, GetHandleId(whichUnit))
 endfunction
 
-hook RemoveUnit RemoveUnitHook
+private function Init takes nothing returns nothing
+    call TriggerRegisterAnyUnitEventBJ(castTrigger, EVENT_PLAYER_UNIT_SPELL_CHANNEL)
+    call TriggerAddCondition(castTrigger, Condition(function TriggerConditionCast))
+
+    call OnUnitRemoval(RemoveUnitHook)
+endfunction
 
 endlibrary

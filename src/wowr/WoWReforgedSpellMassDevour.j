@@ -1,4 +1,4 @@
-library WoWReforgedSpellMassDevour initializer Init requires SimError, MathUtils, WoWReforgedAbilitySkill
+library WoWReforgedSpellMassDevour initializer Init requires SimError, MathUtils, OnUnitRemoval, WoWReforgedAbilitySkill
 
 globals
     private constant real RANGE = 512.0
@@ -8,7 +8,7 @@ globals
 
     private constant integer DUMMY_DEVOUR_ABILITY_ID = ABILITY_MASS_DEVOUR_DUMMY
     private constant integer DUMMY_DEVOUR_CARGO_ABILITY_ID = ABILITY_MASS_DEVOUR_CARGO
-    
+
     private constant string DUMMY_DEVOUR_ORDER = "creepdevour"
 
     private hashtable h = InitHashtable()
@@ -17,14 +17,14 @@ globals
     private trigger deathTriggerTarget = CreateTrigger()
     private group casters = CreateGroup()
     private group targets = CreateGroup()
-    
+
     // keys for targets
     private constant integer KEY_CASTER = 0
     private constant integer KEY_DUMMY = 1
-    
+
     // keys for casters
     private constant integer KEY_DUMMIES = 0
-    
+
     private unit c = null
     private player owner = null
     private group dummies = null
@@ -112,7 +112,7 @@ private function CastMassDevour takes unit caster, real x, real y returns nothin
     set owner = GetOwningPlayer(caster)
     set c = caster
     call GroupEnumUnitsInRange(targets, x, y, RANGE, Filter(function MassDevourFilter))
-    
+
     if (BlzGroupGetSize(targets) > 0) then
         if (d == null) then
             set dummies = CreateGroup()
@@ -178,20 +178,6 @@ private function TriggerActionDeathTarget takes nothing returns nothing
     set d = null
 endfunction
 
-private function Init takes nothing returns nothing
-    call TriggerRegisterAnyUnitEventBJ(castTrigger, EVENT_PLAYER_UNIT_SPELL_CHANNEL)
-    call TriggerAddCondition(castTrigger, Condition(function TriggerConditionCast))
-    call TriggerAddAction(castTrigger, function TriggerActionCast)
-    
-    call TriggerRegisterAnyUnitEventBJ(deathTriggerCaster, EVENT_PLAYER_UNIT_DEATH)
-    call TriggerAddCondition(deathTriggerCaster, Condition(function TriggerConditionDeathCaster))
-    call TriggerAddAction(deathTriggerCaster, function TriggerActionDeathCaster)
-    
-    call TriggerRegisterAnyUnitEventBJ(deathTriggerTarget, EVENT_PLAYER_UNIT_DEATH)
-    call TriggerAddCondition(deathTriggerTarget, Condition(function TriggerConditionDeathTarget))
-    call TriggerAddAction(deathTriggerTarget, function TriggerActionDeathTarget)
-endfunction
-
 private function RemoveUnitMassDevour takes unit whichUnit returns nothing
     call GroupRemoveUnit(targets, whichUnit)
     call GroupRemoveUnit(casters, whichUnit)
@@ -199,6 +185,20 @@ private function RemoveUnitMassDevour takes unit whichUnit returns nothing
     call MassDevourClearCaster(whichUnit)
 endfunction
 
-hook RemoveUnit RemoveUnitMassDevour
+private function Init takes nothing returns nothing
+    call TriggerRegisterAnyUnitEventBJ(castTrigger, EVENT_PLAYER_UNIT_SPELL_CHANNEL)
+    call TriggerAddCondition(castTrigger, Condition(function TriggerConditionCast))
+    call TriggerAddAction(castTrigger, function TriggerActionCast)
+
+    call TriggerRegisterAnyUnitEventBJ(deathTriggerCaster, EVENT_PLAYER_UNIT_DEATH)
+    call TriggerAddCondition(deathTriggerCaster, Condition(function TriggerConditionDeathCaster))
+    call TriggerAddAction(deathTriggerCaster, function TriggerActionDeathCaster)
+
+    call TriggerRegisterAnyUnitEventBJ(deathTriggerTarget, EVENT_PLAYER_UNIT_DEATH)
+    call TriggerAddCondition(deathTriggerTarget, Condition(function TriggerConditionDeathTarget))
+    call TriggerAddAction(deathTriggerTarget, function TriggerActionDeathTarget)
+
+    call OnUnitRemoval(RemoveUnitMassDevour)
+endfunction
 
 endlibrary

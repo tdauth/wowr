@@ -41,6 +41,7 @@
 //! import "barade/MaxItemStacks.j"
 //! import "barade/OpLimit.j"
 //! import "barade/OnStartGame.j"
+//! import "barade/OnUnitRemoval.j"
 //! import "barade/PagedButtons.j"
 //! import "barade/PagedButtonsConfig.j"
 //! import "barade/PagedButtonsUI.j"

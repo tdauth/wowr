@@ -1,4 +1,4 @@
-library WoWReforgedPortals initializer Init requires WoWReforgedZones, WoWReforgedI18n, WoWReforgedAntimagicWards, WoWReforgedMapData
+library WoWReforgedPortals initializer Init requires OnUnitRemoval, WoWReforgedZones, WoWReforgedI18n, WoWReforgedAntimagicWards, WoWReforgedMapData
 
 globals
     private constant integer ABILITY_ID_SELECT_DESTINATION = 'A05U'
@@ -43,7 +43,7 @@ endfunction
 
 function UpdatePortalName takes unit whichUnit, boolean activate, real destinationX, real destinationY returns nothing
     local Zone zone = 0
-    
+
     if (activate) then
         set zone = GetZoneByCoordinates(destinationX, destinationY)
         if (zone != 0) then
@@ -264,24 +264,26 @@ endfunction
 
 private function Init takes nothing returns nothing
     set initialized = true
-    
+
     call TriggerRegisterAnyUnitEventBJ(constructFinishedTrigger, EVENT_PLAYER_UNIT_CONSTRUCT_FINISH)
     call TriggerAddCondition(constructFinishedTrigger, Condition(function TriggerConditionConstructFinish))
-    
+
     call TriggerRegisterAnyUnitEventBJ(upgradeFinishTrigger, EVENT_PLAYER_UNIT_UPGRADE_FINISH)
     call TriggerAddCondition(upgradeFinishTrigger, Condition(function TriggerConditionUpgradeFinish))
-    
+
     call TriggerRegisterAnyUnitEventBJ(deathTrigger, EVENT_PLAYER_UNIT_DEATH)
     call TriggerAddCondition(deathTrigger, Condition(function TriggerConditionDeath))
-    
+
     call TriggerRegisterAnyUnitEventBJ(channelTrigger, EVENT_PLAYER_UNIT_SPELL_CHANNEL)
     call TriggerAddCondition(channelTrigger, Condition(function TriggerConditionChannel))
-    
+
     call TriggerRegisterAnyUnitEventBJ(orderTrigger, EVENT_PLAYER_UNIT_ISSUED_POINT_ORDER)
     call TriggerRegisterAnyUnitEventBJ(orderTrigger, EVENT_PLAYER_UNIT_ISSUED_TARGET_ORDER)
     call TriggerAddCondition(orderTrigger, Condition(function TriggerConditionOrder))
-    
+
     call TriggerAddAction(antimagicWardPlacementTrigger, function TriggerActionPlaceAntimagicWard)
+
+    call OnUnitRemoval(RemovePortal)
 endfunction
 
 private function HookWaygateActivate takes unit waygate, boolean activate returns nothing
@@ -312,6 +314,5 @@ hook WaygateActivate HookWaygateActivate
 hook WaygateActivateBJ HookWaygateActivateBJ
 hook WaygateSetDestination HookWaygateSetDestination
 hook WaygateSetDestinationLocBJ HookWaygateSetDestinationLocBJ
-hook RemoveUnit RemovePortal
 
 endlibrary

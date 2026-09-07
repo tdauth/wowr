@@ -1,10 +1,10 @@
-library DrainResources initializer Init requires SimError, Resources, TreeUtils
+library DrainResources initializer Init requires SimError, Resources, TreeUtils, OnUnitRemoval
 
 globals
     public constant real TIMER_INTERVAL = 1.0
     public constant integer ABILITY_ID = 0
     public constant integer ABILITY_ID_ITEM = 'A18J'
-    
+
     private constant integer KEY_TARGET = 0
     private constant integer KEY_LIGHTNING = 1
     private constant integer KEY_ABILITY = 2
@@ -32,7 +32,7 @@ function StopDrainResources takes unit caster returns boolean
         endif
         return true
     endif
-    
+
     return false
 endfunction
 
@@ -66,11 +66,11 @@ private function TimerFunctionDrainResources takes nothing returns nothing
         set owner = GetOwningPlayer(caster)
         set casterHandleId = GetHandleId(caster)
         set target = LoadUnitHandle(h, casterHandleId, KEY_TARGET)
-        
+
         if (target == null) then
             set targetTree = LoadDestructableHandle(h, casterHandleId, KEY_TARGET)
         endif
-        
+
         set abilityId = LoadInteger(h, casterHandleId, KEY_ABILITY)
         set atLeastOneResource = false
         if (abilityId == ABILITY_ID) then
@@ -78,7 +78,7 @@ private function TimerFunctionDrainResources takes nothing returns nothing
         else
             set spellDrainedAmount = 2
         endif
-        
+
         if (target != null) then
             set drainedAmount = IMinBJ(spellDrainedAmount, GetResourceAmount(target))
             if (drainedAmount > 0) then
@@ -87,7 +87,7 @@ private function TimerFunctionDrainResources takes nothing returns nothing
                 call Heal(caster, drainedAmount)
                 set atLeastOneResource = true
             endif
-            
+
             set maxResources = GetMaxResources()
             set j = 0
             loop
@@ -113,12 +113,12 @@ private function TimerFunctionDrainResources takes nothing returns nothing
                 set atLeastOneResource = true
             endif
         endif
-        
+
         if (not atLeastOneResource) then
             call StopDrainResources(caster)
             call IssueImmediateOrder(caster, "stop")
         endif
-        
+
         set caster = null
         set owner = null
         set target = null
@@ -198,14 +198,14 @@ endfunction
 private function Init takes nothing returns nothing
     call TriggerRegisterAnyUnitEventBJ(castTrigger, EVENT_PLAYER_UNIT_SPELL_CHANNEL)
     call TriggerAddCondition(castTrigger, Condition(function TriggerConditionCast))
-       
+
     call TriggerRegisterAnyUnitEventBJ(stopTrigger, EVENT_PLAYER_UNIT_ISSUED_ORDER)
     call TriggerRegisterAnyUnitEventBJ(stopTrigger, EVENT_PLAYER_UNIT_ISSUED_POINT_ORDER)
     call TriggerRegisterAnyUnitEventBJ(stopTrigger, EVENT_PLAYER_UNIT_ISSUED_TARGET_ORDER)
     call TriggerRegisterAnyUnitEventBJ(stopTrigger, EVENT_PLAYER_UNIT_ISSUED_UNIT_ORDER)
     call TriggerAddCondition(stopTrigger, Condition(function TriggerConditionStop))
-endfunction
 
-hook RemoveUnit StopDrainResources
+    call OnUnitRemoval(StopDrainResources)
+endfunction
 
 endlibrary

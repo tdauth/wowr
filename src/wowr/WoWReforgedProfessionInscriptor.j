@@ -1,4 +1,4 @@
-library WoWReforgedProfessionInscriptor initializer Init requires WoWReforgedAbilityFields, WoWReforgedAbilitySkill, WoWReforgedEquipmentBags, WoWReforgedUtils, WoWReforgedI18n
+library WoWReforgedProfessionInscriptor initializer Init requires OnUnitRemoval, WoWReforgedAbilityFields, WoWReforgedAbilitySkill, WoWReforgedEquipmentBags, WoWReforgedUtils, WoWReforgedI18n
 
 globals
     private hashtable h = InitHashtable()
@@ -71,8 +71,6 @@ private function InscriptorSystemRemoveUnit takes unit whichUnit returns nothing
     call FlushChildHashtable(h, GetHandleId(whichUnit))
 endfunction
 
-hook RemoveUnit InscriptorSystemRemoveUnit
-
 function InscriptorSetHeroBonus takes unit hero returns integer
     local item whichItem = null
     local ability whichAbility = null
@@ -131,7 +129,7 @@ function InscriptorSetHeroBonus takes unit hero returns integer
         set whichItem = null
         set i = i + 1
     endloop
-    
+
     if (heroSpellLevel > 0) then
         set heroStatsAndDefenseBonus = heroStatsAndDefenseBonus + INSCRIPTOR_STAT_BONUS_MASTER * heroSpellLevel
         set damageBonus = damageBonus + INSCRIPTOR_DAMAGE_BONUS_MASTER * heroSpellLevel
@@ -282,9 +280,11 @@ private function Init takes nothing returns nothing
     call TriggerRegisterAnyUnitEventBJ(dropItemTrigger, EVENT_PLAYER_UNIT_DROP_ITEM)
     call TriggerAddCondition(dropItemTrigger, Condition(function TriggerConditionDropItem))
     call TriggerAddAction(dropItemTrigger, function TriggerActionSetHeroBonusDrop)
-    
+
     call TriggerRegisterAbilitySkill(learnTrigger)
     call TriggerAddCondition(learnTrigger, Condition(function TriggerConditionLearn))
+
+    call OnUnitRemoval(InscriptorSystemRemoveUnit)
 endfunction
 
 endlibrary

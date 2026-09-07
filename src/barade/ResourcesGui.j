@@ -1,4 +1,4 @@
-library ResourcesGui initializer Init requires OnStartGame, StringFormat, Resources, optional FrameLoader, optional UnitEventEx
+library ResourcesGui initializer Init requires OnStartGame, StringFormat, Resources, optional FrameLoader, optional UnitEventEx, OnUnitRemoval
 
 globals
     private constant real X = 0.3053
@@ -7,20 +7,20 @@ globals
     private constant real HEIGHT = 0.05
     private constant real TEXT_X = X + WIDTH
     private constant real TEXT_WIDTH = 0.1
-    
+
     private constant real X_GATHERED = 0.404
     private constant real Y_GATHERED = 0.09
     private constant real TEXT_X_GATHERED = X_GATHERED + WIDTH
 
     private framehandle IconFrame
     private framehandle TextFrame
-    
+
     private framehandle IconFrameGathered
     private framehandle TextFrameGathered
-    
+
     private framehandle IconFrameGathered2
     private framehandle TextFrameGathered2
-    
+
     private trigger selectionTrigger = CreateTrigger()
     private trigger deselectionTrigger = CreateTrigger()
     private trigger gatherTrigger = CreateTrigger()
@@ -29,11 +29,11 @@ globals
     private timer array updateTimer
     private boolean array updateTimerRunning
     private unit array currentMine // currently selected unit of the corresponding player
-    
+
     private trigger progressBarStartTrigger = CreateTrigger()
     private trigger progressBarFinishTrigger = CreateTrigger()
     private group progressBarUnits = CreateGroup()
-    
+
     private player tmpPlayer = null
     private trigger tmpTrigger = CreateTrigger()
 endglobals
@@ -95,7 +95,7 @@ private function CreateResourcesUI takes nothing returns nothing
     call BlzFrameSetTextAlignment(TextFrame, TEXT_JUSTIFY_MIDDLE, TEXT_JUSTIFY_LEFT)
     call BlzFrameSetScale(TextFrame, 1.0)
     call BlzFrameSetLevel(TextFrame, 1)
-    
+
     set IconFrameGathered = BlzCreateFrame("EscMenuBackdrop", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), 0, 0)
     call BlzFrameSetAbsPoint(IconFrameGathered, FRAMEPOINT_TOPLEFT, X_GATHERED, Y_GATHERED)
     call BlzFrameSetAbsPoint(IconFrameGathered, FRAMEPOINT_BOTTOMRIGHT, X_GATHERED + WIDTH, Y_GATHERED - HEIGHT)
@@ -107,7 +107,7 @@ private function CreateResourcesUI takes nothing returns nothing
     call BlzFrameSetTextAlignment(TextFrameGathered, TEXT_JUSTIFY_MIDDLE, TEXT_JUSTIFY_LEFT)
     call BlzFrameSetScale(TextFrameGathered, 1.0)
     call BlzFrameSetLevel(TextFrameGathered, 1)
-    
+
     set IconFrameGathered2 = BlzCreateFrame("EscMenuBackdrop", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), 0, 0)
     call BlzFrameSetAbsPoint(IconFrameGathered2, FRAMEPOINT_TOPLEFT, X_GATHERED, Y)
     call BlzFrameSetAbsPoint(IconFrameGathered2, FRAMEPOINT_BOTTOMRIGHT, X_GATHERED + WIDTH, Y - HEIGHT)
@@ -181,7 +181,7 @@ private function UpdateGathered takes player whichPlayer, unit worker returns no
         else
             call SetResourcesUIGatheredVisibleAll(false)
         endif
-        
+
         if (resource2 != 0) then
             call BlzFrameSetTexture(IconFrameGathered2, GetResourceIconAtt(resource2), 0, true)
             call BlzFrameSetText(TextFrameGathered2, GetResourceGatheredText(worker, resource2))
@@ -243,7 +243,7 @@ function UpdatePlayerResourceSelectionGui takes player whichPlayer returns nothi
     if (currentMine[playerId] != null and IsUnitType(currentMine[playerId], UNIT_TYPE_HERO)) then
         set currentMine[playerId] = null
     endif
-    
+
     // with cargo there is no space for icons
 static if (LIBRARY_UnitEventEx) then
     if (currentMine[playerId] != null and HasNonEmptyCargo(currentMine[playerId])) then
@@ -258,7 +258,7 @@ endif
     //call BJDebugMsg("XXXXXXXXXXXX")
     if (currentMine[playerId] != null) then
         set resource = GetPrimaryResource(currentMine[playerId])
-        
+
         //call PrintResourcesGuiSelection(whichPlayer)
         //call BJDebugMsg("mine " + GetUnitName(currentMine[playerId]) + " with primary resource " + I2S(resource))
         if (IsMine(currentMine[playerId]) and IsAlliedMine(currentMine[playerId], whichPlayer)) then
@@ -374,6 +374,12 @@ private function TriggerActionProgressBarFinish takes nothing returns nothing
     set u = null
 endfunction
 
+private function RemoveUnitHook takes unit whichUnit returns nothing
+    if (IsUnitInGroup(whichUnit, progressBarUnits)) then
+        call GroupRemoveUnit(progressBarUnits, whichUnit)
+    endif
+endfunction
+
 private function Init takes nothing returns nothing
     local integer i = 0
     loop
@@ -385,22 +391,22 @@ private function Init takes nothing returns nothing
     endloop
     call TriggerRegisterAnyUnitEventBJ(selectionTrigger, EVENT_PLAYER_UNIT_SELECTED)
     call TriggerAddAction(selectionTrigger, function TriggerActionSelected)
-    
+
     call TriggerRegisterAnyUnitEventBJ(deselectionTrigger, EVENT_PLAYER_UNIT_DESELECTED)
     call TriggerAddAction(deselectionTrigger, function TriggerActionDeselected)
-    
+
     call TriggerRegisterGatherEvent(gatherTrigger)
     // Use a trigger action here since trigger conditions will lead to weird behavior when checking player selections.
     call TriggerAddAction(gatherTrigger, function TriggerActionGather)
-    
+
     call TriggerRegisterReturnEvent(returnTrigger)
     // Use a trigger action here since trigger conditions will lead to weird behavior when checking player selections.
     call TriggerAddAction(returnTrigger, function TriggerActionReturn)
 
     call OnStartGame(function CreateResourcesUI)
-    
+
     call TriggerAddAction(tmpTrigger, function TriggerActionTmp)
-    
+
     call TriggerRegisterAnyUnitEventBJ(progressBarStartTrigger, EVENT_PLAYER_UNIT_UPGRADE_START)
     call TriggerRegisterAnyUnitEventBJ(progressBarStartTrigger, EVENT_PLAYER_UNIT_RESEARCH_START)
     call TriggerRegisterAnyUnitEventBJ(progressBarStartTrigger, EVENT_PLAYER_UNIT_TRAIN_START)
@@ -415,18 +421,12 @@ private function Init takes nothing returns nothing
     call TriggerRegisterAnyUnitEventBJ(progressBarFinishTrigger, EVENT_PLAYER_UNIT_DEATH)
     // Use a trigger action here since trigger conditions will lead to weird behavior when checking player selections.
     call TriggerAddAction(progressBarFinishTrigger, function TriggerActionProgressBarFinish)
-    
+
+    call OnUnitRemoval(RemoveUnitHook)
+
     static if LIBRARY_FrameLoader then
         call FrameLoaderAdd(function CreateResourcesUI)
     endif
 endfunction
-
-private function RemoveUnitHook takes unit whichUnit returns nothing
-    if (IsUnitInGroup(whichUnit, progressBarUnits)) then
-        call GroupRemoveUnit(progressBarUnits, whichUnit)
-    endif
-endfunction
-
-hook RemoveUnit RemoveUnitHook
 
 endlibrary

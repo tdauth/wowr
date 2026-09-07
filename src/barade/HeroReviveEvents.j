@@ -1,4 +1,4 @@
-library HeroReviveEvents initializer Init requires HeroReviveCancelEvent
+library HeroReviveEvents initializer Init requires HeroReviveCancelEvent, OnUnitRemoval
 // Created by Baradé for the Queue library.
 
 globals
@@ -10,7 +10,7 @@ globals
     private trigger finishReviveTrigger = CreateTrigger()
     private group heroes = CreateGroup()
     private hashtable h = InitHashtable()
-     
+
     private trigger array callbackOrderStartReviveTriggers
     private integer callbackStartOrderStartTriggersCounter = 0
     private trigger array callbackOrderCancelReviveTriggers
@@ -144,20 +144,8 @@ private function TriggerConditionFinishRevive takes nothing returns boolean
         call FlushChildHashtable(h, GetHandleId(hero))
     endif
     set hero = null
-    
+
     return false
-endfunction
-
-private function Init takes nothing returns nothing
-    call TriggerRegisterAnyUnitEventBJ(orderTrigger, EVENT_PLAYER_UNIT_ISSUED_TARGET_ORDER)
-    call TriggerRegisterAnyUnitEventBJ(orderTrigger, EVENT_PLAYER_UNIT_ISSUED_ORDER)
-    call TriggerAddCondition(orderTrigger, Condition(function TriggerConditionOrder))
-
-    call TriggerRegisterAnyUnitEventBJ(startReviveTrigger, EVENT_PLAYER_HERO_REVIVE_START)
-    call TriggerAddCondition(startReviveTrigger, Condition(function TriggerConditionStartRevive))
-    
-    call TriggerRegisterAnyUnitEventBJ(finishReviveTrigger, EVENT_PLAYER_HERO_REVIVE_FINISH)
-    call TriggerAddCondition(finishReviveTrigger, Condition(function TriggerConditionFinishRevive))
 endfunction
 
 private function RemoveUnitHook takes unit whichUnit returns nothing
@@ -167,6 +155,18 @@ private function RemoveUnitHook takes unit whichUnit returns nothing
     endif
 endfunction
 
-hook RemoveUnit RemoveUnitHook
+private function Init takes nothing returns nothing
+    call TriggerRegisterAnyUnitEventBJ(orderTrigger, EVENT_PLAYER_UNIT_ISSUED_TARGET_ORDER)
+    call TriggerRegisterAnyUnitEventBJ(orderTrigger, EVENT_PLAYER_UNIT_ISSUED_ORDER)
+    call TriggerAddCondition(orderTrigger, Condition(function TriggerConditionOrder))
+
+    call TriggerRegisterAnyUnitEventBJ(startReviveTrigger, EVENT_PLAYER_HERO_REVIVE_START)
+    call TriggerAddCondition(startReviveTrigger, Condition(function TriggerConditionStartRevive))
+
+    call TriggerRegisterAnyUnitEventBJ(finishReviveTrigger, EVENT_PLAYER_HERO_REVIVE_FINISH)
+    call TriggerAddCondition(finishReviveTrigger, Condition(function TriggerConditionFinishRevive))
+
+    call OnUnitRemoval(RemoveUnitHook)
+endfunction
 
 endlibrary

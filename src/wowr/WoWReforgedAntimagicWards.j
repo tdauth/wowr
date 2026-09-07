@@ -1,12 +1,12 @@
-library WoWReforgedAntimagicWards initializer Init requires MathUtils
+library WoWReforgedAntimagicWards initializer Init requires MathUtils, OnUnitRemoval
 
 globals
     public constant real MAX_DISTANCE = 2048.00
-    
+
     // avoid cyclic dependencies
     unit tmpAntimagicWard = null
     trigger antimagicWardPlacementTrigger = CreateTrigger()
-    
+
     private group wards = CreateGroup()
     private trigger constructFinishedTrigger = CreateTrigger()
     private trigger deathTrigger = CreateTrigger()
@@ -104,11 +104,11 @@ private function Init takes nothing returns nothing
 
     call TriggerRegisterAnyUnitEventBJ(channelTrigger, EVENT_PLAYER_UNIT_SPELL_CHANNEL)
     call TriggerAddCondition(channelTrigger, Condition(function TriggerConditionChannel))
-    
+
     call TriggerRegisterAnyUnitEventBJ(castTrigger, EVENT_PLAYER_UNIT_SPELL_CAST)
     call TriggerAddCondition(castTrigger, Condition(function TriggerConditionCast))
-endfunction
 
-hook RemoveUnit RemoveAntimagicWard
+    call OnUnitRemoval(RemoveAntimagicWard)
+endfunction
 
 endlibrary
