@@ -2,12 +2,6 @@ library WoWReforgedProfessionSculptor initializer Init
 
 globals
     private trigger constructFinishTrigger = CreateTrigger()
-
-    constant integer SCULPTOR_MUD_GOLEM = 'n0H2'
-    constant integer SCULPTOR_WAR_GOLEM = 'n0H3'
-    constant integer SCULPTOR_SIEGE_GOLEM = 'n0H4'
-    constant integer SCULPTOR_FLESH_GOLEM = 'n0H5'
-    constant integer SCULPTOR_DIVINE_GOLEM = 'n0O7'
 endglobals
 
 function IsSculptorGolem takes integer unitTypeId returns boolean

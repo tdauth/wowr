@@ -3462,6 +3462,7 @@ globals
     constant integer ITEM_BAIT                                       = 'I0L5' // advanced
     constant integer ITEM_ADVANCED_BAIT                              = 'I0L6' // adept
     constant integer ITEM_MONSTER_LURE                               = 'I0L2' // master
+    constant integer MONSTER_LURE                                    = 'nlur' // master
     constant integer ITEM_SCROLL_OF_CHARM                            = 'I19R' // grand master
     constant integer ITEM_CAGE                                       = 'I19S' // doctor
     constant integer CAGE_TAMER                                      = 'h0AV' // doctor
@@ -3492,6 +3493,11 @@ globals
     constant integer ITEM_TINY_DIVINE_GOLEM                          = 'I186' // grand master
     constant integer ITEM_TINY_GOLEM_FACTORY                         = 'I185' // doctor
 
+    constant integer SCULPTOR_MUD_GOLEM                              = 'n0H2'
+    constant integer SCULPTOR_WAR_GOLEM                              = 'n0H3'
+    constant integer SCULPTOR_SIEGE_GOLEM                            = 'n0H4'
+    constant integer SCULPTOR_FLESH_GOLEM                            = 'n0H5'
+    constant integer SCULPTOR_DIVINE_GOLEM                           = 'n0O7'
     constant integer GOLEM_FACTORY                                   = 'n0O6'
     constant integer DIVINE_GOLEM_GOLEM_SCULPTOR                     = 'n0O7'
 

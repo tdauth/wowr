@@ -114,6 +114,7 @@
 //! import "wowr/WoWReforgedProfessionArchaeologist.j"
 //! import "wowr/WoWReforgedProfessionArmorer.j"
 //! import "wowr/WoWReforgedProfessionBooksShop.j"
+//! import "wowr/WoWReforgedProfessionCaptain.j"
 //! import "wowr/WoWReforgedProfessionCombiner.j"
 //! import "wowr/WowReforgedProfessionCook.j"
 //! import "wowr/WoWReforgedProfessionEngineer.j"
