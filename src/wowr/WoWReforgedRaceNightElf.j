@@ -51,10 +51,10 @@ private function PowerOfCenarius takes unit caster, real x, real y returns boole
 endfunction
 
 private function FilterIsValidImmortalityTarget takes nothing returns boolean
-    return not IsUnitType(GetFilterUnit(), UNIT_TYPE_STRUCTURE) and not IsUnitType(GetFilterUnit(), UNIT_TYPE_MECHANICAL) and GetUnitRace(GetFilterUnit()) == RACE_NIGHTELF and (GetUnitState(GetFilterUnit(), UNIT_STATE_LIFE) >= GetUnitState(GetFilterUnit(), UNIT_STATE_MAX_LIFE) or GetUnitState(GetFilterUnit(), UNIT_STATE_MANA) >= GetUnitState(GetFilterUnit(), UNIT_STATE_MAX_MANA))
+    return not IsUnitType(GetFilterUnit(), UNIT_TYPE_STRUCTURE) and not IsUnitType(GetFilterUnit(), UNIT_TYPE_MECHANICAL) and GetUnitRace(GetFilterUnit()) == RACE_NIGHTELF and (GetUnitState(GetFilterUnit(), UNIT_STATE_LIFE) < GetUnitState(GetFilterUnit(), UNIT_STATE_MAX_LIFE) or GetUnitState(GetFilterUnit(), UNIT_STATE_MANA) < GetUnitState(GetFilterUnit(), UNIT_STATE_MAX_MANA))
 endfunction
 
-private function Immortaility takes unit caster returns boolean
+private function Immortality takes unit caster returns boolean
     local boolean result = false
     local unit dummy = null
     local lightning array allLightnings
@@ -83,7 +83,7 @@ private function Immortaility takes unit caster returns boolean
             call RemoveUnit(dummy)
             set dummy = null
         else
-            call SimError(GetOwningPlayer(GetTriggerUnit()), GetLocalizedString("NOT_ENOUGH_WISPS_IN_WORLD_TREE"))
+            call SimError(GetOwningPlayer(caster), GetLocalizedString("NOT_ENOUGH_WISPS_IN_WORLD_TREE"))
         endif
         call PolledWait(2.0)
         set i = 0
@@ -111,8 +111,8 @@ private function TriggerActionChannel takes nothing returns nothing
             call IssueImmediateOrder(GetTriggerUnit(), "stop")
             call SimError(GetOwningPlayer(GetTriggerUnit()), GetLocalizedString("NO_VALID_TARGETS_IN_THIS_AREA"))
         endif
-    elseif (GetSpellAbilityId() == 'A08P') then // Immortaility
-        if (not Immortaility(GetTriggerUnit())) then
+    elseif (GetSpellAbilityId() == 'A08P') then // Immortality
+        if (not Immortality(GetTriggerUnit())) then
             call IssueImmediateOrder(GetTriggerUnit(), "stop")
             call SimError(GetOwningPlayer(GetTriggerUnit()), GetLocalizedString("NO_VALID_TARGETS_IN_THIS_AREA"))
         endif
