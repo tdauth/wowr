@@ -105,7 +105,6 @@ private function TriggerConditionPurchaseItem takes nothing returns boolean
 endfunction
 
 private function TriggerConditionPurchaseUnit takes nothing returns boolean
-     local unit hero = GetBuyingUnit()
     local integer count = UseItemsOfType(hero, ITEM_AMULET_OF_HAGGLE)
     local integer id = GetUnitTypeId(GetSoldUnit())
     if (GetUnitTypeId(GetSellingUnit()) == MERCHANT_SHOP) then
