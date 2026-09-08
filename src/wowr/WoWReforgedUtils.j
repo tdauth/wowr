@@ -1,4 +1,4 @@
-library WoWReforgedUtils requires TreeUtils, MathUtils, CameraUtils, HeroUtils, ForceUtils, SelectionUtils, AttackRange, StringUtils, CopyGroup, Aura, Crafting, UnitGroupRespawn, MassSpell, WoWReforgedI18n
+library WoWReforgedUtils requires MathUtils, CameraUtils, HeroUtils, ForceUtils, SelectionUtils, AttackRange, StringUtils, CopyGroup, Aura, Crafting, UnitGroupRespawn, MassSpell, WoWReforgedI18n
 /*
 function GetNpcName takes unit hero returns string
     return GetUnitNameByType(GetUnitTypeId(hero), GetOwningPlayer(hero))
@@ -518,41 +518,6 @@ endfunction
 function KillAllHauntedGoldMines takes player whichPlayer returns nothing
     set bj_wantDestroyGroup = true
     call ForGroupBJ(GetUnitsOfPlayerMatching(whichPlayer, Filter(function FilterFunctionIsHauntedGoldMine)), function ForFunctionKillUnit)
-endfunction
-
-function EnumLivingTreeDestructablesInCircleFilter takes nothing returns boolean
-    local boolean result = IsDestructableAliveBJ(GetFilterDestructable()) and IsDestructableTree(GetFilterDestructable())
-    local location destLoc = null
-
-    if (result) then
-        set destLoc = GetDestructableLoc(GetFilterDestructable())
-        set result = DistanceBetweenPoints(destLoc, bj_enumDestructableCenter) <= bj_enumDestructableRadius
-        call RemoveLocation(destLoc)
-        set destLoc = null
-    endif
-
-    return result
-endfunction
-
-function RandomLivingTreeDestructableInCircle takes real radius, location loc returns destructable
-    local boolexpr whichFilter= Filter(function EnumLivingTreeDestructablesInCircleFilter)
-    local rect r
-
-    if (radius >= 0) then
-        set bj_enumDestructableCenter = loc
-        set bj_enumDestructableRadius = radius
-        set bj_destRandomConsidered = 0
-        set bj_destRandomCurrentPick = null
-        set r = GetRectFromCircleBJ(loc, radius)
-        call EnumDestructablesInRect(r, whichFilter, function RandomDestructableInRectBJEnum)
-        call RemoveRect(r)
-        set r = null
-    endif
-
-    call DestroyBoolExpr(whichFilter)
-    set whichFilter = null
-
-    return bj_destRandomCurrentPick
 endfunction
 
 function IsWall takes integer buildingId returns boolean

@@ -86,6 +86,9 @@ StringList {
     // Item Summoner
     SUMMONED_X_ITEMS                   "Summoned %1% items.",
     NO_MATCHING_ITEMS                  "No matching items.",
+    // Night Elf World Tree
+    RESURRECTION_ALL_OVER_THE_MAP      "Resurrection all over the map!",
+    NOT_ENOUGH_WISPS_IN_WORLD_TREE     "Not enough Wisps in the World Tree to cast Resurrection.",
     // Moving Boxes
     NO_WRAPABLE_BUILDINGS              "No wrapable buildings in area.",
     // Game End
