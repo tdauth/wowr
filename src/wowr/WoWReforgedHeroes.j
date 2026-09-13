@@ -259,6 +259,7 @@ private function Init takes nothing returns nothing
     call AddHero(DEATH_KNIGHT, CLASS_DEATH_KNIGHT, udg_RaceUndead, FROST_WYRM_MOUNT, false, GetLocalizedString("UNDEAD"), "")
     call AddHero(LICH, CLASS_NECROMANCER, udg_RaceUndead, FROST_WYRM_MOUNT, false, GetLocalizedString("UNDEAD"), "")
     call AddHero(DARK_RANGER, CLASS_HUNTER, udg_RaceUndead, FROST_WYRM_MOUNT, false, GetLocalizedString("UNDEAD"), "")
+    call AddHero(FORSAKEN_PALADIN, CLASS_DEATH_KNIGHT, udg_RaceUndead, FROST_WYRM_MOUNT, false, GetLocalizedString("UNDEAD"), "")
     call AddHero(NECROMANCER_HERO, CLASS_NECROMANCER, udg_RaceUndead, FROST_WYRM_MOUNT, false, GetLocalizedString("UNDEAD"), "")
     call AddHero(ABOMINATION_HERO, CLASS_WARRIOR, udg_RaceUndead, FROST_WYRM_MOUNT, false, GetLocalizedString("UNDEAD"), "")
     call AddHero(BANSHEE_HERO, CLASS_WITCH_DOCTOR, udg_RaceUndead, FROST_WYRM_MOUNT, false, GetLocalizedString("UNDEAD"), "")

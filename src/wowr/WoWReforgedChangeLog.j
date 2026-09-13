@@ -26,6 +26,8 @@ endfunction
 
 private function Init takes nothing returns nothing
     call AddVersion("4.7")
+    call AddChange("Support Forsaken Kingdom.")
+    call AddChange("Add hero Forsaken Paladin.")
     call AddChange("Register missing Goblin research Berserk Tank.")
     call AddChange("Add missing hotkey for unit Nerubian Queen.")
     call AddChange("Fix maximum movement speed of Heavy Tank for race Goblin.")

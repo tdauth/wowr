@@ -2700,6 +2700,7 @@ function InitHeroes takes nothing returns nothing
     // Undead
     call AddHero(DEATH_KNIGHT)
     call AddHero(DARK_RANGER)
+    call AddHero(FORSAKEN_PALADIN)
     call AddHero(LICH)
     call AddHero(NECROMANCER_HERO)
     call AddHero(ABOMINATION_HERO)
