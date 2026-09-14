@@ -56,8 +56,8 @@ Load the map in the World Editor and go to "Scenario" -> "Map Options ..." -> "S
 ## Computer AI
 
 The map uses Warcraft's AI for computer players.
-The map contains the modified [common.j](./wowr.w3x/scripts/common.j) to make constants available to map triggers AND AI scripts at once.
-The map contains the modified [common.ai](./wowr.w3x/scripts/common.ai) which is used by all custom AI scripts.
+The map contains the modified [common.j](./wowr.w3x/Scripts/common.j) to make constants available to map triggers AND AI scripts at once.
+The map contains the modified [common.ai](./wowr.w3x/Scripts/common.ai) which is used by all custom AI scripts.
 Run [check.bat](./scripts/check.bat) on Windows to check all custom AI scripts for syntax errors before releasing the map.
 
 ### Warlords
@@ -109,7 +109,7 @@ Use this check list when releasing a new version of the map:
 * Add all credits from this README to the map to make them appear in the quest log.
 * Add all changes to the ChangeLog in the quest log by adding them in [WoWReforgedCredits.j](./src/wowr/WoWReforgedCredits.j).
 * Make sure that the global variables for the map and the game are split into the proper trigger editor folders. There should be no top level "Variables" folder in trigger editor.
-* Make sure that the modified files [common.j](./wowr.w3x/scripts/common.j) and [common.ai](./wowr.w3x/scripts/common.ai) are up to date with the latest Warcraft III: Reforged patch.
+* Make sure that the modified files [common.j](./wowr.w3x/Scripts/common.j) and [common.ai](./wowr.w3x/Scripts/common.ai) are up to date with the latest Warcraft III: Reforged patch.
 * Use [check.bat](./scripts/check.bat) (Windows) or [check.sh](./scripts/check.sh) (Linux) to check all JASS scripts and FDF files. It uses the JAR fdfparser-1.0.jar from [WarsmashModEngine](https://github.com/Retera/WarsmashModEngine) for FDF parsing.
 * Check all translation files in the [_Locales](./wowr.w3x/_Locales/) folder. Use [diffstrings.bat](./scripts/diffstrings.bat) (Windows) or [diffstrings.sh](./scripts/diffstrings.sh) (Linux) to compare the translation files with the original ones.
 * Make sure that savegames still work by saving and loading.
@@ -132,7 +132,7 @@ Multiplayer tests are important to detect desyncs.
 
 ## Corrupted Map Data/Unregistered native function
 
-"There was an error trying to load the selected map. The map is unavailable or corrupted." might appear on selecting an older version of the map which uses natives in the [common.j](./wowr.w3x/scripts/common.j) file which do not exist anymore due to an update of Warcraft III.
+"There was an error trying to load the selected map. The map is unavailable or corrupted." might appear on selecting an older version of the map which uses natives in the [common.j](./wowr.w3x/Scripts/common.j) file which do not exist anymore due to an update of Warcraft III.
 Saving the map will lead to "Unregistered native function" errors.
 The first shown line number is actually the first line number after the natives which are not available anymore.
 Just compare the custom common.j file with the one of the latest Warcraft III version and remove/comment the old natives in the custom file.
@@ -207,7 +207,7 @@ This map has been developed for Warcraft III: Reforged.
 However, it can be adapted for the old Frozen Throne version.
 Use the tool [Map Adapter](https://www.hiveworkshop.com/threads/map-adapter.326456/) or adapt the map manually.
 JASS natives which only exist in Reforged must be replaced with custom functions.
-You have to adapt the [common.j](./wowr.w3x/scripts/common.j) file and remove natives which do not exist in Frozen Throne.
+You have to adapt the [common.j](./wowr.w3x/Scripts/common.j) file and remove natives which do not exist in Frozen Throne.
 You have to add all of these natives to the map script war3map.j as user-defined JASS functions.
 Modify any map file manually with an MPQ editor like [Ladik's MPQ Editor](https://www.hiveworkshop.com/threads/ladiks-mpq-editor-version-2-0-1-278.91512/).
 
