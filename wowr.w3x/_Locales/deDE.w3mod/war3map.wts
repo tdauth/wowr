@@ -4709,7 +4709,7 @@ Goblin-Dynamit
 STRING 787
 // Abilities: A03M (Hero Skins), Name (Name)
 {
-Hero Skins
+Helden-Skins
 }
 
 STRING 788
@@ -6759,7 +6759,7 @@ Fortgeschrittenes Demolieren
 }
 
 STRING 1139
-// Abilities: A194 (Taming - Advanced), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A194 (Zähmung - Advanced), Ubertip (Tooltip - Normal - Extended)
 {
 The Alchemist uses gathered herbs and minerals to create a Mana Stone.
 }
@@ -12952,7 +12952,7 @@ A
 }
 
 STRING 2358
-// Abilities: A266 (Taming - Grand Master), Hotkey (Hotkey - Normal)
+// Abilities: A266 (Zähmung - Grand Master), Hotkey (Hotkey - Normal)
 {
 A
 }
@@ -46474,29 +46474,29 @@ Errichtet einen Käfig.
 STRING 11423
 // Items: I19S (Tiny Cage), Ubertip (Tooltip - Extended)
 {
-Creates a Käfig at a target location. Bezauberunged targets will be duplicated per Käfig in range.
+Errichtet einen Käfig am Zielort. Bezauberungs-Ziele werden pro Käfig in Reichweite verdoppelt.
 }
 
 STRING 11425
 // Abilities: A265 (Item Mass Charm), Name (Name)
 {
-Item Massenbezauberung
+Gegestand Massenbezauberung
 }
 
 STRING 11426
-// Abilities: A266 (Taming - Grand Master), Name (Name)
+// Abilities: A266 (Zähmung - Grand Master), Name (Name)
 {
-Taming - Großmeister
+Zähmung - Großmeister
 }
 
 STRING 11427
-// Abilities: A266 (Taming - Grand Master), Tip (Tooltip - Normal)
+// Abilities: A266 (Zähmung - Grand Master), Tip (Tooltip - Normal)
 {
-Großmeister Taming
+Großmeister-Zähmung
 }
 
 STRING 11428
-// Abilities: A266 (Taming - Grand Master), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A266 (Zähmung - Grand Master), Ubertip (Tooltip - Normal - Extended)
 {
 Der Dompteur nutzt sein Wissen, um eine Rolle der Bezauberung herzustellen.
 }
@@ -46514,19 +46514,19 @@ STRING 11430
 }
 
 STRING 11431
-// Abilities: A268 (Taming - Doctor), Name (Name)
+// Abilities: A268 (Zähmung - Doctor), Name (Name)
 {
-Taming - Doctor
+Zähmung - Doktor
 }
 
 STRING 11432
-// Abilities: A268 (Taming - Doctor), Tip (Tooltip - Normal)
+// Abilities: A268 (Zähmung - Doctor), Tip (Tooltip - Normal)
 {
-Doctor Taming
+Doktor-Zähmung
 }
 
 STRING 11433
-// Abilities: A268 (Taming - Doctor), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A268 (Zähmung - Doctor), Ubertip (Tooltip - Normal - Extended)
 {
 The Tamer uses his knowledge to craft a Tiny Käfig.
 }
@@ -46564,7 +46564,7 @@ Kobold Tunnel
 STRING 11441
 // Abilities: A096 (Reveal), Ubertip (Tooltip - Normal - Extended)
 {
-Reveals an area of the map. |nDetects invisible units. |nHält <A096,Dur1> Sekunden lang an.
+Enthüllt ein Gebiet auf der Karte. |nDeckt unsichtbare Einheiten auf. |nHält <A096,Dur1> Sekunden lang an.
 }
 
 STRING 11442
@@ -46582,13 +46582,13 @@ Lich-König beschwören
 STRING 11444
 // Items: I0L1 (Tamer), Ubertip (Tooltip - Extended)
 {
-Tames creeps which allows you controlling them permanently:|n- Kleiner Köder|n- Köder|n- Hoch entwickelter Köder|n- Monsterköder|n- Rolle der Bezauberung|n- Winziger Käfig
+Zähmt Unholde, was Ihnen erlaubt, sie dauerhaft zu steuern:|n- Kleiner Köder|n- Köder|n- Hoch entwickelter Köder|n- Monsterköder|n- Rolle der Bezauberung|n- Winziger Käfig
 }
 
 STRING 11445
 // Units: n039 (Book of Summoning Pedestal), Ubertip (Tooltip - Extended)
 {
-Allows summoning Höllenbesties from the sky. |n|n|cffffcc00Begrenzt auf 1.|r
+Ermöglicht es, Höllenbestien vom Himmel herbeizurufen. |n|n|cffffcc00Begrenzt auf 1.|r
 }
 
 STRING 11446
@@ -46858,7 +46858,7 @@ Dorne errichten
 STRING 11560
 // Units: o006 (Thorn), Ubertip (Tooltip - Extended)
 {
-Summons powerful Thorns.|n|n|cffffcc00Begrenzt auf 1.|r
+Beschwört mächtige Dornen.|n|n|cffffcc00Begrenzt auf 1.|r
 }
 
 STRING 11561
@@ -52094,7 +52094,7 @@ E
 }
 
 STRING 15224
-// Abilities: A196 (Taming - Adept), Hotkey (Hotkey - Normal)
+// Abilities: A196 (Zähmung - Adept), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -57809,7 +57809,7 @@ E
 }
 
 STRING 19909
-// Abilities: A191 (Taming - Novice), Hotkey (Hotkey - Normal)
+// Abilities: A191 (Zähmung - Novice), Hotkey (Hotkey - Normal)
 {
 N
 }
@@ -61040,7 +61040,7 @@ Festhaut erforschen
 }
 
 STRING 22363
-// Abilities: A194 (Taming - Advanced), Hotkey (Hotkey - Normal)
+// Abilities: A194 (Zähmung - Advanced), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -68371,7 +68371,7 @@ Y
 }
 
 STRING 29359
-// Upgrades: R04R (Hippogryph Taming), Hotkey (Hotkey)
+// Upgrades: R04R (Hippogryph Zähmung), Hotkey (Hotkey)
 {
 X
 }
@@ -70465,7 +70465,7 @@ STRING 31554
 }
 
 STRING 31555
-// Upgrades: R04I (Hippogryph Taming), Ubertip (Tooltip - Extended)
+// Upgrades: R04I (Hippogryph Zähmung), Ubertip (Tooltip - Extended)
 {
 Trains War Eagles to allow Bogenschützinnen to mount them. This allows them to attack both air and ground units.
 }
@@ -70483,13 +70483,13 @@ STRING 31557
 }
 
 STRING 31558
-// Upgrades: R04R (Hippogryph Taming), Name (Name)
+// Upgrades: R04R (Hippogryph Zähmung), Name (Name)
 {
 Drachenfalken-Zähmung
 }
 
 STRING 31559
-// Upgrades: R04R (Hippogryph Taming), Tip (Tooltip)
+// Upgrades: R04R (Hippogryph Zähmung), Tip (Tooltip)
 {
 Drachenfalken-Zähmung erforschen
 }
@@ -70507,7 +70507,7 @@ X
 }
 
 STRING 31562
-// Upgrades: R04R (Hippogryph Taming), Ubertip (Tooltip - Extended)
+// Upgrades: R04R (Hippogryph Zähmung), Ubertip (Tooltip - Extended)
 {
 Trains Dragonhawks to allow Bogenschützinnen to mount them. This allows them to attack both air and ground units.
 }
@@ -70903,7 +70903,7 @@ Djinn
 }
 
 STRING 32016
-// Abilities: A268 (Taming - Doctor), Hotkey (Hotkey - Normal)
+// Abilities: A268 (Zähmung - Doctor), Hotkey (Hotkey - Normal)
 {
 S
 }
@@ -77989,25 +77989,25 @@ Winzige Burg
 }
 
 STRING 35789
-// Items: I0L3 (Book of Taming), Name (Name)
+// Items: I0L3 (Book of Zähmung), Name (Name)
 {
 Buch der Zähmung
 }
 
 STRING 35790
-// Items: I0L3 (Book of Taming), Description (Description)
+// Items: I0L3 (Book of Zähmung), Description (Description)
 {
 A book that contains knowledge of taming wild creatures.
 }
 
 STRING 35791
-// Items: I0L3 (Book of Taming), Ubertip (Tooltip - Extended)
+// Items: I0L3 (Book of Zähmung), Ubertip (Tooltip - Extended)
 {
 A book that contains knowledge of taming wild creatures.
 }
 
 STRING 35792
-// Items: I0L3 (Book of Taming), Tip (Tooltip - Basic)
+// Items: I0L3 (Book of Zähmung), Tip (Tooltip - Basic)
 {
 Buch der Zähmung erwerben
 }
@@ -78037,25 +78037,25 @@ Bezauberungs a creep with a base level up to 3.
 }
 
 STRING 35797
-// Abilities: A190 (Taming), Name (Name)
+// Abilities: A190 (Zähmung), Name (Name)
 {
 Zähmung
 }
 
 STRING 35798
-// Abilities: A191 (Taming - Novice), Name (Name)
+// Abilities: A191 (Zähmung - Novice), Name (Name)
 {
 Zähmung - Novize
 }
 
 STRING 35799
-// Abilities: A191 (Taming - Novice), Tip (Tooltip - Normal)
+// Abilities: A191 (Zähmung - Novice), Tip (Tooltip - Normal)
 {
-Novize Taming
+Novize Zähmung
 }
 
 STRING 35800
-// Abilities: A191 (Taming - Novice), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A191 (Zähmung - Novice), Ubertip (Tooltip - Normal - Extended)
 {
 The Tamer uses his knowledge to craft a Small Bait.
 }
@@ -78133,15 +78133,15 @@ STRING 35814
 }
 
 STRING 35815
-// Abilities: A194 (Taming - Advanced), Name (Name)
+// Abilities: A194 (Zähmung - Advanced), Name (Name)
 {
-Taming - Advanced
+Zähmung - Advanced
 }
 
 STRING 35816
-// Abilities: A194 (Taming - Advanced), Tip (Tooltip - Normal)
+// Abilities: A194 (Zähmung - Advanced), Tip (Tooltip - Normal)
 {
-Advanced Taming
+Advanced Zähmung
 }
 
 STRING 35819
@@ -78151,37 +78151,37 @@ STRING 35819
 }
 
 STRING 35820
-// Abilities: A196 (Taming - Adept), Name (Name)
+// Abilities: A196 (Zähmung - Adept), Name (Name)
 {
-Taming - Adept
+Zähmung - Adept
 }
 
 STRING 35821
-// Abilities: A196 (Taming - Adept), Tip (Tooltip - Normal)
+// Abilities: A196 (Zähmung - Adept), Tip (Tooltip - Normal)
 {
-Adept Taming
+Adept Zähmung
 }
 
 STRING 35822
-// Abilities: A196 (Taming - Adept), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A196 (Zähmung - Adept), Ubertip (Tooltip - Normal - Extended)
 {
 The Farmer uses his knowledge to create an Advanced Bait.
 }
 
 STRING 35823
-// Abilities: A197 (Taming - Master), Name (Name)
+// Abilities: A197 (Zähmung - Master), Name (Name)
 {
-Taming - Meister
+Zähmung - Meister
 }
 
 STRING 35824
-// Abilities: A197 (Taming - Master), Tip (Tooltip - Normal)
+// Abilities: A197 (Zähmung - Master), Tip (Tooltip - Normal)
 {
-Meister Taming
+Meister Zähmung
 }
 
 STRING 35825
-// Abilities: A197 (Taming - Master), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A197 (Zähmung - Master), Ubertip (Tooltip - Normal - Extended)
 {
 The Tamer uses his knowledge to create a Monsterköder.
 }
@@ -95619,7 +95619,7 @@ K
 STRING 42841
 // Abilities: A1L6 (+1 Agility), Tip (Tooltip - Normal)
 {
-+1 Agility
++1 Beweglichkeit
 }
 
 STRING 42843
@@ -122494,19 +122494,19 @@ Wählt den ersten Helden neu aus.
 STRING 59698
 // Abilities: A0C7 (Paint Red), Ubertip (Tooltip - Normal - Extended)
 {
-Paints red.|n|n|cffffcc00All colors are limited to 10 in total.|r
+Malt rot.|n|n|cffffcc00Alle Farben sind auf insgesamt 10 begrenzt.|r
 }
 
 STRING 59699
 // Abilities: A0C9 (Paint Blue), Ubertip (Tooltip - Normal - Extended)
 {
-Paints blue.|n|n|cffffcc00All colors are limited to 10 in total.|r
+Malt blau.|n|n|cffffcc00Alle Farben sind auf insgesamt 10 begrenzt.|r
 }
 
 STRING 59700
 // Abilities: A0CA (Paint Yellow), Ubertip (Tooltip - Normal - Extended)
 {
-Paints yellow. |n|n|cffffcc00All colors are limited to 10 in total.|r
+Malt gelb. |n|n|cffffcc00Alle Farben sind auf insgesamt 10 begrenzt.|r
 }
 
 STRING 59703
@@ -122524,7 +122524,7 @@ STRING 59704
 STRING 59705
 // Abilities: A01X (Water Spell - Crushing Wave), Name (Name)
 {
-Water Spell - Schmetterwelle
+Wasserzauber - Schmetterwelle
 }
 
 STRING 59706
@@ -123566,19 +123566,19 @@ Mounts a War Eagle so that the Archer can attack from the air. |n|n|cffffcc00Gre
 }
 
 STRING 61872
-// Upgrades: R04I (Hippogryph Taming), EditorSuffix (Editor Suffix)
+// Upgrades: R04I (Hippogryph Zähmung), EditorSuffix (Editor Suffix)
 {
 (Hochelfen)
 }
 
 STRING 61873
-// Upgrades: R04I (Hippogryph Taming), Name (Name)
+// Upgrades: R04I (Hippogryph Zähmung), Name (Name)
 {
 Kriegsadler-Zähmung
 }
 
 STRING 61874
-// Upgrades: R04I (Hippogryph Taming), Tip (Tooltip)
+// Upgrades: R04I (Hippogryph Zähmung), Tip (Tooltip)
 {
 Kriegsadler-Zähmung erforschen
 }
@@ -123770,7 +123770,7 @@ Erzkleriker-Meisterausbildung
 }
 
 STRING 62120
-// Upgrades: R04R (Hippogryph Taming), EditorSuffix (Editor Suffix)
+// Upgrades: R04R (Hippogryph Zähmung), EditorSuffix (Editor Suffix)
 {
 (Hochelfen)
 }
