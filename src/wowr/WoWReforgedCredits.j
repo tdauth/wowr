@@ -13,7 +13,6 @@ private function Init takes nothing returns nothing
     call AddCredit("Toasty Toast UwU: Tests.")
     call AddCredit("Lissai: Tests.")
     call AddCredit("Deranor: Tests.")
-    call AddCredit("Axxa's World of Warcraft Logo Creator: Logo.")
     call AddCredit("Wowpedia: Most of the lore.")
     call AddCredit("Jason Hayes, Glenn Stafford: A Call to Arms")
     call AddCredit("Vexorian: SimError")

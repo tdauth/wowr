@@ -237,7 +237,6 @@ Playing Warcraft III can be played on Ubuntu using Steam, adding it as non-Steam
 * Toasty Toast UwU: Tests.
 * Lissai: Tests.
 * Deranor: Tests.
-* Axxa's World of Warcraft Logo Creator: Logo.
 * [Wowpedia](https://wowpedia.fandom.com/): Most of the lore.
 * Jason Hayes, Glenn Stafford: [A Call to Arms](https://web.archive.org/web/20030403125739/http://ftp.blizzard.com/pub/war3/mp3s/Warcraft-ACallToArms.zip)
 * Vexorian: [SimError](http://www.wc3c.net/showthread.php?t=101260)

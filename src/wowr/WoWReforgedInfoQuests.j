@@ -92,7 +92,7 @@ private function AddTauntsQuestItems takes nothing returns nothing
 endfunction
 
 private function Init takes nothing returns nothing
-    call AddInfoQuest(GetLocalizedStringSafe("IQ_MAP_TITLE"), GetLocalizedStringSafe("IQ_MAP_DESCRIPTION"), "ReplaceableTextures\\CommandButtons\\BTNLogo.blp")
+    call AddInfoQuest(GetLocalizedStringSafe("IQ_MAP_TITLE"), GetLocalizedStringSafe("IQ_MAP_DESCRIPTION"), "ReplaceableTextures\\CommandButtons\\BTNSelectHeroOn.blp")
     call AddInfoQuestItem(GetLocalizedStringSafe("IQ_MAP_0"))
     call AddInfoQuestItem(GetLocalizedStringSafe("IQ_MAP_1"))
     call AddInfoQuestItem(GetLocalizedStringSafe("IQ_MAP_2"))
