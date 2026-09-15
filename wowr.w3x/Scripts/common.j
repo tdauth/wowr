@@ -754,8 +754,8 @@ globals
     constant unitevent EVENT_UNIT_HIDDEN                                = ConvertUnitEvent(56)
     constant unitevent EVENT_UNIT_SELECTED                              = ConvertUnitEvent(57)
     constant unitevent EVENT_UNIT_DESELECTED                            = ConvertUnitEvent(58)
-                                                                        
-    constant unitevent EVENT_UNIT_STATE_LIMIT                           = ConvertUnitEvent(59)                                                                        
+
+    constant unitevent EVENT_UNIT_STATE_LIMIT                           = ConvertUnitEvent(59)
 
     // Events which may have a filter for the "other unit"
     //

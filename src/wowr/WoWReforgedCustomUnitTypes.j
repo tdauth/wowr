@@ -1,4 +1,4 @@
-library WoWReforgedCustomUnitTypes initializer Init requires CustomUnitTypes, UnitGroupRespawn, UnitGroupRespawnConfig, WoWReforgedAutoSkill, WoWReforgedPortals, WoWReforgedHeroes, WoWReforgedBosses, WoWReforgedRaces, WoWReforgedProfessions, WoWReforgedResources, WoWReforgedProperties, WoWReforgedSkins, WoWReforgedArmory, WoWReforgedTaverns, WoWReforgedSummonedUnits, WoWReforgedGaia, WoWReforgedChests, WoWReforegdHideout, WoWReforgedTrainer, WoWReforgedProfessionFarmer, WoWReforgedProfessionHunter, WoWReforgedCommandButtons, WoWReforgedGoldMines, WoWReforgedLevers, WoWReforgedRandomCorpse, WoWReforgedProfessionBooksShop, WoWReforgedSceptersShop, WoWReforgedBanners, WoWReforgedVIPs, WoWReforgedAlchemistLab, WoWReforgedMounts, WoWReforgedCraftingStash, WoWReforgedRaceDwarf, WoWReforgedMapData
+library WoWReforgedCustomUnitTypes initializer Init requires CustomUnitTypes, UnitGroupRespawn, UnitGroupRespawnConfig, WoWReforgedAutoSkill, WoWReforgedPortals, WoWReforgedHeroes, WoWReforgedBosses, WoWReforgedRaces, WoWReforgedProfessions, WoWReforgedResources, WoWReforgedProperties, WoWReforgedSkins, WoWReforgedArmory, WoWReforgedTaverns, WoWReforgedSummonedUnits, WoWReforgedGaia, WoWReforgedChests, WoWReforegdHideout, WoWReforgedTrainer, WoWReforgedProfessionFarmer, WoWReforgedProfessionHunter, WoWReforgedCommandButtons, WoWReforgedGoldMines, WoWReforgedLevers, WoWReforgedRandomCorpse, WoWReforgedProfessionBooksShop, WoWReforgedSceptersShop, WoWReforgedBanners, WoWReforgedVIPs, WoWReforgedAlchemistLab, WoWReforgedMounts, WoWReforgedCraftingStash, WoWReforgedRaceDwarf, WoWReforgedRaceTroll, WoWReforgedMapData
 
 private function AddCustomMine takes unit whichUnit returns nothing
     local integer index = GetMineTypeIndex(GetUnitTypeId(whichUnit))
@@ -313,6 +313,22 @@ private struct CustomUnitTypeDwarfLumberMill extends CustomUnitType
 
 endstruct
 
+private struct CustomUnitTypeTrollArena extends CustomUnitType
+
+    public stub method onEnter takes unit whichUnit returns nothing
+        call AddTrollArena(whichUnit)
+    endmethod
+
+    public stub method onDeath takes unit whichUnit returns nothing
+        call RemoveTrollArena(whichUnit)
+    endmethod
+
+    public stub method onRemove takes unit whichUnit returns nothing
+        call RemoveTrollArena(whichUnit)
+    endmethod
+
+endstruct
+
 private struct CustomUnitTypeAddTentacle extends CustomUnitType
 
     public stub method onEnter takes unit whichUnit returns nothing
@@ -530,6 +546,9 @@ private function Init takes nothing returns nothing
 
     // Race Dwarf
     call AddCustomUnitType(DWARF_LUMBER_MILL, CustomUnitTypeDwarfLumberMill.create())
+
+    // Race Troll
+    call AddCustomUnitType(TROLL_ARENA, CustomUnitTypeTrollArena.create())
 
     set c = CustomUnitTypeAddTentacle.create()
     call AddCustomUnitType(TENTACLE_CTHUN, c)

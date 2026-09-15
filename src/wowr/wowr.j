@@ -135,6 +135,7 @@
 //! import "wowr/WoWReforgedRaceLimits.j"
 //! import "wowr/WoWReforgedRaceNightElf.j"
 //! import "wowr/WoWReforgedRaces.j"
+//! import "wowr/WoWReforgedRaceTroll.j"
 //! import "wowr/WoWReforgedRaceUnits.j"
 //! import "wowr/WoWReforgedRacing.j"
 //! import "wowr/WoWReforgedRandomCorpse.j"
