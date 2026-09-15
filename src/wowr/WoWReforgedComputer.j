@@ -95,7 +95,7 @@ private function EnumAutoCraft takes nothing returns nothing
     endif
 endfunction
 
-private function ComputerAIAutoCraft takes nothing returns nothing
+function ComputerAIAutoCraft takes nothing returns nothing
     call ForForce(computerLobbyPlayers, function EnumAutoCraft)
 endfunction
 

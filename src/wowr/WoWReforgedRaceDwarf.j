@@ -8,6 +8,7 @@ globals
     private hashtable h = InitHashtable()
     private timer t = CreateTimer()
     private group lumberMills = CreateGroup()
+    private trigger castTrigger = CreateTrigger()
 endglobals
 
 private function EnumPickFirstLivingTreeInCircleFilter takes nothing returns boolean
@@ -66,8 +67,29 @@ function RemoveDwarfLumberMill takes unit whichUnit returns nothing
     endif
 endfunction
 
+private function TriggerConditionCast takes nothing returns boolean
+    if (GetSpellAbilityId() == 'A0EL') then // Sleep Form
+        if (GetUnitTypeId(GetTriggerUnit()) == 'n04X') then // Start
+            call SetUnitAnimation(GetTriggerUnit(), "sleep")
+        elseif (GetUnitTypeId(GetTriggerUnit()) == 'n052') then // End
+            call SetUnitAnimation(GetTriggerUnit(), "stand" )
+        endif
+    elseif (GetSpellAbilityId() == 'A0E0') then // Breeding Form
+        if (GetUnitTypeId(GetTriggerUnit()) == 'n04V') then // Start
+            call SetUnitAnimation(GetTriggerUnit(), "upgrade first")
+        elseif (GetUnitTypeId(GetTriggerUnit()) == 'n04Y') then // End
+            call SetUnitAnimation(GetTriggerUnit(), "stand alternate")
+            call UnitRemoveAbility(GetTriggerUnit(), 'ARal')
+        endif
+    endif
+    return false
+endfunction
+
 private function Init takes nothing returns nothing
     set filter = Filter(function EnumPickFirstLivingTreeInCircleFilter)
+
+    call TriggerRegisterAnyUnitEventBJ(castTrigger, EVENT_PLAYER_UNIT_SPELL_CAST)
+    call TriggerAddCondition(castTrigger, Condition(function TriggerConditionCast))
 endfunction
 
 endlibrary
