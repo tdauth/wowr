@@ -4682,6 +4682,7 @@ globals
     constant integer DWARF_MINE                                      = 'u011' // mine
     constant integer DWARF_MINE_2                                    = 'u00Z'
     constant integer DWARF_MINE_3                                    = 'u010'
+    constant integer DWARF_MINE_AI                                   = 'u00Y'
     constant integer DWARF_SHIPYARD                                  = 'h038'
 
     constant integer DWARF_MINER                                     = 'h02Q' // worker
@@ -6766,7 +6767,7 @@ globals
     constant integer SAMURO                                          = 'Osam'
     // Undead
     constant integer DARK_RANGER                                     = 'Nbrn'
-    constant integer FORSAKEN_PALADIN                                = 'Npal'
+    constant integer FORSAKEN_PALADIN                                = 'Npal' // Forsaken Kingdom
     constant integer NECROMANCER_HERO                                = 'U013'
     constant integer ABOMINATION_HERO                                = 'U01G'
     constant integer BANSHEE_HERO                                    = 'U01F'

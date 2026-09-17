@@ -411,7 +411,7 @@ private function EnumAITechnologies takes nothing returns nothing
     // Only AI Undead goldmine
     call SetPlayerUnitAvailableBJ('u00O', false, GetEnumPlayer())
     // Only AI Dwarf goldmine
-    call SetPlayerUnitAvailableBJ('u00Y', false, GetEnumPlayer())
+    call SetPlayerUnitAvailableBJ(DWARF_MINE_AI, false, GetEnumPlayer())
 endfunction
 
 private function EnumUserTechnologies takes nothing returns nothing

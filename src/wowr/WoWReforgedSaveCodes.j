@@ -1,4 +1,4 @@
-library WoWReforgedSaveCodes requires OpLimit, StringUtils, ForceUtils, MaxHpResearch, SaveCodes, WoWReforgedSaveCodeObjects, WoWReforgedUtils, WoWReforgedMapData, WoWReforgedResources, WoWReforgedEquipmentBags, WoWReforgedHeroJourney, WoWReforgedEvolution, WoWReforgedDemigod, WoWReforgedDependencyEquivalents, WoWReforgedRaces, WoWReforgedProfessions, WoWReforgedItems, WoWReforgedTradingPosts, WoWReforgedPortals, WoWReforgedAntimagicWards, WoWReforgedBanners, WoWReforgedSkins, WoWReforgedRecordPlayer, WoWReforgedSaveMaster, WoWReforgedPowerGenerators
+library WoWReforgedSaveCodes requires OpLimit, StringUtils, ForceUtils, MaxHpResearch, SaveCodes, WoWReforgedSaveCodeObjects, WoWReforgedUtils, WoWReforgedMapData, WoWReforgedResources, WoWReforgedEquipmentBags, WoWReforgedHeroJourney, WoWReforgedEvolution, WoWReforgedDemigod, WoWReforgedDependencyEquivalents, WoWReforgedRaces, WoWReforgedProfessions, WoWReforgedItems, WoWReforgedTradingPosts, WoWReforgedPortals, WoWReforgedAntimagicWards, WoWReforgedBanners, WoWReforgedSkins, WoWReforgedRecordPlayer, WoWReforgedSaveMaster, WoWReforgedPowerGenerators, WoWReforgedRaceOgre
 
 globals
     constant integer SAVE_CODE_INDEX_TYPE = 0
@@ -2397,8 +2397,7 @@ function ApplySaveCodeResearches takes player whichPlayer, string s returns bool
 
             if (atLeastOne) then
                 call AddGeneratedSaveCode(s)
-                set udg_TmpPlayer = whichPlayer
-                call ConditionalTriggerExecute(gg_trg_Ogre_Update_Captured_Black_Drakes)
+                call UpdateAllCapturedBlackDrakes(whichPlayer)
                 set udg_TmpPlayer = whichPlayer
                 call ConditionalTriggerExecute(gg_trg_Dragonkin_Update_Black_Dragons)
             endif

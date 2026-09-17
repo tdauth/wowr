@@ -1,4 +1,4 @@
-library WoWReforgedRaceDwarf initializer Init requires MathUtils, TreeUtils
+library WoWReforgedRaceDwarf initializer Init requires MathUtils, TreeUtils, OnUnitRemoval
 
 globals
     private boolexpr filter = null
@@ -8,7 +8,11 @@ globals
     private hashtable h = InitHashtable()
     private timer t = CreateTimer()
     private group lumberMills = CreateGroup()
+    private group runeOfRebirthTargets = CreateGroup()
     private trigger castTrigger = CreateTrigger()
+    private trigger deathTrigger = CreateTrigger()
+    private trigger anyCastTrigger = CreateTrigger()
+    private trigger anyUpgradeTrigger = CreateTrigger()
 endglobals
 
 private function EnumPickFirstLivingTreeInCircleFilter takes nothing returns boolean
@@ -67,6 +71,30 @@ function RemoveDwarfLumberMill takes unit whichUnit returns nothing
     endif
 endfunction
 
+function AddDwarfMineShaft takes unit whichUnit returns nothing
+    call SetResourceAmount(whichUnit, 1000000)
+endfunction
+
+function RemoveDwarfMineShaft takes unit whichUnit returns nothing
+    call ReplaceUnitBJ(whichUnit, 'ngol', bj_UNIT_STATE_METHOD_DEFAULTS )
+    call SetUnitOwner(GetLastReplacedUnitBJ(), Player(PLAYER_NEUTRAL_PASSIVE), true)
+    call SetResourceAmount(GetLastReplacedUnitBJ(), 1000000)
+endfunction
+
+private function RuneOfRebirth takes unit caster, unit target returns nothing
+    if (not IsUnitInGroup(target, runeOfRebirthTargets)) then
+        if (not IsUnitType(target, UNIT_TYPE_RESISTANT)) then
+            call GroupAddUnit(runeOfRebirthTargets, target)
+        else
+            call IssueImmediateOrder(caster, "stop")
+            call SimError(GetOwningPlayer(caster), GetLocalizedString("INVALID_TARGET"))
+        endif
+    else
+        call IssueImmediateOrder(caster, "stop" )
+        call SimError(GetOwningPlayer(caster), GetLocalizedString("INVALID_TARGET"))
+    endif
+endfunction
+
 private function TriggerConditionCast takes nothing returns boolean
     if (GetSpellAbilityId() == 'A0EL') then // Sleep Form
         if (GetUnitTypeId(GetTriggerUnit()) == 'n04X') then // Start
@@ -81,8 +109,40 @@ private function TriggerConditionCast takes nothing returns boolean
             call SetUnitAnimation(GetTriggerUnit(), "stand alternate")
             call UnitRemoveAbility(GetTriggerUnit(), 'ARal')
         endif
+    elseif (GetSpellAbilityId() == 'A0EE') then // Rune of Rebirth
+        call RuneOfRebirth(GetTriggerUnit(), GetSpellTargetUnit())
     endif
     return false
+endfunction
+
+private function TriggerConditionDeath takes nothing returns boolean
+    if (IsUnitInGroup(GetTriggerUnit(), runeOfRebirthTargets)) then
+        call GroupRemoveUnit(runeOfRebirthTargets, GetTriggerUnit())
+        call UnitDropItem(GetTriggerUnit(), 'rreb')
+    endif
+    return false
+endfunction
+
+private function IsDwarfMineShaft takes integer unitTypeId returns boolean
+    return unitTypeId == DWARF_MINE_AI or unitTypeId == DWARF_HOUSING or unitTypeId == DWARF_MINE_2 or unitTypeId == DWARF_MINE_3
+endfunction
+
+private function TriggerConditionAnyCast takes nothing returns boolean
+    if ((GetSpellAbilityId() == 'S00H' or GetSpellAbilityId() == 'S00I') and IsDwarfMineShaft(GetUnitTypeId(GetTriggerUnit()))) then // Dwarf Mine Chaos
+        call AddDwarfMineShaft(GetTriggerUnit())
+    endif
+    return false
+endfunction
+
+private function TriggerConditionAnyUpgrade takes nothing returns boolean
+    if (IsDwarfMineShaft(GetUnitTypeId(GetTriggerUnit()))) then
+        call AddDwarfMineShaft(GetTriggerUnit())
+    endif
+    return false
+endfunction
+
+private function HookRemoveUnit takes unit whichUnit returns nothing
+    call GroupRemoveUnit(runeOfRebirthTargets, GetTriggerUnit())
 endfunction
 
 private function Init takes nothing returns nothing
@@ -90,6 +150,26 @@ private function Init takes nothing returns nothing
 
     call TriggerRegisterAnyUnitEventBJ(castTrigger, EVENT_PLAYER_UNIT_SPELL_CAST)
     call TriggerAddCondition(castTrigger, Condition(function TriggerConditionCast))
+
+    call TriggerRegisterAnyUnitEventBJ(deathTrigger, EVENT_PLAYER_UNIT_DEATH)
+    call TriggerAddCondition(deathTrigger, Condition(function TriggerConditionDeath))
+
+    call TriggerRegisterAnyUnitEventBJ(anyCastTrigger, EVENT_PLAYER_UNIT_SPELL_CHANNEL)
+    call TriggerRegisterAnyUnitEventBJ(anyCastTrigger, EVENT_PLAYER_UNIT_SPELL_CAST)
+    call TriggerRegisterAnyUnitEventBJ(anyCastTrigger, EVENT_PLAYER_UNIT_SPELL_EFFECT)
+    call TriggerRegisterAnyUnitEventBJ(anyCastTrigger, EVENT_PLAYER_UNIT_SPELL_FINISH)
+    call TriggerRegisterAnyUnitEventBJ(anyCastTrigger, EVENT_PLAYER_UNIT_SPELL_ENDCAST)
+    call TriggerAddCondition(anyCastTrigger, Condition(function TriggerConditionAnyCast))
+
+    call TriggerRegisterAnyUnitEventBJ(anyUpgradeTrigger, EVENT_PLAYER_UNIT_UPGRADE_START)
+    call TriggerRegisterAnyUnitEventBJ(anyUpgradeTrigger, EVENT_PLAYER_UNIT_UPGRADE_CANCEL)
+    call TriggerRegisterAnyUnitEventBJ(anyUpgradeTrigger, EVENT_PLAYER_UNIT_UPGRADE_FINISH)
+    call TriggerRegisterAnyUnitEventBJ(anyUpgradeTrigger, EVENT_PLAYER_UNIT_RESEARCH_FINISH)
+    call TriggerRegisterAnyUnitEventBJ(anyUpgradeTrigger, EVENT_PLAYER_UNIT_RESEARCH_START)
+    call TriggerRegisterAnyUnitEventBJ(anyUpgradeTrigger, EVENT_PLAYER_UNIT_RESEARCH_CANCEL)
+    call TriggerAddCondition(anyUpgradeTrigger, Condition(function TriggerConditionAnyUpgrade))
+
+    call OnUnitRemoval(HookRemoveUnit)
 endfunction
 
 endlibrary

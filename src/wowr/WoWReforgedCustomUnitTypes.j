@@ -313,6 +313,22 @@ private struct CustomUnitTypeDwarfLumberMill extends CustomUnitType
 
 endstruct
 
+private struct CustomUnitTypeDwarfMineShaft extends CustomUnitType
+
+    public stub method onEnter takes unit whichUnit returns nothing
+        call AddDwarfMineShaft(whichUnit)
+    endmethod
+
+    public stub method onDeath takes unit whichUnit returns nothing
+        call RemoveDwarfMineShaft(whichUnit)
+    endmethod
+
+    public stub method onRemove takes unit whichUnit returns nothing
+        call RemoveDwarfMineShaft(whichUnit)
+    endmethod
+
+endstruct
+
 private struct CustomUnitTypeTrollArena extends CustomUnitType
 
     public stub method onEnter takes unit whichUnit returns nothing
@@ -329,7 +345,15 @@ private struct CustomUnitTypeTrollArena extends CustomUnitType
 
 endstruct
 
-private struct CustomUnitTypeAddTentacle extends CustomUnitType
+private struct CustomUnitTypeCapturedBlackDrake extends CustomUnitType
+
+    public stub method onEnter takes unit whichUnit returns nothing
+        call AddCapturedBlackDrake(whichUnit)
+    endmethod
+
+endstruct
+
+private struct CustomUnitTypeTentacle extends CustomUnitType
 
     public stub method onEnter takes unit whichUnit returns nothing
         call AddTentacle(whichUnit)
@@ -546,11 +570,20 @@ private function Init takes nothing returns nothing
 
     // Race Dwarf
     call AddCustomUnitType(DWARF_LUMBER_MILL, CustomUnitTypeDwarfLumberMill.create())
+    set c = CustomUnitTypeDwarfMineShaft.create()
+    call AddCustomUnitType(DWARF_MINE_AI, c)
+    call AddCustomUnitType(DWARF_HOUSING, c)
+    call AddCustomUnitType(DWARF_MINE, c)
+    call AddCustomUnitType(DWARF_MINE_2, c)
+    call AddCustomUnitType(DWARF_MINE_3, c)
 
     // Race Troll
     call AddCustomUnitType(TROLL_ARENA, CustomUnitTypeTrollArena.create())
 
-    set c = CustomUnitTypeAddTentacle.create()
+    // Race Ogre
+    call AddCustomUnitType(OGRE_DRAKE, CustomUnitTypeCapturedBlackDrake.create())
+
+    set c = CustomUnitTypeTentacle.create()
     call AddCustomUnitType(TENTACLE_CTHUN, c)
     call AddCustomUnitType(TENTACLE_NZOTH, c)
     call AddCustomUnitType(TENTACLE_YOGG_SARON, c)
