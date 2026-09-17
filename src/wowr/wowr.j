@@ -133,6 +133,7 @@
 //! import "wowr/WoWReforgedRaceDwarf.j"
 //! import "wowr/WoWReforgedRaceHuman.j"
 //! import "wowr/WoWReforgedRaceLimits.j"
+//! import "wowr/WoWReforgedRaceMurloc.j"
 //! import "wowr/WoWReforgedRaceNightElf.j"
 //! import "wowr/WoWReforgedRaceOgre.j"
 //! import "wowr/WoWReforgedRaceOrc.j"

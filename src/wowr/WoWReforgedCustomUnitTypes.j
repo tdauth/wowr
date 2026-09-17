@@ -1,4 +1,4 @@
-library WoWReforgedCustomUnitTypes initializer Init requires CustomUnitTypes, UnitGroupRespawn, UnitGroupRespawnConfig, WoWReforgedAutoSkill, WoWReforgedPortals, WoWReforgedHeroes, WoWReforgedBosses, WoWReforgedRaces, WoWReforgedProfessions, WoWReforgedResources, WoWReforgedProperties, WoWReforgedSkins, WoWReforgedArmory, WoWReforgedTaverns, WoWReforgedSummonedUnits, WoWReforgedGaia, WoWReforgedChests, WoWReforegdHideout, WoWReforgedTrainer, WoWReforgedProfessionFarmer, WoWReforgedProfessionHunter, WoWReforgedCommandButtons, WoWReforgedGoldMines, WoWReforgedLevers, WoWReforgedRandomCorpse, WoWReforgedProfessionBooksShop, WoWReforgedSceptersShop, WoWReforgedBanners, WoWReforgedVIPs, WoWReforgedAlchemistLab, WoWReforgedMounts, WoWReforgedCraftingStash, WoWReforgedRaceDwarf, WoWReforgedRaceTroll, WoWReforgedMapData
+library WoWReforgedCustomUnitTypes initializer Init requires CustomUnitTypes, UnitGroupRespawn, UnitGroupRespawnConfig, WoWReforgedAutoSkill, WoWReforgedPortals, WoWReforgedHeroes, WoWReforgedBosses, WoWReforgedRaces, WoWReforgedProfessions, WoWReforgedResources, WoWReforgedProperties, WoWReforgedSkins, WoWReforgedArmory, WoWReforgedTaverns, WoWReforgedSummonedUnits, WoWReforgedGaia, WoWReforgedChests, WoWReforegdHideout, WoWReforgedTrainer, WoWReforgedProfessionFarmer, WoWReforgedProfessionHunter, WoWReforgedCommandButtons, WoWReforgedGoldMines, WoWReforgedLevers, WoWReforgedRandomCorpse, WoWReforgedProfessionBooksShop, WoWReforgedSceptersShop, WoWReforgedBanners, WoWReforgedVIPs, WoWReforgedAlchemistLab, WoWReforgedMounts, WoWReforgedCraftingStash, WoWReforgedRaceDwarf, WoWReforgedRaceTroll, WoWReforgedRaceMurloc, WoWReforgedMapData
 
 private function AddCustomMine takes unit whichUnit returns nothing
     local integer index = GetMineTypeIndex(GetUnitTypeId(whichUnit))
@@ -353,6 +353,25 @@ private struct CustomUnitTypeCapturedBlackDrake extends CustomUnitType
 
 endstruct
 
+private struct CustomUnitTypeMurloc extends CustomUnitType
+
+    public stub method onEnter takes unit whichUnit returns nothing
+        call AddMurlocRiverBank(whichUnit)
+        call AddMurlocSwarming(whichUnit)
+    endmethod
+
+    public stub method onDeath takes unit whichUnit returns nothing
+        call RemoveMurlocRiverBank(whichUnit)
+        call RemoveMurlocSwarming(whichUnit)
+    endmethod
+
+    public stub method onRemove takes unit whichUnit returns nothing
+        call RemoveMurlocRiverBank(whichUnit)
+        call RemoveMurlocSwarming(whichUnit)
+    endmethod
+
+endstruct
+
 private struct CustomUnitTypeTentacle extends CustomUnitType
 
     public stub method onEnter takes unit whichUnit returns nothing
@@ -582,6 +601,19 @@ private function Init takes nothing returns nothing
 
     // Race Ogre
     call AddCustomUnitType(OGRE_DRAKE, CustomUnitTypeCapturedBlackDrake.create())
+
+    // Race Murloc
+    set c = CustomUnitTypeMurloc.create()
+    call AddCustomUnitType(MURLOC_WORKER, c)
+    call AddCustomUnitType(MURLOC_TIDESRUNNER, c)
+    call AddCustomUnitType(MURLOC_HUNTER, c)
+    call AddCustomUnitType(MURLOC_FLESH_EATER, c)
+    call AddCustomUnitType(MURLOC_BUBBLE_MAGE, c)
+    call AddCustomUnitType(MURLOC_SHADOWCASTER, c)
+    call AddCustomUnitType(MURLOC_CULTIST, c)
+    call AddCustomUnitType(MURLOC_CITIZEN_MALE, c)
+    call AddCustomUnitType(MURLOC_CITIZEN_FEMALE, c)
+    call AddCustomUnitType(MURLOC_CHILD, c)
 
     set c = CustomUnitTypeTentacle.create()
     call AddCustomUnitType(TENTACLE_CTHUN, c)
