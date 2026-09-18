@@ -139,6 +139,7 @@
 //! import "wowr/WoWReforgedRaceOrc.j"
 //! import "wowr/WoWReforgedRaces.j"
 //! import "wowr/WoWReforgedRaceTroll.j"
+//! import "wowr/WoWReforgedRaceTuskarr.j"
 //! import "wowr/WoWReforgedRaceUndead.j"
 //! import "wowr/WoWReforgedRaceUnits.j"
 //! import "wowr/WoWReforgedRacing.j"

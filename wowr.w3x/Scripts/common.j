@@ -5578,6 +5578,7 @@ globals
     constant integer TUSKARR_ELITE_ARMORED_POLAR_BEAR                = 'n0FX' // elite siege engine
     constant integer TUSKARR_CHIEFTAIN                               = 'n0FF' // tauren
     constant integer TUSKARR_FISHING_BOAT                            = 'h0PU' // special ship 1
+    constant integer FISH_TRAP                                       = 'o065' // summoned from item
 
     constant integer TUSKARR_PET                                     = 'n0FH'
     constant integer TUSKARR_CITIZEN_FEMALE                          = 'n0FN'
