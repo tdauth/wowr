@@ -248,7 +248,6 @@ Playing Warcraft III can be played on Ubuntu using Steam, adding it as non-Steam
 * Dangerb0y: [Easy Item Stack 'n Split v2.7.4](https://www.hiveworkshop.com/threads/easy-item-stack-n-split-v2-7-4.153287/) as reference for the unstack and pickup item systems.
 * MeKC: [GetItemValue](https://www.hiveworkshop.com/threads/detecting-item-price.120355/#post-1045229) as reference for item gold and lumber value system.
 * Spellbound: [UnitEventEx](https://www.hiveworkshop.com/threads/uniteventex.306289/)
-* TriggerHappy: [UnitDex](https://www.hiveworkshop.com/threads/system-unitdex-unit-indexer.248209/)
 * Bannar: [RegisterNativeEvent/RegisterPlayerUnitEvent](https://www.hiveworkshop.com/threads/snippet-registerevent-pack.250266/)
 * Almia: [World Bounds v1.3](https://github.com/nestharus/JASS/blob/master/jass/Systems/WorldBounds/script.j)
 * Xetanth87: [I2S without natives for use in AI scripts](https://www.hiveworkshop.com/threads/i2s-without-natives-for-use-in-ai-scripts.348472/)

@@ -1,7 +1,8 @@
 /*
     UnitEventEx v1.03
     by Spellbound
-    Barade: Adapt to RegisterPlayerUnitEvent by Magtheridon96.
+
+    Barade: Modified to use RegisterPlayerUnitEvent by Magtheridon96 and Indexer by Chopinsk to avoid collisions with these used systems.
 
     Credits to Bribe for the excellent GUI Unit Event, of which this library is the vJASS
     version of. He was also helpful in understanding how his system works so that I may code this.
@@ -117,7 +118,7 @@
         returns a copy of the list of the units in the cargo of transporter.
         NB: you must destroy the list that is returned after you're done with it.
 */
-library UnitEventEx requires UnitDex, RegisterPlayerUnitEvent, optional ListT, WorldBounds
+library UnitEventEx requires Indexer, RegisterPlayerUnitEvent, optional ListT, WorldBounds
 globals
 
     // CONFIGURATION
@@ -189,7 +190,7 @@ native UnitAlive takes unit u returns boolean
 private function FireEvent takes integer ev, unit u, unit other returns nothing
     local integer playerId = GetPlayerId(GetOwningPlayer(u))
     local integer handleId = GetHandleId(u)
-    local integer id = GetUnitId(u)
+    local integer id = GetUnitUserData(u)
     local unit prevUnit = eventUnit
     local unit prevOther = eventOther
     local integer prevType = eventPreType
@@ -227,24 +228,24 @@ private struct Cargo
     endmethod
 
     static method remove takes unit u, unit transport returns nothing
-        local integer transport_id = GetUnitId(transport)
+        local integer transport_id = GetUnitUserData(transport)
         static if LIBRARY_ListT then
             call CargoList[transport_id].removeElem(u)
         else
             call GroupRemoveUnit(CargoGroup[transport_id], u)
         endif
-        set Transporter[GetUnitId(u)] = null
+        set Transporter[GetUnitUserData(u)] = null
         call FireEvent(EVENT_ON_CARGO_UNLOAD, u, transport)
     endmethod
 
     static method add takes unit u, unit transport returns nothing
-        local integer transport_id = GetUnitId(transport)
+        local integer transport_id = GetUnitUserData(transport)
         static if LIBRARY_ListT then
             call CargoList[transport_id].push(u)
         else
             call GroupAddUnit(CargoGroup[transport_id], u)
         endif
-        set Transporter[GetUnitId(u)] = transport
+        set Transporter[GetUnitUserData(u)] = transport
         call FireEvent(EVENT_ON_CARGO_LOAD, u, transport)
     endmethod
 
@@ -309,26 +310,25 @@ function GetCargoUnit takes nothing returns unit
     return eventOther
 endfunction
 function GetCargoSize takes unit transport returns integer
-    return Cargo.size(GetUnitId(transport))
+    return Cargo.size(GetUnitUserData(transport))
 endfunction
 function IsUnitInTransporter takes unit whichUnit returns boolean
-    return Transporter[GetUnitId(whichUnit)] != null
+    return Transporter[GetUnitUserData(whichUnit)] != null
 endfunction
 function GetUnitTransporter takes unit whichUnit returns unit
-    return Transporter[GetUnitId(whichUnit)]
+    return Transporter[GetUnitUserData(whichUnit)]
 endfunction
 function GetCargoTransportedUnitGroup takes unit transporter returns group
-    return Cargo.copyGroup(GetUnitId(transporter))
+    return Cargo.copyGroup(GetUnitUserData(transporter))
 endfunction
 static if LIBRARY_ListT then
     function GetCargoTransportedUnitList takes unit transporter returns UEExList
-        return Cargo.copyList(GetUnitId(transporter))
+        return Cargo.copyList(GetUnitUserData(transporter))
     endfunction
 endif
 
 private module UnitEventExCore
 
-    /*/* afterIndex */*/
     private static method afterIndex takes nothing returns nothing
         local integer i = Stack
         local integer id
@@ -337,7 +337,7 @@ private module UnitEventExCore
         loop
             exitwhen i < 0
             set u = IndexedUnit[i]
-            set id = GetUnitId(u)
+            set id = GetUnitUserData(u)
 
             if IsNew[id] then
                 set IsNew[id] = false
@@ -373,19 +373,15 @@ private module UnitEventExCore
         set u = null
     endmethod
 
-
-    /*/* timerCheck */*/
     private static method timerCheck takes unit u returns nothing
         set Stack = Stack + 1
         set IndexedUnit[Stack] = u
         call TimerStart(AfterIndexTimer, 0., false, function thistype.afterIndex)
     endmethod
 
-
-    /*/* unload */*/
     private static method unload takes unit u returns nothing
-        local integer id = GetUnitId(u)
-        local integer cargo_id = GetUnitId(CargoUnit[id])
+        local integer id = GetUnitUserData(u)
+        local integer cargo_id = GetUnitUserData(CargoUnit[id])
 
         call Cargo.remove(u, CargoUnit[id])
 
@@ -394,11 +390,9 @@ private module UnitEventExCore
         endif
     endmethod
 
-
-    /*/* onOrder */*/
     private static method onOrder takes nothing returns nothing
         local unit u = GetTriggerUnit()
-        local integer id = GetUnitId(u)
+        local integer id = GetUnitUserData(u)
 
             // onOrder occurs after onEnter
 
@@ -501,11 +495,9 @@ private module UnitEventExCore
         set u = null
     endmethod
 
-
-    /*/* onDeath */*/
     private static method onDeath takes nothing returns nothing
         local unit u = GetTriggerUnit()
-        local integer id = GetUnitId(u)
+        local integer id = GetUnitUserData(u)
 
         // This checks if the unit has been indexed.
         if id > 0 then
@@ -522,11 +514,9 @@ private module UnitEventExCore
         set u = null
     endmethod
 
-
-    /*/* onLoad */*/
     private static method onLoad takes nothing returns nothing
         local unit u = GetTriggerUnit()
-        local integer id = GetUnitId(u)
+        local integer id = GetUnitUserData(u)
         local integer cargo_id
 
         // if unit somehow loaded into a transport while being inside another, unload it
@@ -551,7 +541,7 @@ private module UnitEventExCore
         endif
 
         set CargoUnit[id] = GetTransportUnit()
-        set cargo_id = GetUnitId(CargoUnit[id])
+        set cargo_id = GetUnitUserData(CargoUnit[id])
 
         if not Cargo.exists(cargo_id) then
             call Cargo.create(cargo_id)
@@ -561,12 +551,10 @@ private module UnitEventExCore
         set u = null
     endmethod
 
-
-    /*/* onEnter */*/
     private static method onEnter takes nothing returns boolean
         local unit u = GetFilterUnit()
-        local integer id = GetUnitId(u)
-        local integer cargo_id = GetUnitId(CargoUnit[id])
+        local integer id = GetUnitUserData(u)
+        local integer cargo_id = GetUnitUserData(CargoUnit[id])
 
             // onEnter occurs AFTER onIndex
 
@@ -582,11 +570,9 @@ private module UnitEventExCore
         return false // Barade: Fix for Warsmash.
     endmethod
 
-
-    /*/* onIndex */*/
-    private static method onIndex takes nothing returns boolean
-        local unit u = GetIndexedUnit()
-        local integer id = GetUnitId(u)
+    private static method onIndex takes nothing returns nothing
+        local unit u = GetIndexUnit()
+        local integer id = GetUnitUserData(u)
 
             // onIndex occurs BEFORE onEnter
 
@@ -612,23 +598,17 @@ private module UnitEventExCore
         call thistype.timerCheck(u)
 
         set u = null
-
-        return false // Barade: Fix for Warsmash.
     endmethod
 
-
-    /*/* onDeindex */*/
-    private static method onDeindex takes nothing returns boolean
-        local unit u = GetIndexedUnit()
-        local integer id = GetUnitId(u)
+    private static method onDeindex takes nothing returns nothing
+        local unit u = GetIndexUnit()
+        local integer id = GetUnitUserData(u)
 
         if Cargo.exists(id) then
             call Cargo.delete(id)
         endif
 
         set u = null
-
-        return false // Barade: Fix for Warsmash.
     endmethod
 
 
@@ -672,11 +652,11 @@ private module UnitEventExCore
                 call RegisterPlayerUnitEvent(EVENT_PLAYER_UNIT_LOADED, function thistype.onLoad)
 
             endif
-            call RegisterUnitIndexEvent(Condition(function thistype.onDeindex), EVENT_UNIT_DEINDEX)
+            call RegisterUnitDeindexEvent(function thistype.onDeindex)
 
         endif
 
-        call RegisterUnitIndexEvent(Condition(function thistype.onIndex), EVENT_UNIT_INDEX)
+        call RegisterUnitIndexEvent(function thistype.onIndex)
 
         static if DETECT_TRANSFORM then
             set i = 0

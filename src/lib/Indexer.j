@@ -1,7 +1,9 @@
 library Indexer
     /*
+    Barade:
     RegisterUnitIndexEvent collides with UnitDex.
     GetIndexUnit collides with AIDS.
+    but both systems are not used anymore and replaced with this one.
     */
     /* ------------------------ Indexer v1.1 by Chopinski ----------------------- */
     // Simple unit indexer for version 1.31+
@@ -92,11 +94,9 @@ library Indexer
     /* -------------------------------------------------------------------------- */
     /*                                  JASS API                                  */
     /* -------------------------------------------------------------------------- */
-    /*
     function RegisterUnitIndexEvent takes code c returns nothing
         call TriggerAddCondition(Indexer.onIndex, Filter(c))
     endfunction
-    */
 
     function RegisterUnitDeindexEvent takes code c returns nothing
         call TriggerAddCondition(Indexer.onDeindex, Filter(c))

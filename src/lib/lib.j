@@ -37,7 +37,6 @@
 //! import "lib/TenacityUtils.j"
 //! import "lib/TerrainPathability.j"
 //! import "lib/TimerUtils.j"
-//! import "lib/UnitDex.j"
 //! import "lib/UnitEventEx.j"
 //! import "lib/Utilities.j"
 //! import "lib/WorldBounds.j"

@@ -29,6 +29,7 @@ private function Init takes nothing returns nothing
     call AddChange("Support Forsaken Kingdom.")
     call AddChange("Add hero Forsaken Paladin.")
     call AddChange("Remove custom logo.")
+    call AddChange("Replace UnitIndex which is a dependency of UnitEventEx with Indexer from NewBonus system to prevent bugs.")
     call AddChange("Register missing Goblin research Berserk Tank.")
     call AddChange("Add missing hotkey for unit Nerubian Queen.")
     call AddChange("Fix maximum movement speed of Heavy Tank for race Goblin.")
