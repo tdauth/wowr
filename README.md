@@ -11,6 +11,7 @@ Warcraft III: Reforged open world role-playing game and strategy map.
 | :---: | :---: |
 | <img src="images/QR_Code_Subscribe.png" alt="Subscribe" width="200" height="200" valign="top" /> | <img src="images/QR_Code_Donate.png" alt="Donate" width="200" height="200" valign="top" /> |
 
+* Or become a [Patreon](https://www.patreon.com/c/WoWReforged).
 * Send me your Battle.net ID on Discord after subscribing to get it unlocked with the next map release.
 * Discuss the map on its [Discord Server](https://discord.gg/eM34z36).
 
