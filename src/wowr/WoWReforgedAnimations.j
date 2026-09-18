@@ -3,49 +3,50 @@ library WoWReforgedAnimations initializer Init
 globals
     private trigger deathTrigger = CreateTrigger()
     private trigger damagedTrigger = CreateTrigger()
+    private trigger constructStartTrigger = CreateTrigger()
 endglobals
 
 private function TriggerConditionDeath takes nothing returns boolean
     local integer unitTypeId = GetUnitTypeId(GetTriggerUnit())
-    if (unitTypeId == 'u00A') then
+    if (unitTypeId == DEMON_DIMENSIONAL_GATE) then
         return true
-    elseif (unitTypeId == 'u009') then
+    elseif (unitTypeId == DEMON_FLOATING_ROCKS) then
         return true
-    elseif (unitTypeId == 'u00C') then
+    elseif (unitTypeId == DEMON_DUNGEON_OF_PAIN) then
         return true
-    elseif (unitTypeId == 'u00G') then
+    elseif (unitTypeId == DEMON_OBELISK) then
         return true
-    elseif (unitTypeId == 'h01R') then
+    elseif (unitTypeId == RESURRECTION_STONE) then
         return true
-    elseif (unitTypeId == 'e00D') then
+    elseif (unitTypeId == BLOOD_ELF_CAGE) then
         return true
     elseif (unitTypeId == GATE_CLOSED_HORIZONTAL) then
         return true
-    elseif (unitTypeId == 'h021') then
+    elseif (unitTypeId == GATE_OPEN_HORIZONTAL) then
         return true
-    elseif (unitTypeId == 'o019') then
+    elseif (unitTypeId == GOBLIN_HUT) then
         return true
-    elseif (unitTypeId == 'o00R') then
+    elseif (unitTypeId == GOBLIN_AIR_FIELD) then
         return true
-    elseif (unitTypeId == 'n05F') then
+    elseif (unitTypeId == HIGH_ELF_SUNWELL) then
         return true
-    elseif (unitTypeId == 'h0A9') then
+    elseif (unitTypeId == PANDAREN_WORKSHOP) then
         return true
-    elseif (unitTypeId == 'h0QH') then
+    elseif (unitTypeId == PANDAREN_BREWERY) then
         return true
-    elseif (unitTypeId == 'o00I') then
+    elseif (unitTypeId == NAGA_STATUE_OF_ASZHARA) then
         return true
     elseif (unitTypeId == 'n0DP') then
         return true
-    elseif (unitTypeId == 'h0P7') then
+    elseif (unitTypeId == VRYKUL_LAMP) then
         return true
     elseif (unitTypeId == 'n02Q') then
         return true
-    elseif (unitTypeId == 'N06C') then
+    elseif (unitTypeId == NZOTH) then
         return true
-    elseif (unitTypeId == 'N069') then
+    elseif (unitTypeId == YOGG_SARON) then
         return true
-    elseif (unitTypeId == 'N06E') then
+    elseif (unitTypeId == CTHUN) then
         return true
     endif
     return false
@@ -54,7 +55,7 @@ endfunction
 private function TriggerActionDeath takes nothing returns nothing
     local unit u = GetTriggerUnit()
     local integer unitTypeId = GetUnitTypeId(u)
-    if (unitTypeId == 'N06C' or unitTypeId == 'N069' or unitTypeId == 'N06E') then
+    if (unitTypeId == NZOTH or unitTypeId == YOGG_SARON or unitTypeId == CTHUN) then
         call SetUnitTimeScalePercent(u, 800.00 )
         call SetUnitAnimation(u, "decay")
         call TriggerSleepAction(2.0)
@@ -73,6 +74,18 @@ private function TriggerConditionDamaged takes nothing returns boolean
     return false
 endfunction
 
+private function TriggerConditionConstructStart takes nothing returns boolean
+    return GetUnitTypeId(GetTriggerUnit()) == DEMON_IMP or GetUnitTypeId(GetTriggerUnit()) == NERUBIAN_WORKER
+endfunction
+
+private function TriggerActionConstructStart takes nothing returns nothing
+    local unit triggerUnit = GetTriggerUnit()
+    call ResetUnitAnimation(triggerUnit)
+    call PolledWait(1.0)
+    call ResetUnitAnimation(triggerUnit)
+    set triggerUnit = null
+endfunction
+
 private function Init takes nothing returns nothing
     call TriggerRegisterAnyUnitEventBJ(deathTrigger, EVENT_PLAYER_UNIT_DEATH)
     call TriggerAddCondition(deathTrigger, Condition(function TriggerConditionDeath))
@@ -80,6 +93,10 @@ private function Init takes nothing returns nothing
 
     call TriggerRegisterAnyUnitEventBJ(damagedTrigger, EVENT_PLAYER_UNIT_DAMAGED)
     call TriggerAddCondition(damagedTrigger, Condition(function TriggerConditionDamaged))
+
+    call TriggerRegisterAnyUnitEventBJ(constructStartTrigger, EVENT_PLAYER_UNIT_CONSTRUCT_START)
+    call TriggerAddCondition(constructStartTrigger, Condition(function TriggerConditionConstructStart))
+    call TriggerAddAction(constructStartTrigger, function TriggerActionConstructStart)
 endfunction
 
 endlibrary

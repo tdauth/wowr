@@ -142,6 +142,7 @@
 //! import "wowr/WoWReforgedRaceTuskarr.j"
 //! import "wowr/WoWReforgedRaceUndead.j"
 //! import "wowr/WoWReforgedRaceUnits.j"
+//! import "wowr/WoWReforgedRaceVrykul.j"
 //! import "wowr/WoWReforgedRacing.j"
 //! import "wowr/WoWReforgedRandomCorpse.j"
 //! import "wowr/WoWReforgedRecreateHeroItems.j"

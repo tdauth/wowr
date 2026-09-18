@@ -404,6 +404,22 @@ private struct CustomUnitTypeBurialPlace extends CustomUnitType
 
 endstruct
 
+private struct CustomUnitTypeHallOfValor extends CustomUnitType
+
+    public stub method onEnter takes unit whichUnit returns nothing
+        call AddHallOfValor(whichUnit)
+    endmethod
+
+    public stub method onDeath takes unit whichUnit returns nothing
+        call RemoveHallOfValor(whichUnit)
+    endmethod
+
+    public stub method onRemove takes unit whichUnit returns nothing
+        call RemoveHallOfValor(whichUnit)
+    endmethod
+
+endstruct
+
 private struct CustomUnitTypeTentacle extends CustomUnitType
 
     public stub method onEnter takes unit whichUnit returns nothing
@@ -650,6 +666,9 @@ private function Init takes nothing returns nothing
     // Race Tuskarr
     call AddCustomUnitType(FISH_TRAP, CustomUnitTypeFishTrap.create())
     call AddCustomUnitType(TUSKARR_BURIAL_PLACE, CustomUnitTypeBurialPlace.create())
+
+    // Race Vrykul
+    call AddCustomUnitType(VRYKUL_HALL_OF_VALOR, CustomUnitTypeHallOfValor.create())
 
     set c = CustomUnitTypeTentacle.create()
     call AddCustomUnitType(TENTACLE_CTHUN, c)
