@@ -415,8 +415,8 @@ private function EnumAITechnologies takes nothing returns nothing
 endfunction
 
 private function EnumUserTechnologies takes nothing returns nothing
-    call SetPlayerTechResearchedSwap('R019', 0, GetEnumPlayer())
-    call SetPlayerTechResearchedSwap('R01C', 1, GetEnumPlayer())
+    call SetPlayerTechResearched(GetEnumPlayer(), 'R019', 0)
+    call SetPlayerTechResearched(GetEnumPlayer(), 'R01C', 1)
     // Only non-AI Undead goldmine
     call SetPlayerUnitAvailableBJ('ugol', false, GetEnumPlayer())
     // Only non-AI Dwarf goldmine

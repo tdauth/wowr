@@ -146,7 +146,7 @@ endfunction
 
 private function TriggerConditionResearchFinish takes nothing returns boolean
     if (GetResearched() == UPG_CHEAP_EVOLUTION) then
-        call SetPlayerTechResearchedSwap(UPG_EVOLUTION, GetPlayerTechCountSimple(GetResearched(), GetOwningPlayer(GetTriggerUnit())), GetOwningPlayer(GetTriggerUnit()))
+        call SetPlayerTechResearched(GetOwningPlayer(GetTriggerUnit()), UPG_EVOLUTION, GetPlayerTechCountSimple(GetResearched(), GetOwningPlayer(GetTriggerUnit())))
     elseif (GetResearched() == UPG_EVOLUTION) then
         call UpgradeEvolution(GetOwningPlayer(GetTriggerUnit()))
     endif

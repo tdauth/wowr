@@ -4553,6 +4553,8 @@ private function Init takes nothing returns nothing
     call AddAbility('A16I', 1, udg_RaceBloodElf)
     // GOBLIN
     call AddAbility('A0BA', 1, udg_RaceGoblin)
+    // TAUREN
+    call AddAbility('A1JJ', 1, udg_RaceTauren)
     // KUL TIRAS
     call AddAbility('A0RI', 1, udg_RaceKulTiras)
     call AddAbility('A0RJ', 1, udg_RaceKulTiras)

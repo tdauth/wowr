@@ -1,4 +1,4 @@
-library WoWReforgedCustomUnitTypes initializer Init requires CustomUnitTypes, UnitGroupRespawn, UnitGroupRespawnConfig, WoWReforgedAutoSkill, WoWReforgedPortals, WoWReforgedHeroes, WoWReforgedBosses, WoWReforgedRaces, WoWReforgedProfessions, WoWReforgedResources, WoWReforgedProperties, WoWReforgedSkins, WoWReforgedArmory, WoWReforgedTaverns, WoWReforgedSummonedUnits, WoWReforgedGaia, WoWReforgedChests, WoWReforegdHideout, WoWReforgedTrainer, WoWReforgedProfessionFarmer, WoWReforgedProfessionHunter, WoWReforgedCommandButtons, WoWReforgedGoldMines, WoWReforgedLevers, WoWReforgedRandomCorpse, WoWReforgedProfessionBooksShop, WoWReforgedSceptersShop, WoWReforgedBanners, WoWReforgedVIPs, WoWReforgedAlchemistLab, WoWReforgedMounts, WoWReforgedCraftingStash, WoWReforgedRaceDwarf, WoWReforgedRaceTroll, WoWReforgedRaceMurloc, WoWReforgedRaceTuskarr, WoWReforgedMapData
+library WoWReforgedCustomUnitTypes initializer Init requires CustomUnitTypes, UnitGroupRespawn, UnitGroupRespawnConfig, WoWReforgedAutoSkill, WoWReforgedPortals, WoWReforgedHeroes, WoWReforgedBosses, WoWReforgedRaces, WoWReforgedProfessions, WoWReforgedResources, WoWReforgedProperties, WoWReforgedSkins, WoWReforgedArmory, WoWReforgedTaverns, WoWReforgedSummonedUnits, WoWReforgedGaia, WoWReforgedChests, WoWReforegdHideout, WoWReforgedTrainer, WoWReforgedProfessionFarmer, WoWReforgedProfessionHunter, WoWReforgedCommandButtons, WoWReforgedGoldMines, WoWReforgedLevers, WoWReforgedRandomCorpse, WoWReforgedProfessionBooksShop, WoWReforgedSceptersShop, WoWReforgedBanners, WoWReforgedVIPs, WoWReforgedAlchemistLab, WoWReforgedMounts, WoWReforgedCraftingStash, WoWReforgedRaceDwarf, WoWReforgedRaceTroll, WoWReforgedRaceMurloc, WoWReforgedRaceTuskarr, WoWReforgedRaceTauren, WoWReforgedMapData
 
 private function AddCustomMine takes unit whichUnit returns nothing
     local integer index = GetMineTypeIndex(GetUnitTypeId(whichUnit))
@@ -329,6 +329,22 @@ private struct CustomUnitTypeDwarfMineShaft extends CustomUnitType
 
 endstruct
 
+private struct CustomUnitTypeTaurenPole extends CustomUnitType
+
+    public stub method onEnter takes unit whichUnit returns nothing
+        call AddTaurenPole(whichUnit)
+    endmethod
+
+    public stub method onDeath takes unit whichUnit returns nothing
+        call RemoveTaurenPole(whichUnit)
+    endmethod
+
+    public stub method onRemove takes unit whichUnit returns nothing
+        call RemoveTaurenPole(whichUnit)
+    endmethod
+
+endstruct
+
 private struct CustomUnitTypeTrollArena extends CustomUnitType
 
     public stub method onEnter takes unit whichUnit returns nothing
@@ -643,6 +659,9 @@ private function Init takes nothing returns nothing
     call AddCustomUnitType(DWARF_MINE, c)
     call AddCustomUnitType(DWARF_MINE_2, c)
     call AddCustomUnitType(DWARF_MINE_3, c)
+
+    // Race Tauren
+    call AddCustomUnitType(TAUREN_TOTEM_POLE, CustomUnitTypeTaurenPole.create())
 
     // Race Troll
     call AddCustomUnitType(TROLL_ARENA, CustomUnitTypeTrollArena.create())
