@@ -28,6 +28,8 @@ private function Init takes nothing returns nothing
     call AddVersion("4.7")
     call AddChange("Support Forsaken Kingdom.")
     call AddChange("Add hero Forsaken Paladin.")
+    call AddChange("Add class Priest.")
+    call AddChange("Add class VIP.")
     call AddChange("Remove custom logo.")
     call AddChange("Replace UnitIndex which is a dependency of UnitEventEx with Indexer from NewBonus system to prevent bugs.")
     call AddChange("Register missing Goblin research Berserk Tank.")

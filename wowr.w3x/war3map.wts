@@ -8268,6 +8268,12 @@ STRING 1389
 (Spell Book)
 }
 
+STRING 1390
+// Items: I03J (Priest), Name (Name)
+{
+Priest
+}
+
 STRING 1391
 // Units: n06Z (Engineer Item Stuff), Hotkey (Hotkey)
 {
@@ -8610,6 +8616,12 @@ STRING 1447
 M
 }
 
+STRING 1448
+// Items: I03J (Priest), Tip (Tooltip - Basic)
+{
+Priest
+}
+
 STRING 1449
 // Units: U003 (Arch Lich), Tip (Tooltip - Basic)
 {
@@ -8668,6 +8680,12 @@ STRING 1458
 // Abilities: A105 (Storm Bolt), EditorSuffix (Editor Suffix)
 {
 (Club Strike)
+}
+
+STRING 1459
+// Items: I03J (Priest), Ubertip (Tooltip - Extended)
+{
+Changes the class to VIP:|n- Heal|n- Inner Fire|n- Holy Light|n- Divine Shield|n- Healing Wave|n- Holy Aura|n- Healing Spray|n- Devotion Aura|n- Holy Nova|n- Horn of Stormwind|n- Resurrection
 }
 
 STRING 1460
@@ -10188,10 +10206,22 @@ STRING 1712
 (Neutral Hostile)
 }
 
+STRING 1713
+// Abilities: A02Y (Haste), Name (Name)
+{
+Haste
+}
+
 STRING 1714
 // Units: h0JJ (Dummy Shroud of Protection), Name (Name)
 {
 Dummy Shroud of Protection
+}
+
+STRING 1715
+// Abilities: A02Y (Haste), EditorSuffix (Editor Suffix)
+{
+(Priest)
 }
 
 STRING 1716

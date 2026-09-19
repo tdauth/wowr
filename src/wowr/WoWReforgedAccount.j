@@ -2,10 +2,10 @@ library WoWReforgedAccount initializer Init requires SimError, UnitTypeUtils, Wo
 
 globals
     private Account array playerAccount
-    
+
     private Account array accounts
     private integer accountsCounter = 0
-    
+
     private hashtable h = InitHashtable()
     private string array restrictedChatCommands
     private integer restrictedChatCommandsCounter = 0
@@ -258,6 +258,7 @@ function PlayerHasUnlockedChatCommand takes player whichPlayer, string chatComma
 endfunction
 
 private function UnlockVIP takes Account a returns nothing
+    call AccountUnlock(a, ITEM_VIP)
     call AccountUnlock(a, AEGWYNN)
     call AccountUnlock(a, TICHONDRIUS_HERO)
     call AccountUnlock(a, LICH_KING)
@@ -281,15 +282,15 @@ endfunction
 private function Init takes nothing returns nothing
     local integer i = 0
     local Account a = 0
-    
+
     set a = AddAccount("Barade#2569", "ReplaceableTextures\\CommandButtons\\BTNPenguin.blp")
     call AccountUnlock(a, BARADE)
     call UnlockVIP(a)
-    
+
     set a = AddAccount("Etos7#2138", "ReplaceableTextures\\CommandButtons\\BTNHeroBloodelffemale.blp")
     call AccountUnlock(a, EYLON)
     call UnlockVIP(a)
-    
+
     // All VIPs
     set i = 0
     loop
@@ -301,7 +302,7 @@ private function Init takes nothing returns nothing
         endif
         set i = i + 1
     endloop
-    
+
     // We store the corresponding accounts in the beginning for performance reasons and to allow players to change their names later in game.
     set i = 0
     loop

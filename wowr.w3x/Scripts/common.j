@@ -6440,6 +6440,7 @@ globals
     constant integer ABILITY_RIGHTEOUS_FURY                          = 'A022' // Forsaken Kingdom
     constant integer ABILITY_SACRED_AURA                             = 'A023' // Forsaken Kingdom
     constant integer ABILITY_CLEANSING_FIRE                          = 'A02A' // Forsaken Kingdom
+    constant integer ABILITY_HASTE                                   = 'A02Y'
 
     // Paladin
     constant integer ABILITY_HEAL                                    = 'Anhe'
@@ -6609,7 +6610,8 @@ globals
     constant integer ABILITY_STORM_EARTH_FIRE                        = 'A070'
     constant integer ABILITY_BLADESTORM                              = 'A0DM'
 
-    // Trainer
+    // VIP
+    constant integer ITEM_VIP                                        = 'I03J'
     constant integer ABILITY_ATTRIBUTE_BONUS                         = 'A041'
     constant integer ABILITY_DAMAGE_BONUS                            = 'A1LN'
     constant integer ABILITY_ARMOR_BONUS                             = 'A1LP'
@@ -6620,6 +6622,7 @@ globals
     constant integer ABILITY_LIFE_REGENERATION                       = 'A1LE'
     constant integer ABILITY_MANA_REGENERATION                       = 'A1LG'
     constant integer ABILITY_SIGHT_RANGE_BONUS                       = 'A021'
+    constant integer ABILITY_TELEPORTATION                           = 'A13N'
 
     // Submerge
     constant integer ABILITY_SUBMERGE_SEA_WITCH                      = 'A238'
@@ -6641,7 +6644,6 @@ globals
     constant integer ABILITY_INFERNO                                 = 'A1V1'
     constant integer ABILITY_DRAIN                                   = 'A03C'
     constant integer ABILITY_SOUL_BURN                               = 'A06Z'
-    constant integer ABILITY_TELEPORTATION                           = 'A13N'
     constant integer ABILITY_OPEN_PORTALS                            = 'A0SZ'
     constant integer OPEN_PORTALS_PORTAL                             = 'n09W'
     constant integer ABILITY_REVIVE                                  = 'A0T7'
