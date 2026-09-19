@@ -1,4 +1,4 @@
-library WoWReforgedCustomUnitTypes initializer Init requires CustomUnitTypes, UnitGroupRespawn, UnitGroupRespawnConfig, WoWReforgedAutoSkill, WoWReforgedPortals, WoWReforgedHeroes, WoWReforgedBosses, WoWReforgedRaces, WoWReforgedProfessions, WoWReforgedResources, WoWReforgedProperties, WoWReforgedSkins, WoWReforgedArmory, WoWReforgedTaverns, WoWReforgedSummonedUnits, WoWReforgedGaia, WoWReforgedChests, WoWReforegdHideout, WoWReforgedTrainer, WoWReforgedProfessionFarmer, WoWReforgedProfessionHunter, WoWReforgedCommandButtons, WoWReforgedGoldMines, WoWReforgedLevers, WoWReforgedRandomCorpse, WoWReforgedProfessionBooksShop, WoWReforgedSceptersShop, WoWReforgedBanners, WoWReforgedVIPs, WoWReforgedAlchemistLab, WoWReforgedMounts, WoWReforgedCraftingStash, WoWReforgedRaceDwarf, WoWReforgedRaceTroll, WoWReforgedRaceMurloc, WoWReforgedRaceTuskarr, WoWReforgedRaceTauren, WoWReforgedMapData
+library WoWReforgedCustomUnitTypes initializer Init requires CustomUnitTypes, UnitGroupRespawn, UnitGroupRespawnConfig, WoWReforgedAutoSkill, WoWReforgedPortals, WoWReforgedHeroes, WoWReforgedBosses, WoWReforgedRaces, WoWReforgedProfessions, WoWReforgedResources, WoWReforgedProperties, WoWReforgedSkins, WoWReforgedArmory, WoWReforgedTaverns, WoWReforgedSummonedUnits, WoWReforgedGaia, WoWReforgedChests, WoWReforegdHideout, WoWReforgedTrainer, WoWReforgedProfessionFarmer, WoWReforgedProfessionHunter, WoWReforgedCommandButtons, WoWReforgedGoldMines, WoWReforgedLevers, WoWReforgedRandomCorpse, WoWReforgedProfessionBooksShop, WoWReforgedSceptersShop, WoWReforgedBanners, WoWReforgedVIPs, WoWReforgedAlchemistLab, WoWReforgedMounts, WoWReforgedCraftingStash, WoWReforgedRaceDwarf, WoWReforgedRaceTroll, WoWReforgedRaceMurloc, WoWReforgedRaceTuskarr, WoWReforgedRaceTauren, WoWReforgedRaceWorgen, WoWReforgedMapData
 
 private function AddCustomMine takes unit whichUnit returns nothing
     local integer index = GetMineTypeIndex(GetUnitTypeId(whichUnit))
@@ -369,6 +369,14 @@ private struct CustomUnitTypeCapturedBlackDrake extends CustomUnitType
 
 endstruct
 
+private struct CustomUnitTypeNocturnalWorgen extends CustomUnitType
+
+    public stub method onEnter takes unit whichUnit returns nothing
+        call AddNocturnalWorgen(whichUnit)
+    endmethod
+
+endstruct
+
 private struct CustomUnitTypeMurloc extends CustomUnitType
 
     public stub method onEnter takes unit whichUnit returns nothing
@@ -668,6 +676,22 @@ private function Init takes nothing returns nothing
 
     // Race Ogre
     call AddCustomUnitType(OGRE_DRAKE, CustomUnitTypeCapturedBlackDrake.create())
+
+    // Race Worgen
+    set c = CustomUnitTypeNocturnalWorgen.create()
+    call AddCustomUnitType(WORGEN_PEASANT, c)
+    call AddCustomUnitType(WORGEN_FOOTMAN, c)
+    call AddCustomUnitType(WORGEN_RIFLEMAN, c)
+    call AddCustomUnitType(WORGEN_KNIGHT, c)
+    call AddCustomUnitType(WORGEN_DRUID, c)
+    call AddCustomUnitType(WORGEN_NIGHTSTALKER, c)
+    call AddCustomUnitType(WORGEN_BATTLE_MAGE, c)
+    call AddCustomUnitType(WORGEN_BANNER_CARRIER, c)
+    call AddCustomUnitType(WORGEN_MINDLESS_WORGEN, c)
+    call AddCustomUnitType(WORGEN_STORMCROW_KNIGHT, c)
+    call AddCustomUnitType(WORGEN_CITIZEN_MALE, c)
+    call AddCustomUnitType(WORGEN_CITIZEN_FEMALE, c)
+    call AddCustomUnitType(WORGEN_CHILD, c)
 
     // Race Murloc
     set c = CustomUnitTypeMurloc.create()
