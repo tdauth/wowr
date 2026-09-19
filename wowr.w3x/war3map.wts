@@ -4724,6 +4724,12 @@ STRING 789
 Magical Gold Coin
 }
 
+STRING 790
+// Items: I03C (Priest), Name (Name)
+{
+Priest
+}
+
 STRING 791
 // Buffs/Effects: B00U (), Bufftip (Tooltip)
 {
@@ -8094,6 +8100,12 @@ STRING 1361
 (Reflection)
 }
 
+STRING 1362
+// Items: I03C (Priest), Tip (Tooltip - Basic)
+{
+Priest
+}
+
 STRING 1363
 // Units: nwgt (Portal), EditorSuffix (Name - Editor Suffix)
 {
@@ -8104,6 +8116,12 @@ STRING 1364
 // Units: H0Q3 (Customizable Hero), Hotkey (Hotkey)
 {
 Q
+}
+
+STRING 1365
+// Items: I03C (Priest), Ubertip (Tooltip - Extended)
+{
+Changes the class to Priest:|n- Heal|n- Inner Fire|n- Holy Light|n- Divine Shield|n- Healing Wave|n- Holy Aura|n- Healing Spray|n- Devotion Aura|n- Holy Nova|n- Horn of Stormwind|n- Resurrection
 }
 
 STRING 1366

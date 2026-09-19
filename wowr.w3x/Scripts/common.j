@@ -6435,6 +6435,12 @@ globals
     constant integer ABILITY_TORNADO                                 = 'A024'
     constant integer ABILITY_TORNADO_BUILDING_DAMAGE_AURA            = 'Atdg'
 
+    // Priest
+    constant integer ABILITY_CONSECRATION                            = 'A01K' // Forsaken Kingdom
+    constant integer ABILITY_RIGHTEOUS_FURY                          = 'A022' // Forsaken Kingdom
+    constant integer ABILITY_SACRED_AURA                             = 'A023' // Forsaken Kingdom
+    constant integer ABILITY_CLEANSING_FIRE                          = 'A02A' // Forsaken Kingdom
+
     // Paladin
     constant integer ABILITY_HEAL                                    = 'Anhe'
     constant integer ABILITY_INNFER_FIRE                             = 'ACif'
