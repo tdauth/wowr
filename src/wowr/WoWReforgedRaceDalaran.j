@@ -10,6 +10,11 @@ globals
     private trigger castTrigger = CreateTrigger()
     private trigger deathTrigger = CreateTrigger()
     private trigger timerTrigger = CreateTrigger()
+    private trigger summonTrigger = CreateTrigger()
+    private trigger spellEffectTrigger = CreateTrigger()
+    private trigger upgradeFinishTrigger = CreateTrigger()
+    private trigger researchFinishTrigger = CreateTrigger()
+    private trigger constructFinishTrigger = CreateTrigger()
 endglobals
 
 private function AddShieldWeatherEffect takes weathereffect w returns integer
@@ -163,6 +168,84 @@ private function TriggerConditionTimer takes nothing returns boolean
     return false
 endfunction
 
+private function TriggerConditionSummon takes nothing returns boolean
+    if (IsUnitType(GetSummoningUnit(), UNIT_TYPE_STRUCTURE) and GetUnitTypeId(GetSummonedUnit()) == 'h09T') then
+        call UnitApplyTimedLife(GetSummonedUnit(), 'BTLF', 60.0)
+    endif
+    return false
+endfunction
+
+private function IsDalaranBuildingWithRoot takes integer unitTypeId returns boolean
+    if (unitTypeId == DALARAN_TIER_1) then
+        return true
+    elseif (unitTypeId == DALARAN_TIER_2) then
+        return true
+    elseif (unitTypeId == DALARAN_TIER_3) then
+        return true
+    elseif (unitTypeId == DALARAN_HOUSING) then
+        return true
+    elseif (unitTypeId == DALARAN_POWER_GENERATOR) then
+        return true
+    elseif (unitTypeId == DALARAN_ALTAR) then
+        return true
+    elseif (unitTypeId == DALARAN_BARRACKS) then
+        return true
+    elseif (unitTypeId == DALARAN_BLACKSMITH) then
+        return true
+    elseif (unitTypeId == DALARAN_ZOO) then
+        return true
+    elseif (unitTypeId == DALARAN_ARCANE_SANCTUM) then
+        return true
+    elseif (unitTypeId == DALARAN_ELEMENTAL_SANCTUARY_1) then
+        return true
+    elseif (unitTypeId == DALARAN_SHOP) then
+        return true
+    elseif (unitTypeId == DALARAN_GUARD_TOWER_1) then
+        return true
+    elseif (unitTypeId == DALARAN_SHIPYARD) then
+        return true
+    elseif (unitTypeId == DALARAN_VIOLET_CITADEL) then
+        return true
+    endif
+    return false
+endfunction
+
+private function TriggerConditionSpellEffect takes nothing returns boolean
+    if (GetSpellAbilityId() == 'Aro1' and IsDalaranBuildingWithRoot(GetUnitTypeId(GetTriggerUnit()))) then // Unroot
+        call UnitAddAbility(GetTriggerUnit(), 'A0O0')
+    endif
+    return false
+endfunction
+
+private function TriggerConditionUpgradeFinish takes nothing returns boolean
+    if (IsDalaranBuildingWithRoot(GetUnitTypeId(GetTriggerUnit()))) then
+        call UnitRemoveAbility(GetTriggerUnit(), 'A0O0')
+        call UnitAddAbility(GetTriggerUnit(), 'A0O0')
+    endif
+    return false
+endfunction
+
+private function EnumUpdateGoldMineAbilityLevel takes nothing returns nothing
+    call SetUnitAbilityLevel(GetEnumUnit(), GetPlayerTechCountSimple(UPG_DALARAN_GOLD, GetOwningPlayer(GetEnumUnit())), 'A0O3')
+endfunction
+
+private function TriggerConditionResearchFinish takes nothing returns boolean
+    if (GetResearched() == UPG_DALARAN_GOLD) then
+        set bj_wantDestroyGroup = true
+        call ForGroupBJ(GetUnitsOfPlayerAndTypeId(GetOwningPlayer(GetResearchingUnit()), DALARAN_HOUSING), function EnumUpdateGoldMineAbilityLevel)
+        set bj_wantDestroyGroup = true
+        call ForGroupBJ(GetUnitsOfPlayerAndTypeId(GetOwningPlayer(GetResearchingUnit()), DALARAN_MINE), function EnumUpdateGoldMineAbilityLevel)
+    endif
+    return false
+endfunction
+
+private function TriggerConditionConstructFinish takes nothing returns boolean
+    if (GetUnitTypeId(GetConstructedStructure()) == DALARAN_HOUSING and GetUnitTypeId(GetConstructedStructure()) == DALARAN_MINE) then
+        call SetUnitAbilityLevel(GetTriggerUnit(), GetPlayerTechCountSimple(UPG_DALARAN_GOLD, GetOwningPlayer(GetConstructedStructure())), 'A0O3')
+    endif
+    return false
+endfunction
+
 private function Init takes nothing returns nothing
     set filterIsEnemyOfPowerGenerator = Filter(function FilterIsEnemyOfPowerGenerator)
     call TriggerRegisterAnyUnitEventBJ(castTrigger, EVENT_PLAYER_UNIT_SPELL_CAST)
@@ -174,6 +257,21 @@ private function Init takes nothing returns nothing
     call DisableTrigger(timerTrigger)
     call TriggerRegisterTimerEventPeriodic(timerTrigger, 4.0)
     call TriggerAddCondition(timerTrigger, Condition(function TriggerConditionTimer))
+
+    call TriggerRegisterAnyUnitEventBJ(summonTrigger, EVENT_PLAYER_UNIT_SUMMON)
+    call TriggerAddCondition(summonTrigger, Condition(function TriggerConditionSummon))
+
+    call TriggerRegisterAnyUnitEventBJ(spellEffectTrigger, EVENT_PLAYER_UNIT_SPELL_EFFECT)
+    call TriggerAddCondition(spellEffectTrigger, Condition(function TriggerConditionSpellEffect))
+
+    call TriggerRegisterAnyUnitEventBJ(upgradeFinishTrigger, EVENT_PLAYER_UNIT_UPGRADE_FINISH)
+    call TriggerAddCondition(upgradeFinishTrigger, Condition(function TriggerConditionUpgradeFinish))
+
+    call TriggerRegisterAnyUnitEventBJ(researchFinishTrigger, EVENT_PLAYER_UNIT_RESEARCH_FINISH)
+    call TriggerAddCondition(researchFinishTrigger, Condition(function TriggerConditionResearchFinish))
+
+    call TriggerRegisterAnyUnitEventBJ(constructFinishTrigger, EVENT_PLAYER_UNIT_CONSTRUCT_FINISH)
+    call TriggerAddCondition(constructFinishTrigger, Condition(function TriggerConditionConstructFinish))
 
     call OnUnitRemoval(RemoveDalaranPowerGenerator)
 endfunction

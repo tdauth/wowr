@@ -4725,7 +4725,7 @@ Magical Gold Coin
 }
 
 STRING 790
-// Items: I03C (Priest), Name (Name)
+// Units: H068 (Priest), Name (Name)
 {
 Priest
 }
@@ -8101,7 +8101,7 @@ STRING 1361
 }
 
 STRING 1362
-// Items: I03C (Priest), Tip (Tooltip - Basic)
+// Items: I03C (Priest), Name (Name)
 {
 Priest
 }
@@ -8269,7 +8269,7 @@ STRING 1389
 }
 
 STRING 1390
-// Items: I03J (Priest), Name (Name)
+// Items: I03C (Priest), Tip (Tooltip - Basic)
 {
 Priest
 }
@@ -8617,7 +8617,7 @@ M
 }
 
 STRING 1448
-// Items: I03J (Priest), Tip (Tooltip - Basic)
+// Items: I03J (Priest), Name (Name)
 {
 Priest
 }
@@ -51571,7 +51571,7 @@ STRING 14638
 }
 
 STRING 14641
-// Units: H068 (Priest), Name (Name)
+// Items: I03J (Priest), Tip (Tooltip - Basic)
 {
 Priest
 }
@@ -56011,7 +56011,7 @@ Regenerates <A0NP,DataA1,%> % mana per second of nearby friendly units.
 }
 
 STRING 18232
-// Units: h09Y (Magical Pen), EditorSuffix (Name - Editor Suffix)
+// Units: n08D (Dalaran Mutant), EditorSuffix (Name - Editor Suffix)
 {
 (Dalaran)
 }
@@ -56059,7 +56059,7 @@ Arcane Creature Attack
 }
 
 STRING 18358
-// Units: n08D (Dalaran Mutant), EditorSuffix (Name - Editor Suffix)
+// Units: h09Z (Void Elemental), EditorSuffix (Name - Editor Suffix)
 {
 (Dalaran)
 }
@@ -56980,7 +56980,7 @@ Summons a powerful Fire Elemental with <nsel,realHP> hit points that does <nsel,
 }
 
 STRING 18991
-// Units: h09Z (Void Elemental), EditorSuffix (Name - Editor Suffix)
+// Units: o02Q (Void Disc), EditorSuffix (Name - Editor Suffix)
 {
 (Dalaran)
 }
@@ -59188,25 +59188,25 @@ F
 }
 
 STRING 20462
-// Units: o02Q (Void Disc), EditorSuffix (Name - Editor Suffix)
-{
-(Dalaran)
-}
-
-STRING 20463
 // Units: n08E (Dalaran Sky Guard Tower), EditorSuffix (Name - Editor Suffix)
 {
 (Dalaran)
 }
 
-STRING 20464
+STRING 20463
 // Units: h09X (Elemental Sanctuary Extended), EditorSuffix (Name - Editor Suffix)
 {
 (Dalaran)
 }
 
-STRING 20468
+STRING 20464
 // Units: h0A0 (Dalaran Aviary), EditorSuffix (Name - Editor Suffix)
+{
+(Dalaran)
+}
+
+STRING 20468
+// Units: h0A1 (Dragonhawk Rider), EditorSuffix (Name - Editor Suffix)
 {
 (Dalaran)
 }
@@ -59266,7 +59266,7 @@ Loads a targeted friendly Elemental Servant.
 }
 
 STRING 20480
-// Units: h0A1 (Dragonhawk Rider), EditorSuffix (Name - Editor Suffix)
+// Units: u018 (Enchanted Gold Mine), EditorSuffix (Name - Editor Suffix)
 {
 (Dalaran)
 }
@@ -59284,7 +59284,7 @@ Research Dalaran Shield
 }
 
 STRING 20484
-// Units: u018 (Enchanted Gold Mine), EditorSuffix (Name - Editor Suffix)
+// Units: h0A2 (Sorceress), EditorSuffix (Name - Editor Suffix)
 {
 (Dalaran)
 }
@@ -59314,7 +59314,7 @@ E
 }
 
 STRING 20490
-// Units: h0A2 (Sorceress), EditorSuffix (Name - Editor Suffix)
+// Units: n0NZ (Arcane Laboratory), EditorSuffix (Name - Editor Suffix)
 {
 (Dalaran)
 }
@@ -59332,13 +59332,13 @@ Heavy ranged unit with Raise Dead. Can also cast Summon Sea Elemental and Silenc
 }
 
 STRING 20493
-// Units: n0NZ (Arcane Laboratory), EditorSuffix (Name - Editor Suffix)
+// Abilities: A0NM (Unit Inventory), EditorSuffix (Editor Suffix)
 {
 (Dalaran)
 }
 
 STRING 20494
-// Abilities: A0NM (Unit Inventory), EditorSuffix (Editor Suffix)
+// Abilities: A0NN (Arcane Gold Mine Ability), EditorSuffix (Editor Suffix)
 {
 (Dalaran)
 }
@@ -59356,7 +59356,7 @@ Wizard Master Training
 }
 
 STRING 20497
-// Abilities: A0NN (Arcane Gold Mine Ability), EditorSuffix (Editor Suffix)
+// Abilities: A0NT (Summon Fire Elemental), EditorSuffix (Editor Suffix)
 {
 (Dalaran)
 }
@@ -59440,19 +59440,19 @@ Dalaran buildings can cast several abilities.
 }
 
 STRING 20515
-// Abilities: A0NT (Summon Fire Elemental), EditorSuffix (Editor Suffix)
-{
-(Dalaran)
-}
-
-STRING 20516
 // Abilities: S00Q (Load Elemental Servant), EditorSuffix (Editor Suffix)
 {
 (Dalaran)
 }
 
-STRING 20517
+STRING 20516
 // Abilities: A0NV (Magic Sentry), EditorSuffix (Editor Suffix)
+{
+(Dalaran)
+}
+
+STRING 20517
+// Abilities: A0NW (Summon Sea Elemental), EditorSuffix (Editor Suffix)
 {
 (Dalaran)
 }
@@ -59470,7 +59470,7 @@ Buildings Blink
 }
 
 STRING 20520
-// Abilities: A0NW (Summon Sea Elemental), EditorSuffix (Editor Suffix)
+// Abilities: A0NX (Silence), EditorSuffix (Editor Suffix)
 {
 (Dalaran)
 }
@@ -59494,7 +59494,7 @@ Spawn Fire Elementals
 }
 
 STRING 20524
-// Abilities: A0NX (Silence), EditorSuffix (Editor Suffix)
+// Abilities: A0O1 (Enchant Gold Mine), EditorSuffix (Editor Suffix)
 {
 (Dalaran)
 }
@@ -59524,7 +59524,7 @@ Medium ranged unit that can Bash opponents. |n|n|cffffcc00Attacks land and air u
 }
 
 STRING 20529
-// Abilities: A0O1 (Enchant Gold Mine), EditorSuffix (Editor Suffix)
+// Abilities: A0O5 (Devour Cargo), EditorSuffix (Editor Suffix)
 {
 (Dalaran)
 }
@@ -59536,7 +59536,7 @@ Enchant Gold Mine
 }
 
 STRING 20531
-// Abilities: A0O5 (Devour Cargo), EditorSuffix (Editor Suffix)
+// Abilities: A0O6 (Imprison), EditorSuffix (Editor Suffix)
 {
 (Dalaran)
 }
@@ -59578,7 +59578,7 @@ STRING 20537
 }
 
 STRING 20538
-// Abilities: A0O6 (Imprison), EditorSuffix (Editor Suffix)
+// Abilities: A0O8 (Rain of Void), EditorSuffix (Editor Suffix)
 {
 (Dalaran)
 }
@@ -59596,7 +59596,7 @@ Buildings Mana Shield
 }
 
 STRING 20541
-// Abilities: A0O8 (Rain of Void), EditorSuffix (Editor Suffix)
+// Abilities: A0O9 (Void Disc), EditorSuffix (Editor Suffix)
 {
 (Dalaran)
 }
@@ -59655,24 +59655,6 @@ STRING 20553
 Strong combat creature. Can cast Hurl Boulder and Slam. Has the ability Spell Immunity. |n|n|cffffcc00Attacks land and air units.|r
 }
 
-STRING 20555
-// Units: h09Y (Magical Pen), Name (Name)
-{
-Magical Pen
-}
-
-STRING 20556
-// Units: h09Y (Magical Pen), Tip (Tooltip - Basic)
-{
-Build Magical Pen
-}
-
-STRING 20557
-// Units: h09Y (Magical Pen), Ubertip (Tooltip - Extended)
-{
-Allows capturing enemy units.
-}
-
 STRING 20559
 // Abilities: A0NU (Feedback), Ubertip (Tooltip - Normal - Extended)
 {
@@ -59686,13 +59668,13 @@ Spawn Fire Elementals
 }
 
 STRING 20561
-// Abilities: A0O9 (Void Disc), EditorSuffix (Editor Suffix)
+// Abilities: A0OO (Cloud), EditorSuffix (Editor Suffix)
 {
 (Dalaran)
 }
 
 STRING 20562
-// Abilities: A0OO (Cloud), EditorSuffix (Editor Suffix)
+// Abilities: A0RE (Hurl Boulder), EditorSuffix (Editor Suffix)
 {
 (Dalaran)
 }
@@ -59716,7 +59698,7 @@ Imprisons an enemy land unit. If the Magical Pen is destroyed while the unit is 
 }
 
 STRING 20566
-// Abilities: A0RE (Hurl Boulder), EditorSuffix (Editor Suffix)
+// Abilities: A0RF (Shockwave), EditorSuffix (Editor Suffix)
 {
 (Dalaran)
 }
@@ -59776,7 +59758,7 @@ rarm
 }
 
 STRING 20578
-// Abilities: A0RF (Shockwave), EditorSuffix (Editor Suffix)
+// Abilities: A0RG (Spell Immunity), EditorSuffix (Editor Suffix)
 {
 (Dalaran)
 }
@@ -59788,7 +59770,7 @@ Train Dalaran Mutant
 }
 
 STRING 20581
-// Abilities: A0RG (Spell Immunity), EditorSuffix (Editor Suffix)
+// Abilities: A0RH (Devour), EditorSuffix (Editor Suffix)
 {
 (Dalaran)
 }
@@ -59860,25 +59842,25 @@ Rain of Void (Effect)
 }
 
 STRING 20605
-// Abilities: A0RH (Devour), EditorSuffix (Editor Suffix)
-{
-(Dalaran)
-}
-
-STRING 20606
 // Abilities: A10P (Polymorph), EditorSuffix (Editor Suffix)
 {
 (Dalaran)
 }
 
-STRING 20607
+STRING 20606
 // Upgrades: R05R (Cloud), EditorSuffix (Editor Suffix)
 {
 (Dalaran)
 }
 
-STRING 20608
+STRING 20607
 // Upgrades: R05S (Burning Oil), EditorSuffix (Editor Suffix)
+{
+(Dalaran)
+}
+
+STRING 20608
+// Upgrades: R05T (Backpack), EditorSuffix (Editor Suffix)
 {
 (Dalaran)
 }
@@ -59980,25 +59962,25 @@ Increases the armor, maximum hit points and damage of all elemental units.
 }
 
 STRING 20630
-// Upgrades: R05T (Backpack), EditorSuffix (Editor Suffix)
-{
-(Dalaran)
-}
-
-STRING 20631
 // Upgrades: R05U (Exhume Corpses), EditorSuffix (Editor Suffix)
 {
 (Dalaran)
 }
 
-STRING 20632
+STRING 20631
 // Upgrades: R05V (Long Rifles), EditorSuffix (Editor Suffix)
 {
 (Dalaran)
 }
 
-STRING 20633
+STRING 20632
 // Upgrades: R05W (Magic Sentry), EditorSuffix (Editor Suffix)
+{
+(Dalaran)
+}
+
+STRING 20633
+// Upgrades: R05X (Sorceress Adept Training,Sorceress Master Training), EditorSuffix (Editor Suffix)
 {
 (Dalaran)
 }
@@ -60088,7 +60070,7 @@ Arcane Gold Mines
 }
 
 STRING 20652
-// Upgrades: R05X (Sorceress Adept Training,Sorceress Master Training), EditorSuffix (Editor Suffix)
+// Upgrades: R05Y (Flare), EditorSuffix (Editor Suffix)
 {
 (Dalaran)
 }
@@ -60343,13 +60325,13 @@ P
 }
 
 STRING 21303
-// Upgrades: R05Y (Flare), EditorSuffix (Editor Suffix)
+// Upgrades: R05Z (Flare), EditorSuffix (Editor Suffix)
 {
 (Dalaran)
 }
 
 STRING 21304
-// Upgrades: R05Z (Flare), EditorSuffix (Editor Suffix)
+// Upgrades: R060 (Flare), EditorSuffix (Editor Suffix)
 {
 (Dalaran)
 }
@@ -60361,7 +60343,7 @@ rlev
 }
 
 STRING 21306
-// Upgrades: R060 (Flare), EditorSuffix (Editor Suffix)
+// Upgrades: R061 (Flare), EditorSuffix (Editor Suffix)
 {
 (Dalaran)
 }
@@ -60379,7 +60361,7 @@ Fire Mage Master Training
 }
 
 STRING 21309
-// Upgrades: R061 (Flare), EditorSuffix (Editor Suffix)
+// Upgrades: R062 (Nature's Blessing), EditorSuffix (Editor Suffix)
 {
 (Dalaran)
 }
@@ -60409,7 +60391,7 @@ Increases Fire Mages mana capacity, mana regeneration rate, hit points, and give
 }
 
 STRING 21319
-// Upgrades: R062 (Nature's Blessing), EditorSuffix (Editor Suffix)
+// Upgrades: R063 (Cloud), EditorSuffix (Editor Suffix)
 {
 (Dalaran)
 }
@@ -60421,7 +60403,7 @@ Increases the maximum hit points of Dragonhawk Riders and Supply Carts by <Rhan,
 }
 
 STRING 21321
-// Upgrades: R063 (Cloud), EditorSuffix (Editor Suffix)
+// Upgrades: R065 (Sorceress Adept Training,Sorceress Master Training), EditorSuffix (Editor Suffix)
 {
 (Dalaran)
 }
@@ -60445,7 +60427,7 @@ Magical Flesh Armor
 }
 
 STRING 21325
-// Upgrades: R065 (Sorceress Adept Training,Sorceress Master Training), EditorSuffix (Editor Suffix)
+// Upgrades: R066 (Animal War Training), EditorSuffix (Editor Suffix)
 {
 (Dalaran)
 }
@@ -63102,7 +63084,7 @@ Build Dragon Roost
 }
 
 STRING 23897
-// Upgrades: R066 (Animal War Training), EditorSuffix (Editor Suffix)
+// Upgrades: R067 (Cloud), EditorSuffix (Editor Suffix)
 {
 (Dalaran)
 }
@@ -63162,13 +63144,13 @@ Sleep
 }
 
 STRING 24382
-// Upgrades: R067 (Cloud), EditorSuffix (Editor Suffix)
+// Upgrades: R068 (Studded Leather Armor,Reinforced Leather Armor,Dragonhide Armor), EditorSuffix (Editor Suffix)
 {
 (Dalaran)
 }
 
 STRING 24383
-// Upgrades: R068 (Studded Leather Armor,Reinforced Leather Armor,Dragonhide Armor), EditorSuffix (Editor Suffix)
+// Upgrades: R069 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), EditorSuffix (Editor Suffix)
 {
 (Dalaran)
 }
@@ -63186,7 +63168,7 @@ Golem Master Training
 }
 
 STRING 24386
-// Upgrades: R069 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), EditorSuffix (Editor Suffix)
+// Upgrades: R06A (Iron Plating,Steel Plating,Mithril Plating), EditorSuffix (Editor Suffix)
 {
 (Dalaran)
 }
@@ -82752,7 +82734,7 @@ Light ranged unit. |n|n|cffffcc00Attacks land and air units.|r
 }
 
 STRING 37425
-// Upgrades: R06A (Iron Plating,Steel Plating,Mithril Plating), EditorSuffix (Editor Suffix)
+// Upgrades: R06H (Creature Attack,Improved Creature Attack,Advanced Creature Attack), EditorSuffix (Editor Suffix)
 {
 (Dalaran)
 }
@@ -86616,7 +86598,7 @@ STRING 38848
 }
 
 STRING 38849
-// Upgrades: R06H (Creature Attack,Improved Creature Attack,Advanced Creature Attack), EditorSuffix (Editor Suffix)
+// Upgrades: R06N (Sorceress Adept Training,Sorceress Master Training), EditorSuffix (Editor Suffix)
 {
 (Dalaran)
 }
@@ -112541,12 +112523,6 @@ Advanced watch tower. Can learn the Feedback ability.|n|n|cffffcc00Attacks land 
 }
 
 STRING 53819
-// Upgrades: R06N (Sorceress Adept Training,Sorceress Master Training), EditorSuffix (Editor Suffix)
-{
-(Dalaran)
-}
-
-STRING 53820
 // Upgrades: R083 (Sorceress Adept Training,Sorceress Master Training), EditorSuffix (Editor Suffix)
 {
 (Dalaran)
