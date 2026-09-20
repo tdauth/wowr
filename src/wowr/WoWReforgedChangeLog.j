@@ -151,6 +151,7 @@ private function Init takes nothing returns nothing
     call AddChange("Remove moving bosses Cenarius and Deathwing.")
     call AddChange("Add library OnUnitRemoval which replaces unsafe RemoveUnit hooks.")
     call AddChange("Prevent Dalaran Blink from teleporting into player selection.")
+    call AddChange("Remove Dalaran building Magical Pen h09Y.")
 
 static if (MAP_DEBUG_MODE_ENABLED) then
     call AddVersion("4.6")
