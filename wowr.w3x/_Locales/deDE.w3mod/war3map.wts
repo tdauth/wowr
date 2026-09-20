@@ -4724,6 +4724,12 @@ STRING 789
 Magische Goldmünze
 }
 
+STRING 790
+// Units: H068 (Priest), Name (Name)
+{
+Priester
+}
+
 STRING 791
 // Buffs/Effects: B00U (), Bufftip (Tooltip)
 {
@@ -6759,7 +6765,7 @@ Fortgeschrittenes Demolieren
 }
 
 STRING 1139
-// Abilities: A194 (Zähmung - Advanced), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A194 (Taming - Advanced), Ubertip (Tooltip - Normal - Extended)
 {
 The Alchemist uses gathered herbs and minerals to create a Mana Stone.
 }
@@ -8094,6 +8100,12 @@ STRING 1361
 (Spiegelung)
 }
 
+STRING 1362
+// Items: I03C (Priest), Name (Name)
+{
+Priester
+}
+
 STRING 1363
 // Units: nwgt (Portal), EditorSuffix (Name - Editor Suffix)
 {
@@ -8104,6 +8116,12 @@ STRING 1364
 // Units: H0Q3 (Customizable Hero), Hotkey (Hotkey)
 {
 Q
+}
+
+STRING 1365
+// Items: I03C (Priest), Ubertip (Tooltip - Extended)
+{
+Wechselt die Klasse zum Priester:|n- Heilen|n- Inneres Feuer|n- Holy Light|n- Divine Shield|n- Healing Wave|n- Holy Aura|n- Healing Spray|n- Devotion Aura|n- Holy Nova|n- Horn of Stormwind|n- Resurrection
 }
 
 STRING 1366
@@ -8248,6 +8266,12 @@ STRING 1389
 // Abilities: A01X (Water Spell - Crushing Wave), EditorSuffix (Editor Suffix)
 {
 (Zauberbuch)
+}
+
+STRING 1390
+// Items: I03C (Priest), Tip (Tooltip - Basic)
+{
+Priester
 }
 
 STRING 1391
@@ -8592,6 +8616,12 @@ STRING 1447
 M
 }
 
+STRING 1448
+// Items: I03J (Priest), Name (Name)
+{
+Priester
+}
+
 STRING 1449
 // Units: U003 (Arch Lich), Tip (Tooltip - Basic)
 {
@@ -8650,6 +8680,12 @@ STRING 1458
 // Abilities: A105 (Storm Bolt), EditorSuffix (Editor Suffix)
 {
 (Keulenschlag)
+}
+
+STRING 1459
+// Items: I03J (Priest), Ubertip (Tooltip - Extended)
+{
+Wechselt die Klasse zum VIP:|n- Heal|n- Inner Fire|n- Holy Light|n- Divine Shield|n- Healing Wave|n- Holy Aura|n- Healing Spray|n- Devotion Aura|n- Holy Nova|n- Horn of Stormwind|n- Resurrection
 }
 
 STRING 1460
@@ -10170,10 +10206,22 @@ STRING 1712
 (Neutral Feindlich)
 }
 
+STRING 1713
+// Abilities: A02Y (Haste), Name (Name)
+{
+Haste
+}
+
 STRING 1714
 // Units: h0JJ (Dummy Shroud of Protection), Name (Name)
 {
 Dummy Schutzmantel
+}
+
+STRING 1715
+// Abilities: A02Y (Haste), EditorSuffix (Editor Suffix)
+{
+(Priest)
 }
 
 STRING 1716
@@ -12952,7 +13000,7 @@ A
 }
 
 STRING 2358
-// Abilities: A266 (Zähmung - Grand Master), Hotkey (Hotkey - Normal)
+// Abilities: A266 (Taming - Grand Master), Hotkey (Hotkey - Normal)
 {
 A
 }
@@ -46484,19 +46532,19 @@ Gegestand Massenbezauberung
 }
 
 STRING 11426
-// Abilities: A266 (Zähmung - Grand Master), Name (Name)
+// Abilities: A266 (Taming - Grand Master), Name (Name)
 {
 Zähmung - Großmeister
 }
 
 STRING 11427
-// Abilities: A266 (Zähmung - Grand Master), Tip (Tooltip - Normal)
+// Abilities: A266 (Taming - Grand Master), Tip (Tooltip - Normal)
 {
 Großmeister-Zähmung
 }
 
 STRING 11428
-// Abilities: A266 (Zähmung - Grand Master), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A266 (Taming - Grand Master), Ubertip (Tooltip - Normal - Extended)
 {
 Der Dompteur nutzt sein Wissen, um eine Rolle der Bezauberung herzustellen.
 }
@@ -46514,19 +46562,19 @@ STRING 11430
 }
 
 STRING 11431
-// Abilities: A268 (Zähmung - Doctor), Name (Name)
+// Abilities: A268 (Taming - Doctor), Name (Name)
 {
 Zähmung - Doktor
 }
 
 STRING 11432
-// Abilities: A268 (Zähmung - Doctor), Tip (Tooltip - Normal)
+// Abilities: A268 (Taming - Doctor), Tip (Tooltip - Normal)
 {
 Doktor-Zähmung
 }
 
 STRING 11433
-// Abilities: A268 (Zähmung - Doctor), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A268 (Taming - Doctor), Ubertip (Tooltip - Normal - Extended)
 {
 The Tamer uses his knowledge to craft a Tiny Käfig.
 }
@@ -51524,7 +51572,7 @@ STRING 14638
 }
 
 STRING 14641
-// Units: H068 (Priest), Name (Name)
+// Items: I03J (Priest), Tip (Tooltip - Basic)
 {
 Priester
 }
@@ -52094,7 +52142,7 @@ E
 }
 
 STRING 15224
-// Abilities: A196 (Zähmung - Adept), Hotkey (Hotkey - Normal)
+// Abilities: A196 (Taming - Adept), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -55964,7 +56012,7 @@ Regenerates <A0NP,DataA1,%> % mana per second of nearby friendly units.
 }
 
 STRING 18232
-// Units: h09Y (Magical Pen), EditorSuffix (Name - Editor Suffix)
+// Units: n08D (Dalaran Mutant), EditorSuffix (Name - Editor Suffix)
 {
 (Dalaran)
 }
@@ -56012,7 +56060,7 @@ Arkaner Kreaturen-Angriff
 }
 
 STRING 18358
-// Units: n08D (Dalaran Mutant), EditorSuffix (Name - Editor Suffix)
+// Units: h09Z (Void Elemental), EditorSuffix (Name - Editor Suffix)
 {
 (Dalaran)
 }
@@ -56933,7 +56981,7 @@ Summons a powerful Feuer-Elementargeist with <nsel,realHP> hit points that does 
 }
 
 STRING 18991
-// Units: h09Z (Void Elemental), EditorSuffix (Name - Editor Suffix)
+// Units: o02Q (Void Disc), EditorSuffix (Name - Editor Suffix)
 {
 (Dalaran)
 }
@@ -57809,7 +57857,7 @@ E
 }
 
 STRING 19909
-// Abilities: A191 (Zähmung - Novice), Hotkey (Hotkey - Normal)
+// Abilities: A191 (Taming - Novice), Hotkey (Hotkey - Normal)
 {
 N
 }
@@ -59141,25 +59189,25 @@ F
 }
 
 STRING 20462
-// Units: o02Q (Void Disc), EditorSuffix (Name - Editor Suffix)
-{
-(Dalaran)
-}
-
-STRING 20463
 // Units: n08E (Dalaran Sky Guard Tower), EditorSuffix (Name - Editor Suffix)
 {
 (Dalaran)
 }
 
-STRING 20464
+STRING 20463
 // Units: h09X (Elemental Sanctuary Extended), EditorSuffix (Name - Editor Suffix)
 {
 (Dalaran)
 }
 
-STRING 20468
+STRING 20464
 // Units: h0A0 (Dalaran Aviary), EditorSuffix (Name - Editor Suffix)
+{
+(Dalaran)
+}
+
+STRING 20468
+// Units: h0A1 (Dragonhawk Rider), EditorSuffix (Name - Editor Suffix)
 {
 (Dalaran)
 }
@@ -59219,7 +59267,7 @@ Loads a targeted friendly Elementardiener.
 }
 
 STRING 20480
-// Units: h0A1 (Dragonhawk Rider), EditorSuffix (Name - Editor Suffix)
+// Units: u018 (Enchanted Gold Mine), EditorSuffix (Name - Editor Suffix)
 {
 (Dalaran)
 }
@@ -59237,7 +59285,7 @@ Dalaran-Schild erforschen
 }
 
 STRING 20484
-// Units: u018 (Enchanted Gold Mine), EditorSuffix (Name - Editor Suffix)
+// Units: h0A2 (Sorceress), EditorSuffix (Name - Editor Suffix)
 {
 (Dalaran)
 }
@@ -59267,7 +59315,7 @@ E
 }
 
 STRING 20490
-// Units: h0A2 (Sorceress), EditorSuffix (Name - Editor Suffix)
+// Units: n0NZ (Arcane Laboratory), EditorSuffix (Name - Editor Suffix)
 {
 (Dalaran)
 }
@@ -59285,13 +59333,13 @@ Schwere Fernkampf-Einheit mit 'Tote erwecken'. Kann außerdem 'Meeres-Elementarg
 }
 
 STRING 20493
-// Units: n0NZ (Arcane Laboratory), EditorSuffix (Name - Editor Suffix)
+// Abilities: A0NM (Unit Inventory), EditorSuffix (Editor Suffix)
 {
 (Dalaran)
 }
 
 STRING 20494
-// Abilities: A0NM (Unit Inventory), EditorSuffix (Editor Suffix)
+// Abilities: A0NN (Arcane Gold Mine Ability), EditorSuffix (Editor Suffix)
 {
 (Dalaran)
 }
@@ -59309,7 +59357,7 @@ Zauberer-Meisterausbildung
 }
 
 STRING 20497
-// Abilities: A0NN (Arcane Gold Mine Ability), EditorSuffix (Editor Suffix)
+// Abilities: A0NT (Summon Fire Elemental), EditorSuffix (Editor Suffix)
 {
 (Dalaran)
 }
@@ -59393,19 +59441,19 @@ Dalaran buildings can cast several abilities.
 }
 
 STRING 20515
-// Abilities: A0NT (Summon Fire Elemental), EditorSuffix (Editor Suffix)
-{
-(Dalaran)
-}
-
-STRING 20516
 // Abilities: S00Q (Load Elemental Servant), EditorSuffix (Editor Suffix)
 {
 (Dalaran)
 }
 
-STRING 20517
+STRING 20516
 // Abilities: A0NV (Magic Sentry), EditorSuffix (Editor Suffix)
+{
+(Dalaran)
+}
+
+STRING 20517
+// Abilities: A0NW (Summon Sea Elemental), EditorSuffix (Editor Suffix)
 {
 (Dalaran)
 }
@@ -59423,7 +59471,7 @@ Gebäude-Blinzeln
 }
 
 STRING 20520
-// Abilities: A0NW (Summon Sea Elemental), EditorSuffix (Editor Suffix)
+// Abilities: A0NX (Silence), EditorSuffix (Editor Suffix)
 {
 (Dalaran)
 }
@@ -59447,7 +59495,7 @@ Feuer-Elementargeister beschwören
 }
 
 STRING 20524
-// Abilities: A0NX (Silence), EditorSuffix (Editor Suffix)
+// Abilities: A0O1 (Enchant Gold Mine), EditorSuffix (Editor Suffix)
 {
 (Dalaran)
 }
@@ -59477,7 +59525,7 @@ Medium ranged unit that can Hieb opponents. |n|n|cffffcc00Greift Land- und Luft-
 }
 
 STRING 20529
-// Abilities: A0O1 (Enchant Gold Mine), EditorSuffix (Editor Suffix)
+// Abilities: A0O5 (Devour Cargo), EditorSuffix (Editor Suffix)
 {
 (Dalaran)
 }
@@ -59489,7 +59537,7 @@ Goldmine verzaubern
 }
 
 STRING 20531
-// Abilities: A0O5 (Devour Cargo), EditorSuffix (Editor Suffix)
+// Abilities: A0O6 (Imprison), EditorSuffix (Editor Suffix)
 {
 (Dalaran)
 }
@@ -59531,7 +59579,7 @@ STRING 20537
 }
 
 STRING 20538
-// Abilities: A0O6 (Imprison), EditorSuffix (Editor Suffix)
+// Abilities: A0O8 (Rain of Void), EditorSuffix (Editor Suffix)
 {
 (Dalaran)
 }
@@ -59549,7 +59597,7 @@ Gebäude-Manaschild
 }
 
 STRING 20541
-// Abilities: A0O8 (Rain of Void), EditorSuffix (Editor Suffix)
+// Abilities: A0O9 (Void Disc), EditorSuffix (Editor Suffix)
 {
 (Dalaran)
 }
@@ -59608,24 +59656,6 @@ STRING 20553
 Strong combat creature. Can cast Hurl Boulder and Schmettern. Has the ability Spell Immunity. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
 }
 
-STRING 20555
-// Units: h09Y (Magical Pen), Name (Name)
-{
-Magischer Pferch
-}
-
-STRING 20556
-// Units: h09Y (Magical Pen), Tip (Tooltip - Basic)
-{
-Magischen Pferch errichten
-}
-
-STRING 20557
-// Units: h09Y (Magical Pen), Ubertip (Tooltip - Extended)
-{
-Allows capturing enemy units.
-}
-
 STRING 20559
 // Abilities: A0NU (Feedback), Ubertip (Tooltip - Normal - Extended)
 {
@@ -59639,13 +59669,13 @@ Feuer-Elementargeister erzeugen
 }
 
 STRING 20561
-// Abilities: A0O9 (Void Disc), EditorSuffix (Editor Suffix)
+// Abilities: A0OO (Cloud), EditorSuffix (Editor Suffix)
 {
 (Dalaran)
 }
 
 STRING 20562
-// Abilities: A0OO (Cloud), EditorSuffix (Editor Suffix)
+// Abilities: A0RE (Hurl Boulder), EditorSuffix (Editor Suffix)
 {
 (Dalaran)
 }
@@ -59669,7 +59699,7 @@ Kerkert eine gegnerische Land-Einheit ein. Falls der Magische Pferch zerstört w
 }
 
 STRING 20566
-// Abilities: A0RE (Hurl Boulder), EditorSuffix (Editor Suffix)
+// Abilities: A0RF (Shockwave), EditorSuffix (Editor Suffix)
 {
 (Dalaran)
 }
@@ -59729,7 +59759,7 @@ rarm
 }
 
 STRING 20578
-// Abilities: A0RF (Shockwave), EditorSuffix (Editor Suffix)
+// Abilities: A0RG (Spell Immunity), EditorSuffix (Editor Suffix)
 {
 (Dalaran)
 }
@@ -59741,7 +59771,7 @@ Dalaran-Mutant ausbilden
 }
 
 STRING 20581
-// Abilities: A0RG (Spell Immunity), EditorSuffix (Editor Suffix)
+// Abilities: A0RH (Devour), EditorSuffix (Editor Suffix)
 {
 (Dalaran)
 }
@@ -59813,25 +59843,25 @@ Leereregen (Effekt)
 }
 
 STRING 20605
-// Abilities: A0RH (Devour), EditorSuffix (Editor Suffix)
-{
-(Dalaran)
-}
-
-STRING 20606
 // Abilities: A10P (Polymorph), EditorSuffix (Editor Suffix)
 {
 (Dalaran)
 }
 
-STRING 20607
+STRING 20606
 // Upgrades: R05R (Cloud), EditorSuffix (Editor Suffix)
 {
 (Dalaran)
 }
 
-STRING 20608
+STRING 20607
 // Upgrades: R05S (Burning Oil), EditorSuffix (Editor Suffix)
+{
+(Dalaran)
+}
+
+STRING 20608
+// Upgrades: R05T (Backpack), EditorSuffix (Editor Suffix)
 {
 (Dalaran)
 }
@@ -59933,25 +59963,25 @@ Erhöht die Rüstung, maximalen Trefferpunkte und den Schaden von allen elementa
 }
 
 STRING 20630
-// Upgrades: R05T (Backpack), EditorSuffix (Editor Suffix)
-{
-(Dalaran)
-}
-
-STRING 20631
 // Upgrades: R05U (Exhume Corpses), EditorSuffix (Editor Suffix)
 {
 (Dalaran)
 }
 
-STRING 20632
+STRING 20631
 // Upgrades: R05V (Long Rifles), EditorSuffix (Editor Suffix)
 {
 (Dalaran)
 }
 
-STRING 20633
+STRING 20632
 // Upgrades: R05W (Magic Sentry), EditorSuffix (Editor Suffix)
+{
+(Dalaran)
+}
+
+STRING 20633
+// Upgrades: R05X (Sorceress Adept Training,Sorceress Master Training), EditorSuffix (Editor Suffix)
 {
 (Dalaran)
 }
@@ -60041,7 +60071,7 @@ Arkane Goldminen
 }
 
 STRING 20652
-// Upgrades: R05X (Sorceress Adept Training,Sorceress Master Training), EditorSuffix (Editor Suffix)
+// Upgrades: R05Y (Flare), EditorSuffix (Editor Suffix)
 {
 (Dalaran)
 }
@@ -60296,13 +60326,13 @@ P
 }
 
 STRING 21303
-// Upgrades: R05Y (Flare), EditorSuffix (Editor Suffix)
+// Upgrades: R05Z (Flare), EditorSuffix (Editor Suffix)
 {
 (Dalaran)
 }
 
 STRING 21304
-// Upgrades: R05Z (Flare), EditorSuffix (Editor Suffix)
+// Upgrades: R060 (Flare), EditorSuffix (Editor Suffix)
 {
 (Dalaran)
 }
@@ -60314,7 +60344,7 @@ rlev
 }
 
 STRING 21306
-// Upgrades: R060 (Flare), EditorSuffix (Editor Suffix)
+// Upgrades: R061 (Flare), EditorSuffix (Editor Suffix)
 {
 (Dalaran)
 }
@@ -60332,7 +60362,7 @@ Feuermagier-Meister-Ausbildung
 }
 
 STRING 21309
-// Upgrades: R061 (Flare), EditorSuffix (Editor Suffix)
+// Upgrades: R062 (Nature's Blessing), EditorSuffix (Editor Suffix)
 {
 (Dalaran)
 }
@@ -60362,7 +60392,7 @@ Erhöht die Mana-Kapazität, die Mana-Regenerationsrate und die Trefferpunkte vo
 }
 
 STRING 21319
-// Upgrades: R062 (Nature's Blessing), EditorSuffix (Editor Suffix)
+// Upgrades: R063 (Cloud), EditorSuffix (Editor Suffix)
 {
 (Dalaran)
 }
@@ -60374,7 +60404,7 @@ Increases the maximum hit points of Drachenfalken-Reiter and Versorgungswagens b
 }
 
 STRING 21321
-// Upgrades: R063 (Cloud), EditorSuffix (Editor Suffix)
+// Upgrades: R065 (Sorceress Adept Training,Sorceress Master Training), EditorSuffix (Editor Suffix)
 {
 (Dalaran)
 }
@@ -60398,7 +60428,7 @@ Magical Flesh Armor
 }
 
 STRING 21325
-// Upgrades: R065 (Sorceress Adept Training,Sorceress Master Training), EditorSuffix (Editor Suffix)
+// Upgrades: R066 (Animal War Training), EditorSuffix (Editor Suffix)
 {
 (Dalaran)
 }
@@ -61040,7 +61070,7 @@ Festhaut erforschen
 }
 
 STRING 22363
-// Abilities: A194 (Zähmung - Advanced), Hotkey (Hotkey - Normal)
+// Abilities: A194 (Taming - Advanced), Hotkey (Hotkey - Normal)
 {
 D
 }
@@ -63055,7 +63085,7 @@ Drachenhorst errichten
 }
 
 STRING 23897
-// Upgrades: R066 (Animal War Training), EditorSuffix (Editor Suffix)
+// Upgrades: R067 (Cloud), EditorSuffix (Editor Suffix)
 {
 (Dalaran)
 }
@@ -63115,13 +63145,13 @@ Schlaf
 }
 
 STRING 24382
-// Upgrades: R067 (Cloud), EditorSuffix (Editor Suffix)
+// Upgrades: R068 (Studded Leather Armor,Reinforced Leather Armor,Dragonhide Armor), EditorSuffix (Editor Suffix)
 {
 (Dalaran)
 }
 
 STRING 24383
-// Upgrades: R068 (Studded Leather Armor,Reinforced Leather Armor,Dragonhide Armor), EditorSuffix (Editor Suffix)
+// Upgrades: R069 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), EditorSuffix (Editor Suffix)
 {
 (Dalaran)
 }
@@ -63139,7 +63169,7 @@ Golem-Meisterausbildung
 }
 
 STRING 24386
-// Upgrades: R069 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), EditorSuffix (Editor Suffix)
+// Upgrades: R06A (Iron Plating,Steel Plating,Mithril Plating), EditorSuffix (Editor Suffix)
 {
 (Dalaran)
 }
@@ -68371,7 +68401,7 @@ Y
 }
 
 STRING 29359
-// Upgrades: R04R (Hippogryph Zähmung), Hotkey (Hotkey)
+// Upgrades: R04R (Hippogryph Taming), Hotkey (Hotkey)
 {
 X
 }
@@ -70465,7 +70495,7 @@ STRING 31554
 }
 
 STRING 31555
-// Upgrades: R04I (Hippogryph Zähmung), Ubertip (Tooltip - Extended)
+// Upgrades: R04I (Hippogryph Taming), Ubertip (Tooltip - Extended)
 {
 Trains War Eagles to allow Bogenschützinnen to mount them. This allows them to attack both air and ground units.
 }
@@ -70483,13 +70513,13 @@ STRING 31557
 }
 
 STRING 31558
-// Upgrades: R04R (Hippogryph Zähmung), Name (Name)
+// Upgrades: R04R (Hippogryph Taming), Name (Name)
 {
 Drachenfalken-Zähmung
 }
 
 STRING 31559
-// Upgrades: R04R (Hippogryph Zähmung), Tip (Tooltip)
+// Upgrades: R04R (Hippogryph Taming), Tip (Tooltip)
 {
 Drachenfalken-Zähmung erforschen
 }
@@ -70507,7 +70537,7 @@ X
 }
 
 STRING 31562
-// Upgrades: R04R (Hippogryph Zähmung), Ubertip (Tooltip - Extended)
+// Upgrades: R04R (Hippogryph Taming), Ubertip (Tooltip - Extended)
 {
 Trains Dragonhawks to allow Bogenschützinnen to mount them. This allows them to attack both air and ground units.
 }
@@ -70903,7 +70933,7 @@ Djinn
 }
 
 STRING 32016
-// Abilities: A268 (Zähmung - Doctor), Hotkey (Hotkey - Normal)
+// Abilities: A268 (Taming - Doctor), Hotkey (Hotkey - Normal)
 {
 S
 }
@@ -77989,25 +78019,25 @@ Winzige Burg
 }
 
 STRING 35789
-// Items: I0L3 (Book of Zähmung), Name (Name)
+// Items: I0L3 (Book of Taming), Name (Name)
 {
 Buch der Zähmung
 }
 
 STRING 35790
-// Items: I0L3 (Book of Zähmung), Description (Description)
+// Items: I0L3 (Book of Taming), Description (Description)
 {
 A book that contains knowledge of taming wild creatures.
 }
 
 STRING 35791
-// Items: I0L3 (Book of Zähmung), Ubertip (Tooltip - Extended)
+// Items: I0L3 (Book of Taming), Ubertip (Tooltip - Extended)
 {
 A book that contains knowledge of taming wild creatures.
 }
 
 STRING 35792
-// Items: I0L3 (Book of Zähmung), Tip (Tooltip - Basic)
+// Items: I0L3 (Book of Taming), Tip (Tooltip - Basic)
 {
 Buch der Zähmung erwerben
 }
@@ -78037,25 +78067,25 @@ Bezauberungs a creep with a base level up to 3.
 }
 
 STRING 35797
-// Abilities: A190 (Zähmung), Name (Name)
+// Abilities: A190 (Taming), Name (Name)
 {
 Zähmung
 }
 
 STRING 35798
-// Abilities: A191 (Zähmung - Novice), Name (Name)
+// Abilities: A191 (Taming - Novice), Name (Name)
 {
 Zähmung - Novize
 }
 
 STRING 35799
-// Abilities: A191 (Zähmung - Novice), Tip (Tooltip - Normal)
+// Abilities: A191 (Taming - Novice), Tip (Tooltip - Normal)
 {
 Novize Zähmung
 }
 
 STRING 35800
-// Abilities: A191 (Zähmung - Novice), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A191 (Taming - Novice), Ubertip (Tooltip - Normal - Extended)
 {
 The Tamer uses his knowledge to craft a Small Bait.
 }
@@ -78133,13 +78163,13 @@ STRING 35814
 }
 
 STRING 35815
-// Abilities: A194 (Zähmung - Advanced), Name (Name)
+// Abilities: A194 (Taming - Advanced), Name (Name)
 {
 Zähmung - Advanced
 }
 
 STRING 35816
-// Abilities: A194 (Zähmung - Advanced), Tip (Tooltip - Normal)
+// Abilities: A194 (Taming - Advanced), Tip (Tooltip - Normal)
 {
 Advanced Zähmung
 }
@@ -78151,37 +78181,37 @@ STRING 35819
 }
 
 STRING 35820
-// Abilities: A196 (Zähmung - Adept), Name (Name)
+// Abilities: A196 (Taming - Adept), Name (Name)
 {
 Zähmung - Adept
 }
 
 STRING 35821
-// Abilities: A196 (Zähmung - Adept), Tip (Tooltip - Normal)
+// Abilities: A196 (Taming - Adept), Tip (Tooltip - Normal)
 {
 Adept Zähmung
 }
 
 STRING 35822
-// Abilities: A196 (Zähmung - Adept), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A196 (Taming - Adept), Ubertip (Tooltip - Normal - Extended)
 {
 The Farmer uses his knowledge to create an Advanced Bait.
 }
 
 STRING 35823
-// Abilities: A197 (Zähmung - Master), Name (Name)
+// Abilities: A197 (Taming - Master), Name (Name)
 {
 Zähmung - Meister
 }
 
 STRING 35824
-// Abilities: A197 (Zähmung - Master), Tip (Tooltip - Normal)
+// Abilities: A197 (Taming - Master), Tip (Tooltip - Normal)
 {
 Meister Zähmung
 }
 
 STRING 35825
-// Abilities: A197 (Zähmung - Master), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A197 (Taming - Master), Ubertip (Tooltip - Normal - Extended)
 {
 The Tamer uses his knowledge to create a Monsterköder.
 }
@@ -82705,7 +82735,7 @@ Leichte Fernkampfeinheit. |n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
 }
 
 STRING 37425
-// Upgrades: R06A (Iron Plating,Steel Plating,Mithril Plating), EditorSuffix (Editor Suffix)
+// Upgrades: R06H (Creature Attack,Improved Creature Attack,Advanced Creature Attack), EditorSuffix (Editor Suffix)
 {
 (Dalaran)
 }
@@ -86569,7 +86599,7 @@ STRING 38848
 }
 
 STRING 38849
-// Upgrades: R06H (Creature Attack,Improved Creature Attack,Advanced Creature Attack), EditorSuffix (Editor Suffix)
+// Upgrades: R06N (Sorceress Adept Training,Sorceress Master Training), EditorSuffix (Editor Suffix)
 {
 (Dalaran)
 }
@@ -112494,12 +112524,6 @@ Hoch entwickelter Wachturm. Kann die Fähigkeit 'Rückkopplung' erlernen.|n|n|cf
 }
 
 STRING 53819
-// Upgrades: R06N (Sorceress Adept Training,Sorceress Master Training), EditorSuffix (Editor Suffix)
-{
-(Dalaran)
-}
-
-STRING 53820
 // Upgrades: R083 (Sorceress Adept Training,Sorceress Master Training), EditorSuffix (Editor Suffix)
 {
 (Dalaran)
@@ -123566,19 +123590,19 @@ Mounts a War Eagle so that the Archer can attack from the air. |n|n|cffffcc00Gre
 }
 
 STRING 61872
-// Upgrades: R04I (Hippogryph Zähmung), EditorSuffix (Editor Suffix)
+// Upgrades: R04I (Hippogryph Taming), EditorSuffix (Editor Suffix)
 {
 (Hochelfen)
 }
 
 STRING 61873
-// Upgrades: R04I (Hippogryph Zähmung), Name (Name)
+// Upgrades: R04I (Hippogryph Taming), Name (Name)
 {
 Kriegsadler-Zähmung
 }
 
 STRING 61874
-// Upgrades: R04I (Hippogryph Zähmung), Tip (Tooltip)
+// Upgrades: R04I (Hippogryph Taming), Tip (Tooltip)
 {
 Kriegsadler-Zähmung erforschen
 }
@@ -123770,7 +123794,7 @@ Erzkleriker-Meisterausbildung
 }
 
 STRING 62120
-// Upgrades: R04R (Hippogryph Zähmung), EditorSuffix (Editor Suffix)
+// Upgrades: R04R (Hippogryph Taming), EditorSuffix (Editor Suffix)
 {
 (Hochelfen)
 }

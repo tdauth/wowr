@@ -65,7 +65,7 @@ StringList {
     DEACTIVATED_RESURRECTION_STONE     "Auferstehungsschrein deaktiviert.",
     RESURRECTION_STONE_HERO_ONLY       "Nur einer Ihrer Helden kann den Auferstehungsschrein aktivieren.",
     NO_HERO_X                          "Kein Held %1%.",
-    // Quiver
+    // Quiver and Arrows
     ALREADY_USED                       "Bereits benutzt.",
     // Goblin Tool Box
     TARGET_HAS_MINIMUM_HP              "Ziel hat bereits die maximalen Trefferpunkte erreicht.",
@@ -86,6 +86,9 @@ StringList {
     // Item Summoner
     SUMMONED_X_ITEMS                   "%1% Gegenstände herbeigerufen.",
     NO_MATCHING_ITEMS                  "Keine passenden Gegenstände.",
+    // Night Elf World Tree
+    RESURRECTION_ALL_OVER_THE_MAP      "Auferstehung auf der gesamten Karte!",
+    NOT_ENOUGH_WISPS_IN_WORLD_TREE     "Nicht genügend Irrwische im Weltenbaum, um Auferstehung zu wirken.",
     // Moving Boxes
     NO_WRAPABLE_BUILDINGS              "Keine verpackbaren Gebäude in diesem Gebiet.",
     // Game End
@@ -1400,18 +1403,29 @@ StringList {
     AERIAL_SHACKLES_TOOLTIP            "Magically binds a target enemy air unit, so that it cannot move or attack and takes <this,mls1,x> damage per second. |nLasts <this,adur,x> seconds. |n|n|cffffcc00Increases the damage with every level.|r",
     LIGHTNING_SHIELD_TOOLTIP           "Forms a shield of electricity around a target unit, dealing <this,Lsh1,x> damage per second to units around it. |nLasts <this,adur,x> seconds.|n|n|cffffcc00Increases the damage with every level.|r",
     TORNADO_TOOLTIP                    "Summons a fierce controllable Tornado that slows enemy units' movement speed, randomly tosses enemy ground units into the air and damages enemy buildings. It causes <Atdg,Tdg1,x> damage per second to buildings. |nLasts <this,adur,x> seconds.|n|n|cffffcc00Increases the slowdown and caused damage with every level.|r",
-    // Paladin
+    // Priest
     HEAL_TOOLTIP                       "Heals <this,Hea1,x> hit points per second of a target friendly non-mechanical wounded unit.|n|n|cffffcc00Increases the amount of healed hit points with every level.|r",
     INNER_FIRE_TOOLTIP                 "Increases a target friendly unit's damage by <this,Inf1,x,%>% and armor by <this,Inf2,x>. |nLasts <this,adur,x> seconds. |n|n|cffffcc00Increases the bonus damage and armor with every level.|r",
-    HOLY_LIGHT_TOOLTIP                 "A holy light that can heal a friendly living unit for <this,Hhb1,x> or deal half damage to an enemy Undead unit.|n|n|cffffcc00Increases the healed hit points with every level.|r",
-    DIVINE_SHIELD_TOOLTIP              "Gives a friendly target unit Divine armor damage for <this,cr00,x> seconds. Has a cooldown of <this,acdn,x> seconds.|n|n|cffffcc00Increases duration with every level.|r",
+    HASTE_TOOLTIP                      "Multiplies the movement speed of the Hero and nearby allied units by a factor of <this,Ispi>. |nLasts <this,Dur1> seconds.|n|n|cffffcc00Increases movement speed factor and duration with every level.|r",
+    DISCHARGE_TOOLTIP                  "Starts and adds <this,cr00,x> seconds to cooldowns of the target's abilities. Has a cooldown of <this,acdn,x> seconds.|n|n|cffffcc00Increases the added cooldown and decreases the cooldown of this spell with every level.|r",
+    CONSECRATION_TOOLTIP               "Bless the ground, healing nearby friendly living units for <this,hcr1> hit points per second. Enemy Undead units take <this,hcr2> damage per second and have incoming healing reduced by <this,hcr3>%.|nLasts <this,Dur1> seconds.|n|n|cffffcc00Increases the hit points and damage per second and incoming healing reduction with every level.|r",
     HEALING_WAVE_TOOLTIP               "Calls forth a wave of healing energy that bounces up to <this,Ocl2,x> times, healing <this,Ocl1,x> damage on the primary target. Each jump heals less damage.",
+    SACRED_AURA_TOOLTIP                "Gives <this,hsa1,%>% Magic Resistance and <this,hsa2>% increased healing received to nearby friendly units.|n|n|cffffcc00Increases the magic resistance and increased healing with every level.|r",
+    CLEANSING_FIRE_TOOLTIP             "Call upon the Light, removing all debuffs from nearby friendly units and all buffs from nearby enemy units. Friendly units are healed for <this,hcl1> hit points, and gain <this,hcl4>% bonus to damage for <this,hcl3> seconds. For each debuff removed from a friendly unit, that unit heals an additional <this,hcl2> hit points and gains an additional <this,hcl5>% bonus to damage. Enemy units are stunned for <this,hcl6> seconds.|n|cffffcc00Deals <this,hcl7> damage to summoned units.|r|n|n|cffffcc00Increases the healed hit points and gained bonus damage with every level.|r",
+    REVIVE_TOOLTIP                     "Revives <this,cr00,x> friendly dead units including dead heroes. Dead heroes have always a higher priority than regular units. Has a cooldown of <this,acdn,x> seconds.|n|n|cffffcc00Increases the number of revived targets and decreases the cooldown with every level.|r",
+    // TODO add 2 abilities
+    // Paladin
+    HOLY_LIGHT_TOOLTIP                 "A holy light that can heal a friendly living unit for <this,Hhb1,x> or deal half damage to an enemy Undead unit.|n|n|cffffcc00Increases the healed hit points with every level.|r",
+    PARRY_TOOLTIP                      "Parries the next attack for <this,cr00,x> seconds.|n|n|cffffcc00Increases the time with every level.|r",
+    RIGHTEOUS_FURY_TOOLTIP             "Dashes towards a target point up to <this,Rng1> range away, dealing <this,chr2> damage to enemy land units hit along the way, and slowing their movement by <this,nrf3,%>% and attack rate by <this,nrf4,%>%.|n|n|cffffcc00Increases the dealt damage with every level.|r",
+    DIVINE_SHIELD_TOOLTIP              "Gives a friendly target unit Divine armor damage for <this,cr00,x> seconds. Has a cooldown of <this,acdn,x> seconds.|n|n|cffffcc00Increases duration with every level.|r",
     HOLY_AURA_TOOLTIP                  "Decreases nearby enemy Undead units' movement speed by <this,Uau1,x,%>% and life regeneration rate by <this,Uau2,x,%>%. |n|n|cffffcc00Decreases the movement and regeneration bonus with every level.|r",
     HEALING_SPRAY_TOOLTIP              "Sprays <this,Nhs6,x> waves of healing mist; each wave heals <this,Ncs1,x> damage to all friendly units in an area.|n|n|cffffcc00Increases the number of waves, area of effect and healed life with every level.|r",
     DEVOTION_AURA_TOOLTIP              "Gives <this,Had1,x> additional armor to nearby friendly units.|n|n|cffffcc00Increases the armor bonus with every level.|r",
     HOLY_NOVA_TOOLTIP                  "Casts a powerful nova of Holy Magic damaging Undead enemy units and healing allied non-Undead units for <this,cr00,x> points.|n|n|cffffcc00Increases the damage and healing with every level.|r",
     HORN_OF_STORMWIND_TOOLTIP           "Gives nearby friendly units a bonus of <this,Roa2,x> to armor. |nLasts <this,adur,x> seconds. |n|n|cffffcc00Increases the bonus armor with every level.|r",
     RESURRECTION_TOOLTIP               "Brings back to life the corpses of <this,Hre1,x> friendly nearby units.|n|n|cffffcc00Increases the number of corpses with every level.|r",
+    // TODO add one ability
     // Death Knight
     CURSE_TOOLTIP                      "Curses a target enemy unit, causing it to have a <this,Crs1,x,%>% chance to miss on an attack. |nLasts <this,adur,x> seconds.|n|n|cffffcc00Increases the chance with every level.|r",
     UNHOLY_FRENZY_TOOLTIP              "Increases the attack rate of a target unit by <this,Uhf1,x,%>%, but drains <this,Uhf2,x> hit points per second. |nLasts <this,adur,x> seconds.|n|n|cffffcc00Increases the attack rate with every level.|r",
@@ -1534,7 +1548,7 @@ StringList {
     SPELL_SHIELD_TOOLTIP               "Blocks a negative spell that an enemy casts on the Hero once every <this,acdn,x> seconds.|n|n|cffffcc00Decreases the cooldown with every level.|r",
     CHARM_TOOLTIP                      "Takes permanent control of a target enemy unit. |nCharm cannot be used on Heroes, or creeps above level <this,Nch1,x>. When Charm is being used on workers, they will die instantly. |n|n|cffffcc00Increases the maximum creep level with every level.|r",
     BIG_BAD_VOODOO_TOOLTIP             "Turns all friendly units invulnerable in an area around the hero.|nThe hero does not turn invulnerable.|nLasts <this,adur,x> seconds. |n|n|cffffcc00Increases the duration with every level.|r",
-    // Trainer
+    // VIP
     ATTRIBUTE_BONUS_TOOLTIP            "Gives a total of <this,Iagi,x> points to Agility, Intelligence, and Strength.|n|n|cffffcc00Increases the stats with every level.|r",
     DAMAGE_BONUS_TOOLTIP               "Increases the attack damage of the Hero by <his,Iatt,x>.|n|n|cffffcc00Increases the damage bonus with every level.|r",
     ARMOR_BONUS_TOOLTIP                "Increases the armor of the Hero by <this,Idef,x>.|n|n|cffffcc00Increases the armor bonus with every level.|r",
@@ -1545,6 +1559,7 @@ StringList {
     LIFE_REGENERATION_TOOLTIP          "Increases the Hero's hit point regeneration by <this,Ihpr,x>.|n|n|cffffcc00Increases the hit point regeneration with every level.|r",
     MANA_REGENERATION_TOOLTIP          "Increases the Hero's rate of mana regeneration by <this,Arm1,x>.|n|n|cffffcc00Increases the mana regeneration with every level.|r",
     SIGHT_RANGE_BONUS_TOOLTIP          "Increases the Hero's rate sight range by <this,Isib,x>.|n|n|cffffcc00Increases the sight range with every level.|r",
+    TELEPORTATION_TOOLTIP              "Teleports the hero to the targeted allied land unit or structure.|n|n|cffffcc00Decreases the cooldown with every level.|r",
     // Other
     MASS_CHARM_TOOLTIP                 "Takes control of target enemy units. |nCharm cannot be used on Heroes, or creeps above level <A14Q,Nch1,x>. When Charm is being used on workers, they will die instantly. |n|n|cffffcc00Increases the maximum creep level with every level.|r",
     MASS_FINGER_OF_DEATH_TOOLTIP       "Instantly turns a creature or building inside-out, destroying it utterly. Causes <A177,Nfd3,x> damage.|n|n|cffffcc00Increases the damage with every level.|r",
@@ -1553,8 +1568,6 @@ StringList {
     INFERNO_TOOLTIP                    "Summons an Infernal from the sky causing <this,Uin1,x> damage to enemy ground units on impact and stunning them for <this,adur,x> seconds.|nLasts <this,Uin2,x> seconds.|n|n|cffffcc00Increases the stats of the summoned Infernal with every level.|r",
     DRAIN_TOOLTIP                      "Absorbs the life essence and mana of a target enemy unit by taking hit points from it every second and giving them to Gul'dan. |n|nDrain also applies the current rank of the Black Arrow debuff to the target. |nLasts <this,adur,x> seconds.|n|n|cffffcc00Increases the drained and transfered life and mana per second with every level.|r",
     SOUL_BURN_TOOLTIP                  "Wreaths an enemy unit in magical flames which cause <this,Nso1,x> damage per second, prevent the casting of spells, and reduce attack damage by <this,Nso3,x,%>%.|nLasts <this,adur,x> seconds.|n|n|cffffcc00Increases the damaget and duration with every level.|r",
-    TELEPORTATION_TOOLTIP              "Teleports the hero to the targeted allied land unit or structure.|n|n|cffffcc00Decreases the cooldown with every level.|r",
-    PARRY_TOOLTIP                      "Parries the next attack for <this,cr00,x> seconds.|n|n|cffffcc00Increases the time with every level.|r",
     MASS_INVISIBILITY_TOOLTIP          "Makes targeted units invisible. If the units attack, use an ability or cast a spell, they will become visible.|n|n|cffffcc00Increases the duration with every level.|r",
     MASS_POLYMORPH_TOOLTIP             "Turns a target enemy unit into a sheep. The targeted unit retains its hit points and armor, but cannot attack. |nCannot be cast on Heroes. |nLasts <Aply,adur,x> seconds.|n|n|cffffcc00Increases the duration and maximum target creep level with every level.|r",
     MASS_SLOW_TOOLTIP                  "Slows a target enemy unit's attack rate and movement speed. |nLasts <A0QG,adur,x> seconds.|n|n|cffffcc00Increases the reduction percentage with every level.|r",
@@ -1575,7 +1588,6 @@ StringList {
     MASS_HOLY_LIGHT_TOOLTIP            "A holy light that can heal friendly living units or damage enemy Undead units.|n|n|cffffcc00Increases the healed hit points with every level.|r",
     MASS_INNER_FIRE_TOOLTIP            "Increases target friendly units' damage by <A1WK,Inf1,x,%>% and armor by <A1WK,Inf2,x>. |nLasts <A1WK,adur,x> seconds.|n|n|cffffcc00Increases the bonus damage and armor with every level.|r",
     OPEN_PORTALS_TOOLTIP               "Opens two portals connected to each other. One at the hero's position and the other one at the target location. The portals last <this,cr00,x> seconds.|n|n|cffffcc00Increases the duration with every level.|r",
-    REVIVE_TOOLTIP                     "Revives <this,cr00,x> friendly dead units including dead heroes. Dead heroes have always a higher priority than regular units. Has a cooldown of <this,acdn,x> seconds.|n|n|cffffcc00Increases the number of revived targets and decreases the cooldown with every level.|r",
     FIRE_ATTACK_TOOLTIP                "Adds <A1JO,DataA1> bonus fire damage to the attack of a Hero when carried. The Hero's attacks also become ranged when attacking air and do splash damage to nearby enemy units.",
     FINISH_CONSTRUCTION_TOOLTIP        "Finishes the construction and upgrades of friendly buildings.|n|n|cffffcc00Decreases the cooldown with every level.|r",
     PICKPOCKETING_TOOLTIP              "Gives your hero the chance to pickpocket a nearby killed unit. It will steal a random item from the unit's inventory including equipment bags and give you 20 % of its bounty extra.|n|n|cffffcc00Increases the chance percentage with every level.|r",
@@ -1588,7 +1600,6 @@ StringList {
     SUMMON_EARTH_ELEMENTAL_TOOLTIP     "Summons an earth elemental to attack the hero's enemies. |nLasts <this,adur,x> seconds. |n|n|cffffcc00Attacks land and air units.|r|n|n|cffffcc00Increases the stats of the earth elemental with every level.|r",
     WEB_TOOLTIP                        "Binds a target enemy air unit in webbing, forcing it to the ground. Webbed units can be hit as though they were land units. |nLasts <this,adur,x> seconds.|n|n|cffffcc00Increases the duration with every level.|r",
     HIDE_IN_TREES_TOOLTIP              "Hides the unit in the targeted tree which makes it invisible and unmovable and increases the life and mana regeneration until leaving the trees or the tree is cut down.|n|n|cffffcc00Increases the life and mana regeneration with every level.|r",
-    DISCHARGE_TOOLTIP                  "Starts and adds <this,cr00,x> seconds to cooldowns of the target's abilities. Has a cooldown of <this,acdn,x> seconds.|n|n|cffffcc00Increases the added cooldown and decreases the cooldown of this spell with every level.|r",
     MIND_CONTROL_TOOLTIP               "The owning player of the target unit is forced to share control with you for <this,cr00,x> seconds.|n|n|cffffcc00Increases the duration with every level.|r",
     TELEKINESIS_TOOLTIP                "Marks a target unit, item or destructable for moving it. Moves the marked target to the given location when cast on the ground. Has a cooldown of <this,acdn,x> seconds and a range of <this,aran,x>.|n|n|cffffcc00Increases the maximum distance and reduces the cooldown with every level.|r",
     // Chat Commands
@@ -2064,7 +2075,7 @@ StringList {
     Q_DUROTAR_LAW_CODE_0               "Bring the Code of Laws tome to Tyrande on Teldrassil Isle.",
     Q_DUROTAR_LAW_CODE_1               "Return to Thrall for your payment.",
     // OrcQuest2
-    Q_HARPY_MENACE_TITLE               "Harpy Menace",
+    Q_HARPY_MENACE_TITLE               "Harpien-Bedrohung",
     Q_HARPY_MENACE_DESCRIPTION         "The Tauren have constantly been harassed by Harpies and Centaurs since they moved to Mulgore. Now a scout has discovered one of the Harpies´ Queens. Cairne believes that if she was destroyed, the Harpies would at last be silenced. He needs a strong hero to travel to the nearby Stonetalon Mountains, find the Harpy Queen and dispose of her as she deserves. Return afterwards her heart to Cairne as a proof of the mission success and claim your reward! (*ugh*)",
     Q_HARPY_MENACE_0                   "Kill the Harpy Queen.",
     Q_HARPY_MENACE_1                   "Return her heart to Cairne.",
@@ -2074,7 +2085,7 @@ StringList {
     Q_ARENA_CONTEST_0                  "Beat Level 9 of the Gauntlet.",
     Q_ARENA_CONTEST_1                  "Show Rexxar the Stonemaul Arena Master Belt.",
     // OrcQuest4
-    Q_CENTAUR_KHANS_TITLE              "Centaur Khans",
+    Q_CENTAUR_KHANS_TITLE              "Zentauren-Khans",
     Q_CENTAUR_KHANS_DESCRIPTION        "The Pandaren Brewmaster, Chem Stormstout, has recently arrived in Mulgore with interesting news from his travel in the south. There seems to be an increased movement of the centaurs. They apparently seem to have their seasonal fights for who is to be the new Supreme Centaur leader. The Tauren see their opportunity to strike a blow at the centaurs in order to lower their battle morale and cause confusion among them. Cairne and Chem will reward any Hero who kills all 7 Centaur Khans in the southern part of the Barrens.",
     Q_CENTAUR_KHANS_0                  "Kill all 7 Centaur Khans.",
     Q_CENTAUR_KHANS_1                  "Return to Cairne to receive your reward.",
@@ -2089,7 +2100,7 @@ StringList {
     Q_TRAITOR_0                        "Capture Kael in Outland.",
     Q_TRAITOR_1                        "Return Kael to Lor'Themar Theron.",
     // BloodElfQuest3
-    Q_FORSAKEN_TITLE                   "Forsaken",
+    Q_FORSAKEN_TITLE                   "Verlassene",
     Q_FORSAKEN_DESCRIPTION             "We need more allies the make the Blood Elf army strong enough for defeating the Scourge in our former kingdom. Sylvanas Windrunner is ready to help the Blood Elves with her Forsaken troops to defeat the common enemy if we meet her and kill enemy undead creeps for her.",
     Q_FORSAKEN_0                       "Bring Lor'themar's message to Sylvanas in Undercity.",
     Q_FORSAKEN_1                       "Kill 20 Undead creeps.",
@@ -2106,7 +2117,7 @@ StringList {
     Q_TOMB_OF_SARGERAS_0               "Get the artifact from Kil´Jaeden in the Tomb of Sargeras near the Maelstrom.",
     Q_TOMB_OF_SARGERAS_1               "Bring the artifact to Lord Illidan in Nazjatar.",
     // NagaQuest2
-    Q_FIGHT_FIRE_WITH_FIRE_TITLE       "Fight Fire with Fire",
+    Q_FIGHT_FIRE_WITH_FIRE_TITLE       "Bekämpft Feuer mit Feuer",
     Q_FIGHT_FIRE_WITH_FIRE_DESCRIPTION "Lord Illidan is getting tired of being chased by the Night Elf Warden Maiev Shadowsong. Before the next step to strike at the Lich King, Illidan wants the Warden matter solved first. According to spy reports, Maiev and her group of Huntresses have currently set up a base camp near the Naga Temple Ruins, giving you the chance to conduct a surprise attack! However, Illidan wants Maiev alive. You will have to use a special magical scroll Kael has made to prevent Maiev from using her teleporting skills and capture her. The quest is to find Maiev and use the Arcane Scroll near her in order to activate the spell. Afterwards, return Maiev to Illidan and claim your reward!",
     Q_FIGHT_FIRE_WITH_FIRE_0           "Capture Maiev in Sunken Ruins with Kael's scroll.",
     Q_FIGHT_FIRE_WITH_FIRE_1           "Return the captured Maiev to Lord Illidan in Nazjatar.",
@@ -2153,7 +2164,7 @@ StringList {
     Q_DEMIGODS_HORN_0                  "Find Cenarius horn in Ashenvale.",
     Q_DEMIGODS_HORN_1                  "Bring the horn to Kel'Thuzad in Sunwell Grove.",
     // LichKingQuest3
-    Q_LICH_KINGS_ORDER_TITLE           "Lich King´s Order",
+    Q_LICH_KINGS_ORDER_TITLE           "Befehl des Lich-Königs",
     Q_LICH_KINGS_ORDER_DESCRIPTION     "After having enabled the Lich King to control the the mysterious Faceless Ones, the time has come to unravel the Scourge´s Wrath. The Quest is as hard as easy it is to describe it: you are to destroy one Nation´s Capital (Tier 1, 2 or 3 Town Hall or a or a Demigod Temple). Hiring Faceless Ones in Draktharon Keep (Anub´Arak) might be clever in order to accomplish this difficult task. After you complete your Quest, return to Arthas and claim your reward!",
     Q_LICH_KINGS_ORDER_0               "Destroy one Nation´s Capital (Tier 1, 2 or 3 Town Hall or a or a Demigod Temple).",
     Q_LICH_KINGS_ORDER_1               "Return to Arthas to claim your reward.",
@@ -2189,7 +2200,7 @@ StringList {
     Q_THE_NEW_CITADEL_0                "Bring the instructions to the Commander of the Citadel.",
     Q_THE_NEW_CITADEL_1                "Deliver the message from the Commander back to Socrethar.",
     // DemonQuest2
-    Q_DRAENEI_DESERTERS_TITLE          "Draenei Deserters",
+    Q_DRAENEI_DESERTERS_TITLE          "Draenei Deserteure",
     Q_DRAENEI_DESERTERS_DESCRIPTION    "Lady Hederine needs information about planned attacks from the Draenei. Hence, she gives you spell to convert Draeneis which will give her the information she needs. Convert 5 Draenei and bring them to her. Return the spell to her to receive your reward.",
     Q_DRAENEI_DESERTERS_0              "Convert 5 Draenei with the Charm item by Lady Hederine.",
     Q_DRAENEI_DESERTERS_1              "Return to Lady Hederine to get your reward.",
@@ -2260,7 +2271,7 @@ StringList {
     Q_FUNERAL_0                        "Sink the boat with the body in the Maelstrom.",
     Q_FUNERAL_1                        "Return the spirit to Elder Ko'nani.",
     // TuskarrQuest4
-    Q_ANCESTORS_TITLE                  "Ancestors",
+    Q_ANCESTORS_TITLE                  "Vorfahren",
     Q_ANCESTORS_DESCRIPTION            "Elder Ko'nani from the Tuskarr wants you travel to the Tuskarr Statue created for their ancestors and summon a Tuskarr Chieftain from the past to get his advice. Travel to the statue, hire a Tuskarr Chieftain and return it to to Ko'nani to get your reward.",
     Q_ANCESTORS_0                      "Hire a Tuskarr Chieftain from the statue.",
     Q_ANCESTORS_1                      "Return the Tuskarr Chieftain to Elder Ko'nani.",
