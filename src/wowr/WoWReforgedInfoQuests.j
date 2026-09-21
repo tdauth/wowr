@@ -299,7 +299,6 @@ private function Init takes nothing returns nothing
     call AddInfoQuestItem(GetLocalizedStringSafe("CC_STR"))
     call AddInfoQuestItem(GetLocalizedStringSafe("CC_AGI"))
     call AddInfoQuestItem(GetLocalizedStringSafe("CC_INT"))
-    call AddInfoQuestItem(GetLocalizedStringSafe("CC_RENAME"))
     call AddInfoQuestItem(GetLocalizedStringSafe("CC_SAY"))
     call AddInfoQuestItem(GetLocalizedStringSafe("CC_SHOUT"))
     call AddInfoQuestItem(GetLocalizedStringSafe("CC_BUILDER"))
