@@ -24,6 +24,12 @@ Warcraft III: Reforged open world role-playing game and strategy map.
 Download and place the map file `wowr[version].w3x` into the folder `C:\Users\%USERNAME%\Documents\Warcraft III\Maps\Download`.
 Start Warcraft III: Reforged and play a custom game by choosing the map.
 
+## Adapt the Map to Official Warcraft III Updates
+
+Blizzard sometimes release new official updates for Warcraft III which make the map unplayable since it uses a modified [common.j](./wowr.w3x/Scripts/common.j) and [common.ai](./wowr.w3x/Scripts/common.ai) file.
+These files have to be updated to contain the types, natives and constants from the latest offical update of Warcraft III.
+For example, for Forsaken Kingdom we had to include everything from the modified [common.j](./wc3/fk/Scripts/common.j).
+
 ## Modify the Map
 
 - Start the World Editor of Warcraft III.
@@ -110,7 +116,7 @@ Use this check list when releasing a new version of the map:
 * Add all credits from this README to the map to make them appear in the quest log.
 * Add all changes to the ChangeLog in the quest log by adding them in [WoWReforgedCredits.j](./src/wowr/WoWReforgedCredits.j).
 * Make sure that the global variables for the map and the game are split into the proper trigger editor folders. There should be no top level "Variables" folder in trigger editor.
-* Make sure that the modified files [common.j](./wowr.w3x/Scripts/common.j) and [common.ai](./wowr.w3x/Scripts/common.ai) are up to date with the latest Warcraft III: Reforged patch.
+* Make sure that the modified files [common.j](./wowr.w3x/Scripts/common.j) and [common.ai](./wowr.w3x/Scripts/common.ai) are up to date with the latest official Warcraft III update.
 * Use [check.bat](./scripts/check.bat) (Windows) or [check.sh](./scripts/check.sh) (Linux) to check all JASS scripts and FDF files. It uses the JAR fdfparser-1.0.jar from [WarsmashModEngine](https://github.com/Retera/WarsmashModEngine) for FDF parsing.
 * Check all translation files in the [_Locales](./wowr.w3x/_Locales/) folder. Use [diffstrings.bat](./scripts/diffstrings.bat) (Windows) or [diffstrings.sh](./scripts/diffstrings.sh) (Linux) to compare the translation files with the original ones.
 * Make sure that savegames still work by saving and loading.
