@@ -73,9 +73,9 @@ private function AddClassesQuestItems takes nothing returns nothing
     local integer i = 0
     local integer max = GetMaxHeroClasses()
     loop
-        exitwhen ( i == max )
+        exitwhen (i >= max)
         call AddInfoQuestItem(GetHeroClassName(i))
-        set i=i + 1
+        set i= i + 1
     endloop
 endfunction
 
@@ -85,7 +85,7 @@ private function AddTauntsQuestItems takes nothing returns nothing
     call AddInfoQuestItem(GetLocalizedStringSafe("TAUNTS_QUEST_ITEM_0"))
     call AddInfoQuestItem(GetLocalizedStringSafe("TAUNTS_QUEST_ITEM_1"))
     loop
-        exitwhen (i == max)
+        exitwhen (i >= max)
         call AddInfoQuestItem("\"" + GetTauntChatCommand(i) + "\": " + GetTauntText(i))
         set i = i + 1
     endloop
