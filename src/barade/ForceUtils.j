@@ -18,6 +18,20 @@ function ForceAddForce takes force target, force source returns nothing
     endloop
 endfunction
 
+function ForceRemoveForce takes force target, force source returns nothing
+    local player slotPlayer = null
+    local integer i = 0
+    loop
+        set slotPlayer = Player(i)
+        if (IsPlayerInForce(slotPlayer, source)) then
+            call ForceRemovePlayer(target, slotPlayer)
+        endif
+        set slotPlayer = null
+        set i = i + 1
+        exitwhen (i >= bj_MAX_PLAYERS)
+    endloop
+endfunction
+
 // non leaking function
 function ForceAddAlliesWithSharedControl takes force target, player owner returns nothing
     local player slotPlayer = null

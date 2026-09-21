@@ -152,6 +152,7 @@ private function Init takes nothing returns nothing
     call AddChange("Add library OnUnitRemoval which replaces unsafe RemoveUnit hooks.")
     call AddChange("Prevent Dalaran Blink from teleporting into player selection.")
     call AddChange("Remove Dalaran building Magical Pen h09Y.")
+    call AddChange("Add JASS function ForceRemoveForce to ForceUtils.")
 
 static if (MAP_DEBUG_MODE_ENABLED) then
     call AddVersion("4.6")
