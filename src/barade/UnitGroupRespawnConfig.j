@@ -39,7 +39,7 @@ endfunction
 private function DropItem takes unit dyingUnit, group whichGroup returns nothing
     local integer unitLevel = GetMaxUnitLevelFromGroup(whichGroup)
     local integer itemLevel = unitLevel // 60 percent chance
-    local integer chance = GetRandomInt(0, 100)
+    local integer chance = GetRandomInt(1, 100)
     // 40 percent chance to drop an item with level above or below
     if (chance <= 40) then
         if (chance <= 10) then // 10 percent level above

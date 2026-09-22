@@ -104,7 +104,7 @@ function GetComputerAINavy takes player whichPlayer returns group
 endfunction
 
 function ComputerAINavyAttacks takes player whichPlayer returns nothing
-    local integer target = GetRandomInt(0, udg_NavyAttackLocationsCounter)
+    local integer target = GetRandomInt(0, udg_NavyAttackLocationsCounter - 1)
     local rect targetRect = udg_NavyAttackLocations[target]
     local real x = GetRectCenterX(targetRect)
     local real y = GetRectCenterY(targetRect)

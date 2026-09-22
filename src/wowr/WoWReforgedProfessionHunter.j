@@ -21,8 +21,12 @@ function GetCritterSpawnerTimerHandleId takes nothing returns integer
     return GetHandleId(spawnCrittersTimer)
 endfunction
 
+function GetRandomTrophyItemTypeId takes nothing returns integer
+    return trophyItemTypeIds[GetRandomInt(0, trophyCounter - 1)]
+endfunction
+
 private function SpawnRandomCritter takes real x, real y, real face returns unit
-    return CreateUnit(Player(PLAYER_NEUTRAL_PASSIVE), trophyUnitTypeIds[GetRandomInt(0, trophyCounter)], x, y, face)
+    return CreateUnit(Player(PLAYER_NEUTRAL_PASSIVE), GetRandomTrophyItemTypeId(), x, y, face)
 endfunction
 
 private function EnumSpawnCritter takes nothing returns nothing
@@ -59,10 +63,6 @@ endfunction
 
 function GetTrophyItemTypeId takes integer index returns integer
     return trophyItemTypeIds[index]
-endfunction
-
-function GetRandomTrophyItemTypeId takes nothing returns integer
-    return trophyItemTypeIds[GetRandomInt(0, trophyCounter - 1)]
 endfunction
 
 function IsCritter takes integer unitTypeId returns boolean

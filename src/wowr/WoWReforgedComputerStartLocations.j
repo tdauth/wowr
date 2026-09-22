@@ -61,7 +61,7 @@ struct ComputerStartLocation
         call BJDebugMsg("Possible races count " + I2S(c))
 
         if (c > 0) then
-            return r[GetRandomInt(0, c)]
+            return r[GetRandomInt(0, c - 1)]
         endif
 
         call BJDebugMsg("Found no matching race and now choosing by team only.")

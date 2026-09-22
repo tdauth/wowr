@@ -34,8 +34,8 @@ function GetRandomAshenvaleRainWeatherEffect takes nothing returns integer
     set counter = counter + 1
     set e[counter] = ASHENVALE_RAIN_LIGHT
     set counter = counter + 1
-    
-    return e[GetRandomInt(0, counter)]
+
+    return e[GetRandomInt(0, counter - 1)]
 endfunction
 
 function GetRandomLordaeronRainWeatherEffect takes nothing returns integer
@@ -45,7 +45,7 @@ function GetRandomLordaeronRainWeatherEffect takes nothing returns integer
     set counter = counter + 1
     set e[counter] = LORDAERON_RAIN_LIGHT
     set counter = counter + 1
-    
+
     return e[GetRandomInt(0, counter)]
 endfunction
 
@@ -56,7 +56,7 @@ function GetRandomSnowWeatherEffect takes nothing returns integer
     set counter = counter + 1
     set e[counter] = NORTHREND_SNOW_HEAVY
     set counter = counter + 1
-    
+
     return e[GetRandomInt(0, counter)]
 endfunction
 
@@ -67,7 +67,7 @@ function GetRandomOutlandWindWeatherEffect takes nothing returns integer
     set counter = counter + 1
     set e[counter] = OUTLAND_WIND_LIGHT
     set counter = counter + 1
-    
+
     return e[GetRandomInt(0, counter)]
 endfunction
 
@@ -80,7 +80,7 @@ function GetRandomSeaWeatherEffect takes nothing returns integer
     set counter = counter + 1
     set e[counter] = WIND_HEAVY
     set counter = counter + 1
-    
+
     return e[GetRandomInt(0, counter)]
 endfunction
 
@@ -91,7 +91,7 @@ function GetRandomDungeonWhiteFogEffect takes nothing returns integer
     set counter = counter + 1
     set e[counter] = DUNGEON_WHITE_FOG_LIGHT
     set counter = counter + 1
-    
+
     return e[GetRandomInt(0, counter)]
 endfunction
 

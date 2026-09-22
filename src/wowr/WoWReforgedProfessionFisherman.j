@@ -25,9 +25,9 @@ endfunction
 
 function CreateFishForFishingRod takes unit hero returns item
     local item whichItem = null
-    if (GetRandomInt(0, 100) <= 60) then
+    if (GetRandomInt(1, 100) <= 60) then
         set whichItem = UnitAddItemById(hero, 'I0KN')
-        if (GetRandomInt(0, 100) <= 15) then
+        if (GetRandomInt(1, 100) <= 15) then
             call SetItemCharges(whichItem, GetItemCharges(whichItem) + GetRandomInt(2, 6))
         endif
 

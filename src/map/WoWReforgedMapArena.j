@@ -22,7 +22,7 @@ private function TriggerConditionDeath takes nothing returns boolean
 endfunction
 
 private function DoDropItem takes nothing returns boolean
-    return GetRandomInt(0, 100) >= 50
+    return GetRandomInt(1, 100) >= 50
 endfunction
 
 private function TriggerActionDeath takes nothing returns nothing

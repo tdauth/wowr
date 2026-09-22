@@ -246,7 +246,6 @@ endfunction
 
 // Used for Computer AI.
 function GetRandomComputerProfessionEx takes integer exclude0, integer exclude1 returns integer
-    local integer random = GetRandomInt(0, 13) // all possible menu items
     local integer array a
     local integer c = 0
     set a[c] = udg_ProfessionHerbalist
@@ -276,7 +275,7 @@ function GetRandomComputerProfessionEx takes integer exclude0, integer exclude1 
     set a[c] = udg_ProfessionWitchDoctor
     set c = c + 1
 
-    return a[GetRandomInt(0, c)]
+    return a[GetRandomInt(0, c - 1)]
 endfunction
 
 function GetRandomComputerProfession takes nothing returns integer
