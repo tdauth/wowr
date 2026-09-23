@@ -48,7 +48,7 @@ struct ComputerStartLocation
         local integer array r
         local integer c = 0
         loop
-            exitwhen (i == possibleRacesCounter)
+            exitwhen (i >= possibleRacesCounter)
             set raceTeam = GetRaceTeam(possibleRaces[i])
             if (raceTeam == team or raceTeam == TEAM_NONE) then
                 call BJDebugMsg("Possible race " + GetRaceName(possibleRaces[i]) + " for start location " + I2S(this) + " with team " + I2S(team))
