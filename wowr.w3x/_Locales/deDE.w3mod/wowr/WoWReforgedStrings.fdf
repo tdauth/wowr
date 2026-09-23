@@ -2200,7 +2200,7 @@ StringList {
     Q_THE_NEW_CITADEL_0                "Bring the instructions to the Commander of the Citadel.",
     Q_THE_NEW_CITADEL_1                "Deliver the message from the Commander back to Socrethar.",
     // DemonQuest2
-    Q_DRAENEI_DESERTERS_TITLE          "Draenei Deserteure",
+    Q_DRAENEI_DESERTERS_TITLE          "Draenei-Deserteure",
     Q_DRAENEI_DESERTERS_DESCRIPTION    "Lady Hederine needs information about planned attacks from the Draenei. Hence, she gives you spell to convert Draeneis which will give her the information she needs. Convert 5 Draenei and bring them to her. Return the spell to her to receive your reward.",
     Q_DRAENEI_DESERTERS_0              "Convert 5 Draenei with the Charm item by Lady Hederine.",
     Q_DRAENEI_DESERTERS_1              "Return to Lady Hederine to get your reward.",
@@ -2226,7 +2226,7 @@ StringList {
     Q_GOBLIN_INVENTION_0               "Buy a Goblin Blaster on Kezan.",
     Q_GOBLIN_INVENTION_1               "Bring the Goblin Blaster to Chen on Pandaria.",
     // PandarenQuest3
-    Q_MURGUL_REVENGE_TITLE             "Mur'gul Revenge",
+    Q_MURGUL_REVENGE_TITLE             "Rache der Mur'gul",
     Q_MURGUL_REVENGE_DESCRIPTION       "The Mur'gul are back sending a herald with some conditions for the Pandaren to retreat from this land. Although peaceful we have to fight them back to protect our land. Kill the herald and bring the conditions to Chen to get your reward.",
     Q_MURGUL_REVENGE_0                 "Kill the herald on Pandaria.",
     Q_MURGUL_REVENGE_1                 "Bring the dropped conditions to Chen on Pandaria.",
@@ -2306,7 +2306,7 @@ StringList {
     Q_INVASION_0                       "Destroy all Dimensional Gates on Azeroth.",
     Q_INVASION_1                       "Return the Portal Stone to Jaina on Theramore.",
     // JainaQuest3
-    Q_ELEMENTAL_LORDS_TITLE            "Elemental Lords",
+    Q_ELEMENTAL_LORDS_TITLE            "Elementar-Lords",
     Q_ELEMENTAL_LORDS_DESCRIPTION      "The Elemental Lords are back from the Elemental Plane for revenge on Azeroth. Defeat them and return to Jaina.",
     Q_ELEMENTAL_LORDS_0                "Defeat all Elemental Lords.",
     Q_ELEMENTAL_LORDS_1                "Return the Elemental Stone to Jaina on Theramore.",
