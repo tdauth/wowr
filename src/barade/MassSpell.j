@@ -64,7 +64,7 @@ private function TriggerActionMassSpell takes nothing returns nothing
     local integer i = 0
     local unit caster = GetTriggerUnit()
     local player owner = GetOwningPlayer(caster)
-    local integer abilityLevel = GetUnitAbilityLevel(caster, abilityId)
+    //local integer abilityLevel = GetUnitAbilityLevel(caster, abilityId)
     //local real radius = BlzGetAbilityRealLevelField(BlzGetUnitAbility(caster, abilityId), ABILITY_RLF_AREA_OF_EFFECT, abilityLevel) // TODO always returns 0
     local real radius = s.radius
     local unit dummy = null
