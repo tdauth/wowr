@@ -1,4 +1,4 @@
-library WoWReforgedCustomUnitTypes initializer Init requires CustomUnitTypes, UnitGroupRespawn, UnitGroupRespawnConfig, WoWReforgedAutoSkill, WoWReforgedPortals, WoWReforgedHeroes, WoWReforgedBosses, WoWReforgedRaces, WoWReforgedProfessions, WoWReforgedResources, WoWReforgedProperties, WoWReforgedSkins, WoWReforgedArmory, WoWReforgedTaverns, WoWReforgedSummonedUnits, WoWReforgedGaia, WoWReforgedChests, WoWReforegdHideout, WoWReforgedTrainer, WoWReforgedProfessionFarmer, WoWReforgedProfessionHunter, WoWReforgedCommandButtons, WoWReforgedGoldMines, WoWReforgedLevers, WoWReforgedRandomCorpse, WoWReforgedProfessionBooksShop, WoWReforgedSceptersShop, WoWReforgedBanners, WoWReforgedVIPs, WoWReforgedAlchemistLab, WoWReforgedMounts, WoWReforgedCraftingStash, WoWReforgedRaceDwarf, WoWReforgedRaceTroll, WoWReforgedRaceMurloc, WoWReforgedRaceTuskarr, WoWReforgedRaceTauren, WoWReforgedRaceWorgen, WoWReforgedRaceGoblin, WoWReforgedMapData
+library WoWReforgedCustomUnitTypes initializer Init requires CustomUnitTypes, UnitGroupRespawn, UnitGroupRespawnConfig, WoWReforgedAutoSkill, WoWReforgedPortals, WoWReforgedHeroes, WoWReforgedBosses, WoWReforgedRaces, WoWReforgedProfessions, WoWReforgedResources, WoWReforgedProperties, WoWReforgedSkins, WoWReforgedArmory, WoWReforgedTaverns, WoWReforgedSummonedUnits, WoWReforgedGaia, WoWReforgedChests, WoWReforegdHideout, WoWReforgedTrainer, WoWReforgedProfessionFarmer, WoWReforgedProfessionHunter, WoWReforgedCommandButtons, WoWReforgedGoldMines, WoWReforgedLevers, WoWReforgedRandomCorpse, WoWReforgedProfessionBooksShop, WoWReforgedSceptersShop, WoWReforgedBanners, WoWReforgedVIPs, WoWReforgedAlchemistLab, WoWReforgedMounts, WoWReforgedCraftingStash, WoWReforgedRaceDwarf, WoWReforgedRaceTroll, WoWReforgedRaceMurloc, WoWReforgedRaceTuskarr, WoWReforgedRaceTauren, WoWReforgedRaceWorgen, WoWReforgedRaceGoblin, WoWReforgedRaceHighElf, WoWReforgedMapData
 
 private function AddCustomMine takes unit whichUnit returns nothing
     local integer index = GetMineTypeIndex(GetUnitTypeId(whichUnit))
@@ -309,6 +309,14 @@ private struct CustomUnitTypeDwarfLumberMill extends CustomUnitType
 
     public stub method onRemove takes unit whichUnit returns nothing
         call RemoveDwarfLumberMill(whichUnit)
+    endmethod
+
+endstruct
+
+private struct CustomUnitTypeDiurnalHighElf extends CustomUnitType
+
+    public stub method onEnter takes unit whichUnit returns nothing
+        call AddDiurnalHighElf(whichUnit)
     endmethod
 
 endstruct
@@ -683,6 +691,24 @@ private function Init takes nothing returns nothing
     call AddCustomUnitType(DWARF_MINE, c)
     call AddCustomUnitType(DWARF_MINE_2, c)
     call AddCustomUnitType(DWARF_MINE_3, c)
+
+    // Race High Elf
+    set c = CustomUnitTypeDiurnalHighElf.create()
+    call AddCustomUnitType(HIGH_ELF_ENGINEER, c)
+    call AddCustomUnitType(HIGH_ELF_ARCHER, c)
+    call AddCustomUnitType(HIGH_ELF_RANGER, c)
+    call AddCustomUnitType(HIGH_ELF_SWORDMAN, c)
+    call AddCustomUnitType(HIGH_ELF_LIEUTENANT, c)
+    call AddCustomUnitType(HIGH_ELF_PRIEST, c)
+    call AddCustomUnitType(HIGH_ELF_SORCERESS, c)
+    call AddCustomUnitType(HIGH_ELF_KNIGHT, c)
+    call AddCustomUnitType(HIGH_ELF_EAGLE_RIDER, c)
+    call AddCustomUnitType(HIGH_ELF_DRAGON_HAWK_RIDER, c)
+    call AddCustomUnitType(HIGH_ELF_DRAGON_HAWK_ARCHER, c)
+    call AddCustomUnitType(HIGH_ELF_DRAGON, c)
+    call AddCustomUnitType(HIGH_ELF_CITIZEN_MALE, c)
+    call AddCustomUnitType(HIGH_ELF_CITIZEN_FEMALE, c)
+    call AddCustomUnitType(HIGH_ELF_CHILD, c)
 
     // Race Tauren
     call AddCustomUnitType(TAUREN_TOTEM_POLE, CustomUnitTypeTaurenPole.create())
