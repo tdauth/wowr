@@ -782,10 +782,10 @@ private function Init takes nothing returns nothing
     set c = CustomUnitTypeReturnBuilding.create()
     call AddCustomUnitType(TEMPLE_OF_DARKNESS, c)
     call AddCustomUnitType(TEMPLE_OF_LIGHT, c)
-    set i = 0
+    set i = 1 // udg_RaceNone is 0
     set max = GetRacesMax()
     loop
-        exitwhen (i == max)
+        exitwhen (i >= max)
         if (GetRaceTier1(i) != 0) then
             call AddCustomUnitType(GetRaceTier1(i), c)
         endif

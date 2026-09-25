@@ -19,7 +19,7 @@ private function AddRaceAbilityId takes integer whichRace, integer abilityId ret
 endfunction
 
 private function GetRaceByAbilityId takes integer abilityId returns integer
-    local integer i = 0
+    local integer i = 1 // udg_RaceNone is 0
     local integer max = GetRacesMax()
     loop
         exitwhen (i >= max)

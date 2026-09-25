@@ -2,9 +2,9 @@ library WoWReforgedRacesLimits initializer Init requires WoWReforgedUtils, WoWRe
 
 function SetRacesLimits takes integer housingLimit, integer towerLimit returns nothing
     local integer max = GetRacesMax()
-    local integer i = 0
+    local integer i = 1 // udg_RaceNone is 0
     loop
-        exitwhen (i == max)
+        exitwhen (i >= max)
         if (GetRaceObjectTypeId(i, RACE_OBJECT_TYPE_HOUSING) != 0) then
             call SetTechMaxAllowed(GetRaceObjectTypeId(i, RACE_OBJECT_TYPE_HOUSING), housingLimit)
         endif
@@ -12,23 +12,23 @@ function SetRacesLimits takes integer housingLimit, integer towerLimit returns n
         if (GetRaceObjectTypeId(i, RACE_OBJECT_TYPE_SCOUT_TOWER) != 0) then
             call SetTechMaxAllowed(GetRaceObjectTypeId(i, RACE_OBJECT_TYPE_SCOUT_TOWER), towerLimit)
         endif
-        
+
         if (GetRaceObjectTypeId(i, RACE_OBJECT_TYPE_GUARD_TOWER) != 0) then
             call SetTechMaxAllowed(GetRaceObjectTypeId(i, RACE_OBJECT_TYPE_GUARD_TOWER), towerLimit)
         endif
-        
+
         if (GetRaceObjectTypeId(i, RACE_OBJECT_TYPE_CANNON_TOWER) != 0) then
             call SetTechMaxAllowed(GetRaceObjectTypeId(i, RACE_OBJECT_TYPE_CANNON_TOWER), towerLimit)
         endif
-        
+
         if (GetRaceObjectTypeId(i, RACE_OBJECT_TYPE_ARCANE_TOWER) != 0) then
             call SetTechMaxAllowed(GetRaceObjectTypeId(i, RACE_OBJECT_TYPE_ARCANE_TOWER), towerLimit)
         endif
-        
+
         if (GetRaceObjectTypeId(i, RACE_OBJECT_TYPE_SPECIAL_BUILDING) != 0) then
             call SetTechMaxAllowed(GetRaceObjectTypeId(i, RACE_OBJECT_TYPE_SPECIAL_BUILDING), 1)
         endif
-        
+
         if (GetRaceObjectTypeId(i, RACE_OBJECT_TYPE_SPECIAL_BUILDING_2) != 0) then
             call SetTechMaxAllowed(GetRaceObjectTypeId(i, RACE_OBJECT_TYPE_SPECIAL_BUILDING_2), 1)
         endif

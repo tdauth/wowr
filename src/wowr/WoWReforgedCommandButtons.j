@@ -9,7 +9,7 @@ globals
     constant integer ABILITY_HOLD_POSITION = 'A0JY'
     constant integer ABILITY_HERO_SKILLS = 'A1X9'
     constant integer ABILITY_ROTATE = 'A0XW'
-    
+
     private hashtable h = InitHashtable()
     private trigger channelTrigger = CreateTrigger()
     private trigger enterTrigger = CreateTrigger()
@@ -19,6 +19,8 @@ function AddCommandButtonsForced takes unit whichUnit returns nothing
     //call BJDebugMsg("Add ability " + GetObjectName(ABILITY_ID_COMMAND_BUTTONS) + " to " + GetUnitName(whichUnit))
     call UnitAddAbility(whichUnit, ABILITY_ID_COMMAND_BUTTONS)
     call UnitMakeAbilityPermanent(whichUnit, true, ABILITY_ID_COMMAND_BUTTONS)
+    call UnitAddAbility(whichUnit, ABILITY_EXPANDED_INVENTORY)
+    call UnitMakeAbilityPermanent(whichUnit, true, ABILITY_EXPANDED_INVENTORY)
 endfunction
 
 function AddCommandButtons takes unit whichUnit returns boolean
@@ -48,13 +50,14 @@ function AddCommandButtons takes unit whichUnit returns boolean
     return true
 endfunction
 
-function ReaddCommandButtons takes unit whichUnit returns nothing
-    call UnitRemoveAbility(whichUnit, ABILITY_ID_COMMAND_BUTTONS)
-    call AddCommandButtonsForced(whichUnit)
-endfunction
-
 function RemoveCommandButtons takes unit whichUnit returns nothing
     call UnitRemoveAbility(whichUnit, ABILITY_ID_COMMAND_BUTTONS)
+    call UnitRemoveAbility(whichUnit, ABILITY_EXPANDED_INVENTORY)
+endfunction
+
+private function ReaddCommandButtons takes unit whichUnit returns nothing
+    call RemoveCommandButtons(whichUnit)
+    call AddCommandButtonsForced(whichUnit)
 endfunction
 
 private function TimerFunctionAbility takes nothing returns nothing
@@ -66,7 +69,7 @@ private function TimerFunctionAbility takes nothing returns nothing
     local real y = LoadReal(h, handleId, 3)
     local unit target = LoadUnitHandle(h, handleId, 4)
     local destructable targetDestructable = LoadDestructableHandle(h, handleId, 5)
-    
+
     if (abilityId == ABILITY_ATTACK) then
         call IssueImmediateOrder(caster, "stop")
         call ResetUnitAnimation(caster)
@@ -106,11 +109,11 @@ private function TimerFunctionAbility takes nothing returns nothing
     elseif (abilityId == ABILITY_STOP or abilityId == ABILITY_HOLD_POSITION) then
         call ResetUnitAnimation(caster)
     endif
-    
+
     set caster = null
     set target = null
     set targetDestructable = null
-    
+
     call FlushChildHashtable(h, handleId)
     call PauseTimer(t)
     call DestroyTimer(t)
@@ -156,7 +159,7 @@ endfunction
 private function Init takes nothing returns nothing
     call TriggerRegisterAnyUnitEventBJ(channelTrigger, EVENT_PLAYER_UNIT_SPELL_CHANNEL)
     call TriggerAddCondition(channelTrigger, Condition(function TriggerConditionChannel))
-    
+
     call TriggerRegisterEnterRectSimple(enterTrigger, GetPlayableMapRect())
     call TriggerAddCondition(enterTrigger, Condition(function TriggerConditionEnter))
 endfunction

@@ -2,13 +2,13 @@ library WoWReforgedBuilder initializer Init requires PagedButtons, SafeString, W
 
 globals
     constant integer BUILDER = 'E027'
-    
+
     constant integer ITEM_TYPE_ID_PLAYER_RED = 'I0VZ'
     constant integer ITEM_TYPE_ID_NEUTRAL_HOSTILE = 'I0W0'
     constant integer ITEM_TYPE_ID_NEUTRAL_PASSIVE = 'I0W1'
-    
+
     constant integer ITEM_TYPE_ID_COLOR_RED = 'I0W2'
-    
+
     private integer array targetPlayerIndex
 
     private boolean buildersEnabled = false
@@ -25,18 +25,18 @@ private function EnableBuilder takes unit whichUnit returns nothing
     local integer max2 = 0
     local integer j = 0
     call EnablePagedButtons(whichUnit)
-    
+
     call SetPagedButtonsCurrentPageName(whichUnit, GetLocalizedStringSafe("PLAYERS"))
     call AddPagedButtonsItemType(whichUnit, ITEM_TYPE_ID_PLAYER_RED)
     call AddPagedButtonsItemType(whichUnit, ITEM_TYPE_ID_NEUTRAL_HOSTILE)
     call AddPagedButtonsItemType(whichUnit, ITEM_TYPE_ID_NEUTRAL_PASSIVE)
-    
+
     call AddPagedButtonsSpacersRemaining(whichUnit)
-   
+
     call SetPagedButtonsCurrentPageName(whichUnit, GetLocalizedStringSafe("COLORS"))
     call AddPagedButtonsItemType(whichUnit, ITEM_TYPE_ID_COLOR_RED)
     call AddPagedButtonsSpacersRemaining(whichUnit)
-    
+
     call SetPagedButtonsCurrentPageName(whichUnit, GetLocalizedStringSafe("CREEPS"))
     set i = 0
     set max = GetCreepsMax()
@@ -47,8 +47,9 @@ private function EnableBuilder takes unit whichUnit returns nothing
         endif
         set i = i + 1
     endloop
-    
+
     call SetPagedButtonsCurrentPageName(whichUnit, GetLocalizedStringSafe("RACES"))
+    set i = 1 // udg_RaceNone is 0
     set max = GetRacesMax()
     loop
         exitwhen (i >= max)
@@ -125,7 +126,7 @@ private function TriggerConditionSell takes nothing returns boolean
         elseif (itemTypeId == ITEM_TYPE_ID_NEUTRAL_PASSIVE) then
             set targetPlayerIndex[playerId] = PLAYER_NEUTRAL_PASSIVE
         elseif (itemTypeId == ITEM_TYPE_ID_COLOR_RED) then
-            call SetPlayerColor(GetTargetPlayer(owner), PLAYER_COLOR_RED) 
+            call SetPlayerColor(GetTargetPlayer(owner), PLAYER_COLOR_RED)
         else
             call CreateUnit(GetTargetPlayer(owner), itemTypeId, GetUnitX(b), GetUnitY(b), GetUnitFacing(b))
         endif
@@ -157,10 +158,10 @@ endfunction
 private function Init takes nothing returns nothing
     call TriggerRegisterAnyUnitEventBJ(sellTrigger, EVENT_PLAYER_UNIT_SELL_ITEM)
     call TriggerAddCondition(sellTrigger, Condition(function TriggerConditionSell))
-    
+
     call TriggerRegisterAnyUnitEventBJ(orderTrigger, EVENT_PLAYER_UNIT_ISSUED_POINT_ORDER)
     call TriggerAddCondition(orderTrigger, Condition(function TriggerConditionOrder))
-    
+
     call TriggerRegisterAnyUnitEventBJ(orderTargetTrigger, EVENT_PLAYER_UNIT_ISSUED_TARGET_ORDER)
     call TriggerAddCondition(orderTargetTrigger, Condition(function TriggerConditionOrderTarget))
 endfunction

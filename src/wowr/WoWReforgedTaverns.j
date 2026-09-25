@@ -63,7 +63,7 @@ function AddHeroesTavern takes unit tavern returns nothing
 endfunction
 
 function AddRacesTavern takes unit tavern returns nothing
-    local integer i = 2 // skip udg_RaceNone and udg_RaceFreelancer
+    local integer i = 2 // skip udg_RaceNone and udg_RaceFreelancer, udg_RaceNone is 0
     local integer max = GetRacesMax()
     call GroupAddUnit(racesTaverns, tavern)
     call EnablePagedButtons(tavern)
@@ -183,7 +183,7 @@ function SelectRandomRace takes unit buyingUnit, unit tavern returns nothing
     local integer random = 0
     local integer page = 0
     local integer index = 0
-    local integer i = 1 // skip udg_RaceNone
+    local integer i = 1 // udg_RaceNone is 0
     local integer max = GetRacesMax()
     loop
         exitwhen (i >= max)

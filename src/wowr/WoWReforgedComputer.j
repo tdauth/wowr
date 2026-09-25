@@ -382,7 +382,7 @@ function AddAllPreplacedComputerUnits takes player whichPlayer returns nothing
 endfunction
 
 private function PickRandomUnusedRace takes player owner returns integer
-    local integer i = 1
+    local integer i = 1 // udg_RaceNone is 0
     local integer max = GetRacesMax()
     loop
         exitwhen (i >= max)

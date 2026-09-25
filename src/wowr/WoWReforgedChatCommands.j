@@ -1268,10 +1268,10 @@ endif
 endfunction
 
 private function CheatRaces takes nothing returns nothing
-    local integer i = 0
+    local integer i = 1 // udg_RaceNone is 0
     loop
         exitwhen (i >= GetRacesMax())
-        call BJDebugMsg("Race " + I2S(i) + ": " + GetRaceName(i) + " with tavern item " + GetObjectName(GetRaceTavernItemTypeId(i)) + " and scepter " + GetObjectName(GetRaceItemTypeId(i)))
+        call BJDebugMsg("Race " + I2S(i) + ": " + GetRaceName(i) + " with tavern item " + GetObjectName(GetRaceTavernItemTypeId(i)) + " and scepter " + GetObjectName(GetRaceItemTypeId(i)) + " and tier 1 item " + GetObjectName(GetRaceTier1Item(i)))
         set i = i + 1
     endloop
 endfunction

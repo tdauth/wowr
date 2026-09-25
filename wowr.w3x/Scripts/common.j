@@ -3187,6 +3187,8 @@ globals
     constant integer ABILITY_SHROUD_OF_PROTECTION                    = 'A026'
     constant integer ABILITY_SHROUD_OF_PROTECTION_DUMMY              = 'h0JJ'
 
+    constant integer ABILITY_EXPANDED_INVENTORY                      = 'AIni' // Forsaken Kingdom
+
     // Mounts
     constant integer GRYPHON_MOUNT                                   = 'h004'
     constant integer WYVERN_MOUNT                                    = 'o003'
@@ -6438,23 +6440,30 @@ globals
     constant integer ABILITY_TORNADO_BUILDING_DAMAGE_AURA            = 'Atdg'
 
     // Priest
-    constant integer ABILITY_CONSECRATION                            = 'A01K' // Forsaken Kingdom
-    constant integer ABILITY_RIGHTEOUS_FURY                          = 'A022' // Forsaken Kingdom
-    constant integer ABILITY_SACRED_AURA                             = 'A023' // Forsaken Kingdom
-    constant integer ABILITY_CLEANSING_FIRE                          = 'A02A' // Forsaken Kingdom
-    constant integer ABILITY_HASTE                                   = 'A02Y'
-
-    // Paladin
     constant integer ABILITY_HEAL                                    = 'Anhe'
     constant integer ABILITY_INNFER_FIRE                             = 'ACif'
-    constant integer ABILITY_HOLY_LIGHT                              = 'A13W'
-    constant integer ABILITY_DIVINE_SHIELD                           = 'A1NY'
+    constant integer ABILITY_HASTE                                   = 'A02Y'
+    constant integer ABILITY_DISCHARGE                               = 'A12S'
+    constant integer ABILITY_CONSECRATION                            = 'A01K' // Forsaken Kingdom
     constant integer ABILITY_HEALING_WAVE                            = 'Leav'
+    constant integer ABILITY_SACRED_AURA                             = 'A023' // Forsaken Kingdom
+    constant integer ABILITY_MIND_CONTROL                            = 'A03A' // Forsaken Kingdom
+    constant integer ABILITY_CLEANSING_FIRE                          = 'A02A' // Forsaken Kingdom
+    constant integer ABILITY_REVIVE                                  = 'A0T7'
+    constant integer REVIVE_DUMMY                                    = 'h0CG'
+    constant integer ABILITY_HOLY_WRATH                              = 'A03D' // Forsaken Kingdom
+
+    // Paladin
+    constant integer ABILITY_HOLY_LIGHT                              = 'A13W'
+    constant integer ABILITY_PARRY                                   = 'A1Z5' // TODO Replace with Forsaken Kingdom Grit AHgr
+    constant integer ABILITY_RIGHTEOUS_FURY                          = 'A022' // Forsaken Kingdom
+    constant integer ABILITY_DIVINE_SHIELD                           = 'A1NY'
     constant integer ABILITY_HOLY_AURA                               = 'A117'
     constant integer ABILITY_HEALING_SPRAY                           = 'A01R'
     constant integer ABILITY_DEVOTION_AURA                           = 'ACav'
     constant integer ABILITY_HOLY_NOVA                               = 'A118'
     constant integer ABILITY_HORN_OF_STORMWIND                       = 'A01Q'
+    constant integer ABILITY_RAISE_THE_BANNER                        = 'A03L' // Forsaken Kingdom
     constant integer ABILITY_RESURRECTION                            = 'A13V'
 
     // Death Knight
@@ -6648,8 +6657,6 @@ globals
     constant integer ABILITY_SOUL_BURN                               = 'A06Z'
     constant integer ABILITY_OPEN_PORTALS                            = 'A0SZ'
     constant integer OPEN_PORTALS_PORTAL                             = 'n09W'
-    constant integer ABILITY_REVIVE                                  = 'A0T7'
-    constant integer REVIVE_DUMMY                                    = 'h0CG'
     constant integer ABILITY_FINISH_CONSTRUCTIONS                    = 'A0K5'
     constant integer ABILITY_FINISH_CONSTRUCTIONS_ITEM               = 'A08X'
     constant integer ABILITY_TRUE_SIGHT                              = 'ANtr'
@@ -6659,12 +6666,9 @@ globals
     constant integer ABILITY_ENSLAVEMENT                             = 'A0KD'
     constant integer ABILITY_PICKPOCKETING                           = 'A17B'
     constant integer ABILITY_PILLAGE_AURA                            = 'A13Z'
-    constant integer ABILITY_PARRY                                   = 'A1Z5'
     constant integer ABILITY_SUMMON_EARTH_ELEMENTAL                  = 'A26H'
     constant integer ABILITY_WEB                                     = 'ACwb'
     constant integer ABILITY_HIDE_IN_TREES                           = 'A1QE'
-    constant integer ABILITY_DISCHARGE                               = 'A12S'
-    constant integer ABILITY_MIND_CONTROL                            = 'A22T'
     constant integer ABILITY_TELEKINESIS                             = 'A0XZ'
     constant integer ABILITY_RAIN_OF_CHAOS_SPECIAL_BUILDING          = 'A097'
 

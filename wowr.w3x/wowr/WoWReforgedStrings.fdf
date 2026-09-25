@@ -1413,9 +1413,10 @@ StringList {
     CONSECRATION_TOOLTIP               "Bless the ground, healing nearby friendly living units for <this,hcr1> hit points per second. Enemy Undead units take <this,hcr2> damage per second and have incoming healing reduced by <this,hcr3>%.|nLasts <this,Dur1> seconds.|n|n|cffffcc00Increases the hit points and damage per second and incoming healing reduction with every level.|r",
     HEALING_WAVE_TOOLTIP               "Calls forth a wave of healing energy that bounces up to <this,Ocl2,x> times, healing <this,Ocl1,x> damage on the primary target. Each jump heals less damage.",
     SACRED_AURA_TOOLTIP                "Gives <this,hsa1,%>% Magic Resistance and <this,hsa2>% increased healing received to nearby friendly units.|n|n|cffffcc00Increases the magic resistance and increased healing with every level.|r",
+    MIND_CONTROL_TOOLTIP               "Takes control of a target enemy unit with maximum level <this,Pos1> for a <this,Dur1> seconds. Maximum <this,hmc3> units can be controlled at the same time.|n|n|cffffcc00Increases the maximum unit level, duration and maximum number of controlled units with every level.|r",
     CLEANSING_FIRE_TOOLTIP             "Call upon the Light, removing all debuffs from nearby friendly units and all buffs from nearby enemy units. Friendly units are healed for <this,hcl1> hit points, and gain <this,hcl4>% bonus to damage for <this,hcl3> seconds. For each debuff removed from a friendly unit, that unit heals an additional <this,hcl2> hit points and gains an additional <this,hcl5>% bonus to damage. Enemy units are stunned for <this,hcl6> seconds.|n|cffffcc00Deals <this,hcl7> damage to summoned units.|r|n|n|cffffcc00Increases the healed hit points and gained bonus damage with every level.|r",
     REVIVE_TOOLTIP                     "Revives <this,cr00,x> friendly dead units including dead heroes. Dead heroes have always a higher priority than regular units. Has a cooldown of <this,acdn,x> seconds.|n|n|cffffcc00Increases the number of revived targets and decreases the cooldown with every level.|r",
-    // TODO add 2 abilities
+    HOLY_WRATH_TOOLTIP                 "Strikes the target area, dealing <this,pbl1> damage to enemy units and dispelling magic from targets struck. Enemy Undead units take an additional <this,pbl6> damage per second for <this,Dur1> seconds.|n|cffffcc00Deals <this,pbl8> damage to summoned units.|r|n|n|cffffcc00Increases the caused damage with every level.|r",
     // Paladin
     HOLY_LIGHT_TOOLTIP                 "A holy light that can heal a friendly living unit for <this,Hhb1,x> or deal half damage to an enemy Undead unit.|n|n|cffffcc00Increases the healed hit points with every level.|r",
     PARRY_TOOLTIP                      "Parries the next attack for <this,cr00,x> seconds.|n|n|cffffcc00Increases the time with every level.|r",
@@ -1426,8 +1427,8 @@ StringList {
     DEVOTION_AURA_TOOLTIP              "Gives <this,Had1,x> additional armor to nearby friendly units.|n|n|cffffcc00Increases the armor bonus with every level.|r",
     HOLY_NOVA_TOOLTIP                  "Casts a powerful nova of Holy Magic damaging Undead enemy units and healing allied non-Undead units for <this,cr00,x> points.|n|n|cffffcc00Increases the damage and healing with every level.|r",
     HORN_OF_STORMWIND_TOOLTIP           "Gives nearby friendly units a bonus of <this,Roa2,x> to armor. |nLasts <this,adur,x> seconds. |n|n|cffffcc00Increases the bonus armor with every level.|r",
+    RAISE_THE_BANNER_TOOLTIP           "Place a banner at a target location, increasing nearby allied unit's Critical Strike chance by <Aaxr,Ocr1>% and Spell Critical chance by <Aasc,Ocr1>%.|nLasts <this,Dur1> seconds.|n|n|cffffcc00Increases the chances with every level.|r",
     RESURRECTION_TOOLTIP               "Brings back to life the corpses of <this,Hre1,x> friendly nearby units.|n|n|cffffcc00Increases the number of corpses with every level.|r",
-    // TODO add one ability
     // Death Knight
     CURSE_TOOLTIP                      "Curses a target enemy unit, causing it to have a <this,Crs1,x,%>% chance to miss on an attack. |nLasts <this,adur,x> seconds.|n|n|cffffcc00Increases the chance with every level.|r",
     UNHOLY_FRENZY_TOOLTIP              "Increases the attack rate of a target unit by <this,Uhf1,x,%>%, but drains <this,Uhf2,x> hit points per second. |nLasts <this,adur,x> seconds.|n|n|cffffcc00Increases the attack rate with every level.|r",
@@ -1602,7 +1603,6 @@ StringList {
     SUMMON_EARTH_ELEMENTAL_TOOLTIP     "Summons an earth elemental to attack the hero's enemies. |nLasts <this,adur,x> seconds. |n|n|cffffcc00Attacks land and air units.|r|n|n|cffffcc00Increases the stats of the earth elemental with every level.|r",
     WEB_TOOLTIP                        "Binds a target enemy air unit in webbing, forcing it to the ground. Webbed units can be hit as though they were land units. |nLasts <this,adur,x> seconds.|n|n|cffffcc00Increases the duration with every level.|r",
     HIDE_IN_TREES_TOOLTIP              "Hides the unit in the targeted tree which makes it invisible and unmovable and increases the life and mana regeneration until leaving the trees or the tree is cut down.|n|n|cffffcc00Increases the life and mana regeneration with every level.|r",
-    MIND_CONTROL_TOOLTIP               "The owning player of the target unit is forced to share control with you for <this,cr00,x> seconds.|n|n|cffffcc00Increases the duration with every level.|r",
     TELEKINESIS_TOOLTIP                "Marks a target unit, item or destructable for moving it. Moves the marked target to the given location when cast on the ground. Has a cooldown of <this,acdn,x> seconds and a range of <this,aran,x>.|n|n|cffffcc00Increases the maximum distance and reduces the cooldown with every level.|r",
     // Chat Commands
     CC_HELP                            "'-h/-help': Lists chat commands.",

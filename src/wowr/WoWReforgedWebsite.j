@@ -2324,14 +2324,14 @@ private function GenerateRaceTechnologyTree takes integer whichRace returns noth
 endfunction
 
 private function GenerateRaces takes nothing returns nothing
-    local integer i = 0
+    local integer i = 1 // udg_RaceNone is 0
     local integer max = GetRacesMax()
 
     call FileStart()
     call FileWriteLine("<!-- Races generated with chat command \"-website\". -->")
     set i = 0
     loop
-        exitwhen (i == max)
+        exitwhen (i >= max)
         call GenerateRace(i)
         set i = i + 1
     endloop

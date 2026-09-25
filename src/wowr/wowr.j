@@ -193,7 +193,6 @@
 //! import "wowr/WoWReforgedSpellMassDevour.j"
 //! import "wowr/WoWReforgedSpellMassForestation.j"
 //! import "wowr/WoWReforgedSpellMeteor.j"
-//! import "wowr/WoWReforgedSpellMindControl.j"
 //! import "wowr/WowReforgedSpellMultiply.j"
 //! import "wowr/WoWReforgedSpellMultiTier.j"
 //! import "wowr/WoWReforgedSpellOpenPortals.j"

@@ -29,6 +29,7 @@ private function Init takes nothing returns nothing
     call AddChange("Support Forsaken Kingdom.")
     call AddChange("Add hero Forsaken Paladin.")
     call AddChange("Add class Priest.")
+    call AddChange("Revise class Paladin.")
     call AddChange("Add class VIP.")
     call AddChange("Remove custom logo.")
     call AddChange("Replace UnitIndex which is a dependency of UnitEventEx with Indexer from NewBonus system to prevent bugs.")
@@ -156,6 +157,8 @@ private function Init takes nothing returns nothing
     call AddChange("Fix resources gathering by Goblin Oil Platforms.")
     call AddChange("Add vote \"-2vs2\".")
     call AddChange("Remove messages when picking up and dropping legendary items.")
+    call AddChange("Add ability Expand Inventory to command buttons.")
+    call AddChange("Remove custom spell Mind Control.")
 
 static if (MAP_DEBUG_MODE_ENABLED) then
     call AddVersion("4.6")

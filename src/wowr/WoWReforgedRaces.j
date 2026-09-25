@@ -303,10 +303,10 @@ endfunction
 
 function GetObjectRace takes integer objectTypeId returns integer
     local integer id = GetPrimaryDependencyEquivalent(objectTypeId)
-    local integer i = 0
+    local integer i = 1 // udg_RaceNone is 0
     local integer max = GetRacesMax()
     loop
-        exitwhen (i == max)
+        exitwhen (i >= max)
         if (GetRaceObjectType(i, id) != RACE_OBJECT_TYPE_NONE) then
             return i
         endif
@@ -335,7 +335,7 @@ function IsWaterUnit takes unit whichUnit returns boolean
 endfunction
 
 function GetObjectRaceType takes integer objectTypeId returns integer
-    local integer i = 0
+    local integer i = 1 // udg_RaceNone is 0
     local integer tmpType = 0
     local integer result = RACE_OBJECT_TYPE_NONE
     local integer max = GetRacesMax()
@@ -360,11 +360,11 @@ function IsUnitShip takes unit whichUnit returns boolean
 endfunction
 
 function MapRaceObjectType takes integer objectTypeId, integer targetRace returns integer
-    local integer i = 0
+    local integer i = 1 // udg_RaceNone is 0
     local integer max = GetRacesMax()
     local integer tmpType = 0
     loop
-        exitwhen (i == max)
+        exitwhen (i >= max)
         set tmpType = GetRaceObjectTypeIncludingDependencyEquivalents(i, objectTypeId)
         if (tmpType != RACE_OBJECT_TYPE_NONE) then
             return GetRaceObjectTypeId(targetRace, tmpType)
@@ -591,7 +591,7 @@ endfunction
 
 function GetRaceByTavernItemTypeId takes integer tavernItemTypeId returns integer
     local integer max = GetRacesMax()
-    local integer i = 0
+    local integer i = 1 // udg_RaceNone is 0
     loop
         exitwhen (i >= max)
         if (GetRaceTavernItemTypeId(i) == 0) then
@@ -642,6 +642,10 @@ endfunction
 
 private function SetRaceTier1Item takes integer whichRace, integer id returns nothing
     call SetRaceObjectType(whichRace, RACE_OBJECT_TYPE_TIER_1_ITEM, id)
+endfunction
+
+function GetRaceTier1Item takes integer whichRace returns integer
+    return GetRaceObjectType(whichRace, RACE_OBJECT_TYPE_TIER_1_ITEM)
 endfunction
 
 private function SetRaceTier2 takes integer whichRace, integer id returns nothing
@@ -4416,10 +4420,10 @@ private function AddDragonkin takes nothing returns nothing
 endfunction
 
 private function AddRaceScepterItems takes nothing returns nothing
-    local integer i = 0
+    local integer i = 1 // udg_RaceNone is 0
     local integer max = GetRacesMax()
     loop
-        exitwhen (i == max)
+        exitwhen (i >= max)
         call SetRaceObjectType(i, RACE_OBJECT_TYPE_SCEPTER_ITEM, udg_RaceItemType[i])
         set i = i + 1
     endloop
@@ -4439,9 +4443,9 @@ endfunction
 
 private function AddRaceStandardObjectIdFields takes nothing returns nothing
     local integer max = GetRacesMax()
-    local integer i = 0
+    local integer i = 1 // udg_RaceNone is 0
     loop
-        exitwhen (i == max)
+        exitwhen (i >= max)
         call AddObjectDependencyEquivalents(i, RACE_OBJECT_TYPE_TIER_1, RACE_OBJECT_TYPE_TIER_2)
         call AddObjectDependencyEquivalents(i, RACE_OBJECT_TYPE_TIER_1, RACE_OBJECT_TYPE_TIER_3)
         call AddObjectDependencyEquivalents(i, RACE_OBJECT_TYPE_SCOUT_TOWER, RACE_OBJECT_TYPE_GUARD_TOWER)

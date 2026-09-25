@@ -1,20 +1,20 @@
 library WoWReforgedComputerStartLocations requires MathUtils, WoWReforgedTmpVariables, WoWReforgedRaces
 
 function GetRandomRaceWithAISupport takes nothing returns integer
-    return GetRandomInt(0, GetRacesMax() - 1) // with freelancer
+    return GetRandomInt(1, GetRacesMax() - 1) // with freelancer, udg_RaceNone is 0
 endfunction
 
 function GetRandomWarlordRaceWithAISupport takes nothing returns integer
-    return GetRandomInt(1, GetRacesMax() - 1) // no freelancer
+    return GetRandomInt(2, GetRacesMax() - 1) // no freelancer, udg_RaceNone is 0
 endfunction
 
 function GetRandomWarlordTeamRaceWithAISupport takes integer team returns integer
     local integer array r
     local integer c = 0
-    local integer i = 0
+    local integer i = 1 // udg_RaceNone is 0
     local integer max = GetRacesMax()
     loop
-        exitwhen (i == max)
+        exitwhen (i >= max)
         if (GetRaceTeam(i) == team or GetRaceTeam(i) == TEAM_NONE) then
             set r[c] = i
             set c = c + 1

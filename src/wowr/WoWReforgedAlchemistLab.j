@@ -4,7 +4,7 @@ globals
     constant integer ABILITY_ID_CONVERT_UNIT = 'A16S'
     constant integer ABILITY_ID_CONVERT_ITEM = 'A1BI'
     constant integer UNIT_TYPE_ID_CONVERT = 'h03S'
-    
+
     private trigger sellItemTrigger = CreateTrigger()
     private trigger sellUnitTrigger = CreateTrigger()
     private trigger castTrigger = CreateTrigger()
@@ -18,13 +18,13 @@ endfunction
 
 function AddAlchemistLab takes unit shop returns nothing
     local integer max = GetRacesMax()
-    local integer i = 0
+    local integer i = 1 // udg_RaceNone is 0
     call SetShopRace(shop, udg_RaceFreelancer)
     call EnablePagedButtons(shop)
     call SetPagedButtonsSlotsPerPage(shop, 8)
     loop
         exitwhen (i >= max)
-        call AddPagedButtonsItemType(shop, udg_RaceTavernItemType[i])
+        call AddPagedButtonsItemType(shop, GetRaceTavernItemTypeId(i))
         set i = i + 1
     endloop
 endfunction
@@ -100,7 +100,7 @@ private function ConvertUnit takes unit caster, unit target, integer targetRace 
             else
                 call IssueImmediateOrder(caster, "stop")
                 call SimError(owner, GetLocalizedString("COULD_NOT_CONVERT_TARGET_UNIT"))
-            endif        
+            endif
         else
             call IssueImmediateOrder(caster, "stop")
             call SimError(owner, GetLocalizedString("CONVERSION_NOT_ALLOWED"))
@@ -117,7 +117,7 @@ private function ConvertItem takes unit caster, item target, integer targetRace 
     local integer targetItemTypeId = MapRaceObjectType(GetItemTypeId(target), targetRace)
     local item whichItem = null
     if (targetItemTypeId != 0) then
-        if (IsRaceTypeAllowed(owner, GetRaceObjectType(targetRace, targetItemTypeId), targetRace)) then            
+        if (IsRaceTypeAllowed(owner, GetRaceObjectType(targetRace, targetItemTypeId), targetRace)) then
             if (targetItemTypeId != GetItemTypeId(target)) then
                 set whichItem = ReplaceItem(target, targetItemTypeId)
                 call ExecuteCallbacks(caster, null, whichItem)
@@ -163,7 +163,7 @@ private function TriggerConditionCast takes nothing returns boolean
     local integer targetRace = GetUnitUserData(shop)
     local unit targetUnit = GetSpellTargetUnit()
     local item targetItem = GetSpellTargetItem()
-    
+
     if (abilityId == ABILITY_ID_CONVERT_UNIT or abilityId == ABILITY_ID_CONVERT_ITEM) then
         if (targetUnit != null) then
             call ConvertUnit(shop, targetUnit, targetRace)
@@ -171,21 +171,21 @@ private function TriggerConditionCast takes nothing returns boolean
             call ConvertItem(shop, targetItem, targetRace)
         endif
     endif
-    
+
     set shop = null
     set targetUnit = null
     set targetItem = null
-    
+
     return false
 endfunction
 
 private function Init takes nothing returns nothing
     call TriggerRegisterAnyUnitEventBJ(sellItemTrigger, EVENT_PLAYER_UNIT_SELL_ITEM)
     call TriggerAddCondition(sellItemTrigger, Condition(function TriggerConditionSellItem))
-    
+
     call TriggerRegisterAnyUnitEventBJ(sellUnitTrigger, EVENT_PLAYER_UNIT_SELL)
     call TriggerAddCondition(sellUnitTrigger, Condition(function TriggerConditionSellUnit))
-    
+
     call TriggerRegisterAnyUnitEventBJ(castTrigger, EVENT_PLAYER_UNIT_SPELL_CAST)
     call TriggerAddCondition(castTrigger, Condition(function TriggerConditionCast))
 endfunction

@@ -254,14 +254,14 @@ private function AddBuildingsFromBanners takes nothing returns nothing
 endfunction
 
 private function AddRaceItemsSaveObjects takes nothing returns nothing
-    local integer i = 1
+    local integer i = 1 // udg_RaceNone is 0
     local integer max = GetRacesMax()
     local integer j = 0
     local integer max2 = 0
     local integer array addedObjectTypeIds
     local integer addedObjectTypeIdsCounter = 0
     loop
-        exitwhen (i == max)
+        exitwhen (i >= max)
         set j = 0
         set max2 = RACE_MAX_OBJECT_TYPES
         loop
@@ -276,12 +276,12 @@ private function AddRaceItemsSaveObjects takes nothing returns nothing
 endfunction
 
 private function AddRaceUnitsSaveObjects takes nothing returns nothing
-    local integer i = udg_RaceFreelancer
+    local integer i = 1 // udg_RaceNone is 0
     local integer max = GetRacesMax()
     local integer j = 0
     local integer max2 = 0
     loop
-        exitwhen (i == max)
+        exitwhen (i >= max)
         set j = 0
         set max2 = RACE_MAX_OBJECT_TYPES
         loop
@@ -296,14 +296,14 @@ private function AddRaceUnitsSaveObjects takes nothing returns nothing
 endfunction
 
 private function AddRaceBuildingsSaveObjects takes nothing returns nothing
-    local integer i = udg_RaceFreelancer
+    local integer i = 1 // udg_RaceNone is 0
     local integer max = GetRacesMax()
     local integer j = 0
     local integer max2 = 0
     local integer array addedObjectTypeIds
     local integer addedObjectTypeIdsCounter = 0
     loop
-        exitwhen (i == max)
+        exitwhen (i >= max)
         set j = 0
         set max2 = RACE_MAX_OBJECT_TYPES
         loop
@@ -321,7 +321,7 @@ private function AddCreepsSaveObjects takes nothing returns nothing
     local integer i = 0
     local integer max = GetCreepsMax()
     loop
-        exitwhen (i == max)
+        exitwhen (i >= max)
         if (GetCreep(i) != 0) then
             call AddUnit(GetCreep(i))
         endif
@@ -333,7 +333,7 @@ private function AddItemsFromTrophies takes nothing returns nothing
     local integer i = 0
     local integer max = GetTrophyCounter()
     loop
-        exitwhen (i == max)
+        exitwhen (i >= max)
         call AddItem(GetTrophyItemTypeId(i))
         set i = i + 1
     endloop
@@ -343,7 +343,7 @@ private function AddItemsFromArena takes nothing returns nothing
     local integer i = 0
     local integer max = GetArenaTicketsMax()
     loop
-        exitwhen (i == max)
+        exitwhen (i >= max)
         if (GetArenaTicket(i).rewardItemTypeId != 0) then
             call AddItem(GetArenaTicket(i).rewardItemTypeId)
         endif
@@ -355,7 +355,7 @@ private function AddItemsFromEquipment takes nothing returns nothing
     local integer i = 0
     local integer max = GetMaxEquipmentItemTypes()
     loop
-        exitwhen (i == max)
+        exitwhen (i >= max)
         if (GetEquipmentItemTypeId(i) != 0) then
             call AddItem(GetEquipmentItemTypeId(i))
         endif
@@ -370,7 +370,7 @@ private function AddItemsFromItemSets takes nothing returns nothing
     local integer i = 0
     local integer max = GetItemSetsMax()
     loop
-        exitwhen (i == max)
+        exitwhen (i >= max)
         set s = GetItemSet(i)
         set counter = 0
         set j = 0
@@ -386,13 +386,13 @@ endfunction
 private function AddWallBuildingsSaveObjects takes nothing returns nothing
     local integer i = 0
     loop
-        exitwhen (i == MAX_WALL_PIECES)
+        exitwhen (i >= MAX_WALL_PIECES)
         call AddBuilding(GetWallTypeGround(i))
         set i = i + 1
     endloop
     set i = 0
     loop
-        exitwhen (i == MAX_WALL_PIECES)
+        exitwhen (i >= MAX_WALL_PIECES)
         call AddBuilding(GetWallTypeAir(i))
         set i = i + 1
     endloop
