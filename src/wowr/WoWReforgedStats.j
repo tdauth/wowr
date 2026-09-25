@@ -1,4 +1,4 @@
-library WoWReforgedStats requires StringUtils, PlayerColorUtils, ForceUtils, WoWReforgedUtils, WoWReforgedEvolution, WoWReforgedI18n
+library WoWReforgedStats requires StringUtils, PlayerColorUtils, ForceUtils, WoWReforgedUtils, WoWReforgedProfessions, WoWReforgedRaces, WoWReforgedEvolution, WoWReforgedI18n
 
 globals
     private constant real UPDATE_INTERVAL = 5.0
@@ -34,9 +34,8 @@ endfunction
 private function ForFunctionUpdateStats takes nothing returns nothing
     local multiboarditem mitem = null
     local player whichPlayer = GetEnumPlayer()
-    local integer convertedPlayerId = GetConvertedPlayerId(whichPlayer)
     local boolean isUser = GetPlayerController(whichPlayer) == MAP_CONTROL_USER
-    local boolean isWarlord = udg_PlayerIsWarlord[convertedPlayerId]
+    local boolean isWarlord = IsPlayerWarlord(whichPlayer)
     local integer goldUpkeepRate = GetPlayerState(whichPlayer, PLAYER_STATE_GOLD_UPKEEP_RATE)
     local integer itemTypeId = 0
     local integer column = 0
@@ -60,65 +59,47 @@ private function ForFunctionUpdateStats takes nothing returns nothing
     // Game Mode/Race 1
     set column = column + 1
     if (whichPlayer != udg_BossesPlayer) then
-        if (isWarlord) then
-            set value = udg_PlayerRace[convertedPlayerId]
-            set text = GetIconByRace(value)
-            set mitem = MultiboardGetItem(m, currentRow, column)
-            call MultiboardSetItemIcon(mitem, text)
-            call MultiboardReleaseItem(mitem)
-        else
-            set mitem = MultiboardGetItem(m, currentRow, column)
-            call MultiboardSetItemIcon(mitem, "ReplaceableTextures\\CommandButtons\\BTNMercenaryCamp.blp")
-            call MultiboardReleaseItem(mitem)
-        endif
+        set value = GetPlayerRace1(whichPlayer)
+        set text = GetIconByRace(value)
+        set mitem = MultiboardGetItem(m, currentRow, column)
+        call MultiboardSetItemIcon(mitem, text)
+        call MultiboardReleaseItem(mitem)
     endif
     // Race 2
     set column = column + 1
     if (isUser) then
-        if (isWarlord) then
-            set value = udg_PlayerRace2[convertedPlayerId]
-            set text = GetIconByRace(value)
-            set mitem = MultiboardGetItem(m, currentRow, column)
-            call MultiboardSetItemIcon(mitem, text)
-            call MultiboardReleaseItem(mitem)
-        else
-            set mitem = MultiboardGetItem(m, currentRow, column)
-            call MultiboardSetItemIcon(mitem, "ReplaceableTextures\\CommandButtons\\BTNMercenaryCamp.blp")
-            call MultiboardReleaseItem(mitem)
-        endif
+        set value = GetPlayerRace2(whichPlayer)
+        set text = GetIconByRace(value)
+        set mitem = MultiboardGetItem(m, currentRow, column)
+        call MultiboardSetItemIcon(mitem, text)
+        call MultiboardReleaseItem(mitem)
     endif
     // Race 3
     set column = column + 1
     if (isUser) then
-        if (isWarlord) then
-            set value = udg_PlayerRace3[convertedPlayerId]
-            set text = GetIconByRace(value)
-            set mitem = MultiboardGetItem(m, currentRow, column)
-            call MultiboardSetItemIcon(mitem, text)
-            call MultiboardReleaseItem(mitem)
-        else
-            set mitem = MultiboardGetItem(m, currentRow, column)
-            call MultiboardSetItemIcon(mitem, "ReplaceableTextures\\CommandButtons\\BTNMercenaryCamp.blp")
-            call MultiboardReleaseItem(mitem)
-        endif
+        set value = GetPlayerRace3(whichPlayer)
+        set text = GetIconByRace(value)
+        set mitem = MultiboardGetItem(m, currentRow, column)
+        call MultiboardSetItemIcon(mitem, text)
+        call MultiboardReleaseItem(mitem)
     endif
     // Profession 1
     set column = column + 1
-    set value = udg_PlayerProfession[convertedPlayerId]
+    set value = GetPlayerProfession1(whichPlayer)
     set text = GetIconByProfession(value)
     set mitem = MultiboardGetItem(m, currentRow, column)
     call MultiboardSetItemIcon(mitem, text)
     call MultiboardReleaseItem(mitem)
     // Profession 2
     set column = column + 1
-    set value = udg_PlayerProfession2[convertedPlayerId]
+    set value = GetPlayerProfession2(whichPlayer)
     set text = GetIconByProfession(value)
     set mitem = MultiboardGetItem(m, currentRow, column)
     call MultiboardSetItemIcon(mitem, text)
     call MultiboardReleaseItem(mitem)
     // Profession 3
     set column = column + 1
-    set value = udg_PlayerProfession3[convertedPlayerId]
+    set value = GetPlayerProfession3(whichPlayer)
     set text = GetIconByProfession(value)
     set mitem = MultiboardGetItem(m, currentRow, column)
     call MultiboardSetItemIcon(mitem, text)
@@ -127,14 +108,14 @@ private function ForFunctionUpdateStats takes nothing returns nothing
     set column = column + 1
     set mitem = MultiboardGetItem(m, currentRow, column)
     call MultiboardSetItemStyle(mitem, true, true)
-    if (udg_Held[convertedPlayerId] != null) then
-        set text = I2S(GetHeroLevel(udg_Held[convertedPlayerId]))
+    if (GetPlayerHero1(whichPlayer) != null) then
+        set text = I2S(GetHeroLevel(GetPlayerHero1(whichPlayer)))
     else
         set text = "0"
     endif
     call MultiboardSetItemValue(mitem, text)
-    if (udg_Held[convertedPlayerId] != null) then
-        set value = GetUnitTypeId(udg_Held[convertedPlayerId])
+    if (GetPlayerHero1(whichPlayer) != null) then
+        set value = GetUnitTypeId(GetPlayerHero1(whichPlayer))
     else
         set value = 0
     endif
@@ -145,14 +126,14 @@ private function ForFunctionUpdateStats takes nothing returns nothing
     set column = column + 1
     set mitem = MultiboardGetItem(m, currentRow, column)
     call MultiboardSetItemStyle(mitem, true, true)
-    if (udg_Held2[convertedPlayerId] != null) then
-        set text = I2S(GetHeroLevel(udg_Held2[convertedPlayerId]))
+    if (GetPlayerHero2(whichPlayer) != null) then
+        set text = I2S(GetHeroLevel(GetPlayerHero2(whichPlayer)))
     else
         set text = "0"
     endif
     call MultiboardSetItemValue(mitem, text)
-    if (udg_Held2[convertedPlayerId] != null) then
-        set value = GetUnitTypeId(udg_Held2[convertedPlayerId])
+    if (GetPlayerHero2(whichPlayer) != null) then
+        set value = GetUnitTypeId(GetPlayerHero2(whichPlayer))
     else
         set value = 0
     endif
@@ -163,14 +144,14 @@ private function ForFunctionUpdateStats takes nothing returns nothing
     set column = column + 1
     set mitem = MultiboardGetItem(m, currentRow, column)
     call MultiboardSetItemStyle(mitem, true, true)
-    if (udg_Held3[convertedPlayerId] != null) then
-        set text = I2S(GetHeroLevel(udg_Held3[convertedPlayerId]))
+    if (GetPlayerHero3(whichPlayer) != null) then
+        set text = I2S(GetHeroLevel(GetPlayerHero3(whichPlayer)))
     else
         set text = "0"
     endif
     call MultiboardSetItemValue(mitem, text)
-    if (udg_Held3[convertedPlayerId] != null) then
-        set value = GetUnitTypeId(udg_Held3[convertedPlayerId])
+    if (GetPlayerHero3(whichPlayer) != null) then
+        set value = GetUnitTypeId(GetPlayerHero3(whichPlayer))
     else
         set value = 0
     endif
