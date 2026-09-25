@@ -1,4 +1,4 @@
-library WoWReforgedChatCommands initializer Init requires Ascii, HostUtils, StringUtils, StringFormat, SafeString, ForceUtils, PlayerColorUtils, WoWReforgedUtils, WoWReforgedMapData, optional QueueUI, WoWReforgedPlayerInfos, WoWReforgedStats, WoWReforgedSaveCodeObjects, WoWReforgedHeroes, WoWReforgedBosses, WoWReforgedQuests, WoWReforgedProfessions, optional WoWReforgedUiActionsBar, WoWReforgedStats, WoWReforgedAttributes, WoWReforgedAccount, WoWReforgedComputerStartLocations, WoWReforgedSaveCodesAll, WoWReforgedZones, WoWReforgedCinematic, WoWReforgedTownHalls, WoWReforgedBackpacks, WoWReforgedUiBackpack, optional OrdersWatcher, OnStartGame
+library WoWReforgedChatCommands initializer Init requires Ascii, HostUtils, StringUtils, StringFormat, SafeString, ForceUtils, PlayerColorUtils, WoWReforgedUtils, WoWReforgedMapData, optional QueueUI, WoWReforgedPlayerInfos, WoWReforgedStats, WoWReforgedSaveCodeObjects, WoWReforgedHeroes, WoWReforgedBosses, WoWReforgedQuests, WoWReforgedProfessions, optional WoWReforgedUiActionsBar, WoWReforgedStats, WoWReforgedAttributes, WoWReforgedAccount, WoWReforgedComputerStartLocations, WoWReforgedSaveCodesAll, WoWReforgedZones, WoWReforgedCinematic, WoWReforgedTownHalls, WoWReforgedRaces, WoWReforgedBackpacks, WoWReforgedUiBackpack, optional OrdersWatcher, OnStartGame
 
 /*
  * Chat commands and cheats.
@@ -274,7 +274,7 @@ private function HelpReset takes nothing returns nothing
 endfunction
 
 private function GetHelpTextCheats takes nothing returns string
-    return "-cheats, -nocheats, -creeps, -cinoutro, -cinlichking, -cinoldgods, -cininvasion, -boots, -terrain, -heroskills, -bonus, -quests, -fields, -read, -write, -maxresources, -respawngroupcounter, -respawnall, -maxlevel, -levelX, -col, -medivh, -revive, -resetrepick, -demigodlight, -demigoddark, -trydemigod, -orderon, -orderoff, -kill, -fill, -share, -unitinfo, -checksave, -generatesave, -savecounters, -savecodeduplicates, -savecodemissing, -autoskill, -orbs, -herolevels, -deathwing, -claws, -clawsbonus, -regennight, -craft, -legendary, -professions, -aigui, -aicraft, -aiharveston/off, -day, -night, -jaina, -arena, -evolution, -evolutioncreeps, -nagaquest4, -website"
+    return "-cheats, -nocheats, -creeps, -cinoutro, -cinlichking, -cinoldgods, -cininvasion, -boots, -terrain, -heroskills, -bonus, -quests, -fields, -read, -write, -maxresources, -respawngroupcounter, -respawnall, -maxlevel, -levelX, -col, -medivh, -revive, -resetrepick, -demigodlight, -demigoddark, -trydemigod, -orderon, -orderoff, -races, -kill, -fill, -share, -unitinfo, -checksave, -generatesave, -savecounters, -savecodeduplicates, -savecodemissing, -autoskill, -orbs, -herolevels, -deathwing, -claws, -clawsbonus, -regennight, -craft, -legendary, -professions, -aigui, -aicraft, -aiharveston/off, -day, -night, -jaina, -arena, -evolution, -evolutioncreeps, -nagaquest4, -website"
 endfunction
 
 private function HelpCheats takes nothing returns nothing
@@ -1267,6 +1267,15 @@ static if (LIBRARY_OrdersWatcher) then
 endif
 endfunction
 
+private function CheatRaces takes nothing returns nothing
+    local integer i = 0
+    loop
+        exitwhen (i >= GetRacesMax())
+        call BJDebugMsg("Race " + I2S(i) + ": " + GetRaceName(i) + " with tavern item " + GetObjectName(GetRaceTavernItemTypeId(i)) + " and scepter " + GetObjectName(GetRaceItemTypeId(i)))
+        set i = i + 1
+    endloop
+endfunction
+
 private function StartGame takes nothing returns nothing
     set udg_Cheats = GetAllPlayingUsersCount() == 1 and (GetPlayerName(Player(0)) == "WorldEdit" or GetPlayerName(Player(0)) == "Barade" or  GetPlayerName(Player(0)) == "Barade#2569")
 endfunction
@@ -1445,6 +1454,7 @@ private function Init takes nothing returns nothing
     call AddCheat("-loadmines", true, function CheatLoadMines)
     call AddCheat("-orderon", true, function CheatOrderOn)
     call AddCheat("-orderoff", true, function CheatOrderOff)
+    call AddCheat("-races", true, function CheatRaces)
 
     // after all chat commands
     call ForForce(GetAllPlayingUsers(), function EnumPlayerRegisterChatEvent)

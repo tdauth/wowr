@@ -468,6 +468,10 @@ function MapItemID takes integer unitID, integer targetRace returns integer
     return MapRaceObjectType(unitID, targetRace)
 endfunction
 
+function GetRaceTavernItemTypeId takes integer whichRace returns integer
+    return udg_RaceTavernItemType[whichRace]
+endfunction
+
 function GetRaceName takes integer whichRace returns string
     return GetObjectName(udg_RaceTavernItemType[whichRace])
 endfunction
