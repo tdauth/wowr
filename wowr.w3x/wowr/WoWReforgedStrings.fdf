@@ -1134,6 +1134,7 @@ StringList {
     HYPHEN_FIRST_HERO                  "- First Hero",
     HYPHEN_SECOND_HERO                 "- Second Hero",
     HYPHEN_THIRD_HERO                  "- Third Hero",
+    PICKED_GAME_MODE_X                 "Picked game mode %1%.",
     PICKED_HERO_X                      "Picked hero %1%.",
     PICKED_RACE_X_Y                    "Picked race %1%: %2%",
     PICKED_PROFESSION_X_Y              "Picked profession %1%: %2%.",

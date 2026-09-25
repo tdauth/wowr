@@ -104,6 +104,7 @@
 //! import "wowr/WoWReforgedPagedButtonsConfig.j"
 //! import "wowr/WoWReforgedPlayerInfos.j"
 //! import "wowr/WoWReforgedPlayers.j"
+//! import "wowr/WoWReforgedPlayerSelection.j"
 //! import "wowr/WoWReforgedPickpocketing.j"
 //! import "wowr/WoWReforgedPings.j"
 //! import "wowr/WoWReforgedPortals.j"

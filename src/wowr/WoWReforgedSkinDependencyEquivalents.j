@@ -2,7 +2,7 @@ library WoWReforgedSkinDependencyEquivalents initializer Init requires SimError,
 
 globals
     private hashtable h = InitHashtable()
-    
+
     constant integer NEXT_SKIN_ABILITY_ID = 'A263'
     constant integer NEXT_SKIN_ITEM_ABILITY_ID = 'A0AK'
     constant integer NEXT_SKIN_UNIT_TYPE_ID = 'o0C0'
@@ -16,6 +16,7 @@ function SetUnitSkinWithHeroIcon takes unit whichUnit, integer skinId returns no
     call SetUnitOwner(whichUnit, owner, true)
     call RefreshBackpackForPlayer(owner)
     call RecreateAllEquipmentBags(owner)
+    call UnitAddAbility(whichUnit, HERO_GLOW_ABILITY_ID)
     set owner = null
 endfunction
 
@@ -23,7 +24,7 @@ struct SkinDependencyEquivalents
     boolean primary // is the primary unit
     integer array ids[10]
     integer count = 0
-    
+
     method contains takes integer id returns boolean
         local integer i = 0
         loop
@@ -62,7 +63,7 @@ function IsSkinDependencyEquivalent takes integer id, integer other returns bool
     if (d != 0) then
         return d.contains(other)
     endif
-    
+
     return false
 endfunction
 
@@ -78,7 +79,7 @@ function GetPrimarySkinDependencyEquivalent takes integer id returns integer
             set i = i + 1
         endloop
     endif
-    
+
     return id
 endfunction
 
@@ -111,7 +112,6 @@ function NextSkin takes unit whichUnit returns nothing
         set skinIndex = ModuloInteger(currentIndex + 1, skinsCounter)
         set skin = skins[skinIndex]
         call SetUnitSkinWithHeroIcon(whichUnit, skin)
-        call UnitAddAbility(whichUnit, 'A071') // hero glow
         call DisplayTextToPlayer(GetOwningPlayer(whichUnit), 0.0, 0.0, Format(GetLocalizedString("SKIN_CHANGED_RANGE")).s(GetObjectName(skin)).i(skinIndex + 1).i(skinsCounter).result()) // Changed skin to %1% (%2%/%3%).
     else
         call SimError(GetOwningPlayer(whichUnit), GetLocalizedString("SKIN_NO_OTHER")) // No other skins.
@@ -130,20 +130,20 @@ private function Init takes nothing returns nothing
     call AddSkinDependencyEquivalents(RAIDER_HERO, FEL_RAIDER)
     call AddSkinDependencyEquivalents(PEON_HERO, FEL_PEON)
     call AddSkinDependencyEquivalents(KODO_BEAST_HERO, FEL_KODO_BEAST)
-    
+
     // Undead
 
     call AddSkinDependencyEquivalents(BANSHEE, WRAITH)
     call AddSkinDependencyEquivalents(BANSHEE_HERO, WRAITH)
 
-    
+
     call AddSkinDependencyEquivalents(KEEPER, KEEPER_OF_THE_GROVE_GHOST)
     call AddSkinDependencyEquivalents(KEEPER, CENARIUS_HERO)
-    
+
     call AddSkinDependencyEquivalents(MOUNTAIN_GIANT_HERO, 'e012') // Frost Giant
     call AddSkinDependencyEquivalents(MOUNTAIN_GIANT_HERO, 'e013') // Molten Giant
     call AddSkinDependencyEquivalents(MOUNTAIN_GIANT_HERO, SEA_GIANT) // Molten Giant
-    
+
     call AddSkinDependencyEquivalents(ANCIENT_OF_LORE_HERO, ANCIENT_WAR)
     call AddSkinDependencyEquivalents(ANCIENT_OF_LORE_HERO, ANCIENT_WIND)
     call AddSkinDependencyEquivalents(ANCIENT_OF_LORE_HERO, TREE_AGES)
@@ -151,54 +151,54 @@ private function Init takes nothing returns nothing
     call AddSkinDependencyEquivalents(ANCIENT_OF_LORE_HERO, TREE_LIFE)
     call AddSkinDependencyEquivalents(ANCIENT_OF_LORE_HERO, ANCIENT_PROTECT)
     call AddSkinDependencyEquivalents(ANCIENT_OF_LORE_HERO, DEN_OF_WONDERS)
-    
+
     call AddSkinDependencyEquivalents(RANGER, DARK_RANGER)
     call AddSkinDependencyEquivalents(RANGER, RANGER_NIGHT_ELF)
-    
+
     call AddSkinDependencyEquivalents(WITCH_DOCTOR_HERO, 'ndth') // Dark Troll High Priest
     call AddSkinDependencyEquivalents(WITCH_DOCTOR_HERO, 'nfsh') // Forest Troll High Priest
     call AddSkinDependencyEquivalents(WITCH_DOCTOR_HERO, 'nith') // Ice Troll High Priest
 
     call AddSkinDependencyEquivalents(TROLL_WARLORD, 'Ndtw') // Dark Troll Warlord
     call AddSkinDependencyEquivalents(TROLL_WARLORD, 'nitw') // Ice Troll Warlord
-    
+
     call AddSkinDependencyEquivalents(FURBOLG_URSA_WARRIOR_HERO, 'nfpu') // Polar Furbolg Ursa Warrior
-    
+
     call AddSkinDependencyEquivalents(NAGA_SORCERESS, LADY_VASHJ)
     call AddSkinDependencyEquivalents(NAGA_SORCERESS, NAGA_SIREN_HERO)
-    
+
     call AddSkinDependencyEquivalents(DARK_VALKYR, GOLDEN_VALKYR)
-    
+
     call AddSkinDependencyEquivalents(SIEGE_GOLEM, 'nggr') // Granite Golem
     call AddSkinDependencyEquivalents(SIEGE_GOLEM, 'ngrk') // Mud Golem
     call AddSkinDependencyEquivalents(SIEGE_GOLEM, 'nggm') // Moss Covered Granite Golem
     call AddSkinDependencyEquivalents(SIEGE_GOLEM, 'ngst') // Rock Golem
     call AddSkinDependencyEquivalents(SIEGE_GOLEM, 'nfgl') // Flesh Golem
     call AddSkinDependencyEquivalents(SIEGE_GOLEM, DIVINE_GOLEM)
-    
+
     call AddSkinDependencyEquivalents(SALAMANDER_LORD, 'nslv') // Salamander Vizier
     call AddSkinDependencyEquivalents(SALAMANDER_LORD, 'nstw') // Storm Wyrm
-    
+
     call AddSkinDependencyEquivalents(HARPY_QUEEN, 'nhrr') // Harpy Rogue
     call AddSkinDependencyEquivalents(HARPY_QUEEN, 'nhrw') // Harpy Windwitch
-    
+
     call AddSkinDependencyEquivalents(ANCIENT_SASQUATCH, ANCIENT_WENDIGO)
     call AddSkinDependencyEquivalents(ANCIENT_SASQUATCH, ENRANGED_JUNGLE_STALKER)
-    
+
     call AddSkinDependencyEquivalents(BROOD_MOTHER, 'nsgp') // Forest Spider
     call AddSkinDependencyEquivalents(BROOD_MOTHER, 'nsgt') // Giant Spider
-    
+
     call AddSkinDependencyEquivalents(RED_DRAGON_HERO, BLACK_DRAGON)
     call AddSkinDependencyEquivalents(RED_DRAGON_HERO, BRONZE_DRAGON)
     call AddSkinDependencyEquivalents(RED_DRAGON_HERO, BLUE_DRAGON)
     call AddSkinDependencyEquivalents(RED_DRAGON_HERO, GREEN_DRAGON)
     call AddSkinDependencyEquivalents(RED_DRAGON_HERO, NETHER_DRAGON)
-    
+
     call AddSkinDependencyEquivalents(GNOMISH_SUBMARINE_HERO, GOBLIN_SUBMARINE_HERO)
     call AddSkinDependencyEquivalents(GNOMISH_SUBMARINE_HERO, DWARF_SUBMARINE_HERO)
-    
+
     call AddSkinDependencyEquivalents(GNOMISH_SUBMARINE_HERO_PILOT, GOBLIN_SUBMARINE_HERO)
-    
+
     call AddSkinDependencyEquivalents(HUMAN_BATTLESHIP_HERO, ORC_JUGGERNAUGHT)
     call AddSkinDependencyEquivalents(HUMAN_BATTLESHIP_HERO, UNDEAD_BATTLESHIP)
     call AddSkinDependencyEquivalents(HUMAN_BATTLESHIP_HERO, ELF_BATTLESHIP)

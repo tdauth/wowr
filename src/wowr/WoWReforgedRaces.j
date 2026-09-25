@@ -637,7 +637,7 @@ private function SetRaceTier1 takes integer whichRace, integer id returns nothin
 endfunction
 
 function GetRaceTier1 takes integer whichRace returns integer
-    return GetRaceObjectType(whichRace, RACE_OBJECT_TYPE_TIER_1)
+    return GetRaceObjectTypeId(whichRace, RACE_OBJECT_TYPE_TIER_1)
 endfunction
 
 private function SetRaceTier1Item takes integer whichRace, integer id returns nothing
@@ -645,7 +645,7 @@ private function SetRaceTier1Item takes integer whichRace, integer id returns no
 endfunction
 
 function GetRaceTier1Item takes integer whichRace returns integer
-    return GetRaceObjectType(whichRace, RACE_OBJECT_TYPE_TIER_1_ITEM)
+    return GetRaceObjectTypeId(whichRace, RACE_OBJECT_TYPE_TIER_1_ITEM)
 endfunction
 
 private function SetRaceTier2 takes integer whichRace, integer id returns nothing
@@ -653,7 +653,7 @@ private function SetRaceTier2 takes integer whichRace, integer id returns nothin
 endfunction
 
 function GetRaceTier2 takes integer whichRace returns integer
-    return GetRaceObjectType(whichRace, RACE_OBJECT_TYPE_TIER_2)
+    return GetRaceObjectTypeId(whichRace, RACE_OBJECT_TYPE_TIER_2)
 endfunction
 
 private function SetRaceTier2Item takes integer whichRace, integer id returns nothing
@@ -665,7 +665,7 @@ private function SetRaceTier3 takes integer whichRace, integer id returns nothin
 endfunction
 
 function GetRaceTier3 takes integer whichRace returns integer
-    return GetRaceObjectType(whichRace, RACE_OBJECT_TYPE_TIER_3)
+    return GetRaceObjectTypeId(whichRace, RACE_OBJECT_TYPE_TIER_3)
 endfunction
 
 private function SetRaceTier3Item takes integer whichRace, integer id returns nothing
@@ -701,7 +701,7 @@ private function SetRaceMill takes integer whichRace, integer id returns nothing
 endfunction
 
 function GetRaceMill takes integer whichRace returns integer
-    return GetRaceObjectType(whichRace, RACE_OBJECT_TYPE_MILL)
+    return GetRaceObjectTypeId(whichRace, RACE_OBJECT_TYPE_MILL)
 endfunction
 
 private function SetRaceMillItem takes integer whichRace, integer id returns nothing

@@ -3272,6 +3272,9 @@ globals
     constant integer UPG_DRAGON_ROOST                                = 'R06M'
     constant integer UPG_ARCANE_PORTALS                              = 'R026'
 
+    constant integer HERO_GLOW_ABILITY_ID                            = 'A071'
+    constant integer HERO_GLOW_BUFF_ID                               = 'B00B'
+
     constant integer ARCHANGEL                                       = 'H0A3'
     constant integer SEA_GIANT_CUSTOMIZABLE                          = 'H0FB'
     constant integer CUSTOMIZABLE_HERO                               = 'H0Q3'
