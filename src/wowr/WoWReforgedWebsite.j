@@ -322,7 +322,7 @@ private function RaceIconToHtml takes integer whichRace returns nothing
     if (whichRace == udg_RaceNone) then
         call FileWriteLine("-")
     else
-        call IconToHtmlEx(udg_RaceTavernItemType[whichRace], "races.html")
+        call IconToHtmlEx(GetRaceTavernItemTypeId(whichRace), "races.html")
     endif
 endfunction
 
@@ -1968,9 +1968,9 @@ private function GetRaceTeamName takes integer team returns string
 endfunction
 
 private function GenerateRaceEx takes integer i returns nothing
-    local item whichItem = CreateItem(udg_RaceTavernItemType[i], 0.0, 0.0)
+    local item whichItem = CreateItem(GetRaceTavernItemTypeId(i), 0.0, 0.0)
     local item tinyItem = CreateItem(GetRaceTier1Item(i), 0.0, 0.0)
-    call FileWriteLine("<tr id=\"" + A2S(udg_RaceTavernItemType[i]) + "\">")
+    call FileWriteLine("<tr id=\"" + A2S(GetRaceTavernItemTypeId(i)) + "\">")
     // icon
     call FileWriteLine("<td data-order=\"" + I2S(i) + "\">")
     call WriteRacePopoverWithIconEx(whichItem, "races.html")

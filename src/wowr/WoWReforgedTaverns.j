@@ -73,7 +73,7 @@ function AddRacesTavern takes unit tavern returns nothing
 
     loop
         exitwhen (i >= max)
-        call AddPagedButtonsItemType(tavern, udg_RaceTavernItemType[i])
+        call AddPagedButtonsItemType(tavern, GetRaceTavernItemTypeId(i))
         set i = i + 1
     endloop
     call SetPagedButtonsPage(tavern, 0)
@@ -187,7 +187,7 @@ function SelectRandomRace takes unit buyingUnit, unit tavern returns nothing
     local integer max = GetRacesMax()
     loop
         exitwhen (i >= max)
-        set id = udg_RaceTavernItemType[i]
+        set id = GetRaceTavernItemTypeId(i)
         if (PlayerCanPickRaceEx(owner, id)) then
             set availableIds[availableIdsCounter] = id
             set availableIdsCounter = availableIdsCounter + 1

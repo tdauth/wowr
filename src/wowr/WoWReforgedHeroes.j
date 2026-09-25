@@ -114,14 +114,14 @@ function ChooseRandomHeroFromRace takes integer whichRace returns integer
     loop
         exitwhen (i >= max)
         if ((GetHeroRace(i) == whichRace or whichRace == udg_RaceFreelancer) and not IsUnitTypeNavyHero(GetHeroUnitType(i))) then
-            //call BJDebugMsg("Adding index " + I2S(i) + " possible heroes for race " + GetObjectName(udg_RaceTavernItemType[whichRace]) + ": " + GetObjectName(udg_HeroUnitType[i]))
+            //call BJDebugMsg("Adding index " + I2S(i) + " possible heroes for race " + GetRaceName(whichRace) + ": " + GetObjectName(udg_HeroUnitType[i]))
             set heroIndices[heroIndicesCounter] = i
             set heroIndicesCounter = heroIndicesCounter + 1
         endif
         set i = i + 1
     endloop
 
-    //call BJDebugMsg("Got " + I2S(heroIndicesCounter) + " possible heroes for race " + GetObjectName(udg_RaceTavernItemType[whichRace]))
+    //call BJDebugMsg("Got " + I2S(heroIndicesCounter) + " possible heroes for race " + GetRaceName(whichRace))
 
     if (heroIndicesCounter > 0) then
         return heroIndices[GetRandomInt(0, heroIndicesCounter - 1)]

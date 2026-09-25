@@ -143,7 +143,7 @@ function DisplayStats takes player to, player from returns nothing
     endif
 
     if (GetPlayerRace3(from) != udg_RaceNone) then
-        set race2 = GetRaceName(GetPlayerRace3(from)) + " (" + I2S(R2I(GetResearchesPercentageForRace(GetPlayerRace3(from), from))) + " %)"
+        set race3 = GetRaceName(GetPlayerRace3(from)) + " (" + I2S(R2I(GetResearchesPercentageForRace(GetPlayerRace3(from), from))) + " %)"
     endif
 
     if (GetPlayerProfession1(from) != udg_ProfessionNone) then

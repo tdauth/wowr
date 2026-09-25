@@ -12,8 +12,8 @@ endglobals
 
 private function SetShopRace takes unit shop, integer whichRace returns nothing
     call SetUnitUserData(shop, whichRace)
-    call BlzSetUnitName(shop, Format(GetLocalizedString("ALCHEMIST_LAB_X")).s(GetObjectName(udg_RaceTavernItemType[whichRace])).result())
-    //call BJDebugMsg("Change shop race to " + GetObjectName(udg_RaceTavernItemType[whichRace]))
+    call BlzSetUnitName(shop, Format(GetLocalizedString("ALCHEMIST_LAB_X")).s(GetRaceName(whichRace)).result())
+    //call BJDebugMsg("Change shop race to " + GetRaceName(whichRace))
 endfunction
 
 function AddAlchemistLab takes unit shop returns nothing

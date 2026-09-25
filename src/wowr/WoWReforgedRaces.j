@@ -473,7 +473,7 @@ function GetRaceTavernItemTypeId takes integer whichRace returns integer
 endfunction
 
 function GetRaceName takes integer whichRace returns string
-    return GetObjectName(udg_RaceTavernItemType[whichRace])
+    return GetObjectName(GetRaceTavernItemTypeId(whichRace))
 endfunction
 
 function IsCitizen takes integer objectTypeId returns boolean
@@ -533,11 +533,11 @@ private function AddRace takes nothing returns integer
 endfunction
 
 function GetIconByRace takes integer whichRace returns string
-    if (whichRace == udg_RaceNone or udg_RaceTavernItemType[whichRace] == 0) then
+    if (whichRace == udg_RaceNone or GetRaceTavernItemTypeId(whichRace) == 0) then
         return "ReplaceableTextures\\WorldEditUI\\Editor-Random-Unit.blp"
     endif
 
-    return BlzGetAbilityIcon(udg_RaceTavernItemType[whichRace])
+    return BlzGetAbilityIcon(GetRaceTavernItemTypeId(whichRace))
 endfunction
 
 function GetRaceTeam takes integer r returns integer
