@@ -130,6 +130,7 @@
 //! import "wowr/WoWReforgedProperties.j"
 //! import "wowr/WoWReforgedQuests.j"
 //! import "wowr/WoWReforgedRaceDalaran.j"
+//! import "wowr/WoWReforgedRaceDragonkin.j"
 //! import "wowr/WoWReforgedRaceDungeon.j"
 //! import "wowr/WoWReforgedRaceDwarf.j"
 //! import "wowr/WoWReforgedRaceGnome.j"

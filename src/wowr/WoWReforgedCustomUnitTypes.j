@@ -1,4 +1,4 @@
-library WoWReforgedCustomUnitTypes initializer Init requires CustomUnitTypes, UnitGroupRespawn, UnitGroupRespawnConfig, WoWReforgedAutoSkill, WoWReforgedPortals, WoWReforgedHeroes, WoWReforgedBosses, WoWReforgedRaces, WoWReforgedProfessions, WoWReforgedResources, WoWReforgedProperties, WoWReforgedSkins, WoWReforgedArmory, WoWReforgedTaverns, WoWReforgedSummonedUnits, WoWReforgedGaia, WoWReforgedChests, WoWReforegdHideout, WoWReforgedTrainer, WoWReforgedProfessionFarmer, WoWReforgedProfessionHunter, WoWReforgedCommandButtons, WoWReforgedGoldMines, WoWReforgedLevers, WoWReforgedRandomCorpse, WoWReforgedProfessionBooksShop, WoWReforgedSceptersShop, WoWReforgedBanners, WoWReforgedVIPs, WoWReforgedAlchemistLab, WoWReforgedMounts, WoWReforgedCraftingStash, WoWReforgedRaceDwarf, WoWReforgedRaceTroll, WoWReforgedRaceMurloc, WoWReforgedRaceTuskarr, WoWReforgedRaceTauren, WoWReforgedRaceWorgen, WoWReforgedRaceGoblin, WoWReforgedRaceHighElf, WoWReforgedMapData
+library WoWReforgedCustomUnitTypes initializer Init requires CustomUnitTypes, UnitGroupRespawn, UnitGroupRespawnConfig, WoWReforgedAutoSkill, WoWReforgedPortals, WoWReforgedHeroes, WoWReforgedBosses, WoWReforgedRaces, WoWReforgedProfessions, WoWReforgedResources, WoWReforgedProperties, WoWReforgedSkins, WoWReforgedArmory, WoWReforgedTaverns, WoWReforgedSummonedUnits, WoWReforgedGaia, WoWReforgedChests, WoWReforegdHideout, WoWReforgedTrainer, WoWReforgedProfessionFarmer, WoWReforgedProfessionHunter, WoWReforgedCommandButtons, WoWReforgedGoldMines, WoWReforgedLevers, WoWReforgedRandomCorpse, WoWReforgedProfessionBooksShop, WoWReforgedSceptersShop, WoWReforgedBanners, WoWReforgedVIPs, WoWReforgedAlchemistLab, WoWReforgedMounts, WoWReforgedCraftingStash, WoWReforgedRaceDwarf, WoWReforgedRaceTroll, WoWReforgedRaceMurloc, WoWReforgedRaceTuskarr, WoWReforgedRaceTauren, WoWReforgedRaceWorgen, WoWReforgedRaceGoblin, WoWReforgedRaceHighElf, WoWReforgedRaceDragonkin, WoWReforgedMapData
 
 private function AddCustomMine takes unit whichUnit returns nothing
     local integer index = GetMineTypeIndex(GetUnitTypeId(whichUnit))
@@ -468,6 +468,14 @@ private struct CustomUnitTypeHallOfValor extends CustomUnitType
 
 endstruct
 
+private struct CustomUnitTypeDragonkinBlackDragon extends CustomUnitType
+
+    public stub method onEnter takes unit whichUnit returns nothing
+        call AddDragonkinBlackDragon(whichUnit)
+    endmethod
+
+endstruct
+
 private struct CustomUnitTypeTentacle extends CustomUnitType
 
     public stub method onEnter takes unit whichUnit returns nothing
@@ -759,6 +767,9 @@ private function Init takes nothing returns nothing
 
     // Race Vrykul
     call AddCustomUnitType(VRYKUL_HALL_OF_VALOR, CustomUnitTypeHallOfValor.create())
+
+    // Race Dragonkin
+    call AddCustomUnitType(DRAGONKIN_BLACK_DRAGON, CustomUnitTypeDragonkinBlackDragon.create())
 
     set c = CustomUnitTypeTentacle.create()
     call AddCustomUnitType(TENTACLE_CTHUN, c)
