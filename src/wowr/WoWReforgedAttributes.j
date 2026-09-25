@@ -2,7 +2,7 @@ library WoWReforgedAttributes initializer Init requires NewBonus, PagedButtons, 
 
 globals
     private player filterPlayer = null
-    
+
     private trigger sellTrigger = CreateTrigger()
     public trigger levelUpTrigger = CreateTrigger() // public for WoWReforgedHeroTransformation
     private trigger channelTrigger = CreateTrigger()
@@ -35,7 +35,7 @@ function GetHeroSecondaryStat takes unit hero returns integer
     elseif (primary == bj_HEROSTAT_AGI) then
         return bj_HEROSTAT_STR
     endif
-    
+
     return bj_HEROSTAT_AGI
 endfunction
 
@@ -50,15 +50,15 @@ function EqualWowReforgedSkillPoints takes unit hero returns nothing
         call ModifyHeroStat(bj_HEROSTAT_AGI, hero, bj_MODIFYMETHOD_ADD, value)
         call ModifyHeroStat(bj_HEROSTAT_INT, hero, bj_MODIFYMETHOD_ADD, value)
         call RemoveUnitAttribute(hero, udg_AttributeAttributePoints, value * 3.0 + I2R(mod))
-        
+
         if (mod > 0) then
             call ModifyHeroStat(GetHeroPrimaryStat(hero), hero, bj_MODIFYMETHOD_ADD, 1)
-        
+
             if (mod > 1) then
                 call ModifyHeroStat(GetHeroSecondaryStat(hero), hero, bj_MODIFYMETHOD_ADD, mod - 1)
             endif
         endif
-        
+
         call ShowWowReforgedSkillPoints(hero)
     else
         call SimError(GetOwningPlayer(hero), GetLocalizedString("NO_ATTRIBUTE_POINTS"))
@@ -191,7 +191,7 @@ private function TriggerConditionSell takes nothing returns boolean
 endfunction
 
 private function TriggerConditionLevelUp takes nothing returns boolean
-    if (IsUnitType(GetSoldUnit(), UNIT_TYPE_HERO)) then
+    if (IsUnitType(GetLevelingUnit(), UNIT_TYPE_HERO)) then
         call AddSkillPointsLevelUp(GetLevelingUnit())
         if (CanUseCustomizableAttributes(GetLevelingUnit())) then
             call AddUnitAttribute(GetLevelingUnit(), udg_AttributeAttributePoints, IMaxBJ(1, GetGainedHeroLevels(GetLevelingUnit())) * ATTRIBUTE_POINTS_PER_LEVEL)
@@ -237,7 +237,7 @@ private function Init takes nothing returns nothing
     set udg_AttributeAttributePoints = AddAttribute(GetLocalizedStringSafe("ATTRIBUTE_POINTS"))
     call SetAttributeIcon(udg_AttributeAttributePoints, "ReplaceableTextures\\CommandButtons\\BTNStatUp.blp")
     call SetAttributeDescription(udg_AttributeAttributePoints, GetLocalizedStringSafe("ATTRIBUTE_POINTS_DESCRIPTION"))
-    
+
     set udg_AttributeSkillPoints = AddAttribute(GetLocalizedStringSafe("SKILL_POINTS"))
     call SetAttributeIcon(udg_AttributeAttributePoints, "ReplaceableTextures\\CommandButtons\\BTNSkillz.blp")
     call SetAttributeDescription(udg_AttributeAttributePoints, GetLocalizedStringSafe("SKILL_POINTS_DESCRIPTION"))
