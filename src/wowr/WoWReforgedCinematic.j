@@ -8,11 +8,12 @@ globals
     private boolean array playerQueueUIEnabled
     private real array playerCameraX
     private real array playerCameraY
-    
+
     private trigger syncTrigger = CreateTrigger()
     private group actors = CreateGroup()
     private effect array effects
     private integer effectsCounter = 0
+    private trigger skipTrigger = CreateTrigger()
 endglobals
 
 function AddCinematicActor takes unit whichUnit returns nothing
@@ -102,13 +103,13 @@ private function StorePlayerSelections takes nothing returns nothing
     loop
         exitwhen (i == bj_MAX_PLAYERS)
         set slotPlayer = Player(i)
-        
+
         if (playerSelections[i] != null) then
             call GroupClear(playerSelections[i])
             call DestroyGroup(playerSelections[i])
             set playerSelections[i] = null
         endif
-        
+
         if (GetPlayerSlotState(slotPlayer) == PLAYER_SLOT_STATE_PLAYING and GetPlayerController(slotPlayer) == MAP_CONTROL_COMPUTER) then
             set playerSelections[i] = GetUnitsSelectedAllSafe(slotPlayer)
         endif
@@ -123,11 +124,11 @@ private function RestorePlayerSelections takes nothing returns nothing
     loop
         exitwhen (i == bj_MAX_PLAYERS)
         set slotPlayer = Player(i)
-        
+
         if (playerSelections[i] != null and GetPlayerSlotState(slotPlayer) == PLAYER_SLOT_STATE_PLAYING and GetPlayerController(slotPlayer) == MAP_CONTROL_COMPUTER) then
             call SelectGroupForPlayerBJ(playerSelections[i], slotPlayer)
         endif
-        
+
         set slotPlayer = null
         set i = i + 1
     endloop
@@ -289,21 +290,62 @@ private function TriggerActionSync takes nothing returns nothing
     endif
 endfunction
 
+private function TriggerConditionSkip takes nothing returns boolean
+    return udg_CinematicRunning and not udg_CinematicPreparation and not udg_CinematicCleanup
+endfunction
+
+private function CinematicCleanup takes nothing returns nothing
+    set udg_CinematicRunning = false
+    set udg_CinematicPreparation = false
+    set udg_CinematicCleanup = true
+    call CinematicFadeBJ(bj_CINEFADETYPE_FADEOUT, 1.50, "ReplaceableTextures\\CameraMasks\\Black_mask.blp", 0, 0, 0, 0)
+    call PolledWait(2.00)
+    call CinematicModeBJ(false, GetPlayersAll())
+    call EndThematicMusicBJ()
+    call DisableCinematic()
+    if (udg_CinematicCleanupTrigger != null) then
+        call ConditionalTriggerExecute(udg_CinematicCleanupTrigger)
+    endif
+    set udg_CinematicCleanupTrigger = null
+    call PolledWait(0.50)
+    call CinematicFadeBJ(bj_CINEFADETYPE_FADEIN, 1.50, "ReplaceableTextures\\CameraMasks\\Black_mask.blp", 0, 0, 0, 0)
+    call PolledWait(1.50)
+    call UnprepareCinematic()
+    set udg_CinematicCleanup = false
+endfunction
+
+function EndCinematic takes nothing returns nothing
+    if (not udg_CinematicCleanup and udg_CinematicRunning) then
+        call CinematicCleanup()
+    endif
+endfunction
+
+private function TriggerActionSkip takes nothing returns nothing
+    call CinematicCleanup()
+    call StopSoundBJ(GetLastPlayedSound(), false)
+    call EndThematicMusicBJ()
+endfunction
+
 private function Init takes nothing returns nothing
     local player slotPlayer = null
     local integer i = 0
     loop
-        exitwhen (i == bj_MAX_PLAYERS)
+        exitwhen (i >= bj_MAX_PLAYERS)
         set playerSelections[i] = CreateGroup()
         set slotPlayer = Player(i)
         set playerCameraX[i] = GetPlayerStartLocationX(slotPlayer)
         set playerCameraY[i] = GetPlayerStartLocationY(slotPlayer)
         call BlzTriggerRegisterPlayerSyncEvent(syncTrigger, slotPlayer, PREFIX_X, false)
         call BlzTriggerRegisterPlayerSyncEvent(syncTrigger, slotPlayer, PREFIX_Y, false)
+        call TriggerRegisterPlayerEventEndCinematic(skipTrigger, slotPlayer)
         set slotPlayer = null
         set i = i + 1
     endloop
     call TriggerAddAction(syncTrigger, function TriggerActionSync)
+
+    call TriggerAddCondition(skipTrigger, Condition(function TriggerConditionSkip))
+    call TriggerAddAction(skipTrigger, function TriggerActionSkip)
+
     set udg_Cinematics = GetAllUsersCount() == 1
 endfunction
 

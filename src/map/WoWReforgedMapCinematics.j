@@ -6,10 +6,6 @@ globals
     private unit actorArchimonde = null
 endglobals
 
-private function EndCinematic takes nothing returns nothing
-    call ConditionalTriggerExecute(gg_trg_Cinematics_End)
-endfunction
-
 private function IntroCleanup takes nothing returns nothing
     call SetSkyModel("Environment\\Sky\\LordaeronSummerSky\\LordaeronSummerSky.mdl")
     call ResetUnitAnimation(GetBossArchimonde())
