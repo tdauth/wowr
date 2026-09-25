@@ -593,8 +593,11 @@ function GetRaceByTavernItemTypeId takes integer tavernItemTypeId returns intege
     local integer max = GetRacesMax()
     local integer i = 0
     loop
-        exitwhen (i == max)
-        if (tavernItemTypeId == udg_RaceTavernItemType[i]) then
+        exitwhen (i >= max)
+        if (GetRaceTavernItemTypeId(i) == 0) then
+            call BJDebugMsg("Race tavern item type ID is 0 for race " + I2S(i))
+        endif
+        if (tavernItemTypeId == GetRaceTavernItemTypeId(i)) then
             return i
         endif
         set i = i + 1
