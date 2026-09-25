@@ -2,5 +2,3 @@
 InfoPanelIconArmorDivine=ReplaceableTextures\CommandButtons\ATTDivineArmorNew.blp
 InfoPanelIconArmorDivineNeutral=ReplaceableTextures\CommandButtons\UPGDivineArmorNew.blp
 
-[Errors]
-Inventoryfull=
