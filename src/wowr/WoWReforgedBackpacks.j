@@ -1202,7 +1202,7 @@ endfunction
 
 function CreateBackpackForPlayer takes player whichPlayer returns nothing
     local integer playerId = GetPlayerId(whichPlayer)
-    set Backpack[playerId] = CreateUnit(whichPlayer, BACK_PACK, GetUnitX(GetPlayerHero1(whichPlayer)), GetUnitY(GetPlayerHero1(whichPlayer)), 0.00)
+    set Backpack[playerId] = CreateUnit(whichPlayer, BACKPACK, GetUnitX(GetPlayerHero1(whichPlayer)), GetUnitY(GetPlayerHero1(whichPlayer)), 0.00)
     call SuspendHeroXP(Backpack[playerId], true)
     call SetUnitInvulnerable(Backpack[playerId], true)
     call BlzSetUnitName(Backpack[playerId], Format(GetLocalizedString("BAG_WITH_INDEX")).i(1).result()) // Bag %1%

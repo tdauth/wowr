@@ -1,9 +1,14 @@
-library WoWReforgedBosses initializer Init requires UnitTypeUtils, OnUnitRemoval, WoWReforgedUtils, WoWReforgedHeroes, WoWReforgedCommandButtons, WoWReforgedSkillMenu, WoWReforgedClasses, WoWReforgedAutoSkill, WoWReforgedMapData
+library WoWReforgedBosses initializer Init requires UnitTypeUtils, AttackRange, OnUnitRemoval, WoWReforgedUtils, WoWReforgedHeroes, WoWReforgedCommandButtons, WoWReforgedSkillMenu, WoWReforgedClasses, WoWReforgedAutoSkill, WoWReforgedMapData
 // Require WoWReforgedHeroes to assign the boss hero classes to the correct ones.
+// Contains code for legendary items.
 
 globals
+    constant real ANCIENT_BOW_RANGE = 2600.0
+
     private trigger deathTrigger = CreateTrigger()
     private trigger heroLevelTrigger = CreateTrigger()
+    private trigger pickupItemTrigger = CreateTrigger()
+    private trigger dropItemTrigger = CreateTrigger()
 
     private integer legendaryItemsCounter = 0
     private integer array legendaryItemTypeId
@@ -11,6 +16,12 @@ globals
     private unit array legendaryItemBuilding
     private rect array legendaryItemRect
 endglobals
+
+function AddAncientBowBonus takes unit hero returns nothing
+    call SetUnitAttackRange(hero, ANCIENT_BOW_RANGE)
+    call BlzSetUnitRealFieldBJ(hero, UNIT_RF_SIGHT_RADIUS, ANCIENT_BOW_RANGE)
+    call BlzSetUnitRealFieldBJ(hero, UNIT_RF_ACQUISITION_RANGE, ANCIENT_BOW_RANGE)
+endfunction
 
 function IsBoss takes integer unitTypeId returns boolean
     local boolean result = false
@@ -197,6 +208,38 @@ private function TriggerConditionHeroLevel takes nothing returns boolean
     return false
 endfunction
 
+private function TriggerConditionPickupItem takes nothing returns boolean
+    if (GetUnitTypeId(GetTriggerUnit()) != BACKPACK and GetUnitTypeId(GetTriggerUnit()) != EQUIPMENT_BAG and IsUnitType(GetTriggerUnit(), UNIT_TYPE_HERO)) then
+        if (GetItemTypeId(GetManipulatedItem()) == ITEM_THE_ASHBRINGER) then
+            if (BlzGetUnitWeaponIntegerField(GetTriggerUnit(), UNIT_WEAPON_IF_ATTACK_ATTACK_TYPE, 0) != 5) then
+                set udg_BossesFrostmourneCarrier = GetTriggerUnit()
+                call BlzSetUnitWeaponIntegerFieldBJ(GetTriggerUnit(), UNIT_WEAPON_IF_ATTACK_ATTACK_TYPE, 0, 5)
+            endif
+        elseif (GetItemTypeId(GetManipulatedItem()) == ITEM_TORTOLLAS_SHELL) then
+            if (BlzGetUnitIntegerField(GetTriggerUnit(), UNIT_IF_DEFENSE_TYPE) != 6) then
+                set udg_BossesTurtleShellCarrier = GetTriggerUnit()
+                call BlzSetUnitIntegerFieldBJ(GetTriggerUnit(), UNIT_IF_DEFENSE_TYPE, 6)
+            endif
+        endif
+    endif
+    return false
+endfunction
+
+private function TriggerConditionDropItem takes nothing returns boolean
+    if (GetItemTypeId(GetManipulatedItem()) == ITEM_THE_ASHBRINGER) then
+        if (GetTriggerUnit() == udg_BossesFrostmourneCarrier) then
+            set udg_BossesFrostmourneCarrier = null
+            call BlzSetUnitWeaponIntegerFieldBJ(GetTriggerUnit(), UNIT_WEAPON_IF_ATTACK_ATTACK_TYPE, 0, GetUnitDamageTypeByType(GetUnitTypeId(GetTriggerUnit()), GetOwningPlayer(GetTriggerUnit())))
+        endif
+    elseif (GetItemTypeId(GetManipulatedItem()) == ITEM_TORTOLLAS_SHELL) then
+        if (GetTriggerUnit() == udg_BossesTurtleShellCarrier) then
+            set udg_BossesTurtleShellCarrier = null
+            call BlzSetUnitIntegerFieldBJ(GetTriggerUnit(), UNIT_IF_DEFENSE_TYPE, GetUnitDefenseTypeByType(GetUnitTypeId(GetTriggerUnit()), GetOwningPlayer(GetTriggerUnit())))
+        endif
+    endif
+    return false
+endfunction
+
 private function AddBoss takes integer id, integer class returns nothing
     call AssignHeroClass(id, class)
     call SetIsCampaign(id, true)
@@ -223,6 +266,12 @@ private function Init takes nothing returns nothing
 
     call TriggerRegisterAnyUnitEventBJ(heroLevelTrigger, EVENT_PLAYER_HERO_LEVEL)
     call TriggerAddCondition(heroLevelTrigger, Condition(function TriggerConditionHeroLevel))
+
+    call TriggerRegisterAnyUnitEventBJ(pickupItemTrigger, EVENT_PLAYER_UNIT_PICKUP_ITEM)
+    call TriggerAddCondition(pickupItemTrigger, Condition(function TriggerConditionPickupItem))
+
+    call TriggerRegisterAnyUnitEventBJ(dropItemTrigger, EVENT_PLAYER_UNIT_DROP_ITEM)
+    call TriggerAddCondition(dropItemTrigger, Condition(function TriggerConditionDropItem))
 
     call SetPlayerFlagBJ(PLAYER_STATE_GIVES_BOUNTY, true, Player(PLAYER_NEUTRAL_AGGRESSIVE))
     call SetPlayerFlagBJ(PLAYER_STATE_GIVES_BOUNTY, true, GetMapBossesPlayer())

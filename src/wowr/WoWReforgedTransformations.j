@@ -1,4 +1,4 @@
-library WoWReforgedTransformations initializer Init requires NewBonus, WoWReforgedHeroTransformation, WoWReforgedAbilitySkill, WoWReforgedAncientBow
+library WoWReforgedTransformations initializer Init requires NewBonus, WoWReforgedHeroTransformation, WoWReforgedAbilitySkill, WoWReforgedBosses
 
 globals
     private trigger transformTrigger = CreateTrigger()
@@ -38,19 +38,19 @@ private function TriggerConditionTransform takes nothing returns boolean
       //  call AddUnitBonus(GetTriggerTransformedHero(), BONUS_STRENGTH, -GetRoboGoblinStrengthBonus(GetTriggerTransformedHero(), ABILITY_ROBO_GOBLIN, GetUnitAbilitySkillLevelSafe(GetTriggerTransformedHero(), ABILITY_ROBO_GOBLIN)))
        // call AddUnitBonus(GetTriggerTransformedHero(), BONUS_ARMOR, -GetRoboGoblinArmorBonus(GetTriggerTransformedHero(), ABILITY_ROBO_GOBLIN, GetUnitAbilitySkillLevelSafe(GetTriggerTransformedHero(), ABILITY_ROBO_GOBLIN)))
     endif
-    
+
     if (GetTriggerTransformedHero() == udg_BossesFrostmourneCarrier) then
         call BlzSetUnitWeaponIntegerField(GetTriggerTransformedHero(), UNIT_WEAPON_IF_ATTACK_ATTACK_TYPE, 0, 5)
     endif
-    
+
     if (GetTriggerTransformedHero() == udg_BossesTurtleShellCarrier) then
         call BlzSetUnitIntegerField(GetTriggerUnit(), UNIT_IF_DEFENSE_TYPE, 6)
     endif
-    
+
     if (GetTriggerTransformedHero() == udg_BossesBowCarrier) then
         call AddAncientBowBonus(GetTriggerTransformedHero())
     endif
-    
+
     return false
 endfunction
 
@@ -64,25 +64,25 @@ endfunction
 
 private function Init takes nothing returns nothing
     local integer index = 0
-    
+
     call TriggerRegisterHeroTransform(transformTrigger)
     call TriggerAddCondition(transformTrigger, Condition(function TriggerConditionTransform))
-    
+
     call TriggerRegisterAnyUnitEventBJ(normalFormTrigger, EVENT_PLAYER_UNIT_SPELL_CAST)
     call TriggerAddCondition(normalFormTrigger, Condition(function TriggerConditionNormalForm))
     call TriggerAddAction(normalFormTrigger, function TriggerActionNormalForm)
-    
+
     set index = AddHeroTransformationItemTypeIdEx(ABILITY_METAMORPHOSIS, DEMON_HUNTER_M)
     call SetHeroTransformationAnimProperties(index, "alternate")
     set index = AddHeroTransformationItemTypeIdEx(ABILITY_GHOST_FORM, GHOST_FORM)
     set index = AddHeroTransformationItemTypeIdEx(ABILITY_ROBO_GOBLIN, TINKER_M)
     call SetHeroTransformationAnimProperties(index, "alternate")
-    
+
     call RegisterAbilityFieldCustomReal0(ABILITY_METAMORPHOSIS, GetMetamorphosisLifeBonus)
     call RegisterAbilityFieldCustomReal0(ABILITY_GHOST_FORM, GetGhostFormLifeBonus)
     call RegisterAbilityFieldCustomInteger0(ABILITY_ROBO_GOBLIN, GetRoboGoblinStrengthBonus)
     call RegisterAbilityFieldCustomInteger1(ABILITY_ROBO_GOBLIN, GetRoboGoblinArmorBonus)
-    
+
     // TODO Chaos for Orcs/Grommash
     // TODO Battleship for Proudmoore
     // TODO Etheral Form for Spirit Walker
@@ -92,7 +92,7 @@ private function Init takes nothing returns nothing
     // TODO Corruption Furbolg Ursa Warrior
     // TODO Lion-skull Helmet for Anduin ReplaceableTextures\CommandButtons\BTNKingAnduin.blp
     // TODO Worgen Form for Worgen heroes
-    
+
     // Druid Forms
     set index = AddHeroTransformationItemTypeIdEx('A1H2', DRUID_FORM_BEAR)
     set index = AddHeroTransformationItemTypeIdEx('A1H3', DRUID_FORM_CROW)

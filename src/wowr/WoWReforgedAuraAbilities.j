@@ -5,7 +5,7 @@ globals
 endglobals
 
 function FilterIsNoInvulnerableInvalidTarget takes unit target returns boolean
-        return GetUnitTypeId(target) != BACK_PACK and GetUnitTypeId(target) != EQUIPMENT_BAG and not BlzIsUnitInvulnerable(target)
+        return GetUnitTypeId(target) != BACKPACK and GetUnitTypeId(target) != EQUIPMENT_BAG and not BlzIsUnitInvulnerable(target)
 endfunction
 
 function FilterAlliedTargetsNonStructureMana takes unit caster, unit target, integer abilityId returns boolean
@@ -70,13 +70,13 @@ endfunction
 
 private function Init takes nothing returns nothing
     call AddAura(ABILITY_PILLAGE_AURA, 'A142', 'A140', FilterAlliedTargetsNonStructure, 512.0, false, 0, 0.0, 0, 0.0, 0, 0.0)
-    
+
     call AddAura(ABILITY_MISS_AURA, 'A1KV', 0, FilterEnemyTargetsNonStructure, 512.0, false, BONUS_MISS_CHANCE, 3.0, 0, 0.0, 0, 0.0)
     call RegisterAbilityFieldCustomReal0(ABILITY_MISS_AURA, GetAuraBonus0)
-    
+
     call AddAura('A1L0', 'A1KV', 0, FilterEnemyTargetsNonStructure, 512.0, false, BONUS_MISS_CHANCE, 3.0, 0, 0.0, 0, 0.0)
     call RegisterAbilityFieldCustomReal0('A1L0', GetAuraBonus0)
-    
+
     call AddAura(ABILITY_DRUNKEN_AURA, 'A1E1', 0, FilterAlliedTargetsNonStructure, 512.0, false, BONUS_CRITICAL_CHANCE, 1.0, BONUS_CRITICAL_DAMAGE, 0.4, BONUS_EVASION_CHANCE, 1.0)
     call RegisterAbilityFieldCustomReal0(ABILITY_DRUNKEN_AURA, GetAuraBonus0)
     call RegisterAbilityFieldCustomReal1(ABILITY_DRUNKEN_AURA, GetAuraBonus1)

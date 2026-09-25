@@ -16,7 +16,7 @@ private function Init takes nothing returns nothing
     call AddLegendaryItem('I027', GetBossArchimonde(), gg_unit_nfrm_0054, gg_rct_Legendary_Medivhs_Spell_Book) // Unique - Medivh's Spell Book
     call AddLegendaryItem('I03R', gg_unit_N036_0516, gg_unit_nfrm_0517, gg_rct_Legendary_Scepter_of_the_Sea) // Unique - Scepter of King Deepbeard
     call AddLegendaryItem('I03T', gg_unit_N03B_0622, gg_unit_nfrm_0623, gg_rct_Legendary_Turtle_Shell) // Unique - Tortolla's Shell
-    call AddLegendaryItem('I03S', gg_unit_H01P_0590, gg_unit_nfrm_0589, gg_rct_Legendary_Frostmourne) // Unique - The Ashbringer
+    call AddLegendaryItem(ITEM_THE_ASHBRINGER, gg_unit_H01P_0590, gg_unit_nfrm_0589, gg_rct_Legendary_Frostmourne)
     call AddLegendaryItem('I040', gg_unit_O00L_0927, gg_unit_nfrm_0942, gg_rct_Legendary_Mathogs_Cage) // Unique - Mathog's Cage
     call AddLegendaryItem('I045', gg_unit_Nswt_2458, gg_unit_nfrm_0993, gg_rct_Legendary_Sea_Witch_Tail) // Unique - Sea Witch Tail
     call AddLegendaryItem('I071', gg_unit_N068_0310, gg_unit_nfrm_0311, gg_rct_Legendary_Queen_Aszhara) // Unique - Heart of Aszhara

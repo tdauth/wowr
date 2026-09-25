@@ -230,7 +230,7 @@ private function TriggerConditionPickupItem takes nothing returns boolean
         return true
     endif
 
-    return IsUnitType(GetTriggerUnit(), UNIT_TYPE_HERO) and GetUnitTypeId(GetTriggerUnit()) != BACK_PACK and GetUnitTypeId(GetTriggerUnit()) != EQUIPMENT_BAG and (GetItemTypeId(GetManipulatedItem()) == INSCRIPTOR_ITEM_TYPE_ID_NOVICE or GetItemTypeId(GetManipulatedItem()) == INSCRIPTOR_ITEM_TYPE_ID_ADVANCED or GetItemTypeId(GetManipulatedItem()) == INSCRIPTOR_ITEM_TYPE_ID_ADEPT or GetItemTypeId(GetManipulatedItem()) == INSCRIPTOR_ITEM_TYPE_ID_MASTER)
+    return IsUnitType(GetTriggerUnit(), UNIT_TYPE_HERO) and GetUnitTypeId(GetTriggerUnit()) != BACKPACK and GetUnitTypeId(GetTriggerUnit()) != EQUIPMENT_BAG and (GetItemTypeId(GetManipulatedItem()) == INSCRIPTOR_ITEM_TYPE_ID_NOVICE or GetItemTypeId(GetManipulatedItem()) == INSCRIPTOR_ITEM_TYPE_ID_ADVANCED or GetItemTypeId(GetManipulatedItem()) == INSCRIPTOR_ITEM_TYPE_ID_ADEPT or GetItemTypeId(GetManipulatedItem()) == INSCRIPTOR_ITEM_TYPE_ID_MASTER)
 endfunction
 
 private function TriggerActionSetHeroBonus takes nothing returns nothing

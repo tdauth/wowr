@@ -2939,8 +2939,7 @@ globals
 
     // Heroes
     constant integer HERO_SELECTOR                                   = 'H056'
-    constant integer BACK_PACK                                       = 'E008'
-    constant integer BACKPACK                                        = BACK_PACK
+    constant integer BACKPACK                                        = 'E008'
     constant integer EQUIPMENT_BAG                                   = 'E00R'
     constant integer MAX_HERO_LEVEL                                  = 75
     constant integer MAX_HERO_SPELL_LEVEL                            = 7
@@ -3780,6 +3779,8 @@ globals
 
     // Legendary Items
     constant integer ITEM_SCEPTER_OF_SARGERAS                        = 'I046'
+    constant integer ITEM_THE_ASHBRINGER                             = 'I03S'
+    constant integer ITEM_TORTOLLAS_SHELL                            = 'I03T'
 
     // Recipes
     constant integer ITEM_BOOTS_OF_TELEPORTATION                     = 'I0YI'
