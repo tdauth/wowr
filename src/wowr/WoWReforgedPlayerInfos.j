@@ -134,6 +134,8 @@ function DisplayStats takes player to, player from returns nothing
         set heroLevel3 = I2S(GetHeroLevel3(from))
     endif
 
+    call BJDebugMsg("Show player info about " + GetPlayerName(from) + " for player " + GetPlayerName(to))
+
     if (GetPlayerRace1(from) != udg_RaceNone) then
         set race1 = GetRaceName(GetPlayerRace1(from)) + " (" + I2S(R2I(GetResearchesPercentageForRace(GetPlayerRace1(from), from))) + " %)"
     endif
