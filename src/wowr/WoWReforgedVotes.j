@@ -65,10 +65,48 @@ private function Lobby takes nothing returns nothing
     call DisplayVoteEnabled(GetLocalizedStringSafe("LOBBY"))
 endfunction
 
+private function Teams2vs2 takes nothing returns nothing
+    local player slotPlayer
+    local force array forces
+    local integer counter = 0
+    local integer playersInForce = 0
+    local integer i = 0
+    call DisableAllianceChangesTrigger()
+    call SetForceAllianceStateBJ(GetMapLobbyPlayers(), GetMapLobbyPlayers(), bj_ALLIANCE_UNALLIED)
+    loop
+        exitwhen (i >= bj_MAX_PLAYERS)
+        set slotPlayer = Player(i)
+        if (IsPlayerInForce(slotPlayer, GetMapLobbyPlayers())) then
+            if (playersInForce == 0) then
+                set forces[counter] = CreateForce()
+                set counter = counter + 1
+            endif
+            call ForceAddPlayer(forces[counter - 1], slotPlayer)
+            set playersInForce = playersInForce + 1
+            if (playersInForce == 2) then
+                set playersInForce = 0
+            endif
+        endif
+        set slotPlayer = null
+        set i = i + 1
+    endloop
+    set i = 0
+    loop
+        exitwhen (i >= counter)
+        call SetForceAllianceStateBJ(forces[i], forces[i], bj_ALLIANCE_ALLIED)
+        call ForceClear(forces[i])
+        call DestroyForce(forces[i])
+        set forces[i] = null
+        set i = i + 1
+    endloop
+    call EnableAllianceChangesTrigger()
+    call DisplayVoteEnabled(GetLocalizedStringSafe("TEAMS_2_VS_2"))
+endfunction
+
 private function EnumUnlock takes nothing returns nothing
     call SetPlayerTechResearched(GetEnumPlayer(), UPG_HERO_LEVEL_5, 1)
     call SetPlayerTechResearched(GetEnumPlayer(), UPG_HERO_LEVEL_10, 1)
-    call SetPlayerTechResearched(GetEnumPlayer(), UPG_HERO_LEVEL_15, 1)    
+    call SetPlayerTechResearched(GetEnumPlayer(), UPG_HERO_LEVEL_15, 1)
     call SetPlayerTechResearched(GetEnumPlayer(), UPG_HERO_LEVEL_20, 1)
     call SetPlayerTechResearched(GetEnumPlayer(), UPG_HERO_LEVEL_25, 1)
     call SetPlayerTechResearched(GetEnumPlayer(), UPG_HERO_LEVEL_30, 1)
@@ -408,6 +446,7 @@ private function Init takes nothing returns nothing
 
     call Add(GetLocalizedStringSafe("FFA"), "-ffa", function FFA)
     call Add(GetLocalizedStringSafe("LOBBY"), "-lobby", function Lobby)
+    call Add(GetLocalizedStringSafe("TEAMS_2_VS_2"), "-2vs2", function Teams2vs2)
 
     call Add(GetLocalizedStringSafe("UNLOCK"), "-unlock", function Unlock)
     call Add(GetLocalizedStringSafe("LOCK"), "-lock", function Lock)

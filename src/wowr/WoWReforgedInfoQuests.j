@@ -162,6 +162,7 @@ private function Init takes nothing returns nothing
     call AddInfoQuestItem(GetLocalizedStringSafe("CC_ORDER"))
     call AddInfoQuestItem(GetLocalizedStringSafe("CC_FFA"))
     call AddInfoQuestItem(GetLocalizedStringSafe("CC_LOBBY"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_2_VS_2"))
     call AddInfoQuestItem(GetLocalizedStringSafe("CC_FRIENDS"))
     call AddInfoQuestItem(GetLocalizedStringSafe("CC_ENEMIES"))
     call AddInfoQuestItem(GetLocalizedStringSafe("CC_NEUTRAL_ALL"))
