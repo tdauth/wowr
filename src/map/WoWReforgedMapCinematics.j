@@ -22,7 +22,7 @@ endfunction
 function PlayIntroCinematic takes nothing returns nothing
     if (not udg_IntroShown) then
         if (udg_Cinematics) then
-            call BJDebugMsg("Wait for cinematic end.")
+            //call BJDebugMsg("Wait for cinematic end.")
             call WaitForCinematicEnd()
             set udg_IntroShown = true
             set udg_CinematicCleanupTrigger = introCleanupTrigger
@@ -46,11 +46,11 @@ function PlayIntroCinematic takes nothing returns nothing
             call PolledWait(GetSoundDurationBJ(GetLastPlayedSound()))
             call EndCinematic()
         else
-            call BJDebugMsg("Cinematics are disabled.")
+            //call BJDebugMsg("Cinematics are disabled.")
             call IntroCleanup()
         endif
     else
-        call BJDebugMsg("Intro was already shown.")
+        //call BJDebugMsg("Intro was already shown.")
     endif
 endfunction
 
