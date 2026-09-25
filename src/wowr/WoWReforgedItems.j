@@ -26,8 +26,10 @@ function CanItemTypeIdBePickedUp takes integer itemTypeId, unit hero returns boo
     if (GetUnitTypeId(hero) != ITEM_VALUES_DUMMY_HERO) then
         if (not udg_PlayerUnlockedAllRaces[GetConvertedPlayerId(heroOwner)]) then
             if (not PlayerIsAllowedItemRace(heroOwner, itemTypeId)) then
+                call BJDebugMsg(GetUnitName(hero) + " is not allowed item race of " + GetObjectName(itemTypeId))
                 set result = false
             elseif (not PlayerIsAllowedItemProfession(heroOwner, itemTypeId)) then
+                call BJDebugMsg(GetUnitName(hero) + " is not allowed item profession of " + GetObjectName(itemTypeId))
                 set result = false
             endif
         endif

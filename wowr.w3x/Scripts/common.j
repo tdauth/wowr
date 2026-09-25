@@ -6443,7 +6443,7 @@ globals
     constant integer ABILITY_HEAL                                    = 'Anhe'
     constant integer ABILITY_INNFER_FIRE                             = 'ACif'
     constant integer ABILITY_HASTE                                   = 'A02Y'
-    constant integer ABILITY_DISCHARGE                               = 'A12S'
+    constant integer ABILITY_DISCHARGE                               = 'A12S' // TODO Replace with something more interesting from Forsaken Kingdom
     constant integer ABILITY_CONSECRATION                            = 'A01K' // Forsaken Kingdom
     constant integer ABILITY_HEALING_WAVE                            = 'Leav'
     constant integer ABILITY_SACRED_AURA                             = 'A023' // Forsaken Kingdom

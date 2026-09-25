@@ -1024,7 +1024,6 @@ private function Init takes nothing returns nothing
     call AddCredit("NFWar: BTNHorseShoe2")
     call AddCredit("NFWar: BTNHorseShoe3")
     call AddCredit("Legal_Ease: BTNJudgmentOff")
-    call AddCredit("The_Silent: BTNMindControlWBrain")
     call AddCredit("Mouseketeer: BTN_NagaSorceror")
     call AddCredit("Misha: Naga Sorceror")
     call AddCredit("AndrewOverload519: Naga Nazjatar Gate")
