@@ -93,6 +93,7 @@ Frame "POPUPMENU" "HeroesPopup" INHERITS WITHCHILDREN "MyPopupTemplate" {
         MenuItem "DEATH_KNIGHT",     -2,
         MenuItem "LICH",     -2,
         MenuItem "DARK_RANGER",     -2,
+        MenuItem "FORSAKEN_PALADIN",     -2,
         MenuItem "NECROMANCER",     -2,
         MenuItem "ABOMINATION",     -2,
         MenuItem "BANSHEE",     -2,

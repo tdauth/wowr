@@ -283,6 +283,7 @@ StringList {
     DEATH_KNIGHT                       "Death Knight",
     LICH                               "Lich",
     DARK_RANGER                        "Dark Ranger",
+    FORSAKEN_PALADIN                   "Forsaken Paladin",
     NECROMANCER                        "Necromancer",
     ABOMINATION                        "Abomination",
     BANSHEE                            "Banshee",
