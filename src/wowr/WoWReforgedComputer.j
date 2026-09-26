@@ -312,7 +312,7 @@ private function StartingUnitsAndPickAIStandard takes player whichPlayer, locati
     call StartingUnitsPeons(whichPlayer, l, whichRace)
     call StartingUnitsShredders(whichPlayer, l, whichRace)
     if (not recreate) then
-        call BJDebugMsg("Start Campaign AI " + GetRaceAIScript(whichRace))
+        //call BJDebugMsg("Start Campaign AI " + GetRaceAIScript(whichRace))
         call StartCampaignAI(whichPlayer, GetRaceAIScript(whichRace))
     endif
     if (GetRaceHasFootmanWorker(whichRace)) then
@@ -765,11 +765,11 @@ private function EnumStartLobbySettings takes nothing returns nothing
         set bj_wantDestroyGroup = true
         call RemoveUnit(FirstOfGroup(GetUnitsOfPlayerAndTypeId(GetEnumPlayer(), FOUNTAIN_OF_LIFE)))
         if (isWarlord) then
-            call BJDebugMsg("Player " + GetPlayerName(GetEnumPlayer()) + " is warlord.")
+            //call BJDebugMsg("Player " + GetPlayerName(GetEnumPlayer()) + " is warlord.")
             set udg_PlayerIsWarlord[convertedPlayerId] = true
             call SetPlayerHandicapXPBJ(GetEnumPlayer(), udg_WarlordXPRate)
         else
-            call BJDebugMsg("Player " + GetPlayerName(GetEnumPlayer()) + " is freelancer.")
+            //call BJDebugMsg("Player " + GetPlayerName(GetEnumPlayer()) + " is freelancer.")
             set udg_PlayerIsWarlord[convertedPlayerId] = false
             call SetPlayerHandicapXPBJ(GetEnumPlayer(), udg_FreelancerXPRate)
             call SetPlayerTechResearched(GetEnumPlayer(), UPG_FREELANCER, 1)

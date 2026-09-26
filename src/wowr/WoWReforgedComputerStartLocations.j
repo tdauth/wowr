@@ -51,20 +51,20 @@ struct ComputerStartLocation
             exitwhen (i >= possibleRacesCounter)
             set raceTeam = GetRaceTeam(possibleRaces[i])
             if (raceTeam == team or raceTeam == TEAM_NONE) then
-                call BJDebugMsg("Possible race " + GetRaceName(possibleRaces[i]) + " for start location " + I2S(this) + " with team " + I2S(team))
+                //call BJDebugMsg("Possible race " + GetRaceName(possibleRaces[i]) + " for start location " + I2S(this) + " with team " + I2S(team))
                 set r[c] = possibleRaces[i]
                 set c = c + 1
             endif
             set i = i + 1
         endloop
 
-        call BJDebugMsg("Possible races count " + I2S(c))
+        //call BJDebugMsg("Possible races count " + I2S(c))
 
         if (c > 0) then
             return r[GetRandomInt(0, c - 1)]
         endif
 
-        call BJDebugMsg("Found no matching race and now choosing by team only.")
+        //call BJDebugMsg("Found no matching race and now choosing by team only.")
 
         if (team == TEAM_ALLIANCE) then
             return GetRandomWarlordAllianceRaceWithAISupport()

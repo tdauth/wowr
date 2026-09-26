@@ -606,7 +606,7 @@ function AiPlayersUIGetPlayerRace takes player whichPlayer, integer startLocatio
     if (index != -1) then
         set frameValue = Races[index]
         if (frameValue == RACES_MENU_ITEM_MATCHING_START_LOCATION) then
-            call BJDebugMsg("RACES_MENU_ITEM_MATCHING_START_LOCATION")
+            //call BJDebugMsg("RACES_MENU_ITEM_MATCHING_START_LOCATION")
             return GetComputerStartLocation(startLocation).getRandomPossibleRaceWarlord(team)
         elseif (frameValue == RACES_MENU_ITEM_RANDOM_WARLORD) then
             return GetRandomWarlordRaceWithAISupport()
