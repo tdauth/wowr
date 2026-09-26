@@ -1253,7 +1253,6 @@ Playing Warcraft III can be played on Ubuntu using Steam, adding it as non-Steam
 * NFWar: [BTNHorseShoe2](https://www.hiveworkshop.com/threads/btnhorseshoe2.202889/)
 * NFWar: [BTNHorseShoe3](https://www.hiveworkshop.com/threads/btnhorseshoe3.202890/)
 * Legal_Ease: [BTNJudgmentOff](https://www.hiveworkshop.com/threads/btnjudgmentoff.274736/)
-* The_Silent: [BTNMindControlWBrain](https://www.hiveworkshop.com/threads/btnmindcontrolwbrain.269965/)
 * Mouseketeer: [BTN_NagaSorceror](https://www.hiveworkshop.com/threads/btn_nagasorceror.354997/)
 * Misha: [Naga Sorceror](https://www.hiveworkshop.com/threads/naga-sorceror.136081/)
 * AndrewOverload519: [Naga Nazjatar Gate](https://www.hiveworkshop.com/threads/naga-nazjatar-gate.236192/)
