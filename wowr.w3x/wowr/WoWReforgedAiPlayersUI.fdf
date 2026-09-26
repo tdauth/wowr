@@ -48,8 +48,6 @@ Frame "POPUPMENU" "HeroesPopup" INHERITS WITHCHILDREN "MyPopupTemplate" {
         MenuItem "RANDOM",     -2,
         // Add all heroes in the correct order:
         MenuItem "CUSTOMIZABLE_HERO",     -2,
-        MenuItem "NERZHUL",     -2,
-        MenuItem "GULDAN",     -2,
         MenuItem "PALADIN",     -2,
         MenuItem "WIZARD",     -2,
         MenuItem "DARK_KNIGHT",     -2,
@@ -89,6 +87,8 @@ Frame "POPUPMENU" "HeroesPopup" INHERITS WITHCHILDREN "MyPopupTemplate" {
         MenuItem "THRALL",     -2,
         MenuItem "GROMMASH_HELLSCREAM",     -2,
         MenuItem "DREKTHAR",     -2,
+        MenuItem "NERZHUL",     -2,
+        MenuItem "GULDAN",     -2,
         MenuItem "SAMURO",     -2,
         MenuItem "DEATH_KNIGHT",     -2,
         MenuItem "LICH",     -2,
