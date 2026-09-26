@@ -168,6 +168,7 @@ private function Init takes nothing returns nothing
     call AddChange("Fix page names in Alchemist Labs.")
     call AddChange("Add ground texture to High Elf Farm.")
     call AddChange("Add ground texture to High Elf Housing.")
+    call AddChange("Scale down neutral Dimensional Ships and remove shadows.")
 
 static if (MAP_DEBUG_MODE_ENABLED) then
     call AddVersion("4.6")
