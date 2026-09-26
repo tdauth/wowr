@@ -28,7 +28,7 @@ private function Init takes nothing returns nothing
     call AddVersion("4.7")
     call AddChange("Support Forsaken Kingdom.")
     call AddChange("Library ItemUtils supports extended inventories and equipment of Forsaken Kingdom.")
-    call AddChange("Heroes start with a Backpack item now.")
+    call AddChange("Heroes and Equipment Bags start with a Backpack item now.")
     call AddChange("Add hero Forsaken Paladin.")
     call AddChange("Add class Priest.")
     call AddChange("Revise class Paladin.")

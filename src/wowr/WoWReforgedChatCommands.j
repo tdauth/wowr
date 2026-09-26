@@ -1054,6 +1054,32 @@ private function CheatResurrect takes nothing returns nothing
     call ForGroup(GetPlayerHeroes(GetTriggerPlayer()), function EnumResurrectHero)
 endfunction
 
+private function CheatLevel takes nothing returns nothing
+    local string token = SubString(GetEventPlayerChatString(), StringLength(GetEventPlayerChatStringMatched()) + 1, StringLength(GetEventPlayerChatString()))
+    local integer level = S2I(token)
+    if (GetPlayerHero1(GetTriggerPlayer()) != null) then
+        call SetHeroLevel(GetPlayerHero1(GetTriggerPlayer()), level, true)
+    endif
+    if (GetPlayerHero2(GetTriggerPlayer()) != null) then
+        call SetHeroLevel(GetPlayerHero2(GetTriggerPlayer()), level, true)
+    endif
+    if (GetPlayerHero3(GetTriggerPlayer()) != null) then
+        call SetHeroLevel(GetPlayerHero3(GetTriggerPlayer()), level, true)
+    endif
+endfunction
+
+private function CheatMaxLevel takes nothing returns nothing
+    if (GetPlayerHero1(GetTriggerPlayer()) != null) then
+        call SetHeroLevel(GetPlayerHero1(GetTriggerPlayer()), MAX_HERO_LEVEL, true)
+    endif
+    if (GetPlayerHero2(GetTriggerPlayer()) != null) then
+        call SetHeroLevel(GetPlayerHero2(GetTriggerPlayer()), MAX_HERO_LEVEL, true)
+    endif
+    if (GetPlayerHero3(GetTriggerPlayer()) != null) then
+        call SetHeroLevel(GetPlayerHero3(GetTriggerPlayer()), MAX_HERO_LEVEL, true)
+    endif
+endfunction
+
 function CheatUnfreeze takes nothing returns nothing
     call PauseAllUnitsBJ(false)
 endfunction
@@ -1284,6 +1310,12 @@ private function CheatRaces takes nothing returns nothing
     endloop
 endfunction
 
+private function CheatMedivh takes nothing returns nothing
+    if (GetPlayerHero1(GetTriggerPlayer()) != null) then
+        call UnitAddItemById(GetPlayerHero1(GetTriggerPlayer()), ITEM_MEDIVHS_SPELL_BOOK)
+    endif
+endfunction
+
 private function StartGame takes nothing returns nothing
     set udg_Cheats = GetAllPlayingUsersCount() == 1 and (GetPlayerName(Player(0)) == "WorldEdit" or GetPlayerName(Player(0)) == "Barade" or  GetPlayerName(Player(0)) == "Barade#2569")
 endfunction
@@ -1449,6 +1481,8 @@ private function Init takes nothing returns nothing
     call AddCheat("-kill", true, function CheatKill)
     call AddCheat("-fill", true, function CheatFill)
     call AddCheat("-res", true, function CheatResurrect)
+    call AddCheat("-level", false, function CheatLevel)
+    call AddCheat("-maxlevel", false, function CheatMaxLevel)
     call AddCheat("-unfreeze", true, function CheatUnfreeze)
     call AddCheat("-nocreeps", true, function CheatNoCreeps)
     call AddCheat("-nobosses", true, function CheatNoBosses)
@@ -1464,6 +1498,7 @@ private function Init takes nothing returns nothing
     call AddCheat("-orderon", true, function CheatOrderOn)
     call AddCheat("-orderoff", true, function CheatOrderOff)
     call AddCheat("-races", true, function CheatRaces)
+    call AddCheat("-medivh", true, function CheatMedivh)
 
     // after all chat commands
     call ForForce(GetAllPlayingUsers(), function EnumPlayerRegisterChatEvent)

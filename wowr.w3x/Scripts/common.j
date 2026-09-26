@@ -3801,6 +3801,7 @@ globals
     constant integer ITEM_SCEPTER_OF_SARGERAS                        = 'I046'
     constant integer ITEM_THE_ASHBRINGER                             = 'I03S'
     constant integer ITEM_TORTOLLAS_SHELL                            = 'I03T'
+    constant integer ITEM_MEDIVHS_SPELL_BOOK                         = 'I027'
 
     // Recipes
     constant integer ITEM_BOOTS_OF_TELEPORTATION                     = 'I0YI'

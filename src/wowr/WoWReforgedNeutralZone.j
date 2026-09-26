@@ -5,6 +5,7 @@ function ResetHeroToNeutralZone takes unit hero, real x, real y, real facing ret
     call ReviveHero(hero, x, y, true)
     call SetUnitFacing(hero, facing)
     call SetUnitInvulnerable(hero, false) // could be from player selection
+    call RemoveBackpackItemFromHero(hero)
     call DropAllItemsFromHero(hero)
 endfunction
 
@@ -13,10 +14,10 @@ function ResetAllHeroesToNeutralZone takes player whichPlayer returns nothing
     local real x = GetMapNeutralZoneX(whichPlayer)
     local real y = GetMapNeutralZoneY(whichPlayer)
     local real facing = GetMapNeutralZoneFacing(whichPlayer)
-    
+
     // Prevent endless automatic hero revivals of left players.
     call DeactivateAllResurrectionStones(whichPlayer)
-    
+
     if (GetPlayerHero1(whichPlayer) != null) then
         call ResetHeroToNeutralZone(GetPlayerHero1(whichPlayer), x, y, facing)
     endif

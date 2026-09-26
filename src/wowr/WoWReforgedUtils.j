@@ -454,16 +454,44 @@ function GetLowestHeroLevel1FromAllPlayingUsers takes nothing returns integer
     return result
 endfunction
 
+function RemoveBackpackItemFromHero takes unit hero returns nothing
+	local item slotItem = null
+	local integer result = 0
+	local integer i = 0
+	local integer max = UnitInventorySize(hero)
+	loop
+		exitwhen (i >= max)
+		set slotItem = UnitItemInSlot(hero, i)
+		if (slotItem != null and GetItemTypeId(slotItem) == ITEM_BACKPACK) then
+			call UnitRemoveItem(hero, slotItem)
+		endif
+		set slotItem = null
+		set i = i + 1
+	endloop
+endfunction
+
 function DropAllItemsFromHero1 takes player whichPlayer returns integer
-    return DropAllItemsFromHero(udg_Hero[GetPlayerId(whichPlayer)])
+    if (GetPlayerHero1(whichPlayer) != null) then
+        call RemoveBackpackItemFromHero(GetPlayerHero1(whichPlayer))
+        return DropAllItemsFromHero(GetPlayerHero1(whichPlayer))
+    endif
+    return 0
 endfunction
 
 function DropAllItemsFromHero2 takes player whichPlayer returns integer
-    return DropAllItemsFromHero(udg_Hero2[GetPlayerId(whichPlayer)])
+    if (GetPlayerHero2(whichPlayer) != null) then
+        call RemoveBackpackItemFromHero(GetPlayerHero2(whichPlayer))
+        return DropAllItemsFromHero(GetPlayerHero2(whichPlayer))
+    endif
+    return 0
 endfunction
 
 function DropAllItemsFromHero3 takes player whichPlayer returns integer
-    return DropAllItemsFromHero(udg_Hero3[GetPlayerId(whichPlayer)])
+    if (GetPlayerHero3(whichPlayer) != null) then
+        call RemoveBackpackItemFromHero(GetPlayerHero3(whichPlayer))
+        return DropAllItemsFromHero(GetPlayerHero3(whichPlayer))
+    endif
+    return 0
 endfunction
 
 function IsHauntedGoldMine takes integer unitTypeId returns boolean

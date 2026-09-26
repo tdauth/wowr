@@ -125,6 +125,7 @@ private function RemoveEquipmentBags takes player whichPlayer returns nothing
     loop
         exitwhen (i >= max)
         set equipmentBag = GetPlayerEquipmentBag(whichPlayer, i)
+        call RemoveBackpackItemFromHero(equipmentBag)
         call DropAllItemsFromHero(equipmentBag)
         call DisableItemCraftingUnit(equipmentBag)
         call RemoveUnit(equipmentBag)
@@ -163,6 +164,7 @@ private function CreateSingleEquipmentBag takes player whichPlayer, integer inde
     call UnitAddAbility(equipmentBag, 'AInv')
     call BlzSetUnitName(equipmentBag, equipmentBagName)
     call BlzSetHeroProperName(equipmentBag, equipmentBagName)
+    call UnitAddItemById(equipmentBag, ITEM_BACKPACK)
     if (addSkillMenu) then
         call AddSkillMenu(equipmentBag)
     endif
@@ -185,6 +187,7 @@ endfunction
 private function ForGroupRemoveUnit takes nothing returns nothing
     local unit u = GetEnumUnit()
     //call BJDebugMsg("Remove 1")
+    call RemoveBackpackItemFromHero(u)
     call DropAllItemsFromHero(u)
     //call BJDebugMsg("Remove 2")
     call DisableItemCraftingUnit(u)
