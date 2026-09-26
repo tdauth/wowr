@@ -10,7 +10,7 @@ endglobals
 private function TriggerConditionConstructFinish takes nothing returns boolean
     local unit b = GetConstructedStructure()
     if (GetUnitTypeId(b) == UNIT_TYPE_ID_PIG_FARM) then
-        call AddLoadedMine(b, udg_ResourceMeat, 200, 20)
+        call AddLoadedMine(b, RESOURCE_MEAT, 200, 20)
         call SetLoadedMineAllowedWorkerUnitTypeId(b, UNIT_TYPE_ID_FEL_BOAR, true)
         call SetMineExplodesOnDeath(b, false)
     endif
@@ -36,7 +36,7 @@ private function TriggerConditionGather takes nothing returns boolean
     //call BJDebugMsg("Gather: " + GetUnitName(GetTriggerWorker()) + " in mine " + GetUnitName(GetTriggerMine()))
     if (GetUnitTypeId(GetTriggerWorker()) == UNIT_TYPE_ID_FEL_BOAR) then
         call KillCargo(GetTriggerMine())
-        call SetUnitResource(GetTriggerMine(), udg_ResourceMeat, 200)
+        call SetUnitResource(GetTriggerMine(), RESOURCE_MEAT, 200)
     endif
     return false
 endfunction
@@ -44,7 +44,7 @@ endfunction
 private function Init takes nothing returns nothing
     call TriggerRegisterAnyUnitEventBJ(constructedTrigger, EVENT_PLAYER_UNIT_CONSTRUCT_FINISH)
     call TriggerAddCondition(constructedTrigger, Condition(function TriggerConditionConstructFinish))
-    
+
     call TriggerRegisterGatherEvent(gatherTrigger)
     call TriggerAddCondition(gatherTrigger, Condition(function TriggerConditionGather))
 endfunction

@@ -10236,6 +10236,12 @@ STRING 1717
 Tank Hero, defending your army and destroying hostile towns. Can learn Storm Bolt, Spiked Carapace, Eat Tree, and Demolish. |n|n|cffffcc00Attacks land units.|r
 }
 
+STRING 1718
+// Items: I03P (Backpack), Tip (Tooltip - Basic)
+{
+Purchase Backpack
+}
+
 STRING 1719
 // Units: N0HY (Siege Golem), Ubertip (Tooltip - Extended)
 {
@@ -10243,7 +10249,7 @@ Warrior Hero, adept at summoning beasts into battle. Can learn Storm Bolt, War S
 }
 
 STRING 1720
-// Items: I03P (Backpack), Name (Name)
+// Units: E008 (Backpack), Name (Name)
 {
 Backpack
 }
@@ -10308,7 +10314,6 @@ Purchase Backpack
 }
 
 STRING 1731
-// Items: I03P (Backpack), Tip (Tooltip - Basic)
 {
 Purchase Backpack
 }
@@ -29775,7 +29780,7 @@ Herbalism - Grand Master
 }
 
 STRING 6093
-// Units: E008 (Backpack), Name (Name)
+// Units: E008 (Backpack), Propernames (Proper Names)
 {
 Backpack
 }
@@ -31242,7 +31247,7 @@ STRING 6521
 }
 
 STRING 6522
-// Units: E008 (Backpack), Propernames (Proper Names)
+// Items: I03P (Backpack), Name (Name)
 {
 Backpack
 }

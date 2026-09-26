@@ -13,7 +13,7 @@ private function FilterIsSacrificeTarget takes nothing returns boolean
 endfunction
 
 private function EnumSacrifice takes nothing returns nothing
-    if (GetObjectRace(GetUnitTypeId(GetEnumUnit())) == udg_RaceTroll) then
+    if (GetObjectRace(GetUnitTypeId(GetEnumUnit())) == WOWR_RACE_TROLL) then
         call ReplaceUnitBJ(GetEnumUnit(), ChooseRandomCreepBJ(GetUnitBaseLevel(GetEnumUnit())), bj_UNIT_STATE_METHOD_RELATIVE)
         set enumResult = true
     endif

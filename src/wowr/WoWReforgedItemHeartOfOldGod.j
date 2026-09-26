@@ -74,17 +74,17 @@ private function Init takes nothing returns nothing
     call TriggerAddCondition(channelTrigger, Condition(function TriggerConditionChannel))
 
     // Init after races.
-    call AddRaceAbilityId(udg_RaceHuman, 'A0AU')
-    call AddRaceAbilityId(udg_RaceOrc, 'A0AV')
-    call AddRaceAbilityId(udg_RaceUndead, 'A0AT')
-    call AddRaceAbilityId(udg_RaceNightElf, 'A0AW')
-    call AddRaceAbilityId(udg_RaceBloodElf, 'A0AX')
-    call AddRaceAbilityId(udg_RaceNaga, 'A0AY')
-    call AddRaceAbilityId(udg_RaceDemon, 'A0AZ')
-    call AddRaceAbilityId(udg_RaceLostOnes, 'A0B0')
-    call AddRaceAbilityId(udg_RaceFurbolg, 'A0B1')
-    call AddRaceAbilityId(udg_RaceGoblin, 'A0CG')
-    call AddRaceAbilityId(udg_RaceDwarf, 'A0F4')
+    call AddRaceAbilityId(WOWR_RACE_HUMAN, 'A0AU')
+    call AddRaceAbilityId(WOWR_RACE_ORC, 'A0AV')
+    call AddRaceAbilityId(WOWR_RACE_UNDEAD, 'A0AT')
+    call AddRaceAbilityId(WOWR_RACE_NIGHT_ELF, 'A0AW')
+    call AddRaceAbilityId(WOWR_RACE_BLOOD_ELF, 'A0AX')
+    call AddRaceAbilityId(WOWR_RACE_NAGA, 'A0AY')
+    call AddRaceAbilityId(WOWR_RACE_DEMON, 'A0AZ')
+    call AddRaceAbilityId(WOWR_RACE_LOST_ONES, 'A0B0')
+    call AddRaceAbilityId(WOWR_RACE_FURBOLG, 'A0B1')
+    call AddRaceAbilityId(WOWR_RACE_DWARF, 'A0F4')
+    call AddRaceAbilityId(WOWR_RACE_GOBLIN, 'A0CG')
 endfunction
 
 endlibrary

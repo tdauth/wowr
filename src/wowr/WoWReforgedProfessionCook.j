@@ -40,16 +40,15 @@ endfunction
 
 function AddCookFirePit takes unit whichUnit returns nothing
     local integer i = 0
-    local integer max = udg_RecipeCooking
+    local integer max = RECIPE_COOKING
     call EnableItemCraftingUnit(whichUnit)
     loop
         exitwhen (i >= max)
         call SetItemCraftingRecipeEnabled(whichUnit, i, false)
         set i = i + 1
     endloop
-    //call SetItemCraftingRecipeEnabled(whichUnit, udg_RecipeHolyGrail, false)
 
-    //call SetPagedButtonsPage(whichUnit, GetRecipePage(udg_RecipeCooking))
+    //call SetPagedButtonsPage(whichUnit, GetRecipePage(RECIPE_COOKING))
 endfunction
 
 function WarriorsMenu takes unit hero returns nothing
@@ -75,7 +74,7 @@ endfunction
 
 function IsItemTypeIdCookingRecipe takes integer itemTypeId returns boolean
     local integer i = 0
-    local integer max = udg_RecipeCooking
+    local integer max = RECIPE_COOKING
     loop
         exitwhen (i == max)
         if (itemTypeId == GetRecipeItemTypeId(i)) then

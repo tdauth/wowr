@@ -9,7 +9,7 @@ globals
 endglobals
 
 private function EnumFishTrap takes nothing returns nothing
-    call AddPlayerResource(GetOwningPlayer(GetEnumUnit()), udg_ResourceMeat, 20 + GetUnitAbilityLevel(GetEnumUnit(), 'A1GL') * 5)
+    call AddPlayerResource(GetOwningPlayer(GetEnumUnit()), RESOURCE_MEAT, 20 + GetUnitAbilityLevel(GetEnumUnit(), 'A1GL') * 5)
 endfunction
 
 private function TimerFunctionFishTraps takes nothing returns nothing

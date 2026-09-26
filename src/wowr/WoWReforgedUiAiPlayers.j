@@ -621,7 +621,7 @@ function AiPlayersUIGetPlayerRace takes player whichPlayer, integer startLocatio
             return udg_RaceFreelancer
         else
             // Orc item = 7
-            // udg_RaceOrc = 3
+            // WOWR_RACE_ORC = 3
             // 7 + 1 - 5 = 3
             return frameValue + 1 - RACES_MENU_ITEM_RANDOM_HORDE // Ignore Freelancer race which is 1 (udg_RaceNone is 0)
         endif
@@ -639,41 +639,41 @@ function AiPlayersUIGetPlayerProfession takes player whichPlayer returns integer
     if (index != -1) then
         set frameValue = Professions[index]
         if (frameValue == PROFESSIONS_MENU_ITEM_HERBALIST) then
-            return udg_ProfessionHerbalist
+            return PROFESSION_HERBALIST
         elseif (frameValue == PROFESSIONS_MENU_ITEM_ALCHEMIST) then
-            return udg_ProfessionAlchemist
+            return PROFESSION_ALCHEMIST
         elseif (frameValue == PROFESSIONS_MENU_ITEM_WEAPON_SMITH) then
-            return udg_ProfessionWeaponSmith
+            return PROFESSION_WEAPON_SMITH
         elseif (frameValue == PROFESSIONS_MENU_ITEM_ARMORER) then
-            return udg_ProfessionArmourer
+            return PROFESSION_ARMORER
         elseif (frameValue == PROFESSIONS_MENU_ITEM_ENGINEER) then
-            return udg_ProfessionEngineer
+            return PROFESSION_ENGINEER
         elseif (frameValue == PROFESSIONS_MENU_ITEM_DEMOLITION_EXPERT) then
-            return udg_ProfessionDemolitionExpert
+            return PROFESSION_DEMOLITION_EXPERT
         elseif (frameValue == PROFESSIONS_MENU_ITEM_DRAGON_BREEDER) then
-            return udg_ProfessionDragonBreeder
+            return PROFESSION_DRAGON_BREEDER
         elseif (frameValue == PROFESSIONS_MENU_ITEM_LORE_MASTER) then
-            return udg_ProfessionLoreMaster
+            return PROFESSION_LORE_MASTER
         elseif (frameValue == PROFESSIONS_MENU_ITEM_RUNE_FORGER) then
-            return udg_ProfessionRuneforger
+            return PROFESSION_RUNE_FORGER
         elseif (frameValue == PROFESSIONS_MENU_ITEM_SORCERER) then
-            return udg_ProfessionSorcerer
+            return PROFESSION_SORCERER
         elseif (frameValue == PROFESSIONS_MENU_ITEM_JEWELCRAFTER) then
-            return udg_ProfessionJewelcrafter
+            return PROFESSION_JEWELCRAFTER
         elseif (frameValue == PROFESSIONS_MENU_ITEM_ARCHAEOLOGIST) then
-            return udg_ProfessionArchaeologist
+            return PROFESSION_ARCHAEOLOGIST
         elseif (frameValue == PROFESSIONS_MENU_ITEM_WITCH_DOCTOR) then
-            return udg_ProfessionWitchDoctor
+            return PROFESSION_WITCH_DOCTOR
         elseif (frameValue == PROFESSIONS_MENU_ITEM_TAMER) then
-            return udg_ProfessionTamer
+            return PROFESSION_TAMER
         elseif (frameValue == PROFESSIONS_MENU_ITEM_NECROMANCER) then
-            return udg_ProfessionNecromancer
+            return PROFESSION_NECROMANCER
         elseif (frameValue == PROFESSIONS_MENU_ITEM_GOLEM_SCULPTOR) then
-            return udg_ProfessionGolemSculptor
+            return PROFESSION_GOLEM_SCULPTOR
         elseif (frameValue == PROFESSIONS_MENU_ITEM_WARLOCK) then
-            return udg_ProfessionWarlock
+            return PROFESSION_WARLOCK
         elseif (frameValue == PROFESSIONS_MENU_ITEM_ASTROMANCER) then
-            return udg_ProfessionAstromancer
+            return PROFESSION_ASTROMANCER
         endif
     endif
 

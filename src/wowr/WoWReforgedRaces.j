@@ -3,6 +3,43 @@ library WoWReforgedRaces initializer Init requires WoWReforgedUtils, WoWReforged
 globals
     constant integer RACE_NONE = 0
     integer RACE_FREELANCER = 1
+    integer WOWR_RACE_HUMAN
+    integer WOWR_RACE_ORC
+    integer WOWR_RACE_UNDEAD
+    integer WOWR_RACE_NIGHT_ELF
+    integer WOWR_RACE_BLOOD_ELF
+    integer WOWR_RACE_NAGA
+    integer WOWR_RACE_DRAENEI
+    integer WOWR_RACE_LOST_ONES
+    integer WOWR_RACE_DEMON
+    integer WOWR_RACE_FURBOLG
+    integer WOWR_RACE_DWARF
+    integer WOWR_RACE_GOBLIN
+    integer WOWR_RACE_HIGH_ELF
+    integer WOWR_RACE_GNOME
+    integer WOWR_RACE_TROLL
+    integer WOWR_RACE_TAUREN
+    integer WOWR_RACE_PANDAREN
+    integer WOWR_RACE_LORDAERON
+    integer WOWR_RACE_STORMWIND
+    integer WOWR_RACE_DALARAN
+    integer WOWR_RACE_KUL_TIRAS
+    integer WOWR_RACE_WORGEN
+    integer WOWR_RACE_VRYKUL
+    integer WOWR_RACE_NERUBIAN
+    integer WOWR_RACE_TUSKARR
+    integer WOWR_RACE_MURLOC
+    integer WOWR_RACE_OGRE
+    integer WOWR_RACE_FEL_ORC
+    integer WOWR_RACE_FACELESS_ONE
+    integer WOWR_RACE_SATYR
+    integer WOWR_RACE_CENTAUR
+    integer WOWR_RACE_GNOLL
+    integer WOWR_RACE_KOBOLD
+    integer WOWR_RACE_QUILLBOAR
+    integer WOWR_RACE_BANDIT
+    integer WOWR_RACE_DUNGEON
+    integer WOWR_RACE_DRAGONKIN
 
     constant integer RACE_OBJECT_TYPE_NONE = 0
     // BUILDINGS
@@ -1002,10 +1039,8 @@ private function AddNone takes nothing returns nothing
     call AddResearch(r, UPG_MASONRY_ENGINEER)
 endfunction
 
-private function AddFreelancer takes nothing returns nothing
+private function AddFreelancer takes nothing returns integer
     local integer r = AddRace()
-    set udg_RaceFreelancer = r
-    set RACE_FREELANCER = r
     call SetRaceTavernItemType(r, ITEM_FREELANCER)
     call SetRaceAiScript(r, "wowr\\Freelancer.ai")
     call SetRaceTeam(r, TEAM_NONE)
@@ -1077,11 +1112,12 @@ private function AddFreelancer takes nothing returns nothing
     call SetRaceTransportShip(r, ORC_TRANSPORT_SHIP)
     call SetRaceFrigate(r, ORC_FRIGATE)
     call SetRaceBattleship(r, ORC_JUGGERNAUGHT)
+
+    return r
 endfunction
 
-private function AddHuman takes nothing returns nothing
+private function AddHuman takes nothing returns integer
     local integer r = AddRace()
-    set udg_RaceHuman = r
     call SetRaceTavernItemType(r, ITEM_HUMAN)
     call SetRaceAiScript(r, "wowr\\Human.ai")
     call SetRaceItemType(r, ITEM_HUMAN_SCEPTER)
@@ -1177,11 +1213,12 @@ private function AddHuman takes nothing returns nothing
     call SetRaceTransportShip(r, HUMAN_TRANSPORT_SHIP)
     call SetRaceFrigate(r, HUMAN_FRIGATE)
     call SetRaceBattleship(r, HUMAN_BATTLESHIP)
+
+    return r
 endfunction
 
-private function AddOrc takes nothing returns nothing
+private function AddOrc takes nothing returns integer
     local integer r = AddRace()
-    set udg_RaceOrc = r
     call SetRaceTavernItemType(r, ITEM_ORC)
     call SetRaceAiScript(r, "wowr\\Orc.ai")
     call SetRaceItemType(r, ITEM_ORC_SCEPTER)
@@ -1272,11 +1309,12 @@ private function AddOrc takes nothing returns nothing
     call SetRaceTransportShip(r, ORC_TRANSPORT_SHIP)
     call SetRaceFrigate(r, ORC_FRIGATE)
     call SetRaceBattleship(r, ORC_JUGGERNAUGHT)
+
+    return r
 endfunction
 
-private function AddUndead takes nothing returns nothing
+private function AddUndead takes nothing returns integer
     local integer r = AddRace()
-    set udg_RaceUndead = r
     call SetRaceTavernItemType(r, ITEM_UNDEAD)
     call SetRaceAiScript(r, "wowr\\Undead.ai")
     call SetRaceItemType(r, ITEM_UNDEAD_SCEPTER)
@@ -1375,11 +1413,12 @@ private function AddUndead takes nothing returns nothing
     call SetRaceTransportShip(r, UNDEAD_TRANSPORT_SHIP)
     call SetRaceFrigate(r, UNDEAD_FRIGATE)
     call SetRaceBattleship(r, UNDEAD_BATTLESHIP)
+
+    return r
 endfunction
 
-private function AddNightElf takes nothing returns nothing
+private function AddNightElf takes nothing returns integer
     local integer r = AddRace()
-    set udg_RaceNightElf = r
     call SetRaceTavernItemType(r, ITEM_ELF)
     call SetRaceAiScript(r, "wowr\\NightElf.ai")
     call SetRaceItemType(r, ITEM_ELF_SCEPTER)
@@ -1474,11 +1513,12 @@ private function AddNightElf takes nothing returns nothing
     call SetRaceTransportShip(r, ELF_TRANSPORT_SHIP)
     call SetRaceFrigate(r, ELF_FRIGATE)
     call SetRaceBattleship(r, ELF_BATTLESHIP)
+
+    return r
 endfunction
 
-private function AddBloodElf takes nothing returns nothing
+private function AddBloodElf takes nothing returns integer
     local integer r = AddRace()
-    set udg_RaceBloodElf = r
     call SetRaceTavernItemType(r, ITEM_BLOOD_ELF)
     call SetRaceAiScript(r, "wowr\\BloodElf.ai")
     call SetRaceItemType(r, ITEM_BLOOD_ELF_SCEPTER)
@@ -1573,11 +1613,12 @@ private function AddBloodElf takes nothing returns nothing
     call SetRaceTransportShip(r, BLOOD_ELF_TRANSPORT_SHIP)
     call SetRaceFrigate(r, BLOOD_ELF_FRIGATE)
     call SetRaceBattleship(r, BLOOD_ELF_BATTLESHIP)
+
+    return r
 endfunction
 
-private function AddNaga takes nothing returns nothing
+private function AddNaga takes nothing returns integer
     local integer r = AddRace()
-    set udg_RaceNaga = r
     call SetRaceTavernItemType(r, ITEM_NAGA)
     call SetRaceAiScript(r, "wowr\\Naga.ai")
     call SetRaceItemType(r, ITEM_NAGA_SCEPTER)
@@ -1665,11 +1706,12 @@ private function AddNaga takes nothing returns nothing
     call SetRaceTransportShip(r, ELF_TRANSPORT_SHIP)
     call SetRaceFrigate(r, ELF_FRIGATE)
     call SetRaceBattleship(r, ELF_BATTLESHIP)
+
+    return r
 endfunction
 
-private function AddDraenei takes nothing returns nothing
+private function AddDraenei takes nothing returns integer
     local integer r = AddRace()
-    set udg_RaceDraenei = r
     call SetRaceTavernItemType(r, ITEM_EREDAR)
     call SetRaceAiScript(r, "wowr\\Draenei.ai")
     call SetRaceItemType(r, ITEM_EREDAR_SCEPTER)
@@ -1747,11 +1789,12 @@ private function AddDraenei takes nothing returns nothing
     call SetRaceTransportShip(r, ORC_TRANSPORT_SHIP)
     call SetRaceFrigate(r, ORC_FRIGATE)
     call SetRaceBattleship(r, ORC_JUGGERNAUGHT)
+
+    return r
 endfunction
 
-private function AddLostOnes takes nothing returns nothing
+private function AddLostOnes takes nothing returns integer
     local integer r = AddRace()
-    set udg_RaceLostOnes = r
     call SetRaceTavernItemType(r, ITEM_LOST_ONES)
     call SetRaceAiScript(r, "wowr\\LostOnes.ai")
     call SetRaceItemType(r, ITEM_LOST_ONES_SCEPTER)
@@ -1831,11 +1874,12 @@ private function AddLostOnes takes nothing returns nothing
     call SetRaceTransportShip(r, ORC_TRANSPORT_SHIP)
     call SetRaceFrigate(r, ORC_FRIGATE)
     call SetRaceBattleship(r, ORC_JUGGERNAUGHT)
+
+    return r
 endfunction
 
-private function AddDemon takes nothing returns nothing
+private function AddDemon takes nothing returns integer
     local integer r = AddRace()
-    set udg_RaceDemon = r
     call SetRaceTavernItemType(r, ITEM_DEMON)
     call SetRaceAiScript(r, "wowr\\Demon.ai")
     call SetRaceItemType(r, ITEM_DEMON_SCEPTER)
@@ -1935,11 +1979,12 @@ private function AddDemon takes nothing returns nothing
     call SetRaceTransportShip(r, ORC_TRANSPORT_SHIP)
     call SetRaceFrigate(r, ORC_FRIGATE)
     call SetRaceBattleship(r, ORC_JUGGERNAUGHT)
+
+    return r
 endfunction
 
-private function AddFurbolg takes nothing returns nothing
+private function AddFurbolg takes nothing returns integer
     local integer r = AddRace()
-    set udg_RaceFurbolg = r
     call SetRaceTavernItemType(r, ITEM_FURBOLG)
     call SetRaceAiScript(r, "wowr\\Furbolg.ai")
     call SetRaceItemType(r, ITEM_FURBOLG_SCEPTER)
@@ -2030,11 +2075,12 @@ private function AddFurbolg takes nothing returns nothing
     call SetRaceTransportShip(r, ORC_TRANSPORT_SHIP)
     call SetRaceFrigate(r, ORC_FRIGATE)
     call SetRaceBattleship(r, ORC_JUGGERNAUGHT)
+
+    return r
 endfunction
 
-private function AddGoblin takes nothing returns nothing
+private function AddGoblin takes nothing returns integer
     local integer r = AddRace()
-    set udg_RaceGoblin = r
     call SetRaceTavernItemType(r, ITEM_GOBLIN)
     call SetRaceAiScript(r, "wowr\\Goblin.ai")
     call SetRaceItemType(r, ITEM_GOBLIN_SCEPTER)
@@ -2141,11 +2187,12 @@ private function AddGoblin takes nothing returns nothing
     call SetRaceFrigate(r, ORC_FRIGATE)
     call SetRaceBattleship(r, ORC_JUGGERNAUGHT)
     call SetRaceShipSpecial1(r, GOBLIN_SUBMARINE)
+
+    return r
 endfunction
 
-private function AddDwarf takes nothing returns nothing
+private function AddDwarf takes nothing returns integer
     local integer r = AddRace()
-    set udg_RaceDwarf = r
     call SetRaceTavernItemType(r, ITEM_DWARF)
     call SetRaceAiScript(r, "wowr\\Dwarf.ai")
     call SetRaceItemType(r, ITEM_DWARF_SCEPTER)
@@ -2247,11 +2294,13 @@ private function AddDwarf takes nothing returns nothing
     call SetRaceFrigate(r, HUMAN_FRIGATE)
     call SetRaceBattleship(r, HUMAN_BATTLESHIP)
     call SetRaceShipSpecial1(r, DWARF_SUBMARINE)
+
+    return r
 endfunction
 
-private function AddHighElf takes nothing returns nothing
+private function AddHighElf takes nothing returns integer
     local integer r = AddRace()
-    set udg_RaceHighElf = r
+
     call SetRaceTavernItemType(r, ITEM_HIGH_ELF)
     call SetRaceAiScript(r, "wowr\\HighElf.ai")
     call SetRaceItemType(r, ITEM_HIGH_ELF_SCEPTER)
@@ -2344,11 +2393,12 @@ private function AddHighElf takes nothing returns nothing
     call SetRaceTransportShip(r, HIGH_ELF_TRANSPORT_SHIP)
     call SetRaceFrigate(r, HIGH_ELF_FRIGATE)
     call SetRaceBattleship(r, HIGH_ELF_BATTLESHIP)
+
+    return r
 endfunction
 
-private function AddGnome takes nothing returns nothing
+private function AddGnome takes nothing returns integer
     local integer r = AddRace()
-    set udg_RaceGnome = r
     call SetRaceTavernItemType(r, ITEM_GNOME)
     call SetRaceAiScript(r, "wowr\\Gnome.ai")
     call SetRaceItemType(r, ITEM_GNOME_SCEPTER)
@@ -2432,11 +2482,12 @@ private function AddGnome takes nothing returns nothing
     call SetRaceTransportShip(r, HUMAN_TRANSPORT_SHIP)
     call SetRaceFrigate(r, HUMAN_FRIGATE)
     call SetRaceBattleship(r, HUMAN_BATTLESHIP)
+
+    return r
 endfunction
 
-private function AddTroll takes nothing returns nothing
+private function AddTroll takes nothing returns integer
     local integer r = AddRace()
-    set udg_RaceTroll = r
     call SetRaceTavernItemType(r, ITEM_TROLL)
     call SetRaceAiScript(r, "wowr\\Troll.ai")
     call SetRaceItemType(r, ITEM_TROLL_SCEPTER)
@@ -2528,11 +2579,12 @@ private function AddTroll takes nothing returns nothing
     call SetRaceFrigate(r, ORC_FRIGATE)
     call SetRaceBattleship(r, ORC_JUGGERNAUGHT)
     call SetRaceShipSpecial1(r, TROLL_TIGERSHARK_RIDER)
+
+    return r
 endfunction
 
-private function AddTauren takes nothing returns nothing
+private function AddTauren takes nothing returns integer
     local integer r = AddRace()
-    set udg_RaceTauren = r
     call SetRaceTavernItemType(r, ITEM_TAUREN)
     call SetRaceAiScript(r, "wowr\\Tauren.ai")
     call SetRaceItemType(r, ITEM_TAUREN_SCEPTER)
@@ -2616,11 +2668,12 @@ private function AddTauren takes nothing returns nothing
     call SetRaceTransportShip(r, ORC_TRANSPORT_SHIP)
     call SetRaceFrigate(r, ORC_FRIGATE)
     call SetRaceBattleship(r, ORC_JUGGERNAUGHT)
+
+    return r
 endfunction
 
-private function AddPandaren takes nothing returns nothing
+private function AddPandaren takes nothing returns integer
     local integer r = AddRace()
-    set udg_RacePandaren = r
     call SetRaceTavernItemType(r, ITEM_PANDAREN)
     call SetRaceAiScript(r, "wowr\\Pandaren.ai")
     call SetRaceItemType(r, ITEM_PANDAREN_SCEPTER)
@@ -2713,11 +2766,12 @@ private function AddPandaren takes nothing returns nothing
     call SetRaceTransportShip(r, PANDAREN_TRANSPORT_SHIP)
     call SetRaceFrigate(r, ELF_FRIGATE)
     call SetRaceBattleship(r, PANDAREN_BATTLESHIP)
+
+    return r
 endfunction
 
-private function AddLordaeron takes nothing returns nothing
+private function AddLordaeron takes nothing returns integer
     local integer r = AddRace()
-    set udg_RaceLordaeron = r
     call SetRaceTavernItemType(r, ITEM_LORDAERON)
     call SetRaceAiScript(r, "wowr\\Lordaeron.ai")
     call SetRaceItemType(r, ITEM_LORDAERON_SCEPTER)
@@ -2811,11 +2865,12 @@ private function AddLordaeron takes nothing returns nothing
     call SetRaceTransportShip(r, HUMAN_TRANSPORT_SHIP)
     call SetRaceFrigate(r, HUMAN_FRIGATE)
     call SetRaceBattleship(r, HUMAN_BATTLESHIP)
+
+    return r
 endfunction
 
-private function AddStormwind takes nothing returns nothing
+private function AddStormwind takes nothing returns integer
     local integer r = AddRace()
-    set udg_RaceStormwind = r
     call SetRaceTavernItemType(r, ITEM_STORMWIND)
     call SetRaceAiScript(r, "wowr\\Stormwind.ai")
     call SetRaceItemType(r, ITEM_STORMWIND_SCEPTER)
@@ -2910,11 +2965,12 @@ private function AddStormwind takes nothing returns nothing
     call SetRaceTransportShip(r, HUMAN_TRANSPORT_SHIP)
     call SetRaceFrigate(r, HUMAN_FRIGATE)
     call SetRaceBattleship(r, HUMAN_BATTLESHIP)
+
+    return r
 endfunction
 
-private function AddDalaran takes nothing returns nothing
+private function AddDalaran takes nothing returns integer
     local integer r = AddRace()
-    set udg_RaceDalaran = r
     call SetRaceTavernItemType(r, ITEM_DALARAN)
     call SetRaceAiScript(r, "wowr\\Dalaran.ai")
     call SetRaceItemType(r, ITEM_DALARAN_SCEPTER)
@@ -3017,11 +3073,12 @@ private function AddDalaran takes nothing returns nothing
     call SetRaceBattleship(r, HUMAN_BATTLESHIP)
     call SetRaceShipSpecial1(r, DALARAN_WATER_ELEMENTAL)
     call SetRaceShipSpecial2(r, DALARAN_SEA_ELEMENTAL)
+
+    return r
 endfunction
 
-private function AddKulTiras takes nothing returns nothing
+private function AddKulTiras takes nothing returns integer
     local integer r = AddRace()
-    set udg_RaceKulTiras = r
     call SetRaceTavernItemType(r, ITEM_KUL_TIRAS)
     call SetRaceAiScript(r, "wowr\\KulTiras.ai")
     call SetRaceItemType(r, ITEM_KUL_TIRAS_SCEPTER)
@@ -3126,11 +3183,12 @@ private function AddKulTiras takes nothing returns nothing
     call SetRaceBattleship(r, KULTIRAS_BATTLESHIP)
     call SetRaceShipSpecial1(r, KULTIRAS_DREADNOUGHT)
     call SetRaceShipSpecial2(r, KULTIRAS_PIRATE_BATTLESHIP)
+
+    return r
 endfunction
 
-private function AddWorgen takes nothing returns nothing
+private function AddWorgen takes nothing returns integer
     local integer r = AddRace()
-    set udg_RaceWorgen = r
     call SetRaceTavernItemType(r, ITEM_WORGEN)
     call SetRaceAiScript(r, "wowr\\Worgen.ai")
     call SetRaceItemType(r, ITEM_WORGEN_SCEPTER)
@@ -3224,11 +3282,12 @@ private function AddWorgen takes nothing returns nothing
     call SetRaceTransportShip(r, WORGEN_TRANSPORT_SHIP)
     call SetRaceFrigate(r, WORGEN_FRIGATE)
     call SetRaceBattleship(r, WORGEN_BATTLESHIP)
+
+    return r
 endfunction
 
-private function AddVrykul takes nothing returns nothing
+private function AddVrykul takes nothing returns integer
     local integer r = AddRace()
-    set udg_RaceVrykul = r
     call SetRaceTavernItemType(r, ITEM_VRYKUL)
     call SetRaceAiScript(r, "wowr\\Vrykul.ai")
     call SetRaceItemType(r, ITEM_VRYKUL_SCEPTER)
@@ -3316,11 +3375,12 @@ private function AddVrykul takes nothing returns nothing
     call SetRaceFrigate(r, HUMAN_FRIGATE)
     call SetRaceBattleship(r, HUMAN_BATTLESHIP)
     call SetRaceShipSpecial1(r, VRYKUL_RAKKAR_SHIP)
+
+    return r
 endfunction
 
-private function AddNerubian takes nothing returns nothing
+private function AddNerubian takes nothing returns integer
     local integer r = AddRace()
-    set udg_RaceNerubian = r
     call SetRaceTavernItemType(r, ITEM_NERUBIAN)
     call SetRaceAiScript(r, "wowr\\Nerubian.ai")
     call SetRaceItemType(r, ITEM_NERUBIAN_SCEPTER)
@@ -3406,11 +3466,12 @@ private function AddNerubian takes nothing returns nothing
     call SetRaceTransportShip(r, UNDEAD_TRANSPORT_SHIP)
     call SetRaceFrigate(r, UNDEAD_FRIGATE)
     call SetRaceBattleship(r, UNDEAD_BATTLESHIP)
+
+    return r
 endfunction
 
-private function AddTuskarr takes nothing returns nothing
+private function AddTuskarr takes nothing returns integer
     local integer r = AddRace()
-    set udg_RaceTuskarr = r
     call SetRaceTavernItemType(r, ITEM_TUSKARR)
     call SetRaceAiScript(r, "wowr\\Tuskarr.ai")
     call SetRaceItemType(r, ITEM_TUSKARR_SCEPTER)
@@ -3501,11 +3562,12 @@ private function AddTuskarr takes nothing returns nothing
     call SetRaceTransportShip(r, ORC_TRANSPORT_SHIP)
     call SetRaceFrigate(r, ORC_FRIGATE)
     call SetRaceBattleship(r, ORC_JUGGERNAUGHT)
+
+    return r
 endfunction
 
-private function AddMurloc takes nothing returns nothing
+private function AddMurloc takes nothing returns integer
     local integer r = AddRace()
-    set udg_RaceMurloc = r
     call SetRaceTavernItemType(r, ITEM_MURLOC)
     call SetRaceAiScript(r, "wowr\\Murloc.ai")
     call SetRaceItemType(r, ITEM_MURLOC_SCEPTER)
@@ -3588,11 +3650,12 @@ private function AddMurloc takes nothing returns nothing
     call SetRaceTransportShip(r, ELF_TRANSPORT_SHIP)
     call SetRaceFrigate(r, ELF_FRIGATE)
     call SetRaceBattleship(r, ELF_BATTLESHIP)
+
+    return r
 endfunction
 
-private function AddOgre takes nothing returns nothing
+private function AddOgre takes nothing returns integer
     local integer r = AddRace()
-    set udg_RaceOgre = r
     call SetRaceTavernItemType(r, ITEM_OGRE)
     call SetRaceAiScript(r, "wowr\\Ogre.ai")
     call SetRaceItemType(r, ITEM_OGRE_SCEPTER)
@@ -3689,11 +3752,12 @@ private function AddOgre takes nothing returns nothing
     call SetRaceTransportShip(r, ORC_TRANSPORT_SHIP)
     call SetRaceFrigate(r, ORC_FRIGATE)
     call SetRaceBattleship(r, ORC_JUGGERNAUGHT)
+
+    return r
 endfunction
 
-private function AddFelOrc takes nothing returns nothing
+private function AddFelOrc takes nothing returns integer
     local integer r = AddRace()
-    set udg_RaceFelOrc = r
     call SetRaceTavernItemType(r, ITEM_FEL_ORC)
     call SetRaceAiScript(r, "wowr\\FelOrc.ai")
     call SetRaceItemType(r, ITEM_FEL_ORC_SCEPTER)
@@ -3779,11 +3843,12 @@ private function AddFelOrc takes nothing returns nothing
     call SetRaceTransportShip(r, ORC_TRANSPORT_SHIP)
     call SetRaceFrigate(r, ORC_FRIGATE)
     call SetRaceBattleship(r, ORC_JUGGERNAUGHT)
+
+    return r
 endfunction
 
-private function AddFacelessOne takes nothing returns nothing
+private function AddFacelessOne takes nothing returns integer
     local integer r = AddRace()
-    set udg_RaceFacelessOne = r
     call SetRaceTavernItemType(r, ITEM_FACELESS_ONE)
     call SetRaceAiScript(r, "wowr\\FacelessOne.ai")
     call SetRaceItemType(r, ITEM_FACELESS_ONE_SCEPTER)
@@ -3861,11 +3926,12 @@ private function AddFacelessOne takes nothing returns nothing
     call SetRaceTransportShip(r, UNDEAD_TRANSPORT_SHIP)
     call SetRaceFrigate(r, UNDEAD_FRIGATE)
     call SetRaceBattleship(r, UNDEAD_BATTLESHIP)
+
+    return r
 endfunction
 
-private function AddSatyr takes nothing returns nothing
+private function AddSatyr takes nothing returns integer
     local integer r = AddRace()
-    set udg_RaceSatyr = r
     call SetRaceTavernItemType(r, ITEM_SATYR)
     call SetRaceAiScript(r, "wowr\\Satyr.ai")
     call SetRaceItemType(r, ITEM_SATYR_SCEPTER)
@@ -3929,11 +3995,12 @@ private function AddSatyr takes nothing returns nothing
     call SetRaceTransportShip(r, ELF_TRANSPORT_SHIP)
     call SetRaceFrigate(r, ELF_FRIGATE)
     call SetRaceBattleship(r, ELF_BATTLESHIP)
+
+    return r
 endfunction
 
-private function AddCentaur takes nothing returns nothing
+private function AddCentaur takes nothing returns integer
     local integer r = AddRace()
-    set udg_RaceCentaur = r
     call SetRaceTavernItemType(r, ITEM_CENTAUR)
     call SetRaceAiScript(r, "wowr\\Centaur.ai")
     call SetRaceItemType(r, ITEM_CENTAUR_SCEPTER)
@@ -3995,11 +4062,12 @@ private function AddCentaur takes nothing returns nothing
     call SetRaceCitizenFemale(r, CENTAUR_CITIZEN_FEMALE)
     call SetRaceChild(r, CENTAUR_CHILD)
     call SetRacePet(r, CENTAUR_PET)
+
+    return r
 endfunction
 
-private function AddGnoll takes nothing returns nothing
+private function AddGnoll takes nothing returns integer
     local integer r = AddRace()
-    set udg_RaceGnoll = r
     call SetRaceTavernItemType(r, ITEM_GNOLL)
     call SetRaceAiScript(r, "wowr\\Gnoll.ai")
     call SetRaceItemType(r, ITEM_GNOLL_SCEPTER)
@@ -4052,11 +4120,12 @@ private function AddGnoll takes nothing returns nothing
     call SetRaceCitizenFemale(r, GNOLL_CITIZEN_FEMALE)
     call SetRaceChild(r, GNOLL_CHILD)
     call SetRacePet(r, GNOLL_PET)
+
+    return r
 endfunction
 
-private function AddKobold takes nothing returns nothing
+private function AddKobold takes nothing returns integer
     local integer r = AddRace()
-    set udg_RaceKobold = r
     call SetRaceTavernItemType(r, ITEM_KOBOLD)
     call SetRaceAiScript(r, "wowr\\Kobold.ai")
     call SetRaceItemType(r, ITEM_KOBOLD_SCEPTER)
@@ -4114,11 +4183,12 @@ private function AddKobold takes nothing returns nothing
     call SetRaceCitizenFemale(r, KOBOLD_CITIZEN_FEMALE)
     call SetRaceChild(r, KOBOLD_CHILD)
     call SetRacePet(r, KOBOLD_PET)
+
+    return r
 endfunction
 
-private function AddQuillboar takes nothing returns nothing
+private function AddQuillboar takes nothing returns integer
     local integer r = AddRace()
-    set udg_RaceQuillboar = r
     call SetRaceTavernItemType(r, ITEM_QUILLBOAR)
     call SetRaceAiScript(r, "wowr\\Quillboar.ai")
     call SetRaceItemType(r, ITEM_QUILLBOAR_SCEPTER)
@@ -4177,11 +4247,12 @@ private function AddQuillboar takes nothing returns nothing
     call SetRaceCitizenFemale(r, QUILLBOAR_CITIZEN_FEMALE)
     call SetRaceChild(r, QUILLBOAR_CHILD)
     call SetRacePet(r, QUILLBOAR_PET)
+
+    return r
 endfunction
 
-private function AddBandit takes nothing returns nothing
+private function AddBandit takes nothing returns integer
     local integer r = AddRace()
-    set udg_RaceBandit = r
     call SetRaceTavernItemType(r, ITEM_BANDIT)
     call SetRaceAiScript(r, "wowr\\Bandit.ai")
     call SetRaceItemType(r, ITEM_BANDIT_SCEPTER)
@@ -4270,11 +4341,12 @@ private function AddBandit takes nothing returns nothing
     call SetRaceCitizenFemale(r, BANDIT_CITIZEN_FEMALE)
     call SetRaceChild(r, BANDIT_CHILD)
     call SetRacePet(r, BANDIT_PET)
+
+    return r
 endfunction
 
-private function AddDungeon takes nothing returns nothing
+private function AddDungeon takes nothing returns integer
     local integer r = AddRace()
-    set udg_RaceDungeon = r
     call SetRaceTavernItemType(r, ITEM_DUNGEON)
     call SetRaceAiScript(r, "wowr\\Dungeon.ai")
     call SetRaceItemType(r, ITEM_DUNGEON_SCEPTER)
@@ -4362,11 +4434,12 @@ private function AddDungeon takes nothing returns nothing
     call SetRaceCitizenFemale(r, DUNGEON_CITIZEN_FEMALE)
     call SetRaceChild(r, DUNGEON_CHILD)
     call SetRacePet(r, DUNGEON_PET)
+
+    return r
 endfunction
 
-private function AddDragonkin takes nothing returns nothing
+private function AddDragonkin takes nothing returns integer
     local integer r = AddRace()
-    set udg_RaceDragonkin = r
     call SetRaceTavernItemType(r, ITEM_DRAGONKIN)
     call SetRaceAiScript(r, "wowr\\Dragonkin.ai")
     call SetRaceItemType(r, ITEM_DRAGONKIN_SCEPTER)
@@ -4421,6 +4494,8 @@ private function AddDragonkin takes nothing returns nothing
     call SetRaceCitizenFemale(r, DRAGONKIN_CITIZEN_FEMALE)
     call SetRaceChild(r, DRAGONKIN_CHILD)
     call SetRacePet(r, DRAGONKIN_PET)
+
+    return r
 endfunction
 
 private function AddRaceScepterItems takes nothing returns nothing
@@ -4497,44 +4572,44 @@ private function Init takes nothing returns nothing
 
     // RacesPopupMenu has to match this order
     call AddNone() // udg_RaceNone = 0
-    call AddFreelancer()
-    call AddHuman()
-    call AddOrc()
-    call AddUndead()
-    call AddNightElf()
-    call AddBloodElf()
-    call AddNaga()
-    call AddDraenei()
-    call AddLostOnes()
-    call AddDemon()
-    call AddFurbolg()
-    call AddDwarf()
-    call AddGoblin()
-    call AddHighElf()
-    call AddGnome()
-    call AddTroll()
-    call AddTauren()
-    call AddPandaren()
-    call AddLordaeron()
-    call AddStormwind()
-    call AddDalaran()
-    call AddKulTiras()
-    call AddWorgen()
-    call AddVrykul()
-    call AddNerubian()
-    call AddTuskarr()
-    call AddMurloc()
-    call AddOgre()
-    call AddFelOrc()
-    call AddFacelessOne()
-    call AddSatyr()
-    call AddCentaur()
-    call AddGnoll()
-    call AddKobold()
-    call AddQuillboar()
-    call AddBandit()
-    call AddDungeon()
-    call AddDragonkin()
+    set RACE_FREELANCER = AddFreelancer()
+    set WOWR_RACE_HUMAN = AddHuman()
+    set WOWR_RACE_ORC = AddOrc()
+    set WOWR_RACE_UNDEAD = AddUndead()
+    set WOWR_RACE_NIGHT_ELF = AddNightElf()
+    set WOWR_RACE_BLOOD_ELF = AddBloodElf()
+    set WOWR_RACE_NAGA = AddNaga()
+    set WOWR_RACE_DRAENEI = AddDraenei()
+    set WOWR_RACE_LOST_ONES = AddLostOnes()
+    set WOWR_RACE_DEMON = AddDemon()
+    set WOWR_RACE_FURBOLG = AddFurbolg()
+    set WOWR_RACE_DWARF = AddDwarf()
+    set WOWR_RACE_GOBLIN = AddGoblin()
+    set WOWR_RACE_HIGH_ELF = AddHighElf()
+    set WOWR_RACE_GNOME = AddGnome()
+    set WOWR_RACE_TROLL = AddTroll()
+    set WOWR_RACE_TAUREN = AddTauren()
+    set WOWR_RACE_PANDAREN = AddPandaren()
+    set WOWR_RACE_LORDAERON = AddLordaeron()
+    set WOWR_RACE_STORMWIND = AddStormwind()
+    set WOWR_RACE_DALARAN = AddDalaran()
+    set WOWR_RACE_KUL_TIRAS = AddKulTiras()
+    set WOWR_RACE_WORGEN = AddWorgen()
+    set WOWR_RACE_VRYKUL = AddVrykul()
+    set WOWR_RACE_NERUBIAN = AddNerubian()
+    set WOWR_RACE_TUSKARR = AddTuskarr()
+    set WOWR_RACE_MURLOC = AddMurloc()
+    set WOWR_RACE_OGRE = AddOgre()
+    set WOWR_RACE_FEL_ORC = AddFelOrc()
+    set WOWR_RACE_FACELESS_ONE = AddFacelessOne()
+    set WOWR_RACE_SATYR = AddSatyr()
+    set WOWR_RACE_CENTAUR = AddCentaur()
+    set WOWR_RACE_GNOLL = AddGnoll()
+    set WOWR_RACE_KOBOLD = AddKobold()
+    set WOWR_RACE_QUILLBOAR = AddQuillboar()
+    set WOWR_RACE_BANDIT = AddBandit()
+    set WOWR_RACE_DUNGEON = AddDungeon()
+    set WOWR_RACE_DRAGONKIN = AddDragonkin()
 
     call AddRaceScepterItems()
 
@@ -4559,27 +4634,27 @@ private function Init takes nothing returns nothing
     call AddAbility('ACmi', 1, udg_RaceNone)
     call AddAbility('A0N6', 1, udg_RaceNone)
     // HUMAN
-    call AddAbility('Adef', 1, udg_RaceHuman)
-    call AddAbility('Asth', 1, udg_RaceHuman)
-    call AddAbility('Ahea', 1, udg_RaceHuman)
-    call AddAbility('Aslo', 1, udg_RaceHuman)
+    call AddAbility('Adef', 1, WOWR_RACE_HUMAN)
+    call AddAbility('Asth', 1, WOWR_RACE_HUMAN)
+    call AddAbility('Ahea', 1, WOWR_RACE_HUMAN)
+    call AddAbility('Aslo', 1, WOWR_RACE_HUMAN)
     // NIGHT ELF
-    call AddAbility('Aro2', 1, udg_RaceNightElf)
+    call AddAbility('Aro2', 1, WOWR_RACE_NIGHT_ELF)
     // BLOOD ELF
-    call AddAbility('A16I', 1, udg_RaceBloodElf)
+    call AddAbility('A16I', 1, WOWR_RACE_BLOOD_ELF)
     // GOBLIN
-    call AddAbility('A0BA', 1, udg_RaceGoblin)
+    call AddAbility('A0BA', 1, WOWR_RACE_GOBLIN)
     // TAUREN
-    call AddAbility('A1JJ', 1, udg_RaceTauren)
+    call AddAbility('A1JJ', 1, WOWR_RACE_TAUREN)
     // KUL TIRAS
-    call AddAbility('A0RI', 1, udg_RaceKulTiras)
-    call AddAbility('A0RJ', 1, udg_RaceKulTiras)
-    call AddAbility('A0JE', 1, udg_RaceKulTiras)
+    call AddAbility('A0RI', 1, WOWR_RACE_KUL_TIRAS)
+    call AddAbility('A0RJ', 1, WOWR_RACE_KUL_TIRAS)
+    call AddAbility('A0JE', 1, WOWR_RACE_KUL_TIRAS)
     // WORGEN
-    call AddAbility('A11Y', 1, udg_RaceWorgen)
+    call AddAbility('A11Y', 1, WOWR_RACE_WORGEN)
     // DALARAN
-    call AddAbility('A0NI', 1, udg_RaceDalaran)
-    call AddAbility('A0NZ', 1, udg_RaceDalaran)
+    call AddAbility('A0NI', 1, WOWR_RACE_DALARAN)
+    call AddAbility('A0NZ', 1, WOWR_RACE_DALARAN)
 endfunction
 
 endlibrary

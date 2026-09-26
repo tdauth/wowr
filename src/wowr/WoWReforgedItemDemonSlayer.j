@@ -7,7 +7,7 @@ endglobals
 private function TriggerConditionDamaged takes nothing returns boolean
     local real damage = 0.0
     if (UnitHasItemOfTypeBJ(GetEventDamageSource(), ITEM_DEMON_SLAYER)) then
-        if (GetObjectRace(GetUnitTypeId(GetTriggerUnit())) == udg_RaceDemon or GetUnitRace(GetTriggerUnit()) == RACE_DEMON) then
+        if (GetObjectRace(GetUnitTypeId(GetTriggerUnit())) == WOWR_RACE_DEMON or GetUnitRace(GetTriggerUnit()) == RACE_DEMON) then
             set damage = GetEventDamage() * 0.30
             call DisableTrigger(GetTriggeringTrigger())
             call UnitDamageTargetBJ(GetEventDamageSource(), GetTriggerUnit(), damage, ATTACK_TYPE_MELEE, DAMAGE_TYPE_NORMAL)

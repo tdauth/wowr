@@ -660,7 +660,7 @@ private function TimerFunctionAutoAttackNavy takes nothing returns nothing
 endfunction
 
 private function EnumAutoLoadMines takes nothing returns nothing
-    if (PlayerHasRace(GetEnumPlayer(), udg_RaceDwarf) or PlayerHasRace(GetEnumPlayer(), udg_RaceDalaran) or PlayerHasRace(GetEnumPlayer(), udg_RaceSatyr)) then
+    if (PlayerHasRace(GetEnumPlayer(), WOWR_RACE_DWARF) or PlayerHasRace(GetEnumPlayer(), WOWR_RACE_DALARAN) or PlayerHasRace(GetEnumPlayer(), WOWR_RACE_SATYR)) then
         call AutloadWorkersIntoMinesAI(GetEnumPlayer())
     endif
 endfunction
@@ -729,7 +729,7 @@ private function EnumStartLobbySettings takes nothing returns nothing
         endloop
 
         // Harvest Bonuses
-        if (playerRace == udg_RaceUndead or playerRace == udg_RaceNightElf or playerRace == udg_RaceDwarf or playerRace == udg_RaceDalaran) then
+        if (playerRace == WOWR_RACE_UNDEAD or playerRace == WOWR_RACE_NIGHT_ELF or playerRace == WOWR_RACE_DWARF or playerRace == WOWR_RACE_DALARAN) then
             call SetPlayerTechResearched(GetEnumPlayer(), UPG_AI_HARVEST_BONUS, 1)
         endif
         // Hero

@@ -1,6 +1,12 @@
-library WoWReforgedCraftingStash initializer Init requires Crafting, WoWReforgedBosses, WoWReforgedMapBosses
+library WoWReforgedCraftingStash initializer Init requires Crafting, WoWReforgedProfessions, WoWReforgedBosses, WoWReforgedMapBosses
 
 globals
+    integer RECIPE_BOOTS_OF_TELEPORTATION
+    integer RECIPE_GOBLIN_LAND_MINES
+    integer RECIPE_POTION_OF_GREATER_HEALING
+    integer RECIPE_POTION_OF_GREATER_MANA
+    integer RECIPE_COOKING
+
     private trigger castTrigger = CreateTrigger()
     private trigger craftItemTrigger = CreateTrigger()
     private trigger craftUnitTrigger = CreateTrigger()
@@ -51,16 +57,16 @@ private function CraftUnitTriggerAction takes nothing returns nothing
 endfunction
 
 private function TriggerConditionOnRequirement takes nothing returns boolean
-    if (GetTriggerRecipe() == udg_RecipeBootsOfTeleportation and GetUnitLegendaryItemsCount(GetTriggerCraftingUnit()) < 6) then
+    if (GetTriggerRecipe() == RECIPE_BOOTS_OF_TELEPORTATION and GetUnitLegendaryItemsCount(GetTriggerCraftingUnit()) < 6) then
         //call BJDebugMsg("Boots of Teleportation with 6 legendary items! Counter " + I2S(GetUnitLegendaryItemsCount(GetTriggerCraftingUnit())))
         return false
-    elseif (GetTriggerRecipe() == udg_RecipePotionOfGreaterHealing and not PlayerHasProfession(GetOwningPlayer(GetTriggerCraftingUnit()), udg_ProfessionHerbalist)) then
+    elseif (GetTriggerRecipe() == RECIPE_POTION_OF_GREATER_HEALING and not PlayerHasProfession(GetOwningPlayer(GetTriggerCraftingUnit()), PROFESSION_HERBALIST)) then
         return false
-    elseif (GetTriggerRecipe() == udg_RecipePotionOfGreaterMana and not PlayerHasProfession(GetOwningPlayer(GetTriggerCraftingUnit()), udg_ProfessionAlchemist)) then
+    elseif (GetTriggerRecipe() == RECIPE_POTION_OF_GREATER_MANA and not PlayerHasProfession(GetOwningPlayer(GetTriggerCraftingUnit()), PROFESSION_ALCHEMIST)) then
         return false
-    elseif (GetTriggerRecipe() == udg_RecipeGoblinLandMines and not PlayerHasProfession(GetOwningPlayer(GetTriggerCraftingUnit()), udg_ProfessionDemolitionExpert)) then
+    elseif (GetTriggerRecipe() == RECIPE_GOBLIN_LAND_MINES and not PlayerHasProfession(GetOwningPlayer(GetTriggerCraftingUnit()), PROFESSION_DEMOLITION_EXPERT)) then
         return false
-    elseif (GetTriggerRecipe() >= udg_RecipeCooking and not PlayerHasProfession(GetOwningPlayer(GetTriggerCraftingUnit()), udg_ProfessionCook)) then
+    elseif (GetTriggerRecipe() >= RECIPE_COOKING and not PlayerHasProfession(GetOwningPlayer(GetTriggerCraftingUnit()), PROFESSION_COOK)) then
         return false
     endif
     return true
@@ -90,7 +96,7 @@ private function Init takes nothing returns nothing
     call TriggerAddAction(disassembleTrigger, function TriggerActionOnDisassembleItem)
 
     // UNIQUE
-    set udg_RecipeBootsOfTeleportation = AddRecipe(ITEM_BOOTS_OF_TELEPORTATION, 'I0YJ')
+    set RECIPE_BOOTS_OF_TELEPORTATION = AddRecipe(ITEM_BOOTS_OF_TELEPORTATION, 'I0YJ')
     call AddRequirementsLegendaryItems(r, 1)
     call SetRecipeMinRequirements(r, 6)
 
@@ -169,8 +175,8 @@ private function Init takes nothing returns nothing
     set r = AddRecipe(ITEM_BOARDS, 'I097')
     call AddRecipeRequirementItem(r, ITEM_BRANCH, 3, true)
 
-    set udg_RecipeGoblinLandMines = AddRecipe(ITEM_GOBLIN_LAND_MINES, 'I09B')
-    call AddRecipeRequirementItem(udg_RecipeGoblinLandMines, ITEM_BLACK_POWDER, 3, true)
+    set RECIPE_GOBLIN_LAND_MINES = AddRecipe(ITEM_GOBLIN_LAND_MINES, 'I09B')
+    call AddRecipeRequirementItem(RECIPE_GOBLIN_LAND_MINES, ITEM_BLACK_POWDER, 3, true)
 
     call AddRecipeSpacer(GetLocalizedStringSafe("PAGE_TITLE_MISC"))
 
@@ -178,13 +184,13 @@ private function Init takes nothing returns nothing
     set r = AddRecipe(ITEM_POTION_OF_HEALING, 'I093')
     call AddRecipeRequirementItem(r, ITEM_HEALING_HERB, 3, true)
 
-    set udg_RecipePotionOfGreaterHealing = AddRecipe(ITEM_POTION_OF_GREATER_HEALING, 'I10Z')
+    set RECIPE_POTION_OF_GREATER_HEALING = AddRecipe(ITEM_POTION_OF_GREATER_HEALING, 'I10Z')
     call AddRecipeRequirementItem(r, ITEM_HEALING_HERB, 5, true)
 
     set r = AddRecipe(ITEM_POTION_OF_MANA, 'I091')
     call AddRecipeRequirementItem(r, ITEM_MANA_HERB, 3, true)
 
-    set udg_RecipePotionOfGreaterMana = AddRecipe(ITEM_POTION_OF_GREATER_MANA, 'I111')
+    set RECIPE_POTION_OF_GREATER_MANA = AddRecipe(ITEM_POTION_OF_GREATER_MANA, 'I111')
     call AddRecipeRequirementItem(r, ITEM_MANA_HERB, 5, true)
 
     set r = AddRecipe(ITEM_POTION_OF_INVISIBILITY, 'I112')

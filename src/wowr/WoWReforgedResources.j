@@ -5,6 +5,24 @@ library WoWReforgedResources initializer Init requires Resources, ForceUtils, Pl
  */
 
 globals
+    integer RESOURCE_OIL
+    integer RESOURCE_COPPER
+    integer RESOURCE_SILVER
+    integer RESOURCE_GEMSTONES
+    integer RESOURCE_MEAT
+    integer RESOURCE_GRAIN
+    integer RESOURCE_MILK
+    integer RESOURCE_WOOL
+    integer RESOURCE_ROCK
+    integer RESOURCE_IRON
+    integer RESOURCE_BLACK_POWDER
+    integer RESOURCE_WATER
+    integer RESOURCE_POWER
+    integer RESOURCE_FAVOR
+    integer RESOURCE_FRUITS
+    integer RESOURCE_FEL
+    integer RESOURCE_ARGUNITE
+
     private integer maxMines = 0
     private integer array mineTypes
     private integer array mineResource
@@ -78,7 +96,7 @@ endfunction
 
 private function AddWoWReforgedOilShip takes unit producer, unit worker returns nothing
     call AddWorker(worker)
-    call AddResourceToWorker(worker, udg_ResourceOil, 'A1PL', "harvest", 'A1PN', "spies", 'A1PO', "robogoblin", 200, 20, "gold")
+    call AddResourceToWorker(worker, RESOURCE_OIL, 'A1PL', "harvest", 'A1PN', "spies", 'A1PO', "robogoblin", 200, 20, "gold")
     if (producer != null) then
         call ReorderWorkerToMineRally(producer, worker)
     endif
@@ -102,14 +120,14 @@ endfunction
 
 private function AddWoWReforgedFaithWorker takes unit producer, unit worker returns nothing
     call AddWorker(worker)
-    call AddResourceToWorker(worker, udg_ResourceFavor, 'A1PM', "heal", 'A1PN', "spies", 'A1PO', "robogoblin", 20, 5, "gold")
+    call AddResourceToWorker(worker, RESOURCE_FAVOR, 'A1PM', "heal", 'A1PN', "spies", 'A1PO', "robogoblin", 20, 5, "gold")
     if (producer != null) then
         call ReorderWorkerToMineRally(producer, worker)
     endif
 endfunction
 
 private function AddWoWReforgedFaithMine takes unit mine returns nothing
-    call AddMineEx(mine, udg_ResourceFavor, 200)
+    call AddMineEx(mine, RESOURCE_FAVOR, 200)
 endfunction
 
 private function AddRandomMine takes integer buildingTypeId, integer resource, integer startAmount returns integer
@@ -131,11 +149,11 @@ function AddRandomWaterMine takes integer buildingTypeId, integer resource, inte
 endfunction
 
 function AddFishSchool takes unit whichUnit returns nothing
-    call AddMineEx(whichUnit, udg_ResourceMeat, 50000)
+    call AddMineEx(whichUnit, RESOURCE_MEAT, 50000)
 endfunction
 
 function AddBerryBush takes unit whichUnit returns nothing
-    call AddMineEx(whichUnit, udg_ResourceFruits, 500)
+    call AddMineEx(whichUnit, RESOURCE_FRUITS, 500)
 endfunction
 
 private function FilterIsRandomMine takes nothing returns boolean
@@ -222,60 +240,60 @@ private function RewardFlotsam takes unit flotsam, unit killer returns nothing
 endfunction
 
 private function UseMeatItem takes unit hero returns nothing
-    call CustomBounty(hero, udg_ResourceMeat, 30)
+    call CustomBounty(hero, RESOURCE_MEAT, 30)
 endfunction
 
 private function UseFishItem takes unit hero returns nothing
-    call CustomBounty(hero, udg_ResourceMeat, 30)
+    call CustomBounty(hero, RESOURCE_MEAT, 30)
 endfunction
 
 private function UseBananaItem takes unit hero returns nothing
-    call CustomBounty(hero, udg_ResourceFruits, 30)
+    call CustomBounty(hero, RESOURCE_FRUITS, 30)
 endfunction
 
 private function UseLemonItem takes unit hero returns nothing
-    call CustomBounty(hero, udg_ResourceFruits, 30)
+    call CustomBounty(hero, RESOURCE_FRUITS, 30)
 endfunction
 
 private function UseOrangeItem takes unit hero returns nothing
-    call CustomBounty(hero, udg_ResourceFruits, 30)
+    call CustomBounty(hero, RESOURCE_FRUITS, 30)
 endfunction
 
 private function UseGarlicItem takes unit hero returns nothing
-    call CustomBounty(hero, udg_ResourceFruits, 30)
+    call CustomBounty(hero, RESOURCE_FRUITS, 30)
 endfunction
 
 private function UsePumpkinItem takes unit hero returns nothing
-    call CustomBounty(hero, udg_ResourceFruits, 30)
+    call CustomBounty(hero, RESOURCE_FRUITS, 30)
 endfunction
 
 private function UseAppleItem takes unit hero returns nothing
-    call CustomBounty(hero, udg_ResourceFruits, 30)
+    call CustomBounty(hero, RESOURCE_FRUITS, 30)
 endfunction
 
 private function UseBundleOfWheatItem takes unit hero returns nothing
-    call CustomBounty(hero, udg_ResourceGrain, 30)
+    call CustomBounty(hero, RESOURCE_GRAIN, 30)
 endfunction
 
 private function UseBlackPowderItem takes unit hero returns nothing
-    call CustomBounty(hero, udg_ResourceBlackPowder, 12)
+    call CustomBounty(hero, RESOURCE_BLACK_POWDER, 12)
 endfunction
 
 private function UseRockItem takes unit hero returns nothing
-    call CustomBounty(hero, udg_ResourceRock, 25)
+    call CustomBounty(hero, RESOURCE_ROCK, 25)
 endfunction
 
 private function UseMilkItem takes unit hero returns nothing
-    call CustomBounty(hero, udg_ResourceMilk, 30)
+    call CustomBounty(hero, RESOURCE_MILK, 30)
 endfunction
 
 private function UseWoolItem takes unit hero returns nothing
-    call CustomBounty(hero, udg_ResourceWool, 30)
+    call CustomBounty(hero, RESOURCE_WOOL, 30)
 endfunction
 
 private function AddFishingBoat takes unit producer, unit worker returns nothing
     call AddWorker(worker)
-    call AddResourceToWorker(worker, udg_ResourceMeat, 'A1PM', "heal", 'A1PN', "spies", 'A1PO', "robogoblin", 200, 20, "gold")
+    call AddResourceToWorker(worker, RESOURCE_MEAT, 'A1PM', "heal", 'A1PN', "spies", 'A1PO', "robogoblin", 200, 20, "gold")
     if (producer != null) then
         call ReorderWorkerToMineRally(producer, worker)
     endif
@@ -283,7 +301,7 @@ endfunction
 
 private function AddOilBoat takes unit producer, unit worker returns nothing
     call AddWorker(worker)
-    call AddResourceToWorker(worker, udg_ResourceOil, 'A1PM', "heal", 'A1PN', "spies", 'A1PO', "robogoblin", 100, 100, "gold")
+    call AddResourceToWorker(worker, RESOURCE_OIL, 'A1PM', "heal", 'A1PN', "spies", 'A1PO', "robogoblin", 100, 100, "gold")
     if (producer != null) then
         call ReorderWorkerToMineRally(producer, worker)
     endif
@@ -458,7 +476,7 @@ private function ReplaceUnitWithAnimalCorpse takes unit whichUnit returns nothin
     local unit corpse = CreateUnit(GetOwningPlayer(whichUnit), 'n0A2', GetUnitX(whichUnit), GetUnitY(whichUnit), GetUnitFacing(whichUnit))
     call BlzSetUnitSkin(corpse, BlzGetUnitSkin(whichUnit))
     call SetUnitAnimation(corpse, "decay flesh")
-    call AddMineEx(corpse, udg_ResourceMeat, 200)
+    call AddMineEx(corpse, RESOURCE_MEAT, 200)
     set corpse = null
 endfunction
 
@@ -578,25 +596,23 @@ private function Init takes nothing returns nothing
     call TriggerAddCondition(triggerChatCommandGuiOff, Condition(function TriggerConditionChatCommandGuiOff))
     call TriggerAddCondition(triggerChatCommandInfo, Condition(function TriggerConditionChatCommandInfo))
 
-    set udg_ResourceGold = Resources_GOLD
-    set udg_ResourceLumber = Resources_LUMBER
-    set udg_ResourceOil = Add("oil", GetLocalizedStringSafe("OIL"), GetLocalizedStringSafe("OIL_DESCRIPTION"), 2.0, 50, 50, 50, "ReplaceableTextures\\CommandButtons\\BTNOil.blp", "ReplaceableTextures\\CommandButtons\\BTNOil.blp")
-    set udg_ResourceCopper = Add("copper", GetLocalizedStringSafe("COPPER"), GetLocalizedStringSafe("COPPER_DESCRIPTION"), 0.25, 184, 115, 51, "ReplaceableTextures\\CommandButtons\\BTNCopperCoins.blp", "ReplaceableTextures\\CommandButtons\\BTNCopperCoins.blp")
-    set udg_ResourceSilver = Add("silver", GetLocalizedStringSafe("SILVER"), GetLocalizedStringSafe("SILVER_DESCRIPTION"), 0.5, 192, 192, 192, "ReplaceableTextures\\CommandButtons\\BTNSilverCoin.blp", "ReplaceableTextures\\CommandButtons\\BTNSilverCoin.blp")
-    set udg_ResourceGemstones = Add("gemstones", GetLocalizedStringSafe("GEMSTONES"), GetLocalizedStringSafe("GEMSTONES_DESCRIPTION"), 2.5, 192, 192, 192, "ReplaceableTextures\\CommandButtons\\BTNEnchantedGemstone.blp", "ReplaceableTextures\\CommandButtons\\BTNEnchantedGemstone.blp")
-    set udg_ResourceMeat = Add("meat", GetLocalizedStringSafe("MEAT"), GetLocalizedStringSafe("MEAT_DESCRIPTION"), 0.4, 255, 165, 0, "ReplaceableTextures\\CommandButtons\\BTNMonsterLure.blp", "ReplaceableTextures\\CommandButtons\\BTNMonsterLure.blp")
-    set udg_ResourceGrain = Add("grain", GetLocalizedStringSafe("GRAIN"), GetLocalizedStringSafe("GRAIN_DESCRIPTION"), 0.4, 243, 164, 2, "ReplaceableTextures\\CommandButtons\\BTNWheat.blp", "ReplaceableTextures\\CommandButtons\\BTNWheat.blp")
-    set udg_ResourceMilk = Add("milk", GetLocalizedStringSafe("MILK"), GetLocalizedStringSafe("MILK_DESCRIPTION"), 0.6, 255, 255, 255, "ReplaceableTextures\\CommandButtons\\BTNINV_Misc_Milk_04.blp", "ReplaceableTextures\\CommandButtons\\BTNINV_Misc_Milk_04.blp")
-    set udg_ResourceWool = Add("wool", GetLocalizedStringSafe("WOOL"), GetLocalizedStringSafe("WOOL_DESCRIPTION"), 1.2, 255, 255, 255, "ReplaceableTextures\\CommandButtons\\BTNSheep.blp", "ReplaceableTextures\\CommandButtons\\BTNSheep.blp")
-    set udg_ResourceRock = Add("rock", GetLocalizedStringSafe("ROCKS"), GetLocalizedStringSafe("ROCKS_DESCRIPTION"), 0.4, 128, 128, 128, "ReplaceableTextures\\CommandButtons\\BTNINV_Misc_Rock_01.blp", "ReplaceableTextures\\CommandButtons\\BTNINV_Misc_Rock_01.blp")
-    set udg_ResourceIron = Add("iron", GetLocalizedStringSafe("IRON"), GetLocalizedStringSafe("IRON_DESCRIPTION"), 0.5, 161, 157, 148, "ReplaceableTextures\\CommandButtons\\BTNINV_Ingot_Iron.blp", "ReplaceableTextures\\CommandButtons\\BTNINV_Ingot_Iron.blp")
-    set udg_ResourceBlackPowder = Add("blackpowder", GetLocalizedStringSafe("BLACK_POWDER"), GetLocalizedStringSafe("BLACK_POWDER_DESCRIPTION"), 0.8, 0, 0, 0, "ReplaceableTextures\\CommandButtons\\BTNHumanMissileUpOne.blp", "ReplaceableTextures\\CommandButtons\\BTNHumanMissileUpOne.blp")
-    set udg_ResourceWater = Add("water", GetLocalizedStringSafe("WATER"), GetLocalizedStringSafe("WATER_DESCRIPTION"), 0.20, 14, 135, 204, "ReplaceableTextures\\CommandButtons\\BTNINV_WaterBucket.blp", "ReplaceableTextures\\CommandButtons\\BTNINV_WaterBucket.blp")
-    set udg_ResourceElectricity = Add("power", GetLocalizedStringSafe("POWER"), GetLocalizedStringSafe("POWER_DESCRIPTION"), 1.30, 179, 206, 255, "ReplaceableTextures\\CommandButtons\\BTNElectricity Breakout.blp", "ReplaceableTextures\\CommandButtons\\BTNElectricity Breakout.blp")
-    set udg_ResourceFavor = Add("favor", GetLocalizedStringSafe("FAVOR"), GetLocalizedStringSafe("FAVOR_DESCRIPTION"), 1.1, 234, 208, 35, "ReplaceableTextures\\CommandButtons\\BTNTestOfFaith.blp", "ReplaceableTextures\\CommandButtons\\BTNTestOfFaith.blp")
-    set udg_ResourceFruits = Add("fruits", GetLocalizedStringSafe("FRUITS"), GetLocalizedStringSafe("FRUITS_DESCRIPTION"), 0.4, 255, 165, 0, "ReplaceableTextures\\CommandButtons\\BTNOrange.blp", "ReplaceableTextures\\CommandButtons\\BTNOrange.blp")
-    set udg_ResourceFel = Add("fel", GetLocalizedStringSafe("FEL"), GetLocalizedStringSafe("FEL_DESCRIPTION"), 2.0, 50, 255, 50, "ReplaceableTextures\\CommandButtons\\BTNFelBurn.blp", "ReplaceableTextures\\CommandButtons\\BTNFelBurn.blp")
-    set udg_ResourceArgunite = Add("argunite", GetLocalizedStringSafe("ARGUNITE"), GetLocalizedStringSafe("ARGUNITE_DESCRIPTION"), 2.0, 191, 85, 236, "ReplaceableTextures\\CommandButtons\\BTNBTNDraeneiPylon.dds", "ReplaceableTextures\\CommandButtons\\BTNBTNDraeneiPylon.dds")
+    set RESOURCE_OIL = Add("oil", GetLocalizedStringSafe("OIL"), GetLocalizedStringSafe("OIL_DESCRIPTION"), 2.0, 50, 50, 50, "ReplaceableTextures\\CommandButtons\\BTNOil.blp", "ReplaceableTextures\\CommandButtons\\BTNOil.blp")
+    set RESOURCE_COPPER = Add("copper", GetLocalizedStringSafe("COPPER"), GetLocalizedStringSafe("COPPER_DESCRIPTION"), 0.25, 184, 115, 51, "ReplaceableTextures\\CommandButtons\\BTNCopperCoins.blp", "ReplaceableTextures\\CommandButtons\\BTNCopperCoins.blp")
+    set RESOURCE_SILVER = Add("silver", GetLocalizedStringSafe("SILVER"), GetLocalizedStringSafe("SILVER_DESCRIPTION"), 0.5, 192, 192, 192, "ReplaceableTextures\\CommandButtons\\BTNSilverCoin.blp", "ReplaceableTextures\\CommandButtons\\BTNSilverCoin.blp")
+    set RESOURCE_GEMSTONES = Add("gemstones", GetLocalizedStringSafe("GEMSTONES"), GetLocalizedStringSafe("GEMSTONES_DESCRIPTION"), 2.5, 192, 192, 192, "ReplaceableTextures\\CommandButtons\\BTNEnchantedGemstone.blp", "ReplaceableTextures\\CommandButtons\\BTNEnchantedGemstone.blp")
+    set RESOURCE_MEAT = Add("meat", GetLocalizedStringSafe("MEAT"), GetLocalizedStringSafe("MEAT_DESCRIPTION"), 0.4, 255, 165, 0, "ReplaceableTextures\\CommandButtons\\BTNMonsterLure.blp", "ReplaceableTextures\\CommandButtons\\BTNMonsterLure.blp")
+    set RESOURCE_GRAIN = Add("grain", GetLocalizedStringSafe("GRAIN"), GetLocalizedStringSafe("GRAIN_DESCRIPTION"), 0.4, 243, 164, 2, "ReplaceableTextures\\CommandButtons\\BTNWheat.blp", "ReplaceableTextures\\CommandButtons\\BTNWheat.blp")
+    set RESOURCE_MILK = Add("milk", GetLocalizedStringSafe("MILK"), GetLocalizedStringSafe("MILK_DESCRIPTION"), 0.6, 255, 255, 255, "ReplaceableTextures\\CommandButtons\\BTNINV_Misc_Milk_04.blp", "ReplaceableTextures\\CommandButtons\\BTNINV_Misc_Milk_04.blp")
+    set RESOURCE_WOOL = Add("wool", GetLocalizedStringSafe("WOOL"), GetLocalizedStringSafe("WOOL_DESCRIPTION"), 1.2, 255, 255, 255, "ReplaceableTextures\\CommandButtons\\BTNSheep.blp", "ReplaceableTextures\\CommandButtons\\BTNSheep.blp")
+    set RESOURCE_ROCK = Add("rock", GetLocalizedStringSafe("ROCKS"), GetLocalizedStringSafe("ROCKS_DESCRIPTION"), 0.4, 128, 128, 128, "ReplaceableTextures\\CommandButtons\\BTNINV_Misc_Rock_01.blp", "ReplaceableTextures\\CommandButtons\\BTNINV_Misc_Rock_01.blp")
+    set RESOURCE_IRON = Add("iron", GetLocalizedStringSafe("IRON"), GetLocalizedStringSafe("IRON_DESCRIPTION"), 0.5, 161, 157, 148, "ReplaceableTextures\\CommandButtons\\BTNINV_Ingot_Iron.blp", "ReplaceableTextures\\CommandButtons\\BTNINV_Ingot_Iron.blp")
+    set RESOURCE_BLACK_POWDER = Add("blackpowder", GetLocalizedStringSafe("BLACK_POWDER"), GetLocalizedStringSafe("BLACK_POWDER_DESCRIPTION"), 0.8, 0, 0, 0, "ReplaceableTextures\\CommandButtons\\BTNHumanMissileUpOne.blp", "ReplaceableTextures\\CommandButtons\\BTNHumanMissileUpOne.blp")
+    set RESOURCE_WATER = Add("water", GetLocalizedStringSafe("WATER"), GetLocalizedStringSafe("WATER_DESCRIPTION"), 0.20, 14, 135, 204, "ReplaceableTextures\\CommandButtons\\BTNINV_WaterBucket.blp", "ReplaceableTextures\\CommandButtons\\BTNINV_WaterBucket.blp")
+    set RESOURCE_POWER = Add("power", GetLocalizedStringSafe("POWER"), GetLocalizedStringSafe("POWER_DESCRIPTION"), 1.30, 179, 206, 255, "ReplaceableTextures\\CommandButtons\\BTNElectricity Breakout.blp", "ReplaceableTextures\\CommandButtons\\BTNElectricity Breakout.blp")
+    set RESOURCE_FAVOR = Add("favor", GetLocalizedStringSafe("FAVOR"), GetLocalizedStringSafe("FAVOR_DESCRIPTION"), 1.1, 234, 208, 35, "ReplaceableTextures\\CommandButtons\\BTNTestOfFaith.blp", "ReplaceableTextures\\CommandButtons\\BTNTestOfFaith.blp")
+    set RESOURCE_FRUITS = Add("fruits", GetLocalizedStringSafe("FRUITS"), GetLocalizedStringSafe("FRUITS_DESCRIPTION"), 0.4, 255, 165, 0, "ReplaceableTextures\\CommandButtons\\BTNOrange.blp", "ReplaceableTextures\\CommandButtons\\BTNOrange.blp")
+    set RESOURCE_FEL = Add("fel", GetLocalizedStringSafe("FEL"), GetLocalizedStringSafe("FEL_DESCRIPTION"), 2.0, 50, 255, 50, "ReplaceableTextures\\CommandButtons\\BTNFelBurn.blp", "ReplaceableTextures\\CommandButtons\\BTNFelBurn.blp")
+    set RESOURCE_ARGUNITE = Add("argunite", GetLocalizedStringSafe("ARGUNITE"), GetLocalizedStringSafe("ARGUNITE_DESCRIPTION"), 2.0, 191, 85, 236, "ReplaceableTextures\\CommandButtons\\BTNBTNDraeneiPylon.dds", "ReplaceableTextures\\CommandButtons\\BTNBTNDraeneiPylon.dds")
 
     call TriggerRegisterAnyUnitEventBJ(deathTrigger, EVENT_PLAYER_UNIT_DEATH)
     call TriggerAddCondition(deathTrigger, Condition(function TriggerConditionDeath))
@@ -617,20 +633,20 @@ private function Init takes nothing returns nothing
     call TriggerAddCondition(trainFinishTrigger, Condition(function TriggerConditionTrainFinish))
 
     // Call after initializing the global variables for resources.
-    call AddRandomMine(GEMSTONES_MINE, udg_ResourceGemstones, 500)
-    call AddRandomMine(ORE_MINE, udg_ResourceIron, 5000)
-    call AddRandomMine(WELL, udg_ResourceWater, 5000)
-    call AddRandomMine(OIL_PLATFORM, udg_ResourceOil, 1000)
-    call AddRandomMine(FOOD_FARM, udg_ResourceGrain, 5000)
-    call AddRandomMine(POWER_CRYSTAL_MINE, udg_ResourceElectricity, 2000)
-    call AddRandomMine(MONUMENT, udg_ResourceFavor, 2000)
-    call AddRandomMine(FRUIT_STAND, udg_ResourceFruits, 5000)
-    call AddRandomMine(ROCKS_MINE, udg_ResourceRock, 2000)
-    call AddRandomMine(ARGUNITE_MINE, udg_ResourceArgunite, 2000)
-    call AddRandomMine(FEL_MINE, udg_ResourceFel, 2000)
-    call AddRandomMine(ANIMAL_PEN, udg_ResourceWool, 2000)
+    call AddRandomMine(GEMSTONES_MINE, RESOURCE_GEMSTONES, 500)
+    call AddRandomMine(ORE_MINE, RESOURCE_IRON, 5000)
+    call AddRandomMine(WELL, RESOURCE_WATER, 5000)
+    call AddRandomMine(OIL_PLATFORM, RESOURCE_OIL, 1000)
+    call AddRandomMine(FOOD_FARM, RESOURCE_GRAIN, 5000)
+    call AddRandomMine(POWER_CRYSTAL_MINE, RESOURCE_POWER, 2000)
+    call AddRandomMine(MONUMENT, RESOURCE_FAVOR, 2000)
+    call AddRandomMine(FRUIT_STAND, RESOURCE_FRUITS, 5000)
+    call AddRandomMine(ROCKS_MINE, RESOURCE_ROCK, 2000)
+    call AddRandomMine(ARGUNITE_MINE, RESOURCE_ARGUNITE, 2000)
+    call AddRandomMine(FEL_MINE, RESOURCE_FEL, 2000)
+    call AddRandomMine(ANIMAL_PEN, RESOURCE_WOOL, 2000)
 
-    call AddRandomWaterMine(WATER_OIL_PLATFORM, udg_ResourceOil, 20000)
+    call AddRandomWaterMine(WATER_OIL_PLATFORM, RESOURCE_OIL, 20000)
 endfunction
 
 endlibrary

@@ -93,10 +93,10 @@ private function Init takes nothing returns nothing
     call AddOreItemTypeId(ITEM_ORE_SILVER)
 
     // do after initializing resources
-    call AddMineralResource(udg_ResourceSilver)
-    call AddMineralResource(udg_ResourceIron)
-    call AddMineralResource(udg_ResourceRock)
-    call AddMineralResource(udg_ResourceGemstones)
+    call AddMineralResource(RESOURCE_SILVER)
+    call AddMineralResource(RESOURCE_IRON)
+    call AddMineralResource(RESOURCE_ROCK)
+    call AddMineralResource(RESOURCE_GEMSTONES)
 endfunction
 
 endlibrary

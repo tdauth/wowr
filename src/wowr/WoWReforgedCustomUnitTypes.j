@@ -157,7 +157,7 @@ endstruct
 private struct CustomUnitTypeEnableItemCraftingUnit extends CustomUnitType
 
     public stub method onEnter takes unit whichUnit returns nothing
-        local integer i = udg_RecipeCooking
+        local integer i = RECIPE_COOKING
         local integer max = GetRecipesMax()
         call EnableItemCraftingUnit(whichUnit)
         loop

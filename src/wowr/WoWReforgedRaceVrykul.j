@@ -37,7 +37,7 @@ endfunction
 
 private function TriggerConditionDeath takes nothing returns boolean
     if (GetKillingUnit() != null and not IsUnitType(GetKillingUnit(), UNIT_TYPE_STRUCTURE) and not IsUnitType(GetKillingUnit(), UNIT_TYPE_HERO)) then // Champion kills
-        if (GetObjectRace(GetUnitTypeId(GetKillingUnit())) == udg_RaceVrykul and IsUnitInGroup(GetKillingUnit(), champions)) then
+        if (GetObjectRace(GetUnitTypeId(GetKillingUnit())) == WOWR_RACE_VRYKUL and IsUnitInGroup(GetKillingUnit(), champions)) then
             if (CountHallsOfPlayer(GetOwningPlayer(GetKillingUnit())) > 0) then
                 call SaveInteger(h, GetHandleId(GetKillingUnit()), 0, LoadInteger(h, GetHandleId(GetKillingUnit()), 0) + 1)
                 if (LoadInteger(h, GetHandleId(GetKillingUnit()), 0) == 3) then

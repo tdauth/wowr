@@ -1,6 +1,40 @@
 library WoWReforgedProfessions initializer Init requires MaxItemStacks, MathUtils, TextTagUtils, ForceUtils, StringFormat, UnitTypeUtils, WoWReforgedProfessionMiner, WowReforgedProfessionCook
 
 globals
+    integer PROFESSION_HERBALIST
+    integer PROFESSION_ALCHEMIST
+    integer PROFESSION_WEAPON_SMITH
+    integer PROFESSION_ARMORER
+    integer PROFESSION_ENGINEER
+    integer PROFESSION_DEMOLITION_EXPERT
+    integer PROFESSION_LORE_MASTER
+    integer PROFESSION_SORCERER
+    integer PROFESSION_RUNE_FORGER
+    integer PROFESSION_DRAGON_BREEDER
+    integer PROFESSION_JEWELCRAFTER
+    integer PROFESSION_ENCHANTER
+    integer PROFESSION_CAPTAIN
+    integer PROFESSION_ARCHAEOLOGIST
+    integer PROFESSION_WITCH_DOCTOR
+    integer PROFESSION_MERCHANT
+    integer PROFESSION_FARMER
+    integer PROFESSION_TAMER
+    integer PROFESSION_INSCRIPTOR
+    integer PROFESSION_NECROMANCER
+    integer PROFESSION_GOLEM_SCULPTOR
+    integer PROFESSION_COMBINER
+    integer PROFESSION_HUNTER
+    integer PROFESSION_MINER
+    integer PROFESSION_COOK
+    integer PROFESSION_FISHERMAN
+    integer PROFESSION_PROSPECTOR
+    integer PROFESSION_LUMBERJACK
+    integer PROFESSION_WARLOCK
+    integer PROFESSION_THIEF
+    integer PROFESSION_ASTROMANCER
+    integer PROFESSION_BARD
+    integer PROFESSION_SCRIBE
+
     constant real DOCTOR_MANA_COST = 1200.0
     constant real GRAND_MASTER_MANA_COST = 1000.0
     constant real MASTER_MANA_COST = 800.0
@@ -248,31 +282,31 @@ endfunction
 function GetRandomComputerProfessionEx takes integer exclude0, integer exclude1 returns integer
     local integer array a
     local integer c = 0
-    set a[c] = udg_ProfessionHerbalist
+    set a[c] = PROFESSION_HERBALIST
     set c = c + 1
-    set a[c] = udg_ProfessionAlchemist
+    set a[c] = PROFESSION_ALCHEMIST
     set c = c + 1
-    set a[c] = udg_ProfessionWeaponSmith
+    set a[c] = PROFESSION_WEAPON_SMITH
     set c = c + 1
-    set a[c] = udg_ProfessionArmourer
+    set a[c] = PROFESSION_ARMORER
     set c = c + 1
-    set a[c] = udg_ProfessionEngineer
+    set a[c] = PROFESSION_ENGINEER
     set c = c + 1
-    set a[c] = udg_ProfessionDemolitionExpert
+    set a[c] = PROFESSION_DEMOLITION_EXPERT
     set c = c + 1
-    set a[c] = udg_ProfessionDragonBreeder
+    set a[c] = PROFESSION_DRAGON_BREEDER
     set c = c + 1
-    set a[c] = udg_ProfessionLoreMaster
+    set a[c] = PROFESSION_LORE_MASTER
     set c = c + 1
-    set a[c] = udg_ProfessionRuneforger
+    set a[c] = PROFESSION_RUNE_FORGER
     set c = c + 1
-    set a[c] = udg_ProfessionSorcerer
+    set a[c] = PROFESSION_SORCERER
     set c = c + 1
-    set a[c] = udg_ProfessionJewelcrafter
+    set a[c] = PROFESSION_JEWELCRAFTER
     set c = c + 1
-    set a[c] = udg_ProfessionArchaeologist
+    set a[c] = PROFESSION_ARCHAEOLOGIST
     set c = c + 1
-    set a[c] = udg_ProfessionWitchDoctor
+    set a[c] = PROFESSION_WITCH_DOCTOR
     set c = c + 1
 
     return a[GetRandomInt(0, c - 1)]
@@ -294,7 +328,7 @@ endfunction
 
 // TODO Determine by registered stuff not manually except for archeology and rune master
 function GetNextCraftedProfessionItemEx takes integer profession, integer rank returns integer
-	if (profession == udg_ProfessionHerbalist) then
+	if (profession == PROFESSION_HERBALIST) then
         if (rank == PROFESSION_RANK_DOCTOR) then
             return ITEM_FOUNTAIN_OF_HEALTH
         elseif (rank == PROFESSION_RANK_GRAND_MASTER) then
@@ -308,7 +342,7 @@ function GetNextCraftedProfessionItemEx takes integer profession, integer rank r
 		elseif (rank == PROFESSION_RANK_NOVICE) then
 			return ITEM_POTION_OF_GREATER_HEALING
 		endif
-	elseif (profession == udg_ProfessionAlchemist) then
+	elseif (profession == PROFESSION_ALCHEMIST) then
         if (rank == PROFESSION_RANK_DOCTOR) then
             return ITEM_FOUNTAIN_OF_MANA
         elseif (rank == PROFESSION_RANK_GRAND_MASTER) then
@@ -322,7 +356,7 @@ function GetNextCraftedProfessionItemEx takes integer profession, integer rank r
 		elseif (rank == PROFESSION_RANK_NOVICE) then
 			return ITEM_POTION_OF_GREATER_MANA
 		endif
-	elseif (profession == udg_ProfessionWeaponSmith) then
+	elseif (profession == PROFESSION_WEAPON_SMITH) then
         if (rank == PROFESSION_RANK_GRAND_MASTER) then
 			return ITEM_MYTHICAL_POISON_BLADE
 		elseif (rank == PROFESSION_RANK_MASTER) then
@@ -334,7 +368,7 @@ function GetNextCraftedProfessionItemEx takes integer profession, integer rank r
 		elseif (rank == PROFESSION_RANK_NOVICE) then
 			return ITEM_BOW_OF_FIRE
 		endif
-    elseif (profession == udg_ProfessionArmourer) then
+    elseif (profession == PROFESSION_ARMORER) then
         if (rank == PROFESSION_RANK_GRAND_MASTER) then
 			return ITEM_MYTHICAL_GOLDEN_ARMOR
 		elseif (rank == PROFESSION_RANK_MASTER) then
@@ -346,7 +380,7 @@ function GetNextCraftedProfessionItemEx takes integer profession, integer rank r
 		elseif (rank == PROFESSION_RANK_NOVICE) then
 			return ITEM_LIGHT_LEATHER_ARMOR
 		endif
-    elseif (profession == udg_ProfessionEngineer) then
+    elseif (profession == PROFESSION_ENGINEER) then
         if (rank == PROFESSION_RANK_DOCTOR) then
             return ITEM_POWER_GENERATOR_ENGINEER
         elseif (rank == PROFESSION_RANK_GRAND_MASTER) then
@@ -362,7 +396,7 @@ function GetNextCraftedProfessionItemEx takes integer profession, integer rank r
 		elseif (rank == PROFESSION_RANK_NOVICE) then
 			return ITEM_TINY_FLAME_TOWER
 		endif
-    elseif (profession == udg_ProfessionDemolitionExpert) then
+    elseif (profession == PROFESSION_DEMOLITION_EXPERT) then
         if (rank == PROFESSION_RANK_DOCTOR) then
             return ITEM_NUCLEAR_SILO
         //elseif (rank == PROFESSION_RANK_GRAND_MASTER) then
@@ -376,7 +410,7 @@ function GetNextCraftedProfessionItemEx takes integer profession, integer rank r
 		elseif (rank == PROFESSION_RANK_NOVICE) then
 			return ITEM_GOBLIN_LAND_MINES
 		endif
-    elseif (profession == udg_ProfessionLoreMaster) then
+    elseif (profession == PROFESSION_LORE_MASTER) then
 		if (rank == PROFESSION_RANK_MASTER) then
 			return ITEM_ANKH_OF_REINCARNATION
 		elseif (rank == PROFESSION_RANK_ADEPT) then
@@ -386,7 +420,7 @@ function GetNextCraftedProfessionItemEx takes integer profession, integer rank r
 		elseif (rank == PROFESSION_RANK_NOVICE) then
 			return ITEM_SCROLL_OF_PROTECTION
 		endif
-    elseif (profession == udg_ProfessionSorcerer) then
+    elseif (profession == PROFESSION_SORCERER) then
 		if (rank == PROFESSION_RANK_MASTER) then
 			return ITEM_WAND_OF_SORCERER_ILLUSION
 		elseif (rank == PROFESSION_RANK_ADEPT) then
@@ -396,7 +430,7 @@ function GetNextCraftedProfessionItemEx takes integer profession, integer rank r
 		elseif (rank == PROFESSION_RANK_NOVICE) then
 			return ITEM_WAND_OF_NEUTRALIZATION
 		endif
-    elseif (profession == udg_ProfessionRuneforger) then
+    elseif (profession == PROFESSION_RUNE_FORGER) then
         if (rank == PROFESSION_RANK_MASTER) then
 			return ITEM_RUNE_OF_GREATER_RESURRECTION
         elseif (rank == PROFESSION_RANK_MASTER) then
@@ -410,7 +444,7 @@ function GetNextCraftedProfessionItemEx takes integer profession, integer rank r
 		elseif (rank == PROFESSION_RANK_NOVICE) then
 			return ITEM_RUNE_OF_SPEED_RUNEFORGER
 		endif
-    elseif (profession == udg_ProfessionDragonBreeder) then
+    elseif (profession == PROFESSION_DRAGON_BREEDER) then
         if (rank == PROFESSION_RANK_DOCTOR) then
             return ITEM_DRAGON_BREEDER_ROOST
         //elseif (rank == PROFESSION_RANK_GRAND_MASTER) then
@@ -425,7 +459,7 @@ function GetNextCraftedProfessionItemEx takes integer profession, integer rank r
 		elseif (rank == PROFESSION_RANK_NOVICE) then
 			return ITEM_GREEN_DRAGON_WHELP_EGG
 		endif
-    elseif (profession == udg_ProfessionJewelcrafter) then
+    elseif (profession == PROFESSION_JEWELCRAFTER) then
         if (rank == PROFESSION_RANK_MASTER) then
 			return ITEM_GOLDEN_CROWN
         elseif (rank == PROFESSION_RANK_MASTER) then
@@ -451,7 +485,7 @@ function GetNextCraftedProfessionItemEx takes integer profession, integer rank r
 		elseif (rank == PROFESSION_RANK_NOVICE) then
 			return ChooseRandomItemExBJ(1, ITEM_TYPE_ANY)
 		endif
-    elseif (profession == udg_ProfessionWitchDoctor) then
+    elseif (profession == PROFESSION_WITCH_DOCTOR) then
 		if (rank == PROFESSION_RANK_MASTER) then
 			return ITEM_HEALING_WARDS
 		elseif (rank == PROFESSION_RANK_ADEPT) then
@@ -461,7 +495,7 @@ function GetNextCraftedProfessionItemEx takes integer profession, integer rank r
 		elseif (rank == PROFESSION_RANK_NOVICE) then
 			return ITEM_SENTRY_WARDS
 		endif
-    elseif (profession == udg_ProfessionTamer) then
+    elseif (profession == PROFESSION_TAMER) then
 		if (rank == PROFESSION_RANK_MASTER) then
 			return ITEM_MONSTER_LURE
 		elseif (rank == PROFESSION_RANK_ADEPT) then
@@ -471,7 +505,7 @@ function GetNextCraftedProfessionItemEx takes integer profession, integer rank r
 		elseif (rank == PROFESSION_RANK_NOVICE) then
 			return ITEM_SMALL_BAIT
 		endif
-    elseif (profession == udg_ProfessionNecromancer) then
+    elseif (profession == PROFESSION_NECROMANCER) then
         if (rank == PROFESSION_RANK_GRAND_MASTER) then
             return ITEM_SCROLL_OF_ANIMATE_DEAD
 		elseif (rank == PROFESSION_RANK_MASTER) then
@@ -483,7 +517,7 @@ function GetNextCraftedProfessionItemEx takes integer profession, integer rank r
 		elseif (rank == PROFESSION_RANK_NOVICE) then
 			return ITEM_ROD_OF_NECROMANCY
 		endif
-    elseif (profession == udg_ProfessionGolemSculptor) then
+    elseif (profession == PROFESSION_GOLEM_SCULPTOR) then
 		if (rank == PROFESSION_RANK_MASTER) then
 			return ITEM_TINY_FLESH_GOLEM
 		elseif (rank == PROFESSION_RANK_ADEPT) then
@@ -493,7 +527,7 @@ function GetNextCraftedProfessionItemEx takes integer profession, integer rank r
 		elseif (rank == PROFESSION_RANK_NOVICE) then
 			return ITEM_TINY_MUD_GOLEM
 		endif
-    elseif (profession == udg_ProfessionWarlock) then
+    elseif (profession == PROFESSION_WARLOCK) then
        if (rank == PROFESSION_RANK_DOCTOR) then
             return ITEM_TINY_FEL_FOUNTAIN
         elseif (rank == PROFESSION_RANK_GRAND_MASTER) then
@@ -507,7 +541,7 @@ function GetNextCraftedProfessionItemEx takes integer profession, integer rank r
 		elseif (rank == PROFESSION_RANK_NOVICE) then
 			return ITEM_WAND_OF_DRAIN
 		endif
-    elseif (profession == udg_ProfessionAstromancer) then
+    elseif (profession == PROFESSION_ASTROMANCER) then
 		if (rank == PROFESSION_RANK_MASTER) then
 			return ITEM_ARCANE_OBSERVATORY_ASTROMANCER
 		elseif (rank == PROFESSION_RANK_ADEPT) then
@@ -859,7 +893,7 @@ private function Init takes nothing returns nothing
     call TriggerRegisterAnyUnitEventBJ(channelTrigger, EVENT_PLAYER_UNIT_SPELL_CHANNEL)
     call TriggerAddAction(channelTrigger, function TriggerActionChannel)
 
-    set udg_ProfessionHerbalist = AddProfession('I06N', 'I00G')
+    set PROFESSION_HERBALIST = AddProfession('I06N', 'I00G')
     call AddProfessionCraftedItem(PROFESSION_RANK_NOVICE, ITEM_POTION_OF_GREATER_HEALING, 1, true, 'A00E')
     call AddProfessionCraftedItem(PROFESSION_RANK_ADVANCED, ITEM_SCROLL_OF_HEALING, 1, true, 'A00I')
     call AddProfessionCraftedItem(PROFESSION_RANK_ADEPT, ITEM_HEALTH_STONE, 1, true, 'A01B')
@@ -867,7 +901,7 @@ private function Init takes nothing returns nothing
     call AddProfessionCraftedItem(PROFESSION_RANK_GRAND_MASTER, ITEM_TALISMAN_OF_EVERLASTING, 1, true, 'A0WR')
     call AddProfessionCraftedItem(PROFESSION_RANK_DOCTOR, ITEM_FOUNTAIN_OF_HEALTH, 1, true, 'A0WS')
 
-    set udg_ProfessionAlchemist = AddProfession('I06O', 'I00D')
+    set PROFESSION_ALCHEMIST = AddProfession('I06O', 'I00D')
     call AddProfessionCraftedItem(PROFESSION_RANK_NOVICE, ITEM_POTION_OF_GREATER_MANA, 1, true, 'A007')
     call AddProfessionCraftedItem(PROFESSION_RANK_ADVANCED, ITEM_SCROLL_OF_MANA, 1, true, 'A01M')
     call AddProfessionCraftedItem(PROFESSION_RANK_ADEPT, ITEM_MANA_STONE, 1, true, 'A009')
@@ -875,7 +909,7 @@ private function Init takes nothing returns nothing
     call AddProfessionCraftedItem(PROFESSION_RANK_GRAND_MASTER, ITEM_TALISMAN_OF_SPELL_PROTECTION, 1, true, 'A0WK')
     call AddProfessionCraftedItem(PROFESSION_RANK_DOCTOR, ITEM_FOUNTAIN_OF_MANA, 1, true, 'A0WO')
 
-    set udg_ProfessionWeaponSmith = AddProfession('I06M', 'I00J')
+    set PROFESSION_WEAPON_SMITH = AddProfession('I06M', 'I00J')
     call AddProfessionCraftedItem(PROFESSION_RANK_NOVICE, ITEM_BOW_OF_FIRE, 1, true, 'A00L')
     call AddProfessionCraftedItem(PROFESSION_RANK_ADVANCED, ITEM_MITHRIL_LONG_SWORD, 1, true, 'A00R')
     call AddProfessionCraftedItem(PROFESSION_RANK_ADEPT, ITEM_DEMON_SLAYER_AXE, 1, true, 'A00S')
@@ -883,7 +917,7 @@ private function Init takes nothing returns nothing
     call AddProfessionCraftedItem(PROFESSION_RANK_GRAND_MASTER, ITEM_MYTHICAL_POISON_BLADE, 1, true, 'A0YG')
     call AddProfessionCraftedItem(PROFESSION_RANK_DOCTOR, ITEM_WEAPON_FORGING_HAMMER, 1, true, 'A107')
 
-    set udg_ProfessionArmourer = AddProfession('I05T', 'I00E')
+    set PROFESSION_ARMORER = AddProfession('I05T', 'I00E')
     call AddProfessionCraftedItem(PROFESSION_RANK_NOVICE, ITEM_LIGHT_LEATHER_ARMOR, 1, true, 'A00C')
     call AddProfessionCraftedItem(PROFESSION_RANK_ADVANCED, ITEM_PLATED_HELMET, 1, true, 'A00B')
     call AddProfessionCraftedItem(PROFESSION_RANK_ADEPT, ITEM_HEAVY_PLATED_SHIELD, 1, true, 'A01N')
@@ -891,7 +925,7 @@ private function Init takes nothing returns nothing
     call AddProfessionCraftedItem(PROFESSION_RANK_GRAND_MASTER, ITEM_MYTHICAL_GOLDEN_ARMOR, 1, true, 'A0YM')
     call AddProfessionCraftedItem(PROFESSION_RANK_DOCTOR, ITEM_ARMOR_FORGING_HAMMER, 1, true, 'A0ZK')
 
-    set udg_ProfessionEngineer = AddProfession('I06P', 'I00F')
+    set PROFESSION_ENGINEER = AddProfession('I06P', 'I00F')
     call AddProfessionCraftedItem(PROFESSION_RANK_NOVICE, ITEM_TINY_FLAME_TOWER, 1, true, 'A01A')
     call AddProfessionCraftedItem(PROFESSION_RANK_ADVANCED, ITEM_TINY_COLD_TOWER, 1, true, 'A006')
     call AddProfessionCraftedItem(PROFESSION_RANK_ADEPT, ITEM_TINY_BOULDER_TOWER, 1, true, 'A016')
@@ -900,7 +934,7 @@ private function Init takes nothing returns nothing
     call AddProfessionCraftedItem(PROFESSION_RANK_GRAND_MASTER, ITEM_SCROLL_OF_CONSTRUCTION, 1, true, 'A0YM')
     call AddProfessionCraftedItem(PROFESSION_RANK_DOCTOR, ITEM_POWER_GENERATOR_ENGINEER, 1, true, 'A20Y')
 
-    set udg_ProfessionDemolitionExpert = AddProfession('I191', 'I192')
+    set PROFESSION_DEMOLITION_EXPERT = AddProfession('I191', 'I192')
     call AddProfessionCraftedItem(PROFESSION_RANK_NOVICE, ITEM_GOBLIN_LAND_MINES, 1, true, 'A1ZI')
     call AddProfessionCraftedItem(PROFESSION_RANK_ADVANCED, ITEM_GOBLIN_GRENADES, 1, true, 'A202')
     call AddProfessionCraftedItem(PROFESSION_RANK_ADVANCED, ITEM_EXPLOSIVE_BARRELS, 1, true, 'A202')
@@ -910,7 +944,7 @@ private function Init takes nothing returns nothing
     call AddProfessionCraftedUnit(PROFESSION_RANK_GRAND_MASTER, TNT_CATAPULT, 2, true, 'A260')
     call AddProfessionCraftedItem(PROFESSION_RANK_DOCTOR, ITEM_NUCLEAR_SILO, 1, true, 'A261')
 
-    set udg_ProfessionLoreMaster = AddProfession('I06Q', 'I00I')
+    set PROFESSION_LORE_MASTER = AddProfession('I06Q', 'I00I')
     call AddProfessionCraftedItem(PROFESSION_RANK_NOVICE, ITEM_SCROLL_OF_PROTECTION, 1, true, 'A00Q')
     call AddProfessionCraftedItem(PROFESSION_RANK_ADVANCED, ITEM_SCROLL_OF_THE_BEAST, 1, true, 'A00F')
     call AddProfessionCraftedItem(PROFESSION_RANK_ADEPT, ITEM_SCROLL_OF_RESTORATION, 1, true, 'A00G')
@@ -918,7 +952,7 @@ private function Init takes nothing returns nothing
     call AddProfessionCraftedItem(PROFESSION_RANK_GRAND_MASTER, ITEM_SCROLL_OF_RESURRECTION, 1, true, 'A17M')
     call AddProfessionCraftedItem(PROFESSION_RANK_DOCTOR, ITEM_ANKH_OF_REINCARNATION, 1, true, 'A17N')
 
-    set udg_ProfessionSorcerer = AddProfession('I06R', 'I02X')
+    set PROFESSION_SORCERER = AddProfession('I06R', 'I02X')
     call AddProfessionCraftedItem(PROFESSION_RANK_NOVICE, ITEM_WAND_OF_NEUTRALIZATION, 8, true, 'A06F')
     call AddProfessionCraftedItem(PROFESSION_RANK_ADVANCED, ITEM_WAND_OF_THE_WIND, 4, true, 'A06H')
     call AddProfessionCraftedItem(PROFESSION_RANK_ADEPT, ITEM_WAND_OF_REANIMATION, 4, true, 'A06E')
@@ -926,7 +960,7 @@ private function Init takes nothing returns nothing
     call AddProfessionCraftedItem(PROFESSION_RANK_GRAND_MASTER, ITEM_WAND_OF_SHADOWSIGHT, 4, true, 'A1BE')
     call AddProfessionCraftedItem(PROFESSION_RANK_DOCTOR, ITEM_WAND_OF_TELEKINESIS, 4, true, 'A1BF')
 
-    set udg_ProfessionRuneforger = AddProfession('I06S', 'I02Y')
+    set PROFESSION_RUNE_FORGER = AddProfession('I06S', 'I02Y')
     call AddProfessionCraftedItem(PROFESSION_RANK_NOVICE, ITEM_RUNE_OF_SPEED_RUNEFORGER, 8, true, 'A06I')
     call AddProfessionCraftedItem(PROFESSION_RANK_ADVANCED, ITEM_RUNE_OF_DISPEL_MAGIC_RUNEFORGER, 4, true, 'A06K')
     call AddProfessionCraftedItem(PROFESSION_RANK_ADEPT, ITEM_RUNE_OF_RESTORATION_RUNEFORGER, 4, true, 'A06J')
@@ -934,7 +968,7 @@ private function Init takes nothing returns nothing
     call AddProfessionCraftedItem(PROFESSION_RANK_GRAND_MASTER, ITEM_RUNE_OF_LESSER_RESURRECTION_RUNEFORGER, 4, true, 'A10R')
     call AddProfessionCraftedItem(PROFESSION_RANK_DOCTOR, ITEM_RUNE_OF_GREATER_RESURRECTION, 2, true, 'A10T')
 
-    set udg_ProfessionDragonBreeder = AddProfession('I06T', 'I033')
+    set PROFESSION_DRAGON_BREEDER = AddProfession('I06T', 'I033')
     call AddProfessionCraftedItem(PROFESSION_RANK_NOVICE, ITEM_GREEN_DRAGON_WHELP_EGG, 1, true, 'A06M')
     call AddProfessionCraftedItem(PROFESSION_RANK_ADVANCED, ITEM_THARIFAS_EGG, 1, true, 'A06O')
     call AddProfessionCraftedItem(PROFESSION_RANK_ADEPT, ITEM_GREEN_DRAKE_EGG, 1, true, 'A06N')
@@ -942,7 +976,7 @@ private function Init takes nothing returns nothing
     call AddProfessionCraftedItem(PROFESSION_RANK_GRAND_MASTER, ITEM_DRAGON_EGG, 1, true, 'A0WM')
     call AddProfessionCraftedItem(PROFESSION_RANK_DOCTOR, ITEM_DRAGON_BREEDER_ROOST, 1, true, 'A0WN')
 
-    set udg_ProfessionJewelcrafter = AddProfession('I075', 'I076')
+    set PROFESSION_JEWELCRAFTER = AddProfession('I075', 'I076')
     call AddProfessionCraftedItem(PROFESSION_RANK_NOVICE, ITEM_RING_OF_SUPERIORITY, 1, true, 'A0IL')
     call AddProfessionCraftedItem(PROFESSION_RANK_ADVANCED, ITEM_ENCHANTED_GEMSTONE, 1, true, 'A0IN')
     call AddProfessionCraftedItem(PROFESSION_RANK_ADEPT, ITEM_GREEN_GEMSTONE, 1, true, 'A0IO')
@@ -950,7 +984,7 @@ private function Init takes nothing returns nothing
     call AddProfessionCraftedItem(PROFESSION_RANK_GRAND_MASTER, ITEM_BRACELET, 1, true, 'A10W')
     call AddProfessionCraftedItem(PROFESSION_RANK_DOCTOR, ITEM_GOLDEN_CROWN, 1, true, 'A10X')
 
-    set udg_ProfessionEnchanter = AddProfession('I07E', 'I07G')
+    set PROFESSION_ENCHANTER = AddProfession('I07E', 'I07G')
     call AddProfessionCraftedItem(PROFESSION_RANK_NOVICE, ITEM_NOVICE_ENCHANTING_FORMULA, 1, true, 'A0IS')
     call AddProfessionCraftedItem(PROFESSION_RANK_ADVANCED, ITEM_ADVANCED_ENCHANTING_FORMULA, 1, true, 'A0IT')
     call AddProfessionCraftedItem(PROFESSION_RANK_ADEPT, ITEM_ADEPT_ENCHANTING_FORMULA, 1, true, 'A0IU')
@@ -958,7 +992,7 @@ private function Init takes nothing returns nothing
     call AddProfessionCraftedItem(PROFESSION_RANK_GRAND_MASTER, ITEM_GRAND_MASTER_ENCHANTING_FORMULA, 1, true, 'A0YJ')
     call AddProfessionCraftedItem(PROFESSION_RANK_DOCTOR, ITEM_DOCTOR_ENCHANTING_FORMULA, 1, true, 'A0YL')
 
-    set udg_ProfessionPirate = AddProfession('I080', 'I081') // TODO udg_ProfessionCaptain
+    set PROFESSION_CAPTAIN = AddProfession('I080', 'I081') // TODO udg_ProfessionCaptain
     call AddProfessionCraftedItem(PROFESSION_RANK_NOVICE, ITEM_CAPTAIN_SHIP, 1, true, 'A0JK')
     call AddProfessionCraftedItem(PROFESSION_RANK_ADVANCED, ITEM_TREASURE_MAP, 1, true, 'A0JN')
     call AddProfessionCraftedItem(PROFESSION_RANK_ADEPT, ITEM_COMPASS, 1, true, 'A0JP')
@@ -966,7 +1000,7 @@ private function Init takes nothing returns nothing
     call AddProfessionCraftedUnit(PROFESSION_RANK_GRAND_MASTER, GNOMISH_SUBMARINE, 2, true, 'A24F')
     call AddProfessionCraftedItem(PROFESSION_RANK_DOCTOR, ITEM_SHIPYARD, 1, true, 'A21G')
 
-    set udg_ProfessionArchaeologist = AddProfession('I09D', 'I09E')
+    set PROFESSION_ARCHAEOLOGIST = AddProfession('I09D', 'I09E')
     call AddProfessionCraftedItem(PROFESSION_RANK_NOVICE, ITEM_RANDOM_1, 1, false, 'A0MJ')
     call AddProfessionCraftedItem(PROFESSION_RANK_ADVANCED, ITEM_RANDOM_3, 1, false, 'A0ML')
     call AddProfessionCraftedItem(PROFESSION_RANK_ADEPT, ITEM_RANDOM_5, 1, false, 'A0MK')
@@ -974,7 +1008,7 @@ private function Init takes nothing returns nothing
     call AddProfessionCraftedItem(PROFESSION_RANK_GRAND_MASTER, ITEM_RANDOM_8, 1, false, 'A10F')
     call AddProfessionCraftedItem(PROFESSION_RANK_DOCTOR, ITEM_EXCAVATION_SITE, 1, true, 'A10H')
 
-    set udg_ProfessionWitchDoctor = AddProfession('I09J', 'I09L')
+    set PROFESSION_WITCH_DOCTOR = AddProfession('I09J', 'I09L')
     call AddProfessionCraftedItem(PROFESSION_RANK_NOVICE, ITEM_SENTRY_WARDS, 8, true, 'A0MT')
     call AddProfessionCraftedItem(PROFESSION_RANK_ADVANCED, ITEM_STASIS_TRAPS, 4, true, 'A0MU')
     call AddProfessionCraftedItem(PROFESSION_RANK_ADEPT, ITEM_MANA_WARDS, 3, true, 'A0MW')
@@ -982,7 +1016,7 @@ private function Init takes nothing returns nothing
     call AddProfessionCraftedItem(PROFESSION_RANK_GRAND_MASTER, ITEM_TINY_FOUNTAINS_OF_POWER, 3, true, 'A17I')
     call AddProfessionCraftedItem(PROFESSION_RANK_DOCTOR, ITEM_PEACE_WARDS, 3, true, 'A17L')
 
-    set udg_ProfessionMerchant = AddProfession('I0D1', 'I0D2')
+    set PROFESSION_MERCHANT = AddProfession('I0D1', 'I0D2')
     call AddProfessionCraftedItem(PROFESSION_RANK_NOVICE, ITEM_SMALL_BILL, 1, true, 'A0U3')
     call AddProfessionCraftedItem(PROFESSION_RANK_ADVANCED, ITEM_BILL, 1, true, 'A0U9')
     call AddProfessionCraftedItem(PROFESSION_RANK_ADEPT, ITEM_LARGE_BILL, 1, true, 'A0UA')
@@ -990,7 +1024,7 @@ private function Init takes nothing returns nothing
     call AddProfessionCraftedItem(PROFESSION_RANK_GRAND_MASTER, ITEM_AMULET_OF_HAGGLE, 1, true, 'A1ZB')
     call AddProfessionCraftedItem(PROFESSION_RANK_DOCTOR, ITEM_MERCHANT_SHOP, 1, true, 'A1ZF')
 
-    set udg_ProfessionFarmer = AddProfession('I0JT', 'I0JV')
+    set PROFESSION_FARMER = AddProfession('I0JT', 'I0JV')
     call AddProfessionCraftedItem(PROFESSION_RANK_NOVICE, ITEM_TINY_FARM_FARMER, 1, true, 'A170')
     call AddProfessionCraftedItem(PROFESSION_RANK_ADVANCED, ITEM_TINY_WATER_SUPPLY, 1, true, 'A172')
     call AddProfessionCraftedItem(PROFESSION_RANK_ADEPT, ITEM_TINY_GRANARY, 1, true, 'A17V')
@@ -998,7 +1032,7 @@ private function Init takes nothing returns nothing
     call AddProfessionCraftedItem(PROFESSION_RANK_GRAND_MASTER, ITEM_TINY_ANIMAL_PEN, 1, true, 'A1UD')
     call AddProfessionCraftedItem(PROFESSION_RANK_DOCTOR, ITEM_TINY_BARN, 1, true, 'A20T')
 
-    set udg_ProfessionTamer = AddProfession('I0L1', 'I0L3')
+    set PROFESSION_TAMER = AddProfession('I0L1', 'I0L3')
     call AddProfessionCraftedItem(PROFESSION_RANK_NOVICE, ITEM_SMALL_BAIT, 1, true, 'A191')
     call AddProfessionCraftedItem(PROFESSION_RANK_ADVANCED, ITEM_BAIT, 1, true, 'A194')
     call AddProfessionCraftedItem(PROFESSION_RANK_ADEPT, ITEM_ADVANCED_BAIT, 1, true, 'A196')
@@ -1006,7 +1040,7 @@ private function Init takes nothing returns nothing
     call AddProfessionCraftedItem(PROFESSION_RANK_GRAND_MASTER, ITEM_SCROLL_OF_CHARM, 1, true, 'A266')
     call AddProfessionCraftedItem(PROFESSION_RANK_DOCTOR, ITEM_CAGE, 1, true, 'A268')
 
-    set udg_ProfessionInscriptor = AddProfession('I0NM', 'I0NN')
+    set PROFESSION_INSCRIPTOR = AddProfession('I0NM', 'I0NN')
     call AddProfessionCraftedItem(PROFESSION_RANK_NOVICE, ITEM_NOVICE_GLYPH, 1, true, 'A1CO')
     call AddProfessionCraftedItem(PROFESSION_RANK_ADVANCED, ITEM_ADEPT_GLYPH, 1, true, 'A1CS')
     call AddProfessionCraftedItem(PROFESSION_RANK_ADEPT, ITEM_ADVANCED_GLYPH, 1, true, 'A1CQ')
@@ -1014,7 +1048,7 @@ private function Init takes nothing returns nothing
     call AddProfessionCraftedItem(PROFESSION_RANK_GRAND_MASTER, ITEM_GRAND_MASTER_GLYPH, 1, true, 'A108')
     call AddProfessionCraftedItem(PROFESSION_RANK_DOCTOR, ITEM_DOCTOR_GLYPH, 1, true, 'A109')
 
-    set udg_ProfessionNecromancer = AddProfession('I0S6', 'I0S7')
+    set PROFESSION_NECROMANCER = AddProfession('I0S6', 'I0S7')
     call AddProfessionCraftedItem(PROFESSION_RANK_NOVICE, ITEM_ROD_OF_NECROMANCY, 8, true, 'A1M1')
     call AddProfessionCraftedItem(PROFESSION_RANK_ADVANCED, ITEM_WAND_OF_CORPSES, 8, true, 'A1M2')
     call AddProfessionCraftedItem(PROFESSION_RANK_ADEPT, ITEM_SACRIFICAL_SCULL, 10, true, 'A1M3')
@@ -1022,7 +1056,7 @@ private function Init takes nothing returns nothing
     call AddProfessionCraftedItem(PROFESSION_RANK_GRAND_MASTER, ITEM_SCROLL_OF_ANIMATE_DEAD, 2, true, 'A0WV')
     call AddProfessionCraftedItem(PROFESSION_RANK_DOCTOR, ITEM_TINY_NECROMANCER_GRAVEYARD, 1, true, 'A0WY')
 
-    set udg_ProfessionGolemSculptor = AddProfession('I0SD', 'I0SE')
+    set PROFESSION_GOLEM_SCULPTOR = AddProfession('I0SD', 'I0SE')
     call AddProfessionCraftedItem(PROFESSION_RANK_NOVICE, ITEM_TINY_MUD_GOLEM, 2, true, 'A1M8')
     call AddProfessionCraftedItem(PROFESSION_RANK_ADVANCED, ITEM_TINY_WAR_GOLEM, 2, true, 'A1MC')
     call AddProfessionCraftedItem(PROFESSION_RANK_ADEPT, ITEM_TINY_SIEGE_GOLEM, 2, true, 'A1MS')
@@ -1030,13 +1064,13 @@ private function Init takes nothing returns nothing
     call AddProfessionCraftedItem(PROFESSION_RANK_GRAND_MASTER, ITEM_TINY_DIVINE_GOLEM, 2, true, 'A1P5')
     call AddProfessionCraftedItem(PROFESSION_RANK_DOCTOR, ITEM_TINY_GOLEM_FACTORY, 1, true, 'A1NT')
 
-    set udg_ProfessionCombiner = AddProfession('I0T3', 'I0T4')
+    set PROFESSION_COMBINER = AddProfession('I0T3', 'I0T4')
     call AddProfessionCraftedItem(PROFESSION_RANK_NOVICE, ITEM_SMALL_COMBINATION_TOOL, 1, true, 'A1O6')
     call AddProfessionCraftedItem(PROFESSION_RANK_ADVANCED, ITEM_COMBINATION_TOOL, 1, true, 'A1O7')
     call AddProfessionCraftedItem(PROFESSION_RANK_ADEPT, ITEM_ADVANCED_COMBINATION_TOOL, 1, true, 'A1O8')
     call AddProfessionCraftedItem(PROFESSION_RANK_MASTER, ITEM_MASTER_COMBINATION_TOOL, 1, true, 'A1O9')
 
-    set udg_ProfessionHunter = AddProfession('I0VP', 'I0VQ')
+    set PROFESSION_HUNTER = AddProfession('I0VP', 'I0VQ')
     call AddProfessionCraftedItem(PROFESSION_RANK_NOVICE, ITEM_HUNTING_BOW, 2, true, 'A1SI')
     call AddProfessionCraftedItem(PROFESSION_RANK_ADVANCED, ITEM_SKINNING_RACKS, 2, true, 'A1SO')
     call AddProfessionCraftedItem(PROFESSION_RANK_ADEPT, ITEM_HUNTING_DOG_CAGE, 2, true, 'A1SQ')
@@ -1044,33 +1078,33 @@ private function Init takes nothing returns nothing
     call AddProfessionCraftedUnit(PROFESSION_RANK_GRAND_MASTER, HUNTING_HAWK, 2, true, 'A209')
     call AddProfessionCraftedItem(PROFESSION_RANK_DOCTOR, ITEM_HUNTING_CAMP, 2, true, 'A208')
 
-    set udg_ProfessionMiner = AddProfession('I0W5', 'I0W6')
+    set PROFESSION_MINER = AddProfession('I0W5', 'I0W6')
     call AddProfessionCraftedItem(PROFESSION_RANK_NOVICE, ITEM_PICKAXE, 1, true, 'A1T4')
     call AddProfessionCraftedItem(PROFESSION_RANK_ADVANCED, ITEM_RANDOM_ORE, 1, false, 'A1T5')
     call AddProfessionCraftedItem(PROFESSION_RANK_ADEPT, ITEM_DIAMOND, 2, true, 'A1T6')
     call AddProfessionCraftedItem(PROFESSION_RANK_MASTER, ITEM_MINES, 2, true, 'A1T7')
 
-    set udg_ProfessionCook = AddProfession('I0WN', 'I0WP')
+    set PROFESSION_COOK = AddProfession('I0WN', 'I0WP')
     call AddProfessionCraftedItem(PROFESSION_RANK_NOVICE, ITEM_FIRE_PIT, 1, true, 'A1U2')
     call AddProfessionCraftedItem(PROFESSION_RANK_ADVANCED, ITEM_KITCHEN_KNIFE, 1, true, 'A1UJ')
     call AddProfessionCraftedItem(PROFESSION_RANK_ADEPT, ITEM_RANDOM_INGREDIENT, 1, false, 'A1UK')
     call AddProfessionCraftedItem(PROFESSION_RANK_MASTER, ITEM_RECIPE, 2, true, 'A1UL')
     call AddProfessionCraftedItem(PROFESSION_RANK_GRAND_MASTER, ITEM_FRUIT_STAND, 2, true, 'A0L2')
 
-    set udg_ProfessionFisherman = AddProfession('I0WX', 'I0X2')
+    set PROFESSION_FISHERMAN = AddProfession('I0WX', 'I0X2')
     call AddProfessionCraftedItem(PROFESSION_RANK_NOVICE, ITEM_FISHING_PORT, 1, true, 'A1UA')
     call AddProfessionCraftedItem(PROFESSION_RANK_ADVANCED, ITEM_FISH_TRAP, 4, true, 'A1UB')
     call AddProfessionCraftedItem(PROFESSION_RANK_ADEPT, ITEM_FISHING_ROD, 4, true, 'A1UH')
     call AddProfessionCraftedItem(PROFESSION_RANK_MASTER, ITEM_FISH_MARKET, 1, true, 'A1UF')
 
-    set udg_ProfessionProspector = AddProfession('I11W', 'I11Z')
+    set PROFESSION_PROSPECTOR = AddProfession('I11W', 'I11Z')
     call AddProfessionCraftedItem(PROFESSION_RANK_NOVICE, ITEM_GOLD_DRILL, 1, true, 'A21M')
     call AddProfessionCraftedItem(PROFESSION_RANK_ADVANCED, ITEM_GOLD_COINS, 1, true, 'A21N')
     call AddProfessionCraftedItem(PROFESSION_RANK_ADVANCED, ITEM_MAGICAL_GOLD_COIN, 4, true, 'A21N')
     call AddProfessionCraftedUnit(PROFESSION_RANK_ADEPT, DRILLBOT, 2, true, 'A21O')
     call AddProfessionCraftedItem(PROFESSION_RANK_MASTER, ITEM_GOLD_PANNING, 1, true, 'A21P')
 
-    set udg_ProfessionLumberjack = AddProfession('I0XM', 'I0XP')
+    set PROFESSION_LUMBERJACK = AddProfession('I0XM', 'I0XP')
     call AddProfessionCraftedItem(PROFESSION_RANK_NOVICE, ITEM_FELLING_AXE, 1, true, 'A1UX')
     call AddProfessionCraftedItem(PROFESSION_RANK_ADVANCED, ITEM_MAGICAL_SEED, 6, true, 'A1UY')
     call AddProfessionCraftedItem(PROFESSION_RANK_ADVANCED, ITEM_BUNDLE_OF_LUMBER, 1, true, 'A1UY')
@@ -1078,7 +1112,7 @@ private function Init takes nothing returns nothing
     call AddProfessionCraftedUnit(PROFESSION_RANK_ADEPT, SHREDDER, 2, true, 'A1UZ')
     call AddProfessionCraftedItem(PROFESSION_RANK_MASTER, ITEM_SAWMILL, 1, true, 'A1V0')
 
-    set udg_ProfessionWarlock = AddProfession('I0YE', 'I0YF')
+    set PROFESSION_WARLOCK = AddProfession('I0YE', 'I0YF')
     call AddProfessionCraftedItem(PROFESSION_RANK_NOVICE, ITEM_WAND_OF_DRAIN, 3, true, 'A1WW')
     call AddProfessionCraftedItem(PROFESSION_RANK_ADVANCED, ITEM_INFERNO_STONE, 2, true, 'A1WX')
     call AddProfessionCraftedItem(PROFESSION_RANK_ADEPT, ITEM_DEMON_BLOOD, 3, true, 'A1WY')
@@ -1087,7 +1121,7 @@ private function Init takes nothing returns nothing
     call AddProfessionCraftedItem(PROFESSION_RANK_GRAND_MASTER, ITEM_DEMONIC_FIGURE, 2, true, 'A10A')
     call AddProfessionCraftedItem(PROFESSION_RANK_DOCTOR, ITEM_TINY_FEL_FOUNTAIN, 1, true, 'A10B')
 
-    set udg_ProfessionThief = AddProfession('I10P', 'I10Q')
+    set PROFESSION_THIEF = AddProfession('I10P', 'I10Q')
     call AddProfessionCraftedItem(PROFESSION_RANK_NOVICE, ITEM_LOCK_PICK, 3, true, 'A20L')
     call AddProfessionCraftedItem(PROFESSION_RANK_ADVANCED, ITEM_ITEM_LOCKER, 3, true, 'A20M')
     call AddProfessionCraftedItem(PROFESSION_RANK_ADEPT, ITEM_TINY_SAFE, 3, true, 'A20N')
@@ -1095,7 +1129,7 @@ private function Init takes nothing returns nothing
     call AddProfessionCraftedItem(PROFESSION_RANK_GRAND_MASTER, ITEM_PICKPOCKETING, 3, true, 'A01H')
     call AddProfessionCraftedItem(PROFESSION_RANK_DOCTOR, ITEM_TINY_THIEVES_GUILD_THIEF, 1, true, 'A01J')
 
-    set udg_ProfessionAstromancer = AddProfession('I12X', 'I12Y')
+    set PROFESSION_ASTROMANCER = AddProfession('I12X', 'I12Y')
     call AddProfessionCraftedItem(PROFESSION_RANK_NOVICE, ITEM_NAVIGATION_SCROLL, 3, true, 'A22Z')
     call AddProfessionCraftedItem(PROFESSION_RANK_NOVICE, ITEM_TINY_PORTAL_ASTROMANCER, 3, true, 'A22Z')
     call AddProfessionCraftedItem(PROFESSION_RANK_ADVANCED, ITEM_FLARE_GUN, 3, true, 'A230')
@@ -1108,13 +1142,13 @@ private function Init takes nothing returns nothing
     call AddProfessionCraftedItem(PROFESSION_RANK_DOCTOR, ITEM_STAR, 1, true, 'A25W')
     call AddProfessionCraftedItem(PROFESSION_RANK_DOCTOR, ITEM_SUNSTONE, 3, true, 'A25W')
 
-    set udg_ProfessionBard = AddProfession('I14G', 'I14H')
+    set PROFESSION_BARD = AddProfession('I14G', 'I14H')
     call AddProfessionCraftedItem(PROFESSION_RANK_NOVICE, ITEM_SONG, 3, true, 'A24U')
     call AddProfessionCraftedItem(PROFESSION_RANK_ADVANCED, ITEM_FLUTE, 2, true, 'A25B')
     call AddProfessionCraftedItem(PROFESSION_RANK_ADEPT, ITEM_POEM, 3, true, 'A25E')
     call AddProfessionCraftedItem(PROFESSION_RANK_MASTER, ITEM_RECORD_PLAYER, 3, true, 'A25A')
 
-    set udg_ProfessionScribe = AddProfession('I0HC', 'I0HD')
+    set PROFESSION_SCRIBE = AddProfession('I0HC', 'I0HD')
     call AddProfessionCraftedItem(PROFESSION_RANK_NOVICE, TOME_OF_KNOWLEDGE, 1, true, 'A0SR')
     call AddProfessionCraftedItem(PROFESSION_RANK_ADVANCED, MANUAL_OF_HEALTH, 1, true, 'A0SS')
     call AddProfessionCraftedItem(PROFESSION_RANK_ADVANCED, MANUAL_OF_MANA, 1, true, 'A0SS')

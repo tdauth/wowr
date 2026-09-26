@@ -1,4 +1,4 @@
-library WoWReforgedCalendar initializer Init requires StringUtils, TreeUtils, WeatherEffectUtils, TimeOfDayUtils, Votes, OnStartGame, WoWReforgedUtils, WoWReforgedTerrain, WoWReforgedZones, WoWReforgedI18n
+library WoWReforgedCalendar initializer Init requires StringUtils, TreeUtils, WeatherEffectUtils, TimeOfDayUtils, Votes, OnStartGame, WoWReforgedUtils, WoWReforgedResources, WoWReforgedTerrain, WoWReforgedZones, WoWReforgedI18n
 
 struct TreeMapping
     integer summerId
@@ -50,7 +50,7 @@ globals
     constant integer SEASON_SPRING = 1
     constant integer SEASON_FALL = 2
     constant integer SEASON_WINTER = 3
-    
+
     constant integer JANUARY = 1
     constant integer FEBRUARY = 2
     constant integer MARCH = 3
@@ -63,7 +63,7 @@ globals
     constant integer OCTOBER = 10
     constant integer NOVEMBER = 11
     constant integer DECEMBER = 12
-    
+
     private integer passedTime = 0
     private trigger changeDayTrigger = CreateTrigger()
     private timer changeSecondTimer = CreateTimer()
@@ -72,27 +72,27 @@ globals
     private integer days = SUMMER_DAY // we always start in summer
     private integer years = 24
     private integer season = SEASON_WINTER
-    
+
     private boolean seasonsEnabled = true
-    
+
     private boolean easterTrees = false
     private boolean christmasTrees = false
     private effect array newYearEffects
-    
+
     private boolean weatherRunning = false
     private timer weatherTimer = CreateTimer()
     private timer thunderTimer = CreateTimer()
-    
+
     private TileMapping array tileMappings
     private integer tileMappingsCounter = 0
-    
+
     private CalendarEvent array calendarEvents
     private integer calendarEventsCounter = 0
-    
+
     private hashtable h = InitHashtable()
-    
+
     private filterfunc filterIsMineWithResourceWaterNotFull = null
-    
+
     private rect tmpRect = null
 endglobals
 
@@ -101,7 +101,7 @@ function GetCalendarChangeSecondTimerHandleId takes nothing returns integer
 endfunction
 
 function GetCalendarThunderTimerHandleId takes nothing returns integer
-    return GetHandleId(thunderTimer) 
+    return GetHandleId(thunderTimer)
 endfunction
 
 function GetCalendarWeatherTimerHandleId takes nothing returns integer
@@ -160,7 +160,7 @@ function AddCalendarEvent takes string name, string vote, integer startDay, real
     set e.icon = icon
     set calendarEvents[calendarEventsCounter] = e
     set calendarEventsCounter = calendarEventsCounter + 1
-    
+
     call SaveInteger(h, GetHandleId(e.voteTrigger), 0, e)
     call TriggerAddAction(e.voteTrigger, function TriggerActionVote)
 
@@ -169,7 +169,7 @@ function AddCalendarEvent takes string name, string vote, integer startDay, real
     call VoteAddChoice(v, false, vote, vote)
     call VoteSetStartChatCommand(v, vote)
     call VoteSetYesTrigger(v, e.voteTrigger)
-    
+
     return e
 endfunction
 
@@ -186,7 +186,7 @@ private function CheckCalendarEvents takes nothing returns nothing
     loop
         exitwhen (i >= calendarEventsCounter)
         set e = calendarEvents[i]
-        if (e.running) then 
+        if (e.running) then
            if (not IsBetweenCalendarDay(e.startDay, e.startTimeOfDay, e.endDay, e.endTimeOfDay)) then
                 if (e.endFunc != 0) then
                     call e.endFunc.execute(e)
@@ -212,7 +212,7 @@ function GetRunningCalendarEvent takes nothing returns CalendarEvent
     loop
         exitwhen (i >= calendarEventsCounter)
         set e = calendarEvents[i]
-        if (e.running) then 
+        if (e.running) then
            return e
         endif
         set i = i + 1
@@ -228,14 +228,14 @@ function AddTreeMapping takes integer summerId, integer fallId, integer winterId
     set t.winterSnowyId = winterSnowyId
     set t.easterId = easterId
     set t.christmasId = christmasId
-    
+
     call SaveInteger(h, summerId, 0, t)
     call SaveInteger(h, fallId, 0, t)
     call SaveInteger(h, winterId, 0, t)
     call SaveInteger(h, winterSnowyId, 0, t)
     call SaveInteger(h, easterId, 0, t)
     call SaveInteger(h, christmasId, 0, t)
-    
+
     return t
 endfunction
 
@@ -253,11 +253,11 @@ function AddTileMapping takes integer summerId, integer fallId, integer winterId
     set t.winterId = winterId
     set tileMappings[tileMappingsCounter] = t
     set tileMappingsCounter = tileMappingsCounter + 1
-    
+
     call SaveInteger(h, summerId, 0, t)
     call SaveInteger(h, fallId, 0, t)
     call SaveInteger(h, winterId, 0, t)
-    
+
     return t
 endfunction
 
@@ -351,7 +351,7 @@ function GetMonthName takes integer month returns string
     elseif (month == DECEMBER) then
         return GetLocalizedString("MONTH_12")
     endif
-    
+
     return "Unknown"
 endfunction
 
@@ -509,16 +509,16 @@ private function GetRandomWeatherEffect takes integer t returns integer
     elseif (t == TERRAIN_TYPE_DUNGEON or t == TERRAIN_TYPE_UNDERGROUND) then
         return GetRandomDungeonWhiteFogEffect()
     endif
-    
+
     return 0
 endfunction
 
 private function ForForceAddWeatherResourceBonus takes nothing returns nothing
-    call AddPlayerResourceBonus(GetEnumPlayer(), udg_ResourceWater, 20)
+    call AddPlayerResourceBonus(GetEnumPlayer(), RESOURCE_WATER, 20)
 endfunction
 
 private function ForForceRemoveWeatherResourceBonus takes nothing returns nothing
-    call RemovePlayerResourceBonus(GetEnumPlayer(), udg_ResourceWater, 20)
+    call RemovePlayerResourceBonus(GetEnumPlayer(), RESOURCE_WATER, 20)
 endfunction
 
 private function AddWeatherResourceBonus takes nothing returns nothing
@@ -530,7 +530,7 @@ private function RemoveWeatherResourceBonus takes nothing returns nothing
 endfunction
 
 private function EnumUnitFillWater takes nothing returns nothing
-    call SetUnitResource(GetEnumUnit(), udg_ResourceWater, GetUnitResourceMax(GetEnumUnit(), udg_ResourceWater))
+    call SetUnitResource(GetEnumUnit(), RESOURCE_WATER, GetUnitResourceMax(GetEnumUnit(), RESOURCE_WATER))
 endfunction
 
 private function RainAddResourceBonus takes rect r returns nothing
@@ -610,12 +610,12 @@ private function AddWeatherEffects takes nothing returns nothing
                 if (weatherEffectIds[index] != 0) then
                     set weather[index] = AddWeatherEffect(GetZoneRect(z, j), weatherEffectIds[index])
                     call EnableWeatherEffect(weather[index], true)
-                    
+
                     if (IsRainWeatherEffect(weatherEffectIds[index])) then
                         call RainAddResourceBonus(GetZoneRect(z, j))
                     endif
                 endif
-                
+
                 if ((t == TERRAIN_TYPE_LORDAERON or t == TERRAIN_TYPE_ASHENVALE) and GetCurrentSeason() == SEASON_WINTER) then
                     call ReplaceTrees(GetZoneRect(z, j), SEASON_WINTER, SEASON_WINTER)
                 endif
@@ -774,11 +774,11 @@ private function ReplaceWithFallTerrain takes nothing returns nothing
 endfunction
 
 private function ForForceAddFallResourceBonus takes nothing returns nothing
-    call AddPlayerResourceBonus(GetEnumPlayer(), udg_ResourceGrain, 20)
+    call AddPlayerResourceBonus(GetEnumPlayer(), RESOURCE_GRAIN, 20)
 endfunction
 
 private function ForForceRemoveFallResourceBonus takes nothing returns nothing
-    call RemovePlayerResourceBonus(GetEnumPlayer(), udg_ResourceGrain, 20)
+    call RemovePlayerResourceBonus(GetEnumPlayer(), RESOURCE_GRAIN, 20)
 endfunction
 
 private function ResourceBonus takes integer previousSeason, integer currentSeason returns nothing
@@ -855,17 +855,17 @@ private function TriggerConditionTimeOfDay takes nothing returns boolean
     if (days == DAYS_PER_YEAR) then
         set days = 1
         set years = years + 1
-        
+
         call HappyNewYear()
     else
         set days = days + 1
     endif
-    
+
     //call BJDebugMsg("Day " + I2S(days))
-    
+
     if (IsSeasonsEnabled()) then
         //call BJDebugMsg("seasons " + I2S(days))
-        
+
         if (days == SUMMER_DAY) then
             set season = SEASON_SUMMER
             call Summer()
@@ -880,7 +880,7 @@ private function TriggerConditionTimeOfDay takes nothing returns boolean
             call Winter()
         endif
     endif
-    
+
     return false
 endfunction
 
@@ -1001,18 +1001,18 @@ globals
 endglobals
 
 private function IsMineWithResourceWaterNotFull takes nothing returns boolean
-    return IsMine(GetFilterUnit()) and GetUnitResourceMax(GetFilterUnit(), udg_ResourceWater) > 0 and GetUnitResource(GetFilterUnit(), udg_ResourceWater) < GetUnitResourceMax(GetFilterUnit(), udg_ResourceWater)    
+    return IsMine(GetFilterUnit()) and GetUnitResourceMax(GetFilterUnit(), RESOURCE_WATER) > 0 and GetUnitResource(GetFilterUnit(), RESOURCE_WATER) < GetUnitResourceMax(GetFilterUnit(), RESOURCE_WATER)
 endfunction
 
 private function Init takes nothing returns nothing
     call TriggerRegisterGameStateEventTimeOfDay(changeDayTrigger, EQUAL, 0.0)
     call TriggerAddCondition(changeDayTrigger, Condition(function TriggerConditionTimeOfDay))
     call OnStartGame(function EnableCalendar)
-    
+
     set treeFilter = Filter(function FilterIsTree)
-    
+
     set filterIsMineWithResourceWaterNotFull = Filter(function IsMineWithResourceWaterNotFull)
-    
+
     call AddTreeMapping(SUMMER_TREE_WALL, FALL_TREE_WALL, WINTER_TREE_WALL, SNOWY_TREE_WALL, EASTERN_TREE_WALL_1, CHRISTMAS_TREE_WALL)
     call AddTreeMapping(CITYSCAPE_SUMMER_TREE_WALL, CITYSCAPE_FALL_TREE_WALL, CITYSCAPE_WINTER_TREE_WALL, CITYSCAPE_SNOWY_TREE_WALL, CARROT_TREE_WALL_1, CITYSCAPE_CHRISTMAS_TREE_WALL)
     call AddTreeMapping(VILLAGE_TREE_WALL, VILLAGE_TREE_WALL_FALL, VILLAGE_TREE_WALL_WINTER, VILLAGE_SNOWY_TREE_WALL, CARROT_TREE_WALL_1, CITYSCAPE_CHRISTMAS_TREE_WALL)
@@ -1020,9 +1020,9 @@ private function Init takes nothing returns nothing
     call AddTreeMapping(ASHENVALE_CANOPY_TREE, ASHENVALE_CANOPY_TREE_FALL, ASHENVALE_CANOPY_TREE_WINTER, ASHENVALE_CANOPY_TREE_WINTER, CARROT_TREE_WALL_2, ASHENVALE_CANOPY_CHRISTMAS_TREE_WALL)
     call AddTreeMapping(AZUREMYST_ISLES_TREE_WALL, AZUREMYST_ISLES_TREE_WALL_FALL, AZUREMYST_ISLES_TREE_WALL_WINTER, AZUREMYST_ISLES_TREE_WALL_WINTER, CARROT_TREE_WALL_1, AZUREMYST_ISLES_CHRISTMAS_TREE_WALL)
     call AddTreeMapping(CRANNIES_SUMMER, CRANNIES_FALL, CRANNIES_WINTER, CRANNIES_WINTER_SNOWY, 0, 0)
-    
+
     call AddTileMapping(TILE_TYPE_GRASS, TILE_TYPE_DARK_GRASS, TILE_TYPE_SNOW)
-    
+
     set easter = AddCalendarEvent("EASTER", "-easter", GetDayByMonth(22, MARCH), 0.0, GetDayByMonth(25, APRIL), 24.0, StartEaster, EndEaster, "ReplaceableTextures\\CommandButtons\\BTNEasterWabbit.blp")
     set christmas = AddCalendarEvent("CHRISTMAS", "-christmas", GetDayByMonth(24, DECEMBER), 22.0, GetDayByMonth(26, DECEMBER), 24.0, StartChristmas, EndChristmas, "ReplaceableTextures\\CommandButtons\\BTNGiftHive.blp")
     set newyear = AddCalendarEvent("NEW_YEAR", "-newyear", GetDayByMonth(30, DECEMBER), 22.0, GetDayByMonth(1, JANUARY), 3.0, StartNewYear, EndNewYear, "ReplaceableTextures\\CommandButtons\\BTNFirework.blp")
