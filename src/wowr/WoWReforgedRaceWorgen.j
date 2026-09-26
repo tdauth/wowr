@@ -42,8 +42,12 @@ private function EnumNocturnalEffect takes nothing returns nothing
 endfunction
 
 private function EnableNocturnalEffectForAll takes nothing returns nothing
-    set bj_wantDestroyGroup = true
-    call ForGroupBJ(GetUnitsInRectMatching(GetPlayableMapRect(), filterIsValidNocturnalTarget), function EnumNocturnalEffect)
+    local group g = CreateGroup()
+    call GroupEnumUnitsInRect(g, GetPlayableMapRect(), filterIsValidNocturnalTarget)
+    call ForGroup(g, function EnumNocturnalEffect)
+    call GroupClear(g)
+    call DestroyGroup(g)
+    set g = null
 endfunction
 
 private function FilterHasNocturnalEffect takes nothing returns boolean
@@ -56,8 +60,12 @@ private function EnumDisableNocturnalEffect takes nothing returns nothing
 endfunction
 
 private function DisableNocturnalEffectForAll takes nothing returns nothing
-    set bj_wantDestroyGroup = true
-    call ForGroupBJ(GetUnitsInRectMatching(GetPlayableMapRect(), filterHasNocturnalEffect), function EnumDisableNocturnalEffect)
+    local group g = CreateGroup()
+    call GroupEnumUnitsInRect(g, GetPlayableMapRect(), filterHasNocturnalEffect)
+    call ForGroup(g, function EnumDisableNocturnalEffect)
+    call GroupClear(g)
+    call DestroyGroup(g)
+    set g = null
 endfunction
 
 private function TriggerConditionDeath takes nothing returns boolean
@@ -68,7 +76,7 @@ private function TriggerConditionDeath takes nothing returns boolean
 endfunction
 
 private function TriggerConditionResearchFinish takes nothing returns boolean
-    if (GetResearched() == 'R08X' and isNight) then
+    if (GetResearched() == UPG_WORGEN_NOCTURNAL and isNight) then
         call EnableNocturnalEffectForAll()
     endif
     return false
