@@ -56,6 +56,7 @@
 //! import "wowr/WoWReforgedGatesAndBridges.j"
 //! import "wowr/WoWReforgedGoblinToolBox.j"
 //! import "wowr/WoWReforgedGoldMines.j"
+//! import "wowr/WoWReforgedGuiTriggers.j"
 //! import "wowr/WoWReforgedHeroes.j"
 ///! import "wowr/WoWReforgedHeroGlow.j"
 //! import "wowr/WoWReforgedHeroJourney.j"

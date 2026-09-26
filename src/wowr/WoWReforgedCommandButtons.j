@@ -19,8 +19,6 @@ function AddCommandButtonsForced takes unit whichUnit returns nothing
     //call BJDebugMsg("Add ability " + GetObjectName(ABILITY_ID_COMMAND_BUTTONS) + " to " + GetUnitName(whichUnit))
     call UnitAddAbility(whichUnit, ABILITY_ID_COMMAND_BUTTONS)
     call UnitMakeAbilityPermanent(whichUnit, true, ABILITY_ID_COMMAND_BUTTONS)
-    call UnitAddAbility(whichUnit, ABILITY_EXPANDED_INVENTORY)
-    call UnitMakeAbilityPermanent(whichUnit, true, ABILITY_EXPANDED_INVENTORY)
 endfunction
 
 function AddCommandButtons takes unit whichUnit returns boolean
@@ -52,7 +50,6 @@ endfunction
 
 function RemoveCommandButtons takes unit whichUnit returns nothing
     call UnitRemoveAbility(whichUnit, ABILITY_ID_COMMAND_BUTTONS)
-    call UnitRemoveAbility(whichUnit, ABILITY_EXPANDED_INVENTORY)
 endfunction
 
 private function ReaddCommandButtons takes unit whichUnit returns nothing

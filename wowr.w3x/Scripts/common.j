@@ -3187,7 +3187,16 @@ globals
     constant integer ABILITY_SHROUD_OF_PROTECTION                    = 'A026'
     constant integer ABILITY_SHROUD_OF_PROTECTION_DUMMY              = 'h0JJ'
 
+    // Forsaken Kingdom inventory
+    constant integer ITEM_BACKPACK                                   = 'I03P' // Forsaken Kingdom
+    constant integer ABILITY_EQUIPMENT_INVENTORY                     = 'AInx' // Forsaken Kingdom
+    constant integer ABILITY_EQUIPMENT_SLOTS                         = 'AEqu' // Forsaken Kingdom
     constant integer ABILITY_EXPANDED_INVENTORY                      = 'AIni' // Forsaken Kingdom
+
+    // Forsaken Kingdom equipment
+    constant integer ITEM_ABOMINATIONS_HOOK                          = 'epah'
+    constant integer ITEM_AGUS_SHAMBLING_HAND                        = 'eash'
+    constant integer ITEM_ANCIENT_BRONZE_HELMET                      = 'eabh'
 
     // Mounts
     constant integer GRYPHON_MOUNT                                   = 'h004'

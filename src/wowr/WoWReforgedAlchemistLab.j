@@ -136,10 +136,14 @@ private function ConvertItem takes unit caster, item target, integer targetRace 
     set owner = null
 endfunction
 
+private function IsAlchemistLab takes integer unitTypeId returns boolean
+    return unitTypeId == ALCHEMIST_LAB or unitTypeId == ALCHEMIST_LAB_NEUTRAL
+endfunction
+
 private function TriggerConditionSellItem takes nothing returns boolean
     local integer r = udg_RaceNone
     //call BJDebugMsg("Shop " + GetUnitName(shop) + " sells item " + GetItemName(soldItem))
-    if (GetUnitTypeId(GetSellingUnit()) == ALCHEMIST_LAB) then
+    if (IsAlchemistLab(GetUnitTypeId(GetSellingUnit()))) then
         set r = GetRaceByTavernItemTypeId(GetItemTypeId(GetSoldItem()))
         if (r != udg_RaceNone) then
             call SetShopRace(GetSellingUnit(),r)

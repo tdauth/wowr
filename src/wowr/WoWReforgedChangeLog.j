@@ -27,6 +27,8 @@ endfunction
 private function Init takes nothing returns nothing
     call AddVersion("4.7")
     call AddChange("Support Forsaken Kingdom.")
+    call AddChange("Library ItemUtils supports extended inventories and equipment of Forsaken Kingdom.")
+    call AddChange("Heroes start with a Backpack item now.")
     call AddChange("Add hero Forsaken Paladin.")
     call AddChange("Add class Priest.")
     call AddChange("Revise class Paladin.")
@@ -162,6 +164,7 @@ private function Init takes nothing returns nothing
     call AddChange("Remove neutral building minimap icon for Fel Fountain.")
     call AddChange("Remove neutral building minimap icon for Well.")
     call AddChange("Scale down building Dragon Roost by Dragon Breeder.")
+    call AddChange("Fix changing races for neutral Alchemist Labs.")
 
 static if (MAP_DEBUG_MODE_ENABLED) then
     call AddVersion("4.6")

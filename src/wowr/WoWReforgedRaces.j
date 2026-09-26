@@ -1,6 +1,9 @@
 library WoWReforgedRaces initializer Init requires WoWReforgedUtils, WoWReforgedVIPs, WoWReforgedDependencyEquivalents, WoWReforgedObjectMappings, WoWReforgedResearches
 
 globals
+    constant integer RACE_NONE = 0
+    integer RACE_FREELANCER = 1
+
     constant integer RACE_OBJECT_TYPE_NONE = 0
     // BUILDINGS
     constant integer RACE_OBJECT_TYPE_FARM = 1
@@ -607,7 +610,7 @@ endfunction
 
 function PlayerCanPickRaceEx takes player whichPlayer, integer tavernItemTypeId returns boolean
     local integer index = GetRaceByTavernItemTypeId(tavernItemTypeId)
-    if (index > 0) then
+    if (index != udg_RaceNone) then
         return not IsRaceBonus(index) or udg_UnlockedAll or IsPlayerVIP(whichPlayer) or GetHeroLevel1(whichPlayer) >= 30
     endif
     return false
@@ -1002,6 +1005,7 @@ endfunction
 private function AddFreelancer takes nothing returns nothing
     local integer r = AddRace()
     set udg_RaceFreelancer = r
+    set RACE_FREELANCER = r
     call SetRaceTavernItemType(r, ITEM_FREELANCER)
     call SetRaceAiScript(r, "wowr\\Freelancer.ai")
     call SetRaceTeam(r, TEAM_NONE)

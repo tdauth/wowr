@@ -16,18 +16,21 @@ function AddArmory takes unit shop returns nothing
     loop
         exitwhen (i >= max)
         if (i > 1 and GetEquipmentItemTypeCategoryName(i) != "" and GetEquipmentItemTypeCategoryName(i) != null and GetEquipmentItemTypeCategoryName(i) != pageName) then
-            call AddPagedButtonsSpacersRemaining(shop)
+            set pageName = GetEquipmentItemTypeCategoryName(i)
+            call NextPagedButtonsPage(shop, pageName)
         endif
         call AddPagedButtonsItemType(shop, GetEquipmentItemTypeId(i))
-        if (GetEquipmentItemTypeCategoryName(i) != "" and GetEquipmentItemTypeCategoryName(i) != null) then
-            set pageName = GetEquipmentItemTypeCategoryName(i)
-            call SetPagedButtonsCurrentPageName(shop, pageName)
-        endif
         set i = i + 1
     endloop
-    
+
+    // Forsaken Kingdom
+    call NextPagedButtonsPage(shop, "Forsaken Kingdom Equipment")
+    call AddPagedButtonsItemType(shop, ITEM_ABOMINATIONS_HOOK)
+    call AddPagedButtonsItemType(shop, ITEM_AGUS_SHAMBLING_HAND)
+    call AddPagedButtonsItemType(shop, ITEM_ANCIENT_BRONZE_HELMET)
+
     //call BJDebugMsg("Before enabling paged buttons for shop " + GetUnitName(shop) + " with " + I2S(max) + " total learnable skills.")
-    
+
     //call BJDebugMsg("Enabled shop " + GetUnitName(shop) + " with " + I2S(max) + " total learnable skills.")
 endfunction
 

@@ -10242,6 +10242,12 @@ STRING 1719
 Warrior Hero, adept at summoning beasts into battle. Can learn Storm Bolt, War Stomp, Bash, and Avatar. |n|n|cffffcc00Attacks land units.|r
 }
 
+STRING 1720
+// Items: I03P (Backpack), Name (Name)
+{
+Backpack
+}
+
 STRING 1721
 // Units: O09P (Fel Raider), Ubertip (Tooltip - Extended)
 {
@@ -10294,6 +10300,17 @@ STRING 1729
 // Abilities: A07Z (Spell Steal), EditorSuffix (Editor Suffix)
 {
 (Neutral Hostile)
+}
+
+STRING 1730
+{
+Purchase Backpack
+}
+
+STRING 1731
+// Items: I03P (Backpack), Tip (Tooltip - Basic)
+{
+Purchase Backpack
 }
 
 STRING 1732
