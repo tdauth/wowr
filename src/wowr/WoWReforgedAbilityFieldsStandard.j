@@ -437,6 +437,11 @@ private function Init takes nothing returns nothing
     call RegisterAbilityFieldType(GetHandleId(ABILITY_RLF_MOVEMENT_SPEED_FACTOR_SLO1), ABILITY_FIELD_TYPE_CHANCE_REAL)
     call RegisterAbilityFieldType(GetHandleId(ABILITY_RLF_ATTACK_SPEED_FACTOR_SLO2), ABILITY_FIELD_TYPE_CHANCE_REAL)
 
+    // Forsaken Kingdom
+    // Sacred Aura
+    call RegisterAbilityFieldType('hsa1', ABILITY_FIELD_TYPE_CHANCE_REAL)
+    call RegisterAbilityFieldType('hsa2', ABILITY_FIELD_TYPE_CHANCE_REAL)
+
     // Invisibility
     call RegisterInvisibility('Aivs') // Human original
     call RegisterInvisibility('A10Q') // Dalaran
@@ -633,19 +638,24 @@ private function Init takes nothing returns nothing
 
     // Classes
 
-    // Paladin
+    // Priest
     call RegisterUnitAbilityField(ABILITY_HEAL, GetHandleId(ABILITY_RLF_HIT_POINTS_GAINED_HEA1))
 
     call RegisterUnitAbility(ABILITY_INNFER_FIRE)
     call RegisterAbilityField(ABILITY_INNFER_FIRE, GetHandleId(ABILITY_RLF_DAMAGE_INCREASE_PERCENT_INF1))
     call RegisterAbilityField(ABILITY_INNFER_FIRE, GetHandleId(ABILITY_ILF_DEFENSE_INCREASE_INF2))
 
-    call RegisterUnitHealBonus(ABILITY_HOLY_LIGHT, GetHandleId(ABILITY_RLF_AMOUNT_HEALED_DAMAGED_HHB1))
-    call RegisterUnitHealBonus(ABILITY_MASS_HOLY_LIGHT_DUMMY, GetHandleId(ABILITY_RLF_AMOUNT_HEALED_DAMAGED_HHB1))
+    call RegisterUnitAbility(ABILITY_SACRED_AURA) // Forsaken Kingdom
+    call RegisterAbilityField(ABILITY_SACRED_AURA, 'hsa1')
+    call RegisterAbilityField(ABILITY_SACRED_AURA, 'hsa2')
 
     call RegisterUnitAbility(ABILITY_HEALING_WAVE)
     call RegisterAbilityField(ABILITY_HEALING_WAVE, GetHandleId(ABILITY_ILF_NUMBER_OF_TARGETS_HIT))
     call RegisterAbilityField(ABILITY_HEALING_WAVE, GetHandleId(ABILITY_RLF_DAMAGE_PER_TARGET_OCL1))
+
+    // Paladin
+    call RegisterUnitHealBonus(ABILITY_HOLY_LIGHT, GetHandleId(ABILITY_RLF_AMOUNT_HEALED_DAMAGED_HHB1))
+    call RegisterUnitHealBonus(ABILITY_MASS_HOLY_LIGHT_DUMMY, GetHandleId(ABILITY_RLF_AMOUNT_HEALED_DAMAGED_HHB1))
 
     call RegisterUnitAbility(ABILITY_DEVOTION_AURA)
     call RegisterAbilityField(ABILITY_DEVOTION_AURA, GetHandleId(ABILITY_RLF_ARMOR_BONUS_HAD1))
