@@ -712,7 +712,7 @@ private function EnumStartLobbySettings takes nothing returns nothing
         call RemoveRandomMinesAtAIStartLocation(startLocationIndex)
         // Race
         set playerRace = AiPlayersUIGetPlayerRace(GetEnumPlayer(), startLocationIndex, GetPlayerTeam(GetEnumPlayer()))
-        call BJDebugMsg("Player " + GetPlayerName(GetEnumPlayer()) + " chooses race " + GetRaceName(playerRace) + " and start location " + I2S(startLocationIndex))
+        //call BJDebugMsg("Player " + GetPlayerName(GetEnumPlayer()) + " chooses race " + GetRaceName(playerRace) + " and start location " + I2S(startLocationIndex))
         set udg_PlayerRace[convertedPlayerId] = playerRace
         // Start Main Building and Workers
         call StartingUnitsAndPickAI(GetEnumPlayer(), l, playerRace)

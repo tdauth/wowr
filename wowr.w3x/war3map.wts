@@ -8619,7 +8619,7 @@ M
 STRING 1448
 // Items: I03J (Priest), Name (Name)
 {
-Priest
+VIP
 }
 
 STRING 1449
@@ -51589,7 +51589,7 @@ STRING 14638
 STRING 14641
 // Items: I03J (Priest), Tip (Tooltip - Basic)
 {
-Priest
+VIP
 }
 
 STRING 14657
