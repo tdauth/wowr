@@ -19,7 +19,7 @@ endfunction
 function AddAlchemistLab takes unit shop returns nothing
     local integer max = GetRacesMax()
     local integer i = 1 // udg_RaceNone is 0
-    call SetShopRace(shop, udg_RaceFreelancer)
+    call SetShopRace(shop, RACE_FREELANCER)
     call EnablePagedButtons(shop)
     call SetPagedButtonsSlotsPerPage(shop, 8)
     loop
