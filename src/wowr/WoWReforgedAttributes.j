@@ -1,6 +1,9 @@
 library WoWReforgedAttributes initializer Init requires NewBonus, PagedButtons, HeroUtils, Attributes, UnitGroupUtils, OnStartGame, WoWReforgedUtils, WoWReforgedSkillMenu, WoWReforgedHeroTransformation
 
 globals
+    integer ATTRIBUTE_ATTRIBUTE_POINTS = 0
+    integer ATTRIBUTE_SKILL_POINTS = 0
+
     private player filterPlayer = null
 
     private trigger sellTrigger = CreateTrigger()
@@ -9,7 +12,7 @@ globals
 endglobals
 
 function ShowWowReforgedSkillPoints takes unit hero returns nothing
-    call DisplayTextToPlayer(GetOwningPlayer(hero), 0.0, 0.0, Format(GetLocalizedString("ATTRIBUTE_POINTS_MESSAGE")).i(R2I(GetUnitAttribute(hero, udg_AttributeAttributePoints))).i(R2I(GetUnitAttribute(hero, udg_AttributeSkillPoints))).result())
+    call DisplayTextToPlayer(GetOwningPlayer(hero), 0.0, 0.0, Format(GetLocalizedString("ATTRIBUTE_POINTS_MESSAGE")).i(R2I(GetUnitAttribute(hero, ATTRIBUTE_ATTRIBUTE_POINTS))).i(R2I(GetUnitAttribute(hero, ATTRIBUTE_SKILL_POINTS))).result())
 endfunction
 
 function ResetWowReforgedSkillPoints takes unit hero returns nothing
@@ -21,7 +24,7 @@ function ResetWowReforgedSkillPoints takes unit hero returns nothing
         call SetHeroStr(hero, 1, true)
         call SetHeroAgi(hero, 1, true)
         call SetHeroInt(hero, 1, true)
-        call AddUnitAttribute(hero, udg_AttributeAttributePoints, skillPoints)
+        call AddUnitAttribute(hero, ATTRIBUTE_ATTRIBUTE_POINTS, skillPoints)
         call ShowWowReforgedSkillPoints(hero)
     else
         call SimError(GetOwningPlayer(hero), GetLocalizedString("NO_ATTRIBUTE_POINTS_SPENT"))
@@ -43,13 +46,13 @@ function EqualWowReforgedSkillPoints takes unit hero returns nothing
     local integer value = 0
     local integer mod = 0
     call ResetWowReforgedSkillPoints(hero)
-    set value = R2I(GetUnitAttribute(hero, udg_AttributeAttributePoints) / 3.0)
-    set mod = R2I(ModuloReal(GetUnitAttribute(hero, udg_AttributeAttributePoints), 3.0))
+    set value = R2I(GetUnitAttribute(hero, ATTRIBUTE_ATTRIBUTE_POINTS) / 3.0)
+    set mod = R2I(ModuloReal(GetUnitAttribute(hero, ATTRIBUTE_ATTRIBUTE_POINTS), 3.0))
     if (value > 0.0) then
         call ModifyHeroStat(bj_HEROSTAT_STR, hero, bj_MODIFYMETHOD_ADD, value)
         call ModifyHeroStat(bj_HEROSTAT_AGI, hero, bj_MODIFYMETHOD_ADD, value)
         call ModifyHeroStat(bj_HEROSTAT_INT, hero, bj_MODIFYMETHOD_ADD, value)
-        call RemoveUnitAttribute(hero, udg_AttributeAttributePoints, value * 3.0 + I2R(mod))
+        call RemoveUnitAttribute(hero, ATTRIBUTE_ATTRIBUTE_POINTS, value * 3.0 + I2R(mod))
 
         if (mod > 0) then
             call ModifyHeroStat(GetHeroPrimaryStat(hero), hero, bj_MODIFYMETHOD_ADD, 1)
@@ -67,8 +70,8 @@ endfunction
 
 function WoWReforgedSkillAttribute takes unit hero, integer whichStat, real value returns nothing
     if (value > 0.0) then
-        if (GetUnitAttribute(hero, udg_AttributeAttributePoints) >= value) then
-            call AddUnitAttribute(hero, udg_AttributeAttributePoints, -value)
+        if (GetUnitAttribute(hero, ATTRIBUTE_ATTRIBUTE_POINTS) >= value) then
+            call AddUnitAttribute(hero, ATTRIBUTE_ATTRIBUTE_POINTS, -value)
             call ModifyHeroStat(whichStat, hero, bj_MODIFYMETHOD_ADD, R2I(value))
             call ShowWowReforgedSkillPoints(hero)
         else
@@ -79,7 +82,7 @@ function WoWReforgedSkillAttribute takes unit hero, integer whichStat, real valu
         set value = RMinBJ(I2R(GetHeroStatBJ(whichStat, hero, false)) - 1.0, value) // keep 1.0 of the attribute
         set value = RMaxBJ(0.0, value)
         if (value > 0.0) then
-            call AddUnitAttribute(udg_TmpUnit, udg_AttributeAttributePoints, value)
+            call AddUnitAttribute(udg_TmpUnit, ATTRIBUTE_ATTRIBUTE_POINTS, value)
             call ModifyHeroStat(whichStat, hero, bj_MODIFYMETHOD_SUB, R2I(value))
             call ShowWowReforgedSkillPoints(hero)
         else
@@ -132,7 +135,7 @@ function SkillAttributeMax takes player whichPlayer, integer a returns nothing
     local integer max = BlzGroupGetSize(g)
     loop
         exitwhen (i == max)
-        call WoWReforgedSkillAttribute(BlzGroupUnitAt(g, i), a, GetUnitAttribute(BlzGroupUnitAt(g, i), udg_AttributeAttributePoints))
+        call WoWReforgedSkillAttribute(BlzGroupUnitAt(g, i), a, GetUnitAttribute(BlzGroupUnitAt(g, i), ATTRIBUTE_ATTRIBUTE_POINTS))
         set i = i + 1
     endloop
     call GroupClear(g)
@@ -185,7 +188,7 @@ private function TriggerConditionSell takes nothing returns boolean
         call AddSkillPointsInitial(GetSoldUnit())
         if (CanUseCustomizableAttributes(GetSoldUnit())) then
             call BJDebugMsg("Initial attribute points for customizable hero.")
-            call AddUnitAttribute(GetSoldUnit(), udg_AttributeAttributePoints, START_ATTRIBUTE_POINTS)
+            call AddUnitAttribute(GetSoldUnit(), ATTRIBUTE_ATTRIBUTE_POINTS, START_ATTRIBUTE_POINTS)
         endif
     endif
     return false
@@ -195,7 +198,7 @@ private function TriggerConditionLevelUp takes nothing returns boolean
     if (IsUnitType(GetLevelingUnit(), UNIT_TYPE_HERO)) then
         call AddSkillPointsLevelUp(GetLevelingUnit())
         if (CanUseCustomizableAttributes(GetLevelingUnit())) then
-            call AddUnitAttribute(GetLevelingUnit(), udg_AttributeAttributePoints, IMaxBJ(1, GetGainedHeroLevels(GetLevelingUnit())) * ATTRIBUTE_POINTS_PER_LEVEL)
+            call AddUnitAttribute(GetLevelingUnit(), ATTRIBUTE_ATTRIBUTE_POINTS, IMaxBJ(1, GetGainedHeroLevels(GetLevelingUnit())) * ATTRIBUTE_POINTS_PER_LEVEL)
         endif
    endif
     return false
@@ -235,13 +238,13 @@ private function Init takes nothing returns nothing
     call TriggerRegisterAnyUnitEventBJ(channelTrigger, EVENT_PLAYER_UNIT_SPELL_CHANNEL)
     call TriggerAddCondition(channelTrigger, Condition(function TriggerConditionChannel))
 
-    set udg_AttributeAttributePoints = AddAttribute(GetLocalizedStringSafe("ATTRIBUTE_POINTS"))
-    call SetAttributeIcon(udg_AttributeAttributePoints, "ReplaceableTextures\\CommandButtons\\BTNStatUp.blp")
-    call SetAttributeDescription(udg_AttributeAttributePoints, GetLocalizedStringSafe("ATTRIBUTE_POINTS_DESCRIPTION"))
+    set ATTRIBUTE_ATTRIBUTE_POINTS = AddAttribute(GetLocalizedStringSafe("ATTRIBUTE_POINTS"))
+    call SetAttributeIcon(ATTRIBUTE_ATTRIBUTE_POINTS, "ReplaceableTextures\\CommandButtons\\BTNStatUp.blp")
+    call SetAttributeDescription(ATTRIBUTE_ATTRIBUTE_POINTS, GetLocalizedStringSafe("ATTRIBUTE_POINTS_DESCRIPTION"))
 
-    set udg_AttributeSkillPoints = AddAttribute(GetLocalizedStringSafe("SKILL_POINTS"))
-    call SetAttributeIcon(udg_AttributeAttributePoints, "ReplaceableTextures\\CommandButtons\\BTNSkillz.blp")
-    call SetAttributeDescription(udg_AttributeAttributePoints, GetLocalizedStringSafe("SKILL_POINTS_DESCRIPTION"))
+    set ATTRIBUTE_SKILL_POINTS = AddAttribute(GetLocalizedStringSafe("SKILL_POINTS"))
+    call SetAttributeIcon(ATTRIBUTE_SKILL_POINTS, "ReplaceableTextures\\CommandButtons\\BTNSkillz.blp")
+    call SetAttributeDescription(ATTRIBUTE_SKILL_POINTS, GetLocalizedStringSafe("SKILL_POINTS_DESCRIPTION"))
 endfunction
 
 endlibrary

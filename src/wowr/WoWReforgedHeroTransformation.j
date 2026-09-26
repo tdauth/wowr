@@ -3,7 +3,7 @@ library WoWReforgedHeroTransformation initializer Init requires WoWReforgedUtils
 globals
     private trigger array callbackTriggersTransform
     private integer callbackTriggersTransformCounter = 0
-    
+
     private unit triggerHero = null
     private integer triggerOriginalUnitTypeId = 0
 endglobals
@@ -57,44 +57,44 @@ function ReplaceHero takes unit hero, integer newUnitId, integer unitStateMethod
     local integer defenseType = BlzGetUnitIntegerField(hero, UNIT_IF_DEFENSE_TYPE)
     local unit mount = MountGet(hero)
     local unit result = null
-    
+
     call TransferSkillMenu(sourceHandleId, 0, null)
     call CopyHeroLevelGainData(sourceHandleId, 0)
-    call CopyUnitAttributeData(udg_AttributeAttributePoints, sourceHandleId, 0)
-    call CopyUnitAttributeData(udg_AttributeSkillPoints, sourceHandleId, 0)
+    call CopyUnitAttributeData(ATTRIBUTE_ATTRIBUTE_POINTS, sourceHandleId, 0)
+    call CopyUnitAttributeData(ATTRIBUTE_SKILL_POINTS, sourceHandleId, 0)
 
     call DisableTrigger(WoWReforgedAttributes_levelUpTrigger)
     set result = ReplaceUnitBJ(hero, newUnitId, unitStateMethod)
     call AddCommandButtonsForced(result)
     call EnableTrigger(WoWReforgedAttributes_levelUpTrigger)
-    
+
     set targetHandleId = GetHandleId(result)
     call TransferSkillMenu(0, targetHandleId, result)
     call CopyHeroLevelGainData(0, targetHandleId)
-    call CopyUnitAttributeData(udg_AttributeAttributePoints, 0, targetHandleId)
-    call CopyUnitAttributeData(udg_AttributeSkillPoints, 0, targetHandleId)
-    
+    call CopyUnitAttributeData(ATTRIBUTE_ATTRIBUTE_POINTS, 0, targetHandleId)
+    call CopyUnitAttributeData(ATTRIBUTE_SKILL_POINTS, 0, targetHandleId)
+
     if (mount != null) then
         call MountAssign(result, mount)
     endif
-    
-    call ModifyHeroSkillPoints(result, bj_MODIFYMETHOD_SET, R2I(GetUnitAttribute(result, udg_AttributeSkillPoints)))
-    
+
+    call ModifyHeroSkillPoints(result, bj_MODIFYMETHOD_SET, R2I(GetUnitAttribute(result, ATTRIBUTE_SKILL_POINTS)))
+
     if (keepAttributes) then
         call SetHeroStr(result, str, true)
         call SetHeroAgi(result, agi, true)
         call SetHeroInt(result, int, true)
     endif
-    
+
     if (keepAttributesPerLevel) then
         call BlzSetUnitRealField(result, UNIT_RF_STRENGTH_PER_LEVEL, strPerLevel)
         call BlzSetUnitRealField(result, UNIT_RF_AGILITY_PER_LEVEL, agiPerLevel)
         call BlzSetUnitRealField(result, UNIT_RF_INTELLIGENCE_PER_LEVEL, intPerLevel)
     endif
-    
+
     call BlzSetUnitIntegerField(result, UNIT_IF_PRIMARY_ATTRIBUTE, primaryAttribute)
     call BlzSetHeroProperName(result, properName)
-    
+
     if (attackEnabled0) then
         call BlzSetUnitWeaponIntegerField(result, UNIT_WEAPON_IF_ATTACK_ATTACK_TYPE, 0, attackType0)
     endif
@@ -103,21 +103,21 @@ function ReplaceHero takes unit hero, integer newUnitId, integer unitStateMethod
     endif
 
     call BlzSetUnitIntegerField(result, UNIT_IF_DEFENSE_TYPE, defenseType)
-    
+
     if (isHero1) then
         call SetPlayerHero1(owner, result)
     endif
-    
+
     if (isHero2) then
         call SetPlayerHero2(owner, result)
     endif
-    
+
     if (isHero3) then
         call SetPlayerHero3(owner, result)
     endif
-    
+
     call UpdateMount(result)
-    
+
     return result
 endfunction
 
@@ -142,7 +142,7 @@ struct HeroTransformationItemType
     integer id
     integer unitTypeId
     string animProperties = "" // alternate
-    
+
     public method matchesUnit takes unit whichUnit returns boolean
         return unitTypeId == GetUnitTypeId(whichUnit)
     endmethod
@@ -154,7 +154,7 @@ globals
     private trigger castTrigger = CreateTrigger()
     private HeroTransformationItemType array types
     private integer typesCounter = 0
-    
+
     private constant integer MAX_HEROES = 3
     private integer array playerHeroOriginalUnitTypeId
 endglobals
@@ -278,7 +278,7 @@ function TransformHeroBack takes unit hero returns unit
                 call RefreshBackpackForPlayer(owner)
                 call RecreateAllEquipmentBags(owner)
                 call TransformByHeroInventory(GetLastReplacedUnitBJ())
-                
+
                 return GetLastReplacedUnitBJ()
             endif
             set i = i + 1
@@ -368,11 +368,11 @@ private function Init takes nothing returns nothing
     call TriggerRegisterAnyUnitEventBJ(pickupTrigger, EVENT_PLAYER_UNIT_PICKUP_ITEM)
     call TriggerAddCondition(pickupTrigger, Condition(function TriggerConditionPickup))
     call TriggerAddAction(pickupTrigger, function TriggerActionPickup)
-    
+
     call TriggerRegisterAnyUnitEventBJ(dropTrigger, EVENT_PLAYER_UNIT_DROP_ITEM)
     call TriggerAddCondition(dropTrigger, Condition(function TriggerConditionDrop))
     call TriggerAddAction(dropTrigger, function TriggerActionDrop)
-    
+
     call TriggerRegisterAnyUnitEventBJ(castTrigger, EVENT_PLAYER_UNIT_SPELL_EFFECT) // After consuming the mana costs.
     call TriggerAddCondition(castTrigger, Condition(function TriggerConditionCast))
     call TriggerAddAction(castTrigger, function TriggerActionCast)

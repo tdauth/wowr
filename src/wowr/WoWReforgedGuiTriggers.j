@@ -10,6 +10,9 @@ function InitWoWReforgedGuiVariables takes nothing returns nothing
     // Races
     set udg_RaceNone = 0
     set udg_RaceFreelancer = RACE_FREELANCER
+    // Attributes
+    set udg_AttributeAttributePoints = ATTRIBUTE_ATTRIBUTE_POINTS
+    set udg_AttributeSkillPoints = ATTRIBUTE_SKILL_POINTS
 endfunction
 
 // Global variables are useful for GUI triggers.

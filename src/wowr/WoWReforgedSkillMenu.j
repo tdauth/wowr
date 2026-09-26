@@ -587,25 +587,25 @@ function ChangeAllSlotAbilities takes unit whichUnit, integer index returns noth
 endfunction
 
 function GetHeroSkillPointsCustom takes unit hero returns integer
-    return R2I(GetUnitAttribute(hero, udg_AttributeSkillPoints))
+    return R2I(GetUnitAttribute(hero, ATTRIBUTE_SKILL_POINTS))
 endfunction
 
 function SetHeroSkillPoints takes unit hero, integer skillPoints returns nothing
-    call SetUnitAttribute(hero, udg_AttributeSkillPoints, I2R(skillPoints))
+    call SetUnitAttribute(hero, ATTRIBUTE_SKILL_POINTS, I2R(skillPoints))
     if (IsUnitType(hero, UNIT_TYPE_HERO)) then
         call UnitModifySkillPoints(hero, skillPoints - GetHeroSkillPoints(hero))
     endif
 endfunction
 
 function AddHeroSkillPoints takes unit hero, integer skillPoints returns nothing
-    call AddUnitAttribute(hero, udg_AttributeSkillPoints, I2R(skillPoints))
+    call AddUnitAttribute(hero, ATTRIBUTE_SKILL_POINTS, I2R(skillPoints))
     if (IsUnitType(hero, UNIT_TYPE_HERO)) then
         call UnitModifySkillPoints(hero, skillPoints)
     endif
 endfunction
 
 function RemoveHeroSkillPoints takes unit hero, integer skillPoints returns nothing
-    call RemoveUnitAttribute(hero, udg_AttributeSkillPoints, I2R(skillPoints))
+    call RemoveUnitAttribute(hero, ATTRIBUTE_SKILL_POINTS, I2R(skillPoints))
     if (IsUnitType(hero, UNIT_TYPE_HERO)) then
         call UnitModifySkillPoints(hero, -skillPoints)
     endif
@@ -613,14 +613,14 @@ endfunction
 
 private function UpdateHeroSkillPoints takes unit hero returns nothing
     if (IsUnitType(hero, UNIT_TYPE_HERO)) then
-        call UnitModifySkillPoints(hero, R2I(GetUnitAttribute(hero, udg_AttributeSkillPoints)) - GetHeroSkillPoints(hero))
+        call UnitModifySkillPoints(hero, R2I(GetUnitAttribute(hero, ATTRIBUTE_SKILL_POINTS)) - GetHeroSkillPoints(hero))
     endif
 endfunction
 
 function AddSkillPointsInitial takes unit hero returns nothing
     local integer skillPoints = SKILL_POINTS_PER_LEVEL
     if (skillPoints > 0) then
-        call AddUnitAttribute(hero, udg_AttributeSkillPoints, I2R(skillPoints))
+        call AddUnitAttribute(hero, ATTRIBUTE_SKILL_POINTS, I2R(skillPoints))
         call UpdateHeroSkillPoints(hero)
     endif
 endfunction
@@ -631,7 +631,7 @@ function AddSkillPointsLevelUp takes unit hero returns nothing
     //local integer actualAddedHeroSkillPoints = skillPoints - gainedHeroLevels
     //call BJDebugMsg("Level up for " + GetUnitName(hero) + " with gained levels " + I2S(gainedHeroLevels) + " and skill points per level " + I2S(SKILL_POINTS_PER_LEVEL) + ": " + I2S(skillPoints) + " leading to actual added hero skill points: " + I2S(actualAddedHeroSkillPoints))
     if (skillPoints > 0) then
-        call AddUnitAttribute(hero, udg_AttributeSkillPoints, I2R(skillPoints))
+        call AddUnitAttribute(hero, ATTRIBUTE_SKILL_POINTS, I2R(skillPoints))
         call UpdateHeroSkillPoints(hero)
     endif
 endfunction

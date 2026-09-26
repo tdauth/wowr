@@ -165,6 +165,7 @@ private function Init takes nothing returns nothing
     call AddChange("Remove neutral building minimap icon for Well.")
     call AddChange("Scale down building Dragon Roost by Dragon Breeder.")
     call AddChange("Fix changing races for neutral Alchemist Labs.")
+    call AddChange("Fix page names in Alchemist Labs.")
 
 static if (MAP_DEBUG_MODE_ENABLED) then
     call AddVersion("4.6")
