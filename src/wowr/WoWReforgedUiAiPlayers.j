@@ -619,6 +619,9 @@ function AiPlayersUIGetPlayerRace takes player whichPlayer, integer startLocatio
         elseif (frameValue == RACES_MENU_ITEM_RANDOM_FREELANCER) then
             return udg_RaceFreelancer
         else
+            // Orc item = 7
+            // udg_RaceOrc = 3
+            // 7 + 1 - 5 = 3
             return frameValue + 1 - RACES_MENU_ITEM_RANDOM_HORDE // Ignore Freelancer race which is 1 (udg_RaceNone is 0)
         endif
     endif
