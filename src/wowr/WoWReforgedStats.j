@@ -1,4 +1,4 @@
-library WoWReforgedStats requires StringUtils, PlayerColorUtils, ForceUtils, WoWReforgedUtils, WoWReforgedProfessions, WoWReforgedRaces, WoWReforgedEvolution, WoWReforgedI18n
+library WoWReforgedStats requires StringUtils, PlayerColorUtils, ForceUtils, WoWReforgedUtils, WoWReforgedProfessions, WoWReforgedRaces, WoWReforgedEvolution, WoWReforgedI18n, WoWReforgedMapData
 
 globals
     private constant real UPDATE_INTERVAL = 5.0
@@ -58,7 +58,7 @@ private function ForFunctionUpdateStats takes nothing returns nothing
     call MultiboardReleaseItem(mitem)
     // Game Mode/Race 1
     set column = column + 1
-    if (whichPlayer != udg_BossesPlayer) then
+    if (whichPlayer != GetMapBossesPlayer()) then
         set value = GetPlayerRace1(whichPlayer)
         set text = GetIconByRace(value)
         set mitem = MultiboardGetItem(m, currentRow, column)
@@ -232,7 +232,7 @@ function CreateStats takes nothing returns nothing
     endif
     call ForceClear(f)
     call ForceAddForce(f, GetPlayersAll())
-    call ForceRemovePlayer(f, udg_BossesPlayer)
+    call ForceRemovePlayer(f, GetMapBossesPlayer())
 
     set m = CreateMultiboard()
     call MultiboardSetRowCount(m, CountPlayersInForceBJ(f))

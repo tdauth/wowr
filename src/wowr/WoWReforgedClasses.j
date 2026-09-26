@@ -1,7 +1,7 @@
-library WoWReforgedClasses initializer Init requires SafeString, WoWReforgedSkillMenu, WoWReforgedDependencyEquivalents
+library WoWReforgedClasses initializer Init requires SafeString, WoWReforgedAccount, WoWReforgedSkillMenu, WoWReforgedDependencyEquivalents
 
 globals
-    integer CLASS_NONE = -1
+    constant integer CLASS_NONE = -1
     integer CLASS_ARCANIST = -1
     integer CLASS_PYROMANCER = -1
     integer CLASS_HYDROMANCER = -1
@@ -32,16 +32,31 @@ function GetMaxHeroClasses takes nothing returns integer
     return classesCounter
 endfunction
 
-function GetRandomHeroClass takes nothing returns integer
-    return GetRandomInt(0, GetMaxHeroClasses() - 1)
-endfunction
-
 function GetHeroClassByIndex takes integer index returns integer
     return classes[index]
 endfunction
 
 function GetHeroClassItemTypeId takes integer index returns integer
     return classItemTypeIds[index]
+endfunction
+
+function GetRandomHeroClass takes player whichPlayer returns integer
+    local integer array availableHeroClasses
+    local integer availableHeroClassesCounter = 0
+    local integer i = 0
+    local integer max = GetMaxHeroClasses()
+    loop
+        exitwhen (i >= max)
+        if (PlayerHasUnlocked(whichPlayer, GetHeroClassItemTypeId(i))) then
+            set availableHeroClasses[availableHeroClassesCounter] = i
+            set availableHeroClassesCounter = availableHeroClassesCounter + 1
+        endif
+        set i = i + 1
+    endloop
+    if (availableHeroClassesCounter > 0) then
+        return availableHeroClasses[GetRandomInt(0, availableHeroClassesCounter - 1)]
+    endif
+    return CLASS_NONE
 endfunction
 
 function GetHeroClassName takes integer index returns string
@@ -131,7 +146,7 @@ function ApplyHeroClass takes unit hero returns boolean
 endfunction
 
 function ApplyRandomHeroClassEx takes unit hero returns boolean
-    return ApplySpecificHeroClass(hero, GetRandomHeroClass(), true)
+    return ApplySpecificHeroClass(hero, GetRandomHeroClass(GetOwningPlayer(hero)), true)
 endfunction
 
 function ApplyMatchingHeroClass takes unit hero returns nothing

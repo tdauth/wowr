@@ -1,4 +1,4 @@
-library WoWReforgedCages initializer Init
+library WoWReforgedCages initializer Init requires WoWReforgedMapData
 
 function IsCage takes integer unitTypeId returns boolean
     return unitTypeId == CAGE_0 or unitTypeId == CAGE_1 or unitTypeId == CAGE_2
@@ -16,7 +16,7 @@ private function SpawnRandomCreep takes unit cage, unit killer returns unit
     local player owner = GetOwningPlayer(killer)
     local unit creep = null
     if (killer == null) then
-        set owner = udg_Gaia
+        set owner = GetMapGaiaPlayer()
     endif
     set creep = CreateUnit(owner, ChooseRandomCreep(GetRandomInt(1, 10)), GetUnitX(cage), GetUnitY(cage), GetUnitFacing(cage))
     call UnitApplyTimedLife(creep, 'B000', 60.0)

@@ -1,4 +1,4 @@
-library WoWReforgedGaia initializer Init requires OnStartGame
+library WoWReforgedGaia initializer Init requires WoWReforgedMapData, OnStartGame
 
 private function UpdateGaiaUnitForPlayer takes unit whichUnit, player whichPlayer returns nothing
     call SetUnitRescuable(whichUnit, whichPlayer, GetPlayerState(whichPlayer, PLAYER_STATE_RESOURCE_FOOD_CAP) - GetPlayerState(whichPlayer, PLAYER_STATE_RESOURCE_FOOD_USED) >= GetUnitFoodUsed(whichUnit))
@@ -30,7 +30,7 @@ private function ForGroupUpdateForPlayer takes nothing returns nothing
 endfunction
 
 private function UpdateAllGaiaUnitsForPlayer takes player whichPlayer returns nothing
-    local group allUnits = GetUnitsOfPlayerAll(udg_Gaia)
+    local group allUnits = GetUnitsOfPlayerAll(GetMapGaiaPlayer())
     set tmpPlayer = whichPlayer
     call ForGroup(allUnits, function ForGroupUpdateForPlayer)
     call GroupClear(allUnits)
@@ -43,7 +43,7 @@ private function ForGroupUpdateForAllPlayers takes nothing returns nothing
 endfunction
 
 private function UpdateAllGaiaUnitsForAllPlayers takes nothing returns nothing
-    local group allUnits = GetUnitsOfPlayerAll(udg_Gaia)
+    local group allUnits = GetUnitsOfPlayerAll(GetMapGaiaPlayer())
     call ForGroup(allUnits, function ForGroupUpdateForAllPlayers)
     call GroupClear(allUnits)
     call DestroyGroup(allUnits)
@@ -72,9 +72,9 @@ private function Init takes nothing returns nothing
     call TriggerRegisterAnyUnitEventBJ(updateFoodTriger, EVENT_PLAYER_UNIT_DEATH)
     call TriggerRegisterAnyUnitEventBJ(updateFoodTriger, EVENT_PLAYER_HERO_REVIVE_FINISH)
     call TriggerAddCondition(updateFoodTriger, Condition(function TriggerConditionUpdateFood))
-    
+
     call TryInitRescuableTriggersBJ()
-    
+
     // Only player 1 red can rescue the units if this is done during the map initialization. Hence, we delay it.
     call OnStartGame(function UpdateAllGaiaUnitsForAllPlayers)
 endfunction

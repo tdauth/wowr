@@ -169,6 +169,8 @@ private function Init takes nothing returns nothing
     call AddChange("Add ground texture to High Elf Farm.")
     call AddChange("Add ground texture to High Elf Housing.")
     call AddChange("Scale down neutral Dimensional Ships and remove shadows.")
+    call AddChange("Remove tooltip frame from backpack UI.")
+    call AddChange("Change cheat \"-revive\" into \"-res\".")
 
 static if (MAP_DEBUG_MODE_ENABLED) then
     call AddVersion("4.6")

@@ -72,9 +72,9 @@ function UpdateBossPlayerHeroes takes nothing returns nothing
         set i = i + 1
     endloop
 
-    call SetPlayerHero1(udg_BossesPlayer, boss1)
-    call SetPlayerHero2(udg_BossesPlayer, boss2)
-    call SetPlayerHero3(udg_BossesPlayer, boss3)
+    call SetPlayerHero1(GetMapBossesPlayer(), boss1)
+    call SetPlayerHero2(GetMapBossesPlayer(), boss2)
+    call SetPlayerHero3(GetMapBossesPlayer(), boss3)
 endfunction
 
 function GetLegendaryItemsMax takes nothing returns integer

@@ -129,6 +129,7 @@ function UpgradeEvolution takes player whichPlayer returns nothing
 endfunction
 
 function SetEvolutionLevelForCreeps takes integer level returns nothing
+    call BJDebugMsg("Set evolution for creeps to level " + I2S(level))
     call SetEvolutionLevelOfPlayer(Player(PLAYER_NEUTRAL_AGGRESSIVE), level)
     call SetEvolutionLevelOfPlayer(GetMapBossesPlayer(), level)
 endfunction
@@ -196,7 +197,7 @@ endfunction
 
 private function TriggerConditionHeroLevel takes nothing returns boolean
     local integer lowestLevel = 0
-    if (GetOwningPlayer(GetTriggerUnit()) != GetMapBossesPlayer() and GetOwningPlayer(GetTriggerUnit()) != Player(PLAYER_NEUTRAL_AGGRESSIVE) and GetPlayerHero1(GetOwningPlayer(GetTriggerUnit())) == GetTriggerUnit()) then
+    if (IsPlayerInForce(GetOwningPlayer(GetTriggerUnit()), GetMapLobbyPlayers()) and GetPlayerHero1(GetOwningPlayer(GetTriggerUnit())) == GetTriggerUnit()) then
         // Determine if it is the lowest hero
         set lowestLevel = GetLowestHeroLevel1FromAllPlayingUsers()
         // Creeps

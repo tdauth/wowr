@@ -6,30 +6,25 @@ globals
     private constant real BACKPACK_UI_CHARGES_POS = 0.003
     private constant real BACKPACK_UI_CHARGES_SIZE = 0.02
     private constant real BACKPACK_UI_BUTTON_SPACE = 0.005
-    
+
     private constant real UI_SLOT_X = 0.03
     private constant real UI_SLOT_Y = 0.53
 
     private constant real UI_CHECKBOX_X = 0.48
     private constant real UI_CHECKBOX_Y = 0.20
     private constant real UI_CHECKBOX_SIZE = 0.02818
-    
-    private constant real UI_TOOLTIP_FRAME_X = 0.62
-    private constant real UI_TOOLTIP_FRAME_Y = 0.54
-    private constant real UI_TOOLTIP_FRAME_WIDTH = 0.16
-    private constant real UI_TOOLTIP_FRAME_HEIGHT = 0.36
-    
+
     private constant real UI_TOOLTIP_X = 0.639
     private constant real UI_TOOLTIP_Y = 0.47
     private constant real UI_TOOLTIP_WIDTH = 0.12
     private constant real UI_TOOLTIP_HEIGHT = 0.26
-    
+
     private constant real UI_TOOLTIP_ICON_X = UI_TOOLTIP_X
     private constant real UI_TOOLTIP_ICON_Y = 0.515
     private constant real UI_TOOLTIP_ICON_SIZE = 0.02
-    
+
     public constant real TOOLTIP_FONT_HEIGHT = 0.008
-    
+
     private hashtable h = InitHashtable()
 
     private constant integer KEY_INDEX = 1
@@ -48,7 +43,6 @@ globals
     private trigger array BackpackItemTrigger
     private trigger array BackpackItemTooltipOnTrigger
     private trigger array BackpackItemTooltipOffTrigger
-    private framehandle BackpackTooltipFrame
     private framehandle BackpackTooltipIcon
     private framehandle BackpackTooltipModel
     private framehandle BackpackItemGoldFrame
@@ -234,11 +228,11 @@ private function EnterItemFunction takes nothing returns nothing
     if (itemTypeId != 0) then
         if (GetBackpackItemIsPawnable(index)) then
             set tooltip = GetObjectName(itemTypeId)
-            
+
             if (GetBackpackItemCharges(index) > 1) then
                 set tooltip = tooltip + Format(GetLocalizedString("BAG_CHARGES")).i(GetBackpackItemCharges(index)).result() //  (|cffffcc00%1%|r)
             endif
-            
+
             set tooltip = tooltip + "|n"
 
             if (GetItemValueGold(itemTypeId) > 0) then
@@ -262,11 +256,11 @@ private function EnterItemFunction takes nothing returns nothing
     else
         //call BlzFrameSetVisible(BackpackItemGoldIconFrame[playerId], false)
     endif
-    
+
     if (itemTypeId != 0) then
         set c = GetPagedButtonsConfig(itemTypeId)
         set cDefault = GetPagedButtonsConfig(0)
-        
+
         if (GetBackpackItemIsPawnable(index)) then
             set tooltip = tooltip + GetLocalizedString("BAG_DROP_TO_SELL_ITEM") + GetBackpackItemTooltipExtended(index) // |n|n|cff808080Drop item on shop to sell|R|n
         endif
@@ -274,11 +268,11 @@ private function EnterItemFunction takes nothing returns nothing
         if (GetBackpackItemPlayer(index) != null and GetBackpackItemPlayer(index) != Player(PLAYER_NEUTRAL_PASSIVE)) then
             set tooltip = tooltip + Format(GetLocalizedString("BAG_ITEM_OWNER")).s(GetPlayerNameColored(GetBackpackItemPlayer(index))).result() // |n|nOwner: %1%
         endif
-        
+
         if (GetTriggerPlayer() == GetLocalPlayer()) then
             call BlzFrameSetTexture(BackpackTooltipIcon, GetIconByItemType(itemTypeId), 0, false)
             //call BJDebugMsg("Icon " + GetIconByItemType(itemTypeId) + " for item type " + GetObjectName(itemTypeId))
-            
+
             if (c != 0) then
                 call BlzFrameSetModel(BackpackTooltipModel, c.modelPath, 1)
                 call BlzFrameSetScale(BackpackTooltipModel, c.modelScale)
@@ -289,7 +283,7 @@ private function EnterItemFunction takes nothing returns nothing
                 call BlzFrameSetAbsPoint(BackpackTooltipModel, FRAMEPOINT_CENTER, cDefault.modelX, cDefault.modelY)
             endif
             call BlzFrameSetSpriteAnimate(BackpackTooltipModel, 2, 0)
-            
+
             call BlzFrameSetVisible(BackpackTooltipIcon, true)
             call BlzFrameSetVisible(BackpackTooltipModel, true)
         endif
@@ -325,7 +319,7 @@ private function CheckedFunction takes nothing returns nothing
     set Checked[GetPlayerId(GetTriggerPlayer())] = true
     call ShowBackpackUI(GetTriggerPlayer())
 endfunction
-    
+
 private function UncheckedFunction takes nothing returns nothing
     set Checked[GetPlayerId(GetTriggerPlayer())] = false
     call ShowBackpackUI(GetTriggerPlayer())
@@ -401,7 +395,7 @@ private function CreateBackpackUI takes nothing returns nothing
             call SaveInteger(h, GetHandleId(BackpackItemTooltipOffTrigger[index]), KEY_INDEX, index)
 
             // TODO Mouse down and mouse up to drag & drop to another bag or switch or do it like Warcraft's inventory with right click and left click. Add the icon of the item to the mouse cursor. If you click on the map it is dropped, if you click on the inventory it is dropped there.
-            
+
             set BackpackItemBagBackgroundFrame[index] = BlzCreateFrameByType("BACKDROP", "ItemBagBackrgroundFrame" + I2S(index), BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), "", 0)
             call BlzFrameSetAbsPoint(BackpackItemBagBackgroundFrame[index], FRAMEPOINT_TOPLEFT, x, y)
             call BlzFrameSetAbsPoint(BackpackItemBagBackgroundFrame[index], FRAMEPOINT_BOTTOMRIGHT, x + BACKPACK_UI_CHARGES_BACKGROUND_SIZE, y - BACKPACK_UI_CHARGES_BACKGROUND_SIZE)
@@ -417,7 +411,7 @@ private function CreateBackpackUI takes nothing returns nothing
             call BlzFrameSetVisible(BackpackItemBagFrame[index], false)
             call BlzFrameSetEnable(BackpackItemBagFrame[index], false)
             call BlzFrameSetLevel(BackpackItemBagFrame[index], 2)
-            
+
             set BackpackItemChargesBackgroundFrame[index] = BlzCreateFrameByType("BACKDROP", "ItemChargesBackrgroundFrame" + I2S(index), BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), "", 0)
             call BlzFrameSetAbsPoint(BackpackItemChargesBackgroundFrame[index], FRAMEPOINT_TOPLEFT, x + BACKPACK_UI_BUTTON_SIZE - BACKPACK_UI_CHARGES_BACKGROUND_SIZE, y - BACKPACK_UI_BUTTON_SIZE + BACKPACK_UI_CHARGES_BACKGROUND_SIZE)
             call BlzFrameSetAbsPoint(BackpackItemChargesBackgroundFrame[index], FRAMEPOINT_BOTTOMRIGHT, x + BACKPACK_UI_BUTTON_SIZE, y - BACKPACK_UI_BUTTON_SIZE)
@@ -447,10 +441,6 @@ private function CreateBackpackUI takes nothing returns nothing
         endif
     endloop
 
-    set BackpackTooltipFrame = BlzCreateFrame("EscMenuBackdrop", BackpackBackgroundFrame, 0, 0)
-    call BlzFrameSetAbsPoint(BackpackTooltipFrame, FRAMEPOINT_TOPLEFT, UI_TOOLTIP_FRAME_X , UI_TOOLTIP_FRAME_Y)
-    call BlzFrameSetAbsPoint(BackpackTooltipFrame, FRAMEPOINT_BOTTOMRIGHT, UI_TOOLTIP_FRAME_X + UI_TOOLTIP_FRAME_WIDTH, UI_TOOLTIP_FRAME_Y - UI_TOOLTIP_FRAME_HEIGHT)
-
     set BackpackItemGoldFrame = BlzCreateFrame("BACKDROP", BackpackBackgroundFrame, 0, 0)
     call BlzFrameSetAbsPoint(BackpackItemGoldFrame, FRAMEPOINT_TOPLEFT, 0.69, 0.50)
     call BlzFrameSetAbsPoint(BackpackItemGoldFrame, FRAMEPOINT_BOTTOMRIGHT, 0.71, 0.48)
@@ -468,7 +458,7 @@ private function CreateBackpackUI takes nothing returns nothing
     call BlzFrameSetAbsPoint(BackpackTooltipIcon, FRAMEPOINT_BOTTOMRIGHT, UI_TOOLTIP_ICON_X + UI_TOOLTIP_ICON_SIZE, UI_TOOLTIP_ICON_Y - UI_TOOLTIP_ICON_SIZE)
     call BlzFrameSetTexture(BackpackTooltipIcon, "ReplaceableTextures\\WorldEditUI\\Editor-Random-Item.blp", 0, true)
     call BlzFrameSetVisible(BackpackTooltipIcon, false)
-    
+
     /*
      -- create a Sprite copy the button's positions
     local model =  BlzCreateFrameByType("SPRITE", "SpriteName", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), "", 0)
@@ -504,7 +494,7 @@ private function CreateBackpackUI takes nothing returns nothing
     call BlzFrameSetTextAlignment(BackpackTooltipText, TEXT_JUSTIFY_TOP, TEXT_JUSTIFY_LEFT)
     call BlzFrameSetLevel(BackpackTooltipText, 1)
     //call BlzFrameSetTooltip(Frame05, BackpackTooltipText)
-    
+
     set Checkbox = BlzCreateFrame("QuestCheckBox2", BackpackBackgroundFrame, 0, 0)
     call BlzFrameSetAbsPoint(Checkbox, FRAMEPOINT_TOPLEFT, UI_CHECKBOX_X, UI_CHECKBOX_Y)
     call BlzFrameSetAbsPoint(Checkbox, FRAMEPOINT_BOTTOMRIGHT, UI_CHECKBOX_X + UI_CHECKBOX_SIZE, UI_CHECKBOX_Y - UI_CHECKBOX_SIZE)
@@ -513,19 +503,19 @@ private function CreateBackpackUI takes nothing returns nothing
     set CheckTrigger = CreateTrigger()
     call BlzTriggerRegisterFrameEvent(CheckTrigger, Checkbox, FRAMEEVENT_CHECKBOX_CHECKED)
     call TriggerAddAction(CheckTrigger, function CheckedFunction)
-    
+
     set UncheckTrigger = CreateTrigger()
     call BlzTriggerRegisterFrameEvent(UncheckTrigger, Checkbox, FRAMEEVENT_CHECKBOX_UNCHECKED)
     call TriggerAddAction(UncheckTrigger, function UncheckedFunction)
-    
+
     set CheckboxTooltipOnTrigger = CreateTrigger()
     call BlzTriggerRegisterFrameEvent(CheckboxTooltipOnTrigger, Checkbox, FRAMEEVENT_MOUSE_ENTER)
     call TriggerAddAction(CheckboxTooltipOnTrigger, function CheckboxEnterItemFunction)
-    
+
     set CheckboxTooltipOffTrigger = CreateTrigger()
     call BlzTriggerRegisterFrameEvent(CheckboxTooltipOffTrigger, Checkbox, FRAMEEVENT_MOUSE_LEAVE)
     call TriggerAddAction(CheckboxTooltipOffTrigger, function CheckboxLeaveItemFunction)
-    
+
     set BackpackCloseButton = CreateFullScreenCloseButton()
 
     set BackpackCloseTrigger = CreateTrigger()
@@ -544,7 +534,7 @@ private function Init takes nothing returns nothing
     call OnStartGame(function CreateBackpackUI)
 
     call FrameLoaderAdd(function CreateBackpackUI)
-    
+
     //call FrameSaverAdd(function HideBackpackUIForAllPlayers)
 endfunction
 

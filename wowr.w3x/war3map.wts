@@ -8617,7 +8617,7 @@ M
 }
 
 STRING 1448
-// Items: I03J (Priest), Name (Name)
+// Items: I03J (VIP), Name (Name)
 {
 VIP
 }
@@ -8683,7 +8683,7 @@ STRING 1458
 }
 
 STRING 1459
-// Items: I03J (Priest), Ubertip (Tooltip - Extended)
+// Items: I03J (VIP), Ubertip (Tooltip - Extended)
 {
 Changes the class to VIP:|n- Heal|n- Inner Fire|n- Holy Light|n- Divine Shield|n- Healing Wave|n- Holy Aura|n- Healing Spray|n- Devotion Aura|n- Holy Nova|n- Horn of Stormwind|n- Resurrection
 }
@@ -51587,7 +51587,7 @@ STRING 14638
 }
 
 STRING 14641
-// Items: I03J (Priest), Tip (Tooltip - Basic)
+// Items: I03J (VIP), Tip (Tooltip - Basic)
 {
 VIP
 }

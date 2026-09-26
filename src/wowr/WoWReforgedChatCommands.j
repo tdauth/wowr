@@ -274,7 +274,7 @@ private function HelpReset takes nothing returns nothing
 endfunction
 
 private function GetHelpTextCheats takes nothing returns string
-    return "-cheats, -nocheats, -creeps, -cinoutro, -cinlichking, -cinoldgods, -cininvasion, -boots, -terrain, -heroskills, -bonus, -quests, -fields, -read, -write, -maxresources, -respawngroupcounter, -respawnall, -maxlevel, -levelX, -col, -medivh, -revive, -resetrepick, -demigodlight, -demigoddark, -trydemigod, -orderon, -orderoff, -races, -kill, -fill, -share, -unitinfo, -checksave, -generatesave, -savecounters, -savecodeduplicates, -savecodemissing, -autoskill, -orbs, -herolevels, -deathwing, -claws, -clawsbonus, -regennight, -craft, -legendary, -professions, -aigui, -aicraft, -aiharveston/off, -day, -night, -jaina, -arena, -evolution, -evolutioncreeps, -nagaquest4, -website"
+    return "-cheats, -nocheats, -creeps, -cinoutro, -cinlichking, -cinoldgods, -cininvasion, -boots, -terrain, -heroskills, -bonus, -quests, -fields, -read, -write, -maxresources, -respawngroupcounter, -respawnall, -maxlevel, -levelX, -col, -medivh, -resetrepick, -demigodlight, -demigoddark, -trydemigod, -orderon, -orderoff, -races, -kill, -fill, -res, -share, -unitinfo, -checksave, -generatesave, -savecounters, -savecodeduplicates, -savecodemissing, -autoskill, -orbs, -herolevels, -deathwing, -claws, -clawsbonus, -regennight, -craft, -legendary, -professions, -aigui, -aicraft, -aiharveston/off, -day, -night, -jaina, -arena, -evolution, -evolutioncreeps, -nagaquest4, -website"
 endfunction
 
 private function HelpCheats takes nothing returns nothing
@@ -1046,6 +1046,14 @@ private function CheatFill takes nothing returns nothing
     call ForGroupBJ(GetUnitsSelectedAll(GetTriggerPlayer()), function EnumFill)
 endfunction
 
+private function EnumResurrectHero takes nothing returns nothing
+    call ReviveHero(GetEnumUnit(), GetUnitX(GetEnumUnit()), GetUnitY(GetEnumUnit()), true)
+endfunction
+
+private function CheatResurrect takes nothing returns nothing
+    call ForGroup(GetPlayerHeroes(GetTriggerPlayer()), function EnumResurrectHero)
+endfunction
+
 function CheatUnfreeze takes nothing returns nothing
     call PauseAllUnitsBJ(false)
 endfunction
@@ -1062,7 +1070,7 @@ endfunction
 
 function CheatNoBosses takes nothing returns nothing
     set bj_wantDestroyGroup = true
-    call ForGroupBJ(GetUnitsOfPlayerAll(udg_BossesPlayer), function EnumRemoveUnit)
+    call ForGroupBJ(GetUnitsOfPlayerAll(GetMapBossesPlayer()), function EnumRemoveUnit)
     call BJDebugMsg("Removed all bosses.")
 endfunction
 
@@ -1440,6 +1448,7 @@ private function Init takes nothing returns nothing
     // Cheats
     call AddCheat("-kill", true, function CheatKill)
     call AddCheat("-fill", true, function CheatFill)
+    call AddCheat("-res", true, function CheatResurrect)
     call AddCheat("-unfreeze", true, function CheatUnfreeze)
     call AddCheat("-nocreeps", true, function CheatNoCreeps)
     call AddCheat("-nobosses", true, function CheatNoBosses)

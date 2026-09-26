@@ -74,7 +74,7 @@ endfunction
 function ComputerAIAutoReviveHeroesAll takes nothing returns nothing
     local force all = CreateForce()
     call ForceAddPlayingComputerPlayers(all)
-    call ForceRemovePlayer(all, udg_BossesPlayer)
+    call ForceRemovePlayer(all, GetMapBossesPlayer())
     call ForForce(all, function EnumComputerAIAutoReviveHeroes)
     call ForceClear(all)
     call DestroyForce(all)
