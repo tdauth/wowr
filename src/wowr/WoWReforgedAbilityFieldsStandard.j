@@ -441,6 +441,11 @@ private function Init takes nothing returns nothing
     // Sacred Aura
     call RegisterAbilityFieldType('hsa1', ABILITY_FIELD_TYPE_CHANCE_REAL)
     call RegisterAbilityFieldType('hsa2', ABILITY_FIELD_TYPE_CHANCE_REAL)
+    // Righteous Fury
+    call RegisterAbilityFieldType('Rng1', ABILITY_FIELD_TYPE_DAMAGE_REAL)
+    call RegisterAbilityFieldType('chr2', ABILITY_FIELD_TYPE_DAMAGE_REAL)
+    call RegisterAbilityFieldType('nrf3', ABILITY_FIELD_TYPE_CHANCE_REAL)
+    call RegisterAbilityFieldType('nrf4', ABILITY_FIELD_TYPE_CHANCE_REAL)
 
     // Invisibility
     call RegisterInvisibility('Aivs') // Human original
@@ -656,6 +661,12 @@ private function Init takes nothing returns nothing
     // Paladin
     call RegisterUnitHealBonus(ABILITY_HOLY_LIGHT, GetHandleId(ABILITY_RLF_AMOUNT_HEALED_DAMAGED_HHB1))
     call RegisterUnitHealBonus(ABILITY_MASS_HOLY_LIGHT_DUMMY, GetHandleId(ABILITY_RLF_AMOUNT_HEALED_DAMAGED_HHB1))
+
+    call RegisterUnitAbility(ABILITY_RIGHTEOUS_FURY)
+    call RegisterAbilityField(ABILITY_RIGHTEOUS_FURY, 'Rng1')
+    call RegisterAbilityField(ABILITY_RIGHTEOUS_FURY, 'chr2')
+    call RegisterAbilityField(ABILITY_RIGHTEOUS_FURY, 'nrf3')
+    call RegisterAbilityField(ABILITY_RIGHTEOUS_FURY, 'nrf4')
 
     call RegisterUnitAbility(ABILITY_DEVOTION_AURA)
     call RegisterAbilityField(ABILITY_DEVOTION_AURA, GetHandleId(ABILITY_RLF_ARMOR_BONUS_HAD1))
