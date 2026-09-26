@@ -192,7 +192,7 @@ endfunction
 
 private function TriggerConditionIssuePointOrder takes nothing returns boolean
     if (IsUnitInItemCarrierGroup(GetTriggerUnit(), ITEM_BOOTS_OF_TELEPORTATION) or IsUnitInItemCarrierGroup(GetTriggerUnit(), ITEM_SCEPTER_OF_SARGERAS)) then
-        if ((GetIssuedOrderId() == OrderId("move") or GetIssuedOrderId() == OrderId("smart")) and IsMaskedToPlayer(GetOrderPointX(), GetOrderPointY(), GetOwningPlayer(GetTriggerUnit())) and MapLocationCanBeTeleportedTo(GetTriggerUnit(), GetOrderPointX(), GetOrderPointY()) and DistanceBetweenCoordinates(GetUnitX(GetTriggerUnit()), GetUnitY(GetTriggerUnit()), GetOrderPointX(), GetOrderPointY()) >= 500.00) then
+        if ((GetIssuedOrderId() == OrderId("move") or GetIssuedOrderId() == OrderId("smart")) and not IsMaskedToPlayer(GetOrderPointX(), GetOrderPointY(), GetOwningPlayer(GetTriggerUnit())) and MapLocationCanBeTeleportedTo(GetTriggerUnit(), GetOrderPointX(), GetOrderPointY()) and DistanceBetweenCoordinates(GetUnitX(GetTriggerUnit()), GetUnitY(GetTriggerUnit()), GetOrderPointX(), GetOrderPointY()) >= 500.0) then
             if (IsUnitInItemCarrierGroup(GetTriggerUnit(), ITEM_SCEPTER_OF_SARGERAS)) then
                 call UnitUseItemPoint(GetTriggerUnit(), GetItemOfTypeFromUnitBJ(GetTriggerUnit(), ITEM_SCEPTER_OF_SARGERAS), GetOrderPointX(), GetOrderPointY())
             else
