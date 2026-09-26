@@ -220,7 +220,6 @@
 //! import "wowr/WoWReforgedTerrain.j"
 //! import "wowr/WoWReforgedTextTag.j"
 //! import "wowr/WoWReforgedThievesGuild.j"
-//! import "wowr/WoWReforgedTmpVariables.j"
 //! import "wowr/WoWReforgedTomes.j"
 //! import "wowr/WoWReforgedTownHalls.j"
 //! import "wowr/WoWReforgedTradingPosts.j"

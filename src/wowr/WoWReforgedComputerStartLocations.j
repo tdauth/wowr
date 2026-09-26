@@ -1,4 +1,4 @@
-library WoWReforgedComputerStartLocations requires MathUtils, WoWReforgedTmpVariables, WoWReforgedRaces
+library WoWReforgedComputerStartLocations requires MathUtils, WoWReforgedGuiTriggers, WoWReforgedRaces
 
 function GetRandomRaceWithAISupport takes nothing returns integer
     return GetRandomInt(1, GetRacesMax() - 1) // with freelancer, udg_RaceNone is 0
