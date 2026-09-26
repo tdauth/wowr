@@ -144,7 +144,7 @@ function ExamineUnit takes unit caster, unit whichUnit returns nothing
         set msg = msg + "\nRace: " + GetRaceName(whichRace)
     endif
 
-    if (whichProfession == udg_ProfessionNone) then
+    if (whichProfession == PROFESSION_NONE) then
         set msg = msg + "\nNo profession."
     else
         set msg = msg + "\nProfession: " + GetProfessionName(whichProfession)
@@ -428,7 +428,7 @@ function ExamineItem takes unit caster, item whichItem returns nothing
         set msg = msg + "\nRace: " + GetRaceName(whichRace)
     endif
 
-    if (whichProfession == udg_ProfessionNone) then
+    if (whichProfession == PROFESSION_NONE) then
         set msg = msg + "\nNo profession."
     else
         set msg = msg + "\nProfession: " + GetProfessionName(whichProfession)

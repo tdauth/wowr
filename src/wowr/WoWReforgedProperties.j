@@ -298,7 +298,7 @@ private function Init takes nothing returns nothing
     call AddProperty('n07N', 'h0WS', RESOURCE_MEAT, WOWR_RACE_ORC, true) // Orgrimmar
     call AddProperty('n08S', 'h0WW', RESOURCE_FAVOR, WOWR_RACE_TAUREN, true) // Thunder Bluff
     call AddProperty('n0LX', 'h0XO', RESOURCE_MEAT, WOWR_RACE_CENTAUR, false) // Maraudon
-    call AddProperty('n0LY', 'h0XP', RESOURCE_MEAT, udg_RaceQuillboar, false) // Razorfen Kraul
+    call AddProperty('n0LY', 'h0XP', RESOURCE_MEAT, WOWR_RACE_QUILLBOAR, false) // Razorfen Kraul
     call AddProperty('n0BK', 'h0X5', RESOURCE_OIL, WOWR_RACE_TROLL, true) // Darkspear Isle
     call AddProperty('n07O', 'h0WT', RESOURCE_FAVOR, WOWR_RACE_UNDEAD, false) // Undercity
     call AddProperty('n098', 'h0X1', Resources_GOLD, WOWR_RACE_BLOOD_ELF, true) // Sunstrider Isle

@@ -86,7 +86,7 @@ endfunction
 
 private function EnumAutoCraft takes nothing returns nothing
     local group heroes = null
-    if (GetPlayerProfession1(GetEnumPlayer()) != udg_ProfessionNone or GetPlayerProfession2(GetEnumPlayer()) != udg_ProfessionNone or GetPlayerProfession3(GetEnumPlayer()) != udg_ProfessionNone) then
+    if (GetPlayerProfession1(GetEnumPlayer()) != PROFESSION_NONE or GetPlayerProfession2(GetEnumPlayer()) != PROFESSION_NONE or GetPlayerProfession3(GetEnumPlayer()) != PROFESSION_NONE) then
         set heroes = GetPlayerHeroes(GetEnumPlayer())
         call ForGroup(heroes, function EnumHeroAutoCrafts)
         call GroupClear(heroes)
@@ -515,11 +515,11 @@ private function TriggerConditionHeroLevel takes nothing returns boolean
                 endif
             endif
 
-            if (GetHeroLevel(GetTriggerUnit()) >= HERO_JOURNEY_PROFESSION_2 and GetPlayerProfession2(owner) == udg_ProfessionNone) then
+            if (GetHeroLevel(GetTriggerUnit()) >= HERO_JOURNEY_PROFESSION_2 and GetPlayerProfession2(owner) == PROFESSION_NONE) then
                 call ComputerAutopickProfession2(GetOwningPlayer(GetTriggerUnit()))
             endif
 
-            if (GetHeroLevel(GetTriggerUnit()) >= HERO_JOURNEY_PROFESSION_3 and GetPlayerProfession3(owner) == udg_ProfessionNone) then
+            if (GetHeroLevel(GetTriggerUnit()) >= HERO_JOURNEY_PROFESSION_3 and GetPlayerProfession3(owner) == PROFESSION_NONE) then
                 call ComputerAutopickProfession3(GetOwningPlayer(GetTriggerUnit()))
             endif
         endif

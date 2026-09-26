@@ -15,12 +15,12 @@ private function Init takes nothing returns nothing
 
 	call AddComputerStartLocationRectWithShipyard(gg_rct_Town_Hall_Orgrimmar, gg_rct_Town_Hall_Shipyard_Orgrimmar)
 	call AddComputerStartLocationPossibleRaceLast(WOWR_RACE_ORC)
-	call AddComputerStartLocationPossibleRaceLast(udg_RaceQuillboar)
+	call AddComputerStartLocationPossibleRaceLast(WOWR_RACE_QUILLBOAR)
 	call AddComputerStartLocationPossibleRaceLast(WOWR_RACE_CENTAUR)
 
 	call AddComputerStartLocationRectWithShipyard(gg_rct_Town_Hall_Thunder_Bluff, gg_rct_Town_Hall_Shipyard_Thunder_Bluff)
 	call AddComputerStartLocationPossibleRaceLast(WOWR_RACE_TAUREN)
-	call AddComputerStartLocationPossibleRaceLast(udg_RaceQuillboar)
+	call AddComputerStartLocationPossibleRaceLast(WOWR_RACE_QUILLBOAR)
 	call AddComputerStartLocationPossibleRaceLast(WOWR_RACE_CENTAUR)
 
 	call AddComputerStartLocationRectWithShipyard(gg_rct_Town_Hall_Echo_Isles, gg_rct_Town_Hall_Shipyard_Echo_Isles)

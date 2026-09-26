@@ -3197,6 +3197,12 @@ globals
     constant integer ITEM_ABOMINATIONS_HOOK                          = 'epah'
     constant integer ITEM_AGUS_SHAMBLING_HAND                        = 'eash'
     constant integer ITEM_ANCIENT_BRONZE_HELMET                      = 'eabh'
+    constant integer ITEM_ARMOR_OF_THE_SCARLET_CRUSADE               = 'easc'
+    constant integer ITEM_BANDIT_MASK                                = 'ehbm'
+    constant integer ITEM_BLACKSMITHS_APRON                          = 'eaba'
+    constant integer ITEM_BLADE_DANCERS_GERAVES                      = 'ebdg'
+    constant integer ITEM_BLIGHTWEAVER_BOOTS                         = 'ebwb'
+    constant integer ITEM_BLUE_DRAGON_FIGURINE                       = 'ebdf'
 
     // Mounts
     constant integer GRYPHON_MOUNT                                   = 'h004'

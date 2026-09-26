@@ -1,6 +1,7 @@
 library WoWReforgedProfessions initializer Init requires MaxItemStacks, MathUtils, TextTagUtils, ForceUtils, StringFormat, UnitTypeUtils, WoWReforgedProfessionMiner, WowReforgedProfessionCook
 
 globals
+    constant integer PROFESSION_NONE = -1
     integer PROFESSION_HERBALIST
     integer PROFESSION_ALCHEMIST
     integer PROFESSION_WEAPON_SMITH
@@ -115,7 +116,7 @@ function GetProfessionFromString takes string s returns integer
 endfunction
 
 function IsValidProfession takes integer p returns boolean
-    return p > udg_ProfessionNone and p < GetProfessionsMax()
+    return p > PROFESSION_NONE and p < GetProfessionsMax()
 endfunction
 
 private function GetIconByProfessionEx takes integer profession returns string
@@ -134,7 +135,7 @@ private function GetIconByProfessionEx takes integer profession returns string
 endfunction
 
 function GetIconByProfession takes integer profession returns string
-    if (profession == udg_ProfessionNone) then
+    if (profession == PROFESSION_NONE) then
         return "ReplaceableTextures\\WorldEditUI\\Editor-Random-Unit.blp"
     endif
 
@@ -171,12 +172,12 @@ function GetProfessionByTavernItemTypeId takes integer tavernItemTypeId returns 
         endif
         set i = i + 1
     endloop
-    return -1 // udg_ProfessionNone
+    return PROFESSION_NONE
 endfunction
 
 function GiveProfessionBookToHero takes unit hero, integer professionIndex returns nothing
     local integer itemTypeId = 0
-    if (professionIndex != udg_ProfessionNone) then
+    if (professionIndex != PROFESSION_NONE) then
         set itemTypeId = GetProfession(professionIndex).bookItemTypeId
         call UnitAddItemById(hero, itemTypeId)
         call DisplayTextToPlayer(GetOwningPlayer(hero), 0.0, 0.0, Format(GetLocalizedString("GIVE_X_TO_Y")).s(GetObjectName(itemTypeId)).s(GetActualObjectName(GetUnitTypeId(hero))).result())
@@ -313,12 +314,12 @@ function GetRandomComputerProfessionEx takes integer exclude0, integer exclude1 
 endfunction
 
 function GetRandomComputerProfession takes nothing returns integer
-    return GetRandomComputerProfessionEx(udg_ProfessionNone, udg_ProfessionNone)
+    return GetRandomComputerProfessionEx(PROFESSION_NONE, PROFESSION_NONE)
 endfunction
 
 function ComputerAutopickProfession2 takes player whichPlayer returns nothing
     local integer convertedPlayerId = GetConvertedPlayerId(whichPlayer)
-    set udg_PlayerProfession2[convertedPlayerId] = GetRandomComputerProfessionEx(udg_PlayerProfession[convertedPlayerId], udg_ProfessionNone)
+    set udg_PlayerProfession2[convertedPlayerId] = GetRandomComputerProfessionEx(udg_PlayerProfession[convertedPlayerId], PROFESSION_NONE)
 endfunction
 
 function ComputerAutopickProfession3 takes player whichPlayer returns nothing
@@ -473,7 +474,7 @@ function GetNextCraftedProfessionItemEx takes integer profession, integer rank r
 		elseif (rank == PROFESSION_RANK_NOVICE) then
 			return ITEM_RING_OF_SUPERIORITY
 		endif
-    elseif (profession == udg_ProfessionArchaeologist) then
+    elseif (profession == PROFESSION_ARCHAEOLOGIST) then
         if (rank == PROFESSION_RANK_GRAND_MASTER) then
             return ChooseRandomItemExBJ(8, ITEM_TYPE_ANY)
 		elseif (rank == PROFESSION_RANK_MASTER) then
@@ -678,7 +679,7 @@ function GetBookItemProfession takes integer itemTypeId returns integer
         endif
         set i = i + 1
     endloop
-    return udg_ProfessionNone
+    return PROFESSION_NONE
 endfunction
 
 function GetObjectProfession takes integer objectId returns integer
@@ -706,7 +707,7 @@ function GetObjectProfession takes integer objectId returns integer
         endloop
         set i = i + 1
     endloop
-    return udg_ProfessionNone
+    return PROFESSION_NONE
 endfunction
 
 function ProfessionBonusCharges takes unit hero returns integer
@@ -883,9 +884,9 @@ private function Init takes nothing returns nothing
     local integer i = 0
     loop
         exitwhen (i == bj_MAX_PLAYERS)
-        set udg_PlayerProfession[convertedPlayerId] = udg_ProfessionNone
-        set udg_PlayerProfession2[convertedPlayerId] = udg_ProfessionNone
-        set udg_PlayerProfession3[convertedPlayerId] = udg_ProfessionNone
+        set udg_PlayerProfession[convertedPlayerId] = PROFESSION_NONE
+        set udg_PlayerProfession2[convertedPlayerId] = PROFESSION_NONE
+        set udg_PlayerProfession3[convertedPlayerId] = PROFESSION_NONE
         set convertedPlayerId = convertedPlayerId + 1
         set i = i + 1
     endloop

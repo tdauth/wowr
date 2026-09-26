@@ -351,7 +351,7 @@ private function RaceOrProfessionOrQuestIconToHtml takes integer objectId, integ
         call RaceIconToHtml(whichRace)
         set matches = true
     endif
-    if (profession != udg_ProfessionNone) then
+    if (profession != PROFESSION_NONE) then
         call IconToHtmlEx(GetProfessionItemTypeId(profession), "professions.html")
         set matches = true
     endif

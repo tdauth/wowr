@@ -148,15 +148,15 @@ function DisplayStats takes player to, player from returns nothing
         set race3 = GetRaceName(GetPlayerRace3(from)) + " (" + I2S(R2I(GetResearchesPercentageForRace(GetPlayerRace3(from), from))) + " %)"
     endif
 
-    if (GetPlayerProfession1(from) != udg_ProfessionNone) then
+    if (GetPlayerProfession1(from) != PROFESSION_NONE) then
         set profession1 = GetProfessionName(GetPlayerProfession1(from))
     endif
 
-    if (GetPlayerProfession2(from) != udg_ProfessionNone) then
+    if (GetPlayerProfession2(from) != PROFESSION_NONE) then
         set profession2 = GetProfessionName(GetPlayerProfession2(from))
     endif
 
-    if (GetPlayerProfession3(from) != udg_ProfessionNone) then
+    if (GetPlayerProfession3(from) != PROFESSION_NONE) then
         set profession1 = GetProfessionName(GetPlayerProfession3(from))
     endif
 
@@ -239,15 +239,15 @@ function GetPlayerSelectionSettings takes player whichPlayer returns string
         set race3 = GetRaceName(udg_PlayerSelectionRace3[convertedPlayerId])
     endif
 
-    if (udg_PlayerSelectionProfession1[convertedPlayerId] != udg_ProfessionNone) then
+    if (udg_PlayerSelectionProfession1[convertedPlayerId] != PROFESSION_NONE) then
         set profession1 = GetProfessionName(udg_PlayerSelectionProfession1[convertedPlayerId])
     endif
 
-    if (udg_PlayerSelectionProfession2[convertedPlayerId] != udg_ProfessionNone) then
+    if (udg_PlayerSelectionProfession2[convertedPlayerId] != PROFESSION_NONE) then
         set profession2 = GetProfessionName(udg_PlayerSelectionProfession2[convertedPlayerId])
     endif
 
-    if (udg_PlayerSelectionProfession3[convertedPlayerId] != udg_ProfessionNone) then
+    if (udg_PlayerSelectionProfession3[convertedPlayerId] != PROFESSION_NONE) then
         set profession3 = GetProfessionName(udg_PlayerSelectionProfession3[convertedPlayerId])
     endif
 

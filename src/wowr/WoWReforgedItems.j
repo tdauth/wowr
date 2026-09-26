@@ -16,7 +16,7 @@ endfunction
 
 private function PlayerIsAllowedItemProfession takes player whichPlayer, integer itemTypeId returns boolean
     local integer itemProfession = GetBookItemProfession(itemTypeId)
-    return itemProfession == udg_ProfessionNone or PlayerHasProfession(whichPlayer, itemProfession)
+    return itemProfession == PROFESSION_NONE or PlayerHasProfession(whichPlayer, itemProfession)
 endfunction
 
 // TODO Make this function faster by caching item type races and professions!
@@ -71,7 +71,7 @@ private function IsUniqueScepterOrProfessionBook takes item whichItem, unit hero
     if (GetUnitTypeId(hero) == BACKPACK or GetUnitTypeId(hero) == ITEM_VALUES_DUMMY_HERO) then
         return true
     endif
-    if (GetBookItemProfession(itemTypeId) != udg_ProfessionNone or GetObjectRaceType(itemTypeId) == RACE_OBJECT_TYPE_SCEPTER_ITEM) then
+    if (GetBookItemProfession(itemTypeId) != PROFESSION_NONE or GetObjectRaceType(itemTypeId) == RACE_OBJECT_TYPE_SCEPTER_ITEM) then
         return CountItemsOfItemTypeId(hero, itemTypeId) <= 1
     endif
     return true

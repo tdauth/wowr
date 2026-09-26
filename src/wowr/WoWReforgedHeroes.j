@@ -478,7 +478,7 @@ private function Init takes nothing returns nothing
     call AddHero(GEOMANCER, CLASS_GEOMANCER, WOWR_RACE_KOBOLD, EAGLE_MOUNT, false, GetLocalizedString("KOBOLD"), "")
 
     // Quillboar
-    call AddHero(RAZORMANE_CHIEFTAIN, CLASS_WARRIOR, udg_RaceQuillboar, EAGLE_MOUNT, false, GetLocalizedString("QUILLBOAR"), "")
+    call AddHero(RAZORMANE_CHIEFTAIN, CLASS_WARRIOR, WOWR_RACE_QUILLBOAR, EAGLE_MOUNT, false, GetLocalizedString("QUILLBOAR"), "")
 
     // Bandit
     call AddHero(BANDIT_LORD, CLASS_WARRIOR, WOWR_RACE_BANDIT, CROW_MOUNT, false, GetLocalizedString("BANDIT"), "")

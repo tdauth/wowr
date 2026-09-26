@@ -9,13 +9,13 @@ endfunction
 
 function RecreateHeroItems takes player whichPlayer returns nothing
     if (GetPlayerHero1(whichPlayer) != null) then
-        if (GetPlayerProfession1(whichPlayer) != udg_ProfessionNone) then
+        if (GetPlayerProfession1(whichPlayer) != PROFESSION_NONE) then
             call UnitAddItemByIdIfNotInInventory(GetPlayerHero1(whichPlayer), GetProfessionBookItemTypeId(GetPlayerProfession1(whichPlayer)))
         endif
-        if (GetPlayerProfession2(whichPlayer) != udg_ProfessionNone and GetPlayerProfession2(whichPlayer) != GetPlayerProfession1(whichPlayer)) then
+        if (GetPlayerProfession2(whichPlayer) != PROFESSION_NONE and GetPlayerProfession2(whichPlayer) != GetPlayerProfession1(whichPlayer)) then
             call UnitAddItemByIdIfNotInInventory(GetPlayerHero1(whichPlayer), GetProfessionBookItemTypeId(GetPlayerProfession2(whichPlayer)))
         endif
-        if (GetPlayerProfession3(whichPlayer) != udg_ProfessionNone and GetPlayerProfession3(whichPlayer) != GetPlayerProfession2(whichPlayer) and GetPlayerProfession3(whichPlayer) != GetPlayerProfession1(whichPlayer)) then
+        if (GetPlayerProfession3(whichPlayer) != PROFESSION_NONE and GetPlayerProfession3(whichPlayer) != GetPlayerProfession2(whichPlayer) and GetPlayerProfession3(whichPlayer) != GetPlayerProfession1(whichPlayer)) then
             call UnitAddItemByIdIfNotInInventory(GetPlayerHero1(whichPlayer), GetProfessionBookItemTypeId(GetPlayerProfession3(whichPlayer)))
         endif
         if (GetPlayerRace1(whichPlayer) != udg_RaceNone) then
