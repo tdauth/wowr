@@ -166,6 +166,8 @@ private function Init takes nothing returns nothing
     call AddChange("Scale down building Dragon Roost by Dragon Breeder.")
     call AddChange("Fix changing races for neutral Alchemist Labs.")
     call AddChange("Fix page names in Alchemist Labs.")
+    call AddChange("Add ground texture to High Elf Farm.")
+    call AddChange("Add ground texture to High Elf Housing.")
 
 static if (MAP_DEBUG_MODE_ENABLED) then
     call AddVersion("4.6")
