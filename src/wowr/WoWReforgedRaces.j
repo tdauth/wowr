@@ -4491,7 +4491,8 @@ private function Init takes nothing returns nothing
         set i = i + 1
     endloop
 
-    call AddNone()
+    // RacesPopupMenu has to match this order
+    call AddNone() // udg_RaceNone = 0
     call AddFreelancer()
     call AddHuman()
     call AddOrc()
@@ -4503,8 +4504,8 @@ private function Init takes nothing returns nothing
     call AddLostOnes()
     call AddDemon()
     call AddFurbolg()
-    call AddGoblin()
     call AddDwarf()
+    call AddGoblin()
     call AddHighElf()
     call AddGnome()
     call AddTroll()
