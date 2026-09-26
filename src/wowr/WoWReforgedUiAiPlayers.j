@@ -88,7 +88,7 @@ globals
     private constant integer HEROES_MENU_ITEM_RANDOM_MATCHING_RACE = 0
     private constant integer HEROES_MENU_ITEM_RANDOM = 1
     private constant integer HEROES_MENU_ITEM_CUSTOMIZABLE = 2
-    private constant integer HEROES_MENU_ITEM_FINAL = 204
+    private constant integer HEROES_MENU_ITEM_FINAL = 205
 
     // StartLocationsPopupMenu
     private constant integer START_LOCATION_MENU_ITEM_RANDOM_MATCHING_TEAM = 0
