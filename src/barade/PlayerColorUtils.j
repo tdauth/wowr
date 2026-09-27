@@ -53,6 +53,8 @@ function GetPlayerColorRed takes playercolor c returns integer
         return 0x00
     elseif c == PLAYER_COLOR_PEANUT then
         return 0xA4
+    elseif c == PLAYER_COLOR_BLACK then
+        return 0x00
     else
         return 0xFF
     endif
@@ -108,6 +110,8 @@ function GetPlayerColorGreen takes playercolor c returns integer
         return 0x78
     elseif c == PLAYER_COLOR_PEANUT then
         return 0x6F
+    elseif c == PLAYER_COLOR_BLACK then
+        return 0x00
     else
         return 0xFF
     endif
@@ -162,6 +166,8 @@ function GetPlayerColorBlue takes playercolor c returns integer
         return 0x1E
     elseif c == PLAYER_COLOR_PEANUT then
         return 0x33
+    elseif c == PLAYER_COLOR_BLACK then
+        return 0x00
     else
         return 0xFF
     endif
@@ -217,6 +223,8 @@ function GetPlayerColorString takes playercolor c, string text returns string
         return "|cff00781E" + text + "|r"
     elseif c == PLAYER_COLOR_PEANUT then
         return "|cffA46F33" + text + "|r"
+    elseif c == PLAYER_COLOR_BLACK then
+        return "|cff000000" + text + "|r"
     else
         return "|cffFFFFFF" + text + "|r"
     endif
@@ -259,30 +267,18 @@ private function Init takes nothing returns nothing
     set PlayerColorNames[21] = "SNOW"
     set PlayerColorNames[22] = "EMERALD"
     set PlayerColorNames[23] = "PEANUT"
+    set PlayerColorNames[24] = "BLACK"
 endfunction
 
 function GetPlayerColorName takes player whichPlayer returns string
     return StringCase(PlayerColorNames[GetHandleId(GetPlayerColor(whichPlayer))], false)
 endfunction
 
-function GetPlayerColorFromString takes string whichString returns playercolor
-    local integer i = 0
-    loop
-        exitwhen (i == bj_MAX_PLAYERS)
-        if (whichString == I2S(i + 1) or (PlayerColorNames[i] != null and StringLength(PlayerColorNames[i]) > 0 and StringCase(whichString, true) == PlayerColorNames[i]) or (StringLength(GetPlayerName(Player(i))) > 0 and StringStartsWith(GetPlayerName(Player(i)), whichString))) then
-            return ConvertPlayerColor(i)
-        endif
-        set i = i + 1
-    endloop
-
-    return null
-endfunction
-
 function GetPlayerFromString takes string whichString returns player
     local integer i = 0
     if (StringLength(whichString) > 0) then
         loop
-            exitwhen (i == bj_MAX_PLAYERS)
+            exitwhen (i >= bj_MAX_PLAYERS)
             if (whichString == I2S(i + 1) or (PlayerColorNames[i] != null and StringLength(PlayerColorNames[i]) > 0 and StringCase(whichString, true) == PlayerColorNames[i]) or (StringLength(GetPlayerName(Player(i))) > 0 and StringStartsWith(GetPlayerName(Player(i)), whichString))) then
                 return Player(i)
             endif
@@ -290,6 +286,14 @@ function GetPlayerFromString takes string whichString returns player
         endloop
     endif
 
+    return null
+endfunction
+
+function GetPlayerColorFromString takes string whichString returns playercolor
+    local player p = GetPlayerFromString(whichString)
+    if (p != null) then
+        return GetPlayerColor(p)
+    endif
     return null
 endfunction
 

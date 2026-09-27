@@ -85,7 +85,7 @@ function GetMapWaterNeutralZoneFacing takes nothing returns real
 endfunction
 
 function GetMapAllowConfigureAIPlayer takes player whichPlayer returns boolean
-    return whichPlayer != GetMapBossesPlayer() and whichPlayer != GetMapGaiaPlayer() and whichPlayer != Player(PLAYER_NEUTRAL_AGGRESSIVE) and whichPlayer != Player(PLAYER_NEUTRAL_PASSIVE)
+    return GetPlayerId(whichPlayer) < GetMapMaxLobbyPlayers()
 endfunction
 
 function AddMapSettings takes framehandle textArea returns nothing
@@ -105,7 +105,7 @@ private function Init takes nothing returns nothing
     local integer team = 0
     local integer i = 0
     loop
-        exitwhen (i == bj_MAX_PLAYER_SLOTS)
+        exitwhen (i >= bj_MAX_PLAYER_SLOTS)
         set slotPlayer = Player(i)
         if (GetMapAllowConfigureAIPlayer(slotPlayer)) then
             call ForceAddPlayer(lobbyPlayers, slotPlayer)
