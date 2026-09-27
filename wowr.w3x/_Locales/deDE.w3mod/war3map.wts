@@ -8617,7 +8617,7 @@ M
 }
 
 STRING 1448
-// Items: I03J (Priest), Name (Name)
+// Items: I03J (VIP), Name (Name)
 {
 VIP
 }
@@ -8683,7 +8683,7 @@ STRING 1458
 }
 
 STRING 1459
-// Items: I03J (Priest), Ubertip (Tooltip - Extended)
+// Items: I03J (VIP), Ubertip (Tooltip - Extended)
 {
 Wechselt die Klasse zum VIP:|n- Heal|n- Inner Fire|n- Holy Light|n- Divine Shield|n- Healing Wave|n- Holy Aura|n- Healing Spray|n- Devotion Aura|n- Holy Nova|n- Horn of Stormwind|n- Resurrection
 }
@@ -10236,10 +10236,22 @@ STRING 1717
 Tank Hero, defending your army and destroying hostile towns. Can learn Storm Bolt, Stachelpanzer, Baum essen, and Demolieren. |n|n|cffffcc00Greift Land-Einheiten an.|r
 }
 
+STRING 1718
+// Items: I03P (Backpack), Tip (Tooltip - Basic)
+{
+Purchase Backpack
+}
+
 STRING 1719
 // Units: N0HY (Siege Golem), Ubertip (Tooltip - Extended)
 {
 Ein Kriegerheld, adept at summoning beasts into battle. Can learn Storm Bolt, Kriegsdonner, Hieb, and Avatar. |n|n|cffffcc00Greift Land-Einheiten an.|r
+}
+
+STRING 1720
+// Units: E008 (Backpack), Name (Name)
+{
+Backpack
 }
 
 STRING 1721
@@ -10294,6 +10306,16 @@ STRING 1729
 // Abilities: A07Z (Spell Steal), EditorSuffix (Editor Suffix)
 {
 (Neutral Feindlich)
+}
+
+STRING 1730
+{
+Purchase Backpack
+}
+
+STRING 1731
+{
+Purchase Backpack
 }
 
 STRING 1732
@@ -15169,12 +15191,6 @@ STRING 2856
 // Upgrades: R06K (Pillage), Name (Name)
 {
 Versklavung
-}
-
-STRING 2857
-// Abilities: A1G3 (Nocturnal), EditorSuffix (Editor Suffix)
-{
- (Icon) (Helden)
 }
 
 STRING 2858
@@ -29759,7 +29775,7 @@ Kräuterkunde - Großmeister
 }
 
 STRING 6093
-// Units: E008 (Backpack), Name (Name)
+// Units: E008 (Backpack), Propernames (Proper Names)
 {
 Rucksack
 }
@@ -31226,7 +31242,7 @@ STRING 6521
 }
 
 STRING 6522
-// Units: E008 (Backpack), Propernames (Proper Names)
+// Items: I03P (Backpack), Name (Name)
 {
 Rucksack
 }
@@ -51566,7 +51582,7 @@ STRING 14638
 }
 
 STRING 14641
-// Items: I03J (Priest), Tip (Tooltip - Basic)
+// Items: I03J (VIP), Tip (Tooltip - Basic)
 {
 VIP
 }
@@ -86809,13 +86825,13 @@ This unit is affected by Nachtaktiv. It has increased stats during night.
 }
 
 STRING 38891
-// Abilities: A1G3 (Nocturnal), Tip (Tooltip - Normal)
+// Buffs/Effects: B02L (Nocturnal), EditorName (Name (Editor Only))
 {
 Nachtaktiv
 }
 
 STRING 38892
-// Abilities: A1G3 (Nocturnal), Name (Name)
+// Upgrades: R08X (Magic Sentry), Name (Name)
 {
 Nachtaktiv
 }
@@ -88678,24 +88694,6 @@ STRING 40017
 // Units: N0FC (Tuskarr Chieftain), Tip (Tooltip - Basic)
 {
 Tuskarr-Häuptling beschwören
-}
-
-STRING 40022
-// Abilities: A1G3 (Nocturnal), Ubertip (Tooltip - Normal - Extended)
-{
-Increases the sight and other stats of the hero during night.
-}
-
-STRING 40023
-// Buffs/Effects: B02L (Nocturnal), EditorName (Name (Editor Only))
-{
-Nachtaktiv
-}
-
-STRING 40024
-// Upgrades: R08X (Magic Sentry), Name (Name)
-{
-Nachtaktiv
 }
 
 STRING 40027

@@ -1233,6 +1233,7 @@ StringList {
     NO_REPICK_WITH_ENEMIES             "Sie können nicht neuwählen, wenn sich Gegner in einer gewissen Reichweite befinden.",
     NO_REPICK_RACE_FOR_FREELANCERS     "Das Volk neuzuwählen ist nur für Kriegsherren möglich.",
     HERO_LEVEL_REQUIREMENT             "Benötigt Heldenstufe %1% oder höher.",
+    HERO_REPICK_INFO                   "Ihre Gegenstände werden auf Theramore abgelegt und Ihre Enheiten werden entfernt! Nur Ihre Erfahrung bleibt erhalten.",
     // Equipment
     ONLY_CUSTOMIZABLE_HEROES_EQUIPMENT "Nur anpassbare Helden können Ausrüstungsgegenstände benutzen.",
     // Elevator
