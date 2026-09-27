@@ -888,7 +888,7 @@ private function GenerateDamageCalculationTable takes nothing returns nothing
     call FileWriteLine("<!-- Heroes generated with chat command \"-website\". -->")
 
     // The line below creates the file at the specified location
-    call FileSave("WorldOfWarcraftReforged-DamageCalculationTable.txt")
+    call FileSave("wowr-website/DamageCalculationTable.txt")
 endfunction
 
 private function GenerateHeroEx takes integer heroTypeId, integer whichRace, integer index returns nothing
@@ -1079,7 +1079,7 @@ private function GenerateHeroes takes nothing returns nothing
     call FileWriteLine("<!-- Heroes generated with chat command \"-website\". -->")
 
     // The line below creates the file at the specified location
-    call FileSave("WorldOfWarcraftReforged-Heroes.txt")
+    call FileSave("wowr-website/Heroes.txt")
 endfunction
 
 private function GenerateBossEx takes unit hero, integer index returns nothing
@@ -1252,7 +1252,7 @@ private function GenerateBosses takes nothing returns nothing
     call FileWriteLine("<!-- Bosses generated with chat command \"-website\". -->")
 
     // The line below creates the file at the specified location
-    call FileSave("WorldOfWarcraftReforged-Bosses.txt")
+    call FileSave("wowr-website/Bosses.txt")
 endfunction
 
 private function GetUnitCountInMap takes integer unitTypeId returns string
@@ -1516,7 +1516,7 @@ private function GenerateUnits takes nothing returns nothing
     call FileWriteLine("<!-- Units generated with chat command \"-website\". -->")
 
     // The line below creates the file at the specified location
-    call FileSave("WorldOfWarcraftReforged-Units.txt")
+    call FileSave("wowr-website/Units.txt")
 endfunction
 
 private function GenerateBuildingEx takes integer unitTypeId, integer whichRace, integer index returns nothing
@@ -1708,7 +1708,7 @@ private function GenerateBuildings takes nothing returns nothing
     call FileWriteLine("<!-- Buildings generated with chat command \"-website\". -->")
 
     // The line below creates the file at the specified location
-    call FileSave("WorldOfWarcraftReforged-Buildings.txt")
+    call FileSave("wowr-website/Buildings.txt")
 endfunction
 
 private function GenerateItemEx takes integer itemTypeId, integer whichRace, integer index returns nothing
@@ -1876,7 +1876,7 @@ private function GenerateItems takes nothing returns nothing
     call FileWriteLine("<!-- Items generated with chat command \"-website\". -->")
 
     // The line below creates the file at the specified location
-    call FileSave("WorldOfWarcraftReforged-Items.txt")
+    call FileSave("wowr-website/Items.txt")
 endfunction
 
 private function GenerateAllRaceIconsEx takes integer whichRace returns nothing
@@ -2339,7 +2339,7 @@ private function GenerateRaces takes nothing returns nothing
     call FileWriteLine("<!-- Races generated with chat command \"-website\". -->")
 
     // The line below creates the file at the specified location
-    call FileSave("WorldOfWarcraftReforged-Races.txt")
+    call FileSave("wowr-website/Races.txt")
 
     set i = 0
     loop
@@ -2350,7 +2350,7 @@ private function GenerateRaces takes nothing returns nothing
         call FileWriteLine("<!-- Races generated with chat command \"-website\". -->")
 
         // The line below creates the file at the specified location
-        call FileSave("WorldOfWarcraftReforged-Race-" + GetRaceName(i) + ".txt")
+        call FileSave("wowr-website/Race-" + GetRaceName(i) + ".txt")
         set i = i + 1
     endloop
 endfunction
@@ -2464,7 +2464,7 @@ private function GenerateClasses takes nothing returns nothing
     call FileWriteLine("<!-- Classes generated with chat command \"-website\". -->")
 
     // The line below creates the file at the specified location
-    call FileSave("WorldOfWarcraftReforged-Classes.txt")
+    call FileSave("wowr-website/Classes.txt")
 endfunction
 
 private function GenerateClassesOverview takes nothing returns nothing
@@ -2482,7 +2482,7 @@ private function GenerateClassesOverview takes nothing returns nothing
     call FileWriteLine("<!-- Classes generated with chat command \"-website\". -->")
 
     // The line below creates the file at the specified location
-    call FileSave("WorldOfWarcraftReforged-ClassesOverview.txt")
+    call FileSave("wowr-website/ClassesOverview.txt")
 endfunction
 
 private function GenerateProfessions takes nothing returns nothing
@@ -2501,7 +2501,7 @@ private function GenerateProfessions takes nothing returns nothing
     call FileWriteLine("<!-- Professions generated with chat command \"-website\". -->")
 
     // The line below creates the file at the specified location
-    call FileSave("WorldOfWarcraftReforged-Professions.txt")
+    call FileSave("wowr-website/Professions.txt")
 endfunction
 
 private function GenerateProfessionsOverview takes nothing returns nothing
@@ -2520,7 +2520,7 @@ private function GenerateProfessionsOverview takes nothing returns nothing
     call FileWriteLine("<!-- Professions generated with chat command \"-website\". -->")
 
     // The line below creates the file at the specified location
-    call FileSave("WorldOfWarcraftReforged-ProfessionsOverview.txt")
+    call FileSave("wowr-website/ProfessionsOverview.txt")
 endfunction
 
 private function GeneratePlayers takes nothing returns nothing
@@ -2696,7 +2696,7 @@ private function GeneratePlayers takes nothing returns nothing
     call FileWriteLine("<!-- Players generated with chat command \"-website\". -->")
 
     // The line below creates the file at the specified location
-    call FileSave("WorldOfWarcraftReforged-Players.txt")
+    call FileSave("wowr-website/Players.txt")
 endfunction
 
 private function GenerateQuestEx takes integer i returns nothing
@@ -2787,7 +2787,7 @@ private function GenerateQuests takes nothing returns nothing
     call FileWriteLine("<!-- Quests generated with chat command \"-website\". -->")
 
     // The line below creates the file at the specified location
-    call FileSave("WorldOfWarcraftReforged-Quests.txt")
+    call FileSave("wowr-website/Quests.txt")
 endfunction
 
 private function GenerateInfoQuest takes integer i returns nothing
@@ -2856,7 +2856,7 @@ private function GenerateInfoQuests takes nothing returns nothing
     call FileWriteLine("<!-- Info quests generated with chat command \"-website\". -->")
 
     // The line below creates the file at the specified location
-    call FileSave("WorldOfWarcraftReforged-InfoQuests.txt")
+    call FileSave("wowr-website/InfoQuests.txt")
 endfunction
 
 private function GenerateNpcs takes nothing returns nothing
@@ -2903,7 +2903,7 @@ private function GenerateNpcs takes nothing returns nothing
     endloop
 
     // The line below creates the file at the specified location
-    call FileSave("WorldOfWarcraftReforged-Npcs.txt")
+    call FileSave("wowr-website/Npcs.txt")
 endfunction
 
 private function GenerateResearchEx takes integer researchId, integer whichRace, integer index returns nothing
@@ -2975,7 +2975,7 @@ private function GenerateResearches takes nothing returns nothing
     call FileWriteLine("<!-- Researches generated with chat command \"-website\". -->")
 
     // The line below creates the file at the specified location
-    call FileSave("WorldOfWarcraftReforged-Researches.txt")
+    call FileSave("wowr-website/Researches.txt")
 endfunction
 
 private function GenerateSpellEx takes SkillMenuAbility skillMenuAbility, integer slot, integer counter returns nothing
@@ -3109,7 +3109,7 @@ private function GenerateSpells takes nothing returns nothing
     call FileWriteLine("<!-- Spells generated with chat command \"-website\". -->")
 
     // The line below creates the file at the specified location
-    call FileSave("WorldOfWarcraftReforged-Spells.txt")
+    call FileSave("wowr-website/Spells.txt")
 endfunction
 
 private function GenerateMountEx takes integer i returns nothing
@@ -3219,7 +3219,7 @@ private function GenerateMounts takes nothing returns nothing
     call FileWriteLine("<!-- Mounts generated with chat command \"-website\". -->")
 
     // The line below creates the file at the specified location
-    call FileSave("WorldOfWarcraftReforged-Mounts.txt")
+    call FileSave("wowr-website/Mounts.txt")
 endfunction
 
 private function GenerateChatCommands takes nothing returns nothing
@@ -3239,7 +3239,7 @@ private function GenerateChatCommands takes nothing returns nothing
     call FileWriteLine("<!-- Chat Commands generated with chat command \"-website\". -->")
 
     // The line below creates the file at the specified location
-    call FileSave("WorldOfWarcraftReforged-ChatCommands.txt")
+    call FileSave("wowr-website/ChatCommands.txt")
 endfunction
 
 private function GenerateHeroJourney takes nothing returns nothing
@@ -3259,7 +3259,7 @@ private function GenerateHeroJourney takes nothing returns nothing
     call FileWriteLine("<!-- Hero journey generated with chat command \"-website\". -->")
 
     // The line below creates the file at the specified location
-    call FileSave("WorldOfWarcraftReforged-HeroJourney.txt")
+    call FileSave("wowr-website/HeroJourney.txt")
 endfunction
 
 private function GenerateCredits takes nothing returns nothing
@@ -3279,7 +3279,7 @@ private function GenerateCredits takes nothing returns nothing
     call FileWriteLine("<!-- Credits generated with chat command \"-website\". -->")
 
     // The line below creates the file at the specified location
-    call FileSave("WorldOfWarcraftReforged-Credits.txt")
+    call FileSave("wowr-website/Credits.txt")
 endfunction
 
 private function GenerateZoneEx takes integer i returns nothing
@@ -3342,7 +3342,7 @@ private function GenerateZones takes nothing returns nothing
     call FileWriteLine("<!-- Zones generated with chat command \"-website\". -->")
 
     // The line below creates the file at the specified location
-    call FileSave("WorldOfWarcraftReforged-Zones.txt")
+    call FileSave("wowr-website/Zones.txt")
 endfunction
 
 private function GenerateRecipeEx takes integer i returns nothing
@@ -3414,7 +3414,7 @@ private function GenerateRecipes takes nothing returns nothing
     call FileWriteLine("<!-- Recipes generated with chat command \"-website\". -->")
 
     // The line below creates the file at the specified location
-    call FileSave("WorldOfWarcraftReforged-Recipes.txt")
+    call FileSave("wowr-website/Recipes.txt")
 endfunction
 
 private function GenerateResources takes nothing returns nothing
@@ -3478,7 +3478,7 @@ private function GenerateResources takes nothing returns nothing
     call FileWriteLine("<!-- Resources generated with chat command \"-website\". -->")
 
     // The line below creates the file at the specified location
-    call FileSave("WorldOfWarcraftReforged-Resources.txt")
+    call FileSave("wowr-website/Resources.txt")
 endfunction
 
 private function GenerateSkins takes nothing returns nothing
@@ -3530,7 +3530,7 @@ private function GenerateSkins takes nothing returns nothing
     call FileWriteLine("<!-- Skins generated with chat command \"-website\". -->")
 
     // The line below creates the file at the specified location
-    call FileSave("WorldOfWarcraftReforged-Skins.txt")
+    call FileSave("wowr-website/Skins.txt")
 endfunction
 
 private function GenerateEquipment takes nothing returns nothing
@@ -3591,7 +3591,7 @@ private function GenerateEquipment takes nothing returns nothing
     call FileWriteLine("<!-- Equipment generated with chat command \"-website\". -->")
 
     // The line below creates the file at the specified location
-    call FileSave("WorldOfWarcraftReforged-Equipment.txt")
+    call FileSave("wowr-website/Equipment.txt")
 endfunction
 
 private function GenerateAttribute takes integer attribute, integer index returns nothing
@@ -3708,7 +3708,7 @@ private function GenerateAttributes takes nothing returns nothing
     call FileWriteLine("<!-- Attributes generated with chat command \"-website\". -->")
 
     // The line below creates the file at the specified location
-    call FileSave("WorldOfWarcraftReforged-Attributes.txt")
+    call FileSave("wowr-website/Attributes.txt")
 endfunction
 
 function FirstUnitOfTypeId takes integer unitTypeId returns unit
@@ -3818,7 +3818,7 @@ private function GenerateProperties takes nothing returns nothing
     call FileWriteLine("<!-- Properties generated with chat command \"-website\". -->")
 
     // The line below creates the file at the specified location
-    call FileSave("WorldOfWarcraftReforged-Properties.txt")
+    call FileSave("wowr-website/Properties.txt")
 endfunction
 
 private function GenerateRacingTracks takes nothing returns nothing
@@ -3879,7 +3879,7 @@ private function GenerateRacingTracks takes nothing returns nothing
     call FileWriteLine("<!-- Racing tracks generated with chat command \"-website\". -->")
 
     // The line below creates the file at the specified location
-    call FileSave("WorldOfWarcraftReforged-RacingTracks.txt")
+    call FileSave("wowr-website/RacingTracks.txt")
 endfunction
 
 private function GenerateSeason takes integer season, integer startDay, integer endDay returns nothing
@@ -3964,7 +3964,7 @@ private function GenerateCalendarEvents takes nothing returns nothing
     call FileWriteLine("<!-- Calendar events generated with chat command \"-website\". -->")
 
     // The line below creates the file at the specified location
-    call FileSave("WorldOfWarcraftReforged-CalendarEvents.txt")
+    call FileSave("wowr-website/CalendarEvents.txt")
 endfunction
 
 private function GenerateChangeLogs takes nothing returns nothing
@@ -3989,7 +3989,7 @@ private function GenerateChangeLogs takes nothing returns nothing
         call FileWriteLine("<!-- ChangeLogs generated with chat command \"-website\". -->")
 
         // The line below creates the file at the specified location
-        call FileSave("WorldOfWarcraftReforged-ChangeLog-" + QuestGetTitle(GetVersionQuest(i)) + ".txt")
+        call FileSave("wowr-website/ChangeLog-" + QuestGetTitle(GetVersionQuest(i)) + ".txt")
         set i = i + 1
     endloop
 endfunction
@@ -4101,7 +4101,7 @@ private function GenerateStartLocations takes nothing returns nothing
     endloop
 
     // The line below creates the file at the specified location
-    call FileSave("WorldOfWarcraftReforged-StartLocations.txt")
+    call FileSave("wowr-website/StartLocations.txt")
 endfunction
 
 private function TriggerConditionIsSinglePlayer takes nothing returns boolean

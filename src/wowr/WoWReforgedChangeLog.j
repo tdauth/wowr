@@ -176,6 +176,7 @@ private function Init takes nothing returns nothing
     call AddChange("Cheat \"-evolution\" lists Evolution level and works for every player now.")
     call AddChange("JASS function GetMapAllowConfigureAIPlayer returns only true now for the first 10 players.")
     call AddChange("PlayerColorUtils supports PLAYER_COLOR_BLACK.")
+    call AddChange("Generate website data into sub folder \"wowr-website\" now.")
 
 static if (MAP_DEBUG_MODE_ENABLED) then
     call AddVersion("4.6")
