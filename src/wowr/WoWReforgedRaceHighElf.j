@@ -101,7 +101,7 @@ private function TriggerConditionDay takes nothing returns boolean
 endfunction
 
 private function FilterIsValidSunwellResurrectionTarget takes nothing returns boolean
-    return IsUnitEnemy(GetFilterUnit(), filterPlayer) and GetObjectRace(GetUnitTypeId(GetFilterUnit())) == WOWR_RACE_UNDEAD
+    return not IsUnitType(GetFilterUnit(), UNIT_TYPE_STRUCTURE) and not IsUnitType(GetFilterUnit(), UNIT_TYPE_MECHANICAL) and IsUnitEnemy(GetFilterUnit(), filterPlayer) and GetObjectRace(GetUnitTypeId(GetFilterUnit())) == WOWR_RACE_UNDEAD
 endfunction
 
 private function EnumResurrect takes nothing returns nothing
