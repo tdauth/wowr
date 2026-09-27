@@ -1,4 +1,4 @@
-library WoWReforgedWebsite initializer Init requires Ascii, OpLimit, Indexer, SafeString, Resources, DamageCalculationTableUI, GenerateIds, UnitTypeUtils, ItemUtils, FileUtils, StringUtils, UnitCost, TimeOfDayUtils, QuestUtils, SaveCodes, WoWReforgedBosses, WoWReforgedRaces, WoWReforgedPrestoredSaveCodes, WoWReforgedQuests, WoWReforgedInfoQuests, WoWReforgedProfessions, WoWReforgedMounts, WoWReforgedResearches, WoWReforgedSkins, WoWReforgedEquipment, WoWReforgedProperties, WoWReforgedRacing, WoWReforgedCalendar, WoWReforgedArena, WoWReforgedNpcs, WoWReforgedDependencyEquivalents, WoWReforgedObjectMappings, WoWReforgedHunter, WoWReforgedStartLocations, WoWReforgedVIPs, WoWReforgedAccount, WoWReforgedResources, WoWReforgedSkillMenu, WoWReforgedClasses, WoWReforgedComputerStartLocations, WoWReforgedHeroTransformation
+library WoWReforgedWebsite initializer Init requires Ascii, OpLimit, Indexer, SafeString, Resources, DamageCalculationTableUI, GenerateIds, UnitTypeUtils, ItemUtils, FileUtils, StringUtils, UnitCost, TimeOfDayUtils, QuestUtils, SaveCodes, WoWReforgedBosses, WoWReforgedRaces, WoWReforgedQuests, WoWReforgedInfoQuests, WoWReforgedProfessions, WoWReforgedMounts, WoWReforgedResearches, WoWReforgedSkins, WoWReforgedEquipment, WoWReforgedProperties, WoWReforgedRacing, WoWReforgedCalendar, WoWReforgedArena, WoWReforgedNpcs, WoWReforgedDependencyEquivalents, WoWReforgedObjectMappings, WoWReforgedProfessionHunter, WoWReforgedStartLocations, WoWReforgedVIPs, WoWReforgedAccount, WoWReforgedResources, WoWReforgedSkillMenu, WoWReforgedClasses, WoWReforgedComputerStartLocations, WoWReforgedHeroTransformation
 
 /*
 Generates data necessary for https://github.com/tdauth/wowr-website
@@ -2525,7 +2525,7 @@ endfunction
 
 private function GeneratePlayers takes nothing returns nothing
     local integer i = 0
-    local integer max = GetPrestoredSaveCodesMax()
+    local integer max = 0
     local string saveCode = ""
     local string playerName = ""
     local Account a = 0
@@ -2534,90 +2534,6 @@ private function GeneratePlayers takes nothing returns nothing
     call FileWriteLine("<!-- Players generated with chat command \"-website\". -->")
 
     call ClearGeneratedStringIds()
-
-    set i = 0
-    loop
-        exitwhen (i == max)
-        if (GetPrestoredSaveCodeTypeByIndex(i) == PRESTORED_SAVECODE_TYPE_HEROES) then
-            set playerName = GetPrestoredSaveCodePlayerNameByIndex(i)
-
-            if (GenerateIdString(playerName)) then
-                set saveCode = GetPrestoredSaveCodeByIndex(i)
-                set a = GetAccountByName(playerName)
-
-                call FileWriteLine("<tr id=\"" + playerName + "\">")
-
-                // icon
-                call FileWriteLine("<td>")
-                if (a != 0 and StringLength(a.icon) > 0) then
-                    call Icon(playerName, a.icon)
-                else
-                    call FileWriteLine("-")
-                endif
-                call FileWriteLine("</td>")
-
-                // name
-                call FileWriteLine("<td>")
-                call FileWriteLine("<a href=\"https://us.forums.blizzard.com/en/warcraft3/u/" + playerName + "\">")
-                call FileWriteLine(playerName)
-                call FileWriteLine("</a>")
-                call FileWriteLine("</td>")
-
-                // VIP
-                call FileWriteLine("<td>")
-                if (IsAccountVIP(playerName)) then
-                    call FileWriteLine("yes")
-                else
-                    call FileWriteLine("no")
-                endif
-                call FileWriteLine("</td>")
-
-                // hero level 1
-                call FileWriteLine("<td>")
-                call FileWriteLine(I2S(IMinBJ(MAX_HERO_LEVEL, GetHeroLevelByXP(GetSaveCodeXp1(playerName, saveCode)))))
-                call FileWriteLine("</td>")
-
-                // hero level 2
-                call FileWriteLine("<td>")
-                call FileWriteLine(I2S(IMinBJ(MAX_HERO_LEVEL, GetHeroLevelByXP(GetSaveCodeXp2(playerName, saveCode)))))
-                call FileWriteLine("</td>")
-
-                // hero level 3
-                call FileWriteLine("<td>")
-                call FileWriteLine(I2S(IMinBJ(MAX_HERO_LEVEL, GetHeroLevelByXP(GetSaveCodeXp3(playerName, saveCode)))))
-                call FileWriteLine("</td>")
-
-                // gold
-                call FileWriteLine("<td>")
-                call FileWriteLine(I2S(GetSaveCodeGold(playerName, saveCode)))
-                call FileWriteLine("</td>")
-
-                // lumber
-                call FileWriteLine("<td>")
-                call FileWriteLine(I2S(GetSaveCodeLumber(playerName, saveCode)))
-                call FileWriteLine("</td>")
-
-                // unlocked
-                if (a != 0) then
-                    call FileWriteLine("<td>")
-                    call FileWriteLine(UnlockedAccountIds(a))
-                    call FileWriteLine("</td>")
-                else
-                    call FileWriteLine("<td>")
-                    call FileWriteLine("-")
-                    call FileWriteLine("</td>")
-                endif
-
-                // savecode
-                call FileWriteLine("<td>")
-                call FileWriteLine(saveCode)
-                call FileWriteLine("</td>")
-
-                call FileWriteLine("</tr>")
-            endif
-        endif
-        set i = i + 1
-    endloop
 
     set i = 0
     set max = GetAccountsMax()
@@ -4200,10 +4116,6 @@ private function TriggerConditionIsSinglePlayer takes nothing returns boolean
 endfunction
 
 private function TriggerActionWebsite takes nothing returns nothing
-    // Summon all bosses:
-    call TimerStart(udg_BossDeathwingTimer, 0.0, false, null)
-    call TimerStart(udg_BossCenariusTimer, 0.0, false, null)
-    call TriggerSleepAction(1.0)
     call SetTimeOfDay(12.0)
     call SuspendTimeOfDay(true)
 
