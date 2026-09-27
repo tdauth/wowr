@@ -6,6 +6,26 @@ globals
     private boolexpr filterIsValidUnitRemovalTarget = null
 endglobals
 
+function DisplayPlayerSelectionInfo takes nothing returns nothing
+    call DisplayTextToForce(GetPlayersAll(), GetLocalizedString("PLAYER_SELECTION_INFO"))
+endfunction
+
+function DisplayPlayerSelectionStart takes player whichPlayer returns nothing
+    call DisplayTextToPlayer(whichPlayer, 0.0, 0.0, GetLocalizedString("PLAYER_SELECTION_START"))
+endfunction
+
+function DisplayPlayerSelectionStartH2 takes player whichPlayer returns nothing
+    call DisplayTextToPlayer(whichPlayer, 0.0, 0.0, GetLocalizedString("PLAYER_SELECTION_START_H2"))
+endfunction
+
+function DisplayPlayerSelectionStartH3 takes player whichPlayer returns nothing
+    call DisplayTextToPlayer(whichPlayer, 0.0, 0.0, GetLocalizedString("PLAYER_SELECTION_START_H3"))
+endfunction
+
+function DisplayPlayerSelectionHelp takes player whichPlayer returns nothing
+    call DisplayTextToPlayer(whichPlayer, 0.0, 0.0, GetLocalizedString("PLAYER_SELECTION_HELP"))
+endfunction
+
 function DisplayPickedGameModeWarlord takes player whichPlayer returns nothing
     call DisplayTextToPlayer(whichPlayer, 0.0, 0.0, Format(GetLocalizedString("PICKED_GAME_MODE_X")).s(GetLocalizedString("WARLORD")).result())
 endfunction

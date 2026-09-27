@@ -1113,6 +1113,11 @@ StringList {
     HIDEHOUTS_ARE_LIMITED_TO_1         "Hideouts are limited to 1.",
     HIDEOUTS_ARE_RESTRUCTED            "Hideouts are restricted to Freelancers.",
     // Player Selection
+    PLAYER_SELECTION_INFO              "Pick game mode, hero, race, profession, start location and start the game. Use '-random' to pick random and '-start' to start the game or '-rs' for both at once.",
+    PLAYER_SELECTION_START             "Your hero can be revived at altars and on Theramore but will be removed on repicks! Use '-repick' to repick your hero.",
+    PLAYER_SELECTION_START_H2          "Your second hero can be revived at altars and on Theramore but will be removed on repicks! Use '-h2' to repick your second hero.",
+    PLAYER_SELECTION_START_H3          "Your third hero can be revived at altars and on Theramore but will be removed on repicks! Use '-h3' to repick your third hero.",
+    PLAYER_SELECTION_HELP              "Enter '-help/-h' to get all chat commands. Enter '-clear/-c' to clear the screen from messages. Enter '-unlock' to unlock everything from start.",
     NOT_ALLOWED_IN_PLAYER_SELECTION    "Not allowed in player selection.",
     ONLY_DURING_PLAYER_SELECTION       "Only during player selection.",
     CANNOT_CHANGE_GAME_MODE            "You have to be in your initial hero selection or full repick to change the game mode.",
