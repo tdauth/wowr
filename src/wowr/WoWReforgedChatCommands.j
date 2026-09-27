@@ -1059,7 +1059,7 @@ private function CheatResurrect takes nothing returns nothing
 endfunction
 
 private function CheatLevel takes nothing returns nothing
-    local string token = SubString(GetEventPlayerChatString(), StringLength(GetEventPlayerChatStringMatched()) + 1, StringLength(GetEventPlayerChatString()))
+    local string token = StringToken(GetEventPlayerChatString(), 1)
     local integer level = S2I(token)
     if (GetPlayerHero1(GetTriggerPlayer()) != null) then
         call SetHeroLevel(GetPlayerHero1(GetTriggerPlayer()), level, true)
@@ -1329,18 +1329,19 @@ private function CheatEvolution takes nothing returns nothing
     if (p == null) then
         call DisplayTextToPlayer(GetTriggerPlayer(), 0.0, 0.0, "Usage: \"-evolution <player> <level>\". Evolution for all players:")
         loop
-            exitwhen (i >= bj_MAX_PLAYERS)
+            exitwhen (i >= bj_MAX_PLAYER_SLOTS)
             if (IsPlayerInForce(Player(i), GetMapLobbyPlayers()) or Player(i) == GetMapGaiaPlayer() or Player(i) == GetMapBossesPlayer() or Player(i) == Player(PLAYER_NEUTRAL_AGGRESSIVE)) then
                 call DisplayTextToPlayer(GetTriggerPlayer(), 0.0, 0.0, "- " + GetPlayerNameColored(Player(i)) + ": " + I2S(GetPlayerTechCountSimple(UPG_EVOLUTION, Player(i))))
             endif
             set i = i + 1
         endloop
     else
+        call DisplayTextToPlayer(GetTriggerPlayer(), 0.0, 0.0, "Set evolution for " + GetPlayerNameColored(p) + " from level " + I2S(GetPlayerTechCountSimple(UPG_EVOLUTION, p)) + " to level: " + I2S(level))
         //call SetEvolutionLevelForCreeps(udg_TmpInteger)
         call SetPlayerTechResearched(p, UPG_EVOLUTION, level)
         call SetPlayerTechResearched(p, UPG_CHEAP_EVOLUTION, level)
         call SetEvolutionLevelOfPlayer(p, level)
-        call DisplayTextToPlayer(GetTriggerPlayer(), 0.0, 0.0, "Set evolution for " + GetPlayerNameColored(p) + " to level: " + I2S(level))
+
     endif
 endfunction
 
