@@ -241,5 +241,6 @@
 //! import "wowr/WoWReforgedVotekick.j"
 //! import "wowr/WoWReforgedVotes.j"
 //! import "wowr/WoWReforgedWalls.j"
+//! import "wowr/WoWReforgedWebsite.j"
 //! import "wowr/WoWReforgedWitchHut.j"
 //! import "wowr/WoWReforgedZones.j"
