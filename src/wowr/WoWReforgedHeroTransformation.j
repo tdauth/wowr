@@ -177,14 +177,6 @@ function AddHeroTransformationItemTypeIdEx takes integer id, integer unitTypeId 
     return index
 endfunction
 
-function AddHeroTransformationItemTypeId takes nothing returns integer
-    return AddHeroTransformationItemTypeIdEx(udg_TmpItemTypeId, udg_TmpUnitType)
-endfunction
-
-function AddHeroTransformationAbilityId takes nothing returns integer
-    return AddHeroTransformationItemTypeIdEx(udg_TmpAbilityCode, udg_TmpUnitType)
-endfunction
-
 function SetHeroTransformationAnimProperties takes integer index, string animProperties returns nothing
     set types[index].animProperties = animProperties
 endfunction

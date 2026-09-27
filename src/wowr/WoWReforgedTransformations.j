@@ -104,6 +104,10 @@ private function Init takes nothing returns nothing
     set index = AddHeroTransformationItemTypeIdEx('A1GW', DRUID_FORM_CAT)
     set index = AddHeroTransformationItemTypeIdEx('A1GZ', DRUID_FORM_WOLF)
     set index = AddHeroTransformationItemTypeIdEx('A1H1', DRUID_FORM_SPIDER)
+
+    // Legendary Items
+    call AddHeroTransformationItemTypeIdEx(ITEM_ANGEL_WINGS, ARCHANGEL)
+    call AddHeroTransformationItemTypeIdEx(ITEM_SCEPTER_OF_KING_DEEPBEARD, SEA_GIANT_CUSTOMIZABLE)
 endfunction
 
 endlibrary

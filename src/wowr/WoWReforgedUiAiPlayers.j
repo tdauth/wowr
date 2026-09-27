@@ -96,6 +96,7 @@ globals
     private constant integer START_LOCATION_MENU_ITEM_RANDOM_ALLIANCE = 2
     private constant integer START_LOCATION_MENU_ITEM_RANDOM_HORDE = 3
     private constant integer START_LOCATION_MENU_ITEM_TERDRASSIL = 4
+    private constant integer START_LOCATION_MENU_ITEM_FINAL = 22
 
     // RacesPopupMenu
     private constant integer RACES_MENU_ITEM_MATCHING_START_LOCATION = 0
@@ -105,6 +106,7 @@ globals
     private constant integer RACES_MENU_ITEM_RANDOM_ALLIANCE = 4
     private constant integer RACES_MENU_ITEM_RANDOM_HORDE = 5
     private constant integer RACES_MENU_ITEM_HUMAN = 6
+    private constant integer RACES_MENU_ITEM_FINAL = 42
 
     // ProfessionsPopupMenu
     private constant integer PROFESSIONS_MENU_ITEM_RANDOM = 0
@@ -237,6 +239,26 @@ globals
     private framehandle applyButton
     private trigger applyTrigger = null
 endglobals
+
+private function GetRacesPopupCount takes integer index returns integer
+    local framehandle menuFrame = null
+    local integer result = 0
+
+    if (raceLabelEdit[index] != null) then
+        set menuFrame = BlzFrameGetChild(raceLabelEdit[index], 0)
+        if menuFrame != null then
+            set result = BlzFrameGetChildrenCount(menuFrame)
+        endif
+    endif
+
+    call BJDebugMsg("Race items in AI players UI: " + I2S(result) + " for index " + I2S(index))
+
+    return result
+endfunction
+
+private function GetRacesPopupFinalIndex takes integer index returns integer
+    return GetRacesPopupCount(index)
+endfunction
 
 function DisplayAISettingsInfo takes nothing returns nothing
       call DisplayTextToForce(GetPlayersAll(), Format(GetLocalizedStringSafe("AI_HOST_CHOOSES")).s(GetPlayerNameColored(GetHost())).result())
@@ -853,16 +875,12 @@ private function HeroDownFunction takes nothing returns nothing
     call PlayClickSound(GetTriggerPlayer())
 endfunction
 
-private function GetStartLocationsLastIndex takes nothing returns integer
-    return GetMaxComputerStartLocations() + START_LOCATION_MENU_ITEM_RANDOM_HORDE
-endfunction
-
 private function StartLocationUpFunction takes nothing returns nothing
     local integer index = LoadInteger(h, GetHandleId(GetTriggeringTrigger()), 0)
 
     if (GetTriggerPlayer() == GetLocalPlayer()) then
         if (BlzFrameGetValue(startLocationComboBox[index]) == 0) then
-            call BlzFrameSetValue(startLocationComboBox[index], GetStartLocationsLastIndex())
+            call BlzFrameSetValue(startLocationComboBox[index], START_LOCATION_MENU_ITEM_FINAL)
         else
             call BlzFrameSetValue(startLocationComboBox[index], BlzFrameGetValue(startLocationComboBox[index]) - 1)
         endif
@@ -875,7 +893,7 @@ private function StartLocationDownFunction takes nothing returns nothing
     local integer index = LoadInteger(h, GetHandleId(GetTriggeringTrigger()), 0)
 
     if (GetTriggerPlayer() == GetLocalPlayer()) then
-        if (BlzFrameGetValue(startLocationComboBox[index]) == GetStartLocationsLastIndex()) then
+        if (BlzFrameGetValue(startLocationComboBox[index]) == START_LOCATION_MENU_ITEM_FINAL) then
             call BlzFrameSetValue(startLocationComboBox[index], 0)
         else
             call BlzFrameSetValue(startLocationComboBox[index], BlzFrameGetValue(startLocationComboBox[index]) + 1)
@@ -885,16 +903,13 @@ private function StartLocationDownFunction takes nothing returns nothing
     call PlayClickSound(GetTriggerPlayer())
 endfunction
 
-private function GetRacesLastIndex takes nothing returns integer
-    return GetRacesMax() - 1 + RACES_MENU_ITEM_RANDOM_HORDE
-endfunction
-
 private function RaceUpFunction takes nothing returns nothing
     local integer index = LoadInteger(h, GetHandleId(GetTriggeringTrigger()), 0)
+    local integer finalIndex = GetRacesPopupFinalIndex(index)
 
     if (GetTriggerPlayer() == GetLocalPlayer()) then
         if (BlzFrameGetValue(raceLabelEdit[index]) == 0) then
-            call BlzFrameSetValue(raceLabelEdit[index], GetRacesLastIndex())
+            call BlzFrameSetValue(raceLabelEdit[index], RACES_MENU_ITEM_FINAL)
         else
             call BlzFrameSetValue(raceLabelEdit[index], BlzFrameGetValue(raceLabelEdit[index]) - 1)
         endif
@@ -907,7 +922,7 @@ private function RaceDownFunction takes nothing returns nothing
     local integer index = LoadInteger(h, GetHandleId(GetTriggeringTrigger()), 0)
 
     if (GetTriggerPlayer() == GetLocalPlayer()) then
-        if (BlzFrameGetValue(raceLabelEdit[index]) == GetRacesLastIndex()) then
+        if (BlzFrameGetValue(raceLabelEdit[index]) == RACES_MENU_ITEM_FINAL) then
             call BlzFrameSetValue(raceLabelEdit[index], 0)
         else
             call BlzFrameSetValue(raceLabelEdit[index], BlzFrameGetValue(raceLabelEdit[index]) + 1)
