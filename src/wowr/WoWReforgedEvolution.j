@@ -206,6 +206,7 @@ private function TriggerConditionHeroLevel takes nothing returns boolean
             The lowest hero level of playing users will determine the Evolution level of creeps and bosses.
             If any hero levels down due to full repick it can down grade the Evolution level for creeps and bosses.
             */
+            call BJDebugMsg("Set creeps Evolution level from lowest hero level " + I2S(lowestLevel) + " from level up of " + GetUnitName(GetTriggerUnit()))
             call SetEvolutionLevelForCreeps(lowestLevel)
         endif
     endif
