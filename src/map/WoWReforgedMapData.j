@@ -56,27 +56,31 @@ function MapLocationCanBeTeleportedTo takes unit whichUnit, real x, real y retur
     return not RectContainsCoords(gg_rct_Player_Selection, x, y)
 endfunction
 
-function GetMapNeutralZoneX takes player whichPlayer returns real
+function GetMapNeutralZoneRect takes nothing returns rect
+    return gg_rct_redirect_forbidden_zone
+endfunction
+
+function GetMapNeutralZoneX takes nothing returns real
     return GetRectCenterX(gg_rct_redirect_forbidden_zone)
 endfunction
 
-function GetMapNeutralZoneY takes player whichPlayer returns real
+function GetMapNeutralZoneY takes nothing returns real
     return GetRectCenterY(gg_rct_redirect_forbidden_zone)
 endfunction
 
-function GetMapNeutralZoneFacing takes player whichPlayer returns real
+function GetMapNeutralZoneFacing takes nothing returns real
     return 270.0
 endfunction
 
-function GetMapWaterNeutralZoneX takes player whichPlayer returns real
+function GetMapWaterNeutralZoneX takes nothing returns real
     return GetRectCenterX(gg_rct_Start_Location_Theramore_Water)
 endfunction
 
-function GetMapWaterNeutralZoneY takes player whichPlayer returns real
+function GetMapWaterNeutralZoneY takes nothing returns real
     return GetRectCenterY(gg_rct_Start_Location_Theramore_Water)
 endfunction
 
-function GetMapWaterNeutralZoneFacing takes player whichPlayer returns real
+function GetMapWaterNeutralZoneFacing takes nothing returns real
     return 270.0
 endfunction
 

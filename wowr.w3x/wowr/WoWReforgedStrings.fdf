@@ -1234,6 +1234,7 @@ StringList {
     NO_REPICK_WITH_ENEMIES             "You cannot repick when enemies are within a certain range.",
     NO_REPICK_RACE_FOR_FREELANCERS     "Repicking the race is only possible for Warlords.",
     HERO_LEVEL_REQUIREMENT             "Requires hero level %1% or higher.",
+    HERO_REPICK_INFO                   "Your items are dropped on Theramore and your units are removed! Only your experience is stored.",
     // Equipment
     ONLY_CUSTOMIZABLE_HEROES_EQUIPMENT "Only customizable heroes can use equipment items.",
     // Elevator

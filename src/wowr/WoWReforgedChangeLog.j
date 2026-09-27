@@ -171,6 +171,9 @@ private function Init takes nothing returns nothing
     call AddChange("Scale down neutral Dimensional Ships and remove shadows.")
     call AddChange("Remove tooltip frame from backpack UI.")
     call AddChange("Change cheat \"-revive\" into \"-res\".")
+    call AddChange("Add JASS function DropAllItemsFromHeroAt.")
+    call AddChange("Add JASS function GetMapNeutralZoneRect.")
+    call AddChange("JASS functions to get neutral zone info do not require a player parameter anymore.")
 
 static if (MAP_DEBUG_MODE_ENABLED) then
     call AddVersion("4.6")

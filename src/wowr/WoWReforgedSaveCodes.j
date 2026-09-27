@@ -392,8 +392,8 @@ function ApplySaveCode takes player whichPlayer, string s returns boolean
     local integer lastSaveCodeSegment = GetSaveCodeSegments(saveCode) - 1
     local string checkedSaveCode = GetSaveCodeUntil(saveCode, lastSaveCodeSegment)
     local integer checksum = ConvertSaveCodeSegmentIntoDecimalNumberFromSaveCode(saveCode, lastSaveCodeSegment)
-    local real demigodX = GetMapNeutralZoneX(whichPlayer)
-    local real demigodY = GetMapNeutralZoneY(whichPlayer)
+    local real demigodX = GetMapNeutralZoneX()
+    local real demigodY = GetMapNeutralZoneY()
 
     //call BJDebugMsg("Obfuscated save code: " + s)
     //call BJDebugMsg("Non-Obfuscated save code: " + saveCode)
@@ -2016,8 +2016,8 @@ function ApplySaveCodeUnits takes player whichPlayer, string s returns boolean
                             if (GetPlayerState(whichPlayer, PLAYER_STATE_RESOURCE_FOOD_USED) + GetFoodUsed(id) <= GetPlayerState(whichPlayer, PLAYER_STATE_FOOD_CAP_CEILING)) then
                                 if (IsObjectFromPlayerRace(id, whichPlayer) and IsObjectFromPlayerProfession(id, whichPlayer)) then
                                     if (GetPlayerTechMaxAllowed(whichPlayer, id) == 0 or CountLivingPlayerUnitsOfTypeIdFast(id , whichPlayer) < GetPlayerTechMaxAllowed(whichPlayer, id)) then
-                                        call MoveLocation(tmpLocation, GetMapWaterNeutralZoneX(whichPlayer), GetMapWaterNeutralZoneY(whichPlayer))
-                                        call CreateUnitAtLocSaveLast(whichPlayer, id, tmpLocation, GetMapWaterNeutralZoneFacing(whichPlayer))
+                                        call MoveLocation(tmpLocation, GetMapWaterNeutralZoneX(), GetMapWaterNeutralZoneY())
+                                        call CreateUnitAtLocSaveLast(whichPlayer, id, tmpLocation, GetMapWaterNeutralZoneFacing())
 
                                         call ApplyAllMaxHpResearches(bj_lastCreatedUnit, null)
 

@@ -11,9 +11,9 @@ endfunction
 
 // Only when a player leaves the game.
 function ResetAllHeroesToNeutralZone takes player whichPlayer returns nothing
-    local real x = GetMapNeutralZoneX(whichPlayer)
-    local real y = GetMapNeutralZoneY(whichPlayer)
-    local real facing = GetMapNeutralZoneFacing(whichPlayer)
+    local real x = GetMapNeutralZoneX()
+    local real y = GetMapNeutralZoneY()
+    local real facing = GetMapNeutralZoneFacing()
 
     // Prevent endless automatic hero revivals of left players.
     call DeactivateAllResurrectionStones(whichPlayer)

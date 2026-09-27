@@ -1,4 +1,4 @@
-library WoWReforgedChatCommands initializer Init requires Ascii, HostUtils, StringUtils, StringFormat, SafeString, ForceUtils, PlayerColorUtils, WoWReforgedUtils, WoWReforgedMapData, optional QueueUI, WoWReforgedPlayerInfos, WoWReforgedStats, WoWReforgedSaveCodeObjects, WoWReforgedHeroes, WoWReforgedBosses, WoWReforgedQuests, WoWReforgedProfessions, optional WoWReforgedUiActionsBar, WoWReforgedStats, WoWReforgedAttributes, WoWReforgedAccount, WoWReforgedComputerStartLocations, WoWReforgedSaveCodesAll, WoWReforgedZones, WoWReforgedCinematic, WoWReforgedTownHalls, WoWReforgedRaces, WoWReforgedBackpacks, WoWReforgedUiBackpack, optional OrdersWatcher, OnStartGame
+library WoWReforgedChatCommands initializer Init requires Ascii, HostUtils, StringUtils, StringFormat, SafeString, ForceUtils, PlayerColorUtils, WoWReforgedUtils, WoWReforgedMapData, optional QueueUI, WoWReforgedPlayerInfos, WoWReforgedStats, WoWReforgedSaveCodeObjects, WoWReforgedHeroes, WoWReforgedBosses, WoWReforgedQuests, WoWReforgedProfessions, optional WoWReforgedUiActionsBar, WoWReforgedStats, WoWReforgedAttributes, WoWReforgedAccount, WoWReforgedComputerStartLocations, WoWReforgedSaveCodesAll, WoWReforgedZones, WoWReforgedCinematic, WoWReforgedTownHalls, WoWReforgedRaces, WoWReforgedBackpacks, WoWReforgedUiBackpack, WoWReforgedPlayerSelection, optional OrdersWatcher, OnStartGame
 
 /*
  * Chat commands and cheats.
@@ -673,6 +673,10 @@ endfunction
 
 private function Show takes nothing returns nothing
     call ShowUI(GetTriggerPlayer())
+endfunction
+
+private function Repick takes nothing returns nothing
+    call HeroRepick(GetTriggerPlayer())
 endfunction
 
 private function Unlocked takes nothing returns nothing
@@ -1409,6 +1413,7 @@ private function Init takes nothing returns nothing
     call Add("-show", true, function Show)
 
     // TODO Hero repick and ping chat commands
+    call Add("-repick", true, function Repick)
 
     call Add("-unlocked", true, function Unlocked)
     call AddAlias("-u", true)
