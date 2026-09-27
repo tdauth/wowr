@@ -1,8 +1,7 @@
-library WoWReforgedRaceHighElf initializer Init requires SimError, NewBonusUtils
+library WoWReforgedRaceHighElf initializer Init requires SimError, NewBonusUtils, WoWReforgedRaces
 
 globals
     private boolean isDay = false
-    private hashtable h = InitHashtable()
     private boolexpr filterIsDayTarget = null
     private boolexpr filterIsNightTarget = null
     private boolexpr filterIsValidSunwellResurrectionTarget = null
@@ -13,18 +12,23 @@ globals
     private trigger castTrigger = CreateTrigger()
 endglobals
 
-private function AddUnitTypeId takes integer unitTypeId, integer targetUnitTypeId returns nothing
-    call SaveInteger(h, unitTypeId, 0, targetUnitTypeId)
+private function EnumEnableDiurnalResearch takes nothing returns nothing
+    call SetPlayerTechResearched(GetEnumPlayer(), 'R0D3', 1)
 endfunction
 
-private function GetTargetUnitTypeId takes integer unitTypeId returns integer
-    return LoadInteger(h, unitTypeId, 0)
+private function EnableDiurnalResearch takes nothing returns nothing
+    call ForForce(GetPlayersAll(), function EnumEnableDiurnalResearch)
+endfunction
+
+private function EnumDisableDiurnalResearch takes nothing returns nothing
+    call SetPlayerTechResearched(GetEnumPlayer(), 'R0D3', 0)
+endfunction
+
+private function DisableDiurnalResearch takes nothing returns nothing
+    call ForForce(GetPlayersAll(), function EnumDisableDiurnalResearch)
 endfunction
 
 private function EnableDiurnalEffect takes unit whichUnit returns nothing
-    if (not IsUnitType(whichUnit, UNIT_TYPE_HERO)) then
-        call SetPlayerTechResearched(GetOwningPlayer(whichUnit), 'R0D3', 1)
-    endif
     call UnitAddAbility(whichUnit, 'A1IQ')
     call LinkBonusToBuff(whichUnit, BONUS_HEALTH, 80.0, 'B02L')
     call LinkBonusToBuff(whichUnit, BONUS_HEALTH_REGEN, 0.4, 'B02L')
@@ -49,10 +53,10 @@ private function Daylight takes nothing returns nothing
     call GroupClear(g)
     call DestroyGroup(g)
     set g = null
+    call EnableDiurnalResearch()
 endfunction
 
 private function EnumNight takes nothing returns nothing
-    call SetPlayerTechResearched(GetOwningPlayer(GetEnumUnit()), UPG_HIGH_ELF_DIURNAL, 0)
     call UnitRemoveAbility(GetEnumUnit(), 'A1IQ')
 endfunction
 
@@ -64,6 +68,7 @@ private function Night takes nothing returns nothing
     call GroupClear(g)
     call DestroyGroup(g)
     set g = null
+    call DisableDiurnalResearch()
 endfunction
 
 private function FilterIsDayTarget takes nothing returns boolean
@@ -78,31 +83,33 @@ private function TriggerConditionResearchFinish takes nothing returns boolean
 endfunction
 
 private function FilterIsNightTarget takes nothing returns boolean
-    return GetUnitAbilityLevelSwapped('A1ER', GetFilterUnit()) > 0
+    return GetUnitAbilityLevel(GetFilterUnit(), 'A1ER') > 0
 endfunction
 
 private function TriggerConditionNight takes nothing returns boolean
-    if (isDay and (GetTimeOfDay() >= 18.00 or GetTimeOfDay() < 6.00)) then
+    if (isDay and (GetTimeOfDay() >= bj_TOD_DUSK or GetTimeOfDay() < bj_TOD_DAWN)) then
         call Night()
     endif
     return false
 endfunction
 
 private function TriggerConditionDay takes nothing returns boolean
-    if (not isDay and GetTimeOfDay() < 18.00) then
+    if (not isDay and GetTimeOfDay() >= bj_TOD_DAWN and GetTimeOfDay() < bj_TOD_DUSK) then
         call Daylight()
     endif
     return false
 endfunction
 
 private function FilterIsValidSunwellResurrectionTarget takes nothing returns boolean
-    return IsUnitEnemy(GetFilterUnit(), filterPlayer) and GetTargetUnitTypeId(GetUnitTypeId(GetFilterUnit())) != 0
+    return IsUnitEnemy(GetFilterUnit(), filterPlayer) and GetObjectRace(GetUnitTypeId(GetFilterUnit())) == WOWR_RACE_UNDEAD
 endfunction
 
 private function EnumResurrect takes nothing returns nothing
-    local integer targetUnitTypeId = GetTargetUnitTypeId(GetUnitTypeId(GetEnumUnit()))
-    call ReplaceUnitBJ(GetEnumUnit(), targetUnitTypeId, bj_UNIT_STATE_METHOD_RELATIVE)
-    call SetUnitOwner(GetLastReplacedUnitBJ(), filterPlayer, true)
+    local integer targetUnitTypeId = MapUnitID(GetUnitTypeId(GetEnumUnit()), WOWR_RACE_HIGH_ELF, false)
+    if (targetUnitTypeId != 0) then
+        call ReplaceUnitBJ(GetEnumUnit(), targetUnitTypeId, bj_UNIT_STATE_METHOD_RELATIVE)
+        call SetUnitOwner(GetLastReplacedUnitBJ(), filterPlayer, true)
+    endif
 endfunction
 
 private function Resurrect takes unit whichUnit, real x, real y returns nothing
@@ -129,24 +136,22 @@ endfunction
 
 private function Init takes nothing returns nothing
     set filterIsDayTarget = Filter(function FilterIsDayTarget)
+    set filterIsNightTarget = Filter(function FilterIsNightTarget)
+    set filterIsValidSunwellResurrectionTarget = Filter(function FilterIsValidSunwellResurrectionTarget)
+
     call TriggerRegisterAnyUnitEventBJ(researchFinishTrigger, EVENT_PLAYER_UNIT_RESEARCH_FINISH)
     call TriggerAddCondition(researchFinishTrigger, Condition(function TriggerConditionResearchFinish))
 
-    set filterIsNightTarget = Filter(function FilterIsNightTarget)
-    call TriggerRegisterGameStateEventTimeOfDay(nightTrigger, GREATER_THAN_OR_EQUAL, 18.00)
-    call TriggerRegisterGameStateEventTimeOfDay(nightTrigger, GREATER_THAN_OR_EQUAL, 0.00)
+    call TriggerRegisterGameStateEvent(nightTrigger, GAME_STATE_TIME_OF_DAY, LESS_THAN, bj_TOD_DAWN)
+    call TriggerRegisterGameStateEvent(nightTrigger, GAME_STATE_TIME_OF_DAY, GREATER_THAN_OR_EQUAL, bj_TOD_DUSK)
     call TriggerAddCondition(nightTrigger, Condition(function TriggerConditionNight))
 
-    call TriggerRegisterGameStateEventTimeOfDay(dayTrigger, GREATER_THAN_OR_EQUAL, 6.00)
+    call TriggerRegisterGameStateEvent(dayTrigger, GAME_STATE_TIME_OF_DAY, GREATER_THAN_OR_EQUAL, bj_TOD_DAWN)
+    call TriggerRegisterGameStateEvent(dayTrigger, GAME_STATE_TIME_OF_DAY, LESS_THAN, bj_TOD_DUSK)
     call TriggerAddCondition(dayTrigger, Condition(function TriggerConditionDay))
 
-    set filterIsValidSunwellResurrectionTarget = Filter(function FilterIsValidSunwellResurrectionTarget)
     call TriggerRegisterAnyUnitEventBJ(castTrigger, EVENT_PLAYER_UNIT_SPELL_CAST)
     call TriggerAddCondition(castTrigger, Condition(function TriggerConditionCast))
-
-    call AddUnitTypeId(SHADE, HIGH_ELF_SWORDMAN)
-    call AddUnitTypeId(BANSHEE, HIGH_ELF_ARCHER)
-    call AddUnitTypeId(NECRO, HIGH_ELF_SORCERESS)
 endfunction
 
 endlibrary

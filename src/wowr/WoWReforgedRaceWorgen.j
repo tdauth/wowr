@@ -1,6 +1,8 @@
 library WoWReforgedRaceWorgen initializer Init requires NewBonusUtils
 
 globals
+    private constant integer NOCTURNAL_ICON_ABILITY_ID = 'A120'
+    private constant integer NOCTURNAL_LUMBER_HARVEST_RESEARCH = 'R0C1'
     private boolean isNight = false
     private boolexpr filterIsValidNocturnalTarget = null
     private boolexpr filterHasNocturnalEffect = null
@@ -10,10 +12,23 @@ globals
     private trigger dayTrigger = CreateTrigger()
 endglobals
 
+private function EnumEnableNocturnalResearch takes nothing returns nothing
+    call SetPlayerTechResearched(GetEnumPlayer(), NOCTURNAL_LUMBER_HARVEST_RESEARCH, 1)
+endfunction
+
+private function EnableNocturnalResearch takes nothing returns nothing
+    call ForForce(GetPlayersAll(), function EnumEnableNocturnalResearch)
+endfunction
+
+private function EnumDisableNocturnalResearch takes nothing returns nothing
+    call SetPlayerTechResearched(GetEnumPlayer(), NOCTURNAL_LUMBER_HARVEST_RESEARCH, 0)
+endfunction
+
+private function DisableNocturnalResearch takes nothing returns nothing
+    call ForForce(GetPlayersAll(), function EnumDisableNocturnalResearch)
+endfunction
+
 private function EnableNocturnalEffect takes unit whichUnit returns nothing
-    if (not IsUnitType(whichUnit, UNIT_TYPE_HERO)) then
-        call SetPlayerTechResearched(GetOwningPlayer(whichUnit), 'R0C1', 1)
-    endif
     call UnitAddAbility(whichUnit, 'A1ER')
     call LinkBonusToBuff(whichUnit, BONUS_HEALTH, 80.0, 'B02L')
     call LinkBonusToBuff(whichUnit, BONUS_HEALTH_REGEN, 0.4, 'B02L')
@@ -21,8 +36,12 @@ private function EnableNocturnalEffect takes unit whichUnit returns nothing
     call LinkBonusToBuff(whichUnit, BONUS_MOVEMENT_SPEED, 80, 'B02L')
 endfunction
 
+private function UnitIsValidTargetForNocturnal takes unit whichUnit returns boolean
+    return GetUnitAbilityLevel(whichUnit, NOCTURNAL_ICON_ABILITY_ID) > 0 and GetUnitAbilityLevel(whichUnit, 'A1ER') == 0
+endfunction
+
 function AddNocturnalWorgen takes unit whichUnit returns nothing
-    if (isNight and (GetUnitAbilityLevel(whichUnit, 'A1G3') > 0 or GetUnitAbilityLevel(whichUnit, 'A120') > 0) and GetUnitAbilityLevel(whichUnit, 'A1ER') == 0) then
+    if (isNight and UnitIsValidTargetForNocturnal(whichUnit)) then
         call EnableNocturnalEffect(whichUnit)
     endif
 endfunction
@@ -34,7 +53,7 @@ private function Curse takes unit whichUnit, unit killer returns nothing
 endfunction
 
 private function FilterIsValidNocturnalTarget takes nothing returns boolean
-    return GetUnitAbilityLevel(GetFilterUnit(), 'A120') > 0 and GetUnitAbilityLevel(GetFilterUnit(), 'A1ER') == 0
+    return UnitIsValidTargetForNocturnal(GetFilterUnit())
 endfunction
 
 private function EnumNocturnalEffect takes nothing returns nothing
@@ -48,6 +67,7 @@ private function EnableNocturnalEffectForAll takes nothing returns nothing
     call GroupClear(g)
     call DestroyGroup(g)
     set g = null
+    call EnableNocturnalResearch()
 endfunction
 
 private function FilterHasNocturnalEffect takes nothing returns boolean
@@ -55,7 +75,6 @@ private function FilterHasNocturnalEffect takes nothing returns boolean
 endfunction
 
 private function EnumDisableNocturnalEffect takes nothing returns nothing
-    call SetPlayerTechResearched(GetOwningPlayer(GetEnumUnit()), 'R0C1', 0)
     call UnitRemoveAbility(GetEnumUnit(), 'A1ER')
 endfunction
 
@@ -66,6 +85,7 @@ private function DisableNocturnalEffectForAll takes nothing returns nothing
     call GroupClear(g)
     call DestroyGroup(g)
     set g = null
+    call DisableNocturnalResearch()
 endfunction
 
 private function TriggerConditionDeath takes nothing returns boolean
@@ -83,7 +103,7 @@ private function TriggerConditionResearchFinish takes nothing returns boolean
 endfunction
 
 private function TriggerConditionNight takes nothing returns boolean
-    if (not isNight and (GetTimeOfDay() >= 18.0 or GetTimeOfDay() < 6.0)) then
+    if (not isNight and (GetTimeOfDay() >= bj_TOD_DUSK or GetTimeOfDay() < bj_TOD_DAWN)) then
         set isNight = true
         call EnableNocturnalEffectForAll()
     endif
@@ -91,7 +111,7 @@ private function TriggerConditionNight takes nothing returns boolean
 endfunction
 
 private function TriggerConditionDay takes nothing returns boolean
-    if (isNight and GetTimeOfDay() < 18.00) then
+    if (isNight and GetTimeOfDay() >= bj_TOD_DAWN and GetTimeOfDay() < bj_TOD_DUSK) then
         set isNight = false
         call DisableNocturnalEffectForAll()
     endif
@@ -107,11 +127,12 @@ private function Init takes nothing returns nothing
     call TriggerRegisterAnyUnitEventBJ(researchFinishTrigger, EVENT_PLAYER_UNIT_RESEARCH_FINISH)
     call TriggerAddCondition(researchFinishTrigger, Condition(function TriggerConditionResearchFinish))
 
-    call TriggerRegisterGameStateEventTimeOfDay(nightTrigger, GREATER_THAN_OR_EQUAL, 18.00)
-    call TriggerRegisterGameStateEventTimeOfDay(nightTrigger, GREATER_THAN_OR_EQUAL, 0.00)
+    call TriggerRegisterGameStateEvent(nightTrigger, GAME_STATE_TIME_OF_DAY, LESS_THAN, bj_TOD_DAWN)
+    call TriggerRegisterGameStateEvent(nightTrigger, GAME_STATE_TIME_OF_DAY, GREATER_THAN_OR_EQUAL, bj_TOD_DUSK)
     call TriggerAddCondition(nightTrigger, Condition(function TriggerConditionNight))
 
-    call TriggerRegisterGameStateEventTimeOfDay(dayTrigger, GREATER_THAN_OR_EQUAL, 6.00)
+    call TriggerRegisterGameStateEvent(dayTrigger, GAME_STATE_TIME_OF_DAY, GREATER_THAN_OR_EQUAL, bj_TOD_DAWN)
+    call TriggerRegisterGameStateEvent(dayTrigger, GAME_STATE_TIME_OF_DAY, LESS_THAN, bj_TOD_DUSK)
     call TriggerAddCondition(dayTrigger, Condition(function TriggerConditionDay))
 endfunction
 
