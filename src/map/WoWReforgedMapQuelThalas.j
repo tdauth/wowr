@@ -146,9 +146,8 @@ private function StartGame takes nothing returns nothing
     call SetDoodadAnimationRectBJ("Stand Third", 'YOsw', gg_rct_Sunwell)
     set udg_QuelThalasWeatherEffect = AddWeatherEffect(gg_rct_Weather_Sunwell_Grove, 'FDrl')
     set udg_QuelThalasWeatherEffectForest = AddWeatherEffect(gg_rct_Weather_Quel_Thalas, 'FDwl')
-endfunction
 
-private function Init takes nothing returns nothing
+    // Do not call this in Init since it is too early:
     call GroupAddUnit(udg_QuelThalasRuinedElvenBuildings, gg_unit_nef6_0509)
     call GroupAddUnit(udg_QuelThalasRuinedElvenBuildings, gg_unit_nef7_0603)
     call GroupAddUnit(udg_QuelThalasRuinedElvenBuildings, gg_unit_nef6_0460)
@@ -172,7 +171,9 @@ private function Init takes nothing returns nothing
     call GroupAddUnit(udg_QuelThalasRuinedElvenBuildings, gg_unit_nefm_0678)
     call GroupAddUnit(udg_QuelThalasRuinedElvenBuildings, gg_unit_nef7_0679)
     call ForGroup(udg_QuelThalasRuinedElvenBuildings, function EnumUpdateQuelThalasBuilding)
+endfunction
 
+private function Init takes nothing returns nothing
     call OnStartGame(function StartGame)
 endfunction
 
