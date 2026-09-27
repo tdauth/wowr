@@ -240,24 +240,21 @@ globals
     private trigger applyTrigger = null
 endglobals
 
-private function GetRacesPopupCount takes integer index returns integer
+// TODO This helper does not work and always returns 0
+private function GetRacesPopupFinalIndex takes integer index returns integer
     local framehandle menuFrame = null
     local integer result = 0
 
     if (raceLabelEdit[index] != null) then
         set menuFrame = BlzFrameGetChild(raceLabelEdit[index], 0)
         if menuFrame != null then
-            set result = BlzFrameGetChildrenCount(menuFrame)
+            set result = IMaxBJ(0, BlzFrameGetChildrenCount(menuFrame) - 1)
         endif
     endif
 
-    call BJDebugMsg("Race items in AI players UI: " + I2S(result) + " for index " + I2S(index))
+    //call BJDebugMsg("Race items in AI players UI: " + I2S(result) + " for index " + I2S(index))
 
     return result
-endfunction
-
-private function GetRacesPopupFinalIndex takes integer index returns integer
-    return GetRacesPopupCount(index)
 endfunction
 
 function DisplayAISettingsInfo takes nothing returns nothing
