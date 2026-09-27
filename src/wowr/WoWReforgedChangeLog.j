@@ -175,6 +175,7 @@ private function Init takes nothing returns nothing
     call AddChange("Add JASS function GetMapNeutralZoneRect.")
     call AddChange("JASS functions to get neutral zone info do not require a player parameter anymore.")
     call AddChange("High Elf Sunwell Resurrection works for all non-structure and non-mechanical Undead units now.")
+    call AddChange("Cheat \"-evolution\" lists Evolution level and works for every player now.")
 
 static if (MAP_DEBUG_MODE_ENABLED) then
     call AddVersion("4.6")

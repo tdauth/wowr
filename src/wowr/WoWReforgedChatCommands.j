@@ -274,7 +274,7 @@ private function HelpReset takes nothing returns nothing
 endfunction
 
 private function GetHelpTextCheats takes nothing returns string
-    return "-cheats, -nocheats, -creeps, -cinoutro, -cinlichking, -cinoldgods, -cininvasion, -boots, -terrain, -heroskills, -bonus, -quests, -fields, -read, -write, -maxresources, -respawngroupcounter, -respawnall, -maxlevel, -levelX, -col, -medivh, -resetrepick, -demigodlight, -demigoddark, -trydemigod, -orderon, -orderoff, -races, -kill, -fill, -res, -share, -unitinfo, -checksave, -generatesave, -savecounters, -savecodeduplicates, -savecodemissing, -autoskill, -orbs, -herolevels, -deathwing, -claws, -clawsbonus, -regennight, -craft, -legendary, -professions, -aigui, -aicraft, -aiharveston/off, -day, -night, -jaina, -arena, -evolution, -evolutioncreeps, -nagaquest4, -website"
+    return "-cheats, -nocheats, -creeps, -cinoutro, -cinlichking, -cinoldgods, -cininvasion, -boots, -terrain, -heroskills, -bonus, -quests, -fields, -read, -write, -maxresources, -respawngroupcounter, -respawnall, -maxlevel, -levelX, -col, -medivh, -resetrepick, -demigodlight, -demigoddark, -trydemigod, -orderon, -orderoff, -races, -kill, -fill, -res, -share, -unitinfo, -checksave, -generatesave, -savecounters, -savecodeduplicates, -savecodemissing, -autoskill, -orbs, -herolevels, -deathwing, -claws, -clawsbonus, -regennight, -craft, -legendary, -professions, -aigui, -aicraft, -aiharveston/off, -day, -night, -jaina, -arena, -evolution X Y, -nagaquest4, -website"
 endfunction
 
 private function HelpCheats takes nothing returns nothing
@@ -1320,6 +1320,30 @@ private function CheatMedivh takes nothing returns nothing
     endif
 endfunction
 
+private function CheatEvolution takes nothing returns nothing
+    local string x = StringToken(GetEventPlayerChatString(), 1)
+    local player p = GetPlayerFromString(x)
+    local string y = StringToken(GetEventPlayerChatString(), 2)
+    local integer level = S2I(y)
+    local integer i = 0
+    if (p == null) then
+        call DisplayTextToPlayer(GetTriggerPlayer(), 0.0, 0.0, "Usage: \"-evolution <player> <level>\". Evolution for all players:")
+        loop
+            exitwhen (i >= bj_MAX_PLAYERS)
+            if (IsPlayerInForce(Player(i), GetMapLobbyPlayers()) or Player(i) == GetMapGaiaPlayer() or Player(i) == GetMapBossesPlayer() or Player(i) == Player(PLAYER_NEUTRAL_AGGRESSIVE)) then
+                call DisplayTextToPlayer(GetTriggerPlayer(), 0.0, 0.0, "- " + GetPlayerNameColored(Player(i)) + ": " + I2S(GetPlayerTechCountSimple(UPG_EVOLUTION, Player(i))))
+            endif
+            set i = i + 1
+        endloop
+    else
+        //call SetEvolutionLevelForCreeps(udg_TmpInteger)
+        call SetPlayerTechResearched(p, UPG_EVOLUTION, level)
+        call SetPlayerTechResearched(p, UPG_CHEAP_EVOLUTION, level)
+        call SetEvolutionLevelOfPlayer(p, level)
+        call DisplayTextToPlayer(GetTriggerPlayer(), 0.0, 0.0, "Set evolution for " + GetPlayerNameColored(p) + " to level: " + I2S(level))
+    endif
+endfunction
+
 private function StartGame takes nothing returns nothing
     set udg_Cheats = GetAllPlayingUsersCount() == 1 and (GetPlayerName(Player(0)) == "WorldEdit" or GetPlayerName(Player(0)) == "Barade" or  GetPlayerName(Player(0)) == "Barade#2569")
 endfunction
@@ -1504,6 +1528,7 @@ private function Init takes nothing returns nothing
     call AddCheat("-orderoff", true, function CheatOrderOff)
     call AddCheat("-races", true, function CheatRaces)
     call AddCheat("-medivh", true, function CheatMedivh)
+    call AddCheat("-evolution", false, function CheatEvolution)
 
     // after all chat commands
     call ForForce(GetAllPlayingUsers(), function EnumPlayerRegisterChatEvent)
