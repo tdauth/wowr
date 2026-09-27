@@ -3287,16 +3287,16 @@ function UpdateWorkers takes nothing returns nothing
                 call NotifyOtherPlayers("I will use a location with coordiante Y " + I2S2(attackTargetLocationY) + " when attacking a location.")
             elseif (c == COMMAND_EASY) then
                 set difficulty = EASY
-                call NotifyOtherPlayers("I will play EASY.")
+                call NotifyOtherPlayers("I will play on difficulty EASY.")
             elseif (c == COMMAND_NORMAL) then
                 set difficulty = NORMAL
-                call NotifyOtherPlayers("I will play NORMAL.")
+                call NotifyOtherPlayers("I will play on difficulty NORMAL.")
             elseif (c == COMMAND_HARD) then
                 set difficulty = HARD
-                call NotifyOtherPlayers("I will play HARD.")
+                call NotifyOtherPlayers("I will play on difficulty HARD.")
             elseif (c == COMMAND_INSANE) then
                 set difficulty = INSANE
-                call NotifyOtherPlayers("I will play INSANE.")
+                call NotifyOtherPlayers("I will play on difficulty INSANE.")
             elseif (c == COMMAND_ZEPPELINS) then
                 set zeppelins = GetLastData()
                 call NotifyOtherPlayers("I will build " + I2S2(zeppelins) + " Zeppelins!")
