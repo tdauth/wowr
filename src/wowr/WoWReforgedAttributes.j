@@ -187,7 +187,7 @@ private function TriggerConditionSell takes nothing returns boolean
     if (IsUnitType(GetSoldUnit(), UNIT_TYPE_HERO)) then
         call AddSkillPointsInitial(GetSoldUnit())
         if (CanUseCustomizableAttributes(GetSoldUnit())) then
-            call BJDebugMsg("Initial attribute points for customizable hero.")
+            //call BJDebugMsg("Initial attribute points for customizable hero.")
             call AddUnitAttribute(GetSoldUnit(), ATTRIBUTE_ATTRIBUTE_POINTS, START_ATTRIBUTE_POINTS)
         endif
     endif
