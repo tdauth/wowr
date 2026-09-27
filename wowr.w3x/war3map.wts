@@ -15193,12 +15193,6 @@ STRING 2856
 Enslavement
 }
 
-STRING 2857
-// Abilities: A1G3 (Nocturnal), EditorSuffix (Editor Suffix)
-{
- (Icon) (Heroes)
-}
-
 STRING 2858
 // Abilities: A03T (Hero Abilities Increase Ability Level), Name (Name)
 {
@@ -86830,13 +86824,13 @@ This unit is affected by Nocturnal. It has increased stats during night.
 }
 
 STRING 38891
-// Abilities: A1G3 (Nocturnal), Tip (Tooltip - Normal)
+// Buffs/Effects: B02L (Nocturnal), EditorName (Name (Editor Only))
 {
 Nocturnal
 }
 
 STRING 38892
-// Abilities: A1G3 (Nocturnal), Name (Name)
+// Upgrades: R08X (Magic Sentry), Name (Name)
 {
 Nocturnal
 }
@@ -88699,24 +88693,6 @@ STRING 40017
 // Units: N0FC (Tuskarr Chieftain), Tip (Tooltip - Basic)
 {
 Summon Tuskarr Chieftain
-}
-
-STRING 40022
-// Abilities: A1G3 (Nocturnal), Ubertip (Tooltip - Normal - Extended)
-{
-Increases the sight and other stats of the hero during night.
-}
-
-STRING 40023
-// Buffs/Effects: B02L (Nocturnal), EditorName (Name (Editor Only))
-{
-Nocturnal
-}
-
-STRING 40024
-// Upgrades: R08X (Magic Sentry), Name (Name)
-{
-Nocturnal
 }
 
 STRING 40027
