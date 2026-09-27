@@ -463,7 +463,7 @@ function RemoveBackpackItemFromHero takes unit hero returns nothing
 		exitwhen (i >= max)
 		set slotItem = UnitItemInSlot(hero, i)
 		if (slotItem != null and GetItemTypeId(slotItem) == ITEM_BACKPACK) then
-			call UnitRemoveItem(hero, slotItem)
+			call RemoveItem(slotItem)
 		endif
 		set slotItem = null
 		set i = i + 1
