@@ -56,7 +56,7 @@ private function TriggerActionLeave takes nothing returns nothing
     local force enemyUsersPlaying = GetUserEnemiesPlaying(GetTriggerPlayer())
     local force neutralUsersPlaying = GetUserNeutralPlaying(GetTriggerPlayer())
     local integer playerId = GetPlayerId(GetTriggerPlayer())
-    call DisplayTextToForce(GetPlayersAll(), Format(GetLocalizedString("PLAYER_LEFT_GAME")).s(GetPlayerNameColored(GetTriggerPlayer())).result())
+    call DisplayTextToForce(GetPlayersAll(), Format(GetLocalizedString("PLAYER_HAS_LEFT_GAME")).s(GetPlayerNameColored(GetTriggerPlayer())).result())
     // TODO Enumerate All players and set alliance depending on the player.
     // Enemy Computer Players
     call SetForceAllianceStateBJ(bj_FORCE_PLAYER[playerId], bj_FORCE_PLAYER[PLAYER_NEUTRAL_AGGRESSIVE], bj_ALLIANCE_UNALLIED)
