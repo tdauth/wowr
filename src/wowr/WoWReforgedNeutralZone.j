@@ -5,7 +5,6 @@ function ResetHeroToNeutralZone takes unit hero, real x, real y, real facing ret
     call ReviveHero(hero, x, y, true)
     call SetUnitFacing(hero, facing)
     call SetUnitInvulnerable(hero, false) // could be from player selection
-    call RemoveBackpackItemFromHero(hero)
     call DropAllItemsFromHero(hero)
 endfunction
 
