@@ -3208,6 +3208,12 @@ globals
     constant integer ITEM_BOOTS_OF_HASTE                             = 'rcdr'
     constant integer ITEM_BOOTS_OF_THE_FORSAKEN                      = 'ebof'
     constant integer ITEM_BOOTS_OF_THE_WARM_HEARTH                   = 'ebwh'
+    constant integer ITEM_BRAMBLETHORN_VESTMENTS                     = 'ebtv'
+    constant integer ITEM_CAGED_SOUL                                 = 'ercs'
+    constant integer ITEM_CITRINE_ADORNED_BOOTS                      = 'ecab'
+    constant integer ITEM_CRUSADERS_GAUNTLETS                        = 'egcg'
+    constant integer ITEM_DALARAN_SAPPHIRE_ROBES                     = 'edsr'
+    constant integer ITEM_DALARAN_SIGNET_RING                        = 'rspa'
 
     // Mounts
     constant integer GRYPHON_MOUNT                                   = 'h004'

@@ -400,6 +400,12 @@ private function Init takes nothing returns nothing
     call AddForsakenKingdomEquipmentItemTypeId(ITEM_BOOTS_OF_HASTE)
     call AddForsakenKingdomEquipmentItemTypeId(ITEM_BOOTS_OF_THE_FORSAKEN)
     call AddForsakenKingdomEquipmentItemTypeId(ITEM_BOOTS_OF_THE_WARM_HEARTH)
+    call AddForsakenKingdomEquipmentItemTypeId(ITEM_BRAMBLETHORN_VESTMENTS)
+    call AddForsakenKingdomEquipmentItemTypeId(ITEM_CAGED_SOUL)
+    call AddForsakenKingdomEquipmentItemTypeId(ITEM_CITRINE_ADORNED_BOOTS)
+    call AddForsakenKingdomEquipmentItemTypeId(ITEM_CRUSADERS_GAUNTLETS)
+    call AddForsakenKingdomEquipmentItemTypeId(ITEM_DALARAN_SAPPHIRE_ROBES)
+    call AddForsakenKingdomEquipmentItemTypeId(ITEM_DALARAN_SIGNET_RING)
 endfunction
 
 endlibrary
