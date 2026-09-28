@@ -363,6 +363,16 @@ private function AddItemsFromEquipment takes nothing returns nothing
     endloop
 endfunction
 
+private function AddItemsFromForsakenKingdomEquipment takes nothing returns nothing
+    local integer i = 0
+    local integer max = GetMaxForsakenKingdomEquipmentItemTypeIds()
+    loop
+        exitwhen (i >= max)
+        call AddItem(GetForsakenKingdomEquipmentItemTypeId(i))
+        set i = i + 1
+    endloop
+endfunction
+
 private function AddItemsFromItemSets takes nothing returns nothing
     local ItemSet s = 0
     local integer j = 0
@@ -664,6 +674,7 @@ private function AddItems takes nothing returns nothing
     call AddItemsFromRecipes()
     // EQUIPMENT ITEMS
     call AddItemsFromEquipment()
+    call AddItemsFromForsakenKingdomEquipment()
     // ARENA REWARD ITEMS
     call AddItemsFromArena()
     // BANNER ITEMS

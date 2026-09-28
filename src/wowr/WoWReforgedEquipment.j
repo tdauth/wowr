@@ -26,7 +26,23 @@ globals
     private boolean array equipmentItemTypeCategoryType
     private integer array equipmentItemTypeAnimation
     private integer equipmentTypesCounter = 1 // start with 1 so 0 means none
+
+    private integer array forsakenKingdomEquipmentItemTypeId
+    private integer forsakenKingdomEquipmentItemTypeIdCounter = 0
 endglobals
+
+private function AddForsakenKingdomEquipmentItemTypeId takes integer itemTypeId returns nothing
+    set forsakenKingdomEquipmentItemTypeId[forsakenKingdomEquipmentItemTypeIdCounter] = itemTypeId
+    set forsakenKingdomEquipmentItemTypeIdCounter = forsakenKingdomEquipmentItemTypeIdCounter + 1
+endfunction
+
+function GetForsakenKingdomEquipmentItemTypeId takes integer index returns integer
+    return forsakenKingdomEquipmentItemTypeId[index]
+endfunction
+
+function GetMaxForsakenKingdomEquipmentItemTypeIds takes nothing returns integer
+    return forsakenKingdomEquipmentItemTypeIdCounter
+endfunction
 
 function GetEquipmentItemTypeId takes integer index returns integer
     return equipmentItemTypeId[index]
@@ -368,6 +384,22 @@ private function Init takes nothing returns nothing
     // Boots
     call AddEquipmentItemType('I0UD', GetLocalizedStringSafe("PAGE_TITLE_BOOTS"), CATEGORY_FOOT, VILLAGER_255_ANIMATION_ATTACK_NO_WEAPON) // Wolf Pelt Boots
     call AddEquipmentItemType('I10N', GetLocalizedStringSafe("PAGE_TITLE_BOOTS"), CATEGORY_FOOT, VILLAGER_255_ANIMATION_ATTACK_NO_WEAPON) // Metal Boots
+
+    // Forsaken Kingdom
+    call AddForsakenKingdomEquipmentItemTypeId(ITEM_ABOMINATIONS_HOOK)
+    call AddForsakenKingdomEquipmentItemTypeId(ITEM_AGUS_SHAMBLING_HAND)
+    call AddForsakenKingdomEquipmentItemTypeId(ITEM_ANCIENT_BRONZE_HELMET)
+    call AddForsakenKingdomEquipmentItemTypeId(ITEM_ARMOR_OF_THE_SCARLET_CRUSADE)
+    call AddForsakenKingdomEquipmentItemTypeId(ITEM_BANDIT_MASK)
+    call AddForsakenKingdomEquipmentItemTypeId(ITEM_BLACKSMITHS_APRON)
+    call AddForsakenKingdomEquipmentItemTypeId(ITEM_BLADE_DANCERS_GERAVES)
+    call AddForsakenKingdomEquipmentItemTypeId(ITEM_BLIGHTWEAVER_BOOTS)
+    call AddForsakenKingdomEquipmentItemTypeId(ITEM_BLUE_DRAGON_FIGURINE)
+    call AddForsakenKingdomEquipmentItemTypeId(ITEM_BONE_CAGE_BREASTPLATE)
+    call AddForsakenKingdomEquipmentItemTypeId(ITEM_BONE_STAFF)
+    call AddForsakenKingdomEquipmentItemTypeId(ITEM_BOOTS_OF_HASTE)
+    call AddForsakenKingdomEquipmentItemTypeId(ITEM_BOOTS_OF_THE_FORSAKEN)
+    call AddForsakenKingdomEquipmentItemTypeId(ITEM_BOOTS_OF_THE_WARM_HEARTH)
 endfunction
 
 endlibrary

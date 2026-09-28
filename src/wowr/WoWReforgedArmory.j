@@ -24,21 +24,14 @@ function AddArmory takes unit shop returns nothing
     endloop
 
     // Forsaken Kingdom
-    call NextPagedButtonsPage(shop, "Forsaken Kingdom Equipment")
-    call AddPagedButtonsItemType(shop, ITEM_ABOMINATIONS_HOOK)
-    call AddPagedButtonsItemType(shop, ITEM_AGUS_SHAMBLING_HAND)
-    call AddPagedButtonsItemType(shop, ITEM_ANCIENT_BRONZE_HELMET)
-    call AddPagedButtonsItemType(shop, ITEM_ARMOR_OF_THE_SCARLET_CRUSADE)
-    call AddPagedButtonsItemType(shop, ITEM_BANDIT_MASK)
-    call AddPagedButtonsItemType(shop, ITEM_BLACKSMITHS_APRON)
-    call AddPagedButtonsItemType(shop, ITEM_BLADE_DANCERS_GERAVES)
-    call AddPagedButtonsItemType(shop, ITEM_BLIGHTWEAVER_BOOTS)
-    call AddPagedButtonsItemType(shop, ITEM_BLUE_DRAGON_FIGURINE)
-    call AddPagedButtonsItemType(shop, ITEM_BONE_CAGE_BREASTPLATE)
-    call AddPagedButtonsItemType(shop, ITEM_BONE_STAFF)
-    call AddPagedButtonsItemType(shop, ITEM_BOOTS_OF_HASTE)
-    call AddPagedButtonsItemType(shop, ITEM_BOOTS_OF_THE_FORSAKEN)
-    call AddPagedButtonsItemType(shop, ITEM_BOOTS_OF_THE_WARM_HEARTH)
+    call NextPagedButtonsPage(shop, "Forsaken Kingdom")
+    set i = 0
+    set max = GetMaxForsakenKingdomEquipmentItemTypeIds()
+    loop
+        exitwhen (i >= max)
+        call AddPagedButtonsItemType(shop, GetForsakenKingdomEquipmentItemTypeId(i))
+        set i = i + 1
+    endloop
 
     //call BJDebugMsg("Before enabling paged buttons for shop " + GetUnitName(shop) + " with " + I2S(max) + " total learnable skills.")
 
