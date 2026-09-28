@@ -6,11 +6,11 @@ private function Init takes nothing returns nothing
 
     // Special
     call AddZone(GetLocalizedStringSafe("PLAYER_SELECTION"), gg_rct_Player_Selection, "ReplaceableTextures\\CommandButtons\\BTNTavern.blp", PLAYER_COLOR_RED, "playerselection", SUMMER_TREE_WALL, TERRAIN_TYPE_LORDAERON)
-    
+
     // Azeroth
     call AddZoneWorld(GetLocalizedStringSafe("AZEROTH"), "ReplaceableTextures\\CommandButtons\\BTNCastle.blp", "azeroth")
     call ResetZoneCurrentContinent()
-    
+
     // Islands
     call AddZone(GetLocalizedStringSafe("DEMIGOD_TEMPLE"), gg_rct_Sunken_Ruins_4, "ReplaceableTextures\\CommandButtons\\BTNDragonHawk.blp", PLAYER_COLOR_YELLOW, "demigodtemple", RUINS_TREE_WALL, TERRAIN_TYPE_SUNKEN_RUINS)
     call AddZone(GetLocalizedStringSafe("THERAMORE"), gg_rct_Weather_Theramore, "ReplaceableTextures\\CommandButtons\\BTNTheramoreBanner.blp", PLAYER_COLOR_TURQUOISE, "theramore", RUINS_TREE_WALL, TERRAIN_TYPE_LORDAERON)
@@ -33,7 +33,7 @@ private function Init takes nothing returns nothing
     call AddZone(GetLocalizedStringSafe("FORBIDDING_SEA"), gg_rct_Zone_The_Forbidding_Sea, "ReplaceableTextures\\CommandButtons\\BTNCrushingWave.blp", PLAYER_COLOR_LIGHT_BLUE, "forbiddingsea", RUINS_TREE_WALL, TERRAIN_TYPE_SEA)
     call AddZone(GetLocalizedStringSafe("SOUTH_SEA"), gg_rct_Zone_South_Sea, "ReplaceableTextures\\CommandButtons\\BTNCrushingWave.blp", PLAYER_COLOR_LIGHT_BLUE, "southsea", RUINS_TREE_WALL, TERRAIN_TYPE_SEA)
     call AddZone(GetLocalizedStringSafe("GREAT_SEA"), gg_rct_Zone_Great_Sea_1, "ReplaceableTextures\\CommandButtons\\BTNCrushingWave.blp", PLAYER_COLOR_LIGHT_BLUE, "greatsea", RUINS_TREE_WALL, TERRAIN_TYPE_SEA)
-    
+
     // Eastern Kingdoms
     call AddZoneContinent(GetLocalizedStringSafe("EASTERN_KINGDOMS"), "ReplaceableTextures\\CommandButtons\\BTNCastle.blp", "easternkingdoms")
 
@@ -91,10 +91,10 @@ private function Init takes nothing returns nothing
     call AddZoneRect(gg_rct_Zone_Silverpine_Forest_3)
     call AddZoneRect(gg_rct_Zone_Silverpine_Forest_4)
     call AddZone(GetLocalizedStringSafe("TOL_BARAD"), gg_rct_Zone_Tol_Barad, "ReplaceableTextures\\CommandButtons\\BTNCage2.blp", PLAYER_COLOR_BLACK, "tolbarad", FALL_TREE_WALL, TERRAIN_TYPE_LORDAERON)
-    
+
     // Kalimndor
     call AddZoneContinent(GetLocalizedStringSafe("KALIMDOR"), "ReplaceableTextures\\CommandButtons\\BTNFarSight.blp", "kalimdor")
-    
+
     call AddZone(GetLocalizedStringSafe("CENARIUS_GRAVE"), gg_rct_Weather_Cenarius, "ReplaceableTextures\\CommandButtons\\BTNKeeperOfTheGrove.blp", PLAYER_COLOR_EMERALD, "cenariusgrave", ASHENVALE_TREE_WALL, TERRAIN_TYPE_ASHENVALE)
     call AddZone(GetLocalizedStringSafe("TELDRASSIL"), gg_rct_Zone_Teldrassil, "ReplaceableTextures\\CommandButtons\\BTNTreeOfLife.blp", PLAYER_COLOR_GREEN, "teldrassil", ASHENVALE_TREE_WALL, TERRAIN_TYPE_ASHENVALE)
     call AddZoneRect(gg_rct_Zone_Teldrassil_2)
@@ -147,10 +147,10 @@ private function Init takes nothing returns nothing
     call AddZoneRect(gg_rct_Zone_Uldum_2)
     call AddZoneRect(gg_rct_Zone_Uldum_3)
     call AddZoneRect(gg_rct_Zone_Uldum_4)
-    
+
     // Northrend
     call AddZoneContinent(GetLocalizedStringSafe("NORHREND"), "ReplaceableTextures\\CommandButtons\\BTNGlacier.blp", "northrend")
-    
+
     call AddZone(GetLocalizedStringSafe("ZUL_DRAK"), gg_rct_Location_Draktharon_Keep, "ReplaceableTextures\\CommandButtons\\BTNNerubianPalace.blp", PLAYER_COLOR_CYAN, "zuldrak", NORTHREND_TREE_WALL, TERRAIN_TYPE_NORTHREND)
     call AddZone(GetLocalizedStringSafe("AZJOL_NERUB"), gg_rct_Weather_Neruben_Dungeon, "ReplaceableTextures\\CommandButtons\\BTNNerubianPalace.blp", PLAYER_COLOR_CYAN, "azjolnerub", NORTHREND_TREE_WALL, TERRAIN_TYPE_UNDERGROUND)
     call AddZone(GetLocalizedStringSafe("THE_STORM_PEAK"), gg_rct_Zone_The_Storm_Peaks, "ReplaceableTextures\\CommandButtons\\BTNBTNPermafrostSnowman.blp", PLAYER_COLOR_CYAN, "azjolnerub", NORTHREND_TREE_WALL, TERRAIN_TYPE_NORTHREND)
@@ -178,6 +178,16 @@ private function Init takes nothing returns nothing
     call AddZoneRect(gg_rct_Zone_Dragonblight_3)
     call AddZoneRect(gg_rct_Zone_Dragonblight_4)
     call AddZone(GetLocalizedStringSafe("GRIZZLY_HILLS"), gg_rct_Zone_Grizzly_Hills, "ReplaceableTextures\\CommandButtons\\BTNPolarFurbolg.blp", PLAYER_COLOR_BROWN, "grizzlyhills", NORTHREND_TREE_WALL, TERRAIN_TYPE_NORTHREND)
+
+    // Outland
+    call AddZoneWorld(GetLocalizedStringSafe("OUTLAND"), "ReplaceableTextures\\CommandButtons\\BTNOutland_FloatingChunks0.blp", "outland")
+    call ResetZoneCurrentContinent()
+    call AddZone(GetLocalizedStringSafe("OUTLAND"), gg_rct_Zone_Outland_1, "ReplaceableTextures\\CommandButtons\\BTNOutland_FloatingChunks0.blp", PLAYER_COLOR_RED, "outland", OUTLAND_TREE_WALL, TERRAIN_TYPE_OUTLAND)
+    call AddZoneRect(gg_rct_Zone_Outland_2)
+    call AddZoneRect(gg_rct_Zone_Outland_3)
+    call AddZoneRect(gg_rct_Zone_Outland_4)
+    call AddZoneRect(gg_rct_Zone_Outland_5)
+    call AddZoneRect(gg_rct_Zone_Outland_6)
 endfunction
 
 endlibrary
