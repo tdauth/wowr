@@ -1,4 +1,4 @@
-library WoWReforgedPlayers initializer Init requires ForceUtils, WoWReforgedBackpacks, WoWReforgedNeutralZone
+library WoWReforgedPlayers initializer Init requires ForceUtils, WoWReforgedStats, WoWReforgedBackpacks, WoWReforgedNeutralZone
 
 globals
     private trigger leavesTrigger = CreateTrigger()
@@ -77,6 +77,9 @@ private function TriggerActionLeave takes nothing returns nothing
     call ResetAllHeroesToNeutralZone(GetTriggerPlayer())
     // Destroy the backpack since we cannot use it in full shared control properly
     call DestroyBackpackSystemForPlayer(GetTriggerPlayer())
+
+    // Recreate the stats multiboard in case Warcraft's shared resources multiboard appeared.
+    call CreateStats()
 
     call ForceClear(alliedUsersPlaying)
     call DestroyForce(alliedUsersPlaying)

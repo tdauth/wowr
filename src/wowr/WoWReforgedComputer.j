@@ -494,7 +494,7 @@ private function TriggerConditionAllianceChange takes nothing returns boolean
         call ForForce(computerPlayers, function EnumUpdateAllianceState)
         //call h__DisplayTextToForce(GetForceOfPlayer(GetTriggerPlayer()), "TRIGSTR_16466")
         call EnableAllianceChangesTrigger()
-        // Recreate the stats multiboard in case Warcraft's shared ressources multiboard appeared.
+        // Recreate the stats multiboard in case Warcraft's shared resources multiboard appeared.
         call CreateStats()
     endif
     return false
