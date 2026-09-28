@@ -326,4 +326,12 @@ function GetPlayerNameWithoutTag takes player whichPlayer returns string
      return GetPlayerNameWithoutTagEx(GetPlayerName(whichPlayer))
 endfunction
 
+function GetPlayerNameWithoutTagColoredSimple takes player whichPlayer returns string
+	return GetPlayerColorString(GetPlayerColor(whichPlayer), GetPlayerNameWithoutTag(whichPlayer))
+endfunction
+
+function GetPlayerNameWithoutTagColored takes player whichPlayer returns string
+	return "[" + I2S(GetPlayerId(whichPlayer) + 1) + "]" + GetPlayerNameWithoutTagColoredSimple(whichPlayer)
+endfunction
+
 endlibrary

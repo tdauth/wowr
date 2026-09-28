@@ -40,7 +40,7 @@ private function ForFunctionUpdateStats takes nothing returns nothing
     local integer itemTypeId = 0
     local integer column = 0
     // Player name plus color and numer
-    local string text = GetPlayerNameColored(whichPlayer)
+    local string text = GetPlayerNameWithoutTagColored(whichPlayer)
     local integer value = 0
     if (isUser and GetPlayerSlotState(whichPlayer) == PLAYER_SLOT_STATE_LEFT) then
         set text = Format(GetLocalizedString("STATS_LEFT")).s(text).result()

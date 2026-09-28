@@ -181,6 +181,9 @@ private function Init takes nothing returns nothing
     call AddChange("Never drop items with ITEM_TYPE_CAMPAIGN by creeps.")
     call AddChange("Fix icon position of equipment items in Armory.")
     call AddChange("Move neutral buildings on Theramore.")
+    call AddChange("Add JASS function GetPlayerNameWithoutTagColoredSimple.")
+    call AddChange("Add JASS function GetPlayerNameWithoutTagColored.")
+    call AddChange("Show player names without tags in stats multiboard.")
 
 static if (MAP_DEBUG_MODE_ENABLED) then
     call AddVersion("4.6")
