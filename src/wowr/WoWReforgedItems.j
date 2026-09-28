@@ -126,7 +126,7 @@ private function TriggerConditionPickupItem takes nothing returns boolean
     // The item could have already been removed by some other trigger
     if (itemTypeId != 0 and GetWidgetLife(whichItem) > 0.0 and not CanItemBePickedUp(whichItem, GetTriggerUnit())) then
         call DisableTrigger(GetTriggeringTrigger())
-        call BJDebugMsg("Item pickup error " + A2S(itemTypeId) + ": " + GetObjectName(itemTypeId))
+        call BJDebugMsg("Item pickup error " + A2S(itemTypeId) + ": " + GetObjectName(itemTypeId) + " for unit " + GetUnitName(GetTriggerUnit()) + " of " + GetPlayerName(GetOwningPlayer(GetTriggerUnit())))
         call ShowItemPickupError(GetTriggerUnit(), whichItem)
         call UnitRemoveItem(GetTriggerUnit(), whichItem)
         call EnableTrigger(GetTriggeringTrigger())
