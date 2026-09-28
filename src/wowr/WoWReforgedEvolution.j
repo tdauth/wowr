@@ -247,18 +247,21 @@ endfunction
 
 private function HookSetPlayerTechResearched takes player whichPlayer, integer techid, integer setToLevel returns nothing
     if (techid == UPG_EVOLUTION) then
+        call BJDebugMsg("HookSetPlayerTechResearched")
         call SetEvolutionLevel(whichPlayer, setToLevel - GetEvolutionLevelOfPlayer(whichPlayer))
     endif
 endfunction
 
 private function HookAddPlayerTechResearched takes player whichPlayer, integer techid, integer levels returns nothing
     if (techid == UPG_EVOLUTION) then
+        call BJDebugMsg("HookAddPlayerTechResearched")
         call SetEvolutionLevel(whichPlayer, levels)
     endif
 endfunction
 
 private function HookBlzDecPlayerTechResearched takes player whichPlayer, integer techid, integer levels returns nothing
     if (techid == UPG_EVOLUTION) then
+        call BJDebugMsg("HookBlzDecPlayerTechResearched")
         call SetEvolutionLevel(whichPlayer, -levels)
     endif
 endfunction

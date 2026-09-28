@@ -14,8 +14,8 @@ function InitWoWReforgedGuiVariables takes nothing returns nothing
     set udg_ProfessionNone = PROFESSION_NONE
     set udg_ProfessionScribe = PROFESSION_SCRIBE
     // Races
-    set udg_RaceNone = 0
-    set udg_RaceFreelancer = RACE_FREELANCER
+    set udg_RaceNone = WOWR_RACE_NONE
+    set udg_RaceFreelancer = WOWR_RACE_FREELANCER
     // Resources
     set udg_ResourceGold = Resources_GOLD
     set udg_ResourceLumber = Resources_LUMBER

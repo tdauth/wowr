@@ -7,7 +7,7 @@ struct Research
     integer goldCostBase
     integer lumberCostBase
     integer timeBase
-    
+
     integer goldIncrement
     integer lumberIncrement
     integer timeIncrement
@@ -16,7 +16,7 @@ endstruct
 globals
     private Research array researches
     private integer researchesCounter = 0
-    
+
     private Research lastCreatedResearch = 0
 endglobals
 
@@ -29,12 +29,12 @@ function AddResearch takes integer whichRace, integer researchId returns Researc
     set r.researchId = researchId
     set r.whichRace = whichRace
     set r.levels = GetPlayerTechMaxAllowed(Player(0), researchId)
-    
+
     set lastCreatedResearch = r
-    
+
     set researches[researchesCounter] = r
     set researchesCounter = researchesCounter + 1
-    
+
     return r
 endfunction
 
@@ -128,7 +128,7 @@ function ResearchAllForPlayer takes player whichPlayer, integer whichRace return
     local integer max = GetResearchesMax()
     //call BJDebugMsg("Max researches " + I2S(max) + " and race " + I2S(whichRace) + " " + GetRaceName(whichRace) + " and player " + GetPlayerName(whichPlayer))
     loop
-        exitwhen (i == max)
+        exitwhen (i >= max)
         set r = GetResearch(i)
         //call BJDebugMsg("Research " + GetObjectName(r.researchId) + " with levels " + I2S(r.levels) + " for race " + GetRaceName(r.whichRace))
         if (r.whichRace == whichRace and GetPlayerTechCountSimple(r.researchId, whichPlayer) < r.levels) then

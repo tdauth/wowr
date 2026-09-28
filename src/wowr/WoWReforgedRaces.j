@@ -1,8 +1,8 @@
 library WoWReforgedRaces initializer Init requires WoWReforgedUtils, WoWReforgedVIPs, WoWReforgedDependencyEquivalents, WoWReforgedObjectMappings, WoWReforgedResearches
 
 globals
-    constant integer RACE_NONE = 0
-    integer RACE_FREELANCER = 1
+    constant integer WOWR_RACE_NONE = 0
+    integer WOWR_RACE_FREELANCER = 1
     integer WOWR_RACE_HUMAN
     integer WOWR_RACE_ORC
     integer WOWR_RACE_UNDEAD
@@ -4572,7 +4572,7 @@ private function Init takes nothing returns nothing
 
     // RacesPopupMenu has to match this order
     call AddNone() // udg_RaceNone = 0
-    set RACE_FREELANCER = AddFreelancer()
+    set WOWR_RACE_FREELANCER = AddFreelancer()
     set WOWR_RACE_HUMAN = AddHuman()
     set WOWR_RACE_ORC = AddOrc()
     set WOWR_RACE_UNDEAD = AddUndead()
