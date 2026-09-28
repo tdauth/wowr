@@ -177,6 +177,7 @@ private function Init takes nothing returns nothing
     call AddChange("JASS function GetMapAllowConfigureAIPlayer returns only true now for the first 10 players.")
     call AddChange("PlayerColorUtils supports PLAYER_COLOR_BLACK.")
     call AddChange("Generate website data into sub folder \"wowr-website\" now.")
+    call AddChange("Never drop items with ITEM_TYPE_CAMPAIGN by creeps.")
 
 static if (MAP_DEBUG_MODE_ENABLED) then
     call AddVersion("4.6")
