@@ -178,6 +178,7 @@ private function Init takes nothing returns nothing
     call AddChange("PlayerColorUtils supports PLAYER_COLOR_BLACK.")
     call AddChange("Generate website data into sub folder \"wowr-website\" now.")
     call AddChange("Never drop items with ITEM_TYPE_CAMPAIGN by creeps.")
+    call AddChange("Fix icon position of equipment items in Armory.")
 
 static if (MAP_DEBUG_MODE_ENABLED) then
     call AddVersion("4.6")
