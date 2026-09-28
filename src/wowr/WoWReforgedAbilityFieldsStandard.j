@@ -438,6 +438,10 @@ private function Init takes nothing returns nothing
     call RegisterAbilityFieldType(GetHandleId(ABILITY_RLF_ATTACK_SPEED_FACTOR_SLO2), ABILITY_FIELD_TYPE_CHANCE_REAL)
 
     // Forsaken Kingdom
+    // Holy Wrath
+    call RegisterAbilityFieldType('pbl1', ABILITY_FIELD_TYPE_DAMAGE_REAL)
+    call RegisterAbilityFieldType('pbl6', ABILITY_FIELD_TYPE_DEFENSE_REAL)
+    call RegisterAbilityFieldType('pbl8', ABILITY_FIELD_TYPE_DAMAGE_REAL)
     // Sacred Aura
     call RegisterAbilityFieldType('hsa1', ABILITY_FIELD_TYPE_CHANCE_REAL)
     call RegisterAbilityFieldType('hsa2', ABILITY_FIELD_TYPE_CHANCE_REAL)
@@ -657,6 +661,11 @@ private function Init takes nothing returns nothing
     call RegisterUnitAbility(ABILITY_HEALING_WAVE)
     call RegisterAbilityField(ABILITY_HEALING_WAVE, GetHandleId(ABILITY_ILF_NUMBER_OF_TARGETS_HIT))
     call RegisterAbilityField(ABILITY_HEALING_WAVE, GetHandleId(ABILITY_RLF_DAMAGE_PER_TARGET_OCL1))
+
+    call RegisterUnitAbility(ABILITY_HOLY_WRATH)
+    call RegisterAbilityField(ABILITY_HOLY_WRATH, 'pbl1')
+    call RegisterAbilityField(ABILITY_HOLY_WRATH, 'pbl6')
+    call RegisterAbilityField(ABILITY_HOLY_WRATH, 'pbl8')
 
     // Paladin
     call RegisterUnitHealBonus(ABILITY_HOLY_LIGHT, GetHandleId(ABILITY_RLF_AMOUNT_HEALED_DAMAGED_HHB1))
