@@ -94,6 +94,7 @@ private function SetEvolutionLevelEx takes player whichPlayer, integer levels re
 endfunction
 
 private function SetEvolutionLevel takes player whichPlayer, integer levels returns nothing
+    call BJDebugMsg("Set evolution level for " + GetPlayerName(whichPlayer) + " to level " + I2S(levels))
     if (levels != 0) then
         call SetEvolutionLevelEx(whichPlayer, levels)
     endif
@@ -137,6 +138,7 @@ endfunction
 private function TriggerConditionPlayerLeaves takes nothing returns boolean
     // Determine if it is the lowest hero
     local integer lowestLevel = GetLowestHeroLevel1FromAllPlayingUsers()
+    call BJDebugMsg("Player " + GetPlayerName(GetTriggerPlayer()) + " left the game and hence evolution level is now " + I2S(lowestLevel))
     // Creeps
     if (GetPlayerTechCountSimple(UPG_EVOLUTION, Player(PLAYER_NEUTRAL_AGGRESSIVE)) != lowestLevel) then
         // The lowest hero level of playing users will determine the Evolution level of creeps and bosses.
@@ -197,7 +199,7 @@ endfunction
 
 private function TriggerConditionHeroLevel takes nothing returns boolean
     local integer lowestLevel = 0
-    if (IsPlayerInForce(GetOwningPlayer(GetTriggerUnit()), GetMapLobbyPlayers()) and GetPlayerHero1(GetOwningPlayer(GetTriggerUnit())) == GetTriggerUnit()) then
+    if (GetUnitTypeId(GetTriggerUnit()) != 0 and IsPlayerInForce(GetOwningPlayer(GetTriggerUnit()), GetMapLobbyPlayers()) and GetPlayerHero1(GetOwningPlayer(GetTriggerUnit())) == GetTriggerUnit()) then
         // Determine if it is the lowest hero
         set lowestLevel = GetLowestHeroLevel1FromAllPlayingUsers()
         // Creeps
