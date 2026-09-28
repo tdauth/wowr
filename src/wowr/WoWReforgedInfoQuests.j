@@ -1,4 +1,4 @@
-library WoWReforgedInfoQuests initializer Init requires SafeString, Taunts, WoWReforgedClasses
+library WoWReforgedInfoQuests initializer Init requires SafeString, QuestUtils, Taunts, WoWReforgedClasses
 // Info quests are the required quests and provide more information about this map. They have to be stored for generating the website.
 
 globals
@@ -31,8 +31,7 @@ function AddInfoQuest takes string title, string description, string iconPath re
 endfunction
 
 function AddInfoQuestItem takes string description returns questitem
-    local questitem i = QuestCreateItem(questHandle[questsMax - 1])
-    call QuestItemSetDescription(i, description)
+    local questitem i = CreateQuestItem(questHandle[questsMax - 1], description)
     call QuestItemSetCompleted(i, false)
     return i
 endfunction
