@@ -82,7 +82,7 @@ private function SetEvolutionLevelEx takes player whichPlayer, integer levels re
     call GroupEnumUnitsOfPlayer(units, whichPlayer, Filter(function FilterIsEvolutionAffected))
     set max = BlzGroupGetSize(units)
     loop
-        exitwhen(i == max)
+        exitwhen(i >= max)
         set member = BlzGroupUnitAt(units, i)
         call SetUnitEvolutionFields(member, levels, BlzGetUnitIntegerField(member, UNIT_IF_LEVEL) + bonus, BlzGetUnitRealField(member, UNIT_RF_DEFENSE) + I2R(bonus))
         set member = null
@@ -94,7 +94,6 @@ private function SetEvolutionLevelEx takes player whichPlayer, integer levels re
 endfunction
 
 private function SetEvolutionLevel takes player whichPlayer, integer levels returns nothing
-    call BJDebugMsg("Set evolution level for " + GetPlayerName(whichPlayer) + " to level " + I2S(levels))
     if (levels != 0) then
         call SetEvolutionLevelEx(whichPlayer, levels)
     endif
@@ -130,7 +129,6 @@ function UpgradeEvolution takes player whichPlayer returns nothing
 endfunction
 
 function SetEvolutionLevelForCreeps takes integer level returns nothing
-    call BJDebugMsg("Set evolution for creeps to level " + I2S(level))
     call SetEvolutionLevelOfPlayer(Player(PLAYER_NEUTRAL_AGGRESSIVE), level)
     call SetEvolutionLevelOfPlayer(GetMapBossesPlayer(), level)
 endfunction
@@ -138,7 +136,6 @@ endfunction
 private function TriggerConditionPlayerLeaves takes nothing returns boolean
     // Determine if it is the lowest hero
     local integer lowestLevel = GetLowestHeroLevel1FromAllPlayingUsers()
-    call BJDebugMsg("Player " + GetPlayerName(GetTriggerPlayer()) + " left the game and hence evolution level is now " + I2S(lowestLevel))
     // Creeps
     if (GetPlayerTechCountSimple(UPG_EVOLUTION, Player(PLAYER_NEUTRAL_AGGRESSIVE)) != lowestLevel) then
         // The lowest hero level of playing users will determine the Evolution level of creeps and bosses.
@@ -208,7 +205,6 @@ private function TriggerConditionHeroLevel takes nothing returns boolean
             The lowest hero level of playing users will determine the Evolution level of creeps and bosses.
             If any hero levels down due to full repick it can down grade the Evolution level for creeps and bosses.
             */
-            call BJDebugMsg("Set creeps Evolution level from lowest hero level " + I2S(lowestLevel) + " from level up of " + GetUnitName(GetTriggerUnit()))
             call SetEvolutionLevelForCreeps(lowestLevel)
         endif
     endif
@@ -247,21 +243,18 @@ endfunction
 
 private function HookSetPlayerTechResearched takes player whichPlayer, integer techid, integer setToLevel returns nothing
     if (techid == UPG_EVOLUTION) then
-        call BJDebugMsg("HookSetPlayerTechResearched")
         call SetEvolutionLevel(whichPlayer, setToLevel - GetEvolutionLevelOfPlayer(whichPlayer))
     endif
 endfunction
 
 private function HookAddPlayerTechResearched takes player whichPlayer, integer techid, integer levels returns nothing
     if (techid == UPG_EVOLUTION) then
-        call BJDebugMsg("HookAddPlayerTechResearched")
         call SetEvolutionLevel(whichPlayer, levels)
     endif
 endfunction
 
 private function HookBlzDecPlayerTechResearched takes player whichPlayer, integer techid, integer levels returns nothing
     if (techid == UPG_EVOLUTION) then
-        call BJDebugMsg("HookBlzDecPlayerTechResearched")
         call SetEvolutionLevel(whichPlayer, -levels)
     endif
 endfunction
