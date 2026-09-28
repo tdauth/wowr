@@ -34,6 +34,11 @@ function AddArmory takes unit shop returns nothing
     call AddPagedButtonsItemType(shop, ITEM_BLADE_DANCERS_GERAVES)
     call AddPagedButtonsItemType(shop, ITEM_BLIGHTWEAVER_BOOTS)
     call AddPagedButtonsItemType(shop, ITEM_BLUE_DRAGON_FIGURINE)
+    call AddPagedButtonsItemType(shop, ITEM_BONE_CAGE_BREASTPLATE)
+    call AddPagedButtonsItemType(shop, ITEM_BONE_STAFF)
+    call AddPagedButtonsItemType(shop, ITEM_BOOTS_OF_HASTE)
+    call AddPagedButtonsItemType(shop, ITEM_BOOTS_OF_THE_FORSAKEN)
+    call AddPagedButtonsItemType(shop, ITEM_BOOTS_OF_THE_WARM_HEARTH)
 
     //call BJDebugMsg("Before enabling paged buttons for shop " + GetUnitName(shop) + " with " + I2S(max) + " total learnable skills.")
 

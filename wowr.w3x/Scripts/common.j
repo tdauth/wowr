@@ -3203,6 +3203,11 @@ globals
     constant integer ITEM_BLADE_DANCERS_GERAVES                      = 'ebdg'
     constant integer ITEM_BLIGHTWEAVER_BOOTS                         = 'ebwb'
     constant integer ITEM_BLUE_DRAGON_FIGURINE                       = 'ebdf'
+    constant integer ITEM_BONE_CAGE_BREASTPLATE                      = 'ebcb'
+    constant integer ITEM_BONE_STAFF                                 = 'esbs'
+    constant integer ITEM_BOOTS_OF_HASTE                             = 'rcdr'
+    constant integer ITEM_BOOTS_OF_THE_FORSAKEN                      = 'ebof'
+    constant integer ITEM_BOOTS_OF_THE_WARM_HEARTH                   = 'ebwh'
 
     // Mounts
     constant integer GRYPHON_MOUNT                                   = 'h004'
