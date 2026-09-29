@@ -1,4 +1,4 @@
-library WoWReforgedInfoQuests initializer Init requires SafeString, QuestUtils, Taunts, WoWReforgedClasses
+library WoWReforgedInfoQuests initializer Init requires SafeString, QuestUtils, Taunts, UnitGroupRespawnConfig, WoWReforgedClasses
 // Info quests are the required quests and provide more information about this map. They have to be stored for generating the website.
 
 globals
@@ -468,6 +468,11 @@ private function Init takes nothing returns nothing
     call AddInfoQuestItem(GetLocalizedStringSafe("CC_AI_TRACE_ON"))
 
     call AddInfoQuest(GetLocalizedStringSafe("IQ_CREEPS_TITLE"), Format(GetLocalizedStringSafe("IQ_CREEPS_DESCRIPTION")).t(R2I(UnitGroupRespawnConfig_DEFAULT_TIMEOUT)).result(), "ReplaceableTextures\\CommandButtons\\BTNPitLord.blp")
+    call AddInfoQuestItem(Format(GetLocalizedStringSafe("IQ_CREEPS_0")).i(DROP_CHANCE_ITEM).result())
+    call AddInfoQuestItem(Format(GetLocalizedStringSafe("IQ_CREEPS_1")).i(DROP_CHANCE_DIFFERENT_LEVEL).result())
+    call AddInfoQuestItem(Format(GetLocalizedStringSafe("IQ_CREEPS_2")).i(DROP_CHANCE_HIGHER_LEVEL).result())
+    call AddInfoQuestItem(Format(GetLocalizedStringSafe("IQ_CREEPS_2")).i(DROP_CHANCE_LOWER_LEVEL).result())
+    call AddInfoQuestItem(GetLocalizedStringSafe("IQ_CREEPS_4"))
 
     // Replaces info quest Legendary Items
     call AddInfoQuest(GetLocalizedStringSafe("IQ_BOSSES_TITLE"), Format(GetLocalizedStringSafe("IQ_BOSSES_DESCRIPTION")).t(R2I(UnitGroupRespawnConfig_DEFAULT_TIMEOUT)).result(), "ReplaceableTextures\\CommandButtons\\BTNMannoroth.blp")

@@ -19,6 +19,12 @@ globals
     // Uses the unit type levels instead of the current levels of units which could have been changed with function calls for item drops.
     public constant boolean GET_UNIT_LEVEL_BY_TYPE = true
 
+    // World of Warcraft Reforged
+    constant integer DROP_CHANCE_ITEM = 50
+    constant integer DROP_CHANCE_DIFFERENT_LEVEL = 40
+    constant integer DROP_CHANCE_HIGHER_LEVEL = 10
+    constant integer DROP_CHANCE_LOWER_LEVEL = DROP_CHANCE_DIFFERENT_LEVEL - DROP_CHANCE_HIGHER_LEVEL
+
     // Caches the unit levels for unit types.
     private hashtable respawnUnitLevelsHashTable = InitHashtable()
 endglobals
@@ -77,8 +83,8 @@ private function DropItem takes unit dyingUnit, group whichGroup returns nothing
     local integer itemTypeId = 0
 
     // 40 percent chance to drop an item with level above or below
-    if (chance <= 40) then
-        if (chance <= 10) then // 10 percent level above
+    if (chance <= DROP_CHANCE_DIFFERENT_LEVEL) then
+        if (chance <= DROP_CHANCE_HIGHER_LEVEL) then // 10 percent level above
             set itemLevel = IMinBJ(8, unitLevel + GetRandomInt(1, 8 - unitLevel))
         else // 30 percent level below
             set itemLevel = IMaxBJ(0, unitLevel - GetRandomInt(1, unitLevel - 1))
@@ -105,10 +111,10 @@ endfunction
 
 private function DropItemForGroupEx takes integer groupIndex, unit dyingUnit, group whichGroup returns nothing
     local integer unitLevel = GetMaxUnitLevelFromGroup(whichGroup)
-    local integer chanceToDrop = GetRandomInt(0, 1)
+    local integer chanceToDrop = GetRandomInt(1, 100)
 
     // 50 percent chance to drop an item at all
-    if (chanceToDrop == 0) then
+    if (chanceToDrop <= DROP_CHANCE_ITEM) then
         call DropItem(dyingUnit, whichGroup)
     endif
 endfunction
