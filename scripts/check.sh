@@ -2,9 +2,9 @@ SCRIPTS_DIR="../scripts"
 MAP_DIR="../wowr.w3x"
 WOWR_DIR="$MAP_DIR/wowr"
 PJASS="$SCRIPTS_DIR/pjass"
-COMMON_J="$MAP_DIR/scripts/common.j"
-COMMON_AI="$MAP_DIR/scripts/common.ai"
-BLIZZARD_J="../wc3/reforged/scripts/blizzard.j"
+COMMON_J="$MAP_DIR/Scripts/common.j"
+COMMON_AI="$MAP_DIR/Scripts/common.ai"
+BLIZZARD_J="../wc3/fk/Scripts/Blizzard.j"
 "$PJASS" -v
 
 for f in "$WOWR_DIR"/*.ai
