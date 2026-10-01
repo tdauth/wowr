@@ -1,10 +1,14 @@
-library WoWReforgedChatCommands initializer Init requires Ascii, HostUtils, StringUtils, StringFormat, SafeString, ForceUtils, PlayerColorUtils, WoWReforgedUtils, WoWReforgedMapData, optional QueueUI, WoWReforgedPlayerInfos, WoWReforgedStats, WoWReforgedSaveCodeObjects, WoWReforgedHeroes, WoWReforgedBosses, WoWReforgedQuests, WoWReforgedProfessions, optional WoWReforgedUiActionsBar, WoWReforgedStats, WoWReforgedAttributes, WoWReforgedAccount, WoWReforgedComputerStartLocations, WoWReforgedSaveCodesAll, WoWReforgedZones, WoWReforgedCinematic, WoWReforgedTownHalls, WoWReforgedRaces, WoWReforgedBackpacks, WoWReforgedUiBackpack, WoWReforgedPlayerSelection, optional OrdersWatcher, OnStartGame
+library WoWReforgedChatCommands initializer Init requires Ascii, SimError, HostUtils, StringUtils, StringFormat, SafeString, ForceUtils, PlayerColorUtils, WoWReforgedUtils, WoWReforgedMapData, optional QueueUI, WoWReforgedPlayerInfos, WoWReforgedStats, WoWReforgedSaveCodeObjects, WoWReforgedHeroes, WoWReforgedBosses, WoWReforgedQuests, WoWReforgedProfessions, optional WoWReforgedUiActionsBar, WoWReforgedStats, WoWReforgedAttributes, WoWReforgedAccount, WoWReforgedComputerStartLocations, WoWReforgedSaveCodesAll, WoWReforgedZones, WoWReforgedCinematic, WoWReforgedTownHalls, WoWReforgedRaces, WoWReforgedBackpacks, WoWReforgedUiBackpack, WoWReforgedPlayerSelection, WoWReforgedVIPs, optional OrdersWatcher, OnStartGame
 
 /*
  * Chat commands and cheats.
  */
 
 globals
+    private boolexpr filterIsValidRenameTarget = null
+    private player filterPlayer = null
+    private string filterName = null
+
     // TODO Do we really need sto store the instances? We could register trigger events instantly.
     private ChatCommand array chatCommands
     private integer chatCommandsCounter = 0
@@ -1026,6 +1030,36 @@ private function CommandShout takes nothing returns nothing
     call Shout(GetTriggerPlayer(), StringTokenEnteredChatMessageEx(1, true))
 endfunction
 
+private function FilterIsValidRenameTarget takes nothing returns boolean
+    return GetOwningPlayer(GetFilterUnit()) == filterPlayer and GetUnitTypeId(GetFilterUnit()) != BACKPACK and GetUnitTypeId(GetFilterUnit()) != EQUIPMENT_BAG and (udg_UnlockedAll or IsPlayerVIP(filterPlayer) or GetPlayerTechCountSimple(UPG_HERO_LEVEL_75, filterPlayer) > 0 or GetUnitTypeId(GetFilterUnit()) == CUSTOMIZABLE_HERO)
+endfunction
+
+private function EnumRename takes nothing returns nothing
+    call DisplayTextToPlayer(filterPlayer, 0.0, 0.0, Format(GetLocalizedString("CHANGED_NAME_INTO_X")).s(filterName).result())
+    if (IsUnitType(GetEnumUnit(), UNIT_TYPE_HERO)) then
+        call BlzSetHeroProperName(GetEnumUnit(), filterName)
+    else
+        call BlzSetUnitName(GetEnumUnit(), filterName)
+    endif
+endfunction
+
+private function Rename takes nothing returns nothing
+    local string name = StringTokenEnteredChatMessageEx(1, true)
+    local group g = CreateGroup()
+    call SyncSelections() // delays, issues in trigger conditions and multiplayer games
+    set filterPlayer = GetTriggerPlayer()
+    call GroupEnumUnitsSelected(g, GetTriggerPlayer(), filterIsValidRenameTarget)
+    if (BlzGroupGetSize(g) > 0) then
+        set filterName = name
+        call ForGroup(g, function EnumRename)
+    else
+        call SimError(GetTriggerPlayer(), GetLocalizedString("ONLY_MAX_HERO_LEVEL_VIP"))
+    endif
+    call GroupClear(g)
+    call DestroyGroup(g)
+    set g = null
+endfunction
+
 // Cheats
 
 private function EnumKill takes nothing returns nothing
@@ -1350,6 +1384,8 @@ private function StartGame takes nothing returns nothing
 endfunction
 
 private function Init takes nothing returns nothing
+    set filterIsValidRenameTarget = Filter(function FilterIsValidRenameTarget)
+
     call Add("-help", true, function Help)
     call AddAlias("-h", true)
     call AddAlias("help", true)
@@ -1506,6 +1542,8 @@ private function Init takes nothing returns nothing
 
     call Add("-transfer", false, function ChatCommandTransfer)
     call Add("-notransfer", true, function ChatCommandNoTransfer)
+
+    call Add("-rename", false, function Rename)
 
     // Cheats
     call AddCheat("-kill", true, function CheatKill)

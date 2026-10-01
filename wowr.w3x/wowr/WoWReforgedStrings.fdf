@@ -51,6 +51,7 @@ StringList {
     X_CHANGED_NAME_FOR_PLAYER_Y        "%1% changed name for player %2%.",
     INVALID_PLAYER_COLOR_X             "Invalid player color %1%.",
     ONLY_MAX_HERO_LEVEL_VIP_COMPUTER   "Only possible at maximum hero level or for VIP or for Computer players.",
+    ONLY_MAX_HERO_LEVEL_VIP            "Only possible at maximum hero level or for VIP players.",
     INVALID_TARGET_PLAYER              "Invalid target player.",
     // Respawn
     PREVENT_UNIT_RESPAWN               "Prevent respawn of %1% because of nearby buildings.",
@@ -1214,6 +1215,7 @@ StringList {
     AI_CHANGE_ERROR                    "Unable to change AI to %1% for %2%.",
     ENABLED                            "enabled",
     DISABLED                           "disabled",
+    CHANGED_NAME_INTO_X                "Changed name into: %1%.",
     // Votes
     IQ_ENABLED                         "Enabled",
     IQ_DISABLED                        "Disabled",

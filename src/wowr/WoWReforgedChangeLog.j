@@ -184,6 +184,8 @@ private function Init takes nothing returns nothing
     call AddChange("Add JASS function GetPlayerNameWithoutTagColoredSimple.")
     call AddChange("Add JASS function GetPlayerNameWithoutTagColored.")
     call AddChange("Show player names without tags in stats multiboard.")
+    call AddChange("Item Bow of Fire causes 10 damage and fix its tooltip.")
+    call AddChange("Less feedback for chat command \"-rename\" and make strings translatable.")
 
 static if (MAP_DEBUG_MODE_ENABLED) then
     call AddVersion("4.6")
