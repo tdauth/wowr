@@ -406,6 +406,11 @@ private function Init takes nothing returns nothing
     call AddForsakenKingdomEquipmentItemTypeId(ITEM_CRUSADERS_GAUNTLETS)
     call AddForsakenKingdomEquipmentItemTypeId(ITEM_DALARAN_SAPPHIRE_ROBES)
     call AddForsakenKingdomEquipmentItemTypeId(ITEM_DALARAN_SIGNET_RING)
+    call AddForsakenKingdomEquipmentItemTypeId(ITEM_DESECRATED_TOWER_SHIELD)
+    call AddForsakenKingdomEquipmentItemTypeId(ITEM_DIAMOND_STAFF_OF_DALARAN)
+    call AddForsakenKingdomEquipmentItemTypeId(ITEM_DREADED_CHESTPLATE)
+    call AddForsakenKingdomEquipmentItemTypeId(ITEM_ENDLRESS_FLASK_OFRESTORATION)
+    call AddForsakenKingdomEquipmentItemTypeId(ITEM_ESSENCE_OF_THE_SPIDER_QUEEN)
 endfunction
 
 endlibrary

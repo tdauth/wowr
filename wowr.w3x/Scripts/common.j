@@ -3214,6 +3214,11 @@ globals
     constant integer ITEM_CRUSADERS_GAUNTLETS                        = 'egcg'
     constant integer ITEM_DALARAN_SAPPHIRE_ROBES                     = 'edsr'
     constant integer ITEM_DALARAN_SIGNET_RING                        = 'rspa'
+    constant integer ITEM_DESECRATED_TOWER_SHIELD                    = 'edts'
+    constant integer ITEM_DIAMOND_STAFF_OF_DALARAN                   = 'edds'
+    constant integer ITEM_DREADED_CHESTPLATE                         = 'ecdc'
+    constant integer ITEM_ENDLRESS_FLASK_OFRESTORATION               = 'eefr'
+    constant integer ITEM_ESSENCE_OF_THE_SPIDER_QUEEN                = 'eesq'
 
     // Mounts
     constant integer GRYPHON_MOUNT                                   = 'h004'
