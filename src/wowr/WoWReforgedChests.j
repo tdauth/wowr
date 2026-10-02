@@ -1,4 +1,4 @@
-library WoWReforgedChests initializer Init
+library WoWReforgedChests initializer Init requires WoWReforgedRandomItems
 
 globals
     private trigger sellTrigger = CreateTrigger()
