@@ -1941,7 +1941,7 @@ StringList {
     IQ_CHEATS_CIN_INVASION             "'-cininvasion': Shows the Invasion cinematic.",
     IQ_CREEPS_TITLE                    "Unholde",
     IQ_CREEPS_DESCRIPTION              "You can kill creeps to increase the level of your hero. There is different creeps everywhere in the world. When you kill a group of computer-controlled creeps, it will be respawned after %1%, so the number of opponents in the game is not finite. Some groups leave items after their extermination which can be picked up by your hero. The creeps won't respawn if there is a building in the area. When the building is destroyed, the creeps will respawn again.",
-    IQ_CREEPS_0                        "There is a chance of %1% % for creeps to drop an item when the last one of a group is killed."
+    IQ_CREEPS_0                        "There is a chance of %1% % for creeps to drop an item when the last one of a group is killed.",
     IQ_CREEPS_1                        "There is a %1% % chance to drop an item with a higher or lower level than the highest unit level from a creep group.",
     IQ_CREEPS_2                        "There is a %1% % chance to drop an item with a random higher level than the highest unit level from a creep group.",
     IQ_CREEPS_3                        "There is a %1% % chance to drop an item with a random lower level than the highest unit level from a creep group.",
