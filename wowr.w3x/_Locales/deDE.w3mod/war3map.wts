@@ -2145,12 +2145,6 @@ STRING 358
 Precisely crafted magical bow. Grants +10 damage and allows to attack air units with fiery arrows.
 }
 
-STRING 359
-// Items: I00O (Bow of Fire), Ubertip (Tooltip - Extended)
-{
-Precisely crafted magical bow. Grants +10 damage and allows to attack air units with fiery arrows.
-}
-
 STRING 360
 // Items: I00O (Bow of Fire), Tip (Tooltip - Basic)
 {
@@ -10540,6 +10534,12 @@ STRING 1768
 (+10 All Stats)
 }
 
+STRING 1769
+// Items: I00O (Bow of Fire), Ubertip (Tooltip - Extended)
+{
+Precisely crafted magical bow. Grants +<A05F,DataA1> damage and allows to attack air units with fiery arrows.
+}
+
 STRING 1770
 // Items: I1A4 (Tome of Magic), Description (Description)
 {
@@ -10580,6 +10580,12 @@ STRING 1776
 // Abilities: A0AQ (Summon Water Elemental), EditorSuffix (Editor Suffix)
 {
 (Neutral Feindlich)
+}
+
+STRING 1777
+// Abilities: A05F (Item Attack Fire Bonus), EditorSuffix (Editor Suffix)
+{
+(Bow of Fire)
 }
 
 STRING 1784
