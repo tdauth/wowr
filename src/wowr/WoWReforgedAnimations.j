@@ -36,9 +36,9 @@ private function TriggerConditionDeath takes nothing returns boolean
         return true
     elseif (unitTypeId == NAGA_STATUE_OF_ASZHARA) then
         return true
-    elseif (unitTypeId == 'n0DP') then
-        return true
     elseif (unitTypeId == VRYKUL_LAMP) then
+        return true
+    elseif (unitTypeId == BEEHIVE) then
         return true
     elseif (unitTypeId == 'n02Q') then
         return true

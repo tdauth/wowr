@@ -17072,7 +17072,7 @@ L
 }
 
 STRING 3316
-// Units: n0DP (Beehive), Name (Name)
+// Units: n09H (Beehive), Name (Name)
 {
 Beehive
 }
@@ -76747,18 +76747,6 @@ STRING 35264
 // Units: n0DO (Bee), Tip (Tooltip - Basic)
 {
 Invoke Bee
-}
-
-STRING 35265
-// Units: n09H (Beehive), Name (Name)
-{
-Beehive
-}
-
-STRING 35266
-// Abilities: A18D (Spawn Bees), Name (Name)
-{
-Spawn Bees
 }
 
 STRING 35267
