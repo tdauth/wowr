@@ -66,7 +66,7 @@ function ShowPlayers takes player to returns nothing
             else
                 set vip = ""
             endif
-            call DisplayTimedTextToPlayer(to, 0, 0, 20.0, I2S(GetPlayerTeam(listedPlayer) + 1) + " [" + I2S(i + 1) + "]" + GetPlayerColorString(GetPlayerColor(listedPlayer), GetPlayerName(listedPlayer)) + ": " + GetPlayerColorName(listedPlayer) + vip)
+            call DisplayTimedTextToPlayer(to, 0, 0, 20.0, I2S(GetPlayerTeam(listedPlayer) + 1) + " " + GetPlayerNameWithoutTagColored(listedPlayer) + ": " + GetPlayerColorName(listedPlayer) + vip)
         endif
         set listedPlayer = null
         set i = i + 1

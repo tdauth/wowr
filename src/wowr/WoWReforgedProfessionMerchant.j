@@ -1,4 +1,4 @@
-library WoWReforgedProfessionMerchant initializer Init requires ItemTypeUtils, ForceUtils, TextTagUtils, UnitCost
+library WoWReforgedProfessionMerchant initializer Init requires ItemTypeUtils, ForceUtils, TextTagUtils, UnitCost, WoWReforgedRandomItems
 
 globals
     private trigger purchaseItemTrigger = CreateTrigger()
@@ -78,13 +78,13 @@ private function MerchantShop takes unit whichUnit returns nothing
     call SetUnitTypeSlots(whichUnit, 5)
     set i = 0
     loop
-        exitwhen (i == 6)
-        call AddItemToStock(whichUnit, ChooseRandomItem(GetRandomInt(0, 8)), 1, 1)
+        exitwhen (i >= 6)
+        call AddItemToStock(whichUnit, GetRandomDropableItemTypeId(-1), 1, 1)
         set i = i + 1
     endloop
     set i = 0
     loop
-        exitwhen (i == 5)
+        exitwhen (i >= 5)
         call AddUnitToStock(whichUnit, ChooseRandomCreep(GetRandomInt(0, 10)), 1, 1)
         set i = i + 1
     endloop

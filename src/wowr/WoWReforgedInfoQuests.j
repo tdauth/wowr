@@ -13,13 +13,13 @@ endglobals
 function AddInfoQuest takes string title, string description, string iconPath returns quest
     local integer index = questsMax
     local quest q = CreateQuest()
+    set questHandle[index] = q
     set questId[index] = title
     set questIcon[index] = iconPath
     set questTitle[index] = title
     set questDescription[index] = description
     set questsMax = questsMax + 1
 
-    set questHandle[questsMax - 1] = q
     call QuestSetTitle(q, title)
     call QuestSetDescription(q, description)
     call QuestSetIconPath(q, iconPath)

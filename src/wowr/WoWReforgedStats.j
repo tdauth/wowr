@@ -242,7 +242,7 @@ function CreateStats takes nothing returns nothing
     set i = 0
     set row = 0
     loop
-        exitwhen (i == bj_MAX_PLAYERS)
+        exitwhen (i >= bj_MAX_PLAYERS)
         set slotPlayer = Player(i)
         if (IsPlayerInForce(slotPlayer, f)) then
             set isUser = GetPlayerController(slotPlayer) == MAP_CONTROL_USER
@@ -253,7 +253,7 @@ function CreateStats takes nothing returns nothing
             // player name plus color and number
             set mitem = MultiboardGetItem(m, row, column)
             call MultiboardSetItemStyle(mitem, true, false)
-            call MultiboardSetItemWidth(mitem, 0.14)
+            call MultiboardSetItemWidth(mitem, 0.10)
             call MultiboardReleaseItem(mitem)
             set column = column + 1
             // Team

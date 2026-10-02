@@ -23,7 +23,7 @@ endfunction
 function CanItemTypeIdBePickedUp takes integer itemTypeId, unit hero returns boolean
     local player heroOwner = GetOwningPlayer(hero)
     local boolean result = true
-    if (GetUnitTypeId(hero) != ITEM_VALUES_DUMMY_HERO) then
+    if (GetUnitTypeId(hero) != ITEM_VALUES_DUMMY_HERO and GetUnitTypeId(hero) != MAX_ITEM_STACKS_DUMMY_HERO) then
         if (not udg_PlayerUnlockedAllRaces[GetConvertedPlayerId(heroOwner)]) then
             if (not PlayerIsAllowedItemRace(heroOwner, itemTypeId)) then
                 //call BJDebugMsg(GetUnitName(hero) + " is not allowed item race of " + GetObjectName(itemTypeId))
@@ -45,7 +45,7 @@ endfunction
 
 private function GetItemTypeIdPickupErrorReason takes integer itemTypeId, unit hero returns string
     local player heroOwner = GetOwningPlayer(hero)
-    if (GetUnitTypeId(hero) != ITEM_VALUES_DUMMY_HERO) then
+    if (GetUnitTypeId(hero) != ITEM_VALUES_DUMMY_HERO and GetUnitTypeId(hero) != MAX_ITEM_STACKS_DUMMY_HERO) then
         if (not udg_PlayerUnlockedAllRaces[GetConvertedPlayerId(heroOwner)]) then
             if (not PlayerIsAllowedItemRace(heroOwner, itemTypeId)) then
                 return Format(GetLocalizedString("BELONGS_TO_RACE")).s(GetObjectName(itemTypeId)).s(GetRaceName(GetItemRace(itemTypeId))).result()
@@ -68,7 +68,7 @@ endfunction
  */
 private function IsUniqueScepterOrProfessionBook takes item whichItem, unit hero returns boolean
     local integer itemTypeId = GetItemTypeId(whichItem)
-    if (GetUnitTypeId(hero) == BACKPACK or GetUnitTypeId(hero) == ITEM_VALUES_DUMMY_HERO) then
+    if (GetUnitTypeId(hero) == BACKPACK or GetUnitTypeId(hero) == ITEM_VALUES_DUMMY_HERO or GetUnitTypeId(hero) == MAX_ITEM_STACKS_DUMMY_HERO) then
         return true
     endif
     if (GetBookItemProfession(itemTypeId) != PROFESSION_NONE or GetObjectRaceType(itemTypeId) == RACE_OBJECT_TYPE_SCEPTER_ITEM) then
@@ -80,7 +80,7 @@ endfunction
 function CanItemBePickedUp takes item whichItem, unit hero returns boolean
     local player heroOwner = GetOwningPlayer(hero)
     local player itemOwner = GetItemPlayer(whichItem)
-    local boolean result = GetUnitTypeId(hero) == ITEM_VALUES_DUMMY_HERO or ((itemOwner == null or itemOwner == Player(PLAYER_NEUTRAL_PASSIVE) or itemOwner == heroOwner) and IsUniqueScepterOrProfessionBook(whichItem, hero) and CanItemTypeIdBePickedUp(GetItemTypeId(whichItem), hero))
+    local boolean result = GetUnitTypeId(hero) == ITEM_VALUES_DUMMY_HERO or GetUnitTypeId(hero) == MAX_ITEM_STACKS_DUMMY_HERO or ((itemOwner == null or itemOwner == Player(PLAYER_NEUTRAL_PASSIVE) or itemOwner == heroOwner) and IsUniqueScepterOrProfessionBook(whichItem, hero) and CanItemTypeIdBePickedUp(GetItemTypeId(whichItem), hero))
     set heroOwner = null
     set itemOwner = null
     return result
@@ -90,7 +90,7 @@ function GetItemPickupErrorReason takes item whichItem, unit hero returns string
     local player heroOwner = GetOwningPlayer(hero)
     local player itemOwner = GetItemPlayer(whichItem)
     local string result = null
-    if (GetUnitTypeId(hero) != ITEM_VALUES_DUMMY_HERO) then
+    if (GetUnitTypeId(hero) != ITEM_VALUES_DUMMY_HERO and GetUnitTypeId(hero) != MAX_ITEM_STACKS_DUMMY_HERO) then
         if (itemOwner != null and itemOwner != Player(PLAYER_NEUTRAL_PASSIVE) and itemOwner != heroOwner) then
             set result = Format(GetLocalizedString("OWNER_IS")).s(GetPlayerNameColored(itemOwner)).result()
         elseif (not IsUniqueScepterOrProfessionBook(whichItem, hero)) then
@@ -153,7 +153,7 @@ private function TriggerConditionSellItem takes nothing returns boolean
     local item soldItem = GetSoldItem()
     local integer soldItemTypeId = GetItemTypeId(soldItem)
     // Properties are allowed to sell race items.
-    if (not udg_UnlockedAll and buyerUnitTypeId != ITEM_VALUES_DUMMY_HERO) then
+    if (not udg_UnlockedAll and buyerUnitTypeId != ITEM_VALUES_DUMMY_HERO and buyerUnitTypeId != MAX_ITEM_STACKS_DUMMY_HERO) then
         if (not PlayerIsAllowedItemProfession(buyerOwner, soldItemTypeId)) then
             call SimErrorRefundProfessionItem(buyer, soldItem)
             call RefundItem(soldItem, buyerOwner)

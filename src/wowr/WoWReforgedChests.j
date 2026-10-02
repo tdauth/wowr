@@ -13,7 +13,7 @@ private function UnitEmptiesChest takes unit whichUnit returns nothing
     local integer max = GetRandomInt(2, 4)
     loop
         exitwhen i == max
-        call UnitAddItemById(whichUnit, ChooseRandomItemExBJ(-1, ITEM_TYPE_ANY))
+        call UnitAddItemById(whichUnit, GetRandomDropableItemTypeId(-1))
         set i = i + 1
     endloop
 endfunction
@@ -26,7 +26,7 @@ private function TriggerConditionSell takes nothing returns boolean
     return false
 endfunction
 
-private function Init takes nothing returns nothing    
+private function Init takes nothing returns nothing
     call TriggerRegisterAnyUnitEventBJ(sellTrigger, EVENT_PLAYER_UNIT_SELL)
     call TriggerAddCondition(sellTrigger, Condition(function TriggerConditionSell))
 endfunction

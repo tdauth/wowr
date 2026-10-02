@@ -219,8 +219,8 @@ private function CreateUI takes nothing returns nothing
     set i = 0
     set max = QuestGetItemCount(GetVersionQuest(0))
     loop
-        exitwhen (i == max)
-        call BlzFrameAddText(TextAreaFrame, "- " + GetLocalizedString(QuestItemGetDescription(QuestGetItem(GetVersionQuest(0), i))))
+        exitwhen (i >= max)
+        call BlzFrameAddText(TextAreaFrame, "- " + QuestItemGetDescription(QuestGetItem(GetVersionQuest(0), i)))
         set i = i + 1
     endloop
 

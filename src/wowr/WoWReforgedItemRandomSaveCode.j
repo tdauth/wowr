@@ -1,4 +1,4 @@
-library WoWReforgedItemRandomSaveCode initializer Init requires WoWReforgedUtils, WoWReforgedSaveCodes, optional WoWReforgedUrlUi
+library WoWReforgedItemRandomSaveCode initializer Init requires WoWReforgedUtils, WoWReforgedSaveCodes, WoWReforgedRandomItems, optional WoWReforgedUrlUi
 
 globals
     private trigger pickupItemTrigger = CreateTrigger()
@@ -48,12 +48,12 @@ private function GetSaveCodeRandomUnits takes player whichPlayer returns string
 endfunction
 
 private function GetSaveCodeRandomItems takes player whichPlayer returns string
-    local item item0 = CreateItem(ChooseRandomItem(GetRandomInt(0, 8)), 0.0, 0.0)
-    local item item1 = CreateItem(ChooseRandomItem(GetRandomInt(0, 8)), 0.0, 0.0)
-    local item item2 = CreateItem(ChooseRandomItem(GetRandomInt(0, 8)), 0.0, 0.0)
-    local item item3 = CreateItem(ChooseRandomItem(GetRandomInt(0, 8)), 0.0, 0.0)
-    local item item4 = CreateItem(ChooseRandomItem(GetRandomInt(0, 8)), 0.0, 0.0)
-    local item item5 = CreateItem(ChooseRandomItem(GetRandomInt(0, 8)), 0.0, 0.0)
+    local item item0 = CreateItem(GetRandomDropableItemTypeId(-1), 0.0, 0.0)
+    local item item1 = CreateItem(GetRandomDropableItemTypeId(-1), 0.0, 0.0)
+    local item item2 = CreateItem(GetRandomDropableItemTypeId(-1), 0.0, 0.0)
+    local item item3 = CreateItem(GetRandomDropableItemTypeId(-1), 0.0, 0.0)
+    local item item4 = CreateItem(GetRandomDropableItemTypeId(-1), 0.0, 0.0)
+    local item item5 = CreateItem(GetRandomDropableItemTypeId(-1), 0.0, 0.0)
     local string result
 
     call SetItemCharges(item0, GetRandomInt(1, 30))

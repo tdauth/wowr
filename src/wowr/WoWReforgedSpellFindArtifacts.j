@@ -1,4 +1,4 @@
-library WoWReforgedSpellFindArtifacts initializer Init requires SimError, WoWReforgedAbilitySkill
+library WoWReforgedSpellFindArtifacts initializer Init requires SimError, WoWReforgedAbilitySkill, WoWReforgedRandomItems
 
 globals
     private trigger castTrigger = CreateTrigger()
@@ -18,8 +18,8 @@ function FindArtifacts takes unit caster, integer abilityId returns nothing
     local integer i = 0
     local integer max = GetFindArtifactsItemCount(caster, abilityId, level)
     loop
-        exitwhen (i == max)
-        call UnitAddItemByIdSwapped(ChooseRandomItemExBJ(itemLevel, ITEM_TYPE_ANY), caster)
+        exitwhen (i >= max)
+        call UnitAddItemByIdSwapped(GetRandomDropableItemTypeId(itemLevel), caster)
         set i = i + 1
     endloop
 endfunction
@@ -34,7 +34,7 @@ endfunction
 private function Init takes nothing returns nothing
     call TriggerRegisterAnyUnitEventBJ(castTrigger, EVENT_PLAYER_UNIT_SPELL_CAST)
     call TriggerAddCondition(castTrigger, Condition(function TriggerConditionCast))
-    
+
     call RegisterAbilityFieldCustomInteger0(ABILITY_FIND_ARTIFACTS, GetFindArtifactsItemCount)
     call RegisterAbilityFieldCustomInteger1(ABILITY_FIND_ARTIFACTS, GetFindArtifactsItemLevel)
 endfunction

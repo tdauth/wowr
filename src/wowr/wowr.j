@@ -160,6 +160,7 @@
 //! import "wowr/WoWReforgedRaceWorgen.j"
 //! import "wowr/WoWReforgedRacing.j"
 //! import "wowr/WoWReforgedRandomCorpse.j"
+//! import "wowr/WoWReforgedRandomItems.j"
 //! import "wowr/WoWReforgedRecreateHeroItems.j"
 //! import "wowr/WoWReforgedRecordPlayer.j"
 //! import "wowr/WoWReforgedResearches.j"

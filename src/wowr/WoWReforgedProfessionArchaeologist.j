@@ -1,4 +1,4 @@
-library WoWReforgedProfessionArchaeologist initializer Init requires WoWReforgedProfessions
+library WoWReforgedProfessionArchaeologist initializer Init requires WoWReforgedProfessions, WoWReforgedRandomItems
 
 globals
     private constant integer ABILITY_ID_DIG_UP_ARTIFACTS = 'A0AB'
@@ -35,7 +35,7 @@ private function CraftRandomItem takes unit caster, integer abilityId returns no
     local integer max = 1 + ProfessionBonusCharges(caster)
     loop
         exitwhen (i == max)
-        call ProfessionCraftItems(caster, abilityId, ChooseRandomItemExBJ(GetItemLevelByAbilityId(abilityId), ITEM_TYPE_ANY), 1)
+        call ProfessionCraftItems(caster, abilityId, GetRandomDropableItemTypeId(GetItemLevelByAbilityId(abilityId)), 1)
         set i = i + 1
     endloop
 endfunction
@@ -43,8 +43,9 @@ endfunction
 private function RefillExcavationSite takes unit whichUnit returns nothing
     local integer i = 0
     loop
-        exitwhen (i == 9)
-        call AddItemToStock(whichUnit, ChooseRandomItem(i), 1, 1)
+        exitwhen (i >= 9)
+        // TODO
+        call AddItemToStock(whichUnit, GetRandomDropableItemTypeId(i), 1, 1)
         set i = i + 1
     endloop
 endfunction
@@ -69,7 +70,7 @@ endfunction
 private function Init takes nothing returns nothing
     call TriggerRegisterAnyUnitEventBJ(castTrigger, EVENT_PLAYER_UNIT_SPELL_CAST)
     call TriggerAddCondition(castTrigger, Condition(function TriggerConditionCast))
-    
+
     call TriggerRegisterAnyUnitEventBJ(constructionFinishTrigger, EVENT_PLAYER_UNIT_CONSTRUCT_FINISH)
     call TriggerAddCondition(constructionFinishTrigger, Condition(function TriggerConditionConstructionFinish))
 endfunction

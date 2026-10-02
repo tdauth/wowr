@@ -1,4 +1,4 @@
-library WoWReforgedProfessions initializer Init requires MaxItemStacks, MathUtils, TextTagUtils, ForceUtils, StringFormat, UnitTypeUtils, WoWReforgedProfessionMiner, WowReforgedProfessionCook
+library WoWReforgedProfessions initializer Init requires MaxItemStacks, MathUtils, TextTagUtils, ForceUtils, StringFormat, UnitTypeUtils, WoWReforgedProfessionMiner, WowReforgedProfessionCook, WoWReforgedRandomItems
 
 globals
     constant integer PROFESSION_NONE = -1
@@ -476,15 +476,15 @@ function GetNextCraftedProfessionItemEx takes integer profession, integer rank r
 		endif
     elseif (profession == PROFESSION_ARCHAEOLOGIST) then
         if (rank == PROFESSION_RANK_GRAND_MASTER) then
-            return ChooseRandomItemExBJ(8, ITEM_TYPE_ANY)
+            return GetRandomDropableItemTypeId(8)
 		elseif (rank == PROFESSION_RANK_MASTER) then
-			return ChooseRandomItemExBJ(7, ITEM_TYPE_ANY)
+			return GetRandomDropableItemTypeId(7)
 		elseif (rank == PROFESSION_RANK_ADEPT) then
-			return ChooseRandomItemExBJ(5, ITEM_TYPE_ANY)
+			return GetRandomDropableItemTypeId(5)
 		elseif (rank == PROFESSION_RANK_ADVANCED) then
-			return ChooseRandomItemExBJ(3, ITEM_TYPE_ANY)
+			return GetRandomDropableItemTypeId(3)
 		elseif (rank == PROFESSION_RANK_NOVICE) then
-			return ChooseRandomItemExBJ(1, ITEM_TYPE_ANY)
+			return GetRandomDropableItemTypeId(1)
 		endif
     elseif (profession == PROFESSION_WITCH_DOCTOR) then
 		if (rank == PROFESSION_RANK_MASTER) then

@@ -1,4 +1,4 @@
-library WoWReforgedThievesGuild initializer Init requires OnUnitRemoval, WoWReforgedRaces
+library WoWReforgedThievesGuild initializer Init requires OnUnitRemoval, WoWReforgedRaces, WoWReforgedRandomItems
 
 globals
     private trigger deathTrigger = CreateTrigger()
@@ -26,7 +26,7 @@ private function UpdateEachStockBuildingEnum takes nothing returns nothing
     local integer pickedItemId
 
     loop
-        set pickedItemId = ChooseRandomItemEx(bj_stockPickedItemType, bj_stockPickedItemLevel)
+        set pickedItemId = GetRandomDropableItemTypeId(bj_stockPickedItemLevel)
         exitwhen IsItemIdSellable(pickedItemId)
 
         // If we get hung up on an entire class/level combo of unsellable
