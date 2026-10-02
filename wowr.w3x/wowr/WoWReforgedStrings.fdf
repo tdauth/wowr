@@ -46,7 +46,7 @@ StringList {
     REACHED_LIMIT_OF_COLORS            "Reached limit of colors.",
     // Players
     PLAYER_HAS_LEFT_GAME               "%1% has left the game.",
-    // -playercolor, -playername
+    // -playercolor, -playername, -rename, -scale, -teamcolor
     X_CHANGED_COLOR_FOR_PLAYER_Y       "%1% changed color for player %2%.",
     X_CHANGED_NAME_FOR_PLAYER_Y        "%1% changed name for player %2%.",
     INVALID_PLAYER_COLOR_X             "Invalid player color %1%.",

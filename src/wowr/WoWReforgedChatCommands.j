@@ -6,6 +6,8 @@ library WoWReforgedChatCommands initializer Init requires Ascii, SimError, HostU
 
 globals
     private boolexpr filterIsValidRenameTarget = null
+    private boolexpr filterIsValidScaleTarget = null
+    private boolexpr filterIsValidTeamColorTarget = null
     private player filterPlayer = null
     private string filterName = null
 
@@ -1030,8 +1032,52 @@ private function CommandShout takes nothing returns nothing
     call Shout(GetTriggerPlayer(), StringTokenEnteredChatMessageEx(1, true))
 endfunction
 
+private function PlayerCanDoVisualChatCommand takes player whichPlayer returns boolean
+    return udg_UnlockedAll or IsPlayerVIP(whichPlayer) or GetPlayerTechCountSimple(UPG_HERO_LEVEL_75, whichPlayer) > 0
+endfunction
+
+private function PlayerColor takes nothing returns nothing
+    local string token = StringToken(GetEventPlayerChatString(), 1)
+    local player p = GetPlayerFromString(token)
+    local string playerColor
+    local playercolor c = null
+    if (p != null) then
+        if ((GetPlayerController(p) == MAP_CONTROL_COMPUTER and GetMapAllowConfigureAIPlayer(p)) or (p == GetTriggerPlayer() and PlayerCanDoVisualChatCommand(GetTriggerPlayer()))) then
+            set playerColor = StringToken(GetEventPlayerChatString(), 2)
+            set c = GetPlayerColorFromString(playerColor)
+            if (c != null) then
+                call SetPlayerColorBJ(p, c, true)
+                call DisplayTextToForce(GetPlayersAll(), Format(GetLocalizedString("X_CHANGED_COLOR_FOR_PLAYER_Y")).s(GetPlayerNameColored(GetTriggerPlayer())).s(playerColor).result() )
+            else
+                call SimError(GetTriggerPlayer(), Format(GetLocalizedString("INVALID_PLAYER_COLOR_X")).s(playerColor).result())
+            endif
+        else
+            call SimError(GetTriggerPlayer(), GetLocalizedString("ONLY_MAX_HERO_LEVEL_VIP_COMPUTER"))
+        endif
+    else
+        call SimError(GetTriggerPlayer(), GetLocalizedString("INVALID_TARGET_PLAYER"))
+    endif
+endfunction
+
+private function PlayerName takes nothing returns nothing
+    local string token = StringToken(GetEventPlayerChatString(), 1)
+    local player p = GetPlayerFromString(token)
+    local string playerName
+    if (p != null) then
+        if ((GetPlayerController(p) == MAP_CONTROL_COMPUTER and GetMapAllowConfigureAIPlayer(p)) or (p == GetTriggerPlayer() and PlayerCanDoVisualChatCommand(GetTriggerPlayer()))) then
+            set playerName = StringToken(GetEventPlayerChatString(), 2)
+            call SetPlayerName(p, playerName)
+            call DisplayTextToForce(GetPlayersAll(), Format(GetLocalizedString("X_CHANGED_NAME_FOR_PLAYER_Y")).s(GetPlayerNameColored(GetTriggerPlayer())).s(playerName).result())
+        else
+            call SimError(GetTriggerPlayer(), GetLocalizedString("ONLY_MAX_HERO_LEVEL_VIP_COMPUTER"))
+        endif
+    else
+        call SimError(GetTriggerPlayer(), GetLocalizedString("INVALID_TARGET_PLAYER"))
+    endif
+endfunction
+
 private function FilterIsValidRenameTarget takes nothing returns boolean
-    return GetOwningPlayer(GetFilterUnit()) == filterPlayer and GetUnitTypeId(GetFilterUnit()) != BACKPACK and GetUnitTypeId(GetFilterUnit()) != EQUIPMENT_BAG and (udg_UnlockedAll or IsPlayerVIP(filterPlayer) or GetPlayerTechCountSimple(UPG_HERO_LEVEL_75, filterPlayer) > 0 or GetUnitTypeId(GetFilterUnit()) == CUSTOMIZABLE_HERO)
+    return GetOwningPlayer(GetFilterUnit()) == filterPlayer and GetUnitTypeId(GetFilterUnit()) != BACKPACK and GetUnitTypeId(GetFilterUnit()) != EQUIPMENT_BAG and (PlayerCanDoVisualChatCommand(filterPlayer) or GetUnitTypeId(GetFilterUnit()) == CUSTOMIZABLE_HERO)
 endfunction
 
 private function EnumRename takes nothing returns nothing
@@ -1059,6 +1105,79 @@ private function Rename takes nothing returns nothing
     call DestroyGroup(g)
     set g = null
 endfunction
+
+private function FilterIsValidScaleTarget takes nothing returns boolean
+    return GetOwningPlayer(GetFilterUnit()) == filterPlayer and GetUnitTypeId(GetFilterUnit()) != BACKPACK and GetUnitTypeId(GetFilterUnit()) != EQUIPMENT_BAG
+endfunction
+
+private function ScaleUnitsSelectedByPlayer takes player whichPlayer, real scale returns nothing
+    local integer i = 0
+    local integer max = 0
+    local group g = CreateGroup()
+    call SyncSelections() // delays, issues in trigger conditions and multiplayer games
+    set filterPlayer = whichPlayer
+    call GroupEnumUnitsSelected(g, whichPlayer, filterIsValidScaleTarget)
+     if (BlzGroupGetSize(g) > 0) then
+        set i = 0
+        set max = BlzGroupGetSize(g)
+        loop
+            exitwhen (i >= max)
+            call SetUnitScalePercent(BlzGroupUnitAt(g, i), 100.0 * scale, 100.0 * scale, 100.0 * scale)
+            set i = i + 1
+        endloop
+    endif
+    call GroupClear(g)
+    call DestroyGroup(g)
+    set g = null
+endfunction
+
+private function Scale takes nothing returns nothing
+    if (PlayerCanDoVisualChatCommand(GetTriggerPlayer())) then
+        call ScaleUnitsSelectedByPlayer(GetTriggerPlayer(), RMinBJ(RMaxBJ(S2R(StringToken(GetEventPlayerChatString(), 1)), 0.10), 10.0))
+    else
+        call SimError(GetTriggerPlayer(), GetLocalizedString("ONLY_MAX_HERO_LEVEL_VIP"))
+    endif
+endfunction
+
+private function FilterIsValidTeamColorTarget takes nothing returns boolean
+    return GetOwningPlayer(GetFilterUnit()) == filterPlayer
+endfunction
+
+private function SetTeamColorForUnitsSelectedByPlayer takes player whichPlayer, playercolor c returns nothing
+    local integer i = 0
+    local integer max = 0
+    local group g = CreateGroup()
+    call SyncSelections() // delays, issues in trigger conditions and multiplayer games
+    set filterPlayer = whichPlayer
+    call GroupEnumUnitsSelected(g, whichPlayer, filterIsValidTeamColorTarget)
+     if (BlzGroupGetSize(g) > 0) then
+        set i = 0
+        set max = BlzGroupGetSize(g)
+        loop
+            exitwhen (i >= max)
+            call SetUnitColor(BlzGroupUnitAt(g, i), c)
+            set i = i + 1
+        endloop
+    endif
+    call GroupClear(g)
+    call DestroyGroup(g)
+    set g = null
+endfunction
+
+private function TeamColor takes nothing returns nothing
+    local string token = StringToken(GetEventPlayerChatString(), 1)
+    local playercolor c = GetPlayerColorFromString(token)
+    if (PlayerCanDoVisualChatCommand(GetTriggerPlayer())) then
+        if (c != null) then
+            call SetTeamColorForUnitsSelectedByPlayer(GetTriggerPlayer(), c)
+        else
+            call SimError(GetTriggerPlayer(), Format(GetLocalizedString("INVALID_PLAYER_COLOR_X")).s(token).result())
+        endif
+    else
+        call SimError(GetTriggerPlayer(), GetLocalizedString("ONLY_MAX_HERO_LEVEL_VIP"))
+    endif
+endfunction
+
 
 // Cheats
 
@@ -1385,6 +1504,8 @@ endfunction
 
 private function Init takes nothing returns nothing
     set filterIsValidRenameTarget = Filter(function FilterIsValidRenameTarget)
+    set filterIsValidScaleTarget = Filter(function FilterIsValidScaleTarget)
+    set filterIsValidTeamColorTarget = Filter(function FilterIsValidTeamColorTarget)
 
     call Add("-help", true, function Help)
     call AddAlias("-h", true)
@@ -1543,7 +1664,11 @@ private function Init takes nothing returns nothing
     call Add("-transfer", false, function ChatCommandTransfer)
     call Add("-notransfer", true, function ChatCommandNoTransfer)
 
+    call Add("-playercolor", false, function PlayerColor)
+    call Add("-playername", false, function PlayerName)
     call Add("-rename", false, function Rename)
+    call Add("-scale", false, function Scale)
+    call Add("-teamcolor", false, function TeamColor)
 
     // Cheats
     call AddCheat("-kill", true, function CheatKill)
