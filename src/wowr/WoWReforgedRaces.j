@@ -681,6 +681,7 @@ function GetRaceTier1 takes integer whichRace returns integer
 endfunction
 
 private function SetRaceTier1Item takes integer whichRace, integer id returns nothing
+    set udg_RaceItemTypeTinyCastle[whichRace] = id
     call SetRaceObjectType(whichRace, RACE_OBJECT_TYPE_TIER_1_ITEM, id)
 endfunction
 
