@@ -28,7 +28,7 @@ endfunction
 function RemoveAllCinematicEffects takes nothing returns nothing
     local integer i = 0
     loop
-        exitwhen (i == effectsCounter)
+        exitwhen (i >= effectsCounter)
         call DestroyEffect(effects[i])
         set i = i + 1
     endloop
@@ -40,7 +40,7 @@ private function StorePlayerQueueUI takes nothing returns nothing
     local player slotPlayer = null
     local integer i = 0
     loop
-        exitwhen (i == bj_MAX_PLAYERS)
+        exitwhen (i >= bj_MAX_PLAYERS)
         set slotPlayer = Player(i)
         set playerQueueUIEnabled[i] = IsQueueUIEnabledForPlayer(slotPlayer)
         set slotPlayer = null
@@ -52,7 +52,7 @@ private function RestorePlayerQueueUI takes nothing returns nothing
     local player slotPlayer = null
     local integer i = 0
     loop
-        exitwhen (i == bj_MAX_PLAYERS)
+        exitwhen (i >= bj_MAX_PLAYERS)
         set slotPlayer = Player(i)
         call SetQueueUIEnabledForPlayer(slotPlayer, playerQueueUIEnabled[i])
         set slotPlayer = null
@@ -101,7 +101,7 @@ private function StorePlayerSelections takes nothing returns nothing
     local player slotPlayer = null
     local integer i = 0
     loop
-        exitwhen (i == bj_MAX_PLAYERS)
+        exitwhen (i >= bj_MAX_PLAYERS)
         set slotPlayer = Player(i)
 
         if (playerSelections[i] != null) then
@@ -122,7 +122,7 @@ private function RestorePlayerSelections takes nothing returns nothing
     local player slotPlayer = null
     local integer i = 0
     loop
-        exitwhen (i == bj_MAX_PLAYERS)
+        exitwhen (i >= bj_MAX_PLAYERS)
         set slotPlayer = Player(i)
 
         if (playerSelections[i] != null and GetPlayerSlotState(slotPlayer) == PLAYER_SLOT_STATE_PLAYING and GetPlayerController(slotPlayer) == MAP_CONTROL_COMPUTER) then
@@ -142,7 +142,7 @@ private function SyncCameraPositions takes nothing returns nothing
     local player slotPlayer = null
     local integer i = 0
     loop
-        exitwhen (i == bj_MAX_PLAYERS)
+        exitwhen (i >= bj_MAX_PLAYERS)
         set slotPlayer = Player(i)
         if (GetPlayerController(slotPlayer) == MAP_CONTROL_USER and GetPlayerSlotState(slotPlayer) == PLAYER_SLOT_STATE_PLAYING) then
             if (slotPlayer == GetLocalPlayer()) then
