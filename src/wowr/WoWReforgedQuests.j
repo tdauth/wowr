@@ -10,26 +10,7 @@ globals
     private unit array questNpc
     private integer array questReward
     private integer array questRequirement
-    
-    private string tmpIconPath = null
-    private string tmpTitle = null
-    private string tmpDescription = null
-    private integer tmpRequirement = -1
 endglobals
-
-private function AddQuestWoWReforged takes nothing returns integer
-    local integer index = questsMax
-    set questId[index] = udg_TmpString
-    set questIcon[index] = tmpIconPath
-    set questTitle[index] = tmpTitle
-    set questDescription[index] = tmpDescription
-    set questNpc[index] = udg_TmpUnit
-    set questReward[index] = udg_TmpItemTypeId
-    set questRequirement[index] = tmpRequirement
-    set questsMax = questsMax + 1
-
-    return index
-endfunction
 
 function GetQuestsMax takes nothing returns integer
     return questsMax
@@ -66,37 +47,6 @@ endfunction
 function GetQuestRequirement takes integer q returns integer
     return questRequirement[q]
 endfunction
-
-function SetQuestRequirementToLast takes nothing returns nothing
-    set tmpRequirement = IMaxBJ(GetQuestsMax() - 1, 0)
-endfunction
-
-function SetQuestNoRequirement takes nothing returns nothing
-    set tmpRequirement = -1
-endfunction
-
-private function CreateQuestBJHook takes integer questType, string title, string description, string iconPath returns nothing
-    local boolean required = (questType == bj_QUESTTYPE_REQ_DISCOVERED) or (questType == bj_QUESTTYPE_REQ_UNDISCOVERED)
-
-    if (not required) then
-        set tmpIconPath = iconPath
-        set tmpTitle = GetLocalizedString(title)
-        set tmpDescription = GetLocalizedString(description) // Barade: this leads some how to a cut off string on the website
-        
-        call AddQuestWoWReforged()
-    endif
-endfunction
-
-hook CreateQuestBJ CreateQuestBJHook
-
-private function GetLastCreatedQuestBJHook takes nothing returns nothing
-    local integer index = questsMax - 1
-    if (not IsQuestRequired(bj_lastCreatedQuest) and questHandle[index] == null) then
-        set questHandle[index] = bj_lastCreatedQuest
-    endif
-endfunction
-
-hook GetLastCreatedQuestBJ GetLastCreatedQuestBJHook
 
 function AddQuest takes string id, string title, string description, string iconPath, unit npc, integer rewardItemTypeId returns quest
     local integer index = questsMax
@@ -144,10 +94,6 @@ function ShowQuestRewards takes player whichPlayer returns nothing
         set i = i + 1
     endloop
     call DisplayTimedTextToPlayer(whichPlayer, 0.0, 0.0, 15.0, message)
-endfunction
-
-function AddQuestItemWoWReforged takes nothing returns nothing
-    call AddQuestItem(udg_TmpString)
 endfunction
 
 /*
