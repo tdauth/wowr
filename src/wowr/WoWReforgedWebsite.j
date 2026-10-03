@@ -1234,7 +1234,7 @@ private function GenerateBosses takes nothing returns nothing
     set i = 0
     set max = BlzGroupGetSize(udg_Bosses)
     loop
-        exitwhen (i == max)
+        exitwhen (i >= max)
         call GenerateBoss(BlzGroupUnitAt(udg_Bosses, i), index)
         set index = index + 1
         set i = i + 1
@@ -1243,7 +1243,7 @@ private function GenerateBosses takes nothing returns nothing
     set i = 0
     set max = BlzGroupGetSize(udg_BossesQuests)
     loop
-        exitwhen (i == max)
+        exitwhen (i >= max)
         call GenerateBoss(BlzGroupUnitAt(udg_BossesQuests, i), index)
         set index = index + 1
         set i = i + 1

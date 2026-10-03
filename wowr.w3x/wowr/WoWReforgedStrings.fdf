@@ -1216,6 +1216,9 @@ StringList {
     ENABLED                            "enabled",
     DISABLED                           "disabled",
     CHANGED_NAME_INTO_X                "Changed name into: %1%.",
+    ROLLED_A_DICE                      "%1% rolled a dice with %2% sides: %3%",
+    PLAYING_ANIMATION_X                "Playing animation '%1%'.",
+    ANIM_USAGE                         "Usage; '-anim Stand, Attack, Death, Dissipate, Decay, Birth, Morph, Spell, Work, Walk, Spell Channel, Attack Slam'",
     // Votes
     IQ_ENABLED                         "Enabled",
     IQ_DISABLED                        "Disabled",

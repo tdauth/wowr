@@ -5,6 +5,7 @@ library WoWReforgedChatCommands initializer Init requires Ascii, SimError, HostU
  */
 
 globals
+    private boolexpr filterIsValidAnimTarget = null
     private boolexpr filterIsValidRenameTarget = null
     private boolexpr filterIsValidScaleTarget = null
     private boolexpr filterIsValidTeamColorTarget = null
@@ -1024,6 +1025,45 @@ private function MountName3 takes nothing returns nothing
     call SetMountName3(GetTriggerPlayer(), StringTokenEnteredChatMessageEx(1, true))
 endfunction
 
+private function FilterIsValidAnimTarget takes nothing returns boolean
+    return GetOwningPlayer(GetFilterUnit()) == filterPlayer and GetPlayerAlliance(GetOwningPlayer(GetFilterUnit()), filterPlayer, ALLIANCE_SHARED_ADVANCED_CONTROL)
+endfunction
+
+private function EnumAnim takes nothing returns nothing
+    call QueueUnitAnimationBJ(GetEnumUnit(), filterName)
+endfunction
+
+private function AnimForSelectedUnits takes player whichPlayer, string animation returns nothing
+    local group g = CreateGroup()
+    call SyncSelections() // delays, issues in trigger conditions and multiplayer games
+    set filterPlayer = GetTriggerPlayer()
+    call GroupEnumUnitsSelected(g, GetTriggerPlayer(), filterIsValidAnimTarget)
+    set filterName = animation
+    call ForGroup(g, function EnumAnim)
+    call DisplayTextToPlayer(GetTriggerPlayer(), 0.0, 0.0, Format(GetLocalizedString("PLAYING_ANIMATION_X")).s(animation).result())
+    call GroupClear(g)
+    call DestroyGroup(g)
+    set g = null
+endfunction
+
+private function Anim takes nothing returns nothing
+    local string token = StringTokenEx(GetEventPlayerChatString(), 1, " ", true)
+    if (StringLength(token) > 0) then
+        call AnimForSelectedUnits(GetTriggerPlayer(), token)
+    else
+        call SimError(GetTriggerPlayer(), GetLocalizedString("ANIM_USAGE"))
+    endif
+endfunction
+
+private function Dice takes nothing returns nothing
+    local string token = StringToken(GetEventPlayerChatString(), 1)
+    local integer sides = 6
+    if (StringLength(token) > 0) then
+        set sides = S2I(token)
+    endif
+    call DisplayTextToForce(GetPlayersAll(), Format(GetLocalizedString("ROLLED_A_DICE")).s(GetPlayerNameWithoutTagColored(GetTriggerPlayer())).i(sides).i(GetRandomInt(1, sides)).result())
+endfunction
+
 private function CommandSay takes nothing returns nothing
     call Say(GetTriggerPlayer(), StringTokenEnteredChatMessageEx(1, true))
 endfunction
@@ -1503,6 +1543,7 @@ private function StartGame takes nothing returns nothing
 endfunction
 
 private function Init takes nothing returns nothing
+    set filterIsValidAnimTarget = Filter(function FilterIsValidAnimTarget)
     set filterIsValidRenameTarget = Filter(function FilterIsValidRenameTarget)
     set filterIsValidScaleTarget = Filter(function FilterIsValidScaleTarget)
     set filterIsValidTeamColorTarget = Filter(function FilterIsValidTeamColorTarget)
@@ -1658,6 +1699,8 @@ private function Init takes nothing returns nothing
     call Add("-mountname2", false, function MountName2)
     call Add("-mountname3", false, function MountName3)
 
+    call Add("-anim", false, function Anim)
+    call Add("-dice", false, function Dice)
     call Add("-say", false, function CommandSay)
     call Add("-shout", false, function CommandShout)
 
