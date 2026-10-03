@@ -2791,7 +2791,7 @@ private function GenerateQuests takes nothing returns nothing
 endfunction
 
 private function GenerateInfoQuest takes integer i returns nothing
-    local string id = StringReplace(GetInfoQuestId(i), " ", "")
+    local string id = StringReplace(QuestGetTitle(GetInfoQuestHandle(i)), " ", "")
     local integer j = 0
     local integer max2 = 0
 
@@ -2799,18 +2799,18 @@ private function GenerateInfoQuest takes integer i returns nothing
     // icon
     call FileWriteLine("<td data-order=\"" + I2S(i) + "\">")
     call FileWriteLine("<a href=\"#" + id + "\">")
-    call FileWriteLine("<img class=\"wowr-icon\" src=\"" + GetInfoQuestIcon(i) + "\" title=\"" + GetInfoQuestIcon(i) + "\" />")
+    call FileWriteLine("<img class=\"wowr-icon\" src=\"" + QuestGetIconPath(GetInfoQuestHandle(i)) + "\" title=\"" + QuestGetIconPath(GetInfoQuestHandle(i)) + "\" />")
     call FileWriteLine("</a>")
     call FileWriteLine("</td>")
 
     // name
     call FileWriteLine("<td>")
-    call FileWriteLine(GetInfoQuestTitle(i))
+    call FileWriteLine(QuestGetTitle(GetInfoQuestHandle(i)))
     call FileWriteLine("</td>")
 
     // description
     call FileWriteLine("<td>")
-    call FormatTooltip(GetInfoQuestDescription(i))
+    call FormatTooltip(QuestGetDescription(GetInfoQuestHandle(i)))
     call FileWriteLine("</td>")
 
     // items

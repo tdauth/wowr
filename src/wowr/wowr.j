@@ -201,6 +201,7 @@
 //! import "wowr/WoWReforgedSpellOpenPortals.j"
 //! import "wowr/WoWReforgedSpellParry.j"
 //! import "wowr/WoWReforgedSpellPocketFactory.j"
+//! import "wowr/WoWReforgedSpellRaiseTheBanner.j"
 //! import "wowr/WoWReforgedSpellRandomizeSkin.j"
 //! import "wowr/WoWReforgedSpellReflection.j"
 //! import "wowr/WoWReforgedSpellRevive.j"

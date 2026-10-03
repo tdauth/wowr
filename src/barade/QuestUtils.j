@@ -4,10 +4,12 @@ globals
     private hashtable h = InitHashtable()
     private constant integer KEY_TITLE = 0
     private constant integer KEY_DESCRIPTION = 1
-    private constant integer KEY_COUNTER = 2
+    private constant integer KEY_ICON_PATH = 2
+    private constant integer KEY_COUNTER = 3
 
     private string lastQuestTitle = ""
     private string lastQuestDescription = ""
+    private string lastQuestIconPath = ""
     private quest lastQuestForQuestItem = null
     private string lastQuestItemDescription = ""
 endglobals
@@ -72,6 +74,10 @@ function QuestGetDescription takes quest whichQuest returns string
     return LoadStr(h, GetHandleId(whichQuest), KEY_DESCRIPTION)
 endfunction
 
+function QuestGetIconPath takes quest whichQuest returns string
+    return LoadStr(h, GetHandleId(whichQuest), KEY_ICON_PATH)
+endfunction
+
 function QuestGetItemCount takes quest whichQuest returns integer
     return LoadInteger(h, GetHandleId(whichQuest), KEY_COUNTER)
 endfunction
@@ -90,6 +96,10 @@ endfunction
 
 private function QuestSetDescriptionHook takes quest whichQuest, string description returns nothing
     call SaveStr(h, GetHandleId(whichQuest), KEY_DESCRIPTION, description)
+endfunction
+
+private function QuestSetIconPathHook takes quest whichQuest, string iconPath returns nothing
+    call SaveStr(h, GetHandleId(whichQuest), KEY_ICON_PATH, iconPath)
 endfunction
 
 private function QuestItemSetDescriptionHook takes questitem whichQuestItem, string description returns nothing
@@ -118,6 +128,7 @@ endfunction
 private function CreateQuestBJHook takes integer questType, string title, string description, string iconPath returns nothing
     set lastQuestTitle = title
     set lastQuestDescription = description
+    set lastQuestIconPath = iconPath
 endfunction
 
 private function GetLastCreatedQuestBJHook takes nothing returns nothing
@@ -126,6 +137,9 @@ private function GetLastCreatedQuestBJHook takes nothing returns nothing
     endif
     if (not HaveSavedString(h, GetHandleId(bj_lastCreatedQuest), KEY_DESCRIPTION)) then
         call QuestSetDescriptionHook(bj_lastCreatedQuest, lastQuestDescription)
+    endif
+    if (not HaveSavedString(h, GetHandleId(bj_lastCreatedQuest), KEY_ICON_PATH)) then
+        call QuestSetIconPathHook(bj_lastCreatedQuest, lastQuestIconPath)
     endif
 endfunction
 
@@ -143,6 +157,7 @@ hook QuestSetTitle QuestSetTitleHook
 hook QuestSetTitleBJ QuestSetTitleHook
 hook QuestSetDescription QuestSetDescriptionHook
 hook QuestSetDescriptionBJ QuestSetDescriptionHook
+hook QuestSetIconPath QuestSetIconPathHook
 hook QuestItemSetDescription QuestItemSetDescriptionHook
 hook QuestItemSetDescriptionBJ QuestItemSetDescriptionHook
 hook DestroyQuest DestroyQuestHook

@@ -259,6 +259,9 @@ private function Init takes nothing returns nothing
     // Death Knight
     call RegisterAbilitySummonedUnitType(ABILITY_BLACK_ARROW, DARK_MINION_1, DARK_MINION_1, 1, -1, false)
 
+    // Priest
+    call RegisterAbilitySummonedUnitType(ABILITY_RAISE_THE_BANNER, LORDAERON_BANNER, LORDAERON_BANNER, 1, -1, false)
+
     // Warlock
     call RegisterAbilitySummonedUnitType(ABILITY_DOOM, DOOM_GUARD_SUMMONED, DOOM_GUARD_SUMMONED, 1, -1, false)
 

@@ -4,20 +4,12 @@ library WoWReforgedInfoQuests initializer Init requires SafeString, QuestUtils, 
 globals
     private integer questsMax = 0
     private quest array questHandle
-    private string array questId
-    private string array questIcon
-    private string array questTitle
-    private string array questDescription
 endglobals
 
 function AddInfoQuest takes string title, string description, string iconPath returns quest
     local integer index = questsMax
     local quest q = CreateQuest()
     set questHandle[index] = q
-    set questId[index] = title
-    set questIcon[index] = iconPath
-    set questTitle[index] = title
-    set questDescription[index] = description
     set questsMax = questsMax + 1
 
     call QuestSetTitle(q, title)
@@ -32,6 +24,7 @@ endfunction
 
 function AddInfoQuestItem takes string description returns questitem
     local questitem i = CreateQuestItem(questHandle[questsMax - 1], description)
+    call BJDebugMsg("Quest items : " + I2S(QuestGetItemCount(questHandle[questsMax - 1])))
     call QuestItemSetCompleted(i, false)
     return i
 endfunction
@@ -42,22 +35,6 @@ endfunction
 
 function GetInfoQuestHandle takes integer q returns quest
     return questHandle[q]
-endfunction
-
-function GetInfoQuestId takes integer q returns string
-    return questId[q]
-endfunction
-
-function GetInfoQuestIcon takes integer q returns string
-    return questIcon[q]
-endfunction
-
-function GetInfoQuestTitle takes integer q returns string
-    return questTitle[q]
-endfunction
-
-function GetInfoQuestDescription takes integer q returns string
-    return questDescription[q]
 endfunction
 
 private function AddInfoQuestItemHeroJourney takes integer level returns nothing

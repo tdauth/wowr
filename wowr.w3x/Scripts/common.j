@@ -6501,6 +6501,9 @@ globals
     constant integer ABILITY_HOLY_NOVA                               = 'A118'
     constant integer ABILITY_HORN_OF_STORMWIND                       = 'A01Q'
     constant integer ABILITY_RAISE_THE_BANNER                        = 'A03L' // Forsaken Kingdom
+    constant integer LORDAERON_BANNER                                = 'hcta' // Forsaken Kingdom
+    constant integer ABILITY_RAISE_THE_BANNER_CRIT                   = 'Aaxr'
+    constant integer ABILITY_RAISE_THE_BANNER_SPELL_CRIT             = 'Aasc'
     constant integer ABILITY_RESURRECTION                            = 'A13V'
 
     // Death Knight
