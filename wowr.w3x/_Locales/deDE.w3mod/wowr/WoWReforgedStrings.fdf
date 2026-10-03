@@ -1216,6 +1216,9 @@ StringList {
     ENABLED                            "aktiviert",
     DISABLED                           "deaktiviert",
     CHANGED_NAME_INTO_X                "Name geändert zu: %1%.",
+    ROLLED_A_DICE                      "%1% hat einen Würfel mit %2% Seiten gewürfelt: %3%",
+    PLAYING_ANIMATION_X                "Animation '%1%' abgespielt.",
+    ANIM_USAGE                         "Benutzung; '-anim Stand, Attack, Death, Dissipate, Decay, Birth, Morph, Spell, Work, Walk, Spell Channel, Attack Slam'",
     // Votes
     IQ_ENABLED                         "Aktiviert",
     IQ_DISABLED                        "Deaktiviert",
