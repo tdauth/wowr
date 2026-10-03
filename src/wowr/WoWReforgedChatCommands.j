@@ -281,7 +281,7 @@ private function HelpReset takes nothing returns nothing
 endfunction
 
 private function GetHelpTextCheats takes nothing returns string
-    return "-cheats, -nocheats, -creeps, -cinoutro, -cinlichking, -cinoldgods, -cininvasion, -boots, -terrain, -heroskills, -bonus, -quests, -fields, -read, -write, -maxresources, -respawngroupcounter, -respawnall, -maxlevel, -levelX, -col, -medivh, -resetrepick, -demigodlight, -demigoddark, -trydemigod, -orderon, -orderoff, -races, -kill, -fill, -res, -share, -unitinfo, -checksave, -generatesave, -savecounters, -savecodeduplicates, -savecodemissing, -autoskill, -orbs, -herolevels, -deathwing, -claws, -clawsbonus, -regennight, -craft, -legendary, -professions, -aigui, -aicraft, -aiharveston/off, -day, -night, -jaina, -arena, -evolution X Y, -nagaquest4, -website"
+    return "-cheats, -nocheats, -creeps, -cinoutro, -cinlichking, -cinoldgods, -cininvasion, -boots, -terrain, -heroskills, -bonus, -quests, -fields, -read, -write, -maxresources, -respawngroupcounter, -respawnall, -maxlevel, -levelX, -col, -medivh, -resetrepick, -demigodlight, -demigoddark, -trydemigod, -orderon, -orderoff, -races, -kill, -fill, -res, -share, -unitinfo, -checksave, -generatesave, -savecounters, -savecodeduplicates, -savecodemissing, -autoskill, -orbs, -herolevels, -deathwing, -claws, -clawsbonus, -regennight, -craft, -legendary, -professions, -aigui, -aicraft, -aiharveston/off, -day, -night, -jaina, -arena, -evolution X Y, -unlockcampaigns, -nagaquest4, -website"
 endfunction
 
 private function HelpCheats takes nothing returns nothing
@@ -1538,6 +1538,140 @@ private function CheatEvolution takes nothing returns nothing
     endif
 endfunction
 
+private function CheatUnlockCampaigns takes nothing returns nothing
+    // Tutorial
+    call SetTutorialCleared(true)
+    call SetCampaignAvailable(bj_CAMPAIGN_INDEX_T, true)
+    call SetOpCinematicAvailable(bj_CAMPAIGN_INDEX_T, true)
+    call SetMissionAvailable(bj_CAMPAIGN_INDEX_T, 0, true)
+    call SetMissionAvailable(bj_CAMPAIGN_INDEX_T, 1, true)
+    call SetMissionAvailable(bj_CAMPAIGN_INDEX_T, 2, true)
+    call SetMissionAvailable(bj_CAMPAIGN_INDEX_T, 3, true)
+    call SetMissionAvailable(bj_CAMPAIGN_INDEX_T, 4, true)
+    // Human
+    call SetCampaignAvailable(bj_CAMPAIGN_INDEX_H, true)
+    call SetOpCinematicAvailable(bj_CAMPAIGN_INDEX_H, true)
+    call SetMissionAvailable(bj_CAMPAIGN_INDEX_H, 0, true)
+    call SetMissionAvailable(bj_CAMPAIGN_INDEX_H, 1, true)
+    call SetMissionAvailable(bj_CAMPAIGN_INDEX_H, 2, true)
+    call SetMissionAvailable(bj_CAMPAIGN_INDEX_H, 3, true)
+    call SetMissionAvailable(bj_CAMPAIGN_INDEX_H, 4, true)
+    call SetMissionAvailable(bj_CAMPAIGN_INDEX_H, 5, true)
+    call SetMissionAvailable(bj_CAMPAIGN_INDEX_H, 6, true)
+    call SetMissionAvailable(bj_CAMPAIGN_INDEX_H, 7, true)
+    call SetMissionAvailable(bj_CAMPAIGN_INDEX_H, 8, true)
+    call SetMissionAvailable(bj_CAMPAIGN_INDEX_H, 9, true)
+    call SetMissionAvailable(bj_CAMPAIGN_INDEX_H, 10, true)
+    call SetMissionAvailable(bj_CAMPAIGN_INDEX_H, 11, true)
+    call SetEdCinematicAvailable(bj_CAMPAIGN_INDEX_H, true)
+    // Undead
+    call SetCampaignAvailable(bj_CAMPAIGN_INDEX_U, true)
+    call SetEdCinematicAvailable(bj_CAMPAIGN_INDEX_U, true)
+    call SetMissionAvailable(bj_CAMPAIGN_INDEX_U, 0, true)
+    call SetMissionAvailable(bj_CAMPAIGN_INDEX_U, 1, true)
+    call SetMissionAvailable(bj_CAMPAIGN_INDEX_U, 2, true)
+    call SetMissionAvailable(bj_CAMPAIGN_INDEX_U, 3, true)
+    call SetMissionAvailable(bj_CAMPAIGN_INDEX_U, 4, true)
+    call SetMissionAvailable(bj_CAMPAIGN_INDEX_U, 5, true)
+    call SetMissionAvailable(bj_CAMPAIGN_INDEX_U, 6, true)
+    call SetMissionAvailable(bj_CAMPAIGN_INDEX_U, 7, true)
+    call SetMissionAvailable(bj_CAMPAIGN_INDEX_U, 8, true)
+    call SetMissionAvailable(bj_CAMPAIGN_INDEX_U, 9, true)
+    call SetEdCinematicAvailable(bj_CAMPAIGN_INDEX_U, true)
+    // Orc
+    call SetCampaignAvailable(bj_CAMPAIGN_INDEX_O, true)
+    call SetOpCinematicAvailable(bj_CAMPAIGN_INDEX_O, true)
+    call SetMissionAvailable(bj_CAMPAIGN_INDEX_O, 0, true)
+    call SetMissionAvailable(bj_CAMPAIGN_INDEX_O, 1, true)
+    call SetMissionAvailable(bj_CAMPAIGN_INDEX_O, 2, true)
+    call SetMissionAvailable(bj_CAMPAIGN_INDEX_O, 3, true)
+    call SetMissionAvailable(bj_CAMPAIGN_INDEX_O, 4, true)
+    call SetMissionAvailable(bj_CAMPAIGN_INDEX_O, 5, true)
+    call SetMissionAvailable(bj_CAMPAIGN_INDEX_O, 6, true)
+    call SetMissionAvailable(bj_CAMPAIGN_INDEX_O, 7, true)
+    call SetMissionAvailable(bj_CAMPAIGN_INDEX_O, 8, true)
+    call SetMissionAvailable(bj_CAMPAIGN_INDEX_O, 9, true)
+    call SetMissionAvailable(bj_CAMPAIGN_INDEX_O, 10, true)
+    call SetEdCinematicAvailable(bj_CAMPAIGN_INDEX_O, true)
+    // Night Elf
+    call SetCampaignAvailable(bj_CAMPAIGN_INDEX_N, true)
+    call SetMissionAvailable(bj_CAMPAIGN_INDEX_N, 0, true)
+    call SetMissionAvailable(bj_CAMPAIGN_INDEX_N, 1, true)
+    call SetMissionAvailable(bj_CAMPAIGN_INDEX_N, 2, true)
+    call SetMissionAvailable(bj_CAMPAIGN_INDEX_N, 3, true)
+    call SetMissionAvailable(bj_CAMPAIGN_INDEX_N, 4, true)
+    call SetMissionAvailable(bj_CAMPAIGN_INDEX_N, 5, true)
+    call SetMissionAvailable(bj_CAMPAIGN_INDEX_N, 6, true)
+    call SetMissionAvailable(bj_CAMPAIGN_INDEX_N, 7, true)
+    call SetMissionAvailable(bj_CAMPAIGN_INDEX_N, 8, true)
+    call SetMissionAvailable(bj_CAMPAIGN_INDEX_N, 9, true)
+    call SetEdCinematicAvailable(bj_CAMPAIGN_INDEX_N, true)
+    // Expansion Night Elf
+    call SetCampaignAvailable(bj_CAMPAIGN_OFFSET_XN, true)
+    call SetOpCinematicAvailable(bj_CAMPAIGN_OFFSET_XN, true)
+    call SetMissionAvailable(bj_CAMPAIGN_OFFSET_XN, 0, true)
+    call SetMissionAvailable(bj_CAMPAIGN_OFFSET_XN, 1, true)
+    call SetMissionAvailable(bj_CAMPAIGN_OFFSET_XN, 2, true)
+    call SetMissionAvailable(bj_CAMPAIGN_OFFSET_XN, 3, true)
+    call SetMissionAvailable(bj_CAMPAIGN_OFFSET_XN, 4, true)
+    call SetMissionAvailable(bj_CAMPAIGN_OFFSET_XN, 5, true)
+    call SetMissionAvailable(bj_CAMPAIGN_OFFSET_XN, 6, true)
+    call SetMissionAvailable(bj_CAMPAIGN_OFFSET_XN, 7, true)
+    call SetMissionAvailable(bj_CAMPAIGN_OFFSET_XN, 8, true)
+    call SetMissionAvailable(bj_CAMPAIGN_OFFSET_XN, 9, true)
+    call SetMissionAvailable(bj_CAMPAIGN_OFFSET_XN, 10, true)
+    // Expansion Human
+    call SetCampaignAvailable(bj_CAMPAIGN_OFFSET_XH, true)
+    call SetMissionAvailable(bj_CAMPAIGN_OFFSET_XH, 0, true)
+    call SetMissionAvailable(bj_CAMPAIGN_OFFSET_XH, 1, true)
+    call SetMissionAvailable(bj_CAMPAIGN_OFFSET_XH, 2, true)
+    call SetMissionAvailable(bj_CAMPAIGN_OFFSET_XH, 3, true)
+    call SetMissionAvailable(bj_CAMPAIGN_OFFSET_XH, 4, true)
+    call SetMissionAvailable(bj_CAMPAIGN_OFFSET_XH, 5, true)
+    call SetMissionAvailable(bj_CAMPAIGN_OFFSET_XH, 6, true)
+    call SetMissionAvailable(bj_CAMPAIGN_OFFSET_XH, 7, true)
+    call SetMissionAvailable(bj_CAMPAIGN_OFFSET_XH, 8, true)
+    call SetMissionAvailable(bj_CAMPAIGN_OFFSET_XH, 9, true)
+    // Expansion Undead
+    call SetCampaignAvailable(bj_CAMPAIGN_OFFSET_XU, true)
+    call SetEdCinematicAvailable(bj_CAMPAIGN_OFFSET_XU, true)
+    call SetMissionAvailable(bj_CAMPAIGN_OFFSET_XU, 0, true)
+    call SetMissionAvailable(bj_CAMPAIGN_OFFSET_XU, 1, true)
+    call SetMissionAvailable(bj_CAMPAIGN_OFFSET_XU, 2, true)
+    call SetMissionAvailable(bj_CAMPAIGN_OFFSET_XU, 3, true)
+    call SetMissionAvailable(bj_CAMPAIGN_OFFSET_XU, 4, true)
+    call SetMissionAvailable(bj_CAMPAIGN_OFFSET_XU, 5, true)
+    call SetMissionAvailable(bj_CAMPAIGN_OFFSET_XU, 6, true)
+    call SetMissionAvailable(bj_CAMPAIGN_OFFSET_XU, 7, true)
+    call SetMissionAvailable(bj_CAMPAIGN_OFFSET_XU, 8, true)
+    call SetMissionAvailable(bj_CAMPAIGN_OFFSET_XU, 9, true)
+    call SetMissionAvailable(bj_CAMPAIGN_OFFSET_XU, 10, true)
+    call SetMissionAvailable(bj_CAMPAIGN_OFFSET_XU, 11, true)
+    call SetMissionAvailable(bj_CAMPAIGN_OFFSET_XU, 12, true)
+    call SetMissionAvailable(bj_CAMPAIGN_OFFSET_XU, 13, true)
+    // Expansion Orc
+    call SetCampaignAvailable(bj_CAMPAIGN_OFFSET_XO, true)
+    call SetMissionAvailable(bj_CAMPAIGN_OFFSET_XO, 0, true)
+    call SetMissionAvailable(bj_CAMPAIGN_OFFSET_XO, 1, true)
+    call SetMissionAvailable(bj_CAMPAIGN_OFFSET_XO, 2, true)
+    call SetMissionAvailable(bj_CAMPAIGN_OFFSET_XO, 3, true)
+    // Rebirth Human
+    call SetOpCinematicAvailable(bj_CAMPAIGN_OFFSET_RH, true)
+    call SetCampaignAvailable(bj_CAMPAIGN_OFFSET_RH, true)
+    call SetMissionAvailable(bj_CAMPAIGN_OFFSET_RH, 0, true)
+    call SetMissionAvailable(bj_CAMPAIGN_OFFSET_RH, 1, true)
+    call SetMissionAvailable(bj_CAMPAIGN_OFFSET_RH, 2, true)
+    call SetMissionAvailable(bj_CAMPAIGN_OFFSET_RH, 3, true)
+    call SetMissionAvailable(bj_CAMPAIGN_OFFSET_RH, 4, true)
+    // Rebirth Undead
+    call SetCampaignAvailable(bj_CAMPAIGN_OFFSET_RU, true)
+    call SetMissionAvailable(bj_CAMPAIGN_OFFSET_RU, 0, true)
+    call SetMissionAvailable(bj_CAMPAIGN_OFFSET_RU, 1, true)
+    call SetMissionAvailable(bj_CAMPAIGN_OFFSET_RU, 2, true)
+    call SetMissionAvailable(bj_CAMPAIGN_OFFSET_RU, 3, true)
+    call SetEdCinematicAvailable(bj_CAMPAIGN_INDEX_RU, true)
+endfunction
+
 private function StartGame takes nothing returns nothing
     set udg_Cheats = GetAllPlayingUsersCount() == 1 and (GetPlayerName(Player(0)) == "WorldEdit" or GetPlayerName(Player(0)) == "Barade" or  GetPlayerName(Player(0)) == "Barade#2569")
 endfunction
@@ -1736,6 +1870,7 @@ private function Init takes nothing returns nothing
     call AddCheat("-races", true, function CheatRaces)
     call AddCheat("-medivh", true, function CheatMedivh)
     call AddCheat("-evolution", false, function CheatEvolution)
+    call AddCheat("-unlockcampaigns", true, function CheatUnlockCampaigns)
 
     // after all chat commands
     call ForForce(GetAllPlayingUsers(), function EnumPlayerRegisterChatEvent)
