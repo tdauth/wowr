@@ -193,6 +193,7 @@ private function Init takes nothing returns nothing
     call AddChange("Ignore unit type MAX_ITEM_STACKS_DUMMY_HERO for item pickup checks.")
     call AddChange("Add JASS function QuestGetIconPath to library QuestUtils.")
     call AddChange("Store less data for info quests.")
+    call AddChange("All three Paladin bosses have True Sight now.")
 
 static if (MAP_DEBUG_MODE_ENABLED) then
     call AddVersion("4.6")
