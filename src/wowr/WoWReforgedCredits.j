@@ -434,7 +434,6 @@ private function Init takes nothing returns nothing
     call AddCredit("r.ace613: Acolyte and Derivatives")
     call AddCredit("Darky29: BTNDragonEye")
     call AddCredit("(Darkfang), Blizzard Entertainment: DivineArmor")
-    call AddCredit("PrinceYaser: BTNSoulDischarge")
     call AddCredit("TurieL: RiflemanElite")
     call AddCredit("PrinceYaser: BTNPlateArmor")
     call AddCredit("Illidan(Evil)X: Replaceable Banner")

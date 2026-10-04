@@ -467,9 +467,14 @@ private function Init takes nothing returns nothing
     call RegisterAbilityFieldType('nrf4', ABILITY_FIELD_TYPE_CHANCE_REAL)
     // Raise the Banner
     call RegisterAbilityFieldType(GetHandleId(ABILITY_RLF_CHANCE_TO_CRITICAL_STRIKE), ABILITY_FIELD_TYPE_DAMAGE_REAL) // Chance like 50.0
-
-    // Haste
-    call RegisterAbilityFieldType('Ispi', ABILITY_FIELD_TYPE_SUMMONED_UNITS_INTEGER)
+    // Inspire Courage
+    call RegisterAbilityFieldType('hic1', ABILITY_FIELD_TYPE_DEFENSE_REAL)
+    call RegisterAbilityFieldType('hic2', ABILITY_FIELD_TYPE_CHANCE_REAL)
+    // Guiding Hand
+    call RegisterAbilityFieldType('hgh1', ABILITY_FIELD_TYPE_DEFENSE_REAL)
+    call RegisterAbilityFieldType('hgh7', ABILITY_FIELD_TYPE_DEFENSE_REAL)
+    call RegisterAbilityFieldType('hgh2', ABILITY_FIELD_TYPE_DEFENSE_REAL)
+    call RegisterAbilityFieldType('hgh6', ABILITY_FIELD_TYPE_DEFENSE_REAL)
 
     // Invisibility
     call RegisterInvisibility('Aivs') // Human original
@@ -674,8 +679,15 @@ private function Init takes nothing returns nothing
     call RegisterAbilityField(ABILITY_INNFER_FIRE, GetHandleId(ABILITY_RLF_DAMAGE_INCREASE_PERCENT_INF1))
     call RegisterAbilityField(ABILITY_INNFER_FIRE, GetHandleId(ABILITY_ILF_DEFENSE_INCREASE_INF2))
 
-    call RegisterUnitAbility(ABILITY_HASTE)
-    call RegisterAbilityField(ABILITY_HASTE, 'Ispi')
+    call RegisterUnitAbility(ABILITY_INSPIRE_COURAGE) // Forsaken Kingdom
+    call RegisterAbilityField(ABILITY_INSPIRE_COURAGE, 'hic1')
+    call RegisterAbilityField(ABILITY_INSPIRE_COURAGE, 'hic2')
+
+    call RegisterUnitAbility(ABILITY_GUIDING_HAND) // Forsaken Kingdom
+    call RegisterAbilityField(ABILITY_GUIDING_HAND, 'hgh1')
+    call RegisterAbilityField(ABILITY_GUIDING_HAND, 'hgh7')
+    call RegisterAbilityField(ABILITY_GUIDING_HAND, 'hgh2')
+    call RegisterAbilityField(ABILITY_GUIDING_HAND, 'hgh6')
 
     call RegisterUnitAbility(ABILITY_CONSECRATION) // Forsaken Kingdom
     call RegisterAbilityField(ABILITY_CONSECRATION, 'hcr1')
@@ -1206,9 +1218,6 @@ private function Init takes nothing returns nothing
     call RegisterUnitAbility(ABILITY_MASS_INNER_FIRE_DUMMY)
     call RegisterAbilityField(ABILITY_MASS_INNER_FIRE_DUMMY, GetHandleId(ABILITY_RLF_DAMAGE_INCREASE_PERCENT_INF1))
     call RegisterAbilityField(ABILITY_MASS_INNER_FIRE_DUMMY, GetHandleId(ABILITY_ILF_DEFENSE_INCREASE_INF2))
-
-    call RegisterUnitAbility(ABILITY_DISCHARGE)
-    call RegisterAbilityField(ABILITY_DISCHARGE, GetHandleId(ABILITY_RLF_COOLDOWN))
 
     call RegisterSilence(ABILITY_TELEKINESIS)
     call RegisterAbilityField(ABILITY_TELEKINESIS, GetHandleId(ABILITY_RLF_CAST_RANGE))

@@ -6479,8 +6479,8 @@ globals
     // Priest
     constant integer ABILITY_HEAL                                    = 'Anhe'
     constant integer ABILITY_INNFER_FIRE                             = 'ACif'
-    constant integer ABILITY_HASTE                                   = 'A02Y' // TODO Replace with Forsaken Kingdom Inspire Courage AHic
-    constant integer ABILITY_DISCHARGE                               = 'A12S' // TODO Replace with Forsaken Kingdom Guiding Hand AHgh
+    constant integer ABILITY_INSPIRE_COURAGE                         = 'A072' // Forsaken Kingdom
+    constant integer ABILITY_GUIDING_HAND                            = 'A07I' // Forsaken Kingdom
     constant integer ABILITY_CONSECRATION                            = 'A01K' // Forsaken Kingdom
     constant integer ABILITY_HEALING_WAVE                            = 'Leav'
     constant integer ABILITY_SACRED_AURA                             = 'A023' // Forsaken Kingdom

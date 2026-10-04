@@ -664,7 +664,6 @@ Playing Warcraft III can be played on Ubuntu using Steam, adding it as non-Steam
 * r.ace613: [Acolyte and Derivatives](https://www.hiveworkshop.com/threads/acolyte-and-derivatives.336072/)
 * Darky29: [BTNDragonEye](https://www.hiveworkshop.com/threads/btndragoneye.54555/)
 * (Darkfang), Blizzard Entertainment: [DivineArmor](https://www.hiveworkshop.com/threads/divinearmor.288821/)
-* PrinceYaser: [BTNSoulDischarge](https://www.hiveworkshop.com/threads/btnsouldischarge.319933/)
 * TurieL: [RiflemanElite](https://www.hiveworkshop.com/threads/riflemanelite.49808/)
 * PrinceYaser: [BTNPlateArmor](https://www.hiveworkshop.com/threads/btnplatearmor.310470/)
 * Illidan(Evil)X: [Replaceable Banner](https://www.hiveworkshop.com/threads/replaceable-banner.278853/)

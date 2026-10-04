@@ -181,7 +181,6 @@
 //! import "wowr/WoWReforgedSkins.j"
 //! import "wowr/WoWReforgedSpellCharge.j"
 //! import "wowr/WoWReforgedSpellClubStrike.j"
-//! import "wowr/WoWReforgedSpellDischarge.j"
 //! import "wowr/WoWReforgedSpellDivineShield.j"
 //! import "wowr/WoWReforgedSpellEscapePortal.j"
 //! import "wowr/WoWReforgedSpellExplosiveBarrel.j"
