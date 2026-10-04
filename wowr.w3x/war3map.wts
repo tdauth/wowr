@@ -2146,7 +2146,7 @@ Precisely crafted magical bow. Grants +10 damage and allows to attack air units 
 }
 
 STRING 359
-// Units: N01X (Elemental Lord), EditorSuffix (Name - Editor Suffix)
+// Units: Ubal (Dreadlord), EditorSuffix (Name - Editor Suffix)
 {
 (Boss)
 }
@@ -3634,7 +3634,7 @@ STRING 605
 }
 
 STRING 606
-// Units: Ubal (Dreadlord), EditorSuffix (Name - Editor Suffix)
+// Units: Uvng (Dreadlord), EditorSuffix (Name - Editor Suffix)
 {
 (Boss)
 }
@@ -6559,7 +6559,7 @@ Changes the class to Druid:|n- Rejuvenation|n- Faerie Fire|n- Force of Nature|n-
 }
 
 STRING 1103
-// Units: Uvng (Dreadlord), EditorSuffix (Name - Editor Suffix)
+// Units: Udth (Dreadlord), EditorSuffix (Name - Editor Suffix)
 {
 (Boss)
 }
@@ -9997,7 +9997,7 @@ Revive Murmur
 }
 
 STRING 1678
-// Units: Udth (Dreadlord), EditorSuffix (Name - Editor Suffix)
+// Units: Umal (Dreadlord), EditorSuffix (Name - Editor Suffix)
 {
 (Boss)
 }
@@ -13594,7 +13594,7 @@ STRING 2486
 }
 
 STRING 2488
-// Units: Umal (Dreadlord), EditorSuffix (Name - Editor Suffix)
+// Units: Nswt (The Sea Witch), EditorSuffix (Name - Editor Suffix)
 {
 (Boss)
 }
@@ -15310,7 +15310,7 @@ Summon Elune
 }
 
 STRING 2912
-// Units: Nswt (The Sea Witch), EditorSuffix (Name - Editor Suffix)
+// Units: Npld (Pit Lord), EditorSuffix (Name - Editor Suffix)
 {
 (Boss)
 }
@@ -19324,7 +19324,7 @@ Mercenary Camp Argus
 }
 
 STRING 3813
-// Units: Npld (Pit Lord), EditorSuffix (Name - Editor Suffix)
+// Units: N005 (Felwood's Pain), EditorSuffix (Name - Editor Suffix)
 {
 (Boss)
 }
@@ -19630,7 +19630,7 @@ Train Salamander
 }
 
 STRING 3884
-// Units: N005 (Felwood's Pain), EditorSuffix (Name - Editor Suffix)
+// Units: O002 (Hydra Queen), EditorSuffix (Name - Editor Suffix)
 {
 (Boss)
 }
@@ -19966,19 +19966,19 @@ All races shouldn't have too many lumber workers to safe space. They need a lumb
 }
 
 STRING 3959
-// Units: O002 (Hydra Queen), EditorSuffix (Name - Editor Suffix)
-{
-(Boss)
-}
-
-STRING 3960
 // Units: U000 (Varimathras the Betrayer), EditorSuffix (Name - Editor Suffix)
 {
 (Boss)
 }
 
-STRING 3961
+STRING 3960
 // Units: E003 (Stormbringer), EditorSuffix (Name - Editor Suffix)
+{
+(Boss)
+}
+
+STRING 3961
+// Units: E004 (Dragon Temple Guardian), EditorSuffix (Name - Editor Suffix)
 {
 (Boss)
 }
@@ -19996,7 +19996,7 @@ W
 }
 
 STRING 3964
-// Units: E004 (Dragon Temple Guardian), EditorSuffix (Name - Editor Suffix)
+// Units: U002 (Void Revenant), EditorSuffix (Name - Editor Suffix)
 {
 (Boss)
 }
@@ -20038,7 +20038,7 @@ Warrior Hero, exceptional at absorbing damage and melee combat. Can learn Shockw
 }
 
 STRING 3974
-// Units: U002 (Void Revenant), EditorSuffix (Name - Editor Suffix)
+// Units: U003 (Arch Lich), EditorSuffix (Name - Editor Suffix)
 {
 (Boss)
 }
@@ -20356,13 +20356,13 @@ D
 }
 
 STRING 4112
-// Units: U003 (Arch Lich), EditorSuffix (Name - Editor Suffix)
+// Units: U001 (Faceless Nightmare), EditorSuffix (Name - Editor Suffix)
 {
 (Boss)
 }
 
 STRING 4113
-// Units: U001 (Faceless Nightmare), EditorSuffix (Name - Editor Suffix)
+// Units: N011 (The Defiler), EditorSuffix (Name - Editor Suffix)
 {
 (Boss)
 }
@@ -20902,7 +20902,7 @@ STRING 4278
 }
 
 STRING 4280
-// Units: N011 (The Defiler), EditorSuffix (Name - Editor Suffix)
+// Units: N01O (The Deceiver), EditorSuffix (Name - Editor Suffix)
 {
 (Boss)
 }
@@ -21520,7 +21520,7 @@ Furbolg
 }
 
 STRING 4419
-// Units: N01O (The Deceiver), EditorSuffix (Name - Editor Suffix)
+// Units: N02T (Nether Dragon), EditorSuffix (Name - Editor Suffix)
 {
 (Boss)
 }
@@ -21646,7 +21646,7 @@ STRING 4440
 }
 
 STRING 4443
-// Units: N02T (Nether Dragon), EditorSuffix (Name - Editor Suffix)
+// Units: N036 (Sea Giant), EditorSuffix (Name - Editor Suffix)
 {
 (Boss)
 }
@@ -22519,7 +22519,7 @@ Skin Villager Child
 }
 
 STRING 4642
-// Units: N036 (Sea Giant), EditorSuffix (Name - Editor Suffix)
+// Units: H01P (Keeper of Ashbringer), EditorSuffix (Name - Editor Suffix)
 {
 (Boss)
 }
@@ -23512,7 +23512,7 @@ Scarlet Monastery
 }
 
 STRING 4841
-// Units: H01P (Keeper of Ashbringer), EditorSuffix (Name - Editor Suffix)
+// Units: N03B (The Wise), EditorSuffix (Name - Editor Suffix)
 {
 (Boss)
 }
@@ -23818,7 +23818,7 @@ STRING 4896
 }
 
 STRING 4897
-// Units: N03B (The Wise), EditorSuffix (Name - Editor Suffix)
+// Units: N03L (Murloc Sorcerer), EditorSuffix (Name - Editor Suffix)
 {
 (Boss)
 }
@@ -25750,7 +25750,7 @@ Boat construction facility. Produces Human Transport Ships, Human Frigates, Kul 
 }
 
 STRING 5299
-// Units: N03L (Murloc Sorcerer), EditorSuffix (Name - Editor Suffix)
+// Units: N03O (The Eye of Sargeras), EditorSuffix (Name - Editor Suffix)
 {
 (Boss)
 }
@@ -30832,7 +30832,7 @@ Revive Smolderon
 }
 
 STRING 6413
-// Units: N03O (The Eye of Sargeras), EditorSuffix (Name - Editor Suffix)
+// Units: U00V (Avatar of Sargeras), EditorSuffix (Name - Editor Suffix)
 {
 (Boss)
 }
@@ -31012,7 +31012,7 @@ Human Citizen (female) (Kul Tiras)
 }
 
 STRING 6470
-// Units: U00V (Avatar of Sargeras), EditorSuffix (Name - Editor Suffix)
+// Units: O00L (Slave Master), EditorSuffix (Name - Editor Suffix)
 {
 (Boss)
 }
@@ -37582,7 +37582,7 @@ Build Forge
 }
 
 STRING 8166
-// Units: O00L (Slave Master), EditorSuffix (Name - Editor Suffix)
+// Units: O00M (Warlock), EditorSuffix (Name - Editor Suffix)
 {
 (Boss)
 }
@@ -40621,7 +40621,7 @@ Q
 }
 
 STRING 9022
-// Units: O00M (Warlock), EditorSuffix (Name - Editor Suffix)
+// Units: N041 (Alchemist), EditorSuffix (Name - Editor Suffix)
 {
 (Boss)
 }
@@ -47533,19 +47533,19 @@ Allows building male citizens a Stonemaul Camp to train Stonemaul clan Ogres.
 }
 
 STRING 11836
-// Units: N041 (Alchemist), EditorSuffix (Name - Editor Suffix)
-{
-(Boss)
-}
-
-STRING 11837
 // Units: N04K (Tinker), EditorSuffix (Name - Editor Suffix)
 {
 (Boss)
 }
 
-STRING 11838
+STRING 11837
 // Units: N04R (Elder Sage), EditorSuffix (Name - Editor Suffix)
+{
+(Boss)
+}
+
+STRING 11838
+// Units: N067 (The Destroyer), EditorSuffix (Name - Editor Suffix)
 {
 (Boss)
 }
@@ -47887,7 +47887,7 @@ STRING 11913
 }
 
 STRING 11917
-// Units: N067 (The Destroyer), EditorSuffix (Name - Editor Suffix)
+// Units: N068 (Naga Queen), EditorSuffix (Name - Editor Suffix)
 {
 (Boss)
 }
@@ -48157,13 +48157,13 @@ Captain
 }
 
 STRING 12043
-// Units: N068 (Naga Queen), EditorSuffix (Name - Editor Suffix)
+// Units: N06E (Old God of Madness and Chaos), EditorSuffix (Name - Editor Suffix)
 {
 (Boss)
 }
 
 STRING 12044
-// Units: N06E (Old God of Madness and Chaos), EditorSuffix (Name - Editor Suffix)
+// Units: E00Q (Demigod), EditorSuffix (Name - Editor Suffix)
 {
 (Boss)
 }
@@ -50503,7 +50503,7 @@ Summon Antonidas
 }
 
 STRING 14070
-// Units: E00Q (Demigod), EditorSuffix (Name - Editor Suffix)
+// Units: E00S (Goddess), EditorSuffix (Name - Editor Suffix)
 {
 (Boss)
 }
@@ -50917,7 +50917,7 @@ STRING 14301
 }
 
 STRING 14315
-// Units: E00S (Goddess), EditorSuffix (Name - Editor Suffix)
+// Units: H09B (Ghostly Archmage), EditorSuffix (Name - Editor Suffix)
 {
 (Boss)
 }
@@ -51049,7 +51049,7 @@ E
 }
 
 STRING 14348
-// Units: H09B (Ghostly Archmage), EditorSuffix (Name - Editor Suffix)
+// Units: N0C8 (Herald of the Deep Mother), EditorSuffix (Name - Editor Suffix)
 {
 (Boss)
 }
@@ -51109,7 +51109,7 @@ Avatar of Sargeras
 }
 
 STRING 14358
-// Units: N0C8 (Herald of the Deep Mother), EditorSuffix (Name - Editor Suffix)
+// Units: H0QP (Paladin), EditorSuffix (Name - Editor Suffix)
 {
 (Boss)
 }
@@ -52033,7 +52033,7 @@ W
 }
 
 STRING 15096
-// Units: H0QP (Paladin), EditorSuffix (Name - Editor Suffix)
+// Units: H0QQ (Paladin), EditorSuffix (Name - Editor Suffix)
 {
 (Boss)
 }
@@ -52093,7 +52093,7 @@ STRING 15125
 }
 
 STRING 15126
-// Units: H0QQ (Paladin), EditorSuffix (Name - Editor Suffix)
+// Units: N0IG (Elemental Lord), EditorSuffix (Name - Editor Suffix)
 {
 (Boss)
 }
@@ -52225,7 +52225,7 @@ Revive Yogg-saron
 }
 
 STRING 15310
-// Units: N0IG (Elemental Lord), EditorSuffix (Name - Editor Suffix)
+// Units: N0IH (Elemental Lord), EditorSuffix (Name - Editor Suffix)
 {
 (Boss)
 }
@@ -52267,7 +52267,7 @@ STRING 15316
 }
 
 STRING 15317
-// Units: N0IH (Elemental Lord), EditorSuffix (Name - Editor Suffix)
+// Units: N0II (Elemental Lord), EditorSuffix (Name - Editor Suffix)
 {
 (Boss)
 }
@@ -52645,7 +52645,7 @@ STRING 15817
 }
 
 STRING 15818
-// Units: N0II (Elemental Lord), EditorSuffix (Name - Editor Suffix)
+// Units: N0IL (The Jade Serpent), EditorSuffix (Name - Editor Suffix)
 {
 (Boss)
 }
@@ -56089,13 +56089,13 @@ Mathog
 }
 
 STRING 18696
-// Units: N0IL (The Jade Serpent), EditorSuffix (Name - Editor Suffix)
+// Units: N0IM (Eagle Spirit), EditorSuffix (Name - Editor Suffix)
 {
 (Boss)
 }
 
 STRING 18700
-// Units: N0IM (Eagle Spirit), EditorSuffix (Name - Editor Suffix)
+// Units: N0J4 (Fel Lord), EditorSuffix (Name - Editor Suffix)
 {
 (Boss)
 }
@@ -56119,7 +56119,7 @@ STRING 18705
 }
 
 STRING 18706
-// Units: N0J4 (Fel Lord), EditorSuffix (Name - Editor Suffix)
+// Units: N02Z (Overlord), EditorSuffix (Name - Editor Suffix)
 {
 (Boss)
 }
@@ -57274,7 +57274,7 @@ Elemental Lord
 }
 
 STRING 19407
-// Units: N02Z (Overlord), EditorSuffix (Name - Editor Suffix)
+// Units: N030 (Phoenix God), EditorSuffix (Name - Editor Suffix)
 {
 (Boss)
 }
@@ -62814,7 +62814,7 @@ Revive Mal'Ganis
 }
 
 STRING 23534
-// Units: N030 (Phoenix God), EditorSuffix (Name - Editor Suffix)
+// Units: N0M7 (The Dreamer), EditorSuffix (Name - Editor Suffix)
 {
 (Boss)
 }
@@ -64440,7 +64440,7 @@ STRING 25201
 }
 
 STRING 25213
-// Units: N0M7 (The Dreamer), EditorSuffix (Name - Editor Suffix)
+// Units: N0M8 (Satyr Lord), EditorSuffix (Name - Editor Suffix)
 {
 (Boss)
 }
@@ -85692,7 +85692,7 @@ A hearty Goblin citizen. Has life regeneration aura.
 }
 
 STRING 38481
-// Units: N0M8 (Satyr Lord), EditorSuffix (Name - Editor Suffix)
+// Units: N0DR (Elemental Lord), EditorSuffix (Name - Editor Suffix)
 {
 (Boss)
 }
@@ -100758,7 +100758,7 @@ Revive Neptulon
 }
 
 STRING 46356
-// Units: N0DR (Elemental Lord), EditorSuffix (Name - Editor Suffix)
+// Units: U03L (Master of Revendreth), EditorSuffix (Name - Editor Suffix)
 {
 (Boss)
 }
@@ -100794,7 +100794,7 @@ Revive Therazane
 }
 
 STRING 46362
-// Units: U03L (Master of Revendreth), EditorSuffix (Name - Editor Suffix)
+// Units: E01A (Blade of the Black Empire), EditorSuffix (Name - Editor Suffix)
 {
 (Boss)
 }
@@ -100824,7 +100824,7 @@ Revive Thunderaan
 }
 
 STRING 46368
-// Units: E01A (Blade of the Black Empire), EditorSuffix (Name - Editor Suffix)
+// Units: N00Y (Lord of the Shado-Pan), EditorSuffix (Name - Editor Suffix)
 {
 (Boss)
 }
@@ -100926,7 +100926,7 @@ A boulder that is thrown at an enemy unit, causing <A1N6,DataA1> points of damag
 }
 
 STRING 46475
-// Units: N00Y (Lord of the Shado-Pan), EditorSuffix (Name - Editor Suffix)
+// Units: N01X (Elemental Lord), EditorSuffix (Name - Editor Suffix)
 {
 (Boss)
 }

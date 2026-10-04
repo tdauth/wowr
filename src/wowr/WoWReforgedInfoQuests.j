@@ -320,6 +320,8 @@ private function Init takes nothing returns nothing
     call AddInfoQuestItem(GetLocalizedStringSafe("CC_REVEAL"))
     call AddInfoQuestItem(GetLocalizedStringSafe("CC_CHEATS"))
     call AddInfoQuestItem(GetLocalizedStringSafe("CC_RESET_REVOLUTION"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_BAG_INFO"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_BAG_UI"))
 
     call AddInfoQuest(GetLocalizedStringSafe("IQ_U_CHAT_COMMANDS_TITLE"), GetLocalizedStringSafe("IQ_U_CHAT_COMMANDS_DESCRIPTION"), "ReplaceableTextures\\CommandButtons\\BTNDisenchant.blp")
     call AddInfoQuestItem(GetLocalizedStringSafe("IQ_U_CHAT_COMMANDS_0"))

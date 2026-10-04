@@ -683,6 +683,57 @@ private function Show takes nothing returns nothing
     call ShowUI(GetTriggerPlayer())
 endfunction
 
+private function UiOn takes nothing returns nothing
+static if LIBRARY_PagedButtonsUI then
+    call SetPagedButtonsUIEnabledForPlayer(GetTriggerPlayer(), true)
+endif
+    call DisplayTextToPlayer(GetTriggerPlayer(), 0.0, 0.0, GetLocalizedString("ENABLED_PAGED_BUTTONS_UI"))
+endfunction
+
+private function UiOff takes nothing returns nothing
+static if LIBRARY_PagedButtonsUI then
+    call SetPagedButtonsUIEnabledForPlayer(GetTriggerPlayer(), false)
+endif
+    call DisplayTextToPlayer(GetTriggerPlayer(), 0.0, 0.0, GetLocalizedString("DISABLED_PAGED_BUTTONS_UI"))
+endfunction
+
+private function UiQueueOn takes nothing returns nothing
+    call SetQueueUIEnabledForPlayer(GetTriggerPlayer(), true)
+    call DisplayTextToPlayer(GetTriggerPlayer(), 0.0, 0.0, GetLocalizedString("ENABLED_QUEUE_UI"))
+endfunction
+
+private function UiQueueOff takes nothing returns nothing
+    call SetQueueUIEnabledForPlayer(GetTriggerPlayer(), false)
+    call DisplayTextToPlayer(GetTriggerPlayer(), 0.0, 0.0, GetLocalizedString("DISABLED_QUEUE_UI"))
+endfunction
+
+private function UiQueueClear takes nothing returns nothing
+    if (GetPlayerQueue(GetTriggerPlayer()) != 0) then
+        call ClearQueue(GetPlayerQueue(GetTriggerPlayer()))
+    endif
+    call DisplayTextToPlayer(GetTriggerPlayer(), 0.0, 0.0, GetLocalizedString("CLEARED_QUEUE_UI"))
+endfunction
+
+private function BagInfoOn takes nothing returns nothing
+    call SetPlayerBagInfo(GetTriggerPlayer(), true)
+    call DisplayTextToPlayer(GetTriggerPlayer(), 0.0, 0.0, GetLocalizedString("ENABLED_BAG_INFO"))
+endfunction
+
+private function BagInfoOff takes nothing returns nothing
+    call SetPlayerBagInfo(GetTriggerPlayer(), false)
+    call DisplayTextToPlayer(GetTriggerPlayer(), 0.0, 0.0, GetLocalizedString("DISABLED_BAG_INFO"))
+endfunction
+
+private function BagUiOn takes nothing returns nothing
+    set udg_BackpackDontShowUI[GetConvertedPlayerId(GetTriggerPlayer())] = true
+    call DisplayTextToPlayer(GetTriggerPlayer(), 0.0, 0.0, GetLocalizedString("ENABLED_BACKPACK_UI"))
+endfunction
+
+private function BagUiOff takes nothing returns nothing
+    set udg_BackpackDontShowUI[GetConvertedPlayerId(GetTriggerPlayer())] = false
+    call DisplayTextToPlayer(GetTriggerPlayer(), 0.0, 0.0, GetLocalizedString("DISABLED_BACKPACK_UI"))
+endfunction
+
 private function Repick takes nothing returns nothing
     call HeroRepick(GetTriggerPlayer())
 endfunction
@@ -1806,6 +1857,15 @@ private function Init takes nothing returns nothing
 
     call Add("-hide", true, function Hide)
     call Add("-show", true, function Show)
+    call Add("-uion", true, function UiOn)
+    call Add("-uioff", true, function UiOff)
+    call Add("-uiqueueon", true, function UiQueueOn)
+    call Add("-uiqueueoff", true, function UiQueueOff)
+    call Add("-uiqueueclear", true, function UiQueueClear)
+    call Add("-baginfoon", true, function BagInfoOn)
+    call Add("-baginfooff", true, function BagInfoOff)
+    call Add("-baguion", true, function BagUiOn)
+    call Add("-baguioff", true, function BagUiOff)
 
     // TODO Hero repick and ping chat commands
     call Add("-repick", true, function Repick)
