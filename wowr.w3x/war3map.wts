@@ -10290,16 +10290,6 @@ STRING 1729
 (Neutral Hostile)
 }
 
-STRING 1730
-{
-Purchase Backpack
-}
-
-STRING 1731
-{
-Purchase Backpack
-}
-
 STRING 1732
 // Abilities: A03O (Hero Abilities Matching Class), Name (Name)
 {
