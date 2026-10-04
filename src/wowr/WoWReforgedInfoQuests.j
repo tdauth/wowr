@@ -24,7 +24,7 @@ endfunction
 
 function AddInfoQuestItem takes string description returns questitem
     local questitem i = CreateQuestItem(questHandle[questsMax - 1], description)
-    call BJDebugMsg("Quest items : " + I2S(QuestGetItemCount(questHandle[questsMax - 1])))
+    //call BJDebugMsg("Quest items : " + I2S(QuestGetItemCount(questHandle[questsMax - 1])))
     call QuestItemSetCompleted(i, false)
     return i
 endfunction
