@@ -694,15 +694,16 @@ private function Init takes nothing returns nothing
     call RegisterAbilityField(ABILITY_CONSECRATION, 'hcr2')
     call RegisterAbilityField(ABILITY_CONSECRATION, 'hcr3')
 
-    call RegisterUnitAbility(ABILITY_SACRED_AURA) // Forsaken Kingdom
-    call RegisterAbilityField(ABILITY_SACRED_AURA, 'hsa1')
-    call RegisterAbilityField(ABILITY_SACRED_AURA, 'hsa2')
-
     call RegisterUnitAbility(ABILITY_HEALING_WAVE)
     call RegisterAbilityField(ABILITY_HEALING_WAVE, GetHandleId(ABILITY_ILF_NUMBER_OF_TARGETS_HIT))
     call RegisterAbilityField(ABILITY_HEALING_WAVE, GetHandleId(ABILITY_RLF_DAMAGE_PER_TARGET_OCL1))
 
+    call RegisterUnitAbility(ABILITY_SACRED_AURA) // Forsaken Kingdom
+    call RegisterAbilityField(ABILITY_SACRED_AURA, 'hsa1')
+    call RegisterAbilityField(ABILITY_SACRED_AURA, 'hsa2')
+
     call RegisterUnitAbility(ABILITY_MIND_CONTROL) // Forsaken Kingdom
+    call RegisterAbilityField(ABILITY_MIND_CONTROL, GetHandleId(ABILITY_ILF_MAXIMUM_CREEP_LEVEL_POS1))
     call RegisterAbilityField(ABILITY_MIND_CONTROL, 'hmc3')
 
     call RegisterUnitAbility(ABILITY_CLEANSING_FIRE) // Forsaken Kingdom
