@@ -58,7 +58,7 @@ function CreateQuestItem takes quest whichQuest, string description returns ques
     set bj_lastCreatedQuestItem = QuestCreateItem(whichQuest)
     call QuestItemSetDescription(bj_lastCreatedQuestItem, description)
     call QuestItemSetCompleted(bj_lastCreatedQuestItem, false)
-    call AddLastQuestItemToLastQuest()
+    call AddQuestItemToQuest(whichQuest, bj_lastCreatedQuestItem)
     return bj_lastCreatedQuestItem
 endfunction
 
