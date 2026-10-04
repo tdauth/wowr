@@ -1230,6 +1230,7 @@ StringList {
     VOTE_MESSAGE                       "%1% has voted for %2%: %3%/%4%",
     // Cheats
     CREATED_X_FOR_FIRST_HERO           "Created %1% for your first hero.",
+    UNLOCKED_ALL_CAMPAIGNS             "Unlocked all campaigns for all players!",
     // Player Infos
     FREELANCER                         "Freelancer",
     WARLORD                            "Warlord",

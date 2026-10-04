@@ -1670,6 +1670,8 @@ private function CheatUnlockCampaigns takes nothing returns nothing
     call SetMissionAvailable(bj_CAMPAIGN_OFFSET_RU, 2, true)
     call SetMissionAvailable(bj_CAMPAIGN_OFFSET_RU, 3, true)
     call SetEdCinematicAvailable(bj_CAMPAIGN_INDEX_RU, true)
+
+    call DisplayTextToForce(GetPlayersAll(), GetLocalizedString("UNLOCKED_ALL_CAMPAIGNS"))
 endfunction
 
 private function StartGame takes nothing returns nothing

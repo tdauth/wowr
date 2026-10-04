@@ -1230,6 +1230,7 @@ StringList {
     VOTE_MESSAGE                       "%1% hat für %2% abgestimmt: %3%/%4%",
     // Cheats
     CREATED_X_FOR_FIRST_HERO           "%1% für Ihren ersten Helden erstellt.",
+    UNLOCKED_ALL_CAMPAIGNS             "Alle Kampagnen für alle Spieler freigeschaltet!",
     // Player Infos
     FREELANCER                         "Freiberufler",
     WARLORD                            "Kriegsherr",
