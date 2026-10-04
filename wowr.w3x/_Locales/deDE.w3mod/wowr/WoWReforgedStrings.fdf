@@ -1219,6 +1219,9 @@ StringList {
     ROLLED_A_DICE                      "%1% hat einen Würfel mit %2% Seiten gewürfelt: %3%",
     PLAYING_ANIMATION_X                "Animation '%1%' abgespielt.",
     ANIM_USAGE                         "Benutzung; '-anim Stand, Attack, Death, Dissipate, Decay, Birth, Morph, Spell, Work, Walk, Spell Channel, Attack Slam'",
+    AUTO_SKILL_SELECTED                "Auto-Skille all Ihre ausgewählten Helden.",
+    RESET_EVOLUTION                    "Setze Evolution zurück auf Stufe: %1%",
+    RESET_EVOLUTION_LEVEL_ERROR        "Stufe muss niedriger als ihre aktuelle Forschungsstufe sein.",
     // Votes
     IQ_ENABLED                         "Aktiviert",
     IQ_DISABLED                        "Deaktiviert",

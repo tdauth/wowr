@@ -1219,6 +1219,9 @@ StringList {
     ROLLED_A_DICE                      "%1% rolled a dice with %2% sides: %3%",
     PLAYING_ANIMATION_X                "Playing animation '%1%'.",
     ANIM_USAGE                         "Usage; '-anim Stand, Attack, Death, Dissipate, Decay, Birth, Morph, Spell, Work, Walk, Spell Channel, Attack Slam'",
+    AUTO_SKILL_SELECTED                "Auto skilling all selected heroes owned by you.",
+    RESET_EVOLUTION                    "Resetting Evolution back to level: %1%",
+    RESET_EVOLUTION_LEVEL_ERROR        "Level must be lower that your current research level.",
     // Votes
     IQ_ENABLED                         "Enabled",
     IQ_DISABLED                        "Disabled",

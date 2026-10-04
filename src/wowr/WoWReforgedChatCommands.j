@@ -5,6 +5,7 @@ library WoWReforgedChatCommands initializer Init requires Ascii, SimError, HostU
  */
 
 globals
+    private boolexpr filterIsValidAutoSkillTarget = null
     private boolexpr filterIsValidAnimTarget = null
     private boolexpr filterIsValidRenameTarget = null
     private boolexpr filterIsValidScaleTarget = null
@@ -772,6 +773,40 @@ private function Clear takes nothing returns nothing
     if (GetLocalPlayer() == GetTriggerPlayer()) then
         // Use only local code (no net traffic) within this block to avoid desyncs.
         call ClearTextMessages()
+    endif
+endfunction
+
+private function FilterIsValidAutoSkillTarget takes nothing returns boolean
+    return IsUnitType(GetFilterUnit(), UNIT_TYPE_HERO) and GetOwningPlayer(GetFilterUnit()) == filterPlayer
+endfunction
+
+private function EnumAutoSkill takes nothing returns nothing
+    call AutoSkillHero(GetEnumUnit())
+endfunction
+
+private function Auto takes nothing returns nothing
+    local group g = CreateGroup()
+     call SyncSelections() // delays, issues in trigger conditions and multiplayer games
+    set filterPlayer = GetTriggerPlayer()
+    call GroupEnumUnitsSelected(g, GetTriggerPlayer(), filterIsValidAutoSkillTarget)
+    call ForGroup(g, function EnumAutoSkill)
+    call DisplayTextToPlayer(GetTriggerPlayer(), 0.0, 0.0, GetLocalizedString("AUTO_SKILL_SELECTED"))
+    call GroupClear(g)
+    call DestroyGroup(g)
+    set g = null
+endfunction
+
+private function ResetRevolution takes nothing returns nothing
+    local string token = StringTokenEnteredChatMessageEx(1, true)
+    local integer level = S2I(token)
+    if (GetPlayerTechCountSimple(UPG_EVOLUTION, GetTriggerPlayer()) > level) then
+        call SetPlayerTechResearched(GetTriggerPlayer(), UPG_EVOLUTION, level)
+        if (IsPlayerFreelancer(GetTriggerPlayer())) then
+            call SetPlayerTechResearched(GetTriggerPlayer(), UPG_CHEAP_EVOLUTION, level)
+        endif
+        call DisplayTextToPlayer(GetTriggerPlayer(), 0.0, 0.0, Format(GetLocalizedString("RESET_EVOLUTION")).i(level).result())
+    else
+        call SimError(GetTriggerPlayer(), GetLocalizedString("RESET_EVOLUTION_LEVEL_ERROR"))
     endif
 endfunction
 
@@ -1679,6 +1714,7 @@ private function StartGame takes nothing returns nothing
 endfunction
 
 private function Init takes nothing returns nothing
+    set filterIsValidAutoSkillTarget = Filter(function FilterIsValidAutoSkillTarget)
     set filterIsValidAnimTarget = Filter(function FilterIsValidAnimTarget)
     set filterIsValidRenameTarget = Filter(function FilterIsValidRenameTarget)
     set filterIsValidScaleTarget = Filter(function FilterIsValidScaleTarget)
@@ -1801,8 +1837,9 @@ private function Init takes nothing returns nothing
     call Add("-pingraces", true, function PingRaces)
 
     call Add("-suicide", true, function Suicide)
-
     call Add("-clear", true, function Clear)
+    call Add("-auto", true, function Auto)
+    call Add("-resetevolution", false, function ResetRevolution)
 
     call Add("-save", true, function Save)
     call Add("-savec", true, function SaveClear)
