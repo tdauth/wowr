@@ -336,6 +336,7 @@ private function Init takes nothing returns nothing
     call AddBoss(GOBLIN_BANK_DIRECTOR, CLASS_TINKER)
     call AddBoss(HERALD_OF_THE_DEEP_MOTHER, CLASS_HYDROMANCER)
     call AddBoss(MAGTHERIDON_BOSS, CLASS_WARLOCK)
+    call AddBoss(PIT_LORD, CLASS_WARLOCK) // Azgalor
     call AddBoss(GHOST_BOSS, CLASS_DRUID)
 
     call AddBoss(DETHEROC, CLASS_DEATH_KNIGHT)

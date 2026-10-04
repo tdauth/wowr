@@ -195,6 +195,7 @@ private function Init takes nothing returns nothing
     call AddChange("Store less data for info quests.")
     call AddChange("All three Paladin bosses have True Sight now.")
     call AddChange("Add cheat \"-unlockcampaigns\".")
+    call AddChange("Give boss Azgalor in Outland class Warlock.")
 
 static if (MAP_DEBUG_MODE_ENABLED) then
     call AddVersion("4.6")
