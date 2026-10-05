@@ -1,4 +1,4 @@
-library WoWReforgedInfoQuests initializer Init requires SafeString, QuestUtils, Taunts, UnitGroupRespawnConfig, WoWReforgedClasses
+library WoWReforgedInfoQuests initializer Init requires SafeString, QuestUtils, Taunts, UnitGroupRespawnConfig, WoWReforgedClasses, WoWReforgedTaunts
 // Info quests are the required quests and provide more information about this map. They have to be stored for generating the website.
 
 globals
@@ -57,7 +57,7 @@ endfunction
 
 private function AddTauntsQuestItems takes nothing returns nothing
     local integer i= 0
-    local integer max= GetTauntsCount()
+    local integer max = GetTauntsCount()
     call AddInfoQuestItem(GetLocalizedStringSafe("TAUNTS_QUEST_ITEM_0"))
     call AddInfoQuestItem(GetLocalizedStringSafe("TAUNTS_QUEST_ITEM_1"))
     loop
