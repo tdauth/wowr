@@ -198,6 +198,7 @@ private function Init takes nothing returns nothing
     call AddChange("Give boss Azgalor in Outland class Warlock.")
     call AddChange("Quest reward item Tome of Sacrifices for Blood Elf quest 3 cannot be sold anymore.")
     call AddChange("SetUnitSkinWithHeroIcon keeps unit name and proper name now.")
+    call AddChange("Add gate to the north of Echo Isles.")
 
 static if (MAP_DEBUG_MODE_ENABLED) then
     call AddVersion("4.6")

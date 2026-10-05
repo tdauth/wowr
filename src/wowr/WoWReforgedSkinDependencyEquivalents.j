@@ -10,9 +10,10 @@ endglobals
 
 function SetUnitSkinWithHeroIcon takes unit whichUnit, integer skinId returns nothing
     local player owner = GetOwningPlayer(whichUnit)
-    local string name = GetUnitName(whichUnit
+    local boolean isHero = IsUnitType(whichUnit, UNIT_TYPE_HERO)
+    local string name = GetUnitName(whichUnit)
     local string properName = GetHeroProperName(whichUnit)
-    if (IsUnitType(whichUnit, UNIT_TYPE_HERO)) then
+    if (isHero) then
         set properName = GetHeroProperName(whichUnit)
     endif
     call BlzSetUnitSkin(whichUnit, skinId)
@@ -23,7 +24,7 @@ function SetUnitSkinWithHeroIcon takes unit whichUnit, integer skinId returns no
     call RecreateAllEquipmentBags(owner)
     call UnitAddAbility(whichUnit, HERO_GLOW_ABILITY_ID)
     call BlzSetUnitName(whichUnit, name)
-    if (IsUnitType(whichUnit, UNIT_TYPE_HERO)) then
+    if (isHero) then
         call BlzSetHeroProperName(whichUnit, properName)
     endif
     set owner = null

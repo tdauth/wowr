@@ -61,6 +61,7 @@ private function Init takes nothing returns nothing
     call AddLeverGate(gg_unit_n0ES_0058, gg_dest_DTg7_2184)
     // Echo Isles
     call AddLeverGate(gg_unit_n0ES_0117, gg_dest_DTg8_2220)
+    call AddLeverGate(gg_unit_n0ES_0174, gg_dest_DTg5_2300)
     // Sunken Ruins
     call AddLeverGate(gg_unit_n0ES_0112, gg_dest_ZTsx_2195)
     call AddLeverGate(gg_unit_n0ES_2023, gg_dest_ZTsx_9720)
