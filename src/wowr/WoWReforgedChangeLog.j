@@ -196,6 +196,7 @@ private function Init takes nothing returns nothing
     call AddChange("All three Paladin bosses have True Sight now.")
     call AddChange("Add cheat \"-unlockcampaigns\".")
     call AddChange("Give boss Azgalor in Outland class Warlock.")
+    call AddChange("Quest reward item Tome of Sacrifices for Blood Elf quest 3 cannot be sold anymore.")
 
 static if (MAP_DEBUG_MODE_ENABLED) then
     call AddVersion("4.6")
