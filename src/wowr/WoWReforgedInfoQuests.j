@@ -56,7 +56,7 @@ private function AddClassesQuestItems takes nothing returns nothing
 endfunction
 
 private function AddTauntsQuestItems takes nothing returns nothing
-    local integer i= 0
+    local integer i = 0
     local integer max = GetTauntsCount()
     call AddInfoQuestItem(GetLocalizedStringSafe("TAUNTS_QUEST_ITEM_0"))
     call AddInfoQuestItem(GetLocalizedStringSafe("TAUNTS_QUEST_ITEM_1"))
