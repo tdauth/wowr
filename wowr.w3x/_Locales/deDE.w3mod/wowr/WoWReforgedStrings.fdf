@@ -1995,6 +1995,18 @@ StringList {
     IQ_CREDITS_TITLE                   "Mitwirkende",
     IQ_CREDITS_DESCRIPTION             "Alle Leute, die an dieser Karte mitgewirkt haben.",
     // Quests
+    LEADERBOARD_KILLED_UNDEAD          "Getötete Untote (5)", // udg_HumanQuest4Leaderboard
+    LEADERBOARD_SIEGE_OF_DALARAN       "Belagerung von Dalaran", // udg_DalaranQuest4Leaderboard
+    UNDEAD_WAVES_X                     "Wellen Untoter 10/", // udg_DalaranQuest4Leaderboard
+    LEADERBOARD_CENTAUR_KHANS          "Zentauren-Khans (7)", // udg_OrcQuest4Leaderboard
+    LEADERBOARD_UNDEAD_CREEPS          "Untote Unholde (20)", // udg_BloodElfQuest3Leaderboard
+    LEADERBOARD_PALADINS_SLAIN         "Erschlagene Paladine (5)", // udg_PaladinsSlain
+    LEADERBOARD_CHARMED_DRAENEI        "Bezauberte Draenei (5)", // udg_QuestDemon2Leaderboard
+    LEADERBOARD_DEMON_HEROES_SLAIN     "Erschlagene Dämonen-Helden (5)", // udg_DemonsSlain
+    LEADERBOARD_WHALES_HUNTED          "Gejagte Waale (6)", // udg_WhalesHunted
+    LEADERBOARD_OLD_GODS_SLAIN         "Erschlagene Alte Götter (3)", // udg_OldGodsSlain
+    LEADERBOARD_ELEMENTAL_LORDS_KILLED "Getötete Elementar-Lords (5)", // udg_ElementalLordsSlayed
+    LEADERBOARD_WILD_GODS_CAPTURED     "Gefangene Wilde Götter (4)", // udg_WildGodsCaptured
     // MainQuest1
     Q_ARCHIMONDE_DESCRIPTION           "Archimonde ist zurückgekehrt, um diese Welt mit Hilfe seiner Brennenden Legion zu erobern. Reist nach Fremdland, findet und besiegt ihn, um Azeroth zu beschützen.",
     Q_ARCHIMONDE_0                     "Besiegt Archimonde.",

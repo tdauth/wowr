@@ -1995,6 +1995,18 @@ StringList {
     IQ_CREDITS_TITLE                   "Credits",
     IQ_CREDITS_DESCRIPTION             "All the people who contributed to this map.",
     // Quests
+    LEADERBOARD_KILLED_UNDEAD          "Killed Undead (5)", // udg_HumanQuest4Leaderboard
+    LEADERBOARD_SIEGE_OF_DALARAN       "Siege of Dalaran", // udg_DalaranQuest4Leaderboard
+    UNDEAD_WAVES_X                     "Undead Waves 10/", // udg_DalaranQuest4Leaderboard
+    LEADERBOARD_CENTAUR_KHANS          "Centaur Khans (7)", // udg_OrcQuest4Leaderboard
+    LEADERBOARD_UNDEAD_CREEPS          "Undead Creeps (20)", // udg_BloodElfQuest3Leaderboard
+    LEADERBOARD_PALADINS_SLAIN         "Paladins slain (5)", // udg_PaladinsSlain
+    LEADERBOARD_CHARMED_DRAENEI        "Charmed Draenei (5)", // udg_QuestDemon2Leaderboard
+    LEADERBOARD_DEMON_HEROES_SLAIN     "Demon heroes slain (5)", // udg_DemonsSlain
+    LEADERBOARD_WHALES_HUNTED          "Whales hunted (6)", // udg_WhalesHunted
+    LEADERBOARD_OLD_GODS_SLAIN         "Old Gods slain (3)", // udg_OldGodsSlain
+    LEADERBOARD_ELEMENTAL_LORDS_KILLED "Elemental Lords killed (5)", // udg_ElementalLordsSlayed
+    LEADERBOARD_WILD_GODS_CAPTURED     "Wild Gods captured (4)", // udg_WildGodsCaptured
     // MainQuest1
     Q_ARCHIMONDE_DESCRIPTION           "Archimonde has returned to this world to conquer it with the help of his Burning Legion. Travel to Outland, find and defeat him to protect Azeroth.",
     Q_ARCHIMONDE_0                     "Defeat Archimonde.",
