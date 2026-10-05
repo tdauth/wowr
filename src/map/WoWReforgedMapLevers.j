@@ -67,6 +67,7 @@ private function Init takes nothing returns nothing
     call AddLeverGate(gg_unit_n0ES_2023, gg_dest_ZTsx_9720)
     // Outland
     call AddLeverGate(gg_unit_n0ES_0072, gg_dest_ATg4_2185)
+    call AddLeverGate(gg_unit_n0ES_0176, gg_dest_ATg1_2312)
 endfunction
 
 endlibrary
