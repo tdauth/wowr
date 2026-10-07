@@ -44,6 +44,7 @@ StringList {
     HERO_HAS_FULL_LIFE                 "Hero has full life.",
     ONE_ABILITY_HAS_COOLDOWN           "At least one ability still has a cooldown.",
     REACHED_LIMIT_OF_COLORS            "Reached limit of colors.",
+    YOU_CANNOT_BUILD_HERE              "You cannot build here.",
     // Players
     PLAYER_HAS_LEFT_GAME               "%1% has left the game.",
     // -playercolor, -playername, -rename, -scale, -teamcolor

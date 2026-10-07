@@ -111,6 +111,7 @@
 //! import "wowr/WoWReforgedPortals.j"
 //! import "wowr/WoWReforgedPowerGenerators.j"
 ///! import "wowr/WoWReforgedPreloadScript.j"
+//! import "wowr/WoWReforgedPrevention.j"
 //! import "wowr/WoWReforgedProfessions.j"
 //! import "wowr/WoWReforgedProfessionArchaeologist.j"
 //! import "wowr/WoWReforgedProfessionArmorer.j"
