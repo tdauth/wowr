@@ -44,6 +44,7 @@ StringList {
     HERO_HAS_FULL_LIFE                 "Held hat volles Leben.",
     ONE_ABILITY_HAS_COOLDOWN           "Mindestens eine Fähigkeit ist noch nicht wieder bereit.",
     REACHED_LIMIT_OF_COLORS            "Maximum der Farben erreicht.",
+    YOU_CANNOT_BUILD_HERE              "Sie können hier nicht bauen.",
     // Players
     PLAYER_HAS_LEFT_GAME               "%1% hat das Spiel verlassen.",
     // -playercolor, -playername, -rename, -scale, -teamcolor
