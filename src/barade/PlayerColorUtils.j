@@ -55,10 +55,8 @@ function GetPlayerColorRed takes playercolor c returns integer
         return 0xA4
     elseif c == PLAYER_COLOR_BLACK then
         return 0x00
-    else
-        return 0xFF
     endif
-    return 0
+    return 0xFF
 endfunction
 
 function GetPlayerColorGreen takes playercolor c returns integer
@@ -112,9 +110,8 @@ function GetPlayerColorGreen takes playercolor c returns integer
         return 0x6F
     elseif c == PLAYER_COLOR_BLACK then
         return 0x00
-    else
-        return 0xFF
     endif
+    return 0xFF
 endfunction
 
 function GetPlayerColorBlue takes playercolor c returns integer
@@ -168,9 +165,8 @@ function GetPlayerColorBlue takes playercolor c returns integer
         return 0x33
     elseif c == PLAYER_COLOR_BLACK then
         return 0x00
-    else
-        return 0xFF
     endif
+    return 0xFF
 endfunction
 
 function GetPlayerColorString takes playercolor c, string text returns string
@@ -225,9 +221,8 @@ function GetPlayerColorString takes playercolor c, string text returns string
         return "|cffA46F33" + text + "|r"
     elseif c == PLAYER_COLOR_BLACK then
         return "|cff000000" + text + "|r"
-    else
-        return "|cffFFFFFF" + text + "|r"
     endif
+    return "|cffFFFFFF" + text + "|r"
 endfunction
 
 function GetPlayerNameColoredSimple takes player whichPlayer returns string
