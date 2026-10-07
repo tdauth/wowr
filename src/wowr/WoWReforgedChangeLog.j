@@ -200,6 +200,7 @@ private function Init takes nothing returns nothing
     call AddChange("SetUnitSkinWithHeroIcon keeps unit name and proper name now.")
     call AddChange("Add gate to the north of Echo Isles.")
     call AddChange("More shallow water at the coast of Northrend.")
+    call AddChange("Store Fountain of Life per player.")
 
 static if (MAP_DEBUG_MODE_ENABLED) then
     call AddVersion("4.6")

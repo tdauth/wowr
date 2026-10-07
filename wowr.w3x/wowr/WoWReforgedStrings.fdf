@@ -1231,6 +1231,8 @@ StringList {
     DISABLED_BAG_INFO                  "Disabled bag info.",
     ENABLED_BACKPACK_UI                "Enabled UI for backpack on selection.",
     DISABLED_BACKPACK_UI               "Disabled UI for backpack on selection.",
+    ENABLED_GAIA                       "Enabled rescuing units from player Gaia.",
+    DISABLED_GAIA                      "Disabled rescuing units from player Gaia.",
     // Votes
     IQ_ENABLED                         "Enabled",
     IQ_DISABLED                        "Disabled",
@@ -1868,6 +1870,7 @@ StringList {
     CC_RESET_REVOLUTION                "'-resetevolution X': Resets level of research Evolution back to X.",
     CC_BAG_INFO                        "'-baginfoon/off': Enables/disables information text when picking up items into the backpack.",
     CC_BAG_UI                          "'-baguion/off': Enables/disables automatically opening the backpack UI when selecting the backpack.",
+    CC_GAIA                            "'-gaiaon/off': Makes units owned by player Gaia rescuable/not rescuable for your.",
     // Info Quests
     IQ_MAP_TITLE                       "Map",
     IQ_MAP_DESCRIPTION                 "Welcome to World of Warcraft Reforged. This map is an open world RPG. This means that you can do whatever you want to. Complete some of the optional quests, hunt other players or forge alliances. Baradé wishes you a lot of fun while playing. I thank EvilPitlord and DeMoNiKuS for the creation of the original map 'World of Warcraft Reborn'.",

@@ -1,4 +1,4 @@
-library WoWReforgedChatCommands initializer Init requires Ascii, SimError, HostUtils, StringUtils, StringFormat, SafeString, ForceUtils, PlayerColorUtils, WoWReforgedUtils, WoWReforgedMapData, optional QueueUI, WoWReforgedPlayerInfos, WoWReforgedStats, WoWReforgedSaveCodeObjects, WoWReforgedHeroes, WoWReforgedBosses, WoWReforgedQuests, WoWReforgedProfessions, optional WoWReforgedUiActionsBar, WoWReforgedStats, WoWReforgedAttributes, WoWReforgedAccount, WoWReforgedComputerStartLocations, WoWReforgedSaveCodesAll, WoWReforgedZones, WoWReforgedCinematic, WoWReforgedTownHalls, WoWReforgedRaces, WoWReforgedBackpacks, WoWReforgedUiBackpack, WoWReforgedPlayerSelection, WoWReforgedVIPs, optional OrdersWatcher, OnStartGame
+library WoWReforgedChatCommands initializer Init requires Ascii, SimError, HostUtils, StringUtils, StringFormat, SafeString, ForceUtils, PlayerColorUtils, WoWReforgedUtils, WoWReforgedMapData, optional QueueUI, WoWReforgedPlayerInfos, WoWReforgedStats, WoWReforgedSaveCodeObjects, WoWReforgedHeroes, WoWReforgedBosses, WoWReforgedQuests, WoWReforgedProfessions, optional WoWReforgedUiActionsBar, WoWReforgedStats, WoWReforgedAttributes, WoWReforgedAccount, WoWReforgedComputerStartLocations, WoWReforgedSaveCodesAll, WoWReforgedZones, WoWReforgedCinematic, WoWReforgedTownHalls, WoWReforgedRaces, WoWReforgedBackpacks, WoWReforgedUiBackpack, WoWReforgedPlayerSelection, WoWReforgedVIPs, WoWReforgedProfessionInscriptor, WoWReforgedProfessionHunter, WoWReforgedProfessionEnchanter, WoWReforgedPlayers, optional OrdersWatcher, OnStartGame
 
 /*
  * Chat commands and cheats.
@@ -340,6 +340,11 @@ endfunction
 
 private function Host takes nothing returns nothing
     call DisplayTextToPlayer(GetTriggerPlayer(), 0.0, 0.0, Format(GetLocalizedStringSafe("HOST_X")).s(GetPlayerNameColored(GetHost())).result())
+endfunction
+
+private function Revive takes nothing returns nothing
+    call PanCameraToTimedForPlayer(GetTriggerPlayer(), GetUnitX(GetPlayerFountainOfLife(GetTriggerPlayer())), GetUnitY(GetPlayerFountainOfLife(GetTriggerPlayer())), 0.0)
+    call SelectUnitForPlayerSingle(GetPlayerFountainOfLife(GetTriggerPlayer()), GetTriggerPlayer() )
 endfunction
 
 private function Get takes nothing returns nothing
@@ -1304,6 +1309,39 @@ private function TeamColor takes nothing returns nothing
     endif
 endfunction
 
+private function EnumMakeRescuable takes nothing returns nothing
+    call MakeUnitRescuableToForceBJ(GetEnumUnit(), true, udg_GaiaRescuingPlayers)
+endfunction
+
+private function GaiaOn takes nothing returns nothing
+    call DisplayTextToPlayer(GetTriggerPlayer(), 0.0, 0.0, GetLocalizedString("ENABLED_GAIA"))
+    call ForceAddPlayerSimple(GetTriggerPlayer(), udg_GaiaRescuingPlayers)
+    set bj_wantDestroyGroup = true
+    call ForGroupBJ(GetUnitsOfPlayerAll(udg_Gaia), function EnumMakeRescuable)
+endfunction
+
+private function EnumMakeUnrescuable takes nothing returns nothing
+    call MakeUnitRescuableToForceBJ(GetEnumUnit(), true, udg_GaiaRescuingPlayers)
+endfunction
+
+private function GaiaOff takes nothing returns nothing
+    call DisplayTextToPlayer(GetTriggerPlayer(), 0.0, 0.0, GetLocalizedString("DISABLED_GAIA"))
+    call ForceRemovePlayerSimple(GetTriggerPlayer(), udg_GaiaRescuingPlayers)
+    set bj_wantDestroyGroup = true
+    call ForGroupBJ(GetUnitsOfPlayerAll(udg_Gaia), function EnumMakeUnrescuable)
+endfunction
+
+private function Enchanter takes nothing returns nothing
+    call DisplayTextToPlayer(GetTriggerPlayer(), 0.0, 0.0, EnchanterInfo(GetTriggerPlayer()))
+endfunction
+
+private function Inscriptor takes nothing returns nothing
+    call DisplayTextToPlayer(GetTriggerPlayer(), 0.0, 0.0, InscriptorInfo(GetTriggerPlayer()))
+endfunction
+
+private function Trophies takes nothing returns nothing
+    call DisplayTextToPlayer(GetTriggerPlayer(), 0.0, 0.0, TrophiesInfo(GetTriggerPlayer()))
+endfunction
 
 // Cheats
 
@@ -1805,6 +1843,8 @@ private function Init takes nothing returns nothing
     call Add("-info", false, function Info)
     call AddAlias("-i", false)
     call Add("-host", true, function Host)
+    call Add("-revive", true, function Revive)
+    call AddAlias("-x", true)
 
     call Add("-get", true, function Get)
     call AddAlias("-g", true)
@@ -1945,6 +1985,16 @@ private function Init takes nothing returns nothing
     call Add("-rename", false, function Rename)
     call Add("-scale", false, function Scale)
     call Add("-teamcolor", false, function TeamColor)
+
+    call Add("-gaiaon", true, function GaiaOn)
+    call Add("-gaiaoff", true, function GaiaOff)
+
+    call Add("-enchanter", true, function Enchanter)
+    call AddAlias("-e", true)
+    call Add("-inscriptor", true, function Inscriptor)
+    call AddAlias("-n", true)
+    call Add("-trophies", true, function Trophies)
+    call AddAlias("-t", true)
 
     // Cheats
     call AddCheat("-kill", true, function CheatKill)

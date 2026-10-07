@@ -46,7 +46,7 @@ StringList {
     REACHED_LIMIT_OF_COLORS            "Maximum der Farben erreicht.",
     // Players
     PLAYER_HAS_LEFT_GAME               "%1% hat das Spiel verlassen.",
-    // -playercolor, -playername
+    // -playercolor, -playername, -rename, -scale, -teamcolor
     X_CHANGED_COLOR_FOR_PLAYER_Y       "%1% hat die Farbe von Spieler %2% geändert.",
     X_CHANGED_NAME_FOR_PLAYER_Y        "%1% hat den Namen von Spieler %2% geändert.",
     INVALID_PLAYER_COLOR_X             "Ungültige Spielerfarbe %1%.",
@@ -1231,6 +1231,8 @@ StringList {
     DISABLED_BAG_INFO                  "Taschen-Info deaktiviert.",
     ENABLED_BACKPACK_UI                "UI für Rucksack bei Auswahl aktiviert.",
     DISABLED_BACKPACK_UI               "UI für Rucksack bei Auswahl deaktiviert.",
+    ENABLED_GAIA                       "Enabled rescuing units from player Gaia.",
+    DISABLED_GAIA                      "Disabled rescuing units from player Gaia.",
     // Votes
     IQ_ENABLED                         "Aktiviert",
     IQ_DISABLED                        "Deaktiviert",
@@ -1868,6 +1870,7 @@ StringList {
     CC_RESET_REVOLUTION                "'-resetevolution X': Resets level of research Evolution back to X.",
     CC_BAG_INFO                        "'-baginfoon/off': Enables/disables information text when picking up items into the backpack.",
     CC_BAG_UI                          "'-baguion/off': Enables/disables automatically opening the backpack UI when selecting the backpack.",
+    CC_GAIA                            "'-gaiaon/off': Makes units owned by player Gaia rescuable/not rescuable for your.",
     // Info Quests
     IQ_MAP_TITLE                       "Karte",
     IQ_MAP_DESCRIPTION                 "Willkommen in World of Warcraft Reforged. Bei dieser Karte handelt es sich um ein Rollenspiel mit offener Welt. Das bedeutet , Sie können tun und lassen, was immer Sie wollen. Erfüllen Sie einige der optionalen Quests, jagen Sie andere Spieler oder schmieden Sie Allianzen. Baradé wünscht Ihnen viel Spaß beim Spielen. Ich bedanke mich bei EvilPitlord und DeMoNiKuS für die Erstellung der ursprünglichen Karte 'World of Warcraft Reborn'.",

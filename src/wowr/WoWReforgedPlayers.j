@@ -1,8 +1,17 @@
 library WoWReforgedPlayers initializer Init requires ForceUtils, WoWReforgedStats, WoWReforgedBackpacks, WoWReforgedNeutralZone
 
 globals
+    private unit array fountainOfLife
     private trigger leavesTrigger = CreateTrigger()
 endglobals
+
+function SetPlayerFountainOfLife takes player whichPlayer, unit whichUnit returns nothing
+    set fountainOfLife[GetPlayerId(whichPlayer)] = whichUnit
+endfunction
+
+function GetPlayerFountainOfLife takes player whichPlayer returns unit
+    return fountainOfLife[GetPlayerId(whichPlayer)]
+endfunction
 
 private function EnumRegisterPlayerLeavesEvent takes nothing returns nothing
     call TriggerRegisterPlayerEvent(leavesTrigger, GetEnumPlayer(), EVENT_PLAYER_LEAVE)

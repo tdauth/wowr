@@ -18,6 +18,14 @@ private function AddTentacle takes unit whichUnit returns nothing
     call AddSummonedUnitBonus(whichUnit, MAX_HERO_SPELL_LEVEL)
 endfunction
 
+private struct CustomUnitTypeFountainOfLife extends CustomUnitType
+
+    public stub method onEnter takes unit whichUnit returns nothing
+        call SetPlayerFountainOfLife(GetOwningPlayer(whichUnit), whichUnit)
+    endmethod
+
+endstruct
+
 private struct CustomUnitTypePlayerHideout extends CustomUnitType
 
     public stub method onEnter takes unit whichUnit returns nothing
@@ -596,6 +604,8 @@ private function Init takes nothing returns nothing
     local CustomUnitType c = 0
     local integer i = 0
     local integer max = 0
+
+    call AddCustomUnitType(FOUNTAIN_OF_LIFE, CustomUnitTypeFountainOfLife.create())
 
     call AddCustomUnitType(HIDEOUT, CustomUnitTypePlayerHideout.create())
 
