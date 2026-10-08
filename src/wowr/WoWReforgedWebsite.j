@@ -3543,8 +3543,56 @@ private function GenerateEquipment takes nothing returns nothing
     call FileWriteLine("<!-- Equipment generated with chat command \"-website\". -->")
 
     loop
-        exitwhen (i == max)
+        exitwhen (i >= max)
         set itemTypeId = GetEquipmentItemTypeId(i)
+        if (itemTypeId != 0) then
+            set whichItem = CreateItem(itemTypeId, 0.0, 0.0)
+            call FileWriteLine("<tr id=\"" + A2S(itemTypeId) + "\">")
+
+            // icon
+            call FileWriteLine("<td>")
+            call IconToHtml(itemTypeId)
+            call FileWriteLine("</td>")
+
+            // name
+            call FileWriteLine("<td>")
+            call FileWriteLine(GetObjectName(itemTypeId))
+            call FileWriteLine("</td>")
+
+            // level
+            call FileWriteLine("<td>")
+            call FileWriteLine(I2S(GetItemLevel(whichItem)))
+            call FileWriteLine("</td>")
+
+            // tooltip
+            //call FileWriteLine("<td>")
+            //call FormatTooltip(BlzGetItemExtendedTooltip(whichItem))
+            //call FileWriteLine("</td>")
+
+            // gold cost
+            call GenerateItemTypeIdGoldCost(itemTypeId)
+
+            // lumber cost
+            call GenerateItemTypeIdLumberCost(itemTypeId)
+
+            // description
+            call FileWriteLine("<td>")
+            call FormatTooltip(BlzGetAbilityExtendedTooltip(itemTypeId, 0))
+            call FileWriteLine("</td>")
+
+            call FileWriteLine("</tr>")
+
+            call RemoveItem(whichItem)
+            set whichItem = null
+        endif
+        set i = i + 1
+    endloop
+
+    set i = 0
+    set max = GetMaxForsakenKingdomEquipmentItemTypeIds()
+    loop
+        exitwhen (i >= max)
+        set itemTypeId = GetForsakenKingdomEquipmentItemTypeId(i)
         if (itemTypeId != 0) then
             set whichItem = CreateItem(itemTypeId, 0.0, 0.0)
             call FileWriteLine("<tr id=\"" + A2S(itemTypeId) + "\">")
