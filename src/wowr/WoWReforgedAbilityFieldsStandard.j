@@ -440,29 +440,29 @@ private function Init takes nothing returns nothing
     // Forsaken Kingdom
 
     // Consecration
-    call RegisterAbilityFieldType('hcr1', ABILITY_FIELD_TYPE_DAMAGE_REAL)
-    call RegisterAbilityFieldType('hcr2', ABILITY_FIELD_TYPE_DAMAGE_REAL)
-    call RegisterAbilityFieldType('hcr3', ABILITY_FIELD_TYPE_CHANCE_REAL)
+    call RegisterAbilityFieldType(GetHandleId(ABILITY_RLF_ALLY_HEALING_PER_SECOND), ABILITY_FIELD_TYPE_DAMAGE_REAL)
+    call RegisterAbilityFieldType(GetHandleId(ABILITY_RLF_ENEMY_DAMAGE_PER_SECOND), ABILITY_FIELD_TYPE_DAMAGE_REAL)
+    call RegisterAbilityFieldType(GetHandleId(ABILITY_RLF_ENEMY_HEALING_REDUCTION_PERCENT), ABILITY_FIELD_TYPE_CHANCE_REAL)
     // Mind Control
     call RegisterAbilityFieldType('hmc3', ABILITY_FIELD_TYPE_SUMMONED_UNITS_INTEGER)
     // Cleansing Fire
-    call RegisterAbilityFieldType('hcl1', ABILITY_FIELD_TYPE_DAMAGE_REAL)
-    call RegisterAbilityFieldType('hcl2', ABILITY_FIELD_TYPE_DEFENSE_REAL)
-    call RegisterAbilityFieldType('hcl3', ABILITY_FIELD_TYPE_DURATION_REAL)
-    call RegisterAbilityFieldType('hcl4', ABILITY_FIELD_TYPE_CHANCE_REAL)
-    call RegisterAbilityFieldType('hcl5', ABILITY_FIELD_TYPE_CHANCE_REAL)
-    call RegisterAbilityFieldType('hcl6', ABILITY_FIELD_TYPE_DURATION_REAL)
-    call RegisterAbilityFieldType('hcl7', ABILITY_FIELD_TYPE_DAMAGE_REAL)
+    call RegisterAbilityFieldType(GetHandleId(ABILITY_RLF_ALLY_HEALING_BASE), ABILITY_FIELD_TYPE_DAMAGE_REAL)
+    call RegisterAbilityFieldType(GetHandleId(ABILITY_RLF_HEALING_PER_DEBUFF_REMOVED), ABILITY_FIELD_TYPE_DEFENSE_REAL)
+    call RegisterAbilityFieldType(GetHandleId(ABILITY_RLF_ALLY_BUFF_DURATION), ABILITY_FIELD_TYPE_DURATION_REAL)
+    call RegisterAbilityFieldType(GetHandleId(ABILITY_RLF_ALLY_DAMAGE_BONUS_PERCENT_BASE), ABILITY_FIELD_TYPE_CHANCE_REAL)
+    call RegisterAbilityFieldType(GetHandleId(ABILITY_RLF_ALLY_DAMAGE_BONUS_PERCENT_PER_DEBUFF_REMOVED), ABILITY_FIELD_TYPE_CHANCE_REAL)
+    call RegisterAbilityFieldType(GetHandleId(ABILITY_RLF_ENEMY_STUN_DURATION), ABILITY_FIELD_TYPE_DURATION_REAL)
+    call RegisterAbilityFieldType(GetHandleId(ABILITY_RLF_DAMAGE_TO_SUMMONS), ABILITY_FIELD_TYPE_DAMAGE_REAL)
     // Holy Wrath
     call RegisterAbilityFieldType('pbl1', ABILITY_FIELD_TYPE_DAMAGE_REAL)
     call RegisterAbilityFieldType('pbl6', ABILITY_FIELD_TYPE_DEFENSE_REAL)
     call RegisterAbilityFieldType('pbl8', ABILITY_FIELD_TYPE_DAMAGE_REAL)
     // Sacred Aura
-    call RegisterAbilityFieldType('hsa1', ABILITY_FIELD_TYPE_CHANCE_REAL)
-    call RegisterAbilityFieldType('hsa2', ABILITY_FIELD_TYPE_CHANCE_REAL)
+    call RegisterAbilityFieldType(GetHandleId(ABILITY_RLF_ALLY_PERCENT_MAGIC_RESIST_INCREASE), ABILITY_FIELD_TYPE_CHANCE_REAL)
+    call RegisterAbilityFieldType(GetHandleId(ABILITY_RLF_ALLY_PERCENT_HEALING_INCREASE), ABILITY_FIELD_TYPE_CHANCE_REAL)
     // Righteous Fury
     call RegisterAbilityFieldType('Rng1', ABILITY_FIELD_TYPE_DAMAGE_REAL)
-    call RegisterAbilityFieldType('chr2', ABILITY_FIELD_TYPE_DAMAGE_REAL)
+    call RegisterAbilityFieldType(GetHandleId(ABILITY_RLF_DASH_DAMAGE), ABILITY_FIELD_TYPE_DAMAGE_REAL)
     call RegisterAbilityFieldType('nrf3', ABILITY_FIELD_TYPE_CHANCE_REAL)
     call RegisterAbilityFieldType('nrf4', ABILITY_FIELD_TYPE_CHANCE_REAL)
     // Raise the Banner
@@ -690,30 +690,30 @@ private function Init takes nothing returns nothing
     call RegisterAbilityField(ABILITY_GUIDING_HAND, 'hgh6')
 
     call RegisterUnitAbility(ABILITY_CONSECRATION) // Forsaken Kingdom
-    call RegisterAbilityField(ABILITY_CONSECRATION, 'hcr1')
-    call RegisterAbilityField(ABILITY_CONSECRATION, 'hcr2')
-    call RegisterAbilityField(ABILITY_CONSECRATION, 'hcr3')
+    call RegisterAbilityField(ABILITY_CONSECRATION, GetHandleId(ABILITY_RLF_ALLY_HEALING_PER_SECOND))
+    call RegisterAbilityField(ABILITY_CONSECRATION, GetHandleId(ABILITY_RLF_ENEMY_DAMAGE_PER_SECOND))
+    call RegisterAbilityField(ABILITY_CONSECRATION, GetHandleId(ABILITY_RLF_ENEMY_HEALING_REDUCTION_PERCENT))
 
     call RegisterUnitAbility(ABILITY_HEALING_WAVE)
     call RegisterAbilityField(ABILITY_HEALING_WAVE, GetHandleId(ABILITY_ILF_NUMBER_OF_TARGETS_HIT))
     call RegisterAbilityField(ABILITY_HEALING_WAVE, GetHandleId(ABILITY_RLF_DAMAGE_PER_TARGET_OCL1))
 
     call RegisterUnitAbility(ABILITY_SACRED_AURA) // Forsaken Kingdom
-    call RegisterAbilityField(ABILITY_SACRED_AURA, 'hsa1')
-    call RegisterAbilityField(ABILITY_SACRED_AURA, 'hsa2')
+    call RegisterAbilityField(ABILITY_SACRED_AURA, GetHandleId(ABILITY_RLF_ALLY_PERCENT_MAGIC_RESIST_INCREASE))
+    call RegisterAbilityField(ABILITY_SACRED_AURA, GetHandleId(ABILITY_RLF_ALLY_PERCENT_HEALING_INCREASE))
 
     call RegisterUnitAbility(ABILITY_MIND_CONTROL) // Forsaken Kingdom
     call RegisterAbilityField(ABILITY_MIND_CONTROL, GetHandleId(ABILITY_ILF_MAXIMUM_CREEP_LEVEL_POS1))
     call RegisterAbilityField(ABILITY_MIND_CONTROL, 'hmc3')
 
     call RegisterUnitAbility(ABILITY_CLEANSING_FIRE) // Forsaken Kingdom
-    call RegisterAbilityField(ABILITY_CLEANSING_FIRE, 'hcl1')
-    call RegisterAbilityField(ABILITY_CLEANSING_FIRE, 'hcl2')
-    call RegisterAbilityField(ABILITY_CLEANSING_FIRE, 'hcl3')
-    call RegisterAbilityField(ABILITY_CLEANSING_FIRE, 'hcl4')
-    call RegisterAbilityField(ABILITY_CLEANSING_FIRE, 'hcl5')
-    call RegisterAbilityField(ABILITY_CLEANSING_FIRE, 'hcl6')
-    call RegisterAbilityField(ABILITY_CLEANSING_FIRE, 'hcl7')
+    call RegisterAbilityField(ABILITY_CLEANSING_FIRE, GetHandleId(ABILITY_RLF_ALLY_HEALING_BASE))
+    call RegisterAbilityField(ABILITY_CLEANSING_FIRE, GetHandleId(ABILITY_RLF_HEALING_PER_DEBUFF_REMOVED))
+    call RegisterAbilityField(ABILITY_CLEANSING_FIRE, GetHandleId(ABILITY_RLF_ALLY_BUFF_DURATION))
+    call RegisterAbilityField(ABILITY_CLEANSING_FIRE, GetHandleId(ABILITY_RLF_ALLY_DAMAGE_BONUS_PERCENT_BASE))
+    call RegisterAbilityField(ABILITY_CLEANSING_FIRE, GetHandleId(ABILITY_RLF_ALLY_DAMAGE_BONUS_PERCENT_PER_DEBUFF_REMOVED))
+    call RegisterAbilityField(ABILITY_CLEANSING_FIRE, GetHandleId(ABILITY_RLF_ENEMY_STUN_DURATION))
+    call RegisterAbilityField(ABILITY_CLEANSING_FIRE, GetHandleId(ABILITY_RLF_DAMAGE_TO_SUMMONS))
 
     call RegisterUnitAbility(ABILITY_HOLY_WRATH) // Forsaken Kingdom
     call RegisterAbilityField(ABILITY_HOLY_WRATH, 'pbl1')
@@ -726,7 +726,7 @@ private function Init takes nothing returns nothing
 
     call RegisterUnitAbility(ABILITY_RIGHTEOUS_FURY) // Forsaken Kingdom
     call RegisterAbilityField(ABILITY_RIGHTEOUS_FURY, 'Rng1')
-    call RegisterAbilityField(ABILITY_RIGHTEOUS_FURY, 'chr2')
+    call RegisterAbilityField(ABILITY_RIGHTEOUS_FURY, GetHandleId(ABILITY_RLF_DASH_DAMAGE))
     call RegisterAbilityField(ABILITY_RIGHTEOUS_FURY, 'nrf3')
     call RegisterAbilityField(ABILITY_RIGHTEOUS_FURY, 'nrf4')
 

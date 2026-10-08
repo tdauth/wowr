@@ -18,10 +18,10 @@ function DropAllItemsFromHero takes unit hero returns integer
 
 	// Forsaken Kingdom
 	set i = 0
-	set max = UnitExtendedInventorySize(hero)
+	set max = BlzUnitExtendedInventorySize(hero)
 	loop
 		exitwhen (i >= max)
-		set slotItem = UnitItemInBagSlot(hero, i)
+		set slotItem = BlzUnitItemInBagSlot(hero, i)
 		if (slotItem != null) then
 			call UnitRemoveItem(hero, slotItem)
 			set result = result + 1
@@ -33,7 +33,7 @@ function DropAllItemsFromHero takes unit hero returns integer
 	set i = 0
 	loop
 		exitwhen (i >= bj_MAX_EQUIPMENT_INVENTORY)
-		set slotItem = UnitItemInEquipmentSlot(hero, ConvertLoadoutSlot(i))
+		set slotItem = BlzUnitItemInEquipmentSlot(hero, ConvertLoadoutSlot(i))
 		if (slotItem != null) then
 			call UnitRemoveItem(hero, slotItem)
 			set result = result + 1
@@ -64,10 +64,10 @@ function DropAllItemsFromHeroAt takes unit hero, real x, real y returns integer
 
 	// Forsaken Kingdom
 	set i = 0
-	set max = UnitExtendedInventorySize(hero)
+	set max = BlzUnitExtendedInventorySize(hero)
 	loop
 		exitwhen (i >= max)
-		set slotItem = UnitItemInBagSlot(hero, i)
+		set slotItem = BlzUnitItemInBagSlot(hero, i)
 		if (slotItem != null) then
 			call UnitRemoveItem(hero, slotItem)
 			call SetItemPosition(slotItem, x, y)
@@ -80,7 +80,7 @@ function DropAllItemsFromHeroAt takes unit hero, real x, real y returns integer
 	set i = 0
 	loop
 		exitwhen (i >= bj_MAX_EQUIPMENT_INVENTORY)
-		set slotItem = UnitItemInEquipmentSlot(hero, ConvertLoadoutSlot(i))
+		set slotItem = BlzUnitItemInEquipmentSlot(hero, ConvertLoadoutSlot(i))
 		if (slotItem != null) then
 			call UnitRemoveItem(hero, slotItem)
 			call SetItemPosition(slotItem, x, y)
@@ -120,10 +120,10 @@ function CountItemsOfItemTypeId takes unit whichUnit, integer itemId returns int
 
 	// Forsaken Kingdom
 	set i = 0
-	set max = UnitExtendedInventorySize(whichUnit)
+	set max = BlzUnitExtendedInventorySize(whichUnit)
 	loop
 		exitwhen (i >= max)
-		set slotItem = UnitItemInBagSlot(whichUnit, i)
+		set slotItem = BlzUnitItemInBagSlot(whichUnit, i)
 		if (slotItem != null) then
 			if (GetItemTypeId(slotItem) == itemId) then
 				set result = result + IMaxBJ(GetItemCharges(slotItem), 1)
@@ -136,7 +136,7 @@ function CountItemsOfItemTypeId takes unit whichUnit, integer itemId returns int
 	set i = 0
 	loop
 		exitwhen (i >= bj_MAX_EQUIPMENT_INVENTORY)
-		set slotItem = UnitItemInEquipmentSlot(whichUnit, ConvertLoadoutSlot(i))
+		set slotItem = BlzUnitItemInEquipmentSlot(whichUnit, ConvertLoadoutSlot(i))
 		if (slotItem != null) then
 			if (GetItemTypeId(slotItem) == itemId) then
 				set result = result + IMaxBJ(GetItemCharges(slotItem), 1)
@@ -169,10 +169,10 @@ function RemoveAllItemsOfTypeId takes unit whichUnit, integer itemId returns int
 
 	// Forsaken Kingdom
 	set i = 0
-	set max = UnitExtendedInventorySize(whichUnit)
+	set max = BlzUnitExtendedInventorySize(whichUnit)
 	loop
 		exitwhen (i >= max)
-		set slotItem = UnitItemInBagSlot(whichUnit, i)
+		set slotItem = BlzUnitItemInBagSlot(whichUnit, i)
 		if (slotItem != null) then
 			if (GetItemTypeId(slotItem) == itemId) then
 				set result = result + IMaxBJ(GetItemCharges(slotItem), 1)
@@ -186,7 +186,7 @@ function RemoveAllItemsOfTypeId takes unit whichUnit, integer itemId returns int
 	set i = 0
 	loop
 		exitwhen (i >= bj_MAX_EQUIPMENT_INVENTORY)
-		set slotItem = UnitItemInEquipmentSlot(whichUnit, ConvertLoadoutSlot(i))
+		set slotItem = BlzUnitItemInEquipmentSlot(whichUnit, ConvertLoadoutSlot(i))
 		if (slotItem != null) then
 			if (GetItemTypeId(slotItem) == itemId) then
 				set result = result + IMaxBJ(GetItemCharges(slotItem), 1)
@@ -242,12 +242,12 @@ function DropFirstItemFromHero takes unit hero, integer itemTypeId returns item
 
 	// Forsaken Kingdom
 	set i = 0
-	set max = UnitExtendedInventorySize(hero)
+	set max = BlzUnitExtendedInventorySize(hero)
 	loop
 		exitwhen (i >= max or whichItem != null)
-		set slotItem = UnitItemInBagSlot(hero, i)
+		set slotItem = BlzUnitItemInBagSlot(hero, i)
 		if (slotItem != null and GetItemTypeId(slotItem) == itemTypeId) then
-			call UnitRemoveItem(hero, UnitItemInBagSlot(hero, i))
+			call UnitRemoveItem(hero, slotItem)
 			set whichItem = slotItem
 		endif
 		set slotItem = null
@@ -257,7 +257,7 @@ function DropFirstItemFromHero takes unit hero, integer itemTypeId returns item
 	set i = 0
 	loop
 		exitwhen (i >= bj_MAX_EQUIPMENT_INVENTORY or whichItem != null)
-		set slotItem = UnitItemInEquipmentSlot(hero, ConvertLoadoutSlot(i))
+		set slotItem = BlzUnitItemInEquipmentSlot(hero, ConvertLoadoutSlot(i))
 		if (slotItem != null and GetItemTypeId(slotItem) == itemTypeId) then
 			call UnitRemoveItem(hero, slotItem)
 			set whichItem = slotItem
