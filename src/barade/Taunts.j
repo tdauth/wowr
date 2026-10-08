@@ -2,11 +2,11 @@ library Taunts initializer Init requires PlayerUtils, SoundUtils, optional Quest
 
 globals
     private hashtable h = InitHashtable()
-    
+
     private trigger TauntsEnableChatTrigger = CreateTrigger()
     private trigger TauntsDisableChatTrigger = CreateTrigger()
     private trigger TauntsListChatTrigger = CreateTrigger()
-    
+
     private boolean array TauntsEnabled
 
     private integer TauntsCount = 0
@@ -56,7 +56,7 @@ function PlayPlayerTaunt takes player whichPlayer, integer taunt returns nothing
     local player slotPlayer = null
     local integer i = 0
     loop
-        exitwhen (i == bj_MAX_PLAYERS)
+        exitwhen (i >= bj_MAX_PLAYERS)
         set slotPlayer = Player(i)
         if (IsPlayerTauntsEnabled(slotPlayer)) then
             call PlaySoundForPlayer(slotPlayer, GetTauntSound(taunt))
@@ -113,7 +113,7 @@ endfunction
 private function Init takes nothing returns nothing
     local integer i = 0
     loop
-        exitwhen (i == bj_MAX_PLAYERS)
+        exitwhen (i >= bj_MAX_PLAYERS)
         set TauntsEnabled[i] = true
         set i = i + 1
     endloop
