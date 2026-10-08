@@ -2724,11 +2724,11 @@ Nachtelfen-, Untote- und Zwergen-KI kann Unterkünfte nicht benutzen. Sie brauch
 
 STRING 456
 {
-- Schnellstart mit -rs.
+- Schnellstart mit "-rs".
 - Kriegsherren errichten eine Basis und bilden eine Armee aus, Freiberufler steigen schneller Stufen auf.
 - Erhaltet bessere Gegenstände durch Quests und die Tötung von Bossen.
 - Schmiedet Allianzen über das Allianzmenü von Warcraft (F11) oder Chat-Befehle.
-- Belebt eure toten Helden auf Theramore wieder.
+- Belebt eure toten Helden auf Theramore mit "-revive" wieder.
 - Verkauft hergestellte Gegenstände für Gold.
 - Speichert eure Helden mit "-save".
 - Seht Quest-Markierungen mit "-ping".

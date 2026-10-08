@@ -2724,11 +2724,11 @@ Night Elf and Undead AI cannot use housings. They need a bonus.
 
 STRING 456
 {
-- Quick start with -rs.
+- Quick start with "-rs".
 - Warlords build a base and army, Freelancers level faster.
 - Get better items from quests and killing bosses.
 - Forge alliances via Warcraft's ally menu (F11) or chat commands.
-- Revive your dead heroes on Theramore.
+- Revive your dead heroes on Theramore with "-revive".
 - Sell crafted items for gold.
 - Save your hero with "-save".
 - See quest markers with "-ping".
