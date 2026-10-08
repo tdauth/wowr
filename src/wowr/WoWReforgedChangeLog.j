@@ -201,6 +201,7 @@ private function Init takes nothing returns nothing
     call AddChange("Add gate to the north of Echo Isles.")
     call AddChange("More shallow water at the coast of Northrend.")
     call AddChange("Store Fountain of Life per player.")
+    call AddChange("\"-suicide\" and Selfdestruct are not possible on invulnerable units anymore.")
 
 static if (MAP_DEBUG_MODE_ENABLED) then
     call AddVersion("4.6")

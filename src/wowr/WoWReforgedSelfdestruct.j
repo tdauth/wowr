@@ -15,11 +15,24 @@ private function IsAirWall takes integer unitTypeId returns boolean
     return false
 endfunction
 
+function SelfdestructUnit takes player whichPlayer, unit whichUnit returns boolean
+    if (not BlzIsUnitInvulnerable(whichUnit)) then
+        if (not RectContainsUnit(GetMapPlayerSelectionRect(), whichUnit)) then
+            call KillUnit(whichUnit)
+            return true
+        else
+            call SimError(whichPlayer, GetLocalizedStringSafe("NOT_ALLOWED_IN_PLAYER_SELECTION"))
+        endif
+    else
+        call SimError(whichPlayer, GetLocalizedStringSafe("TARGET_IS_INVULNERABLE"))
+    endif
+    return false
+endfunction
+
 private function TriggerConditionSpellCast takes nothing returns boolean
     local unit triggerUnit = GetTriggerUnit()
     if (GetSpellAbilityId() == 'A09M') then // Selfdestruct
-        if (not RectContainsUnit(GetMapPlayerSelectionRect(), triggerUnit)) then
-            call KillUnit(triggerUnit)
+        if (not SelfdestructUnit(GetOwningPlayer(GetTriggerUnit()), triggerUnit)) then
             call QueueUnitAnimationBJ(triggerUnit, "death")
             if (GetUnitTypeId(triggerUnit) == 'h0P8') then // Rock (Summon Wall)
                 call PlaySoundOnUnitBJ(gg_snd_RockChunksDeath1, 100, triggerUnit)
@@ -36,8 +49,6 @@ private function TriggerConditionSpellCast takes nothing returns boolean
                     call QueueUnitAnimationBJ(triggerUnit, "death")
                 endif
             endif
-        else
-            call SimError(GetTriggerPlayer(), GetLocalizedStringSafe("NOT_ALLOWED_IN_PLAYER_SELECTION"))
         endif
     endif
     set triggerUnit = null
