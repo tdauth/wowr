@@ -1,4 +1,4 @@
-library WoWReforgedTaunts requires Taunts
+library WoWReforgedTaunts initializer Init requires Taunts
 
 private function AddTauntWoWReforged takes string text, sound s returns nothing
     call AddTaunt(I2S(GetTauntsCount() + 1), text, s)
