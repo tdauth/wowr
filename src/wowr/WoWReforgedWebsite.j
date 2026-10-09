@@ -3533,6 +3533,31 @@ private function GenerateSkins takes nothing returns nothing
     call FileSave("wowr-website/Skins.txt")
 endfunction
 
+private function GetEquipmentTypeName takes equipmentType t returns string
+    if (t == EQUIPMENT_TYPE_NONE) then
+        return "None"
+    elseif (t == EQUIPMENT_TYPE_HEAD) then
+        return "Head"
+    elseif (t == EQUIPMENT_TYPE_CHEST) then
+        return "Chest"
+    elseif (t == EQUIPMENT_TYPE_GLOVES) then
+        return "Gloves"
+    elseif (t == EQUIPMENT_TYPE_BOOTS) then
+        return "Boots"
+    elseif (t == EQUIPMENT_TYPE_RING) then
+        return "Ring"
+    elseif (t == EQUIPMENT_TYPE_PRIMARY) then
+        return "Primary"
+    elseif (t == EQUIPMENT_TYPE_OFFHAND) then
+        return "Offhand"
+    elseif (t == EQUIPMENT_TYPE_TRINKET) then
+        return "Trinket"
+    elseif (t == EQUIPMENT_TYPE_ANY) then
+        return "Any"
+    endif
+    return ""
+endfunction
+
 private function GenerateEquipment takes nothing returns nothing
     local integer i = 0
     local integer max = GetMaxEquipmentItemTypes()
@@ -3557,6 +3582,11 @@ private function GenerateEquipment takes nothing returns nothing
             // name
             call FileWriteLine("<td>")
             call FileWriteLine(GetObjectName(itemTypeId))
+            call FileWriteLine("</td>")
+
+            // category
+            call FileWriteLine("<td>")
+            call FileWriteLine(GetEquipmentItemTypeCategoryName(i))
             call FileWriteLine("</td>")
 
             // level
@@ -3605,6 +3635,11 @@ private function GenerateEquipment takes nothing returns nothing
             // name
             call FileWriteLine("<td>")
             call FileWriteLine(GetObjectName(itemTypeId))
+            call FileWriteLine("</td>")
+
+            // category
+            call FileWriteLine("<td>")
+            call FileWriteLine(GetEquipmentTypeName(BlzGetItemEquipmentType(whichItem)))
             call FileWriteLine("</td>")
 
             // level
