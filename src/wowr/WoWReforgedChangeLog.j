@@ -24,6 +24,7 @@ endfunction
 
 private function Init takes nothing returns nothing
     call AddVersion("4.7")
+    call AddChange("Reduce map dimensions and remove lots of terrain, creeps, bosses and NPCs.")
     call AddChange("Support Forsaken Kingdom.")
     call AddChange("Library ItemUtils supports extended inventories and equipment of Forsaken Kingdom.")
     call AddChange("Heroes and Equipment Bags start with a Backpack item now.")
@@ -69,7 +70,6 @@ private function Init takes nothing returns nothing
     call AddChange("Remove achievements.")
     call AddChange("Remove custom attributes.")
     call AddChange("Remove German buff for Cover.")
-    call AddChange("Remove lots of terrain, creeps, bosses and NPCs to make the map much smaller.")
     call AddChange("Remove unused Running Wild content.")
     call AddChange("Remove unused Evoker Dragon Form content.")
     call AddChange("Remove item Lumber carried by Pack Horse.")
