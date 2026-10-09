@@ -27,7 +27,7 @@ do
       continue
    fi
 
-   "$PJASS" "$COMMON_J" "$COMMON_AI" "$BLIZZARD_J" "$f"
+   "$PJASS" "$COMMON_J" "$BLIZZARD_J" "$f" # "$COMMON_AI" is not available in map script war3map.j
 done
 
 for f in "$WOWR_DIR"/*.fdf
