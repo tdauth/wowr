@@ -7660,11 +7660,11 @@ constant native GetManipulatedItem  takes nothing returns item
 
 // EVENT_PLAYER_UNIT_EQUIP_ITEM
 constant native GetEquippedItem     takes nothing returns item
-constant native BlzGetEquippedItem     takes nothing returns item
+//constant native BlzGetEquippedItem     takes nothing returns item // 3.0.1
 
 // EVENT_PLAYER_UNIT_UNEQUIP_ITEM
 constant native GetUnequippedItem   takes nothing returns item
-constant native BlzGetUnequippedItem   takes nothing returns item
+//constant native BlzGetUnequippedItem   takes nothing returns item // 3.0.1
 
 // For EVENT_PLAYER_UNIT_PICKUP_ITEM, returns the item absorbing the picked up item in case it is stacking.
 // Returns null if the item was a powerup and not a stacking item.
@@ -7866,7 +7866,7 @@ native          GetItemX        takes item i returns real
 native          GetItemY        takes item i returns real
 native          SetItemPosition takes item i, real x, real y returns nothing
 native          SetItemColor takes item whichItem, playercolor whichColor returns nothing
-native          BlzSetItemColor takes item whichItem, playercolor whichColor returns nothing
+//native          BlzSetItemColor takes item whichItem, playercolor whichColor returns nothing // 3.0.1
 native          SetItemDropOnDeath  takes item whichItem, boolean flag returns nothing
 native          SetItemDroppable takes item i, boolean flag returns nothing
 native          SetItemPawnable takes item i, boolean flag returns nothing
@@ -7875,8 +7875,8 @@ native          SetItemInvulnerable takes item whichItem, boolean flag returns n
 native          IsItemInvulnerable  takes item whichItem returns boolean
 native          IsItemEquipped  takes item whichItem returns boolean
 native          IsItemInBag     takes item whichItem returns boolean
-native          BlzIsItemEquipped  takes item whichItem returns boolean
-native          BlzIsItemInBag     takes item whichItem returns boolean
+//native          BlzIsItemEquipped  takes item whichItem returns boolean // 3.0.1
+//native          BlzIsItemInBag     takes item whichItem returns boolean // 3.0.1
 native          SetItemVisible  takes item whichItem, boolean show returns nothing
 native          IsItemVisible   takes item whichItem returns boolean
 native          IsItemOwned     takes item whichItem returns boolean
@@ -7897,8 +7897,8 @@ native          GetItemUserData takes item whichItem returns integer
 native          SetItemUserData takes item whichItem, integer data returns nothing
 native          GetItemEquipmentType takes item whichItem returns equipmentType
 native          GetItemTag           takes item whichItem returns itemTag
-native          BlzGetItemEquipmentType takes item whichItem returns equipmentType
-native          BlzGetItemTag           takes item whichItem returns itemTag
+//native          BlzGetItemEquipmentType takes item whichItem returns equipmentType // 3.0.1
+//native          BlzGetItemTag           takes item whichItem returns itemTag // 3.0.1
 
 //============================================================================
 // Unit API
@@ -8008,22 +8008,22 @@ native          GetUnitPointValueByType takes integer unitType returns integer
 
 native          UnitAddItem             takes unit whichUnit, item whichItem returns boolean
 native          UnitEquipItem           takes unit whichUnit, item whichItem returns boolean
-native          BlzUnitEquipItem           takes unit whichUnit, item whichItem returns boolean
+//native          BlzUnitEquipItem           takes unit whichUnit, item whichItem returns boolean // 3.0.1
 native          UnitAddItemById         takes unit whichUnit, integer itemId returns item
 native          UnitAddItemToSlotById   takes unit whichUnit, integer itemId, integer itemSlot returns boolean
 native          UnitRemoveItem          takes unit whichUnit, item whichItem returns nothing
 native          UnitRemoveItemFromSlot  takes unit whichUnit, integer itemSlot returns item
 native          UnitUnequipItem         takes unit whichUnit, item whichItem returns nothing
-native          BlzUnitUnequipItem         takes unit whichUnit, item whichItem returns nothing
+//native          BlzUnitUnequipItem         takes unit whichUnit, item whichItem returns nothing // 3.0.1
 native          UnitUnequipItemFromSlot takes unit whichUnit, loadoutslot slot returns item
-native          BlzUnitUnequipItemFromSlot takes unit whichUnit, loadoutslot slot returns item
+//native          BlzUnitUnequipItemFromSlot takes unit whichUnit, loadoutslot slot returns item // 3.0.1
 native          UnitHasItem             takes unit whichUnit, item whichItem returns boolean
 native          UnitHasItemBagged       takes unit whichUnit, item whichItem returns boolean
-native          BlzUnitHasItemBagged       takes unit whichUnit, item whichItem returns boolean
+//native          BlzUnitHasItemBagged       takes unit whichUnit, item whichItem returns boolean // 3.0.1
 native          UnitItemInSlot          takes unit whichUnit, integer itemSlot returns item
 native          UnitInventorySize       takes unit whichUnit returns integer
 native          UnitExtendedInventorySize takes unit whichUnit returns integer
-native          BlzUnitExtendedInventorySize takes unit whichUnit returns integer
+//native          BlzUnitExtendedInventorySize takes unit whichUnit returns integer // 3.0.1
 
 native          UnitItemInBagSlot               takes unit whichUnit, integer itemSlot returns item
 native          UnitItemInEquipmentSlot         takes unit whichUnit, loadoutslot itemSlot returns item
@@ -8032,13 +8032,13 @@ native          UnitHasLoadoutSlotEmpty         takes unit whichUnit, loadoutslo
 native          UnitHasAnyItemEquiped           takes unit whichUnit returns boolean
 native          UnitHasItemEquipmentOfType      takes unit whichUnit, equipmentType equipmentId returns boolean
 native          UnitCanEquipItemOfEquipmentType takes unit whichUnit, equipmentType equipmentId returns boolean
-native          BlzUnitItemInBagSlot               takes unit whichUnit, integer itemSlot returns item
-native          BlzUnitItemInEquipmentSlot         takes unit whichUnit, loadoutslot itemSlot returns item
-native          BlzUnitHasItemEquipped             takes unit whichUnit, item whichItem returns boolean
-native          BlzUnitHasLoadoutSlotEmpty         takes unit whichUnit, loadoutslot itemSlot returns boolean
-native          BlzUnitHasAnyItemEquipped           takes unit whichUnit returns boolean
-native          BlzUnitHasItemEquipmentOfType      takes unit whichUnit, equipmentType equipmentId returns boolean
-native          BlzUnitCanEquipItemOfEquipmentType takes unit whichUnit, equipmentType equipmentId returns boolean
+//native          BlzUnitItemInBagSlot               takes unit whichUnit, integer itemSlot returns item // 3.0.1
+//native          BlzUnitItemInEquipmentSlot         takes unit whichUnit, loadoutslot itemSlot returns item // 3.0.1
+//native          BlzUnitHasItemEquipped             takes unit whichUnit, item whichItem returns boolean // 3.0.1
+//native          BlzUnitHasLoadoutSlotEmpty         takes unit whichUnit, loadoutslot itemSlot returns boolean // 3.0.1
+//native          BlzUnitHasAnyItemEquipped           takes unit whichUnit returns boolean // 3.0.1
+//native          BlzUnitHasItemEquipmentOfType      takes unit whichUnit, equipmentType equipmentId returns boolean // 3.0.1
+//native          BlzUnitCanEquipItemOfEquipmentType takes unit whichUnit, equipmentType equipmentId returns boolean // 3.0.1
 
 native          UnitDropItemPoint       takes unit whichUnit, item whichItem, real x, real y returns boolean
 native          UnitDropItemSlot        takes unit whichUnit, item whichItem, integer slot returns boolean
@@ -8124,7 +8124,7 @@ native UnitSetUsesAltIcon           takes unit whichUnit, boolean flag returns n
 
 native UnitDamagePoint              takes unit whichUnit, real delay, real radius, real x, real y, real amount, boolean attack, boolean ranged, attacktype attackType, damagetype damageType, weapontype weaponType returns boolean
 native UnitDamageTarget             takes unit whichUnit, widget target, real amount, boolean attack, boolean ranged, attacktype attackType, damagetype damageType, weapontype weaponType returns boolean
-native BlzUnitHeal                  takes unit whichUnit, unit source, real life, boolean isItem, boolean applyStatBonuses returns real
+//native BlzUnitHeal                  takes unit whichUnit, unit source, real life, boolean isItem, boolean applyStatBonuses returns real // 3.0.1
 
 native IssueImmediateOrder          takes unit whichUnit, string order returns boolean
 native IssueImmediateOrderById      takes unit whichUnit, integer order returns boolean
@@ -8178,7 +8178,7 @@ native SetUnitTypeSlots             takes unit whichUnit, integer slots returns 
 native GetUnitUserData              takes unit whichUnit returns integer
 native SetUnitUserData              takes unit whichUnit, integer data returns nothing
 
-native BlzResetUnitTalents          takes unit whichUnit returns nothing
+//native BlzResetUnitTalents          takes unit whichUnit returns nothing // 3.0.1
 
 //============================================================================
 // Player API
@@ -8482,7 +8482,7 @@ native ChooseRandomNPBuilding   takes nothing returns integer
 native ChooseRandomItem         takes integer level returns integer
 native ChooseRandomItemEx       takes itemtype whichType, integer level returns integer
 native ChooseRandomItemExWithFilter takes itemtype whichType, integer level, equipmentType whichEquipmentType, itemTag whichTag returns integer
-native ChooseRandomItemExWithFilterAndIncludes takes itemtype whichType, integer level, equipmentType whichEquipmentType, itemTag whichTag, boolean includeInvalidMorphs, boolean includeNonPickRandom returns integer
+//native ChooseRandomItemExWithFilterAndIncludes takes itemtype whichType, integer level, equipmentType whichEquipmentType, itemTag whichTag, boolean includeInvalidMorphs, boolean includeNonPickRandom returns integer // 3.0.1
 native SetRandomSeed            takes integer seed returns nothing
 
 //============================================================================
@@ -8572,7 +8572,7 @@ native EnableMinimapFilterButtons   takes boolean enableAlly, boolean enableCree
 native EnableDragSelect             takes boolean state, boolean ui returns nothing
 native EnablePreSelect              takes boolean state, boolean ui returns nothing
 native EnableSelect                 takes boolean state, boolean ui returns nothing
-native BlzGetHUDScale               takes nothing returns real
+//native BlzGetHUDScale               takes nothing returns real // 3.0.1
 
 //============================================================================
 // Trackable API
@@ -8730,8 +8730,8 @@ native SetCameraFieldControlledByInput takes camerafield whichField, boolean con
 native GetCameraFieldControlledByInput takes camerafield whichField returns boolean
 native SetCameraTargetController    takes unit whichUnit, real xoffset, real yoffset, boolean inheritOrientation returns nothing
 native SetCameraOrientController    takes unit whichUnit, real xoffset, real yoffset returns nothing
-native BlzGetCameraAllowsHotkeyTargetLock takes nothing returns boolean
-native BlzSetCameraAllowsHotkeyTargetLock takes boolean allows returns nothing
+//native BlzGetCameraAllowsHotkeyTargetLock takes nothing returns boolean // 3.0.1
+//native BlzSetCameraAllowsHotkeyTargetLock takes boolean allows returns nothing // 3.0.1
 native BlzCameraSetCameraType       takes integer cameraType returns nothing
 native BlzCameraGetCameraType       takes nothing returns integer
 
@@ -8847,7 +8847,7 @@ native EndThematicMusic             takes nothing returns nothing
 native SetMusicVolume               takes integer volume returns nothing
 native SetMusicPlayPosition         takes integer millisecs returns nothing
 native SetThematicMusicVolume       takes integer volume returns nothing
-native BlzSetThematicMusicAbsoluteVolume takes integer volume returns nothing
+//native BlzSetThematicMusicAbsoluteVolume takes integer volume returns nothing // 3.0.1
 native SetThematicMusicPlayPosition takes integer millisecs returns nothing
 
 // other music and sound calls
@@ -8892,7 +8892,7 @@ native AddSpecialEffect             takes string modelName, real x, real y retur
 native AddSpecialEffectLoc          takes string modelName, location where returns effect
 native AddSpecialEffectTarget       takes string modelName, widget targetWidget, string attachPointName returns effect
 native DestroyEffect                takes effect whichEffect returns nothing
-native BlzRemoveEffect              takes effect whichEffect returns nothing
+//native BlzRemoveEffect              takes effect whichEffect returns nothing // 3.0.1
 
 native AddSpellEffect               takes string abilityString, effecttype t, real x, real y returns effect
 native AddSpellEffectLoc            takes string abilityString, effecttype t,location where returns effect
@@ -9410,3 +9410,21 @@ native SetDestructableVertexColor			takes destructable whichDestructable, intege
 native UnitAlive            takes unit id                               returns boolean
 native GetUnitGoldCost      takes integer unitid                        returns integer
 native GetUnitWoodCost      takes integer unitid                        returns integer
+
+// 3.0.1
+
+function BlzUnitItemInEquipmentSlot takes unit whichUnit, loadoutslot itemSlot returns item
+    return UnitItemInEquipmentSlot(whichUnit, itemSlot)
+endfunction
+
+function BlzUnitItemInBagSlot takes unit whichUnit, integer itemSlot returns item
+    return UnitItemInBagSlot(whichUnit, itemSlot)
+endfunction
+
+function BlzUnitExtendedInventorySize takes unit whichUnit returns integer
+    return UnitExtendedInventorySize(whichUnit)
+endfunction
+
+function BlzGetItemEquipmentType takes item whichItem returns equipmentType
+    return GetItemEquipmentType(whichItem)
+endfunction
