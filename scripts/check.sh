@@ -18,7 +18,7 @@ done
 
 for f in "$WOWR_DIR"/*.pld
 do
-   "$PJASS" "$COMMON_J" "$COMMON_AI" "$BLIZZARD_J" "$f"
+   "$PJASS" "$COMMON_J" "$BLIZZARD_J" "$f" # "$COMMON_AI" is not available in preload scripts
 done
 
 for f in "$MAP_DIR"/*.j
