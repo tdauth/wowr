@@ -8,12 +8,12 @@ library Utilities requires TimerUtils, Indexer, TimedHandles, RegisterPlayerUnit
     // 5 - Copy the TimedHandles library over to your map and follow its install instructions
     // 6 - Copy the RegisterPlayerUnitEvent library over to your map and follow its install instructions
     /* ---------------------------------------- By Chopinski ---------------------------------------- */
-    
+
     /* ---------------------------------------------------------------------------------------------- */
     /*                                          Configuration                                         */
     /* ---------------------------------------------------------------------------------------------- */
     globals
-        // The dummy caster unit id 
+        // The dummy caster unit id
         public  constant integer DUMMY     = 'dumi'
         // Update period
         private constant real    PERIOD    = 0.031250000
@@ -28,20 +28,18 @@ library Utilities requires TimerUtils, Indexer, TimedHandles, RegisterPlayerUnit
     /* ---------------------------------------------------------------------------------------------- */
     /*                                            JASS API                                            */
     /* ---------------------------------------------------------------------------------------------- */
-    // Only one declaration per map required
-    native UnitAlive takes unit id returns boolean
 
     // Returns the terrain Z value (Desync safe)
     function GetLocZ takes real x, real y returns real
         call MoveLocation(LOCZ, x, y)
         return GetLocationZ(LOCZ)
     endfunction
-    
+
     // Similar to GetUnitX and GetUnitY but for Z axis
     function GetUnitZ takes unit u returns real
         return GetLocZ(GetUnitX(u), GetUnitY(u)) + GetUnitFlyHeight(u)
     endfunction
-    
+
     // Similar to SetUnitX and SetUnitY but for Z axis
     function SetUnitZ takes unit u, real z returns nothing
         call SetUnitFlyHeight(u, z - GetLocZ(GetUnitX(u), GetUnitY(u)), 0)
@@ -60,7 +58,7 @@ library Utilities requires TimerUtils, Indexer, TimedHandles, RegisterPlayerUnit
             call BlzSetSpecialEffectZ(bj_lastCreatedEffect, z + GetLocZ(x, y))
         endif
         call BlzSetSpecialEffectScale(bj_lastCreatedEffect, scale)
-        
+
         return bj_lastCreatedEffect
     endfunction
 
@@ -69,7 +67,7 @@ library Utilities requires TimerUtils, Indexer, TimedHandles, RegisterPlayerUnit
         local group g = CreateGroup()
         local group h = CreateGroup()
         local unit  w
-        
+
         call GroupEnumUnitsInRange(h, x, y, aoe, null)
         if structures and magicImmune then
             loop
@@ -109,7 +107,7 @@ library Utilities requires TimerUtils, Indexer, TimedHandles, RegisterPlayerUnit
             endloop
         endif
         call DestroyGroup(h)
-    
+
         set    h = null
         return g
     endfunction
@@ -122,7 +120,7 @@ library Utilities requires TimerUtils, Indexer, TimedHandles, RegisterPlayerUnit
         local real    md = 100000
         local integer i  = 0
         local integer size = BlzGroupGetSize(g)
-        
+
         set bj_closestUnitGroup = null
         loop
             exitwhen i == size
@@ -130,7 +128,7 @@ library Utilities requires TimerUtils, Indexer, TimedHandles, RegisterPlayerUnit
                 if UnitAlive(u) then
                     set dx = GetUnitX(u) - x
                     set dy = GetUnitY(u) - y
-                    
+
                     if (dx*dx + dy*dy)/100000 < md then
                         set bj_closestUnitGroup = u
                         set md = (dx*dx + dy*dy)/100000
@@ -138,10 +136,10 @@ library Utilities requires TimerUtils, Indexer, TimedHandles, RegisterPlayerUnit
                 endif
             set i = i + 1
         endloop
-        
+
         return bj_closestUnitGroup
     endfunction
-    
+
     // Removes a destructable after a period of time
     function RemoveDestructableTimed takes destructable dest, real timeout returns nothing
         call TimedDestructable.create(dest, timeout)
@@ -170,7 +168,7 @@ library Utilities requires TimerUtils, Indexer, TimedHandles, RegisterPlayerUnit
     // Spams the specified effect model attached to a unit for the given interval for the number of times count
     function SpamEffectUnit takes unit target, string model, string attach, real interval, integer count returns nothing
         call EffectSpam.spam(target, model, attach, 0, 0, 0, 0, interval, count)
-    endfunction   
+    endfunction
 
     // Add the specified ability to the specified unit for the given duration. Use hide to show or not the ability button.
     function UnitAddAbilityTimed takes unit whichUnit, integer abilityId, real duration, integer level, boolean hide returns nothing
@@ -180,13 +178,13 @@ library Utilities requires TimerUtils, Indexer, TimedHandles, RegisterPlayerUnit
     // Resets the specified unit ability cooldown
     function ResetUnitAbilityCooldown takes unit whichUnit, integer abilCode returns nothing
         call ResetCooldown.reset(whichUnit, abilCode)
-    endfunction 
+    endfunction
 
     // Returns the distance between 2 coordinates in Warcraft III units
     function DistanceBetweenCoordinates takes real x1, real y1, real x2, real y2 returns real
         local real dx = (x2 - x1)
         local real dy = (y2 - y1)
-    
+
         return SquareRoot(dx*dx + dy*dy)
     endfunction
 
@@ -195,7 +193,7 @@ library Utilities requires TimerUtils, Indexer, TimedHandles, RegisterPlayerUnit
         local group  h       = CreateGroup()
         local player enemyOf = GetOwningPlayer(source)
         local unit   w
-        
+
         call GroupEnumUnitsInRange(h, x, y, aoe, null)
         if allies then
             if structures and magicImmune then
@@ -275,7 +273,7 @@ library Utilities requires TimerUtils, Indexer, TimedHandles, RegisterPlayerUnit
             endif
         endif
         call DestroyGroup(h)
-    
+
         set h       = null
         set enemyOf = null
     endfunction
@@ -334,7 +332,7 @@ library Utilities requires TimerUtils, Indexer, TimedHandles, RegisterPlayerUnit
         local integer i = 0
         local integer j
         local item k
-        
+
         loop
             exitwhen i > bj_MAX_INVENTORY
                 set k = UnitItemInSlot(source, i)
@@ -352,7 +350,7 @@ library Utilities requires TimerUtils, Indexer, TimedHandles, RegisterPlayerUnit
                 endif
             set i = i + 1
         endloop
-        
+
         set k = null
     endfunction
 
@@ -366,11 +364,11 @@ library Utilities requires TimerUtils, Indexer, TimedHandles, RegisterPlayerUnit
         if strength != 0 then
             call SetHeroStr(whichUnit, GetHeroStr(whichUnit, false) + strength, true)
         endif
-    
+
         if agility != 0 then
             call SetHeroAgi(whichUnit, GetHeroAgi(whichUnit, false) + agility, true)
         endif
-    
+
         if intelligence != 0 then
             call SetHeroInt(whichUnit, GetHeroInt(whichUnit, false) + intelligence, true)
         endif
@@ -385,7 +383,7 @@ library Utilities requires TimerUtils, Indexer, TimedHandles, RegisterPlayerUnit
         local real  dy
 
         set bj_closestUnitGroup = null
-        
+
         call GroupEnumUnitsInRect(g, bj_mapInitialPlayableArea, e)
         loop
             set u = FirstOfGroup(g)
@@ -393,7 +391,7 @@ library Utilities requires TimerUtils, Indexer, TimedHandles, RegisterPlayerUnit
                 if UnitAlive(u) then
                     set dx = GetUnitX(u) - x
                     set dy = GetUnitY(u) - y
-                    
+
                     if (dx*dx + dy*dy)/100000 < md then
                         set bj_closestUnitGroup = u
                         set md = (dx*dx + dy*dy)/100000
@@ -407,7 +405,7 @@ library Utilities requires TimerUtils, Indexer, TimedHandles, RegisterPlayerUnit
 
         return bj_closestUnitGroup
     endfunction
-    
+
     // Creates a chain lightning with the specified ligihtning effect with the amount of bounces
     function CreateChainLightning takes unit source, unit target, real damage, real aoe, real duration, real interval, integer bounceCount, attacktype attackType, damagetype damageType, string lightningType, string sfx, string attachPoint, boolean canRebounce returns nothing
         call ChainLightning.create(source, target, damage, aoe, duration, interval, bounceCount, attackType, damageType, lightningType, sfx, attachPoint, canRebounce)
@@ -421,14 +419,14 @@ library Utilities requires TimerUtils, Indexer, TimedHandles, RegisterPlayerUnit
     // Creates a text tag in an unit position for a duration
     function CreateTextOnUnit takes unit whichUnit, string text, real duration, integer red, integer green, integer blue, integer alpha returns nothing
         local texttag tx = CreateTextTag()
-        
+
         call SetTextTagText(tx, text, 0.015)
         call SetTextTagPosUnit(tx, whichUnit, 0)
         call SetTextTagColor(tx, red, green, blue, alpha)
         call SetTextTagLifespan(tx, duration)
         call SetTextTagVelocity(tx, 0.0, 0.0355)
         call SetTextTagPermanent(tx, false)
-        
+
         set tx = null
     endfunction
 
@@ -455,7 +453,7 @@ library Utilities requires TimerUtils, Indexer, TimedHandles, RegisterPlayerUnit
     // Casts an ability in the target unit. Must have no casting time
     function CastAbilityTarget takes unit target, integer id, string order, integer level returns nothing
         local unit dummy = DummyRetrieve(GetOwningPlayer(target), 0, 0, 0, 0)
-        
+
         call UnitAddAbility(dummy, id)
         call SetUnitAbilityLevel(dummy, id, level)
         call IssueTargetOrder(dummy, order, target)
@@ -485,17 +483,17 @@ library Utilities requires TimerUtils, Indexer, TimedHandles, RegisterPlayerUnit
             set x = GetUnitX(u) - x
             set y = GetUnitY(u) - y
             set range = x*x + y*y
-    
+
             if range > 0. then
                 set face = face*bj_DEGTORAD - Atan2(y, x)
                 set fov = fov*bj_DEGTORAD/2 + Asin(BlzGetUnitCollisionSize(u)/SquareRoot(range))
-    
+
                 return RAbsBJ(face) <= fov or RAbsBJ(face - 2.00*bj_PI) <= fov
             endif
-    
+
             return true
         endif
-    
+
         return false
     endfunction
 
@@ -504,7 +502,7 @@ library Utilities requires TimerUtils, Indexer, TimedHandles, RegisterPlayerUnit
         local group  h       = CreateGroup()
         local player enemyOf = GetOwningPlayer(source)
         local unit   w
-        
+
         call GroupEnumUnitsInRange(h, x, y, aoe, null)
         if allies then
             if structures and magicImmune then
@@ -584,7 +582,7 @@ library Utilities requires TimerUtils, Indexer, TimedHandles, RegisterPlayerUnit
             endif
         endif
         call DestroyGroup(h)
-    
+
         set h       = null
         set enemyOf = null
     endfunction
@@ -593,7 +591,7 @@ library Utilities requires TimerUtils, Indexer, TimedHandles, RegisterPlayerUnit
     function HealArea takes player alliesOf, real x, real y, real aoe, real amount, string fxpath, string attchPoint returns nothing
         local group g = CreateGroup()
         local unit v
-        
+
         call GroupEnumUnitsInRange(g, x, y, aoe, null)
         loop
             set v = FirstOfGroup(g)
@@ -611,7 +609,7 @@ library Utilities requires TimerUtils, Indexer, TimedHandles, RegisterPlayerUnit
             call GroupRemoveUnit(g, v)
         endloop
         call DestroyGroup(g)
-    
+
         set g = null
     endfunction
 
@@ -625,7 +623,7 @@ library Utilities requires TimerUtils, Indexer, TimedHandles, RegisterPlayerUnit
     endfunction
 
     // Fix for camera pan desync. credits do Daffa
-    function SmartCameraPanBJModified takes player whichPlayer, location loc, real duration returns nothing 
+    function SmartCameraPanBJModified takes player whichPlayer, location loc, real duration returns nothing
         local real tx = GetLocationX(loc)
         local real ty = GetLocationY(loc)
         local real dx = tx - GetCameraTargetPositionX()
@@ -644,9 +642,9 @@ library Utilities requires TimerUtils, Indexer, TimedHandles, RegisterPlayerUnit
             endif
         endif
     endfunction
-    
+
     // Fix for camera pan desync. credits do Daffa
-    function SmartCameraPanBJModifiedXY takes player whichPlayer, real x, real y, real duration returns nothing 
+    function SmartCameraPanBJModifiedXY takes player whichPlayer, real x, real y, real duration returns nothing
         local real dx = x - GetCameraTargetPositionX()
         local real dy = y - GetCameraTargetPositionY()
         local real dist = SquareRoot(dx * dx + dy * dy)
@@ -668,7 +666,7 @@ library Utilities requires TimerUtils, Indexer, TimedHandles, RegisterPlayerUnit
     function StartUnitAbilityCooldown takes unit source, integer abilCode, real cooldown returns nothing
         call AbilityCooldown.start(source, abilCode, cooldown)
     endfunction
-    
+
     // Pauses or Unpauses a unit after a delay. If flag = true than the unit will be paused and unpaused after the duration. If flag = false than the unit will be unpaused and paused after the duration.
     function PauseUnitTimed takes unit u, real duration, boolean flag returns nothing
         call TimedPause.create(u, duration, flag)
@@ -689,7 +687,7 @@ library Utilities requires TimerUtils, Indexer, TimedHandles, RegisterPlayerUnit
             call BlzEndUnitAbilityCooldown(unit, ability)
             call ReleaseTimer(timer)
             call deallocate()
-            
+
             set unit = null
             set timer  = null
         endmethod
@@ -702,7 +700,7 @@ library Utilities requires TimerUtils, Indexer, TimedHandles, RegisterPlayerUnit
             set ability = id
 
             call TimerStart(timer, 0.01, false, function thistype.onExpire)
-        endmethod 
+        endmethod
     endstruct
 
     /* ---------------------------------------- Timed Ability --------------------------------------- */
@@ -751,7 +749,7 @@ library Utilities requires TimerUtils, Indexer, TimedHandles, RegisterPlayerUnit
 
         static method add takes unit u, integer id, real duration, integer level, boolean hide returns nothing
             local thistype this = LoadInteger(table, GetHandleId(u), id)
-            
+
             if this == 0 then
                 set this = thistype.allocate()
                 set unit = u
@@ -780,8 +778,8 @@ library Utilities requires TimerUtils, Indexer, TimedHandles, RegisterPlayerUnit
     /* ----------------------------------------- Effect Spam ---------------------------------------- */
     struct EffectSpam
         timer timer
-        unit unit 
-        integer i 
+        unit unit
+        integer i
         string effect
         string point
         real scale
@@ -852,7 +850,7 @@ library Utilities requires TimerUtils, Indexer, TimedHandles, RegisterPlayerUnit
 
             set prev       = null
             set self       = null
-            set next       = null 
+            set next       = null
             set unit       = null
             set group      = null
             set timer      = null
@@ -866,26 +864,26 @@ library Utilities requires TimerUtils, Indexer, TimedHandles, RegisterPlayerUnit
 
         private static method onPeriod takes nothing returns nothing
             local thistype this = GetTimerData(GetExpiredTimer())
-            
+
             call DestroyGroup(group)
             if bounces > 0 then
                 set group = GetEnemyUnitsInRange(player, GetUnitX(self), GetUnitY(self), range, false, false)
                 call GroupRemoveUnit(group, self)
-                
+
                 if not rebounce then
                     call BlzGroupRemoveGroupFast(damaged, group)
                 endif
-                
+
                 if BlzGroupGetSize(group) == 0 then
                     call destroy()
                 else
                     set next = GetClosestUnitGroup(GetUnitX(self), GetUnitY(self), group)
-                    
+
                     if next == prev and BlzGroupGetSize(group) > 1 then
                         call GroupRemoveUnit(group, prev)
                         set next = GetClosestUnitGroup(GetUnitX(self), GetUnitY(self), group)
                     endif
-                    
+
                     if next != null then
                         call DestroyLightningTimed(AddLightningEx(lightning, true, GetUnitX(self), GetUnitY(self), GetUnitZ(self) + 60.0, GetUnitX(next), GetUnitY(next), GetUnitZ(next) + 60.0), duration)
                         call DestroyEffect(AddSpecialEffectTarget(effect, next, attach))
@@ -993,7 +991,7 @@ library Utilities requires TimerUtils, Indexer, TimedHandles, RegisterPlayerUnit
 
             call recycle(unit)
             call ReleaseTimer(timer)
-            
+
             set timer = null
             set unit  = null
 
@@ -1010,7 +1008,7 @@ library Utilities requires TimerUtils, Indexer, TimedHandles, RegisterPlayerUnit
 
                 set timer = NewTimerEx(this)
                 set unit  = dummy
-                
+
                 call TimerStart(timer, delay, false, function thistype.onExpire)
             endif
         endmethod
@@ -1111,7 +1109,7 @@ library Utilities requires TimerUtils, Indexer, TimedHandles, RegisterPlayerUnit
             set effect     = AddSpecialEffectTarget(model, target, attach)
             set didx       = didx + 1
             set data[didx] = this
-            
+
             if didx == 0 then
                 call TimerStart(timer, 0.03125000, true, function thistype.onPeriod)
             endif
@@ -1237,7 +1235,7 @@ library Utilities requires TimerUtils, Indexer, TimedHandles, RegisterPlayerUnit
             endif
             call ReleaseTimer(timer)
             call deallocate()
-            
+
             set timer = null
             set unit = null
         endmethod
@@ -1250,14 +1248,14 @@ library Utilities requires TimerUtils, Indexer, TimedHandles, RegisterPlayerUnit
             set unit = u
             set flag = pause
             set key = GetUnitUserData(u)
-            
+
             if array[key] == 0 then
                 call BlzPauseUnitEx(u, pause)
             endif
             set array[key] = array[key] + 1
-            
+
             call TimerStart(timer, duration, false, function thistype.onExpire)
-            
+
             return this
         endmethod
     endstruct

@@ -185,7 +185,7 @@ globals
     private boolean rezCheck = true
 
 endglobals
-native UnitAlive takes unit u returns boolean
+
 //! runtextmacro optional DEFINE_LIST("", "UEExList", "unit")
 private function FireEvent takes integer ev, unit u, unit other returns nothing
     local integer playerId = GetPlayerId(GetOwningPlayer(u))

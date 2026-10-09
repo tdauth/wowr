@@ -9407,5 +9407,6 @@ native BlzCreateDeadDestructableZWithSkinPitchRollColor takes integer objectid, 
 native SetDestructableVertexColor			takes destructable whichDestructable, integer red, integer green, integer blue, integer alpha returns nothing
 
 // commmon.ai
+native UnitAlive            takes unit id                               returns boolean
 native GetUnitGoldCost      takes integer unitid                        returns integer
 native GetUnitWoodCost      takes integer unitid                        returns integer

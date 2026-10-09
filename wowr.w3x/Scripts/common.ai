@@ -123,7 +123,6 @@ native SuicideUnit          takes integer count, integer unitid         returns 
 native SuicideUnitEx        takes integer ct, integer uid, integer pid  returns nothing
 native StartThread          takes code func                             returns nothing
 native Sleep                takes real seconds                          returns nothing
-native UnitAlive            takes unit id                               returns boolean
 native UnitInvis            takes unit id                               returns boolean
 native IgnoredUnits         takes integer unitid                        returns integer
 native TownThreatened       takes nothing                               returns boolean
