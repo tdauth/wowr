@@ -2861,8 +2861,7 @@ endfunction
 
 private function GenerateNpcs takes nothing returns nothing
     local integer i = 0
-    local integer max = GetMaxNpcs()
-    local integer unitTypeId = 0
+    local integer max = BlzGroupGetSize(GetNpcs())
     local Zone zone = 0
     local unit u = null
 
@@ -2870,20 +2869,19 @@ private function GenerateNpcs takes nothing returns nothing
     call FileWriteLine("<!-- NPCs generated with chat command \"-website\". -->")
     set i = 0
     loop
-        exitwhen (i == max)
-        set unitTypeId = GetNpc(i)
-        set u = GetNpcUnitByUnitTypeId(unitTypeId)
+        exitwhen (i >= max)
+        set u = BlzGroupUnitAt(GetNpcs(), i)
 
         if (u != null) then
-            call FileWriteLine("<tr id=\"" + A2S(unitTypeId) + "\">")
+            call FileWriteLine("<tr id=\"" + A2S(GetUnitTypeId(u)) + "\">")
             // icon
             call FileWriteLine("<td>")
-            call IconToHtml(unitTypeId)
+            call IconToHtml(GetUnitTypeId(u))
             call FileWriteLine("</td>")
 
             // name
             call FileWriteLine("<td>")
-            call FileWriteLine(GetActualObjectName(unitTypeId))
+            call FileWriteLine(GetActualObjectName(GetUnitTypeId(u)))
             call FileWriteLine("</td>")
 
             // location

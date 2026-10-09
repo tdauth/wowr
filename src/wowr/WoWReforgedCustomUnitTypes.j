@@ -1,4 +1,4 @@
-library WoWReforgedCustomUnitTypes initializer Init requires CustomUnitTypes, UnitGroupRespawn, UnitGroupRespawnConfig, WoWReforgedAutoSkill, WoWReforgedPortals, WoWReforgedHeroes, WoWReforgedBosses, WoWReforgedRaces, WoWReforgedProfessions, WoWReforgedResources, WoWReforgedProperties, WoWReforgedSkins, WoWReforgedArmory, WoWReforgedTaverns, WoWReforgedSummonedUnits, WoWReforgedGaia, WoWReforgedChests, WoWReforegdHideout, WoWReforgedTrainer, WoWReforgedProfessionFarmer, WoWReforgedProfessionHunter, WoWReforgedCommandButtons, WoWReforgedGoldMines, WoWReforgedLevers, WoWReforgedRandomCorpse, WoWReforgedProfessionBooksShop, WoWReforgedSceptersShop, WoWReforgedBanners, WoWReforgedVIPs, WoWReforgedAlchemistLab, WoWReforgedMounts, WoWReforgedCraftingStash, WoWReforgedRaceDwarf, WoWReforgedRaceTroll, WoWReforgedRaceMurloc, WoWReforgedRaceTuskarr, WoWReforgedRaceTauren, WoWReforgedRaceWorgen, WoWReforgedRaceGoblin, WoWReforgedRaceHighElf, WoWReforgedRaceDragonkin, WoWReforgedMapData
+library WoWReforgedCustomUnitTypes initializer Init requires CustomUnitTypes, UnitGroupRespawn, UnitGroupRespawnConfig, WoWReforgedAutoSkill, WoWReforgedPortals, WoWReforgedHeroes, WoWReforgedBosses, WoWReforgedRaces, WoWReforgedProfessions, WoWReforgedResources, WoWReforgedProperties, WoWReforgedSkins, WoWReforgedArmory, WoWReforgedTaverns, WoWReforgedSummonedUnits, WoWReforgedGaia, WoWReforgedChests, WoWReforegdHideout, WoWReforgedTrainer, WoWReforgedProfessionFarmer, WoWReforgedProfessionHunter, WoWReforgedCommandButtons, WoWReforgedGoldMines, WoWReforgedLevers, WoWReforgedRandomCorpse, WoWReforgedProfessionBooksShop, WoWReforgedSceptersShop, WoWReforgedBanners, WoWReforgedVIPs, WoWReforgedAlchemistLab, WoWReforgedMounts, WoWReforgedCraftingStash, WoWReforgedRaceDwarf, WoWReforgedRaceTroll, WoWReforgedRaceMurloc, WoWReforgedRaceTuskarr, WoWReforgedRaceTauren, WoWReforgedRaceWorgen, WoWReforgedRaceGoblin, WoWReforgedRaceHighElf, WoWReforgedRaceDragonkin, WoWReforgedNpcs, WoWReforgedMapData
 
 private function AddCustomMine takes unit whichUnit returns nothing
     local integer index = GetMineTypeIndex(GetUnitTypeId(whichUnit))
@@ -30,6 +30,14 @@ private struct CustomUnitTypePlayerHideout extends CustomUnitType
 
     public stub method onEnter takes unit whichUnit returns nothing
         call SetPlayerHideout(whichUnit)
+    endmethod
+
+endstruct
+
+private struct CustomUnitTypeNpc extends CustomUnitType
+
+    public stub method onEnter takes unit whichUnit returns nothing
+        call AddNpc(whichUnit)
     endmethod
 
 endstruct
@@ -608,6 +616,62 @@ private function Init takes nothing returns nothing
     call AddCustomUnitType(FOUNTAIN_OF_LIFE, CustomUnitTypeFountainOfLife.create())
 
     call AddCustomUnitType(HIDEOUT, CustomUnitTypePlayerHideout.create())
+
+    set c = CustomUnitTypeNpc.create()
+    call AddCustomUnitType(NPC_ANDUIN_WRYNN, c)
+    call AddCustomUnitType(NPC_ARCHMAGE_OF_NETHERGARDE, c)
+    call AddCustomUnitType(NPC_LORD_NICHOLAS_BUZAN, c)
+    call AddCustomUnitType(NPC_MAGNI_BRONZEBEARD, c)
+    call AddCustomUnitType(NPC_JAINA, c)
+    call AddCustomUnitType(NPC_KIL_JAEDEN, c)
+    call AddCustomUnitType(NPC_KHADGAR, c)
+    call AddCustomUnitType(NPC_HALAHK_THE_LIFEBRINGER, c)
+    call AddCustomUnitType(NPC_MEDIVH, c)
+    call AddCustomUnitType(NPC_KAEL, c)
+    call AddCustomUnitType(NPC_THRALL, c)
+    call AddCustomUnitType(NPC_CAIRNE, c)
+    call AddCustomUnitType(NPC_REXXAR, c)
+    call AddCustomUnitType(NPC_CHEN_STORMSTOUT, c)
+    call AddCustomUnitType(NPC_CHEN_STORMSTOUT_PANDARIA, c)
+    call AddCustomUnitType(NPC_TYRANDE, c)
+    call AddCustomUnitType(NPC_MALFURION, c)
+    call AddCustomUnitType(NPC_ILLIDAN, c)
+    call AddCustomUnitType(NPC_VASHJ, c)
+    call AddCustomUnitType(NPC_ANUB_ARAK, c)
+    call AddCustomUnitType(NPC_KEL_THUZAD, c)
+    call AddCustomUnitType(NPC_SYLVANAS, c)
+    call AddCustomUnitType(NPC_LORTHEMAR_THERON, c)
+    call AddCustomUnitType(NPC_LICH_KING, c)
+    call AddCustomUnitType(NPC_FALRIC, c)
+    call AddCustomUnitType(NPC_DUNGEON_MASTER, c)
+    call AddCustomUnitType(NPC_FLINTDAGGER, c)
+    call AddCustomUnitType(NPC_ELDER_KONANI, c)
+    call AddCustomUnitType(NPC_KEEPER_OF_THE_GRAVE, c)
+    call AddCustomUnitType(NPC_TRADE_PRINCE, c)
+    call AddCustomUnitType(NPC_AKAMA, c)
+    call AddCustomUnitType(NPC_SOCRETHAR, c)
+    call AddCustomUnitType(NPC_LADY_HEDERINE, c)
+    call AddCustomUnitType(NPC_COMMANDER_OF_THE_CITADEL, c)
+    call AddCustomUnitType(NPC_VELEN_ARGUS, c)
+    call AddCustomUnitType(NPC_XERA, c)
+    call AddCustomUnitType(NPC_ADMIRAL_PROUDMOORES_SPIRIT, c)
+    call AddCustomUnitType(NPC_FLEET_ADMIRAL_TETHYS, c)
+    call AddCustomUnitType(NPC_GERARD, c)
+    call AddCustomUnitType(NPC_KING_YMIRON, c)
+    call AddCustomUnitType(NPC_GENN_GREYMANE, c)
+    call AddCustomUnitType(NPC_ALEXSTRASZA, c)
+    call AddCustomUnitType(NPC_GELBIN_MEKKATORQUE, c)
+    call AddCustomUnitType(NPC_HIGH_KING_MAULGAR, c)
+    call AddCustomUnitType(NPC_CAPTAIN_GARRAN_VIMES, c)
+    call AddCustomUnitType(NPC_ALIDEN_PERENOLDE, c)
+    call AddCustomUnitType(NPC_TERENAS_MENETHIL_II, c)
+    call AddCustomUnitType(NPC_CHARLGA_RAZORFLANK, c)
+    call AddCustomUnitType(NPC_KHANAM_MATRA_SAREST, c)
+    call AddCustomUnitType(NPC_HOGGER, c)
+    call AddCustomUnitType(NPC_MURLOC_PRIEST, c)
+    call AddCustomUnitType(NPC_GENERAL_VEZAX, c)
+    call AddCustomUnitType(NPC_CARSTEN, c)
+    call AddCustomUnitType(NPC_BARADE, c)
 
     call AddCustomUnitType(FISH_SCHOOL, CustomUnitTypeFishSchool.create())
     call AddCustomUnitType(BERRY_BUSHES, CustomUnitTypeBerryBush.create())

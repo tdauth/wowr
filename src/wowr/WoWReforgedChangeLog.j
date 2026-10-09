@@ -203,6 +203,7 @@ private function Init takes nothing returns nothing
     call AddChange("Store Fountain of Life per player.")
     call AddChange("\"-suicide\" and Selfdestruct are not possible on invulnerable units anymore.")
     call AddChange("Fix owners of several neutral units on the map.")
+    call AddChange("Simplify registering NPCs.")
 
 static if (MAP_DEBUG_MODE_ENABLED) then
     call AddVersion("4.6")

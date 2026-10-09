@@ -185,16 +185,6 @@ function PingResurrectionStones takes player whichPlayer returns nothing
     set g = null
 endfunction
 
-private function IsNpcFilter takes nothing returns boolean
-    return IsUnitNpc(GetFilterUnit())
-endfunction
-
-function GetNpcs takes nothing returns group
-    local group g = CreateGroup()
-    call GroupEnumUnitsOfPlayer(g, Player(PLAYER_NEUTRAL_PASSIVE), Filter(function IsNpcFilter))
-    return g
-endfunction
-
 function PingNpcForPlayer takes unit altar, player whichPlayer returns nothing
     if (GetLocalPlayer() == whichPlayer) then
         // Use only local code (no net traffic) within this block to avoid desyncs.
@@ -212,9 +202,6 @@ function PingNpcs takes player whichPlayer returns nothing
         call PingNpcForPlayer(BlzGroupUnitAt(g, i), whichPlayer)
         set i = i + 1
     endloop
-    call GroupClear(g)
-    call DestroyGroup(g)
-    set g = null
 endfunction
 
 function PingGoldMines takes player whichPlayer returns nothing
