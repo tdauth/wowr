@@ -282,7 +282,7 @@ private function HelpReset takes nothing returns nothing
 endfunction
 
 private function GetHelpTextCheats takes nothing returns string
-    return "-cheats, -nocheats, -creeps, -cinoutro, -cinlichking, -cinoldgods, -cininvasion, -boots, -terrain, -heroskills, -bonus, -quests, -fields, -read, -write, -maxresources, -respawngroupcounter, -respawnall, -maxlevel, -levelX, -col, -medivh, -resetrepick, -demigodlight, -demigoddark, -trydemigod, -orderon, -orderoff, -races, -kill, -fill, -res, -share, -unitinfo, -checksave, -generatesave, -savecounters, -savecodeduplicates, -savecodemissing, -autoskill, -orbs, -herolevels, -deathwing, -claws, -clawsbonus, -regennight, -craft, -legendary, -professions, -aigui, -aicraft, -aiharveston/off, -day, -night, -jaina, -arena, -evolution X Y, -unlockcampaigns, -nagaquest4, -website"
+    return "-cheats, -nocheats, -creeps, -cinoutro, -cinlichking, -cinoldgods, -cininvasion, -boots, -terrain, -heroskills, -bonus, -quests, -fields, -read, -write, -maxresources, -respawngroupcounter, -respawnall, -maxlevel, -levelX, -col, -medivh, -demigodlight, -demigoddark, -trydemigod, -orderon, -orderoff, -races, -kill, -fill, -res, -share, -unitinfo, -checksave, -generatesave, -savecounters, -savecodeduplicates, -savecodemissing, -autoskill, -orbs, -herolevels, -claws, -clawsbonus, -regennight, -craft, -legendary, -professions, -aigui, -aicraft, -aiharveston/off, -jaina, -arena, -evolution X Y, -unlockcampaigns, -nagaquest4, -website"
 endfunction
 
 private function HelpCheats takes nothing returns nothing
