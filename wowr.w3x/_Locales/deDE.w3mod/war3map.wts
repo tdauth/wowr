@@ -4575,11 +4575,6 @@ STRING 764
 (Goblin-Magier)
 }
 
-STRING 765
-{
-|cffffcc00Volk:|r Orcs|n|cffffcc00Klasse:|r Erdmagier|n|cffffcc00Reittier:|r Flügeldrache|n|cffffcc00Primäres Attribut:|r Intelligenz|n|cffffcc00Kraft:|r 15/2|n|cffffcc00Beweglichkeit:|r 18/1|n|cffffcc00Intelligenz:|r 19/3|n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
-}
-
 STRING 766
 // Abilities: A0BZ (Submerge), EditorSuffix (Editor Suffix)
 {
