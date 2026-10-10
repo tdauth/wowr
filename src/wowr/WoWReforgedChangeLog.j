@@ -213,6 +213,8 @@ private function Init takes nothing returns nothing
     call AddChange("Add alias \"-date\" for chat command \"-time\".")
     call AddChange("Add info quest entry for chat command \"-date\".")
     call AddChange("Farmhands can construct Wheat Fields now.")
+    call AddChange("Do not duplicate Gold Mines on Dwarf Mine Shaft deaths.")
+    call AddChange("CustomUnitTypes uses Indexer and reacts to building researches now.")
 
 static if (MAP_DEBUG_MODE_ENABLED) then
     call AddVersion("4.6")

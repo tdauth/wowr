@@ -9,6 +9,7 @@ library CustomUnitTypes requires Indexer, OnUnitRemoval
 globals
     private constant integer KEY_HANDLER = 0
 
+    private trigger finishUpgradeTrigger = CreateTrigger()
     private trigger deathTrigger = CreateTrigger()
     private hashtable h = InitHashtable()
     private boolean init = false
@@ -96,6 +97,12 @@ private function OnEnter takes nothing returns nothing
     endif
 endfunction
 
+private function TriggerConditionFinishUpgrade takes nothing returns boolean
+    if (IsCustomUnitType(GetUnitTypeId(GetIndexUnit()))) then
+        call CallCustomUnitTypeOnEnter(GetIndexUnit())
+    endif
+endfunction
+
 private function TriggerConditionDeath takes nothing returns boolean
     if (IsCustomUnitType(GetUnitTypeId(GetTriggerUnit()))) then
         call CallCustomUnitTypeOnDeath(GetTriggerUnit())
@@ -111,6 +118,9 @@ endfunction
 
 function InitCustomUnitTypesDetection takes nothing returns nothing
     call RegisterUnitIndexEvent(function OnEnter)
+
+    call TriggerRegisterAnyUnitEventBJ(finishUpgradeTrigger, EVENT_PLAYER_UNIT_UPGRADE_FINISH)
+    call TriggerAddCondition(finishUpgradeTrigger, Condition(function TriggerConditionFinishUpgrade))
 
     call TriggerRegisterAnyUnitEventBJ(deathTrigger, EVENT_PLAYER_UNIT_DEATH)
     call TriggerAddCondition(deathTrigger, Condition(function TriggerConditionDeath))

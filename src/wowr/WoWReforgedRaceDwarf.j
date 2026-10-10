@@ -76,9 +76,10 @@ function AddDwarfMineShaft takes unit whichUnit returns nothing
 endfunction
 
 function RemoveDwarfMineShaft takes unit whichUnit returns nothing
-    call ReplaceUnitBJ(whichUnit, 'ngol', bj_UNIT_STATE_METHOD_DEFAULTS )
-    call SetUnitOwner(GetLastReplacedUnitBJ(), Player(PLAYER_NEUTRAL_PASSIVE), true)
-    call SetResourceAmount(GetLastReplacedUnitBJ(), 1000000)
+    // Goldmine is restored automatically on death!
+    //call ReplaceUnitBJ(whichUnit, 'ngol', bj_UNIT_STATE_METHOD_DEFAULTS )
+    //call SetUnitOwner(GetLastReplacedUnitBJ(), Player(PLAYER_NEUTRAL_PASSIVE), true)
+    //call SetResourceAmount(GetLastReplacedUnitBJ(), 1000000)
 endfunction
 
 private function RuneOfRebirth takes unit caster, unit target returns nothing
