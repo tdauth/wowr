@@ -101,6 +101,7 @@ private function TriggerConditionFinishUpgrade takes nothing returns boolean
     if (IsCustomUnitType(GetUnitTypeId(GetIndexUnit()))) then
         call CallCustomUnitTypeOnEnter(GetIndexUnit())
     endif
+    return false
 endfunction
 
 private function TriggerConditionDeath takes nothing returns boolean
