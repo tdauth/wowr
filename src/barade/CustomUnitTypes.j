@@ -62,24 +62,21 @@ function IsCustomUnitType takes integer unitTypeId returns boolean
 endfunction
 
 function CallCustomUnitTypeOnEnter takes unit whichUnit returns nothing
-    local integer unitTypeId = GetUnitTypeId(whichUnit)
-    local CustomUnitType c = LoadInteger(h, unitTypeId, KEY_HANDLER)
+    local CustomUnitType c = LoadInteger(h, GetUnitTypeId(whichUnit), KEY_HANDLER)
     if (c != 0 and c.filter.evaluate(whichUnit)) then
         call c.onEnter.execute(whichUnit)
     endif
 endfunction
 
 function CallCustomUnitTypeOnDeath takes unit whichUnit returns nothing
-    local integer unitTypeId = GetUnitTypeId(whichUnit)
-    local CustomUnitType c = LoadInteger(h, unitTypeId, KEY_HANDLER)
+    local CustomUnitType c = LoadInteger(h, GetUnitTypeId(whichUnit), KEY_HANDLER)
     if (c != 0 and c.filter.evaluate(whichUnit)) then
         call c.onDeath.execute(whichUnit)
     endif
 endfunction
 
 function CallCustomUnitTypeOnRemove takes unit whichUnit returns nothing
-    local integer unitTypeId = GetUnitTypeId(whichUnit)
-    local CustomUnitType c = LoadInteger(h, unitTypeId, KEY_HANDLER)
+    local CustomUnitType c = LoadInteger(h, GetUnitTypeId(whichUnit), KEY_HANDLER)
     if (c != 0 and c.filter.evaluate(whichUnit)) then
         call c.onRemove.execute(whichUnit)
     endif
@@ -112,6 +109,15 @@ private function RemoveUnitHook takes unit whichUnit returns nothing
     endif
 endfunction
 
+function InitCustomUnitTypesDetection takes nothing returns nothing
+    call RegisterUnitIndexEvent(function OnEnter)
+
+    call TriggerRegisterAnyUnitEventBJ(deathTrigger, EVENT_PLAYER_UNIT_DEATH)
+    call TriggerAddCondition(deathTrigger, Condition(function TriggerConditionDeath))
+
+    call OnUnitRemoval(RemoveUnitHook)
+endfunction
+
 // Call this function AFTER all the AddCustomUnitType calls.
 function InitCustomUnitTypes takes nothing returns nothing
     if (init) then
@@ -121,13 +127,8 @@ function InitCustomUnitTypes takes nothing returns nothing
         set bj_wantDestroyGroup = true
         call ForGroup(GetUnitsInRectMatching(GetPlayableMapRect(), Filter(function FilterHasCustomUnitType)), function EnumCustomUnitType)
 
-        call RegisterUnitIndexEvent(function OnEnter)
-
-        call TriggerRegisterAnyUnitEventBJ(deathTrigger, EVENT_PLAYER_UNIT_DEATH)
-        call TriggerAddCondition(deathTrigger, Condition(function TriggerConditionDeath))
+        call InitCustomUnitTypesDetection()
     endif
-
-    call OnUnitRemoval(RemoveUnitHook)
 endfunction
 
 endlibrary

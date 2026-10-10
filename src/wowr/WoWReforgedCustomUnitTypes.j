@@ -66,7 +66,7 @@ private struct CustomUnitTypePortal extends CustomUnitType
 
 endstruct
 
-private struct CustomUnitTypeAddCustomMine extends CustomUnitType
+private struct CustomUnitTypeCustomMine extends CustomUnitType
 
     public stub method onEnter takes unit whichUnit returns nothing
         call AddCustomMine(whichUnit)
@@ -74,7 +74,7 @@ private struct CustomUnitTypeAddCustomMine extends CustomUnitType
 
 endstruct
 
-private struct CustomUnitTypeAddProperty extends CustomUnitType
+private struct CustomUnitTypeProperty extends CustomUnitType
 
     public stub method onEnter takes unit whichUnit returns nothing
         call AddCustomProperty(whichUnit)
@@ -571,34 +571,12 @@ endfunction
 function InitAllPreplacedUnits takes nothing returns nothing
     local timer t = CreateTimer()
     local group g = CreateGroup()
-    local integer i = 0
-    local integer max = 0
-    local CustomUnitType c = 0
     call TimerStart(t, 9999999.0, false, null)
-
-    set c = CustomUnitTypeAddCustomMine.create()
-    set i = 0
-    set max = GetMaxMines()
-    loop
-        exitwhen (i == max)
-        //call BJDebugMsg("Mine type " + I2S(i) + " " + GetObjectName(GetMineTypeId(i)))
-        call AddCustomUnitType(GetMineTypeId(i), c)
-        set i = i + 1
-    endloop
-
-    set c = CustomUnitTypeAddProperty.create()
-    set i = 0
-    set max = GetMaxProperties()
-    loop
-        exitwhen (i == max)
-        call AddCustomUnitType(GetProperty(i).unitTypeId, c)
-        set i = i + 1
-    endloop
-
     call ForceAddPlayer(UnitGroupRespawnConfig_AUTO_ADDED_GROUP_PLAYERS, GetMapBossesPlayer())
     call ForceAddPlayer(UnitGroupRespawnConfig_AUTO_ADDED_GROUP_PLAYERS, Player(PLAYER_NEUTRAL_AGGRESSIVE))
     call GroupEnumUnitsInRect(g, GetPlayableMapRect(), null) // This should be the only GroupEnumUnits during the initialization!!!
     call ForGroup(g, function EnumUnitInit)
+    call InitCustomUnitTypesDetection()
     call GroupClear(g)
     call DestroyGroup(g)
     set g = null
@@ -680,6 +658,25 @@ private function Init takes nothing returns nothing
     call AddCustomUnitType(PORTAL, c)
     call AddCustomUnitType(PORTAL_NEUTRAL, c)
     call AddCustomUnitType(PORTAL_NEUTRAL_WATER, c)
+
+    set c = CustomUnitTypeCustomMine.create()
+    set i = 0
+    set max = GetMaxMines()
+    loop
+        exitwhen (i >= max)
+        //call BJDebugMsg("Mine type " + I2S(i) + " " + GetObjectName(GetMineTypeId(i)))
+        call AddCustomUnitType(GetMineTypeId(i), c)
+        set i = i + 1
+    endloop
+
+    set c = CustomUnitTypeProperty.create()
+    set i = 0
+    set max = GetMaxProperties()
+    loop
+        exitwhen (i >= max)
+        call AddCustomUnitType(GetProperty(i).unitTypeId, c)
+        set i = i + 1
+    endloop
 
     call AddCustomUnitType(LIBRARY, CustomUnitTypeHideLibrary.create())
 
