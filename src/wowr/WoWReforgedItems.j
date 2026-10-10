@@ -24,7 +24,7 @@ function CanItemTypeIdBePickedUp takes integer itemTypeId, unit hero returns boo
     local player heroOwner = GetOwningPlayer(hero)
     local boolean result = true
     if (GetUnitTypeId(hero) != ITEM_VALUES_DUMMY_HERO and GetUnitTypeId(hero) != MAX_ITEM_STACKS_DUMMY_HERO) then
-        if (not udg_PlayerUnlockedAllRaces[GetConvertedPlayerId(heroOwner)]) then
+        if (not PlayerHasUnlockedAllRaces(heroOwner)) then
             if (not PlayerIsAllowedItemRace(heroOwner, itemTypeId)) then
                 //call BJDebugMsg(GetUnitName(hero) + " is not allowed item race of " + GetObjectName(itemTypeId))
                 set result = false
@@ -46,7 +46,7 @@ endfunction
 private function GetItemTypeIdPickupErrorReason takes integer itemTypeId, unit hero returns string
     local player heroOwner = GetOwningPlayer(hero)
     if (GetUnitTypeId(hero) != ITEM_VALUES_DUMMY_HERO and GetUnitTypeId(hero) != MAX_ITEM_STACKS_DUMMY_HERO) then
-        if (not udg_PlayerUnlockedAllRaces[GetConvertedPlayerId(heroOwner)]) then
+        if (not PlayerHasUnlockedAllRaces(heroOwner)) then
             if (not PlayerIsAllowedItemRace(heroOwner, itemTypeId)) then
                 return Format(GetLocalizedString("BELONGS_TO_RACE")).s(GetObjectName(itemTypeId)).s(GetRaceName(GetItemRace(itemTypeId))).result()
             elseif (not PlayerIsAllowedItemProfession(heroOwner, itemTypeId)) then

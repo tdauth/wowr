@@ -876,15 +876,13 @@ endfunction
 
 function DropAllItemsNotFromRaceForHero takes unit hero returns nothing
     local player owner = GetOwningPlayer(hero)
-    local integer convertedPlayerId = GetConvertedPlayerId(owner)
-    local boolean playerUnlockedAllRaces = udg_PlayerUnlockedAllRaces[convertedPlayerId]
-    local integer playerRace1 = udg_PlayerRace[convertedPlayerId]
-    local integer playerRace2 = udg_PlayerRace2[convertedPlayerId]
-    local integer playerRace3 = udg_PlayerRace3[convertedPlayerId]
+    local integer playerRace1 = GetPlayerRace1(owner)
+    local integer playerRace2 = GetPlayerRace2(owner)
+    local integer playerRace3 = GetPlayerRace3(owner)
     local item slotItem = null
     local integer itemRace = udg_RaceNone
     local integer i = 0
-    if (not playerUnlockedAllRaces) then
+    if (not PlayerHasUnlockedAllRaces(owner)) then
         loop
             exitwhen (i == bj_MAX_INVENTORY)
             set slotItem = UnitItemInSlot(hero, i)
@@ -923,34 +921,31 @@ endfunction
 
 function DropAllItemsNotFromProfessionForHero takes unit hero returns nothing
     local player owner = GetOwningPlayer(hero)
-    local integer convertedPlayerId = GetConvertedPlayerId(owner)
-    local integer playerProfession1 = udg_PlayerProfession[convertedPlayerId]
-    local integer playerProfession2 = udg_PlayerProfession2[convertedPlayerId]
-    local integer playerProfession3 = udg_PlayerProfession3[convertedPlayerId]
+    local integer playerProfession1 = GetPlayerProfession1(owner)
+    local integer playerProfession2 = GetPlayerProfession2(owner)
+    local integer playerProfession3 = GetPlayerProfession3(owner)
     local item slotItem = null
     local integer j = 0
     local integer i = 0
     local integer max2 = GetProfessionsMax()
-    if (not udg_PlayerUnlockedAllRaces[convertedPlayerId]) then
-        loop
-            exitwhen (i == bj_MAX_INVENTORY)
-            set slotItem = UnitItemInSlot(hero, i)
-            if (slotItem != null) then
-                set j = 0
-                loop
-                    exitwhen (j == max2)
-                    if (GetProfession(j).itemTypeId == GetItemTypeId(slotItem) and playerProfession1 != j and playerProfession2 != j and playerProfession3 != j) then
-                        call BackpackMessage(owner, Format(GetLocalizedString("DROPPING_ITEM_OF_OTHER_PROFESSION")).s(GetItemName(slotItem)).result())
-                        call UnitRemoveItemFromSlot(hero, i)
-                        exitwhen (true)
-                    endif
-                    set j = j + 1
-                endloop
-            endif
-            set slotItem = null
-            set i = i + 1
-        endloop
-    endif
+    loop
+        exitwhen (i >= bj_MAX_INVENTORY)
+        set slotItem = UnitItemInSlot(hero, i)
+        if (slotItem != null) then
+            set j = 0
+            loop
+                exitwhen (j >= max2)
+                if (GetProfession(j).itemTypeId == GetItemTypeId(slotItem) and playerProfession1 != j and playerProfession2 != j and playerProfession3 != j) then
+                    call BackpackMessage(owner, Format(GetLocalizedString("DROPPING_ITEM_OF_OTHER_PROFESSION")).s(GetItemName(slotItem)).result())
+                    call UnitRemoveItemFromSlot(hero, i)
+                    exitwhen (true)
+                endif
+                set j = j + 1
+            endloop
+        endif
+        set slotItem = null
+        set i = i + 1
+    endloop
     set owner = null
 endfunction
 

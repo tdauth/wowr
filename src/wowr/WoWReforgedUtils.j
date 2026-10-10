@@ -133,6 +133,10 @@ function IsPlayerWarlord takes player whichPlayer returns boolean
     return udg_PlayerIsWarlord[GetConvertedPlayerId(whichPlayer)]
 endfunction
 
+function PlayerHasUnlockedAllRaces takes player whichPlayer returns boolean
+    return udg_PlayerUnlockedAllRaces[GetConvertedPlayerId(whichPlayer)]
+endfunction
+
 function PlayerHasUnlockedRace takes player whichPlayer, integer whichRace returns boolean
     local integer convertedPlayerId = GetConvertedPlayerId(whichPlayer)
     return whichRace == udg_RaceNone or udg_PlayerUnlockedAllRaces[convertedPlayerId] or whichRace == udg_PlayerRace[convertedPlayerId] or whichRace == udg_PlayerRace2[convertedPlayerId] or udg_UnlockedAll
