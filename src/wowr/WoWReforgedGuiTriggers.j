@@ -1,8 +1,10 @@
-library WoWReforgedGuiTriggers requires MathUtils, WoWReforgedMapData
+library WoWReforgedGuiTriggers requires MathUtils, ForceUtils, WoWReforgedMapData
 // Remove this library when all GUI triggers have been refactored into vJass code.
 
 // Call this in a GUI trigger with map initialization event which is executed AFTER InitGlobals in war3map.j.
 function InitWoWReforgedGuiVariables takes nothing returns nothing
+    // Settings
+    set udg_Cinematics = GetAllUsersCount() == 1
     // Game Modes
     set udg_FreelancerXPRate = 130.0
     set udg_WarlordXPRate = 100.0
