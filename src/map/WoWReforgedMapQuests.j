@@ -170,16 +170,16 @@ private function Init takes nothing returns nothing
 
     // Draenei Quests
     set udg_DraeneiQuestPingTarget = GetRectCenter(gg_rct_Draenei_Quest_1_discover_and_complete)
-    set udg_QuestLichking[1] = AddQuest("DraeneiQuest1", GetLocalizedStringSafe("Q_AKAMAS_MESSAGE_TITLE"), GetLocalizedStringSafe("Q_AKAMAS_MESSAGE_DESCRIPTION"), "ReplaceableTextures\\CommandButtons\\BTNSpy.blp", gg_unit_Naka_0149, 'rde4')
+    set udg_Draenei_Quest[1] = AddQuest("DraeneiQuest1", GetLocalizedStringSafe("Q_AKAMAS_MESSAGE_TITLE"), GetLocalizedStringSafe("Q_AKAMAS_MESSAGE_DESCRIPTION"), "ReplaceableTextures\\CommandButtons\\BTNSpy.blp", gg_unit_Naka_0149, 'rde4')
     call AddQuestItem(GetLocalizedStringSafe("Q_AKAMAS_MESSAGE_0"))
-    set udg_QuestLichking[2] = AddQuest("DraeneiQuest2", GetLocalizedStringSafe("Q_AN_UNLIKELY_ALLIANCE_TITLE"), GetLocalizedStringSafe("Q_AN_UNLIKELY_ALLIANCE_DESCRIPTION"), "ReplaceableTextures\\CommandButtons\\BTNChaosBlademaster.blp", gg_unit_Naka_0149, 'ratf')
+    set udg_Draenei_Quest[2] = AddQuest("DraeneiQuest2", GetLocalizedStringSafe("Q_AN_UNLIKELY_ALLIANCE_TITLE"), GetLocalizedStringSafe("Q_AN_UNLIKELY_ALLIANCE_DESCRIPTION"), "ReplaceableTextures\\CommandButtons\\BTNChaosBlademaster.blp", gg_unit_Naka_0149, 'ratf')
     call AddQuestItem(GetLocalizedStringSafe("Q_AN_UNLIKELY_ALLIANCE_0"))
     call AddQuestItem(GetLocalizedStringSafe("Q_AN_UNLIKELY_ALLIANCE_1"))
-    set udg_QuestLichking[3] = AddQuest("DraeneiQuest3", GetLocalizedStringSafe("Q_MAGTHERIDONS_DEFEAT_TITLE"), GetLocalizedStringSafe("Q_MAGTHERIDONS_DEFEAT_DESCRIPTION"), "ReplaceableTextures\\CommandButtons\\BTNPitLord.blp", gg_unit_Naka_0149, 'sora')
+    set udg_Draenei_Quest[3] = AddQuest("DraeneiQuest3", GetLocalizedStringSafe("Q_MAGTHERIDONS_DEFEAT_TITLE"), GetLocalizedStringSafe("Q_MAGTHERIDONS_DEFEAT_DESCRIPTION"), "ReplaceableTextures\\CommandButtons\\BTNPitLord.blp", gg_unit_Naka_0149, 'sora')
     call AddQuestItem(GetLocalizedStringSafe("Q_MAGTHERIDONS_DEFEAT_0"))
     call AddQuestItem(GetLocalizedStringSafe("Q_MAGTHERIDONS_DEFEAT_1"))
     call AddQuestItem(GetLocalizedStringSafe("Q_MAGTHERIDONS_DEFEAT_2"))
-    set udg_QuestLichking[4] = AddQuest("DraeneiQuest4", GetLocalizedStringSafe("Q_ARCHIMONDES_RETURN_TITLE"), GetLocalizedStringSafe("Q_ARCHIMONDES_RETURN_DESCRIPTION"), "ReplaceableTextures\\CommandButtons\\BTNDemonGate.blp", gg_unit_Naka_0149, 'nspi')
+    set udg_Draenei_Quest[4] = AddQuest("DraeneiQuest4", GetLocalizedStringSafe("Q_ARCHIMONDES_RETURN_TITLE"), GetLocalizedStringSafe("Q_ARCHIMONDES_RETURN_DESCRIPTION"), "ReplaceableTextures\\CommandButtons\\BTNDemonGate.blp", gg_unit_Naka_0149, 'nspi')
     call AddQuestItem(GetLocalizedStringSafe("Q_ARCHIMONDES_RETURN_0"))
     call AddQuestItem(GetLocalizedStringSafe("Q_ARCHIMONDES_RETURN_1"))
 
