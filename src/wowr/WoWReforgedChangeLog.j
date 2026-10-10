@@ -215,6 +215,7 @@ private function Init takes nothing returns nothing
     call AddChange("Farmhands can construct Wheat Fields now.")
     call AddChange("Do not duplicate Gold Mines on Dwarf Mine Shaft deaths.")
     call AddChange("CustomUnitTypes uses Indexer and reacts to building researches now.")
+    call AddChange("Dummies and Dummy Sheeps in player selection have owner Neutral Passive now.")
 
 static if (MAP_DEBUG_MODE_ENABLED) then
     call AddVersion("4.6")
