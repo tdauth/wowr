@@ -62,7 +62,7 @@ function BuildingStrategy takes nothing returns nothing
         call StartExpansionSimple(SATYR_ANCIENT_PROTECTOR)
 
         if (buildShips) then
-            call StartUnitSimple(shipyards, ELF_SHIPYARD)
+            call StartUnitSimple(shipyards, SATYR_SHIPYARD)
             call StartUnitSimple(ships_transport, ELF_TRANSPORT_SHIP)
             call StartUnitSimple(ships_frigate, ELF_FRIGATE)
             call StartUnitSimple(ships_battleship, ELF_BATTLESHIP)

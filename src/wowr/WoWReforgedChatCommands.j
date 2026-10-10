@@ -1933,7 +1933,9 @@ private function Init takes nothing returns nothing
     call Add("-pingraces", true, function PingRaces)
 
     call Add("-suicide", true, function Suicide)
+    call AddAlias("-k", true)
     call Add("-clear", true, function Clear)
+    call AddAlias("-c", true)
     call Add("-auto", true, function Auto)
     call Add("-resetevolution", false, function ResetRevolution)
 

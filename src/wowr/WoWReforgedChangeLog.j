@@ -204,6 +204,8 @@ private function Init takes nothing returns nothing
     call AddChange("\"-suicide\" and Selfdestruct are not possible on invulnerable units anymore.")
     call AddChange("Fix owners of several neutral units on the map.")
     call AddChange("Simplify registering NPCs.")
+    call AddChange("Add Satyr Shipyard.")
+    call AddChange("Fix icon position and category of research Improved Corrupted Ancient Protectors.")
 
 static if (MAP_DEBUG_MODE_ENABLED) then
     call AddVersion("4.6")

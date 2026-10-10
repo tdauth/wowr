@@ -436,6 +436,9 @@ private function Init takes nothing returns nothing
     call RegisterAbilityFieldType(GetHandleId(ABILITY_RLF_DAMAGE_PER_SECOND_LSH1), ABILITY_FIELD_TYPE_DAMAGE_REAL)
     call RegisterAbilityFieldType(GetHandleId(ABILITY_RLF_MOVEMENT_SPEED_FACTOR_SLO1), ABILITY_FIELD_TYPE_CHANCE_REAL)
     call RegisterAbilityFieldType(GetHandleId(ABILITY_RLF_ATTACK_SPEED_FACTOR_SLO2), ABILITY_FIELD_TYPE_CHANCE_REAL)
+    call RegisterAbilityFieldType(GetHandleId(ABILITY_RLF_ATTACK_SPEED_INCREASE_ISX1), ABILITY_FIELD_TYPE_DAMAGE_REAL)
+    call RegisterAbilityFieldType(GetHandleId(ABILITY_ILF_MOVEMENT_SPEED_BONUS), ABILITY_FIELD_TYPE_LIFE_INTEGER) // TODO Damage Integer
+    call RegisterAbilityFieldType(GetHandleId(ABILITY_ILF_SIGHT_RANGE_BONUS), ABILITY_FIELD_TYPE_LIFE_INTEGER)
 
     // Forsaken Kingdom
 
@@ -1191,6 +1194,15 @@ private function Init takes nothing returns nothing
     call RegisterAbilityField(ABILITY_ATTRIBUTE_BONUS, GetHandleId(ABILITY_ILF_STRENGTH_BONUS_ISTR))
     call RegisterAbilityField(ABILITY_ATTRIBUTE_BONUS, GetHandleId(ABILITY_ILF_AGILITY_BONUS))
     call RegisterAbilityField(ABILITY_ATTRIBUTE_BONUS, GetHandleId(ABILITY_ILF_INTELLIGENCE_BONUS))
+
+    call RegisterUnitAbility(ABILITY_ATTACK_SPEED_BONUS)
+    call RegisterAbilityField(ABILITY_ATTACK_SPEED_BONUS, GetHandleId(ABILITY_RLF_ATTACK_SPEED_INCREASE_ISX1))
+
+    call RegisterUnitAbility(ABILITY_MOVE_SPEED_BONUS)
+    call RegisterAbilityField(ABILITY_MOVE_SPEED_BONUS, GetHandleId(ABILITY_ILF_MOVEMENT_SPEED_BONUS))
+
+    call RegisterUnitAbility(ABILITY_SIGHT_RANGE_BONUS)
+    call RegisterAbilityField(ABILITY_SIGHT_RANGE_BONUS, GetHandleId(ABILITY_ILF_SIGHT_RANGE_BONUS))
 
     // Other abilities
     call RegisterUnitAbility(ABILITY_TRUE_SIGHT)

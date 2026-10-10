@@ -9,13 +9,13 @@ globals
 
     constant integer ITEM_STRENGTH_PLUS_1 = 'I0RO'
     constant integer ITEM_STRENGTH_MINUS_1 = 'I0RN'
-    
+
     constant integer ITEM_AGILITY_PLUS_1 = 'I0RP'
     constant integer ITEM_AGILITY_MINUS_1 = 'I0RR'
-    
+
     constant integer ITEM_INTELLIGENCE_PLUS_1 = 'I0RQ'
     constant integer ITEM_INTELLIGENCE_MINUS_1 = 'I0RS'
-    
+
     constant integer ITEM_FOOT = 'I0OJ'
     constant integer ITEM_AMPHIBIOUS = 'I0OK'
     constant integer ITEM_FLY = 'I0OL'
@@ -23,7 +23,7 @@ globals
     constant integer ITEM_STRENGTH = 'I0OM'
     constant integer ITEM_AGILITY = 'I0ON'
     constant integer ITEM_INTELLIGENCE = 'I0OO'
-    
+
     constant integer ITEM_MELEE = 'I0II'
     constant integer ITEM_RANGE = 'I0UZ'
 
@@ -40,24 +40,24 @@ function AddTrainer takes unit shop returns nothing
 
     call EnablePagedButtons(shop)
     call SetPagedButtonsSlotsPerPage(shop, 9)
-    
+
     // hero classes
     call NextPagedButtonsPage(shop, GetLocalizedString("CLASSES"))
     call AddPagedButtonsItemType(shop, ITEM_RANDOM_CLASS)
     set i = 0
     set max = GetMaxHeroClasses()
     loop
-        exitwhen (i == max)
+        exitwhen (i >= max)
         call AddPagedButtonsItemType(shop, GetHeroClassItemTypeId(i))
         set i = i + 1
     endloop
-    
+
     // primary attributes
     call NextPagedButtonsPage(shop, GetLocalizedString("PRIMARY_ATTRIBUTES"))
     call AddPagedButtonsItemType(shop, ITEM_STRENGTH)
     call AddPagedButtonsItemType(shop, ITEM_AGILITY)
     call AddPagedButtonsItemType(shop, ITEM_INTELLIGENCE)
-    
+
     // attack types
     call NextPagedButtonsPage(shop, GetLocalizedString("ATTACK_TYPES"))
     call AddPagedButtonsItemType(shop, ITEM_MELEE)
@@ -68,7 +68,7 @@ function AddTrainer takes unit shop returns nothing
     call AddPagedButtonsItemType(shop, ITEM_FOOT)
     call AddPagedButtonsItemType(shop, ITEM_AMPHIBIOUS)
     call AddPagedButtonsItemType(shop, ITEM_FLY)
-    
+
     // attributes
     call NextPagedButtonsPage(shop, GetLocalizedString("ATTRIBUTES"))
     call AddPagedButtonsItemType(shop, ITEM_EQUAL_ATTRIBUTES)
@@ -87,7 +87,7 @@ private function TriggerConditionSellItem takes nothing returns boolean
     local item whichItem = GetSoldItem()
     local integer itemTypeId = GetItemTypeId(whichItem)
     local integer heroClass = -1
-    
+
     if (itemTypeId == ITEM_EQUAL_ATTRIBUTES) then
         call ShowWowReforgedSkillPoints(hero)
         call RemoveItem(whichItem)

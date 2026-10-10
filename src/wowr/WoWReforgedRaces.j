@@ -3959,7 +3959,7 @@ private function AddSatyr takes nothing returns integer
     call SetRaceSacrificialPit(r, SATYR_DEFILED_FOUNTAIN_OF_LIFE)
     call SetRaceHousing(r, SATYR_HOUSING)
     call SetRaceMine(r, SATYR_MINE)
-    call SetRaceShipyard(r, ELF_SHIPYARD)
+    call SetRaceShipyard(r, SATYR_SHIPYARD)
     call SetRaceSpecialBuilding(r, SATYR_SKULL_OF_GULDAN)
 
     // researches

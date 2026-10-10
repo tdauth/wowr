@@ -1,4 +1,4 @@
-library CustomUnitTypes requires OnUnitRemoval
+library CustomUnitTypes requires Indexer, OnUnitRemoval
 /*
  * Custom Unit Types 1.0
  *
@@ -9,7 +9,6 @@ library CustomUnitTypes requires OnUnitRemoval
 globals
     private constant integer KEY_HANDLER = 0
 
-    private trigger enterTrigger = CreateTrigger()
     private trigger deathTrigger = CreateTrigger()
     private hashtable h = InitHashtable()
     private boolean init = false
@@ -94,11 +93,10 @@ private function EnumCustomUnitType takes nothing returns nothing
     call CallCustomUnitTypeOnEnter(GetEnumUnit())
 endfunction
 
-private function TriggerConditionEnter takes nothing returns boolean
-    if (IsCustomUnitType(GetUnitTypeId(GetTriggerUnit()))) then
-        call CallCustomUnitTypeOnEnter(GetTriggerUnit())
+private function OnEnter takes nothing returns nothing
+    if (IsCustomUnitType(GetUnitTypeId(GetIndexUnit()))) then
+        call CallCustomUnitTypeOnEnter(GetIndexUnit())
     endif
-    return false
 endfunction
 
 private function TriggerConditionDeath takes nothing returns boolean
@@ -123,8 +121,7 @@ function InitCustomUnitTypes takes nothing returns nothing
         set bj_wantDestroyGroup = true
         call ForGroup(GetUnitsInRectMatching(GetPlayableMapRect(), Filter(function FilterHasCustomUnitType)), function EnumCustomUnitType)
 
-        call TriggerRegisterEnterRectSimple(enterTrigger, GetPlayableMapRect())
-        call TriggerAddCondition(enterTrigger, Condition(function TriggerConditionEnter))
+        call RegisterUnitIndexEvent(function OnEnter)
 
         call TriggerRegisterAnyUnitEventBJ(deathTrigger, EVENT_PLAYER_UNIT_DEATH)
         call TriggerAddCondition(deathTrigger, Condition(function TriggerConditionDeath))

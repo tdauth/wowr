@@ -6078,6 +6078,7 @@ globals
     constant integer SATYR_DEFILED_FOUNTAIN_OF_LIFE                  = 'n0HA' // sacrifical pit
     constant integer SATYR_MINE                                      = 'e020'
     constant integer SATYR_SKULL_OF_GULDAN                           = 'o09T' // special building
+    constant integer SATYR_SHIPYARD                                  = 'e023'
 
     constant integer UPG_SATYR_BACKPACK                              = 'R0DX'
     constant integer UPG_SATYR_STR_MOON                              = 'R0GB'
