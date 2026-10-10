@@ -212,6 +212,7 @@ private function Init takes nothing returns nothing
     call AddChange("Add custom models and icons for Satyr citizens.")
     call AddChange("Add alias \"-date\" for chat command \"-time\".")
     call AddChange("Add info quest entry for chat command \"-date\".")
+    call AddChange("Farmhands can construct Wheat Fields now.")
 
 static if (MAP_DEBUG_MODE_ENABLED) then
     call AddVersion("4.6")
