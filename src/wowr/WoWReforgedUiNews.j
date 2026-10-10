@@ -214,8 +214,6 @@ private function CreateUI takes nothing returns nothing
     call BlzFrameSetAbsPoint(TextAreaFrame, FRAMEPOINT_TOPLEFT, TEXT_AREA_X, TEXT_AREA_Y)
     call BlzFrameSetAbsPoint(TextAreaFrame, FRAMEPOINT_BOTTOMRIGHT, TEXT_AREA_X + TEXT_AREA_WIDTH, TEXT_AREA_Y - TEXT_AREA_HEIGHT)
     call BlzFrameSetFont(TextAreaFrame, "MasterFont", 0.011, 0)
-    call BlzFrameAddText(TextAreaFrame, Format(GetLocalizedString("NEWS_LINE_1")).s(MAP_VERSION).result())
-    call BlzFrameAddText(TextAreaFrame, GetLocalizedString("NEWS_LINE_2"))
     set i = 0
     set max = QuestGetItemCount(GetVersionQuest(0))
     loop
@@ -223,6 +221,8 @@ private function CreateUI takes nothing returns nothing
         call BlzFrameAddText(TextAreaFrame, "- " + QuestItemGetDescription(QuestGetItem(GetVersionQuest(0), i)))
         set i = i + 1
     endloop
+    call BlzFrameAddText(TextAreaFrame, Format(GetLocalizedString("NEWS_LINE_1")).s(MAP_VERSION).result())
+    call BlzFrameAddText(TextAreaFrame, GetLocalizedString("NEWS_LINE_2"))
 
     set f = BlzCreateFrame("ScriptDialogButton", BackgroundFrame, 0, 0)
     call BlzFrameSetAbsPoint(f, FRAMEPOINT_TOPLEFT, CLOSE_BUTTON_X, CLOSE_BUTTON_Y)
