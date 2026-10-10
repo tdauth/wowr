@@ -1510,3 +1510,5 @@ Playing Warcraft III can be played on Ubuntu using Steam, adding it as non-Steam
 * General Frank: [Bloodelf Phoenix Guard](https://www.hiveworkshop.com/threads/bloodelf-phoenix-guard.50668/)
 * MangakaDark: [Blood Mage (Female) Icon](https://www.hiveworkshop.com/threads/blood-mage-female-icon.354738/)
 * TianJiYiPin: [Xal'atath](https://www.hiveworkshop.com/threads/xalatath.354994/)
+* johnwar: [Satyr Shadowdancer (Re-Classic)](https://www.hiveworkshop.com/threads/satyr-shadowdancer-re-classic.335439/)
+* r.ace613: [Satyr Shadowmancer (Re-Classic)](https://www.hiveworkshop.com/threads/satyr-shadowmancer-re-classic.336648/)

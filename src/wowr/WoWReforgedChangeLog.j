@@ -209,6 +209,7 @@ private function Init takes nothing returns nothing
     call AddChange("Fix trained units of Corrupted Entangled Gold Mine.")
     call AddChange("Add Satyr research Animate Dead.")
     call AddChange("Add Mechanical Dummy Pig to player selection.")
+    call AddChange("Add custom models and icons for Satyr citizens.")
 
 static if (MAP_DEBUG_MODE_ENABLED) then
     call AddVersion("4.6")

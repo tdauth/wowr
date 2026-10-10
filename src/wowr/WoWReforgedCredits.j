@@ -1279,6 +1279,8 @@ private function Init takes nothing returns nothing
     call AddCredit("General Frank: Bloodelf Phoenix Guard")
     call AddCredit("MangakaDark: Blood Mage (Female) Icon")
     call AddCredit("TianJiYiPin: Xal'atath")
+    call AddCredit("johnwar: Satyr Shadowdancer (Re-Classic)")
+    call AddCredit("r.ace613: Satyr Shadowmancer (Re-Classic)")
 endfunction
 
 endlibrary
