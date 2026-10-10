@@ -1195,14 +1195,35 @@ private function Init takes nothing returns nothing
     call RegisterAbilityField(ABILITY_ATTRIBUTE_BONUS, GetHandleId(ABILITY_ILF_AGILITY_BONUS))
     call RegisterAbilityField(ABILITY_ATTRIBUTE_BONUS, GetHandleId(ABILITY_ILF_INTELLIGENCE_BONUS))
 
+    call RegisterUnitAbility(ABILITY_DAMAGE_BONUS)
+    call RegisterAbilityField(ABILITY_DAMAGE_BONUS, GetHandleId(ABILITY_ILF_ATTACK_BONUS))
+
+    call RegisterUnitAbility(ABILITY_ARMOR_BONUS)
+    call RegisterAbilityField(ABILITY_ARMOR_BONUS, GetHandleId(ABILITY_ILF_DEFENSE_BONUS_IDEF))
+
     call RegisterUnitAbility(ABILITY_ATTACK_SPEED_BONUS)
     call RegisterAbilityField(ABILITY_ATTACK_SPEED_BONUS, GetHandleId(ABILITY_RLF_ATTACK_SPEED_INCREASE_ISX1))
 
     call RegisterUnitAbility(ABILITY_MOVE_SPEED_BONUS)
     call RegisterAbilityField(ABILITY_MOVE_SPEED_BONUS, GetHandleId(ABILITY_ILF_MOVEMENT_SPEED_BONUS))
 
+    call RegisterUnitAbility(ABILITY_LIFE_BONUS)
+    call RegisterAbilityField(ABILITY_LIFE_BONUS, GetHandleId(ABILITY_ILF_MAX_LIFE_GAINED))
+
+    call RegisterUnitAbility(ABILITY_MANA_BONUS)
+    call RegisterAbilityField(ABILITY_MANA_BONUS, GetHandleId(ABILITY_ILF_MAX_MANA_GAINED))
+
+    call RegisterUnitAbility(ABILITY_LIFE_REGENERATION)
+    call RegisterAbilityField(ABILITY_LIFE_REGENERATION, GetHandleId(ABILITY_ILF_HIT_POINTS_REGENERATED_PER_SECOND))
+
+    call RegisterUnitAbility(ABILITY_MANA_REGENERATION)
+    call RegisterAbilityField(ABILITY_MANA_REGENERATION, GetHandleId(ABILITY_RLF_AMOUNT_REGENERATED))
+
     call RegisterUnitAbility(ABILITY_SIGHT_RANGE_BONUS)
     call RegisterAbilityField(ABILITY_SIGHT_RANGE_BONUS, GetHandleId(ABILITY_ILF_SIGHT_RANGE_BONUS))
+
+    call RegisterUnitAbility(ABILITY_TELEPORTATION)
+    call RegisterAbilityField(ABILITY_TELEPORTATION, GetHandleId(ABILITY_RLF_COOLDOWN))
 
     // Other abilities
     call RegisterUnitAbility(ABILITY_TRUE_SIGHT)

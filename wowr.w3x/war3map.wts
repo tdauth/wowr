@@ -10208,7 +10208,7 @@ STRING 1712
 }
 
 STRING 1713
-// Upgrades: R0IJ (Improved Masonry,Advanced Masonry,Imbued Masonry), EditorSuffix (Editor Suffix)
+// Units: n0GV (Corrupted Ancient of War), EditorSuffix (Name - Editor Suffix)
 {
 (Satyr)
 }
@@ -10310,9 +10310,15 @@ STRING 1729
 }
 
 STRING 1730
-// Upgrades: R088 (Flak Cannons), Hotkey (Hotkey)
+// Units: e009 (Night Elf Shipyard), Hotkey (Hotkey)
 {
 S
+}
+
+STRING 1731
+// Units: n01J (Mechanical Dummy Pig), Name (Name)
+{
+Mechanical Dummy Pig
 }
 
 STRING 1732
@@ -10591,6 +10597,42 @@ STRING 1777
 (Bow of Fire)
 }
 
+STRING 1778
+// Units: n0CF (Dummy Pig), Description (Description)
+{
+A pig who wants to be punished.
+}
+
+STRING 1779
+// Units: h09U (Air Elemental), Hotkey (Hotkey)
+{
+A
+}
+
+STRING 1780
+// Units: e01Y (Worker), EditorSuffix (Name - Editor Suffix)
+{
+(Satyr)
+}
+
+STRING 1781
+// Upgrades: R02A (Resistant Skin), Name (Name)
+{
+Animate Dead
+}
+
+STRING 1782
+// Upgrades: R02A (Resistant Skin), Tip (Tooltip)
+{
+Research Animate Dead
+}
+
+STRING 1783
+// Units: n0GW (Corrupted Ancient Protector), EditorSuffix (Name - Editor Suffix)
+{
+(Satyr)
+}
+
 STRING 1784
 // Units: Hpal (Paladin), Ubertip (Tooltip - Extended)
 {
@@ -10819,6 +10861,12 @@ STRING 1821
 Neutral shop with all kinds of items to improve your hero and unit stats and to build a Hideout for Freelancers.
 }
 
+STRING 1822
+// Upgrades: R02A (Resistant Skin), Ubertip (Tooltip - Extended)
+{
+Gives Hellcallers the ability Animate Dead.
+}
+
 STRING 1831
 // Units: h0KK (Gnome Factory), Tip (Tooltip - Basic)
 {
@@ -10952,7 +11000,7 @@ Increases Arch Clerics' mana capacity, mana regeneration rate, hit points, and g
 }
 
 STRING 1854
-// Units: h09U (Air Elemental), Hotkey (Hotkey)
+// Units: o02V (Open Gate), Hotkey (Hotkey)
 {
 A
 }
@@ -12563,277 +12611,277 @@ STRING 2277
 }
 
 STRING 2280
-// Units: o02V (Open Gate), Hotkey (Hotkey)
-{
-A
-}
-
-STRING 2281
 // Units: U01G (Abomination), Hotkey (Hotkey)
 {
 A
 }
 
-STRING 2282
+STRING 2281
 // Units: h0CR (Kul Tiras Advanced Shipyard), Hotkey (Hotkey)
 {
 A
 }
 
-STRING 2283
+STRING 2282
 // Units: o054 (Alchemist Lab), Hotkey (Hotkey)
 {
 A
 }
 
-STRING 2284
+STRING 2283
 // Units: n0E2 (Alliance Airship), Hotkey (Hotkey)
 {
 A
 }
 
-STRING 2285
+STRING 2284
 // Units: h0OV (Anvil), Hotkey (Hotkey)
 {
 A
 }
 
-STRING 2286
+STRING 2285
 // Units: n0EZ (Armored Wolf), Hotkey (Hotkey)
 {
 A
 }
 
-STRING 2287
+STRING 2286
 // Units: N0F3 (Sapper), Hotkey (Hotkey)
 {
 A
 }
 
-STRING 2288
+STRING 2287
 // Units: N0H0 (Satyr Hellcaller), Hotkey (Hotkey)
 {
 A
 }
 
-STRING 2289
+STRING 2288
 // Units: n0HD (Shadowdancer), Hotkey (Hotkey)
 {
 A
 }
 
-STRING 2290
+STRING 2289
 // Units: h0RM (Mage), Hotkey (Hotkey)
 {
 A
 }
 
-STRING 2291
+STRING 2290
 // Units: n0IK (Air Elemental), Hotkey (Hotkey)
 {
 A
 }
 
-STRING 2292
+STRING 2291
 // Units: h0SC (Change Direction), Hotkey (Hotkey)
 {
 A
 }
 
-STRING 2293
+STRING 2292
 // Units: n0KC (Aqir), Hotkey (Hotkey)
 {
 A
 }
 
-STRING 2294
+STRING 2293
 // Units: n09M (Skeleton Archer), Hotkey (Hotkey)
 {
 A
 }
 
-STRING 2295
+STRING 2294
 // Units: n0AU (Stormwind Airship), Hotkey (Hotkey)
 {
 A
 }
 
-STRING 2296
+STRING 2295
 // Items: gopr (Glyph of Purification), Hotkey (Hotkey)
 {
 A
 }
 
-STRING 2297
+STRING 2296
 // Items: I055 (Gold Bars), Hotkey (Hotkey)
 {
 A
 }
 
-STRING 2298
+STRING 2297
 // Items: I05X (First Profession), Hotkey (Hotkey)
 {
 A
 }
 
-STRING 2299
+STRING 2298
 // Items: I064 (Undercity (Lordaeron Ruins)), Hotkey (Hotkey)
 {
 A
 }
 
-STRING 2300
+STRING 2299
 // Items: I06E (Blood Elf), Hotkey (Hotkey)
 {
 A
 }
 
-STRING 2301
+STRING 2300
 // Items: I06P (Engineer), Hotkey (Hotkey)
 {
 A
 }
 
-STRING 2302
+STRING 2301
 // Items: I096 (Craft Gold Bars), Hotkey (Hotkey)
 {
 A
 }
 
-STRING 2303
+STRING 2302
 // Items: I09T (Tauren), Hotkey (Hotkey)
 {
 A
 }
 
-STRING 2304
+STRING 2303
 // Items: I0H5 (Iron Bars), Hotkey (Hotkey)
 {
 A
 }
 
-STRING 2305
+STRING 2304
 // Items: I0H6 (Craft Iron Bars), Hotkey (Hotkey)
 {
 A
 }
 
-STRING 2306
+STRING 2305
 // Items: I0KQ (Silver Bars), Hotkey (Hotkey)
 {
 A
 }
 
-STRING 2307
+STRING 2306
 // Items: I0KR (Craft Silver Bars), Hotkey (Hotkey)
 {
 A
 }
 
-STRING 2308
+STRING 2307
 // Items: I0L1 (Tamer), Hotkey (Hotkey)
 {
 A
 }
 
-STRING 2309
+STRING 2308
 // Items: I0RN (-1 Strength), Hotkey (Hotkey)
 {
 A
 }
 
-STRING 2310
+STRING 2309
 // Items: I0ST (Kobold), Hotkey (Hotkey)
 {
 A
 }
 
-STRING 2311
+STRING 2310
 // Items: I0SU (Quillboar), Hotkey (Hotkey)
 {
 A
 }
 
-STRING 2312
+STRING 2311
 // Items: I114 (Silvermoon), Hotkey (Hotkey)
 {
 A
 }
 
-STRING 2313
+STRING 2312
 // Items: I115 (Thunder Bluff (Mulgore)), Hotkey (Hotkey)
 {
 A
 }
 
-STRING 2314
+STRING 2313
 // Items: I116 (Sunstrider Isle), Hotkey (Hotkey)
 {
 A
 }
 
-STRING 2315
+STRING 2314
 // Items: I13E (Tome of Damage), Hotkey (Hotkey)
 {
 A
 }
 
-STRING 2316
+STRING 2315
 // Items: I18H (Magical Filler), Hotkey (Hotkey)
 {
 A
 }
 
-STRING 2317
+STRING 2316
 // Abilities: ACad (Animate Dead), Hotkey (Hotkey - Normal)
 {
 A
 }
 
-STRING 2318
+STRING 2317
 // Abilities: A09Z (Ping Excluded Units for Savecode), Hotkey (Hotkey - Normal)
 {
 A
 }
 
-STRING 2319
+STRING 2318
 // Abilities: A0AX (Convert Into Blood Elf), Hotkey (Hotkey - Normal)
 {
 A
 }
 
-STRING 2320
+STRING 2319
 // Abilities: A0D5 (Convert into Ancient), Hotkey (Hotkey - Normal)
 {
 A
 }
 
-STRING 2321
+STRING 2320
 // Abilities: A0MG (Select Location), Hotkey (Hotkey - Normal)
 {
 A
 }
 
-STRING 2322
+STRING 2321
 // Abilities: A1GU (Wildkin Form), Hotkey (Hotkey - Normal)
 {
 A
 }
 
-STRING 2323
+STRING 2322
 // Abilities: A1IO (Artifical Day), Hotkey (Hotkey - Normal)
 {
 A
 }
 
-STRING 2324
+STRING 2323
 // Abilities: A1L8 (-1 Strength), Hotkey (Hotkey - Normal)
 {
 A
 }
 
-STRING 2325
+STRING 2324
 // Abilities: A1LL (Attack Speed Bonus), Researchhotkey (Hotkey - Learn)
+{
+A
+}
+
+STRING 2325
+// Abilities: A1LN (Damage Bonus), Researchhotkey (Hotkey - Learn)
 {
 A
 }
@@ -12851,13 +12899,13 @@ STRING 2327
 }
 
 STRING 2328
-// Abilities: A1LN (Damage Bonus), Researchhotkey (Hotkey - Learn)
+// Abilities: A1LP (Armor Bonus), Researchhotkey (Hotkey - Learn)
 {
 A
 }
 
 STRING 2329
-// Abilities: A1LP (Armor Bonus), Researchhotkey (Hotkey - Learn)
+// Abilities: A1OG (Mark 4), Hotkey (Hotkey - Normal)
 {
 A
 }
@@ -12869,181 +12917,181 @@ Zerberus
 }
 
 STRING 2331
-// Abilities: A1OG (Mark 4), Hotkey (Hotkey - Normal)
-{
-A
-}
-
-STRING 2332
 // Abilities: A1X6 (Attack), Hotkey (Hotkey - Normal)
 {
 A
 }
 
-STRING 2333
+STRING 2332
 // Abilities: A1XA (Auto Skill), Hotkey (Hotkey - Normal)
 {
 A
 }
 
-STRING 2334
+STRING 2333
 // Abilities: A0WR (Herbalism - Grand Master), Hotkey (Hotkey - Normal)
 {
 A
 }
 
-STRING 2335
+STRING 2334
 // Abilities: A0WK (Alchemy - Grand Master), Hotkey (Hotkey - Normal)
 {
 A
 }
 
-STRING 2336
+STRING 2335
 // Abilities: A0WM (Dragon Breeding - Grand Master), Hotkey (Hotkey - Normal)
 {
 A
 }
 
-STRING 2337
+STRING 2336
 // Abilities: A0WV (Necromancy - Grand Master), Hotkey (Hotkey - Normal)
 {
 A
 }
 
-STRING 2338
+STRING 2337
 // Abilities: A0YG (Weaponsmithing - Grand Master), Hotkey (Hotkey - Normal)
 {
 A
 }
 
-STRING 2339
+STRING 2338
 // Abilities: A0YI (Scribing - Grand Master), Hotkey (Hotkey - Normal)
 {
 A
 }
 
-STRING 2340
+STRING 2339
 // Abilities: A0YJ (Enchanting - Grand Master), Hotkey (Hotkey - Normal)
 {
 A
 }
 
-STRING 2341
+STRING 2340
 // Abilities: A0YM (Armoring - Grand Master), Hotkey (Hotkey - Normal)
 {
 A
 }
 
-STRING 2342
+STRING 2341
 // Abilities: A108 (Inscription - Grand Master), Hotkey (Hotkey - Normal)
 {
 A
 }
 
-STRING 2343
+STRING 2342
 // Abilities: A10A (Warlockery - Grand Master), Hotkey (Hotkey - Normal)
 {
 A
 }
 
-STRING 2344
+STRING 2343
 // Abilities: A10F (Archaeology - Grand Master), Hotkey (Hotkey - Normal)
 {
 A
 }
 
-STRING 2345
+STRING 2344
 // Abilities: A10R (Runeforging - Grand Master), Hotkey (Hotkey - Normal)
 {
 A
 }
 
-STRING 2346
+STRING 2345
 // Abilities: A10W (Jewelcrafting - Grand Master), Hotkey (Hotkey - Normal)
 {
 A
 }
 
-STRING 2347
+STRING 2346
 // Abilities: A17I (Witch Doctor - Grand Master), Hotkey (Hotkey - Normal)
 {
 A
 }
 
-STRING 2348
+STRING 2347
 // Abilities: A17M (Loremastery - Grand Master), Hotkey (Hotkey - Normal)
 {
 A
 }
 
-STRING 2349
+STRING 2348
 // Abilities: A1BE (Sorcery - Grand Master), Hotkey (Hotkey - Normal)
 {
 A
 }
 
-STRING 2350
+STRING 2349
 // Abilities: A1P5 (Sculpting - Grand Master), Hotkey (Hotkey - Normal)
 {
 A
 }
 
-STRING 2351
+STRING 2350
 // Abilities: A1UD (Farming - Grand Master), Hotkey (Hotkey - Normal)
 {
 A
 }
 
-STRING 2352
+STRING 2351
 // Abilities: A1ZB (Merchant - Grand Master), Hotkey (Hotkey - Normal)
 {
 A
 }
 
-STRING 2353
+STRING 2352
 // Abilities: A1ZH (Engineering - Grand Master), Hotkey (Hotkey - Normal)
 {
 A
 }
 
-STRING 2354
+STRING 2353
 // Abilities: A209 (Hunting - Grand Master), Hotkey (Hotkey - Normal)
 {
 A
 }
 
-STRING 2355
+STRING 2354
 // Abilities: A24F (Captain - Grand Master), Hotkey (Hotkey - Normal)
 {
 A
 }
 
-STRING 2356
+STRING 2355
 // Abilities: A25X (Astromancy - Grand Master), Hotkey (Hotkey - Normal)
 {
 A
 }
 
-STRING 2357
+STRING 2356
 // Abilities: A260 (Demolishing - Grand Master), Hotkey (Hotkey - Normal)
 {
 A
 }
 
-STRING 2358
+STRING 2357
 // Abilities: A266 (Taming - Grand Master), Hotkey (Hotkey - Normal)
 {
 A
 }
 
-STRING 2359
+STRING 2358
 // Abilities: A0L2 (Cooking - Grand Master), Hotkey (Hotkey - Normal)
 {
 A
 }
 
-STRING 2360
+STRING 2359
 // Abilities: A0WT (Slot 5), Hotkey (Hotkey - Normal)
+{
+A
+}
+
+STRING 2360
+// Abilities: A0ID (Acid Bomb), Hotkey (Hotkey - Normal)
 {
 A
 }
@@ -13061,13 +13109,13 @@ Combiner
 }
 
 STRING 2364
-// Abilities: A0ID (Acid Bomb), Hotkey (Hotkey - Normal)
+// Abilities: A01H (Thieving - Grand Master), Hotkey (Hotkey - Normal)
 {
 A
 }
 
 STRING 2365
-// Abilities: A01H (Thieving - Grand Master), Hotkey (Hotkey - Normal)
+// Abilities: A02Y (Animate Dead), Hotkey (Hotkey - Normal)
 {
 A
 }
@@ -14615,7 +14663,7 @@ Build Tiny Bandit Shipyard
 }
 
 STRING 2658
-// Units: e009 (Night Elf Shipyard), Hotkey (Hotkey)
+// Units: o00A (Draenei Shipyard), Hotkey (Hotkey)
 {
 S
 }
@@ -14993,7 +15041,7 @@ STRING 2796
 }
 
 STRING 2799
-// Units: o00A (Draenei Shipyard), Hotkey (Hotkey)
+// Units: n01N (Draenei Shop), Hotkey (Hotkey)
 {
 S
 }
@@ -15689,7 +15737,7 @@ Summon Sea Giant
 }
 
 STRING 2991
-// Units: n01N (Draenei Shop), Hotkey (Hotkey)
+// Units: o00E (Furbolg Shipyard), Hotkey (Hotkey)
 {
 S
 }
@@ -15713,49 +15761,49 @@ D
 }
 
 STRING 2998
-// Units: o00E (Furbolg Shipyard), Hotkey (Hotkey)
-{
-S
-}
-
-STRING 2999
 // Units: h01S (Freelancer Shop), Hotkey (Hotkey)
 {
 S
 }
 
-STRING 3000
+STRING 2999
 // Units: o01B (Goblin Shipyard), Hotkey (Hotkey)
 {
 S
 }
 
-STRING 3001
+STRING 3000
 // Units: h02K (Goblin Steam Roller), Hotkey (Hotkey)
 {
 S
 }
 
-STRING 3002
+STRING 3001
 // Units: o01J (Railway South), Hotkey (Hotkey)
 {
 S
 }
 
-STRING 3003
+STRING 3002
 // Units: h038 (Dwarf Shipyard), Hotkey (Hotkey)
 {
 S
 }
 
-STRING 3004
+STRING 3003
 // Units: h04Y (High Elf Shipyard), Hotkey (Hotkey)
 {
 S
 }
 
-STRING 3005
+STRING 3004
 // Units: e00O (Naga Shipyard), Hotkey (Hotkey)
+{
+S
+}
+
+STRING 3005
+// Units: h05G (Kul Tiras Shipyard), Hotkey (Hotkey)
 {
 S
 }
@@ -15779,13 +15827,13 @@ Ping Destination
 }
 
 STRING 3010
-// Units: h05G (Kul Tiras Shipyard), Hotkey (Hotkey)
+// Units: N07D (Goblin Shredder), Hotkey (Hotkey)
 {
 S
 }
 
 STRING 3011
-// Units: N07D (Goblin Shredder), Hotkey (Hotkey)
+// Units: u017 (Demon Shipyard), Hotkey (Hotkey)
 {
 S
 }
@@ -16859,7 +16907,7 @@ Rumblefitz
 }
 
 STRING 3262
-// Units: u017 (Demon Shipyard), Hotkey (Hotkey)
+// Units: h09D (Arcane Shipyard), Hotkey (Hotkey)
 {
 S
 }
@@ -17027,7 +17075,7 @@ Slave Master Master Training
 }
 
 STRING 3308
-// Units: h09D (Arcane Shipyard), Hotkey (Hotkey)
+// Units: h09G (Sand Elemental), Hotkey (Hotkey)
 {
 S
 }
@@ -19241,7 +19289,7 @@ R
 }
 
 STRING 3780
-// Units: h09G (Sand Elemental), Hotkey (Hotkey)
+// Units: h0AA (Sage), Hotkey (Hotkey)
 {
 S
 }
@@ -19847,7 +19895,7 @@ Altar of Pain
 }
 
 STRING 3928
-// Units: h0AA (Sage), Hotkey (Hotkey)
+// Units: o02Y (Move Bridge Up), Hotkey (Hotkey)
 {
 S
 }
@@ -21449,7 +21497,7 @@ Build Furbolg Shipyard
 }
 
 STRING 4401
-// Units: o02Y (Move Bridge Up), Hotkey (Hotkey)
+// Units: h0IM (Spear Carrier), Hotkey (Hotkey)
 {
 S
 }
@@ -21893,7 +21941,7 @@ STRING 4480
 }
 
 STRING 4481
-// Units: h0IM (Spear Carrier), Hotkey (Hotkey)
+// Units: h0IN (Vrykul Shipyard), Hotkey (Hotkey)
 {
 S
 }
@@ -22232,7 +22280,7 @@ STRING 4543
 }
 
 STRING 4544
-// Units: h0IN (Vrykul Shipyard), Hotkey (Hotkey)
+// Units: h0JB (Worgen Shipyard), Hotkey (Hotkey)
 {
 S
 }
@@ -22502,7 +22550,7 @@ Summon Gruul the Dragonkiller
 }
 
 STRING 4634
-// Units: h0JB (Worgen Shipyard), Hotkey (Hotkey)
+// Units: O04L (Spirit Walker), Hotkey (Hotkey)
 {
 S
 }
@@ -22700,7 +22748,7 @@ G
 }
 
 STRING 4686
-// Units: O04L (Spirit Walker), Hotkey (Hotkey)
+// Units: O04M (Spirit Walker), Hotkey (Hotkey)
 {
 S
 }
@@ -25109,7 +25157,7 @@ Tidal Guardians summon a Tidal Wyrm when dying who defends your town.
 }
 
 STRING 5179
-// Units: O04M (Spirit Walker), Hotkey (Hotkey)
+// Units: e01D (Cloud Serpent), Hotkey (Hotkey)
 {
 S
 }
@@ -25253,7 +25301,7 @@ STRING 5205
 }
 
 STRING 5208
-// Units: e01D (Cloud Serpent), Hotkey (Hotkey)
+// Units: H0K7 (Spellbreaker), Hotkey (Hotkey)
 {
 S
 }
@@ -27869,7 +27917,7 @@ Hire Dragonkin Citizen (female)
 }
 
 STRING 5748
-// Units: H0K7 (Spellbreaker), Hotkey (Hotkey)
+// Units: o051 (Troll Shipyard), Hotkey (Hotkey)
 {
 S
 }
@@ -28787,7 +28835,7 @@ STRING 5910
 }
 
 STRING 5911
-// Units: o051 (Troll Shipyard), Hotkey (Hotkey)
+// Units: h0MW (Spiked Trap), Hotkey (Hotkey)
 {
 S
 }
@@ -29861,7 +29909,7 @@ STRING 6105
 }
 
 STRING 6106
-// Units: h0MW (Spiked Trap), Hotkey (Hotkey)
+// Units: h0NB (Lordaeron Shipyard), Hotkey (Hotkey)
 {
 S
 }
@@ -29969,7 +30017,7 @@ Tidal Guardians summon a Tidal Wyrm when dying who defends your town.
 }
 
 STRING 6155
-// Units: h0NB (Lordaeron Shipyard), Hotkey (Hotkey)
+// Units: h0OL (Human Fire Ship), Hotkey (Hotkey)
 {
 S
 }
@@ -30185,7 +30233,7 @@ The Dragon Breeder uses his knowledge to create a Tiny Dragon Roost.
 }
 
 STRING 6199
-// Units: h0OL (Human Fire Ship), Hotkey (Hotkey)
+// Units: n0FE (Spearman), Hotkey (Hotkey)
 {
 S
 }
@@ -30401,7 +30449,7 @@ rlev
 }
 
 STRING 6238
-// Units: n0FE (Spearman), Hotkey (Hotkey)
+// Units: o064 (Tuskarr Shipyard), Hotkey (Hotkey)
 {
 S
 }
@@ -30977,7 +31025,7 @@ The Necromancer uses his gathered herbs and minerals to create a Tiny Necromance
 }
 
 STRING 6438
-// Units: o064 (Tuskarr Shipyard), Hotkey (Hotkey)
+// Units: n0G9 (Murloc Shadowcaster), Hotkey (Hotkey)
 {
 S
 }
@@ -31616,7 +31664,7 @@ Open Gate
 }
 
 STRING 6611
-// Units: n0G9 (Murloc Shadowcaster), Hotkey (Hotkey)
+// Units: n0GM (Ogre Stone Thrower), Hotkey (Hotkey)
 {
 S
 }
@@ -31688,7 +31736,7 @@ Grand Master Enchanting Formula
 }
 
 STRING 6677
-// Units: n0GM (Ogre Stone Thrower), Hotkey (Hotkey)
+// Units: e01V (Pandaren Shipyard), Hotkey (Hotkey)
 {
 S
 }
@@ -31844,7 +31892,7 @@ W
 }
 
 STRING 6713
-// Units: e01V (Pandaren Shipyard), Hotkey (Hotkey)
+// Units: e026 (High Elf Shipyard), Hotkey (Hotkey)
 {
 S
 }
@@ -32672,7 +32720,7 @@ STRING 6972
 }
 
 STRING 6973
-// Units: e026 (High Elf Shipyard), Hotkey (Hotkey)
+// Units: o07C (Ogre Shipyard), Hotkey (Hotkey)
 {
 S
 }
@@ -33386,7 +33434,7 @@ R
 }
 
 STRING 7165
-// Units: o07C (Ogre Shipyard), Hotkey (Hotkey)
+// Units: h0RG (Stormwind Shipyard), Hotkey (Hotkey)
 {
 S
 }
@@ -35378,13 +35426,13 @@ T
 }
 
 STRING 7729
-// Units: h0RG (Stormwind Shipyard), Hotkey (Hotkey)
+// Units: h0U2 (Fishing Port), Hotkey (Hotkey)
 {
 S
 }
 
 STRING 7730
-// Units: h0U2 (Fishing Port), Hotkey (Hotkey)
+// Units: n0J9 (Shark), Hotkey (Hotkey)
 {
 S
 }
@@ -35420,7 +35468,7 @@ Increases Succubus' mana capacity, mana regeneration rate, hit points, and gives
 }
 
 STRING 7736
-// Units: n0J9 (Shark), Hotkey (Hotkey)
+// Units: n0L6 (Satyr), Hotkey (Hotkey)
 {
 S
 }
@@ -37163,7 +37211,7 @@ Craft Tomes of Greater Experince.
 }
 
 STRING 8077
-// Units: n0L6 (Satyr), Hotkey (Hotkey)
+// Units: h0WJ (Shipyard), Hotkey (Hotkey)
 {
 S
 }
@@ -37175,7 +37223,7 @@ Cunning Hero, adept at manipulating opponents. Can learn Silence, Holy Light, Un
 }
 
 STRING 8079
-// Units: h0WJ (Shipyard), Hotkey (Hotkey)
+// Units: h0WN (Gnome Shipyard), Hotkey (Hotkey)
 {
 S
 }
@@ -37259,7 +37307,7 @@ Automatically brings the Hero back to life with <A1UT,DataB1> hit points when th
 }
 
 STRING 8093
-// Units: h0WN (Gnome Shipyard), Hotkey (Hotkey)
+// Units: o09W (Freelancer Shipyard), Hotkey (Hotkey)
 {
 S
 }
@@ -37385,7 +37433,7 @@ STRING 8113
 }
 
 STRING 8114
-// Units: o09W (Freelancer Shipyard), Hotkey (Hotkey)
+// Units: u037 (Nerubian Shipyard), Hotkey (Hotkey)
 {
 S
 }
@@ -37475,7 +37523,7 @@ The Weapon Smithing uses his knowledge to create a Weapon Forging Hammer.
 }
 
 STRING 8129
-// Units: u037 (Nerubian Shipyard), Hotkey (Hotkey)
+// Units: o09X (Fel Orc Shipyard), Hotkey (Hotkey)
 {
 S
 }
@@ -37721,7 +37769,7 @@ Mystical Hero, adept at using nature spells. Can learn Mass Rejuvenation, Mass F
 }
 
 STRING 8189
-// Units: o09X (Fel Orc Shipyard), Hotkey (Hotkey)
+// Units: n0MG (Centaur Sorcerer), Hotkey (Hotkey)
 {
 S
 }
@@ -38348,13 +38396,13 @@ STRING 8302
 }
 
 STRING 8304
-// Units: n0MG (Centaur Sorcerer), Hotkey (Hotkey)
+// Units: h0YJ (Kul Tiras Shipyard), Hotkey (Hotkey)
 {
 S
 }
 
 STRING 8305
-// Units: h0YJ (Kul Tiras Shipyard), Hotkey (Hotkey)
+// Units: o0B6 (Kobold Shipyard), Hotkey (Hotkey)
 {
 S
 }
@@ -39266,7 +39314,7 @@ Call upon the spirit of Gnomebot to save you.
 }
 
 STRING 8477
-// Units: o0B6 (Kobold Shipyard), Hotkey (Hotkey)
+// Units: h07O (Bandit Shipyard), Hotkey (Hotkey)
 {
 S
 }
@@ -39350,7 +39398,7 @@ P
 }
 
 STRING 8512
-// Units: h07O (Bandit Shipyard), Hotkey (Hotkey)
+// Units: n09Y (Salamander), Hotkey (Hotkey)
 {
 S
 }
@@ -39596,13 +39644,13 @@ The Jewelcrafter uses his gathered jewels to craft a Golden Crown.
 }
 
 STRING 8561
-// Units: n09Y (Salamander), Hotkey (Hotkey)
+// Units: u01O (Dungeon Shipyard), Hotkey (Hotkey)
 {
 S
 }
 
 STRING 8562
-// Units: u01O (Dungeon Shipyard), Hotkey (Hotkey)
+// Units: o04E (Dragonkin Shipyard), Hotkey (Hotkey)
 {
 S
 }
@@ -39722,13 +39770,13 @@ D
 }
 
 STRING 8602
-// Units: o04E (Dragonkin Shipyard), Hotkey (Hotkey)
+// Units: e019 (Blood Elf Shipyard), Hotkey (Hotkey)
 {
 S
 }
 
 STRING 8603
-// Units: e019 (Blood Elf Shipyard), Hotkey (Hotkey)
+// Units: h0AT (Shipyard), Hotkey (Hotkey)
 {
 S
 }
@@ -40148,7 +40196,7 @@ Flame Storm
 }
 
 STRING 8687
-// Units: h0AT (Shipyard), Hotkey (Hotkey)
+// Units: o016 (Draenei Shipyard), Hotkey (Hotkey)
 {
 S
 }
@@ -41636,7 +41684,7 @@ The Witch Doctor uses his knowledge to create Peace Wards.
 }
 
 STRING 10076
-// Units: o016 (Draenei Shipyard), Hotkey (Hotkey)
+// Units: o007 (Tauren Shipyard), Hotkey (Hotkey)
 {
 S
 }
@@ -41678,7 +41726,7 @@ The Loreamster uses his knowledge to create a Arcane Scroll.
 }
 
 STRING 10085
-// Units: o007 (Tauren Shipyard), Hotkey (Hotkey)
+// Units: e00U (Murloc Shipyard), Hotkey (Hotkey)
 {
 S
 }
@@ -42824,7 +42872,7 @@ The Sorcerer uses his knowledge to create a Wand of Telekinesis.
 }
 
 STRING 10319
-// Units: e00U (Murloc Shipyard), Hotkey (Hotkey)
+// Units: u00U (Faceless One Shipyard), Hotkey (Hotkey)
 {
 S
 }
@@ -42992,7 +43040,7 @@ STRING 10375
 }
 
 STRING 10376
-// Units: u00U (Faceless One Shipyard), Hotkey (Hotkey)
+// Units: e023 (Satyr Shipyard), Hotkey (Hotkey)
 {
 S
 }
@@ -43004,7 +43052,7 @@ Provides an additional source of gold income.|n|n|cffffcc00Limited to 4.|r
 }
 
 STRING 10391
-// Units: e023 (Satyr Shipyard), Hotkey (Hotkey)
+// Items: fgrg (Stone Token), Hotkey (Hotkey)
 {
 S
 }
@@ -43028,7 +43076,7 @@ U
 }
 
 STRING 10395
-// Items: fgrg (Stone Token), Hotkey (Hotkey)
+// Items: gomn (Glyph of Omniscience), Hotkey (Hotkey)
 {
 S
 }
@@ -43424,7 +43472,7 @@ Craft Tiny Divine Golems.
 }
 
 STRING 10485
-// Items: gomn (Glyph of Omniscience), Hotkey (Hotkey)
+// Items: rots (Scepter of the Sea), Hotkey (Hotkey)
 {
 S
 }
@@ -43754,7 +43802,7 @@ STRING 10572
 }
 
 STRING 10573
-// Items: rots (Scepter of the Sea), Hotkey (Hotkey)
+// Items: I05Y (Second Profession), Hotkey (Hotkey)
 {
 S
 }
@@ -44336,7 +44384,7 @@ D
 }
 
 STRING 10742
-// Items: I05Y (Second Profession), Hotkey (Hotkey)
+// Items: I065 (Naga Ruins (Sunken Kalimdor)), Hotkey (Hotkey)
 {
 S
 }
@@ -44534,7 +44582,7 @@ L
 }
 
 STRING 10779
-// Items: I065 (Naga Ruins (Sunken Kalimdor)), Hotkey (Hotkey)
+// Items: I06F (Naga), Hotkey (Hotkey)
 {
 S
 }
@@ -44726,7 +44774,7 @@ W
 }
 
 STRING 10854
-// Items: I06F (Naga), Hotkey (Hotkey)
+// Items: I06Q (Loremaster), Hotkey (Hotkey)
 {
 S
 }
@@ -44966,19 +45014,19 @@ G
 }
 
 STRING 10900
-// Items: I06Q (Loremaster), Hotkey (Hotkey)
-{
-S
-}
-
-STRING 10901
 // Items: I08U (Boards), Hotkey (Hotkey)
 {
 S
 }
 
-STRING 10902
+STRING 10901
 // Items: I097 (Craft Boards), Hotkey (Hotkey)
+{
+S
+}
+
+STRING 10902
+// Items: I09H (Item Locker), Hotkey (Hotkey)
 {
 S
 }
@@ -45122,7 +45170,7 @@ Creates a Gnome Turret.
 }
 
 STRING 10927
-// Items: I09H (Item Locker), Hotkey (Hotkey)
+// Items: I09Q (Troll), Hotkey (Hotkey)
 {
 S
 }
@@ -45470,7 +45518,7 @@ STRING 11015
 }
 
 STRING 11019
-// Items: I09Q (Troll), Hotkey (Hotkey)
+// Items: I0B0 (Summon Red Dragon), Hotkey (Hotkey)
 {
 S
 }
@@ -46634,7 +46682,7 @@ Reveals an area of the map. |nDetects invisible units. |nLasts <A096,Dur1> secon
 }
 
 STRING 11442
-// Items: I0B0 (Summon Red Dragon), Hotkey (Hotkey)
+// Items: I0AL (Summon Green Dragon), Hotkey (Hotkey)
 {
 S
 }
@@ -47240,7 +47288,7 @@ W
 }
 
 STRING 11709
-// Items: I0AL (Summon Green Dragon), Hotkey (Hotkey)
+// Items: I0AM (Summon Black Dragon), Hotkey (Hotkey)
 {
 S
 }
@@ -50432,7 +50480,7 @@ Build Demon Shipyard
 }
 
 STRING 14055
-// Items: I0AM (Summon Black Dragon), Hotkey (Hotkey)
+// Items: I0AN (Summon Bronze Dragon), Hotkey (Hotkey)
 {
 S
 }
@@ -51200,7 +51248,7 @@ Purchase Amulet of Martial Arts
 }
 
 STRING 14411
-// Items: I0AN (Summon Bronze Dragon), Hotkey (Hotkey)
+// Items: I0B2 (Summon Blue Dragon), Hotkey (Hotkey)
 {
 S
 }
@@ -51680,7 +51728,7 @@ STRING 14726
 }
 
 STRING 14727
-// Items: I0B2 (Summon Blue Dragon), Hotkey (Hotkey)
+// Items: I0B3 (Summon Nether Dragon), Hotkey (Hotkey)
 {
 S
 }
@@ -53816,7 +53864,7 @@ STRING 16859
 }
 
 STRING 16860
-// Items: I0B3 (Summon Nether Dragon), Hotkey (Hotkey)
+// Items: I0JQ (Craft Ice Shards), Hotkey (Hotkey)
 {
 S
 }
@@ -53924,7 +53972,7 @@ O
 }
 
 STRING 16918
-// Items: I0JQ (Craft Ice Shards), Hotkey (Hotkey)
+// Items: I0NM (Inscriptor), Hotkey (Hotkey)
 {
 S
 }
@@ -54116,7 +54164,7 @@ C
 }
 
 STRING 17004
-// Items: I0NM (Inscriptor), Hotkey (Hotkey)
+// Items: I0OT (Summon Guard of the Old Gods), Hotkey (Hotkey)
 {
 S
 }
@@ -54182,7 +54230,7 @@ Serves as a drop-off point for harvested lumber. |nAlso contains upgrades for im
 }
 
 STRING 17296
-// Items: I0OT (Summon Guard of the Old Gods), Hotkey (Hotkey)
+// Items: I0RR (-1 Agility), Hotkey (Hotkey)
 {
 S
 }
@@ -54554,7 +54602,7 @@ Equips the sword which allows only melee attacks.
 }
 
 STRING 17362
-// Items: I0RR (-1 Agility), Hotkey (Hotkey)
+// Items: I0WN (Cook), Hotkey (Hotkey)
 {
 S
 }
@@ -54662,7 +54710,7 @@ STRING 17397
 }
 
 STRING 17400
-// Items: I0WN (Cook), Hotkey (Hotkey)
+// Items: I0WX (Fisherman), Hotkey (Hotkey)
 {
 S
 }
@@ -55592,7 +55640,7 @@ Boards
 }
 
 STRING 17811
-// Items: I0WX (Fisherman), Hotkey (Hotkey)
+// Items: I13G (Tome of Armor), Hotkey (Hotkey)
 {
 S
 }
@@ -55850,7 +55898,7 @@ Nocturnal
 }
 
 STRING 18126
-// Items: I13G (Tome of Armor), Hotkey (Hotkey)
+// Items: I16D (Craft Firehand Gauntlets), Hotkey (Hotkey)
 {
 S
 }
@@ -56144,7 +56192,7 @@ STRING 18706
 }
 
 STRING 18734
-// Items: I16D (Craft Firehand Gauntlets), Hotkey (Hotkey)
+// Items: I18B (Scepter of the Cult), Hotkey (Hotkey)
 {
 S
 }
@@ -57011,7 +57059,7 @@ Mana Regeneration
 }
 
 STRING 18995
-// Items: I18B (Scepter of the Cult), Hotkey (Hotkey)
+// Items: I19U (Spade), Hotkey (Hotkey)
 {
 S
 }
@@ -57545,7 +57593,7 @@ E
 }
 
 STRING 19665
-// Items: I19U (Spade), Hotkey (Hotkey)
+// Abilities: A026 (Shroud of Protection), Hotkey (Hotkey - Normal)
 {
 S
 }
@@ -57941,7 +57989,7 @@ E
 }
 
 STRING 19937
-// Abilities: A026 (Shroud of Protection), Hotkey (Hotkey - Normal)
+// Abilities: A0AY (Convert Into Naga), Hotkey (Hotkey - Normal)
 {
 S
 }
@@ -58127,7 +58175,7 @@ Y
 }
 
 STRING 20037
-// Abilities: A0AY (Convert Into Naga), Hotkey (Hotkey - Normal)
+// Abilities: A0DC (Play Clan Sound), Hotkey (Hotkey - Normal)
 {
 S
 }
@@ -58217,13 +58265,13 @@ P
 }
 
 STRING 20070
-// Abilities: A0DC (Play Clan Sound), Hotkey (Hotkey - Normal)
+// Abilities: A0PQ (Dark Summoning), Hotkey (Hotkey - Normal)
 {
 S
 }
 
 STRING 20071
-// Abilities: A0PQ (Dark Summoning), Hotkey (Hotkey - Normal)
+// Abilities: A0W7 (Slide), Hotkey (Hotkey - Normal)
 {
 S
 }
@@ -58466,7 +58514,7 @@ Y
 }
 
 STRING 20146
-// Abilities: A0W7 (Slide), Hotkey (Hotkey - Normal)
+// Abilities: A0XR (Club Strike), Hotkey (Hotkey - Normal)
 {
 S
 }
@@ -60572,7 +60620,7 @@ STRING 21375
 }
 
 STRING 21381
-// Abilities: A0XR (Club Strike), Hotkey (Hotkey - Normal)
+// Abilities: A1H2 (Bear Form), Hotkey (Hotkey - Normal)
 {
 S
 }
@@ -61226,7 +61274,7 @@ Eredar Sorcerer Master Training
 }
 
 STRING 22403
-// Abilities: A1H2 (Bear Form), Hotkey (Hotkey - Normal)
+// Abilities: A1L9 (-1 Agility), Hotkey (Hotkey - Normal)
 {
 S
 }
@@ -62036,7 +62084,7 @@ Massive Dragon Egg.
 }
 
 STRING 22690
-// Abilities: A1L9 (-1 Agility), Hotkey (Hotkey - Normal)
+// Abilities: A1OH (Transfer), Hotkey (Hotkey - Normal)
 {
 S
 }
@@ -62108,31 +62156,31 @@ Summon Blue Dragon
 }
 
 STRING 22714
-// Abilities: A1OH (Transfer), Hotkey (Hotkey - Normal)
-{
-S
-}
-
-STRING 22715
 // Abilities: A1X5 (Stop), Hotkey (Hotkey - Normal)
 {
 S
 }
 
-STRING 22716
+STRING 22715
 // Abilities: A1XO (Randomize Skin), Hotkey (Hotkey - Normal)
 {
 S
 }
 
-STRING 22717
+STRING 22716
 // Abilities: A0WS (Herbalism - Doctor), Hotkey (Hotkey - Normal)
 {
 S
 }
 
-STRING 22718
+STRING 22717
 // Abilities: A0WN (Dragon Breeding - Doctor), Hotkey (Hotkey - Normal)
+{
+S
+}
+
+STRING 22718
+// Abilities: A0WO (Alchemy - Doctor), Hotkey (Hotkey - Normal)
 {
 S
 }
@@ -62455,7 +62503,7 @@ E
 }
 
 STRING 23064
-// Abilities: A0WO (Alchemy - Doctor), Hotkey (Hotkey - Normal)
+// Abilities: A0WY (Necromancy - Doctor), Hotkey (Hotkey - Normal)
 {
 S
 }
@@ -63013,7 +63061,7 @@ Staff of Teleportation
 }
 
 STRING 23843
-// Abilities: A0WY (Necromancy - Doctor), Hotkey (Hotkey - Normal)
+// Abilities: A0YH (Scribing - Doctor), Hotkey (Hotkey - Normal)
 {
 S
 }
@@ -64063,7 +64111,7 @@ Well
 }
 
 STRING 24843
-// Abilities: A0YH (Scribing - Doctor), Hotkey (Hotkey - Normal)
+// Abilities: A0YL (Enchanting - Doctor), Hotkey (Hotkey - Normal)
 {
 S
 }
@@ -64507,7 +64555,7 @@ Revive Captain
 }
 
 STRING 25383
-// Abilities: A0YL (Enchanting - Doctor), Hotkey (Hotkey - Normal)
+// Abilities: A0ZK (Armoring - Doctor), Hotkey (Hotkey - Normal)
 {
 S
 }
@@ -64771,7 +64819,7 @@ D
 }
 
 STRING 25611
-// Abilities: A0ZK (Armoring - Doctor), Hotkey (Hotkey - Normal)
+// Abilities: A107 (Weaponsmithing - Doctor), Hotkey (Hotkey - Normal)
 {
 S
 }
@@ -65077,7 +65125,7 @@ Golden Claw
 }
 
 STRING 26168
-// Abilities: A107 (Weaponsmithing - Doctor), Hotkey (Hotkey - Normal)
+// Abilities: A109 (Inscription - Doctor), Hotkey (Hotkey - Normal)
 {
 S
 }
@@ -65281,7 +65329,7 @@ Build Wall
 }
 
 STRING 26251
-// Abilities: A109 (Inscription - Doctor), Hotkey (Hotkey - Normal)
+// Abilities: A10B (Warlockery - Doctor), Hotkey (Hotkey - Normal)
 {
 S
 }
@@ -65341,7 +65389,7 @@ Upgrade to Advanced Dragon's Reach
 }
 
 STRING 26431
-// Abilities: A10B (Warlockery - Doctor), Hotkey (Hotkey - Normal)
+// Abilities: A10H (Archaeology - Doctor), Hotkey (Hotkey - Normal)
 {
 S
 }
@@ -65899,19 +65947,19 @@ STRING 26722
 }
 
 STRING 26730
-// Abilities: A10H (Archaeology - Doctor), Hotkey (Hotkey - Normal)
-{
-S
-}
-
-STRING 26853
 // Abilities: A10T (Runeforging - Doctor), Hotkey (Hotkey - Normal)
 {
 S
 }
 
-STRING 26862
+STRING 26853
 // Abilities: A10X (Jewelcrafting - Doctor), Hotkey (Hotkey - Normal)
+{
+S
+}
+
+STRING 26862
+// Abilities: A114 (Flame Storm), Hotkey (Hotkey - Normal)
 {
 S
 }
@@ -66301,7 +66349,7 @@ G
 }
 
 STRING 27633
-// Abilities: A114 (Flame Storm), Hotkey (Hotkey - Normal)
+// Abilities: A17L (Witch Doctor - Doctor), Hotkey (Hotkey - Normal)
 {
 S
 }
@@ -66337,7 +66385,7 @@ Research Cluster Rockets
 }
 
 STRING 27793
-// Abilities: A17L (Witch Doctor - Doctor), Hotkey (Hotkey - Normal)
+// Abilities: A17N (Loremastery - Doctor), Hotkey (Hotkey - Normal)
 {
 S
 }
@@ -67183,7 +67231,7 @@ Gives extra damage to the attacks of nearby friendly units.
 }
 
 STRING 28168
-// Abilities: A17N (Loremastery - Doctor), Hotkey (Hotkey - Normal)
+// Abilities: A1BF (Sorcery - Doctor), Hotkey (Hotkey - Normal)
 {
 S
 }
@@ -67375,7 +67423,7 @@ Train Ballista
 }
 
 STRING 28420
-// Abilities: A1BF (Sorcery - Doctor), Hotkey (Hotkey - Normal)
+// Abilities: A1NT (Sculpting - Doctor), Hotkey (Hotkey - Normal)
 {
 S
 }
@@ -68527,7 +68575,7 @@ Submerged Lady Vashj
 }
 
 STRING 29678
-// Abilities: A1NT (Sculpting - Doctor), Hotkey (Hotkey - Normal)
+// Abilities: A1ZF (Merchant - Doctor), Hotkey (Hotkey - Normal)
 {
 S
 }
@@ -68611,7 +68659,7 @@ Craft Shield of Honor
 }
 
 STRING 30023
-// Abilities: A1ZF (Merchant - Doctor), Hotkey (Hotkey - Normal)
+// Abilities: A208 (Hunting - Doctor), Hotkey (Hotkey - Normal)
 {
 S
 }
@@ -68821,7 +68869,7 @@ STRING 30461
 }
 
 STRING 30463
-// Abilities: A208 (Hunting - Doctor), Hotkey (Hotkey - Normal)
+// Abilities: A20T (Farming - Doctor), Hotkey (Hotkey - Normal)
 {
 S
 }
@@ -68899,7 +68947,7 @@ E
 }
 
 STRING 30703
-// Abilities: A20T (Farming - Doctor), Hotkey (Hotkey - Normal)
+// Abilities: A20Y (Engineering - Doctor), Hotkey (Hotkey - Normal)
 {
 S
 }
@@ -68941,7 +68989,7 @@ P
 }
 
 STRING 30800
-// Abilities: A20Y (Engineering - Doctor), Hotkey (Hotkey - Normal)
+// Abilities: A21G (Captain - Doctor), Hotkey (Hotkey - Normal)
 {
 S
 }
@@ -69313,7 +69361,7 @@ STRING 30933
 }
 
 STRING 30934
-// Abilities: A21G (Captain - Doctor), Hotkey (Hotkey - Normal)
+// Abilities: A25W (Astromancy - Doctor), Hotkey (Hotkey - Normal)
 {
 S
 }
@@ -70369,7 +70417,7 @@ Train Coral Golem
 }
 
 STRING 31525
-// Abilities: A25W (Astromancy - Doctor), Hotkey (Hotkey - Normal)
+// Abilities: A261 (Demolishing - Doctor), Hotkey (Hotkey - Normal)
 {
 S
 }
@@ -70939,7 +70987,7 @@ Djinn
 }
 
 STRING 32016
-// Abilities: A261 (Demolishing - Doctor), Hotkey (Hotkey - Normal)
+// Abilities: A268 (Taming - Doctor), Hotkey (Hotkey - Normal)
 {
 S
 }
@@ -71137,7 +71185,7 @@ STRING 32275
 }
 
 STRING 32279
-// Abilities: A268 (Taming - Doctor), Hotkey (Hotkey - Normal)
+// Abilities: A07Z (Spell Steal), Hotkey (Hotkey - Normal)
 {
 S
 }
@@ -71515,7 +71563,7 @@ A lovely pet.
 }
 
 STRING 32523
-// Abilities: A07Z (Spell Steal), Hotkey (Hotkey - Normal)
+// Abilities: A07Z (Spell Steal), Unhotkey (Hotkey - Turn Off)
 {
 S
 }
@@ -71713,7 +71761,7 @@ STRING 32557
 }
 
 STRING 32579
-// Abilities: A07Z (Spell Steal), Unhotkey (Hotkey - Turn Off)
+// Abilities: A0X1 (Slot 6), Hotkey (Hotkey - Normal)
 {
 S
 }
@@ -71749,7 +71797,7 @@ Increases the Archer's attack range.
 }
 
 STRING 32620
-// Units: n0CF (Dummy Pig), Description (Description)
+// Units: n0E7 (Undead Dummy Pig), Description (Description)
 {
 A pig who wants to be punished.
 }
@@ -72745,7 +72793,7 @@ STRING 33301
 }
 
 STRING 33342
-// Abilities: A0X1 (Slot 6), Hotkey (Hotkey - Normal)
+// Abilities: A03N (Matching Class), Hotkey (Hotkey - Normal)
 {
 S
 }
@@ -72871,7 +72919,7 @@ Research Rain of Fire
 }
 
 STRING 33423
-// Abilities: A03N (Matching Class), Hotkey (Hotkey - Normal)
+// Abilities: A08M (Sentinel), Hotkey (Hotkey - Normal)
 {
 S
 }
@@ -72889,7 +72937,7 @@ L
 }
 
 STRING 33428
-// Abilities: A08M (Sentinel), Hotkey (Hotkey - Normal)
+// Abilities: A01I (Wind Gust), Hotkey (Hotkey - Normal)
 {
 S
 }
@@ -73483,7 +73531,7 @@ Train Troll Tigershark Rider
 }
 
 STRING 33715
-// Abilities: A01I (Wind Gust), Hotkey (Hotkey - Normal)
+// Abilities: A01J (Thieving - Doctor), Hotkey (Hotkey - Normal)
 {
 S
 }
@@ -74785,7 +74833,7 @@ D
 }
 
 STRING 34215
-// Abilities: A01J (Thieving - Doctor), Hotkey (Hotkey - Normal)
+// Upgrades: R00F (Banshee Adept Training,Banshee Master Training), Hotkey (Hotkey)
 {
 S
 }
@@ -75439,7 +75487,7 @@ STRING 34709
 }
 
 STRING 34728
-// Upgrades: R00F (Banshee Adept Training,Banshee Master Training), Hotkey (Hotkey)
+// Upgrades: R093 (Flak Cannons), Hotkey (Hotkey)
 {
 S
 }
@@ -75493,7 +75541,7 @@ C
 }
 
 STRING 34780
-// Upgrades: R093 (Flak Cannons), Hotkey (Hotkey)
+// Upgrades: R0GP (Chaos), Hotkey (Hotkey)
 {
 S
 }
@@ -75709,7 +75757,7 @@ Research Reincarnation
 }
 
 STRING 34940
-// Units: n0GV (Corrupted Ancient of War), EditorSuffix (Name - Editor Suffix)
+// Units: n0GZ (Corrupted Tree of Eternity), EditorSuffix (Name - Editor Suffix)
 {
 (Satyr)
 }
@@ -77053,7 +77101,7 @@ Provides an additional source of gold income.|n|n|cffffcc00Limited to 4.|r
 }
 
 STRING 35395
-// Upgrades: R0GP (Chaos), Hotkey (Hotkey)
+// Upgrades: R0I1 (Submerge), Hotkey (Hotkey)
 {
 S
 }
@@ -77323,7 +77371,7 @@ P
 }
 
 STRING 35575
-// Upgrades: R0I1 (Submerge), Hotkey (Hotkey)
+// Upgrades: R06L (Ensnare), Hotkey (Hotkey)
 {
 S
 }
@@ -81103,7 +81151,7 @@ STRING 36360
 }
 
 STRING 36361
-// Upgrades: R06L (Ensnare), Hotkey (Hotkey)
+// Upgrades: R088 (Flak Cannons), Hotkey (Hotkey)
 {
 S
 }
@@ -81289,7 +81337,7 @@ Undead Dummy Pig
 }
 
 STRING 37057
-// Units: n0E7 (Undead Dummy Pig), Description (Description)
+// Units: n0ED (Flying Dummy Sheep), Description (Description)
 {
 A pig who wants to be punished.
 }
@@ -82045,7 +82093,7 @@ Flying Dummy Sheep
 }
 
 STRING 37297
-// Units: n0ED (Flying Dummy Sheep), Description (Description)
+// Units: n0EE (Amphibious Dummy Pig), Description (Description)
 {
 A pig who wants to be punished.
 }
@@ -82057,7 +82105,7 @@ Amphibious Dummy Pig
 }
 
 STRING 37299
-// Units: n0EE (Amphibious Dummy Pig), Description (Description)
+// Units: n01J (Mechanical Dummy Pig), Description (Description)
 {
 A pig who wants to be punished.
 }
@@ -96715,7 +96763,7 @@ K
 }
 
 STRING 43383
-// Units: e01Y (Worker), EditorSuffix (Name - Editor Suffix)
+// Units: n0H1 (Corrupted Moon Well), EditorSuffix (Name - Editor Suffix)
 {
 (Satyr)
 }
@@ -110998,127 +111046,127 @@ K
 }
 
 STRING 51732
-// Units: n0GW (Corrupted Ancient Protector), EditorSuffix (Name - Editor Suffix)
-{
-(Satyr)
-}
-
-STRING 51733
-// Units: n0GZ (Corrupted Tree of Eternity), EditorSuffix (Name - Editor Suffix)
-{
-(Satyr)
-}
-
-STRING 51734
-// Units: n0H1 (Corrupted Moon Well), EditorSuffix (Name - Editor Suffix)
-{
-(Satyr)
-}
-
-STRING 51735
 // Units: e01Z (Hunter's Hall), EditorSuffix (Name - Editor Suffix)
 {
 (Satyr)
 }
 
-STRING 51736
+STRING 51733
 // Units: e020 (Corrupted Entangled Gold Mine), EditorSuffix (Name - Editor Suffix)
 {
 (Satyr)
 }
 
-STRING 51737
+STRING 51734
 // Units: n0H8 (Corrupted Treant), EditorSuffix (Name - Editor Suffix)
 {
 (Satyr)
 }
 
-STRING 51738
+STRING 51735
 // Units: e021 (Corrupted Ancient of Lore), EditorSuffix (Name - Editor Suffix)
 {
 (Satyr)
 }
 
-STRING 51739
+STRING 51736
 // Units: e022 (Corrupted Ancient of Wind), EditorSuffix (Name - Editor Suffix)
 {
 (Satyr)
 }
 
-STRING 51740
+STRING 51737
 // Units: e024 (Corrupted Ancient of Wonders), EditorSuffix (Name - Editor Suffix)
 {
 (Satyr)
 }
 
-STRING 51741
+STRING 51738
 // Units: n0H9 (Demon Gate), EditorSuffix (Name - Editor Suffix)
 {
 (Satyr)
 }
 
-STRING 51742
+STRING 51739
 // Units: n0HA (Defiled Fountain of Life), EditorSuffix (Name - Editor Suffix)
 {
 (Satyr)
 }
 
-STRING 51743
+STRING 51740
 // Units: n0HB (Ghost), EditorSuffix (Name - Editor Suffix)
 {
 (Satyr)
 }
 
-STRING 51744
+STRING 51741
 // Units: n0HC (Sludge Flinger), EditorSuffix (Name - Editor Suffix)
 {
 (Satyr)
 }
 
-STRING 51745
+STRING 51742
 // Units: n0HD (Shadowdancer), EditorSuffix (Name - Editor Suffix)
 {
 (Satyr)
 }
 
-STRING 51746
+STRING 51743
 // Units: n0HE (Green Drake), EditorSuffix (Name - Editor Suffix)
 {
 (Satyr)
 }
 
-STRING 51747
+STRING 51744
 // Units: e025 (Corrupted Altar of Elders), EditorSuffix (Name - Editor Suffix)
 {
 (Satyr)
 }
 
-STRING 51748
+STRING 51745
 // Units: n0HL (Hellcaller), EditorSuffix (Name - Editor Suffix)
 {
 (Satyr)
 }
 
-STRING 51749
+STRING 51746
 // Units: n0L2 (Doom Guard), EditorSuffix (Name - Editor Suffix)
 {
 (Satyr)
 }
 
-STRING 51750
+STRING 51747
 // Units: n0L3 (Fel Stalker), EditorSuffix (Name - Editor Suffix)
 {
 (Satyr)
 }
 
-STRING 51751
+STRING 51748
 // Units: n0L4 (Infernal), EditorSuffix (Name - Editor Suffix)
 {
 (Satyr)
 }
 
-STRING 51752
+STRING 51749
 // Units: n0L5 (Trickster), EditorSuffix (Name - Editor Suffix)
+{
+(Satyr)
+}
+
+STRING 51750
+// Units: n0L7 (Giant Skeleton Warrior), EditorSuffix (Name - Editor Suffix)
+{
+(Satyr)
+}
+
+STRING 51751
+// Units: n0N5 (Satyr Child), EditorSuffix (Name - Editor Suffix)
+{
+(Satyr)
+}
+
+STRING 51752
+// Units: n0N6 (Pet Sludge), EditorSuffix (Name - Editor Suffix)
 {
 (Satyr)
 }
@@ -111160,19 +111208,19 @@ Build Satyr Housing
 }
 
 STRING 51759
-// Units: n0L7 (Giant Skeleton Warrior), EditorSuffix (Name - Editor Suffix)
+// Units: e023 (Satyr Shipyard), EditorSuffix (Name - Editor Suffix)
 {
 (Satyr)
 }
 
 STRING 51760
-// Units: n0N5 (Satyr Child), EditorSuffix (Name - Editor Suffix)
+// Abilities: S01C (Load Satyr Worker), EditorSuffix (Editor Suffix)
 {
 (Satyr)
 }
 
 STRING 51761
-// Units: n0N6 (Pet Sludge), EditorSuffix (Name - Editor Suffix)
+// Abilities: A1ME (Entangle Gold Mine), EditorSuffix (Editor Suffix)
 {
 (Satyr)
 }
@@ -111208,43 +111256,43 @@ Satyr
 }
 
 STRING 51769
-// Units: e023 (Satyr Shipyard), EditorSuffix (Name - Editor Suffix)
-{
-(Satyr)
-}
-
-STRING 51770
-// Abilities: S01C (Load Satyr Worker), EditorSuffix (Editor Suffix)
-{
-(Satyr)
-}
-
-STRING 51771
-// Abilities: A1ME (Entangle Gold Mine), EditorSuffix (Editor Suffix)
-{
-(Satyr)
-}
-
-STRING 51772
 // Abilities: A1MQ (Unit Inventory), EditorSuffix (Editor Suffix)
 {
 (Satyr)
 }
 
-STRING 51773
+STRING 51770
 // Abilities: A1V3 (Parasite), EditorSuffix (Editor Suffix)
 {
 (Satyr)
 }
 
-STRING 51774
+STRING 51771
 // Abilities: A1V4 (Devour), EditorSuffix (Editor Suffix)
 {
 (Satyr)
 }
 
-STRING 51775
+STRING 51772
 // Abilities: A1V5 (Devour Cargo), EditorSuffix (Editor Suffix)
+{
+(Satyr)
+}
+
+STRING 51773
+// Abilities: A1XB (Mana Burn), EditorSuffix (Editor Suffix)
+{
+(Satyr)
+}
+
+STRING 51774
+// Abilities: A02Y (Animate Dead), EditorSuffix (Editor Suffix)
+{
+(Satyr)
+}
+
+STRING 51775
+// Upgrades: R0DX (Backpack), EditorSuffix (Editor Suffix)
 {
 (Satyr)
 }
@@ -111262,7 +111310,7 @@ Advanced Mana Burn
 }
 
 STRING 51778
-// Abilities: A1XB (Mana Burn), EditorSuffix (Editor Suffix)
+// Upgrades: R0GA (Moon Armor,Improved Moon Armor,Advanced Moon Armor), EditorSuffix (Editor Suffix)
 {
 (Satyr)
 }
@@ -111274,43 +111322,43 @@ Gives specific Satyr ground units the ability to carry items.
 }
 
 STRING 51780
-// Upgrades: R0DX (Backpack), EditorSuffix (Editor Suffix)
-{
-(Satyr)
-}
-
-STRING 51781
-// Upgrades: R0GA (Moon Armor,Improved Moon Armor,Advanced Moon Armor), EditorSuffix (Editor Suffix)
-{
-(Satyr)
-}
-
-STRING 51782
 // Upgrades: R0GB (Strength of the Moon,Improved Strength of the Moon,Advanced Strength of the Moo), EditorSuffix (Editor Suffix)
 {
 (Satyr)
 }
 
-STRING 51783
+STRING 51781
 // Upgrades: R0GC (Druid of the Talon Adept Training,Druid of the Talon Master Training), EditorSuffix (Editor Suffix)
 {
 (Satyr)
 }
 
-STRING 51784
+STRING 51782
 // Upgrades: R0H6 (Strength of the Wild,Improved Strength of the Wild,Advanced Strength of the Wil), EditorSuffix (Editor Suffix)
 {
 (Satyr)
 }
 
-STRING 51785
+STRING 51783
 // Upgrades: R0H7 (Nature's Blessing), EditorSuffix (Editor Suffix)
 {
 (Satyr)
 }
 
-STRING 51787
+STRING 51784
 // Upgrades: R0H8 (Reinforced Hides,Improved Reinforced Hides,Advanced Reinforced Hides), EditorSuffix (Editor Suffix)
+{
+(Satyr)
+}
+
+STRING 51785
+// Upgrades: R0H9 (Well Spring), EditorSuffix (Editor Suffix)
+{
+(Satyr)
+}
+
+STRING 51787
+// Upgrades: R0HC (Burning Oil), EditorSuffix (Editor Suffix)
 {
 (Satyr)
 }
@@ -111388,7 +111436,7 @@ Train Infernal
 }
 
 STRING 51808
-// Upgrades: R0H9 (Well Spring), EditorSuffix (Editor Suffix)
+// Upgrades: R0IJ (Improved Masonry,Advanced Masonry,Imbued Masonry), EditorSuffix (Editor Suffix)
 {
 (Satyr)
 }
@@ -119420,7 +119468,7 @@ Shows the terrain type of the target point.
 }
 
 STRING 57599
-// Upgrades: R0HC (Burning Oil), EditorSuffix (Editor Suffix)
+// Upgrades: R02A (Resistant Skin), EditorSuffix (Editor Suffix)
 {
 (Satyr)
 }

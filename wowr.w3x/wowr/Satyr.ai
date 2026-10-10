@@ -47,6 +47,7 @@ function BuildingStrategy takes nothing returns nothing
         call SetBuildUpgr(3, UPG_SATYR_HIDES)
         call SetBuildUpgr(3, UPG_SATYR_CORRUPTED_ANCIENT_PROTECTORS)
         call SetBuildUpgr(2, UPG_SATYR_SLUDGE_FLINGER)
+        call SetBuildUpgr(1, UPG_SATYR_ANIMATE_DEAD)
         call SetBuildUpgr(1, UPG_SATYR_MANA_BURN)
         call SetBuildUpgr(1, UPG_SATRY_BLESSING)
         call SetBuildUpgr(1, UPG_SATYR_BACKPACK)

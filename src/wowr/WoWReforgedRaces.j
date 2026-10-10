@@ -3972,6 +3972,7 @@ private function AddSatyr takes nothing returns integer
     call AddResearch(r, UPG_SATYR_CORRUPTED_ANCIENT_PROTECTORS)
     call AddResearch(r, UPG_SATYR_MANA_BURN)
     call AddResearch(r, UPG_SATRY_BLESSING)
+    call AddResearch(r, UPG_SATYR_ANIMATE_DEAD)
     call AddResearch(r, UPG_SATYR_SKULL_OF_GULDAN)
 
     // units

@@ -206,6 +206,9 @@ private function Init takes nothing returns nothing
     call AddChange("Simplify registering NPCs.")
     call AddChange("Add Satyr Shipyard.")
     call AddChange("Fix icon position and category of research Improved Corrupted Ancient Protectors.")
+    call AddChange("Fix trained units of Corrupted Entangled Gold Mine.")
+    call AddChange("Add Satyr research Animate Dead.")
+    call AddChange("Add Mechanical Dummy Pig to player selection.")
 
 static if (MAP_DEBUG_MODE_ENABLED) then
     call AddVersion("4.6")
