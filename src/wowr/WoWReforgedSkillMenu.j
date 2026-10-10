@@ -559,7 +559,14 @@ endfunction
 
 function AbilityHasNoCooldown takes unit whichUnit, integer slot returns boolean
     local SkillMenu skillMenu = GetSkillMenu(whichUnit)
-    return skillMenu != 0 and skillMenu.abilityIds[slot] != 0 and skillMenu.abilityIds[slot].abilityId != 0 and BlzGetUnitAbilityCooldownRemaining(whichUnit, skillMenu.abilityIds[slot].abilityId) <= 0.0
+    if (skillMenu == 0) then
+        return true
+    elseif (skillMenu.abilityIds[slot] == 0) then
+        return true
+    elseif (skillMenu.abilityIds[slot].abilityId == 0) then
+        return true
+    endif
+    return BlzGetUnitAbilityCooldownRemaining(whichUnit, skillMenu.abilityIds[slot].abilityId) <= 0.0
 endfunction
 
 private function ChangeAbilityForCurrentSlot takes unit whichUnit, SkillMenuAbility newAbility returns nothing
