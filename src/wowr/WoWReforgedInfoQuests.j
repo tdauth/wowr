@@ -303,6 +303,7 @@ private function Init takes nothing returns nothing
     call AddInfoQuestItem(GetLocalizedStringSafe("CC_SKY_MOON"))
     call AddInfoQuestItem(GetLocalizedStringSafe("CC_FOOD"))
     call AddInfoQuestItem(GetLocalizedStringSafe("CC_LIMITS"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_TIME"))
     call AddInfoQuestItem(GetLocalizedStringSafe("CC_SEASONS"))
     call AddInfoQuestItem(GetLocalizedStringSafe("CC_WINTER"))
     call AddInfoQuestItem(GetLocalizedStringSafe("CC_SPRING"))

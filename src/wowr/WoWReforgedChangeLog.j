@@ -210,6 +210,8 @@ private function Init takes nothing returns nothing
     call AddChange("Add Satyr research Animate Dead.")
     call AddChange("Add Mechanical Dummy Pig to player selection.")
     call AddChange("Add custom models and icons for Satyr citizens.")
+    call AddChange("Add alias \"-date\" for chat command \"-time\".")
+    call AddChange("Add info quest entry for chat command \"-date\".")
 
 static if (MAP_DEBUG_MODE_ENABLED) then
     call AddVersion("4.6")

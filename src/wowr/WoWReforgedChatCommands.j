@@ -1835,6 +1835,7 @@ private function Init takes nothing returns nothing
     call Add("-version", true, function Version)
     call AddAlias("-v", true)
     call Add("-time", true, function Time)
+    call AddAlias("-date", true)
 
     call Add("-info", false, function Info)
     call AddAlias("-i", false)
