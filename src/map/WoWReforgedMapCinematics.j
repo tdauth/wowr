@@ -1,6 +1,7 @@
 library WoWReforgedMapCinematics initializer Init requires WoWReforgedCinematic, WoWReforgedUiNews, WoWReforgedMapBosses, WoWReforgedMapData
 
 globals
+    private boolean introShown = false
     private trigger introCleanupTrigger = CreateTrigger()
     private trigger outroCleanupTrigger = CreateTrigger()
     private unit actorArchimonde = null
@@ -20,11 +21,11 @@ private function EnumIntroCamera takes nothing returns nothing
 endfunction
 
 function PlayIntroCinematic takes nothing returns nothing
-    if (not udg_IntroShown) then
+    if (not introShown) then
         if (udg_Cinematics) then
             //call BJDebugMsg("Wait for cinematic end.")
             call WaitForCinematicEnd()
-            set udg_IntroShown = true
+            set introShown = true
             set udg_CinematicCleanupTrigger = introCleanupTrigger
             call PrepareCinematic()
             call CinematicFadeBJ(bj_CINEFADETYPE_FADEOUT, 1.0, "ReplaceableTextures\\CameraMasks\\Black_mask.blp", 0, 0, 0, 0)

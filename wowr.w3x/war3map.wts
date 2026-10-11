@@ -11414,7 +11414,6 @@ STRING 1917
 }
 
 STRING 1918
-// Units: h0MQ (Pegasus Knight), Ubertip (Tooltip - Extended)
 {
 Powerful flying creature, mounted by a Human lance-thrower. Can learn Animal War Training. |n|n|cffffcc00Attacks land and air units.|r
 }
@@ -11450,21 +11449,25 @@ Basic observation tower. Has no attack, but can be upgraded into a Guard Tower, 
 }
 
 STRING 1924
-// Upgrades: R046 (Magic Sentry), EditorSuffix (Editor Suffix)
 {
 (Lordaeron)
 }
 
 STRING 1925
-// Upgrades: R046 (Magic Sentry), Ubertip (Tooltip - Extended)
 {
 Provides Lordaeron towers with the ability to detect invisible units.
 }
 
 STRING 1926
-// Upgrades: R051 (Sundering Blades), EditorSuffix (Editor Suffix)
+// Upgrades: R046 (Magic Sentry), EditorSuffix (Editor Suffix)
 {
 (Lordaeron)
+}
+
+STRING 1927
+// Units: h0MQ (Pegasus Knight), Ubertip (Tooltip - Extended)
+{
+Powerful flying creature, mounted by a Human lance-thrower. Can learn Animal War Training. |n|n|cffffcc00Attacks land and air units.|r
 }
 
 STRING 1928
@@ -11473,10 +11476,32 @@ STRING 1928
 The High Elves revere the sun. Increases the sight and other stats of High Elf units at day time. Workers harvest plus 10 lumber during the day.
 }
 
+STRING 1929
+{
+Provides Lordaeron towers with the ability to detect invisible units.
+}
+
+STRING 1930
+{
+(Lordaeron)
+}
+
 STRING 1931
 // Units: n00J (Orc Citizen (female)), Ubertip (Tooltip - Extended)
 {
 An intelligent Orc citizen. Has mana regeneration aura.
+}
+
+STRING 1932
+// Upgrades: R046 (Magic Sentry), Ubertip (Tooltip - Extended)
+{
+Provides Lordaeron towers with the ability to detect invisible units.
+}
+
+STRING 1933
+// Upgrades: R051 (Sundering Blades), EditorSuffix (Editor Suffix)
+{
+(Lordaeron)
 }
 
 STRING 1938
