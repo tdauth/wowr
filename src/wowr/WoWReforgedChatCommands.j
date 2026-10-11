@@ -1,4 +1,4 @@
-library WoWReforgedChatCommands initializer Init requires Ascii, SimError, HostUtils, StringUtils, StringFormat, SafeString, ForceUtils, PlayerColorUtils, WoWReforgedUtils, WoWReforgedMapData, optional QueueUI, WoWReforgedPlayerInfos, WoWReforgedStats, WoWReforgedSaveCodeObjects, WoWReforgedHeroes, WoWReforgedBosses, WoWReforgedQuests, WoWReforgedProfessions, optional WoWReforgedUiActionsBar, WoWReforgedStats, WoWReforgedAttributes, WoWReforgedAccount, WoWReforgedComputerStartLocations, WoWReforgedSaveCodesAll, WoWReforgedZones, WoWReforgedCinematic, WoWReforgedTownHalls, WoWReforgedRaces, WoWReforgedBackpacks, WoWReforgedUiBackpack, WoWReforgedPlayerSelection, WoWReforgedVIPs, WoWReforgedProfessionInscriptor, WoWReforgedProfessionHunter, WoWReforgedProfessionEnchanter, WoWReforgedPlayers, WoWReforgedSelfdestruct, optional OrdersWatcher, OnStartGame
+library WoWReforgedChatCommands initializer Init requires Ascii, SimError, HostUtils, StringUtils, StringFormat, SafeString, ForceUtils, PlayerColorUtils, WoWReforgedUtils, WoWReforgedMapData, optional QueueUI, WoWReforgedPlayerInfos, WoWReforgedStats, WoWReforgedSaveCodeObjects, WoWReforgedHeroes, WoWReforgedBosses, WoWReforgedQuests, WoWReforgedProfessions, optional WoWReforgedUiActionsBar, WoWReforgedStats, WoWReforgedAttributes, WoWReforgedAccount, WoWReforgedComputerStartLocations, WoWReforgedSaveCodesAll, WoWReforgedZones, WoWReforgedCinematic, WoWReforgedTownHalls, WoWReforgedRaces, WoWReforgedBackpacks, WoWReforgedUiBackpack, WoWReforgedPlayerSelection, WoWReforgedVIPs, WoWReforgedProfessionInscriptor, WoWReforgedProfessionHunter, WoWReforgedProfessionEnchanter, WoWReforgedPlayers, WoWReforgedSelfdestruct, WoWReforgedMapCinematics, optional OrdersWatcher, OnStartGame
 
 /*
  * Chat commands and cheats.
@@ -1082,6 +1082,404 @@ private function ClearGenerated takes nothing returns nothing
     call ClearGeneratedSaveCodesVIP(GetTriggerPlayer())
 endfunction
 
+private function AiIgnoreAll takes nothing returns nothing
+    local string token = StringToken(GetEventPlayerChatString(), 1)
+    local player p = GetPlayerFromString(token)
+    if (p != null) then
+        if (GetMapAllowConfigureAIPlayer(p) and p != GetTriggerPlayer() and GetPlayerController(p) == MAP_CONTROL_COMPUTER and IsPlayerAlly(p, GetTriggerPlayer())) then
+            call RemoveAllGuardPositions(p)
+            call DisplayTextToPlayer(GetTriggerPlayer(), 0.0, 0.0, Format(GetLocalizedString("DISABLED_AI_CONTROL_FOR_X")).s(GetPlayerNameWithoutTagColored(p)).result())
+        else
+            call SimError(GetTriggerPlayer(), Format(GetLocalizedString("INVALID_PLAYER_X")).s(GetPlayerNameWithoutTagColored(p)).result())
+        endif
+    else
+        call SimError(GetTriggerPlayer(), GetLocalizedString("INVALID_TARGET_PLAYER"))
+    endif
+endfunction
+
+private function EnumAiIgnore takes nothing returns nothing
+    local player p = GetOwningPlayer(GetEnumUnit())
+    if (not IsUnitType(GetEnumUnit(), UNIT_TYPE_HERO) and not IsUnitType(GetEnumUnit(), UNIT_TYPE_PEON) and GetMapAllowConfigureAIPlayer(p) and p != GetTriggerPlayer() and GetPlayerController(p) == MAP_CONTROL_COMPUTER and IsPlayerAlly(p, GetTriggerPlayer())) then
+        call RemoveGuardPosition(GetEnumUnit())
+        call RecycleGuardPosition( GetEnumUnit() )
+        call DisplayTextToPlayer(GetTriggerPlayer(), 0.0, 0.0, Format(GetLocalizedString("DISABLED_AI_CONTROL_FOR_X")).s(GetUnitName(GetEnumUnit())).result())
+    endif
+    set p = null
+endfunction
+
+private function AiIgnore takes nothing returns nothing
+    set bj_wantDestroyGroup = true
+    call ForGroupBJ(GetUnitsSelectedAll(GetTriggerPlayer()), function EnumAiIgnore)
+endfunction
+
+private function EnumAiUse takes nothing returns nothing
+    local player p = GetOwningPlayer(GetEnumUnit())
+    if (p != null) then
+        if (GetMapAllowConfigureAIPlayer(p) and p != GetTriggerPlayer() and GetPlayerController(p) == MAP_CONTROL_COMPUTER and IsPlayerAlly(p, GetTriggerPlayer())) then
+            call RecycleGuardPosition( GetEnumUnit() )
+            call DisplayTextToPlayer(GetTriggerPlayer(), 0.0, 0.0, Format(GetLocalizedString("ENABLED_AI_CONTROL_FOR_X")).s(GetUnitName(GetEnumUnit())).result())
+        endif
+    else
+        call SimError(GetTriggerPlayer(), GetLocalizedString("INVALID_TARGET_PLAYER"))
+    endif
+    set p = null
+endfunction
+
+private function AiUse takes nothing returns nothing
+    set bj_wantDestroyGroup = true
+    call ForGroupBJ(GetUnitsSelectedAll(GetTriggerPlayer()), function EnumAiUse)
+endfunction
+
+private function AiAttacksOn takes nothing returns nothing
+    local string token = StringToken(GetEventPlayerChatString(), 1)
+    local player p = GetPlayerFromString(token)
+    if (p != null) then
+        if (GetMapAllowConfigureAIPlayer(p) and p != GetTriggerPlayer() and GetPlayerController(p) == MAP_CONTROL_COMPUTER) then
+            call CommandAI(p, COMMAND_ATTACK_ON, GetPlayerId(GetTriggerPlayer()))
+            call DisplayTextToPlayer(GetTriggerPlayer(), 0.0, 0.0, Format(GetLocalizedString("ENABLED_AI_ATTACKING_FOR_X")).s(GetPlayerName(p)).result())
+        else
+            call SimError(GetTriggerPlayer(), Format(GetLocalizedString("INVALID_PLAYER_X")).s(GetPlayerNameWithoutTagColored(p)).result())
+        endif
+    else
+        call SimError(GetTriggerPlayer(), GetLocalizedString("INVALID_TARGET_PLAYER"))
+    endif
+endfunction
+
+private function AiAttacksOff takes nothing returns nothing
+    local string token = StringToken(GetEventPlayerChatString(), 1)
+    local player p = GetPlayerFromString(token)
+    if (p != null) then
+        if (GetMapAllowConfigureAIPlayer(p) and p != GetTriggerPlayer() and GetPlayerController(p) == MAP_CONTROL_COMPUTER) then
+            call CommandAI(p, COMMAND_ATTACK_OFF, GetPlayerId(GetTriggerPlayer()))
+            call DisplayTextToPlayer(GetTriggerPlayer(), 0.0, 0.0, Format(GetLocalizedString("DISABLED_AI_ATTACKING_FOR_X")).s(GetPlayerName(p)).result())
+        else
+            call SimError(GetTriggerPlayer(), Format(GetLocalizedString("INVALID_PLAYER_X")).s(GetPlayerNameWithoutTagColored(p)).result())
+        endif
+    else
+        call SimError(GetTriggerPlayer(), GetLocalizedString("INVALID_TARGET_PLAYER"))
+    endif
+endfunction
+
+private function AiAttacksPlayersOn takes nothing returns nothing
+    local string token = StringToken(GetEventPlayerChatString(), 1)
+    local player p = GetPlayerFromString(token)
+    if (p != null) then
+        if (GetMapAllowConfigureAIPlayer(p) and p != GetTriggerPlayer() and GetPlayerController(p) == MAP_CONTROL_COMPUTER) then
+            call CommandAI(p, COMMAND_ATTACK_PLAYERS_ON, GetPlayerId(GetTriggerPlayer()))
+            call DisplayTextToPlayer(GetTriggerPlayer(), 0.0, 0.0, Format(GetLocalizedString("ENABLED_AI_ATTACKING_PLAYERS_X")).s(GetPlayerName(p)).result())
+        else
+            call SimError(GetTriggerPlayer(), Format(GetLocalizedString("INVALID_PLAYER_X")).s(GetPlayerNameWithoutTagColored(p)).result())
+        endif
+    else
+        call SimError(GetTriggerPlayer(), GetLocalizedString("INVALID_TARGET_PLAYER"))
+    endif
+endfunction
+
+private function AiAttacksPlayersOff takes nothing returns nothing
+    local string token = StringToken(GetEventPlayerChatString(), 1)
+    local player p = GetPlayerFromString(token)
+    if (p != null) then
+        if (GetMapAllowConfigureAIPlayer(p) and p != GetTriggerPlayer() and GetPlayerController(p) == MAP_CONTROL_COMPUTER) then
+            call CommandAI(p, COMMAND_ATTACK_PLAYERS_OFF, GetPlayerId(GetTriggerPlayer()))
+            call DisplayTextToPlayer(GetTriggerPlayer(), 0.0, 0.0, Format(GetLocalizedString("DISABLED_AI_ATTACKING_PLAYERS_X")).s(GetPlayerName(p)).result())
+        else
+            call SimError(GetTriggerPlayer(), Format(GetLocalizedString("INVALID_PLAYER_X")).s(GetPlayerNameWithoutTagColored(p)).result())
+        endif
+    else
+        call SimError(GetTriggerPlayer(), GetLocalizedString("INVALID_TARGET_PLAYER"))
+    endif
+endfunction
+
+private function AiGold takes nothing returns nothing
+    local string token = StringToken(GetEventPlayerChatString(), 1)
+    local player p = GetPlayerFromString(token)
+    if (p != null) then
+        if (GetMapAllowConfigureAIPlayer(p) and p != GetTriggerPlayer() and GetPlayerController(p) == MAP_CONTROL_COMPUTER and IsPlayerAlly(p, GetTriggerPlayer())) then
+            call CommandAI(p, COMMAND_GIVE_GOLD, GetPlayerId(GetTriggerPlayer()))
+            call DisplayTextToPlayer(GetTriggerPlayer(), 0.0, 0.0, Format(GetLocalizedString("ASKED_AI_FOR_GOLD_X")).s(GetPlayerName(p)).result())
+        else
+            call SimError(GetTriggerPlayer(), Format(GetLocalizedString("INVALID_PLAYER_X")).s(GetPlayerNameWithoutTagColored(p)).result())
+        endif
+    else
+        call SimError(GetTriggerPlayer(), GetLocalizedString("INVALID_TARGET_PLAYER"))
+    endif
+endfunction
+
+private function AiLumber takes nothing returns nothing
+    local string token = StringToken(GetEventPlayerChatString(), 1)
+    local player p = GetPlayerFromString(token)
+    if (p != null) then
+        if (GetMapAllowConfigureAIPlayer(p) and p != GetTriggerPlayer() and GetPlayerController(p) == MAP_CONTROL_COMPUTER and IsPlayerAlly(p, GetTriggerPlayer())) then
+            call CommandAI(p, COMMAND_GIVE_LUMBER, GetPlayerId(GetTriggerPlayer()))
+            call DisplayTextToPlayer(GetTriggerPlayer(), 0.0, 0.0, Format(GetLocalizedString("ASKED_AI_FOR_LUMBER_X")).s(GetPlayerName(p)).result())
+        else
+            call SimError(GetTriggerPlayer(), Format(GetLocalizedString("INVALID_PLAYER_X")).s(GetPlayerNameWithoutTagColored(p)).result())
+        endif
+    else
+        call SimError(GetTriggerPlayer(), GetLocalizedString("INVALID_TARGET_PLAYER"))
+    endif
+endfunction
+
+private function AiShipsOn takes nothing returns nothing
+    local string token = StringToken(GetEventPlayerChatString(), 1)
+    local player p = GetPlayerFromString(token)
+    if (p != null) then
+        if (GetMapAllowConfigureAIPlayer(p) and p != GetTriggerPlayer() and GetPlayerController(p) == MAP_CONTROL_COMPUTER) then
+            call CommandAI(p, COMMAND_SHIPS_ON, GetPlayerId(GetTriggerPlayer()))
+            call DisplayTextToPlayer(GetTriggerPlayer(), 0.0, 0.0, Format(GetLocalizedString("ENABLED_AI_SHIPS_FOR_X")).s(GetPlayerName(p)).result())
+        else
+            call SimError(GetTriggerPlayer(), Format(GetLocalizedString("INVALID_PLAYER_X")).s(GetPlayerNameWithoutTagColored(p)).result())
+        endif
+    else
+        call SimError(GetTriggerPlayer(), GetLocalizedString("INVALID_TARGET_PLAYER"))
+    endif
+endfunction
+
+private function AiShipsOff takes nothing returns nothing
+    local string token = StringToken(GetEventPlayerChatString(), 1)
+    local player p = GetPlayerFromString(token)
+    if (p != null) then
+        if (GetMapAllowConfigureAIPlayer(p) and p != GetTriggerPlayer() and GetPlayerController(p) == MAP_CONTROL_COMPUTER) then
+            call CommandAI(p, COMMAND_SHIPS_OFF, GetPlayerId(GetTriggerPlayer()))
+            call DisplayTextToPlayer(GetTriggerPlayer(), 0.0, 0.0, Format(GetLocalizedString("DISABLED_AI_SHIPS_FOR_X")).s(GetPlayerName(p)).result())
+        else
+            call SimError(GetTriggerPlayer(), Format(GetLocalizedString("INVALID_PLAYER_X")).s(GetPlayerNameWithoutTagColored(p)).result())
+        endif
+    else
+        call SimError(GetTriggerPlayer(), GetLocalizedString("INVALID_TARGET_PLAYER"))
+    endif
+endfunction
+
+private function AiExpansions takes nothing returns nothing
+    local string token = StringToken(GetEventPlayerChatString(), 1)
+    local player p = GetPlayerFromString(token)
+    local string token2 = StringToken(GetEventPlayerChatString(), 2)
+    local integer expansions = S2I(token2)
+    if (p != null) then
+        if (GetMapAllowConfigureAIPlayer(p) and p != GetTriggerPlayer() and GetPlayerController(p) == MAP_CONTROL_COMPUTER) then
+            call CommandAI(p, COMMAND_EXPANSIONS, expansions)
+            call DisplayTextToPlayer(GetTriggerPlayer(), 0.0, 0.0, Format(GetLocalizedString("SET_AI_EXPANSIONS_FOR_X_TO_Y")).s(GetPlayerName(p)).i(expansions).result())
+        else
+            call SimError(GetTriggerPlayer(), Format(GetLocalizedString("INVALID_PLAYER_X")).s(GetPlayerNameWithoutTagColored(p)).result())
+        endif
+    else
+        call SimError(GetTriggerPlayer(), GetLocalizedString("INVALID_TARGET_PLAYER"))
+    endif
+endfunction
+
+private function AiZeppelins takes nothing returns nothing
+    local string token = StringToken(GetEventPlayerChatString(), 1)
+    local player p = GetPlayerFromString(token)
+    local string token2 = StringToken(GetEventPlayerChatString(), 2)
+    local integer zeppelins = S2I(token2)
+    if (p != null) then
+        if (GetMapAllowConfigureAIPlayer(p) and p != GetTriggerPlayer() and GetPlayerController(p) == MAP_CONTROL_COMPUTER) then
+            call CommandAI(p, COMMAND_ZEPPELINS, zeppelins)
+            call DisplayTextToPlayer(GetTriggerPlayer(), 0.0, 0.0, Format(GetLocalizedString("SET_AI_ZEPPELINS_FOR_X_TO_Y")).s(GetPlayerName(p)).i(zeppelins).result())
+        else
+            call SimError(GetTriggerPlayer(), Format(GetLocalizedString("INVALID_PLAYER_X")).s(GetPlayerNameWithoutTagColored(p)).result())
+        endif
+    else
+        call SimError(GetTriggerPlayer(), GetLocalizedString("INVALID_TARGET_PLAYER"))
+    endif
+endfunction
+
+private function AiShredders takes nothing returns nothing
+    local string token = StringToken(GetEventPlayerChatString(), 1)
+    local player p = GetPlayerFromString(token)
+    local string token2 = StringToken(GetEventPlayerChatString(), 2)
+    local integer shredders = S2I(token2)
+    if (p != null) then
+        if (GetMapAllowConfigureAIPlayer(p) and p != GetTriggerPlayer() and GetPlayerController(p) == MAP_CONTROL_COMPUTER) then
+            call CommandAI(p, COMMAND_SHREDDERS, shredders)
+            call DisplayTextToPlayer(GetTriggerPlayer(), 0.0, 0.0, Format(GetLocalizedString("SET_AI_SHREDDERS_FOR_X_TO_Y")).s(GetPlayerName(p)).i(shredders).result())
+        else
+            call SimError(GetTriggerPlayer(), Format(GetLocalizedString("INVALID_PLAYER_X")).s(GetPlayerNameWithoutTagColored(p)).result())
+        endif
+    else
+        call SimError(GetTriggerPlayer(), GetLocalizedString("INVALID_TARGET_PLAYER"))
+    endif
+endfunction
+
+private function AiHero takes nothing returns nothing
+    local string token = StringToken(GetEventPlayerChatString(), 1)
+    local player p = GetPlayerFromString(token)
+    local string token2 = StringToken(GetEventPlayerChatString(), 2)
+    local integer heroIndex = S2I(token2)
+    local string token3 = StringToken(GetEventPlayerChatString(), 3)
+    local integer heroType = S2I(token3)
+    if (p != null) then
+        if (GetMapAllowConfigureAIPlayer(p) and p != GetTriggerPlayer() and GetPlayerController(p) == MAP_CONTROL_COMPUTER) then
+            if (heroIndex >= 1 and heroIndex <= 3) then
+                if (GetPlayerHeroByIndex(p, heroIndex - 1) != null) then
+                    if (heroType >= 1 and heroType <= GetHeroesMax()) then
+                        call ReplaceHero(GetPlayerHeroByIndex(p, heroIndex - 1), GetHeroUnitType(heroType - 1), bj_UNIT_STATE_METHOD_RELATIVE, true, true)
+                        call DisplayTextToPlayer(GetTriggerPlayer(), 0.0, 0.0, Format(GetLocalizedString("REPLACED_AI_HERO_X_Y_Z")).s(GetPlayerNameWithoutTagColored(p)).i(heroIndex).s(GetActualObjectName(GetHeroUnitType(heroType - 1))).result())
+                    else
+                        call SimError(GetTriggerPlayer(), Format(GetLocalizedString("HERO_TYPE_MUST_BE_VALID_X_Y")).i(GetHeroesMax()).i(heroType).result())
+                    endif
+                else
+                    call SimError(GetTriggerPlayer(), Format(GetLocalizedString("PLAYER_X_HAS_NO_HERO_Y")).s(GetPlayerNameWithoutTagColored(p)).i(heroIndex).result())
+                endif
+            else
+                call SimError(GetTriggerPlayer(), Format(GetLocalizedString("HERO_NUMBER_MUST_BE_VALID_X")).i(heroIndex).result())
+            endif
+        else
+            call SimError(GetTriggerPlayer(), Format(GetLocalizedString("INVALID_PLAYER_X")).s(GetPlayerNameWithoutTagColored(p)).result())
+        endif
+    else
+        call SimError(GetTriggerPlayer(), GetLocalizedString("INVALID_TARGET_PLAYER"))
+    endif
+endfunction
+
+private function AiProfession takes nothing returns nothing
+    local string token = StringToken(GetEventPlayerChatString(), 1)
+    local player p = GetPlayerFromString(token)
+    local string token2 = StringToken(GetEventPlayerChatString(), 2)
+    local integer professionNumber = GetProfessionFromString(token2)
+    local string token3 = StringToken(GetEventPlayerChatString(), 3)
+    local integer professionIndex = GetProfessionFromString(token3)
+    if (GetMapAllowConfigureAIPlayer(p) and p != GetTriggerPlayer() and GetPlayerController(p) == MAP_CONTROL_COMPUTER and IsPlayerAlly(p, GetTriggerPlayer())) then
+        if (professionNumber >= 1 and professionNumber <= 3) then
+            if (IsValidProfession(professionIndex - 1)) then
+                call SetPlayerProfession(p, professionNumber - 1, professionIndex - 1)
+                call DisplayTextToPlayer(GetTriggerPlayer(), 0.0, 0.0, Format(GetLocalizedString("CHANGED_AI_PROFFESSION_X_Y_Z")).i(professionNumber).s(GetPlayerNameWithoutTagColored(p)).s(GetProfessionName(professionIndex - 1)).result())
+            else
+                call SimError(GetTriggerPlayer(), Format(GetLocalizedString("PROFESSION_MUST_BE_VALID_X_Y")).i(GetProfessionsMax()).s(token3).result())
+            endif
+        else
+            call SimError(GetTriggerPlayer(), Format(GetLocalizedString("PROFESSION_NUMBER_MUST_BE_VALID_X")).s(token2).result())
+        endif
+    else
+        call SimError(GetTriggerPlayer(), GetLocalizedString("INVALID_TARGET_PLAYER"))
+    endif
+endfunction
+
+private function AiInfo takes nothing returns nothing
+    local string token = StringToken(GetEventPlayerChatString(), 1)
+    local player p = GetPlayerFromString(token)
+    if (p != null) then
+        if (GetMapAllowConfigureAIPlayer(p) and p != GetTriggerPlayer() and GetPlayerController(p) == MAP_CONTROL_COMPUTER) then
+            call CommandAI(p, COMMAND_INFO, 0)
+            call DisplayTextToPlayer(GetTriggerPlayer(), 0.0, 0.0, Format(GetLocalizedString("ASKED_AI_FOR_INFO_X")).s(GetPlayerNameWithoutTagColored(p)).result())
+        else
+            call SimError(GetTriggerPlayer(), Format(GetLocalizedString("INVALID_PLAYER_X")).s(GetPlayerNameWithoutTagColored(p)).result())
+        endif
+    else
+        call SimError(GetTriggerPlayer(), GetLocalizedString("INVALID_TARGET_PLAYER"))
+    endif
+endfunction
+
+private function AiTargetOn takes nothing returns nothing
+    local string token = StringToken(GetEventPlayerChatString(), 1)
+    local player p = GetPlayerFromString(token)
+    if (p != null) then
+        if (GetMapAllowConfigureAIPlayer(p) and p != GetTriggerPlayer() and GetPlayerController(p) == MAP_CONTROL_COMPUTER) then
+            call CommandAI(p, COMMAND_ATTACK_TARGET_ON, 0)
+            call DisplayTextToPlayer(GetTriggerPlayer(), 0.0, 0.0, Format(GetLocalizedString("AI_ATTACK_TARGET_ON_X")).s(GetPlayerNameWithoutTagColored(p)).result())
+        else
+            call SimError(GetTriggerPlayer(), Format(GetLocalizedString("INVALID_PLAYER_X")).s(GetPlayerNameWithoutTagColored(p)).result())
+        endif
+    else
+        call SimError(GetTriggerPlayer(), GetLocalizedString("INVALID_TARGET_PLAYER"))
+    endif
+endfunction
+
+private function AiTargetOff takes nothing returns nothing
+    local string token = StringToken(GetEventPlayerChatString(), 1)
+    local player p = GetPlayerFromString(token)
+    if (p != null) then
+        if (GetMapAllowConfigureAIPlayer(p) and p != GetTriggerPlayer() and GetPlayerController(p) == MAP_CONTROL_COMPUTER) then
+            call CommandAI(p, COMMAND_ATTACK_TARGET_OFF, 0)
+            call DisplayTextToPlayer(GetTriggerPlayer(), 0.0, 0.0, Format(GetLocalizedString("AI_ATTACK_TARGET_OFF_X")).s(GetPlayerNameWithoutTagColored(p)).result())
+        else
+            call SimError(GetTriggerPlayer(), Format(GetLocalizedString("INVALID_PLAYER_X")).s(GetPlayerNameWithoutTagColored(p)).result())
+        endif
+    else
+        call SimError(GetTriggerPlayer(), GetLocalizedString("INVALID_TARGET_PLAYER"))
+    endif
+endfunction
+
+private function AiTarget takes nothing returns nothing
+    local string token = StringToken(GetEventPlayerChatString(), 1)
+    local player p = GetPlayerFromString(token)
+    if (p != null) then
+        if (GetMapAllowConfigureAIPlayer(p) and p != GetTriggerPlayer() and GetPlayerController(p) == MAP_CONTROL_COMPUTER) then
+            if (GetPlayerHero1(GetTriggerPlayer()) != null) then
+                call CommandAI(p, COMMAND_ATTACK_TARGET_X, R2I(GetUnitX(GetPlayerHero1(GetTriggerPlayer()))))
+                call CommandAI(p, COMMAND_ATTACK_TARGET_Y, R2I(GetUnitY(GetPlayerHero1(GetTriggerPlayer()))))
+                call DisplayTextToPlayer(GetTriggerPlayer(), 0.0, 0.0, Format(GetLocalizedString("AI_TARGET_LOCATION_HERO_X")).s(GetPlayerNameWithoutTagColored(p)).result())
+            else
+                call SimError(GetTriggerPlayer(), Format(GetLocalizedString("PLAYER_X_HAS_NO_HERO_Y")).s(GetPlayerNameWithoutTagColored(GetTriggerPlayer())).i(1).result())
+            endif
+        else
+            call SimError(GetTriggerPlayer(), Format(GetLocalizedString("INVALID_PLAYER_X")).s(GetPlayerNameWithoutTagColored(p)).result())
+        endif
+    else
+        call SimError(GetTriggerPlayer(), GetLocalizedString("INVALID_TARGET_PLAYER"))
+    endif
+endfunction
+
+private function AiTraceOn takes nothing returns nothing
+    local string token = StringToken(GetEventPlayerChatString(), 1)
+    local player p = GetPlayerFromString(token)
+    if (p != null) then
+        if (GetMapAllowConfigureAIPlayer(p) and p != GetTriggerPlayer() and GetPlayerController(p) == MAP_CONTROL_COMPUTER) then
+            call CommandAI(p, COMMAND_TRACE_ON, 0)
+            call DisplayTextToPlayer(GetTriggerPlayer(), 0.0, 0.0, Format(GetLocalizedString("AI_TRACE_ON_X")).s(GetPlayerNameWithoutTagColored(p)).result())
+        else
+            call SimError(GetTriggerPlayer(), Format(GetLocalizedString("INVALID_PLAYER_X")).s(GetPlayerNameWithoutTagColored(p)).result())
+        endif
+    else
+        call SimError(GetTriggerPlayer(), GetLocalizedString("INVALID_TARGET_PLAYER"))
+    endif
+endfunction
+
+private function AiTraceOff takes nothing returns nothing
+    local string token = StringToken(GetEventPlayerChatString(), 1)
+    local player p = GetPlayerFromString(token)
+    if (p != null) then
+        if (GetMapAllowConfigureAIPlayer(p) and p != GetTriggerPlayer() and GetPlayerController(p) == MAP_CONTROL_COMPUTER) then
+            call CommandAI(p, COMMAND_TRACE_OFF, 0)
+            call DisplayTextToPlayer(GetTriggerPlayer(), 0.0, 0.0, Format(GetLocalizedString("AI_TRACE_OFF_X")).s(GetPlayerNameWithoutTagColored(p)).result())
+        else
+            call SimError(GetTriggerPlayer(), Format(GetLocalizedString("INVALID_PLAYER_X")).s(GetPlayerNameWithoutTagColored(p)).result())
+        endif
+    else
+        call SimError(GetTriggerPlayer(), GetLocalizedString("INVALID_TARGET_PLAYER"))
+    endif
+endfunction
+
+private function AiLoadMines takes nothing returns nothing
+    local string token = StringToken(GetEventPlayerChatString(), 1)
+    local player p = GetPlayerFromString(token)
+    if (p != null) then
+        if (GetMapAllowConfigureAIPlayer(p) and p != GetTriggerPlayer() and GetPlayerController(p) == MAP_CONTROL_COMPUTER) then
+            call AutloadWorkersIntoMinesAI(p)
+            call DisplayTextToPlayer(GetTriggerPlayer(), 0.0, 0.0, Format(GetLocalizedString("AI_LOADED_MINES_X")).s(GetPlayerNameWithoutTagColored(p)).result())
+        else
+            call SimError(GetTriggerPlayer(), Format(GetLocalizedString("INVALID_PLAYER_X")).s(GetPlayerNameWithoutTagColored(p)).result())
+        endif
+    else
+        call SimError(GetTriggerPlayer(), GetLocalizedString("INVALID_TARGET_PLAYER"))
+    endif
+endfunction
+
+private function AiRevive takes nothing returns nothing
+    local string token = StringToken(GetEventPlayerChatString(), 1)
+    local player p = GetPlayerFromString(token)
+    if (p != null) then
+        if (GetMapAllowConfigureAIPlayer(p) and p != GetTriggerPlayer() and GetPlayerController(p) == MAP_CONTROL_COMPUTER) then
+            call ComputerAIAutoReviveHeroes(p)
+            call DisplayTextToPlayer(GetTriggerPlayer(), 0.0, 0.0, Format(GetLocalizedString("AI_REVIVE_HEROES_X")).s(GetPlayerNameWithoutTagColored(p)).result())
+        else
+            call SimError(GetTriggerPlayer(), Format(GetLocalizedString("INVALID_PLAYER_X")).s(GetPlayerNameWithoutTagColored(p)).result())
+        endif
+    else
+        call SimError(GetTriggerPlayer(), GetLocalizedString("INVALID_TARGET_PLAYER"))
+    endif
+endfunction
+
 private function ZonesOn takes nothing returns nothing
     set udg_PlayerShowZonesHints[GetConvertedPlayerId(GetTriggerPlayer())] = true
     call DisplayTextToPlayer(GetTriggerPlayer(), 0.0, 0.0, GetLocalizedString("ZONE_ENABLE"))
@@ -1794,6 +2192,10 @@ private function CheatUnlockCampaigns takes nothing returns nothing
     call DisplayTextToForce(GetPlayersAll(), GetLocalizedString("UNLOCKED_ALL_CAMPAIGNS"))
 endfunction
 
+private function CheatCinHuman1D takes nothing returns nothing
+    call ConditionalTriggerExecute(gg_trg_Cinematics_Human_Quest_1_Discover)
+endfunction
+
 private function StartGame takes nothing returns nothing
     set udg_Cheats = GetAllPlayingUsersCount() == 1 and (GetPlayerName(Player(0)) == "WorldEdit" or GetPlayerName(Player(0)) == "Barade" or  GetPlayerName(Player(0)) == "Barade#2569")
 endfunction
@@ -1960,6 +2362,31 @@ private function Init takes nothing returns nothing
     call Add("-generated", true, function Generated)
     call Add("-cleargenerated", true, function ClearGenerated)
 
+    call Add("-aiignoreall", false, function AiIgnoreAll)
+    call Add("-aiignore", true, function AiIgnore)
+    call Add("-aiuse", true, function AiUse)
+    call Add("-aiattackson", false, function AiAttacksOn)
+    call Add("-aiattacksoff", false, function AiAttacksOff)
+    call Add("-aiattacksplayerson", false, function AiAttacksPlayersOn)
+    call Add("-aiattacksplayersoff", false, function AiAttacksPlayersOff)
+    call Add("-aigold", false, function AiGold)
+    call Add("-ailumber", false, function AiLumber)
+    call Add("-aishipsson", false, function AiShipsOn)
+    call Add("-aishipsoff", false, function AiShipsOff)
+    call Add("-aiexpansions", false, function AiExpansions)
+    call Add("-aizeppelins", false, function AiZeppelins)
+    call Add("-aishredders", false, function AiShredders)
+    call Add("-aihero", false, function AiHero)
+    call Add("-aiprofession", false, function AiProfession)
+    call Add("-aiinfo", false, function AiInfo)
+    call Add("-aitargeton", false, function AiTargetOn)
+    call Add("-aitargetoff", false, function AiTargetOff)
+    call Add("-aitarget", false, function AiTarget)
+    call Add("-aitraceon", false, function AiTraceOn)
+    call Add("-aitraceoff", false, function AiTraceOff)
+    call Add("-ailoadmines", false, function AiLoadMines)
+    call Add("-airevive", false, function AiRevive)
+
     call Add("-zoneson", true, function ZonesOn)
     call Add("-zonesoff", true, function ZonesOff)
     call Add("-zone", true, function Zone)
@@ -2019,6 +2446,9 @@ private function Init takes nothing returns nothing
     call AddCheat("-medivh", true, function CheatMedivh)
     call AddCheat("-evolution", false, function CheatEvolution)
     call AddCheat("-unlockcampaigns", true, function CheatUnlockCampaigns)
+
+    call AddCheat("-cinoutro", true, function PlayOutroCinematic)
+    call AddCheat("-cinhuman1d", true, function CheatCinHuman1D)
 
     // after all chat commands
     call ForForce(GetAllPlayingUsers(), function EnumPlayerRegisterChatEvent)

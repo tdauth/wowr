@@ -216,6 +216,9 @@ private function Init takes nothing returns nothing
     call AddChange("Do not duplicate Gold Mines on Dwarf Mine Shaft deaths.")
     call AddChange("CustomUnitTypes uses Indexer and reacts to building researches now.")
     call AddChange("Dummies and Dummy Sheeps in player selection have owner Neutral Passive now.")
+    call AddChange("No more quest messages on healing or restoring heroes on Theramore.")
+    call AddChange("Add leaderboard chat commands to corresponding quests.")
+    call AddChange("Change base order ID for Random Class to avoid collision with crafting.")
 
 static if (MAP_DEBUG_MODE_ENABLED) then
     call AddVersion("4.6")

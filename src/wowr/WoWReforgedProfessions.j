@@ -275,6 +275,16 @@ function GetPlayerProfession3 takes player whichPlayer returns integer
     return udg_PlayerProfession3[GetConvertedPlayerId(whichPlayer)]
 endfunction
 
+function SetPlayerProfession takes player whichPlayer, integer index, integer p returns nothing
+    if (index == 0) then
+        call SetPlayerProfession1(whichPlayer, p)
+    elseif (index == 1) then
+        call SetPlayerProfession2(whichPlayer, p)
+    elseif (index == 2) then
+        call SetPlayerProfession3(whichPlayer, p)
+    endif
+endfunction
+
 function PlayerHasProfession takes player whichPlayer, integer profession returns boolean
     return GetPlayerProfession1(whichPlayer) == profession or GetPlayerProfession2(whichPlayer) == profession or GetPlayerProfession3(whichPlayer) == profession
 endfunction

@@ -1086,6 +1086,7 @@ private function GenerateBossEx takes unit hero, integer index returns nothing
     local AbstractZone zone = 0
     local integer heroTypeId = GetUnitTypeId(hero)
     local integer legendaryItemIndex = -1
+    call BJDebugMsg("Generate Boss " + GetUnitName(hero))
     call FileWriteLine("<tr id=\"" + A2S(heroTypeId) + "\">")
     // icon
     call FileWriteLine(ColumnDataOrder(I2S(index), GetActualObjectName(heroTypeId)))
@@ -1235,8 +1236,12 @@ private function GenerateBosses takes nothing returns nothing
     set max = BlzGroupGetSize(udg_Bosses)
     loop
         exitwhen (i >= max)
-        call GenerateBoss(BlzGroupUnitAt(udg_Bosses, i), index)
-        set index = index + 1
+        if (BlzGroupUnitAt(udg_Bosses, i) != null) then
+            call GenerateBoss(BlzGroupUnitAt(udg_Bosses, i), index)
+            set index = index + 1
+        else
+            call BJDebugMsg("Boss " + I2S(i) + " is null.")
+        endif
         set i = i + 1
     endloop
 
@@ -1244,8 +1249,12 @@ private function GenerateBosses takes nothing returns nothing
     set max = BlzGroupGetSize(udg_BossesQuests)
     loop
         exitwhen (i >= max)
-        call GenerateBoss(BlzGroupUnitAt(udg_BossesQuests, i), index)
-        set index = index + 1
+        if (BlzGroupUnitAt(udg_BossesQuests, i) != null) then
+            call GenerateBoss(BlzGroupUnitAt(udg_BossesQuests, i), index)
+            set index = index + 1
+        else
+            call BJDebugMsg("Quest boss " + I2S(i) + " is null.")
+        endif
         set i = i + 1
     endloop
 

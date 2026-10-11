@@ -14,7 +14,7 @@ function GetHelpTextPing takes nothing returns string
 endfunction
 
 function GetHelpTextAi takes nothing returns string
-    return "-areset, -airespawn/-noairespawn, -aieasy X, -ainormal X, -aihard X, -aiinsane X, -ainone X, -aineutral X- aicreep X, -aicomputer X, -aion/off X, -aiignoreall X, -aiignore, -aiuse, -aiattackson/off X, -aiattacksplayerson/off X, -aishipson/off X, -aigold/wood X, -aiexpansions X Y, -aishredders X Y, -aizeppelins X Y, -aihero X Y Z, -ailoadmines X, -airevive X, -aiprofession X Y, -aiinfo X, -aitargeton/off X, -aitarget X, -aitraceon/off"
+    return "-areset, -airespawn/-noairespawn, -aieasy X, -ainormal X, -aihard X, -aiinsane X, -ainone X, -aineutral X- aicreep X, -aicomputer X, -aion/off X, -aiignoreall X, -aiuse/-aiignore, -aiattackson/off X, -aiattacksplayerson/off X, -aishipson/off X, -aigold/wood X, -aiexpansions X Y, -aishredders X Y, -aizeppelins X Y, -aihero X Y Z, -ailoadmines X, -airevive X, -aiprofession X Y, -aiinfo X, -aitargeton/off X, -aitarget X, -aitraceon/off"
 endfunction
 
 function GetHelpTextAlly takes nothing returns string

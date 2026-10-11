@@ -18,6 +18,7 @@ private function Init takes nothing returns nothing
     set udg_HumanQuest[4] = AddQuestNext("HumanQuest4", GetLocalizedStringSafe("Q_CRUSADE_TITLE"), GetLocalizedStringSafe("Q_CRUSADE_DESCRIPTION"), "ReplaceableTextures\\CommandButtons\\BTNHeroPaladin.blp", gg_unit_H005_0528, ITEM_ROYAL_PALADIN_HAMMER)
     call AddQuestItem(GetLocalizedStringSafe("Q_CRUSADE_0"))
     call AddQuestItem(GetLocalizedStringSafe("Q_CRUSADE_1"))
+    call AddQuestItem(GetLocalizedStringSafe("CC_CRUSADE"))
 
     // Village Quests
     set udg_VillageQuestPingTarget = GetRectCenter(gg_rct_Village_Quest_1_Discover)
@@ -102,6 +103,7 @@ private function Init takes nothing returns nothing
     set udg_OrcQuest[4] = AddQuest("OrcQuest4", GetLocalizedStringSafe("Q_CENTAUR_KHANS_TITLE"), GetLocalizedStringSafe("Q_CENTAUR_KHANS_DESCRIPTION"), "ReplaceableTextures\\CommandButtons\\BTNPandarenBrewmaster.blp", gg_unit_Nsjs_0218, 'I01N')
     call AddQuestItem(GetLocalizedStringSafe("Q_CENTAUR_KHANS_0"))
     call AddQuestItem(GetLocalizedStringSafe("Q_CENTAUR_KHANS_1"))
+    call AddQuestItem(GetLocalizedStringSafe("CC_CENTAURS"))
 
     // Blood Elf Quests
     set udg_BloodElfQuestPingTarget = GetRectCenter(gg_rct_Blood_Elf_Quest_1_discover_and_complete)
@@ -115,6 +117,7 @@ private function Init takes nothing returns nothing
     call AddQuestItem(GetLocalizedStringSafe("Q_FORSAKEN_0"))
     call AddQuestItem(GetLocalizedStringSafe("Q_FORSAKEN_1"))
     call AddQuestItem(GetLocalizedStringSafe("Q_FORSAKEN_2"))
+    call AddQuestItem(GetLocalizedStringSafe("CC_UNDEADS"))
     set udg_QuestBloodElf[4] = AddQuest("BloodElfQuest4", GetLocalizedStringSafe("Q_QUEL_THALAS_TITLE"), GetLocalizedStringSafe("Q_QUEL_THALAS_DESCRIPTION"), "ReplaceableTextures\\CommandButtons\\BTNElvenFarm.blp", gg_unit_H0U3_2414, 'klmm')
     call AddQuestItem(GetLocalizedStringSafe("Q_QUEL_THALAS_0"))
     call AddQuestItem(GetLocalizedStringSafe("Q_QUEL_THALAS_1"))
@@ -149,6 +152,7 @@ private function Init takes nothing returns nothing
     set udg_QuestSylvanas[3] = AddQuest("ForsakenQuest3", GetLocalizedStringSafe("Q_THE_SILVER_HAND_TITLE"), GetLocalizedStringSafe("Q_THE_SILVER_HAND_DESCRIPTION"), "ReplaceableTextures\\CommandButtons\\BTNHeroPaladin.blp", gg_unit_Usyl_0005, 'I01X')
     call AddQuestItem(GetLocalizedStringSafe("Q_THE_SILVER_HAND_0"))
     call AddQuestItem(GetLocalizedStringSafe("Q_THE_SILVER_HAND_1"))
+    call AddQuestItem(GetLocalizedStringSafe("CC_PALADINS"))
     set udg_QuestSylvanas[4] = AddQuest("ForsakenQuest4", GetLocalizedStringSafe("Q_LEGENDARY_ITEMS_TITLE"), GetLocalizedStringSafe("Q_LEGENDARY_ITEMS_DESCRIPTION"), "ReplaceableTextures\\CommandButtons\\BTNFarSight.blp", gg_unit_Usyl_0005, 'I02Q')
     call AddQuestItem(GetLocalizedStringSafe("Q_LEGENDARY_ITEMS_0"))
 
@@ -191,6 +195,7 @@ private function Init takes nothing returns nothing
     set udg_Demon_Quest[2] = AddQuest("DemonQuest2", GetLocalizedStringSafe("Q_DRAENEI_DESERTERS_TITLE"), GetLocalizedStringSafe("Q_DRAENEI_DESERTERS_DESCRIPTION"), "ReplaceableTextures\\CommandButtons\\BTNCharm.blp", gg_unit_U00S_0651, 'I03W')
     call AddQuestItem(GetLocalizedStringSafe("Q_DRAENEI_DESERTERS_0"))
     call AddQuestItem(GetLocalizedStringSafe("Q_DRAENEI_DESERTERS_1"))
+    call AddQuestItem(GetLocalizedStringSafe("CC_DRAENEI"))
     set udg_Demon_Quest[3] = AddQuest("DemonQuest3", GetLocalizedStringSafe("Q_AKAMA_TITLE"), GetLocalizedStringSafe("Q_AKAMA_DESCRIPTION"), "ReplaceableTextures\\CommandButtons\\BTNDranaiAkama.blp", gg_unit_U00S_0651, 'dsum')
     call AddQuestItem(GetLocalizedStringSafe("Q_AKAMA_0"))
     call AddQuestItem(GetLocalizedStringSafe("Q_AKAMA_1"))
@@ -228,6 +233,7 @@ private function Init takes nothing returns nothing
     set udg_Eredar_Quest[4] = AddQuest("EredarQuest4", GetLocalizedStringSafe("Q_DEMON_HUNT_TITLE"), GetLocalizedStringSafe("Q_DEMON_HUNT_DESCRIPTION"), "ReplaceableTextures\\CommandButtons\\BTNHeroDemonHunter.blp", gg_unit_H0U4_2415, ITEM_DEMON_SLAYER)
     call AddQuestItem(GetLocalizedStringSafe("Q_DEMON_HUNT_0"))
     call AddQuestItem(GetLocalizedStringSafe("Q_DEMON_HUNT_1"))
+    call AddQuestItem(GetLocalizedStringSafe("CC_DEMONS"))
 
     // Tuskarr Quests
     set udg_TuskarrQuestPingTarget = GetRectCenter(gg_rct_Quest_Tuskarr_1)
@@ -237,6 +243,7 @@ private function Init takes nothing returns nothing
     set udg_Tuskarr_Quest[2] = AddQuest("TuskarrQuest2", GetLocalizedStringSafe("Q_WHALING_TITLE"), GetLocalizedStringSafe("Q_WHALING_DESCRIPTION"), "ReplaceableTextures\\CommandButtons\\BTNFish.blp", gg_unit_N0CZ_2594, 'I121')
     call AddQuestItem(GetLocalizedStringSafe("Q_WHALING_0"))
     call AddQuestItem(GetLocalizedStringSafe("Q_WHALING_1"))
+    call AddQuestItem(GetLocalizedStringSafe("CC_WHALES"))
     set udg_Tuskarr_Quest[3] = AddQuest("TuskarrQuest3", GetLocalizedStringSafe("Q_FUNERAL_TITLE"), GetLocalizedStringSafe("Q_FUNERAL_DESCRIPTION"), "ReplaceableTextures\\CommandButtons\\BTNAnkh.blp", gg_unit_N0CZ_2594, 'I123')
     call AddQuestItem(GetLocalizedStringSafe("Q_FUNERAL_0"))
     call AddQuestItem(GetLocalizedStringSafe("Q_FUNERAL_1"))
@@ -264,15 +271,19 @@ private function Init takes nothing returns nothing
     set udg_JainaQuest[1] = AddQuest("JainaQuest1", GetLocalizedStringSafe("Q_OLD_GODS_TITLE"), GetLocalizedStringSafe("Q_OLD_GODS_DESCRIPTION"), "ReplaceableTextures\\CommandButtons\\BTNCthunIcon.blp", gg_unit_Hjai_0012, 'I074')
     call AddQuestItem(GetLocalizedStringSafe("Q_OLD_GODS_0"))
     call AddQuestItem(GetLocalizedStringSafe("Q_OLD_GODS_1"))
+    call AddQuestItem(GetLocalizedStringSafe("CC_OLD_GODS"))
     set udg_JainaQuest[2] = AddQuest("JainaQuest2", GetLocalizedStringSafe("Q_INVASION_TITLE"), GetLocalizedStringSafe("Q_INVASION_DESCRIPTION"), "ReplaceableTextures\\CommandButtons\\BTNInfernal.blp", gg_unit_Hjai_0012, 'I0QY')
     call AddQuestItem(GetLocalizedStringSafe("Q_INVASION_0"))
     call AddQuestItem(GetLocalizedStringSafe("Q_INVASION_1"))
+    call AddQuestItem(GetLocalizedStringSafe("CC_INVASION"))
     set udg_JainaQuest[3] = AddQuest("JainaQuest3", GetLocalizedStringSafe("Q_ELEMENTAL_LORDS_TITLE"), GetLocalizedStringSafe("Q_ELEMENTAL_LORDS_DESCRIPTION"), "ReplaceableTextures\\CommandButtons\\BTNSummonWaterElemental.blp", gg_unit_Hjai_0012, 'I0TM')
     call AddQuestItem(GetLocalizedStringSafe("Q_ELEMENTAL_LORDS_0"))
     call AddQuestItem(GetLocalizedStringSafe("Q_ELEMENTAL_LORDS_1"))
+    call AddQuestItem(GetLocalizedStringSafe("CC_ELEMENTAL"))
     set udg_JainaQuest[4] = AddQuest("JainaQuest4", GetLocalizedStringSafe("Q_WILD_GODS_TITLE"), GetLocalizedStringSafe("Q_WILD_GODS_DESCRIPTION"), "ReplaceableTextures\\CommandButtons\\BTNKeeperOfTheGrove.blp", gg_unit_Hjai_0012, 'I0TR')
     call AddQuestItem(GetLocalizedStringSafe("Q_WILD_GODS_0"))
     call AddQuestItem(GetLocalizedStringSafe("Q_WILD_GODS_1"))
+    call AddQuestItem(GetLocalizedStringSafe("CC_WILD"))
 endfunction
 
 endlibrary

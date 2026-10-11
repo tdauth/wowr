@@ -6706,11 +6706,6 @@ STRING 1128
 Purchase Goblin Tool Box
 }
 
-STRING 1129
-{
-Thieving - Doctor
-}
-
 STRING 1130
 // Units: E00V (Warden), Awakentip (Tooltip - Awaken)
 {
