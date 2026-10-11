@@ -7971,12 +7971,6 @@ STRING 1340
 Wagen ausbilden
 }
 
-STRING 1341
-// Items: I09G (The Burning Legion), Name (Name)
-{
-Die brennende Legion
-}
-
 STRING 1342
 // Units: n054 (Event House), Hotkey (Hotkey)
 {
@@ -8117,7 +8111,7 @@ Q
 STRING 1365
 // Items: I03C (Priest), Ubertip (Tooltip - Extended)
 {
-Wechselt die Klasse zum Priester:|n- Heilen|n- Inneres Feuer|n- Holy Light|n- Divine Shield|n- Healing Wave|n- Holy Aura|n- Healing Spray|n- Devotion Aura|n- Holy Nova|n- Horn of Stormwind|n- Resurrection
+Wechselt die Klasse zum Priester:|n- Heilen|n- Inneres Feuer|n- Heiliges Licht|n- Gottesschild|n- Heilwelle|n- Heilige Aura|n- Heil-Spray|n- Hingabe-Aura|n- Heilige Nova|n- Horn von Sturmwind|n- Auferstehung
 }
 
 STRING 1366
@@ -10862,6 +10856,54 @@ STRING 1822
 Gives Hellcallers the ability Animate Dead.
 }
 
+STRING 1823
+// Abilities: A1NY (Divine Shield), Ubertip (Tooltip - Normal - Extended)
+{
+Gibt einer befreundeten Ziel-Einheit für <A1NY,Dur1> Sekunden göttliche Rüstung. Hat <A1NY,Cool1> Sekunden Abklingzeit.
+}
+
+STRING 1824
+// Buffs/Effects: B003 (Divine Shield), EditorName (Name (Editor Only))
+{
+Gottesschild
+}
+
+STRING 1825
+// Abilities: A07J (Improved Archery), Name (Name)
+{
+Verbessertes Bogenschießen
+}
+
+STRING 1826
+// Abilities: A07J (Improved Archery), EditorSuffix (Editor Suffix)
+{
+(Lordaeron) (Icon)
+}
+
+STRING 1827
+// Upgrades: R0AM (Improved Bows), Name (Name)
+{
+Verbessertes Bogenschießen
+}
+
+STRING 1828
+// Abilities: A0E8 (Long Rifles), EditorSuffix (Editor Suffix)
+{
+(Icon) (Zwerg)
+}
+
+STRING 1829
+// Abilities: A0S1 (Turrets), EditorSuffix (Editor Suffix)
+{
+(Icon) (Kul Tiras)
+}
+
+STRING 1830
+// Abilities: A07T (Long Rifles), EditorSuffix (Editor Suffix)
+{
+(Icon) (Lordaeron)
+}
+
 STRING 1831
 // Units: h0KK (Gnome Factory), Tip (Tooltip - Basic)
 {
@@ -10896,6 +10938,12 @@ STRING 1836
 // Items: I0LA (Tiny Workshop), Name (Name)
 {
 Winzige Werkstatt
+}
+
+STRING 1837
+// Upgrades: R0AZ (Control Magic), EditorSuffix (Editor Suffix)
+{
+(Lordaeron)
 }
 
 STRING 1838
@@ -11012,10 +11060,28 @@ STRING 1856
 Wachturm
 }
 
+STRING 1857
+// Upgrades: R0F7 (Priest Adept Training,Priest Master Training), EditorSuffix (Editor Suffix)
+{
+(Stormwind)
+}
+
 STRING 1858
 // Units: n02D (Furbolg Polar Hut), Hotkey (Hotkey)
 {
 P
+}
+
+STRING 1859
+// Upgrades: R0F8 (Magic Sentry), EditorSuffix (Editor Suffix)
+{
+(Stormwind)
+}
+
+STRING 1860
+// Upgrades: R0F9 (Studded Leather Armor,Reinforced Leather Armor,Dragonhide Armor), EditorSuffix (Editor Suffix)
+{
+(Stormwind)
 }
 
 STRING 1861
@@ -11046,6 +11112,18 @@ STRING 1865
 // Units: n04J (Trading Post), Ubertip (Tooltip - Extended)
 {
 Ermöglicht den Handel mit allen Rohstoffen außer Gold und Holz.
+}
+
+STRING 1866
+// Upgrades: R03A (Fragmentation Shards), EditorSuffix (Editor Suffix)
+{
+(Lordaeron)
+}
+
+STRING 1867
+// Upgrades: R03A (Fragmentation Shards), Ubertip (Tooltip - Extended)
+{
+Upgrades the mortar shells on Alliance Siege Towers and Cannon Towers to increase the damage they deal to Unarmored and Medium armor units.
 }
 
 STRING 1868
@@ -11138,10 +11216,20 @@ STRING 1882
 H
 }
 
+STRING 1883
+{
+(Stormwind)
+}
+
 STRING 1884
 // Units: h06I (Aviary), Ubertip (Tooltip - Extended)
 {
 Bildet Wanderfalken und Albatrossreiter aus. |nBietet auch die Ausbaustufen 'Durchblick' und 'Verschlingen'.
+}
+
+STRING 1885
+{
+Upgrades the mortar shells on Alliance Siege Towers and Cannon Towers to increase the damage they deal to Unarmored and Medium armor units.
 }
 
 STRING 1886
@@ -11198,6 +11286,16 @@ STRING 1894
 Bietet eine zusätzliche Quelle für Goldeinkommen.|n|n|cffffcc00Begrenzt auf 4.|r
 }
 
+STRING 1895
+{
+(Lordaeron)
+}
+
+STRING 1896
+{
+Verleit Lordaeron-Türme die Fähigkeit, unsichtbare Einheiten zu entdecken.
+}
+
 STRING 1897
 // Units: n00I (Orc Citizen (male)), Name (Name)
 {
@@ -11228,6 +11326,16 @@ STRING 1901
 Orc-Bürgerin anheuern
 }
 
+STRING 1902
+{
+(Stormwind)
+}
+
+STRING 1903
+{
+Upgrades the mortar shells on Alliance Siege Towers and Cannon Towers to increase the damage they deal to Unarmored and Medium armor units.
+}
+
 STRING 1904
 // Abilities: A203 (Demolishing - Adept), Name (Name)
 {
@@ -11252,10 +11360,30 @@ STRING 1907
 Demolieren - Meister
 }
 
+STRING 1908
+{
+(Lordaeron)
+}
+
+STRING 1909
+{
+Verleit Lordaeron-Türme die Fähigkeit, unsichtbare Einheiten zu entdecken.
+}
+
 STRING 1910
 // Units: h020 (Gate Closed), Hotkey (Hotkey)
 {
 G
+}
+
+STRING 1911
+{
+(Lordaeron) (Knight)
+}
+
+STRING 1912
+{
+(Stormwind)
 }
 
 STRING 1913
@@ -11264,10 +11392,42 @@ STRING 1913
 Meister Demolieren
 }
 
+STRING 1914
+// Upgrades: R03D (Fragmentation Shards), Ubertip (Tooltip - Extended)
+{
+Upgrades the mortar shells on Alliance Siege Towers and Cannon Towers to increase the damage they deal to Unarmored and Medium armor units.
+}
+
+STRING 1915
+{
+(Lordaeron)
+}
+
+STRING 1916
+{
+Verleit Lordaeron-Türme die Fähigkeit, unsichtbare Einheiten zu entdecken.
+}
+
+STRING 1917
+{
+(Lordaeron)
+}
+
+STRING 1918
+{
+Powerful flying creature, mounted by a Human lance-thrower. Can learn Animal War Training. |n|n|cffffcc00Attacks land and air units.|r
+}
+
 STRING 1919
 // Upgrades: R01A (Envenomed Spears), Ubertip (Tooltip - Extended)
 {
 Adds an additional poison effect to Gnoll-Auftragsmörders' and Gnoll Warhawk Riders' attacks. A unit poisoned by Vergiftete Waffen takes damage over time.
+}
+
+STRING 1920
+// Abilities: A0D0 (Sundering Blades), EditorSuffix (Editor Suffix)
+{
+(Lordaeron) (Knight)
 }
 
 STRING 1921
@@ -11276,10 +11436,38 @@ STRING 1921
 Primäres Gebäude, wird zum Ausbilden von Arbeitern und zum Einlagern gesammelter Rohstoffe verwendet. Kann erst zur Burg und dann zum Schloss ausgebaut werden, um die Produktion weiterer Gebäude- und Einheitenarten zu ermöglichen.
 }
 
+STRING 1922
+// Upgrades: R03D (Fragmentation Shards), EditorSuffix (Editor Suffix)
+{
+(Stormwind)
+}
+
 STRING 1923
 // Units: h00I (Scout Tower), Ubertip (Tooltip - Extended)
 {
 Basic observation tower. Has no attack, but can be upgraded into a Guard Tower, or an Arcane Tower. Can learn the Magic Sentry ability.
+}
+
+STRING 1924
+{
+(Lordaeron)
+}
+
+STRING 1925
+{
+Verleit Lordaeron-Türme die Fähigkeit, unsichtbare Einheiten zu entdecken.
+}
+
+STRING 1926
+// Upgrades: R046 (Magic Sentry), EditorSuffix (Editor Suffix)
+{
+(Lordaeron)
+}
+
+STRING 1927
+// Units: h0MQ (Pegasus Knight), Ubertip (Tooltip - Extended)
+{
+Powerful flying creature, mounted by a Human lance-thrower. Can learn Animal War Training. |n|n|cffffcc00Attacks land and air units.|r
 }
 
 STRING 1928
@@ -11288,10 +11476,32 @@ STRING 1928
 The High Elves revere the sun. Increases the sight and other stats of High Elf units at day time. Arbeiters harvest plus 10 lumber during the day.
 }
 
+STRING 1929
+{
+Verleit Lordaeron-Türme die Fähigkeit, unsichtbare Einheiten zu entdecken.
+}
+
+STRING 1930
+{
+(Lordaeron)
+}
+
 STRING 1931
 // Units: n00J (Orc Citizen (female)), Ubertip (Tooltip - Extended)
 {
 Eine intelligente Orc-Bürgerin. Hat eine Manaregenerations-Aura.
+}
+
+STRING 1932
+// Upgrades: R046 (Magic Sentry), Ubertip (Tooltip - Extended)
+{
+Verleit Lordaeron-Türme die Fähigkeit, unsichtbare Einheiten zu entdecken.
+}
+
+STRING 1933
+// Upgrades: R051 (Sundering Blades), EditorSuffix (Editor Suffix)
+{
+(Lordaeron)
 }
 
 STRING 1938
@@ -18306,7 +18516,7 @@ B
 }
 
 STRING 3533
-// Items: I09G (The Burning Legion), Hotkey (Hotkey)
+// Abilities: ACbc (Breath of Fire), Hotkey (Hotkey - Normal)
 {
 B
 }
@@ -20238,7 +20448,7 @@ D
 }
 
 STRING 4049
-// Abilities: ACbc (Breath of Fire), Hotkey (Hotkey - Normal)
+// Abilities: A0C9 (Paint Blue), Hotkey (Hotkey - Normal)
 {
 B
 }
@@ -22026,7 +22236,7 @@ F
 }
 
 STRING 4503
-// Abilities: A0C9 (Paint Blue), Hotkey (Hotkey - Normal)
+// Abilities: A01E (Blink), Hotkey (Hotkey - Normal)
 {
 B
 }
@@ -22425,7 +22635,7 @@ Flying Wild God boss hero who can cast Spiegelbild, Trunkenbold, Fehlschlagsaura
 }
 
 STRING 4582
-// Abilities: A01E (Blink), Hotkey (Hotkey - Normal)
+// Abilities: A0EN (Carrion Beetles), Hotkey (Hotkey - Normal)
 {
 B
 }
@@ -22503,7 +22713,7 @@ O
 }
 
 STRING 4602
-// Abilities: A0EN (Carrion Beetles), Hotkey (Hotkey - Normal)
+// Upgrades: R01P (Ensnare), Hotkey (Hotkey)
 {
 B
 }
@@ -22683,7 +22893,7 @@ STRING 4675
 }
 
 STRING 4676
-// Upgrades: R01P (Ensnare), Hotkey (Hotkey)
+// Upgrades: R02P (Improved Lumber Harvesting,Advanced Lumber Harvesting), Hotkey (Hotkey)
 {
 B
 }
@@ -23964,7 +24174,7 @@ Einheit umwandeln
 }
 
 STRING 4925
-// Upgrades: R02P (Improved Lumber Harvesting,Advanced Lumber Harvesting), Hotkey (Hotkey)
+// Upgrades: R05Y (Flare), Hotkey (Hotkey)
 {
 B
 }
@@ -23982,7 +24192,7 @@ STRING 4927
 }
 
 STRING 4928
-// Upgrades: R05Y (Flare), Hotkey (Hotkey)
+// Upgrades: R0CH (Steel Armor,Thorium Armor,Arcanite Armor), Hotkey (Hotkey)
 {
 B
 }
@@ -26304,13 +26514,13 @@ P
 }
 
 STRING 5391
-// Upgrades: R0CH (Steel Armor,Thorium Armor,Arcanite Armor), Hotkey (Hotkey)
+// Upgrades: R0EK (Ensnare), Hotkey (Hotkey)
 {
 B
 }
 
 STRING 5392
-// Upgrades: R0EK (Ensnare), Hotkey (Hotkey)
+// Upgrades: R0H9 (Well Spring), Hotkey (Hotkey)
 {
 B
 }
@@ -26328,7 +26538,7 @@ B
 }
 
 STRING 5395
-// Upgrades: R0H9 (Well Spring), Hotkey (Hotkey)
+// Upgrades: R0IU (Improved Lumber Harvesting,Advanced Lumber Harvesting), Hotkey (Hotkey)
 {
 B
 }
@@ -26583,12 +26793,6 @@ STRING 5459
 // Items: I08B (Silver Ore), Description (Description)
 {
 Ermöglicht das Herstellen von Gegenständen.
-}
-
-STRING 5460
-// Upgrades: R0IU (Improved Lumber Harvesting,Advanced Lumber Harvesting), Hotkey (Hotkey)
-{
-B
 }
 
 STRING 5463
@@ -30310,30 +30514,6 @@ STRING 6215
 // Items: I194 (Tiny Hunting Camp), Name (Name)
 {
 Winziges Jagdlager
-}
-
-STRING 6216
-// Items: I03E (Alliance with the Burning Legion), Name (Name)
-{
-Bündnis mit der Brennenden Legion
-}
-
-STRING 6217
-// Items: I03E (Alliance with the Burning Legion), Description (Description)
-{
-Allies the Burning Legion for 5 minutes.
-}
-
-STRING 6218
-// Items: I03E (Alliance with the Burning Legion), Tip (Tooltip - Basic)
-{
-Bündnis mit der Brennenden Legion erwerben
-}
-
-STRING 6219
-// Items: I03E (Alliance with the Burning Legion), Ubertip (Tooltip - Extended)
-{
-Allies the Burning Legion for 5 minutes.
 }
 
 STRING 6220
@@ -34569,12 +34749,6 @@ STRING 7583
 Befestigtes Höllenkampfschiff
 }
 
-STRING 7584
-// Items: I09G (The Burning Legion), Description (Description)
-{
-Opens the portal to The Burning Legion.
-}
-
 STRING 7585
 // Units: n07R (Infernal Reaver), EditorSuffix (Name - Editor Suffix)
 {
@@ -35637,12 +35811,6 @@ STRING 7767
 Befestigtes Versteck
 }
 
-STRING 7768
-// Items: I09G (The Burning Legion), Tip (Tooltip - Basic)
-{
-Die Brennende Legion erwerben
-}
-
 STRING 7769
 // Units: h00K (Fortified Hideout), Ubertip (Tooltip - Extended)
 {
@@ -35671,12 +35839,6 @@ STRING 7773
 // Units: h00M (Temple of Light), Name (Name)
 {
 Tempel des Lichts
-}
-
-STRING 7774
-// Items: I09G (The Burning Legion), Ubertip (Tooltip - Extended)
-{
-Opens the portal to The Burning Legion.
 }
 
 STRING 7775
@@ -47614,7 +47776,7 @@ STRING 11838
 }
 
 STRING 11841
-// Abilities: A01C (Divine Shield), Name (Name)
+// Abilities: A1NY (Divine Shield), Tip (Tooltip - Normal)
 {
 Gottesschild
 }
@@ -47656,7 +47818,7 @@ STRING 11849
 }
 
 STRING 11852
-// Buffs/Effects: B003 (Divine Shield), EditorName (Name (Editor Only))
+// Abilities: A01C (Divine Shield), Name (Name)
 {
 Gottesschild
 }
@@ -48022,7 +48184,7 @@ T
 }
 
 STRING 11976
-// Abilities: A0S1 (Turrets), EditorSuffix (Editor Suffix)
+// Abilities: A0JH (Long Rifles), EditorSuffix (Editor Suffix)
 {
 (Icon) (Kul Tiras)
 }
@@ -52995,12 +53157,6 @@ STRING 16002
 Takes control of a target enemy ship. |nBezauberung cannot be used on ships above level <A0JG,DataA1>.
 }
 
-STRING 16003
-// Abilities: A0JH (Long Rifles), EditorSuffix (Editor Suffix)
-{
- (Icon - Kul Tiras)
-}
-
 STRING 16006
 // Units: h05H (Workshop), EditorSuffix (Name - Editor Suffix)
 {
@@ -53932,7 +54088,7 @@ T
 }
 
 STRING 16896
-// Items: I03E (Alliance with the Burning Legion), Hotkey (Hotkey)
+// Abilities: ACdr (Life Drain), Hotkey (Hotkey - Normal)
 {
 L
 }
@@ -53950,7 +54106,7 @@ T
 }
 
 STRING 16901
-// Abilities: ACdr (Life Drain), Hotkey (Hotkey - Normal)
+// Abilities: A09J (Engineer Place Goblin Land Mine), Hotkey (Hotkey - Normal)
 {
 L
 }
@@ -61318,7 +61474,7 @@ Feuerregen erforschen
 }
 
 STRING 22411
-// Abilities: A09J (Engineer Place Goblin Land Mine), Hotkey (Hotkey - Normal)
+// Abilities: A0AI (Engineer Ship Place Goblin Water Mine), Hotkey (Hotkey - Normal)
 {
 L
 }
@@ -64845,7 +65001,7 @@ Goldmünzen
 }
 
 STRING 25758
-// Abilities: A0AI (Engineer Ship Place Goblin Water Mine), Hotkey (Hotkey - Normal)
+// Abilities: A0DM (Bladestorm), Hotkey (Hotkey - Normal)
 {
 L
 }
@@ -64959,7 +65115,7 @@ STRING 26003
 }
 
 STRING 26019
-// Abilities: A0DM (Bladestorm), Hotkey (Hotkey - Normal)
+// Abilities: A0EF (Monster Lure), Hotkey (Hotkey - Normal)
 {
 L
 }
@@ -72927,7 +73083,7 @@ D
 }
 
 STRING 33426
-// Abilities: A0EF (Monster Lure), Hotkey (Hotkey - Normal)
+// Abilities: A0NO (Gather Lumber), Hotkey (Hotkey - Normal)
 {
 L
 }
@@ -74739,7 +74895,7 @@ Ein listiger Held, adept at damaging and supporting magics. Can learn Feuerblitz
 }
 
 STRING 34195
-// Abilities: A0NO (Gather Lumber), Hotkey (Hotkey - Normal)
+// Abilities: A0PB (Last Bag), Hotkey (Hotkey - Normal)
 {
 L
 }
@@ -75105,7 +75261,7 @@ K
 }
 
 STRING 34366
-// Abilities: A0PB (Last Bag), Hotkey (Hotkey - Normal)
+// Abilities: A1WR (Healing Salve), Hotkey (Hotkey - Normal)
 {
 L
 }
@@ -77259,7 +77415,7 @@ Increases the caused damage to Undead units by 10 %.
 }
 
 STRING 35456
-// Units: n0AU (Stormwind Airship), EditorSuffix (Name - Editor Suffix)
+// Abilities: A188 (Build Tiny Town Center), EditorSuffix (Editor Suffix)
 {
 (Lordaeron)
 }
@@ -77271,13 +77427,13 @@ Scharlachroter Kreuzzug
 }
 
 STRING 35458
-// Abilities: A188 (Build Tiny Town Center), EditorSuffix (Editor Suffix)
+// Abilities: A18M (Unit Inventory), EditorSuffix (Editor Suffix)
 {
 (Lordaeron)
 }
 
 STRING 35459
-// Abilities: A18M (Unit Inventory), EditorSuffix (Editor Suffix)
+// Abilities: A1B4 (Defend), EditorSuffix (Editor Suffix)
 {
 (Lordaeron)
 }
@@ -77313,13 +77469,13 @@ Supporting unit without attack who has the Befehls-Aura ability.
 }
 
 STRING 35465
-// Abilities: A1B4 (Defend), EditorSuffix (Editor Suffix)
+// Abilities: A1BJ (Dispel Magic), EditorSuffix (Editor Suffix)
 {
 (Lordaeron)
 }
 
 STRING 35466
-// Abilities: A1BJ (Dispel Magic), EditorSuffix (Editor Suffix)
+// Abilities: A07U (Fragmentation Shards), EditorSuffix (Editor Suffix)
 {
 (Lordaeron)
 }
@@ -77373,31 +77529,31 @@ S
 }
 
 STRING 35576
-// Upgrades: R0A5 (Barrage), EditorSuffix (Editor Suffix)
+// Abilities: A081 (Magic Sentry), EditorSuffix (Editor Suffix)
 {
 (Lordaeron)
 }
 
 STRING 35577
-// Upgrades: R0A6 (Barrage), EditorSuffix (Editor Suffix)
+// Upgrades: R0A5 (Barrage), EditorSuffix (Editor Suffix)
 {
 (Lordaeron)
 }
 
 STRING 35578
-// Upgrades: R0AD (Burning Oil), EditorSuffix (Editor Suffix)
+// Upgrades: R0A6 (Barrage), EditorSuffix (Editor Suffix)
 {
 (Lordaeron)
 }
 
 STRING 35579
-// Upgrades: R0AF (Control Magic), EditorSuffix (Editor Suffix)
+// Upgrades: R0AD (Burning Oil), EditorSuffix (Editor Suffix)
 {
 (Lordaeron)
 }
 
 STRING 35584
-// Upgrades: R0AG (Backpack), EditorSuffix (Editor Suffix)
+// Upgrades: R0AF (Control Magic), EditorSuffix (Editor Suffix)
 {
 (Lordaeron)
 }
@@ -77433,19 +77589,19 @@ STRING 35618
 }
 
 STRING 35619
-// Upgrades: R0AH (Improved Lumber Harvesting,Advanced Lumber Harvesting), EditorSuffix (Editor Suffix)
+// Upgrades: R0AG (Backpack), EditorSuffix (Editor Suffix)
 {
 (Lordaeron)
 }
 
 STRING 35620
-// Upgrades: R0AI (Improved Masonry,Advanced Masonry,Imbued Masonry), EditorSuffix (Editor Suffix)
+// Upgrades: R0AH (Improved Lumber Harvesting,Advanced Lumber Harvesting), EditorSuffix (Editor Suffix)
 {
 (Lordaeron)
 }
 
 STRING 35621
-// Upgrades: R0AL (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), EditorSuffix (Editor Suffix)
+// Upgrades: R0AI (Improved Masonry,Advanced Masonry,Imbued Masonry), EditorSuffix (Editor Suffix)
 {
 (Lordaeron)
 }
@@ -80853,31 +81009,31 @@ Ein heiliges Licht kann eine befreundete lebende Einheit um <A13W,DataA1> Treffe
 }
 
 STRING 36303
-// Upgrades: R0AM (Improved Bows), EditorSuffix (Editor Suffix)
+// Upgrades: R0AL (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), EditorSuffix (Editor Suffix)
 {
 (Lordaeron)
 }
 
 STRING 36304
-// Upgrades: R0AN (Defend), EditorSuffix (Editor Suffix)
+// Upgrades: R0AM (Improved Bows), EditorSuffix (Editor Suffix)
 {
 (Lordaeron)
 }
 
 STRING 36305
-// Upgrades: R0AO (Iron Plating,Steel Plating,Mithril Plating), EditorSuffix (Editor Suffix)
+// Upgrades: R0AN (Defend), EditorSuffix (Editor Suffix)
 {
 (Lordaeron)
 }
 
 STRING 36306
-// Upgrades: R0AP (Steel Ranged Weapons,Thorium Ranged Weapons,Arcanite Ranged Weapons), EditorSuffix (Editor Suffix)
+// Upgrades: R0AO (Iron Plating,Steel Plating,Mithril Plating), EditorSuffix (Editor Suffix)
 {
 (Lordaeron)
 }
 
 STRING 36307
-// Upgrades: R0AM (Improved Bows), Name (Name)
+// Abilities: A07J (Improved Archery), Tip (Tooltip - Normal)
 {
 Verbessertes Bogenschießen
 }
@@ -80889,7 +81045,7 @@ Verbessertes Bogenschießen erforschen
 }
 
 STRING 36309
-// Upgrades: R0AQ (Studded Leather Armor,Reinforced Leather Armor,Dragonhide Armor), EditorSuffix (Editor Suffix)
+// Upgrades: R0AP (Steel Ranged Weapons,Thorium Ranged Weapons,Arcanite Ranged Weapons), EditorSuffix (Editor Suffix)
 {
 (Lordaeron)
 }
@@ -80901,31 +81057,31 @@ Increases the Archer's, Armbrustschützen's and Greifenreiters attack range.
 }
 
 STRING 36311
-// Upgrades: R0AR (Improved Masonry,Advanced Masonry,Imbued Masonry), EditorSuffix (Editor Suffix)
+// Upgrades: R0AQ (Studded Leather Armor,Reinforced Leather Armor,Dragonhide Armor), EditorSuffix (Editor Suffix)
 {
 (Lordaeron)
 }
 
 STRING 36312
-// Upgrades: R0AS (Long Rifles), EditorSuffix (Editor Suffix)
+// Upgrades: R0AR (Improved Masonry,Advanced Masonry,Imbued Masonry), EditorSuffix (Editor Suffix)
 {
 (Lordaeron)
 }
 
 STRING 36313
-// Upgrades: R0AT (Animal War Training), EditorSuffix (Editor Suffix)
+// Upgrades: R0AS (Long Rifles), EditorSuffix (Editor Suffix)
 {
 (Lordaeron)
 }
 
 STRING 36314
-// Upgrades: R0AW (Priest Adept Training,Priest Master Training), EditorSuffix (Editor Suffix)
+// Upgrades: R0AT (Animal War Training), EditorSuffix (Editor Suffix)
 {
 (Lordaeron)
 }
 
 STRING 36315
-// Upgrades: R0AX (Sorceress Adept Training,Sorceress Master Training), EditorSuffix (Editor Suffix)
+// Upgrades: R0AW (Priest Adept Training,Priest Master Training), EditorSuffix (Editor Suffix)
 {
 (Lordaeron)
 }
@@ -80985,7 +81141,7 @@ Verbessert Panzerung und Trefferpunkte der mechanischen Einheiten noch weiter.
 }
 
 STRING 36325
-// Upgrades: R0AY (Control Magic), EditorSuffix (Editor Suffix)
+// Upgrades: R0AX (Sorceress Adept Training,Sorceress Master Training), EditorSuffix (Editor Suffix)
 {
 (Lordaeron)
 }
@@ -81153,7 +81309,7 @@ S
 }
 
 STRING 36362
-// Upgrades: R0AZ (Control Magic), EditorSuffix (Editor Suffix)
+// Upgrades: R0AY (Control Magic), EditorSuffix (Editor Suffix)
 {
 (Lordaeron)
 }
@@ -81231,13 +81387,13 @@ Lebensregeneration
 }
 
 STRING 36508
-// Abilities: A1WR (Healing Salve), Hotkey (Hotkey - Normal)
+// Abilities: A227 (Bloodlust), Unhotkey (Hotkey - Turn Off)
 {
 L
 }
 
 STRING 36513
-// Abilities: A227 (Bloodlust), Unhotkey (Hotkey - Turn Off)
+// Abilities: A227 (Bloodlust), Hotkey (Hotkey - Normal)
 {
 L
 }
@@ -84483,7 +84639,7 @@ Uralter Schutzzauber
 }
 
 STRING 37850
-// Abilities: A227 (Bloodlust), Hotkey (Hotkey - Normal)
+// Upgrades: R00Q (Destroyer Form), Hotkey (Hotkey)
 {
 L
 }
@@ -84495,7 +84651,7 @@ F
 }
 
 STRING 37852
-// Upgrades: R00Q (Destroyer Form), Hotkey (Hotkey)
+// Upgrades: R01O (Ensnare), Hotkey (Hotkey)
 {
 L
 }
@@ -85401,7 +85557,7 @@ STRING 38144
 }
 
 STRING 38145
-// Upgrades: R01O (Ensnare), Hotkey (Hotkey)
+// Upgrades: R09L (Witch Doctor Adept Training,Witch Doctor Master Training), Hotkey (Hotkey)
 {
 L
 }
@@ -92181,7 +92337,7 @@ D
 }
 
 STRING 41425
-// Upgrades: R09L (Witch Doctor Adept Training,Witch Doctor Master Training), Hotkey (Hotkey)
+// Upgrades: R0DO (Storm Hammers), Hotkey (Hotkey)
 {
 L
 }
@@ -93819,7 +93975,7 @@ Combines effects of known orbs to one single item. Adds 60 bonus damage to the a
 }
 
 STRING 42162
-// Upgrades: R0DO (Storm Hammers), Hotkey (Hotkey)
+// Upgrades: R0EI (Ensnare), Hotkey (Hotkey)
 {
 L
 }
@@ -95037,7 +95193,7 @@ STRING 42493
 }
 
 STRING 42494
-// Upgrades: R0EI (Ensnare), Hotkey (Hotkey)
+// Upgrades: R0GD (Improved Lumber Harvesting,Advanced Lumber Harvesting), Hotkey (Hotkey)
 {
 L
 }
@@ -98505,7 +98661,7 @@ Adler-Ritter
 }
 
 STRING 44043
-// Upgrades: R0GD (Improved Lumber Harvesting,Advanced Lumber Harvesting), Hotkey (Hotkey)
+// Upgrades: R0I3 (Improved Lumber Harvesting,Advanced Lumber Harvesting), Hotkey (Hotkey)
 {
 L
 }
@@ -99783,19 +99939,19 @@ Sturmwind-Hafen errichten
 }
 
 STRING 45937
-// Abilities: A1OK (Build Tiny Town Hall), EditorSuffix (Editor Suffix)
+// Units: n0AU (Stormwind Airship), EditorSuffix (Name - Editor Suffix)
 {
 (Sturmwind)
 }
 
 STRING 45938
-// Abilities: A1OR (Reinforced Burrows Upgrade), EditorSuffix (Editor Suffix)
+// Abilities: A1OK (Build Tiny Town Hall), EditorSuffix (Editor Suffix)
 {
 (Sturmwind)
 }
 
 STRING 45939
-// Abilities: A1OT (Unit Inventory), EditorSuffix (Editor Suffix)
+// Abilities: A1OR (Reinforced Burrows Upgrade), EditorSuffix (Editor Suffix)
 {
 (Sturmwind)
 }
@@ -99831,19 +99987,19 @@ Bischof ausbilden
 }
 
 STRING 45947
-// Abilities: A1OX (Defend), EditorSuffix (Editor Suffix)
+// Abilities: A1OT (Unit Inventory), EditorSuffix (Editor Suffix)
 {
 (Sturmwind)
 }
 
 STRING 45948
-// Abilities: A1P0 (Spawn Unmounted Knight), EditorSuffix (Editor Suffix)
+// Abilities: A1OX (Defend), EditorSuffix (Editor Suffix)
 {
 (Sturmwind)
 }
 
 STRING 45949
-// Abilities: A1P9 (Inner Fire), EditorSuffix (Editor Suffix)
+// Abilities: A1P0 (Spawn Unmounted Knight), EditorSuffix (Editor Suffix)
 {
 (Sturmwind)
 }
@@ -99861,7 +100017,7 @@ Erlaubt Bürgern den Bau the Scharlachrotes Kloster.
 }
 
 STRING 45955
-// Abilities: A1PA (Dispel Magic), EditorSuffix (Editor Suffix)
+// Abilities: A1P9 (Inner Fire), EditorSuffix (Editor Suffix)
 {
 (Sturmwind)
 }
@@ -99885,19 +100041,19 @@ Ermöglicht Bürgern das Errichten der Kathedrale des Lichts.
 }
 
 STRING 45959
-// Abilities: A1PB (Polymorph), EditorSuffix (Editor Suffix)
+// Abilities: A1PA (Dispel Magic), EditorSuffix (Editor Suffix)
 {
 (Sturmwind)
 }
 
 STRING 45960
-// Abilities: A17R (Build Tiny Scout Tower), EditorSuffix (Editor Suffix)
+// Abilities: A1PB (Polymorph), EditorSuffix (Editor Suffix)
 {
 (Sturmwind)
 }
 
 STRING 45961
-// Abilities: A17S (Build Tiny Keep), EditorSuffix (Editor Suffix)
+// Abilities: A1PD (Magic Sentry), EditorSuffix (Editor Suffix)
 {
 (Sturmwind)
 }
@@ -99981,13 +100137,13 @@ Supporting unit without attack who has the Befehls-Aura ability.
 }
 
 STRING 45977
-// Abilities: A17T (Build Tiny Castle), EditorSuffix (Editor Suffix)
+// Abilities: A17R (Build Tiny Scout Tower), EditorSuffix (Editor Suffix)
 {
 (Sturmwind)
 }
 
 STRING 45978
-// Abilities: A17U (Build Tiny House), EditorSuffix (Editor Suffix)
+// Abilities: A17S (Build Tiny Keep), EditorSuffix (Editor Suffix)
 {
 (Sturmwind)
 }
@@ -100023,19 +100179,19 @@ Fliegen
 }
 
 STRING 45984
-// Abilities: A17W (Build Tiny Barracks), EditorSuffix (Editor Suffix)
+// Abilities: A17T (Build Tiny Castle), EditorSuffix (Editor Suffix)
 {
 (Sturmwind)
 }
 
 STRING 45985
-// Abilities: A17X (Build Tiny Altar of Lions), EditorSuffix (Editor Suffix)
+// Abilities: A17U (Build Tiny House), EditorSuffix (Editor Suffix)
 {
 (Sturmwind)
 }
 
 STRING 45986
-// Abilities: A17Y (Build Tiny Blacksmith), EditorSuffix (Editor Suffix)
+// Abilities: A17W (Build Tiny Barracks), EditorSuffix (Editor Suffix)
 {
 (Sturmwind)
 }
@@ -100065,7 +100221,7 @@ STRING 45995
 }
 
 STRING 45996
-// Abilities: A182 (Build Tiny Lumber Mill), EditorSuffix (Editor Suffix)
+// Abilities: A17X (Build Tiny Altar of Lions), EditorSuffix (Editor Suffix)
 {
 (Sturmwind)
 }
@@ -100095,7 +100251,7 @@ Unberittenen Ritter erzeugen
 }
 
 STRING 46001
-// Abilities: A186 (Build Tiny Mage Tower), EditorSuffix (Editor Suffix)
+// Abilities: A17Y (Build Tiny Blacksmith), EditorSuffix (Editor Suffix)
 {
 (Sturmwind)
 }
@@ -100137,49 +100293,49 @@ STRING 46007
 }
 
 STRING 46009
-// Abilities: A18S (Build Tiny Arcane Vault), EditorSuffix (Editor Suffix)
+// Abilities: A182 (Build Tiny Lumber Mill), EditorSuffix (Editor Suffix)
 {
 (Sturmwind)
 }
 
 STRING 46010
-// Abilities: A18T (Build Tiny Workshop), EditorSuffix (Editor Suffix)
+// Abilities: A186 (Build Tiny Mage Tower), EditorSuffix (Editor Suffix)
 {
 (Sturmwind)
 }
 
 STRING 46011
-// Abilities: A18W (Build Tiny Aviary), EditorSuffix (Editor Suffix)
+// Abilities: A18S (Build Tiny Arcane Vault), EditorSuffix (Editor Suffix)
 {
 (Sturmwind)
 }
 
 STRING 46012
-// Abilities: A18X (Build Tiny Human Housing), EditorSuffix (Editor Suffix)
+// Abilities: A18T (Build Tiny Workshop), EditorSuffix (Editor Suffix)
 {
 (Sturmwind)
 }
 
 STRING 46013
-// Abilities: A1B8 (Build Tiny Cathedral of Light), EditorSuffix (Editor Suffix)
+// Abilities: A18W (Build Tiny Aviary), EditorSuffix (Editor Suffix)
 {
 (Sturmwind)
 }
 
 STRING 46014
-// Abilities: A1B9 (Build Tiny Stormwind Shipyard), EditorSuffix (Editor Suffix)
+// Abilities: A18X (Build Tiny Human Housing), EditorSuffix (Editor Suffix)
 {
 (Sturmwind)
 }
 
 STRING 46015
-// Abilities: A1BA (Build Tiny Cannon Tower), EditorSuffix (Editor Suffix)
+// Abilities: A1B8 (Build Tiny Cathedral of Light), EditorSuffix (Editor Suffix)
 {
 (Sturmwind)
 }
 
 STRING 46016
-// Abilities: A1BB (Build Tiny Arcane Tower), EditorSuffix (Editor Suffix)
+// Abilities: A1B9 (Build Tiny Stormwind Shipyard), EditorSuffix (Editor Suffix)
 {
 (Sturmwind)
 }
@@ -100191,7 +100347,7 @@ Increases the Ranger's attack range.
 }
 
 STRING 46018
-// Abilities: A1BC (Build Tiny Guard Tower), EditorSuffix (Editor Suffix)
+// Abilities: A1BA (Build Tiny Cannon Tower), EditorSuffix (Editor Suffix)
 {
 (Sturmwind)
 }
@@ -100203,7 +100359,7 @@ Increases damage of Sturmwind Rangers by <Remk,base1>.
 }
 
 STRING 46020
-// Abilities: A082 (Reveal), EditorSuffix (Editor Suffix)
+// Abilities: A1BB (Build Tiny Arcane Tower), EditorSuffix (Editor Suffix)
 {
 (Sturmwind)
 }
@@ -100221,19 +100377,19 @@ Absteigen erforschen
 }
 
 STRING 46023
-// Upgrades: R0EP (Reinforced Defenses), EditorSuffix (Editor Suffix)
+// Abilities: A1BC (Build Tiny Guard Tower), EditorSuffix (Editor Suffix)
 {
 (Sturmwind)
 }
 
 STRING 46024
-// Upgrades: R0EQ (Burning Oil), EditorSuffix (Editor Suffix)
+// Abilities: A082 (Reveal), EditorSuffix (Editor Suffix)
 {
 (Sturmwind)
 }
 
 STRING 46025
-// Upgrades: R0ER (Backpack), EditorSuffix (Editor Suffix)
+// Abilities: A080 (Fragmentation Shards), EditorSuffix (Editor Suffix)
 {
 (Sturmwind)
 }
@@ -100293,13 +100449,13 @@ STRING 46038
 }
 
 STRING 46039
-// Upgrades: R0ES (Improved Lumber Harvesting,Advanced Lumber Harvesting), EditorSuffix (Editor Suffix)
+// Upgrades: R0EP (Reinforced Defenses), EditorSuffix (Editor Suffix)
 {
 (Sturmwind)
 }
 
 STRING 46040
-// Upgrades: R0ET (Improved Masonry,Advanced Masonry,Imbued Masonry), EditorSuffix (Editor Suffix)
+// Upgrades: R0EQ (Burning Oil), EditorSuffix (Editor Suffix)
 {
 (Sturmwind)
 }
@@ -100509,31 +100665,31 @@ STRING 46116
 }
 
 STRING 46120
-// Upgrades: R0EU (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), EditorSuffix (Editor Suffix)
+// Upgrades: R0ER (Backpack), EditorSuffix (Editor Suffix)
 {
 (Sturmwind)
 }
 
 STRING 46121
-// Upgrades: R0EV (Defend), EditorSuffix (Editor Suffix)
+// Upgrades: R0ES (Improved Lumber Harvesting,Advanced Lumber Harvesting), EditorSuffix (Editor Suffix)
 {
 (Sturmwind)
 }
 
 STRING 46122
-// Upgrades: R0EW (Improved Bows), EditorSuffix (Editor Suffix)
+// Upgrades: R0ET (Improved Masonry,Advanced Masonry,Imbued Masonry), EditorSuffix (Editor Suffix)
 {
 (Sturmwind)
 }
 
 STRING 46123
-// Upgrades: R0EX (Marksmanship), EditorSuffix (Editor Suffix)
+// Upgrades: R0EU (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), EditorSuffix (Editor Suffix)
 {
 (Sturmwind)
 }
 
 STRING 46124
-// Upgrades: R0EY (Animal War Training), EditorSuffix (Editor Suffix)
+// Upgrades: R0EV (Defend), EditorSuffix (Editor Suffix)
 {
 (Sturmwind)
 }
@@ -100563,7 +100719,7 @@ Magier-Meister-Ausbildung
 }
 
 STRING 46129
-// Upgrades: R0EZ (Animal War Training), EditorSuffix (Editor Suffix)
+// Upgrades: R0EW (Improved Bows), EditorSuffix (Editor Suffix)
 {
 (Sturmwind)
 }
@@ -100581,19 +100737,19 @@ Erhöht die Mana-Kapazität, die Mana-Regenerationsrate und die Trefferpunkte vo
 }
 
 STRING 46132
-// Upgrades: R0F0 (Sundering Blades), EditorSuffix (Editor Suffix)
+// Upgrades: R0EX (Marksmanship), EditorSuffix (Editor Suffix)
 {
 (Sturmwind)
 }
 
 STRING 46133
-// Upgrades: R0F1 (Iron Plating,Steel Plating,Mithril Plating), EditorSuffix (Editor Suffix)
+// Upgrades: R0EY (Animal War Training), EditorSuffix (Editor Suffix)
 {
 (Sturmwind)
 }
 
 STRING 46134
-// Upgrades: R0F2 (Black Gunpowder,Refined Gunpowder,Imbued Gunpowder), EditorSuffix (Editor Suffix)
+// Upgrades: R0EZ (Animal War Training), EditorSuffix (Editor Suffix)
 {
 (Sturmwind)
 }
@@ -100610,12 +100766,6 @@ STRING 46136
 Heavily armored vehicle, effective at destroying buildings. |n|n|cffffcc00Attacks buildings.|r
 }
 
-STRING 46137
-// Abilities: A1PD (Magic Sentry), EditorSuffix (Editor Suffix)
-{
- (Human Towers) (Sturmwind)
-}
-
 STRING 46141
 // Abilities: A1O9 (Combination - Master), Ubertip (Tooltip - Normal - Extended)
 {
@@ -100629,19 +100779,19 @@ C
 }
 
 STRING 46144
-// Upgrades: R0F5 (Priest Adept Training,Priest Master Training), EditorSuffix (Editor Suffix)
+// Upgrades: R0F0 (Sundering Blades), EditorSuffix (Editor Suffix)
 {
 (Sturmwind)
 }
 
 STRING 46145
-// Upgrades: R0F6 (Sorceress Adept Training,Sorceress Master Training), EditorSuffix (Editor Suffix)
+// Upgrades: R0F1 (Iron Plating,Steel Plating,Mithril Plating), EditorSuffix (Editor Suffix)
 {
 (Sturmwind)
 }
 
 STRING 46146
-// Upgrades: R0F7 (Priest Adept Training,Priest Master Training), EditorSuffix (Editor Suffix)
+// Upgrades: R0F2 (Black Gunpowder,Refined Gunpowder,Imbued Gunpowder), EditorSuffix (Editor Suffix)
 {
 (Sturmwind)
 }
@@ -106878,7 +107028,7 @@ Ein Kriegerheld, adept at summoning beasts into battle. Can learn Schockwelle, M
 }
 
 STRING 50433
-// Upgrades: R0I3 (Improved Lumber Harvesting,Advanced Lumber Harvesting), Hotkey (Hotkey)
+// Upgrades: R07G (Sorceress Adept Training,Sorceress Master Training), Hotkey (Hotkey)
 {
 L
 }
@@ -107280,13 +107430,13 @@ STRING 50517
 }
 
 STRING 50518
-// Upgrades: R0F8 (Magic Sentry), EditorSuffix (Editor Suffix)
+// Upgrades: R0F5 (Priest Adept Training,Priest Master Training), EditorSuffix (Editor Suffix)
 {
 (Sturmwind)
 }
 
 STRING 50519
-// Upgrades: R0F9 (Studded Leather Armor,Reinforced Leather Armor,Dragonhide Armor), EditorSuffix (Editor Suffix)
+// Upgrades: R0F6 (Sorceress Adept Training,Sorceress Master Training), EditorSuffix (Editor Suffix)
 {
 (Sturmwind)
 }
@@ -107535,12 +107685,6 @@ STRING 50620
 // Upgrades: R0GD (Improved Lumber Harvesting,Advanced Lumber Harvesting), EditorSuffix (Editor Suffix)
 {
 (Holzfäller)
-}
-
-STRING 50621
-// Upgrades: R07G (Sorceress Adept Training,Sorceress Master Training), Hotkey (Hotkey)
-{
-L
 }
 
 STRING 50624
@@ -120739,12 +120883,6 @@ STRING 58009
 // Abilities: A0E6 (Storm Bolt), EditorSuffix (Editor Suffix)
 {
 (Dwarf Rider)
-}
-
-STRING 58010
-// Abilities: A0E8 (Long Rifles), EditorSuffix (Editor Suffix)
-{
- (Icon - Dwarf)
 }
 
 STRING 58011

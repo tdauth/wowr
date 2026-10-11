@@ -1182,6 +1182,9 @@ StringList {
     YOU_ARE_CARRYING_NOW_THE_X         "Sie tragen nun das %1%.",
     ACCEPT_HINT                        "Klicken Sie auf Akzeptieren in der Taverne Spiel starten, um Ihre Auswahl für das Spiel zu übernehmen.",
     GIVE_X_TO_Y                        "Gebe %1% an %2%.",
+    // Neutral Zone
+    NEUTRAL_ZONE_ENTER                 "|cffffcc00NEUTRAL ZONE|r You are entering Theramore. This area is a neutral zone. All heroes are invulnerable here. Besides, you can repick safely on Theramore.",
+    NEUTRAL_ZONE_LEAVE                 "|cffffcc00NEUTRAL ZONE|r You are leaving Theramore by which you become vulnerable again. Besides, you can only repick if no enemies are in range of your hero.",
     // Antimagic Wards
     AREA_PROTECTED_BY_ANTIMAGIC_WARD   "Der Bereich ist durch einen Antimagie-Wächter geschützt.",
     // Taunts
@@ -1797,13 +1800,12 @@ StringList {
     CC_AI_CREEP                        "'-aicreep X': Change AI controller to creep for player X.",
     CC_AI_COMPUTER                     "'-aicomputer X': Change AI controller to Computer for player X.",
     CC_AI_ON                           "'-aion/off X': Turn AI on/off for player X.",
-    CC_AI_IGNORE_ALL                   "'-aiignoreall X': Disable AI unit control for player X.",
-    CC_AI_IGNORE                       "'-aiignore': Disable AI unit control for all selected units.",
-    CC_AI_USE                          "'-aiuse': Enable AI unit control for all selected units.",
+    CC_AI_IGNORE_ALL                   "'-aiignoreall X': Disables AI unit control for player X.",
+    CC_AI_USE                          "'-aiuse/-aiignore': Enables/disables AI unit control for all selected units.",
     CC_AI_ATTACKS_ON                   "'-aiattackson/off X': Turn AI attacks on/off for player X.",
     CC_AI_ATTACKS_PLAYERS_ON           "'-aiattacksplayerson/off X': Turn AI player attacks on/off for player X.",
     CC_AI_SHIPS_ON                     "'-aishipsson/off X': Turn AI ships on/off for player X.",
-    CC_AI_GOLD                         "'-aigold/wood X': Ask AI player X for gold/wood.",
+    CC_AI_GOLD                         "'-aigold/lumber X': Ask AI player X for gold/wood.",
     CC_AI_EXPANSIONS                   "'-aiexpansions X Y': Sets Y expansions for player X.",
     CC_AI_SHREDDERS                    "'-aishredders X Y': Sets Y shredders for player X.",
     CC_AI_ZEPPELINS                    "'-aizeppelins X Y': Sets Y zeppelins for player X.",
@@ -2118,6 +2120,7 @@ StringList {
     LEADERBOARD_OLD_GODS_SLAIN         "Erschlagene Alte Götter (3)", // udg_OldGodsSlain
     LEADERBOARD_ELEMENTAL_LORDS_KILLED "Getötete Elementar-Lords (5)", // udg_ElementalLordsSlayed
     LEADERBOARD_WILD_GODS_CAPTURED     "Gefangene Wilde Götter (4)", // udg_WildGodsCaptured
+    DRAENEI_WAVES                      "Draenei-Wellen:",
     // MainQuest1
     Q_ARCHIMONDE_DESCRIPTION           "Archimonde ist zurückgekehrt, um diese Welt mit Hilfe seiner Brennenden Legion zu erobern. Reist nach Fremdland, findet und besiegt ihn, um Azeroth zu beschützen.",
     Q_ARCHIMONDE_0                     "Besiegt Archimonde.",
