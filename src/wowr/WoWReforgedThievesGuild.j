@@ -1,4 +1,4 @@
-library WoWReforgedThievesGuild initializer Init requires OnUnitRemoval, WoWReforgedRaces, WoWReforgedRandomItems
+library WoWReforgedThievesGuild initializer Init requires OnUnitRemoval, WoWReforgedRaces, WoWReforgedRandomItems, WoWReforgedCrateTypes, WoWReforgedCages
 
 globals
     private trigger deathTrigger = CreateTrigger()
@@ -123,6 +123,10 @@ private function IsValidUnit takes player previousOwner, unit whichUnit returns 
     elseif (IsUnitType(whichUnit, UNIT_TYPE_SUMMONED)) then
         return false
     elseif (IsCitizen(unitTypeId)) then
+        return false
+    elseif (IsCrate(unitTypeId)) then
+        return false
+    elseif (IsCage(unitTypeId)) then
         return false
     endif
     return true

@@ -5212,6 +5212,7 @@ globals
     constant integer UPG_LORDAERON_LEATHER                           = 'R0AQ'
     constant integer UPG_LORDAERON_DEFEND                            = 'R0AN'
     constant integer UPG_LORDAERON_LONG_RIFLES                       = 'R0AS'
+    constant integer UPG_LORDAERON_SUNDERING_BLADES                  = 'R051'
     constant integer UPG_LORDAERON_BACKPACK                          = 'R0AG'
     constant integer UPG_LORDAERON_SORCERY                           = 'R0AX'
     constant integer UPG_LORDAERON_MAGE                              = 'R0AW'
@@ -5220,7 +5221,9 @@ globals
     constant integer UPG_LORDAERON_CROSSBOWMEN                       = 'R0A6'
     constant integer UPG_LORDAERON_HUMAN_COURAGE                     = 'R0AZ'
     constant integer UPG_LORDAERON_ARCHERY                           = 'R0AM'
+    constant integer UPG_LORDAERON_MAGIC_SENTRY                      = 'R046'
     constant integer UPG_LORDAERON_ENGINEERING                       = 'R0AR'
+    constant integer UPG_LORDAERON_FRAGMENTATION_SHARDS              = 'R03A'
     constant integer UPG_LORDAERON_SCARLET_CRUSADE                   = 'R0AF'
     constant integer UPG_LORDAERON_SPEARMEN                          = 'R0A5'
     constant integer UPG_LORDAERON_SCARLET_MONASTERY                 = 'R0AD' // special building
@@ -5307,6 +5310,7 @@ globals
     constant integer UPG_STORMWIND_UNMOUNT                           = 'R0EY'
     constant integer UPG_STORMWIND_MAGIC_SENTRY                      = 'R0F8'
     constant integer UPG_STORMWIND_REINFORCED_DEFENSES               = 'R0EP'
+    constant integer UPG_STORMWIND_FRAGMENTATION_SHARDS              = 'R03D'
     constant integer UPG_STORMWIND_CATHEDRAL_OF_LIGHT                = 'R0EQ' // special building
 
     constant integer STORMWIND_WORKER                                = 'h0QZ' // worker

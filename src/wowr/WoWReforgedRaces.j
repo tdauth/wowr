@@ -2830,6 +2830,7 @@ private function AddLordaeron takes nothing returns integer
     call AddResearch(r, UPG_LORDAERON_LEATHER)
     call AddResearch(r, UPG_LORDAERON_DEFEND)
     call AddResearch(r, UPG_LORDAERON_LONG_RIFLES)
+    call AddResearch(r, UPG_LORDAERON_SUNDERING_BLADES)
     call AddResearch(r, UPG_LORDAERON_BACKPACK)
     call AddResearch(r, UPG_LORDAERON_SORCERY)
     call AddResearch(r, UPG_LORDAERON_MAGE)
@@ -2838,7 +2839,9 @@ private function AddLordaeron takes nothing returns integer
     call AddResearch(r, UPG_LORDAERON_CROSSBOWMEN)
     call AddResearch(r, UPG_LORDAERON_HUMAN_COURAGE)
     call AddResearch(r, UPG_LORDAERON_ARCHERY)
+    call AddResearch(r, UPG_LORDAERON_MAGIC_SENTRY)
     call AddResearch(r, UPG_LORDAERON_ENGINEERING)
+    call AddResearch(r, UPG_LORDAERON_FRAGMENTATION_SHARDS)
     call AddResearch(r, UPG_LORDAERON_SCARLET_CRUSADE)
     call AddResearch(r, UPG_LORDAERON_SPEARMEN)
     call AddResearch(r, UPG_LORDAERON_SCARLET_MONASTERY)
@@ -2939,6 +2942,7 @@ private function AddStormwind takes nothing returns integer
     call AddResearch(r, UPG_STORMWIND_UNMOUNT)
     call AddResearch(r, UPG_STORMWIND_MAGIC_SENTRY)
     call AddResearch(r, UPG_STORMWIND_REINFORCED_DEFENSES)
+    call AddResearch(r, UPG_STORMWIND_FRAGMENTATION_SHARDS)
     call AddResearch(r, UPG_STORMWIND_CATHEDRAL_OF_LIGHT)
 
     // units

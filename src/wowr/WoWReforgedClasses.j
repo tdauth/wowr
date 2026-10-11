@@ -121,7 +121,7 @@ function GetHeroClass takes integer unitTypeId returns integer
 endfunction
 
 function ApplySpecificHeroClass takes unit hero, integer heroClass, boolean showMessage returns boolean
-    if (heroClass != -1) then
+    if (heroClass != CLASS_NONE) then
         call BlzSetUnitName(hero, GetHeroClassName(heroClass))
         //call BlzSetHeroProperName(hero, GetObjectName(classItemTypeIds[heroClass])) // TODO For campaign heroes
         call ChangeAllSlotAbilities(hero, heroClass)
@@ -138,7 +138,14 @@ function ApplySpecificHeroClass takes unit hero, integer heroClass, boolean show
 endfunction
 
 function ApplyHeroClassEx takes unit hero, boolean showMessage returns boolean
-    return ApplySpecificHeroClass(hero, GetHeroClass(GetUnitTypeId(hero)), showMessage)
+    local integer unitTypeId = GetUnitTypeId(hero)
+    local integer heroClass = CLASS_NONE
+    if (unitTypeId == CUSTOMIZABLE_HERO) then
+        set heroClass = GetHeroClass(BlzGetUnitSkin(hero))
+    else
+        set heroClass = GetHeroClass(unitTypeId)
+    endif
+    return ApplySpecificHeroClass(hero, heroClass, showMessage)
 endfunction
 
 function ApplyHeroClass takes unit hero returns boolean

@@ -1485,7 +1485,7 @@ StringList {
     HOLY_LIGHT_TOOLTIP                 "A holy light that can heal a friendly living unit for <this,Hhb1,x> or deal half damage to an enemy Undead unit.|n|n|cffffcc00Increases the healed hit points with every level.|r",
     PARRY_TOOLTIP                      "Parries the next attack for <this,cr00,x> seconds.|n|n|cffffcc00Increases the time with every level.|r",
     RIGHTEOUS_FURY_TOOLTIP             "Dashes towards a target point up to <this,Rng1> range away, dealing <this,chr2> damage to enemy land units hit along the way, and slowing their movement by <this,nrf3,%>% and attack rate by <this,nrf4,%>%.|n|n|cffffcc00Increases the dealt damage with every level.|r",
-    DIVINE_SHIELD_TOOLTIP              "Gives a friendly target unit Divine armor damage for <this,cr00,x> seconds. Has a cooldown of <this,acdn,x> seconds.|n|n|cffffcc00Increases duration with every level.|r",
+    DIVINE_SHIELD_TOOLTIP              "Gives a friendly target unit Divine armor for <this,cr00,x> seconds. Has a cooldown of <this,acdn,x> seconds.|n|n|cffffcc00Increases duration with every level.|r",
     HOLY_AURA_TOOLTIP                  "Decreases nearby enemy Undead units' movement speed by <this,Uau1,x,%>% and life regeneration rate by <this,Uau2,x,%>%. |n|n|cffffcc00Decreases the movement and regeneration bonus with every level.|r",
     HEALING_SPRAY_TOOLTIP              "Sprays <this,Nhs6,x> waves of healing mist; each wave heals <this,Ncs1,x> damage to all friendly units in an area.|n|n|cffffcc00Increases the number of waves, area of effect and healed life with every level.|r",
     DEVOTION_AURA_TOOLTIP              "Gives <this,Had1,x> additional armor to nearby friendly units.|n|n|cffffcc00Increases the armor bonus with every level.|r",
@@ -2120,6 +2120,7 @@ StringList {
     LEADERBOARD_OLD_GODS_SLAIN         "Old Gods slain (3)", // udg_OldGodsSlain
     LEADERBOARD_ELEMENTAL_LORDS_KILLED "Elemental Lords killed (5)", // udg_ElementalLordsSlayed
     LEADERBOARD_WILD_GODS_CAPTURED     "Wild Gods captured (4)", // udg_WildGodsCaptured
+    DRAENEI_WAVES                      "Draenei waves:",
     // MainQuest1
     Q_ARCHIMONDE_DESCRIPTION           "Archimonde has returned to this world to conquer it with the help of his Burning Legion. Travel to Outland, find and defeat him to protect Azeroth.",
     Q_ARCHIMONDE_0                     "Defeat Archimonde.",
