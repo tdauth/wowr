@@ -63,23 +63,25 @@ function UpdateItemsForBackpackUI takes player whichPlayer returns nothing
     local integer playerId = GetPlayerId(whichPlayer)
     local integer itemTypeId = 0
     local integer index = 0
+    local integer backpackIndex = 0
     local integer i = 0
     local integer j = 0
     loop
-        exitwhen (i == BACKPACK_MAX_PAGES)
+        exitwhen (i >= BACKPACK_MAX_PAGES)
         set j = 0
         loop
-            exitwhen (j == bj_MAX_INVENTORY)
+            exitwhen (j >= bj_MAX_INVENTORY)
             set index = Index2D(i, j, bj_MAX_INVENTORY)
-            set itemTypeId = GetBackpackItemTypeId(index)
+            set backpackIndex = GetBackpackItemIndex(playerId, i, j)
+            set itemTypeId = GetBackpackItemTypeId(backpackIndex)
             if (itemTypeId == 0) then
                 call BlzFrameSetTexture(BackpackItemBackdropFrame[index], "UI\\Widgets\\Console\\Human\\human-inventory-slotfiller.blp", 0, true)
                 call BlzFrameSetVisible(BackpackItemChargesBackgroundFrame[index], false)
                 call BlzFrameSetVisible(BackpackItemChargesFrame[index], false)
             else
                 call BlzFrameSetTexture(BackpackItemBackdropFrame[index], GetIconByItemType(itemTypeId), 0, true)
-                call BlzFrameSetText(BackpackItemChargesFrame[index], I2S(GetBackpackItemCharges(index)))
-                if (BackpackUIVisible[playerId] and GetBackpackItemCharges(index) > 0) then
+                call BlzFrameSetText(BackpackItemChargesFrame[index], I2S(GetBackpackItemCharges(backpackIndex)))
+                if (BackpackUIVisible[playerId] and GetBackpackItemCharges(backpackIndex) > 0) then
                     if (whichPlayer == GetLocalPlayer()) then
                         call BlzFrameSetVisible(BackpackItemChargesBackgroundFrame[index], true)
                         call BlzFrameSetVisible(BackpackItemChargesFrame[index], true)
@@ -109,6 +111,7 @@ function ShowBackpackUI takes player whichPlayer returns nothing
     local integer i = 0
     local integer j = 0
     local integer index = 0
+    local integer backpackIndex = 0
     local integer playerId = GetPlayerId(whichPlayer)
     if (not BackpackUIExists()) then
         return
@@ -127,10 +130,10 @@ function ShowBackpackUI takes player whichPlayer returns nothing
     endif
     set i = 0
     loop
-        exitwhen (i == BACKPACK_MAX_PAGES)
+        exitwhen (i >= BACKPACK_MAX_PAGES)
         set j = 0
         loop
-            exitwhen (j == bj_MAX_INVENTORY)
+            exitwhen (j >= bj_MAX_INVENTORY)
             set index = Index2D(i, j, bj_MAX_INVENTORY)
             if (whichPlayer == GetLocalPlayer()) then
                 call BlzFrameSetVisible(BackpackItemFrame[index], true)
@@ -138,7 +141,8 @@ function ShowBackpackUI takes player whichPlayer returns nothing
                 call BlzFrameSetVisible(BackpackItemBagBackgroundFrame[index], Checked[playerId])
                 call BlzFrameSetVisible(BackpackItemBagFrame[index], Checked[playerId])
             endif
-            if (GetBackpackItemTypeId(index) != 0 and GetItemTypePerishable(GetBackpackItemTypeId(index))) then
+            set backpackIndex = GetBackpackItemIndex(playerId, i, j)
+            if (GetBackpackItemTypeId(backpackIndex) != 0 and GetItemTypePerishable(GetBackpackItemTypeId(backpackIndex))) then
                 if (whichPlayer == GetLocalPlayer()) then
                     call BlzFrameSetVisible(BackpackItemChargesBackgroundFrame[index], true)
                     call BlzFrameSetVisible(BackpackItemChargesFrame[index], true)
@@ -202,11 +206,13 @@ function HideBackpackUIForAllPlayers takes nothing returns nothing
 endfunction
 
 function BackpackClickItemFunction takes nothing returns nothing
+    local integer playerId = GetPlayerId(GetTriggerPlayer())
     local integer handleId = GetHandleId(GetTriggeringTrigger())
     local integer index = LoadInteger(h, handleId, KEY_INDEX)
     local integer bag = LoadInteger(h, handleId, KEY_BAG)
     local integer slot = LoadInteger(h, handleId, KEY_SLOT)
-    local string text = Format(GetLocalizedString("BAG_CHANGED")).i(bag + 1).result() // Changed to bag %1%.
+    local integer backpackIndex = GetBackpackItemIndex(playerId, bag, slot)
+    local string text = Format(GetLocalizedString("BAG_CHANGED")).i(bag + 1).result()
     if (GetTriggerPlayer() == GetLocalPlayer()) then
         call BlzFrameSetText(BackpackTooltipText, text)
         call BlzSendSyncData("BackpackUI", I2S(bag))
@@ -219,25 +225,26 @@ private function EnterItemFunction takes nothing returns nothing
     local integer index = LoadInteger(h, handleId, KEY_INDEX)
     local integer bag = LoadInteger(h, handleId, KEY_BAG)
     local integer slot = LoadInteger(h, handleId, KEY_SLOT)
+    local integer backpackIndex = GetBackpackItemIndex(playerId, bag, slot)
     local string tooltip = Format(GetLocalizedString("BAG_EMPTY_SLOT")).i(slot + 1).i(bag + 1).result()
-    local integer itemTypeId = GetBackpackItemTypeId(index)
+    local integer itemTypeId = GetBackpackItemTypeId(backpackIndex)
     local PagedButtonsConfig c = 0
     local PagedButtonsConfig cDefault = 0
-    //call BJDebugMsg("Entering item " + I2S(index))
+    //call BJDebugMsg("Entering item " + I2S(backpackIndex))
 
     if (itemTypeId != 0) then
-        if (GetBackpackItemIsPawnable(index)) then
+        if (GetBackpackItemIsPawnable(backpackIndex)) then
             set tooltip = GetObjectName(itemTypeId)
 
-            if (GetBackpackItemCharges(index) > 1) then
-                set tooltip = tooltip + Format(GetLocalizedString("BAG_CHARGES")).i(GetBackpackItemCharges(index)).result() //  (|cffffcc00%1%|r)
+            if (GetBackpackItemCharges(backpackIndex) > 1) then
+                set tooltip = tooltip + Format(GetLocalizedString("BAG_CHARGES")).i(GetBackpackItemCharges(backpackIndex)).result() //  (|cffffcc00%1%|r)
             endif
 
             set tooltip = tooltip + "|n"
 
             if (GetItemValueGold(itemTypeId) > 0) then
                 //call BlzFrameSetVisible(BackpackItemGoldIconFrame[playerId], true)
-                set tooltip = tooltip + Format(GetLocalizedString("BAG_GOLD_VALUE")).i(IMaxBJ(1, GetBackpackItemCharges(index)) * GetItemValueGold(itemTypeId)).result() // |cffFCD20D%1% Gold|r
+                set tooltip = tooltip + Format(GetLocalizedString("BAG_GOLD_VALUE")).i(IMaxBJ(1, GetBackpackItemCharges(backpackIndex)) * GetItemValueGold(itemTypeId)).result() // |cffFCD20D%1% Gold|r
             else
                 //call BlzFrameSetVisible(BackpackItemGoldIconFrame[playerId], false)
             endif
@@ -247,11 +254,11 @@ private function EnterItemFunction takes nothing returns nothing
                     set tooltip = tooltip + " "
                 endif
 
-                set tooltip = tooltip + Format(GetLocalizedString("BAG_LUMBER_VALUE")).i(IMaxBJ(1, GetBackpackItemCharges(index)) * GetItemValueLumber(itemTypeId)).result() // |cffFCD20D%1% Lumber|r
+                set tooltip = tooltip + Format(GetLocalizedString("BAG_LUMBER_VALUE")).i(IMaxBJ(1, GetBackpackItemCharges(backpackIndex)) * GetItemValueLumber(itemTypeId)).result() // |cffFCD20D%1% Lumber|r
             endif
         else
             //call BlzFrameSetVisible(BackpackItemGoldIconFrame[playerId], false)
-            set tooltip = Format(GetLocalizedString("BAG_TOOLTIP")).s(GetObjectName(itemTypeId)).s(GetBackpackItemTooltipExtended(index)).result() // %1%|n|n%2%
+            set tooltip = Format(GetLocalizedString("BAG_TOOLTIP")).s(GetObjectName(itemTypeId)).s(GetBackpackItemTooltipExtended(backpackIndex)).result() // %1%|n|n%2%
         endif
     else
         //call BlzFrameSetVisible(BackpackItemGoldIconFrame[playerId], false)
@@ -261,12 +268,12 @@ private function EnterItemFunction takes nothing returns nothing
         set c = GetPagedButtonsConfig(itemTypeId)
         set cDefault = GetPagedButtonsConfig(0)
 
-        if (GetBackpackItemIsPawnable(index)) then
-            set tooltip = tooltip + GetLocalizedString("BAG_DROP_TO_SELL_ITEM") + GetBackpackItemTooltipExtended(index) // |n|n|cff808080Drop item on shop to sell|R|n
+        if (GetBackpackItemIsPawnable(backpackIndex)) then
+            set tooltip = tooltip + GetLocalizedString("BAG_DROP_TO_SELL_ITEM") + GetBackpackItemTooltipExtended(backpackIndex) // |n|n|cff808080Drop item on shop to sell|R|n
         endif
 
-        if (GetBackpackItemPlayer(index) != null and GetBackpackItemPlayer(index) != Player(PLAYER_NEUTRAL_PASSIVE)) then
-            set tooltip = tooltip + Format(GetLocalizedString("BAG_ITEM_OWNER")).s(GetPlayerNameColored(GetBackpackItemPlayer(index))).result() // |n|nOwner: %1%
+        if (GetBackpackItemPlayer(backpackIndex) != null and GetBackpackItemPlayer(backpackIndex) != Player(PLAYER_NEUTRAL_PASSIVE)) then
+            set tooltip = tooltip + Format(GetLocalizedString("BAG_ITEM_OWNER")).s(GetPlayerNameColored(GetBackpackItemPlayer(backpackIndex))).result() // |n|nOwner: %1%
         endif
 
         if (GetTriggerPlayer() == GetLocalPlayer()) then
@@ -304,7 +311,11 @@ endfunction
 
 private function LeaveItemFunction takes nothing returns nothing
     local integer playerId = GetPlayerId(GetTriggerPlayer())
-    local integer index = LoadInteger(h, GetHandleId(GetTriggeringTrigger()), KEY_INDEX)
+    local integer handleId = GetHandleId(GetTriggeringTrigger())
+    local integer index = LoadInteger(h, handleId, KEY_INDEX)
+    local integer bag = LoadInteger(h, handleId, KEY_BAG)
+    local integer slot = LoadInteger(h, handleId, KEY_SLOT)
+    local integer backpackIndex = GetBackpackItemIndex(playerId, bag, slot)
     //call BJDebugMsg("Leave item " + I2S(index))
     if (GetLocalPlayer() == GetTriggerPlayer()) then
         call BlzFrameSetTexture(BackpackTooltipIcon, "", 0, false)
@@ -358,10 +369,10 @@ private function CreateBackpackUI takes nothing returns nothing
     set y = UI_SLOT_Y
     set i = 0
     loop
-        exitwhen (i == BACKPACK_MAX_PAGES)
+        exitwhen (i >= BACKPACK_MAX_PAGES)
         set j = 0
         loop
-            exitwhen (j == bj_MAX_INVENTORY)
+            exitwhen (j >= bj_MAX_INVENTORY)
             set index = Index2D(i, j, bj_MAX_INVENTORY)
             set BackpackItemFrame[index] = BlzCreateFrame("ScriptDialogButton", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), 0, 0)
             call BlzFrameSetAbsPoint(BackpackItemFrame[index], FRAMEPOINT_TOPLEFT, x, y)
