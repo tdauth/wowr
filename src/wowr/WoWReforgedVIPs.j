@@ -44,7 +44,7 @@ private function WelcomeVIPs takes nothing returns nothing
             if (txt != null) then
                 set txt = txt + ", "
             endif
-            set txt = txt + GetPlayerNameColored(slotPlayer)
+            set txt = txt + GetPlayerNameWithoutTagColored(slotPlayer)
         endif
         set slotPlayer = null
         set i = i + 1

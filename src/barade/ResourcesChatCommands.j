@@ -16,7 +16,7 @@ globals
     public constant real HELP_DURATION = 8.0
     public constant real RESOURCES_DURATION = 8.0
     public constant real INFO_DURATION = 4.0
-   
+
     private trigger chatTrigger = CreateTrigger()
 endglobals
 
@@ -41,7 +41,7 @@ endif
 static if (ALLOW_SELL_WOOD) then
     set msg = msg + ", -sellwood/-sw"
 endif
-    
+
 static if (ALLOW_BUY) then
     set msg = msg + ", -buy amount resource"
 endif
@@ -101,11 +101,11 @@ function GetResourceFromString takes string s returns Resource
         endif
         set i = i + 1
     endloop
-    
+
     if (index >= 1 and index <= max) then
         return GetResource(index - 1)
     endif
-    
+
     return 0
 endfunction
 
@@ -123,8 +123,8 @@ private function GiveChatCommand takes player whichPlayer, string msg returns no
                     if (a <= GetPlayerResource(whichPlayer, r)) then
                         call AddPlayerResource(t, r, a)
                         call RemovePlayerResource(whichPlayer, r, a)
-                        call DisplayTimedTextToPlayer(whichPlayer, 0.0, 0.0, INFO_DURATION, Format(GetLocalizedString("GAVE_RESOURCES_TO")).i(a).s(GetResourceName(r)).s(GetPlayerNameColored(t)).result())
-                        call DisplayTimedTextToPlayer(t, 0.0, 0.0, INFO_DURATION, Format(GetLocalizedString("RECEIVED_RESOURCES_FROM")).i(a).s(GetResourceName(r)).s(GetPlayerNameColored(whichPlayer)).result())
+                        call DisplayTimedTextToPlayer(whichPlayer, 0.0, 0.0, INFO_DURATION, Format(GetLocalizedString("GAVE_RESOURCES_TO")).i(a).s(GetResourceName(r)).s(GetPlayerNameWithoutTagColored(t)).result())
+                        call DisplayTimedTextToPlayer(t, 0.0, 0.0, INFO_DURATION, Format(GetLocalizedString("RECEIVED_RESOURCES_FROM")).i(a).s(GetResourceName(r)).s(GetPlayerNameWithoutTagColored(whichPlayer)).result())
                     else
                         call SimError(whichPlayer, Format(GetLocalizedString("NOT_ENOUGH_X")).s(GetResourceName(r)).result())
                     endif
@@ -157,7 +157,7 @@ private function AskChatCommand takes player whichPlayer, string msg returns not
                         if (a <= GetPlayerResource(f, r)) then
                             call AddPlayerResource(whichPlayer, r, a)
                             call RemovePlayerResource(f, r, a)
-                            call DisplayTimedTextToPlayer(whichPlayer, 0.0, 0.0, INFO_DURATION, Format(GetLocalizedString("RECEIVED_RESOURCES_FROM")).i(a).s(GetResourceName(r)).s(GetPlayerNameColored(f)).result())
+                            call DisplayTimedTextToPlayer(whichPlayer, 0.0, 0.0, INFO_DURATION, Format(GetLocalizedString("RECEIVED_RESOURCES_FROM")).i(a).s(GetResourceName(r)).s(GetPlayerNameWithoutTagColored(f)).result())
                         else
                             call SimError(whichPlayer, Format(GetLocalizedString("TARGET_PLAYER_HAS_NOT_ENOUGH")).s(GetResourceName(r)).result())
                         endif
@@ -186,11 +186,11 @@ private function SellChatCommand takes player whichPlayer, string msg returns no
     local Resource r = GetResourceFromString(resource)
     local Resource t = Resources_GOLD
     local integer received = 0
-    
+
     if (targetResource != "" and targetResource != null) then
         set t = GetResourceFromString(targetResource)
     endif
-    
+
     if (r != 0) then
         if (IsResourceTransferable(r)) then
             if (t != 0) then
@@ -221,7 +221,7 @@ private function BuyChatCommand takes player whichPlayer, string msg returns not
     local integer a = S2I(amount)
     local Resource r = GetResourceFromString(resource)
     local integer received = 0
-    
+
     if (r != 0) then
         if (IsResourceTransferable(r)) then
             if (a > 0) then
@@ -241,7 +241,7 @@ endfunction
 private function TriggerConditionChat takes nothing returns boolean
     local string msg = GetEventPlayerChatString()
     local integer i = 0
-    
+
     if (ALLOW_HELP and (msg == "-helpresources" or msg == "-helpr" or msg == "-hr")) then
         call DisplayTimedTextToPlayer(GetTriggerPlayer(), 0.0, 0.0, HELP_DURATION, GetResourceChatCommands())
     elseif (ALLOW_LIST and (msg == "-resources" or msg == "-res" or msg == "-r")) then

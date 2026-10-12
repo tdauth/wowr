@@ -286,7 +286,7 @@ function VoteAddVote takes integer vote, integer choice, player whichPlayer, boo
         call ForceAddPlayer(VoteChoicesVotes[index], whichPlayer)
 
         if (showMessage) then
-            call DisplayTextToForce(VotePlayers[vote], Format(GetLocalizedString("VOTE_MESSAGE")).s(GetPlayerNameColored(whichPlayer)).s(VoteChoicesNames[index]).i(CountPlayersInForceBJ(VoteChoicesVotes[index])).i(CountPlayersInForceBJ(VotePlayers[vote])).result())
+            call DisplayTextToForce(VotePlayers[vote], Format(GetLocalizedString("VOTE_MESSAGE")).s(GetPlayerNameWithoutTagColored(whichPlayer)).s(VoteChoicesNames[index]).i(CountPlayersInForceBJ(VoteChoicesVotes[index])).i(CountPlayersInForceBJ(VotePlayers[vote])).result())
         endif
 
         call VoteRecalculate(vote, false)
@@ -328,7 +328,7 @@ function VoteStartForAllPlayingUsersWithInitialVote takes integer vote, player w
 endfunction
 
 function StartGlobalVote takes integer vote, player whichPlayer returns nothing
-    call DisplayTextToForce(GetPlayersAll(), Format(GetLocalizedString("START_VOTE_MESSAGE")).s(GetPlayerNameColored(whichPlayer)).s(VoteGetTitle(vote)).s(VoteStartChatCommand[vote]).result())
+    call DisplayTextToForce(GetPlayersAll(), Format(GetLocalizedString("START_VOTE_MESSAGE")).s(GetPlayerNameWithoutTagColored(whichPlayer)).s(VoteGetTitle(vote)).s(VoteStartChatCommand[vote]).result())
     call VoteStartForAllPlayingUsersWithInitialVote(vote, whichPlayer)
 endfunction
 

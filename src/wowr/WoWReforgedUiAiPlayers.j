@@ -258,7 +258,7 @@ private function GetRacesPopupFinalIndex takes integer index returns integer
 endfunction
 
 function DisplayAISettingsInfo takes nothing returns nothing
-      call DisplayTextToForce(GetPlayersAll(), Format(GetLocalizedStringSafe("AI_HOST_CHOOSES")).s(GetPlayerNameColored(GetHost())).result())
+      call DisplayTextToForce(GetPlayersAll(), Format(GetLocalizedStringSafe("AI_HOST_CHOOSES")).s(GetPlayerNameWithoutTagColored(GetHost())).result())
 endfunction
 
 private function UpdateComputerPlayersTitle takes nothing returns nothing

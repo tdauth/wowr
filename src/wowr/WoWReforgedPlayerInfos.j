@@ -160,7 +160,7 @@ function DisplayStats takes player to, player from returns nothing
         set profession1 = GetProfessionName(GetPlayerProfession3(from))
     endif
 
-    call DisplayTimedTextToPlayer(to, 0, 0, 20.0, Format(GetLocalizedString("PLAYER_INFOS")).s(GetPlayerNameColored(from)).s(warlord).s(vip).s(team).i(xpRate).s(heroName1).s(heroLevel1).s(heroName2).s(heroLevel2).s(heroName3).s(heroLevel3).s(race1).s(race2).s(race3).s(profession1).s(profession2).s(profession3).i(gold).i(lumber).i(foodUsed).i(foodMax).i(evolutionLevel).i(heroKills).i(unitKills).i(buildingsRazed).i(bossesKilled).i(bossesMax).result())
+    call DisplayTimedTextToPlayer(to, 0, 0, 20.0, Format(GetLocalizedString("PLAYER_INFOS")).s(GetPlayerNameWithoutTagColored(from)).s(warlord).s(vip).s(team).i(xpRate).s(heroName1).s(heroLevel1).s(heroName2).s(heroLevel2).s(heroName3).s(heroLevel3).s(race1).s(race2).s(race3).s(profession1).s(profession2).s(profession3).i(gold).i(lumber).i(foodUsed).i(foodMax).i(evolutionLevel).i(heroKills).i(unitKills).i(buildingsRazed).i(bossesKilled).i(bossesMax).result())
 endfunction
 
 private function GetPlayerSelectionModeName takes integer mode returns string

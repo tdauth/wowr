@@ -116,7 +116,7 @@ private function ChatCommandAiDifficulty takes player whichPlayer, string comman
         set slotPlayer = Player(i)
         if (IsPlayerInForce(slotPlayer, f) and slotPlayer != GetMapBossesPlayer() and slotPlayer != Player(PLAYER_NEUTRAL_AGGRESSIVE) and slotPlayer != whichPlayer and GetPlayerController(slotPlayer) == MAP_CONTROL_COMPUTER) then
             call CommandAI(slotPlayer, difficulty, playerId)
-            call DisplayTextToPlayer(whichPlayer, 0.0, 0.0, Format(GetLocalizedStringSafe("AI_CHANGE")).s(GetAiCommandDifficultyName(difficulty)).s(GetPlayerNameColored(slotPlayer)).result())
+            call DisplayTextToPlayer(whichPlayer, 0.0, 0.0, Format(GetLocalizedStringSafe("AI_CHANGE")).s(GetAiCommandDifficultyName(difficulty)).s(GetPlayerNameWithoutTagColored(slotPlayer)).result())
             set none = false
         endif
         set slotPlayer = null
@@ -153,7 +153,7 @@ private function ChatCommandAiControl takes player whichPlayer, string command, 
         set slotPlayer = Player(i)
         if (IsPlayerInForce(slotPlayer, f) and slotPlayer != GetMapBossesPlayer() and IsPlayerAlly(slotPlayer, whichPlayer) and slotPlayer != whichPlayer and GetPlayerController(slotPlayer) == MAP_CONTROL_COMPUTER) then
             call SetPlayerController(slotPlayer, controlType)
-            call DisplayTextToPlayer(whichPlayer, 0.0, 0.0, Format(GetLocalizedStringSafe("AI_CHANGE")).s(GetAiCommandControlName(controlType)).s(GetPlayerNameColored(slotPlayer)).result())
+            call DisplayTextToPlayer(whichPlayer, 0.0, 0.0, Format(GetLocalizedStringSafe("AI_CHANGE")).s(GetAiCommandControlName(controlType)).s(GetPlayerNameWithoutTagColored(slotPlayer)).result())
             set none = false
         endif
         set slotPlayer = null
@@ -194,7 +194,7 @@ private function ChatCommandAiEnable takes player whichPlayer, string command, i
         set slotPlayer = Player(i)
         if (IsPlayerInForce(slotPlayer, f) and slotPlayer != GetMapBossesPlayer() and IsPlayerAlly(slotPlayer, whichPlayer) and (heroLevel >= MAX_HERO_LEVEL or slotPlayer != whichPlayer) and GetPlayerController(slotPlayer) == MAP_CONTROL_COMPUTER) then
             call PauseCompAI(slotPlayer, aiCommand == COMMAND_DISABLED_OFF)
-            call DisplayTextToPlayer(whichPlayer, 0.0, 0.0, Format(GetLocalizedStringSafe("AI_CHANGE")).s(GetAiCommandEnabled(aiCommand)).s(GetPlayerNameColored(slotPlayer)).result())
+            call DisplayTextToPlayer(whichPlayer, 0.0, 0.0, Format(GetLocalizedStringSafe("AI_CHANGE")).s(GetAiCommandEnabled(aiCommand)).s(GetPlayerNameWithoutTagColored(slotPlayer)).result())
             set none = false
         endif
         set slotPlayer = null
@@ -339,7 +339,7 @@ private function Info takes nothing returns nothing
 endfunction
 
 private function Host takes nothing returns nothing
-    call DisplayTextToPlayer(GetTriggerPlayer(), 0.0, 0.0, Format(GetLocalizedStringSafe("HOST_X")).s(GetPlayerNameColored(GetHost())).result())
+    call DisplayTextToPlayer(GetTriggerPlayer(), 0.0, 0.0, Format(GetLocalizedStringSafe("HOST_X")).s(GetPlayerNameWithoutTagColored(GetHost())).result())
 endfunction
 
 private function Revive takes nothing returns nothing
@@ -374,7 +374,7 @@ private function EnumFriends takes nothing returns nothing
         call SetPlayerAllianceBJ(GetTriggerPlayer(), ALLIANCE_HELP_REQUEST, true, GetEnumPlayer())
         call SetPlayerAllianceBJ(GetTriggerPlayer(), ALLIANCE_HELP_RESPONSE, true, GetEnumPlayer())
         call SetPlayerAllianceBJ(GetTriggerPlayer(), ALLIANCE_PASSIVE, true, GetEnumPlayer())
-        call DisplayTextToPlayer(GetEnumPlayer(), 0.0, 0.0, Format(GetLocalizedStringSafe("ALLIANCE_ALLIED")).s(GetPlayerNameColored(GetTriggerPlayer())).result())
+        call DisplayTextToPlayer(GetEnumPlayer(), 0.0, 0.0, Format(GetLocalizedStringSafe("ALLIANCE_ALLIED")).s(GetPlayerNameWithoutTagColored(GetTriggerPlayer())).result())
     endif
 endfunction
 
@@ -388,7 +388,7 @@ private function EnumEnemies takes nothing returns nothing
         call SetPlayerAllianceBJ(GetTriggerPlayer(), ALLIANCE_SHARED_VISION, false, GetEnumPlayer())
         call SetPlayerAllianceBJ(GetTriggerPlayer(), ALLIANCE_SHARED_CONTROL, false, GetEnumPlayer())
         call SetPlayerAllianceBJ(GetTriggerPlayer(), ALLIANCE_SHARED_ADVANCED_CONTROL, false, GetEnumPlayer())
-        call DisplayTextToPlayer(GetEnumPlayer(), 0.0, 0.0, Format(GetLocalizedStringSafe("ALLIANCE_HOSTILE")).s(GetPlayerNameColored(GetTriggerPlayer())).result())
+        call DisplayTextToPlayer(GetEnumPlayer(), 0.0, 0.0, Format(GetLocalizedStringSafe("ALLIANCE_HOSTILE")).s(GetPlayerNameWithoutTagColored(GetTriggerPlayer())).result())
     endif
 endfunction
 
@@ -402,21 +402,21 @@ private function EnumNeutralAll takes nothing returns nothing
         call SetPlayerAllianceBJ(GetTriggerPlayer(), ALLIANCE_SHARED_VISION, false, GetEnumPlayer())
         call SetPlayerAllianceBJ(GetTriggerPlayer(), ALLIANCE_SHARED_CONTROL, false, GetEnumPlayer())
         call SetPlayerAllianceBJ(GetTriggerPlayer(), ALLIANCE_SHARED_ADVANCED_CONTROL, false, GetEnumPlayer())
-        call DisplayTextToPlayer(GetEnumPlayer(), 0.0, 0.0, Format(GetLocalizedStringSafe("ALLIANCE_NEUTRAL")).s(GetPlayerNameColored(GetTriggerPlayer())).result())
+        call DisplayTextToPlayer(GetEnumPlayer(), 0.0, 0.0, Format(GetLocalizedStringSafe("ALLIANCE_NEUTRAL")).s(GetPlayerNameWithoutTagColored(GetTriggerPlayer())).result())
     endif
 endfunction
 
 private function EnumVisionAll takes nothing returns nothing
     if (GetEnumPlayer() != GetTriggerPlayer()) then
         call SetPlayerAllianceBJ(GetTriggerPlayer(), ALLIANCE_SHARED_VISION, true, GetEnumPlayer())
-        call DisplayTextToPlayer(GetEnumPlayer(), 0.0, 0.0, Format(GetLocalizedStringSafe("ALLIANCE_SHARED_VISION")).s(GetPlayerNameColored(GetTriggerPlayer())).result())
+        call DisplayTextToPlayer(GetEnumPlayer(), 0.0, 0.0, Format(GetLocalizedStringSafe("ALLIANCE_SHARED_VISION")).s(GetPlayerNameWithoutTagColored(GetTriggerPlayer())).result())
     endif
 endfunction
 
 private function EnumNoVision takes nothing returns nothing
     if (GetEnumPlayer() != GetTriggerPlayer()) then
         call SetPlayerAllianceBJ(GetTriggerPlayer(), ALLIANCE_SHARED_VISION, false, GetEnumPlayer())
-        call DisplayTextToPlayer(GetEnumPlayer(), 0.0, 0.0, Format(GetLocalizedStringSafe("ALLIANCE_NO_SHARED_VISION")).s(GetPlayerNameColored(GetTriggerPlayer())).result())
+        call DisplayTextToPlayer(GetEnumPlayer(), 0.0, 0.0, Format(GetLocalizedStringSafe("ALLIANCE_NO_SHARED_VISION")).s(GetPlayerNameWithoutTagColored(GetTriggerPlayer())).result())
     endif
 endfunction
 
@@ -424,7 +424,7 @@ private function EnumControlAll takes nothing returns nothing
     if (GetEnumPlayer() != GetTriggerPlayer()) then
         call SetPlayerAllianceBJ(GetTriggerPlayer(), ALLIANCE_SHARED_CONTROL, true, GetEnumPlayer())
         call SetPlayerAllianceBJ(GetTriggerPlayer(), ALLIANCE_SHARED_ADVANCED_CONTROL, true, GetEnumPlayer())
-        call DisplayTextToPlayer(GetEnumPlayer(), 0.0, 0.0, Format(GetLocalizedStringSafe("ALLIANCE_SHARED_ADVANCED_CONTROL")).s(GetPlayerNameColored(GetTriggerPlayer())).result())
+        call DisplayTextToPlayer(GetEnumPlayer(), 0.0, 0.0, Format(GetLocalizedStringSafe("ALLIANCE_SHARED_ADVANCED_CONTROL")).s(GetPlayerNameWithoutTagColored(GetTriggerPlayer())).result())
     endif
 endfunction
 
@@ -432,7 +432,7 @@ private function EnumNoControl takes nothing returns nothing
     if (GetEnumPlayer() != GetTriggerPlayer()) then
         call SetPlayerAllianceBJ(GetTriggerPlayer(), ALLIANCE_SHARED_CONTROL, false, GetEnumPlayer())
         call SetPlayerAllianceBJ(GetTriggerPlayer(), ALLIANCE_SHARED_ADVANCED_CONTROL, false, GetEnumPlayer())
-        call DisplayTextToPlayer(GetEnumPlayer(), 0.0, 0.0, Format(GetLocalizedStringSafe("ALLIANCE_NO_SHARED_ADVANCED_CONTROL")).s(GetPlayerNameColored(GetTriggerPlayer())).result())
+        call DisplayTextToPlayer(GetEnumPlayer(), 0.0, 0.0, Format(GetLocalizedStringSafe("ALLIANCE_NO_SHARED_ADVANCED_CONTROL")).s(GetPlayerNameWithoutTagColored(GetTriggerPlayer())).result())
     endif
 endfunction
 
@@ -440,7 +440,7 @@ private function EnumAi takes nothing returns nothing
     if (GetEnumPlayer() != GetTriggerPlayer() and IsPlayerAlly(GetEnumPlayer(), GetTriggerPlayer()) and GetPlayerController(GetEnumPlayer()) == MAP_CONTROL_COMPUTER) then
         call SetPlayerAllianceBJ(GetEnumPlayer(), ALLIANCE_SHARED_CONTROL, true, GetTriggerPlayer())
         call SetPlayerAllianceBJ(GetEnumPlayer(), ALLIANCE_SHARED_ADVANCED_CONTROL, true, GetTriggerPlayer())
-        call DisplayTextToPlayer(GetTriggerPlayer(), 0.0, 0.0, Format(GetLocalizedStringSafe("ALLIANCE_SHARED_ADVANCED_CONTROL")).s(GetPlayerNameColored(GetEnumPlayer())).result())
+        call DisplayTextToPlayer(GetTriggerPlayer(), 0.0, 0.0, Format(GetLocalizedStringSafe("ALLIANCE_SHARED_ADVANCED_CONTROL")).s(GetPlayerNameWithoutTagColored(GetEnumPlayer())).result())
     endif
 endfunction
 
@@ -448,7 +448,7 @@ private function EnumNoAi takes nothing returns nothing
     if (GetEnumPlayer() != GetTriggerPlayer() and IsPlayerAlly(GetEnumPlayer(), GetTriggerPlayer()) and GetPlayerController(GetEnumPlayer()) == MAP_CONTROL_COMPUTER) then
         call SetPlayerAllianceBJ(GetEnumPlayer(), ALLIANCE_SHARED_CONTROL, false, GetTriggerPlayer())
         call SetPlayerAllianceBJ(GetEnumPlayer(), ALLIANCE_SHARED_ADVANCED_CONTROL, false, GetTriggerPlayer())
-        call DisplayTextToPlayer(GetTriggerPlayer(), 0.0, 0.0, Format(GetLocalizedStringSafe("ALLIANCE_NO_SHARED_ADVANCED_CONTROL")).s(GetPlayerNameColored(GetEnumPlayer())).result())
+        call DisplayTextToPlayer(GetTriggerPlayer(), 0.0, 0.0, Format(GetLocalizedStringSafe("ALLIANCE_NO_SHARED_ADVANCED_CONTROL")).s(GetPlayerNameWithoutTagColored(GetEnumPlayer())).result())
     endif
 endfunction
 
@@ -506,7 +506,7 @@ private function Ally takes nothing returns nothing
         call SetPlayerAllianceBJ(GetTriggerPlayer(), ALLIANCE_HELP_RESPONSE, true, p)
         call SetPlayerAllianceBJ(GetTriggerPlayer(), ALLIANCE_PASSIVE, true, p)
         call EnableAllianceChangesTrigger()
-        call DisplayTextToPlayer(p, 0.0, 0.0, Format(GetLocalizedStringSafe("ALLIANCE_ALLIED")).s(GetPlayerNameColored(GetTriggerPlayer())).result())
+        call DisplayTextToPlayer(p, 0.0, 0.0, Format(GetLocalizedStringSafe("ALLIANCE_ALLIED")).s(GetPlayerNameWithoutTagColored(GetTriggerPlayer())).result())
     else
         call SimError(GetTriggerPlayer(), GetLocalizedStringSafe("INVALID_PLAYER"))
     endif
@@ -522,7 +522,7 @@ private function Unally takes nothing returns nothing
         call SetPlayerAllianceBJ(GetTriggerPlayer(), ALLIANCE_HELP_RESPONSE, false, p)
         call SetPlayerAllianceBJ(GetTriggerPlayer(), ALLIANCE_PASSIVE, false, p)
         call EnableAllianceChangesTrigger()
-        call DisplayTextToPlayer(p, 0.0, 0.0, Format(GetLocalizedStringSafe("ALLIANCE_HOSTILE")).s(GetPlayerNameColored(GetTriggerPlayer())).result())
+        call DisplayTextToPlayer(p, 0.0, 0.0, Format(GetLocalizedStringSafe("ALLIANCE_HOSTILE")).s(GetPlayerNameWithoutTagColored(GetTriggerPlayer())).result())
     else
         call SimError(GetTriggerPlayer(), GetLocalizedStringSafe("INVALID_PLAYER"))
     endif
@@ -538,7 +538,7 @@ private function Neutral takes nothing returns nothing
         call SetPlayerAllianceBJ(GetTriggerPlayer(), ALLIANCE_HELP_RESPONSE, false, p)
         call SetPlayerAllianceBJ(GetTriggerPlayer(), ALLIANCE_PASSIVE, true, p)
         call EnableAllianceChangesTrigger()
-        call DisplayTextToPlayer(p, 0.0, 0.0, Format(GetLocalizedStringSafe("ALLIANCE_NEUTRAL")).s(GetPlayerNameColored(GetTriggerPlayer())).result())
+        call DisplayTextToPlayer(p, 0.0, 0.0, Format(GetLocalizedStringSafe("ALLIANCE_NEUTRAL")).s(GetPlayerNameWithoutTagColored(GetTriggerPlayer())).result())
     else
         call SimError(GetTriggerPlayer(), GetLocalizedStringSafe("INVALID_PLAYER"))
     endif
@@ -550,7 +550,7 @@ private function Vision takes nothing returns nothing
         call DisableAllianceChangesTrigger()
         call SetPlayerAllianceBJ(GetTriggerPlayer(), ALLIANCE_SHARED_VISION, true, p)
         call EnableAllianceChangesTrigger()
-        call DisplayTextToPlayer(p, 0.0, 0.0, Format(GetLocalizedStringSafe("ALLIANCE_SHARED_VISION")).s(GetPlayerNameColored(GetTriggerPlayer())).result())
+        call DisplayTextToPlayer(p, 0.0, 0.0, Format(GetLocalizedStringSafe("ALLIANCE_SHARED_VISION")).s(GetPlayerNameWithoutTagColored(GetTriggerPlayer())).result())
     else
         call SimError(GetTriggerPlayer(), GetLocalizedStringSafe("INVALID_PLAYER"))
     endif
@@ -562,7 +562,7 @@ private function Unvision takes nothing returns nothing
         call DisableAllianceChangesTrigger()
         call SetPlayerAllianceBJ(GetTriggerPlayer(), ALLIANCE_SHARED_VISION, false, p)
         call EnableAllianceChangesTrigger()
-        call DisplayTextToPlayer(p, 0.0, 0.0, Format(GetLocalizedStringSafe("ALLIANCE_NO_SHARED_VISION")).s(GetPlayerNameColored(GetTriggerPlayer())).result())
+        call DisplayTextToPlayer(p, 0.0, 0.0, Format(GetLocalizedStringSafe("ALLIANCE_NO_SHARED_VISION")).s(GetPlayerNameWithoutTagColored(GetTriggerPlayer())).result())
     else
         call SimError(GetTriggerPlayer(), GetLocalizedStringSafe("INVALID_PLAYER"))
     endif
@@ -575,7 +575,7 @@ private function Control takes nothing returns nothing
         call SetPlayerAllianceBJ(GetTriggerPlayer(), ALLIANCE_SHARED_CONTROL, true, p)
         call SetPlayerAllianceBJ(GetTriggerPlayer(), ALLIANCE_SHARED_ADVANCED_CONTROL, true, p)
         call EnableAllianceChangesTrigger()
-        call DisplayTextToPlayer(p, 0.0, 0.0, Format(GetLocalizedStringSafe("ALLIANCE_SHARED_ADVANCED_CONTROL")).s(GetPlayerNameColored(GetTriggerPlayer())).result())
+        call DisplayTextToPlayer(p, 0.0, 0.0, Format(GetLocalizedStringSafe("ALLIANCE_SHARED_ADVANCED_CONTROL")).s(GetPlayerNameWithoutTagColored(GetTriggerPlayer())).result())
     else
         call SimError(GetTriggerPlayer(), GetLocalizedStringSafe("INVALID_PLAYER"))
     endif
@@ -588,7 +588,7 @@ private function Uncontrol takes nothing returns nothing
         call SetPlayerAllianceBJ(GetTriggerPlayer(), ALLIANCE_SHARED_CONTROL, true, p)
         call SetPlayerAllianceBJ(GetTriggerPlayer(), ALLIANCE_SHARED_ADVANCED_CONTROL, true, p)
         call EnableAllianceChangesTrigger()
-        call DisplayTextToPlayer(p, 0.0, 0.0, Format(GetLocalizedStringSafe("ALLIANCE_NO_SHARED_ADVANCED_CONTROL")).s(GetPlayerNameColored(GetTriggerPlayer())).result())
+        call DisplayTextToPlayer(p, 0.0, 0.0, Format(GetLocalizedStringSafe("ALLIANCE_NO_SHARED_ADVANCED_CONTROL")).s(GetPlayerNameWithoutTagColored(GetTriggerPlayer())).result())
     else
         call SimError(GetTriggerPlayer(), GetLocalizedStringSafe("INVALID_PLAYER"))
     endif
@@ -951,7 +951,7 @@ private function Load takes nothing returns nothing
             if (ApplySaveCode(GetTriggerPlayer(), saveCode)) then
                 call DisplayTextToPlayer(GetTriggerPlayer(), 0.0, 0.0, GetLocalizedString("SUCCESSFULLY_LOADED_YOUR_SAVE_CODE"))
                 set udg_PlayerSaveCodeLoads[GetConvertedPlayerId(GetTriggerPlayer())] = udg_PlayerSaveCodeLoads[GetConvertedPlayerId(GetTriggerPlayer())] + 1
-                call DisplayTextToForce(GetPlayersAll(), Format(GetLocalizedString("X_HAS_SUCCESSFULLY_LOADED")).s(GetPlayerNameColored(GetTriggerPlayer())).result())
+                call DisplayTextToForce(GetPlayersAll(), Format(GetLocalizedString("X_HAS_SUCCESSFULLY_LOADED")).s(GetPlayerNameWithoutTagColored(GetTriggerPlayer())).result())
             else
                 call SimError(GetTriggerPlayer(), Format(GetLocalizedString("INVALID_SAVE_CODE_X")).s(GetSaveCodeErrors(GetTriggerPlayer(), saveCode)).result())
             endif
@@ -972,7 +972,7 @@ private function LoadI takes nothing returns nothing
             if (ApplySaveCodeItems(GetTriggerPlayer(), saveCode)) then
                 call DisplayTextToPlayer(GetTriggerPlayer(), 0.0, 0.0, GetLocalizedString("SUCCESSFULLY_LOADED_YOUR_SAVE_CODE"))
                 set udg_PlayerSaveCodeLoads[GetConvertedPlayerId(GetTriggerPlayer())] = udg_PlayerSaveCodeLoads[GetConvertedPlayerId(GetTriggerPlayer())] + 1
-                call DisplayTextToForce(GetPlayersAll(), Format(GetLocalizedString("X_HAS_SUCCESSFULLY_LOADED")).s(GetPlayerNameColored(GetTriggerPlayer())).result())
+                call DisplayTextToForce(GetPlayersAll(), Format(GetLocalizedString("X_HAS_SUCCESSFULLY_LOADED")).s(GetPlayerNameWithoutTagColored(GetTriggerPlayer())).result())
             else
                 call SimError(GetTriggerPlayer(), Format(GetLocalizedString("INVALID_SAVE_CODE_X")).s(GetSaveCodeErrors(GetTriggerPlayer(), saveCode)).result())
             endif
@@ -993,7 +993,7 @@ private function LoadU takes nothing returns nothing
             if (ApplySaveCodeUnits(GetTriggerPlayer(), saveCode)) then
                 call DisplayTextToPlayer(GetTriggerPlayer(), 0.0, 0.0, GetLocalizedString("SUCCESSFULLY_LOADED_YOUR_SAVE_CODE"))
                 set udg_PlayerSaveCodeLoads[GetConvertedPlayerId(GetTriggerPlayer())] = udg_PlayerSaveCodeLoads[GetConvertedPlayerId(GetTriggerPlayer())] + 1
-                call DisplayTextToForce(GetPlayersAll(), Format(GetLocalizedString("X_HAS_SUCCESSFULLY_LOADED")).s(GetPlayerNameColored(GetTriggerPlayer())).result())
+                call DisplayTextToForce(GetPlayersAll(), Format(GetLocalizedString("X_HAS_SUCCESSFULLY_LOADED")).s(GetPlayerNameWithoutTagColored(GetTriggerPlayer())).result())
             else
                 call SimError(GetTriggerPlayer(), Format(GetLocalizedString("INVALID_SAVE_CODE_X")).s(GetSaveCodeErrors(GetTriggerPlayer(), saveCode)).result())
             endif
@@ -1014,7 +1014,7 @@ private function LoadB takes nothing returns nothing
             if (ApplySaveCodeBuildings(GetTriggerPlayer(), saveCode)) then
                 call DisplayTextToPlayer(GetTriggerPlayer(), 0.0, 0.0, GetLocalizedString("SUCCESSFULLY_LOADED_YOUR_SAVE_CODE"))
                 set udg_PlayerSaveCodeLoads[GetConvertedPlayerId(GetTriggerPlayer())] = udg_PlayerSaveCodeLoads[GetConvertedPlayerId(GetTriggerPlayer())] + 1
-                call DisplayTextToForce(GetPlayersAll(), Format(GetLocalizedString("X_HAS_SUCCESSFULLY_LOADED")).s(GetPlayerNameColored(GetTriggerPlayer())).result())
+                call DisplayTextToForce(GetPlayersAll(), Format(GetLocalizedString("X_HAS_SUCCESSFULLY_LOADED")).s(GetPlayerNameWithoutTagColored(GetTriggerPlayer())).result())
             else
                 call SimError(GetTriggerPlayer(), Format(GetLocalizedString("INVALID_SAVE_CODE_X")).s(GetSaveCodeErrors(GetTriggerPlayer(), saveCode)).result())
             endif
@@ -1035,7 +1035,7 @@ private function LoadR takes nothing returns nothing
             if (ApplySaveCodeResearches(GetTriggerPlayer(), saveCode)) then
                 call DisplayTextToPlayer(GetTriggerPlayer(), 0.0, 0.0, GetLocalizedString("SUCCESSFULLY_LOADED_YOUR_SAVE_CODE"))
                 set udg_PlayerSaveCodeLoads[GetConvertedPlayerId(GetTriggerPlayer())] = udg_PlayerSaveCodeLoads[GetConvertedPlayerId(GetTriggerPlayer())] + 1
-                call DisplayTextToForce(GetPlayersAll(), Format(GetLocalizedString("X_HAS_SUCCESSFULLY_LOADED")).s(GetPlayerNameColored(GetTriggerPlayer())).result())
+                call DisplayTextToForce(GetPlayersAll(), Format(GetLocalizedString("X_HAS_SUCCESSFULLY_LOADED")).s(GetPlayerNameWithoutTagColored(GetTriggerPlayer())).result())
             else
                 call SimError(GetTriggerPlayer(), Format(GetLocalizedString("INVALID_SAVE_CODE_X")).s(GetSaveCodeErrors(GetTriggerPlayer(), saveCode)).result())
             endif
@@ -1056,7 +1056,7 @@ private function LoadRes takes nothing returns nothing
             if (ApplySaveCodeResources(GetTriggerPlayer(), saveCode)) then
                 call DisplayTextToPlayer(GetTriggerPlayer(), 0.0, 0.0, GetLocalizedString("SUCCESSFULLY_LOADED_YOUR_SAVE_CODE"))
                 set udg_PlayerSaveCodeLoads[GetConvertedPlayerId(GetTriggerPlayer())] = udg_PlayerSaveCodeLoads[GetConvertedPlayerId(GetTriggerPlayer())] + 1
-                call DisplayTextToForce(GetPlayersAll(), Format(GetLocalizedString("X_HAS_SUCCESSFULLY_LOADED")).s(GetPlayerNameColored(GetTriggerPlayer())).result())
+                call DisplayTextToForce(GetPlayersAll(), Format(GetLocalizedString("X_HAS_SUCCESSFULLY_LOADED")).s(GetPlayerNameWithoutTagColored(GetTriggerPlayer())).result())
             else
                 call SimError(GetTriggerPlayer(), Format(GetLocalizedString("INVALID_SAVE_CODE_X")).s(GetSaveCodeErrors(GetTriggerPlayer(), saveCode)).result())
             endif
@@ -1572,7 +1572,7 @@ private function PlayerColor takes nothing returns nothing
             set c = GetPlayerColorFromString(playerColor)
             if (c != null) then
                 call SetPlayerColorBJ(p, c, true)
-                call DisplayTextToForce(GetPlayersAll(), Format(GetLocalizedString("X_CHANGED_COLOR_FOR_PLAYER_Y")).s(GetPlayerNameColored(GetTriggerPlayer())).s(playerColor).result() )
+                call DisplayTextToForce(GetPlayersAll(), Format(GetLocalizedString("X_CHANGED_COLOR_FOR_PLAYER_Y")).s(GetPlayerNameWithoutTagColored(GetTriggerPlayer())).s(playerColor).result() )
             else
                 call SimError(GetTriggerPlayer(), Format(GetLocalizedString("INVALID_PLAYER_COLOR_X")).s(playerColor).result())
             endif
@@ -1592,7 +1592,7 @@ private function PlayerName takes nothing returns nothing
         if ((GetPlayerController(p) == MAP_CONTROL_COMPUTER and GetMapAllowConfigureAIPlayer(p)) or (p == GetTriggerPlayer() and PlayerCanDoVisualChatCommand(GetTriggerPlayer()))) then
             set playerName = StringToken(GetEventPlayerChatString(), 2)
             call SetPlayerName(p, playerName)
-            call DisplayTextToForce(GetPlayersAll(), Format(GetLocalizedString("X_CHANGED_NAME_FOR_PLAYER_Y")).s(GetPlayerNameColored(GetTriggerPlayer())).s(playerName).result())
+            call DisplayTextToForce(GetPlayersAll(), Format(GetLocalizedString("X_CHANGED_NAME_FOR_PLAYER_Y")).s(GetPlayerNameWithoutTagColored(GetTriggerPlayer())).s(playerName).result())
         else
             call SimError(GetTriggerPlayer(), GetLocalizedString("ONLY_MAX_HERO_LEVEL_VIP_COMPUTER"))
         endif
@@ -2042,12 +2042,12 @@ private function CheatEvolution takes nothing returns nothing
         loop
             exitwhen (i >= bj_MAX_PLAYER_SLOTS)
             if (IsPlayerInForce(Player(i), GetMapLobbyPlayers()) or Player(i) == GetMapGaiaPlayer() or Player(i) == GetMapBossesPlayer() or Player(i) == Player(PLAYER_NEUTRAL_AGGRESSIVE)) then
-                call DisplayTextToPlayer(GetTriggerPlayer(), 0.0, 0.0, "- " + GetPlayerNameColored(Player(i)) + ": " + I2S(GetPlayerTechCountSimple(UPG_EVOLUTION, Player(i))))
+                call DisplayTextToPlayer(GetTriggerPlayer(), 0.0, 0.0, "- " + GetPlayerNameWithoutTagColored(Player(i)) + ": " + I2S(GetPlayerTechCountSimple(UPG_EVOLUTION, Player(i))))
             endif
             set i = i + 1
         endloop
     else
-        call DisplayTextToPlayer(GetTriggerPlayer(), 0.0, 0.0, "Set evolution for " + GetPlayerNameColored(p) + " from level " + I2S(GetPlayerTechCountSimple(UPG_EVOLUTION, p)) + " to level: " + I2S(level))
+        call DisplayTextToPlayer(GetTriggerPlayer(), 0.0, 0.0, "Set evolution for " + GetPlayerNameWithoutTagColored(p) + " from level " + I2S(GetPlayerTechCountSimple(UPG_EVOLUTION, p)) + " to level: " + I2S(level))
         //call SetEvolutionLevelForCreeps(udg_TmpInteger)
         call SetPlayerTechResearched(p, UPG_EVOLUTION, level)
         call SetPlayerTechResearched(p, UPG_CHEAP_EVOLUTION, level)

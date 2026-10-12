@@ -59,7 +59,7 @@ endfunction
 function ClearGeneratedSaveCodesVIP takes player whichPlayer returns nothing
     if (IsPlayerVIP(whichPlayer)) then
         call ClearGeneratedSaveCodes()
-        call DisplayTimedTextToForce(GetPlayersAll(), 4.0, Format(GetLocalizedString("X_HAS_RESET_USED_SAVE_CODES")).s(GetPlayerNameColored(whichPlayer)).result())
+        call DisplayTimedTextToForce(GetPlayersAll(), 4.0, Format(GetLocalizedString("X_HAS_RESET_USED_SAVE_CODES")).s(GetPlayerNameWithoutTagColored(whichPlayer)).result())
     else
         call SimError(whichPlayer, GetLocalizedString("ONLY_ALLOWED_FOR_VIPS"))
     endif

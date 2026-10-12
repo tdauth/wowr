@@ -117,7 +117,7 @@ private function UpdateTooltips takes nothing returns nothing
                     if (rowPlayer != columnPlayer) then
                         set index = Index2D(row, column, bj_MAX_PLAYERS)
                         set allianceState = R2I(BlzFrameGetValue(Cells[index]))
-                        call BlzFrameSetText(CellsTooltip[index], Format(GetLocalizedString("FROM_TO_X")).s(GetPlayerNameColored(rowPlayer)).s(GetPlayerNameColored(columnPlayer)).s(GetAllianceStateName(allianceState)).result())
+                        call BlzFrameSetText(CellsTooltip[index], Format(GetLocalizedString("FROM_TO_X")).s(GetPlayerNameWithoutTagColored(rowPlayer)).s(GetPlayerNameWithoutTagColored(columnPlayer)).s(GetAllianceStateName(allianceState)).result())
                     endif
                 endif
                 set columnPlayer = null
@@ -323,7 +323,7 @@ private function CreateUI takes nothing returns nothing
             set RowTitles[row] = BlzCreateFrameByType("BACKDROP", PREFIX + "RowTitle" + I2S(row), BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), "", 0)
             call BlzFrameSetAbsPoint(RowTitles[row], FRAMEPOINT_TOPLEFT, x, y)
             call BlzFrameSetAbsPoint(RowTitles[row], FRAMEPOINT_BOTTOMRIGHT, x + cellHeight, y - cellHeight)
-            //call BlzFrameSetText(RowTitles[row], GetPlayerNameColoredSimple(rowPlayer))
+            //call BlzFrameSetText(RowTitles[row], GetPlayerNameWithoutTagColoredSimple(rowPlayer))
             call BlzFrameSetTexture(RowTitles[row], GetPlayerColorTexture(GetPlayerColor(rowPlayer)), 0, true)
             call BlzFrameSetTextAlignment(RowTitles[row], TEXT_JUSTIFY_TOP, TEXT_JUSTIFY_LEFT)
             call BlzFrameSetScale(RowTitles[row], scale)
@@ -333,7 +333,7 @@ private function CreateUI takes nothing returns nothing
             set ColumnTitles[row] = BlzCreateFrameByType("BACKDROP", PREFIX + "ColumnTitle" + I2S(row), BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), "", 0)
             call BlzFrameSetAbsPoint(ColumnTitles[row], FRAMEPOINT_TOPLEFT, headerX, headerY)
             call BlzFrameSetAbsPoint(ColumnTitles[row], FRAMEPOINT_BOTTOMRIGHT, headerX + cellHeight, headerY - cellHeight)
-            //call BlzFrameSetText(ColumnTitles[row], GetPlayerNameColoredSimple(rowPlayer))
+            //call BlzFrameSetText(ColumnTitles[row], GetPlayerNameWithoutTagColoredSimple(rowPlayer))
             call BlzFrameSetTexture(ColumnTitles[row], GetPlayerColorTexture(GetPlayerColor(rowPlayer)), 0, true)
             call BlzFrameSetTextAlignment(ColumnTitles[row], TEXT_JUSTIFY_TOP, TEXT_JUSTIFY_CENTER)
             call BlzFrameSetScale(ColumnTitles[row], scale)

@@ -217,7 +217,7 @@ function AutloadWorkersIntoMinesAI takes player whichPlayer returns nothing
     call DestroyGroup(workers)
     set workers = null
     // gets annoying
-    //call DisplayTimedTextToForce(GetPlayersAll(), 4.0, "Auto loaded " + I2S(autoLoadMineCounter) + " workers for player " + GetPlayerNameColored(whichPlayer))
+    //call DisplayTimedTextToForce(GetPlayersAll(), 4.0, "Auto loaded " + I2S(autoLoadMineCounter) + " workers for player " + GetPlayerNameWithoutTagColored(whichPlayer))
     set mines = null
 endfunction
 
@@ -431,7 +431,7 @@ private function EnumUpdateAllianceState takes nothing returns nothing
         call SetPlayerAllianceBJ(GetEnumPlayer(), ALLIANCE_SHARED_SPELLS, true, GetTriggerPlayer())
         call SetPlayerAllianceBJ(GetEnumPlayer(), ALLIANCE_HELP_REQUEST, true, GetTriggerPlayer())
         call SetPlayerAllianceBJ(GetEnumPlayer(), ALLIANCE_HELP_RESPONSE, true, GetTriggerPlayer())
-        call DisplayTextToPlayer(GetTriggerPlayer(), 0.0, 0.0, Format(GetLocalizedStringSafe("ALLIANCE_ALLIED")).s(GetPlayerNameColored(GetEnumPlayer())).result())
+        call DisplayTextToPlayer(GetTriggerPlayer(), 0.0, 0.0, Format(GetLocalizedStringSafe("ALLIANCE_ALLIED")).s(GetPlayerNameWithoutTagColored(GetEnumPlayer())).result())
     else
         call SetPlayerAllianceBJ(GetEnumPlayer(), ALLIANCE_SHARED_ADVANCED_CONTROL, false, GetTriggerPlayer())
         call SetPlayerAllianceBJ(GetEnumPlayer(), ALLIANCE_SHARED_VISION, false, GetTriggerPlayer())
@@ -439,7 +439,7 @@ private function EnumUpdateAllianceState takes nothing returns nothing
         call SetPlayerAllianceBJ(GetEnumPlayer(), ALLIANCE_SHARED_SPELLS, false, GetTriggerPlayer())
         call SetPlayerAllianceBJ(GetEnumPlayer(), ALLIANCE_HELP_REQUEST, false, GetTriggerPlayer())
         call SetPlayerAllianceBJ(GetEnumPlayer(), ALLIANCE_HELP_RESPONSE, false, GetTriggerPlayer())
-        call DisplayTextToPlayer(GetTriggerPlayer(), 0.0, 0.0, Format(GetLocalizedStringSafe("ALLIANCE_HOSTILE")).s(GetPlayerNameColored(GetEnumPlayer())).result())
+        call DisplayTextToPlayer(GetTriggerPlayer(), 0.0, 0.0, Format(GetLocalizedStringSafe("ALLIANCE_HOSTILE")).s(GetPlayerNameWithoutTagColored(GetEnumPlayer())).result())
     endif
     if (IsPlayerEnemy(GetTriggerPlayer(), GetEnumPlayer())) then
         call SetPlayerAllianceBJ(GetEnumPlayer(), ALLIANCE_PASSIVE, false, GetTriggerPlayer())
@@ -448,31 +448,31 @@ private function EnumUpdateAllianceState takes nothing returns nothing
     endif
     if (GetPlayerAlliance(GetTriggerPlayer(), GetEnumPlayer(), ALLIANCE_SHARED_CONTROL)) then
         call SetPlayerAllianceBJ(GetEnumPlayer(), ALLIANCE_SHARED_CONTROL, true, GetTriggerPlayer())
-        call DisplayTextToPlayer(GetTriggerPlayer(), 0.0, 0.0, Format(GetLocalizedStringSafe("ALLIANCE_SHARED_CONTROL")).s(GetPlayerNameColored(GetEnumPlayer())).result())
+        call DisplayTextToPlayer(GetTriggerPlayer(), 0.0, 0.0, Format(GetLocalizedStringSafe("ALLIANCE_SHARED_CONTROL")).s(GetPlayerNameWithoutTagColored(GetEnumPlayer())).result())
     else
         call SetPlayerAllianceBJ(GetEnumPlayer(), ALLIANCE_SHARED_CONTROL, false, GetTriggerPlayer())
-        call DisplayTextToPlayer(GetTriggerPlayer(), 0.0, 0.0, Format(GetLocalizedStringSafe("ALLIANCE_NO_SHARED_CONTROL")).s(GetPlayerNameColored(GetEnumPlayer())).result())
+        call DisplayTextToPlayer(GetTriggerPlayer(), 0.0, 0.0, Format(GetLocalizedStringSafe("ALLIANCE_NO_SHARED_CONTROL")).s(GetPlayerNameWithoutTagColored(GetEnumPlayer())).result())
     endif
     if (GetPlayerAlliance(GetTriggerPlayer(), GetEnumPlayer(), ALLIANCE_SHARED_VISION)) then
         call SetPlayerAllianceBJ(GetEnumPlayer(), ALLIANCE_SHARED_VISION, true, GetTriggerPlayer())
-        call DisplayTextToPlayer(GetTriggerPlayer(), 0.0, 0.0, Format(GetLocalizedStringSafe("ALLIANCE_SHARED_VISION")).s(GetPlayerNameColored(GetEnumPlayer())).result())
+        call DisplayTextToPlayer(GetTriggerPlayer(), 0.0, 0.0, Format(GetLocalizedStringSafe("ALLIANCE_SHARED_VISION")).s(GetPlayerNameWithoutTagColored(GetEnumPlayer())).result())
     else
         call SetPlayerAllianceBJ(GetEnumPlayer(), ALLIANCE_SHARED_VISION, false, GetTriggerPlayer())
-        call DisplayTextToPlayer(GetTriggerPlayer(), 0.0, 0.0, Format(GetLocalizedStringSafe("ALLIANCE_NO_SHARED_VISION")).s(GetPlayerNameColored(GetEnumPlayer())).result())
+        call DisplayTextToPlayer(GetTriggerPlayer(), 0.0, 0.0, Format(GetLocalizedStringSafe("ALLIANCE_NO_SHARED_VISION")).s(GetPlayerNameWithoutTagColored(GetEnumPlayer())).result())
     endif
     if (GetPlayerAlliance(GetTriggerPlayer(), GetEnumPlayer(), ALLIANCE_SHARED_ADVANCED_CONTROL)) then
         call SetPlayerAllianceBJ(GetEnumPlayer(), ALLIANCE_SHARED_ADVANCED_CONTROL, true, GetTriggerPlayer())
-        call DisplayTextToPlayer(GetTriggerPlayer(), 0.0, 0.0, Format(GetLocalizedStringSafe("ALLIANCE_SHARED_ADVANCED_CONTROL")).s(GetPlayerNameColored(GetEnumPlayer())).result())
+        call DisplayTextToPlayer(GetTriggerPlayer(), 0.0, 0.0, Format(GetLocalizedStringSafe("ALLIANCE_SHARED_ADVANCED_CONTROL")).s(GetPlayerNameWithoutTagColored(GetEnumPlayer())).result())
     else
         call SetPlayerAllianceBJ(GetEnumPlayer(), ALLIANCE_SHARED_ADVANCED_CONTROL, false, GetTriggerPlayer())
-        call DisplayTextToPlayer(GetTriggerPlayer(), 0.0, 0.0, Format(GetLocalizedStringSafe("ALLIANCE_NO_SHARED_ADVANCED_CONTROL")).s(GetPlayerNameColored(GetEnumPlayer())).result())
+        call DisplayTextToPlayer(GetTriggerPlayer(), 0.0, 0.0, Format(GetLocalizedStringSafe("ALLIANCE_NO_SHARED_ADVANCED_CONTROL")).s(GetPlayerNameWithoutTagColored(GetEnumPlayer())).result())
     endif
 endfunction
 
 private function TriggerConditionPlayerLeaves takes nothing returns boolean
     if (GetTriggerPlayer() == GetHostCached()) then
         if (CountAiPlayersWithConfig() > 0) then
-            call DisplayTextToForce(GetPlayersAll(), Format(GetLocalizedStringSafe("AI_HOST_CHOOSES")).s(GetPlayerNameColored(GetHost())).result())
+            call DisplayTextToForce(GetPlayersAll(), Format(GetLocalizedStringSafe("AI_HOST_CHOOSES")).s(GetPlayerNameWithoutTagColored(GetHost())).result())
             call SetAiPlayersUiVisibleForPlayer(GetHost(), true)
         endif
     endif
@@ -581,7 +581,7 @@ private function TriggerConditionDeath takes nothing returns boolean
 
         if (not udg_AIRespawn and not IsUnitType(GetTriggerUnit(), UNIT_TYPE_SUMMONED) and GetPlayerState(owner, PLAYER_STATE_GAME_RESULT) != 1 and BlzGroupGetSize(computerUnits[playerId]) == 0 and PlayerHeroesAreDead(owner)) then
             call CustomDefeatBJ(owner, GetLocalizedStringSafe("GAMEOVER_DEFEAT"))
-            call DisplayTextToForce(GetPlayersAll(), Format(GetLocalizedStringSafe("X_HAS_DEFEATED_Y")).s(GetPlayerNameColored(GetOwningPlayer(GetKillingUnit()))).s(GetPlayerNameColored(owner)).result())
+            call DisplayTextToForce(GetPlayersAll(), Format(GetLocalizedStringSafe("X_HAS_DEFEATED_Y")).s(GetPlayerNameWithoutTagColored(GetOwningPlayer(GetKillingUnit()))).s(GetPlayerNameWithoutTagColored(owner)).result())
         endif
     endif
     set owner = null
@@ -819,7 +819,7 @@ endfunction
 
 private function StartGame takes nothing returns nothing
     if (CountAiPlayersWithConfig() > 0) then
-        call DisplayTextToForce(GetPlayersAll(), Format(GetLocalizedStringSafe("AI_HOST_CHOOSES")).s(GetPlayerNameColored(GetHost())).result())
+        call DisplayTextToForce(GetPlayersAll(), Format(GetLocalizedStringSafe("AI_HOST_CHOOSES")).s(GetPlayerNameWithoutTagColored(GetHost())).result())
         call SetAiPlayersUiVisibleForPlayer(GetHost(), true)
     else
         call StartLobbySettings()
@@ -843,7 +843,7 @@ function ResetComputerPlayers takes nothing returns boolean
     endloop
 
     if (CountAiPlayersWithConfig() > 0) then
-        call DisplayTextToForce(GetPlayersAll(), Format(GetLocalizedStringSafe("AI_HOST_CHOOSES")).s(GetPlayerNameColored(GetHost())).result())
+        call DisplayTextToForce(GetPlayersAll(), Format(GetLocalizedStringSafe("AI_HOST_CHOOSES")).s(GetPlayerNameWithoutTagColored(GetHost())).result())
         call ShowAiPlayersUiForPlayer(GetHost())
 
         return true

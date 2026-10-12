@@ -111,7 +111,7 @@ function IsUnitThievesGuild takes unit whichUnit returns boolean
 endfunction
 
 private function IsValidUnit takes player previousOwner, unit whichUnit returns boolean
-    local integer unitTypeId = GetUnitTypeId(whichUnit)
+    local integer id = GetUnitTypeId(whichUnit)
     if (previousOwner != Player(PLAYER_NEUTRAL_AGGRESSIVE)) then
         return false
     elseif (IsUnitType(whichUnit, UNIT_TYPE_HERO)) then
@@ -122,11 +122,15 @@ private function IsValidUnit takes player previousOwner, unit whichUnit returns 
         return false
     elseif (IsUnitType(whichUnit, UNIT_TYPE_SUMMONED)) then
         return false
-    elseif (IsCitizen(unitTypeId)) then
+    elseif (IsCitizen(id)) then
         return false
-    elseif (IsCrate(unitTypeId)) then
+    elseif (IsCrate(id)) then
         return false
-    elseif (IsCage(unitTypeId)) then
+    elseif (IsCage(id)) then
+        return false
+    elseif (id == EGG_SACK) then
+        return false
+    elseif (id == CREEP_EXPLOSIVE_BARREL) then
         return false
     endif
     return true

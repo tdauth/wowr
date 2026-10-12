@@ -49,14 +49,14 @@ private function TriggerConditionStart takes nothing returns boolean
                 set yesCounter = yesCounter + 1
                 call TimerStart(expireTimer, 30.0, false, function TimerFunctionExpire)
 
-                call TimerDialogSetTitle(expireTimerDialog, Format(GetLocalizedStringSafe("VOTEKICK_AGAINST_X")).s(GetPlayerNameColored(target)).result())
+                call TimerDialogSetTitle(expireTimerDialog, Format(GetLocalizedStringSafe("VOTEKICK_AGAINST_X")).s(GetPlayerNameWithoutTagColored(target)).result())
                 call TimerDialogDisplay(expireTimerDialog, true)
-                call DisplayTextToForce(GetAllPlayingUsers(), Format(GetLocalizedStringSafe("VOTEKICK_STARTED_AGAINST_X")).s(GetPlayerNameColored(GetTriggerPlayer())).s(GetPlayerNameColored(target)).result())
+                call DisplayTextToForce(GetAllPlayingUsers(), Format(GetLocalizedStringSafe("VOTEKICK_STARTED_AGAINST_X")).s(GetPlayerNameWithoutTagColored(GetTriggerPlayer())).s(GetPlayerNameWithoutTagColored(target)).result())
             else
                 call SimError(GetTriggerPlayer(), Format(GetLocalizedStringSafe("VOTEKICK_COOLDOWN")).s(FormatTime(TimerGetRemaining(playerCooldownTimer[GetPlayerId(target)]))).result())
             endif
         else
-            call SimError(GetTriggerPlayer(), Format(GetLocalizedStringSafe("VOTEKICK_NOT_ALLOWED")).s(GetPlayerNameColored(target)).result())
+            call SimError(GetTriggerPlayer(), Format(GetLocalizedStringSafe("VOTEKICK_NOT_ALLOWED")).s(GetPlayerNameWithoutTagColored(target)).result())
         endif
     else
         call SimError(GetTriggerPlayer(), Format(GetLocalizedStringSafe("VOTEKICK_COOLDOWN")).s(FormatTime(TimerGetRemaining(cooldownTimer))).result())
@@ -70,7 +70,7 @@ private function TriggerConditionYes takes nothing returns boolean
             set playerHasVoted[GetPlayerId(GetTriggerPlayer())] = true
             set yesCounter = yesCounter + 1
             if (yesCounter >= GetAllPlayingUsersCount() / 2) then
-                call DisplayTextToForce(GetAllPlayingUsers(), Format(GetLocalizedStringSafe("X_HAS_BEEN_KICKED")).s(GetPlayerNameColored(targetPlayer)).result())
+                call DisplayTextToForce(GetAllPlayingUsers(), Format(GetLocalizedStringSafe("X_HAS_BEEN_KICKED")).s(GetPlayerNameWithoutTagColored(targetPlayer)).result())
                 call CustomDefeatBJ(targetPlayer, GetLocalizedStringSafe("YOU_HAVE_BEEN_KICKED"))
                 call Reset()
             endif

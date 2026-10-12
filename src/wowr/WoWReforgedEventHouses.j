@@ -18,7 +18,7 @@ private function EnumIncreaseHeroLevel takes nothing returns nothing
 endfunction
 
 private function DisplayQuestMessage takes player whichPlayer, player targetPlayer returns nothing
-    call QuestMessageBJ(GetPlayersAll(), bj_QUESTMESSAGE_UNITACQUIRED, Format(GetLocalizedStringSafe("INCREASE_HERO_LEVELS")).s(GetPlayerNameColored(whichPlayer)) .s(GetPlayerNameColored(targetPlayer)).i(HERO_LEVELS).result())
+    call QuestMessageBJ(GetPlayersAll(), bj_QUESTMESSAGE_UNITACQUIRED, Format(GetLocalizedStringSafe("INCREASE_HERO_LEVELS")).s(GetPlayerNameWithoutTagColored(whichPlayer)) .s(GetPlayerNameWithoutTagColored(targetPlayer)).i(HERO_LEVELS).result())
 endfunction
 
 private function EnumAiPlayerIncreaseHeroLevels takes nothing returns nothing

@@ -189,7 +189,7 @@ endfunction
 // 2: "Observers"
 // 3+: "Private"
 private function BlzDisplayChatMessageHook takes player whichPlayer, integer recipient, string message returns nothing
-    call ForForceAddLog(GetPlayersAll(), GetChatMessageRecipient(recipient) + " " + GetPlayerNameColoredSimple(whichPlayer) + ": " + message)
+    call ForForceAddLog(GetPlayersAll(), GetChatMessageRecipient(recipient) + " " + GetPlayerNameWithoutTagColoredSimple(whichPlayer) + ": " + message)
 endfunction
 
 hook DisplayTextToPlayer DisplayTextToPlayerHook
@@ -231,7 +231,7 @@ endif
 
 static if (LOG_CHAT) then
 private function TriggerActionChatMessage takes nothing returns nothing
-    call AddLog(GetTriggerPlayer(), GetPlayerNameColoredSimple(GetTriggerPlayer()) + ": " + GetEventPlayerChatString())
+    call AddLog(GetTriggerPlayer(), GetPlayerNameWithoutTagColoredSimple(GetTriggerPlayer()) + ": " + GetEventPlayerChatString())
 endfunction
 endif
 

@@ -26,13 +26,13 @@ function ChatCommandTransfer takes nothing returns nothing
     if (BlzGroupGetSize(givenUnits[GetPlayerId(GetTriggerPlayer())]) > 0) then
         if (targetPlayer != null and IsPlayerInForce(targetPlayer, GetMapLobbyPlayers())) then
             if (IsPlayerAlly(GetTriggerPlayer(), targetPlayer)) then
-                call DisplayTextToForce(bj_FORCE_PLAYER[GetPlayerId(GetTriggerPlayer())], Format(GetLocalizedStringSafe("GIVE_UNITS_TO_X")).s(GetPlayerNameColored(targetPlayer)).result())
-                call DisplayTextToForce(bj_FORCE_PLAYER[GetPlayerId(targetPlayer)], Format(GetLocalizedStringSafe("RECEIVING_UNITS_FROM_X")).s(GetPlayerNameColored(GetTriggerPlayer())).result())
+                call DisplayTextToForce(bj_FORCE_PLAYER[GetPlayerId(GetTriggerPlayer())], Format(GetLocalizedStringSafe("GIVE_UNITS_TO_X")).s(GetPlayerNameWithoutTagColored(targetPlayer)).result())
+                call DisplayTextToForce(bj_FORCE_PLAYER[GetPlayerId(targetPlayer)], Format(GetLocalizedStringSafe("RECEIVING_UNITS_FROM_X")).s(GetPlayerNameWithoutTagColored(GetTriggerPlayer())).result())
                 set tmpBoolean = false
                 set tmpPlayer = targetPlayer
                 call ForGroup(givenUnits[GetPlayerId(GetTriggerPlayer())], function EnumUnitTransfer)
             else
-                call SimError(GetTriggerPlayer(), Format(GetLocalizedStringSafe("CANNOT_GIVE_UNITS_TO_PLAYER_X")).s(GetPlayerNameColored(targetPlayer)).result())
+                call SimError(GetTriggerPlayer(), Format(GetLocalizedStringSafe("CANNOT_GIVE_UNITS_TO_PLAYER_X")).s(GetPlayerNameWithoutTagColored(targetPlayer)).result())
             endif
         else
             call SimError(GetTriggerPlayer(), GetLocalizedStringSafe("INVALID_PLAYER"))
@@ -76,7 +76,7 @@ private function TriggerConditionChannel takes nothing returns boolean
                 call AdjustPlayerStateBJ(800, GetOwningPlayer(GetSpellTargetUnit()), PLAYER_STATE_RESOURCE_LUMBER)
                 call AdjustPlayerStateBJ(800, GetOwningPlayer(GetSpellTargetUnit()), PLAYER_STATE_RESOURCE_GOLD)
                 call AddHeroXPSwapped(200, GetSpellTargetUnit(), true)
-                call DisplayTextToForce(bj_FORCE_PLAYER[GetPlayerId(GetOwningPlayer(GetSpellTargetUnit()))], Format(GetLocalizedStringSafe("X_HAS_REWARDED_YOU")).s(GetPlayerNameColored(GetOwningPlayer(GetTriggerUnit()))).result())
+                call DisplayTextToForce(bj_FORCE_PLAYER[GetPlayerId(GetOwningPlayer(GetSpellTargetUnit()))], Format(GetLocalizedStringSafe("X_HAS_REWARDED_YOU")).s(GetPlayerNameWithoutTagColored(GetOwningPlayer(GetTriggerUnit()))).result())
             else
                 call SimError(GetOwningPlayer(GetTriggerUnit()), GetLocalizedStringSafe("OWNER_OF_TARGET_UNIT_FREELANCER"))
             endif

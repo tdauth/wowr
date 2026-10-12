@@ -4,7 +4,7 @@ function BecomeDemigod takes unit hero, integer unitTypeId returns unit
     local unit replaced = ReplaceHero(hero, unitTypeId, bj_UNIT_STATE_METHOD_RELATIVE, false, false)
     call RefreshBackpackForPlayer(GetOwningPlayer(replaced))
     call RecreateAllEquipmentBags(GetOwningPlayer(replaced))
-    call DisplayTimedTextToPlayer(GetOwningPlayer(replaced), 0, 0, 30, Format(GetLocalizedString("BECOME_DEMIGOD")).s(GetPlayerNameColored(GetOwningPlayer(replaced))).s(GetObjectName(unitTypeId)).result())
+    call DisplayTimedTextToPlayer(GetOwningPlayer(replaced), 0, 0, 30, Format(GetLocalizedString("BECOME_DEMIGOD")).s(GetPlayerNameWithoutTagColored(GetOwningPlayer(replaced))).s(GetObjectName(unitTypeId)).result())
     call SetPlayerTechResearched(GetOwningPlayer(replaced), UPG_DEMIGOD, 1)
     return replaced
 endfunction

@@ -92,7 +92,7 @@ function GetItemPickupErrorReason takes item whichItem, unit hero returns string
     local string result = null
     if (GetUnitTypeId(hero) != ITEM_VALUES_DUMMY_HERO and GetUnitTypeId(hero) != MAX_ITEM_STACKS_DUMMY_HERO) then
         if (itemOwner != null and itemOwner != Player(PLAYER_NEUTRAL_PASSIVE) and itemOwner != heroOwner) then
-            set result = Format(GetLocalizedString("OWNER_IS")).s(GetPlayerNameColored(itemOwner)).result()
+            set result = Format(GetLocalizedString("OWNER_IS")).s(GetPlayerNameWithoutTagColored(itemOwner)).result()
         elseif (not IsUniqueScepterOrProfessionBook(whichItem, hero)) then
             set result = GetLocalizedString("ITEM_CAN_ONLY_BE_ONCE_INVENTORY")
         else

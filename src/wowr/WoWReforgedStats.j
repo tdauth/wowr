@@ -340,7 +340,7 @@ function CreateStats takes nothing returns nothing
             set mitem = MultiboardGetItem(m, row, column)
             call MultiboardSetItemStyle(mitem, true, true)
             call MultiboardSetItemIcon(mitem, "UI\\Feedback\\Resources\\ResourceSupply.blp")
-            call MultiboardSetItemWidth(mitem, 0.05)
+            call MultiboardSetItemWidth(mitem, 0.06)
             call MultiboardReleaseItem(mitem)
             set column = column + 1
             // Evolution

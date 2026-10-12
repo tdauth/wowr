@@ -273,7 +273,7 @@ private function EnterItemFunction takes nothing returns nothing
         endif
 
         if (GetBackpackItemPlayer(backpackIndex) != null and GetBackpackItemPlayer(backpackIndex) != Player(PLAYER_NEUTRAL_PASSIVE)) then
-            set tooltip = tooltip + Format(GetLocalizedString("BAG_ITEM_OWNER")).s(GetPlayerNameColored(GetBackpackItemPlayer(backpackIndex))).result() // |n|nOwner: %1%
+            set tooltip = tooltip + Format(GetLocalizedString("BAG_ITEM_OWNER")).s(GetPlayerNameWithoutTagColored(GetBackpackItemPlayer(backpackIndex))).result() // |n|nOwner: %1%
         endif
 
         if (GetTriggerPlayer() == GetLocalPlayer()) then

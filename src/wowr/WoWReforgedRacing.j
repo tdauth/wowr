@@ -23,7 +23,7 @@ function GetRacingTracksCount takes nothing returns integer
 endfunction
 
 function GetRacingTrack takes integer index returns RacingTrack
-    return racingTracks[index] 
+    return racingTracks[index]
 endfunction
 
 struct RacingTrack
@@ -139,21 +139,21 @@ private function ResetRaceWinners takes nothing returns nothing
 endfunction
 
 function GetRacingWinners takes nothing returns string
-    local string msg = "1st: " 
+    local string msg = "1st: "
     if (firstPlace != null) then
-        set msg = msg + GetPlayerNameColored(firstPlace)
+        set msg = msg + GetPlayerNameWithoutTagColored(firstPlace)
     else
         set msg = msg + "-"
     endif
     set msg = msg + ", 2nd: "
     if (secondPlace != null) then
-        set msg = msg + GetPlayerNameColored(secondPlace)
+        set msg = msg + GetPlayerNameWithoutTagColored(secondPlace)
     else
         set msg = msg + "-"
     endif
     set msg = msg + ", 3rd: "
     if (thirdPlace != null) then
-        set msg = msg + GetPlayerNameColored(thirdPlace)
+        set msg = msg + GetPlayerNameWithoutTagColored(thirdPlace)
     else
         set msg = msg + "-"
     endif
@@ -183,10 +183,10 @@ function EndRace takes RacingTrack racingTrack returns boolean
         call DestoyAllCheckPointEffects(racingTrack)
         call FinishRacingTrack(racingTrack)
         call ResetRaceWinners()
-        
+
         return true
     endif
-    
+
     return false
 endfunction
 
@@ -219,17 +219,17 @@ function StartRace takes RacingTrack racingTrack returns boolean
         call SetCheckPointsDone(racingTrack, 0)
         call ResetRaceWinners()
         call RefreshAllCheckPointEffects(racingTrack)
-        
+
         call TimerStart(currentRacingTrackTimer, GetRacingTrackDuration(racingTrack), false, function TimerFunctionEndRace)
         if (currentRacingTrackTimerDialog == null) then
             set currentRacingTrackTimerDialog = CreateTimerDialog(currentRacingTrackTimer)
         endif
         call TimerDialogSetTitle(currentRacingTrackTimerDialog, racingTrack.name)
         call TimerDialogDisplay(currentRacingTrackTimerDialog, true)
-        
+
         return true
     endif
-    
+
     return false
 endfunction
 
@@ -285,10 +285,10 @@ function AddRacingTrack takes string name, integer itemTypeId, integer firstPlac
     set this.firstPlaceTrophyItemTypeId = firstPlaceTrophyItemTypeId
     set this.secondPlaceTrophyItemTypeId = secondPlaceTrophyItemTypeId
     set this.thirdPlaceTrophyItemTypeId = thirdPlaceTrophyItemTypeId
-    
+
     set racingTracks[racingTracksCounter] = this
     set racingTracksCounter = racingTracksCounter + 1
-    
+
     return this
 endfunction
 
@@ -348,7 +348,7 @@ endfunction
 private function Init takes nothing returns nothing
     call TriggerRegisterAnyUnitEventBJ(sellItemTrigger, EVENT_PLAYER_UNIT_SELL_ITEM)
     call TriggerAddCondition(sellItemTrigger, Condition(function TriggerConditionSellItem))
-    
+
     call TriggerAddCondition(enterCheckpointTrigger, Condition(function TriggerConditionEnterCheckpoint))
 endfunction
 

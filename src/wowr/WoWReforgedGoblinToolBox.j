@@ -129,7 +129,7 @@ function ExamineUnit takes unit caster, unit whichUnit returns nothing
     local integer heroIndex = 0
 
     set msg = msg + "\nSkin: " + GetObjectName(BlzGetUnitSkin(whichUnit))
-    set msg = msg + "\nOwner: " + GetPlayerNameColored(GetOwningPlayer(whichUnit))
+    set msg = msg + "\nOwner: " + GetPlayerNameWithoutTagColored(GetOwningPlayer(whichUnit))
 
     if (IsUnitType(whichUnit, UNIT_TYPE_HERO)) then
         set heroIndex = GetHeroIndexByUnitTypeId(id)
@@ -419,7 +419,7 @@ function ExamineItem takes unit caster, item whichItem returns nothing
     if (GetItemPlayer(whichItem) == null) then
         set msg = msg + "\nNo owner."
     else
-        set msg = msg + "\nOwner: " + GetPlayerNameColored(GetItemPlayer(whichItem))
+        set msg = msg + "\nOwner: " + GetPlayerNameWithoutTagColored(GetItemPlayer(whichItem))
     endif
 
     if (whichRace == udg_RaceNone) then
