@@ -183,8 +183,7 @@ private function Init takes nothing returns nothing
     call AddChange("Move neutral buildings on Theramore.")
     call AddChange("Add JASS function GetPlayerNameWithoutTagColoredSimple.")
     call AddChange("Add JASS function GetPlayerNameWithoutTagColored.")
-    call AddChange("Show player names without tags in stats multiboard.")
-    call AddChange("Show player names without tags for chat command \"-players\".")
+    call AddChange("Use player names without tags now in most messages and UI elements.")
     call AddChange("Item Bow of Fire causes 10 damage and fix its tooltip.")
     call AddChange("Less feedback for visual chat commands and make strings translatable.")
     call AddChange("Fix death animation for Beehive for profession Farmer.")
@@ -245,6 +244,7 @@ private function Init takes nothing returns nothing
     call AddChange("Fix icon position of unit Mage for race Lordaeron.")
     call AddChange("Fix tooltip of Pegasus Knight for race Lordaeron.")
     call AddChange("Remove Storm Hammers ability from Pegasus Knight for race Lordaeron.")
+    call AddChange("Fix using GetBackpackItemIndex in Backpack UI.")
 
 static if (MAP_DEBUG_MODE_ENABLED) then
     call AddVersion("4.6")
