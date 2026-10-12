@@ -321,7 +321,7 @@ function SimErrorRace3Requirement takes player whichPlayer returns nothing
 endfunction
 
 function DefeatBossMessage takes player whichPlayer, unit boss returns nothing
-    call QuestMessageBJ(GetPlayersAll(), bj_QUESTMESSAGE_WARNING, Format(GetLocalizedStringSafe("X_HAS_DEFEATED_Y")).s(GetPlayerNameColored(whichPlayer)).s(GetHeroProperName(boss)).result())
+    call QuestMessageBJ(GetPlayersAll(), bj_QUESTMESSAGE_WARNING, Format(GetLocalizedStringSafe("X_HAS_DEFEATED_Y")).s(GetPlayerNameWithoutTagColored(whichPlayer)).s(GetHeroProperName(boss)).result())
 endfunction
 
 endlibrary

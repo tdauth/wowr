@@ -65,7 +65,7 @@ private function TriggerActionLeave takes nothing returns nothing
     local force enemyUsersPlaying = GetUserEnemiesPlaying(GetTriggerPlayer())
     local force neutralUsersPlaying = GetUserNeutralPlaying(GetTriggerPlayer())
     local integer playerId = GetPlayerId(GetTriggerPlayer())
-    call DisplayTextToForce(GetPlayersAll(), Format(GetLocalizedString("PLAYER_HAS_LEFT_GAME")).s(GetPlayerNameColored(GetTriggerPlayer())).result())
+    call DisplayTextToForce(GetPlayersAll(), Format(GetLocalizedString("PLAYER_HAS_LEFT_GAME")).s(GetPlayerNameWithoutTagColored(GetTriggerPlayer())).result())
 
     // TODO Give some possibility to remove their heroes if they are annoying.
     // TODO Remove hero selector and hero if player leaves during initial player selection.

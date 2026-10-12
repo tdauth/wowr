@@ -29,7 +29,7 @@ private function TriggerActionDeath takes nothing returns nothing
     call PlayOutroCinematic()
 
     // Player wins
-    call DisplayTextToForce(GetPlayersAll(), Format(GetLocalizedString("X_HAS_WON_THE_GAME")).s(GetPlayerNameColored(winner)).result())
+    call DisplayTextToForce(GetPlayersAll(), Format(GetLocalizedString("X_HAS_WON_THE_GAME")).s(GetPlayerNameWithoutTagColored(winner)).result())
     call ForForce(winners, function EnumVictory)
     call ForForce(losers, function EnumDefeat)
 
