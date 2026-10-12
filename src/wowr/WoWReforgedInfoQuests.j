@@ -1,4 +1,4 @@
-library WoWReforgedInfoQuests initializer Init requires SafeString, QuestUtils, Taunts, UnitGroupRespawnConfig, WoWReforgedClasses, WoWReforgedTaunts
+library WoWReforgedInfoQuests initializer Init requires StringUtils, SafeString, QuestUtils, Taunts, UnitGroupRespawnConfig, WoWReforgedClasses, WoWReforgedTaunts
 // Info quests are the required quests and provide more information about this map. They have to be stored for generating the website.
 
 globals
@@ -86,6 +86,26 @@ private function Init takes nothing returns nothing
     call AddInfoQuestItem(GetLocalizedStringSafe("CC_VIPS"))
     call AddInfoQuestItem(GetLocalizedStringSafe("IQ_SUPPORT_4"))
     call AddInfoQuestItem(GetLocalizedStringSafe("IQ_SUPPORT_5"))
+
+    set udg_QuestHeroJourney = AddInfoQuest(GetLocalizedStringSafe("IQ_HERO_JOURNEY_TITLE"), GetLocalizedStringSafe("IQ_HERO_JOURNEY_DESCRIPTION"), "ReplaceableTextures\\CommandButtons\\BTNStatUp.blp")
+    call AddInfoQuestItemHeroJourney(5)
+    call AddInfoQuestItemHeroJourney(10)
+    call AddInfoQuestItemHeroJourney(15)
+    call AddInfoQuestItemHeroJourney(20)
+    call AddInfoQuestItemHeroJourney(25)
+    call AddInfoQuestItemHeroJourney(30)
+    call AddInfoQuestItemHeroJourney(35)
+    call AddInfoQuestItemHeroJourney(40)
+    call AddInfoQuestItemHeroJourney(45)
+    call AddInfoQuestItemHeroJourney(50)
+    call AddInfoQuestItemHeroJourney(55)
+    call AddInfoQuestItemHeroJourney(60)
+    call AddInfoQuestItemHeroJourney(65)
+    call AddInfoQuestItemHeroJourney(70)
+    call AddInfoQuestItemHeroJourneyMax(75, 1)
+    call AddInfoQuestItemHeroJourneyMax(75, 2)
+    call AddInfoQuestItemHeroJourneyMax(75, 3)
+    call AddInfoQuestItem(GetLocalizedStringSafe("HERO_JOURNEY_VIP"))
 
     call AddInfoQuest(GetLocalizedStringSafe("IQ_CHAT_COMMANDS_TITLE"), GetLocalizedStringSafe("IQ_CHAT_COMMANDS_DESCRIPTION"), "ReplaceableTextures\\CommandButtons\\BTNBrilliance.blp")
     call AddInfoQuestItem(GetLocalizedStringSafe("CC_HELP"))
@@ -428,38 +448,6 @@ private function Init takes nothing returns nothing
     call AddInfoQuestItem(GetLocalizedStringSafe("IQ_WARCRAFT_CHEATS_20"))
     call AddInfoQuestItem(GetLocalizedStringSafe("IQ_WARCRAFT_CHEATS_21"))
 
-    set udg_QuestHeroJourney = AddInfoQuest(GetLocalizedStringSafe("IQ_HERO_JOURNEY_TITLE"), GetLocalizedStringSafe("IQ_HERO_JOURNEY_DESCRIPTION"), "ReplaceableTextures\\CommandButtons\\BTNStatUp.blp")
-    call AddInfoQuestItemHeroJourney(5)
-    call AddInfoQuestItemHeroJourney(10)
-    call AddInfoQuestItemHeroJourney(15)
-    call AddInfoQuestItemHeroJourney(20)
-    call AddInfoQuestItemHeroJourney(25)
-    call AddInfoQuestItemHeroJourney(30)
-    call AddInfoQuestItemHeroJourney(35)
-    call AddInfoQuestItemHeroJourney(40)
-    call AddInfoQuestItemHeroJourney(45)
-    call AddInfoQuestItemHeroJourney(50)
-    call AddInfoQuestItemHeroJourney(55)
-    call AddInfoQuestItemHeroJourney(60)
-    call AddInfoQuestItemHeroJourney(65)
-    call AddInfoQuestItemHeroJourney(70)
-    call AddInfoQuestItemHeroJourneyMax(75, 1)
-    call AddInfoQuestItemHeroJourneyMax(75, 2)
-    call AddInfoQuestItemHeroJourneyMax(75, 3)
-    call AddInfoQuestItem(GetLocalizedStringSafe("HERO_JOURNEY_VIP"))
-
-    call AddInfoQuest(GetLocalizedStringSafe("IQ_KNOWN_ISSUES_TITLE"), GetLocalizedStringSafe("IQ_KNOWN_ISSUES_DESCRIPTION"), "ReplaceableTextures\\CommandButtons\\BTNVolcano.blp")
-    call AddInfoQuestItem(GetLocalizedStringSafe("IQ_KNOWN_ISSUES_0"))
-    call AddInfoQuestItem(GetLocalizedStringSafe("IQ_KNOWN_ISSUES_1"))
-    call AddInfoQuestItem(GetLocalizedStringSafe("IQ_KNOWN_ISSUES_2"))
-    call AddInfoQuestItem(GetLocalizedStringSafe("IQ_KNOWN_ISSUES_3"))
-    call AddInfoQuestItem(GetLocalizedStringSafe("IQ_KNOWN_ISSUES_4"))
-    call AddInfoQuestItem(GetLocalizedStringSafe("IQ_KNOWN_ISSUES_5"))
-    call AddInfoQuestItem(GetLocalizedStringSafe("IQ_KNOWN_ISSUES_6"))
-    call AddInfoQuestItem(GetLocalizedStringSafe("IQ_KNOWN_ISSUES_7"))
-    call AddInfoQuestItem(GetLocalizedStringSafe("IQ_KNOWN_ISSUES_8"))
-    call AddInfoQuestItem(GetLocalizedStringSafe("IQ_KNOWN_ISSUES_9"))
-
     call AddInfoQuest(GetLocalizedStringSafe("IQ_FACTIONS_TITLE"), GetLocalizedStringSafe("IQ_FACTIONS_DESCRIPTION"), "ReplaceableTextures\\CommandButtons\\BTNOrcCaptureFlag.blp")
     call AddInfoQuestItem(GetLocalizedStringSafe("ALLIANCE"))
     call AddInfoQuestItem(GetLocalizedStringSafe("HORDE"))
@@ -539,7 +527,7 @@ private function Init takes nothing returns nothing
     call AddInfoQuestItem(GetLocalizedStringSafe("CC_AI_TARGET"))
     call AddInfoQuestItem(GetLocalizedStringSafe("CC_AI_TRACE_ON"))
 
-    call AddInfoQuest(GetLocalizedStringSafe("IQ_CREEPS_TITLE"), Format(GetLocalizedStringSafe("IQ_CREEPS_DESCRIPTION")).t(R2I(UnitGroupRespawnConfig_DEFAULT_TIMEOUT)).result(), "ReplaceableTextures\\CommandButtons\\BTNPitLord.blp")
+    call AddInfoQuest(GetLocalizedStringSafe("IQ_CREEPS_TITLE"), Format(GetLocalizedStringSafe("IQ_CREEPS_DESCRIPTION")).s(FormatTimeString(R2I(UnitGroupRespawnConfig_DEFAULT_TIMEOUT))).result(), "ReplaceableTextures\\CommandButtons\\BTNPitLord.blp")
     call AddInfoQuestItem(Format(GetLocalizedStringSafe("IQ_CREEPS_0")).i(DROP_CHANCE_ITEM).result())
     call AddInfoQuestItem(Format(GetLocalizedStringSafe("IQ_CREEPS_1")).i(DROP_CHANCE_DIFFERENT_LEVEL).result())
     call AddInfoQuestItem(Format(GetLocalizedStringSafe("IQ_CREEPS_2")).i(DROP_CHANCE_HIGHER_LEVEL).result())
@@ -547,8 +535,8 @@ private function Init takes nothing returns nothing
     call AddInfoQuestItem(GetLocalizedStringSafe("IQ_CREEPS_4"))
 
     // Replaces info quest Legendary Items
-    call AddInfoQuest(GetLocalizedStringSafe("IQ_BOSSES_TITLE"), Format(GetLocalizedStringSafe("IQ_BOSSES_DESCRIPTION")).t(R2I(UnitGroupRespawnConfig_DEFAULT_TIMEOUT)).result(), "ReplaceableTextures\\CommandButtons\\BTNMannoroth.blp")
-    call AddInfoQuestItem(Format(GetLocalizedStringSafe("IQ_BOSSES_0")).t(R2I(UnitGroupRespawnConfig_DEFAULT_TIMEOUT)).result())
+    call AddInfoQuest(GetLocalizedStringSafe("IQ_BOSSES_TITLE"), Format(GetLocalizedStringSafe("IQ_BOSSES_DESCRIPTION")).s(FormatTimeString(R2I(UnitGroupRespawnConfig_DEFAULT_TIMEOUT))).result(), "ReplaceableTextures\\CommandButtons\\BTNMannoroth.blp")
+    call AddInfoQuestItem(Format(GetLocalizedStringSafe("IQ_BOSSES_0")).s(FormatTimeString(R2I(UnitGroupRespawnConfig_DEFAULT_TIMEOUT))).result())
     call AddInfoQuestItem(GetLocalizedStringSafe("IQ_BOSSES_1"))
     call AddInfoQuestItem(GetLocalizedStringSafe("IQ_BOSSES_2"))
     call AddInfoQuestItem(GetLocalizedStringSafe("CC_PING_BOSSES"))
@@ -602,6 +590,18 @@ private function Init takes nothing returns nothing
 
     call AddInfoQuest(GetLocalizedStringSafe("TAUNTS"), GetLocalizedStringSafe("TAUNTS_DESCRIPTION"), "ReplaceableTextures\\CommandButtons\\BTNPandaTaunt.blp")
     call AddTauntsQuestItems()
+
+    call AddInfoQuest(GetLocalizedStringSafe("IQ_KNOWN_ISSUES_TITLE"), GetLocalizedStringSafe("IQ_KNOWN_ISSUES_DESCRIPTION"), "ReplaceableTextures\\CommandButtons\\BTNVolcano.blp")
+    call AddInfoQuestItem(GetLocalizedStringSafe("IQ_KNOWN_ISSUES_0"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("IQ_KNOWN_ISSUES_1"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("IQ_KNOWN_ISSUES_2"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("IQ_KNOWN_ISSUES_3"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("IQ_KNOWN_ISSUES_4"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("IQ_KNOWN_ISSUES_5"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("IQ_KNOWN_ISSUES_6"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("IQ_KNOWN_ISSUES_7"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("IQ_KNOWN_ISSUES_8"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("IQ_KNOWN_ISSUES_9"))
 endfunction
 
 endlibrary

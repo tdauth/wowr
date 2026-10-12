@@ -1281,6 +1281,8 @@ private function Init takes nothing returns nothing
     call AddCredit("TianJiYiPin: Xal'atath")
     call AddCredit("johnwar: Satyr Shadowdancer (Re-Classic)")
     call AddCredit("r.ace613: Satyr Shadowmancer (Re-Classic)")
+    call AddCredit("Mike: HumanBlacksmith")
+    call AddCredit("Eagle XI: BTNTheBlacksmith")
 endfunction
 
 endlibrary

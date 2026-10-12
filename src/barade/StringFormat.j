@@ -3,7 +3,7 @@ library StringFormat requires StringUtils
 /**
  * Use this struct to format strings which should be internationalized.
  * \code
- local string message = Format(GetLocalizedString("MY_KEY)).t(GetTimeOfDay()).i(3).s("Peter").result()
+ local string message = Format(GetLocalizedString("MY_KEY)).s(FormatTimeString(R2I(GetTimeOfDay()))).i(3).s("Peter").result()
  * \endcode
  * With the string entry MY_KEY "It's %1% o'clock and you're going to die in %2% hours. Maybe you should ask %3% why you're still alive.",
  * in war3map.wts or an FDF file with a StringList.
@@ -17,14 +17,6 @@ library StringFormat requires StringUtils
 struct AFormat
     private integer m_position
     private string m_text
-
-    /**
-     * Ordered arguments formatting is implemented by storing the current format position.
-     * \return Returns the current formatting position/argument.
-     */
-    public method position takes nothing returns integer
-        return this.m_position
-    endmethod
 
     /**
      * \return Returns the current formatted text/string.
@@ -57,37 +49,9 @@ struct AFormat
     //! endtextmacro
 
     //! runtextmacro AFormatMethod("i", "integer", "I2S(value)", "")
-    //! runtextmacro AFormatMethod("integer", "integer", "I2S(value)", "")
     //! runtextmacro AFormatMethod("r", "real", "R2S(value)", "")
-    //! runtextmacro AFormatMethod("real", "real", "R2S(value)", "")
     //! runtextmacro AFormatMethod("rw", "real", "R2SW(value, width, precision)", ", integer width, integer precision")
-    //! runtextmacro AFormatMethod("realWidth", "real", "R2SW(value, width, precision)", ", integer width, integer precision")
     //! runtextmacro AFormatMethod("s", "string", "value", "")
-    //! runtextmacro AFormatMethod("string", "string", "value", "")
-    //! runtextmacro AFormatMethod("h", "handle", "I2S(GetHandleId(value))", "")
-    //! runtextmacro AFormatMethod("handle", "handle", "I2S(GetHandleId(value))", "")
-    //! runtextmacro AFormatMethod("u", "unit", "GetUnitName(value)", "")
-    //! runtextmacro AFormatMethod("unit", "unit", "GetUnitName(value)", "")
-    //! runtextmacro AFormatMethod("it", "item", "GetItemName(value)", "")
-    //! runtextmacro AFormatMethod("item", "item", "GetItemName(value)", "")
-    //! runtextmacro AFormatMethod("d", "destructable", "GetDestructableName(value)", "")
-    //! runtextmacro AFormatMethod("destructable", "destructable", "GetDestructableName(value)", "")
-    //! runtextmacro AFormatMethod("p", "player", "GetPlayerName(value)", "")
-    //! runtextmacro AFormatMethod("player", "player", "GetPlayerName(value)", "")
-//    //! runtextmacro AFormatMethod("he", "unit", "GetHeroProperName(value)", "")
-//    //! runtextmacro AFormatMethod("hero", "unit", "GetHeroProperName(value)", "")
-    //! runtextmacro AFormatMethod("o", "integer", "GetObjectName(value)", "")
-    //! runtextmacro AFormatMethod("object", "integer", "GetObjectName(value)", "")
-//    //! runtextmacro AFormatMethod("l", "string", "GetLocalizedString(value)", "")
-//    //! runtextmacro AFormatMethod("localizedString", "string", "GetLocalizedString(value)", "")
-//    //! runtextmacro AFormatMethod("k", "string", "I2S(GetLocalizedHotkey(value))", "")
-//    //! runtextmacro AFormatMethod("localizedHotkey", "string", "I2S(GetLocalizedHotkey(value))", "")
-//    //! runtextmacro AFormatMethod("e", "integer", "GetExternalString(value)", "")
-//    //! runtextmacro AFormatMethod("externalString", "integer", "GetExternalString(value)", "")
-    /// Use seconds as parameter!
-    //! runtextmacro AFormatMethod("t", "integer", "FormatTimeString(value)", "")
-    /// Use seconds as parameter!
-    //! runtextmacro AFormatMethod("time", "integer", "FormatTimeString(value)", "")
 
     /**
      * \return Returns the formatted string result and destroys the instance.
@@ -104,22 +68,13 @@ struct AFormat
      * Creates a new instance based on text \p text.
      * \sa Format()
      */
-    public static method create takes string text returns AFormat
+    static method create takes string text returns AFormat
         local thistype this = thistype.allocate()
         set this.m_position = 0
         set this.m_text = text
         return this
     endmethod
 endstruct
-
-/**
- * Global function and alternative to \ref AFormat.result().
- * \return Returns the formatted result and destroys the formatting instance.
- * \sa AFormat.result()
- */
-function String takes AFormat format returns string
-    return format.result()
-endfunction
 
 /**
  * Global function and alternative to \ref AFormat.create().

@@ -1512,3 +1512,5 @@ Playing Warcraft III can be played on Ubuntu using Steam, adding it as non-Steam
 * TianJiYiPin: [Xal'atath](https://www.hiveworkshop.com/threads/xalatath.354994/)
 * johnwar: [Satyr Shadowdancer (Re-Classic)](https://www.hiveworkshop.com/threads/satyr-shadowdancer-re-classic.335439/)
 * r.ace613: [Satyr Shadowmancer (Re-Classic)](https://www.hiveworkshop.com/threads/satyr-shadowmancer-re-classic.336648/)
+* Mike: [HumanBlacksmith](https://www.hiveworkshop.com/threads/humanblacksmith.239956/)
+* Eagle XI: [BTNTheBlacksmith](https://www.hiveworkshop.com/threads/btntheblacksmith.271404/)

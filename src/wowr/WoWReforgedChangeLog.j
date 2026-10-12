@@ -245,6 +245,8 @@ private function Init takes nothing returns nothing
     call AddChange("Fix tooltip of Pegasus Knight for race Lordaeron.")
     call AddChange("Remove Storm Hammers ability from Pegasus Knight for race Lordaeron.")
     call AddChange("Fix using GetBackpackItemIndex in Backpack UI.")
+    call AddChange("Simplify library StringFormat.")
+    call AddChange("Make neutral Icecrown Obelisks invulnerable.")
 
 static if (MAP_DEBUG_MODE_ENABLED) then
     call AddVersion("4.6")

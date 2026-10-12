@@ -81,7 +81,7 @@ private function TriggerConditionChannel takes nothing returns boolean
                 call SimError(GetOwningPlayer(GetTriggerUnit()), GetLocalizedStringSafe("OWNER_OF_TARGET_UNIT_FREELANCER"))
             endif
         else
-            call SimError(GetOwningPlayer(GetTriggerUnit()), Format(GetLocalizedStringSafe("SPELL_IS_READY_IN_X")).time(R2I(TimerGetRemaining(rewardTimer[playerId]))).result())
+            call SimError(GetOwningPlayer(GetTriggerUnit()), Format(GetLocalizedStringSafe("SPELL_IS_READY_IN_X")).s(FormatTimeString(R2I(TimerGetRemaining(rewardTimer[playerId])))).result())
         endif
     elseif (GetSpellAbilityId() == 'A04Y') then // Transfer Units
         call UpdateGiveUnitsForPlayer(GetTriggerPlayer(), GetSpellTargetX(), GetSpellTargetY())
@@ -97,7 +97,7 @@ endfunction
 private function Init takes nothing returns nothing
     local integer i = 0
     loop
-        exitwhen (i == bj_MAX_PLAYERS)
+        exitwhen (i >= bj_MAX_PLAYERS)
         set givenUnits[i] = CreateGroup()
         set rewardTimer[i] = CreateTimer()
         set i = i + 1
