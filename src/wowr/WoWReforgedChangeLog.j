@@ -247,6 +247,7 @@ private function Init takes nothing returns nothing
     call AddChange("Fix using GetBackpackItemIndex in Backpack UI.")
     call AddChange("Simplify library StringFormat.")
     call AddChange("Make neutral Icecrown Obelisks invulnerable.")
+    call AddChange("Make Egg Sack owners in Felwood Neutral Hostile")
 
 static if (MAP_DEBUG_MODE_ENABLED) then
     call AddVersion("4.6")
