@@ -247,7 +247,7 @@ private function Init takes nothing returns nothing
     local integer i = 0
     local player slotPlayer = null
     loop
-        exitwhen (i == bj_MAX_PLAYERS)
+        exitwhen (i >= bj_MAX_PLAYERS)
         set slotPlayer = Player(i)
         if (GetPlayerController(slotPlayer) == MAP_CONTROL_USER and GetPlayerSlotState(slotPlayer) == PLAYER_SLOT_STATE_PLAYING) then
             if (StringLength(CHAT_COMMAND_SHORT) > 0) then
