@@ -85,7 +85,7 @@ endfunction
 function RemoveAllBuilders takes nothing returns nothing
     local integer i = 0
     loop
-        exitwhen (i == bj_MAX_PLAYERS)
+        exitwhen (i >= bj_MAX_PLAYERS)
         if (playerBuilders[i] != null) then
             call GroupRemoveUnit(allBuilders, playerBuilders[i])
             call RemoveUnit(playerBuilders[i])
@@ -100,7 +100,7 @@ function CreateAllBuilders takes nothing returns nothing
     local integer i = 0
     call RemoveAllBuilders()
     loop
-        exitwhen (i == bj_MAX_PLAYERS)
+        exitwhen (i >= bj_MAX_PLAYERS)
         if (GetMapAllowConfigureAIPlayer(Player(i)) and GetPlayerSlotState(Player(i)) == PLAYER_SLOT_STATE_PLAYING) then
             call CreateBuilder(Player(i))
         endif

@@ -1967,6 +1967,91 @@ globals
     constant abilityreallevelfield ABILITY_RLF_BONUS_CRITICAL_STRIKE                             = ConvertAbilityRealLevelField('chr3')
     constant abilityreallevelfield ABILITY_RLF_NORMAL_BONUS_CRITICAL_STRIKE_DURATION             = ConvertAbilityRealLevelField('chr4')
     constant abilityreallevelfield ABILITY_RLF_HERO_BONUS_CRITICAL_STRIKE_DURATION               = ConvertAbilityRealLevelField('chr5')
+    constant abilityreallevelfield ABILITY_RLF_STUN_DURATION_ENS4                                = ConvertAbilityRealLevelField('Ens4')
+    constant abilityreallevelfield ABILITY_RLF_ATTACK_SPEED_REDUCTION_PERCENT_ENS5               = ConvertAbilityRealLevelField('Ens5')
+    constant abilityreallevelfield ABILITY_RLF_BONUS_DAMAGE_TAKEN_PERCENT_ENS6                   = ConvertAbilityRealLevelField('Ens6')
+    constant abilityreallevelfield ABILITY_RLF_DAMAGE_SWP1                                       = ConvertAbilityRealLevelField('swp1')
+    constant abilityreallevelfield ABILITY_RLF_ATTACK_DISTANCE_SWP2                              = ConvertAbilityRealLevelField('swp2')
+    constant abilityreallevelfield ABILITY_RLF_ATTACK_ANGLE_SWP3                                 = ConvertAbilityRealLevelField('swp3')
+    constant abilityreallevelfield ABILITY_RLF_DAMAGE_DELAY_SWP4                                 = ConvertAbilityRealLevelField('swp4')
+    constant abilityreallevelfield ABILITY_RLF_DAMAGE_HSL1                                       = ConvertAbilityRealLevelField('hsl1')
+    constant abilityreallevelfield ABILITY_RLF_BONUS_DAMAGE_PERCENT_AGAINST_DEBUFFED             = ConvertAbilityRealLevelField('hsl2')
+    constant abilityreallevelfield ABILITY_RLF_HEAL_PERCENT_ON_DAMAGE_DEALT                      = ConvertAbilityRealLevelField('hsl4')
+    constant abilityreallevelfield ABILITY_RLF_TARGET_INTERSECT_RADIUS                           = ConvertAbilityRealLevelField('chra')
+    constant abilityreallevelfield ABILITY_RLF_BURN_DAMAGE                                       = ConvertAbilityRealLevelField('hsf1')
+    constant abilityreallevelfield ABILITY_RLF_BURN_DAMAGE_PULSE_FREQUENCY                       = ConvertAbilityRealLevelField('hsf2')
+    constant abilityreallevelfield ABILITY_RLF_BONUS_DAMAGE_TO_SUMMONS                           = ConvertAbilityRealLevelField('hsf3')
+    constant abilityreallevelfield ABILITY_RLF_HEAL_AMOUNT_TO_ALLY_UNITS                         = ConvertAbilityRealLevelField('hsf4')
+    constant abilityreallevelfield ABILITY_RLF_DEFENSE_HIC1                                      = ConvertAbilityRealLevelField('hic1')
+    constant abilityreallevelfield ABILITY_RLF_SPELL_DAMAGE_RESISTANCE                           = ConvertAbilityRealLevelField('hic2')
+    constant abilityreallevelfield ABILITY_RLF_HEALING_HIC4                                      = ConvertAbilityRealLevelField('hic4')
+    constant abilityreallevelfield ABILITY_RLF_EXPLOSION_DAMAGE                                  = ConvertAbilityRealLevelField('hmc2')
+    constant abilityreallevelfield ABILITY_RLF_HEALING_PER_TARGET_HIT                            = ConvertAbilityRealLevelField('swp6')
+    constant abilityreallevelfield ABILITY_RLF_ARMOR_REDUCTION_SWP8                              = ConvertAbilityRealLevelField('swp8')
+    constant abilityreallevelfield ABILITY_RLF_DAMAGE_PERCENT_OF_TARGET_MAX_HEALTH               = ConvertAbilityRealLevelField('swpa')
+    constant abilityreallevelfield ABILITY_RLF_COOLDOWN_REDUCTION_ON_HIT                         = ConvertAbilityRealLevelField('swpb')
+    constant abilityreallevelfield ABILITY_RLF_DAMAGE_BONUS_HHR1                                 = ConvertAbilityRealLevelField('hhr1')
+    constant abilityreallevelfield ABILITY_RLF_STUN_DURATION_NORMAL                              = ConvertAbilityRealLevelField('hhr2')
+    constant abilityreallevelfield ABILITY_RLF_STUN_DURATION_HERO                                = ConvertAbilityRealLevelField('hhr3')
+    constant abilityreallevelfield ABILITY_RLF_BONUS_DAMAGE_DEBUFF_DURATION_NORMAL               = ConvertAbilityRealLevelField('hhr4')
+    constant abilityreallevelfield ABILITY_RLF_BONUS_DAMAGE_DEBUFF_DURATION_HERO                 = ConvertAbilityRealLevelField('hhr5')
+    constant abilityreallevelfield ABILITY_RLF_DEBUFF_BONUS_DAMAGE_RECEIVED_PERCENT              = ConvertAbilityRealLevelField('hhr6')
+    constant abilityreallevelfield ABILITY_RLF_DEFENSE_INCREASE                                  = ConvertAbilityRealLevelField('hgr1')
+    constant abilityreallevelfield ABILITY_RLF_DEFENSE_CAP                                       = ConvertAbilityRealLevelField('hgr2')
+    constant abilityreallevelfield ABILITY_RLF_MAGIC_RESISTANCE_AT_CAP                           = ConvertAbilityRealLevelField('hgr3')
+    constant abilityreallevelfield ABILITY_RLF_BONUS_ATTACK_DAMAGE_PERCENT_AT_CAP                = ConvertAbilityRealLevelField('hgr4')
+    constant abilityreallevelfield ABILITY_RLF_ARMOR_REDUCTION_DURATION_NORMAL                   = ConvertAbilityRealLevelField('swpc')
+    constant abilityreallevelfield ABILITY_RLF_ARMOR_REDUCTION_DURATION_HERO                     = ConvertAbilityRealLevelField('swpd')
+    constant abilityreallevelfield ABILITY_RLF_ALLY_INSTANT_HEAL                                 = ConvertAbilityRealLevelField('sol1')
+    constant abilityreallevelfield ABILITY_RLF_ALLY_HEAL_PER_SECOND                              = ConvertAbilityRealLevelField('sol2')
+    constant abilityreallevelfield ABILITY_RLF_ALLY_MANA_RESTORE                                 = ConvertAbilityRealLevelField('sol3')
+    constant abilityreallevelfield ABILITY_RLF_ALLY_PASSIVE_COOLDOWN                             = ConvertAbilityRealLevelField('sol4')
+    constant abilityreallevelfield ABILITY_RLF_ALLY_PASSIVE_DURATION                             = ConvertAbilityRealLevelField('sol5')
+    constant abilityreallevelfield ABILITY_RLF_PASSIVE_RADIUS                                    = ConvertAbilityRealLevelField('slrd')
+    constant abilityreallevelfield ABILITY_RLF_MIND_CONTROL_DURATION_NORMAL                      = ConvertAbilityRealLevelField('mcdr')
+    constant abilityreallevelfield ABILITY_RLF_EXPLOSION_RADIUS_MCRD                             = ConvertAbilityRealLevelField('mcrd')
+    constant abilityreallevelfield ABILITY_RLF_EXPLOSION_RADIUS_SFRD                             = ConvertAbilityRealLevelField('sfrd')
+    constant abilityreallevelfield ABILITY_RLF_DAMAGE_REDUCTION_PERCENT_BLD1                     = ConvertAbilityRealLevelField('bld1')
+    constant abilityreallevelfield ABILITY_RLF_MOVEMENT_SPEED_REDUCTION_PERCENT_BLD2             = ConvertAbilityRealLevelField('bld2')
+    constant abilityreallevelfield ABILITY_RLF_ATTACK_SPEED_INCREASE_PERCENT_BLD3                = ConvertAbilityRealLevelField('bld3')
+    constant abilityreallevelfield ABILITY_RLF_ON_DAMAGE_TAKEN_BONUS_DURATION                    = ConvertAbilityRealLevelField('bld4')
+    constant abilityreallevelfield ABILITY_RLF_SWEEP_COOLDOWN_REDUCTION_ON_HIT                   = ConvertAbilityRealLevelField('bld5')
+    constant abilityreallevelfield ABILITY_RLF_DAMAGE_REFLECTION_PERCENT                         = ConvertAbilityRealLevelField('bld6')
+    constant abilityreallevelfield ABILITY_RLF_FLAT_DAMAGE_REFLECTION                            = ConvertAbilityRealLevelField('bld7')
+    constant abilityreallevelfield ABILITY_RLF_ABILITY_SPEED_INCREASE_PERCENT                    = ConvertAbilityRealLevelField('bld8')
+    constant abilityreallevelfield ABILITY_RLF_SHIELD_HEALTH                                     = ConvertAbilityRealLevelField('hhc1')
+    constant abilityreallevelfield ABILITY_RLF_SHIELD_REFLECT_PERCENT                            = ConvertAbilityRealLevelField('hhc2')
+    constant abilityreallevelfield ABILITY_RLF_SHIELD_DURATION                                   = ConvertAbilityRealLevelField('hhc3')
+    constant abilityreallevelfield ABILITY_RLF_TAUNTED_DEFENSE_REDUCTION                         = ConvertAbilityRealLevelField('hhc4')
+    constant abilityreallevelfield ABILITY_RLF_BONUS_ATTACK_SPEED_PERCENT_HGH1                   = ConvertAbilityRealLevelField('hgh1')
+    constant abilityreallevelfield ABILITY_RLF_BONUS_MOVE_SPEED_PERCENT_HGH2                     = ConvertAbilityRealLevelField('hgh2')
+    constant abilityreallevelfield ABILITY_RLF_BONUS_CRITICAL_HIT_PERCENT                        = ConvertAbilityRealLevelField('hgh3')
+    constant abilityreallevelfield ABILITY_RLF_BONUS_CRITICAL_DAMAGE_PERCENT                     = ConvertAbilityRealLevelField('hgh4')
+    constant abilityreallevelfield ABILITY_RLF_MANA_PER_SECOND_HGH6                              = ConvertAbilityRealLevelField('hgh6')
+    constant abilityreallevelfield ABILITY_RLF_BONUS_COOLDOWN_REDUCTION_PERCENT                  = ConvertAbilityRealLevelField('hgh7')
+    constant abilityreallevelfield ABILITY_RLF_BONUS_DAMAGE_UBR1                                 = ConvertAbilityRealLevelField('ubr1')
+    constant abilityreallevelfield ABILITY_RLF_BONUS_DAMAGE_DURATION_UBR2                        = ConvertAbilityRealLevelField('ubr2')
+    constant abilityreallevelfield ABILITY_RLF_CHARGE_REGEN_TIME_UBR4                            = ConvertAbilityRealLevelField('ubr4')
+    constant abilityreallevelfield ABILITY_RLF_ALLY_MANA_PER_SECOND                              = ConvertAbilityRealLevelField('ula1')
+    constant abilityreallevelfield ABILITY_RLF_ALLY_HEALING_PER_SECOND_ULA2                      = ConvertAbilityRealLevelField('ula2')
+    constant abilityreallevelfield ABILITY_RLF_ALLY_SPELL_RESIST_PERCENT                         = ConvertAbilityRealLevelField('ula3')
+    constant abilityreallevelfield ABILITY_RLF_ALLY_SPELL_AMP_PERCENT                            = ConvertAbilityRealLevelField('ula4')
+    constant abilityreallevelfield ABILITY_RLF_ALLY_SPELL_CRIT_HIT_PERCENT                       = ConvertAbilityRealLevelField('ula5')
+    constant abilityreallevelfield ABILITY_RLF_ALLY_MOVEMENT_SPEED_PERCENT                       = ConvertAbilityRealLevelField('ula6')
+    constant abilityreallevelfield ABILITY_RLF_ENEMY_MANA_PER_SECOND                             = ConvertAbilityRealLevelField('ula7')
+    constant abilityreallevelfield ABILITY_RLF_ENEMY_DAMAGE_PER_SECOND_ULA8                      = ConvertAbilityRealLevelField('ula8')
+    constant abilityreallevelfield ABILITY_RLF_FLAT_MANA_GAIN                                    = ConvertAbilityRealLevelField('bns6')
+    constant abilityreallevelfield ABILITY_RLF_HEALING_RADIUS                                    = ConvertAbilityRealLevelField('bns7')
+    constant abilityreallevelfield ABILITY_RLF_FLAT_DAMAGE_UDB1                                  = ConvertAbilityRealLevelField('udb1')
+    constant abilityreallevelfield ABILITY_RLF_PERCENT_DAMAGE_UDB2                               = ConvertAbilityRealLevelField('udb2')
+    constant abilityreallevelfield ABILITY_RLF_BONUS_ATTACK_SPEED_PER_ATTACK                     = ConvertAbilityRealLevelField('udb4')
+    constant abilityreallevelfield ABILITY_RLF_CHARGE_REGEN_TIME_UWF2                            = ConvertAbilityRealLevelField('uwf2')
+    constant abilityreallevelfield ABILITY_RLF_DAMAGE_UWF3                                       = ConvertAbilityRealLevelField('uwf3')
+    constant abilityreallevelfield ABILITY_RLF_COOLDOWN_REDUCTION_ON_AUTO_ATTACK                 = ConvertAbilityRealLevelField('uwf5')
+    constant abilityreallevelfield ABILITY_RLF_ATTACK_SPEED_REDUCTION_DURATION_NORMAL            = ConvertAbilityRealLevelField('swpe')
+    constant abilityreallevelfield ABILITY_RLF_ATTACK_SPEED_REDUCTION_DURATION_HERO              = ConvertAbilityRealLevelField('swpf')
+    constant abilityreallevelfield ABILITY_RLF_DAMAGE_BY_TARGET_MAX_HEALTH_DURATION_NORMAL       = ConvertAbilityRealLevelField('swpg')
+    constant abilityreallevelfield ABILITY_RLF_DAMAGE_BY_TARGET_MAX_HEALTH_DURATION_HERO         = ConvertAbilityRealLevelField('swph')
 
     constant abilitybooleanlevelfield ABILITY_BLF_PERCENT_BONUS_HAB2            = ConvertAbilityBooleanLevelField('Hab2')
     constant abilitybooleanlevelfield ABILITY_BLF_USE_TELEPORT_CLUSTERING_HMT3  = ConvertAbilityBooleanLevelField('Hmt3')
@@ -2033,6 +2118,13 @@ globals
     constant abilitybooleanlevelfield ABILITY_BLF_DISABLE_OTHER_ABILITIES       = ConvertAbilityBooleanLevelField('Ncl5')
     constant abilitybooleanlevelfield ABILITY_BLF_ALLOW_BOUNTY                  = ConvertAbilityBooleanLevelField('Ntm4')
     constant abilitybooleanlevelfield ABILITY_BLF_REMOVE_BUFFS_ON_ABILITY_START = ConvertAbilityBooleanLevelField('chr6')
+    constant abilitybooleanlevelfield ABILITY_BLF_SILENCES_WHEN_ENSNARED        = ConvertAbilityBooleanLevelField('Ens7')
+    constant abilitybooleanlevelfield ABILITY_BLF_REFRESH_COOLDOWN_ON_KILL_HSL3 = ConvertAbilityBooleanLevelField('hsl3')
+    constant abilitybooleanlevelfield ABILITY_BLF_ENABLE_CHAIN_EXPLOSION        = ConvertAbilityBooleanLevelField('hsf5')
+    constant abilitybooleanlevelfield ABILITY_BLF_DISPEL_MAGIC_BONUS_DAMAGE_TO_SUMMONS = ConvertAbilityBooleanLevelField('hsf6')
+    constant abilitybooleanlevelfield ABILITY_BLF_REMOVES_NEGATIVE_DEBUFFS      = ConvertAbilityBooleanLevelField('hic3')
+    constant abilitybooleanlevelfield ABILITY_BLF_REFRESH_COOLDOWN_ON_KILL_HHR7 = ConvertAbilityBooleanLevelField('hhr7')
+    constant abilitybooleanlevelfield ABILITY_BLF_MAKES_UNITS_UNDYING           = ConvertAbilityBooleanLevelField('hgh5')
 
     constant abilitystringlevelfield ABILITY_SLF_ICON_NORMAL                    = ConvertAbilityStringLevelField('aart')
     constant abilitystringlevelfield ABILITY_SLF_CASTER                         = ConvertAbilityStringLevelField('acat')
@@ -7689,11 +7781,11 @@ constant native GetManipulatedItem  takes nothing returns item
 
 // EVENT_PLAYER_UNIT_EQUIP_ITEM
 constant native GetEquippedItem     takes nothing returns item
-//constant native BlzGetEquippedItem     takes nothing returns item // 3.0.1
+constant native BlzGetEquippedItem     takes nothing returns item // 3.0.1
 
 // EVENT_PLAYER_UNIT_UNEQUIP_ITEM
 constant native GetUnequippedItem   takes nothing returns item
-//constant native BlzGetUnequippedItem   takes nothing returns item // 3.0.1
+constant native BlzGetUnequippedItem   takes nothing returns item // 3.0.1
 
 // For EVENT_PLAYER_UNIT_PICKUP_ITEM, returns the item absorbing the picked up item in case it is stacking.
 // Returns null if the item was a powerup and not a stacking item.
@@ -7895,7 +7987,7 @@ native          GetItemX        takes item i returns real
 native          GetItemY        takes item i returns real
 native          SetItemPosition takes item i, real x, real y returns nothing
 native          SetItemColor takes item whichItem, playercolor whichColor returns nothing
-//native          BlzSetItemColor takes item whichItem, playercolor whichColor returns nothing // 3.0.1
+native          BlzSetItemColor takes item whichItem, playercolor whichColor returns nothing // 3.0.1
 native          SetItemDropOnDeath  takes item whichItem, boolean flag returns nothing
 native          SetItemDroppable takes item i, boolean flag returns nothing
 native          SetItemPawnable takes item i, boolean flag returns nothing
@@ -7904,8 +7996,8 @@ native          SetItemInvulnerable takes item whichItem, boolean flag returns n
 native          IsItemInvulnerable  takes item whichItem returns boolean
 native          IsItemEquipped  takes item whichItem returns boolean
 native          IsItemInBag     takes item whichItem returns boolean
-//native          BlzIsItemEquipped  takes item whichItem returns boolean // 3.0.1
-//native          BlzIsItemInBag     takes item whichItem returns boolean // 3.0.1
+native          BlzIsItemEquipped  takes item whichItem returns boolean // 3.0.1
+native          BlzIsItemInBag     takes item whichItem returns boolean // 3.0.1
 native          SetItemVisible  takes item whichItem, boolean show returns nothing
 native          IsItemVisible   takes item whichItem returns boolean
 native          IsItemOwned     takes item whichItem returns boolean
@@ -7926,8 +8018,8 @@ native          GetItemUserData takes item whichItem returns integer
 native          SetItemUserData takes item whichItem, integer data returns nothing
 native          GetItemEquipmentType takes item whichItem returns equipmentType
 native          GetItemTag           takes item whichItem returns itemTag
-//native          BlzGetItemEquipmentType takes item whichItem returns equipmentType // 3.0.1
-//native          BlzGetItemTag           takes item whichItem returns itemTag // 3.0.1
+native          BlzGetItemEquipmentType takes item whichItem returns equipmentType // 3.0.1
+native          BlzGetItemTag           takes item whichItem returns itemTag // 3.0.1
 
 //============================================================================
 // Unit API
@@ -8037,22 +8129,22 @@ native          GetUnitPointValueByType takes integer unitType returns integer
 
 native          UnitAddItem             takes unit whichUnit, item whichItem returns boolean
 native          UnitEquipItem           takes unit whichUnit, item whichItem returns boolean
-//native          BlzUnitEquipItem           takes unit whichUnit, item whichItem returns boolean // 3.0.1
+native          BlzUnitEquipItem           takes unit whichUnit, item whichItem returns boolean // 3.0.1
 native          UnitAddItemById         takes unit whichUnit, integer itemId returns item
 native          UnitAddItemToSlotById   takes unit whichUnit, integer itemId, integer itemSlot returns boolean
 native          UnitRemoveItem          takes unit whichUnit, item whichItem returns nothing
 native          UnitRemoveItemFromSlot  takes unit whichUnit, integer itemSlot returns item
 native          UnitUnequipItem         takes unit whichUnit, item whichItem returns nothing
-//native          BlzUnitUnequipItem         takes unit whichUnit, item whichItem returns nothing // 3.0.1
+native          BlzUnitUnequipItem         takes unit whichUnit, item whichItem returns nothing // 3.0.1
 native          UnitUnequipItemFromSlot takes unit whichUnit, loadoutslot slot returns item
-//native          BlzUnitUnequipItemFromSlot takes unit whichUnit, loadoutslot slot returns item // 3.0.1
+native          BlzUnitUnequipItemFromSlot takes unit whichUnit, loadoutslot slot returns item // 3.0.1
 native          UnitHasItem             takes unit whichUnit, item whichItem returns boolean
 native          UnitHasItemBagged       takes unit whichUnit, item whichItem returns boolean
-//native          BlzUnitHasItemBagged       takes unit whichUnit, item whichItem returns boolean // 3.0.1
+native          BlzUnitHasItemBagged       takes unit whichUnit, item whichItem returns boolean // 3.0.1
 native          UnitItemInSlot          takes unit whichUnit, integer itemSlot returns item
 native          UnitInventorySize       takes unit whichUnit returns integer
 native          UnitExtendedInventorySize takes unit whichUnit returns integer
-//native          BlzUnitExtendedInventorySize takes unit whichUnit returns integer // 3.0.1
+native          BlzUnitExtendedInventorySize takes unit whichUnit returns integer // 3.0.1
 
 native          UnitItemInBagSlot               takes unit whichUnit, integer itemSlot returns item
 native          UnitItemInEquipmentSlot         takes unit whichUnit, loadoutslot itemSlot returns item
@@ -8061,13 +8153,13 @@ native          UnitHasLoadoutSlotEmpty         takes unit whichUnit, loadoutslo
 native          UnitHasAnyItemEquiped           takes unit whichUnit returns boolean
 native          UnitHasItemEquipmentOfType      takes unit whichUnit, equipmentType equipmentId returns boolean
 native          UnitCanEquipItemOfEquipmentType takes unit whichUnit, equipmentType equipmentId returns boolean
-//native          BlzUnitItemInBagSlot               takes unit whichUnit, integer itemSlot returns item // 3.0.1
-//native          BlzUnitItemInEquipmentSlot         takes unit whichUnit, loadoutslot itemSlot returns item // 3.0.1
-//native          BlzUnitHasItemEquipped             takes unit whichUnit, item whichItem returns boolean // 3.0.1
-//native          BlzUnitHasLoadoutSlotEmpty         takes unit whichUnit, loadoutslot itemSlot returns boolean // 3.0.1
-//native          BlzUnitHasAnyItemEquipped           takes unit whichUnit returns boolean // 3.0.1
-//native          BlzUnitHasItemEquipmentOfType      takes unit whichUnit, equipmentType equipmentId returns boolean // 3.0.1
-//native          BlzUnitCanEquipItemOfEquipmentType takes unit whichUnit, equipmentType equipmentId returns boolean // 3.0.1
+native          BlzUnitItemInBagSlot               takes unit whichUnit, integer itemSlot returns item // 3.0.1
+native          BlzUnitItemInEquipmentSlot         takes unit whichUnit, loadoutslot itemSlot returns item // 3.0.1
+native          BlzUnitHasItemEquipped             takes unit whichUnit, item whichItem returns boolean // 3.0.1
+native          BlzUnitHasLoadoutSlotEmpty         takes unit whichUnit, loadoutslot itemSlot returns boolean // 3.0.1
+native          BlzUnitHasAnyItemEquipped           takes unit whichUnit returns boolean // 3.0.1
+native          BlzUnitHasItemEquipmentOfType      takes unit whichUnit, equipmentType equipmentId returns boolean // 3.0.1
+native          BlzUnitCanEquipItemOfEquipmentType takes unit whichUnit, equipmentType equipmentId returns boolean // 3.0.1
 
 native          UnitDropItemPoint       takes unit whichUnit, item whichItem, real x, real y returns boolean
 native          UnitDropItemSlot        takes unit whichUnit, item whichItem, integer slot returns boolean
@@ -8141,6 +8233,7 @@ native UnitCanSleep                 takes unit whichUnit returns boolean
 native UnitAddSleepPerm             takes unit whichUnit, boolean add returns nothing
 native UnitCanSleepPerm             takes unit whichUnit returns boolean
 native UnitIsSleeping               takes unit whichUnit returns boolean
+native BlzUnitIsAlive               takes unit whichUnit returns boolean // 3.0.1
 native UnitWakeUp                   takes unit whichUnit returns nothing
 native UnitApplyTimedLife           takes unit whichUnit, integer buffId, real duration returns nothing
 native UnitIgnoreAlarm              takes unit whichUnit, boolean flag returns boolean
@@ -8153,7 +8246,7 @@ native UnitSetUsesAltIcon           takes unit whichUnit, boolean flag returns n
 
 native UnitDamagePoint              takes unit whichUnit, real delay, real radius, real x, real y, real amount, boolean attack, boolean ranged, attacktype attackType, damagetype damageType, weapontype weaponType returns boolean
 native UnitDamageTarget             takes unit whichUnit, widget target, real amount, boolean attack, boolean ranged, attacktype attackType, damagetype damageType, weapontype weaponType returns boolean
-//native BlzUnitHeal                  takes unit whichUnit, unit source, real life, boolean isItem, boolean applyStatBonuses returns real // 3.0.1
+native BlzUnitHeal                  takes unit whichUnit, unit source, real life, boolean isItem, boolean applyStatBonuses returns real // 3.0.1
 
 native IssueImmediateOrder          takes unit whichUnit, string order returns boolean
 native IssueImmediateOrderById      takes unit whichUnit, integer order returns boolean
@@ -8207,7 +8300,7 @@ native SetUnitTypeSlots             takes unit whichUnit, integer slots returns 
 native GetUnitUserData              takes unit whichUnit returns integer
 native SetUnitUserData              takes unit whichUnit, integer data returns nothing
 
-//native BlzResetUnitTalents          takes unit whichUnit returns nothing // 3.0.1
+native BlzResetUnitTalents          takes unit whichUnit returns nothing // 3.0.1
 
 //============================================================================
 // Player API
@@ -8511,7 +8604,7 @@ native ChooseRandomNPBuilding   takes nothing returns integer
 native ChooseRandomItem         takes integer level returns integer
 native ChooseRandomItemEx       takes itemtype whichType, integer level returns integer
 native ChooseRandomItemExWithFilter takes itemtype whichType, integer level, equipmentType whichEquipmentType, itemTag whichTag returns integer
-//native ChooseRandomItemExWithFilterAndIncludes takes itemtype whichType, integer level, equipmentType whichEquipmentType, itemTag whichTag, boolean includeInvalidMorphs, boolean includeNonPickRandom returns integer // 3.0.1
+native ChooseRandomItemExWithFilterAndIncludes takes itemtype whichType, integer level, equipmentType whichEquipmentType, itemTag whichTag, boolean includeInvalidMorphs, boolean includeNonPickRandom returns integer // 3.0.1
 native SetRandomSeed            takes integer seed returns nothing
 
 //============================================================================
@@ -8601,7 +8694,10 @@ native EnableMinimapFilterButtons   takes boolean enableAlly, boolean enableCree
 native EnableDragSelect             takes boolean state, boolean ui returns nothing
 native EnablePreSelect              takes boolean state, boolean ui returns nothing
 native EnableSelect                 takes boolean state, boolean ui returns nothing
-//native BlzGetHUDScale               takes nothing returns real // 3.0.1
+native BlzGetHUDScale               takes nothing returns real // 3.0.1
+native BlzSetHUDScale               takes integer percentage returns nothing // 3.0.1
+native BlzLockHUDScale              takes nothing returns nothing // 3.0.1
+native BlzUnlockHUDScale            takes nothing returns nothing // 3.0.1
 
 //============================================================================
 // Trackable API
@@ -8759,8 +8855,8 @@ native SetCameraFieldControlledByInput takes camerafield whichField, boolean con
 native GetCameraFieldControlledByInput takes camerafield whichField returns boolean
 native SetCameraTargetController    takes unit whichUnit, real xoffset, real yoffset, boolean inheritOrientation returns nothing
 native SetCameraOrientController    takes unit whichUnit, real xoffset, real yoffset returns nothing
-//native BlzGetCameraAllowsHotkeyTargetLock takes nothing returns boolean // 3.0.1
-//native BlzSetCameraAllowsHotkeyTargetLock takes boolean allows returns nothing // 3.0.1
+native BlzGetCameraAllowsHotkeyTargetLock takes nothing returns boolean // 3.0.1
+native BlzSetCameraAllowsHotkeyTargetLock takes boolean allows returns nothing // 3.0.1
 native BlzCameraSetCameraType       takes integer cameraType returns nothing
 native BlzCameraGetCameraType       takes nothing returns integer
 
@@ -8876,7 +8972,7 @@ native EndThematicMusic             takes nothing returns nothing
 native SetMusicVolume               takes integer volume returns nothing
 native SetMusicPlayPosition         takes integer millisecs returns nothing
 native SetThematicMusicVolume       takes integer volume returns nothing
-//native BlzSetThematicMusicAbsoluteVolume takes integer volume returns nothing // 3.0.1
+native BlzSetThematicMusicAbsoluteVolume takes integer volume returns nothing // 3.0.1
 native SetThematicMusicPlayPosition takes integer millisecs returns nothing
 
 // other music and sound calls
@@ -8921,7 +9017,7 @@ native AddSpecialEffect             takes string modelName, real x, real y retur
 native AddSpecialEffectLoc          takes string modelName, location where returns effect
 native AddSpecialEffectTarget       takes string modelName, widget targetWidget, string attachPointName returns effect
 native DestroyEffect                takes effect whichEffect returns nothing
-//native BlzRemoveEffect              takes effect whichEffect returns nothing // 3.0.1
+native BlzRemoveEffect              takes effect whichEffect returns nothing // 3.0.1
 
 native AddSpellEffect               takes string abilityString, effecttype t, real x, real y returns effect
 native AddSpellEffectLoc            takes string abilityString, effecttype t,location where returns effect
@@ -9439,21 +9535,3 @@ native SetDestructableVertexColor			takes destructable whichDestructable, intege
 native UnitAlive            takes unit id                               returns boolean
 native GetUnitGoldCost      takes integer unitid                        returns integer
 native GetUnitWoodCost      takes integer unitid                        returns integer
-
-// 3.0.1
-
-function BlzUnitItemInEquipmentSlot takes unit whichUnit, loadoutslot itemSlot returns item
-    return UnitItemInEquipmentSlot(whichUnit, itemSlot)
-endfunction
-
-function BlzUnitItemInBagSlot takes unit whichUnit, integer itemSlot returns item
-    return UnitItemInBagSlot(whichUnit, itemSlot)
-endfunction
-
-function BlzUnitExtendedInventorySize takes unit whichUnit returns integer
-    return UnitExtendedInventorySize(whichUnit)
-endfunction
-
-function BlzGetItemEquipmentType takes item whichItem returns equipmentType
-    return GetItemEquipmentType(whichItem)
-endfunction

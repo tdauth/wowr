@@ -17,7 +17,6 @@
 //! import "lib/Indexer.j"
 //! import "lib/Jump.j"
 //! import "lib/Knockback.j"
-//! import "lib/KnockbackSimple.j"
 //! import "lib/LifeSteal.j"
 //! import "lib/LineSegmentEnumeration.j"
 //! import "lib/LinkedList.j"

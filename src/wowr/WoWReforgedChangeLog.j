@@ -248,6 +248,9 @@ private function Init takes nothing returns nothing
     call AddChange("Simplify library StringFormat.")
     call AddChange("Make neutral Icecrown Obelisks invulnerable.")
     call AddChange("Make Egg Sack owners in Felwood Neutral Hostile")
+    call AddChange("Completely remove player hero and soul from the game if player leaves already during initial selection.")
+    call AddChange("Remove Custom Lightning Effects.")
+    call AddChange("Remove library KnockbackSimple.")
 
 static if (MAP_DEBUG_MODE_ENABLED) then
     call AddVersion("4.6")

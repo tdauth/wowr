@@ -361,7 +361,6 @@ private function Init takes nothing returns nothing
     call RegisterAbilityFieldType(GetHandleId(ABILITY_ILF_NUMBER_OF_WAVES), ABILITY_FIELD_TYPE_SUMMONED_UNITS_INTEGER)
     call RegisterAbilityFieldType(GetHandleId(ABILITY_RLF_SPECIFIC_TARGET_DAMAGE_UFN2), ABILITY_FIELD_TYPE_DAMAGE_REAL)
     call RegisterAbilityFieldType(GetHandleId(ABILITY_RLF_AREA_OF_EFFECT_DAMAGE), ABILITY_FIELD_TYPE_DAMAGE_REAL)
-    call RegisterAbilityFieldType('Ufn2', ABILITY_FIELD_TYPE_DAMAGE_REAL) // TODO Field 'Ufn2' is missing in common.j - Doom movement speed
     call RegisterAbilityFieldType(GetHandleId(ABILITY_RLF_DAMAGE_PER_SECOND_NBF5), ABILITY_FIELD_TYPE_DAMAGE_REAL)
     call RegisterAbilityFieldType(GetHandleId(ABILITY_RLF_DAMAGE_OSH1), ABILITY_FIELD_TYPE_DAMAGE_REAL)
     call RegisterAbilityFieldType(GetHandleId(ABILITY_RLF_DURATION_OF_OWLS), ABILITY_FIELD_TYPE_DURATION_REAL)
@@ -471,13 +470,13 @@ private function Init takes nothing returns nothing
     // Raise the Banner
     call RegisterAbilityFieldType(GetHandleId(ABILITY_RLF_CHANCE_TO_CRITICAL_STRIKE), ABILITY_FIELD_TYPE_DAMAGE_REAL) // Chance like 50.0
     // Inspire Courage
-    call RegisterAbilityFieldType('hic1', ABILITY_FIELD_TYPE_DEFENSE_REAL)
-    call RegisterAbilityFieldType('hic2', ABILITY_FIELD_TYPE_CHANCE_REAL)
+    call RegisterAbilityFieldType(GetHandleId(ABILITY_RLF_DEFENSE_HIC1), ABILITY_FIELD_TYPE_DEFENSE_REAL)
+    call RegisterAbilityFieldType(GetHandleId(ABILITY_RLF_SPELL_DAMAGE_RESISTANCE), ABILITY_FIELD_TYPE_CHANCE_REAL)
     // Guiding Hand
-    call RegisterAbilityFieldType('hgh1', ABILITY_FIELD_TYPE_DEFENSE_REAL)
-    call RegisterAbilityFieldType('hgh7', ABILITY_FIELD_TYPE_DEFENSE_REAL)
-    call RegisterAbilityFieldType('hgh2', ABILITY_FIELD_TYPE_DEFENSE_REAL)
-    call RegisterAbilityFieldType('hgh6', ABILITY_FIELD_TYPE_DEFENSE_REAL)
+    call RegisterAbilityFieldType(GetHandleId(ABILITY_RLF_BONUS_ATTACK_SPEED_PERCENT_HGH1), ABILITY_FIELD_TYPE_DEFENSE_REAL)
+    call RegisterAbilityFieldType(GetHandleId(ABILITY_RLF_BONUS_COOLDOWN_REDUCTION_PERCENT), ABILITY_FIELD_TYPE_DEFENSE_REAL)
+    call RegisterAbilityFieldType(GetHandleId(ABILITY_RLF_BONUS_MOVE_SPEED_PERCENT_HGH2), ABILITY_FIELD_TYPE_DEFENSE_REAL)
+    call RegisterAbilityFieldType(GetHandleId(ABILITY_RLF_MANA_PER_SECOND_HGH6), ABILITY_FIELD_TYPE_DEFENSE_REAL)
 
     // Invisibility
     call RegisterInvisibility('Aivs') // Human original
