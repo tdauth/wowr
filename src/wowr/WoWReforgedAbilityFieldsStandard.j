@@ -446,7 +446,7 @@ private function Init takes nothing returns nothing
     call RegisterAbilityFieldType(GetHandleId(ABILITY_RLF_ENEMY_DAMAGE_PER_SECOND), ABILITY_FIELD_TYPE_DAMAGE_REAL)
     call RegisterAbilityFieldType(GetHandleId(ABILITY_RLF_ENEMY_HEALING_REDUCTION_PERCENT), ABILITY_FIELD_TYPE_CHANCE_REAL)
     // Mind Control
-    call RegisterAbilityFieldType('hmc3', ABILITY_FIELD_TYPE_SUMMONED_UNITS_INTEGER)
+    call RegisterAbilityFieldType(GetHandleId(ABILITY_ILF_MIND_CONTROLLED_UNIT_LIMIT), ABILITY_FIELD_TYPE_SUMMONED_UNITS_INTEGER)
     // Cleansing Fire
     call RegisterAbilityFieldType(GetHandleId(ABILITY_RLF_ALLY_HEALING_BASE), ABILITY_FIELD_TYPE_DAMAGE_REAL)
     call RegisterAbilityFieldType(GetHandleId(ABILITY_RLF_HEALING_PER_DEBUFF_REMOVED), ABILITY_FIELD_TYPE_DEFENSE_REAL)
