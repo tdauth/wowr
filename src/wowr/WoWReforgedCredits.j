@@ -961,7 +961,6 @@ private function Init takes nothing returns nothing
     call AddCredit("Ilya Alaric: Peon Pack")
     call AddCredit("Mainywc3sear: BootsOfTeleport")
     call AddCredit("BaiyuGalan: Xe'ra Icon")
-    call AddCredit("Spellbound: Spellbound's Custom Lightning Effects")
     call AddCredit("Darky29: BTNCoralStone")
     call AddCredit("Tarrasque: RoyalGuard")
     call AddCredit("Mouseketeer: BTNNagaArmoredRoyalGuard")
