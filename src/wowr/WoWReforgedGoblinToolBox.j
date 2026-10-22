@@ -588,9 +588,10 @@ private function HasNoEnemiesNearby takes unit caster returns boolean
     local filterfunc f =  Filter(function FilterFunctionIsLivingEnemy)
     local boolean result = false
     set filterOwner = GetOwningPlayer(caster)
-    call GroupEnumUnitsInRange(g, GetUnitX(caster), GetUnitY(caster), 512.0, filter)
+    call GroupEnumUnitsInRange(g, GetUnitX(caster), GetUnitY(caster), 512.0, f)
     set result = BlzGroupGetSize(g) == 0
-    call DestroyBoolExpr(filter)
+    call DestroyBoolExpr(f)
+    set f = null
     call GroupClear(g)
     call DestroyGroup(g)
     set g = null

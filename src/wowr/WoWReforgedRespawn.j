@@ -23,9 +23,10 @@ function RespawnCoordinatesContainNoBuilding takes real x, real y returns boolea
     local group g = CreateGroup()
     local filterfunc f =  Filter(function FilterFunctionIsBuilding)
     local boolean result = false
-    call GroupEnumUnitsInRange(g, x, y, GetRespawnBuildingSize(), filter)
+    call GroupEnumUnitsInRange(g, x, y, GetRespawnBuildingSize(), f)
     set result = BlzGroupGetSize(g) > 0
-    call DestroyBoolExpr(filter)
+    call DestroyBoolExpr(f)
+    set f = null
     call GroupClear(g)
     call DestroyGroup(g)
     set g = null
