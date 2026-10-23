@@ -86,6 +86,46 @@ function StringRemoveFromStart takes string source, string start returns string
     return source
 endfunction
 
+function StringTrimLeft takes string source returns string
+    local integer i = 0
+    local integer max = StringLength(source)
+    local integer startIndex = -1
+    loop
+        exitwhen (i >= max)
+        if (SubString(source, i, i + 1) != " ") then
+            set startIndex = i
+            exitwhen (true)
+        endif
+        set i = i + 1
+    endloop
+    if (startIndex != -1) then
+        return SubString(source, startIndex, max)
+    endif
+    return ""
+endfunction
+
+function StringTrimRight takes string source returns string
+    local integer max = StringLength(source)
+    local integer i = max - 1
+    local integer endIndex = -1
+    loop
+        exitwhen (i < 0)
+        if (SubString(source, i, i + 1) != " ") then
+            set endIndex = i
+            exitwhen (true)
+        endif
+        set i = i - 1
+    endloop
+    if (endIndex != -1) then
+        return SubString(source, 0, endIndex + 1)
+    endif
+    return ""
+endfunction
+
+function StringTrim takes string source returns string
+    return StringTrimRight(StringTrimLeft(source))
+endfunction
+
 function IndexOfStringEx takes string symbol, string source, integer start returns integer
     local integer symbolLength = StringLength(symbol)
     local integer length = StringLength(source)
@@ -247,7 +287,7 @@ function I2SW takes integer i, integer width returns string
                 exitwhen (true)
             else
                 set result = result + "0"
-                set max = max / 10 
+                set max = max / 10
             endif
         endloop
     else
@@ -278,7 +318,7 @@ function FormatTime takes real time returns string
     local integer hours= R2I(time / 3600.0)
     local integer minutes=  R2I(time - hours * 3600) / 60
     local integer seconds= R2I(time - hours * 3600 - minutes * 60)
-    
+
     return I2SW(hours , 2) + ":" + I2SW(minutes , 2) + ":" + I2SW(seconds , 2)
 endfunction
 
