@@ -1,4 +1,4 @@
-library WoWReforgedChatCommands initializer Init requires Ascii, SimError, HostUtils, StringUtils, StringFormat, SafeString, ForceUtils, PlayerColorUtils, WoWReforgedUtils, WoWReforgedMapData, optional QueueUI, WoWReforgedPlayerInfos, WoWReforgedStats, WoWReforgedSaveCodeObjects, WoWReforgedHeroes, WoWReforgedBosses, WoWReforgedQuests, WoWReforgedProfessions, optional WoWReforgedUiActionsBar, WoWReforgedStats, WoWReforgedAttributes, WoWReforgedAccount, WoWReforgedComputerStartLocations, WoWReforgedSaveCodesAll, WoWReforgedZones, WoWReforgedCinematic, WoWReforgedTownHalls, WoWReforgedRaces, WoWReforgedBackpacks, WoWReforgedUiBackpack, WoWReforgedPlayerSelection, WoWReforgedVIPs, WoWReforgedProfessionInscriptor, WoWReforgedProfessionHunter, WoWReforgedProfessionEnchanter, WoWReforgedPlayers, WoWReforgedSelfdestruct, WoWReforgedMapCinematics, optional OrdersWatcher, OnStartGame
+library WoWReforgedChatCommands initializer Init requires Ascii, SimError, HostUtils, StringUtils, StringFormat, SafeString, ForceUtils, PlayerColorUtils, WoWReforgedUtils, WoWReforgedMapData, optional QueueUI, WoWReforgedPlayerInfos, WoWReforgedStats, WoWReforgedSaveCodeObjects, WoWReforgedHeroes, WoWReforgedBosses, WoWReforgedQuests, WoWReforgedProfessions, optional WoWReforgedUiActionsBar, WoWReforgedStats, WoWReforgedAttributes, WoWReforgedAccount, WoWReforgedComputerStartLocations, WoWReforgedSaveCodesAll, WoWReforgedZones, WoWReforgedCinematic, WoWReforgedTownHalls, WoWReforgedRaces, WoWReforgedBackpacks, WoWReforgedUiBackpack, WoWReforgedPlayerSelection, WoWReforgedVIPs, WoWReforgedProfessionInscriptor, WoWReforgedProfessionHunter, WoWReforgedProfessionEnchanter, WoWReforgedPlayers, WoWReforgedSelfdestruct, WoWReforgedMapCinematics, WoWReforgedMusic, optional OrdersWatcher, OnStartGame
 
 /*
  * Chat commands and cheats.
@@ -255,6 +255,10 @@ endfunction
 
 private function HelpVisual takes nothing returns nothing
     call DisplayTextToPlayer(GetTriggerPlayer(), 0, 0, GetHelpTextVisual())
+endfunction
+
+private function HelpMusic takes nothing returns nothing
+    call DisplayTextToPlayer(GetTriggerPlayer(), 0, 0, GetHelpTextMusic())
 endfunction
 
 private function HelpResources takes nothing returns nothing
@@ -1703,6 +1707,37 @@ private function TeamColor takes nothing returns nothing
     endif
 endfunction
 
+private function ResetMusic takes nothing returns nothing
+    if (GetTriggerPlayer() == GetLocalPlayer()) then
+        call EndThematicMusic()
+        call StopMusic(false)
+        call ResumeMusic()
+    endif
+endfunction
+
+private function MusicOn takes nothing returns nothing
+    call ResetMusic()
+endfunction
+
+private function MusicOff takes nothing returns nothing
+    if (GetTriggerPlayer() == GetLocalPlayer()) then
+        call EndThematicMusic()
+        call StopMusic(false)
+    endif
+endfunction
+
+private function Music takes nothing returns nothing
+    local string token = StringTrim(StringToken(GetEventPlayerChatString(), 1))
+    local integer index = GetMusicByName(token)
+    if (index == -1) then
+        call DisplayTextToPlayer(GetTriggerPlayer(), 0.0, 0.0, GetMusicList())
+    else
+        if (GetTriggerPlayer() == GetLocalPlayer()) then
+            call PlayMusic(GetMusicFile(index))
+        endif
+    endif
+endfunction
+
 private function EnumMakeRescuable takes nothing returns nothing
     call MakeUnitRescuableToForceBJ(GetEnumUnit(), true, udg_GaiaRescuingPlayers)
 endfunction
@@ -2216,6 +2251,7 @@ private function Init takes nothing returns nothing
     call Add("-helpai", true, function HelpAi)
     call Add("-helpally", true, function HelpAlly)
     call Add("-helpvisual", true, function HelpVisual)
+    call Add("-helpmusic", true, function HelpMusic)
     call Add("-helpresources", true, function HelpResources)
     call Add("-helpattributes", true, function HelpAttributes)
     call Add("-helpsave", true, function HelpSave)
@@ -2281,6 +2317,7 @@ private function Init takes nothing returns nothing
     call Add("-reseta", true, function ResetA)
     call Add("-equala", true, function EqualA)
 
+    // AI
     call Add("-aieasy", false, function AiEasy)
     call Add("-ainormal", false, function AiNormal)
     call Add("-aihard", false, function AiHard)
@@ -2294,6 +2331,7 @@ private function Init takes nothing returns nothing
 
     call Add("-pingaistarts", true, function PingAiStarts)
 
+    // Visual
     call Add("-hide", true, function Hide)
     call Add("-show", true, function Show)
     call Add("-uion", true, function UiOn)
@@ -2319,6 +2357,7 @@ private function Init takes nothing returns nothing
     call Add("-order", true, function Order)
     call AddAlias("-or", true)
 
+    // Ping
     call Add("-pingh", true, function PingHeroes)
     call Add("-pinggoldmines", true, function PingGoldMinesAction)
     call Add("-pingnpcs", true, function PingNpcsAction)
@@ -2342,6 +2381,7 @@ private function Init takes nothing returns nothing
     call Add("-auto", true, function Auto)
     call Add("-resetevolution", false, function ResetRevolution)
 
+    // Save Codes
     call Add("-save", true, function Save)
     call Add("-savec", true, function SaveClear)
     call AddAlias("-s", true)
@@ -2406,11 +2446,18 @@ private function Init takes nothing returns nothing
     call Add("-transfer", false, function ChatCommandTransfer)
     call Add("-notransfer", true, function ChatCommandNoTransfer)
 
+    // Visual
     call Add("-playercolor", false, function PlayerColor)
     call Add("-playername", false, function PlayerName)
     call Add("-rename", false, function Rename)
     call Add("-scale", false, function Scale)
     call Add("-teamcolor", false, function TeamColor)
+
+    // Music
+    call Add("-resetmusic", true, function ResetMusic)
+    call Add("-musicon", true, function MusicOn)
+    call Add("-musicoff", true, function MusicOff)
+    call Add("-music", false, function Music)
 
     call Add("-gaiaon", true, function GaiaOn)
     call Add("-gaiaoff", true, function GaiaOff)

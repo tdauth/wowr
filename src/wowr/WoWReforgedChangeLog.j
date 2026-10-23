@@ -251,6 +251,8 @@ private function Init takes nothing returns nothing
     call AddChange("Completely remove player hero and soul from the game if player leaves already during initial selection.")
     call AddChange("Remove Custom Lightning Effects.")
     call AddChange("Remove library KnockbackSimple.")
+    call AddChange("Add JASS functions StringTrim, StringTrimLeft and StringTrimRight.")
+    call AddChange("Add music chat commands and info quest.")
 
 static if (MAP_DEBUG_MODE_ENABLED) then
     call AddVersion("4.6")
