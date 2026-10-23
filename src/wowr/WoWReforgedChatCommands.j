@@ -1733,7 +1733,7 @@ private function Music takes nothing returns nothing
         call DisplayTextToPlayer(GetTriggerPlayer(), 0.0, 0.0, GetMusicList())
     else
         if (GetTriggerPlayer() == GetLocalPlayer()) then
-            call PlayMusic(GetMusicFile(index))
+            call PlayMusic(GetMusicName(index))
         endif
     endif
 endfunction

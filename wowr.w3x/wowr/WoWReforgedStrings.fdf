@@ -2110,7 +2110,7 @@ StringList {
     IQ_CINEMATICS_0                    "Shown to all players at the same time.",
     IQ_CINEMATICS_1                    "Can be skipped with the Escape key.",
     IQ_MUSIC                           "Music",
-    IQ_MUSIC_DESCRIPTION               "Music is played for each player separately. It can be muted/unmuted in the game options for with Ctrl+M.",
+    IQ_MUSIC_DESCRIPTION               "Music is played for each player separately. It can be muted/unmuted in the game options for with Ctrl+M. Sound can be muted/unmuted with Ctrl+S.",
     IQ_CREDITS_TITLE                   "Credits",
     IQ_CREDITS_DESCRIPTION             "All the people who contributed to this map.",
     // Quests
