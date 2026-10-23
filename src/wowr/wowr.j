@@ -98,6 +98,7 @@
 //! import "wowr/WoWReforgedMassAbilities.j"
 //! import "wowr/WoWReforgedMaxHpResearch.j"
 //! import "wowr/WoWReforgedMounts.j"
+//! import "wowr/WoWReforgedMusic.j"
 //! import "wowr/WoWReforgedNeutral.j"
 //! import "wowr/WoWReforgedNeutralZone.j"
 //! import "wowr/WoWReforgedNpcs.j"
