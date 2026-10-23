@@ -2611,11 +2611,6 @@ STRING 436
 (Critter) (Farmer)
 }
 
-STRING 437
-{
-"-savecodeconverter": Allows you converting old savecodes into new ones.
-}
-
 STRING 438
 // Units: nmrk (Marketplace), EditorSuffix (Name - Editor Suffix)
 {
@@ -2682,20 +2677,10 @@ STRING 448
 Trains Priests, and Sorceresses. |nAlso contains spell upgrades for Priests and Sorceresses, and Magic Sentry.
 }
 
-STRING 449
-{
-"-saveautoon/off": Enables/disables auto saving of your hero.
-}
-
 STRING 450
 // Upgrades: R04Y (Animal War Training), Name (Name)
 {
 Bonus Heroes
-}
-
-STRING 451
-{
-"-savegui": Shows the GUI for savecodes.
 }
 
 STRING 452
@@ -3992,11 +3977,6 @@ STRING 665
 Upgrade to Guard Tower
 }
 
-STRING 666
-{
-"-asave": Saves all savecodes in the auto load file.
-}
-
 STRING 667
 // Units: o01F (Oil Platform), Name (Name)
 {
@@ -4132,31 +4112,6 @@ STRING 689
 // Abilities: A1BR (Decay), Name (Name)
 {
 Decay
-}
-
-STRING 690
-{
-"-areset": Allows saving and loading automatic save codes.
-}
-
-STRING 691
-{
-"-loadr X": Loads your researches from savecode X.
-}
-
-STRING 692
-{
-"-loadres X": Loads your resources from savecode X.
-}
-
-STRING 693
-{
-"-generated": Lists all generated savecodes from the current game.
-}
-
-STRING 694
-{
-"-cleargenerated": Clears all generated savecodes from the current game.
 }
 
 STRING 695
@@ -4756,93 +4711,9 @@ Craft explosives to demolish enemy units and structures:|n- Goblin Land Mines|n-
 }
 
 STRING 795
+// Abilities: A0N5 (Save Codes), Name (Name)
 {
 Save Codes
-}
-
-STRING 796
-{
-You can save your current game progress and load it in any other later game. However, it is restricted to your current game mode since the game mode determines how fast your heroes gain experience. Check out the folder "%userprofile%\Documents\Warcraft III\CustomMapData\wowr" and sort the text files in there by modification time. Look for the text files with your Battle.net account name. They contain your save codes. You can copy and paste the -load chat commands into the Warcraft chat and load them in any other game. You cannot load save codes from your current game in the same game.
-}
-
-STRING 797
-{
-"-presave": Lists the prestored savecodes.
-}
-
-STRING 798
-{
-"-clanspresave": Lists the prestored clan savecodes.
-}
-
-STRING 799
-{
-"-loadp X": Loads the prestored savecode X.
-}
-
-STRING 800
-{
-"-loadclanp X": Loads the prestored clan savecode X.
-}
-
-STRING 801
-{
-"-save": Saves your hero and prints the savecode.
-}
-
-STRING 802
-{
-"-savec": Saves your hero without info.
-}
-
-STRING 803
-{
-"-saveautoon": Enables auto saving of your hero.
-}
-
-STRING 804
-{
-"-saveautooff": Disables auto saving of your hero.
-}
-
-STRING 805
-{
-"-load XXX": Loads your hero from savecode XXX.
-}
-
-STRING 806
-{
-Requires matching player name and game mode etc.
-}
-
-STRING 807
-{
-Savecodes are stored in "%userprofile%\Documents\Warcraft III\CustomMapData".
-}
-
-STRING 808
-{
-Press the Print key to store a screenshot.
-}
-
-STRING 809
-{
-Screenshots stored in "%userprofile%\Documents\Warcraft III\ScreenShots".
-}
-
-STRING 810
-{
-"-loadi XXX": Loads items from savecode XXX.
-}
-
-STRING 811
-{
-"-loadu XXX": Loads units from savecode.
-}
-
-STRING 812
-{
-"-loadb XXX": Loads buildings from savecode.
 }
 
 STRING 813
@@ -4861,21 +4732,6 @@ STRING 815
 // Abilities: A00A (Alchemy - Master), Name (Name)
 {
 Alchemy - Master
-}
-
-STRING 816
-{
-|cffffcc00Race:|r Orc|n|cffffcc00Class:|r Geomancer|n|cffffcc00Mount:|r Wyvern|n|cffffcc00Primary Attribute:|r Intelligence|n|cffffcc00Strength:|r 15/2|n|cffffcc00Agility:|r 18/1|n|cffffcc00Intelligence:|r 19/3|n|n|cffffcc00Attacks land and air units.|r
-}
-
-STRING 817
-{
-|cffffcc00Race:|r Orc|n|cffffcc00Class:|r Geomancer|n|cffffcc00Mount:|r Wyvern|n|cffffcc00Primary Attribute:|r Intelligence|n|cffffcc00Strength:|r 15/2|n|cffffcc00Agility:|r 18/1|n|cffffcc00Intelligence:|r 19/3|n|n|cffffcc00Attacks land and air units.|r
-}
-
-STRING 818
-{
-|cffffcc00Race:|r Orc|n|cffffcc00Class:|r Geomancer|n|cffffcc00Mount:|r Wyvern|n|cffffcc00Primary Attribute:|r Intelligence|n|cffffcc00Strength:|r 15/2|n|cffffcc00Agility:|r 18/1|n|cffffcc00Intelligence:|r 19/3|n|n|cffffcc00Attacks land and air units.|r
 }
 
 STRING 819
@@ -6141,12 +5997,6 @@ A
 }
 
 STRING 1033
-// Abilities: A0N5 (Save Codes), Name (Name)
-{
-Save Codes
-}
-
-STRING 1034
 // Abilities: A0N5 (Save Codes), Tip (Tooltip - Normal)
 {
 Save Codes
@@ -6632,16 +6482,6 @@ STRING 1115
 // Abilities: A08Y (Random Class), Tip (Tooltip - Normal)
 {
 Random Class
-}
-
-STRING 1116
-{
-Thieving - Doctor
-}
-
-STRING 1117
-{
-Thieving - Doctor
 }
 
 STRING 1118

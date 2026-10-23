@@ -570,6 +570,19 @@ private function Init takes nothing returns nothing
     call AddInfoQuestItem(GetLocalizedStringSafe("CC_PING_JAINA"))
 
     set udg_QuestSaveAndLoad = AddInfoQuest(Format(GetLocalizedStringSafe("IQ_SAVE_CODES_TITLE")).s(GetLocalizedStringSafe("IQ_ENABLED")).result(), GetLocalizedStringSafe("IQ_SAVE_CODES_DESCRIPTION"), "ReplaceableTextures\\CommandButtons\\BTNIconSave.blp")
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_SAVE"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_SAVE_C"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_SAVE_AUTO_ON"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_SAVE_GUI"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_A_SAVE"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_A_LOAD"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_A_RESET"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_LOAD"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_LOAD_X"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_LOAD_RES"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_SAVE_CHECK"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_GENERATED"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_CLEAR_GENERATED"))
 
     call AddInfoQuest(GetLocalizedStringSafe("IQ_PORTALS_TITLE"), GetLocalizedStringSafe("IQ_PORTALS_DESCRIPTION"), "ReplaceableTextures\\CommandButtons\\BTNWaygate.blp")
     call AddInfoQuestItem(GetLocalizedStringSafe("IQ_PORTALS_0"))
@@ -597,6 +610,8 @@ private function Init takes nothing returns nothing
     call AddInfoQuestItem(GetLocalizedStringSafe("CC_RESET_MUSIC"))
     call AddInfoQuestItem(GetLocalizedStringSafe("CC_MUSIC_ON"))
     call AddInfoQuestItem(GetLocalizedStringSafe("CC_MUSIC"))
+
+    call AddInfoQuest(GetLocalizedStringSafe("IQ_ARENA"), GetLocalizedStringSafe("IQ_ARENA_DESCRIPTION"), "ReplaceableTextures\\CommandButtons\\BTNArmoredOge.blp")
 
     call AddInfoQuest(GetLocalizedStringSafe("TAUNTS"), GetLocalizedStringSafe("TAUNTS_DESCRIPTION"), "ReplaceableTextures\\CommandButtons\\BTNPandaTaunt.blp")
     call AddTauntsQuestItems()
