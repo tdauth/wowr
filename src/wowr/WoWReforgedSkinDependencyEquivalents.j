@@ -184,7 +184,6 @@ private function Init takes nothing returns nothing
     call AddSkinDependencyEquivalents(SIEGE_GOLEM, 'nggm') // Moss Covered Granite Golem
     call AddSkinDependencyEquivalents(SIEGE_GOLEM, 'ngst') // Rock Golem
     call AddSkinDependencyEquivalents(SIEGE_GOLEM, 'nfgl') // Flesh Golem
-    call AddSkinDependencyEquivalents(SIEGE_GOLEM, DIVINE_GOLEM)
 
     call AddSkinDependencyEquivalents(SALAMANDER_LORD, 'nslv') // Salamander Vizier
     call AddSkinDependencyEquivalents(SALAMANDER_LORD, 'nstw') // Storm Wyrm

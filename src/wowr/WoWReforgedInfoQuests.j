@@ -569,6 +569,43 @@ private function Init takes nothing returns nothing
     call AddInfoQuestItem(GetLocalizedStringSafe("CC_PING_GOBLIN"))
     call AddInfoQuestItem(GetLocalizedStringSafe("CC_PING_JAINA"))
 
+    call AddInfoQuest(GetLocalizedStringSafe("BACKPACK"), GetLocalizedStringSafe("IQ_BACKPACK_DESCRIPTION"), "ReplaceableTextures\\CommandButtons\\BTNPackBeast.blp")
+
+    call AddInfoQuest(GetLocalizedStringSafe("IQ_EQUIPMENT_BAGS_TITLE"), GetLocalizedStringSafe("IQ_EQUIPMENT_BAGS_DESCRIPTION"), "ReplaceableTextures\\CommandButtons\\BTNINV_Misc_Bag_09.blp")
+    call AddInfoQuestItem(GetLocalizedStringSafe("IQ_EQUIPMENT_BAGS_0"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("IQ_EQUIPMENT_BAGS_1"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("IQ_EQUIPMENT_BAGS_2"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("IQ_EQUIPMENT_BAGS_3"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("IQ_EQUIPMENT_BAGS_4"))
+
+    call AddInfoQuest(GetLocalizedStringSafe("IQ_LEADERBOARDS_TITLE"), GetLocalizedStringSafe("IQ_LEADERBOARDS_DESCRIPTION"), "ReplaceableTextures\\CommandButtons\\BTNStormHammer.blp")
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_CRUSADE"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_CENTAURS"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_PALADINS"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_DRAENEI"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_DEMONS"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_UNDEADS"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_WHALES"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_OLD_GODS"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_INVASION"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_ELEMENTAL"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_WILD"))
+
+    call AddInfoQuest(GetLocalizedStringSafe("IQ_DEMIGOD_TITLE"), GetLocalizedStringSafe("IQ_DEMIGOD_DESCRIPTION"), "ReplaceableTextures\\CommandButtons\\BTNPurge.blp")
+    call AddInfoQuestItem(GetLocalizedStringSafe("IQ_DEMIGOD_0"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("IQ_DEMIGOD_1"))
+
+    call AddInfoQuest(GetLocalizedStringSafe("IQ_MOUNTS_TITLE"), GetLocalizedStringSafe("IQ_MOUNTS_DESCRIPTION"), "ReplaceableTextures\\CommandButtons\\BTNGryphonRider.blp")
+    call AddInfoQuestItem(GetLocalizedStringSafe("IQ_MOUNTS_0"))
+
+    call AddInfoQuest(GetLocalizedStringSafe("EVOLUTION"), GetLocalizedStringSafe("IQ_EVOLUTION_DESCRIPTION"), "ReplaceableTextures\\CommandButtons\\BTNHealthStone.blp")
+    call AddInfoQuestItem(GetLocalizedStringSafe("IQ_EVOLUTION_0"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("IQ_EVOLUTION_1"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("IQ_EVOLUTION_2"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("IQ_EVOLUTION_3"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("IQ_EVOLUTION_4"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("IQ_EVOLUTION_5"))
+
     set udg_QuestSaveAndLoad = AddInfoQuest(Format(GetLocalizedStringSafe("IQ_SAVE_CODES_TITLE")).s(GetLocalizedStringSafe("IQ_ENABLED")).result(), GetLocalizedStringSafe("IQ_SAVE_CODES_DESCRIPTION"), "ReplaceableTextures\\CommandButtons\\BTNIconSave.blp")
     call AddInfoQuestItem(GetLocalizedStringSafe("CC_SAVE"))
     call AddInfoQuestItem(GetLocalizedStringSafe("CC_SAVE_C"))
