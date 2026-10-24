@@ -606,7 +606,6 @@ private function Init takes nothing returns nothing
     call AddCreep('n07V')
     call AddCreep('u01N')
     call AddCreep('n03S')
-    call AddCreep('n05R')
     call AddCreep('n0CL')
     call AddCreep('n0CN')
     call AddCreep('n0CU')
