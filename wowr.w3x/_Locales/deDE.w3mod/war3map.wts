@@ -4474,16 +4474,6 @@ STRING 754
 Powerful flying boss hero who can cast Feueratem, Feuer-Elementargeist beschwören, Befehls-Aura, Reinkarnation and Schmetter-Angriff.|n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r|n|n|cffffcc00Boss hero requires level 50. Benutzen Sie -unlock, um diese Beschränkung aufzuheben.|r
 }
 
-STRING 755
-{
-|cffffcc00Volk:|r Orcs|n|cffffcc00Klasse:|r Erdmagier|n|cffffcc00Reittier:|r Flügeldrache|n|cffffcc00Primäres Attribut:|r Intelligenz|n|cffffcc00Kraft:|r 15/2|n|cffffcc00Beweglichkeit:|r 18/1|n|cffffcc00Intelligenz:|r 19/3|n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
-}
-
-STRING 756
-{
-|cffffcc00Volk:|r Orcs|n|cffffcc00Klasse:|r Erdmagier|n|cffffcc00Reittier:|r Flügeldrache|n|cffffcc00Primäres Attribut:|r Intelligenz|n|cffffcc00Kraft:|r 15/2|n|cffffcc00Beweglichkeit:|r 18/1|n|cffffcc00Intelligenz:|r 19/3|n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
-}
-
 STRING 757
 // Units: n0BU (Dynamite Stick), Name (Name)
 {
@@ -6496,16 +6486,6 @@ STRING 1119
 Luft-Elementargeist
 }
 
-STRING 1120
-{
-Diebstahl - Doctor
-}
-
-STRING 1121
-{
-Diebstahl - Doctor
-}
-
 STRING 1122
 // Units: H03M (Archmage of the Kirin Tor), Hotkey (Hotkey)
 {
@@ -6522,16 +6502,6 @@ STRING 1124
 // Buffs/Effects: B003 (Divine Shield), Buffubertip (Tooltip - Extended)
 {
 This unit is affected by Gottesschild. It hase Divine armor.
-}
-
-STRING 1125
-{
-Diebstahl - Doctor
-}
-
-STRING 1126
-{
-Diebstahl - Doctor
 }
 
 STRING 1127
