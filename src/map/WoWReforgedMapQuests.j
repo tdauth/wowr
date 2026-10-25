@@ -1,5 +1,24 @@
 library WoWReforgedMapQuests initializer Init requires WoWReforgedQuests
 
+function PingAllMapQuestLocations takes nothing returns nothing
+    call ConditionalTriggerExecute(gg_trg_Human_Quests_Ping)
+    call ConditionalTriggerExecute(gg_trg_Village_Quests_Ping)
+    call ConditionalTriggerExecute(gg_trg_Dalaran_Quests_Ping)
+    call ConditionalTriggerExecute(gg_trg_Kul_Tiras_Quest_Ping)
+    call ConditionalTriggerExecute(gg_trg_Night_Elf_Quests_Ping)
+    call ConditionalTriggerExecute(gg_trg_Orc_Quest_Ping)
+    call ConditionalTriggerExecute(gg_trg_Blood_Elf_Quest_Ping)
+    call ConditionalTriggerExecute(gg_trg_Naga_Quest_Ping)
+    call ConditionalTriggerExecute(gg_trg_Forsaken_Quest_Ping)
+    call ConditionalTriggerExecute(gg_trg_Lich_King_Quest_Ping)
+    call ConditionalTriggerExecute(gg_trg_Draenei_Quest_Ping)
+    call ConditionalTriggerExecute(gg_trg_Demon_Quest_Ping)
+    call ConditionalTriggerExecute(gg_trg_Pandaren_Quests_Ping)
+    call ConditionalTriggerExecute(gg_trg_Eredar_Quests_Ping)
+    call ConditionalTriggerExecute(gg_trg_Tuskarr_Quests_Ping)
+    call ConditionalTriggerExecute(gg_trg_Jaina_Quests_Ping)
+endfunction
+
 private function Init takes nothing returns nothing
     set udg_MainQuest[1] = AddQuest("MainQuest1", GetLocalizedStringSafe("ARCHIMONDE"), GetLocalizedStringSafe("Q_ARCHIMONDE_DESCRIPTION"), "ReplaceableTextures\\CommandButtons\\BTNArchimonde.blp", gg_unit_Hjai_0012, ITEM_MEDIVHS_SPELL_BOOK)
     call AddQuestItem(GetLocalizedStringSafe("Q_ARCHIMONDE_0"))

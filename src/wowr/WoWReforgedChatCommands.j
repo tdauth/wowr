@@ -1,4 +1,4 @@
-library WoWReforgedChatCommands initializer Init requires Ascii, SimError, HostUtils, StringUtils, StringFormat, SafeString, ForceUtils, PlayerColorUtils, WoWReforgedUtils, WoWReforgedMapData, optional QueueUI, WoWReforgedPlayerInfos, WoWReforgedStats, WoWReforgedSaveCodeObjects, WoWReforgedHeroes, WoWReforgedBosses, WoWReforgedQuests, WoWReforgedProfessions, optional WoWReforgedUiActionsBar, WoWReforgedStats, WoWReforgedAttributes, WoWReforgedAccount, WoWReforgedComputerStartLocations, WoWReforgedSaveCodesAll, WoWReforgedZones, WoWReforgedCinematic, WoWReforgedTownHalls, WoWReforgedRaces, WoWReforgedBackpacks, WoWReforgedUiBackpack, WoWReforgedPlayerSelection, WoWReforgedVIPs, WoWReforgedProfessionInscriptor, WoWReforgedProfessionHunter, WoWReforgedProfessionEnchanter, WoWReforgedPlayers, WoWReforgedSelfdestruct, WoWReforgedMapCinematics, WoWReforgedMusic, optional OrdersWatcher, OnStartGame
+library WoWReforgedChatCommands initializer Init requires Ascii, SimError, HostUtils, StringUtils, StringFormat, SafeString, ForceUtils, PlayerColorUtils, WoWReforgedUtils, WoWReforgedMapData, WoWReforgedMapQuests, optional QueueUI, WoWReforgedPlayerInfos, WoWReforgedStats, WoWReforgedSaveCodeObjects, WoWReforgedHeroes, WoWReforgedBosses, WoWReforgedQuests, WoWReforgedProfessions, optional WoWReforgedUiActionsBar, WoWReforgedStats, WoWReforgedAttributes, WoWReforgedAccount, WoWReforgedComputerStartLocations, WoWReforgedSaveCodesAll, WoWReforgedZones, WoWReforgedCinematic, WoWReforgedTownHalls, WoWReforgedRaces, WoWReforgedBackpacks, WoWReforgedUiBackpack, WoWReforgedPlayerSelection, WoWReforgedVIPs, WoWReforgedProfessionInscriptor, WoWReforgedProfessionHunter, WoWReforgedProfessionEnchanter, WoWReforgedPlayers, WoWReforgedSelfdestruct, WoWReforgedMapCinematics, WoWReforgedMusic, optional OrdersWatcher, OnStartGame
 
 /*
  * Chat commands and cheats.
@@ -761,6 +761,10 @@ endfunction
 
 private function Order takes nothing returns nothing
     call OrderBackpack(GetTriggerPlayer())
+endfunction
+
+private function QuestRewards takes nothing returns nothing
+    call ShowQuestRewards(GetTriggerPlayer())
 endfunction
 
 private function PingHeroes takes nothing returns nothing
@@ -2357,7 +2361,11 @@ private function Init takes nothing returns nothing
     call Add("-order", true, function Order)
     call AddAlias("-or", true)
 
+    call Add("-questrewards", true, function QuestRewards)
+    call AddAlias("-qr", true)
+
     // Ping
+    call Add("-ping", true, function PingAllMapQuestLocations)
     call Add("-pingh", true, function PingHeroes)
     call Add("-pinggoldmines", true, function PingGoldMinesAction)
     call Add("-pingnpcs", true, function PingNpcsAction)

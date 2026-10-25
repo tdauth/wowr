@@ -1750,6 +1750,7 @@ StringList {
     CC_PLAYERS                         "'-p/-players': Shows the numbers of all playing players.",
     CC_VOTEKICK                        "'-votekick X': Starts a votekick against player X.",
     CC_YES                             "'-yes': Votes for a votekick.",
+    CC_QUEST_REWARDS                   "'-qr/-questrewards': Lists all quest reward items.",
     CC_PING                            "'-ping': Pings the current quest locations on the minimap.",
     CC_PING_H                          "'-pingh': Pings all allied heroes.",
     CC_PING_M                          "'-pingm': Pings all of your mounts.",
