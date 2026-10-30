@@ -5742,11 +5742,6 @@ STRING 991
 |cffffcc00Race:|r Undead|n|cffffcc00Class:|r Warrior|n|cffffcc00Reittier:|r Frost Wyrm|n|cffffcc00Primäres Attribut:|r Strength|n|cffffcc00Kraft:|r 26/3.2|n|cffffcc00Beweglichkeit:|r 14/1.2|n|cffffcc00Intelligenz:|r 14/1.6|n|n|cffffcc00Attacks land units.|r
 }
 
-STRING 992
-{
-Stellt Taschendiebstahle her.
-}
-
 STRING 993
 // Abilities: A17G (Mass Forestation), EditorSuffix (Editor Suffix)
 {

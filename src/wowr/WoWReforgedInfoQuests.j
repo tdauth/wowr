@@ -483,6 +483,13 @@ private function Init takes nothing returns nothing
     call AddInfoQuestItem(GetLocalizedStringSafe("CC_CONTROL"))
     call AddInfoQuestItem(GetLocalizedStringSafe("CC_UNCONTROL"))
 
+    call AddInfoQuest(GetLocalizedStringSafe("IQ_REPICK_TITLE"), GetLocalizedStringSafe("IQ_REPICK_DESCRIPTION"), "ReplaceableTextures\\CommandButtons\\BTNEvasion.blp")
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_H_X"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_P_X"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_R_X"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_REPICK"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_FULL_REPICK"))
+
     call AddInfoQuest(GetLocalizedStringSafe("IQ_FACTIONS_TITLE"), GetLocalizedStringSafe("IQ_FACTIONS_DESCRIPTION"), "ReplaceableTextures\\CommandButtons\\BTNOrcCaptureFlag.blp")
     call AddInfoQuestItem(GetLocalizedStringSafe("ALLIANCE"))
     call AddInfoQuestItem(GetLocalizedStringSafe("HORDE"))

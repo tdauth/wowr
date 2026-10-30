@@ -1958,6 +1958,8 @@ StringList {
     IQ_KNOWN_ISSUES_9                  "Tooltips von passiven Fähigkeiten werden nicht aktualisiert.",
     IQ_ALLIANCES_TITLE                 "Bündnisse",
     IQ_ALLIANCES_DESCRIPTION           "Alliances can be changed via the default Warcraft menu. You can also send resources via the standard menu. There are chat commands for single player games to change the alliances. The AI should react to your alliance changes. When you ally an AI player, the player should ally you as well etc. Special AI players or bosses are not included.",
+    IQ_REPICK_TITLE                    "Repick",
+    IQ_REPICK_DESCRIPTION              "You can repick heroes, professions, races and even your game mode. As long as you do not do a full repick, your heroes keep their experience.",
     IQ_FACTIONS_TITLE                  "Fraktionen",
     IQ_FACTIONS_DESCRIPTION            "Factions consist of multiple races which allied for a common goal. The two game lobby teams represent the two major factions Alliance and Horde. Players from the same faction are allied by default. The faction The Burning Legion fights against all players. The faction Rescuable allows rescuing respawning units.",
     IQ_FACTIONS_0                      "Races belong to one faction or are neutral.",
