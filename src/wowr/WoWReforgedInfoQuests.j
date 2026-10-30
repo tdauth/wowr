@@ -707,7 +707,20 @@ private function Init takes nothing returns nothing
     call AddInfoQuestItem(GetLocalizedStringSafe("CC_MUSIC_ON"))
     call AddInfoQuestItem(GetLocalizedStringSafe("CC_MUSIC"))
 
-    call AddInfoQuest(GetLocalizedStringSafe("IQ_ARENA"), GetLocalizedStringSafe("IQ_ARENA_DESCRIPTION"), "ReplaceableTextures\\CommandButtons\\BTNArmoredOge.blp")
+    call AddInfoQuest(GetLocalizedStringSafe("IQ_ARENA_TITLE"), GetLocalizedStringSafe("IQ_ARENA_DESCRIPTION"), "ReplaceableTextures\\CommandButtons\\BTNArmoredOge.blp")
+
+    call AddInfoQuest(GetLocalizedStringSafe("IQ_RESOURCES_TITLE"), GetLocalizedStringSafe("IQ_RESOURCES_DESCRIPTION"), "ReplaceableTextures\\CommandButtons\\BTNEnchantedGemstone.blp")
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_HELP_RESOURCES"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_RESOURCES"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_RES_GUI"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_GIVE"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_ASK"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_SELL"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_SELL_ALL"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_SELL_WOOD"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_BUY"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_RESOURCES_INFO"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_LOAD_RES"))
 
     call AddInfoQuest(GetLocalizedStringSafe("TAUNTS"), GetLocalizedStringSafe("TAUNTS_DESCRIPTION"), "ReplaceableTextures\\CommandButtons\\BTNPandaTaunt.blp")
     call AddTauntsQuestItems()

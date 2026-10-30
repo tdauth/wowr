@@ -2160,8 +2160,10 @@ StringList {
     IQ_CINEMATICS_1                    "Können mit der Escape-Taste übersprungen werden.",
     IQ_MUSIC                           "Musik",
     IQ_MUSIC_DESCRIPTION               "Music is played for each player separately. It can be muted/unmuted in the game options for with Ctrl+M. Sound can be muted/unmuted with Ctrl+S.",
-    IQ_ARENA                           "Stonemaul Gauntlet",
+    IQ_ARENA_TITLE                     "Stonemaul Gauntlet",
     IQ_ARENA_DESCRIPTION               "The Stonemaul Ogres are famous for their passion for combat and fighting games. Their new warchief Rexxar has inspired them to establish a public gladiator arena. Here Heros can choose between different opponents to fight against in order to gain experience and maybe some small rewards. However, the Arena must first be officially opened by a certain Orc Quest. If you choose to fight in the arena, there is no turning back. If you enter the Arena with more than 1 Hero (Hero group), you lose the contest as soon as the 1st Hero dies. And if a Hero leaves the Arena before the fight is over, the battle is also over and you prove your cowardness to the Stonemaul Ogres. Aaahahahaharrr!",
+    IQ_RESOURCES_TITLE                 "Resources",
+    IQ_RESOURCES_DESCRIPTION           "Resources allow training, buying and upgrading units, constructing buildings, researching upgrades and buying items. Different resources have a different value. More valuable resources are usually harder to harvest. Resources can be transferred to other players, exchanged into gold and bought from gold.",
     IQ_CREDITS_TITLE                   "Mitwirkende",
     IQ_CREDITS_DESCRIPTION             "Alle Leute, die an dieser Karte mitgewirkt haben.",
     // Quests
