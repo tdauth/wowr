@@ -11259,12 +11259,8 @@ STRING 1928
 The High Elves revere the sun. Increases the sight and other stats of High Elf units at day time. Arbeiters harvest plus 10 lumber during the day.
 }
 
-STRING 1929
-{
-Verleit Lordaeron-Türme die Fähigkeit, unsichtbare Einheiten zu entdecken.
-}
-
 STRING 1930
+// Units: h0MJ (Blacksmith), EditorSuffix (Name - Editor Suffix)
 {
 (Lordaeron)
 }
@@ -11276,7 +11272,7 @@ Eine intelligente Orc-Bürgerin. Hat eine Manaregenerations-Aura.
 }
 
 STRING 1933
-// Units: h0MJ (Blacksmith), EditorSuffix (Name - Editor Suffix)
+// Units: h0MK (Lumber Mill), EditorSuffix (Name - Editor Suffix)
 {
 (Lordaeron)
 }
@@ -21401,7 +21397,7 @@ Furbolg-Unterkunft errichten
 }
 
 STRING 4387
-// Units: h0MK (Lumber Mill), EditorSuffix (Name - Editor Suffix)
+// Units: h0ML (Trade House), EditorSuffix (Name - Editor Suffix)
 {
 (Lordaeron)
 }
@@ -35991,13 +35987,13 @@ P
 }
 
 STRING 7843
-// Units: h0ML (Trade House), EditorSuffix (Name - Editor Suffix)
+// Units: h0MM (Aviary), EditorSuffix (Name - Editor Suffix)
 {
 (Lordaeron)
 }
 
 STRING 7844
-// Units: h0MM (Aviary), EditorSuffix (Name - Editor Suffix)
+// Units: h0MN (Scout Tower), EditorSuffix (Name - Editor Suffix)
 {
 (Lordaeron)
 }
@@ -36009,7 +36005,7 @@ Edelstein-Mine
 }
 
 STRING 7848
-// Units: h0MN (Scout Tower), EditorSuffix (Name - Editor Suffix)
+// Units: h0MO (Workshop), EditorSuffix (Name - Editor Suffix)
 {
 (Lordaeron)
 }
@@ -42141,7 +42137,7 @@ Build Tiny Altar of Lions
 }
 
 STRING 10197
-// Units: h0MO (Workshop), EditorSuffix (Name - Editor Suffix)
+// Units: h0MP (Mage Tower), EditorSuffix (Name - Editor Suffix)
 {
 (Lordaeron)
 }
@@ -53649,7 +53645,7 @@ STRING 16653
 }
 
 STRING 16660
-// Units: h0MP (Mage Tower), EditorSuffix (Name - Editor Suffix)
+// Units: h0MQ (Pegasus Knight), EditorSuffix (Name - Editor Suffix)
 {
 (Lordaeron)
 }
@@ -54189,7 +54185,7 @@ Kul-Tiras-Unterkunft errichten
 }
 
 STRING 17306
-// Units: h0MQ (Pegasus Knight), EditorSuffix (Name - Editor Suffix)
+// Units: h0MR (Spearman), EditorSuffix (Name - Editor Suffix)
 {
 (Lordaeron)
 }
@@ -54759,7 +54755,7 @@ Anti Schiffskanonen Light Armor
 }
 
 STRING 17442
-// Units: h0MR (Spearman), EditorSuffix (Name - Editor Suffix)
+// Units: h0MS (Gryphon Rider), EditorSuffix (Name - Editor Suffix)
 {
 (Lordaeron)
 }
@@ -55737,7 +55733,7 @@ Worgen-Unterkunft errichten
 }
 
 STRING 18108
-// Units: h0MS (Gryphon Rider), EditorSuffix (Name - Editor Suffix)
+// Units: h0MT (Mage), EditorSuffix (Name - Editor Suffix)
 {
 (Lordaeron)
 }
@@ -65894,7 +65890,7 @@ Menschen-Unterkunft errichten
 }
 
 STRING 26901
-// Units: h0MT (Mage), EditorSuffix (Name - Editor Suffix)
+// Units: h0MU (Sorceress), EditorSuffix (Name - Editor Suffix)
 {
 (Lordaeron)
 }
@@ -67142,7 +67138,7 @@ S
 }
 
 STRING 28169
-// Units: h0MU (Sorceress), EditorSuffix (Name - Editor Suffix)
+// Units: n0DI (Crossbowman), EditorSuffix (Name - Editor Suffix)
 {
 (Lordaeron)
 }
@@ -67172,7 +67168,7 @@ Magier-Meister-Ausbildung
 }
 
 STRING 28179
-// Units: n0DI (Crossbowman), EditorSuffix (Name - Editor Suffix)
+// Units: h0MV (Footman), EditorSuffix (Name - Editor Suffix)
 {
 (Lordaeron)
 }
@@ -67310,7 +67306,7 @@ Stops the music.
 }
 
 STRING 28397
-// Units: h0MV (Footman), EditorSuffix (Name - Editor Suffix)
+// Units: n0DY (Human Citizen (male)), EditorSuffix (Name - Editor Suffix)
 {
 (Lordaeron)
 }
@@ -71168,7 +71164,7 @@ Pandaren-Unterkunft errichten
 }
 
 STRING 32427
-// Units: n0DY (Human Citizen (male)), EditorSuffix (Name - Editor Suffix)
+// Units: h0N7 (Human Housing), EditorSuffix (Name - Editor Suffix)
 {
 (Lordaeron)
 }
@@ -71438,7 +71434,7 @@ Goblin-Unterkunft errichten
 }
 
 STRING 32517
-// Units: h0N7 (Human Housing), EditorSuffix (Name - Editor Suffix)
+// Units: h0N8 (Rifleman), EditorSuffix (Name - Editor Suffix)
 {
 (Lordaeron)
 }
@@ -72812,7 +72808,7 @@ STRING 33418
 }
 
 STRING 33420
-// Units: h0N8 (Rifleman), EditorSuffix (Name - Editor Suffix)
+// Units: h0N9 (Battle Mage), EditorSuffix (Name - Editor Suffix)
 {
 (Lordaeron)
 }
@@ -74030,7 +74026,7 @@ STRING 33950
 }
 
 STRING 33951
-// Units: h0N9 (Battle Mage), EditorSuffix (Name - Editor Suffix)
+// Units: h0NA (Banner Carrier), EditorSuffix (Name - Editor Suffix)
 {
 (Lordaeron)
 }
@@ -74348,7 +74344,7 @@ Alchemistenlabor errichten
 }
 
 STRING 34058
-// Units: h0NA (Banner Carrier), EditorSuffix (Name - Editor Suffix)
+// Units: h0NB (Lordaeron Shipyard), EditorSuffix (Name - Editor Suffix)
 {
 (Lordaeron)
 }
@@ -75152,7 +75148,7 @@ STRING 34427
 }
 
 STRING 34430
-// Units: h0NB (Lordaeron Shipyard), EditorSuffix (Name - Editor Suffix)
+// Units: h0NC (Cannon Tower), EditorSuffix (Name - Editor Suffix)
 {
 (Lordaeron)
 }
@@ -75368,13 +75364,13 @@ Menschlicher Mut
 }
 
 STRING 34703
-// Units: h0NC (Cannon Tower), EditorSuffix (Name - Editor Suffix)
+// Units: h0ND (Guard Tower), EditorSuffix (Name - Editor Suffix)
 {
 (Lordaeron)
 }
 
 STRING 34704
-// Units: h0ND (Guard Tower), EditorSuffix (Name - Editor Suffix)
+// Units: h0NE (Arcane Tower), EditorSuffix (Name - Editor Suffix)
 {
 (Lordaeron)
 }
@@ -75386,7 +75382,7 @@ Menschlicher Mut erforschen
 }
 
 STRING 34709
-// Units: h0NE (Arcane Tower), EditorSuffix (Name - Editor Suffix)
+// Units: n0E0 (Human Citizen (female)), EditorSuffix (Name - Editor Suffix)
 {
 (Lordaeron)
 }
@@ -75542,7 +75538,7 @@ rmin
 }
 
 STRING 34889
-// Units: n0E0 (Human Citizen (female)), EditorSuffix (Name - Editor Suffix)
+// Units: h0NJ (Militia), EditorSuffix (Name - Editor Suffix)
 {
 (Lordaeron)
 }
@@ -75698,7 +75694,7 @@ Ausbau zum Palast
 }
 
 STRING 35011
-// Units: h0NJ (Militia), EditorSuffix (Name - Editor Suffix)
+// Units: h0OE (Alliance Siege Tower), EditorSuffix (Name - Editor Suffix)
 {
 (Lordaeron)
 }
@@ -75722,7 +75718,7 @@ Altar von Lordaeron errichten
 }
 
 STRING 35015
-// Units: h0OE (Alliance Siege Tower), EditorSuffix (Name - Editor Suffix)
+// Units: n0E2 (Alliance Airship), EditorSuffix (Name - Editor Suffix)
 {
 (Lordaeron)
 }
@@ -75788,13 +75784,13 @@ Summon Arbeiters
 }
 
 STRING 35032
-// Units: n0E2 (Alliance Airship), EditorSuffix (Name - Editor Suffix)
+// Units: h0OK (Scarlet Crusade Paladin), EditorSuffix (Name - Editor Suffix)
 {
 (Lordaeron)
 }
 
 STRING 35033
-// Units: h0OK (Scarlet Crusade Paladin), EditorSuffix (Name - Editor Suffix)
+// Abilities: A188 (Build Tiny Town Center), EditorSuffix (Editor Suffix)
 {
 (Lordaeron)
 }
@@ -76388,7 +76384,7 @@ Bietet eine zusätzliche Quelle für Goldeinkommen.|n|n|cffffcc00Begrenzt auf 4.
 }
 
 STRING 35154
-// Abilities: A188 (Build Tiny Town Center), EditorSuffix (Editor Suffix)
+// Abilities: A18M (Unit Inventory), EditorSuffix (Editor Suffix)
 {
 (Lordaeron)
 }
@@ -76400,7 +76396,7 @@ Upgrades Footmen to Speerkämpfer, giving them a higher attack range and more da
 }
 
 STRING 35156
-// Abilities: A18M (Unit Inventory), EditorSuffix (Editor Suffix)
+// Abilities: A1B4 (Defend), EditorSuffix (Editor Suffix)
 {
 (Lordaeron)
 }
@@ -76418,13 +76414,13 @@ Magier ausbilden
 }
 
 STRING 35159
-// Abilities: A1B4 (Defend), EditorSuffix (Editor Suffix)
+// Abilities: A1BJ (Dispel Magic), EditorSuffix (Editor Suffix)
 {
 (Lordaeron)
 }
 
 STRING 35160
-// Abilities: A1BJ (Dispel Magic), EditorSuffix (Editor Suffix)
+// Abilities: A07U (Fragmentation Shards), EditorSuffix (Editor Suffix)
 {
 (Lordaeron)
 }
@@ -76502,7 +76498,7 @@ STRING 35175
 }
 
 STRING 35176
-// Abilities: A07U (Fragmentation Shards), EditorSuffix (Editor Suffix)
+// Abilities: A081 (Magic Sentry), EditorSuffix (Editor Suffix)
 {
 (Lordaeron)
 }
@@ -76520,7 +76516,7 @@ Armbrustschützen erfroschen
 }
 
 STRING 35179
-// Abilities: A081 (Magic Sentry), EditorSuffix (Editor Suffix)
+// Upgrades: R0A5 (Barrage), EditorSuffix (Editor Suffix)
 {
 (Lordaeron)
 }
@@ -77084,13 +77080,13 @@ STRING 35437
 }
 
 STRING 35440
-// Upgrades: R0A5 (Barrage), EditorSuffix (Editor Suffix)
+// Upgrades: R0A6 (Barrage), EditorSuffix (Editor Suffix)
 {
 (Lordaeron)
 }
 
 STRING 35441
-// Upgrades: R0A6 (Barrage), EditorSuffix (Editor Suffix)
+// Upgrades: R0AD (Burning Oil), EditorSuffix (Editor Suffix)
 {
 (Lordaeron)
 }
@@ -77114,7 +77110,7 @@ Unterstützender Zauberer. Kann zu Beginn den Zauber 'Heilen' wirken, which incr
 }
 
 STRING 35445
-// Upgrades: R0AD (Burning Oil), EditorSuffix (Editor Suffix)
+// Upgrades: R0AF (Control Magic), EditorSuffix (Editor Suffix)
 {
 (Lordaeron)
 }
@@ -77168,7 +77164,7 @@ Increases the caused damage to Undead units by 10 %.
 }
 
 STRING 35456
-// Upgrades: R0AF (Control Magic), EditorSuffix (Editor Suffix)
+// Upgrades: R0AG (Backpack), EditorSuffix (Editor Suffix)
 {
 (Lordaeron)
 }
@@ -77180,13 +77176,13 @@ Scharlachroter Kreuzzug
 }
 
 STRING 35458
-// Upgrades: R0AG (Backpack), EditorSuffix (Editor Suffix)
+// Upgrades: R0AH (Improved Lumber Harvesting,Advanced Lumber Harvesting), EditorSuffix (Editor Suffix)
 {
 (Lordaeron)
 }
 
 STRING 35459
-// Upgrades: R0AH (Improved Lumber Harvesting,Advanced Lumber Harvesting), EditorSuffix (Editor Suffix)
+// Upgrades: R0AI (Improved Masonry,Advanced Masonry,Imbued Masonry), EditorSuffix (Editor Suffix)
 {
 (Lordaeron)
 }
@@ -77222,13 +77218,13 @@ Supporting unit without attack who has the Befehls-Aura ability.
 }
 
 STRING 35465
-// Upgrades: R0AI (Improved Masonry,Advanced Masonry,Imbued Masonry), EditorSuffix (Editor Suffix)
+// Upgrades: R0AL (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), EditorSuffix (Editor Suffix)
 {
 (Lordaeron)
 }
 
 STRING 35466
-// Upgrades: R0AL (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), EditorSuffix (Editor Suffix)
+// Upgrades: R0AM (Improved Bows), EditorSuffix (Editor Suffix)
 {
 (Lordaeron)
 }
@@ -77282,31 +77278,31 @@ S
 }
 
 STRING 35576
-// Upgrades: R0AM (Improved Bows), EditorSuffix (Editor Suffix)
-{
-(Lordaeron)
-}
-
-STRING 35577
 // Upgrades: R0AN (Defend), EditorSuffix (Editor Suffix)
 {
 (Lordaeron)
 }
 
-STRING 35578
+STRING 35577
 // Upgrades: R0AO (Iron Plating,Steel Plating,Mithril Plating), EditorSuffix (Editor Suffix)
 {
 (Lordaeron)
 }
 
-STRING 35579
+STRING 35578
 // Upgrades: R0AP (Steel Ranged Weapons,Thorium Ranged Weapons,Arcanite Ranged Weapons), EditorSuffix (Editor Suffix)
 {
 (Lordaeron)
 }
 
-STRING 35584
+STRING 35579
 // Upgrades: R0AQ (Studded Leather Armor,Reinforced Leather Armor,Dragonhide Armor), EditorSuffix (Editor Suffix)
+{
+(Lordaeron)
+}
+
+STRING 35584
+// Upgrades: R0AR (Improved Masonry,Advanced Masonry,Imbued Masonry), EditorSuffix (Editor Suffix)
 {
 (Lordaeron)
 }
@@ -77342,19 +77338,19 @@ STRING 35618
 }
 
 STRING 35619
-// Upgrades: R0AR (Improved Masonry,Advanced Masonry,Imbued Masonry), EditorSuffix (Editor Suffix)
-{
-(Lordaeron)
-}
-
-STRING 35620
 // Upgrades: R0AS (Long Rifles), EditorSuffix (Editor Suffix)
 {
 (Lordaeron)
 }
 
-STRING 35621
+STRING 35620
 // Upgrades: R0AT (Animal War Training), EditorSuffix (Editor Suffix)
+{
+(Lordaeron)
+}
+
+STRING 35621
+// Upgrades: R0AW (Priest Adept Training,Priest Master Training), EditorSuffix (Editor Suffix)
 {
 (Lordaeron)
 }
@@ -80762,25 +80758,25 @@ Ein heiliges Licht kann eine befreundete lebende Einheit um <A13W,DataA1> Treffe
 }
 
 STRING 36303
-// Upgrades: R0AW (Priest Adept Training,Priest Master Training), EditorSuffix (Editor Suffix)
-{
-(Lordaeron)
-}
-
-STRING 36304
 // Upgrades: R0AX (Sorceress Adept Training,Sorceress Master Training), EditorSuffix (Editor Suffix)
 {
 (Lordaeron)
 }
 
-STRING 36305
+STRING 36304
 // Upgrades: R0AY (Control Magic), EditorSuffix (Editor Suffix)
 {
 (Lordaeron)
 }
 
-STRING 36306
+STRING 36305
 // Upgrades: R0AZ (Control Magic), EditorSuffix (Editor Suffix)
+{
+(Lordaeron)
+}
+
+STRING 36306
+// Upgrades: R03A (Fragmentation Shards), EditorSuffix (Editor Suffix)
 {
 (Lordaeron)
 }
@@ -80798,7 +80794,7 @@ Verbessertes Bogenschießen erforschen
 }
 
 STRING 36309
-// Upgrades: R03A (Fragmentation Shards), EditorSuffix (Editor Suffix)
+// Upgrades: R046 (Magic Sentry), EditorSuffix (Editor Suffix)
 {
 (Lordaeron)
 }
@@ -80810,12 +80806,6 @@ Increases the Archer's, Armbrustschützen's and Greifenreiters attack range.
 }
 
 STRING 36311
-// Upgrades: R046 (Magic Sentry), EditorSuffix (Editor Suffix)
-{
-(Lordaeron)
-}
-
-STRING 36312
 // Upgrades: R051 (Sundering Blades), EditorSuffix (Editor Suffix)
 {
 (Lordaeron)
