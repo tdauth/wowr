@@ -2211,11 +2211,6 @@ STRING 369
 (Vrykul)
 }
 
-STRING 370
-{
-Handelsposten
-}
-
 STRING 371
 // Units: H003 (Eternal Guardian), Hotkey (Hotkey)
 {
@@ -2232,11 +2227,6 @@ STRING 373
 // Abilities: A01M (Alchemy - Advanced), Ubertip (Tooltip - Normal - Extended)
 {
 The Alchemist uses gathered herbs and minerals to create a Mana Stone.
-}
-
-STRING 374
-{
-Handelsposten ermöglichen denTausch von Rohstoffen.
 }
 
 STRING 375
@@ -2935,11 +2925,6 @@ STRING 491
 // Abilities: A1LL (Attack Speed Bonus), EditorSuffix (Editor Suffix)
 {
 (Neutral Feindlich)
-}
-
-STRING 492
-{
-Gold ist von Steuern betroffen.
 }
 
 STRING 493
@@ -101779,12 +101764,6 @@ STRING 48151
 // Units: n0IS (Armory), Tip (Tooltip - Basic)
 {
 Waffenkammer errichten
-}
-
-STRING 48152
-// Units: n0IS (Armory), Description (Description)
-{
-Allows equipping units and heroes.
 }
 
 STRING 48154
