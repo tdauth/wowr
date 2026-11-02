@@ -2081,16 +2081,6 @@ STRING 347
 |cffffcc00Race:|r Undead|n|cffffcc00Class:|r Necromancer|n|cffffcc00Reittier:|r Frost Wyrm|n|cffffcc00Primäres Attribut:|r Intelligenz|n|cffffcc00Kraft:|r 15/2|n|cffffcc00Beweglichkeit:|r 14/1|n|cffffcc00Intelligenz:|r 20/3.4|n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
 }
 
-STRING 348
-{
-Immobilien
-}
-
-STRING 349
-{
-Properties are unique indestructible buildings at fixed locations which can be purchased by one single player during the game. They allow hiring race-specific units and gathering resources by loading workers.
-}
-
 STRING 350
 // Units: n090 (Mercenary Camp Dragon Isles), Name (Name)
 {
@@ -2927,11 +2917,6 @@ STRING 491
 (Neutral Feindlich)
 }
 
-STRING 493
-{
-Diebesgilden
-}
-
 STRING 494
 // Units: h01V (Freelancer Laboratory), Hotkey (Hotkey)
 {
@@ -2948,11 +2933,6 @@ STRING 496
 // Items: I089 (Iron Ore), Name (Name)
 {
 Eisenerz
-}
-
-STRING 497
-{
-Diebesgildes sell units of enemy killed unit types. If you kill creeps or enemy units, your Thieve Guild will sell the unit. It is limited to only 1 to keep it balanced.
 }
 
 STRING 498
@@ -3729,11 +3709,6 @@ STRING 626
 S
 }
 
-STRING 627
-{
-Marktplätze
-}
-
 STRING 628
 // Units: h03R (Skill Menu), Tip (Tooltip - Basic)
 {
@@ -3972,11 +3947,6 @@ STRING 668
 // Units: o01F (Oil Platform), Tip (Tooltip - Basic)
 {
 Bohrinsel errichten
-}
-
-STRING 669
-{
-Marketplaces sell items dropped by creeps.
 }
 
 STRING 670
@@ -4465,16 +4435,6 @@ STRING 757
 Dynamitstab
 }
 
-STRING 758
-{
-|cffffcc00Volk:|r Orcs|n|cffffcc00Klasse:|r Erdmagier|n|cffffcc00Reittier:|r Flügeldrache|n|cffffcc00Primäres Attribut:|r Intelligenz|n|cffffcc00Kraft:|r 15/2|n|cffffcc00Beweglichkeit:|r 18/1|n|cffffcc00Intelligenz:|r 19/3|n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
-}
-
-STRING 759
-{
-|cffffcc00Volk:|r Orcs|n|cffffcc00Klasse:|r Erdmagier|n|cffffcc00Reittier:|r Flügeldrache|n|cffffcc00Primäres Attribut:|r Intelligenz|n|cffffcc00Kraft:|r 15/2|n|cffffcc00Beweglichkeit:|r 18/1|n|cffffcc00Intelligenz:|r 19/3|n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
-}
-
 STRING 760
 // Units: n043 (Explosive Barrel), Name (Name)
 {
@@ -4770,11 +4730,6 @@ Spieler 9
 STRING 830
 {
 Spieler 10
-}
-
-STRING 831
-{
-Bosse
 }
 
 STRING 832
@@ -5150,29 +5105,15 @@ STRING 894
 Computer
 }
 
-STRING 895
-{
-|cffffcc00Volk:|r Orcs|n|cffffcc00Klasse:|r Erdmagier|n|cffffcc00Reittier:|r Flügeldrache|n|cffffcc00Primäres Attribut:|r Intelligenz|n|cffffcc00Kraft:|r 15/2|n|cffffcc00Beweglichkeit:|r 18/1|n|cffffcc00Intelligenz:|r 19/3|n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
-}
-
 STRING 896
 {
 Spieler 1
 }
 
-STRING 897
-{
-|cffffcc00Volk:|r Orcs|n|cffffcc00Klasse:|r Erdmagier|n|cffffcc00Reittier:|r Flügeldrache|n|cffffcc00Primäres Attribut:|r Intelligenz|n|cffffcc00Kraft:|r 15/2|n|cffffcc00Beweglichkeit:|r 18/1|n|cffffcc00Intelligenz:|r 19/3|n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
-}
-
 STRING 898
+// Items: I0VZ (Player 1), Name (Name)
 {
 Spieler 1
-}
-
-STRING 899
-{
-|cffffcc00Volk:|r Orcs|n|cffffcc00Klasse:|r Erdmagier|n|cffffcc00Reittier:|r Flügeldrache|n|cffffcc00Primäres Attribut:|r Intelligenz|n|cffffcc00Kraft:|r 15/2|n|cffffcc00Beweglichkeit:|r 18/1|n|cffffcc00Intelligenz:|r 19/3|n|n|cffffcc00Greift Land- und Luft-Einheiten an.|r
 }
 
 STRING 900
@@ -5811,11 +5752,6 @@ STRING 1006
 Zauberstab des Rohstoffabsaugens
 }
 
-STRING 1007
-{
-Diebstahl - Doctor
-}
-
 STRING 1008
 // Units: N0BB (Submarine Pilot), EditorSuffix (Name - Editor Suffix)
 {
@@ -6415,11 +6351,6 @@ STRING 1108
 Hydra-Königin beschwören
 }
 
-STRING 1109
-{
-Diebstahl - Doktor
-}
-
 STRING 1110
 // Abilities: A01J (Thieving - Doctor), Tip (Tooltip - Normal)
 {
@@ -6430,16 +6361,6 @@ STRING 1111
 // Abilities: A08Y (Random Class), Name (Name)
 {
 Zufällige Klasse
-}
-
-STRING 1112
-{
-Diebstahl - Doktor
-}
-
-STRING 1113
-{
-Diebstahl - Doktor
 }
 
 STRING 1114
@@ -7771,11 +7692,6 @@ STRING 1343
 // Units: nhea (Blood Elf Archer), EditorSuffix (Name - Editor Suffix)
 {
 (Blutelfen)
-}
-
-STRING 1344
-{
-
 }
 
 STRING 1345
@@ -104083,12 +103999,6 @@ Die Beine eines Frosches.
 }
 
 STRING 49307
-// Items: I0VZ (Player 1), Name (Name)
-{
-Spieler 1
-}
-
-STRING 49308
 // Items: I0VZ (Player 1), Tip (Tooltip - Basic)
 {
 Spieler 1
