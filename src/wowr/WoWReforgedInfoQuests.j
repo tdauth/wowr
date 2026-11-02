@@ -511,6 +511,12 @@ private function Init takes nothing returns nothing
     call AddInfoQuest(GetLocalizedStringSafe("CLASSES"), GetLocalizedStringSafe("IQ_CLASSES_DESCRIPTION"), "ReplaceableTextures\\CommandButtons\\BTNPriestAdept.blp")
     call AddClassesQuestItems()
 
+    call AddInfoQuest(GetLocalizedStringSafe("IQ_ABILITIES_TITLE"), GetLocalizedStringSafe("IQ_ABILITIES_DESCRIPTION"), "ReplaceableTextures\\CommandButtons\\BTNTomeBrown.blp")
+    call AddInfoQuestItem(GetLocalizedStringSafe("IQ_ABILITIES_0"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("IQ_ABILITIES_1"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("IQ_ABILITIES_2"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("IQ_ABILITIES_3"))
+
     call AddInfoQuest(GetLocalizedStringSafe("HEROES"), GetLocalizedStringSafe("IQ_HEROES_DESCRIPTION"), "ReplaceableTextures\\CommandButtons\\BTNHeroPaladin.blp")
     call AddInfoQuestItem(GetLocalizedStringSafe("CC_REPICK"))
     call AddInfoQuestItem(GetLocalizedStringSafe("CC_FULL_REPICK"))
@@ -676,6 +682,12 @@ private function Init takes nothing returns nothing
     call AddInfoQuestItem(GetLocalizedStringSafe("IQ_PORTALS_3"))
     call AddInfoQuestItem(GetLocalizedStringSafe("CC_PING_PORTALS"))
 
+    call AddInfoQuest(GetLocalizedStringSafe("IQ_CRAFTING_STASHES_TITLE"), GetLocalizedStringSafe("IQ_CRAFTING_STASHES_DESCRIPTION"), "ReplaceableTextures\\CommandButtons\\BTNsteelcage.blp")
+    call AddInfoQuestItem(GetLocalizedStringSafe("IQ_CRAFTING_STASHES_0"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("IQ_CRAFTING_STASHES_1"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("IQ_CRAFTING_STASHES_2"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("IQ_CRAFTING_STASHES_3"))
+
     call AddInfoQuest(GetLocalizedStringSafe("IQ_CUSTOMIZABLE_HEROES_TITLE"), GetLocalizedStringSafe("IQ_CUSTOMIZABLE_HEROES_DESCRIPTION"), "ReplaceableTextures\\CommandButtons\\BTNVillagerMan.blp")
     call AddInfoQuestItem(GetLocalizedStringSafe("IQ_CUSTOMIZABLE_HEROES_0"))
     call AddInfoQuestItem(GetLocalizedStringSafe("CC_HELP_ATTRIBUTES"))
@@ -737,6 +749,62 @@ private function Init takes nothing returns nothing
     call AddInfoQuestItem(GetLocalizedStringSafe("CC_MUSIC"))
 
     call AddInfoQuest(GetLocalizedStringSafe("IQ_ARENA_TITLE"), GetLocalizedStringSafe("IQ_ARENA_DESCRIPTION"), "ReplaceableTextures\\CommandButtons\\BTNArmoredOge.blp")
+
+    call AddInfoQuest(GetLocalizedStringSafe("IQ_CAR_RACES_TITLE"), GetLocalizedStringSafe("IQ_CAR_RACES_DESCRIPTION"), "ReplaceableTextures\\CommandButtons\\BTNDwarfCar.blp")
+    call AddInfoQuestItem(GetLocalizedStringSafe("IQ_CAR_RACES_0"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("IQ_CAR_RACES_1"))
+
+    call AddInfoQuest(GetLocalizedStringSafe("IQ_MARKETPLACES_TITLE"), GetLocalizedStringSafe("IQ_MARKETPLACES_DESCRIPTION"), "ReplaceableTextures\\CommandButtons\\BTNBlackMarket.blp")
+    call AddInfoQuestItem(GetLocalizedStringSafe("IQ_MARKETPLACES_0"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("IQ_MARKETPLACES_1"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("IQ_MARKETPLACES_2"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("IQ_MARKETPLACES_3"))
+
+    call AddInfoQuest(GetLocalizedStringSafe("IQ_THIEVES_GUILDS_TITLE"), GetLocalizedStringSafe("IQ_THIEVES_GUILDS_DESCRIPTION"), "ReplaceableTextures\\CommandButtons\\BTNThievesGuildX.blp")
+    call AddInfoQuestItem(GetLocalizedStringSafe("IQ_THIEVES_GUILDS_0"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("IQ_MARKETPLACES_1"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("IQ_MARKETPLACES_2"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("IQ_MARKETPLACES_3"))
+
+    call AddInfoQuest(GetLocalizedStringSafe("IQ_PROPERTIES_TITLE"), GetLocalizedStringSafe("IQ_PROPERTIES_DESCRIPTION"), "ReplaceableTextures\\CommandButtons\\BTNStormwindCastle.blp")
+    call AddInfoQuestItem(GetLocalizedStringSafe("CC_PING_PROPERTIES"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("IQ_PROPERTIES_0"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("IQ_PROPERTIES_1"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("IQ_PROPERTIES_2"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("IQ_PROPERTIES_3"))
+
+    call AddInfoQuest(GetLocalizedStringSafe("IQ_PLAYER_STATS_TITLE"), GetLocalizedStringSafe("IQ_PLAYER_STATS_DESCRIPTION"), "ReplaceableTextures\\CommandButtons\\BTNShaman.blp")
+    call AddInfoQuestItem(GetLocalizedStringSafe("IQ_PLAYER_STATS_0"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("IQ_PLAYER_STATS_1"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("IQ_PLAYER_STATS_2"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("IQ_PLAYER_STATS_3"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("IQ_PLAYER_STATS_4"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("IQ_PLAYER_STATS_5"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("IQ_PLAYER_STATS_6"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("IQ_PLAYER_STATS_7"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("IQ_PLAYER_STATS_8"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("IQ_PLAYER_STATS_9"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("IQ_PLAYER_STATS_10"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("IQ_PLAYER_STATS_11"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("IQ_PLAYER_STATS_12"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("IQ_PLAYER_STATS_13"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("IQ_PLAYER_STATS_14"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("IQ_PLAYER_STATS_15"))
+
+    call AddInfoQuest(GetLocalizedStringSafe("IQ_DRAGON_ROOSTS_TITLE"), GetLocalizedStringSafe("IQ_DRAGON_ROOSTS_DESCRIPTION"), "ReplaceableTextures\\CommandButtons\\BTNBlackDragonRoost.blp")
+    call AddInfoQuestItem(GetLocalizedStringSafe("IQ_DRAGON_ROOSTS_0"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("IQ_DRAGON_ROOSTS_1"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("IQ_DRAGON_ROOSTS_2"))
+
+    call AddInfoQuest(GetLocalizedStringSafe("IQ_ANTIMAGIC_WARDS_TITLE"), GetLocalizedStringSafe("IQ_ANTIMAGIC_WARDS_DESCRIPTION"), "ReplaceableTextures\\CommandButtons\\BTNWebWard.blp")
+    call AddInfoQuestItem(GetLocalizedStringSafe("IQ_ANTIMAGIC_WARDS_0"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("IQ_ANTIMAGIC_WARDS_1"))
+
+    call AddInfoQuest(GetLocalizedStringSafe("IQ_ALCHEMIST_LABS_TITLE"), GetLocalizedStringSafe("IQ_ALCHEMIST_LABS_DESCRIPTION"), "ReplaceableTextures\\CommandButtons\\BTNAmmoDump.blp")
+    call AddInfoQuestItem(GetLocalizedStringSafe("IQ_ALCHEMIST_LABS_0"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("IQ_ALCHEMIST_LABS_1"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("IQ_ALCHEMIST_LABS_2"))
+    call AddInfoQuestItem(GetLocalizedStringSafe("IQ_ALCHEMIST_LABS_3"))
 
     call AddInfoQuest(GetLocalizedStringSafe("IQ_RESOURCES_TITLE"), GetLocalizedStringSafe("IQ_RESOURCES_DESCRIPTION"), "ReplaceableTextures\\CommandButtons\\BTNEnchantedGemstone.blp")
     call AddInfoQuestItem(GetLocalizedStringSafe("IQ_RESOURCES_0"))

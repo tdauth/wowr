@@ -2081,16 +2081,6 @@ STRING 347
 |cffffcc00Race:|r Undead|n|cffffcc00Class:|r Necromancer|n|cffffcc00Mount:|r Frost Wyrm|n|cffffcc00Primary Attribute:|r Intelligence|n|cffffcc00Strength:|r 15/2|n|cffffcc00Agility:|r 14/1|n|cffffcc00Intelligence:|r 20/3.4|n|n|cffffcc00Attacks land and air units.|r
 }
 
-STRING 348
-{
-Properties
-}
-
-STRING 349
-{
-Properties are unique indestructible buildings at fixed locations which can be purchased by one single player during the game. They allow hiring race-specific units and gathering resources by loading workers.
-}
-
 STRING 350
 // Units: n090 (Mercenary Camp Dragon Isles), Name (Name)
 {
@@ -2927,11 +2917,6 @@ STRING 491
 (Neutral Hostile)
 }
 
-STRING 493
-{
-Thieving Guilds
-}
-
 STRING 494
 // Units: h01V (Freelancer Laboratory), Hotkey (Hotkey)
 {
@@ -2948,11 +2933,6 @@ STRING 496
 // Items: I089 (Iron Ore), Name (Name)
 {
 Iron Ore
-}
-
-STRING 497
-{
-Thieving Guilds sell units of enemy killed unit types. If you kill creeps or enemy units, your Thieve Guild will sell the unit. It is limited to only 1 to keep it balanced.
 }
 
 STRING 498
@@ -3729,11 +3709,6 @@ STRING 626
 S
 }
 
-STRING 627
-{
-Market Places
-}
-
 STRING 628
 // Units: h03R (Skill Menu), Tip (Tooltip - Basic)
 {
@@ -3972,11 +3947,6 @@ STRING 668
 // Units: o01F (Oil Platform), Tip (Tooltip - Basic)
 {
 Build Oil Platform
-}
-
-STRING 669
-{
-"-aload": Loads all save codes from the auto load file.
 }
 
 STRING 670
@@ -4465,16 +4435,6 @@ STRING 757
 Dynamite Stick
 }
 
-STRING 758
-{
-|cffffcc00Race:|r Orc|n|cffffcc00Class:|r Geomancer|n|cffffcc00Mount:|r Wyvern|n|cffffcc00Primary Attribute:|r Intelligence|n|cffffcc00Strength:|r 15/2|n|cffffcc00Agility:|r 18/1|n|cffffcc00Intelligence:|r 19/3|n|n|cffffcc00Attacks land and air units.|r
-}
-
-STRING 759
-{
-|cffffcc00Race:|r Orc|n|cffffcc00Class:|r Geomancer|n|cffffcc00Mount:|r Wyvern|n|cffffcc00Primary Attribute:|r Intelligence|n|cffffcc00Strength:|r 15/2|n|cffffcc00Agility:|r 18/1|n|cffffcc00Intelligence:|r 19/3|n|n|cffffcc00Attacks land and air units.|r
-}
-
 STRING 760
 // Units: n043 (Explosive Barrel), Name (Name)
 {
@@ -4770,11 +4730,6 @@ Player 9
 STRING 830
 {
 Player 10
-}
-
-STRING 831
-{
-Bosses New
 }
 
 STRING 832
@@ -5150,29 +5105,15 @@ STRING 894
 Computer
 }
 
-STRING 895
-{
-|cffffcc00Race:|r Orc|n|cffffcc00Class:|r Geomancer|n|cffffcc00Mount:|r Wyvern|n|cffffcc00Primary Attribute:|r Intelligence|n|cffffcc00Strength:|r 15/2|n|cffffcc00Agility:|r 18/1|n|cffffcc00Intelligence:|r 19/3|n|n|cffffcc00Attacks land and air units.|r
-}
-
 STRING 896
 {
 Player 1
 }
 
-STRING 897
-{
-|cffffcc00Race:|r Orc|n|cffffcc00Class:|r Geomancer|n|cffffcc00Mount:|r Wyvern|n|cffffcc00Primary Attribute:|r Intelligence|n|cffffcc00Strength:|r 15/2|n|cffffcc00Agility:|r 18/1|n|cffffcc00Intelligence:|r 19/3|n|n|cffffcc00Attacks land and air units.|r
-}
-
 STRING 898
+// Items: I0VZ (Player 1), Name (Name)
 {
 Player 1
-}
-
-STRING 899
-{
-|cffffcc00Race:|r Orc|n|cffffcc00Class:|r Geomancer|n|cffffcc00Mount:|r Wyvern|n|cffffcc00Primary Attribute:|r Intelligence|n|cffffcc00Strength:|r 15/2|n|cffffcc00Agility:|r 18/1|n|cffffcc00Intelligence:|r 19/3|n|n|cffffcc00Attacks land and air units.|r
 }
 
 STRING 900
@@ -5811,11 +5752,6 @@ STRING 1006
 Wand of Drain Resources
 }
 
-STRING 1007
-{
-Thieving - Doctor
-}
-
 STRING 1008
 // Units: N0BB (Submarine Pilot), EditorSuffix (Name - Editor Suffix)
 {
@@ -6415,11 +6351,6 @@ STRING 1108
 Summon Hydra Queen
 }
 
-STRING 1109
-{
-Thieving - Doctor
-}
-
 STRING 1110
 // Abilities: A01J (Thieving - Doctor), Tip (Tooltip - Normal)
 {
@@ -6430,16 +6361,6 @@ STRING 1111
 // Abilities: A08Y (Random Class), Name (Name)
 {
 Random Class
-}
-
-STRING 1112
-{
-Thieving - Doctor
-}
-
-STRING 1113
-{
-Thieving - Doctor
 }
 
 STRING 1114
@@ -7771,11 +7692,6 @@ STRING 1343
 // Units: nhea (Blood Elf Archer), EditorSuffix (Name - Editor Suffix)
 {
 (Blood Elf)
-}
-
-STRING 1344
-{
-
 }
 
 STRING 1345
@@ -104082,12 +103998,6 @@ The legs of a frog.
 }
 
 STRING 49307
-// Items: I0VZ (Player 1), Name (Name)
-{
-Player 1
-}
-
-STRING 49308
 // Items: I0VZ (Player 1), Tip (Tooltip - Basic)
 {
 Player 1
