@@ -2274,7 +2274,7 @@ private function GenerateRaceTechnologyTreeEx takes integer whichRace returns no
     // Citizen Male
     call GenerateRaceTechnologyTreeBuilding(CRAFTING_STASH)
     call GenerateRaceTechnologyTreeBuilding(WALL)
-    call GenerateRaceTechnologyTreeBuilding(EVENT_HOUSE)
+    call GenerateRaceTechnologyTreeBuilding(ARMORY)
     call GenerateRaceTechnologyTreeBuilding(TRADING_POST)
     call GenerateRaceTechnologyTreeBuilding(RESEARCH_TENT)
     call GenerateRaceTechnologyTreeBuilding(POWER_GENERATOR)
@@ -2292,7 +2292,6 @@ private function GenerateRaceTechnologyTreeEx takes integer whichRace returns no
     call GenerateRaceTechnologyTreeBuilding(ANTIMAGIC_WARD)
 
     // Child
-    call GenerateRaceTechnologyTreeBuilding(ARMORY)
     call GenerateRaceTechnologyTreeBuilding(BANNER_SHOP)
 
     call FileWriteLine("</tr>")

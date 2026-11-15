@@ -253,6 +253,7 @@ private function Init takes nothing returns nothing
     call AddChange("Remove library KnockbackSimple.")
     call AddChange("Add JASS functions StringTrim, StringTrimLeft and StringTrimRight.")
     call AddChange("Add music chat commands and info quest.")
+    call AddChange("Merge Event House into Research Tent and replace it with Armory for male citizens.")
 
 static if (MAP_DEBUG_MODE_ENABLED) then
     call AddVersion("4.6")

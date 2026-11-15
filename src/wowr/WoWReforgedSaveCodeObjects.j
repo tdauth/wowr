@@ -685,19 +685,19 @@ endfunction
 
 private function AddUnits takes nothing returns nothing
     // Neutral
-    call AddUnit('nzep')
-    call AddUnit('ngsp')
-    call AddUnit('ngir')
-    call AddUnit('n0M5')
-    call AddUnit('n0H6')
+    call AddUnit(ZEPPELIN)
+    call AddUnit(SAPPER)
+    call AddUnit(SHREDDER)
+    call AddUnit(DRILLBOT)
+    call AddUnit(HARVEST_CART)
     call AddUnit('n03J')
     call AddUnit('n03F')
     call AddUnit('n070')
     call AddUnit('n06T')
     call AddUnit('n06Z')
     call AddUnit('nbot')
-    call AddUnit('n03H')
-    call AddUnit('h029')
+    call AddUnit(ENGINEER_SHIP)
+    call AddUnit(GNOMISH_SUBMARINE)
     // CREEP UNITS
     call AddCreepsSaveObjects()
     // RACE UNITS
@@ -731,7 +731,7 @@ private function AddBuildings takes nothing returns nothing
     // All Races
     call AddBuilding(POWER_GENERATOR)
     call AddBuilding(RESEARCH_TENT)
-    call AddBuilding(EVENT_HOUSE)
+    call AddBuilding(ARMORY)
     call AddBuilding(PORTAL)
     call AddBuilding(CRAFTING_STASH)
     call AddBuilding(MOUNTS_CAGE)
@@ -744,7 +744,6 @@ private function AddBuildings takes nothing returns nothing
     call AddBuilding(TRAINER)
     call AddBuilding(SKINS)
     call AddBuilding(WITCH_HUT)
-    call AddBuilding(ARMORY)
     call AddBuilding(BANNER_SHOP)
     call AddBuilding(GATE_CLOSED_HORIZONTAL)
     call AddBuilding(GATE_OPEN_HORIZONTAL)

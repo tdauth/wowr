@@ -1258,7 +1258,6 @@ Playing Warcraft III can be played on Ubuntu using Steam, adding it as non-Steam
 * epsilon: [Azshara statue portrait](https://www.hiveworkshop.com/threads/azshara-statue-portrait.206711/)
 * Chucky: [Naga (Generic) Hatchery Animated](https://www.hiveworkshop.com/threads/naga-generic-hatchery-animated.326754/)
 * ikillforeyou: [Night sky with moon skybox](https://www.hiveworkshop.com/threads/night-sky-with-moon-skybox.171715/)
-* Fingolfin: [Fingolfins Planet Pack](https://www.hiveworkshop.com/threads/fingolfins-planet-pack.245456/)
 * Explobomb: [Direhorn](https://www.hiveworkshop.com/threads/direhorn.320879/)
 * PrinceYaser: [BTNNagaWhaler](https://www.hiveworkshop.com/threads/btnnagawhaler.312470/)
 * PROXY: [Goblin Demolisher (Goblin Car)](https://www.hiveworkshop.com/threads/goblin-demolisher-goblin-car.203336/)

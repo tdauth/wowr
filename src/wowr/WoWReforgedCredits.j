@@ -1029,7 +1029,6 @@ private function Init takes nothing returns nothing
     call AddCredit("epsilon: Azshara statue portrait")
     call AddCredit("Chucky: Naga (Generic) Hatchery Animated")
     call AddCredit("ikillforeyou: Night sky with moon skybox")
-    call AddCredit("Fingolfin: Fingolfins Planet Pack")
     call AddCredit("Explobomb: Direhorn")
     call AddCredit("PrinceYaser: BTNNagaWhaler")
     call AddCredit("PROXY: Goblin Demolisher (Goblin Car)")

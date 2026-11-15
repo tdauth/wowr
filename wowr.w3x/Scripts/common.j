@@ -3158,7 +3158,6 @@ globals
     constant integer MOUNTS_SHOP                                     = 'n06U' // Neutral
     constant integer RESEARCH_TENT                                   = 'n042'
     constant integer ITEM_TINY_RESEARCH_TENT                         = 'I0LK'
-    constant integer EVENT_HOUSE                                     = 'n054'
     constant integer CRAFTING_STASH                                  = 'h04V'
     constant integer ITEM_TINY_CRAFTING_STASH                        = 'I0LL'
     constant integer POWER_GENERATOR                                 = 'n025'
